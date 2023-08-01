@@ -950,8 +950,8 @@ class JsonParser {
     };
   }
 
-  private parseExample(example: Text, isExample: boolean): Example {
-    const exampleStr = this.parseText(example);
+  private parseExample(example: Text | boolean, isExample: boolean): Example {
+    const exampleStr = this.parseText(example as string);
     if (exampleStr) {
       return { example: exampleStr };
     }

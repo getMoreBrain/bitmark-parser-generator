@@ -21,28 +21,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -58,28 +66,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -95,28 +111,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -132,28 +156,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -169,28 +201,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -206,28 +246,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -243,28 +291,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -280,28 +336,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -317,28 +381,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -354,28 +426,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -391,28 +471,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -428,28 +516,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -465,28 +561,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -502,28 +606,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -539,28 +651,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -576,28 +696,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -613,28 +741,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -650,28 +786,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -687,28 +831,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -724,28 +876,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher nein",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "eher ja",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "ja",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -753,7 +913,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice]\n[@id:187003]\n===\n[!1. Wurden Sie zu einem Vorstellungsgespräch eingeladen? (Qualitätsanforderung 2)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!2. Wurde Ihnen mitgeteilt, dass Sie in die engere Auswahl gekommen sind? (Qualitätsanforderung 5)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!3. Konnten Sie vor dem Unterzeichnen des Lehrvertrags Ihren Lehrbetrieb kennen lernen? (Qualitätsanforderung 3)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!4. Wurde Ihnen vor dem Unterzeichnen des Lehrvertrags erklärt, welche Anforderungen an Sie gestellt werden? (Qualitätsanforderung 1)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!5. Wurden Sie vor dem Unterzeichnen des Lehrvertrags über die Arbeitsbedingungen informiert? (Qualitätsanforderung 4)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!6. Wurden Ihnen die im Lehrvertrag festgelegten Bedingungen wie Arbeitszeiten, Ferien, Lohn usw. erläutert? (Qualitätsanforderung 6)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!7. Wissen Sie wer Ihr/e Berufsbildner/in im Lehrbetrieb und wer Ihre Ansprechperson in Ihrer Abteilung ist? (Qualitätsanforderung 7)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!8. Wurden Sie am ersten Arbeitstag vom Berufsbildner/von der Berufsbildnerin persönlich begrüsst? (Qualitätsanforderung 8)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!9. Wurden Sie zu Beginn Ihrer beruflichen Grundbildung über die Tätigkeiten und das Arbeitsumfeld Ihres Lehrbetriebs informiert? (Qualitätsanforderung 9)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!10. Kennen Sie die Arbeitsregeln sowie die Hygiene- und Sicherheitsvorschriften des Betriebs? (Qualitätsanforderung 10)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!11. Stehen Ihnen ein angemessener Arbeitsplatz und die nötigen Arbeitsmittel zur Verfügung? (Qualitätsanforderung 11)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!12. Wurden Ihnen Sinn und Zweck des Bildungsplans (betrieblicher Bildungsplan/Modelllehrgang) erläutert? (Qualitätsanforderung 12)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!13. Haben Sie während der Probezeit regelmässig Rückmeldungen zu Ihrer Leistung und Ihrem Verhalten erhalten? (Qualitätsanforderung 13)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!14. Erklärt Ihnen der/die Berufsbildner/in regelmässig, was Sie bis wann lernen müssen? (Qualitätsanforderung 16)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!15. Werden Ihre Arbeiten regelmässig überprüft und mit Ihnen besprochen? (Qualitätsanforderung 18)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!16. Werden Sie fortlaufend in die Arbeitsabläufe des Lehrbetriebs integriert? (Qualitätsanforderungen 19)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!17. Verfolgt Ihr/e Berufsbildner/in Ihre Leistungen in der Berufsfachschule und im überbetrieblichen Kurs? (Qualitätsanforderung 20)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!18. Wird der Bildungsbericht mit Ihnen halbjährlich besprochen und Bezug auf den Bildungsplan (betrieblicher Bildungsplan/Modelllehrgang) genommen? (Qualitätsanforderung 22)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!19. Erhalten Sie Gelegenheit, Rückmeldungen zu Ihrer Ausbildung zu machen, und geht Ihr/e Berufsbildner/in auf diese ein? (Qualitätsanforderung 23)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n===\n[!20. Wissen Sie, an wen Sie sich bei Schwierigkeiten während Ihrer beruflichen Grundbildung wenden können? (Qualitätsanforderung 24)]\n[-nein]\n[-eher nein]\n[-eher ja]\n[+ja]\n==="
@@ -780,28 +940,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -817,28 +985,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -854,28 +1030,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -891,28 +1075,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -928,28 +1120,36 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen teilweise erfüllt",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Anforderungen gut erfüllt",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -957,7 +1157,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice]\n[@id:186986]\nQualitätsanforderungen - Beurteilung\n===\n[!24 - Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!25 - Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!26 - Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!27 - Der/die Berufsbildner/in bildet sich regelmässig weiter.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!28 - Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n==="
@@ -996,21 +1196,27 @@
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1026,21 +1232,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1056,21 +1268,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1086,21 +1304,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1116,21 +1340,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1146,21 +1376,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1176,21 +1412,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1206,21 +1448,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1236,21 +1484,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1266,21 +1520,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1296,21 +1556,27 @@
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1326,21 +1592,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1356,21 +1628,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1386,21 +1664,27 @@
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1416,21 +1700,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "faux",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "on ne sait pas",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -1438,7 +1728,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice:bitmark--&audio]\n[@id:136408]\n[%LES JEUX VIDÉO]\n[&audio:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/franzoesisch_2020/web-resources/audio/hoertext_franzoesisch_2020.mp3]\n\n[!Lies zuerst alle Aussagen zu den Teilen A und B durch. Jetzt hörst du den ganzen Text zwei Mal, ein erstes Mal ohne Pause und ein zweites Mal mit einer kurzen Pause nach dem Teil A. Kreuze bei jeder Aussage an, ob sie richtig oder falsch ist.\nWird nichts zur Aussage gesagt, so setze das Kreuz in die Kolonne \"on ne sait pas\".]\n\n**Teil A**\n===\n[%1][!Kevin joue seulement pendant la journée.]\n[+vrai]\n[-faux]\n[-on ne sait pas]\n===\n[%2][!Kevin joue à des jeux de guerre.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%3][!Kevin reste toujours seul.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%4][!Anne oublie le temps quand elle joue.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%5][!Anne ne fait plus de sport.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===\n[%6][!Anne et ses parents ont beaucoup de discussions parce qu'elle joue trop.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%7][!A l'école, Anne est une bonne élève.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%8][!**Teil B**\nC'est toujours Lionel qui gagne contre ses fils quand ils jouent à des jeux vidéo.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===\n[%9][!Lionel teste seul ses jeux vidéo.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%10][!Lionel gagne beaucoup d'argent.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n===\n[%11][!Dans le club de Nathalie, il y a très peu de filles.]\n[+vrai]\n[-faux]\n[-on ne sait pas]\n===\n[%12][!Le centre de jeunesse est ouvert tous les jours.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%13][!Nathalie n'a pas de patience quand elle joue.]\n[-vrai]\n[+faux]\n[-on ne sait pas]\n===\n[%14][!Pour jouer aux jeux vidéo, les enfants utilisent les deux\nmains.]\n[+vrai]\n[-faux]\n[-on ne sait pas]\n===\n[%15][!Le professeur est venu à l'émission à trottinette.]\n[-vrai]\n[-faux]\n[+on ne sait pas]\n==="
@@ -1480,14 +1770,18 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Nein",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -1495,7 +1789,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice&image]\n[@id:107942]\n[%9]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-9.png]\n[!Es ist Samstagnachmittag. Du gehst zur Post, um Briefmarken zu kaufen. Kannst du die Briefmarken jetzt bekommen? Wähl\nrichtig aus.\nKannst du die Briefmarken jetzt kaufen?]\n[-Ja]\n[+Nein]"
@@ -1537,21 +1831,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Er möchte dir danken.",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Er möchte dir Grüße schicken.",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -1559,7 +1859,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice&image]\n[@id:107955]\n[%21]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-21.png]\n[!Du bekommst eine E-Mail von deinem Freund Detlef. Warum hat Detlef dir eine E-Mail geschickt? Lies die E-Mail und wähl\ndie richtige Antwort.]\n[-Er möchte dich einladen.]\n[-Er möchte dir danken.]\n[+Er möchte dir Grüße schicken.]"
@@ -1586,21 +1886,27 @@
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Hallo, ist Julia da?",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "Moment bitte.",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -1608,7 +1914,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice]\n[@id:107956]\n[%22]\n[!Du willst deine Freundin Julia anrufen. Du rufst an und ein Mann antwortet. Was sagst du? Wähl die beste Antwort.]\n[-Hallo, Julia.]\n[+Hallo, ist Julia da?]\n[-Moment bitte.]"
@@ -1635,21 +1941,27 @@
               "isCorrect": true,
               "item": "1",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "2. Säule",
               "isCorrect": false,
               "item": "2",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "3. Säule",
               "isCorrect": false,
               "item": "3",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1665,21 +1977,27 @@
               "isCorrect": false,
               "item": "1",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "2. Säule",
               "isCorrect": false,
               "item": "2",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "3. Säule",
               "isCorrect": true,
               "item": "3",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1695,21 +2013,27 @@
               "isCorrect": true,
               "item": "1",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "2. Säule",
               "isCorrect": false,
               "item": "2",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "3. Säule",
               "isCorrect": false,
               "item": "3",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         },
@@ -1725,21 +2049,27 @@
               "isCorrect": false,
               "item": "1",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "2. Säule",
               "isCorrect": true,
               "item": "2",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "choice": "3. Säule",
               "isCorrect": false,
               "item": "3",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -1747,7 +2077,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3",
       "comments": [
         {
@@ -1792,7 +2122,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": ""
+              "example": true
             },
             {
               "choice": "H",
@@ -1818,7 +2148,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P][@example]\n[-H]\n[-C]\n==="
@@ -1864,7 +2194,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": ""
+              "example": false
             }
           ]
         }
@@ -1872,7 +2202,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P]\n[-H]\n[-C][@example]\n==="
@@ -1926,7 +2256,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[@example]\n[+P]\n[-H]\n[-C]\n==="
@@ -1954,7 +2284,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": "hello"
+              "example": true
             },
             {
               "choice": "H",
@@ -1980,7 +2310,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P][@example:hello]\n[-H]\n[-C]\n==="
@@ -2026,7 +2356,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": "hello"
+              "example": false
             }
           ]
         }
@@ -2034,7 +2364,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P]\n[-H]\n[-C][@example:hello]\n==="
@@ -2062,7 +2392,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": ""
+              "example": true
             },
             {
               "choice": "H",
@@ -2088,7 +2418,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[@example:false]\n[+P][@example]\n[-H]\n[-C]\n==="
@@ -2116,7 +2446,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": "right"
+              "example": true
             },
             {
               "choice": "H",
@@ -2125,7 +2455,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": "hello"
+              "example": false
             },
             {
               "choice": "C",
@@ -2134,7 +2464,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": "wrong"
+              "example": false
             }
           ]
         }
@@ -2142,7 +2472,7 @@
       "footer": ""
     },
     "parser": {
-      "version": "1.0.15",
+      "version": "1.0.16",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-choice:bitmark--]\n===\n[!1. There is a washer-dryer.]\n[+P][@example:right]\n[-H][@example:hello]\n[-C][@example:wrong]\n==="

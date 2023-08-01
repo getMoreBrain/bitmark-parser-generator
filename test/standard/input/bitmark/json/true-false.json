@@ -10,27 +10,30 @@
       "hint": "",
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
+      "isExample": false,
+      "example": "",
       "statements": [
         {
           "statement": "A house is bigger than a car.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "A tiger is bigger than a cat.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "A cow is bigger than a dog.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         }
       ],
       "body": "",
-      "id": [
-        "287883"
-      ]
+      "id": ["287883"]
     }
   },
   {
@@ -44,32 +47,36 @@
       "hint": "",
       "labelTrue": "",
       "labelFalse": "",
+      "isExample": false,
+      "example": "",
       "statements": [
         {
           "statement": "brown",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "purple, but only in chocolate ads",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "blue",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "green",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         }
       ],
       "body": "",
-      "id": [
-        "287885"
-      ]
+      "id": ["287885"]
     }
   },
   {
@@ -83,22 +90,24 @@
       "hint": "",
       "labelTrue": "",
       "labelFalse": "",
+      "isExample": false,
+      "example": "",
       "statements": [
         {
           "statement": "On the picture, you see a mouse.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "There is a cat on the picture.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         }
       ],
       "body": "",
-      "id": [
-        "287887"
-      ],
+      "id": ["287887"],
       "resource": {
         "type": "image",
         "image": {
@@ -126,127 +135,150 @@
       "hint": "",
       "labelTrue": "Richtig",
       "labelFalse": "Falsch",
+      "isExample": false,
+      "example": "",
       "statements": [
         {
           "statement": "Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Die Leukozyten haben die Fächigkeit, sich aktiv fortzubewegen. Sie können fremde Zellen erkennen und diese imitieren, indem sie spezielle Substanzen freisetzen.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Zu den Schutzbarrieren des Körpers gehören u.a. der Säureschutzmantel (pH-Wert), die Melanozyten (pigmentbildend gegen UV-Strahlen) und die Hornschicht der Haut.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Lzmphozyten werden auch als spezifisches Immunsystem bezeichnet, da sie nur an spezifischen Geweben des Körpers ihre Immunabwehr verrichten.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Makrophagen werden angelockt, indem die Antikörper aus den B-Lymphozyten die Antigene auf dem eingedrungenen Erreger besetzen.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "T- und B-Lymphozyten, Granulozyten und Makrophagen sind von Geburt an zur Abwehr von Krankeitserregern im Einsatz.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Fieber zeigt an, dass das Immunsystem der Körpers aktiv ist, denn ab einer Körpertemperatur von 37°C können sich die Lymphoyzten besser vermehren und sind aktiver.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Bei einer aktiven Impfung werden abgeschwächte Krankheitserreger in den Körper gespritzt, woraufhin die T- und B-Lzmphozyten gegen die Antigene bilden.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Zu den Mikroorganismen zählen z. B. Pilze, Bakterien und Viren.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Um sich zu vermehren und den Stoffwechsel aufrechtzuerhalten, benötigen Bakterien Wärme, Feuchtigkeit, Nährszoffe und einen Wirt (z. B. den Menschen).",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Eine Mzkosen werden Kugelbakterien (Kokken) verursacht.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Medikamente, die gegen Pilze wirken, heissen Antimykotika. Medikamente gegen Viren sint Virostatika und solche gegen Bakkterien Antibiotika.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Stresshormone dienen dem Körper dazu, um in lebensbedrohlichen Situationen sofort reagieren zu können.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Bei der therapeutischen Nutzung von Kortison muss grundsätzlich bei alle Anwendungen, ob lokal oder systemisch, mit erheblichen Nebenwirkungen gerechnet werden.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Bei den sogenannten Superinfektionen handelt es sich um die jeweiligen Varianten der Influenza, die gerade in Umlauf sind und viele Menschenleben kosten können.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Sobald die klassischen Entzündungszeichen erkennbar sind, liegt immer eine Infektion mit Krankheitserregern vor.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Bei der indirekten Übertragung werden Keime beispielsweise über die Türklinke weitergegeben, bei der direkten Übertragung zum Beispiel über Tröpfchen.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Bei der vektoriellen Übertragung werden Krankheitserreger von z. B. Mücken oder Zecken auf den Menschen übertragen.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Eine nosokomiale Infektion wurde in einer Einrichtung der Gesundheitswesens (z- B- Spital, Pflegeheim, Arztpraxis) erworben.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "MRSA ist die Abkürzung für Methicillin resistenter Staphylococcus aureus.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Eine Händedesinfektion hat nach WHO immer zu erfolgen:\n\n• bei Arbeitsbeginn und -Ende\n• vor Mahlzeitzubereitung\n• vor und nach dem Engpässen\n• vor und nach Pausen\n• bei sichtbarer Verschmutzung der Hände\n• nach der Toilettenbenutzung",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Zur persönlicher Hygiene (Individualhyhiene) gehören die Haut-, die Haar-, die Nagel- und die Mundpflege.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Hygiene bezieht such nicht nur auf die persönliche Hygiene (Individualhygiene). Hygiene umfasst auch Themen wie:\n\n• Lebensmittel gyhiene\n• Wasserhygiene (Trinkwasser und Abwasser)\n• Umwelthygiene (Luft, Boden)\n• Abfallentsorgung\n• Arbeitsschutz, die\n• Sozialhygiene und Psychohygiene",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         }
       ],
       "body": "",
-      "id": [
-        "249542"
-      ]
+      "id": ["249542"]
     }
   },
   {
@@ -260,62 +292,72 @@
       "hint": "",
       "labelTrue": "richtig",
       "labelFalse": "falsch",
+      "isExample": false,
+      "example": "",
       "statements": [
         {
           "statement": "Der Säureschutzmantel und die Lipidbarriere sind in oder auf der Epidermis zu finden.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Glycerin und Hyaluronsäure binden Feuchtigkeit in der Haut.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Zu den Funktionen der Haut gehören die Bildung einer Lichtschwiele und die Ausscheidung von Urin.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Die Haut verändert sich mit dem Alter, unter anderem verliert sie an Elastizität.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Pflegeprodukte sind dazu da, gesunde Haut für Krankheiten empfänglicher zu machen.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Wird Wasser zur Reinigung der Haut eingesetzt, so löst es vor allem Fett und hat dadurch eine austrocknende Wirkung.",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Wer seine Ernährung fettarm gestaltet oder die falschen Fette zu sich nimmt, kann unter trockener Haut und Juckreiz leiden.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Schwitzen ist ein Mechanismus, der dem Körper hilft, die Temperatur zu regulieren.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Deos beeinflussen den Geruch, Antitranispirantien reduzieren das Schwitzen.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Meditation kann dabei helfen, Stress abzubauen und damit auch weniger zu schwitzen.",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         }
       ],
       "body": "",
-      "id": [
-        "165223"
-      ]
+      "id": ["165223"]
     }
   },
   {
@@ -329,42 +371,48 @@
       "hint": "",
       "labelTrue": "p",
       "labelFalse": "s",
+      "isExample": false,
+      "example": "",
       "statements": [
         {
           "statement": "Beobachtung",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Test",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Daten aus ausserbetrieblichen Quellen",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Daten aus innerbetrieblichen Quellen",
           "isCorrect": false,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Telefonische Befragungen",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         },
         {
           "statement": "Panel",
           "isCorrect": true,
-          "isExample": false
+          "isExample": false,
+          "example": ""
         }
       ],
       "body": "",
-      "id": [
-        "213731"
-      ]
+      "id": ["213731"]
     }
   }
 ]

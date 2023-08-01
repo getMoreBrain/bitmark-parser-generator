@@ -43,7 +43,7 @@ export interface SelectOptionJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: Text | boolean;
   isCaseSensitive: boolean;
 }
 
@@ -63,6 +63,6 @@ export interface HighlightTextJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: Text | boolean;
   isCaseSensitive: boolean;
 }

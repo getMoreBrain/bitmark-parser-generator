@@ -221,14 +221,18 @@ class Builder extends BaseBuilder {
       resource,
       body,
       sampleSolution,
-      statement,
-      responses,
-      choices,
       footer,
 
       markup,
       parser,
     } = data;
+
+    const cardNode = this.cardNode(data);
+
+    // check if any answers have an example (if so, the question @example is set to true)
+    const isAnswerExample = cardNode
+      ? this.hasAnswerExample(cardNode.choices, cardNode.responses, cardNode.statements)
+      : undefined;
 
     // NOTE: Node order is important and is defined here
     const node: Bit = {
@@ -286,15 +290,12 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      example: this.toExample(example, isAnswerExample),
       partner,
       resource,
       body,
       sampleSolution: ArrayUtils.asArray(sampleSolution),
-      statement,
-      responses,
-      choices,
-      cardNode: this.cardNode(data),
+      cardNode,
       footer,
 
       markup,
@@ -342,7 +343,7 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      example: this.toExampleBoolean(example),
       isCaseSensitive,
     };
 
@@ -377,7 +378,7 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      example: this.toExampleBoolean(example),
       isCaseSensitive,
     };
 
@@ -437,31 +438,15 @@ class Builder extends BaseBuilder {
   }): Quiz {
     const { choices, responses, item, lead, hint, instruction, example } = data;
 
-    // See if choice or response has is an example
-    let isAnswerExample = false;
-    if (choices) {
-      for (const c of choices) {
-        if (c.example) {
-          isAnswerExample = true;
-          break;
-        }
-      }
-    }
-    if (responses) {
-      for (const r of responses) {
-        if (r.example) {
-          isAnswerExample = true;
-          break;
-        }
-      }
-    }
+    // check if any answers have an example
+    const isAnswerExample = this.hasAnswerExample(choices, responses);
 
     // NOTE: Node order is important and is defined here
     const node: Quiz = {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example) || isAnswerExample,
+      example: this.toExample(example, isAnswerExample),
       choices,
       responses,
     };
@@ -996,28 +981,55 @@ class Builder extends BaseBuilder {
   }
 
   private cardNode(data: {
+    questions?: Question[];
     elements?: string[];
     statement?: Statement;
     statements?: Statement[];
+    choices?: Choice[];
     responses?: Response[];
     quizzes?: Quiz[];
     heading?: Heading;
     pairs?: Pair[];
     matrix?: Matrix[];
-    choices?: Choice[];
-    questions?: Question[];
     botResponses?: BotResponse[];
   }): CardNode | undefined {
     let node: CardNode | undefined;
-    const { heading, elements, questions, statements, quizzes, pairs, matrix, botResponses } = data;
+    const {
+      questions,
+      elements,
+      statement,
+      statements,
+      choices,
+      responses,
+      quizzes,
+      heading,
+      pairs,
+      matrix,
+      botResponses,
+    } = data;
 
-    if (heading || elements || questions || statements || quizzes || pairs || matrix || botResponses) {
+    if (
+      questions ||
+      elements ||
+      statement ||
+      statements ||
+      choices ||
+      responses ||
+      quizzes ||
+      heading ||
+      pairs ||
+      matrix ||
+      botResponses
+    ) {
       node = {
-        heading,
-        elements,
         questions,
+        elements,
+        statement,
         statements,
+        choices,
+        responses,
         quizzes,
+        heading,
         pairs,
         matrix,
         botResponses,

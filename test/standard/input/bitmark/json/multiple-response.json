@@ -21,35 +21,45 @@
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "IV-Rentner",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "18 jähriger Schüler",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "22 jähriger Student",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "16 jähriger Lehrling",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -84,7 +94,9 @@
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "IV-Rentner",
@@ -93,28 +105,34 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": "Correct response"
+              "example": true
             },
             {
               "response": "18 jähriger Schüler",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "22 jähriger Student",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "16 jähriger Lehrling",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -149,14 +167,18 @@
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "IV-Rentner",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "18 jähriger Schüler",
@@ -165,21 +187,25 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": ""
+              "example": false
             },
             {
               "response": "22 jähriger Student",
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "16 jähriger Lehrling",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }
@@ -214,7 +240,9 @@
               "isCorrect": true,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "response": "IV-Rentner",
@@ -223,7 +251,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": ""
+              "example": true
             },
             {
               "response": "18 jähriger Schüler",
@@ -232,7 +260,7 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": ""
+              "example": false
             },
             {
               "response": "22 jähriger Student",
@@ -241,14 +269,16 @@
               "hint": "",
               "instruction": "",
               "isExample": true,
-              "example": "Another text here"
+              "example": true
             },
             {
               "response": "16 jähriger Lehrling",
               "isCorrect": false,
               "item": "",
               "hint": "",
-              "instruction": ""
+              "instruction": "",
+              "isExample": false,
+              "example": ""
             }
           ]
         }

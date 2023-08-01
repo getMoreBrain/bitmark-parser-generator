@@ -14,21 +14,23 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Um die Qualität der Bildung und die Einhaltung der Bildungsplanstandards zu gewährleisten, kann der Lehrbetrieb dem/der Berufsbilder/in ein angemessenes Arbeitspensum für die Betreuung der Lernenden, finanzielle Mittel und die materiell notwendigen Gegenstände (eingerichteter Arbeitsplatz mit nötigen Werkzeugen) zur Verfügung stellen. Anbieter von Bildung in beruflicher Praxis sollen potentielle Berufsbildnerinnen und Berufsbildner direkt und persönlich motivieren",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "186304"
-      ]
+      "id": ["186304"]
     }
   },
   {
@@ -46,28 +48,32 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Die Selbstevaluation ist ein Instrument, das gesetzliche vorgeschrieben ist. Die Lehrbetreibe müssen die Resultate dem Kanton melden.",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Neben dem Bilungsbericht, den die Eltern unterzeichnen müssen, werden die Eltern auch regelmässig über die Selbstevaluation informiert.",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "186305"
-      ]
+      "id": ["186305"]
     }
   },
   {
@@ -85,35 +91,41 @@
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Anforderungen teilweise erfüllt",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Anforderungen gut erfüllt",
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "186703"
-      ]
+      "id": ["186703"]
     }
   },
   {
@@ -131,28 +143,32 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "1x im Semester",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "1x im Jahr",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "187235"
-      ]
+      "id": ["187235"]
     }
   },
   {
@@ -170,28 +186,32 @@
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Nein",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Dies ist in der jeweiligen Bildungsverordnung genau definiert",
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "187236"
-      ]
+      "id": ["187236"]
     }
   },
   {
@@ -209,21 +229,23 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "nein, das kann der Betrieb bestimmen",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "187237"
-      ]
+      "id": ["187237"]
     }
   },
   {
@@ -241,35 +263,41 @@
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "224",
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "240",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "242",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "107936"
-      ],
+      "id": ["107936"],
       "resource": {
         "type": "audio",
         "audio": {
@@ -294,28 +322,32 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "07.30 – 09.30 Uhr",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "07.30 – 10.30 Uhr",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "107937"
-      ],
+      "id": ["107937"],
       "resource": {
         "type": "audio",
         "audio": {
@@ -340,21 +372,23 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Nein",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "107943"
-      ],
+      "id": ["107943"],
       "resource": {
         "type": "audio",
         "audio": {
@@ -379,35 +413,41 @@
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "b) Wohnung",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "c) wohnen",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "d) wohnt",
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "131345"
-      ]
+      "id": ["131345"]
     }
   },
   {
@@ -425,35 +465,41 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "b) fahre",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "c) fahrt",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "d) fahren",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "131346"
-      ]
+      "id": ["131346"]
     }
   },
   {
@@ -471,21 +517,23 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Nein",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "186303"
-      ]
+      "id": ["186303"]
     }
   },
   {
@@ -503,42 +551,50 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Berlin",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Prag",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Tegucigalpa",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "Rabat",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "232614"
-      ]
+      "id": ["232614"]
     }
   },
   {
@@ -556,42 +612,50 @@
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "b) 1. Datenbank - 2. Internet - 3. Webserver - 4. Anwendungsserver - 5. Datenbankserver - 6. Client mit Webbrowser",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "c) 1. Datenbank - 2. Internet - 3. Webserver - 4. Datenbankserver - 5. Anwendungsserver - 6. Client mit Webbrowser",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "d) 1. Datenbank - 2. Internet - 3. Anwendungsserver - 4. Webserver - 5. Datenbankserver - 6. Client mit Webbrowser",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "e) 1. Client mit Webbrowser - 2. Internet - 3. Webserver - 4. Datenbankserver - 5. Anwendungsserver - 6. Datenbank",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "232875"
-      ]
+      "id": ["232875"]
     }
   },
   {
@@ -609,42 +673,50 @@
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "b) Systeme, die durch die Bereitstellung von Berichten über Entscheidungsfindungen dienen.",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "c) Systeme, um schwach strukturierte oder unstrukturierte Entscheidungsfindungsprozesse zu unterstützen.",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "d) Systeme, die zur Verwaltung der Ein- und Ausgaben eines Unternehmens dienen.",
           "item": "",
           "isCorrect": false,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         },
         {
           "choice": "e) Systeme, die die Aktivitäten und Transaktionen des Unternehmens überwachen und ausführen.",
           "item": "",
           "isCorrect": true,
           "instruction": "",
-          "hint": ""
+          "hint": "",
+          "isExample": false,
+          "example": ""
         }
       ],
       "isExample": false,
       "example": "",
-      "id": [
-        "232876"
-      ]
+      "id": ["232876"]
     }
   }
 ]

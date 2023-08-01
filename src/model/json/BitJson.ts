@@ -102,7 +102,7 @@ export interface StatementJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: Text | boolean;
   isCaseSensitive: boolean;
 }
 
@@ -114,7 +114,7 @@ export interface ChoiceJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: Text | boolean;
   isCaseSensitive: boolean;
 }
 
@@ -126,7 +126,7 @@ export interface ResponseJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: Text | boolean;
   isCaseSensitive: boolean;
 }
 

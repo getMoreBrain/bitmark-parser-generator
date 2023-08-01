@@ -113,6 +113,12 @@ export interface ItemLead {
 
 export type Example = string | boolean;
 
+export interface ExampleObject {
+  example?: Example;
+}
+
+export type ExampleObjectSingleOrArray = ExampleObject | ExampleObject[];
+
 // Extra Properties
 
 export interface ExtraProperties {
@@ -321,11 +327,14 @@ export interface HighlightText {
 
 // Card Node
 export interface CardNode {
-  heading?: Heading;
-  elements?: string[];
   questions?: Question[];
+  elements?: string[];
+  statement?: Statement;
   statements?: Statement[];
+  choices?: Choice[];
+  responses?: Response[];
   quizzes?: Quiz[];
+  heading?: Heading;
   pairs?: Pair[];
   matrix?: Matrix[];
   botResponses?: BotResponse[];

@@ -54,7 +54,7 @@
 | bot-action-announce | ➖ | ✅ | ✅ |  |
 | bot-action-rating-number | ➖ | ➖ | ➖ | LEGACY? |
 | bot-action-remind | ➖ | ✅ | ✅ |  |
-| bot-action-response | ✅ | ✅ | ✅ |  |
+| bot-action-response | ✅ | ✅ | ✅ | |
 | bot-action-save | ➖ | ✅ | ✅ |  |
 | bot-action-send | ✅ | ✅ | ✅ |  |
 | bot-action-true-false | ➖ | ➖ | ➖ | LEGACY? |
@@ -67,9 +67,9 @@
 | chapter-subject-matter | ✅ | ✅ | ✅ |  |
 | chat | ➖ | ➖ | ➖ | LEGACY? |
 | cloze | ✅ | ✅ | ✅ |  |
-| cloze-and-multiple-choice-text | ✅ | ✅ | ✅ |  |
-| cloze-instruction-grouped | ✅ | ✅ | ✅ |  |
-| cloze-solution-grouped | ✅ | ✅ | ✅ |  |
+| cloze-and-multiple-choice-text | ✅ | ✅ | ✅ | |
+| cloze-instruction-grouped | ✅ | ✅ | ✅ | |
+| cloze-solution-grouped | ✅ | ✅ | ✅ | |
 | code | ✅ | ✅ | ✅ |  |
 | conclusion | ✅ | ✅ | ✅ |  |
 | conversation | ➖ | ➖ | ➖ | LEGACY? |
@@ -103,7 +103,7 @@
 | group-died | ➖ | ➖ | ➖ | LEGACY? |
 | help | ✅ | ✅ | ✅ |  |
 | highlight | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
-| highlight-text | ➖ | ✅ | ✅ |  |
+| highlight-text | ➖ | ✅ | ✅ | |
 | hint | ✅ | ✅ | ✅ |  |
 | image | ✅ | ✅ | ✅ |  |
 | image-link | ✅ | ✅ | ✅ |  |

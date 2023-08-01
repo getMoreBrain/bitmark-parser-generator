@@ -14,13 +14,17 @@
               "text": "mall",
               "instruction": "",
               "isHighlighted": false,
-              "isCorrect": true
+              "isCorrect": true,
+              "isExample": false,
+              "example": ""
             },
             {
               "text": "sea",
               "instruction": "",
               "isHighlighted": false,
-              "isCorrect": false
+              "isCorrect": false,
+              "isExample": false,
+              "example": ""
             }
           ],
           "prefix": "",
@@ -38,19 +42,25 @@
               "text": "breakfast",
               "instruction": "",
               "isHighlighted": false,
-              "isCorrect": true
+              "isCorrect": true,
+              "isExample": false,
+              "example": ""
             },
             {
               "text": "fish",
               "instruction": "",
               "isHighlighted": false,
-              "isCorrect": false
+              "isCorrect": false,
+              "isExample": false,
+              "example": ""
             },
             {
               "text": "trees",
               "instruction": "",
               "isHighlighted": false,
-              "isCorrect": false
+              "isCorrect": false,
+              "isExample": false,
+              "example": ""
             }
           ],
           "prefix": "",

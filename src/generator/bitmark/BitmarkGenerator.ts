@@ -466,9 +466,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   // bitmarkAst -> bits -> bitsValue -> cardNode
 
   protected enter_cardNode(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    // Ignore cards for true-false-1
-    const isTrueFalse1 = this.isTrueFalse1(route);
-    if (isTrueFalse1) return;
+    // Ignore cards for xxx-1
+    const isBitType1 = this.isBitType1(route);
+    if (isBitType1) return;
 
     this.writeCardSetStart();
     this.writeNL();
@@ -481,9 +481,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     route: NodeInfo[],
   ): void {
-    // Ignore cards for true-false-1
-    const isTrueFalse1 = this.isTrueFalse1(route);
-    if (isTrueFalse1) return;
+    // Ignore cards for xxx-1
+    const isBitType1 = this.isBitType1(route);
+    if (isBitType1) return;
 
     this.writeNL();
     this.writeCardSetCardDivider();
@@ -491,9 +491,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected exit_cardNode(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    // Ignore cards for true-false-1
-    const isTrueFalse1 = this.isTrueFalse1(route);
-    if (isTrueFalse1) return;
+    // Ignore cards for xxx-1
+    const isBitType1 = this.isBitType1(route);
+    if (isBitType1) return;
 
     this.writeNL();
     this.writeCardSetEnd();
@@ -534,7 +534,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     route: NodeInfo[],
   ): void {
-    const isTrueFalse1 = this.isTrueFalse1(route);
+    const isTrueFalse1 = this.isBitType(route, BitType.trueFalse1);
 
     if (!isTrueFalse1) {
       this.writeNL();
@@ -1602,9 +1602,17 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return !!writeFormat;
   }
 
-  protected isTrueFalse1(route: NodeInfo[]) {
-    const bitType = this.getBitType(route);
-    return bitType === BitType.trueFalse1;
+  protected isBitType1(route: NodeInfo[]): boolean {
+    return (
+      this.isBitType(route, BitType.trueFalse1) ||
+      this.isBitType(route, BitType.multipleChoice1) ||
+      this.isBitType(route, BitType.multipleResponse1)
+    );
+  }
+
+  protected isBitType(route: NodeInfo[], bitType: BitTypeType): boolean {
+    const bt = this.getBitType(route);
+    return bt === bitType;
   }
 
   protected getBitType(route: NodeInfo[]): BitTypeType | undefined {

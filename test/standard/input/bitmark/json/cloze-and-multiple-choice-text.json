@@ -28,12 +28,16 @@
             {
               "text": "forms",
               "isCorrect": true,
-              "hint": ""
+              "hint": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "text": "formats",
               "isCorrect": false,
-              "hint": ""
+              "hint": "",
+              "isExample": false,
+              "example": ""
             }
           ],
           "postfix": "",
@@ -50,12 +54,16 @@
             {
               "text": "other",
               "isCorrect": true,
-              "hint": ""
+              "hint": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "text": "options",
               "isCorrect": false,
-              "hint": ""
+              "hint": "",
+              "isExample": false,
+              "example": ""
             }
           ],
           "postfix": "",
@@ -72,12 +80,16 @@
             {
               "text": "other",
               "isCorrect": true,
-              "hint": ""
+              "hint": "",
+              "isExample": false,
+              "example": ""
             },
             {
               "text": "options",
               "isCorrect": false,
-              "hint": ""
+              "hint": "",
+              "isExample": false,
+              "example": ""
             }
           ],
           "postfix": "",
@@ -94,7 +106,9 @@
             {
               "text": "other",
               "isCorrect": true,
-              "hint": ""
+              "hint": "",
+              "isExample": false,
+              "example": ""
             }
           ],
           "postfix": "",
@@ -111,7 +125,9 @@
             {
               "text": "options",
               "isCorrect": false,
-              "hint": ""
+              "hint": "",
+              "isExample": false,
+              "example": ""
             }
           ],
           "postfix": "",
