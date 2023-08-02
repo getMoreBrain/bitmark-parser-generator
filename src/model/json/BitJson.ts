@@ -61,7 +61,7 @@ export interface BitJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: ExampleJson;
 
   partner: PartnerJson;
 
@@ -102,7 +102,7 @@ export interface StatementJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text | boolean;
+  example: ExampleJson;
   isCaseSensitive: boolean;
 }
 
@@ -114,7 +114,7 @@ export interface ChoiceJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text | boolean;
+  example: ExampleJson;
   isCaseSensitive: boolean;
 }
 
@@ -126,7 +126,7 @@ export interface ResponseJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text | boolean;
+  example: ExampleJson;
   isCaseSensitive: boolean;
 }
 
@@ -136,7 +136,7 @@ export interface QuizJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: ExampleJson;
   choices: ChoiceJson[];
   responses: ResponseJson[];
 }
@@ -156,7 +156,7 @@ export interface PairJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: ExampleJson;
   isCaseSensitive: boolean;
   isLongAnswer: boolean;
 }
@@ -169,7 +169,7 @@ export interface MatrixJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: ExampleJson;
   isCaseSensitive: boolean;
   isLongAnswer: boolean;
 }
@@ -181,7 +181,7 @@ export interface MatrixCellJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: ExampleJson;
 }
 
 export interface QuestionJson {
@@ -193,7 +193,7 @@ export interface QuestionJson {
   hint: Text;
   instruction: Text;
   isExample: boolean;
-  example: Text;
+  example: ExampleJson;
   isCaseSensitive: boolean;
   isShortAnswer: boolean;
 }
@@ -206,3 +206,5 @@ export interface BotResponseJson {
   lead: Text;
   hint: Text;
 }
+
+export type ExampleJson = Text | boolean | null;

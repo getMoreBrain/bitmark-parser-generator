@@ -1,5 +1,7 @@
 import { Text } from '../ast/TextNodes';
 
+import { ExampleJson } from './BitJson';
+
 export interface BodyBitsJson {
   [key: string]: BodyBitJson;
 }
@@ -12,8 +14,8 @@ export interface BaseBodyBitJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  isExample: boolean;
-  example: Text;
+  // isExample: boolean;
+  example: ExampleJson;
 }
 
 export interface GapJson extends BaseBodyBitJson {
@@ -23,8 +25,8 @@ export interface GapJson extends BaseBodyBitJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  isExample: boolean;
-  example: Text;
+  // isExample: boolean;
+  example: ExampleJson;
   isCaseSensitive: boolean;
 }
 
@@ -42,8 +44,8 @@ export interface SelectOptionJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  isExample: boolean;
-  example: Text | boolean;
+  // isExample: boolean;
+  example: ExampleJson;
   isCaseSensitive: boolean;
 }
 
@@ -62,7 +64,7 @@ export interface HighlightTextJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  isExample: boolean;
-  example: Text | boolean;
+  // isExample: boolean;
+  example: ExampleJson;
   isCaseSensitive: boolean;
 }

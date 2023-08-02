@@ -49,6 +49,10 @@ function propertyContentProcessor(
     if (meta.isBoolean) v = BooleanUtils.toBoolean(v, true);
     if (meta.isInvertedBoolean) v = !BooleanUtils.toBoolean(v, true);
 
+    if (meta.isExample) {
+      if (v === true) v = null;
+    }
+
     if (meta.isSingle) {
       obj[key] = v;
     } else {

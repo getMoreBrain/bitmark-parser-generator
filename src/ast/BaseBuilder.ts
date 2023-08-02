@@ -1,4 +1,4 @@
-import { Example, ExampleObjectSingleOrArray, Property } from '../model/ast/Nodes';
+import { Example, Property } from '../model/ast/Nodes';
 import { PropertyKey, PropertyKeyMetadata, PropertyKeyType } from '../model/enum/PropertyKey';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
@@ -7,89 +7,60 @@ import { StringUtils } from '../utils/StringUtils';
 
 class BaseBuilder {
   /**
-   * Return true if any of the answers has an example.
-   *
-   * @param answers - array of answers
-   * @returns true if any of the answers has an example, otherwise undefined
-   */
-  protected hasAnswerExample(...answers: (ExampleObjectSingleOrArray | undefined)[]): true | undefined {
-    let isAnswerExample: true | undefined;
-    if (Array.isArray(answers)) {
-      for (const as of answers) {
-        if (Array.isArray(as)) {
-          for (const a of as) {
-            if (a.example) {
-              isAnswerExample = true;
-              break;
-            }
-          }
-        } else if (as) {
-          if (as.example) {
-            isAnswerExample = true;
-            break;
-          }
-        }
-        if (isAnswerExample) break;
-      }
-    }
-    return isAnswerExample;
-  }
-
-  /**
    * Convert example to an Example.
-   * This function recognises boolean strings and converts them to boolean values.
+   * - If example is undefined, then undefined will be returned.
+   * - If example is null, then the defaultValue will be used.
+   * - Recognises boolean strings and converts them to boolean values.
    *
-   * @param exampleIn - the example to convert (string or boolean)
-   * @param fallbackExampleIn - if exampleIn resolves to false, this example will be used instead
-   * @returns exampleIn resolved to an Example object
+   * @param example - the example to convert (string, boolean, or null (use defaultValue))
+   * @param defaultValue - the default value to use for this example
+   * @returns example/defaultValue resolved to an Example object
    */
   protected toExample(
-    exampleIn: string | boolean | undefined,
-    fallbackExampleIn?: string | boolean | undefined,
+    example: string | boolean | null | undefined,
+    defaultValue: string | boolean | null,
   ): Example | undefined {
-    const exampleInIsFalse = () => {
-      return fallbackExampleIn != null ? this.toExample(fallbackExampleIn) : undefined;
-    };
+    if (example === undefined) return undefined;
+    let exampleRes: Example = '';
 
-    if (exampleIn == null) return exampleInIsFalse();
-    let text = '';
+    const exampleOrDefault: Example | null = example === null ? defaultValue : example;
 
-    const isBooleanString = BooleanUtils.isBooleanString(exampleIn);
-    if (isBooleanString) {
-      if (!BooleanUtils.toBoolean(exampleIn)) return exampleInIsFalse();
-      return true;
+    if (BooleanUtils.isBooleanString(exampleOrDefault)) {
+      exampleRes = BooleanUtils.toBoolean(exampleOrDefault);
+    } else if (StringUtils.isString(exampleOrDefault)) {
+      exampleRes = exampleOrDefault;
     } else {
-      text = exampleIn as string;
+      exampleRes = exampleOrDefault; // Must be boolean or null
     }
 
-    return text;
+    return exampleRes;
   }
 
   /**
-   * Convert example to an Example (with only boolean values).
-   * This function recognises boolean strings and converts them to boolean values.
+   * Convert example to an Example, only allowing boolean values.
+   * - If example is undefined, then undefined will be returned.
+   * - If example is null, then the defaultValue will be used.
+   * - Recognises boolean strings and converts them to boolean values.
    *
-   * @param exampleIn - the example to convert (string or boolean)
-   * @param fallbackExampleIn - if exampleIn resolves to false, this example will be used instead
-   * @returns exampleIn resolved to an Example object with only boolean values
+   * @param example - the example to convert (string, boolean, or null (use defaultValue))
+   * @param defaultValue - the default value to use for this example
+   * @returns example/defaultValue resolved to an Example object
    */
   protected toExampleBoolean(
-    exampleIn: string | boolean | undefined,
-    fallbackExampleIn?: string | boolean | undefined,
+    example: string | boolean | null | undefined,
+    defaultValue: boolean | null,
   ): Example | undefined {
-    const exampleInIsFalse = () => {
-      return fallbackExampleIn != null ? this.toExample(fallbackExampleIn) : false;
-    };
+    if (example === undefined) return undefined;
+    let exampleRes: Example = '';
 
-    if (exampleIn == null) return exampleInIsFalse();
+    const exampleOrDefault: Example | null = example === null ? defaultValue : example;
 
-    const isBooleanString = BooleanUtils.isBooleanString(exampleIn);
-    if (isBooleanString) {
-      if (!BooleanUtils.toBoolean(exampleIn)) return exampleInIsFalse();
-      return true;
+    if (BooleanUtils.isBoolean(example) || BooleanUtils.isBooleanString(exampleOrDefault)) {
+      exampleRes = BooleanUtils.toBoolean(exampleOrDefault);
+    } else {
+      exampleRes = defaultValue; // Must be boolean or null
     }
-
-    return true;
+    return exampleRes;
   }
 
   /**

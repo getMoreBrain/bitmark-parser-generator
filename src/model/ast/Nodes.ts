@@ -111,13 +111,7 @@ export interface ItemLead {
   lead?: string;
 }
 
-export type Example = string | boolean;
-
-export interface ExampleObject {
-  example?: Example;
-}
-
-export type ExampleObjectSingleOrArray = ExampleObject | ExampleObject[];
+export type Example = string | boolean | null;
 
 // Extra Properties
 
@@ -176,7 +170,7 @@ export interface Quiz {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  // example?: Example;
   choices?: Choice[];
   responses?: Response[];
 }

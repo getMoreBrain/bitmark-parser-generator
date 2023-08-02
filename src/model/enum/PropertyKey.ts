@@ -6,6 +6,7 @@ export interface PropertyKeyMetadata {
   isNumber?: boolean; // If the value is treated as a number
   isBoolean?: boolean; // If the value is treated as a boolean
   isInvertedBoolean?: boolean; // If the value is treated as a boolean with the value inverted (e.g. isLongAnswer ==> isShortAnswer = false)
+  isExample?: boolean; // If the value is treated as an example (special case)
   astKey?: string; // If the AST key is different from the markup property key
   jsonKey?: string; // If the json key is different from the markup property key
   ignoreFalse?: boolean; // If the property should be ignored if the value is false
