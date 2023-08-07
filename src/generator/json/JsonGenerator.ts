@@ -2136,7 +2136,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.item == null) bitJson.item = this.textDefault;
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = this.textDefault;
+        if (bitJson.example == null) bitJson.example = null;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         break;
 
@@ -2172,7 +2172,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
         if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = this.textDefault;
+        if (bitJson.example == null) bitJson.example = null;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
         // if (bitJson.sampleSolution == null) bitJson.sampleSolution = '';
@@ -2184,7 +2184,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
         if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = this.textDefault;
+        if (bitJson.example == null) bitJson.example = null;
         if (bitJson.isCorrect == null) bitJson.isCorrect = false;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         break;
@@ -2195,7 +2195,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
         if (bitJson.isExample == null) bitJson.isExample = false;
-        // if (bitJson.example == null) bitJson.example = this.textDefault;
         if (bitJson.labelFalse == null) bitJson.labelFalse = '';
         if (bitJson.labelTrue == null) bitJson.labelTrue = '';
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
@@ -2205,7 +2204,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.item == null) bitJson.item = this.textDefault;
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = this.textDefault;
+        if (bitJson.example == null) bitJson.example = null;
         if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
         if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
         if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
@@ -2253,7 +2252,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.item == null) bitJson.item = this.textDefault;
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = this.textDefault;
+        if (bitJson.example == null) bitJson.example = null;
         if (bitJson.isTracked == null) bitJson.isTracked = true;
         if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
@@ -2266,7 +2265,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.item == null) bitJson.item = this.textDefault;
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = this.textDefault;
+        if (bitJson.example == null) bitJson.example = null;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         break;
     }
@@ -2326,7 +2325,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.instruction == null) delete bitJson.instruction;
 
     // Example
-    if (bitJson.example == null) delete bitJson.example;
+    if (bitJson.example === undefined) delete bitJson.example;
     if (bitJson.isExample == null) delete bitJson.isExample;
 
     // Extra Properties

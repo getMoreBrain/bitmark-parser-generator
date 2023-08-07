@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "186279"
-      ]
+      "example": null,
+      "id": ["186279"]
     },
     "errors": [
       {
@@ -85,16 +83,9 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "186276"
-      ],
-      "bullet": [
-        "--",
-        "-",
-        "+",
-        "++"
-      ]
+      "example": null,
+      "id": ["186276"],
+      "bullet": ["--", "-", "+", "++"]
     }
   }
 ]

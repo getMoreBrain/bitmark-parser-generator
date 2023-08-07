@@ -8,20 +8,12 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "198777"
-      ],
+      "example": null,
+      "id": ["198777"],
       "title": "Aufgabenset 1",
-      "language": [
-        "de"
-      ],
-      "coverImage": [
-        "undefined"
-      ],
-      "externalId": [
-        "e-aufgabenset-1_038--gjgmwjs"
-      ]
+      "language": ["de"],
+      "coverImage": ["undefined"],
+      "externalId": ["e-aufgabenset-1_038--gjgmwjs"]
     },
     "errors": [
       {
@@ -41,21 +33,15 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "239751"
-      ],
-      "language": [
-        "de"
-      ],
+      "example": null,
+      "id": ["239751"],
+      "language": ["de"],
       "coverImage": [
         "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_cover.png"
       ],
       "title": "Das Methodenbuch für digitalen Unterricht",
       "subtitle": "50 Methoden aus der Praxis mit Tipps, Tricks & Vorlagen von 12 Expert*innen",
-      "externalId": [
-        "e-das-methodenbuch-fr-digitalen-_uoxzqhzapncw"
-      ]
+      "externalId": ["e-das-methodenbuch-fr-digitalen-_uoxzqhzapncw"]
     }
   }
 ]

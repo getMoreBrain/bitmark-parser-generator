@@ -8,7 +8,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Was denkst du? Darf man sich nach dem Konsum von Cannabis hinters Steuer setzen?",
       "responses": [
         {
@@ -45,7 +45,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Wusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?",
       "responses": [
         {
@@ -88,7 +88,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Was denkst du? Darf man sich nach dem Konsum von Cannabis hinters Steuer setzen?",
       "responses": [
         {

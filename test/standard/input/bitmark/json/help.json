@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "210023"
-      ],
+      "example": null,
+      "id": ["210023"],
       "lead": "**Schlüsselbegriffe**"
     }
   },
@@ -24,10 +22,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "210041"
-      ],
+      "example": null,
+      "id": ["210041"],
       "lead": "**Schlüsselbegriffe**"
     }
   },
@@ -40,10 +36,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "210064"
-      ],
+      "example": null,
+      "id": ["210064"],
       "lead": "**Schlüsselbegriffe**"
     }
   },
@@ -56,10 +50,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "208484"
-      ],
+      "example": null,
+      "id": ["208484"],
       "lead": "**Schlüsselbegriffe**"
     }
   }

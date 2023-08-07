@@ -1,4 +1,5 @@
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { ExampleType } from '../../model/enum/ExampleType';
 
 import { CARD_SET_ELEMENTS } from './generic/cardSetBitConfigs';
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
@@ -12,4 +13,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.sequence, {
   cardSet: CARD_SET_ELEMENTS,
   bodyAllowed: true,
   footerAllowed: true,
+  exampleType: ExampleType.boolean,
 });

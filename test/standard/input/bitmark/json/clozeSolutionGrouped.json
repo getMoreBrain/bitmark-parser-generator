@@ -8,72 +8,60 @@
       "item": "2",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "249781"
-      ],
+      "example": null,
+      "id": ["249781"],
       "lead": "HK E.1 Infektionslehre",
       "instruction": "Wie verläuft die Infektionskette?\nVerschieben Sie die Begriffe in die richtige Reihenfolge.",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Infektionsquelle"
-          ],
+          "solutions": ["Infektionsquelle"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Austrittspforte"
-          ],
+          "solutions": ["Austrittspforte"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Übertragungswege direkt oder indirekt"
-          ],
+          "solutions": ["Übertragungswege direkt oder indirekt"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{3}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Eintrittspforte"
-          ],
+          "solutions": ["Eintrittspforte"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{4}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "neue Infektionsquelle"
-          ],
+          "solutions": ["neue Infektionsquelle"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       }
     }
@@ -87,35 +75,29 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "287825"
-      ],
+      "example": null,
+      "id": ["287825"],
       "lead": "cloze-solution-grouped",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "erfreut"
-          ],
+          "solutions": ["erfreut"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": true,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "steht"
-          ],
+          "solutions": ["steht"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       }
     }
@@ -129,119 +111,99 @@
       "item": "82-90",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "131518"
-      ],
+      "example": null,
+      "id": ["131518"],
       "instruction": "Schreiben Sie die Wörter am Ende des Textes an die richtige Stelle.",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "82",
-          "solutions": [
-            "Erinnerung"
-          ],
+          "solutions": ["Erinnerung"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "gap",
           "item": "83",
-          "solutions": [
-            "gab"
-          ],
+          "solutions": ["gab"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "gap",
           "item": "84",
-          "solutions": [
-            "Jahreszeit"
-          ],
+          "solutions": ["Jahreszeit"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{3}": {
           "type": "gap",
           "item": "85",
-          "solutions": [
-            "musste"
-          ],
+          "solutions": ["musste"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{4}": {
           "type": "gap",
           "item": "86",
-          "solutions": [
-            "Balkon"
-          ],
+          "solutions": ["Balkon"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{5}": {
           "type": "gap",
           "item": "87",
-          "solutions": [
-            "Regen"
-          ],
+          "solutions": ["Regen"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{6}": {
           "type": "gap",
           "item": "88",
-          "solutions": [
-            "trotzdem"
-          ],
+          "solutions": ["trotzdem"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{7}": {
           "type": "gap",
           "item": "89",
-          "solutions": [
-            "fällt"
-          ],
+          "solutions": ["fällt"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{8}": {
           "type": "gap",
           "item": "90",
-          "solutions": [
-            "konnte"
-          ],
+          "solutions": ["konnte"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       }
     }

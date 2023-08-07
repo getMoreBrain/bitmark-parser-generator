@@ -1,4 +1,5 @@
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { ExampleType } from '../../model/enum/ExampleType';
 import { PropertyKey } from '../../model/enum/PropertyKey';
 
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
@@ -14,4 +15,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.essay, {
   },
   resourceAttachmentAllowed: true,
   bodyAllowed: true,
+  exampleType: ExampleType.string,
 });

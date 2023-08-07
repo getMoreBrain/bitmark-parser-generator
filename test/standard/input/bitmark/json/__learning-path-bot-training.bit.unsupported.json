@@ -8,12 +8,10 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "isTracked": true,
       "isInfoOnly": false,
-      "bot": [
-        "b-87687aszd87wed78"
-      ]
+      "bot": ["b-87687aszd87wed78"]
     }
   }
 ]

@@ -9,61 +9,51 @@
       "pairs": [
         {
           "key": "a. information about what will happen to luggage left alone",
-          "values": [
-            "4"
-          ],
+          "values": ["4"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
           "key": "b. final information about a flight that is boarding",
-          "values": [
-            "3"
-          ],
+          "values": ["3"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
           "key": "c. new information about a gate",
-          "values": [
-            "2"
-          ],
+          "values": ["2"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
           "key": "d. information for passengers before they board",
-          "values": [
-            "1"
-          ],
+          "values": ["1"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],
       "body": "",
-      "id": [
-        "301924"
-      ],
+      "id": ["301924"],
       "instruction": "Listen to four airport announcements. Match the announcements (1–4) to the information (a–d).",
       "resource": {
         "type": "audio",

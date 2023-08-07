@@ -7,7 +7,7 @@
       "language": ["en", "jp", "cn"],
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.",
       "resource": {

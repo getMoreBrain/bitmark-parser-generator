@@ -7,10 +7,7 @@
       "item": "",
       "heading": {
         "forKeys": "Verb",
-        "forValues": [
-          "Future, 1st Person, Singular",
-          "Past, 3rd Person, Plural"
-        ]
+        "forValues": ["Future, 1st Person, Singular", "Past, 3rd Person, Plural"]
       },
       "matrix": [
         {
@@ -19,19 +16,15 @@
             {
               "item": "",
               "instruction": "Instruction",
-              "values": [
-                "ich werde gehen"
-              ],
-              "example": "",
+              "values": ["ich werde gehen"],
+              "example": null,
               "isExample": true
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "sie gingen"
-              ],
-              "example": "",
+              "values": ["sie gingen"],
+              "example": null,
               "isExample": true
             }
           ],
@@ -39,7 +32,7 @@
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -48,30 +41,24 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "ich werde sprechen"
-              ]
+              "values": ["ich werde sprechen"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "sie sprachen"
-              ]
+              "values": ["sie sprachen"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],
       "body": "",
-      "id": [
-        "287966"
-      ],
+      "id": ["287966"],
       "lead": "match-matrix",
       "instruction": "Bring the german verbs into the correct tense."
     }

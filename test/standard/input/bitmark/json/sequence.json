@@ -8,7 +8,8 @@
       "lead": "sequence",
       "hint": "",
       "instruction": "",
-      "isExample": false,
+      "isExample": true,
+      "example": true,
       "body": "",
       "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."]
     },

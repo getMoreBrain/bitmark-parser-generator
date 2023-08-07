@@ -15,7 +15,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": true,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -26,7 +26,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -37,7 +37,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -48,7 +48,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -59,7 +59,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -70,7 +70,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -81,7 +81,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -92,7 +92,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -103,7 +103,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -114,7 +114,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -125,7 +125,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -136,7 +136,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],

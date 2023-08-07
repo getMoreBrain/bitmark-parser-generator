@@ -108,6 +108,7 @@
       "format": "bitmark--",
       "item": "A18b",
       "instruction": "Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.",
+      "isExample": true,
       "body": "",
       "heading": {},
       "pairs": [
@@ -122,8 +123,8 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isLongAnswer": false,
-          "isExample": false,
-          "example": null
+          "isExample": true,
+          "example": true
         },
         {
           "key": "1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__",
@@ -471,6 +472,7 @@
       "format": "bitmark--",
       "item": "C11",
       "instruction": "Bilden Sie Fragen und antworten Sie wie im Beispiel.",
+      "isExample": true,
       "body": "Kannst Du ...?",
       "heading": {},
       "pairs": [
@@ -482,8 +484,8 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isLongAnswer": false,
-          "isExample": false,
-          "example": null
+          "isExample": true,
+          "example": true
         },
         {
           "key": "die Gäste – das Restaurant Milano – auf dem Stadtplan – zeigen",

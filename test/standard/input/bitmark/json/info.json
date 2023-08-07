@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "287895"
-      ]
+      "example": null,
+      "id": ["287895"]
     }
   },
   {
@@ -23,10 +21,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "287886"
-      ]
+      "example": null,
+      "id": ["287886"]
     }
   }
 ]

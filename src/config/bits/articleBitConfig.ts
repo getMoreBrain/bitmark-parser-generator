@@ -1,4 +1,5 @@
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { ExampleType } from '../../model/enum/ExampleType';
 import { TagType } from '../../model/enum/TagType';
 
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
@@ -14,6 +15,7 @@ const ARTICLE_CONFIG: BitTypeMetadata = {
   },
   resourceAttachmentAllowed: true,
   bodyAllowed: true,
+  exampleType: ExampleType.string,
 };
 BitType.setMetadata<BitTypeMetadata>(BitType.article, ARTICLE_CONFIG);
 

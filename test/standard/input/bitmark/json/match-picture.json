@@ -8,9 +8,7 @@
       "heading": {},
       "pairs": [],
       "body": "|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|cat|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|tiger",
-      "id": [
-        "285726"
-      ],
+      "id": ["285726"],
       "lead": "match-picture",
       "instruction": "Name the animals on the pictures."
     },
@@ -85,15 +83,13 @@
             "height": null,
             "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f023.jpg"
           },
-          "values": [
-            "Hier kann man japanisch essen."
-          ],
+          "values": ["Hier kann man japanisch essen."],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -102,15 +98,13 @@
             "height": null,
             "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg"
           },
-          "values": [
-            "Hier kann man Kaffee trinken."
-          ],
+          "values": ["Hier kann man Kaffee trinken."],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -119,15 +113,13 @@
             "height": null,
             "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f059.jpg"
           },
-          "values": [
-            "Hier kann man Bratwurst kaufen."
-          ],
+          "values": ["Hier kann man Bratwurst kaufen."],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -136,15 +128,13 @@
             "height": null,
             "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f022.jpg"
           },
-          "values": [
-            "Hier kann man ein Schinkenbrötchen kaufen."
-          ],
+          "values": ["Hier kann man ein Schinkenbrötchen kaufen."],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -153,15 +143,13 @@
             "height": null,
             "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f025.jpg"
           },
-          "values": [
-            "Hier kann man Obst und Gemüse kaufen."
-          ],
+          "values": ["Hier kann man Obst und Gemüse kaufen."],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -170,22 +158,18 @@
             "height": null,
             "src": "https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f021.jpg"
           },
-          "values": [
-            "Hier kann man Brot kaufen."
-          ],
+          "values": ["Hier kann man Brot kaufen."],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],
       "body": "",
-      "id": [
-        "136185"
-      ],
+      "id": ["136185"],
       "instruction": "You can buy food and drink in many different places. Match photos 1–6 to the descriptions beneath."
     }
   }

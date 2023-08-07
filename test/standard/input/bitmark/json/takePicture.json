@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "189522"
-      ],
+      "example": null,
+      "id": ["189522"],
       "instruction": "Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können."
     }
   },
@@ -24,10 +22,8 @@
       "item": "7",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "213729"
-      ],
+      "example": null,
+      "id": ["213729"],
       "instruction": "Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.\nBegriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit"
     }
   },
@@ -40,10 +36,8 @@
       "item": "12",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "213734"
-      ],
+      "example": null,
+      "id": ["213734"],
       "instruction": "Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:\nKunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel"
     }
   },
@@ -56,10 +50,8 @@
       "item": "15 A",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "213737"
-      ],
+      "example": null,
+      "id": ["213737"],
       "lead": "Ausgangslage",
       "instruction": "Erläutern Sie das Marktsystem, in dem sich die Easy Building bewegt."
     }
@@ -73,10 +65,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "197943"
-      ]
+      "example": null,
+      "id": ["197943"]
     }
   }
 ]

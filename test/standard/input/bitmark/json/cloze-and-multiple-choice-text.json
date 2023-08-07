@@ -13,13 +13,13 @@
       "placeholders": {
         "{0}": {
           "type": "gap",
-          "solutions": ["cloze"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "solutions": ["cloze"]
         },
         "{1}": {
           "type": "select",
@@ -154,13 +154,13 @@
       "placeholders": {
         "{0}": {
           "type": "gap",
-          "solutions": ["cloze"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": true,
-          "example": "cloze"
+          "example": "cloze",
+          "solutions": ["cloze"]
         },
         "{1}": {
           "type": "select",
@@ -295,13 +295,13 @@
       "placeholders": {
         "{0}": {
           "type": "gap",
-          "solutions": ["cloze", "gap"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": true,
-          "example": "gap"
+          "example": "gap",
+          "solutions": ["cloze", "gap"]
         },
         "{1}": {
           "type": "select",

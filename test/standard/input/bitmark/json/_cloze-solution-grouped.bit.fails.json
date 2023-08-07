@@ -8,47 +8,39 @@
       "item": "28-35",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "131483"
-      ],
+      "example": null,
+      "id": ["131483"],
       "instruction": "Ergänzen Sie die Sätze 28. – 35. mit einem der Wörter",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "wenn"
-          ],
+          "solutions": ["wenn"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "trotzdem"
-          ],
+          "solutions": ["trotzdem"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "obwohl"
-          ],
+          "solutions": ["obwohl"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       }
     },

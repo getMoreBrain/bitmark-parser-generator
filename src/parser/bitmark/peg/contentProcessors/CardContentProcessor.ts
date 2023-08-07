@@ -381,7 +381,7 @@ function parseMatchPairs(
         };
         // Allow example from any card side
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (example) (extraTags as any).example = example;
+        if (example !== undefined) (extraTags as any).example = example;
       }
       sideIdx++;
     }
@@ -424,6 +424,7 @@ function parseMatchMatrix(
   let matrixCells: MatrixCell[] = [];
   let matrixCellValues: string[] = [];
   let matrixCellTags = {};
+  let extraTags = {};
   // let keyAudio: AudioResource | undefined = undefined;
   // let keyImage: ImageResource | undefined = undefined;
 
@@ -435,6 +436,7 @@ function parseMatchMatrix(
     matrixCells = [];
     matrixCellValues = [];
     sideIdx = 0;
+    extraTags = {};
 
     for (const side of card.sides) {
       matrixCellValues = [];
@@ -443,7 +445,7 @@ function parseMatchMatrix(
       for (const content of side.variants) {
         const tags = content.data;
 
-        const { title, cardBody, ...restTags } = tags;
+        const { title, cardBody, example, ...restTags } = tags;
 
         // Merge the tags into the matrix cell tags
         Object.assign(matrixCellTags, restTags);
@@ -475,6 +477,10 @@ function parseMatchMatrix(
             matrixCellValues.push(cardBody ?? '');
           }
         }
+
+        // Allow example from any card side
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (example !== undefined) (extraTags as any).example = example;
       }
 
       // Finished looping variants, create matrix cell
@@ -482,6 +488,7 @@ function parseMatchMatrix(
         const matrixCell = builder.matrixCell({
           values: matrixCellValues,
           ...matrixCellTags,
+          ...extraTags,
         });
         matrixCells.push(matrixCell);
       }

@@ -8,7 +8,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Wusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?",
       "responses": [
         {
@@ -35,7 +35,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Wenn du Cannabis konsumiert hast, musst du übrigens lange warten, bis du dich wieder hinters Steuer setzen darfst. THC wird nicht regelmässig abgebaut: Im Blut kann Cannabis 8 bis 30 Stunden nach dem Konsum nachgewiesen werden.",
       "responses": [
         {
@@ -57,7 +57,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Wusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?",
       "responses": [
         {
@@ -96,7 +96,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "responses": [
         {
           "response": "Ja, das weiss ich",

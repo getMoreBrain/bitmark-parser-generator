@@ -31,7 +31,7 @@
           "hint": "",
           "instruction": "",
           "isExample": true,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "select",
@@ -58,12 +58,10 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       },
-      "id": [
-        "287839"
-      ],
+      "id": ["287839"],
       "lead": "multiple-choice-text"
     }
   },
@@ -104,7 +102,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "select",
@@ -136,7 +134,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "select",
@@ -168,7 +166,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{3}": {
           "type": "select",
@@ -200,12 +198,10 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       },
-      "id": [
-        "213773"
-      ],
+      "id": ["213773"],
       "item": "46",
       "instruction": "ln einem Beratungsunternehmen für Evaluationen von Bundesprojekten diskutiert die Geschäftsleiterin mit drei Partnern, welchen Preis sie für ein ausgeschriebenes Mandat offerieren wollen. Dabei sind sie nicht einig, well sie sich an verschiedenen «K»onentieren. Welche Faktoren sind bei den folgenden Argumenten relevant?"
     }
@@ -242,7 +238,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "select",
@@ -269,7 +265,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "select",
@@ -296,7 +292,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{3}": {
           "type": "select",
@@ -323,12 +319,10 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       },
-      "id": [
-        "213840"
-      ],
+      "id": ["213840"],
       "item": "59",
       "instruction": "Es ist eine Aufgabe der Unternehmensführung, die strategischen Unternehmensziele festzulegen. Ordnen Sie die folgenden Aussagen dem richtigen Zielbereich zu."
     }
@@ -360,7 +354,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "select",
@@ -382,7 +376,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "select",
@@ -404,7 +398,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{3}": {
           "type": "select",
@@ -426,7 +420,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{4}": {
           "type": "select",
@@ -448,12 +442,10 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       },
-      "id": [
-        "208481"
-      ],
+      "id": ["208481"],
       "item": "15",
       "instruction": "Gehören die Personengruppen zum Beschaffungs- oder zum Absatzmarkt? Markieren Sie die zutreffende Antwort."
     }
@@ -485,7 +477,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "select",
@@ -507,7 +499,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "select",
@@ -529,12 +521,10 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       },
-      "id": [
-        "107949"
-      ],
+      "id": ["107949"],
       "item": "16",
       "resource": {
         "type": "image",

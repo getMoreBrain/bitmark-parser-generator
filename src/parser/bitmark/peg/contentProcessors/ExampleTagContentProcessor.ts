@@ -1,4 +1,6 @@
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { BooleanUtils } from '../../../../utils/BooleanUtils';
+import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
   BitContent,
@@ -32,9 +34,21 @@ function exampleTagContentProcessor(
     case BitType.highlightText:
       handleGapOrSelectExample(context, bitType, example, target);
       break;
+    case BitType.match:
+    case BitType.matchAll:
+    case BitType.matchAllReverse:
+    case BitType.matchAudio:
+    case BitType.matchPicture:
+    case BitType.matchReverse:
+    case BitType.matchSolutionGrouped:
+    case BitType.matchMatrix:
+    case BitType.sequence:
+      // Standard example handling (boolean)
+      handleStandardBooleanExample(context, bitType, example, target);
+      break;
     default:
-      // Standard example handling
-      handleStandardExample(context, bitType, example, target);
+      // Standard example handling (string)
+      handleStandardStringExample(context, bitType, example, target);
   }
 }
 
@@ -65,11 +79,11 @@ function handleGapOrSelectExample(
     }
   } else {
     // Example at the bit level
-    handleStandardExample(context, bitType, example, target);
+    handleStandardStringExample(context, bitType, example, target);
   }
 }
 
-function handleStandardExample(
+function handleStandardStringExample(
   _context: BitmarkPegParserContext,
   _bitType: BitTypeType,
   example: string | boolean,
@@ -80,7 +94,32 @@ function handleStandardExample(
     target.example = null;
   } else {
     // Set the example as set in the bitmark
-    target.example = example;
+    if (example) {
+      if (StringUtils.isString(example)) {
+        target.example = example;
+      } else {
+        target.example = ''; // Default to string if not a string (i.e. a boolean)
+      }
+    }
+  }
+}
+
+function handleStandardBooleanExample(
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  example: string | boolean,
+  target: BitContentProcessorResult,
+): void {
+  if (example === true) {
+    // Apply the example default (depends on the position of the [@example] tag in the bitmark)
+    target.example = null;
+  } else {
+    // Set the example as set in the bitmark
+    if (BooleanUtils.isBooleanString(example)) {
+      target.example = BooleanUtils.toBoolean(example);
+    } else {
+      target.example = true; // Default to true if not a boolean string
+    }
   }
 }
 

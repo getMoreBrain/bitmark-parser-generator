@@ -25,10 +25,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "186304"
-      ]
+      "example": null,
+      "id": ["186304"]
     }
   },
   {
@@ -64,10 +62,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "186305"
-      ]
+      "example": null,
+      "id": ["186305"]
     }
   },
   {
@@ -110,10 +106,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "186703"
-      ]
+      "example": null,
+      "id": ["186703"]
     }
   },
   {
@@ -162,7 +156,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -199,7 +193,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -236,7 +230,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -273,7 +267,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -310,7 +304,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -347,7 +341,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -384,7 +378,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -421,7 +415,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -458,7 +452,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -495,7 +489,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -532,7 +526,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -569,7 +563,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -606,7 +600,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -643,7 +637,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -680,7 +674,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -717,7 +711,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -754,7 +748,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -791,7 +785,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -828,7 +822,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -865,12 +859,10 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ],
-      "id": [
-        "187003"
-      ]
+      "id": ["187003"]
     }
   },
   {
@@ -919,7 +911,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -956,7 +948,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -993,7 +985,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -1030,7 +1022,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -1067,12 +1059,10 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ],
-      "id": [
-        "186986"
-      ]
+      "id": ["186986"]
     }
   },
   {
@@ -1108,10 +1098,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187235"
-      ]
+      "example": null,
+      "id": ["187235"]
     }
   },
   {
@@ -1147,10 +1135,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187236"
-      ]
+      "example": null,
+      "id": ["187236"]
     }
   },
   {
@@ -1179,10 +1165,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187237"
-      ]
+      "example": null,
+      "id": ["187237"]
     }
   },
   {
@@ -1224,7 +1208,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "2",
@@ -1254,7 +1238,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "3",
@@ -1284,7 +1268,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "4",
@@ -1314,7 +1298,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "5",
@@ -1344,7 +1328,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "6",
@@ -1374,7 +1358,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "7",
@@ -1404,7 +1388,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "8",
@@ -1434,7 +1418,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "9",
@@ -1464,7 +1448,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "10",
@@ -1494,7 +1478,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "11",
@@ -1524,7 +1508,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "12",
@@ -1554,7 +1538,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "13",
@@ -1584,7 +1568,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "14",
@@ -1614,7 +1598,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "15",
@@ -1644,12 +1628,10 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ],
-      "id": [
-        "136408"
-      ],
+      "id": ["136408"],
       "resource": {
         "type": "audio",
         "audio": {
@@ -1699,10 +1681,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "107936"
-      ],
+      "example": null,
+      "id": ["107936"],
       "resource": {
         "type": "audio",
         "audio": {
@@ -1745,10 +1725,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "107937"
-      ],
+      "example": null,
+      "id": ["107937"],
       "resource": {
         "type": "audio",
         "audio": {
@@ -1790,12 +1768,10 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ],
-      "id": [
-        "107942"
-      ],
+      "id": ["107942"],
       "resource": {
         "type": "image",
         "image": {
@@ -1838,10 +1814,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "107943"
-      ],
+      "example": null,
+      "id": ["107943"],
       "resource": {
         "type": "audio",
         "audio": {
@@ -1891,10 +1865,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "131345"
-      ]
+      "example": null,
+      "id": ["131345"]
     }
   },
   {
@@ -1937,10 +1909,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "131346"
-      ]
+      "example": null,
+      "id": ["131346"]
     }
   },
   {
@@ -1969,10 +1939,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "186303"
-      ]
+      "example": null,
+      "id": ["186303"]
     }
   },
   {
@@ -2022,10 +1990,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "232614"
-      ]
+      "example": null,
+      "id": ["232614"]
     }
   },
   {
@@ -2075,10 +2041,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "232875"
-      ]
+      "example": null,
+      "id": ["232875"]
     }
   },
   {
@@ -2128,10 +2092,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "232876"
-      ]
+      "example": null,
+      "id": ["232876"]
     }
   },
   {
@@ -2173,12 +2135,10 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ],
-      "id": [
-        "107955"
-      ],
+      "id": ["107955"],
       "resource": {
         "type": "image",
         "image": {
@@ -2234,12 +2194,10 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ],
-      "id": [
-        "107956"
-      ]
+      "id": ["107956"]
     }
   },
   {
@@ -2281,7 +2239,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -2311,7 +2269,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -2341,7 +2299,7 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "item": "",
@@ -2371,12 +2329,10 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ],
-      "id": [
-        "291806"
-      ]
+      "id": ["291806"]
     }
   }
 ]

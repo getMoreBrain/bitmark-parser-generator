@@ -8,10 +8,8 @@
       "item": "D2",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "93061"
-      ],
+      "example": null,
+      "id": ["93061"],
       "instruction": "Evaluation\n\nÜberprüfen Sie sich selbst.",
       "bullet": [
         "gut",
@@ -44,7 +42,7 @@
       "item": "D2",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Evaluation\n\nÜberprüfen Sie sich selbst.",
       "bullet": [
         "gut",

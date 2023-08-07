@@ -360,5 +360,67 @@
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n[@id:208467]\n[%1][%Geschlossene Fragen]\n[!Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich.]\n\nA. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung\n===\n[#Aussage]\n==\n[#Bedürfnis]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n===\nAls Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.\n==\nE\n===\nMarcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.\n==\nC\n===\nCorinne bildet sich mit Abendkursen weiter.\n==\nE\n===\nZwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.\n==\nC\n===\nStefan freut sich über ein Lob seiner Vorgesetzten.\n==\nD\n===\nDaniel Gerber verbringt den Abend vor dem Computer, um zu chatten.\n==\nC\n===\nEin Ehepaar installiert eine Alarmanlage im Haus.\n==\nB\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": true
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example]\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": true
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB[@example]\n==="
   }
 ]

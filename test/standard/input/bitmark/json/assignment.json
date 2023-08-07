@@ -8,10 +8,8 @@
       "item": "1",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "197915"
-      ],
+      "example": null,
+      "id": ["197915"],
       "instruction": "Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?"
     }
   },
@@ -24,10 +22,8 @@
       "item": "11",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "210109"
-      ],
+      "example": null,
+      "id": ["210109"],
       "instruction": "Ausgangslage"
     }
   },
@@ -40,10 +36,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "210110"
-      ],
+      "example": null,
+      "id": ["210110"],
       "instruction": "Aufgabe"
     }
   }

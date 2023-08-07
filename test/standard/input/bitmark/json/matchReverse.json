@@ -9,61 +9,51 @@
       "pairs": [
         {
           "key": "Tier",
-          "values": [
-            "das"
-          ],
+          "values": ["das"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": true,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
           "key": "Kuh",
-          "values": [
-            "die"
-          ],
+          "values": ["die"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
           "key": "Löwe",
-          "values": [
-            "die"
-          ],
+          "values": ["die"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
           "key": "Schmetterling",
-          "values": [
-            "der"
-          ],
+          "values": ["der"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],
       "body": "",
-      "id": [
-        "287869"
-      ],
+      "id": ["287869"],
       "lead": "match-reverse",
       "instruction": "Wie heißen die passenden Nomen?"
     }

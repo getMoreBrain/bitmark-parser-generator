@@ -7,6 +7,7 @@
       "item": "",
       "lead": "match-reverse",
       "instruction": "Wie heißen die passenden Nomen?",
+      "isExample": true,
       "body": "",
       "heading": {},
       "pairs": [
@@ -18,8 +19,8 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isLongAnswer": false,
-          "isExample": false,
-          "example": null
+          "isExample": true,
+          "example": true
         },
         {
           "key": "Kuh",

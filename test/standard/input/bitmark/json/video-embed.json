@@ -6,7 +6,7 @@
       "id": ["301454"],
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": "",
       "resource": {
@@ -45,7 +45,7 @@
       "id": ["300497"],
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": ""
     },
@@ -106,7 +106,7 @@
       "id": ["301460"],
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": "",
       "resource": {

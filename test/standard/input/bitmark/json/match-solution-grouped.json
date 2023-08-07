@@ -81,6 +81,7 @@
       "format": "bitmark--",
       "id": ["265794"],
       "item": "",
+      "isExample": true,
       "body": "",
       "heading": {},
       "pairs": [
@@ -92,8 +93,8 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isLongAnswer": false,
-          "isExample": false,
-          "example": null
+          "isExample": true,
+          "example": true
         },
         {
           "key": "in den Urlaub",

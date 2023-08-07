@@ -7,10 +7,7 @@
       "item": "",
       "heading": {
         "forKeys": "Stelle von rechts",
-        "forValues": [
-          "Hexadezimalsystem Ziffern: 0123456789ABCDEF",
-          "Dezimalwert"
-        ]
+        "forValues": ["Hexadezimalsystem Ziffern: 0123456789ABCDEF", "Dezimalwert"]
       },
       "matrix": [
         {
@@ -19,19 +16,15 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "16⁰ ="
-              ],
-              "example": "",
+              "values": ["16⁰ ="],
+              "example": null,
               "isExample": true
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "1"
-              ],
-              "example": "",
+              "values": ["1"],
+              "example": null,
               "isExample": true
             }
           ],
@@ -39,7 +32,7 @@
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -48,23 +41,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "16¹ = 16 ="
-              ]
+              "values": ["16¹ = 16 ="]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "16"
-              ]
+              "values": ["16"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -73,23 +62,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "16² = 16 × 16 ="
-              ]
+              "values": ["16² = 16 × 16 ="]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "256"
-              ]
+              "values": ["256"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -98,23 +83,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "16³ = 16 × 16 × 16 ="
-              ]
+              "values": ["16³ = 16 × 16 × 16 ="]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "4096"
-              ]
+              "values": ["4096"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -123,23 +104,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "16⁴ = 16 × 16 × 16 × 16 ="
-              ]
+              "values": ["16⁴ = 16 × 16 × 16 × 16 ="]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "65 536"
-              ]
+              "values": ["65 536"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -148,23 +125,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "16⁵ = 16 × 16 × 16 × 16 × 16 ="
-              ]
+              "values": ["16⁵ = 16 × 16 × 16 × 16 × 16 ="]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "1 048 576"
-              ]
+              "values": ["1 048 576"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -173,30 +146,24 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "16⁶ = 16 × 16 × 16 × 16 × 16 × 16 ="
-              ]
+              "values": ["16⁶ = 16 × 16 × 16 × 16 × 16 × 16 ="]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "16 777 216"
-              ]
+              "values": ["16 777 216"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],
       "body": "",
-      "id": [
-        "203675"
-      ],
+      "id": ["203675"],
       "instruction": "Das Hexadezimalsystem baut auf der Basis 16 auf und hat 16 Ziffern. Jede Stelle hat gegenüber der rechts von ihr stehenden den 16-fachen Wert. Ergänzen Sie die folgende Hexadezimal-Darstellung:"
     }
   },
@@ -208,10 +175,7 @@
       "item": "42",
       "heading": {
         "forKeys": "Computer 1",
-        "forValues": [
-          "Komponenten",
-          "Computer 2"
-        ]
+        "forValues": ["Komponenten", "Computer 2"]
       },
       "matrix": [
         {
@@ -220,17 +184,13 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Prozessor (CPU)"
-              ]
+              "values": ["Prozessor (CPU)"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Intel Core 2 i7 2,33 GHz 64 bit 4 MB Level 2 Cache"
-              ],
-              "example": "",
+              "values": ["Intel Core 2 i7 2,33 GHz 64 bit 4 MB Level 2 Cache"],
+              "example": null,
               "isExample": true
             }
           ],
@@ -238,7 +198,7 @@
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -247,23 +207,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Systembus"
-              ]
+              "values": ["Systembus"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "667-MHz-Systembus"
-              ]
+              "values": ["667-MHz-Systembus"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -272,23 +228,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Arbeitsspeicher (RAM)"
-              ]
+              "values": ["Arbeitsspeicher (RAM)"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "8 GB 667 MHz DDR2 SDRAM"
-              ]
+              "values": ["8 GB 667 MHz DDR2 SDRAM"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -297,23 +249,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Festplatte"
-              ]
+              "values": ["Festplatte"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "250 GB 7.200 U/ Min. Serial-ATA"
-              ]
+              "values": ["250 GB 7.200 U/ Min. Serial-ATA"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -322,23 +270,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Laufwerke"
-              ]
+              "values": ["Laufwerke"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "SuperDrive DVD-R dual layer, DVD-RW/CD-RW"
-              ]
+              "values": ["SuperDrive DVD-R dual layer, DVD-RW/CD-RW"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -347,23 +291,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Grafikkarte"
-              ]
+              "values": ["Grafikkarte"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "ATI Radeon X1600 128 MB Video-RAM, DVI und VGA"
-              ]
+              "values": ["ATI Radeon X1600 128 MB Video-RAM, DVI und VGA"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -372,23 +312,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Netz-Anschlüsse"
-              ]
+              "values": ["Netz-Anschlüsse"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "10/100/1000 Base-T-Ethernet (RJ-45) 56 k V.90 Modem (RJ-11)"
-              ]
+              "values": ["10/100/1000 Base-T-Ethernet (RJ-45) 56 k V.90 Modem (RJ-11)"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -397,23 +333,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Wireless LAN"
-              ]
+              "values": ["Wireless LAN"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "W-LAN: AirPort (54 Mb/s) + Bluetooth"
-              ]
+              "values": ["W-LAN: AirPort (54 Mb/s) + Bluetooth"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -422,23 +354,19 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Schnittstellen (Ports)"
-              ]
+              "values": ["Schnittstellen (Ports)"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Zwei 400-Mbps FireWire-Ports Drei USB2 Ports"
-              ]
+              "values": ["Zwei 400-Mbps FireWire-Ports Drei USB2 Ports"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -447,9 +375,7 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Audio"
-              ]
+              "values": ["Audio"]
             },
             {
               "item": "",
@@ -463,7 +389,7 @@
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         },
         {
@@ -472,30 +398,24 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "Betriebssysteme"
-              ]
+              "values": ["Betriebssysteme"]
             },
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "MacOs X 10.6 (UNIX) optional Windows 7 (xp)"
-              ]
+              "values": ["MacOs X 10.6 (UNIX) optional Windows 7 (xp)"]
             }
           ],
           "item": "",
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],
       "body": "Betriebssysteme\nLaufwerke\nProzessor (CPU)\nSystembus\nFestplatte\nGrafikkarte\nNetzAnschlüsse\nAudio\nArbeitsspeicher\nSchnittstellen (Ports)-",
-      "id": [
-        "203904"
-      ],
+      "id": ["203904"],
       "instruction": "Schreiben Sie zu den untenstehenden technischen Daten die zugehörigen Begriffe (Komponenten):"
     }
   },
@@ -507,10 +427,7 @@
       "item": "",
       "heading": {
         "forKeys": "Verb",
-        "forValues": [
-          "Future, 1st Person, Singular",
-          "Past, 3rd Person, Plural"
-        ]
+        "forValues": ["Future, 1st Person, Singular", "Past, 3rd Person, Plural"]
       },
       "matrix": [
         {
@@ -519,10 +436,8 @@
             {
               "item": "",
               "instruction": "",
-              "values": [
-                "ich werde gehen"
-              ],
-              "example": "",
+              "values": ["ich werde gehen"],
+              "example": null,
               "isExample": true
             }
           ],
@@ -530,14 +445,12 @@
           "isCaseSensitive": true,
           "hint": "",
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],
       "body": "[!Instruction]sie gingen[@example]sprechenich werde sprechensie sprachen",
-      "id": [
-        "287966"
-      ],
+      "id": ["287966"],
       "lead": "match-matrix",
       "instruction": "Bring the german verbs into the correct tense."
     },

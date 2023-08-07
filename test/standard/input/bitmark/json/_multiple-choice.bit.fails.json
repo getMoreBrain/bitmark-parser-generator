@@ -32,10 +32,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "131476"
-      ]
+      "example": null,
+      "id": ["131476"]
     },
     "errors": [
       {
@@ -352,12 +350,10 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "131330"
-      ]
+      "example": null,
+      "id": ["131330"]
     },
-    "example": ""
+    "example": null
   },
   {
     "bitmark": "[.multiple-choice-1&image-link]\n[@id:232617]\n[!Hauptstadt von Sri Lanka]\n[&image-link:https://card2brain.ch/c2b-images/card/1399684-answer.jpg?v=1654534534510]\n[-Islamabad]\n[-Montevideo]\n[-Dakar]\n[+Colombo]\n[-Peking]",
@@ -406,10 +402,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "232617"
-      ],
+      "example": null,
+      "id": ["232617"],
       "resource": {
         "type": "image-link",
         "imageLink": {
@@ -439,10 +433,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "131345"
-      ]
+      "example": null,
+      "id": ["131345"]
     },
     "errors": [
       {
@@ -518,10 +510,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "232617"
-      ],
+      "example": null,
+      "id": ["232617"],
       "resource": {
         "type": "image-link",
         "imageLink": {
@@ -564,12 +554,10 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ],
-      "id": [
-        "197935"
-      ]
+      "id": ["197935"]
     }
   }
 ]

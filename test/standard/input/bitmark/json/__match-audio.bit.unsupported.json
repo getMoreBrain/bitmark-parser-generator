@@ -15,15 +15,13 @@
             "format": "mp3",
             "src": "http://cdn.bitbook.education/publishers/3/books/26363/miau.mp3"
           },
-          "values": [
-            "cat"
-          ],
+          "values": ["cat"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],

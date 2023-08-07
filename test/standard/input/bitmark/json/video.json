@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "301454"
-      ],
+      "example": null,
+      "id": ["301454"],
       "resource": {
         "type": "video",
         "video": {
@@ -46,10 +44,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "300497"
-      ],
+      "example": null,
+      "id": ["300497"],
       "resource": {
         "type": "video",
         "video": {
@@ -84,10 +80,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "301460"
-      ],
+      "example": null,
+      "id": ["301460"],
       "resource": {
         "type": "video",
         "video": {

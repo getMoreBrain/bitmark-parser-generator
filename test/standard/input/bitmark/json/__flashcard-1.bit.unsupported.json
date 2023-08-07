@@ -8,7 +8,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": ""
+      "example": null
     }
   },
   {
@@ -20,7 +20,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Amer. | ˈsaɪdlaɪn |"
     },
     "parser": {
@@ -47,12 +47,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "language": [
-        "de",
-        "en",
-        "en"
-      ]
+      "example": null,
+      "language": ["de", "en", "en"]
     }
   }
 ]

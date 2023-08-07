@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "192356"
-      ],
+      "example": null,
+      "id": ["192356"],
       "instruction": "Überprüfe deine Antwort nach dem Lesen:",
       "reference": "Ref_Starbucks"
     }
@@ -25,10 +23,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "192374"
-      ],
+      "example": null,
+      "id": ["192374"],
       "instruction": "Überprüfe deine Antwort nach dem Lesen:",
       "reference": "Ref_Emmi"
     }
@@ -42,10 +38,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "192383"
-      ],
+      "example": null,
+      "id": ["192383"],
       "instruction": "Überprüfe deine Antwort nach dem Lesen:",
       "reference": "Ref_Globus"
     }

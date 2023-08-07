@@ -152,3 +152,35 @@ Ein Ehepaar installiert eine Alarmanlage im Haus.
 B
 ===
 
+
+[.match:bitmark--]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+[@example]
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+===
+
+
+[.match:bitmark--]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B[@example]
+===

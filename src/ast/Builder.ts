@@ -1,5 +1,6 @@
-import { BitType, BitTypeType } from '../model/enum/BitType';
+import { BitType, BitTypeMetadata, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType } from '../model/enum/BodyBitType';
+import { ExampleType } from '../model/enum/ExampleType';
 import { PropertyKey } from '../model/enum/PropertyKey';
 import { ResourceTypeType } from '../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
@@ -225,7 +226,6 @@ class Builder extends BaseBuilder {
       lead,
       hint,
       instruction,
-      example,
       partner,
       extraProperties,
       resource,
@@ -237,28 +237,13 @@ class Builder extends BaseBuilder {
       parser,
     } = data;
 
+    const { example } = data;
+
     // Set the card node data
     const cardNode = this.cardNode(data);
 
     // Calculate the value of the example default
     const exampleDefault = ArrayUtils.asSingle(sampleSolution) ?? cardNode?.statement?.isCorrect ?? null;
-
-    // If example is set at the bit level, push it down the tree
-    if (example !== undefined) {
-      if (cardNode) {
-        this.setDefaultExamplesDecision(true, cardNode.choices);
-        this.setDefaultExamplesDecision(false, cardNode.responses, cardNode.statements, cardNode.statement);
-        if (cardNode.quizzes) {
-          for (const quiz of cardNode.quizzes) {
-            this.setDefaultExamplesDecision(true, quiz.choices);
-            this.setDefaultExamplesDecision(false, quiz.responses);
-          }
-        }
-      }
-      if (body) {
-        this.setDefaultExamplesBodyBits(body);
-      }
-    }
 
     // NOTE: Node order is important and is defined here
     const node: Bit = {
@@ -331,6 +316,25 @@ class Builder extends BaseBuilder {
       extraProperties: this.parseExtraProperties(extraProperties),
     };
 
+    // If example is set at the bit level, push it down the tree
+    if (example !== undefined) {
+      if (cardNode) {
+        this.setDefaultExamplesDecision(true, cardNode.choices);
+        this.setDefaultExamplesDecision(false, cardNode.responses, cardNode.statements, cardNode.statement);
+        if (cardNode.quizzes) {
+          for (const quiz of cardNode.quizzes) {
+            this.setDefaultExamplesDecision(true, quiz.choices);
+            this.setDefaultExamplesDecision(false, quiz.responses);
+          }
+        }
+      }
+      if (body) {
+        this.setDefaultExamplesBodyBits(body);
+      }
+
+      this.setDefaultExampleBit(bitType, node);
+    }
+
     // Set default values
     this.setDefaultBitValues(node);
 
@@ -343,6 +347,7 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreEmptyString: ['example'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -546,7 +551,7 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      ...this.toExample(example, null),
+      ...this.toExample(example, true),
       isCaseSensitive,
       isShortAnswer,
       values,
@@ -621,7 +626,7 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      ...this.toExample(example, null),
+      ...this.toExample(example, true),
     };
 
     // Remove Unset Optionals
@@ -1159,6 +1164,26 @@ class Builder extends BaseBuilder {
     }
   }
 
+  private setDefaultExampleBit(bitType: BitTypeType, node: Bit): void {
+    const { example: exampleIn } = node;
+    const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+    if (!meta) return;
+
+    if (exampleIn === null) {
+      // Set the default for the specific bit
+      switch (meta.exampleType) {
+        case ExampleType.boolean:
+          node.example = true;
+          break;
+        case ExampleType.string:
+          node.example = '';
+          break;
+        default:
+        // Ignore at this level
+      }
+    }
+  }
+
   private parseExtraProperties(extraProperties: { [key: string]: unknown } | undefined): ExtraProperties | undefined {
     if (!extraProperties) return undefined;
 
@@ -1174,6 +1199,14 @@ class Builder extends BaseBuilder {
     return res;
   }
 
+  /**
+   * Set the 'isExample' flags on the bit
+   *
+   * The flag is set if the bit has an example. The flag is set at each branch level up the tree from
+   * where the 'example' exists.
+   *
+   * @param bit
+   */
   private setIsExampleFlags(bit: Bit) {
     bit.isExample = false;
 
@@ -1227,8 +1260,20 @@ class Builder extends BaseBuilder {
     // Card level
 
     if (cardNode) {
-      // TODO: pairs
-      // TODO: matrix
+      // pairs
+      for (const v of cardNode.pairs ?? []) {
+        checkIsExample(v as WithExampleAndIsExample);
+      }
+      // matrix
+      for (const mx of cardNode.matrix ?? []) {
+        let hasExample = false;
+
+        // matrix cell
+        for (const v of mx.cells ?? []) {
+          hasExample = checkIsExample(v as WithExampleAndIsExample) ? true : hasExample;
+        }
+        mx.isExample = hasExample;
+      }
       // quizzes
       for (const quiz of cardNode.quizzes ?? []) {
         let hasExample = false;
@@ -1276,6 +1321,9 @@ class Builder extends BaseBuilder {
     for (const v of bit.choices ?? []) {
       checkIsExample(v as WithExampleAndIsExample);
     }
+
+    // Bit itself
+    checkIsExample(bit as WithExampleAndIsExample);
   }
 
   private setDefaultBitValues(bit: Bit) {

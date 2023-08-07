@@ -9,14 +9,12 @@
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "cloze"
-          ],
+          "solutions": ["cloze"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "select",
@@ -38,7 +36,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "select",
@@ -60,7 +58,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{3}": {
           "type": "select",
@@ -82,7 +80,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{4}": {
           "type": "select",
@@ -99,7 +97,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{5}": {
           "type": "select",
@@ -116,12 +114,10 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       },
-      "id": [
-        "287842"
-      ],
+      "id": ["287842"],
       "lead": "cloze-and-multiple-choice-text"
     }
   }

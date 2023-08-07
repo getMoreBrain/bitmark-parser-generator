@@ -8,35 +8,29 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "287822"
-      ],
+      "example": null,
+      "id": ["287822"],
       "lead": "cloze-instruction-grouped",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "erfreut"
-          ],
+          "solutions": ["erfreut"],
           "hint": "",
           "instruction": "erfreuen",
           "isCaseSensitive": true,
           "isExample": true,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "steht"
-          ],
+          "solutions": ["steht"],
           "hint": "",
           "instruction": "stehen",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       }
     }
@@ -50,59 +44,49 @@
       "item": "5",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "107938"
-      ],
+      "example": null,
+      "id": ["107938"],
       "instruction": "In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Woher"
-          ],
+          "solutions": ["Woher"],
           "hint": "",
           "instruction": "woher",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Wo"
-          ],
+          "solutions": ["Wo"],
           "hint": "",
           "instruction": "wo",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Was"
-          ],
+          "solutions": ["Was"],
           "hint": "",
           "instruction": "was",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{3}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Welche"
-          ],
+          "solutions": ["Welche"],
           "hint": "",
           "instruction": "welche",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       }
     }

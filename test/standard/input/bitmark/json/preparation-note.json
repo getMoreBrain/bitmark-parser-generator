@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "190596"
-      ],
+      "example": null,
+      "id": ["190596"],
       "instruction": "Welche Bedeutung hat Arbeit für Sie?"
     }
   },
@@ -24,10 +22,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "190597"
-      ],
+      "example": null,
+      "id": ["190597"],
       "instruction": "Wo sehen Sie die Chancen und Gefahren „moderner“ Arbeit?"
     }
   },
@@ -40,10 +36,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "190598"
-      ],
+      "example": null,
+      "id": ["190598"],
       "instruction": "Ist Feelgood Management ein „Luxusproblem“?"
     }
   },
@@ -56,10 +50,8 @@
       "item": "1",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "191144"
-      ],
+      "example": null,
+      "id": ["191144"],
       "lead": "Verstehen „Design Challenge“"
     }
   },
@@ -72,10 +64,8 @@
       "item": "2",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "191145"
-      ],
+      "example": null,
+      "id": ["191145"],
       "lead": "Beobachten / befragen"
     }
   },
@@ -88,10 +78,8 @@
       "item": "3",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "191146"
-      ],
+      "example": null,
+      "id": ["191146"],
       "lead": "Sichtweisen definieren / zusammen tragen „How might we“"
     }
   },
@@ -104,10 +92,8 @@
       "item": "4",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "191147"
-      ],
+      "example": null,
+      "id": ["191147"],
       "lead": "Ideen finden"
     }
   },
@@ -120,10 +106,8 @@
       "item": "5",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "191148"
-      ],
+      "example": null,
+      "id": ["191148"],
       "lead": "Prototypen entwickeln"
     }
   },
@@ -136,10 +120,8 @@
       "item": "6",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "191149"
-      ],
+      "example": null,
+      "id": ["191149"],
       "lead": "Testen"
     }
   }

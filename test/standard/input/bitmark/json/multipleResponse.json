@@ -52,12 +52,10 @@
           ],
           "hint": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ],
-      "id": [
-        "291969"
-      ]
+      "id": ["291969"]
     }
   },
   {
@@ -93,10 +91,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "186300"
-      ]
+      "example": null,
+      "id": ["186300"]
     }
   },
   {
@@ -139,10 +135,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "186301"
-      ]
+      "example": null,
+      "id": ["186301"]
     }
   },
   {
@@ -185,10 +179,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "186302"
-      ]
+      "example": null,
+      "id": ["186302"]
     }
   },
   {
@@ -231,10 +223,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187540"
-      ]
+      "example": null,
+      "id": ["187540"]
     }
   },
   {
@@ -277,10 +267,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187541"
-      ]
+      "example": null,
+      "id": ["187541"]
     }
   },
   {
@@ -323,10 +311,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187542"
-      ]
+      "example": null,
+      "id": ["187542"]
     }
   },
   {
@@ -369,10 +355,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187543"
-      ]
+      "example": null,
+      "id": ["187543"]
     }
   },
   {
@@ -415,10 +399,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187544"
-      ]
+      "example": null,
+      "id": ["187544"]
     }
   },
   {
@@ -461,10 +443,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187233"
-      ]
+      "example": null,
+      "id": ["187233"]
     }
   },
   {
@@ -500,10 +480,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "187234"
-      ]
+      "example": null,
+      "id": ["187234"]
     }
   },
   {
@@ -567,10 +545,8 @@
         }
       ],
       "isExample": false,
-      "example": "",
-      "id": [
-        "208470"
-      ]
+      "example": null,
+      "id": ["208470"]
     }
   }
 ]
