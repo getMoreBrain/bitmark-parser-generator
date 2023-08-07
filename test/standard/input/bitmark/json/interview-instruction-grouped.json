@@ -1,116 +1,152 @@
 [
   {
-    "bitmark": "[.interview-instruction-grouped:bitmark--]\n[@id:92562]\n[%C5]\n[!Bilden Sie Sätze in der angegebenen Zeitform.]\n===\n[%◇]Kerstin – Friseur – kommen – von__(Präsens)__[@shortAnswer]\n[@example:Kerstin kommt vom Friseur.]\n===\n[%1] du – das Geschirr – Spülmaschine – nehmen – schon – aus – ?__(Perfekt)__[@shortAnswer]\n[$Hast du das Geschirr schon aus der Spülmaschine genommen?]\n===\n[%2] Polizei – Theater – sich befinden – gegenüber__(Präsens)__[@shortAnswer]\n[$Die Polizei befindet sich gegenüber dem Theater]\n===\n[%3] Jan – beim Einparken – Verkehrsschild – fahren – gegen__(Perfekt)__[@shortAnswer]\n[$Jan ist beim Einparken gegen das Verkehrsschild gefahren.]\n===\n[%4] Zug – um 12.56 Uhr – Hamburg-Hauptbahnhof – fahren – ab__(Präsens)__[@shortAnswer]\n[$Der Zug fährt um 12.56 Uhr ab Hamburg-Hauptbahnhof.]\n===\n[%5] neues Einkaufszentrum – Stadt – liegen – 3 km – außerhalb__(Präsens)__[@shortAnswer]\n[$Das neue Einkaufszentrum liegt 3 km außerhalb der Stadt.]\n===\n[%6] Rauchen – Gebäude – verboten sein – innerhalb__(Präsens)__[@shortAnswer]\n[$Rauchen ist innerhalb des Gebäudes verboten.]\n===\n[%7] Kraftwerk – Fluss – gebaut werden – unweit__(Präsens)__[@shortAnswer]\n[$Das Kraftwerk wird unweit des Flusses gebaut.]\n===\n[%8] wir – Häuserblock – zweimal – laufen – um__(Präteritum)__[@shortAnswer]\n[$Wir liefen zweimal um den Häuserblock.]\n===",
     "bit": {
       "type": "interview-instruction-grouped",
       "format": "bitmark--",
+      "id": ["92562"],
       "item": "C5",
-      "instruction": "Bilden Sie Sätze in der angegebenen Zeitform.",
-      "body": "",
-      "footer": "",
       "hint": "",
+      "instruction": "Bilden Sie Sätze in der angegebenen Zeitform.",
+      "isExample": true,
+      "body": "",
       "questions": [
         {
-          "item": "◇",
           "question": "Kerstin – Friseur – kommen – von__(Präsens)__",
-          "instruction": "",
-          "hint": "",
-          "isExample": true,
-          "example": "Kerstin kommt vom Friseur.",
+          "partialAnswer": "",
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "item": "◇",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": true,
+          "example": "Kerstin kommt vom Friseur."
         },
         {
-          "item": "1",
           "question": "du – das Geschirr – Spülmaschine – nehmen – schon – aus – ?__(Perfekt)__",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
+          "partialAnswer": "",
           "sampleSolution": "Hast du das Geschirr schon aus der Spülmaschine genommen?",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "item": "1",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": false,
+          "example": null
         },
         {
-          "item": "2",
           "question": "Polizei – Theater – sich befinden – gegenüber__(Präsens)__",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
+          "partialAnswer": "",
           "sampleSolution": "Die Polizei befindet sich gegenüber dem Theater",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "item": "2",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": false,
+          "example": null
         },
         {
-          "item": "3",
           "question": "Jan – beim Einparken – Verkehrsschild – fahren – gegen__(Perfekt)__",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
+          "partialAnswer": "",
           "sampleSolution": "Jan ist beim Einparken gegen das Verkehrsschild gefahren.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "item": "3",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": false,
+          "example": null
         },
         {
-          "item": "4",
           "question": "Zug – um 12.56 Uhr – Hamburg-Hauptbahnhof – fahren – ab__(Präsens)__",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
+          "partialAnswer": "",
           "sampleSolution": "Der Zug fährt um 12.56 Uhr ab Hamburg-Hauptbahnhof.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "item": "4",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": false,
+          "example": null
         },
         {
-          "item": "5",
           "question": "neues Einkaufszentrum – Stadt – liegen – 3 km – außerhalb__(Präsens)__",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
+          "partialAnswer": "",
           "sampleSolution": "Das neue Einkaufszentrum liegt 3 km außerhalb der Stadt.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "item": "5",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": false,
+          "example": null
         },
         {
-          "item": "6",
           "question": "Rauchen – Gebäude – verboten sein – innerhalb__(Präsens)__",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
+          "partialAnswer": "",
           "sampleSolution": "Rauchen ist innerhalb des Gebäudes verboten.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "item": "6",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": false,
+          "example": null
         },
         {
-          "item": "7",
           "question": "Kraftwerk – Fluss – gebaut werden – unweit__(Präsens)__",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
-          "sampleSolution": "Das Kraftwerk wird unweit des Flusses gebaut.",
           "partialAnswer": "",
-          "isShortAnswer": true
+          "sampleSolution": "Das Kraftwerk wird unweit des Flusses gebaut.",
+          "item": "7",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": false,
+          "example": null
         },
         {
-          "item": "8",
           "question": "wir – Häuserblock – zweimal – laufen – um__(Präteritum)__",
-          "instruction": "",
-          "hint": "",
-          "isExample": false,
-          "example": "",
-          "sampleSolution": "Wir liefen zweimal um den Häuserblock.",
           "partialAnswer": "",
-          "isShortAnswer": true
+          "sampleSolution": "Wir liefen zweimal um den Häuserblock.",
+          "item": "8",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": false,
+          "example": null
         }
       ],
-      "id": ["92562"]
-    }
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.interview-instruction-grouped:bitmark--]\n[@id:92562]\n[%C5]\n[!Bilden Sie Sätze in der angegebenen Zeitform.]\n===\n[%◇]Kerstin – Friseur – kommen – von__(Präsens)__[@shortAnswer]\n[@example:Kerstin kommt vom Friseur.]\n===\n[%1] du – das Geschirr – Spülmaschine – nehmen – schon – aus – ?__(Perfekt)__[@shortAnswer]\n[$Hast du das Geschirr schon aus der Spülmaschine genommen?]\n===\n[%2] Polizei – Theater – sich befinden – gegenüber__(Präsens)__[@shortAnswer]\n[$Die Polizei befindet sich gegenüber dem Theater]\n===\n[%3] Jan – beim Einparken – Verkehrsschild – fahren – gegen__(Perfekt)__[@shortAnswer]\n[$Jan ist beim Einparken gegen das Verkehrsschild gefahren.]\n===\n[%4] Zug – um 12.56 Uhr – Hamburg-Hauptbahnhof – fahren – ab__(Präsens)__[@shortAnswer]\n[$Der Zug fährt um 12.56 Uhr ab Hamburg-Hauptbahnhof.]\n===\n[%5] neues Einkaufszentrum – Stadt – liegen – 3 km – außerhalb__(Präsens)__[@shortAnswer]\n[$Das neue Einkaufszentrum liegt 3 km außerhalb der Stadt.]\n===\n[%6] Rauchen – Gebäude – verboten sein – innerhalb__(Präsens)__[@shortAnswer]\n[$Rauchen ist innerhalb des Gebäudes verboten.]\n===\n[%7] Kraftwerk – Fluss – gebaut werden – unweit__(Präsens)__[@shortAnswer]\n[$Das Kraftwerk wird unweit des Flusses gebaut.]\n===\n[%8] wir – Häuserblock – zweimal – laufen – um__(Präteritum)__[@shortAnswer]\n[$Wir liefen zweimal um den Häuserblock.]\n==="
+  },
+  {
+    "bit": {
+      "type": "interview-instruction-grouped",
+      "format": "bitmark--",
+      "id": ["92562"],
+      "item": "C5",
+      "hint": "",
+      "instruction": "Bilden Sie Sätze in der angegebenen Zeitform.",
+      "isExample": false,
+      "body": "",
+      "questions": [
+        {
+          "question": "Kerstin – Friseur – kommen – von__(Präsens)__",
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": "◇",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.interview-instruction-grouped:bitmark--]\n[@id:92562]\n[%C5]\n[!Bilden Sie Sätze in der angegebenen Zeitform.]\n===\n[%◇]Kerstin – Friseur – kommen – von__(Präsens)__[@shortAnswer]\n==="
   }
 ]

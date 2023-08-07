@@ -46,3 +46,31 @@
 [+22 jähriger Student][@example:Another text here]
 [-16 jähriger Lehrling]
 ===
+
+[.multiple-response:bitmark--]
+[@example]
+===
+[+CorrectAnswer1]
+[+CorrectAnswer2]
+[-FalseAnswer3]
+===
+[-FalseAnswer4]
+===
+
+[.multiple-response:bitmark--]
+===
+[+CorrectAnswer1][@example]
+[+CorrectAnswer2][@example]
+[-FalseAnswer3][@example]
+===
+[-FalseAnswer4]
+===
+
+[.multiple-response:bitmark--]
+===
+[+CorrectAnswer1][@example:false]
+[+CorrectAnswer2]
+[-FalseAnswer3][@example:true]
+===
+[-FalseAnswer4]
+===

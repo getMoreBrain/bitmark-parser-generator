@@ -1,33 +1,33 @@
 [
   {
-    "bitmark": "[.sequence]\n[%32][%sequence]\n[@id:285747]\n===\nEin Elefant\n--\nist\n--\ngrösser als\n--\neine Maus.\n===",
     "bit": {
       "type": "sequence",
       "format": "bitmark--",
-      "instruction": "",
-      "body": "",
-      "elements": [
-        "Ein Elefant",
-        "ist",
-        "grösser als",
-        "eine Maus."
-      ],
+      "id": ["285747"],
       "item": "32",
-      "hint": "",
-      "isExample": false,
-      "example": "",
       "lead": "sequence",
-      "id": [
-        "285747"
-      ]
-    }
+      "hint": "",
+      "instruction": "",
+      "isExample": false,
+      "body": "",
+      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.sequence]\n[%32][%sequence]\n[@id:285747]\n[@example]\n===\nEin Elefant\n--\nist\n--\ngrösser als\n--\neine Maus.\n==="
   },
   {
-    "bitmark": "[.sequence:bitmark--]\n[@id:285749]\n[%33][%sequence]\n===\n**zu oberst**\nDach\n--\n**oben**\n3. Stock\n--\n**in der Mitte**\n2. Stock\n--\n**in der Mitte**\n1. Stock\n--\n**unten**\nErdgeschoss\n--\n**zu unterst**\nKeller\n===",
     "bit": {
       "type": "sequence",
       "format": "bitmark--",
+      "id": ["285749"],
+      "item": "33",
+      "lead": "sequence",
+      "hint": "",
       "instruction": "",
+      "isExample": false,
       "body": "",
       "elements": [
         "**zu oberst**\nDach",
@@ -36,15 +36,12 @@
         "**in der Mitte**\n1. Stock",
         "**unten**\nErdgeschoss",
         "**zu unterst**\nKeller"
-      ],
-      "item": "33",
-      "hint": "",
-      "isExample": false,
-      "example": "",
-      "id": [
-        "285749"
-      ],
-      "lead": "sequence"
-    }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.sequence:bitmark--]\n[@id:285749]\n[%33][%sequence]\n===\n**zu oberst**\nDach\n--\n**oben**\n3. Stock\n--\n**in der Mitte**\n2. Stock\n--\n**in der Mitte**\n1. Stock\n--\n**unten**\nErdgeschoss\n--\n**zu unterst**\nKeller\n==="
   }
 ]

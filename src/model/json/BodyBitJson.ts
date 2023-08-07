@@ -14,27 +14,28 @@ export interface BaseBodyBitJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  // isExample: boolean;
+  isExample: boolean;
   example: ExampleJson;
 }
 
 export interface GapJson extends BaseBodyBitJson {
   type: 'gap'; // body bit type
-  solutions: string[];
   item: Text;
   lead: Text;
   hint: Text;
   instruction: Text;
-  // isExample: boolean;
-  example: ExampleJson;
   isCaseSensitive: boolean;
+  isExample: boolean;
+  example: ExampleJson;
+  solutions: string[];
 }
 
 export interface SelectJson extends BaseBodyBitJson {
   type: 'select'; // body bit type
-  options: SelectOptionJson[];
   prefix: string;
   postfix: string;
+  isExample: boolean;
+  options: SelectOptionJson[];
 }
 
 export interface SelectOptionJson {
@@ -44,16 +45,16 @@ export interface SelectOptionJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  // isExample: boolean;
-  example: ExampleJson;
   isCaseSensitive: boolean;
+  isExample: boolean;
+  example: ExampleJson;
 }
 
 export interface HighlightJson extends BaseBodyBitJson {
   type: 'highlight'; // body bit type
-  texts: HighlightTextJson[];
   prefix: string;
   postfix: string;
+  texts: HighlightTextJson[];
 }
 
 export interface HighlightTextJson {
@@ -64,7 +65,7 @@ export interface HighlightTextJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  // isExample: boolean;
-  example: ExampleJson;
   isCaseSensitive: boolean;
+  isExample: boolean;
+  example: ExampleJson;
 }

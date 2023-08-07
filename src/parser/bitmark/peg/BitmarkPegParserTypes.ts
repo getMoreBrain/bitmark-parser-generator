@@ -35,6 +35,7 @@ import {
   ExtraProperties,
   ImageResource,
   Comment,
+  Example,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -76,6 +77,7 @@ export interface BitHeader {
 export interface TrueFalseValue {
   text: string;
   isCorrect: boolean;
+  example?: Example;
 }
 
 export interface CardData {
@@ -92,7 +94,7 @@ export interface BitContentProcessorResult {
   footer?: FooterText;
   partner?: Partner;
   trueFalse?: TrueFalseValue[];
-  example?: string | boolean;
+  example?: Example;
   isCorrect?: boolean;
   solutions?: string[];
   statement?: Statement;

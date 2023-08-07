@@ -10,7 +10,6 @@
       "lead": "true-false",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": "",
       "statements": [
@@ -18,13 +17,13 @@
           "statement": "A house is bigger than a car.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "A tiger is bigger than a cat.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ]
     },
@@ -63,7 +62,6 @@
       "lead": "true-false",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": "",
       "statements": [
@@ -71,19 +69,19 @@
           "statement": "A house is bigger than a car.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "A tiger is bigger than a cat.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "A cow is bigger than a dog.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ]
     },
@@ -104,7 +102,6 @@
       "lead": "true-false",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": ""
     },
@@ -125,7 +122,6 @@
       "lead": "true-false",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": "",
       "statements": [
@@ -133,7 +129,7 @@
           "statement": "A house",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       ]
     },
@@ -183,7 +179,6 @@
       "lead": "",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": "[@id:2878"
     },
@@ -204,7 +199,6 @@
       "lead": "true-f",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": ""
     },
@@ -225,7 +219,6 @@
       "lead": "",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": ""
     },
@@ -246,7 +239,6 @@
       "lead": "true-false",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": ""
     },
@@ -267,7 +259,6 @@
       "lead": "",
       "hint": "",
       "instruction": "instruction",
-      "example": "",
       "isExample": false,
       "body": ""
     },
@@ -288,7 +279,6 @@
       "lead": "",
       "hint": "hint",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": ""
     },
@@ -309,7 +299,6 @@
       "lead": "",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": ""
     },
@@ -348,7 +337,6 @@
       "lead": "",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": ""
     },
@@ -387,7 +375,6 @@
       "lead": "",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": "::remark::\n[!instruction in remark]\n[!hint in remark]"
     },
@@ -408,7 +395,6 @@
       "lead": "",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": ""
     },
@@ -441,19 +427,19 @@
       "format": "bitmark--",
       "item": "",
       "hint": "",
-      "example": "",
+      "instruction": "",
       "isExample": false,
       "body": "This is a {0}",
       "placeholders": {
         "{0}": {
           "type": "gap",
-          "solutions": ["gap tag"],
           "item": "",
           "hint": "",
           "instruction": "",
+          "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
-          "isCaseSensitive": true
+          "example": null,
+          "solutions": ["gap tag"]
         }
       }
     },
@@ -474,7 +460,6 @@
       "lead": "",
       "hint": "",
       "instruction": "",
-      "example": "",
       "isExample": false,
       "body": "",
       "resource": {

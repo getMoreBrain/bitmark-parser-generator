@@ -1,71 +1,65 @@
 [
   {
-    "bitmark": "[.match-reverse]\n[@id:287869]\n[%][%match-reverse]\n[!Wie heißen die passenden Nomen?]\n===\nTier\n==\ndas[@example]\n===\nKuh\n==\ndie\n===\nLöwe\n==\ndie\n===\nSchmetterling\n==\nder\n===",
     "bit": {
       "type": "match-reverse",
       "format": "bitmark--",
+      "id": ["287869"],
       "item": "",
+      "lead": "match-reverse",
+      "instruction": "Wie heißen die passenden Nomen?",
+      "body": "",
       "heading": {},
       "pairs": [
         {
           "key": "Tier",
-          "values": [
-            "das"
-          ],
+          "values": ["das"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isExample": true,
-          "example": "",
-          "isLongAnswer": false
+          "isLongAnswer": false,
+          "isExample": false,
+          "example": null
         },
         {
           "key": "Kuh",
-          "values": [
-            "die"
-          ],
+          "values": ["die"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Löwe",
-          "values": [
-            "die"
-          ],
+          "values": ["die"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Schmetterling",
-          "values": [
-            "der"
-          ],
+          "values": ["der"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         }
-      ],
-      "body": "",
-      "id": [
-        "287869"
-      ],
-      "lead": "match-reverse",
-      "instruction": "Wie heißen die passenden Nomen?"
-    }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match-reverse]\n[@id:287869]\n[%][%match-reverse]\n[!Wie heißen die passenden Nomen?]\n===\nTier\n==\ndas[@example]\n===\nKuh\n==\ndie\n===\nLöwe\n==\ndie\n===\nSchmetterling\n==\nder\n==="
   }
 ]

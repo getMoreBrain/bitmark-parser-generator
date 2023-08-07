@@ -1,418 +1,536 @@
 [
   {
-    "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n===\n[+A house is bigger than a car.]\n===\n[+A tiger is bigger than a cat.]\n===\n[-A cow is bigger than a dog.]\n===",
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "item": "",
-      "lead": "true-false",
-      "instruction": "",
-      "hint": "",
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
+      "item": "",
+      "lead": "true-false",
+      "hint": "",
+      "instruction": "",
       "isExample": false,
-      "example": "",
+      "body": "",
       "statements": [
         {
           "statement": "A house is bigger than a car.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "A tiger is bigger than a cat.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "A cow is bigger than a dog.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         }
-      ],
-      "body": "",
-      "id": ["287883"]
-    }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n===\n[+A house is bigger than a car.]\n===\n[+A tiger is bigger than a cat.]\n===\n[-A cow is bigger than a dog.]\n==="
   },
   {
-    "bitmark": "[.true-false]\n[@id:287885]\n[%][%true-false]\n[!What colors can cows have in Switzerland?]\n===\n[+brown]\n===\n[+purple, but only in chocolate ads]\n===\n[-blue]\n===\n[-green]\n===",
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "item": "",
-      "lead": "true-false",
-      "instruction": "What colors can cows have in Switzerland?",
-      "hint": "",
+      "id": ["287885"],
       "labelTrue": "",
       "labelFalse": "",
+      "item": "",
+      "lead": "true-false",
+      "hint": "",
+      "instruction": "What colors can cows have in Switzerland?",
       "isExample": false,
-      "example": "",
+      "body": "",
       "statements": [
         {
           "statement": "brown",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "purple, but only in chocolate ads",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "blue",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "green",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         }
-      ],
-      "body": "",
-      "id": ["287885"]
-    }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.true-false]\n[@id:287885]\n[%][%true-false]\n[!What colors can cows have in Switzerland?]\n===\n[+brown]\n===\n[+purple, but only in chocolate ads]\n===\n[-blue]\n===\n[-green]\n==="
   },
   {
-    "bitmark": "[.true-false:bitmark--&image]\n[@id:287887]\n[%][%true-false]\n[&image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png][@width:928]\n===\n[-On the picture, you see a mouse.]\n===\n[+There is a cat on the picture.]\n===",
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "item": "",
-      "lead": "true-false",
-      "instruction": "",
-      "hint": "",
+      "id": ["287887"],
       "labelTrue": "",
       "labelFalse": "",
+      "item": "",
+      "lead": "true-false",
+      "hint": "",
+      "instruction": "",
       "isExample": false,
-      "example": "",
+      "body": "",
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitmark.cloud",
+          "src": "https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png",
+          "width": "928",
+          "height": null,
+          "alt": "",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
+        }
+      },
       "statements": [
         {
           "statement": "On the picture, you see a mouse.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "There is a cat on the picture.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
-      ],
-      "body": "",
-      "id": ["287887"],
-      "resource": {
-        "type": "image",
-        "image": {
-          "src": "https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png",
-          "showInIndex": false,
-          "format": "png",
-          "width": "928",
-          "height": null,
-          "alt": "",
-          "caption": "",
-          "license": "",
-          "copyright": ""
-        }
-      }
-    }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.true-false:bitmark--&image]\n[@id:287887]\n[%][%true-false]\n[&image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png][@width:928]\n===\n[-On the picture, you see a mouse.]\n===\n[+There is a cat on the picture.]\n==="
   },
   {
-    "bitmark": "[.true-false:bitmark++]\n[@id:249542]\n[%][%Selbsttest Grundlagen E]\n[@labelTrue:Richtig][@labelFalse:Falsch]\n===\n[-Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.]\n===\n[-Die Leukozyten haben die Fächigkeit, sich aktiv fortzubewegen. Sie können fremde Zellen erkennen und diese imitieren, indem sie spezielle Substanzen freisetzen.]\n===\n[+Zu den Schutzbarrieren des Körpers gehören u.a. der Säureschutzmantel (pH-Wert), die Melanozyten (pigmentbildend gegen UV-Strahlen) und die Hornschicht der Haut.]\n===\n[-Lzmphozyten werden auch als spezifisches Immunsystem bezeichnet, da sie nur an spezifischen Geweben des Körpers ihre Immunabwehr verrichten.]\n===\n[+Makrophagen werden angelockt, indem die Antikörper aus den B-Lymphozyten die Antigene auf dem eingedrungenen Erreger besetzen.]\n===\n[-T- und B-Lymphozyten, Granulozyten und Makrophagen sind von Geburt an zur Abwehr von Krankeitserregern im Einsatz.]\n===\n[+Fieber zeigt an, dass das Immunsystem der Körpers aktiv ist, denn ab einer Körpertemperatur von 37°C können sich die Lymphoyzten besser vermehren und sind aktiver.]\n===\n[+Bei einer aktiven Impfung werden abgeschwächte Krankheitserreger in den Körper gespritzt, woraufhin die T- und B-Lzmphozyten gegen die Antigene bilden.]\n===\n[+Zu den Mikroorganismen zählen z. B. Pilze, Bakterien und Viren.]\n===\n[-Um sich zu vermehren und den Stoffwechsel aufrechtzuerhalten, benötigen Bakterien Wärme, Feuchtigkeit, Nährszoffe und einen Wirt (z. B. den Menschen).]\n===\n[-Eine Mzkosen werden Kugelbakterien (Kokken) verursacht.]\n===\n[+Medikamente, die gegen Pilze wirken, heissen Antimykotika. Medikamente gegen Viren sint Virostatika und solche gegen Bakkterien Antibiotika.]\n===\n[+Stresshormone dienen dem Körper dazu, um in lebensbedrohlichen Situationen sofort reagieren zu können.]\n===\n[-Bei der therapeutischen Nutzung von Kortison muss grundsätzlich bei alle Anwendungen, ob lokal oder systemisch, mit erheblichen Nebenwirkungen gerechnet werden.]\n===\n[-Bei den sogenannten Superinfektionen handelt es sich um die jeweiligen Varianten der Influenza, die gerade in Umlauf sind und viele Menschenleben kosten können.]\n===\n[-Sobald die klassischen Entzündungszeichen erkennbar sind, liegt immer eine Infektion mit Krankheitserregern vor.]\n===\n[+Bei der indirekten Übertragung werden Keime beispielsweise über die Türklinke weitergegeben, bei der direkten Übertragung zum Beispiel über Tröpfchen.]\n===\n[+Bei der vektoriellen Übertragung werden Krankheitserreger von z. B. Mücken oder Zecken auf den Menschen übertragen.]\n===\n[+Eine nosokomiale Infektion wurde in einer Einrichtung der Gesundheitswesens (z- B- Spital, Pflegeheim, Arztpraxis) erworben.]\n===\n[+MRSA ist die Abkürzung für Methicillin resistenter Staphylococcus aureus.]\n===\n[-Eine Händedesinfektion hat nach WHO immer zu erfolgen:\n\n• bei Arbeitsbeginn und -Ende\n• vor Mahlzeitzubereitung\n• vor und nach dem Engpässen\n• vor und nach Pausen\n• bei sichtbarer Verschmutzung der Hände\n• nach der Toilettenbenutzung]\n===\n[+Zur persönlicher Hygiene (Individualhyhiene) gehören die Haut-, die Haar-, die Nagel- und die Mundpflege.]\n===\n[+Hygiene bezieht such nicht nur auf die persönliche Hygiene (Individualhygiene). Hygiene umfasst auch Themen wie:\n\n• Lebensmittel gyhiene\n• Wasserhygiene (Trinkwasser und Abwasser)\n• Umwelthygiene (Luft, Boden)\n• Abfallentsorgung\n• Arbeitsschutz, die\n• Sozialhygiene und Psychohygiene]\n===",
     "bit": {
       "type": "true-false",
       "format": "bitmark++",
-      "item": "",
-      "lead": "Selbsttest Grundlagen E",
-      "instruction": "",
-      "hint": "",
+      "id": ["249542"],
       "labelTrue": "Richtig",
       "labelFalse": "Falsch",
+      "item": "",
+      "lead": "Selbsttest Grundlagen E",
+      "hint": "",
+      "instruction": "",
       "isExample": false,
-      "example": "",
+      "body": "",
       "statements": [
         {
           "statement": "Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Die Leukozyten haben die Fächigkeit, sich aktiv fortzubewegen. Sie können fremde Zellen erkennen und diese imitieren, indem sie spezielle Substanzen freisetzen.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Zu den Schutzbarrieren des Körpers gehören u.a. der Säureschutzmantel (pH-Wert), die Melanozyten (pigmentbildend gegen UV-Strahlen) und die Hornschicht der Haut.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Lzmphozyten werden auch als spezifisches Immunsystem bezeichnet, da sie nur an spezifischen Geweben des Körpers ihre Immunabwehr verrichten.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Makrophagen werden angelockt, indem die Antikörper aus den B-Lymphozyten die Antigene auf dem eingedrungenen Erreger besetzen.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "T- und B-Lymphozyten, Granulozyten und Makrophagen sind von Geburt an zur Abwehr von Krankeitserregern im Einsatz.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Fieber zeigt an, dass das Immunsystem der Körpers aktiv ist, denn ab einer Körpertemperatur von 37°C können sich die Lymphoyzten besser vermehren und sind aktiver.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Bei einer aktiven Impfung werden abgeschwächte Krankheitserreger in den Körper gespritzt, woraufhin die T- und B-Lzmphozyten gegen die Antigene bilden.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Zu den Mikroorganismen zählen z. B. Pilze, Bakterien und Viren.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Um sich zu vermehren und den Stoffwechsel aufrechtzuerhalten, benötigen Bakterien Wärme, Feuchtigkeit, Nährszoffe und einen Wirt (z. B. den Menschen).",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Eine Mzkosen werden Kugelbakterien (Kokken) verursacht.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Medikamente, die gegen Pilze wirken, heissen Antimykotika. Medikamente gegen Viren sint Virostatika und solche gegen Bakkterien Antibiotika.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Stresshormone dienen dem Körper dazu, um in lebensbedrohlichen Situationen sofort reagieren zu können.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Bei der therapeutischen Nutzung von Kortison muss grundsätzlich bei alle Anwendungen, ob lokal oder systemisch, mit erheblichen Nebenwirkungen gerechnet werden.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Bei den sogenannten Superinfektionen handelt es sich um die jeweiligen Varianten der Influenza, die gerade in Umlauf sind und viele Menschenleben kosten können.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Sobald die klassischen Entzündungszeichen erkennbar sind, liegt immer eine Infektion mit Krankheitserregern vor.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Bei der indirekten Übertragung werden Keime beispielsweise über die Türklinke weitergegeben, bei der direkten Übertragung zum Beispiel über Tröpfchen.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Bei der vektoriellen Übertragung werden Krankheitserreger von z. B. Mücken oder Zecken auf den Menschen übertragen.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Eine nosokomiale Infektion wurde in einer Einrichtung der Gesundheitswesens (z- B- Spital, Pflegeheim, Arztpraxis) erworben.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "MRSA ist die Abkürzung für Methicillin resistenter Staphylococcus aureus.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Eine Händedesinfektion hat nach WHO immer zu erfolgen:\n\n• bei Arbeitsbeginn und -Ende\n• vor Mahlzeitzubereitung\n• vor und nach dem Engpässen\n• vor und nach Pausen\n• bei sichtbarer Verschmutzung der Hände\n• nach der Toilettenbenutzung",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Zur persönlicher Hygiene (Individualhyhiene) gehören die Haut-, die Haar-, die Nagel- und die Mundpflege.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Hygiene bezieht such nicht nur auf die persönliche Hygiene (Individualhygiene). Hygiene umfasst auch Themen wie:\n\n• Lebensmittel gyhiene\n• Wasserhygiene (Trinkwasser und Abwasser)\n• Umwelthygiene (Luft, Boden)\n• Abfallentsorgung\n• Arbeitsschutz, die\n• Sozialhygiene und Psychohygiene",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
-      ],
-      "body": "",
-      "id": ["249542"]
-    }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.true-false:bitmark++]\n[@id:249542]\n[%][%Selbsttest Grundlagen E]\n[@labelTrue:Richtig][@labelFalse:Falsch]\n===\n[-Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.]\n===\n[-Die Leukozyten haben die Fächigkeit, sich aktiv fortzubewegen. Sie können fremde Zellen erkennen und diese imitieren, indem sie spezielle Substanzen freisetzen.]\n===\n[+Zu den Schutzbarrieren des Körpers gehören u.a. der Säureschutzmantel (pH-Wert), die Melanozyten (pigmentbildend gegen UV-Strahlen) und die Hornschicht der Haut.]\n===\n[-Lzmphozyten werden auch als spezifisches Immunsystem bezeichnet, da sie nur an spezifischen Geweben des Körpers ihre Immunabwehr verrichten.]\n===\n[+Makrophagen werden angelockt, indem die Antikörper aus den B-Lymphozyten die Antigene auf dem eingedrungenen Erreger besetzen.]\n===\n[-T- und B-Lymphozyten, Granulozyten und Makrophagen sind von Geburt an zur Abwehr von Krankeitserregern im Einsatz.]\n===\n[+Fieber zeigt an, dass das Immunsystem der Körpers aktiv ist, denn ab einer Körpertemperatur von 37°C können sich die Lymphoyzten besser vermehren und sind aktiver.]\n===\n[+Bei einer aktiven Impfung werden abgeschwächte Krankheitserreger in den Körper gespritzt, woraufhin die T- und B-Lzmphozyten gegen die Antigene bilden.]\n===\n[+Zu den Mikroorganismen zählen z. B. Pilze, Bakterien und Viren.]\n===\n[-Um sich zu vermehren und den Stoffwechsel aufrechtzuerhalten, benötigen Bakterien Wärme, Feuchtigkeit, Nährszoffe und einen Wirt (z. B. den Menschen).]\n===\n[-Eine Mzkosen werden Kugelbakterien (Kokken) verursacht.]\n===\n[+Medikamente, die gegen Pilze wirken, heissen Antimykotika. Medikamente gegen Viren sint Virostatika und solche gegen Bakkterien Antibiotika.]\n===\n[+Stresshormone dienen dem Körper dazu, um in lebensbedrohlichen Situationen sofort reagieren zu können.]\n===\n[-Bei der therapeutischen Nutzung von Kortison muss grundsätzlich bei alle Anwendungen, ob lokal oder systemisch, mit erheblichen Nebenwirkungen gerechnet werden.]\n===\n[-Bei den sogenannten Superinfektionen handelt es sich um die jeweiligen Varianten der Influenza, die gerade in Umlauf sind und viele Menschenleben kosten können.]\n===\n[-Sobald die klassischen Entzündungszeichen erkennbar sind, liegt immer eine Infektion mit Krankheitserregern vor.]\n===\n[+Bei der indirekten Übertragung werden Keime beispielsweise über die Türklinke weitergegeben, bei der direkten Übertragung zum Beispiel über Tröpfchen.]\n===\n[+Bei der vektoriellen Übertragung werden Krankheitserreger von z. B. Mücken oder Zecken auf den Menschen übertragen.]\n===\n[+Eine nosokomiale Infektion wurde in einer Einrichtung der Gesundheitswesens (z- B- Spital, Pflegeheim, Arztpraxis) erworben.]\n===\n[+MRSA ist die Abkürzung für Methicillin resistenter Staphylococcus aureus.]\n===\n[-Eine Händedesinfektion hat nach WHO immer zu erfolgen:\n\n• bei Arbeitsbeginn und -Ende\n• vor Mahlzeitzubereitung\n• vor und nach dem Engpässen\n• vor und nach Pausen\n• bei sichtbarer Verschmutzung der Hände\n• nach der Toilettenbenutzung]\n===\n[+Zur persönlicher Hygiene (Individualhyhiene) gehören die Haut-, die Haar-, die Nagel- und die Mundpflege.]\n===\n[+Hygiene bezieht such nicht nur auf die persönliche Hygiene (Individualhygiene). Hygiene umfasst auch Themen wie:\n\n• Lebensmittel gyhiene\n• Wasserhygiene (Trinkwasser und Abwasser)\n• Umwelthygiene (Luft, Boden)\n• Abfallentsorgung\n• Arbeitsschutz, die\n• Sozialhygiene und Psychohygiene]\n==="
   },
   {
-    "bitmark": "[.true-false:bitmark--]\n[@id:165223]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+Der Säureschutzmantel und die Lipidbarriere sind in oder auf der Epidermis zu finden.]\n===\n[+Glycerin und Hyaluronsäure binden Feuchtigkeit in der Haut.]\n===\n[-Zu den Funktionen der Haut gehören die Bildung einer Lichtschwiele und die Ausscheidung von Urin.]\n===\n[+Die Haut verändert sich mit dem Alter, unter anderem verliert sie an Elastizität.]\n===\n[-Pflegeprodukte sind dazu da, gesunde Haut für Krankheiten empfänglicher zu machen.]\n===\n[-Wird Wasser zur Reinigung der Haut eingesetzt, so löst es vor allem Fett und hat dadurch eine austrocknende Wirkung.]\n===\n[+Wer seine Ernährung fettarm gestaltet oder die falschen Fette zu sich nimmt, kann unter trockener Haut und Juckreiz leiden.]\n===\n[+Schwitzen ist ein Mechanismus, der dem Körper hilft, die Temperatur zu regulieren.]\n===\n[+Deos beeinflussen den Geruch, Antitranispirantien reduzieren das Schwitzen.]\n===\n[+Meditation kann dabei helfen, Stress abzubauen und damit auch weniger zu schwitzen.]\n===",
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "item": "",
-      "lead": "",
-      "instruction": "",
-      "hint": "",
+      "id": ["165223"],
       "labelTrue": "richtig",
       "labelFalse": "falsch",
+      "item": "",
+      "lead": "",
+      "hint": "",
+      "instruction": "",
       "isExample": false,
-      "example": "",
+      "body": "",
       "statements": [
         {
           "statement": "Der Säureschutzmantel und die Lipidbarriere sind in oder auf der Epidermis zu finden.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Glycerin und Hyaluronsäure binden Feuchtigkeit in der Haut.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Zu den Funktionen der Haut gehören die Bildung einer Lichtschwiele und die Ausscheidung von Urin.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Die Haut verändert sich mit dem Alter, unter anderem verliert sie an Elastizität.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Pflegeprodukte sind dazu da, gesunde Haut für Krankheiten empfänglicher zu machen.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Wird Wasser zur Reinigung der Haut eingesetzt, so löst es vor allem Fett und hat dadurch eine austrocknende Wirkung.",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Wer seine Ernährung fettarm gestaltet oder die falschen Fette zu sich nimmt, kann unter trockener Haut und Juckreiz leiden.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Schwitzen ist ein Mechanismus, der dem Körper hilft, die Temperatur zu regulieren.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Deos beeinflussen den Geruch, Antitranispirantien reduzieren das Schwitzen.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Meditation kann dabei helfen, Stress abzubauen und damit auch weniger zu schwitzen.",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
-      ],
-      "body": "",
-      "id": ["165223"]
-    }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.true-false:bitmark--]\n[@id:165223]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+Der Säureschutzmantel und die Lipidbarriere sind in oder auf der Epidermis zu finden.]\n===\n[+Glycerin und Hyaluronsäure binden Feuchtigkeit in der Haut.]\n===\n[-Zu den Funktionen der Haut gehören die Bildung einer Lichtschwiele und die Ausscheidung von Urin.]\n===\n[+Die Haut verändert sich mit dem Alter, unter anderem verliert sie an Elastizität.]\n===\n[-Pflegeprodukte sind dazu da, gesunde Haut für Krankheiten empfänglicher zu machen.]\n===\n[-Wird Wasser zur Reinigung der Haut eingesetzt, so löst es vor allem Fett und hat dadurch eine austrocknende Wirkung.]\n===\n[+Wer seine Ernährung fettarm gestaltet oder die falschen Fette zu sich nimmt, kann unter trockener Haut und Juckreiz leiden.]\n===\n[+Schwitzen ist ein Mechanismus, der dem Körper hilft, die Temperatur zu regulieren.]\n===\n[+Deos beeinflussen den Geruch, Antitranispirantien reduzieren das Schwitzen.]\n===\n[+Meditation kann dabei helfen, Stress abzubauen und damit auch weniger zu schwitzen.]\n==="
   },
   {
-    "bitmark": "[.true-false:bitmark--]\n[@id:213731]\n[%9]\n[!Welche Art der Datenerhebung gehört zur Primär- (P), welche zur Sekundärmarktforschung (S)?]\n[@labelTrue:p][@labelFalse:s]\n===\n[+Beobachtung]\n===\n[+Test]\n===\n[-Daten aus ausserbetrieblichen Quellen]\n===\n[-Daten aus innerbetrieblichen Quellen]\n===\n[+Telefonische Befragungen]\n===\n[+Panel]\n===",
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "item": "9",
-      "lead": "",
-      "instruction": "Welche Art der Datenerhebung gehört zur Primär- (P), welche zur Sekundärmarktforschung (S)?",
-      "hint": "",
+      "id": ["213731"],
       "labelTrue": "p",
       "labelFalse": "s",
+      "item": "9",
+      "lead": "",
+      "hint": "",
+      "instruction": "Welche Art der Datenerhebung gehört zur Primär- (P), welche zur Sekundärmarktforschung (S)?",
       "isExample": false,
-      "example": "",
+      "body": "",
       "statements": [
         {
           "statement": "Beobachtung",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Test",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Daten aus ausserbetrieblichen Quellen",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Daten aus innerbetrieblichen Quellen",
           "isCorrect": false,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Telefonische Befragungen",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         {
           "statement": "Panel",
           "isCorrect": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
-      ],
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.true-false:bitmark--]\n[@id:213731]\n[%9]\n[!Welche Art der Datenerhebung gehört zur Primär- (P), welche zur Sekundärmarktforschung (S)?]\n[@labelTrue:p][@labelFalse:s]\n===\n[+Beobachtung]\n===\n[+Test]\n===\n[-Daten aus ausserbetrieblichen Quellen]\n===\n[-Daten aus innerbetrieblichen Quellen]\n===\n[+Telefonische Befragungen]\n===\n[+Panel]\n==="
+  },
+  {
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "labelTrue": "",
+      "labelFalse": "",
+      "item": "",
+      "lead": "",
+      "hint": "",
+      "instruction": "",
+      "isExample": true,
       "body": "",
-      "id": ["213731"]
-    }
+      "statements": [
+        {
+          "statement": "TrueAnswer",
+          "isCorrect": true,
+          "isExample": true,
+          "example": true
+        },
+        {
+          "statement": "FalseAnswer",
+          "isCorrect": false,
+          "isExample": true,
+          "example": false
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.true-false]\n[@example]\n===\n[+TrueAnswer]\n===\n[-FalseAnswer]\n==="
+  },
+  {
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "labelTrue": "",
+      "labelFalse": "",
+      "item": "",
+      "lead": "",
+      "hint": "",
+      "instruction": "",
+      "isExample": true,
+      "body": "",
+      "statements": [
+        {
+          "statement": "TrueAnswer",
+          "isCorrect": true,
+          "isExample": true,
+          "example": true
+        },
+        {
+          "statement": "FalseAnswer",
+          "isCorrect": false,
+          "isExample": true,
+          "example": false
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.true-false]\n===\n[+TrueAnswer][@example]\n===\n[-FalseAnswer][@example]\n==="
+  },
+  {
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark--",
+      "labelTrue": "",
+      "labelFalse": "",
+      "item": "",
+      "lead": "",
+      "hint": "",
+      "instruction": "",
+      "isExample": true,
+      "body": "",
+      "statements": [
+        {
+          "statement": "TrueAnswer",
+          "isCorrect": true,
+          "isExample": true,
+          "example": false
+        },
+        {
+          "statement": "FalseAnswer",
+          "isCorrect": false,
+          "isExample": true,
+          "example": true
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.true-false]\n===\n[+TrueAnswer][@example:false]\n===\n[-FalseAnswer][@example:true]\n==="
   }
 ]

@@ -19,8 +19,15 @@ class BaseBuilder {
   protected toExample(
     example: string | boolean | null | undefined,
     defaultValue: string | boolean | null,
-  ): Example | undefined {
-    if (example === undefined) return undefined;
+  ): {
+    isExample: boolean;
+    example?: Example;
+  } {
+    if (example === undefined) {
+      return {
+        isExample: false,
+      };
+    }
     let exampleRes: Example = '';
 
     const exampleOrDefault: Example | null = example === null ? defaultValue : example;
@@ -33,7 +40,10 @@ class BaseBuilder {
       exampleRes = exampleOrDefault; // Must be boolean or null
     }
 
-    return exampleRes;
+    return {
+      isExample: exampleRes !== undefined,
+      example: exampleRes,
+    };
   }
 
   /**
@@ -49,8 +59,15 @@ class BaseBuilder {
   protected toExampleBoolean(
     example: string | boolean | null | undefined,
     defaultValue: boolean | null,
-  ): Example | undefined {
-    if (example === undefined) return undefined;
+  ): {
+    isExample: boolean;
+    example?: Example;
+  } {
+    if (example === undefined) {
+      return {
+        isExample: false,
+      };
+    }
     let exampleRes: Example = '';
 
     const exampleOrDefault: Example | null = example === null ? defaultValue : example;
@@ -60,7 +77,11 @@ class BaseBuilder {
     } else {
       exampleRes = defaultValue; // Must be boolean or null
     }
-    return exampleRes;
+
+    return {
+      isExample: exampleRes !== undefined,
+      example: exampleRes,
+    };
   }
 
   /**

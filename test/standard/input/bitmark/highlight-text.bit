@@ -2,3 +2,22 @@
 [@id:285689]
 [%10][%highlight-text]
 She went to the [+mall][-sea] and ate [+breakfast][-fish][-trees].
+
+
+[.highlight-text]
+[@id:285689]
+[%10][%highlight-text]
+[@example]
+She went to the [+mall][-sea] and ate [+breakfast][-fish][-trees].
+
+
+[.highlight-text]
+[@id:285689]
+[%10][%highlight-text]
+She went to the [+mall][-sea] and ate [+breakfast][-fish][@example][-trees].
+
+
+[.highlight-text]
+[@id:285689]
+[%10][%highlight-text]
+She went to the [+mall][-sea] and ate [+breakfast][@example][-fish][-trees].
