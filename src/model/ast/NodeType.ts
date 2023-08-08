@@ -142,9 +142,10 @@ const NodeType = superenum({
   lead: 'lead',
   hint: 'hint',
   instruction: 'instruction',
+  isDefaultExample: 'isDefaultExample',
+  isExample: 'isExample',
   example: 'example',
   exampleValue: 'exampleValue',
-  isExample: 'isExample',
 
   extraProperties: 'extraProperties',
 

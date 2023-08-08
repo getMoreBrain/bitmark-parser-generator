@@ -5,6 +5,7 @@ import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import { bookChainContentProcessor } from './BookChainContentProcessor';
+import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
 import { partnerChainContentProcessor } from './PartnerChainContentProcessor';
 
 import {
@@ -27,7 +28,10 @@ function propertyContentProcessor(
   // Check for chains
   // Generally, the chain will only be present in the correct bit as the data was already validated. The bit type
   // should also be checked here if the property may occur in another bit with a different meaning.
-  if (key === PropertyKey.partner) {
+  if (key === PropertyKey.example) {
+    exampleTagContentProcessor(context, bitLevel, bitType, content, target);
+    return;
+  } else if (key === PropertyKey.partner) {
     partnerChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
   } else if (key === PropertyKey.book) {

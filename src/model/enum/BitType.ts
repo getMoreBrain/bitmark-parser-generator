@@ -3,6 +3,7 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 import { TagDataMap } from '../config/TagData';
 
 import { CardSetTypeType } from './CardSetType';
+import { ExampleTypeType } from './ExampleType';
 import { ResourceTypeType } from './ResourceType';
 
 export interface BitTypeMetadata {
@@ -24,6 +25,9 @@ export interface BitTypeMetadata {
 
   // Is a footer allowed? (default: false)
   footerAllowed?: boolean;
+
+  // Top-level example type (default: none)
+  rootExampleType?: ExampleTypeType;
 }
 
 /**
@@ -152,6 +156,7 @@ const BitType = superenum({
   documentLink: 'document-link',
   documentUpload: 'document-upload',
   editorial: 'editorial',
+  editorNote: 'editor-note',
   essay: 'essay',
   example: 'example',
   featured: 'featured',
@@ -165,7 +170,10 @@ const BitType = superenum({
   highlightText: 'highlight-text',
   hint: 'hint',
   image: 'image',
+  imageLandscape: 'image-landscape',
   imageLink: 'image-link',
+  imageOnDevice: 'image-on-device',
+  imagePortrait: 'image-portrait',
   imagePrototype: 'image-prototype',
   imageSuperWide: 'image-super-wide',
   imageZoom: 'image-zoom',
@@ -178,8 +186,10 @@ const BitType = superenum({
   langLifeSkills: 'lang-life-skills',
   langEnglishAroundWorld: 'lang-english-around-world',
   langGoodToKnow: 'lang-good-to-know',
+  langLearningGoal: 'lang-learning-goal',
   langLearningStrategy: 'lang-learning-strategy',
   langLikeALocal: 'lang-like-a-local',
+  langMaterial: 'lang-material',
   langUsefulPhrases: 'lang-useful-phrases',
   langLevelDown: 'lang-level-down',
   langLevelUp: 'lang-level-up',
@@ -189,6 +199,7 @@ const BitType = superenum({
   langVocabulary: 'lang-vocabulary',
   langHomework: 'lang-homework',
   langTeacherNote: 'lang-teacher-note',
+  langTeacherPronunciation: 'lang-teacher-pronunciation',
   learningPathBook: 'learning-path-book',
   learningPathBotTraining: 'learning-path-bot-training',
   learningPathClassroomEvent: 'learning-path-classroom-event',
