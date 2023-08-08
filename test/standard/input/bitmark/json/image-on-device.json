@@ -1,0 +1,29 @@
+[
+  {
+    "bitmark": "[.image-on-device]\n[@id:342343]\n[&image:https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg]",
+    "bit": {
+      "type": "image-on-device",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": "",
+      "id": ["342343"],
+      "resource": {
+        "type": "image",
+        "image": {
+          "src": "https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg",
+          "showInIndex": false,
+          "format": "jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "caption": "",
+          "license": "",
+          "copyright": ""
+        }
+      }
+    }
+  }
+]
