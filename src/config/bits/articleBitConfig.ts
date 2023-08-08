@@ -23,6 +23,7 @@ const ARTICLE_WITH_EXAMPLE_CONFIG: BitTypeMetadata = {
 BitType.setMetadata<BitTypeMetadata>(BitType.article, ARTICLE_CONFIG);
 
 // Aliases
+
 BitType.setMetadata<BitTypeMetadata>(BitType.aiPrompt, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.articleAi, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.articleAttachment, ARTICLE_WITH_EXAMPLE_CONFIG);
@@ -30,6 +31,20 @@ BitType.setMetadata<BitTypeMetadata>(BitType.assignment, ARTICLE_WITH_EXAMPLE_CO
 BitType.setMetadata<BitTypeMetadata>(BitType.blogArticle, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bug, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.correction, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookPreparation, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookStep, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookIngredients, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookRemark, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookVariation, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookInsert, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookArrangement, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookPracticeAdvise, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookPlate, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookRecommendation, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookPersonalRecommendation, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookSideDrink, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookSideDish, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.cookTimer, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.danger, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.details1, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.details, ARTICLE_WITH_EXAMPLE_CONFIG);
