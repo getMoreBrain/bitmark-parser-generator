@@ -76,6 +76,7 @@ export interface Bit {
   hint?: string;
   instruction?: string;
   isExample?: boolean;
+  isDefaultExample: boolean;
   example?: Example;
   partner?: Partner;
   resource?: Resource;
@@ -112,7 +113,7 @@ export interface ItemLead {
   lead?: string;
 }
 
-export type Example = string | boolean | null;
+export type Example = string | boolean;
 
 // Extra Properties
 
@@ -154,6 +155,7 @@ export interface Decision {
   instruction?: string;
   isCaseSensitive?: boolean;
   isExample: boolean;
+  isDefaultExample: boolean;
   example?: Example;
 }
 
@@ -197,6 +199,7 @@ export interface Pair {
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
   isExample: boolean;
+  isDefaultExample: boolean;
   example?: Example;
 }
 
@@ -208,7 +211,6 @@ export interface Matrix {
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
   isExample: boolean;
-  example?: Example;
   cells: MatrixCell[];
 }
 
@@ -218,6 +220,7 @@ export interface MatrixCell {
   hint?: string;
   instruction?: string;
   isExample: boolean;
+  isDefaultExample: boolean;
   example?: Example;
 }
 
@@ -233,6 +236,7 @@ export interface Question {
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
   isExample: boolean;
+  isDefaultExample: boolean;
   example?: Example;
 }
 
@@ -269,6 +273,7 @@ export interface Gap extends BodyBit {
     instruction?: string;
     isCaseSensitive?: boolean;
     isExample: boolean;
+    isDefaultExample: boolean;
     example?: Example;
   };
 }
@@ -297,6 +302,7 @@ export interface SelectOption {
   instruction?: string;
   isCaseSensitive?: boolean;
   isExample: boolean;
+  isDefaultExample: boolean;
   example?: Example;
 }
 
@@ -325,6 +331,7 @@ export interface HighlightText {
   instruction?: string;
   isCaseSensitive?: boolean;
   isExample: boolean;
+  isDefaultExample: boolean;
   example?: Example;
 }
 

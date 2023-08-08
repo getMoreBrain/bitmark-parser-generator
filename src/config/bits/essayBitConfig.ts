@@ -15,5 +15,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.essay, {
   },
   resourceAttachmentAllowed: true,
   bodyAllowed: true,
-  exampleType: ExampleType.string,
+  rootExampleType: ExampleType.string,
 });

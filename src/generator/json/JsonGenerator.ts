@@ -14,9 +14,10 @@ import { DocumentDownloadResource } from '../../model/ast/Nodes';
 import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
 import { Text, TextAst } from '../../model/ast/TextNodes';
-import { BitType, BitTypeType } from '../../model/enum/BitType';
+import { BitType, BitTypeMetadata, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
+import { ExampleType } from '../../model/enum/ExampleType';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
@@ -24,6 +25,7 @@ import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
 import { TextParser } from '../../parser/text/TextParser';
 import { ArrayUtils } from '../../utils/ArrayUtils';
+import { BooleanUtils } from '../../utils/BooleanUtils';
 import { StringUtils } from '../../utils/StringUtils';
 import { UrlUtils } from '../../utils/UrlUtils';
 import { Generator } from '../Generator';
@@ -198,6 +200,12 @@ interface ItemLeadHintInstuction {
   lead: Text;
   hint: Text;
   instruction: Text;
+}
+
+interface ExampleNode {
+  isExample: boolean;
+  example?: Example | undefined;
+  isDefaultExample: boolean;
 }
 
 interface ExampleJsonWrapper {
@@ -418,6 +426,41 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     this.bitJson = this.createBitJson(bit);
     this.bitWrapperJson.bit = this.bitJson as BitJson;
+
+    // Handle example at the root level - this is bit dependent; configuration is in the bit metadata
+    // There is same logic here to select the correct default value of the example is the default is
+    // required, and this is bit depenedent.
+    // This is ugly, but it is even uglier if the defaults at set in the AST.
+
+    const meta = BitType.getMetadata<BitTypeMetadata>(bit.bitType);
+    const hasRootExample = !!meta?.rootExampleType;
+    const isBoolean = meta?.rootExampleType === ExampleType.boolean;
+
+    if (hasRootExample) {
+      // Calculate the value of the default example
+      let defaultExample: string | boolean;
+      if (isBoolean) {
+        // Boolean example
+        defaultExample = true;
+        if (bit.bitType === BitType.trueFalse1) {
+          if (bit.cardNode?.statement?.isCorrect !== undefined) {
+            defaultExample = bit.cardNode.statement.isCorrect;
+          }
+        }
+      } else {
+        // String example
+        defaultExample = ArrayUtils.asSingle(bit.sampleSolution) ?? '';
+      }
+
+      const exampleRes = this.toExample(bit as ExampleNode, {
+        defaultExample,
+        isBoolean,
+      });
+      this.bitJson.isExample = exampleRes.isExample;
+      this.bitJson.example = exampleRes.example;
+    } else if (bit.isExample) {
+      this.bitJson.isExample = true;
+    }
   }
 
   protected exit_bitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -643,9 +686,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         // Create the statement
         const statementJson: Partial<StatementJson> = {
           statement: s.text ?? '',
-          isCorrect: s.isCorrect ?? false,
+          isCorrect: !!s.isCorrect,
           ...this.toItemLeadHintInstruction(s),
-          ...this.toExample(s.example, s.isExample),
+          ...this.toExample(s, {
+            defaultExample: !!s.isCorrect,
+            isBoolean: true,
+          }),
         };
 
         // Delete unwanted properties
@@ -680,7 +726,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           choice: c.text ?? '',
           isCorrect: c.isCorrect ?? false,
           ...this.toItemLeadHintInstruction(c),
-          ...this.toExample(c.example, c.isExample),
+          ...this.toExample(c, {
+            defaultExample: !!c.isCorrect,
+            isBoolean: true,
+          }),
         };
 
         // Delete unwanted properties
@@ -712,7 +761,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           response: r.text ?? '',
           isCorrect: r.isCorrect ?? false,
           ...this.toItemLeadHintInstruction(r),
-          ...this.toExample(r.example, r.isExample),
+          ...this.toExample(r, {
+            defaultExample: !!r.isCorrect,
+            isBoolean: true,
+          }),
         };
 
         // Delete unwanted properties
@@ -744,7 +796,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
               choice: c.text ?? '',
               isCorrect: c.isCorrect ?? false,
               ...this.toItemLeadHintInstruction(c),
-              ...this.toExample(c.example, c.isExample),
+              ...this.toExample(c, {
+                defaultExample: !!c.isCorrect,
+                isBoolean: true,
+              }),
             };
 
             // Delete unwanted properties
@@ -763,7 +818,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
               response: r.text ?? '',
               isCorrect: r.isCorrect ?? false,
               ...this.toItemLeadHintInstruction(r),
-              ...this.toExample(r.example, r.isExample),
+              ...this.toExample(r, {
+                defaultExample: !!r.isCorrect,
+                isBoolean: true,
+              }),
             };
 
             // Delete unwanted properties
@@ -844,7 +902,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           ...this.toItemLeadHintInstruction(p),
           isCaseSensitive: p.isCaseSensitive ?? true,
           isLongAnswer: !p.isShortAnswer ?? false,
-          ...this.toExample(p.example, p.isExample),
+          ...this.toExample(p, {
+            defaultExample: true,
+            isBoolean: true,
+          }),
         };
 
         // Delete unwanted properties
@@ -887,7 +948,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
             const matrixCellJson: Partial<MatrixCellJson> = {
               values: c.values ?? [],
               ...this.toItemLeadHintInstruction(c),
-              ...this.toExample(c.example, c.isExample),
+              ...this.toExample(c, {
+                defaultExample: true,
+                isBoolean: true,
+              }),
             };
 
             // Delete unwanted properties
@@ -938,7 +1002,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           ...this.toItemLeadHintInstruction(q),
           // isCaseSensitive: q.isCaseSensitive ?? true,
           isShortAnswer: q.isShortAnswer ?? true,
-          ...this.toExample(q.example, q.isExample),
+          ...this.toExample(q, {
+            defaultExample: q.sampleSolution || '',
+            isBoolean: false,
+          }),
         };
 
         // Delete unwanted properties
@@ -1065,20 +1132,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.bitJson.instruction = this.toTextAstOrString(instruction);
   }
 
-  // bitmarkAst -> bits -> bitsValue -> example
-
-  protected leaf_example(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const example = node.value as string | boolean | undefined;
-
-    // Ignore example that is not at the bit level as it are handled elsewhere
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    const res = this.toExample(example, true);
-    if (res) {
-      this.bitJson.example = res.example;
-    }
-  }
-
   // bitmarkAst -> bits -> footer -> footerText
 
   protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1202,12 +1255,17 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected createGapJson(gap: Gap): GapJson {
     const data = gap.data;
 
+    const defaultExample = data.solutions && data.solutions.length > 0 ? data.solutions[0] : '';
+
     // Create the gap
     const gapJson: Partial<GapJson> = {
       type: 'gap',
       ...this.toItemLeadHintInstruction(data),
       isCaseSensitive: data.isCaseSensitive ?? true,
-      ...this.toExample(data.example, data.isExample),
+      ...this.toExample(data, {
+        defaultExample,
+        isBoolean: false,
+      }),
       solutions: data.solutions,
     };
 
@@ -1227,7 +1285,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         text: option.text,
         isCorrect: option.isCorrect ?? false,
         ...this.toItemLeadHintInstruction(option),
-        ...this.toExample(option.example, option.isExample),
+        ...this.toExample(option, {
+          defaultExample: !!option.isCorrect,
+          isBoolean: true,
+        }),
       };
 
       // Remove unwanted properties
@@ -1266,7 +1327,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         isCorrect: text.isCorrect ?? false,
         isHighlighted: text.isHighlighted ?? false,
         ...this.toItemLeadHintInstruction(text),
-        ...this.toExample(text.example, text.isExample),
+        ...this.toExample(text, {
+          defaultExample: !!text.isCorrect,
+          isBoolean: true,
+        }),
       };
 
       // Remove unwanted properties
@@ -1830,27 +1894,35 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     };
   }
 
-  protected toExample(example: Example | undefined, isExample: boolean): ExampleJsonWrapper {
-    if (example === undefined)
+  protected toExample(
+    node: ExampleNode,
+    options: {
+      defaultExample: string | boolean | null;
+      isBoolean: boolean;
+    },
+  ): ExampleJsonWrapper {
+    const { isExample, example, isDefaultExample } = node;
+    const { defaultExample, isBoolean } = options;
+
+    if (!isExample) {
       return {
-        isExample,
+        isExample: false,
         example: null,
       };
-
-    let exampleRes: ExampleJson = this.textDefault;
-
-    if (StringUtils.isString(example)) {
-      exampleRes = this.toTextAstOrString(example as string);
-    } else {
-      exampleRes = example as boolean;
     }
 
-    // Set isExample at bit level as we have an example in the bit
-    this.bitJson.isExample = true;
+    let exampleValue;
+    if (isDefaultExample) {
+      exampleValue = isBoolean
+        ? BooleanUtils.toBoolean(defaultExample)
+        : this.toTextAstOrString(defaultExample as string);
+    } else {
+      exampleValue = isBoolean ? BooleanUtils.toBoolean(example) : this.toTextAstOrString(example as string);
+    }
 
     return {
-      isExample,
-      example: exampleRes,
+      isExample: true,
+      example: exampleValue,
     };
   }
 
@@ -2124,7 +2196,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         break;
 
       case BitType.article:
-      case BitType.highlightText:
       case BitType.message:
       case BitType.sampleSolution:
       case BitType.page:
@@ -2147,6 +2218,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       case BitType.multipleChoice1:
       case BitType.multipleResponse1:
       case BitType.multipleChoiceText:
+      case BitType.highlightText:
       case BitType.clozeAndMultipleChoiceText:
       case BitType.sequence:
         if (bitJson.item == null) bitJson.item = this.textDefault;

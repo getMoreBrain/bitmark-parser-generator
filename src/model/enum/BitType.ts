@@ -27,7 +27,7 @@ export interface BitTypeMetadata {
   footerAllowed?: boolean;
 
   // Top-level example type (default: none)
-  exampleType?: ExampleTypeType;
+  rootExampleType?: ExampleTypeType;
 }
 
 /**

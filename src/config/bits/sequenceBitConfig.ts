@@ -13,5 +13,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.sequence, {
   cardSet: CARD_SET_ELEMENTS,
   bodyAllowed: true,
   footerAllowed: true,
-  exampleType: ExampleType.boolean,
+  rootExampleType: ExampleType.boolean,
 });

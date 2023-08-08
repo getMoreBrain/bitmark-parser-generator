@@ -198,9 +198,9 @@ function parseStatements(
         if (Array.isArray(chainedStatements)) {
           for (const s of chainedStatements) {
             const statement = builder.statement({
-              ...tags,
               ...s,
               ...s.itemLead,
+              ...tags,
             });
             statements.push(statement);
           }
@@ -240,6 +240,7 @@ function parseQuiz(
     for (const side of card.sides) {
       for (const content of side.variants) {
         const tags = content.data;
+        const isDefaultExample = tags.isDefaultExample || tags.example != undefined;
 
         if (insertResponses) {
           if (tags.trueFalse && tags.trueFalse.length > 0) {
@@ -262,6 +263,7 @@ function parseQuiz(
 
         const quiz = builder.quiz({
           ...tags,
+          isDefaultExample,
         });
         quizzes.push(quiz);
       }
@@ -341,7 +343,8 @@ function parseMatchPairs(
 
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { cardBody, title, resources, example, ...tags } = content.data;
+        const { cardBody, title, resources, isDefaultExample, example, ...tags } = content.data;
+        const isExample = isDefaultExample || example != undefined;
 
         // Get the 'heading' which is the [#title] at level 1
         const heading = title && title[1];
@@ -381,7 +384,7 @@ function parseMatchPairs(
         };
         // Allow example from any card side
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (example !== undefined) (extraTags as any).example = example;
+        if (isExample) (extraTags as any).isDefaultExample = true;
       }
       sideIdx++;
     }
@@ -424,7 +427,9 @@ function parseMatchMatrix(
   let matrixCells: MatrixCell[] = [];
   let matrixCellValues: string[] = [];
   let matrixCellTags = {};
-  let extraTags = {};
+  let extraTagsSideLevel = {};
+  let isDefaultExampleAllLevel = false;
+  let isDefaultExampleMartixLevel = false;
   // let keyAudio: AudioResource | undefined = undefined;
   // let keyImage: ImageResource | undefined = undefined;
 
@@ -436,16 +441,18 @@ function parseMatchMatrix(
     matrixCells = [];
     matrixCellValues = [];
     sideIdx = 0;
-    extraTags = {};
+    isDefaultExampleMartixLevel = false;
 
     for (const side of card.sides) {
       matrixCellValues = [];
       matrixCellTags = {};
+      extraTagsSideLevel = {};
 
       for (const content of side.variants) {
         const tags = content.data;
 
-        const { title, cardBody, example, ...restTags } = tags;
+        const { title, cardBody, isDefaultExample, example, ...restTags } = tags;
+        const isExample = isDefaultExample || example != undefined;
 
         // Merge the tags into the matrix cell tags
         Object.assign(matrixCellTags, restTags);
@@ -464,14 +471,17 @@ function parseMatchMatrix(
             //   } else if (tags.resource.type === ResourceType.image) {
             //     keyImage = tags.resource as ImageResource;
             //   }
+            isDefaultExampleAllLevel = isExample ? true : isDefaultExampleAllLevel;
           } else {
             // If not a heading or resource, it is a matrix
             matrixKey = cardBody;
+            isDefaultExampleMartixLevel = isExample ? true : isDefaultExampleMartixLevel;
           }
         } else {
           // Subsequent sides
           if (heading != null) {
             forValues.push(heading);
+            // isDefaultExampleMartixLevel = isExample ? true : isDefaultExampleAllLevel;
           } else if (tags.title == null) {
             // If not a heading, it is a  matrix
             matrixCellValues.push(cardBody ?? '');
@@ -480,7 +490,7 @@ function parseMatchMatrix(
 
         // Allow example from any card side
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (example !== undefined) (extraTags as any).example = example;
+        if (isExample) (extraTagsSideLevel as any).isDefaultExample = true;
       }
 
       // Finished looping variants, create matrix cell
@@ -488,7 +498,7 @@ function parseMatchMatrix(
         const matrixCell = builder.matrixCell({
           values: matrixCellValues,
           ...matrixCellTags,
-          ...extraTags,
+          ...extraTagsSideLevel,
         });
         matrixCells.push(matrixCell);
       }
@@ -509,6 +519,7 @@ function parseMatchMatrix(
         cells: matrixCells,
         isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         isCaseSensitive: true,
+        isDefaultExample: isDefaultExampleAllLevel || isDefaultExampleMartixLevel,
       });
       matrix.push(m);
     }

@@ -5,6 +5,12 @@ import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { StringUtils } from '../utils/StringUtils';
 
+export interface WithExample {
+  isDefaultExample: boolean;
+  isExample: boolean;
+  example?: Example;
+}
+
 class BaseBuilder {
   /**
    * Convert example to an Example.
@@ -12,37 +18,36 @@ class BaseBuilder {
    * - If example is null, then the defaultValue will be used.
    * - Recognises boolean strings and converts them to boolean values.
    *
-   * @param example - the example to convert (string, boolean, or null (use defaultValue))
-   * @param defaultValue - the default value to use for this example
-   * @returns example/defaultValue resolved to an Example object
+   * @param isDefaultExample - true is the example is the default value
+   * @param example - the example to convert (string, boolean) or undefined if none / default
+   * @returns example/isDefaultExample resolved to an Example object
    */
-  protected toExample(
-    example: string | boolean | null | undefined,
-    defaultValue: string | boolean | null,
-  ): {
-    isExample: boolean;
-    example?: Example;
-  } {
-    if (example === undefined) {
+  protected toExample(isDefaultExample: boolean | undefined, example: string | boolean | undefined): WithExample {
+    // Default example
+    if (isDefaultExample) {
       return {
-        isExample: false,
+        isDefaultExample: true,
+        isExample: true,
       };
     }
-    let exampleRes: Example = '';
 
-    const exampleOrDefault: Example | null = example === null ? defaultValue : example;
+    // Example
+    if (example != undefined) {
+      // Convert to boolean to string
+      if (example === true) example = 'true';
+      if (example === false) example = 'false';
 
-    if (BooleanUtils.isBooleanString(exampleOrDefault)) {
-      exampleRes = BooleanUtils.toBoolean(exampleOrDefault);
-    } else if (StringUtils.isString(exampleOrDefault)) {
-      exampleRes = exampleOrDefault;
-    } else {
-      exampleRes = exampleOrDefault; // Must be boolean or null
+      return {
+        isDefaultExample: false,
+        isExample: true,
+        example,
+      };
     }
 
+    // Not an example
     return {
-      isExample: exampleRes !== undefined,
-      example: exampleRes,
+      isDefaultExample: false,
+      isExample: false,
     };
   }
 
@@ -52,35 +57,37 @@ class BaseBuilder {
    * - If example is null, then the defaultValue will be used.
    * - Recognises boolean strings and converts them to boolean values.
    *
-   * @param example - the example to convert (string, boolean, or null (use defaultValue))
-   * @param defaultValue - the default value to use for this example
-   * @returns example/defaultValue resolved to an Example object
+   * @param isDefaultExample - true is the example is the default value
+   * @param example - the example to convert (string, boolean) or undefined if none / default
+   * @returns example/isDefaultExample resolved to an Example object
    */
   protected toExampleBoolean(
-    example: string | boolean | null | undefined,
-    defaultValue: boolean | null,
-  ): {
-    isExample: boolean;
-    example?: Example;
-  } {
-    if (example === undefined) {
+    isDefaultExample: boolean | undefined,
+    example: string | boolean | undefined,
+  ): WithExample {
+    const isExampleButNotBoolean = example != undefined && !BooleanUtils.isBooleanString(example);
+
+    // Default example
+    if (isDefaultExample || isExampleButNotBoolean) {
       return {
-        isExample: false,
+        isDefaultExample: true,
+        isExample: true,
       };
     }
-    let exampleRes: Example = '';
 
-    const exampleOrDefault: Example | null = example === null ? defaultValue : example;
-
-    if (BooleanUtils.isBoolean(example) || BooleanUtils.isBooleanString(exampleOrDefault)) {
-      exampleRes = BooleanUtils.toBoolean(exampleOrDefault);
-    } else {
-      exampleRes = defaultValue; // Must be boolean or null
+    // Example
+    if (example != undefined) {
+      return {
+        isDefaultExample: false,
+        isExample: true,
+        example: BooleanUtils.toBoolean(example),
+      };
     }
 
+    // Not an example
     return {
-      isExample: exampleRes !== undefined,
-      example: exampleRes,
+      isDefaultExample: false,
+      isExample: false,
     };
   }
 

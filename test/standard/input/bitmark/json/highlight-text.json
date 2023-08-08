@@ -3,9 +3,12 @@
     "bit": {
       "type": "highlight-text",
       "format": "bitmark--",
-      "id": ["285689"],
+      "id": ["285686"],
       "item": "10",
       "lead": "highlight-text",
+      "hint": "",
+      "instruction": "",
+      "isExample": false,
       "body": "She went to the {0} and ate {1}.",
       "placeholders": {
         "{0}": {
@@ -76,15 +79,17 @@
       "version": "1.0.16",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.highlight-text]\n[@id:285689]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][-trees]."
+    "bitmark": "[.highlight-text]\n[@id:285686]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][-trees]."
   },
   {
     "bit": {
       "type": "highlight-text",
       "format": "bitmark--",
-      "id": ["285689"],
+      "id": ["285687"],
       "item": "10",
       "lead": "highlight-text",
+      "hint": "",
+      "instruction": "",
       "isExample": true,
       "body": "She went to the {0} and ate {1}.",
       "placeholders": {
@@ -156,15 +161,17 @@
       "version": "1.0.16",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.highlight-text]\n[@id:285689]\n[%10][%highlight-text]\n[@example]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][-trees]."
+    "bitmark": "[.highlight-text]\n[@id:285687]\n[%10][%highlight-text]\n[@example]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][-trees]."
   },
   {
     "bit": {
       "type": "highlight-text",
       "format": "bitmark--",
-      "id": ["285689"],
+      "id": ["285688"],
       "item": "10",
       "lead": "highlight-text",
+      "hint": "",
+      "instruction": "",
       "isExample": true,
       "body": "She went to the {0} and ate {1}.",
       "placeholders": {
@@ -236,7 +243,7 @@
       "version": "1.0.16",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.highlight-text]\n[@id:285689]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][@example][-trees]."
+    "bitmark": "[.highlight-text]\n[@id:285688]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][@example][-trees]."
   },
   {
     "bit": {
@@ -245,6 +252,8 @@
       "id": ["285689"],
       "item": "10",
       "lead": "highlight-text",
+      "hint": "",
+      "instruction": "",
       "isExample": true,
       "body": "She went to the {0} and ate {1}.",
       "placeholders": {

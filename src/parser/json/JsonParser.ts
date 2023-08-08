@@ -292,7 +292,7 @@ class JsonParser {
     const partnerNode = this.partnerBitToAst(partner);
 
     //+-statement
-    const statementNodes = this.statementBitsToAst(statement, isCorrect, statements);
+    const statementNodes = this.statementBitsToAst(statement, isCorrect, statements, example);
 
     //+-response
     const responseNodes = this.responseBitsToAst(bitType, responses as ResponseJson[]);
@@ -410,11 +410,12 @@ class JsonParser {
     statement?: string,
     isCorrect?: boolean,
     statements?: StatementJson[],
+    example?: ExampleJson,
   ): Statement[] | undefined {
     const nodes: Statement[] = [];
 
     if (statement) {
-      const node = builder.statement({ text: statement, isCorrect: isCorrect ?? false });
+      const node = builder.statement({ text: statement, isCorrect: isCorrect ?? false, ...this.parseExample(example) });
       nodes.push(node);
     }
 
@@ -946,7 +947,7 @@ class JsonParser {
     };
   }
 
-  private parseExample(example: ExampleJson): Example | undefined {
+  private parseExample(example: ExampleJson | undefined): Example | undefined {
     if (example == null) return undefined;
     const exampleStr = this.parseText(example as string);
     if (exampleStr) {
