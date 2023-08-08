@@ -30,6 +30,8 @@ jobs:
       - name: Publish
         run: yarn npm publish
       - name: Trigger bitmark API pipeline
+        env:
+          CIRCLE_TOKEN: ${{ secrets.CIRCLE_TOKEN }}
         run: |
           curl -X POST \
             -H "Content-Type: application/json" \
