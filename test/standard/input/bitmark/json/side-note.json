@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "210103"
-      ]
+      "example": null,
+      "id": ["210103"]
     }
   },
   {
@@ -23,16 +21,9 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "ageRange": [
-        "18",
-        "120"
-      ],
-      "language": [
-        "en",
-        "jp",
-        "cn"
-      ]
+      "example": null,
+      "ageRange": ["18", "120"],
+      "language": ["en", "jp", "cn"]
     },
     "parser": {
       "excessResources": [

@@ -8,115 +8,89 @@
       "item": "05_Ablauf und Termine_023 (Freitext)",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "136392"
-      ],
+      "example": null,
+      "id": ["136392"],
       "instruction": "Ordnen Sie die folgenden Aufgaben den einzelnen Projektphasen zu.",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "a",
-            "A"
-          ],
+          "solutions": ["a", "A"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "d",
-            "D"
-          ],
+          "solutions": ["d", "D"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "b",
-            "B"
-          ],
+          "solutions": ["b", "B"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{3}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "f",
-            "F"
-          ],
+          "solutions": ["f", "F"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{4}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "c",
-            "C"
-          ],
+          "solutions": ["c", "C"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{5}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "h",
-            "H"
-          ],
+          "solutions": ["h", "H"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{6}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "e",
-            "E"
-          ],
+          "solutions": ["e", "E"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{7}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "g",
-            "G"
-          ],
+          "solutions": ["g", "G"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       }
     }
@@ -130,47 +104,41 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "younger"
-          ],
+          "solutions": ["younger"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "youngest"
-          ],
+          "solutions": ["youngest"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "youngerer!"
-          ],
+          "solutions": ["youngerer!"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": true,
-          "example": ""
+          "example": null
         }
       }
     },
-    "example": ""
+    "example": null
   },
   {
     "bitmark": "[.cloze:bitmark--]\n|| Chaining of [?HINT?] does not work because of the space and it ends up at the top level ||\n[@id:272904]\n[%34]\n[!Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.]\nBeim [_direkten Vertrieb][_direkten Vertrieb2][?Hint] verkauft eigene [_Verkaufsstellen] einrichten, [_Verkaufsmitarbeitende] einstellen. Beim [_indirekten Vertrieb][_indirekten Vertrieb2] [?HINT?] läuft den [_Grosshandel] [_NOT Grosshandel2] und / oder den [_Einzelhandel].",
@@ -181,97 +149,79 @@
       "item": "34",
       "hint": "HINT?",
       "isExample": false,
-      "example": "",
-      "id": [
-        "272904"
-      ],
+      "example": null,
+      "id": ["272904"],
       "instruction": "Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "direkten Vertrieb",
-            "direkten Vertrieb2"
-          ],
+          "solutions": ["direkten Vertrieb", "direkten Vertrieb2"],
           "hint": "Hint",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Verkaufsstellen"
-          ],
+          "solutions": ["Verkaufsstellen"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Verkaufsmitarbeitende"
-          ],
+          "solutions": ["Verkaufsmitarbeitende"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{3}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "indirekten Vertrieb",
-            "indirekten Vertrieb2"
-          ],
+          "solutions": ["indirekten Vertrieb", "indirekten Vertrieb2"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{4}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Grosshandel"
-          ],
+          "solutions": ["Grosshandel"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{5}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "NOT Grosshandel2"
-          ],
+          "solutions": ["NOT Grosshandel2"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{6}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Einzelhandel"
-          ],
+          "solutions": ["Einzelhandel"],
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null
         }
       }
     }

@@ -76,6 +76,8 @@ export interface BitHeader {
 export interface TrueFalseValue {
   text: string;
   isCorrect: boolean;
+  isDefaultExample: boolean;
+  example?: string;
 }
 
 export interface CardData {
@@ -92,7 +94,8 @@ export interface BitContentProcessorResult {
   footer?: FooterText;
   partner?: Partner;
   trueFalse?: TrueFalseValue[];
-  example?: string | boolean;
+  isDefaultExample?: boolean;
+  example?: string;
   isCorrect?: boolean;
   solutions?: string[];
   statement?: Statement;

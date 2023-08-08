@@ -2,5 +2,22 @@
 [.true-false-1]
 [@id:285736]
 [%28][%true-false-1]
+[@example]
 [+Ein Elefant ist grösser als eine Maus.]
 
+[.true-false-1]
+[@id:285736]
+[%28][%true-false-1]
+[+Ein Elefant ist grösser als eine Maus.][@example]
+
+[.true-false-1]
+[@id:285736]
+[%28][%true-false-1]
+[+Ein Elefant ist grösser als eine Maus.][@example:false]
+
+
+[.true-false-1]
+[@id:285736]
+[%28][%true-false-1]
+[@example:false]
+[+Ein Elefant ist grösser als eine Maus.]

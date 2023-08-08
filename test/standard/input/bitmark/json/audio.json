@@ -8,7 +8,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "resource": {
         "type": "audio",
         "audio": {
@@ -27,7 +27,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": ""
+      "example": null
     }
   },
   {
@@ -39,7 +39,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "resource": {
         "type": "audio",
         "audio": {

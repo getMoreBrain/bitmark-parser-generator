@@ -1,10 +1,12 @@
 [
   {
-    "bitmark": "[.match-solution-grouped:bitmark--]\n[@id:213827]\n[%46]\n[!Ordnen Sie die Begriffe den korrekten Beschreibungen zu.]\n===\n[#Ethischer Begriff]\n==\n[#Beschreibung]\n===\nBeschreibt ein auf Dauerhaftigkeit ausgerichtetes Handeln.\n==\nNachhaltigkeit\n===\nLeitvorstellungen über erwünschenswertes Verhalten.\n==\nWerte\n===\nGesamtheit von Verhaltensregeln innerhalb einer Gesellschaft.\n==\nMoral\n===\nKonkrete Verhaltensanweisungen zur Umsetzung ethischen Verhaltens.\n==\nNormen\n===\nUntersucht und argumentiert für oder gegen Verhaltensregeln.\n==\nEthik\n===",
     "bit": {
       "type": "match-solution-grouped",
       "format": "bitmark--",
+      "id": ["213827"],
       "item": "46",
+      "instruction": "Ordnen Sie die Begriffe den korrekten Beschreibungen zu.",
+      "body": "",
       "heading": {
         "forKeys": "Ethischer Begriff",
         "forValues": "Beschreibung"
@@ -17,9 +19,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Leitvorstellungen über erwünschenswertes Verhalten.",
@@ -28,9 +30,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Gesamtheit von Verhaltensregeln innerhalb einer Gesellschaft.",
@@ -39,9 +41,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Konkrete Verhaltensanweisungen zur Umsetzung ethischen Verhaltens.",
@@ -50,9 +52,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Untersucht und argumentiert für oder gegen Verhaltensregeln.",
@@ -61,22 +63,26 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         }
-      ],
-      "body": "",
-      "id": ["213827"],
-      "instruction": "Ordnen Sie die Begriffe den korrekten Beschreibungen zu."
-    }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match-solution-grouped:bitmark--]\n[@id:213827]\n[%46]\n[!Ordnen Sie die Begriffe den korrekten Beschreibungen zu.]\n===\n[#Ethischer Begriff]\n==\n[#Beschreibung]\n===\nBeschreibt ein auf Dauerhaftigkeit ausgerichtetes Handeln.\n==\nNachhaltigkeit\n===\nLeitvorstellungen über erwünschenswertes Verhalten.\n==\nWerte\n===\nGesamtheit von Verhaltensregeln innerhalb einer Gesellschaft.\n==\nMoral\n===\nKonkrete Verhaltensanweisungen zur Umsetzung ethischen Verhaltens.\n==\nNormen\n===\nUntersucht und argumentiert für oder gegen Verhaltensregeln.\n==\nEthik\n==="
   },
   {
-    "bitmark": "[.match-solution-grouped]\n[@id:265794]\n===\n[%1]die Koffer\n==\npacken[@example]\n===\n[%2]in den Urlaub\n==\nfahren\n===\n[%3]Geld\n==\nausgeben\n===\n[%4]über dem europäischen Durchschnitt\n==\nliegen\n===\n[%5]mehr Inlandsreisen\n==\nplanen\n===\n[%6]das angenehme Wetter\n==\ngenießen\n--\nnutzen\n===\n[%7]den Strandurlaub\n==\nbevorzugen\n===\n[%8]böse Überraschungen\n==\nerleben\n===\n[%9]mobile Angebote\n==\nnutzen\n===\n[%10]sich über verschiede Angebote\n==\ninformieren\n===\n[%11]auf Serviceleistungen\n==\nachten\n===\n[%12]auf die Hotelbar Wert\n==\nlegen\n===",
     "bit": {
       "type": "match-solution-grouped",
       "format": "bitmark--",
+      "id": ["265794"],
       "item": "",
+      "isExample": true,
+      "body": "",
       "heading": {},
       "pairs": [
         {
@@ -86,9 +92,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": true,
-          "example": "",
-          "isLongAnswer": false
+          "example": true
         },
         {
           "key": "in den Urlaub",
@@ -97,9 +103,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Geld",
@@ -108,9 +114,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "über dem europäischen Durchschnitt",
@@ -119,9 +125,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "mehr Inlandsreisen",
@@ -130,9 +136,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "das angenehme Wetter",
@@ -141,9 +147,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "den Strandurlaub",
@@ -152,9 +158,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "böse Überraschungen",
@@ -163,9 +169,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "mobile Angebote",
@@ -174,9 +180,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "sich über verschiede Angebote",
@@ -185,9 +191,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "auf Serviceleistungen",
@@ -196,9 +202,9 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "auf die Hotelbar Wert",
@@ -207,13 +213,16 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "example": null
         }
-      ],
-      "body": "",
-      "id": ["265794"]
-    }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match-solution-grouped]\n[@id:265794]\n===\n[%1]die Koffer\n==\npacken[@example]\n===\n[%2]in den Urlaub\n==\nfahren\n===\n[%3]Geld\n==\nausgeben\n===\n[%4]über dem europäischen Durchschnitt\n==\nliegen\n===\n[%5]mehr Inlandsreisen\n==\nplanen\n===\n[%6]das angenehme Wetter\n==\ngenießen\n--\nnutzen\n===\n[%7]den Strandurlaub\n==\nbevorzugen\n===\n[%8]böse Überraschungen\n==\nerleben\n===\n[%9]mobile Angebote\n==\nnutzen\n===\n[%10]sich über verschiede Angebote\n==\ninformieren\n===\n[%11]auf Serviceleistungen\n==\nachten\n===\n[%12]auf die Hotelbar Wert\n==\nlegen\n==="
   }
 ]

@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "231024"
-      ]
+      "example": null,
+      "id": ["231024"]
     },
     "errors": [
       {
@@ -37,10 +35,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "231025"
-      ]
+      "example": null,
+      "id": ["231025"]
     },
     "errors": [
       {
@@ -60,10 +56,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "231026"
-      ]
+      "example": null,
+      "id": ["231026"]
     }
   },
   {
@@ -75,10 +69,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "231027"
-      ]
+      "example": null,
+      "id": ["231027"]
     }
   },
   {
@@ -90,10 +82,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "231028"
-      ]
+      "example": null,
+      "id": ["231028"]
     }
   },
   {
@@ -105,10 +95,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "231958"
-      ]
+      "example": null,
+      "id": ["231958"]
     }
   },
   {
@@ -120,10 +108,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "231959"
-      ]
+      "example": null,
+      "id": ["231959"]
     }
   },
   {
@@ -135,10 +121,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "232592"
-      ],
+      "example": null,
+      "id": ["232592"],
       "resource": {
         "type": "image-link",
         "imageLink": {
@@ -159,10 +143,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "232737"
-      ]
+      "example": null,
+      "id": ["232737"]
     },
     "errors": [
       {

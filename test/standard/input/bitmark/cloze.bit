@@ -95,3 +95,9 @@ G - Dienstleistungen
 [%34]
 [!Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.]
 Beim [_direkten Vertrieb][_direkten Vertrieb2][?Hint] verkauft eigene [_Verkaufsstellen] einrichten, [_Verkaufsmitarbeitende] einstellen. Beim [_indirekten Vertrieb][_indirekten Vertrieb2][?HINT?] läuft den [_Grosshandel] [_NOT Grosshandel2] und / oder den [_Einzelhandel].
+
+[.cloze]
+This is a multiple gap [_solution][@example][_problem]
+
+[.cloze]
+This is a multiple gap [_solution][_problem][@example:wrong answer]

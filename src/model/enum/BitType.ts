@@ -3,6 +3,7 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 import { TagDataMap } from '../config/TagData';
 
 import { CardSetTypeType } from './CardSetType';
+import { ExampleTypeType } from './ExampleType';
 import { ResourceTypeType } from './ResourceType';
 
 export interface BitTypeMetadata {
@@ -24,6 +25,9 @@ export interface BitTypeMetadata {
 
   // Is a footer allowed? (default: false)
   footerAllowed?: boolean;
+
+  // Top-level example type (default: none)
+  rootExampleType?: ExampleTypeType;
 }
 
 /**

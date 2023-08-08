@@ -12,7 +12,7 @@ import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { env } from '../utils/env/Env';
 
-import { BaseBuilder } from './BaseBuilder';
+import { BaseBuilder, WithExample } from './BaseBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
 import {
@@ -45,6 +45,7 @@ import {
   BodyPart,
   CardNode,
   Comment,
+  Example,
 } from '../model/ast/Nodes';
 
 /**
@@ -135,7 +136,8 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
     partner?: Partner;
     extraProperties?: {
       [key: string]: unknown | unknown[];
@@ -215,20 +217,21 @@ class Builder extends BaseBuilder {
       lead,
       hint,
       instruction,
+      isDefaultExample,
       example,
       partner,
       extraProperties,
       resource,
       body,
       sampleSolution,
-      statement,
-      responses,
-      choices,
       footer,
 
       markup,
       parser,
     } = data;
+
+    // Set the card node data
+    const cardNode = this.cardNode(data);
 
     // NOTE: Node order is important and is defined here
     const node: Bit = {
@@ -286,15 +289,12 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      ...this.toExample(isDefaultExample, example),
       partner,
       resource,
       body,
       sampleSolution: ArrayUtils.asArray(sampleSolution),
-      statement,
-      responses,
-      choices,
-      cardNode: this.cardNode(data),
+      cardNode,
       footer,
 
       markup,
@@ -304,14 +304,50 @@ class Builder extends BaseBuilder {
       extraProperties: this.parseExtraProperties(extraProperties),
     };
 
+    // If isDefaultExample is set at the bit level, push the default example down the tree to the relevant nodes
+    if (isDefaultExample) {
+      if (cardNode) {
+        this.setDefaultExamplesFlags(true, cardNode.choices as WithExample[]);
+        this.setDefaultExamplesFlags(
+          false,
+          cardNode.responses as WithExample[],
+          cardNode.statements as WithExample[],
+          cardNode.statement as WithExample,
+          cardNode.pairs as WithExample[],
+        );
+        if (cardNode.quizzes) {
+          for (const quiz of cardNode.quizzes) {
+            this.setDefaultExamplesFlags(true, quiz.choices);
+            this.setDefaultExamplesFlags(false, quiz.responses);
+          }
+        }
+        if (cardNode.matrix) {
+          for (const m of cardNode.matrix) {
+            this.setDefaultExamplesFlags(false, m.cells);
+          }
+        }
+      }
+      if (body) {
+        this.setDefaultExamplesBodyBits(body);
+      }
+
+      // this.setDefaultExampleBit(bitType, node);
+    }
+
     // Set default values
     this.setDefaultBitValues(node);
+
+    // Set the 'isExample' flags
+    this.setIsExampleFlags(node);
 
     // Add the version to the parser info
     this.addVersionToParserInfo(node);
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyString: ['example'],
+    });
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateBit(node);
@@ -330,24 +366,27 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
   }): Choice {
-    const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = data;
+    const { text, isCorrect, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Choice = {
       text,
-      isCorrect,
+      isCorrect: !!isCorrect,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      ...this.toExampleBoolean(isDefaultExample, example),
       isCaseSensitive,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -365,24 +404,27 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
   }): Response {
-    const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = data;
+    const { text, isCorrect, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Response = {
       text,
-      isCorrect,
+      isCorrect: !!isCorrect,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      ...this.toExampleBoolean(isDefaultExample, example),
       isCaseSensitive,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -431,18 +473,22 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
+    isDefaultExample?: unknown;
     choices?: Choice[];
     responses?: Response[];
   }): Quiz {
-    const { choices, responses, item, lead, hint, instruction, example } = data;
+    const { choices, responses, item, lead, hint, instruction, isDefaultExample } = data;
+
+    if (isDefaultExample) {
+      this.setDefaultExamplesFlags(true, choices);
+      this.setDefaultExamplesFlags(false, responses);
+    }
 
     // NOTE: Node order is important and is defined here
     const node: Quiz = {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
       choices,
       responses,
     };
@@ -491,12 +537,25 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
   }): Pair {
-    const { key, keyAudio, keyImage, values, item, lead, hint, instruction, example, isCaseSensitive, isShortAnswer } =
-      data;
+    const {
+      key,
+      keyAudio,
+      keyImage,
+      values,
+      item,
+      lead,
+      hint,
+      instruction,
+      isCaseSensitive,
+      isShortAnswer,
+      isDefaultExample,
+      example,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Pair = {
@@ -506,14 +565,16 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      ...this.toExample(isDefaultExample, example),
       isCaseSensitive,
       isShortAnswer,
       values,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -531,11 +592,22 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
+    isDefaultExample?: boolean;
   }): Matrix {
-    const { key, cells, item, lead, hint, instruction, example, isCaseSensitive, isShortAnswer } = data;
+    const { key, cells, item, lead, hint, instruction, isCaseSensitive, isShortAnswer, isDefaultExample } = data;
+
+    let isExample = false;
+
+    // Set isExample for matrix based on isExample for cells
+    for (const c of cells ?? []) {
+      if (isDefaultExample && !c.isExample) {
+        c.isDefaultExample = true;
+        c.isExample = true;
+      }
+      isExample = c.isExample ? true : isExample;
+    }
 
     // NOTE: Node order is important and is defined here
     const node: Matrix = {
@@ -543,14 +615,16 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
       isCaseSensitive,
       isShortAnswer,
+      isExample,
       cells,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -567,9 +641,10 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
   }): MatrixCell {
-    const { values, item, lead, hint, instruction, example } = data;
+    const { values, item, lead, hint, instruction, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCell = {
@@ -577,11 +652,13 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      ...this.toExample(isDefaultExample, example),
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -600,9 +677,10 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
   }): Question {
     const {
       question,
@@ -611,10 +689,11 @@ class Builder extends BaseBuilder {
       lead,
       hint,
       instruction,
-      example,
       isCaseSensitive,
       isShortAnswer,
       sampleSolution,
+      isDefaultExample,
+      example,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -624,14 +703,17 @@ class Builder extends BaseBuilder {
       partialAnswer,
       hint,
       instruction,
-      example: this.toExample(example),
+      ...this.toExample(isDefaultExample, example),
       isCaseSensitive,
       isShortAnswer,
       sampleSolution,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, { ignoreEmptyString: ['question'], ignoreFalse: ['isShortAnswer'] });
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyString: ['question'],
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -699,10 +781,13 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
   }): Gap {
-    const { solutions, item, lead, hint, instruction, example, isCaseSensitive } = data;
+    const { solutions, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
+
+    // const defaultExample = Array.isArray(solutions) && solutions.length === 1 ? solutions[0] : null;
 
     // NOTE: Node order is important and is defined here
     const node: Gap = {
@@ -712,13 +797,15 @@ class Builder extends BaseBuilder {
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,
-        example: this.toExample(example),
+        ...this.toExample(isDefaultExample, example),
         isCaseSensitive,
       },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -737,10 +824,9 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): Select {
-    const { options, prefix, postfix, item, lead, hint, instruction, example, isCaseSensitive } = data;
+    const { options, prefix, postfix, item, lead, hint, instruction, isCaseSensitive } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Select = {
@@ -752,13 +838,14 @@ class Builder extends BaseBuilder {
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,
-        example: this.toExample(example),
         isCaseSensitive,
       },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -776,24 +863,27 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
   }): SelectOption {
-    const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = data;
+    const { text, isCorrect, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: SelectOption = {
       text,
-      isCorrect,
+      isCorrect: !!isCorrect,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      ...this.toExample(isDefaultExample, example),
       isCaseSensitive,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -812,10 +902,9 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
   }): Highlight {
-    const { texts, prefix, postfix, item, lead, hint, instruction, example, isCaseSensitive } = data;
+    const { texts, prefix, postfix, item, lead, hint, instruction, isCaseSensitive } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Highlight = {
@@ -827,13 +916,14 @@ class Builder extends BaseBuilder {
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,
-        example: this.toExample(example),
         isCaseSensitive,
       },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -852,25 +942,39 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
   }): HighlightText {
-    const { text, isCorrect, isHighlighted, item, lead, hint, instruction, example, isCaseSensitive } = data;
+    const {
+      text,
+      isCorrect,
+      isHighlighted,
+      item,
+      lead,
+      hint,
+      instruction,
+      isCaseSensitive,
+      isDefaultExample,
+      example,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: HighlightText = {
       text,
-      isCorrect,
-      isHighlighted,
+      isCorrect: !!isCorrect,
+      isHighlighted: !!isHighlighted,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      ...this.toExample(isDefaultExample, example),
       isCaseSensitive,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -888,24 +992,27 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    example?: string | boolean;
     isCaseSensitive?: boolean;
+    isDefaultExample?: boolean;
+    example?: Example;
   }): Statement {
-    const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = data;
+    const { text, isCorrect, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Statement = {
       text,
-      isCorrect,
+      isCorrect: !!isCorrect,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      example: this.toExample(example),
+      ...this.toExampleBoolean(isDefaultExample, example),
       isCaseSensitive,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -977,28 +1084,55 @@ class Builder extends BaseBuilder {
   }
 
   private cardNode(data: {
+    questions?: Question[];
     elements?: string[];
     statement?: Statement;
     statements?: Statement[];
+    choices?: Choice[];
     responses?: Response[];
     quizzes?: Quiz[];
     heading?: Heading;
     pairs?: Pair[];
     matrix?: Matrix[];
-    choices?: Choice[];
-    questions?: Question[];
     botResponses?: BotResponse[];
   }): CardNode | undefined {
     let node: CardNode | undefined;
-    const { heading, elements, questions, statements, quizzes, pairs, matrix, botResponses } = data;
+    const {
+      questions,
+      elements,
+      statement,
+      statements,
+      choices,
+      responses,
+      quizzes,
+      heading,
+      pairs,
+      matrix,
+      botResponses,
+    } = data;
 
-    if (heading || elements || questions || statements || quizzes || pairs || matrix || botResponses) {
+    if (
+      questions ||
+      elements ||
+      statement ||
+      statements ||
+      choices ||
+      responses ||
+      quizzes ||
+      heading ||
+      pairs ||
+      matrix ||
+      botResponses
+    ) {
       node = {
-        heading,
-        elements,
         questions,
+        elements,
+        statement,
         statements,
+        choices,
+        responses,
         quizzes,
+        heading,
         pairs,
         matrix,
         botResponses,
@@ -1010,6 +1144,93 @@ class Builder extends BaseBuilder {
 
     return node;
   }
+
+  /**
+   * Set every correct answer as an example for Decision node(s)
+   *
+   * @param answers - array of answers
+   * @returns true if any of the answers has an example, otherwise undefined
+   */
+  private setDefaultExamplesFlags(onlyCorrect: boolean, ...nodes: (WithExample | WithExample[] | undefined)[]): void {
+    if (Array.isArray(nodes)) {
+      for (const ds of nodes) {
+        if (Array.isArray(ds)) {
+          for (const d of ds) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            if (!d.isExample && (!onlyCorrect || (d as any).isCorrect)) {
+              d.isDefaultExample = true;
+              d.isExample = true;
+            }
+          }
+        } else if (ds) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          if (!ds.isExample && (!onlyCorrect || (ds as any).isCorrect)) {
+            ds.isDefaultExample = true;
+            ds.isExample = true;
+          }
+        }
+      }
+    }
+  }
+
+  private setDefaultExamplesBodyBits(body: Body | undefined): void {
+    if (!body || !body.bodyParts || body.bodyParts.length === 0) return;
+
+    for (const part of body.bodyParts) {
+      if (part) {
+        switch (part.type) {
+          case BodyBitType.gap: {
+            const gap = part as Gap;
+            if (!gap.data.isExample) {
+              gap.data.isDefaultExample = true;
+              gap.data.isExample = true;
+            }
+            break;
+          }
+          case BodyBitType.select: {
+            const select = part as Select;
+            for (const option of select.data.options) {
+              if (!option.isExample && option.isCorrect) {
+                option.isDefaultExample = true;
+                option.isExample = true;
+              }
+            }
+            break;
+          }
+          case BodyBitType.highlight: {
+            const highlight = part as Highlight;
+            for (const text of highlight.data.texts) {
+              if (!text.isExample && text.isCorrect) {
+                text.isDefaultExample = true;
+                text.isExample = true;
+              }
+            }
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  // private setDefaultExampleBit(bitType: BitTypeType, node: Bit): void {
+  //   const { example: exampleIn } = node;
+  //   const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+  //   if (!meta) return;
+
+  //   if (exampleIn === null) {
+  //     // Set the default for the specific bit
+  //     switch (meta.exampleType) {
+  //       case ExampleType.boolean:
+  //         node.example = true;
+  //         break;
+  //       case ExampleType.string:
+  //         node.example = '';
+  //         break;
+  //       default:
+  //       // Ignore at this level
+  //     }
+  //   }
+  // }
 
   private parseExtraProperties(extraProperties: { [key: string]: unknown } | undefined): ExtraProperties | undefined {
     if (!extraProperties) return undefined;
@@ -1024,6 +1245,137 @@ class Builder extends BaseBuilder {
     }
 
     return res;
+  }
+
+  /**
+   * Set the 'isExample' flags on the bit
+   *
+   * The flag is set if the bit has an example. The flag is set at each branch level up the tree from
+   * where the 'example' exists.
+   *
+   * @param bit
+   */
+  private setIsExampleFlags(bit: Bit) {
+    bit.isExample = false;
+
+    const checkIsExample = (example: WithExample): boolean => {
+      if (!example) return false;
+
+      if (example.isDefaultExample || example.example != undefined) {
+        example.isExample = true;
+        bit.isExample = true;
+      } else {
+        if (example === bit) {
+          example.isExample = !!bit.isExample;
+        } else {
+          example.isExample = false;
+        }
+      }
+      return example.isExample;
+    };
+
+    const { body, cardNode } = bit;
+
+    // Body bit level
+
+    if (body && body.bodyParts) {
+      for (const bodyPart of body.bodyParts) {
+        switch (bodyPart.type) {
+          case BodyBitType.gap: {
+            checkIsExample(bodyPart.data as WithExample);
+            break;
+          }
+
+          case BodyBitType.select: {
+            const select = bodyPart as Select;
+            let hasExample = false;
+            for (const option of select.data.options) {
+              hasExample = checkIsExample(option as WithExample) ? true : hasExample;
+            }
+            select.data.isExample = hasExample;
+            break;
+          }
+
+          case BodyBitType.highlight: {
+            const highlight = bodyPart as Highlight;
+            let hasExample = false;
+            for (const text of highlight.data.texts) {
+              hasExample = checkIsExample(text as WithExample) ? true : hasExample;
+            }
+            highlight.data.isExample = hasExample;
+            break;
+          }
+        }
+      }
+    }
+
+    // Card level
+
+    if (cardNode) {
+      // pairs
+      for (const v of cardNode.pairs ?? []) {
+        checkIsExample(v as WithExample);
+      }
+      // matrix
+      for (const mx of cardNode.matrix ?? []) {
+        let hasExample = false;
+
+        // matrix cell
+        for (const v of mx.cells ?? []) {
+          hasExample = checkIsExample(v as WithExample) ? true : hasExample;
+        }
+        mx.isExample = hasExample;
+      }
+      // quizzes
+      for (const quiz of cardNode.quizzes ?? []) {
+        let hasExample = false;
+
+        // responses
+        for (const v of quiz.responses ?? []) {
+          hasExample = checkIsExample(v as WithExample) ? true : hasExample;
+        }
+        // choices
+        for (const v of quiz.choices ?? []) {
+          hasExample = checkIsExample(v as WithExample) ? true : hasExample;
+        }
+        quiz.isExample = hasExample;
+      }
+      // responses
+      for (const v of cardNode.responses ?? []) {
+        checkIsExample(v as WithExample);
+      }
+      // choices
+      for (const v of cardNode.choices ?? []) {
+        checkIsExample(v as WithExample);
+      }
+      // statements
+      for (const v of cardNode.statements ?? []) {
+        checkIsExample(v as WithExample);
+      }
+      // statement
+      checkIsExample(cardNode.statement as WithExample);
+      // NO: elements
+      // questions
+      for (const v of cardNode.questions ?? []) {
+        checkIsExample(v as WithExample);
+      }
+    }
+
+    // Bit level
+
+    // statement
+    checkIsExample(bit.statement as WithExample);
+    // responses
+    for (const v of bit.responses ?? []) {
+      checkIsExample(v as WithExample);
+    }
+    // choices
+    for (const v of bit.choices ?? []) {
+      checkIsExample(v as WithExample);
+    }
+
+    // Bit itself
+    checkIsExample(bit as WithExample);
   }
 
   private setDefaultBitValues(bit: Bit) {

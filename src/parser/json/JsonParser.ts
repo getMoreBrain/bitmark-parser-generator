@@ -51,6 +51,7 @@ import {
   StatementJson,
   PartnerJson,
   BotResponseJson,
+  ExampleJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -256,7 +257,6 @@ class JsonParser {
       lead,
       hint,
       instruction,
-      isExample,
       example,
       partner,
       resource,
@@ -292,7 +292,7 @@ class JsonParser {
     const partnerNode = this.partnerBitToAst(partner);
 
     //+-statement
-    const statementNodes = this.statementBitsToAst(statement, isCorrect, statements);
+    const statementNodes = this.statementBitsToAst(statement, isCorrect, statements, example);
 
     //+-response
     const responseNodes = this.responseBitsToAst(bitType, responses as ResponseJson[]);
@@ -374,7 +374,7 @@ class JsonParser {
       reference,
       referenceEnd,
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-      ...this.parseExample(example, isExample),
+      ...this.parseExample(example),
       partner: partnerNode,
       resource: resourceNode,
       body: bodyNode,
@@ -410,22 +410,23 @@ class JsonParser {
     statement?: string,
     isCorrect?: boolean,
     statements?: StatementJson[],
+    example?: ExampleJson,
   ): Statement[] | undefined {
     const nodes: Statement[] = [];
 
     if (statement) {
-      const node = builder.statement({ text: statement, isCorrect: isCorrect ?? false });
+      const node = builder.statement({ text: statement, isCorrect: isCorrect ?? false, ...this.parseExample(example) });
       nodes.push(node);
     }
 
     if (Array.isArray(statements)) {
       for (const s of statements) {
-        const { statement, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = s;
+        const { statement, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = s;
         const node = builder.statement({
           text: statement,
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
+          ...this.parseExample(example),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -441,12 +442,12 @@ class JsonParser {
     const nodes: Choice[] = [];
     if (Array.isArray(choices)) {
       for (const c of choices) {
-        const { choice, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = c;
+        const { choice, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = c;
         const node = builder.choice({
           text: choice,
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
+          ...this.parseExample(example),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -466,12 +467,12 @@ class JsonParser {
 
     if (Array.isArray(responses)) {
       for (const r of responses) {
-        const { response, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = r;
+        const { response, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = r;
         const node = builder.response({
           text: response,
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
+          ...this.parseExample(example),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -487,12 +488,12 @@ class JsonParser {
     const nodes: SelectOption[] = [];
     if (Array.isArray(options)) {
       for (const o of options) {
-        const { text, isCorrect, item, lead, hint, instruction, isExample, example, isCaseSensitive } = o;
+        const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = o;
         const node = builder.selectOption({
           text,
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
+          ...this.parseExample(example),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -506,14 +507,13 @@ class JsonParser {
     const nodes: HighlightText[] = [];
     if (Array.isArray(highlightTexts)) {
       for (const t of highlightTexts) {
-        const { text, isCorrect, isHighlighted, item, lead, hint, instruction, isExample, example, isCaseSensitive } =
-          t;
+        const { text, isCorrect, isHighlighted, item, lead, hint, instruction, example, isCaseSensitive } = t;
         const node = builder.highlightText({
           text,
           isCorrect,
           isHighlighted,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
+          ...this.parseExample(example),
           isCaseSensitive,
         });
         nodes.push(node);
@@ -527,12 +527,11 @@ class JsonParser {
     const nodes: Quiz[] = [];
     if (Array.isArray(quizzes)) {
       for (const q of quizzes) {
-        const { item, lead, hint, instruction, isExample, example, choices, responses } = q;
+        const { item, lead, hint, instruction, choices, responses } = q;
         const choiceNodes = this.choiceBitsToAst(choices);
         const responseNodes = this.responseBitsToAst(bitType, responses);
         const node = builder.quiz({
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
           choices: choiceNodes,
           responses: responseNodes,
         });
@@ -567,7 +566,6 @@ class JsonParser {
           lead,
           hint,
           instruction,
-          isExample,
           example,
           isCaseSensitive,
           isLongAnswer,
@@ -582,7 +580,7 @@ class JsonParser {
           keyImage: image,
           values,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
+          ...this.parseExample(example),
           isCaseSensitive,
           isShortAnswer: !isLongAnswer,
         });
@@ -599,12 +597,12 @@ class JsonParser {
     const nodes: Matrix[] = [];
     if (Array.isArray(matrix)) {
       for (const m of matrix) {
-        const { key, cells, item, lead, hint, instruction, isExample, example, isCaseSensitive, isLongAnswer } = m;
+        const { key, cells, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer } = m;
         const node = builder.matrix({
           key,
           cells: this.matrixCellsToAst(cells) ?? [],
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
+          ...this.parseExample(example),
           isCaseSensitive,
           isShortAnswer: !isLongAnswer,
         });
@@ -621,12 +619,12 @@ class JsonParser {
     const nodes: MatrixCell[] = [];
     if (Array.isArray(matrixCells)) {
       for (const mc of matrixCells) {
-        const { values, item, lead, hint, instruction, isExample, example } = mc;
+        const { values, item, lead, hint, instruction, example } = mc;
 
         const node = builder.matrixCell({
           values,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
+          ...this.parseExample(example),
         });
         nodes.push(node);
       }
@@ -649,7 +647,6 @@ class JsonParser {
           lead,
           hint,
           instruction,
-          isExample,
           example,
           isCaseSensitive,
           isShortAnswer,
@@ -659,7 +656,7 @@ class JsonParser {
           partialAnswer,
           sampleSolution,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example, isExample),
+          ...this.parseExample(example),
           isCaseSensitive,
           isShortAnswer,
         });
@@ -890,13 +887,13 @@ class JsonParser {
   }
 
   private gapBitToAst(bit: GapJson): Gap {
-    const { item, lead, hint, instruction, isExample, example, isCaseSensitive, solutions } = bit;
+    const { item, lead, hint, instruction, example, isCaseSensitive, solutions } = bit;
 
     // Build bit
     const bitNode = builder.gap({
       solutions,
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-      ...this.parseExample(example, isExample),
+      ...this.parseExample(example),
       isCaseSensitive,
     });
 
@@ -904,7 +901,7 @@ class JsonParser {
   }
 
   private selectBitToAst(bit: SelectJson): Select {
-    const { options, prefix, postfix, item, lead, hint, instruction, isExample, example } = bit;
+    const { options, prefix, postfix, item, lead, hint, instruction, example } = bit;
 
     // Build options bits
     const selectOptionNodes = this.selectOptionBitsToAst(options);
@@ -915,7 +912,7 @@ class JsonParser {
       prefix,
       postfix,
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-      ...this.parseExample(example, isExample),
+      ...this.parseExample(example),
       isCaseSensitive: true,
     });
 
@@ -923,7 +920,7 @@ class JsonParser {
   }
 
   private highlightBitToAst(bit: HighlightJson): Highlight {
-    const { texts, prefix, postfix, item, lead, hint, instruction, isExample, example } = bit;
+    const { texts, prefix, postfix, item, lead, hint, instruction, example } = bit;
 
     // Build options bits
     const highlightTextNodes = this.highlightTextBitsToAst(texts);
@@ -934,7 +931,7 @@ class JsonParser {
       prefix,
       postfix,
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-      ...this.parseExample(example, isExample),
+      ...this.parseExample(example),
       isCaseSensitive: true,
     });
 
@@ -950,12 +947,13 @@ class JsonParser {
     };
   }
 
-  private parseExample(example: Text, isExample: boolean): Example {
-    const exampleStr = this.parseText(example);
+  private parseExample(example: ExampleJson | undefined): Example | undefined {
+    if (example == null) return undefined;
+    const exampleStr = this.parseText(example as string);
     if (exampleStr) {
       return { example: exampleStr };
     }
-    return { example: !!isExample };
+    return { example: !!example };
   }
 
   private parseText(text: Text | undefined, textFormat?: TextFormatType): string | undefined {

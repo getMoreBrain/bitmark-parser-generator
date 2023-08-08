@@ -1,4 +1,5 @@
 import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { ExampleType } from '../../model/enum/ExampleType';
 import { PropertyKey } from '../../model/enum/PropertyKey';
 import { TagType } from '../../model/enum/TagType';
 
@@ -18,4 +19,5 @@ BitType.setMetadata<BitTypeMetadata>(BitType.trueFalse1, {
   },
   resourceAttachmentAllowed: true,
   bodyAllowed: false,
+  rootExampleType: ExampleType.boolean,
 });

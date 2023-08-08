@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "210051"
-      ],
+      "example": null,
+      "id": ["210051"],
       "lead": "Beispiel"
     }
   },
@@ -24,10 +22,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "208411"
-      ],
+      "example": null,
+      "id": ["208411"],
       "lead": "Beispiel"
     }
   },
@@ -40,10 +36,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "208422"
-      ],
+      "example": null,
+      "id": ["208422"],
       "lead": "Beispiel"
     }
   }

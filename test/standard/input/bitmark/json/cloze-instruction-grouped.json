@@ -1,110 +1,101 @@
 [
   {
-    "bitmark": "[.cloze-instruction-grouped]\n[@id:287822]\n[%][%cloze-instruction-grouped]\nDer Fußball [_erfreut][!erfreuen][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht][!stehen] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...",
     "bit": {
       "type": "cloze-instruction-grouped",
       "format": "bitmark--",
-      "body": "Der Fußball {0} sich nicht nur in Deutschland besonderer Beliebtheit, er {1} auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...",
+      "id": ["287822"],
       "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": "",
-      "id": [
-        "287822"
-      ],
       "lead": "cloze-instruction-grouped",
+      "hint": "",
+      "instruction": "",
+      "isExample": true,
+      "body": "Der Fußball {0} sich nicht nur in Deutschland besonderer Beliebtheit, er {1} auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "erfreut"
-          ],
           "hint": "",
           "instruction": "erfreuen",
           "isCaseSensitive": true,
           "isExample": true,
-          "example": ""
+          "example": "erfreut",
+          "solutions": ["erfreut"]
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "steht"
-          ],
           "hint": "",
           "instruction": "stehen",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null,
+          "solutions": ["steht"]
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.cloze-instruction-grouped]\n[@id:287822]\n[%][%cloze-instruction-grouped]\nDer Fußball [_erfreut][!erfreuen][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht][!stehen] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ..."
   },
   {
-    "bitmark": "[.cloze-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[_Woher][!woher] kommen Sie?\n[_Wo][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?",
     "bit": {
       "type": "cloze-instruction-grouped",
       "format": "bitmark--",
-      "body": "{0} kommen Sie?\n{1} wohnen Sie?\n{2} studieren Sie?\n{3} Sprachen sprechen Sie?",
+      "id": ["107938"],
       "item": "5",
       "hint": "",
-      "isExample": false,
-      "example": "",
-      "id": [
-        "107938"
-      ],
       "instruction": "In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.",
+      "isExample": false,
+      "body": "{0} kommen Sie?\n{1} wohnen Sie?\n{2} studieren Sie?\n{3} Sprachen sprechen Sie?",
       "placeholders": {
         "{0}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Woher"
-          ],
           "hint": "",
           "instruction": "woher",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null,
+          "solutions": ["Woher"]
         },
         "{1}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Wo"
-          ],
           "hint": "",
           "instruction": "wo",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null,
+          "solutions": ["Wo"]
         },
         "{2}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Was"
-          ],
           "hint": "",
           "instruction": "was",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null,
+          "solutions": ["Was"]
         },
         "{3}": {
           "type": "gap",
           "item": "",
-          "solutions": [
-            "Welche"
-          ],
           "hint": "",
           "instruction": "welche",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": ""
+          "example": null,
+          "solutions": ["Welche"]
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.cloze-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[_Woher][!woher] kommen Sie?\n[_Wo][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?"
   }
 ]

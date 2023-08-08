@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "239803"
-      ],
+      "example": null,
+      "id": ["239803"],
       "lead": "Reflexion"
     }
   },
@@ -24,10 +22,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "239833"
-      ]
+      "example": null,
+      "id": ["239833"]
     },
     "errors": [
       {
@@ -47,10 +43,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "239840"
-      ]
+      "example": null,
+      "id": ["239840"]
     },
     "errors": [
       {
@@ -70,10 +64,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "239896"
-      ],
+      "example": null,
+      "id": ["239896"],
       "resource": {
         "type": "image",
         "image": {
@@ -99,10 +91,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "234993"
-      ],
+      "example": null,
+      "id": ["234993"],
       "lead": "Agendabeispiel 1: Inhaltlicher Einstieg – Beispielthema: Einnerungskultur & Deutsche Geschichte"
     }
   }

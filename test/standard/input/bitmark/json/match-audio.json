@@ -12,22 +12,18 @@
             "format": "mp3",
             "src": "https://cdn.bitmark.cloud/publishers/3/books/26363/miau.mp3"
           },
-          "values": [
-            "cat"
-          ],
+          "values": ["cat"],
           "item": "",
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": "",
+          "example": null,
           "isLongAnswer": false
         }
       ],
       "body": "[Listen to the audio and name the animal you are hearing.]",
-      "id": [
-        "285729"
-      ],
+      "id": ["285729"],
       "lead": "match-audio"
     }
   }

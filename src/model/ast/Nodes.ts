@@ -75,6 +75,8 @@ export interface Bit {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
+  isExample?: boolean;
+  isDefaultExample: boolean;
   example?: Example;
   partner?: Partner;
   resource?: Resource;
@@ -151,8 +153,10 @@ export interface Decision {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
   isCaseSensitive?: boolean;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
 }
 
 // Bot Response
@@ -170,7 +174,7 @@ export interface Quiz {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
+  isExample?: boolean;
   choices?: Choice[];
   responses?: Response[];
 }
@@ -192,9 +196,11 @@ export interface Pair {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
 }
 
 export interface Matrix {
@@ -202,9 +208,9 @@ export interface Matrix {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
+  isExample: boolean;
   cells: MatrixCell[];
 }
 
@@ -213,6 +219,8 @@ export interface MatrixCell {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
+  isExample: boolean;
+  isDefaultExample: boolean;
   example?: Example;
 }
 
@@ -225,9 +233,11 @@ export interface Question {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
 }
 
 // Body
@@ -261,8 +271,10 @@ export interface Gap extends BodyBit {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    example?: Example;
     isCaseSensitive?: boolean;
+    isExample: boolean;
+    isDefaultExample: boolean;
+    example?: Example;
   };
 }
 
@@ -277,8 +289,8 @@ export interface Select extends BodyBit {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    example?: Example;
     isCaseSensitive?: boolean;
+    isExample?: boolean;
   };
 }
 
@@ -288,8 +300,10 @@ export interface SelectOption {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
   isCaseSensitive?: boolean;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
 }
 
 // Highlight
@@ -303,8 +317,8 @@ export interface Highlight extends BodyBit {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    example?: Example;
     isCaseSensitive?: boolean;
+    isExample?: boolean;
   };
 }
 
@@ -315,17 +329,22 @@ export interface HighlightText {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  example?: Example;
   isCaseSensitive?: boolean;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
 }
 
 // Card Node
 export interface CardNode {
-  heading?: Heading;
-  elements?: string[];
   questions?: Question[];
+  elements?: string[];
+  statement?: Statement;
   statements?: Statement[];
+  choices?: Choice[];
+  responses?: Response[];
   quizzes?: Quiz[];
+  heading?: Heading;
   pairs?: Pair[];
   matrix?: Matrix[];
   botResponses?: BotResponse[];

@@ -5,7 +5,7 @@
       "format": "bitmark--",
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten."
     },
@@ -86,7 +86,7 @@
       "id": ["119760"],
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": "",
       "resource": {
@@ -139,7 +139,7 @@
       "format": "bitmark--",
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
       "resource": {

@@ -8,10 +8,8 @@
       "item": "B7 – Schriftlicher Ausdruck",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "92553"
-      ],
+      "example": null,
+      "id": ["92553"],
       "resource": {
         "type": "image",
         "image": {
@@ -38,10 +36,8 @@
       "item": "A13",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "92606"
-      ],
+      "example": null,
+      "id": ["92606"],
       "instruction": "Hören Sie Erfahrungsberichte zum Thema __Arbeiten im Ausland__.\n\nHören Sie die Berichte zweimal und korrigieren Sie während des Hörens die falschen Informationen und ergänzen Sie die fehlenden Informationen.",
       "resource": {
         "type": "image",
@@ -77,9 +73,7 @@
       "hint": "",
       "isExample": true,
       "example": "Sehr geehrte Damen und Herren,\n\ngestern habe ich die bestellten Bücher aus Ihrem Verlag erhalten, es sich handelt um die Titel „Neue Redemittel“ und „Grammatik 3“. Leider sind die Bücher beschädigd, vermutlich sind sie unterwegs\nnass geworden. Viele Seiten war zusammengeklebt. So kann ich die Bücher leider nicht meer verwenden. Ich benötige die Bücher jedoch dringend vor mein Studium. Ich hoffe, dass Sie mir kurzfristig zwei\nneuen Exemplare der genannten Titel unentgeltlich zur Verfügung stellen können. Würden Sie mich bitte auch noch mitteilen, ob ich Ihnen die beschädigten Bücher soll zurücksenden?\nMir gefällt ihre neue Schulbuchreihe „Was denn nun?“ sehr gut.\nWeil ich als Pädagogikstudentin gerade ein Praktikum an eine Schule mache, wurde ich gern mit dem neuen Material arbeiten. Könnten Sie mir eine Probeexemplar zusenden?\nVielen Dank in Voraus.\n\nMit freundlichem Grüßen\nDanielle Montain",
-      "id": [
-        "92750"
-      ],
+      "id": ["92750"],
       "instruction": "Eine Reklamation\n\nEin ausländischer Freund bittet Sie darum, eine Reklamation an einen deutschen Schulbuchverlag zu korrigieren, da Sie besser Deutsch können."
     }
   },
@@ -93,9 +87,7 @@
       "hint": "",
       "isExample": true,
       "example": "Berlin, 4. März ...\n\nLieber Ralf,\n\ngestern habe ich Deinen interessanten und ausführlichen Brief erhalten. Ich danke Dich sehr dafür. Du hast mich in Deinem Brief gefragt, ob ich auch ein besondere Hobby habe. Ja, ich beschäftige mich mit Wakeboarden. Seit zwei Jahren habe ich mit diesem Sport, der Snowboarden, Wellenreiten und Surfen zugleich ist, angefangen. Ist es eigentlich Wasserskifahren mit einem Board/Brett. Ich trainiere zweimal in die Woche an einem See mit einer Liftanlage. In Deutschland gibt es inzwischen 55 Liftanlagen und mehr wie 200 000 aktive Wakeboarder. Wakeboarden jeder sehr schnell lernen kann, man muss allerdings ein gutes Gleichgewichtsgefühl haben. In Unterschied zum klassischen Wasserski geht man beim Wakeboarden in der Lüfte. Man vollführt Sprünge, Saltos, Flips und Rotationen. Mich macht dieser kreative und anspruchsvolle Sport viel Spaß. Vielleicht Du solltest es auch einmal versuchen. In den meisten Wasserskischulen werden Kurse für Anfänger angeboten, man kann aber auch in einem Wakeboardamp teilnehmen. Wen Du noch Fragen hast, werde ich Dir diese gern beantworten.\n\nViele Grüße\nMarcel",
-      "id": [
-        "92838"
-      ],
+      "id": ["92838"],
       "instruction": "Extremsport\n\nEin ausländischer Freund, der in Berlin studiert, bittet Sie darum, einen Brief über den Trendsport __Wakeboarden__ zu korrigieren, da Sie besser Deutsch können."
     }
   },
@@ -108,7 +100,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Please correct the following text."
     }
   },
@@ -121,7 +113,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Please correct the following text."
     }
   },
@@ -134,7 +126,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "Please correct the upper and lower case.."
     }
   }

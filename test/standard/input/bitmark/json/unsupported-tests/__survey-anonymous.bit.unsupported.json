@@ -8,13 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "bullet": [
-        "good",
-        "not so good",
-        "well",
-        "not so well"
-      ]
+      "example": null,
+      "bullet": ["good", "not so good", "well", "not so well"]
     }
   }
 ]

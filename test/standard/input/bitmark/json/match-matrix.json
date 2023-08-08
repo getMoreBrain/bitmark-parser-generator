@@ -1,79 +1,161 @@
 [
   {
-    "bitmark": "[.match-matrix]\n[@id:287966]\n[%][%match-matrix]\n[!Bring the german verbs into the correct tense.]\n\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen\n==\nich werde gehen[@example][!Instruction]\n==\nsie gingen[@example]\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n===",
     "bit": {
       "type": "match-matrix",
       "format": "bitmark--",
+      "id": ["287966"],
       "item": "",
+      "lead": "match-matrix",
+      "instruction": "Bring the german verbs into the correct tense.",
+      "isExample": true,
+      "body": "",
       "heading": {
         "forKeys": "Verb",
-        "forValues": [
-          "Future, 1st Person, Singular",
-          "Past, 3rd Person, Plural"
-        ]
+        "forValues": ["Future, 1st Person, Singular", "Past, 3rd Person, Plural"]
       },
       "matrix": [
         {
           "key": "gehen",
           "cells": [
             {
+              "values": ["ich werde gehen"],
               "item": "",
               "instruction": "Instruction",
-              "values": [
-                "ich werde gehen"
-              ],
-              "example": "",
-              "isExample": true
+              "isExample": true,
+              "example": true
             },
             {
+              "values": ["sie gingen"],
               "item": "",
               "instruction": "",
-              "values": [
-                "sie gingen"
-              ],
-              "example": "",
-              "isExample": true
+              "isExample": true,
+              "example": true
             }
           ],
           "item": "",
-          "isCaseSensitive": true,
           "hint": "",
-          "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true
         },
         {
           "key": "sprechen",
           "cells": [
             {
+              "values": ["ich werde sprechen"],
               "item": "",
               "instruction": "",
-              "values": [
-                "ich werde sprechen"
-              ]
+              "isExample": false,
+              "example": null
             },
             {
+              "values": ["sie sprachen"],
               "item": "",
               "instruction": "",
-              "values": [
-                "sie sprachen"
-              ]
+              "isExample": false,
+              "example": null
             }
           ],
           "item": "",
-          "isCaseSensitive": true,
           "hint": "",
-          "isExample": false,
-          "example": "",
-          "isLongAnswer": false
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": false
         }
-      ],
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match-matrix]\n[@id:287966]\n[%][%match-matrix]\n[!Bring the german verbs into the correct tense.]\n\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen\n==\nich werde gehen[@example][!Instruction]\n==\nsie gingen[@example]\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n==="
+  },
+  {
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
       "body": "",
-      "id": [
-        "287966"
-      ],
-      "lead": "match-matrix",
-      "instruction": "Bring the german verbs into the correct tense."
-    }
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "matrix": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "cells": [
+            {
+              "values": ["A"],
+              "item": "",
+              "instruction": "",
+              "isExample": true,
+              "example": true
+            },
+            {
+              "values": ["B", "C"],
+              "item": "",
+              "instruction": "",
+              "isExample": true,
+              "example": true
+            }
+          ],
+          "item": "",
+          "hint": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example]\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n==="
+  },
+  {
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "matrix": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "cells": [
+            {
+              "values": ["A"],
+              "item": "",
+              "instruction": "",
+              "isExample": false,
+              "example": null
+            },
+            {
+              "values": ["B", "C"],
+              "item": "",
+              "instruction": "",
+              "isExample": true,
+              "example": true
+            }
+          ],
+          "item": "",
+          "hint": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC[@example]\n==="
   }
 ]

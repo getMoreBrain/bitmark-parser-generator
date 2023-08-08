@@ -301,3 +301,95 @@ die richtige Antwort.]
 [+2. Säule][%2]
 [-3. Säule][%3]
 ===
+
+[.multiple-choice:bitmark--]
+===
+[!1. There is a washer-dryer.]
+[+P][@example]
+[-H]
+[-C]
+===
+
+[.multiple-choice:bitmark--]
+===
+[!1. There is a washer-dryer.]
+[+P]
+[-H]
+[-C][@example]
+===
+
+[.multiple-choice:bitmark--]
+===
+[!1. There is a washer-dryer.]
+[@example]
+[+P]
+[-H]
+[-C]
+===
+
+
+[.multiple-choice:bitmark--]
+===
+[!1. There is a washer-dryer.]
+[+P][@example:hello]
+[-H]
+[-C]
+===
+
+[.multiple-choice:bitmark--]
+===
+[!1. There is a washer-dryer.]
+[+P]
+[-H]
+[-C][@example:hello]
+===
+
+[.multiple-choice:bitmark--]
+===
+[!1. There is a washer-dryer.]
+[@example:false]
+[+P][@example]
+[-H]
+[-C]
+===
+
+[.multiple-choice:bitmark--]
+===
+[!1. There is a washer-dryer.]
+[+P][@example:right]
+[-H][@example:hello]
+[-C][@example:wrong]
+===
+
+
+[.multiple-choice:bitmark--]
+[@example]
+===
+[+Correct Answer]
+[-FalseAnswer1]
+[-FalseAnswer2]
+===
+
+
+[.multiple-choice:bitmark--]
+===
+[@example]
+[+Correct Answer]
+[-FalseAnswer1]
+[-FalseAnswer2]
+===
+
+
+[.multiple-choice:bitmark--]
+===
+[+Correct Answer][@example]
+[-FalseAnswer1]
+[-FalseAnswer2]
+===
+
+[.multiple-choice:bitmark--]
+===
+[+Correct Answer]
+[-FalseAnswer1][@example]
+[-FalseAnswer2]
+===

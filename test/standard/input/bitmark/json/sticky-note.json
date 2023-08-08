@@ -8,7 +8,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "ageRange": ["18", "120"],
       "language": ["en", "jp", "cn"]
     }

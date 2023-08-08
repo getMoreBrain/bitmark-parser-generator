@@ -28,7 +28,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "highlight",
@@ -58,12 +58,10 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       },
-      "id": [
-        "285689"
-      ],
+      "id": ["285689"],
       "lead": "highlight-text",
       "item": "10"
     }
@@ -97,7 +95,7 @@
           "hint": "",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{1}": {
           "type": "highlight",
@@ -121,7 +119,7 @@
           "hint": "A hot drink (caffeinated)",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         },
         "{2}": {
           "type": "highlight",
@@ -145,7 +143,7 @@
           "hint": "what the hell",
           "instruction": "",
           "isExample": false,
-          "example": ""
+          "example": null
         }
       }
     }
