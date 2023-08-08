@@ -30,10 +30,8 @@ jobs:
       - name: Publish
         run: yarn npm publish
       - name: Trigger bitmark API pipeline
-        run:
-          name: Trigger bitmark API pipeline
-          command: |
-            curl -X POST \
-              -H "Content-Type: application/json" \
-              -H "Circle-Token: $CIRCLE_TOKEN" \
-              https://circleci.com/api/v2/project/github/getMoreBrain/bitbook-api/pipeline
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "Circle-Token: $CIRCLE_TOKEN" \
+            https://circleci.com/api/v2/project/github/getMoreBrain/bitbook-api/pipeline
