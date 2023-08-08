@@ -24,11 +24,13 @@ BitType.setMetadata<BitTypeMetadata>(BitType.article, ARTICLE_CONFIG);
 
 // Aliases
 
+BitType.setMetadata<BitTypeMetadata>(BitType.appAiPrompt, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.aiPrompt, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.articleAi, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.articleAttachment, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.assignment, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.audioTranscript, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.bitmarkExample, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.blogArticle, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bug, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.checklist, ARTICLE_WITH_EXAMPLE_CONFIG);
