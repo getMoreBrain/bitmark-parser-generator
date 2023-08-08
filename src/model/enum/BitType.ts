@@ -71,6 +71,7 @@ const BitType = superenum({
   audio: 'audio',
   audioEmbed: 'audio-embed',
   audioLink: 'audio-link',
+  bitmarkExample: 'bitmark-example',
   bitAlias: 'bit-alias',
   bitBookEnding: 'bit-book-ending',
   bitBookSummary: 'bit-book-summary',
