@@ -24,6 +24,7 @@ BitType.setMetadata<BitTypeMetadata>(BitType.article, ARTICLE_CONFIG);
 
 // Aliases
 
+BitType.setMetadata<BitTypeMetadata>(BitType.appAiPrompt, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.aiPrompt, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.articleAi, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.articleAttachment, ARTICLE_WITH_EXAMPLE_CONFIG);
