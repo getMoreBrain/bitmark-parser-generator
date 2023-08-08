@@ -7,7 +7,7 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
 
-BitType.setMetadata<BitTypeMetadata>(BitType.essay, {
+const ESSAY_CONFIG: BitTypeMetadata = {
   tags: {
     ...TAGS_DEFAULT,
     ...TAGS_CHAIN_ANY_RESOURCE,
@@ -16,4 +16,10 @@ BitType.setMetadata<BitTypeMetadata>(BitType.essay, {
   resourceAttachmentAllowed: true,
   bodyAllowed: true,
   rootExampleType: ExampleType.string,
-});
+};
+
+BitType.setMetadata<BitTypeMetadata>(BitType.essay, ESSAY_CONFIG);
+
+// Aliases
+BitType.setMetadata<BitTypeMetadata>(BitType.coachSelfReflectionEssay, ESSAY_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.coachCallToActionEssay, ESSAY_CONFIG);

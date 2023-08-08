@@ -1,0 +1,76 @@
+[.coach-self-reflection-multiple-response:bitmark--]
+[@id:291969]
+[%]
+[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]
+===
+[+Unselbständige]
+[+IV-Rentner]
+[-18 jähriger Schüler]
+[+22 jähriger Student]
+[-16 jähriger Lehrling]
+===
+
+[.coach-self-reflection-multiple-response:bitmark--]
+[@id:291969]
+[%]
+[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]
+===
+[@example:Test]
+[+Unselbständige]
+[+IV-Rentner][@example:Correct response]
+[-18 jähriger Schüler]
+[+22 jähriger Student]
+[-16 jähriger Lehrling]
+===
+
+[.coach-self-reflection-multiple-response:bitmark--]
+[@id:291969]
+[%]
+[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]
+===
+[+Unselbständige]
+[+IV-Rentner]
+[-18 jähriger Schüler][@example]
+[+22 jähriger Student]
+[-16 jähriger Lehrling]
+===
+
+[.coach-self-reflection-multiple-response:bitmark--]
+[@id:291969]
+[%]
+[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]
+===
+[+Unselbständige]
+[+IV-Rentner][@example]
+[-18 jähriger Schüler][@example]
+[+22 jähriger Student][@example:Another text here]
+[-16 jähriger Lehrling]
+===
+
+[.coach-self-reflection-multiple-response:bitmark--]
+[@example]
+===
+[+CorrectAnswer1]
+[+CorrectAnswer2]
+[-FalseAnswer3]
+===
+[-FalseAnswer4]
+===
+
+[.coach-self-reflection-multiple-response:bitmark--]
+===
+[+CorrectAnswer1][@example]
+[+CorrectAnswer2][@example]
+[-FalseAnswer3][@example]
+===
+[-FalseAnswer4]
+===
+
+[.coach-self-reflection-multiple-response:bitmark--]
+===
+[+CorrectAnswer1][@example:false]
+[+CorrectAnswer2]
+[-FalseAnswer3][@example:true]
+===
+[-FalseAnswer4]
+===

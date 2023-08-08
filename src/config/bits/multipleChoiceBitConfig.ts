@@ -7,7 +7,7 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
 
-BitType.setMetadata<BitTypeMetadata>(BitType.multipleChoice, {
+const MULTIPLE_CHOICE_CONFIG: BitTypeMetadata = {
   tags: {
     ...TAGS_DEFAULT,
     ...TAGS_CHAIN_ANY_RESOURCE,
@@ -17,4 +17,10 @@ BitType.setMetadata<BitTypeMetadata>(BitType.multipleChoice, {
   cardSet: CARD_SET_QUIZ,
   bodyAllowed: true,
   footerAllowed: true,
-});
+};
+
+BitType.setMetadata<BitTypeMetadata>(BitType.multipleChoice, MULTIPLE_CHOICE_CONFIG);
+
+// Aliases
+
+BitType.setMetadata<BitTypeMetadata>(BitType.coachSelfReflectionMultipleChoice, MULTIPLE_CHOICE_CONFIG);

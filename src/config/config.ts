@@ -27,8 +27,6 @@ import './bits/chapterSubjectMatterBitConfig';
 import './bits/chatBitConfig';
 import './bits/clozeAndMultipleChoiceTextBitConfig';
 import './bits/clozeBitConfig';
-import './bits/clozeInstructionGroupedBitConfig';
-import './bits/clozeSolutionGroupedBitConfig';
 import './bits/codeBitConfig';
 import './bits/conclusionBitConfig';
 import './bits/conversationBitConfig';

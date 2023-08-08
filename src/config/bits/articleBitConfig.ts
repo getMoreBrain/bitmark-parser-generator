@@ -34,6 +34,10 @@ BitType.setMetadata<BitTypeMetadata>(BitType.bitmarkExample, ARTICLE_WITH_EXAMPL
 BitType.setMetadata<BitTypeMetadata>(BitType.blogArticle, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bug, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.checklist, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.coachAudioTranscript, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.coachCallToActionChecklist, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.coachHomeRules, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.coachVideoTranscript, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.correction, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.cookPreparation, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.cookStep, ARTICLE_WITH_EXAMPLE_CONFIG);

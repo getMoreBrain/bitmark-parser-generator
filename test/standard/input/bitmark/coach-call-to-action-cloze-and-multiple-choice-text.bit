@@ -1,0 +1,35 @@
+[.coach-call-to-action-cloze-and-multiple-choice-text]
+[@id:287842]
+[%][%coach-call-to-action-cloze-and-multiple-choice-text]
+The students completed the [_cloze] with the correct verb [+forms][-formats]
+
+[+other][-options] is on another line and may cause issues with bit chaining.
+
+Here we chain [+other][-options] correctly
+
+Here we chain [+other] [-options] incorrectly
+
+
+[.coach-call-to-action-cloze-and-multiple-choice-text]
+[@id:287843]
+[%][%coach-call-to-action-cloze-and-multiple-choice-text]
+[@example]
+The students completed the [_cloze] with the correct verb [+forms][-formats]
+
+[+other][-options] is on another line and may cause issues with bit chaining.
+
+Here we chain [+other][-options] correctly
+
+Here we chain [+other] [-options] incorrectly
+
+
+[.coach-call-to-action-cloze-and-multiple-choice-text]
+[@id:287844]
+[%][%coach-call-to-action-cloze-and-multiple-choice-text]
+The students completed the [_cloze][_gap][@example] with the correct verb [+forms][-formats]
+
+[+other][-options] is on another line and may cause issues with bit chaining.
+
+Here we chain [+other][@example][-options] correctly
+
+Here we chain [+other] [-options] incorrectly
