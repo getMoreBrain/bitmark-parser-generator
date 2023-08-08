@@ -1,6 +1,7 @@
 | BIT | USED? | PARSER | GENERATOR | NOTES |
 | ------ | -- | -- | -- | -- |
 | _error | ✅ | ✅ | ✅ | Used for error handling to indicate a bit type that is not supported or a bit parse error |
+| app-ai-prompt | ✅ | ✅ | ✅ |  |
 | ai-prompt | ✅ | ✅ | ✅ |  |
 | anchor | ➖ | ➖ | ➖ | LEGACY? |
 | annotation-bookmark | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
@@ -15,9 +16,11 @@
 | audio | ✅ | ✅ | ✅ |  |
 | audio-embed | ✅ | ✅ | ✅ |  |
 | audio-link | ✅ | ✅ | ✅ |  |
+| audio-transcript | ✅ | ✅ | ✅ |  |
 | bit-alias | ➖ | ✅ | ✅ |  |
 | bit-book-ending | ✅ | ✅ | ✅ |  |
 | bit-book-summary | ✅ | ✅ | ✅ |  |
+| bitmark-example | ➖ | ✅ | ✅ |  |
 | blog-article | ✅ | ✅ | ✅ |  |
 | book | ✅ | ✅ | ✅ |  |
 | book-acknowledgments | ✅ | ✅ | ✅ |  |
@@ -66,6 +69,7 @@
 | chapter | ✅ | ✅ | ✅ |  |
 | chapter-subject-matter | ✅ | ✅ | ✅ |  |
 | chat | ➖ | ➖ | ➖ | LEGACY? |
+| checklist | ✅ | ✅ | ✅ |  |
 | cloze | ✅ | ✅ | ✅ |  |
 | cloze-and-multiple-choice-text | ✅ | ✅ | ✅ | |
 | cloze-instruction-grouped | ✅ | ✅ | ✅ | |
@@ -102,6 +106,7 @@
 | document-embed | ✅ | ✅ | ✅ |  |
 | document-link | ✅ | ✅ | ✅ |  |
 | document-upload | ➖ | ➖ | ➖ | LEGACY? |
+| editor-note | ✅ | ✅ | ✅ |  |
 | editorial | ✅ | ✅ | ✅ |  |
 | essay | ✅ | ✅ | ✅ |  |
 | example | ✅ | ✅ | ✅ |  |
@@ -120,7 +125,10 @@
 | highlight-text | ➖ | ✅ | ✅ | |
 | hint | ✅ | ✅ | ✅ |  |
 | image | ✅ | ✅ | ✅ |  |
+| image-landscape | ✅ | ✅ | ✅ |  |
 | image-link | ✅ | ✅ | ✅ |  |
+| image-on-device | ✅ | ✅ | ✅ |  |
+| image-portrait | ✅ | ✅ | ✅ |  |
 | image-prototype | ✅ | ✅ | ✅ |  |
 | image-super-wide | ✅ | ✅ | ✅ |  |
 | image-zoom | ✅ | ✅ | ✅ |  |
@@ -128,22 +136,25 @@
 | internal-link | ✅ | ✅ | ✅ |  |
 | interview | ✅ | ✅ | ✅ |  |
 | interview-instruction-grouped | ✅ | ✅ | ✅ |  |
-| langLearningOutcomes | ✅ | ✅ | ✅ |  |
-| langEnablingLanguageSkills | ✅ | ✅ | ✅ |  |
-| langLifeSkills | ✅ | ✅ | ✅ |  |
-| langEnglishAroundWorld | ✅ | ✅ | ✅ |  |
-| langGoodToKnow | ✅ | ✅ | ✅ |  |
-| langLearningStrategy | ✅ | ✅ | ✅ |  |
-| langLikeALocal | ✅ | ✅ | ✅ |  |
-| langUsefulPhrases | ✅ | ✅ | ✅ |  |
-| langLevelDown | ✅ | ✅ | ✅ |  |
-| langLevelUp | ✅ | ✅ | ✅ |  |
-| langExtraActivity | ✅ | ✅ | ✅ |  |
-| langVideoScript | ✅ | ✅ | ✅ |  |
-| langAudioScript | ✅ | ✅ | ✅ |  |
-| langVocabulary | ✅ | ✅ | ✅ |  |
-| langHomework | ✅ | ✅ | ✅ |  |
-| langTeacherNote | ✅ | ✅ | ✅ |  |
+| lang-learning-outcomes | ✅ | ✅ | ✅ |  |
+| lang-enabling-language-skills | ✅ | ✅ | ✅ |  |
+| lang-life-skills | ✅ | ✅ | ✅ |  |
+| lang-english-around-world | ✅ | ✅ | ✅ |  |
+| lang-good-to-know | ✅ | ✅ | ✅ |  |
+| lang-learning-goal | ✅ | ✅ | ✅ |  |
+| lang-learning-strategy | ✅ | ✅ | ✅ |  |
+| lang-like-a-local | ✅ | ✅ | ✅ |  |
+| lang-material | ✅ | ✅ | ✅ |  |
+| lang-useful-phrases | ✅ | ✅ | ✅ |  |
+| lang-level-down | ✅ | ✅ | ✅ |  |
+| lang-level-up | ✅ | ✅ | ✅ |  |
+| lang-extra-activity | ✅ | ✅ | ✅ |  |
+| lang-video-script | ✅ | ✅ | ✅ |  |
+| lang-audio-script | ✅ | ✅ | ✅ |  |
+| lang-vocabulary | ✅ | ✅ | ✅ |  |
+| lang-homework | ✅ | ✅ | ✅ |  |
+| lang-teacher-note | ✅ | ✅ | ✅ |  |
+| lang-teacher-pronunciation | ✅ | ✅ | ✅ |  |
 | learning-path-book | ✅ | ✅ | ✅ |  |
 | learning-path-bot-training | ➖ | ➖ | ➖ | LEGACY? |
 | learning-path-classroom-event | ✅ | ✅ | ✅ |  |
@@ -213,6 +224,7 @@
 | video-landscape | ✅ | ✅ | ✅ |  |
 | video-link | ✅ |  ✅ | ✅ |  |
 | video-portrait | ✅ | ✅ | ✅ |  |
+| video-transcript | ✅ | ✅ | ✅ |  |
 | warning | ✅ | ✅ | ✅ |  |
 | website-link | ✅ | ✅ | ✅ |  |
 | workbook-article | ✅ | ✅ | ✅ |  |

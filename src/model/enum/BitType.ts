@@ -58,6 +58,7 @@ export interface CardSetVariantConfig {
 
 const BitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
+  appAiPrompt: 'app-ai-prompt',
   aiPrompt: 'ai-prompt',
   anchor: 'anchor',
   appLink: 'app-link',
@@ -70,6 +71,8 @@ const BitType = superenum({
   audio: 'audio',
   audioEmbed: 'audio-embed',
   audioLink: 'audio-link',
+  audioTranscript: 'audio-transcript',
+  bitmarkExample: 'bitmark-example',
   bitAlias: 'bit-alias',
   bitBookEnding: 'bit-book-ending',
   bitBookSummary: 'bit-book-summary',
@@ -120,6 +123,7 @@ const BitType = superenum({
   chapter: 'chapter',
   chapterSubjectMatter: 'chapter-subject-matter',
   chat: 'chat',
+  checklist: 'checklist',
   cloze: 'cloze',
   clozeAndMultipleChoiceText: 'cloze-and-multiple-choice-text',
   clozeInstructionGrouped: 'cloze-instruction-grouped',
@@ -268,6 +272,7 @@ const BitType = superenum({
   videoLandscape: 'video-landscape',
   videoLink: 'video-link',
   videoPortrait: 'video-portrait',
+  videoTranscript: 'video-transcript',
   warning: 'warning',
   websiteLink: 'website-link',
   workbookArticle: 'workbook-article',
