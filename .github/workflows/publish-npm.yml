@@ -10,29 +10,30 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js 16.x
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16.x'
-        registry-url: 'https://registry.npmjs.org'
-        cache: 'yarn'
-    - name: Setup Yarn
-      run: |
-        yarn config set npmRegistryServer "https://registry.npmjs.org"
-        yarn config set npmPublishRegistry "https://registry.npmjs.org"
-        yarn config set npmAlwaysAuth true
-        yarn config set npmAuthToken $NPM_AUTH_TOKEN
-      env:
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-    - name: Install dependencies
-      run: yarn install --immutable
-    - name: Publish
-      run: yarn npm publish
-    - run:
-        name: Trigger bitmark API pipeline
-        command: |
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            -H "Circle-Token: $CIRCLE_TOKEN" \
-            https://circleci.com/api/v2/project/github/getMoreBrain/bitbook-api/pipeline    
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+      - name: Setup Yarn
+        run: |
+          yarn config set npmRegistryServer "https://registry.npmjs.org"
+          yarn config set npmPublishRegistry "https://registry.npmjs.org"
+          yarn config set npmAlwaysAuth true
+          yarn config set npmAuthToken $NPM_AUTH_TOKEN
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Publish
+        run: yarn npm publish
+      - name: Trigger bitmark API pipeline
+        run:
+          name: Trigger bitmark API pipeline
+          command: |
+            curl -X POST \
+              -H "Content-Type: application/json" \
+              -H "Circle-Token: $CIRCLE_TOKEN" \
+              https://circleci.com/api/v2/project/github/getMoreBrain/bitbook-api/pipeline
