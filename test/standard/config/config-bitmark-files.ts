@@ -11,6 +11,7 @@ if (process.env.CI) {
 
 let TEST_FILES: string[] = [
   // // '_simple.bit',
+  // 'app-ai-prompt.bit',
   // 'ai-prompt.bit',
   // 'app-link.bit',
   // 'article.bit',
@@ -204,7 +205,8 @@ let TEST_FILES: string[] = [
 // ALL tests for CI
 if (TEST_ALL) {
   TEST_FILES = [
-    'ai-prompt',
+    'app-ai-prompt.bit',
+    'ai-prompt.bit',
     'app-link.bit',
     'article.bit',
     'article-ai.bit',

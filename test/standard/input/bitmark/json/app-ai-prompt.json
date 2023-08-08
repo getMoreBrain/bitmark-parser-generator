@@ -1,0 +1,56 @@
+[
+  {
+    "bit": {
+      "type": "app-ai-prompt",
+      "format": "bitmark++",
+      "ageRange": ["18", "120"],
+      "language": ["en", "jp", "cn"],
+      "item": "",
+      "hint": "",
+      "example": null,
+      "isExample": false,
+      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::"
+    },
+    "parser": {
+      "version": "1.0.6",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.app-ai-prompt:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@language:en]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::"
+  },
+  {
+    "bit": {
+      "type": "app-ai-prompt",
+      "format": "bitmark++",
+      "AIGenerated": true,
+      "ageRange": ["18", "120"],
+      "language": ["jp", "cn"],
+      "item": "",
+      "hint": "",
+      "example": null,
+      "isExample": false,
+      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::"
+    },
+    "parser": {
+      "version": "1.0.6",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.app-ai-prompt:bitmark++]\n[@AIGenerated:true]\n[@ageRange:18][@ageRange:120]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::"
+  },
+  {
+    "bit": {
+      "type": "app-ai-prompt",
+      "format": "bitmark++",
+      "AIGenerated": false,
+      "item": "",
+      "hint": "",
+      "example": null,
+      "isExample": false,
+      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book."
+    },
+    "parser": {
+      "version": "1.0.6",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.app-ai-prompt:bitmark++]\n[@AIGenerated:false]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book."
+  }
+]
