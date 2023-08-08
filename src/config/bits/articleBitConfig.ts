@@ -28,8 +28,10 @@ BitType.setMetadata<BitTypeMetadata>(BitType.aiPrompt, ARTICLE_WITH_EXAMPLE_CONF
 BitType.setMetadata<BitTypeMetadata>(BitType.articleAi, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.articleAttachment, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.assignment, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.audioTranscript, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.blogArticle, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.bug, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.checklist, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.correction, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.cookPreparation, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.cookStep, ARTICLE_WITH_EXAMPLE_CONFIG);
@@ -88,5 +90,6 @@ BitType.setMetadata<BitTypeMetadata>(BitType.sideNote, ARTICLE_WITH_EXAMPLE_CONF
 BitType.setMetadata<BitTypeMetadata>(BitType.statement, ARTICLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.summary, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.summaryAi, ARTICLE_WITH_EXAMPLE_CONFIG);
+BitType.setMetadata<BitTypeMetadata>(BitType.videoTranscript, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.warning, ARTICLE_WITH_EXAMPLE_CONFIG);
 BitType.setMetadata<BitTypeMetadata>(BitType.workbookArticle, ARTICLE_WITH_EXAMPLE_CONFIG);
