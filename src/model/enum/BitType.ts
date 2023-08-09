@@ -13,7 +13,7 @@ export interface BitType {
 }
 
 export type RootBitTypeType = EnumType<typeof RootBitType>;
-type AliasBitTypeType = EnumType<typeof AliasBitType>;
+export type AliasBitTypeType = EnumType<typeof AliasBitType>;
 export type RootOrAliasBitTypeType = RootBitTypeType | AliasBitTypeType;
 
 export interface RootBitTypeMetadata {
@@ -545,19 +545,17 @@ const RootBitTypeToAliasMap = {
 // Create the bit type alias map for fast lookups
 
 const BitTypeAliasMap: Map<RootOrAliasBitTypeType, RootBitTypeType> = new Map();
-// Ensure bit type aliases to itself
-for (const v of RootBitType.values()) {
-  BitTypeAliasMap.set(v as RootOrAliasBitTypeType, v as RootBitTypeType);
-}
-// Aliases to bit type
-for (const [k, v] of Object.entries(RootBitTypeToAliasMap)) {
-  for (const vv of v) {
-    BitTypeAliasMap.set(vv as RootOrAliasBitTypeType, k as RootBitTypeType);
-  }
-}
 
 class BitTypeUtils {
-  static getBitType(aliasOrRootBitType: RootOrAliasBitTypeType | string | undefined): BitType {
+  /**
+   * Return the bitType (root and alias types) given a root or alias bit type
+   *
+   * If the bit type is not found, the returned bitType will contain the  _error bit type
+   *
+   * @param aliasOrRootBitType bit type in (root or alias, may be invalid)
+   * @returns valid bitType (root and alias types) which will contain _error bit types if the bit type is invalid
+   */
+  public static getBitType(aliasOrRootBitType: RootOrAliasBitTypeType | string | undefined): BitType {
     const alias = BitTypeUtils.getAliasedBitType(aliasOrRootBitType);
     const root = BitTypeUtils.getRootBitType(alias);
     return {
@@ -575,5 +573,21 @@ class BitTypeUtils {
     return AliasBitType.fromValue(bitTypeOrAlias) ?? RootBitType.fromValue(bitTypeOrAlias) ?? RootBitType._error;
   }
 }
+
+function init() {
+  // Ensure bit type aliases to itself
+  for (const v of RootBitType.values()) {
+    BitTypeAliasMap.set(v as RootOrAliasBitTypeType, v as RootBitTypeType);
+  }
+  // Aliases to bit type
+  for (const [k, v] of Object.entries(RootBitTypeToAliasMap)) {
+    for (const vv of v) {
+      BitTypeAliasMap.set(vv as RootOrAliasBitTypeType, k as RootBitTypeType);
+    }
+  }
+}
+
+// Initialise on first import
+init();
 
 export { RootBitType, AliasBitType, BitTypeUtils };
