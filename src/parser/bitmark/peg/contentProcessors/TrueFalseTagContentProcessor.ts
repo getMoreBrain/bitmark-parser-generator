@@ -1,4 +1,4 @@
-import { BitTypeType } from '../../../../model/enum/BitType';
+import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -13,7 +13,7 @@ import {
 function trueFalseTagContentProcessor(
   _context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {

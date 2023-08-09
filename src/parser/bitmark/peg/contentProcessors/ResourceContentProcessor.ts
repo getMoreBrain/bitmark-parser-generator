@@ -1,6 +1,6 @@
 import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
 import { AudioResource, ImageResource, Resource } from '../../../../model/ast/Nodes';
-import { BitType, BitTypeMetadata, BitTypeType } from '../../../../model/enum/BitType';
+import { BitType, RootBitType, RootBitTypeMetadata } from '../../../../model/enum/BitType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
 import { BitUtils } from '../../../../utils/BitUtils';
 
@@ -25,7 +25,7 @@ const resourceBuilder = new ResourceBuilder();
  */
 function buildResource(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   resourceType: string | undefined,
   resources: Resource[] | undefined,
 ): Resource | undefined {
@@ -34,7 +34,7 @@ function buildResource(
   const excessResources: Resource[] = [];
 
   // Get the meta data for the bit
-  const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+  const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bitType.root);
   const resourceAttachmentAllowed = meta?.resourceAttachmentAllowed;
 
   // Get the valid resource types for the bit
@@ -102,7 +102,7 @@ function buildResource(
 
     // Add an error to warn about the excess resources
     let warningMsg = `${excessResources.length} excess resource(s) present in the bit.`;
-    if (validResourceType === BitType.stillImageFilm) {
+    if (validResourceType === RootBitType.stillImageFilm) {
       // Special case for stillImageFilm
       warningMsg += ` The expected resource types are '&image' and '&audio'`;
     } else {
@@ -119,7 +119,7 @@ function buildResource(
 function resourceContentProcessor(
   context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {

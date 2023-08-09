@@ -1,4 +1,4 @@
-import { BitTypeType } from '../../../../model/enum/BitType';
+import { BitType } from '../../../../model/enum/BitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../../../model/enum/PropertyKey';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
@@ -19,7 +19,7 @@ import {
 function propertyContentProcessor(
   context: BitmarkPegParserContext,
   bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {

@@ -1,4 +1,4 @@
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { BitType, RootBitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -13,7 +13,7 @@ import {
 function titleTagContentProcessor(
   _context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -33,13 +33,13 @@ function titleTagContentProcessor(
 
 function buildTitles(
   _context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   title: string[] | undefined,
 ): BitSpecificTitles {
   title = title ?? [];
 
-  switch (bitType) {
-    case BitType.chapter: {
+  switch (bitType.root) {
+    case RootBitType.chapter: {
       let t: string | undefined;
       if (title.length > 0) t = title[title.length - 1];
 
@@ -49,7 +49,7 @@ function buildTitles(
       };
     }
 
-    case BitType.book:
+    case RootBitType.book:
     default: {
       return {
         title: title[1] ?? undefined,

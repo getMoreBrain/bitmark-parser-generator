@@ -142,8 +142,7 @@
   {
     "bit": {
       "type": "_error",
-      "format": "bitmark--",
-      "body": "[@id:2878"
+      "format": "bitmark--"
     },
     "parser": {
       "version": "1.0.16",

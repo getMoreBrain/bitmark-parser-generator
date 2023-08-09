@@ -1,0 +1,425 @@
+[
+  {
+    "bit": {
+      "type": "coach-call-to-action-cloze-and-multiple-choice-text",
+      "format": "bitmark--",
+      "id": ["287842"],
+      "item": "",
+      "lead": "coach-call-to-action-cloze-and-multiple-choice-text",
+      "hint": "",
+      "instruction": "",
+      "isExample": false,
+      "body": "The students completed the {0} with the correct verb {1}\n\n{2} is on another line and may cause issues with bit chaining.\n\nHere we chain {3} correctly\n\nHere we chain {4} {5} incorrectly",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "solutions": ["cloze"]
+        },
+        "{1}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "forms",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": "formats",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{2}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "other",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": "options",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{3}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "other",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": "options",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{4}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "other",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{5}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "options",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        }
+      }
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.coach-call-to-action-cloze-and-multiple-choice-text]\n[@id:287842]\n[%][%coach-call-to-action-cloze-and-multiple-choice-text]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
+  },
+  {
+    "bit": {
+      "type": "coach-call-to-action-cloze-and-multiple-choice-text",
+      "format": "bitmark--",
+      "id": ["287843"],
+      "item": "",
+      "lead": "coach-call-to-action-cloze-and-multiple-choice-text",
+      "hint": "",
+      "instruction": "",
+      "isExample": true,
+      "body": "The students completed the {0} with the correct verb {1}\n\n{2} is on another line and may cause issues with bit chaining.\n\nHere we chain {3} correctly\n\nHere we chain {4} {5} incorrectly",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "cloze",
+          "solutions": ["cloze"]
+        },
+        "{1}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "options": [
+            {
+              "text": "forms",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": true,
+              "example": true
+            },
+            {
+              "text": "formats",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{2}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "options": [
+            {
+              "text": "other",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": true,
+              "example": true
+            },
+            {
+              "text": "options",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{3}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "options": [
+            {
+              "text": "other",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": true,
+              "example": true
+            },
+            {
+              "text": "options",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{4}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "options": [
+            {
+              "text": "other",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": true,
+              "example": true
+            }
+          ]
+        },
+        "{5}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "options",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        }
+      }
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.coach-call-to-action-cloze-and-multiple-choice-text]\n[@id:287843]\n[%][%coach-call-to-action-cloze-and-multiple-choice-text]\n[@example]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
+  },
+  {
+    "bit": {
+      "type": "coach-call-to-action-cloze-and-multiple-choice-text",
+      "format": "bitmark--",
+      "id": ["287844"],
+      "item": "",
+      "lead": "coach-call-to-action-cloze-and-multiple-choice-text",
+      "hint": "",
+      "instruction": "",
+      "isExample": true,
+      "body": "The students completed the {0} with the correct verb {1}\n\n{2} is on another line and may cause issues with bit chaining.\n\nHere we chain {3} correctly\n\nHere we chain {4} {5} incorrectly",
+      "placeholders": {
+        "{0}": {
+          "type": "gap",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": "gap",
+          "solutions": ["cloze", "gap"]
+        },
+        "{1}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "forms",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": "formats",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{2}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "other",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": "options",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{3}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "options": [
+            {
+              "text": "other",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": true,
+              "example": true
+            },
+            {
+              "text": "options",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{4}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "other",
+              "isCorrect": true,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        "{5}": {
+          "type": "select",
+          "prefix": "",
+          "postfix": "",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "options": [
+            {
+              "text": "options",
+              "isCorrect": false,
+              "hint": "",
+              "isExample": false,
+              "example": null
+            }
+          ]
+        }
+      }
+    },
+    "parser": {
+      "version": "1.0.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.coach-call-to-action-cloze-and-multiple-choice-text]\n[@id:287844]\n[%][%coach-call-to-action-cloze-and-multiple-choice-text]\nThe students completed the [_cloze][_gap][@example] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][@example][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
+  }
+]

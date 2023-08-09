@@ -13,9 +13,15 @@
       "resource": {
         "type": "still-image-film-link",
         "stillImageFilmLink": {
-          "provider": "",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
-          "format": "mp4"
+          "caption": "",
+          "copyright": "",
+          "format": "mp4",
+          "height": null,
+          "width": null,
+          "license": "",
+          "provider": "docs.bitmark.cloud",
+          "showInIndex": false
         }
       }
     }

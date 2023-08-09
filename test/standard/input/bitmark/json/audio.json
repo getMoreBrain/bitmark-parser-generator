@@ -1,52 +1,92 @@
 [
   {
-    "bitmark": "[.audio]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&audio:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]",
     "bit": {
       "type": "audio",
       "format": "bitmark--",
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
       "item": "",
       "hint": "",
       "isExample": false,
       "example": null,
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
       "resource": {
         "type": "audio",
         "audio": {
           "format": "mp3",
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3"
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.audio]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&audio:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]"
   },
   {
-    "bitmark": "[.audio:bitmark++]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\nMein Vater zum Beispiel hat drei Studiengänge absolviert, danach vierzig Jahre in einem Betrieb gearbeitet, der Schiffsausrüstungen produzierte, aber viel Spaß hat es ihm nicht gemacht. Nur im Wald fühlte er sich richtig glücklich. In Moskau widmete er seine ganze Freizeit dem Sammeln von ==Birkensaft==(@note:Saft der Birke (eines Baumes)). Viele sowjetische Bürger gingen damals auf die Suche nach ausgefallenen Lebensmitteln und Getränken. Sie vertrauten der Natur mehr als den staatlichen ==Versorgungseinrichtungen==(@note:Geschäften). Der Wald ==bescherte==(@noteschenkte) ihnen Pilze, Beeren, Kräuter und nicht zuletzt Birkensaft.",
     "bit": {
       "type": "audio",
       "format": "bitmark++",
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\nMein Vater zum Beispiel hat drei Studiengänge absolviert, danach vierzig Jahre in einem Betrieb gearbeitet, der Schiffsausrüstungen produzierte, aber viel Spaß hat es ihm nicht gemacht. Nur im Wald fühlte er sich richtig glücklich. In Moskau widmete er seine ganze Freizeit dem Sammeln von ==Birkensaft==(@note:Saft der Birke (eines Baumes)). Viele sowjetische Bürger gingen damals auf die Suche nach ausgefallenen Lebensmitteln und Getränken. Sie vertrauten der Natur mehr als den staatlichen ==Versorgungseinrichtungen==(@note:Geschäften). Der Wald ==bescherte==(@noteschenkte) ihnen Pilze, Beeren, Kräuter und nicht zuletzt Birkensaft.",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": null
-    }
-  },
-  {
-    "bitmark": "[.audio]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&audio:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]",
-    "bit": {
-      "type": "audio",
-      "format": "bitmark--",
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
       "item": "",
       "hint": "",
       "isExample": false,
       "example": null,
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\nMein Vater zum Beispiel hat drei Studiengänge absolviert, danach vierzig Jahre in einem Betrieb gearbeitet, der Schiffsausrüstungen produzierte, aber viel Spaß hat es ihm nicht gemacht. Nur im Wald fühlte er sich richtig glücklich. In Moskau widmete er seine ganze Freizeit dem Sammeln von ==Birkensaft==(@note:Saft der Birke (eines Baumes)). Viele sowjetische Bürger gingen damals auf die Suche nach ausgefallenen Lebensmitteln und Getränken. Sie vertrauten der Natur mehr als den staatlichen ==Versorgungseinrichtungen==(@note:Geschäften). Der Wald ==bescherte==(@noteschenkte) ihnen Pilze, Beeren, Kräuter und nicht zuletzt Birkensaft."
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "Resource type '&audio' is required but is not present in the bit",
+          "text": "[.audio:bitmark++]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\nMein Vater zum Beispiel hat drei Studiengänge absolviert, danach vierzig Jahre in einem Betrieb gearbeitet, der Schiffsausrüstungen produzierte, aber viel Spaß hat es ihm nicht gemacht. Nur im Wald fühlte er sich richtig glücklich. In Moskau widmete er seine ganze Freizeit dem Sammeln von ==Birkensaft==(@note:Saft der Birke (eines Baumes)). Viele sowjetische Bürger gingen damals auf die Suche nach ausgefallenen Lebensmitteln und Getränken. Sie vertrauten der Natur mehr als den staatlichen ==Versorgungseinrichtungen==(@note:Geschäften). Der Wald ==bescherte==(@noteschenkte) ihnen Pilze, Beeren, Kräuter und nicht zuletzt Birkensaft.\n",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 324
+            },
+            "end": {
+              "line": 9,
+              "column": 1,
+              "offset": 1155
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.audio:bitmark++]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\nMein Vater zum Beispiel hat drei Studiengänge absolviert, danach vierzig Jahre in einem Betrieb gearbeitet, der Schiffsausrüstungen produzierte, aber viel Spaß hat es ihm nicht gemacht. Nur im Wald fühlte er sich richtig glücklich. In Moskau widmete er seine ganze Freizeit dem Sammeln von ==Birkensaft==(@note:Saft der Birke (eines Baumes)). Viele sowjetische Bürger gingen damals auf die Suche nach ausgefallenen Lebensmitteln und Getränken. Sie vertrauten der Natur mehr als den staatlichen ==Versorgungseinrichtungen==(@note:Geschäften). Der Wald ==bescherte==(@noteschenkte) ihnen Pilze, Beeren, Kräuter und nicht zuletzt Birkensaft."
+  },
+  {
+    "bit": {
+      "type": "audio",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
       "resource": {
         "type": "audio",
         "audio": {
           "format": "mp3",
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3"
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.audio]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&audio:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]"
   }
 ]
