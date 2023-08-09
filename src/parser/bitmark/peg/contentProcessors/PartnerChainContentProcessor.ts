@@ -1,6 +1,6 @@
 import { Builder } from '../../../../ast/Builder';
 import { ImageResource, Resource } from '../../../../model/ast/Nodes';
-import { BitTypeType } from '../../../../model/enum/BitType';
+import { BitType } from '../../../../model/enum/BitType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -17,7 +17,7 @@ const builder = new Builder();
 function partnerChainContentProcessor(
   context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -68,8 +68,8 @@ function extractAvatarImage(
     // Set the excess resources in the parser info
     context.parser.excessResources = excessResources;
 
-    // Add an error to warn about the excess resources
-    context.addError(`${excessResources.length} excess resource(s) present in the [@parter] chain.`);
+    // Add an warning to warn about the excess resources
+    context.addWarning(`${excessResources.length} excess resource(s) present in the [@parter] chain.`);
   }
 
   return avatarImage;

@@ -1,5 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { RootBitType, BitType } from '../../../../model/enum/BitType';
 
 import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor';
 
@@ -28,7 +28,7 @@ const builder = new Builder();
 function trueFalseChainContentProcessor(
   context: BitmarkPegParserContext,
   bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
@@ -43,7 +43,7 @@ function trueFalseChainContentProcessor(
 function buildTrueFalse(
   context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
@@ -56,15 +56,15 @@ function buildTrueFalse(
 
   if (!statements || !choices || !responses || !bodyParts) return;
 
-  if (bitType === BitType.trueFalse1) {
+  if (bitType.root === RootBitType.trueFalse1) {
     // Treat as true/false for statement
     target.statement = buildStatement(context, bitType, chainContent);
   } else if (
-    bitType === BitType.trueFalse ||
-    bitType === BitType.multipleChoice ||
-    bitType === BitType.multipleChoice1 ||
-    bitType === BitType.multipleResponse ||
-    bitType === BitType.multipleResponse1
+    bitType.root === RootBitType.trueFalse ||
+    bitType.root === RootBitType.multipleChoice ||
+    bitType.root === RootBitType.multipleChoice1 ||
+    bitType.root === RootBitType.multipleResponse ||
+    bitType.root === RootBitType.multipleResponse1
   ) {
     // Treat as true/false for choices / responses
     const tf = buildStatementsChoicesResponses(context, bitType, chainContent);
@@ -72,7 +72,7 @@ function buildTrueFalse(
     if (tf.statements) statements.push(...tf.statements);
     if (tf.choices) choices.push(...tf.choices);
     if (tf.responses) responses.push(...tf.responses);
-  } else if (bitType === BitType.highlightText) {
+  } else if (bitType.root === RootBitType.highlightText) {
     // Treat as highlight text
     const highlight = buildHighlight(context, bitType, chainContent);
     if (highlight) bodyParts.push(highlight);
@@ -93,10 +93,10 @@ function buildTrueFalse(
  */
 function buildStatement(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   trueFalseContent: BitContent[],
 ): Statement | undefined {
-  if (bitType !== BitType.trueFalse1) return undefined;
+  if (bitType.root !== RootBitType.trueFalse1) return undefined;
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
 
@@ -123,13 +123,14 @@ function buildStatement(
  */
 function buildStatementsChoicesResponses(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   trueFalseContent: BitContent[],
 ): StatementsOrChoicesOrResponses {
   // NOTE: We handle V1 tags in V2 multiple-choice / multiple-response for maxium backwards compatibility
-  const insertStatements = bitType === BitType.trueFalse;
-  const insertChoices = bitType === BitType.multipleChoice || bitType === BitType.multipleChoice1;
-  const insertResponses = bitType === BitType.multipleResponse || bitType === BitType.multipleResponse1;
+  const insertStatements = bitType.root === RootBitType.trueFalse;
+  const insertChoices = bitType.root === RootBitType.multipleChoice || bitType.root === RootBitType.multipleChoice1;
+  const insertResponses =
+    bitType.root === RootBitType.multipleResponse || bitType.root === RootBitType.multipleResponse1;
   if (!insertStatements && !insertChoices && !insertResponses) return {};
 
   const statements: Statement[] = [];
@@ -179,7 +180,7 @@ function buildStatementsChoicesResponses(
 
 function buildHighlight(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   highlightContent: BitContent[],
 ): Highlight | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('highlight content', highlightContent);
@@ -205,7 +206,7 @@ function buildHighlight(
 
 function buildSelect(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   selectContent: BitContent[],
 ): Select | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('select content', selectContent);

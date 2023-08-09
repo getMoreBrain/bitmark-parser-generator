@@ -9,7 +9,7 @@
 
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-import { BitTypeType } from '../../../model/enum/BitType';
+import { BitType } from '../../../model/enum/BitType';
 import { ResourceTypeType } from '../../../model/enum/ResourceType';
 import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
@@ -35,6 +35,7 @@ import {
   ExtraProperties,
   ImageResource,
   Comment,
+  MarkConfig,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -68,7 +69,7 @@ export interface SubParserResult<T> {
 }
 
 export interface BitHeader {
-  bitType: BitTypeType;
+  bitType: BitType;
   textFormat: TextFormatType;
   resourceType?: ResourceTypeType;
 }
@@ -97,11 +98,14 @@ export interface BitContentProcessorResult {
   isDefaultExample?: boolean;
   example?: string;
   isCorrect?: boolean;
+  markConfig?: MarkConfig[];
   solutions?: string[];
   statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];
   responses?: Response[];
+  solution?: string;
+  mark?: string[];
   title?: string[];
   subtitle?: string;
   resources?: Resource[];
@@ -197,6 +201,7 @@ const TypeKey = superenum({
   True: 'True',
   False: 'False',
   Gap: 'Gap',
+  Mark: 'Mark',
   SampleSolution: 'SampleSolution',
   Comment: 'Comment',
 
@@ -302,7 +307,7 @@ export interface BitmarkPegParserContext {
   parse: ParseFunction;
   bitContentProcessor(
     bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     data: BitContent[] | undefined,
     /*validTypes: TypeKeyType[],*/
   ): BitContentProcessorResult;

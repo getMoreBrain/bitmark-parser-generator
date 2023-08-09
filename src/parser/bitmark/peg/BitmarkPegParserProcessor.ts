@@ -64,7 +64,7 @@
 
 import { Builder } from '../../../ast/Builder';
 import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
-import { BitType, BitTypeType } from '../../../model/enum/BitType';
+import { BitType, BitTypeUtils, RootBitType } from '../../../model/enum/BitType';
 import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { ResourceType } from '../../../model/enum/ResourceType';
 import { TextFormat } from '../../../model/enum/TextFormat';
@@ -78,6 +78,7 @@ import { commentTagContentProcessor } from './contentProcessors/CommentTagConten
 import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
 import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
 import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
+import { markChainContentProcessor } from './contentProcessors/MarkChainContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
 import { referenceTagContentProcessor } from './contentProcessors/ReferenceTagContentProcessor';
 import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
@@ -199,13 +200,13 @@ class BitmarkPegParserProcessor {
     const { bitType, textFormat, resourceType } = bitHeader;
 
     // Bit type was invalid, so ignore the bit, returning instead the parsing errors
-    if (!bitType) return this.invalidBit();
+    if (!bitType || bitType.root === RootBitType._error) return this.invalidBit();
 
     if (DEBUG_BIT_CONTENT_RAW) this.debugPrint('BIT CONTENT RAW', bitContent);
 
-    const isTrueFalseV1 = bitType === BitType.trueFalse1;
-    const isMultipleChoiceV1 = bitType === BitType.multipleChoice1;
-    const isMultipleResponseV1 = bitType === BitType.multipleResponse1;
+    const isTrueFalseV1 = bitType.root === RootBitType.trueFalse1;
+    const isMultipleChoiceV1 = bitType.root === RootBitType.multipleChoice1;
+    const isMultipleResponseV1 = bitType.root === RootBitType.multipleResponse1;
 
     if (DEBUG_BIT_CONTENT) this.debugPrint('BIT CONTENT', bitContent);
 
@@ -263,16 +264,16 @@ class BitmarkPegParserProcessor {
   }
 
   // Build bit for data that cannot be parsed
-  invalidBit(_bit?: unknown): SubParserResult<Bit> {
-    // Create the error
-    this.addError('Invalid bit');
+  invalidBit(bitData?: unknown): SubParserResult<Bit> {
+    // Create the error is bitData is defined (else it was created when parsing the header)
+    if (bitData) this.addError(`Invalid bit`);
 
     // Build the errors
     this.parser.errors = this.buildBitLevelErrors();
 
     // Build the error bit
     const bit = builder.bit({
-      bitType: BitType._error,
+      bitType: BitTypeUtils.getBitType(RootBitType._error),
       parser: this.parser,
     });
 
@@ -282,13 +283,13 @@ class BitmarkPegParserProcessor {
   // Build bit header
   buildBitHeader(bitType: string, textFormatAndResourceType: Partial<BitHeader>): BitHeader {
     // Get / check bit type
-    const validBitType = BitType.fromValue(bitType);
-    if (!validBitType) {
+    const validBitType = BitTypeUtils.getBitType(bitType);
+    if (validBitType.root === RootBitType._error) {
       this.addError(`Invalid bit type: '${bitType}'`);
     }
 
     return {
-      bitType: validBitType ?? BitType._error,
+      bitType: validBitType,
       textFormat: textFormatAndResourceType.textFormat ?? TextFormat.bitmarkMinusMinus,
       resourceType: textFormatAndResourceType.resourceType,
     };
@@ -331,7 +332,7 @@ class BitmarkPegParserProcessor {
    */
   private bitContentProcessor(
     bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     data: BitContent[] | undefined,
   ): BitContentProcessorResult {
     const result: BitContentProcessorResult = {};
@@ -344,6 +345,7 @@ class BitmarkPegParserProcessor {
     result.responses = [];
     result.resources = [];
     result.trueFalse = [];
+    result.markConfig = [];
     result.extraProperties = {};
     result.comments = [];
 
@@ -406,14 +408,20 @@ class BitmarkPegParserProcessor {
           break;
 
         case TypeKey.Gap: {
-          if (!inChain) addBodyText();
+          if (!inChain) addBodyText(); // Body bit, so add the body text
           gapChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
+          break;
+        }
+
+        case TypeKey.Mark: {
+          if (!inChain) addBodyText(); // Body bit, so add the body text
+          markChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
           break;
         }
 
         case TypeKey.True:
         case TypeKey.False: {
-          if (!inChain) addBodyText();
+          if (!inChain) addBodyText(); // Body bit, so add the body text
           trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
           break;
         }
@@ -479,6 +487,7 @@ class BitmarkPegParserProcessor {
     if (result.choices.length === 0) delete result.choices;
     if (result.responses.length === 0) delete result.responses;
     if (result.trueFalse.length === 0) delete result.trueFalse;
+    if (result.markConfig.length === 0) delete result.markConfig;
     if (result.resources.length === 0) delete result.resources;
     if (result.comments.length === 0) delete result.comments;
 

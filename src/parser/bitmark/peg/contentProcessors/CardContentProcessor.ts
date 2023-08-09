@@ -1,5 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
-import { BitType, BitTypeMetadata, BitTypeType } from '../../../../model/enum/BitType';
+import { BitType, RootBitType, RootBitTypeMetadata } from '../../../../model/enum/BitType';
 import { CardSetType } from '../../../../model/enum/CardSetType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
@@ -33,7 +33,7 @@ const builder = new Builder();
 
 function buildCards(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   parsedCardSet: ParsedCardSet | undefined,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
@@ -50,7 +50,7 @@ function buildCards(
   // Parse the card contents according to the card set type
 
   // Get the bit metadata to check how to parse the card set
-  const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+  const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bitType.root);
   const cardSetType = meta && meta.cardSet?.type;
 
   switch (cardSetType) {
@@ -96,7 +96,7 @@ function buildCards(
 
 function processCardSet(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   parsedCardSet: ParsedCardSet | undefined,
 ): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
@@ -158,7 +158,7 @@ function processCardSet(
 
 function parseElements(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const elements: string[] = [];
@@ -180,7 +180,7 @@ function parseElements(
 
 function parseStatements(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
@@ -226,14 +226,14 @@ function parseStatements(
 
 function parseQuiz(
   _context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   cardSet: ProcessedCardSet,
   choicesV1: Choice[] | undefined,
   responsesV1: Response[] | undefined,
 ): BitSpecificCards {
   const quizzes: Quiz[] = [];
-  const insertChoices = bitType === BitType.multipleChoice;
-  const insertResponses = bitType === BitType.multipleResponse;
+  const insertChoices = bitType.root === RootBitType.multipleChoice;
+  const insertResponses = bitType.root === RootBitType.multipleResponse;
   if (!insertChoices && !insertResponses) return {};
 
   for (const card of cardSet.cards) {
@@ -291,7 +291,7 @@ function parseQuiz(
 
 function parseQuestions(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const questions: Question[] = [];
@@ -318,7 +318,7 @@ function parseQuestions(
 
 function parseMatchPairs(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   let sideIdx = 0;
@@ -415,7 +415,7 @@ function parseMatchPairs(
 
 function parseMatchMatrix(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   let sideIdx = 0;
@@ -533,7 +533,7 @@ function parseMatchMatrix(
 
 function parseBotActionResponses(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const botResponses: BotResponse[] = [];

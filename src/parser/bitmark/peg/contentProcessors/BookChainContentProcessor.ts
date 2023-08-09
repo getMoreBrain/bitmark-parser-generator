@@ -1,4 +1,4 @@
-import { BitTypeType } from '../../../../model/enum/BitType';
+import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -14,7 +14,7 @@ import {
 function bookChainContentProcessor(
   context: BitmarkPegParserContext,
   bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -30,7 +30,7 @@ function bookChainContentProcessor(
 
 function buildBook(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
 ): {
   book: string | undefined;

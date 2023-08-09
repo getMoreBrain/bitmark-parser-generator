@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { NodeType } from '../../model/ast/NodeType';
 import { Bit } from '../../model/ast/Nodes';
-import { BitTypeType } from '../../model/enum/BitType';
+import { BitType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextMarkType } from '../../model/enum/TextMarkType';
@@ -734,7 +734,7 @@ class TextGenerator implements AstWalkCallbacks {
     this.writeString(tag);
   }
 
-  protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
+  protected getBitType(route: NodeInfo[]): BitType | undefined {
     for (const node of route) {
       if (node.key === NodeType.bitsValue) {
         const n = node.value as Bit;

@@ -1,4 +1,4 @@
-import { BitTypeType } from '../enum/BitType';
+import { BitType } from '../enum/BitType';
 import { BodyBitTypeType } from '../enum/BodyBitType';
 import { ResourceTypeType } from '../enum/ResourceType';
 import { TextFormatType } from '../enum/TextFormat';
@@ -20,7 +20,7 @@ export interface BitmarkAst {
 // Bit
 
 export interface Bit {
-  bitType: BitTypeType;
+  bitType: BitType;
   textFormat: TextFormatType;
   resourceType?: ResourceTypeType;
   id?: Property;
@@ -61,6 +61,7 @@ export interface Bit {
   labelFalse?: Property;
   quotedPerson?: Property;
   partialAnswer?: Property;
+  markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: string;
   title?: string;
@@ -127,6 +128,12 @@ export type Property = string[] | number[] | boolean[] | unknown[];
 export interface Partner {
   name: string;
   avatarImage?: ImageResource;
+}
+
+export interface MarkConfig {
+  mark: string;
+  color?: string;
+  emphasis?: string;
 }
 
 // Statement
@@ -259,7 +266,7 @@ export interface BodyPart {
 }
 
 export interface BodyBit extends BodyPart {
-  type: 'gap' | 'select' | 'highlight';
+  type: 'gap' | 'mark' | 'select' | 'highlight';
 }
 
 // Gap
@@ -272,6 +279,20 @@ export interface Gap extends BodyBit {
     hint?: string;
     instruction?: string;
     isCaseSensitive?: boolean;
+    isExample: boolean;
+    isDefaultExample: boolean;
+    example?: Example;
+  };
+}
+
+export interface Mark extends BodyBit {
+  type: 'mark';
+  data: {
+    solution: string;
+    mark?: string;
+    itemLead?: ItemLead;
+    hint?: string;
+    instruction?: string;
     isExample: boolean;
     isDefaultExample: boolean;
     example?: Example;

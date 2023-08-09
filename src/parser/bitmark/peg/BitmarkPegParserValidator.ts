@@ -12,11 +12,11 @@ import { INFINITE_COUNT, TagData, TagDataMap } from '../../../model/config/TagDa
 import { ParserData } from '../../../model/parser/ParserData';
 
 import {
-  BitType,
-  BitTypeMetadata,
-  BitTypeType,
+  RootBitType,
+  RootBitTypeMetadata,
   CardSetConfig,
   CardSetVariantConfig,
+  BitType,
 } from '../../../model/enum/BitType';
 
 import {
@@ -86,13 +86,12 @@ class BitmarkPegParserValidator {
    * Any unknown tag chains will be 'unchained' and processed as individual tags.
    *
    * @param context
-   * @param bitLevel
    * @param bitType
    * @param data the unvalidated bit content from the parser
    *
    * @returns the validated and potentially unchained bit content
    */
-  validateBitTags(context: BitmarkPegParserContext, bitType: BitTypeType, data: BitContent[]): BitContent[] {
+  validateBitTags(context: BitmarkPegParserContext, bitType: BitType, data: BitContent[]): BitContent[] {
     // if (context.DEBUG_BIT_TAG_VALIDATION) context.debugPrint('bit tag validation', data);
     if (!data) return [];
 
@@ -121,6 +120,7 @@ class BitmarkPegParserValidator {
   //  *
   //  * @param context
   //  * @param _bitLevel
+  //  * @param aliasedBitType
   //  * @param bitType
   //  * @param cardSet
   //  * @param cardSetType
@@ -128,15 +128,16 @@ class BitmarkPegParserValidator {
   // validateCardSetType(
   //   context: BitmarkPegParserContext,
   //   _bitLevel: BitContentLevelType,
-  //   bitType: BitTypeType,
+  //   aliasedBitType: RootOrAliasBitType,
+  //   rootBitType: RootBitTypeType,
   //   cardSet: BitContent[] | undefined,
   //   cardSetType: CardSetTypeType | undefined,
   // ): void {
   //   if (cardSet && !cardSetType) {
   //     const parserData = Array.isArray(cardSet) && cardSet.length > 0 ? cardSet[0] : undefined;
-  //     context.addWarning(`Bit '${bitType}' should not have a card set. It will be ignored`, parserData);
+  //     context.addWarning(`Bit '${aliasedBitType}' should not have a card set. It will be ignored`, parserData);
   //   } else if (!cardSet && cardSetType) {
-  //     context.addWarning(`Bit '${bitType}' is missing the card set. It should have a '${cardSetType}' type card set`);
+  //     context.addWarning(`Bit '${aliasedBitType}' is missing the card set. It should have a '${cardSetType}' type card set`);
   //   }
   // }
 
@@ -152,7 +153,7 @@ class BitmarkPegParserValidator {
   checkBody(
     context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     body: Body | undefined,
   ): Body | undefined {
     if (!body) return body;
@@ -164,7 +165,7 @@ class BitmarkPegParserValidator {
     const hasBody = body.bodyParts.length > 0;
 
     if (hasBody && !bodyAllowed) {
-      context.addWarning(`Bit '${bitType}' should not have a body.`);
+      context.addWarning(`Bit '${bitType.alias}' should not have a body.`);
     }
 
     return body;
@@ -182,7 +183,7 @@ class BitmarkPegParserValidator {
   checkBodyPart(
     context: BitmarkPegParserContext,
     bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     bodyPart: string,
   ): string {
     if (!bodyPart) return bodyPart;
@@ -204,7 +205,7 @@ class BitmarkPegParserValidator {
   checkFooter(
     context: BitmarkPegParserContext,
     bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     footer: string,
   ): string {
     if (!footer) return footer;
@@ -216,7 +217,7 @@ class BitmarkPegParserValidator {
     this.checkBodyForCommonPotentialMistakes(context, bitLevel, bitType, footer);
 
     if (!footerAllowed) {
-      context.addWarning(`Bit '${bitType}' should not have a footer.`);
+      context.addWarning(`Bit '${bitType.alias}' should not have a footer.`);
     }
 
     return footer;
@@ -234,7 +235,7 @@ class BitmarkPegParserValidator {
   checkCardBody(
     context: BitmarkPegParserContext,
     bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     cardBody: string | undefined,
     cardNo: number,
     sideNo: number,
@@ -255,7 +256,7 @@ class BitmarkPegParserValidator {
 
     if (!bodyAllowed) {
       context.addWarning(
-        `Bit '${bitType}' should not have a card body at card:${cardNo + 1}, side:${sideNo + 1}, variant:${
+        `Bit '${bitType.alias}' should not have a card body at card:${cardNo + 1}, side:${sideNo + 1}, variant:${
           variantNo + 1
         }.`,
       );
@@ -280,7 +281,7 @@ class BitmarkPegParserValidator {
   private validateTagChainsRecursive(
     context: BitmarkPegParserContext,
     bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     data: BitContent[],
     tags: TagDataMap,
     cardSetConfig?: CardSetConfig,
@@ -385,7 +386,8 @@ class BitmarkPegParserValidator {
    *
    * @param context
    * @param bitLevel
-   * @param bitType
+   *
+   * @param rootBitType
    * @param content
    * @param typeKey
    * @param tagData
@@ -398,7 +400,7 @@ class BitmarkPegParserValidator {
   private validateSingleTag(
     context: BitmarkPegParserContext,
     bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     content: BitContent,
     typeKey: TypeKeyType,
     typeKeyPlusKey: TypeKeyType | string,
@@ -551,7 +553,7 @@ class BitmarkPegParserValidator {
   private validateStandardTag(
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    _bitType: BitTypeType,
+    _bitType: BitType,
     tagData: TagData,
     content: TypeKeyValue,
     seen: SeenData,
@@ -591,7 +593,7 @@ class BitmarkPegParserValidator {
   private validatePropertyTag(
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    _bitType: BitTypeType,
+    _bitType: BitType,
     tagData: TagData,
     content: TypeKeyValue,
     seen: SeenData,
@@ -631,7 +633,7 @@ class BitmarkPegParserValidator {
   private validateResourceTag(
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    _bitType: BitTypeType,
+    _bitType: BitType,
     tagData: TagData,
     content: TypeKeyValue,
     seen: SeenData,
@@ -661,7 +663,7 @@ class BitmarkPegParserValidator {
    *
    * @param context
    * @param bitLevel
-   * @param bitType
+   * @param rootBitType
    * @param tagDatas
    * @param content
    * @param seenResourceKeys
@@ -670,7 +672,7 @@ class BitmarkPegParserValidator {
    */
   private validateCardSet(
     context: BitmarkPegParserContext,
-    bitType: BitTypeType,
+    bitType: BitType,
     _tagData: TagData,
     content: TypeKeyValue,
     cardSetConfig: CardSetConfig | undefined,
@@ -740,33 +742,33 @@ class BitmarkPegParserValidator {
    *
    * @param context
    * @param _bitLevel
-   * @param bitType
+   * @param rootBitType
    * @param body
    * @returns
    */
   private checkBodyForCommonPotentialMistakes(
     context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     body: string,
   ): void {
     if (!body) return;
 
     for (const mistake of COMMON_MISTAKE_STRINGS) {
       if (body.includes(mistake)) {
-        context.addWarning(`Bit '${bitType}' might contain a mistake: ${mistake}`);
+        context.addWarning(`Bit '${bitType.alias}' might contain a mistake: ${mistake}`);
       }
     }
 
     for (const mistake of COMMON_STARTS_WITH_MISTAKE_STRINGS) {
       if (body.startsWith(mistake)) {
-        context.addWarning(`Bit '${bitType}' might contain a mistake: ${mistake}`);
+        context.addWarning(`Bit '${bitType.alias}' might contain a mistake: ${mistake}`);
       }
     }
 
     for (const mistake of COMMON_ENDS_WITH_MISTAKE_STRINGS) {
       if (body.endsWith(mistake)) {
-        context.addWarning(`Bit '${bitType}' might contain a mistake: ${mistake}`);
+        context.addWarning(`Bit '${bitType.alias}' might contain a mistake: ${mistake}`);
       }
     }
   }
@@ -843,10 +845,10 @@ class BitmarkPegParserValidator {
    * @returns the metadata
    * @throws if the bit type has no metadata
    */
-  private getMetadataForBitType(bitType: BitTypeType): BitTypeMetadata {
-    const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+  private getMetadataForBitType(bitType: BitType): RootBitTypeMetadata {
+    const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bitType.root);
     if (!meta) {
-      throw new Error(`Bit type ${bitType} has no metadata`);
+      throw new Error(`Root bit type ${bitType.root} has no metadata`);
     }
 
     return meta;

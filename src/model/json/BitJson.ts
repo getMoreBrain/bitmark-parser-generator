@@ -66,6 +66,8 @@ export interface BitJson {
 
   partner: PartnerJson;
 
+  marks: MarkConfigJson[];
+
   // NEW property - not in the ANTLR parser
   extraProperties: {
     [key: string]: unknown | unknown[];
@@ -93,6 +95,12 @@ export interface BitJson {
 export interface PartnerJson {
   name: string;
   avatarImage: ImageResourceJson;
+}
+
+export interface MarkConfigJson {
+  mark: string;
+  color: string;
+  emphasis: string;
 }
 
 export interface StatementJson {

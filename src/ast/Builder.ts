@@ -1,4 +1,4 @@
-import { BitType, BitTypeType } from '../model/enum/BitType';
+import { AliasBitType, BitType } from '../model/enum/BitType';
 import { BodyBitType } from '../model/enum/BodyBitType';
 import { PropertyKey } from '../model/enum/PropertyKey';
 import { ResourceTypeType } from '../model/enum/ResourceType';
@@ -45,6 +45,8 @@ import {
   BodyPart,
   CardNode,
   Comment,
+  Mark,
+  MarkConfig,
   Example,
 } from '../model/ast/Nodes';
 
@@ -79,7 +81,7 @@ class Builder extends BaseBuilder {
    * @returns
    */
   bit(data: {
-    bitType: BitTypeType;
+    bitType: BitType;
     textFormat?: TextFormatType;
     resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
     id?: string | string[];
@@ -142,6 +144,7 @@ class Builder extends BaseBuilder {
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
+    markConfig?: MarkConfig[];
     resource?: Resource;
     body?: Body;
     sampleSolution?: string | string[];
@@ -220,6 +223,7 @@ class Builder extends BaseBuilder {
       isDefaultExample,
       example,
       partner,
+      markConfig,
       extraProperties,
       resource,
       body,
@@ -286,6 +290,7 @@ class Builder extends BaseBuilder {
       anchor,
       reference,
       referenceEnd,
+      markConfig,
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
@@ -330,8 +335,6 @@ class Builder extends BaseBuilder {
       if (body) {
         this.setDefaultExamplesBodyBits(body);
       }
-
-      // this.setDefaultExampleBit(bitType, node);
     }
 
     // Set default values
@@ -811,6 +814,65 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build mark config node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  markConfig(data: { mark: string; color?: string; emphasis?: string }): MarkConfig {
+    const { mark, color, emphasis } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: MarkConfig = {
+      mark,
+      color,
+      emphasis,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build mark node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  mark(data: {
+    solution: string;
+    mark?: string;
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    isDefaultExample?: boolean;
+    example?: string | boolean;
+  }): Mark {
+    const { solution, mark, item, lead, hint, instruction, isDefaultExample, example } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Mark = {
+      type: BodyBitType.mark,
+      data: {
+        solution,
+        mark,
+        itemLead: this.itemLead(item, lead),
+        hint,
+        instruction,
+        ...this.toExample(isDefaultExample, example),
+      },
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
    * Build select node
    *
    * @param data - data for the node
@@ -1187,6 +1249,14 @@ class Builder extends BaseBuilder {
             }
             break;
           }
+          case BodyBitType.mark: {
+            const mark = part as Mark;
+            if (!mark.data.isExample) {
+              mark.data.isDefaultExample = true;
+              mark.data.isExample = true;
+            }
+            break;
+          }
           case BodyBitType.select: {
             const select = part as Select;
             for (const option of select.data.options) {
@@ -1211,26 +1281,6 @@ class Builder extends BaseBuilder {
       }
     }
   }
-
-  // private setDefaultExampleBit(bitType: BitTypeType, node: Bit): void {
-  //   const { example: exampleIn } = node;
-  //   const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
-  //   if (!meta) return;
-
-  //   if (exampleIn === null) {
-  //     // Set the default for the specific bit
-  //     switch (meta.exampleType) {
-  //       case ExampleType.boolean:
-  //         node.example = true;
-  //         break;
-  //       case ExampleType.string:
-  //         node.example = '';
-  //         break;
-  //       default:
-  //       // Ignore at this level
-  //     }
-  //   }
-  // }
 
   private parseExtraProperties(extraProperties: { [key: string]: unknown } | undefined): ExtraProperties | undefined {
     if (!extraProperties) return undefined;
@@ -1281,7 +1331,8 @@ class Builder extends BaseBuilder {
     if (body && body.bodyParts) {
       for (const bodyPart of body.bodyParts) {
         switch (bodyPart.type) {
-          case BodyBitType.gap: {
+          case BodyBitType.gap:
+          case BodyBitType.mark: {
             checkIsExample(bodyPart.data as WithExample);
             break;
           }
@@ -1380,10 +1431,10 @@ class Builder extends BaseBuilder {
 
   private setDefaultBitValues(bit: Bit) {
     // Set AIGenerated == true for all AI generated bits
-    switch (bit.bitType) {
-      case BitType.articleAi:
-      case BitType.noteAi:
-      case BitType.summaryAi:
+    switch (bit.bitType.alias) {
+      case AliasBitType.articleAi:
+      case AliasBitType.noteAi:
+      case AliasBitType.summaryAi:
         bit.aiGenerated = this.toAstProperty(PropertyKey.aiGenerated, true);
         break;
     }

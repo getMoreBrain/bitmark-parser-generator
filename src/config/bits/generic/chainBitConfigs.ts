@@ -71,4 +71,29 @@ const TAGS_CHAIN_TRUE_FALSE: TagDataMap = {
   },
 };
 
-export { TAGS_CHAIN_PARTNER, TAGS_CHAIN_GAP, TAGS_CHAIN_TRUE_FALSE };
+// Mark configuration
+
+const TAGS_CHAIN_MARK_CONFIG: TagDataMap = {
+  [PropertyKey.mark]: {
+    isProperty: true,
+    maxCount: INFINITE_COUNT,
+    chain: {
+      [PropertyKey.color]: { isProperty: true },
+      [PropertyKey.emphasis]: { isProperty: true },
+    },
+  },
+};
+
+// Mark
+
+const TAGS_CHAIN_MARK: TagDataMap = {
+  [TagType.Mark]: {
+    maxCount: INFINITE_COUNT,
+    chain: {
+      [PropertyKey.mark]: { isProperty: true },
+      ...TAGS_PROPERTY_EXAMPLE,
+    },
+  },
+};
+
+export { TAGS_CHAIN_PARTNER, TAGS_CHAIN_GAP, TAGS_CHAIN_TRUE_FALSE, TAGS_CHAIN_MARK_CONFIG, TAGS_CHAIN_MARK };

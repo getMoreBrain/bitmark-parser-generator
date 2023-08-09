@@ -83,7 +83,22 @@
 | conversation-right-1 | ✅ | ✅ | ✅ |  |
 | conversation-right-1-scream | ✅ | ✅ | ✅ |  |
 | conversation-right-1-thought | ✅ | ✅ | ✅ |  |
-| cook-preparation | ✅ | ✅ | ✅ |  |
+| coach-home-rules | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-rating | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-choice-text | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-essay | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-cloze | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-cloze | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-essay | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-cloze-and-multiple-choice-text | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-multiple-choice-text | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-checklist | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-choice | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-choice-1 | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-response | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-response-1 | ✅ | ✅ | ✅ |  |
+| coach-audio-transcript | ✅ | ✅ | ✅ |  |
+| coach-video-transcript | ✅ | ✅ | ✅ |  |
 | cook-step | ✅ | ✅ | ✅ |  |
 | cook-ingredients | ✅ | ✅ | ✅ |  |
 | cook-remark | ✅ | ✅ | ✅ |  |
@@ -167,8 +182,8 @@
 | learning-path-sign | ➖ | ➖ | ➖ | LEGACY? |
 | learning-path-step | ✅ | ✅ | ✅ |  |
 | learning-path-video-call | ✅ | ✅ | ✅ |  |
-| mark | ✅ | ❌ | ❌ | NOT WORKING IN ANTLR PARSER, not sure how to implement |
-| match | ✅ | ✅ | ❌ |  |
+| mark | ✅ | ✅ | ✅ |  |
+| match | ✅ | ✅ | ✅ |  |
 | match-all | ✅ | ✅ | ✅ |  |
 | match-all-reverse | ✅ | ✅ | ✅ |  |
 | match-audio | ➖ | ➖ | ➖ | LEGACY? |
@@ -197,6 +212,11 @@
 | release-note | ✅ | ✅ | ✅ |  |
 | release-notes-summary | ✅ | ✅ | ✅ |  |
 | remark | ✅ | ✅ | ✅ |  |
+| review-note | ✅ | ✅ | ✅ |  |
+| review-author-note | ✅ | ✅ | ✅ |  |
+| review-reviewer-note | ✅ | ✅ | ✅ |  |
+| review-request-for-review-note | ✅ | ✅ | ✅ |  |
+| review-approved-note | ✅ | ✅ | ✅ |  |
 | sample-solution | ✅ | ✅ | ✅ |  |
 | scorm | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | screenshot | ✅ | ❌ | ❌ | TODO - CREATE TEST |

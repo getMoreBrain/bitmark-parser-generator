@@ -1,4 +1,4 @@
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { RootBitType, BitType } from '../../../../model/enum/BitType';
 
 import {
   BitContent,
@@ -14,7 +14,7 @@ import {
 function exampleTagContentProcessor(
   context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -23,14 +23,16 @@ function exampleTagContentProcessor(
 
   // Each bit type handles example tags differently
 
-  switch (bitType) {
-    case BitType.cloze:
-    case BitType.clozeSolutionGrouped:
-    case BitType.clozeInstructionGrouped:
-    case BitType.clozeAndMultipleChoiceText:
-    case BitType.multipleChoiceText:
-    case BitType.highlightText:
+  switch (bitType.root) {
+    case RootBitType.cloze:
+    case RootBitType.clozeAndMultipleChoiceText:
+    case RootBitType.multipleChoiceText:
+    case RootBitType.highlightText:
       handleGapOrSelectExample(context, bitType, example, target);
+      break;
+    case RootBitType.mark:
+      // Default only example handling
+      handleDefaultOnlyExample(context, bitType, example, target);
       break;
     default:
       // Standard example handling
@@ -40,7 +42,7 @@ function exampleTagContentProcessor(
 
 function handleGapOrSelectExample(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   example: string | boolean,
   target: BitContentProcessorResult,
 ): void {
@@ -69,9 +71,18 @@ function handleGapOrSelectExample(
   }
 }
 
+function handleDefaultOnlyExample(
+  _context: BitmarkPegParserContext,
+  _bitType: BitType,
+  _example: string | boolean,
+  target: BitContentProcessorResult,
+): void {
+  target.isDefaultExample = true;
+}
+
 function handleStandardExample(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   example: string | boolean,
   target: BitContentProcessorResult,
 ): void {
