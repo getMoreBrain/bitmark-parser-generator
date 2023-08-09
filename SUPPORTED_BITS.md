@@ -212,6 +212,11 @@
 | release-note | ✅ | ✅ | ✅ |  |
 | release-notes-summary | ✅ | ✅ | ✅ |  |
 | remark | ✅ | ✅ | ✅ |  |
+| review-note | ✅ | ✅ | ✅ |  |
+| review-author-note | ✅ | ✅ | ✅ |  |
+| review-reviewer-note | ✅ | ✅ | ✅ |  |
+| review-request-for-review-note | ✅ | ✅ | ✅ |  |
+| review-approved-note | ✅ | ✅ | ✅ |  |
 | sample-solution | ✅ | ✅ | ✅ |  |
 | scorm | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | screenshot | ✅ | ❌ | ❌ | TODO - CREATE TEST |
