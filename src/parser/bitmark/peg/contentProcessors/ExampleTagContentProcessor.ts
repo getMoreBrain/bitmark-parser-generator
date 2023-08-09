@@ -30,6 +30,10 @@ function exampleTagContentProcessor(
     case RootBitType.highlightText:
       handleGapOrSelectExample(context, bitType, example, target);
       break;
+    case RootBitType.mark:
+      // Default only example handling
+      handleDefaultOnlyExample(context, bitType, example, target);
+      break;
     default:
       // Standard example handling
       handleStandardExample(context, bitType, example, target);
@@ -65,6 +69,15 @@ function handleGapOrSelectExample(
   } else {
     handleStandardExample(context, bitType, example, target);
   }
+}
+
+function handleDefaultOnlyExample(
+  _context: BitmarkPegParserContext,
+  _bitType: BitType,
+  _example: string | boolean,
+  target: BitContentProcessorResult,
+): void {
+  target.isDefaultExample = true;
 }
 
 function handleStandardExample(

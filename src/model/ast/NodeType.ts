@@ -7,7 +7,11 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 const NodeType = superenum({
   unknown: 'unknown', // unknown
 
-  // Non-terminal
+  bitType: 'bitType', // bit type
+  alias: 'alias', // bit type (alias)
+  root: 'root', // bit type (root)
+  textFormat: 'textFormat',
+
   bitmarkAst: 'bitmarkAst', // bitmarkAst
   bits: 'bits', // bits
   bitsValue: 'bitsValue', // bit
@@ -57,11 +61,6 @@ const NodeType = superenum({
   questionsValue: 'questionsValue',
   botResponses: 'botResponses',
   botResponsesValue: 'botResponsesValue',
-
-  // Terminal (leaf)
-  markup: 'markup', // bitmark markup
-  aliasedBitType: 'aliasedBitType', // bit type
-  textFormat: 'textFormat',
 
   // Properties
   id: 'id',
@@ -191,6 +190,14 @@ const NodeType = superenum({
   name: 'name',
   avatarImage: 'avatarImage',
 
+  // Mark
+  markConfig: 'markConfig',
+  markConfigValue: 'markConfigValue',
+  solution: 'solution',
+  mark: 'mark',
+  color: 'color',
+  emphasis: 'emphasis',
+
   // Resources
   resource: 'resource',
   resourceType: 'resourceType',
@@ -246,6 +253,9 @@ const NodeType = superenum({
   offset: 'offset',
   line: 'line',
   column: 'column',
+
+  // Markup
+  markup: 'markup', // bitmark markup
 });
 
 export type NodeTypeType = EnumType<typeof NodeType>;

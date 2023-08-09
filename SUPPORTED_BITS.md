@@ -182,8 +182,8 @@
 | learning-path-sign | ➖ | ➖ | ➖ | LEGACY? |
 | learning-path-step | ✅ | ✅ | ✅ |  |
 | learning-path-video-call | ✅ | ✅ | ✅ |  |
-| mark | ✅ | ❌ | ❌ | NOT WORKING IN ANTLR PARSER, not sure how to implement |
-| match | ✅ | ✅ | ❌ |  |
+| mark | ✅ | ✅ | ✅ |  |
+| match | ✅ | ✅ | ✅ |  |
 | match-all | ✅ | ✅ | ✅ |  |
 | match-all-reverse | ✅ | ✅ | ✅ |  |
 | match-audio | ➖ | ➖ | ➖ | LEGACY? |
@@ -212,6 +212,11 @@
 | release-note | ✅ | ✅ | ✅ |  |
 | release-notes-summary | ✅ | ✅ | ✅ |  |
 | remark | ✅ | ✅ | ✅ |  |
+| review-note | ✅ | ✅ | ✅ |  |
+| review-author-note | ✅ | ✅ | ✅ |  |
+| review-reviewer-note | ✅ | ✅ | ✅ |  |
+| review-request-for-review-note | ✅ | ✅ | ✅ |  |
+| review-approved-note | ✅ | ✅ | ✅ |  |
 | sample-solution | ✅ | ✅ | ✅ |  |
 | scorm | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | screenshot | ✅ | ❌ | ❌ | TODO - CREATE TEST |

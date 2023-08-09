@@ -12,6 +12,7 @@ const TagType = superenum({
   False: 'False',
   SampleSolution: 'SampleSolution',
   Gap: 'Gap',
+  Mark: 'Mark',
   Resource: 'Resource',
   Remark: 'Remark',
   Comment: 'Comment',

@@ -26,6 +26,8 @@ import {
   Highlight,
   HighlightText,
   ImageResource,
+  Mark,
+  MarkConfig,
   Matrix,
   MatrixCell,
   Pair,
@@ -52,6 +54,7 @@ import {
   PartnerJson,
   BotResponseJson,
   ExampleJson,
+  MarkConfigJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -61,6 +64,7 @@ import {
   GapJson,
   SelectJson,
   HighlightJson,
+  MarkJson,
 } from '../../model/json/BodyBitJson';
 
 interface ReferenceAndReferenceProperty {
@@ -259,6 +263,7 @@ class JsonParser {
       instruction,
       example,
       partner,
+      marks,
       resource,
       body,
       sampleSolution,
@@ -289,7 +294,11 @@ class JsonParser {
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
 
+    // Partner
     const partnerNode = this.partnerBitToAst(partner);
+
+    // Mark Config
+    const markConfigNode = this.markConfigBitToAst(marks);
 
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements, example);
@@ -376,6 +385,7 @@ class JsonParser {
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
       partner: partnerNode,
+      markConfig: markConfigNode,
       resource: resourceNode,
       body: bodyNode,
       sampleSolution: sampleSolution,
@@ -404,6 +414,25 @@ class JsonParser {
     }
 
     return node;
+  }
+
+  private markConfigBitToAst(marks?: MarkConfigJson[]): MarkConfig[] | undefined {
+    const nodes: MarkConfig[] = [];
+    if (Array.isArray(marks)) {
+      for (const m of marks) {
+        const { mark, color, emphasis } = m;
+        const node = builder.markConfig({
+          mark,
+          color,
+          emphasis,
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
   }
 
   private statementBitsToAst(
@@ -851,6 +880,10 @@ class JsonParser {
         const gap = this.gapBitToAst(bit);
         return gap;
       }
+      case BodyBitType.mark: {
+        const mark = this.markBitToAst(bit);
+        return mark;
+      }
       case BodyBitType.select: {
         const select = this.selectBitToAst(bit);
         return select;
@@ -895,6 +928,20 @@ class JsonParser {
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
       isCaseSensitive,
+    });
+
+    return bitNode;
+  }
+
+  private markBitToAst(bit: MarkJson): Mark {
+    const { solution, mark, item, lead, hint, instruction, example } = bit;
+
+    // Build bit
+    const bitNode = builder.mark({
+      solution,
+      mark,
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+      ...this.parseExample(example),
     });
 
     return bitNode;
