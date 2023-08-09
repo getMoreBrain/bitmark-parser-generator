@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "92375"
-      ]
+      "example": null,
+      "id": ["92375"]
     }
   },
   {
@@ -23,7 +21,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "title": "Summary of this Book"
     }
   },
@@ -36,7 +34,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "title": "Summary of Chapter One"
     }
   },
@@ -49,7 +47,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": ""
+      "example": null
     }
   }
 ]

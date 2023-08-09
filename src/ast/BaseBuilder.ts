@@ -5,27 +5,90 @@ import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { StringUtils } from '../utils/StringUtils';
 
+export interface WithExample {
+  isDefaultExample: boolean;
+  isExample: boolean;
+  example?: Example;
+}
+
 class BaseBuilder {
   /**
    * Convert example to an Example.
-   * This function recognises boolean strings and converts them to boolean values.
+   * - If example is undefined, then undefined will be returned.
+   * - If example is null, then the defaultValue will be used.
+   * - Recognises boolean strings and converts them to boolean values.
    *
-   * @param bitmarkText - bitmark text
-   * @returns bitmark text AST as plain JS object
+   * @param isDefaultExample - true is the example is the default value
+   * @param example - the example to convert (string, boolean) or undefined if none / default
+   * @returns example/isDefaultExample resolved to an Example object
    */
-  protected toExample(exampleIn: string | boolean | undefined): Example | undefined {
-    if (exampleIn == null) return undefined;
-    let text = '';
-
-    const isBooleanString = BooleanUtils.isBooleanString(exampleIn);
-    if (isBooleanString) {
-      if (!BooleanUtils.toBoolean(exampleIn)) return undefined;
-      return true;
-    } else {
-      text = exampleIn as string;
+  protected toExample(isDefaultExample: boolean | undefined, example: string | boolean | undefined): WithExample {
+    // Default example
+    if (isDefaultExample) {
+      return {
+        isDefaultExample: true,
+        isExample: true,
+      };
     }
 
-    return text;
+    // Example
+    if (example != undefined) {
+      // Convert to boolean to string
+      if (example === true) example = 'true';
+      if (example === false) example = 'false';
+
+      return {
+        isDefaultExample: false,
+        isExample: true,
+        example,
+      };
+    }
+
+    // Not an example
+    return {
+      isDefaultExample: false,
+      isExample: false,
+    };
+  }
+
+  /**
+   * Convert example to an Example, only allowing boolean values.
+   * - If example is undefined, then undefined will be returned.
+   * - If example is null, then the defaultValue will be used.
+   * - Recognises boolean strings and converts them to boolean values.
+   *
+   * @param isDefaultExample - true is the example is the default value
+   * @param example - the example to convert (string, boolean) or undefined if none / default
+   * @returns example/isDefaultExample resolved to an Example object
+   */
+  protected toExampleBoolean(
+    isDefaultExample: boolean | undefined,
+    example: string | boolean | undefined,
+  ): WithExample {
+    const isExampleButNotBoolean = example != undefined && !BooleanUtils.isBooleanString(example);
+
+    // Default example
+    if (isDefaultExample || isExampleButNotBoolean) {
+      return {
+        isDefaultExample: true,
+        isExample: true,
+      };
+    }
+
+    // Example
+    if (example != undefined) {
+      return {
+        isDefaultExample: false,
+        isExample: true,
+        example: BooleanUtils.toBoolean(example),
+      };
+    }
+
+    // Not an example
+    return {
+      isDefaultExample: false,
+      isExample: false,
+    };
   }
 
   /**

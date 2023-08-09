@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonGenerator
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonGenerator
 
 # Class: JsonGenerator
 
@@ -8,7 +8,7 @@ TODO: NOT IMPLEMENTED!
 
 ## Implements
 
-- [`Generator`](../interfaces/Generator.md)<`void`\>
+- [`Generator`](../interfaces/Generator.md)<[`BitmarkAst`](../interfaces/BitmarkAst.md)\>
 - [`AstWalkCallbacks`](../interfaces/AstWalkCallbacks.md)
 
 ## Table of contents
@@ -20,6 +20,7 @@ TODO: NOT IMPLEMENTED!
 ### Methods
 
 - [generate](JsonGenerator.md#generate)
+- [generateSync](JsonGenerator.md#generateSync)
 - [enter](JsonGenerator.md#enter)
 - [between](JsonGenerator.md#between)
 - [exit](JsonGenerator.md#exit)
@@ -42,11 +43,11 @@ Generate bitmark JSON from a bitmark AST
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `writer` | [`Writer`](../interfaces/Writer.md) | destination for the output |
-| `options?` | [`JsonOptions`](../interfaces/JsonOptions.md) | bitmark generation options |
+| `options?` | `JsonGeneratorOptions` | JSON generation options |
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:180](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L180)
+[generator/json/JsonGenerator.ts:238](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L238)
 
 ## Methods
 
@@ -68,11 +69,37 @@ Generate bitmark markup from bitmark AST
 
 #### Implementation of
 
-Generator.generate
+[Generator](../interfaces/Generator.md).[generate](../interfaces/Generator.md#generate)
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:202](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L202)
+[generator/json/JsonGenerator.ts:273](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L273)
+
+___
+
+### generateSync
+
+▸ **generateSync**(`ast`): `void`
+
+Generate text from a bitmark text AST synchronously
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `ast` | [`BitmarkAst`](../interfaces/BitmarkAst.md) | bitmark text AST |
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[Generator](../interfaces/Generator.md).[generateSync](../interfaces/Generator.md#generateSync)
+
+#### Defined in
+
+[generator/json/JsonGenerator.ts:295](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L295)
 
 ___
 
@@ -96,11 +123,11 @@ Called when a branch node is entered
 
 #### Implementation of
 
-AstWalkCallbacks.enter
+[AstWalkCallbacks](../interfaces/AstWalkCallbacks.md).[enter](../interfaces/AstWalkCallbacks.md#enter)
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:216](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L216)
+[generator/json/JsonGenerator.ts:324](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L324)
 
 ___
 
@@ -126,11 +153,11 @@ Called when between child nodes
 
 #### Implementation of
 
-AstWalkCallbacks.between
+[AstWalkCallbacks](../interfaces/AstWalkCallbacks.md).[between](../interfaces/AstWalkCallbacks.md#between)
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:235](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L235)
+[generator/json/JsonGenerator.ts:343](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L343)
 
 ___
 
@@ -154,11 +181,11 @@ Called when a branch node is exited
 
 #### Implementation of
 
-AstWalkCallbacks.exit
+[AstWalkCallbacks](../interfaces/AstWalkCallbacks.md).[exit](../interfaces/AstWalkCallbacks.md#exit)
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:256](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L256)
+[generator/json/JsonGenerator.ts:364](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L364)
 
 ___
 
@@ -182,11 +209,11 @@ Called when a leaf node is entered
 
 #### Implementation of
 
-AstWalkCallbacks.leaf
+[AstWalkCallbacks](../interfaces/AstWalkCallbacks.md).[leaf](../interfaces/AstWalkCallbacks.md#leaf)
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:268](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L268)
+[generator/json/JsonGenerator.ts:376](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L376)
 
 ___
 
@@ -208,7 +235,7 @@ Writes a string value to the output.
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:2076](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L2076)
+[generator/json/JsonGenerator.ts:2365](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L2365)
 
 ___
 
@@ -230,7 +257,7 @@ Writes a new line to the output. The line is indented automatically. The line is
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:2085](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L2085)
+[generator/json/JsonGenerator.ts:2374](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L2374)
 
 ___
 
@@ -253,7 +280,7 @@ Writes a collection of lines to the output. Each line is indented automatically 
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:2095](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L2095)
+[generator/json/JsonGenerator.ts:2384](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L2384)
 
 ___
 
@@ -269,4 +296,4 @@ Writes a single whitespace character to the output.
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:2103](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L2103)
+[generator/json/JsonGenerator.ts:2392](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L2392)

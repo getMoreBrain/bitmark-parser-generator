@@ -1,10 +1,11 @@
-import { BitTypeType } from '../../../../model/enum/BitType';
+import { BitType } from '../../../../model/enum/BitType';
 import { PropertyKey, PropertyKeyMetadata } from '../../../../model/enum/PropertyKey';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import { bookChainContentProcessor } from './BookChainContentProcessor';
+import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { partnerChainContentProcessor } from './PartnerChainContentProcessor';
 
@@ -20,7 +21,7 @@ import {
 function propertyContentProcessor(
   context: BitmarkPegParserContext,
   bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -30,7 +31,10 @@ function propertyContentProcessor(
   // Check for chains
   // Generally, the chain will only be present in the correct bit as the data was already validated. The bit type
   // should also be checked here if the property may occur in another bit with a different meaning.
-  if (key === PropertyKey.partner) {
+  if (key === PropertyKey.example) {
+    exampleTagContentProcessor(context, bitLevel, bitType, content, target);
+    return;
+  } else if (key === PropertyKey.partner) {
     partnerChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
   } else if (key === PropertyKey.book) {

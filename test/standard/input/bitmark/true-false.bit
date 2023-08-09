@@ -150,3 +150,25 @@
 
 
 
+[.true-false]
+[@example]
+===
+[+TrueAnswer]
+===
+[-FalseAnswer]
+===
+
+
+[.true-false]
+===
+[+TrueAnswer][@example]
+===
+[-FalseAnswer][@example]
+===
+
+[.true-false]
+===
+[+TrueAnswer][@example:false]
+===
+[-FalseAnswer][@example:true]
+===

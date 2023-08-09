@@ -1,0 +1,50 @@
+[
+  {
+    "bitmark": "[.self-assessment]\n|| Not sure if .self-assesment is still supported. Parses to 'bullets' and strange body ||\n[@id:191220]\n===\n1. Die Arbeit, der ich nachgehe, bedeutet mir etwas\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===\n2. Meine Arbeit ist mir sehr wichtig\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===\n3. Meine beruflichen Tätigkeiten sind für mich von persönlicher Bedeutung\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===",
+    "bit": {
+      "type": "self-assessment",
+      "format": "bitmark--",
+      "body": "===\n1. Die Arbeit, der ich nachgehe, bedeutet mir etwas\n\n\n\n===\n2. Meine Arbeit ist mir sehr wichtig\n\n\n\n===\n3. Meine beruflichen Tätigkeiten sind für mich von persönlicher Bedeutung\n\n\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["191220"],
+      "bullet": [
+        "stimme ganz zu",
+        "stimme nicht zu",
+        "teils/teils",
+        "stimme ganz zu",
+        "stimme nicht zu",
+        "teils/teils",
+        "stimme ganz zu",
+        "stimme nicht zu",
+        "teils/teils"
+      ]
+    }
+  },
+  {
+    "bitmark": "[.self-assessment]\n[@id:191222]\n===\n4. Ich bin davon überzeugt, dass ich in der Lage bin, die Anforderungen meiner Arbeit zu erfüllen\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===\n5. Ich vertraue auf meine Fähigkeit, meine Arbeit bewältigen zu können\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===\n6. Ich beherrsche die Fertigkeit, meine Arbeit bewältigen zu können\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===",
+    "bit": {
+      "type": "self-assessment",
+      "format": "bitmark--",
+      "body": "===\n4. Ich bin davon überzeugt, dass ich in der Lage bin, die Anforderungen meiner Arbeit zu erfüllen\n\n\n\n===\n5. Ich vertraue auf meine Fähigkeit, meine Arbeit bewältigen zu können\n\n\n\n===\n6. Ich beherrsche die Fertigkeit, meine Arbeit bewältigen zu können\n\n\n\n===",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["191222"],
+      "bullet": [
+        "stimme ganz zu",
+        "stimme nicht zu",
+        "teils/teils",
+        "stimme ganz zu",
+        "stimme nicht zu",
+        "teils/teils",
+        "stimme ganz zu",
+        "stimme nicht zu",
+        "teils/teils"
+      ]
+    }
+  }
+]

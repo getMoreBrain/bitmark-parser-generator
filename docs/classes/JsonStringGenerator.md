@@ -1,14 +1,12 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonStringGenerator
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonStringGenerator
 
 # Class: JsonStringGenerator
 
 Generate bitmark JSON from a bitmark AST as a string
 
-TODO: NOT IMPLEMENTED!
-
 ## Implements
 
-- [`Generator`](../interfaces/Generator.md)<`string`\>
+- [`Generator`](../interfaces/Generator.md)<[`BitmarkAst`](../interfaces/BitmarkAst.md), `string`\>
 
 ## Table of contents
 
@@ -19,24 +17,25 @@ TODO: NOT IMPLEMENTED!
 ### Methods
 
 - [generate](JsonStringGenerator.md#generate)
+- [generateSync](JsonStringGenerator.md#generateSync)
 
 ## Constructors
 
 ### constructor
 
-• **new JsonStringGenerator**(`generatorOptions?`)
+• **new JsonStringGenerator**(`options?`)
 
 Generate bitmark JSON from a bitmark AST as a string
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `generatorOptions?` | [`JsonOptions`](../interfaces/JsonOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `JsonGeneratorOptions` | JSON generation options |
 
 #### Defined in
 
-[generator/json/JsonStringGenerator.ts:21](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonStringGenerator.ts#L21)
+[generator/json/JsonStringGenerator.ts:19](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonStringGenerator.ts#L19)
 
 ## Methods
 
@@ -58,8 +57,34 @@ Generate bitmark JSON from bitmark AST as a string
 
 #### Implementation of
 
-Generator.generate
+[Generator](../interfaces/Generator.md).[generate](../interfaces/Generator.md#generate)
 
 #### Defined in
 
-[generator/json/JsonStringGenerator.ts:31](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonStringGenerator.ts#L31)
+[generator/json/JsonStringGenerator.ts:29](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonStringGenerator.ts#L29)
+
+___
+
+### generateSync
+
+▸ **generateSync**(`ast`): `string`
+
+Generate bitmark JSON from bitmark AST as a string synchronously
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `ast` | [`BitmarkAst`](../interfaces/BitmarkAst.md) | bitmark AST |
+
+#### Returns
+
+`string`
+
+#### Implementation of
+
+[Generator](../interfaces/Generator.md).[generateSync](../interfaces/Generator.md#generateSync)
+
+#### Defined in
+
+[generator/json/JsonStringGenerator.ts:39](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonStringGenerator.ts#L39)

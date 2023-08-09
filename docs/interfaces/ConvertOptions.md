@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ConvertOptions
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ConvertOptions
 
 # Interface: ConvertOptions
 
@@ -8,6 +8,7 @@ Conversion options for bitmark / JSON conversion
 
 ### Properties
 
+- [bitmarkVersion](ConvertOptions.md#bitmarkVersion)
 - [bitmarkParserType](ConvertOptions.md#bitmarkParserType)
 - [outputFormat](ConvertOptions.md#outputFormat)
 - [outputFile](ConvertOptions.md#outputFile)
@@ -17,6 +18,27 @@ Conversion options for bitmark / JSON conversion
 
 ## Properties
 
+### bitmarkVersion
+
+• `Optional` **bitmarkVersion**: [`BitmarkVersionType`](../modules.md#BitmarkVersionType)
+
+The version of bitmark to output.
+If not specified, the version will be 3.
+
+Specifying the version will set defaults for other options.
+- Bitmark v2:
+  - bitmarkOptions.cardSetVersion: 1
+  - jsonOptions.textAsPlainText: true
+- Bitmark v3:
+  - bitmarkOptions.cardSetVersion: 2
+  - jsonOptions.textAsPlainText: false
+
+#### Defined in
+
+[BitmarkParserGenerator.ts:57](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L57)
+
+___
+
 ### bitmarkParserType
 
 • `Optional` **bitmarkParserType**: [`BitmarkParserTypeType`](../modules.md#BitmarkParserTypeType)
@@ -25,7 +47,7 @@ Specify the bitmark parser to use, overriding the default
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:46](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L46)
+[BitmarkParserGenerator.ts:62](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L62)
 
 ___
 
@@ -37,7 +59,7 @@ Specify the output format, overriding the default
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:50](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L50)
+[BitmarkParserGenerator.ts:67](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L67)
 
 ___
 
@@ -49,7 +71,7 @@ Specify a file to write the output to
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:54](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L54)
+[BitmarkParserGenerator.ts:71](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L71)
 
 ___
 
@@ -61,7 +83,7 @@ Options for the output file
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:58](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L58)
+[BitmarkParserGenerator.ts:75](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L75)
 
 ___
 
@@ -73,7 +95,7 @@ Options for bitmark generation
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:62](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L62)
+[BitmarkParserGenerator.ts:79](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L79)
 
 ___
 
@@ -85,4 +107,4 @@ Options for JSON generation
 
 #### Defined in
 
-[BitmarkParserGenerator.ts:66](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/BitmarkParserGenerator.ts#L66)
+[BitmarkParserGenerator.ts:83](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/BitmarkParserGenerator.ts#L83)

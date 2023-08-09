@@ -1,23 +1,29 @@
 [
   {
-    "bitmark": "[.app-link]\n[@id:119760]\n[&app-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]",
     "bit": {
       "type": "app-link",
       "format": "bitmark--",
-      "body": "",
+      "id": ["119760"],
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "119760"
-      ],
+      "example": null,
+      "body": "",
       "resource": {
         "type": "app-link",
         "appLink": {
-          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.app-link]\n[@id:119760]\n[&app-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]"
   }
 ]

@@ -1,84 +1,131 @@
 [
   {
-    "bitmark": "[.browser-image]\n**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.\n[@focusX:100]\n[@focusY:300]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
     "bit": {
       "type": "browser-image",
       "format": "bitmark--",
-      "body": "**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.",
+      "focusX": 100,
+      "focusY": 300,
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "focusX": 100,
-      "focusY": 300,
+      "example": null,
+      "body": "**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.",
       "resource": {
         "type": "image",
         "image": {
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
-          "showInIndex": false,
           "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
           "width": null,
           "height": null,
           "alt": "",
-          "caption": "",
           "license": "",
-          "copyright": ""
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.browser-image]\n**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.\n[@focusX:100]\n[@focusY:300]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
   {
-    "bitmark": "[.browser-image]\n**◼︎ Temporale Präpositionen**\n__Zeitpunkt__\nWann hast du mit ihm darüber gesprochen/sprichst du mit ihm darüber?\n||insert table||\n__Zeitdauer__\n||insert table||\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
     "bit": {
       "type": "browser-image",
       "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
       "body": "**◼︎ Temporale Präpositionen**\n__Zeitpunkt__\nWann hast du mit ihm darüber gesprochen/sprichst du mit ihm darüber?\n\n__Zeitdauer__",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": "",
       "resource": {
         "type": "image",
         "image": {
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
-          "showInIndex": false,
           "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
           "width": null,
           "height": null,
           "alt": "",
-          "caption": "",
           "license": "",
-          "copyright": ""
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3",
+      "comments": [
+        {
+          "text": "insert table",
+          "location": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 661
+            },
+            "end": {
+              "line": 15,
+              "column": 17,
+              "offset": 677
+            }
+          }
+        },
+        {
+          "text": "insert table",
+          "location": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 692
+            },
+            "end": {
+              "line": 17,
+              "column": 17,
+              "offset": 708
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.browser-image]\n**◼︎ Temporale Präpositionen**\n__Zeitpunkt__\nWann hast du mit ihm darüber gesprochen/sprichst du mit ihm darüber?\n||insert table||\n__Zeitdauer__\n||insert table||\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
   {
-    "bitmark": "[.browser-image]\n**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.\n[@focusX:100]\n[@focusY:300]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
     "bit": {
       "type": "browser-image",
       "format": "bitmark--",
-      "body": "**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.",
+      "focusX": 100,
+      "focusY": 300,
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "focusX": 100,
-      "focusY": 300,
+      "example": null,
+      "body": "**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.",
       "resource": {
         "type": "image",
         "image": {
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
-          "showInIndex": false,
           "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
           "width": null,
           "height": null,
           "alt": "",
-          "caption": "",
           "license": "",
-          "copyright": ""
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.browser-image]\n**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.\n[@focusX:100]\n[@focusY:300]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   }
 ]

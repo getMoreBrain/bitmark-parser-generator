@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ParserJson
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / ParserJson
 
 # Interface: ParserJson
 
@@ -6,11 +6,33 @@
 
 ### Properties
 
+- [version](ParserJson.md#version)
+- [bitmarkVersion](ParserJson.md#bitmarkVersion)
 - [excessResources](ParserJson.md#excessResources)
 - [warnings](ParserJson.md#warnings)
 - [errors](ParserJson.md#errors)
 
 ## Properties
+
+### version
+
+• `Optional` **version**: `string`
+
+#### Defined in
+
+[model/json/ParserJson.ts:6](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ParserJson.ts#L6)
+
+___
+
+### bitmarkVersion
+
+• `Optional` **bitmarkVersion**: `string`
+
+#### Defined in
+
+[model/json/ParserJson.ts:7](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ParserJson.ts#L7)
+
+___
 
 ### excessResources
 
@@ -18,7 +40,7 @@
 
 #### Defined in
 
-[model/json/ParserJson.ts:6](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ParserJson.ts#L6)
+[model/json/ParserJson.ts:8](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ParserJson.ts#L8)
 
 ___
 
@@ -28,7 +50,7 @@ ___
 
 #### Defined in
 
-[model/json/ParserJson.ts:7](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ParserJson.ts#L7)
+[model/json/ParserJson.ts:9](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ParserJson.ts#L9)
 
 ___
 
@@ -38,4 +60,4 @@ ___
 
 #### Defined in
 
-[model/json/ParserJson.ts:8](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/model/json/ParserJson.ts#L8)
+[model/json/ParserJson.ts:10](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/model/json/ParserJson.ts#L10)

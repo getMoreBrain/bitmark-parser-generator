@@ -1,6 +1,7 @@
 | BIT | USED? | PARSER | GENERATOR | NOTES |
 | ------ | -- | -- | -- | -- |
 | _error | ✅ | ✅ | ✅ | Used for error handling to indicate a bit type that is not supported or a bit parse error |
+| app-ai-prompt | ✅ | ✅ | ✅ |  |
 | ai-prompt | ✅ | ✅ | ✅ |  |
 | anchor | ➖ | ➖ | ➖ | LEGACY? |
 | annotation-bookmark | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
@@ -15,9 +16,11 @@
 | audio | ✅ | ✅ | ✅ |  |
 | audio-embed | ✅ | ✅ | ✅ |  |
 | audio-link | ✅ | ✅ | ✅ |  |
+| audio-transcript | ✅ | ✅ | ✅ |  |
 | bit-alias | ➖ | ✅ | ✅ |  |
 | bit-book-ending | ✅ | ✅ | ✅ |  |
 | bit-book-summary | ✅ | ✅ | ✅ |  |
+| bitmark-example | ➖ | ✅ | ✅ |  |
 | blog-article | ✅ | ✅ | ✅ |  |
 | book | ✅ | ✅ | ✅ |  |
 | book-acknowledgments | ✅ | ✅ | ✅ |  |
@@ -54,7 +57,7 @@
 | bot-action-announce | ➖ | ✅ | ✅ |  |
 | bot-action-rating-number | ➖ | ➖ | ➖ | LEGACY? |
 | bot-action-remind | ➖ | ✅ | ✅ |  |
-| bot-action-response | ✅ | ✅ | ✅ |  |
+| bot-action-response | ✅ | ✅ | ✅ | |
 | bot-action-save | ➖ | ✅ | ✅ |  |
 | bot-action-send | ✅ | ✅ | ✅ |  |
 | bot-action-true-false | ➖ | ➖ | ➖ | LEGACY? |
@@ -66,10 +69,11 @@
 | chapter | ✅ | ✅ | ✅ |  |
 | chapter-subject-matter | ✅ | ✅ | ✅ |  |
 | chat | ➖ | ➖ | ➖ | LEGACY? |
+| checklist | ✅ | ✅ | ✅ |  |
 | cloze | ✅ | ✅ | ✅ |  |
-| cloze-and-multiple-choice-text | ✅ | ✅ | ✅ |  |
-| cloze-instruction-grouped | ✅ | ✅ | ✅ |  |
-| cloze-solution-grouped | ✅ | ✅ | ✅ |  |
+| cloze-and-multiple-choice-text | ✅ | ✅ | ✅ | |
+| cloze-instruction-grouped | ✅ | ✅ | ✅ | |
+| cloze-solution-grouped | ✅ | ✅ | ✅ | |
 | code | ✅ | ✅ | ✅ |  |
 | conclusion | ✅ | ✅ | ✅ |  |
 | conversation | ➖ | ➖ | ➖ | LEGACY? |
@@ -79,6 +83,35 @@
 | conversation-right-1 | ✅ | ✅ | ✅ |  |
 | conversation-right-1-scream | ✅ | ✅ | ✅ |  |
 | conversation-right-1-thought | ✅ | ✅ | ✅ |  |
+| coach-home-rules | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-rating | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-choice-text | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-essay | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-cloze | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-cloze | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-essay | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-cloze-and-multiple-choice-text | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-multiple-choice-text | ✅ | ✅ | ✅ |  |
+| coach-call-to-action-checklist | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-choice | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-choice-1 | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-response | ✅ | ✅ | ✅ |  |
+| coach-self-reflection-multiple-response-1 | ✅ | ✅ | ✅ |  |
+| coach-audio-transcript | ✅ | ✅ | ✅ |  |
+| coach-video-transcript | ✅ | ✅ | ✅ |  |
+| cook-step | ✅ | ✅ | ✅ |  |
+| cook-ingredients | ✅ | ✅ | ✅ |  |
+| cook-remark | ✅ | ✅ | ✅ |  |
+| cook-variation | ✅ | ✅ | ✅ |  |
+| cook-insert | ✅ | ✅ | ✅ |  |
+| cook-arrangement | ✅ | ✅ | ✅ |  |
+| cook-practice-advise | ✅ | ✅ | ✅ |  |
+| cook-plate | ✅ | ✅ | ✅ |  |
+| cook-recommendation | ✅ | ✅ | ✅ |  |
+| cook-personal-recommendation | ✅ | ✅ | ✅ |  |
+| cook-side-drink | ✅ | ✅ | ✅ |  |
+| cook-side-dish | ✅ | ✅ | ✅ |  |
+| cook-timer | ✅ | ✅ | ✅ |  |
 | correction | ✅ | ❌ | ❌ | DOES NOT WORK IN THE ANTLR PARSER |
 | danger | ✅ | ✅ | ✅ |  |
 | details | ➖ | ➖ | ➖ | LEGACY? |
@@ -88,6 +121,7 @@
 | document-embed | ✅ | ✅ | ✅ |  |
 | document-link | ✅ | ✅ | ✅ |  |
 | document-upload | ➖ | ➖ | ➖ | LEGACY? |
+| editor-note | ✅ | ✅ | ✅ |  |
 | editorial | ✅ | ✅ | ✅ |  |
 | essay | ✅ | ✅ | ✅ |  |
 | example | ✅ | ✅ | ✅ |  |
@@ -103,10 +137,13 @@
 | group-died | ➖ | ➖ | ➖ | LEGACY? |
 | help | ✅ | ✅ | ✅ |  |
 | highlight | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
-| highlight-text | ➖ | ✅ | ✅ |  |
+| highlight-text | ➖ | ✅ | ✅ | |
 | hint | ✅ | ✅ | ✅ |  |
 | image | ✅ | ✅ | ✅ |  |
+| image-landscape | ✅ | ✅ | ✅ |  |
 | image-link | ✅ | ✅ | ✅ |  |
+| image-on-device | ✅ | ✅ | ✅ |  |
+| image-portrait | ✅ | ✅ | ✅ |  |
 | image-prototype | ✅ | ✅ | ✅ |  |
 | image-super-wide | ✅ | ✅ | ✅ |  |
 | image-zoom | ✅ | ✅ | ✅ |  |
@@ -114,6 +151,25 @@
 | internal-link | ✅ | ✅ | ✅ |  |
 | interview | ✅ | ✅ | ✅ |  |
 | interview-instruction-grouped | ✅ | ✅ | ✅ |  |
+| lang-learning-outcomes | ✅ | ✅ | ✅ |  |
+| lang-enabling-language-skills | ✅ | ✅ | ✅ |  |
+| lang-life-skills | ✅ | ✅ | ✅ |  |
+| lang-english-around-world | ✅ | ✅ | ✅ |  |
+| lang-good-to-know | ✅ | ✅ | ✅ |  |
+| lang-learning-goal | ✅ | ✅ | ✅ |  |
+| lang-learning-strategy | ✅ | ✅ | ✅ |  |
+| lang-like-a-local | ✅ | ✅ | ✅ |  |
+| lang-material | ✅ | ✅ | ✅ |  |
+| lang-useful-phrases | ✅ | ✅ | ✅ |  |
+| lang-level-down | ✅ | ✅ | ✅ |  |
+| lang-level-up | ✅ | ✅ | ✅ |  |
+| lang-extra-activity | ✅ | ✅ | ✅ |  |
+| lang-video-script | ✅ | ✅ | ✅ |  |
+| lang-audio-script | ✅ | ✅ | ✅ |  |
+| lang-vocabulary | ✅ | ✅ | ✅ |  |
+| lang-homework | ✅ | ✅ | ✅ |  |
+| lang-teacher-note | ✅ | ✅ | ✅ |  |
+| lang-teacher-pronunciation | ✅ | ✅ | ✅ |  |
 | learning-path-book | ✅ | ✅ | ✅ |  |
 | learning-path-bot-training | ➖ | ➖ | ➖ | LEGACY? |
 | learning-path-classroom-event | ✅ | ✅ | ✅ |  |
@@ -183,6 +239,7 @@
 | video-landscape | ✅ | ✅ | ✅ |  |
 | video-link | ✅ |  ✅ | ✅ |  |
 | video-portrait | ✅ | ✅ | ✅ |  |
+| video-transcript | ✅ | ✅ | ✅ |  |
 | warning | ✅ | ✅ | ✅ |  |
 | website-link | ✅ | ✅ | ✅ |  |
 | workbook-article | ✅ | ✅ | ✅ |  |

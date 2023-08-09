@@ -1,0 +1,322 @@
+[
+  {
+    "bitmark": "[.match-solution-grouped]\n||body incorrectely contains ===\\n=== etc in the ANTLR parser output||\n[@id:136377]\n[%10_Beschaffung_043 (Match) - 1]\n[!Für welche der unten aufgeführten Konstellationen empfehlen Sie eher mehr bzw. eher weniger spezifische Massnahmen zum Controlling von Lieferanten?]\n===\nEinsatz von zwei externen Mitarbeitenden über einen Personalverleih-Vertrag\n==\neher nein\n===\nVergabe der Entwicklung eines Teilergebnisses in einem Innovationsprojekt\n==\neher ja\n===\nBereitstellung der Infrastruktur für ein grosses Musikkonzert durch einen spezialisierten Lieferanten\n==\neher ja\n===\nKonfiguration und Einführung einer unternehmensumspannenden ERP-Software (Enterprise Resource Planning) durch eine Dienstleistungsfirma\n==\neher ja\n===\nZusammenarbeit mit einer spezialisierten Consultingfirma zur Optimierung des aktuellen Projektmanagement-Systems im Unternehmen\n==\neher nein\n===\nAusarbeitung eines externen Gutachtens zum Aufzeigen der relevanten IT-Risiken in einem Unternehmen\n==\neher nein\n===",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "10_Beschaffung_043 (Match) - 1",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Einsatz von zwei externen Mitarbeitenden über einen Personalverleih-Vertrag",
+          "values": ["eher nein"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Vergabe der Entwicklung eines Teilergebnisses in einem Innovationsprojekt",
+          "values": ["eher ja"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Bereitstellung der Infrastruktur für ein grosses Musikkonzert durch einen spezialisierten Lieferanten",
+          "values": ["eher ja"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Konfiguration und Einführung einer unternehmensumspannenden ERP-Software (Enterprise Resource Planning) durch eine Dienstleistungsfirma",
+          "values": ["eher ja"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Zusammenarbeit mit einer spezialisierten Consultingfirma zur Optimierung des aktuellen Projektmanagement-Systems im Unternehmen",
+          "values": ["eher nein"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Ausarbeitung eines externen Gutachtens zum Aufzeigen der relevanten IT-Risiken in einem Unternehmen",
+          "values": ["eher nein"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": ["136377"],
+      "instruction": "Für welche der unten aufgeführten Konstellationen empfehlen Sie eher mehr bzw. eher weniger spezifische Massnahmen zum Controlling von Lieferanten?"
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped]\n||body incorrectely contains ===\\n=== etc in the ANTLR parser output||\n[@id:136378]\n[%01_Grundlagen_B_001 ]\n[!Handelt es sich bei den in der Tabelle erwähnten Vorhaben um Projekte? Begründen Sie Ihre Antwort.]\n===\nVerlegung des Tempels von Abu Simbel beim Bau des Assuanstaudamms\n==\nja\n===\nAufbau eines neuen Verschlüsselungssystems für Zeichnungen, Teile, Materialien, Stücklisten, Arbeitspläne in einem Maschinenbauunternehmen\n==\nja\n===\nPflegen von Kundenstammdaten für 50000 Kunden auf einer vorliegenden Vordrucksammlung\n==\nnein\n===\nEvaluation einer IT-Anlage\n==\nja & nein\n===\nAbwicklung einer Fusion zweier Unternehmen\n==\nja\n===\nErweiterung der Gehaltsabrechnung um eine weitere Statistikauswertung\n==\nnein\n===\n||todo: ja&nein - fehler? ||",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "01_Grundlagen_B_001",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Verlegung des Tempels von Abu Simbel beim Bau des Assuanstaudamms",
+          "values": ["ja"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Aufbau eines neuen Verschlüsselungssystems für Zeichnungen, Teile, Materialien, Stücklisten, Arbeitspläne in einem Maschinenbauunternehmen",
+          "values": ["ja"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Pflegen von Kundenstammdaten für 50000 Kunden auf einer vorliegenden Vordrucksammlung",
+          "values": ["nein"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Evaluation einer IT-Anlage",
+          "values": ["ja & nein"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Abwicklung einer Fusion zweier Unternehmen",
+          "values": ["ja"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Erweiterung der Gehaltsabrechnung um eine weitere Statistikauswertung",
+          "values": ["nein"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": ["136378"],
+      "instruction": "Handelt es sich bei den in der Tabelle erwähnten Vorhaben um Projekte? Begründen Sie Ihre Antwort."
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped]\n||body incorrectely contains ===\\n=== etc in the ANTLR parser output||\n[@id:136379]\n[%01_Grundlagen_B_002]\n[!Ordnen Sie in der folgenden Tabelle die aufgeführten Merkmale jeweils dem Tagesgeschäft im Unternehmen oder einem Projekt zu.]\n===\nDynamisch\n==\nProjekt\n===\nKalkulierbare Kosten\n==\nTagesgeschäft\n===\nWenig Hierarchie\n==\nProjekt\n===\nDauerhaft\n==\nTagesgeschäft\n===\nEinmalig\n==\nProjekt\n===\nFunktions- oder stellenorientiert\n==\nTagesgeschäft\n===\n\n||TODO:adapt instruction||",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "01_Grundlagen_B_002",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Dynamisch",
+          "values": ["Projekt"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Kalkulierbare Kosten",
+          "values": ["Tagesgeschäft"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Wenig Hierarchie",
+          "values": ["Projekt"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Dauerhaft",
+          "values": ["Tagesgeschäft"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Einmalig",
+          "values": ["Projekt"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Funktions- oder stellenorientiert",
+          "values": ["Tagesgeschäft"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": ["136379"],
+      "instruction": "Ordnen Sie in der folgenden Tabelle die aufgeführten Merkmale jeweils dem Tagesgeschäft im Unternehmen oder einem Projekt zu."
+    }
+  },
+  {
+    "bitmark": "[.match-solution-grouped:bitmark--]\n||body incorrectely contains ===\\n=== etc in the ANTLR parser output||\n[@id:213726]\n[%4]\n[!Ordnen Sie den Schritten aus dem Marketingkonzept die richtigen Fragen zu.]\n===\nAnalyse\n==\nWo stehen wir?\n===\nZiele\n==\nWohin wollen wir?\n===\nStrategien\n==\nWie erreichen wir die Ziele?\n===\nInstrumente\n==\nWelche Instrumente sind nötig?\n===\nBudget\n==\nWie viel Geld und Zeit brauchen wir dafür?\n===\nKontrolle\n==\nWie kontrollieren wir den Erfolg?\n===",
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": "4",
+      "heading": {},
+      "pairs": [
+        {
+          "key": "Analyse",
+          "values": ["Wo stehen wir?"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Ziele",
+          "values": ["Wohin wollen wir?"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Strategien",
+          "values": ["Wie erreichen wir die Ziele?"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Instrumente",
+          "values": ["Welche Instrumente sind nötig?"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Budget",
+          "values": ["Wie viel Geld und Zeit brauchen wir dafür?"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Kontrolle",
+          "values": ["Wie kontrollieren wir den Erfolg?"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": ["213726"],
+      "instruction": "Ordnen Sie den Schritten aus dem Marketingkonzept die richtigen Fragen zu."
+    }
+  }
+]

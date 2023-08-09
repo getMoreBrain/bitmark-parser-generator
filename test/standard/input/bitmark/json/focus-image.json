@@ -8,7 +8,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "focusX": 100,
       "focusY": 300,
       "resource": {
@@ -22,6 +22,7 @@
           "alt": "",
           "caption": "",
           "license": "",
+          "provider": "docs.bitbook.education",
           "copyright": ""
         }
       }

@@ -8,13 +8,19 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "resource": {
         "type": "still-image-film-embed",
         "stillImageFilmEmbed": {
-          "provider": "",
           "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
-          "format": "wmv"
+          "caption": "",
+          "copyright": "",
+          "format": "wmv",
+          "height": null,
+          "width": null,
+          "license": "",
+          "provider": "docs.bitbook.education",
+          "showInIndex": false
         }
       }
     }

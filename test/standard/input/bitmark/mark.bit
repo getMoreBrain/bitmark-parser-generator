@@ -1,24 +1,24 @@
 [.mark]
 [!Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.]
-[@mark:adjective][@color:blue][@indication:underline]
-[@mark:verb][@color:red][@indication:circle]
+[@mark:adjective][@color:blue][@emphasis:underline]
+[@mark:verb][@color:red][@emphasis:circle]
 [@mark:noun][@color:blue]
 
-In der [=letzten][@type:adjective] Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis
-mit der [=schönen][@type:adjective] Backgroundsängerin Sharika.
+In der [=letzten][@mark:adjective] Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis
+mit der [=schönen][@mark:adjective] Backgroundsängerin Sharika.
 
 Jetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine:
 „Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“
-Corinna hat bereits den [=erfolgreichen][@type:adjective] Scheidungsanwalt Otto August von
+Corinna hat bereits den [=erfolgreichen][@mark:adjective] Scheidungsanwalt Otto August von
 Unmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens
-und das [=alleinige][@type:adjective] Sorgerecht für den [=gemeinsamen][@type:adjective] Sohn Lucas (6 Jahre).
-Was das Finanzielle betrifft, so räumen Experten der [=betrogenen][@type:verb] Ehefrau wenig Chancen ein. Sie
-hatte vor der Hochzeit einen Ehevertrag unterschrieben und auf [=finanzielle][@type:adjective] Ansprüche im Fall
+und das [=alleinige][@mark:adjective] Sorgerecht für den [=gemeinsamen][@mark:adjective] Sohn Lucas (6 Jahre).
+Was das Finanzielle betrifft, so räumen Experten der [=betrogenen][@mark:verb] Ehefrau wenig Chancen ein. Sie
+hatte vor der Hochzeit einen Ehevertrag unterschrieben und auf [=finanzielle][@mark:adjective] Ansprüche im Fall
 einer Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren
 Ehen, für die er Unterhalt zahlen muss.
 
-Doch vielleicht gibt es eine [=unerwartete][@type:adjective] Wendung. Ein [=stadtbekannter][@type:adjective][@example:hello] Juwelier
+Doch vielleicht gibt es eine [=unerwartete][@mark:adjective] Wendung. Ein [=stadtbekannter][@mark:adjective][@example:hello] Juwelier
 bestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist
 der [=wertvolle] Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende
-sogar eine [=romantische][@type:adjective][@example] Versöhnung?
+sogar eine [=romantische][@mark:adjective][@example] Versöhnung?
 

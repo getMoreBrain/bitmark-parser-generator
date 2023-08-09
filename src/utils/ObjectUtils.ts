@@ -5,10 +5,15 @@ export interface GetFilenamesSyncOptions {
 }
 
 interface RemoveUnwantedPropertiesOptions {
+  ignoreAllUndefined?: boolean;
   ignoreUndefined?: string[];
+  ignoreAllFalse?: boolean;
   ignoreFalse?: string[];
+  ignoreAllEmptyString?: boolean;
   ignoreEmptyString?: string[];
+  ignoreAllEmptyArrays?: boolean;
   ignoreEmptyArrays?: string[];
+  ignoreAllEmptyObjects?: boolean;
   ignoreEmptyObjects?: string[];
 }
 
@@ -194,11 +199,11 @@ class ObjectUtils {
   removeUnwantedProperties(obj: unknown, options?: RemoveUnwantedPropertiesOptions): void {
     options = Object.assign({}, options);
 
-    this.removeUndefinedProperties(obj, options.ignoreUndefined);
-    this.removeFalseProperties(obj, options.ignoreFalse);
-    this.removeEmptyStringProperties(obj, options.ignoreEmptyString);
-    this.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
-    this.removeEmptyObjectProperties(obj, options.ignoreEmptyObjects);
+    if (!options.ignoreAllUndefined) this.removeUndefinedProperties(obj, options.ignoreUndefined);
+    if (!options.ignoreAllFalse) this.removeFalseProperties(obj, options.ignoreFalse);
+    if (!options.ignoreAllEmptyString) this.removeEmptyStringProperties(obj, options.ignoreEmptyString);
+    if (!options.ignoreAllEmptyArrays) this.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
+    if (!options.ignoreAllEmptyObjects) this.removeEmptyObjectProperties(obj, options.ignoreEmptyObjects);
   }
 
   /**

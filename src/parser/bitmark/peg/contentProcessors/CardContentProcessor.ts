@@ -1,5 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
-import { BitType, BitTypeMetadata, BitTypeType } from '../../../../model/enum/BitType';
+import { BitType, RootBitType, RootBitTypeMetadata } from '../../../../model/enum/BitType';
 import { CardSetType } from '../../../../model/enum/CardSetType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
@@ -33,7 +33,7 @@ const builder = new Builder();
 
 function buildCards(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   parsedCardSet: ParsedCardSet | undefined,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
@@ -50,7 +50,7 @@ function buildCards(
   // Parse the card contents according to the card set type
 
   // Get the bit metadata to check how to parse the card set
-  const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+  const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bitType.root);
   const cardSetType = meta && meta.cardSet?.type;
 
   switch (cardSetType) {
@@ -96,7 +96,7 @@ function buildCards(
 
 function processCardSet(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   parsedCardSet: ParsedCardSet | undefined,
 ): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
@@ -158,7 +158,7 @@ function processCardSet(
 
 function parseElements(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const elements: string[] = [];
@@ -180,7 +180,7 @@ function parseElements(
 
 function parseStatements(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
@@ -198,9 +198,9 @@ function parseStatements(
         if (Array.isArray(chainedStatements)) {
           for (const s of chainedStatements) {
             const statement = builder.statement({
-              ...tags,
               ...s,
               ...s.itemLead,
+              ...tags,
             });
             statements.push(statement);
           }
@@ -226,20 +226,21 @@ function parseStatements(
 
 function parseQuiz(
   _context: BitmarkPegParserContext,
-  bitType: BitTypeType,
+  bitType: BitType,
   cardSet: ProcessedCardSet,
   choicesV1: Choice[] | undefined,
   responsesV1: Response[] | undefined,
 ): BitSpecificCards {
   const quizzes: Quiz[] = [];
-  const insertChoices = bitType === BitType.multipleChoice;
-  const insertResponses = bitType === BitType.multipleResponse;
+  const insertChoices = bitType.root === RootBitType.multipleChoice;
+  const insertResponses = bitType.root === RootBitType.multipleResponse;
   if (!insertChoices && !insertResponses) return {};
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
         const tags = content.data;
+        const isDefaultExample = tags.isDefaultExample || tags.example != undefined;
 
         if (insertResponses) {
           if (tags.trueFalse && tags.trueFalse.length > 0) {
@@ -262,6 +263,7 @@ function parseQuiz(
 
         const quiz = builder.quiz({
           ...tags,
+          isDefaultExample,
         });
         quizzes.push(quiz);
       }
@@ -289,7 +291,7 @@ function parseQuiz(
 
 function parseQuestions(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const questions: Question[] = [];
@@ -316,7 +318,7 @@ function parseQuestions(
 
 function parseMatchPairs(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   let sideIdx = 0;
@@ -341,7 +343,8 @@ function parseMatchPairs(
 
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { cardBody, title, resources, example, ...tags } = content.data;
+        const { cardBody, title, resources, isDefaultExample, example, ...tags } = content.data;
+        const isExample = isDefaultExample || example != undefined;
 
         // Get the 'heading' which is the [#title] at level 1
         const heading = title && title[1];
@@ -381,7 +384,7 @@ function parseMatchPairs(
         };
         // Allow example from any card side
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (example) (extraTags as any).example = example;
+        if (isExample) (extraTags as any).isDefaultExample = true;
       }
       sideIdx++;
     }
@@ -412,7 +415,7 @@ function parseMatchPairs(
 
 function parseMatchMatrix(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   let sideIdx = 0;
@@ -424,6 +427,9 @@ function parseMatchMatrix(
   let matrixCells: MatrixCell[] = [];
   let matrixCellValues: string[] = [];
   let matrixCellTags = {};
+  let extraTagsSideLevel = {};
+  let isDefaultExampleAllLevel = false;
+  let isDefaultExampleMartixLevel = false;
   // let keyAudio: AudioResource | undefined = undefined;
   // let keyImage: ImageResource | undefined = undefined;
 
@@ -435,15 +441,18 @@ function parseMatchMatrix(
     matrixCells = [];
     matrixCellValues = [];
     sideIdx = 0;
+    isDefaultExampleMartixLevel = false;
 
     for (const side of card.sides) {
       matrixCellValues = [];
       matrixCellTags = {};
+      extraTagsSideLevel = {};
 
       for (const content of side.variants) {
         const tags = content.data;
 
-        const { title, cardBody, ...restTags } = tags;
+        const { title, cardBody, isDefaultExample, example, ...restTags } = tags;
+        const isExample = isDefaultExample || example != undefined;
 
         // Merge the tags into the matrix cell tags
         Object.assign(matrixCellTags, restTags);
@@ -462,19 +471,26 @@ function parseMatchMatrix(
             //   } else if (tags.resource.type === ResourceType.image) {
             //     keyImage = tags.resource as ImageResource;
             //   }
+            isDefaultExampleAllLevel = isExample ? true : isDefaultExampleAllLevel;
           } else {
             // If not a heading or resource, it is a matrix
             matrixKey = cardBody;
+            isDefaultExampleMartixLevel = isExample ? true : isDefaultExampleMartixLevel;
           }
         } else {
           // Subsequent sides
           if (heading != null) {
             forValues.push(heading);
+            // isDefaultExampleMartixLevel = isExample ? true : isDefaultExampleAllLevel;
           } else if (tags.title == null) {
             // If not a heading, it is a  matrix
             matrixCellValues.push(cardBody ?? '');
           }
         }
+
+        // Allow example from any card side
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (isExample) (extraTagsSideLevel as any).isDefaultExample = true;
       }
 
       // Finished looping variants, create matrix cell
@@ -482,6 +498,7 @@ function parseMatchMatrix(
         const matrixCell = builder.matrixCell({
           values: matrixCellValues,
           ...matrixCellTags,
+          ...extraTagsSideLevel,
         });
         matrixCells.push(matrixCell);
       }
@@ -502,6 +519,7 @@ function parseMatchMatrix(
         cells: matrixCells,
         isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         isCaseSensitive: true,
+        isDefaultExample: isDefaultExampleAllLevel || isDefaultExampleMartixLevel,
       });
       matrix.push(m);
     }
@@ -515,7 +533,7 @@ function parseMatchMatrix(
 
 function parseBotActionResponses(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const botResponses: BotResponse[] = [];

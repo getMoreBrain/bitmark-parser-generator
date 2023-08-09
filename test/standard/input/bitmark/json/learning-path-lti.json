@@ -8,7 +8,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "isTracked": true,
       "isInfoOnly": false,
       "resource": {
@@ -22,14 +22,13 @@
           "alt": "",
           "caption": "",
           "license": "",
+          "provider": "our.s3",
           "copyright": ""
         }
       },
       "instruction": "Nullserie",
       "action": "Übungsprüfung",
-      "deeplink": [
-        "https://other.platform/path/to/quiz"
-      ],
+      "deeplink": ["https://other.platform/path/to/quiz"],
       "duration": "3600s"
     }
   }

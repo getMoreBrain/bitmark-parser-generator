@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonOptions
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / JsonOptions
 
 # Interface: JsonOptions
 
@@ -8,12 +8,29 @@ JSON output options
 
 ### Properties
 
+- [enableWarnings](JsonOptions.md#enableWarnings)
 - [prettify](JsonOptions.md#prettify)
 - [stringify](JsonOptions.md#stringify)
-- [includeExtraProperties](JsonOptions.md#includeExtraProperties)
+- [textAsPlainText](JsonOptions.md#textAsPlainText)
+- [excludeUnknownProperties](JsonOptions.md#excludeUnknownProperties)
 - [debugGenerationInline](JsonOptions.md#debugGenerationInline)
 
 ## Properties
+
+### enableWarnings
+
+• `Optional` **enableWarnings**: `number` \| `boolean`
+
+Enable parser warnings.
+
+If not set or false, parser warnings will not be included in the output.
+If true, any parser warnings will be included in the output.
+
+#### Defined in
+
+[generator/json/JsonGenerator.ts:119](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L119)
+
+___
 
 ### prettify
 
@@ -29,7 +46,7 @@ If prettify is set, a string will be returned if possible.
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:110](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L110)
+[generator/json/JsonGenerator.ts:130](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L130)
 
 ___
 
@@ -46,22 +63,38 @@ If prettify is set, it will override this setting.
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:120](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L120)
+[generator/json/JsonGenerator.ts:140](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L140)
 
 ___
 
-### includeExtraProperties
+### textAsPlainText
 
-• `Optional` **includeExtraProperties**: `boolean`
+• `Optional` **textAsPlainText**: `boolean`
 
-Include extra properties in the output.
+Output text as plain text rather than parsed bitmark text
 
-If not set or false, extra properties will NOT be included in the JSON output
-It true, extra properties will be included in the JSON output.
+If not set, the default for the bitmark version will be used.
+If false, text will be output as parsed bitmark text.
+It true, text will be output as plain text strings.
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:129](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L129)
+[generator/json/JsonGenerator.ts:149](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L149)
+
+___
+
+### excludeUnknownProperties
+
+• `Optional` **excludeUnknownProperties**: `boolean`
+
+Exclude unknown properties in the output.
+
+If not set or false, unknown properties will be included in the JSON output.
+It true, unknown properties will NOT be included in the JSON output.
+
+#### Defined in
+
+[generator/json/JsonGenerator.ts:158](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L158)
 
 ___
 
@@ -74,4 +107,4 @@ Generate debug information in the output.
 
 #### Defined in
 
-[generator/json/JsonGenerator.ts:135](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/json/JsonGenerator.ts#L135)
+[generator/json/JsonGenerator.ts:164](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/json/JsonGenerator.ts#L164)

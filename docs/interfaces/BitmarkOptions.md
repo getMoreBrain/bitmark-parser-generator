@@ -1,4 +1,4 @@
-[@getmorebrain/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkOptions
+[@gmb/bitmark-parser-generator](../API.md) / [Exports](../modules.md) / BitmarkOptions
 
 # Interface: BitmarkOptions
 
@@ -23,19 +23,21 @@ If false, only include bitmark text format if it is not 'bitmark--'
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:42](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L42)
+[generator/bitmark/BitmarkGenerator.ts:43](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L43)
 
 ___
 
 ### cardSetVersion
 
-• `Optional` **cardSetVersion**: `number`
+• `Optional` **cardSetVersion**: [`CardSetVersionType`](../modules.md#CardSetVersionType)
 
-Card set version to generate
+Card set version to generate:
+1: === / == / --
+2: ++==== / ==== / -- / ~~ / ====++
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:47](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L47)
+[generator/bitmark/BitmarkGenerator.ts:50](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L50)
 
 ___
 
@@ -48,4 +50,4 @@ Generate debug information in the output.
 
 #### Defined in
 
-[generator/bitmark/BitmarkGenerator.ts:53](https://github.com/getMoreBrain/bitmark-parser-generator/blob/9ddf9e2/src/generator/bitmark/BitmarkGenerator.ts#L53)
+[generator/bitmark/BitmarkGenerator.ts:56](https://github.com/getMoreBrain/bitmark-parser-generator/blob/7c62fdc/src/generator/bitmark/BitmarkGenerator.ts#L56)

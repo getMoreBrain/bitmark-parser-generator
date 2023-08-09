@@ -4,5 +4,5 @@ import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 
 PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.example, {
   isSingle: true,
-  ignoreFalse: true,
+  // ignoreFalse: true,
 });

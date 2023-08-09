@@ -1,5 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
-import { BitTypeType } from '../../../../model/enum/BitType';
+import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -15,7 +15,7 @@ const builder = new Builder();
 function commentTagContentProcessor(
   _context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
-  _bitType: BitTypeType,
+  _bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {

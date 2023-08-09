@@ -1,0 +1,53 @@
+[
+  {
+    "bitmark": "[.cook-remark]\n[@id:92375]",
+    "bit": {
+      "type": "cook-remark",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["92375"]
+    }
+  },
+  {
+    "bitmark": "[.cook-remark]\n[#Summary of this Book]\nThis is the cook-remark of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+    "bit": {
+      "type": "cook-remark",
+      "format": "bitmark--",
+      "body": "This is the cook-remark of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "title": "Summary of this Book"
+    }
+  },
+  {
+    "bitmark": "[.cook-remark]\n[#Summary of Chapter One]\nThis is a cook-remark of chapter 1.",
+    "bit": {
+      "type": "cook-remark",
+      "format": "bitmark--",
+      "body": "This is a cook-remark of chapter 1.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "title": "Summary of Chapter One"
+    }
+  },
+  {
+    "bitmark": "[.cook-remark]",
+    "bit": {
+      "type": "cook-remark",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null
+    }
+  }
+]

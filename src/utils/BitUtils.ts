@@ -1,5 +1,5 @@
 import { Resource } from '../model/ast/Nodes';
-import { BitType, BitTypeMetadata, BitTypeType } from '../model/enum/BitType';
+import { BitType, RootBitType, RootBitTypeMetadata } from '../model/enum/BitType';
 import { ResourceType, ResourceTypeType } from '../model/enum/ResourceType';
 
 class BitUtils {
@@ -12,7 +12,7 @@ class BitUtils {
    * @returns the resource type or undefined if none set
    */
   calculateValidResourceType(
-    bitType: BitTypeType | undefined,
+    bitType: BitType,
     resourceType: string | undefined,
     resource: Resource | undefined,
   ): ResourceTypeType | undefined {
@@ -26,7 +26,7 @@ class BitUtils {
     }
 
     if (!ret) {
-      const meta = BitType.getMetadata<BitTypeMetadata>(bitType);
+      const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bitType.root);
 
       if (meta) {
         ret = meta.resourceType;

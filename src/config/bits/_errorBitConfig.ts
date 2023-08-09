@@ -1,7 +1,7 @@
-import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
 
 // Set metadata on the bit types to describe specific behaviour
-BitType.setMetadata<BitTypeMetadata>(BitType._error, {
+RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType._error, {
   tags: {},
   resourceAttachmentAllowed: false,
   bodyAllowed: true,

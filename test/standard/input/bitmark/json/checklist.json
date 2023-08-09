@@ -1,0 +1,44 @@
+[
+  {
+    "bitmark": "[.checklist]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]\n•       2020: TCHF 80\n•       2021: TCHF 90\n•       2022: TCHF 30\n•       2023: TCHF 70\n•       2024: TCHF 30\n•       2025: TCHF 40\n||answer as image||",
+    "bit": {
+      "type": "checklist",
+      "format": "bitmark--",
+      "body": "Die X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n\n•       2020: TCHF 80\n•       2021: TCHF 90\n•       2022: TCHF 30\n•       2023: TCHF 70\n•       2024: TCHF 30\n•       2025: TCHF 40",
+      "item": "1",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["197915"],
+      "instruction": "Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?"
+    }
+  },
+  {
+    "bitmark": "[.checklist]\n[@id:210109]\n[%11]\n[!Ausgangslage]\nIn Ihrem Unternehmen wird darüber diskutiert, ob die Mitarbeitenden im Kundendienst kompetent und freundlich die Kunden beraten und betreuen. Sie schlagen vor, mithilfe von Marktforschung die Qualität des Kundendiensts zu überprüfen.",
+    "bit": {
+      "type": "checklist",
+      "format": "bitmark--",
+      "body": "In Ihrem Unternehmen wird darüber diskutiert, ob die Mitarbeitenden im Kundendienst kompetent und freundlich die Kunden beraten und betreuen. Sie schlagen vor, mithilfe von Marktforschung die Qualität des Kundendiensts zu überprüfen.",
+      "item": "11",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["210109"],
+      "instruction": "Ausgangslage"
+    }
+  },
+  {
+    "bitmark": "[.checklist]\n[@id:210110]\n[!Aufgabe]\nWelche drei konkreten Marktforschungsmethoden schlagen Sie vor, um den Kundendienst zu analysieren? Nennen Sie die Methode, beschreiben Sie diese kurz und ordnen Sie sie der Sekundär- bzw. der Primärmarktforschung zu.",
+    "bit": {
+      "type": "checklist",
+      "format": "bitmark--",
+      "body": "Welche drei konkreten Marktforschungsmethoden schlagen Sie vor, um den Kundendienst zu analysieren? Nennen Sie die Methode, beschreiben Sie diese kurz und ordnen Sie sie der Sekundär- bzw. der Primärmarktforschung zu.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["210110"],
+      "instruction": "Aufgabe"
+    }
+  }
+]

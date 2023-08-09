@@ -8,14 +8,9 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "ageRange": [
-        "18",
-        "120"
-      ],
-      "language": [
-        "jp"
-      ]
+      "example": null,
+      "ageRange": ["18", "120"],
+      "language": ["jp"]
     }
   }
 ]

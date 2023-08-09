@@ -8,12 +8,10 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "isTracked": true,
       "isInfoOnly": false,
-      "id": [
-        "255679"
-      ],
+      "id": ["255679"],
       "resource": {
         "type": "image",
         "image": {
@@ -25,6 +23,7 @@
           "alt": "",
           "caption": "",
           "license": "",
+          "provider": "docs.bitmark.cloud",
           "copyright": ""
         }
       },

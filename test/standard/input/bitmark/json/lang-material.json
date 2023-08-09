@@ -1,0 +1,53 @@
+[
+  {
+    "bitmark": "[.lang-material]\n[@id:92375]",
+    "bit": {
+      "type": "lang-material",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["92375"]
+    }
+  },
+  {
+    "bitmark": "[.lang-material]\n[#Summary of this Book]\nThis is the lang-material of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+    "bit": {
+      "type": "lang-material",
+      "format": "bitmark--",
+      "body": "This is the lang-material of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "title": "Summary of this Book"
+    }
+  },
+  {
+    "bitmark": "[.lang-material]\n[#Summary of Chapter One]\nThis is a lang-material of chapter 1.",
+    "bit": {
+      "type": "lang-material",
+      "format": "bitmark--",
+      "body": "This is a lang-material of chapter 1.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "title": "Summary of Chapter One"
+    }
+  },
+  {
+    "bitmark": "[.lang-material]",
+    "bit": {
+      "type": "lang-material",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null
+    }
+  }
+]

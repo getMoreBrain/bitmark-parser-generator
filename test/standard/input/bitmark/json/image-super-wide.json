@@ -8,7 +8,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "id": ["342343"],
       "resource": {
         "type": "image",
@@ -21,6 +21,7 @@
           "alt": "",
           "caption": "",
           "license": "",
+          "provider": "www.apple.com",
           "copyright": ""
         }
       }

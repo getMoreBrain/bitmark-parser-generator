@@ -95,3 +95,21 @@ Die für die Produktion von Gütern eingesetzten Mittel nennt man Produktionsfak
 [-Ressourcen]
 [-Konsumgüter]
 
+
+[.multiple-response-1:bitmark--]
+[@example]
+[+CorrectAnswer1]
+[+CorrectAnswer2]
+[-FalseAnswer3]
+
+
+[.multiple-response-1:bitmark--]
+[+CorrectAnswer1][@example]
+[+CorrectAnswer2][@example]
+[-FalseAnswer3][@example]
+
+
+[.multiple-response-1:bitmark--]
+[+CorrectAnswer1][@example:false]
+[+CorrectAnswer2]
+[-FalseAnswer3][@example:true]

@@ -6,7 +6,7 @@
       "id": ["301454"],
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": "",
       "resource": {
@@ -45,7 +45,7 @@
       "id": ["300497"],
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": ""
     },
@@ -78,7 +78,7 @@
           }
         }
       ],
-      "errors": [
+      "warnings": [
         {
           "message": "1 excess resource(s) present in the bit. The bit resource type is 'NOT SET'",
           "text": "[.video-embed]\n[@id:300497]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0280.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_ruesten1.png]\n",
@@ -106,7 +106,7 @@
       "id": ["301460"],
       "item": "",
       "hint": "",
-      "example": "",
+      "example": null,
       "isExample": false,
       "body": "",
       "resource": {

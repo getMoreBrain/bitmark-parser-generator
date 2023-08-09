@@ -1,0 +1,520 @@
+[
+  {
+    "bitmark": "[.match-matrix]\n[@id:203675]\n[!Das Hexadezimalsystem baut auf der Basis 16 auf und hat 16 Ziffern. Jede Stelle hat gegenüber der rechts von ihr stehenden den 16-fachen Wert. Ergänzen Sie die folgende Hexadezimal-Darstellung:]\n===\n[#Stelle von rechts]\n==\n[#Hexadezimalsystem Ziffern: 0123456789ABCDEF]\n==\n[#Dezimalwert]\n===\n1.\n==\n16⁰ = [@example]\n==\n1 [@example]\n===\n2.\n==\n16¹ = 16 = [@example]\n==\n16 [@example]\n===\n3.\n==\n16² = 16 × 16 = [@example]\n==\n256 [@example]\n===\n4.\n==\n16³ = 16 × 16 × 16 =\n==\n4096\n===\n5.\n==\n16⁴ = 16 × 16 × 16 × 16 =\n==\n65 536\n===\n6.\n==\n16⁵ = 16 × 16 × 16 × 16 × 16 =\n==\n1 048 576\n===\n7.\n==\n16⁶ = 16 × 16 × 16 × 16 × 16 × 16 =\n==\n16 777 216\n===",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "",
+      "heading": {
+        "forKeys": "Stelle von rechts",
+        "forValues": ["Hexadezimalsystem Ziffern: 0123456789ABCDEF", "Dezimalwert"]
+      },
+      "matrix": [
+        {
+          "key": "1.",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["16⁰ ="],
+              "example": null,
+              "isExample": true
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["1"],
+              "example": null,
+              "isExample": true
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "2.",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["16¹ = 16 ="]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["16"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "3.",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["16² = 16 × 16 ="]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["256"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "4.",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["16³ = 16 × 16 × 16 ="]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["4096"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "5.",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["16⁴ = 16 × 16 × 16 × 16 ="]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["65 536"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "6.",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["16⁵ = 16 × 16 × 16 × 16 × 16 ="]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["1 048 576"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "7.",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["16⁶ = 16 × 16 × 16 × 16 × 16 × 16 ="]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["16 777 216"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        }
+      ],
+      "body": "",
+      "id": ["203675"],
+      "instruction": "Das Hexadezimalsystem baut auf der Basis 16 auf und hat 16 Ziffern. Jede Stelle hat gegenüber der rechts von ihr stehenden den 16-fachen Wert. Ergänzen Sie die folgende Hexadezimal-Darstellung:"
+    }
+  },
+  {
+    "bitmark": "[.match-matrix:bitmark--]\n[@id:203904]\n[%42]\n[!Schreiben Sie zu den untenstehenden technischen Daten die zugehörigen Begriffe (Komponenten):]\nBetriebssysteme\nLaufwerke\nProzessor (CPU)\nSystembus\nFestplatte\nGrafikkarte\nNetz-Anschlüsse\nAudio\nArbeitsspeicher\nSchnittstellen (Ports)\n===\n[#Computer 1]\n==\n[#Komponenten]\n==\n[#Computer 2]\n===\nAMD Sempron mit 2,2 GHz 64 bit 1024 KB L2 Cache\n==\nProzessor (CPU)\n==\nIntel Core 2 i7 2,33 GHz 64 bit 4 MB Level 2 Cache [@example]\n===\n1600-MHz-Systembus\n==\nSystembus\n==\n667-MHz-Systembus [@example]\n===\n8 GB SDRAM (667 MHz) DDR2\n==\nArbeitsspeicher (RAM)\n==\n8 GB 667 MHz DDR2 SDRAM [@example]\n===\n250 GB Serial-ATA\n==\nFestplatte\n==\n250 GB 7.200 U/ Min. Serial-ATA [@example]\n===\nDVD-ROM, CD-RW DVD-R, DVD-RW dual Layer\n==\nLaufwerke\n==\nSuperDrive DVD-R dual layer, DVD-RW/CD-RW [@example]\n===\nNVIDIA Geforce 7300 GT 128 MB Video-RAM, DVI und VGA\n==\nGrafikkarte\n==\nATI Radeon X1600 128 MB Video-RAM, DVI und VGA [@example]\n===\n10/100 Mbps LAN integriert (RJ-45) 56 K V.90 Modem (RJ-11)\n==\nNetz-Anschlüsse\n==\n10/100/1000 Base-T-Ethernet (RJ-45) 56 k V.90 Modem (RJ-11) [@example]\n===\n-\n==\nWireless LAN\n==\nW-LAN: AirPort (54 Mb/s) + Bluetooth [@example]\n===\n1 COM-Port 6 USB2-Ports\n==\nSchnittstellen (Ports)\n==\nZwei 400-Mbps FireWire-Ports Drei USB2 Ports [@example]\n===\nAudio analog + digital in/out\n==\nAudio\n==\nIntegrierte Lautsprecher + Mikrofon digital-Audio in/out über USB Kopfhöreranschluss (16 bit) [@example]\n===\nWindows 7 oder SuSE Linux (UNIX)\n==\nBetriebssysteme\n==\nMacOs X 10.6 (UNIX) optional Windows 7 (xp) [@example]\n===",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "42",
+      "heading": {
+        "forKeys": "Computer 1",
+        "forValues": ["Komponenten", "Computer 2"]
+      },
+      "matrix": [
+        {
+          "key": "AMD Sempron mit 2,2 GHz 64 bit 1024 KB L2 Cache",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Prozessor (CPU)"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Intel Core 2 i7 2,33 GHz 64 bit 4 MB Level 2 Cache"],
+              "example": null,
+              "isExample": true
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "1600-MHz-Systembus",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Systembus"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["667-MHz-Systembus"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "8 GB SDRAM (667 MHz) DDR2",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Arbeitsspeicher (RAM)"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["8 GB 667 MHz DDR2 SDRAM"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "250 GB Serial-ATA",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Festplatte"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["250 GB 7.200 U/ Min. Serial-ATA"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "DVD-ROM, CD-RW DVD-R, DVD-RW dual Layer",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Laufwerke"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["SuperDrive DVD-R dual layer, DVD-RW/CD-RW"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "NVIDIA Geforce 7300 GT 128 MB Video-RAM, DVI und VGA",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Grafikkarte"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["ATI Radeon X1600 128 MB Video-RAM, DVI und VGA"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "10/100 Mbps LAN integriert (RJ-45) 56 K V.90 Modem (RJ-11)",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Netz-Anschlüsse"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["10/100/1000 Base-T-Ethernet (RJ-45) 56 k V.90 Modem (RJ-11)"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "-",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Wireless LAN"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["W-LAN: AirPort (54 Mb/s) + Bluetooth"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "1 COM-Port 6 USB2-Ports",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Schnittstellen (Ports)"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Zwei 400-Mbps FireWire-Ports Drei USB2 Ports"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Audio analog + digital in/out",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Audio"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": [
+                "Integrierte Lautsprecher + Mikrofon digital-Audio in/out über USB Kopfhöreranschluss (16 bit)"
+              ]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        },
+        {
+          "key": "Windows 7 oder SuSE Linux (UNIX)",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["Betriebssysteme"]
+            },
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["MacOs X 10.6 (UNIX) optional Windows 7 (xp)"]
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        }
+      ],
+      "body": "Betriebssysteme\nLaufwerke\nProzessor (CPU)\nSystembus\nFestplatte\nGrafikkarte\nNetzAnschlüsse\nAudio\nArbeitsspeicher\nSchnittstellen (Ports)-",
+      "id": ["203904"],
+      "instruction": "Schreiben Sie zu den untenstehenden technischen Daten die zugehörigen Begriffe (Komponenten):"
+    }
+  },
+  {
+    "bitmark": "[.match-matrix]\n[@id:287966]\n[%][%match-matrix]\n[!Bring the german verbs into the correct tense.]\n\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen\n==\nich werde gehen[@example] [!Instruction]\n==\nsie gingen[@example]\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n===",
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": "",
+      "heading": {
+        "forKeys": "Verb",
+        "forValues": ["Future, 1st Person, Singular", "Past, 3rd Person, Plural"]
+      },
+      "matrix": [
+        {
+          "key": "gehen",
+          "cells": [
+            {
+              "item": "",
+              "instruction": "",
+              "values": ["ich werde gehen"],
+              "example": null,
+              "isExample": true
+            }
+          ],
+          "item": "",
+          "isCaseSensitive": true,
+          "hint": "",
+          "isExample": false,
+          "example": null,
+          "isLongAnswer": false
+        }
+      ],
+      "body": "[!Instruction]sie gingen[@example]sprechenich werde sprechensie sprachen",
+      "id": ["287966"],
+      "lead": "match-matrix",
+      "instruction": "Bring the german verbs into the correct tense."
+    },
+    "errors": [
+      {
+        "message": "Unexpected input ' '",
+        "line": 15,
+        "column": 25,
+        "errorLine": "ich werde gehen[@example] [!Instruction]"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 16,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'sie gingen'",
+        "line": 17,
+        "column": 0,
+        "errorLine": "sie gingen[@example]"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 18,
+        "column": 0,
+        "errorLine": "==="
+      },
+      {
+        "message": "Unexpected input 'sprechen'",
+        "line": 19,
+        "column": 0,
+        "errorLine": "sprechen"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 20,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'ich werde sprechen'",
+        "line": 21,
+        "column": 0,
+        "errorLine": "ich werde sprechen"
+      },
+      {
+        "message": "Unexpected input '=='",
+        "line": 22,
+        "column": 0,
+        "errorLine": "=="
+      },
+      {
+        "message": "Unexpected input 'sie sprachen'",
+        "line": 23,
+        "column": 0,
+        "errorLine": "sie sprachen"
+      },
+      {
+        "message": "Unexpected input '==='",
+        "line": 24,
+        "column": 0,
+        "errorLine": "==="
+      }
+    ]
+  }
+]

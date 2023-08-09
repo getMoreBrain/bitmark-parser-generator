@@ -1,6 +1,6 @@
 import { Builder } from '../../../../ast/Builder';
 import { BodyPart, Mark } from '../../../../model/ast/Nodes';
-import { BitTypeType } from '../../../../model/enum/BitType';
+import { BitType } from '../../../../model/enum/BitType';
 import { ArrayUtils } from '../../../../utils/ArrayUtils';
 
 import { markTagContentProcessor } from './MarkTagContentProcessor';
@@ -18,7 +18,7 @@ const builder = new Builder();
 function markChainContentProcessor(
   context: BitmarkPegParserContext,
   bitLevel: BitContentLevelType,
-  bitType: BitTypeType,
+  bitType: BitType,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
@@ -26,12 +26,12 @@ function markChainContentProcessor(
   if (bitLevel === BitContentLevel.Chain) {
     markTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
   } else {
-    const gap = buildMark(context, bitType, content);
-    if (gap) bodyParts.push(gap);
+    const mark = buildMark(context, bitType, content);
+    if (mark) bodyParts.push(mark);
   }
 }
 
-function buildMark(context: BitmarkPegParserContext, bitType: BitTypeType, content: BitContent): Mark | undefined {
+function buildMark(context: BitmarkPegParserContext, bitType: BitType, content: BitContent): Mark | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('mark content', content);
 
   const chainContent = [content, ...(content.chain ?? [])];

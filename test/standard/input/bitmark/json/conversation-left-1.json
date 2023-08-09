@@ -8,7 +8,7 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
+      "example": null,
       "instruction": "conv left 1",
       "partner": {
         "name": "Emilie",
@@ -21,6 +21,7 @@
           "alt": "",
           "caption": "",
           "license": "",
+          "provider": "cdn.bitbook.education",
           "copyright": ""
         }
       }

@@ -9,7 +9,7 @@
 
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-import { BitTypeType } from '../../../model/enum/BitType';
+import { BitType } from '../../../model/enum/BitType';
 import { ResourceTypeType } from '../../../model/enum/ResourceType';
 import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
@@ -69,7 +69,7 @@ export interface SubParserResult<T> {
 }
 
 export interface BitHeader {
-  bitType: BitTypeType;
+  bitType: BitType;
   textFormat: TextFormatType;
   resourceType?: ResourceTypeType;
 }
@@ -77,6 +77,8 @@ export interface BitHeader {
 export interface TrueFalseValue {
   text: string;
   isCorrect: boolean;
+  isDefaultExample: boolean;
+  example?: string;
 }
 
 export interface CardData {
@@ -93,7 +95,8 @@ export interface BitContentProcessorResult {
   footer?: FooterText;
   partner?: Partner;
   trueFalse?: TrueFalseValue[];
-  example?: string | boolean;
+  isDefaultExample?: boolean;
+  example?: string;
   isCorrect?: boolean;
   markConfig?: MarkConfig[];
   solutions?: string[];
@@ -304,7 +307,7 @@ export interface BitmarkPegParserContext {
   parse: ParseFunction;
   bitContentProcessor(
     bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     data: BitContent[] | undefined,
     /*validTypes: TypeKeyType[],*/
   ): BitContentProcessorResult;

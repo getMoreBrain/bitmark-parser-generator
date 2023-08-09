@@ -1,0 +1,53 @@
+[
+  {
+    "bitmark": "[.lang-level-up]\n[@id:92375]",
+    "bit": {
+      "type": "lang-level-up",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["92375"]
+    }
+  },
+  {
+    "bitmark": "[.lang-level-up]\n[#Summary of this Book]\nThis is the lang-level-up of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+    "bit": {
+      "type": "lang-level-up",
+      "format": "bitmark--",
+      "body": "This is the lang-level-up of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "title": "Summary of this Book"
+    }
+  },
+  {
+    "bitmark": "[.lang-level-up]\n[#Summary of Chapter One]\nThis is a lang-level-up of chapter 1.",
+    "bit": {
+      "type": "lang-level-up",
+      "format": "bitmark--",
+      "body": "This is a lang-level-up of chapter 1.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "title": "Summary of Chapter One"
+    }
+  },
+  {
+    "bitmark": "[.lang-level-up]",
+    "bit": {
+      "type": "lang-level-up",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null
+    }
+  }
+]

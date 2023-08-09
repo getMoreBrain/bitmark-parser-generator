@@ -1,0 +1,53 @@
+[
+  {
+    "bitmark": "[.lang-enabling-language-skills]\n[@id:92375]",
+    "bit": {
+      "type": "lang-enabling-language-skills",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["92375"]
+    }
+  },
+  {
+    "bitmark": "[.lang-enabling-language-skills]\n[#Summary of this Book]\nThis is the lang-enabling-language-skills of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+    "bit": {
+      "type": "lang-enabling-language-skills",
+      "format": "bitmark--",
+      "body": "This is the lang-enabling-language-skills of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "title": "Summary of this Book"
+    }
+  },
+  {
+    "bitmark": "[.lang-enabling-language-skills]\n[#Summary of Chapter One]\nThis is a lang-enabling-language-skills of chapter 1.",
+    "bit": {
+      "type": "lang-enabling-language-skills",
+      "format": "bitmark--",
+      "body": "This is a lang-enabling-language-skills of chapter 1.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "title": "Summary of Chapter One"
+    }
+  },
+  {
+    "bitmark": "[.lang-enabling-language-skills]",
+    "bit": {
+      "type": "lang-enabling-language-skills",
+      "format": "bitmark--",
+      "body": "",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null
+    }
+  }
+]

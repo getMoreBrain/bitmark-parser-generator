@@ -8,10 +8,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "210022"
-      ],
+      "example": null,
+      "id": ["210022"],
       "lead": "**Lernziele**"
     }
   },
@@ -24,10 +22,8 @@
       "item": "",
       "hint": "",
       "isExample": false,
-      "example": "",
-      "id": [
-        "210040"
-      ],
+      "example": null,
+      "id": ["210040"],
       "lead": "**Lernziele**"
     }
   }
