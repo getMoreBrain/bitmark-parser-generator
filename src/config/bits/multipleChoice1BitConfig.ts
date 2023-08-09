@@ -1,4 +1,4 @@
-import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
 
 import { TAGS_CHAIN_TRUE_FALSE } from './generic/chainBitConfigs';
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
@@ -6,7 +6,7 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
 
-const MULTIPLE_CHOICE_1_CONFIG: BitTypeMetadata = {
+RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.multipleChoice1, {
   tags: {
     ...TAGS_DEFAULT,
     ...TAGS_CHAIN_ANY_RESOURCE,
@@ -14,10 +14,4 @@ const MULTIPLE_CHOICE_1_CONFIG: BitTypeMetadata = {
   },
   resourceAttachmentAllowed: true,
   bodyAllowed: true,
-};
-
-BitType.setMetadata<BitTypeMetadata>(BitType.multipleChoice1, MULTIPLE_CHOICE_1_CONFIG);
-
-// Aliases
-
-BitType.setMetadata<BitTypeMetadata>(BitType.coachSelfReflectionMultipleChoice1, MULTIPLE_CHOICE_1_CONFIG);
+});

@@ -13,8 +13,11 @@
       "resource": {
         "type": "website-link",
         "websiteLink": {
-          "siteName": "",
-          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+          "caption": "",
+          "copyright": "",
+          "license": "",
+          "showInIndex": false
         }
       }
     }

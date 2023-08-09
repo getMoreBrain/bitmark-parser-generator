@@ -1,4 +1,4 @@
-import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
 
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
 import { TAGS_DEFAULT } from './generic/standardBitConfigs';
@@ -12,7 +12,7 @@ import {
 
 // Set metadata on the bit types to describe specific behaviour
 
-BitType.setMetadata<BitTypeMetadata>(BitType.match, {
+RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.match, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_ANY_RESOURCE },
   resourceAttachmentAllowed: true,
   cardSet: CARD_SET_MATCH_PAIRS,
@@ -20,39 +20,7 @@ BitType.setMetadata<BitTypeMetadata>(BitType.match, {
   footerAllowed: true,
 });
 
-BitType.setMetadata<BitTypeMetadata>(BitType.matchAll, {
-  tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_ANY_RESOURCE },
-  resourceAttachmentAllowed: true,
-  cardSet: CARD_SET_MATCH_PAIRS,
-  bodyAllowed: true,
-  footerAllowed: true,
-});
-
-BitType.setMetadata<BitTypeMetadata>(BitType.matchReverse, {
-  tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_ANY_RESOURCE },
-  resourceAttachmentAllowed: true,
-  cardSet: CARD_SET_MATCH_PAIRS,
-  bodyAllowed: true,
-  footerAllowed: true,
-});
-
-BitType.setMetadata<BitTypeMetadata>(BitType.matchAllReverse, {
-  tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_ANY_RESOURCE },
-  resourceAttachmentAllowed: true,
-  cardSet: CARD_SET_MATCH_PAIRS,
-  bodyAllowed: true,
-  footerAllowed: true,
-});
-
-BitType.setMetadata<BitTypeMetadata>(BitType.matchSolutionGrouped, {
-  tags: { ...TAGS_DEFAULT },
-  resourceAttachmentAllowed: false,
-  cardSet: CARD_SET_MATCH_PAIRS,
-  bodyAllowed: true,
-  footerAllowed: true,
-});
-
-BitType.setMetadata<BitTypeMetadata>(BitType.matchMatrix, {
+RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.matchMatrix, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_ANY_RESOURCE },
   resourceAttachmentAllowed: true,
   cardSet: CARD_SET_MATCH_MATRIX,
@@ -60,7 +28,7 @@ BitType.setMetadata<BitTypeMetadata>(BitType.matchMatrix, {
   footerAllowed: true,
 });
 
-BitType.setMetadata<BitTypeMetadata>(BitType.matchAudio, {
+RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.matchAudio, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_ANY_RESOURCE },
   resourceAttachmentAllowed: true,
   cardSet: CARD_SET_MATCH_AUDIO_PAIRS,
@@ -68,7 +36,7 @@ BitType.setMetadata<BitTypeMetadata>(BitType.matchAudio, {
   footerAllowed: true,
 });
 
-BitType.setMetadata<BitTypeMetadata>(BitType.matchPicture, {
+RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.matchPicture, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_ANY_RESOURCE },
   resourceAttachmentAllowed: true,
   cardSet: CARD_SET_MATCH_IMAGE_PAIRS,

@@ -1,4 +1,4 @@
-import { BitType, BitTypeMetadata } from '../../model/enum/BitType';
+import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
 
 import { CARD_SET_QUIZ } from './generic/cardSetBitConfigs';
 import { TAGS_CHAIN_TRUE_FALSE } from './generic/chainBitConfigs';
@@ -7,7 +7,7 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
 
-const MULTIPLE_CHOICE_CONFIG: BitTypeMetadata = {
+RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.multipleChoice, {
   tags: {
     ...TAGS_DEFAULT,
     ...TAGS_CHAIN_ANY_RESOURCE,
@@ -17,10 +17,4 @@ const MULTIPLE_CHOICE_CONFIG: BitTypeMetadata = {
   cardSet: CARD_SET_QUIZ,
   bodyAllowed: true,
   footerAllowed: true,
-};
-
-BitType.setMetadata<BitTypeMetadata>(BitType.multipleChoice, MULTIPLE_CHOICE_CONFIG);
-
-// Aliases
-
-BitType.setMetadata<BitTypeMetadata>(BitType.coachSelfReflectionMultipleChoice, MULTIPLE_CHOICE_CONFIG);
+});

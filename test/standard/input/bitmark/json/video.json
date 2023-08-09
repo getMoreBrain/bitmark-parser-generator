@@ -1,110 +1,131 @@
 [
   {
-    "bitmark": "[.video]\n[@id:301454]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
     "bit": {
       "type": "video",
       "format": "bitmark--",
-      "body": "",
+      "id": ["301454"],
       "item": "",
       "hint": "",
       "isExample": false,
       "example": null,
-      "id": ["301454"],
+      "body": "",
       "resource": {
         "type": "video",
         "video": {
           "format": "mp4",
+          "provider": "docs.bitbook.education",
           "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4",
           "width": null,
           "height": null,
-          "duration": "",
-          "mute": false,
-          "autoplay": false,
-          "allowSubtitles": false,
-          "showSubtitles": false,
-          "alt": "",
+          "posterImage": {
+            "format": "png",
+            "provider": "docs.bitbook.education",
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": ""
+          },
           "license": "",
           "copyright": "",
-          "posterImage": {
-            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
-            "format": "png",
-            "width": null,
-            "height": null
-          }
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.video]\n[@id:301454]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
   },
   {
-    "bitmark": "[.video]\n[@id:300497]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0280.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_ruesten1.png]",
     "bit": {
       "type": "video",
       "format": "bitmark--",
-      "body": "",
+      "id": ["300497"],
       "item": "",
       "hint": "",
       "isExample": false,
       "example": null,
-      "id": ["300497"],
+      "body": "",
       "resource": {
         "type": "video",
         "video": {
           "format": "mp4",
+          "provider": "docs.bitbook.education",
           "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0280.mp4",
           "width": null,
           "height": null,
-          "duration": "",
-          "mute": false,
-          "autoplay": false,
-          "allowSubtitles": false,
-          "showSubtitles": false,
-          "alt": "",
+          "posterImage": {
+            "format": "png",
+            "provider": "docs.bitbook.education",
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_ruesten1.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": ""
+          },
           "license": "",
           "copyright": "",
-          "posterImage": {
-            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_ruesten1.png",
-            "format": "png",
-            "width": null,
-            "height": null
-          }
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.video]\n[@id:300497]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0280.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_ruesten1.png]"
   },
   {
-    "bitmark": "[.video]\n[@id:301460]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]",
     "bit": {
       "type": "video",
       "format": "bitmark--",
-      "body": "",
+      "id": ["301460"],
       "item": "",
       "hint": "",
       "isExample": false,
       "example": null,
-      "id": ["301460"],
+      "body": "",
       "resource": {
         "type": "video",
         "video": {
           "format": "mp4",
+          "provider": "docs.bitbook.education",
           "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4",
           "width": null,
           "height": null,
-          "duration": "",
-          "mute": false,
-          "autoplay": false,
-          "allowSubtitles": false,
-          "showSubtitles": false,
-          "alt": "",
+          "posterImage": {
+            "format": "png",
+            "provider": "docs.bitbook.education",
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": ""
+          },
           "license": "",
           "copyright": "",
-          "posterImage": {
-            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
-            "format": "png",
-            "width": null,
-            "height": null
-          }
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.1.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.video]\n[@id:301460]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
   }
 ]

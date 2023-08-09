@@ -86,7 +86,7 @@ let TEST_FILES: string[] = [
   // 'coach-call-to-action-checklist.bit',
   // 'coach-self-reflection-multiple-choice.bit',
   // 'coach-self-reflection-multiple-choice-1.bit',
-  // 'coach-self-reflection-multiple-response.bit',
+  'coach-self-reflection-multiple-response.bit',
   // 'coach-self-reflection-multiple-response-1.bit',
   // 'coach-audio-transcript.bit',
   // 'coach-video-transcript.bit',

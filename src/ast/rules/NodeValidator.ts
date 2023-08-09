@@ -1,5 +1,5 @@
 import { Bit, Resource, StillImageFilmResource } from '../../model/ast/Nodes';
-import { BitType } from '../../model/enum/BitType';
+import { RootBitType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { StringUtils } from '../../utils/StringUtils';
 
@@ -8,10 +8,8 @@ class NodeValidator {
     if (!bit) return bit;
 
     let ret: Bit | undefined = bit;
-    switch (bit.bitType) {
-      case BitType.interview:
-      case BitType.interviewInstructionGrouped:
-      case BitType.botInterview:
+    switch (bit.bitType.root) {
+      case RootBitType.interview:
         ret = this.validateInterviewBit(bit);
         break;
     }

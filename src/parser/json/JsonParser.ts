@@ -2,7 +2,7 @@ import { Builder } from '../../ast/Builder';
 import { ResourceBuilder } from '../../ast/ResourceBuilder';
 import { TextGenerator } from '../../generator/text/TextGenerator';
 import { Text } from '../../model/ast/TextNodes';
-import { BitType, BitTypeType } from '../../model/enum/BitType';
+import { BitType, BitTypeUtils, RootBitType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
@@ -188,7 +188,7 @@ class JsonParser {
   isBit(bit: unknown): boolean {
     if (Object.prototype.hasOwnProperty.call(bit, 'type')) {
       const b = bit as BitJson;
-      return !!BitType.fromValue(b.type);
+      return BitTypeUtils.getBitType(b.type).root !== RootBitType._error;
     }
     return false;
   }
@@ -278,7 +278,7 @@ class JsonParser {
     } = bit;
 
     // Bit type
-    const bitType = BitType.fromValue(type) ?? BitType._error;
+    const bitType = BitTypeUtils.getBitType(type);
 
     // Text Format
     const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
@@ -326,7 +326,7 @@ class JsonParser {
 
     // Build bit
     const bitNode = builder.bit({
-      bitType: type as BitTypeType,
+      bitType,
       textFormat: format as TextFormatType,
       id,
       externalId,
@@ -459,11 +459,11 @@ class JsonParser {
     return nodes;
   }
 
-  private responseBitsToAst(bitType: BitTypeType, responses?: ResponseJson[]): Response[] | undefined {
+  private responseBitsToAst(bitType: BitType, responses?: ResponseJson[]): Response[] | undefined {
     const nodes: Response[] = [];
 
     // Return early if bot response as the responses should be interpreted as bot responses
-    if (bitType === BitType.botActionResponse) return undefined;
+    if (bitType.root === RootBitType.botActionResponse) return undefined;
 
     if (Array.isArray(responses)) {
       for (const r of responses) {
@@ -523,7 +523,7 @@ class JsonParser {
     return nodes;
   }
 
-  private quizBitsToAst(bitType: BitTypeType, quizzes?: QuizJson[]): Quiz[] | undefined {
+  private quizBitsToAst(bitType: BitType, quizzes?: QuizJson[]): Quiz[] | undefined {
     const nodes: Quiz[] = [];
     if (Array.isArray(quizzes)) {
       for (const q of quizzes) {
@@ -669,11 +669,11 @@ class JsonParser {
     return nodes;
   }
 
-  private botResponseBitsToAst(bitType: BitTypeType, responses?: BotResponseJson[]): BotResponse[] | undefined {
+  private botResponseBitsToAst(bitType: BitType, responses?: BotResponseJson[]): BotResponse[] | undefined {
     const nodes: BotResponse[] = [];
 
-    // Return early if not bot response as the responses should be interpreted as standard responses
-    if (bitType !== BitType.botActionResponse) return undefined;
+    // Return early if NOT bot response as the responses should be interpreted as standard responses
+    if (bitType.root !== RootBitType.botActionResponse) return undefined;
 
     if (Array.isArray(responses)) {
       for (const r of responses) {

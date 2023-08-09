@@ -1,4 +1,4 @@
-import { BitTypeType } from '../enum/BitType';
+import { BitType } from '../enum/BitType';
 import { BodyBitTypeType } from '../enum/BodyBitType';
 import { ResourceTypeType } from '../enum/ResourceType';
 import { TextFormatType } from '../enum/TextFormat';
@@ -20,7 +20,7 @@ export interface BitmarkAst {
 // Bit
 
 export interface Bit {
-  bitType: BitTypeType;
+  bitType: BitType;
   textFormat: TextFormatType;
   resourceType?: ResourceTypeType;
   id?: Property;

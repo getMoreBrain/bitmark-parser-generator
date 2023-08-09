@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
-import { BitType, BitTypeType } from '../../model/enum/BitType';
+import { BitType, RootBitType, RootBitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
@@ -286,7 +286,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     const bit = node.value as Bit;
 
     this.writeOPD();
-    this.writeString(bit.bitType);
+    this.writeString(bit.bitType.alias);
 
     if (bit.textFormat) {
       const write = this.isWriteTextFormat(bit.textFormat);
@@ -299,7 +299,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // Write the resource type if there is a resource (unless the bit itself is the resource)
     const resourceType = bit.resource?.type;
-    if (resourceType && resourceType !== bit.bitType) {
+    if (resourceType && resourceType !== bit.bitType.root) {
       this.writeAmpersand();
       this.writeString(bit.resource?.type);
     }
@@ -317,7 +317,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   ): void {
     // The following keys are combined with other keys so don't need newlines
     const noNlKeys: NodeTypeType[] = [
-      NodeType.bitType,
+      NodeType.aliasedBitType,
       NodeType.textFormat,
       NodeType.level,
       NodeType.progress,
@@ -467,7 +467,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected enter_cardNode(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
     // Ignore cards for xxx-1
-    const isBitType1 = this.isBitType1(route);
+    const isBitType1 = this.isRootBitType1(route);
     if (isBitType1) return;
 
     this.writeCardSetStart();
@@ -482,7 +482,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     route: NodeInfo[],
   ): void {
     // Ignore cards for xxx-1
-    const isBitType1 = this.isBitType1(route);
+    const isBitType1 = this.isRootBitType1(route);
     if (isBitType1) return;
 
     this.writeNL();
@@ -492,7 +492,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected exit_cardNode(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
     // Ignore cards for xxx-1
-    const isBitType1 = this.isBitType1(route);
+    const isBitType1 = this.isRootBitType1(route);
     if (isBitType1) return;
 
     this.writeNL();
@@ -534,7 +534,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     route: NodeInfo[],
   ): void {
-    const isTrueFalse1 = this.isBitType(route, BitType.trueFalse1);
+    const isTrueFalse1 = this.isRootBitType(route, RootBitType.trueFalse1);
 
     if (!isTrueFalse1) {
       this.writeNL();
@@ -1610,20 +1610,20 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return !!writeFormat;
   }
 
-  protected isBitType1(route: NodeInfo[]): boolean {
+  protected isRootBitType1(route: NodeInfo[]): boolean {
     return (
-      this.isBitType(route, BitType.trueFalse1) ||
-      this.isBitType(route, BitType.multipleChoice1) ||
-      this.isBitType(route, BitType.multipleResponse1)
+      this.isRootBitType(route, RootBitType.trueFalse1) ||
+      this.isRootBitType(route, RootBitType.multipleChoice1) ||
+      this.isRootBitType(route, RootBitType.multipleResponse1)
     );
   }
 
-  protected isBitType(route: NodeInfo[], bitType: BitTypeType): boolean {
+  protected isRootBitType(route: NodeInfo[], rootBitType: RootBitTypeType): boolean {
     const bt = this.getBitType(route);
-    return bt === bitType;
+    return bt?.root === rootBitType;
   }
 
-  protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
+  protected getBitType(route: NodeInfo[]): BitType | undefined {
     for (const node of route) {
       if (node.key === NodeType.bitsValue) {
         const n = node.value as Bit;

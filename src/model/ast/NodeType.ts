@@ -60,7 +60,7 @@ const NodeType = superenum({
 
   // Terminal (leaf)
   markup: 'markup', // bitmark markup
-  bitType: 'bitType', // bit type
+  aliasedBitType: 'aliasedBitType', // bit type
   textFormat: 'textFormat',
 
   // Properties

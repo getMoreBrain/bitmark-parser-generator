@@ -64,13 +64,14 @@
 
 import { Builder } from '../../../ast/Builder';
 import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
-import { BitType, BitTypeType } from '../../../model/enum/BitType';
+import { BitType, BitTypeUtils, RootBitType } from '../../../model/enum/BitType';
 import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { ResourceType } from '../../../model/enum/ResourceType';
 import { TextFormat } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
+import { StringUtils } from '../../../utils/StringUtils';
 
 import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
@@ -199,13 +200,13 @@ class BitmarkPegParserProcessor {
     const { bitType, textFormat, resourceType } = bitHeader;
 
     // Bit type was invalid, so ignore the bit, returning instead the parsing errors
-    if (!bitType) return this.invalidBit();
+    if (!bitType || bitType.root === RootBitType._error) return this.invalidBit();
 
     if (DEBUG_BIT_CONTENT_RAW) this.debugPrint('BIT CONTENT RAW', bitContent);
 
-    const isTrueFalseV1 = bitType === BitType.trueFalse1;
-    const isMultipleChoiceV1 = bitType === BitType.multipleChoice1;
-    const isMultipleResponseV1 = bitType === BitType.multipleResponse1;
+    const isTrueFalseV1 = bitType.root === RootBitType.trueFalse1;
+    const isMultipleChoiceV1 = bitType.root === RootBitType.multipleChoice1;
+    const isMultipleResponseV1 = bitType.root === RootBitType.multipleResponse1;
 
     if (DEBUG_BIT_CONTENT) this.debugPrint('BIT CONTENT', bitContent);
 
@@ -263,16 +264,16 @@ class BitmarkPegParserProcessor {
   }
 
   // Build bit for data that cannot be parsed
-  invalidBit(_bit?: unknown): SubParserResult<Bit> {
-    // Create the error
-    this.addError('Invalid bit');
+  invalidBit(bitData?: unknown): SubParserResult<Bit> {
+    // Create the error is bitData is defined (else it was created when parsing the header)
+    if (bitData) this.addError(`Invalid bit`);
 
     // Build the errors
     this.parser.errors = this.buildBitLevelErrors();
 
     // Build the error bit
     const bit = builder.bit({
-      bitType: BitType._error,
+      bitType: BitTypeUtils.getBitType(RootBitType._error),
       parser: this.parser,
     });
 
@@ -282,13 +283,13 @@ class BitmarkPegParserProcessor {
   // Build bit header
   buildBitHeader(bitType: string, textFormatAndResourceType: Partial<BitHeader>): BitHeader {
     // Get / check bit type
-    const validBitType = BitType.fromValue(bitType);
-    if (!validBitType) {
+    const validBitType = BitTypeUtils.getBitType(bitType);
+    if (validBitType.root === RootBitType._error) {
       this.addError(`Invalid bit type: '${bitType}'`);
     }
 
     return {
-      bitType: validBitType ?? BitType._error,
+      bitType: validBitType,
       textFormat: textFormatAndResourceType.textFormat ?? TextFormat.bitmarkMinusMinus,
       resourceType: textFormatAndResourceType.resourceType,
     };
@@ -331,7 +332,7 @@ class BitmarkPegParserProcessor {
    */
   private bitContentProcessor(
     bitLevel: BitContentLevelType,
-    bitType: BitTypeType,
+    bitType: BitType,
     data: BitContent[] | undefined,
   ): BitContentProcessorResult {
     const result: BitContentProcessorResult = {};
