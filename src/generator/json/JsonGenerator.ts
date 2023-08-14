@@ -957,6 +957,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (pairs) {
       for (const p of pairs) {
+        // Get default example
+        const defaultExample = Array.isArray(p.values) && p.values.length > 0 && p.values[0];
+
         // Create the question
         const pairJson: Partial<PairJson> = {
           key: p.key ?? '',
@@ -967,8 +970,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           isCaseSensitive: p.isCaseSensitive ?? true,
           isLongAnswer: !p.isShortAnswer ?? false,
           ...this.toExample(p, {
-            defaultExample: true,
-            isBoolean: true,
+            defaultExample,
+            isBoolean: false,
           }),
         };
 
