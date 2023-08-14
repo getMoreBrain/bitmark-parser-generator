@@ -48,6 +48,7 @@ import {
   Mark,
   MarkConfig,
   Example,
+  Flashcard,
 } from '../model/ast/Nodes';
 
 /**
@@ -149,6 +150,7 @@ class Builder extends BaseBuilder {
     body?: Body;
     sampleSolution?: string | string[];
     elements?: string[];
+    flashcards?: Flashcard[];
     statement?: Statement;
     statements?: Statement[];
     responses?: Response[];
@@ -312,6 +314,7 @@ class Builder extends BaseBuilder {
     // If isDefaultExample is set at the bit level, push the default example down the tree to the relevant nodes
     if (isDefaultExample) {
       if (cardNode) {
+        this.setDefaultExamplesFlags(false, cardNode.flashcards as WithExample[]);
         this.setDefaultExamplesFlags(true, cardNode.choices as WithExample[]);
         this.setDefaultExamplesFlags(
           false,
@@ -476,7 +479,7 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    isDefaultExample?: unknown;
+    isDefaultExample?: boolean;
     choices?: Choice[];
     responses?: Response[];
   }): Quiz {
@@ -492,12 +495,15 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
+      isExample: isDefaultExample,
       choices,
       responses,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
 
     return node;
   }
@@ -1042,6 +1048,44 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build flashcard node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  flashcard(data: {
+    question: string;
+    answer?: string;
+    alternativeAnswers?: string[];
+    item?: string;
+    lead?: string;
+    hint?: string;
+    instruction?: string;
+    isDefaultExample?: boolean;
+    example?: Example;
+  }): Flashcard {
+    const { question, answer, alternativeAnswers, item, lead, hint, instruction, isDefaultExample, example } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Flashcard = {
+      question,
+      answer,
+      alternativeAnswers,
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      ...this.toExampleBoolean(isDefaultExample, example),
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
+
+    return node;
+  }
+
+  /**
    * Build statement node
    *
    * @param data - data for the node
@@ -1146,6 +1190,7 @@ class Builder extends BaseBuilder {
   }
 
   private cardNode(data: {
+    flashcards?: Flashcard[];
     questions?: Question[];
     elements?: string[];
     statement?: Statement;
@@ -1162,6 +1207,7 @@ class Builder extends BaseBuilder {
     const {
       questions,
       elements,
+      flashcards,
       statement,
       statements,
       choices,
@@ -1176,6 +1222,7 @@ class Builder extends BaseBuilder {
     if (
       questions ||
       elements ||
+      flashcards ||
       statement ||
       statements ||
       choices ||
@@ -1189,6 +1236,7 @@ class Builder extends BaseBuilder {
       node = {
         questions,
         elements,
+        flashcards,
         statement,
         statements,
         choices,
@@ -1363,6 +1411,11 @@ class Builder extends BaseBuilder {
     // Card level
 
     if (cardNode) {
+      // flashcards
+      for (const v of cardNode.flashcards ?? []) {
+        checkIsExample(v as WithExample);
+      }
+
       // pairs
       for (const v of cardNode.pairs ?? []) {
         checkIsExample(v as WithExample);

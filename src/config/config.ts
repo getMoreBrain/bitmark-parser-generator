@@ -24,7 +24,6 @@ import './bits/documentEmbedBitConfig';
 import './bits/documentLinkBitConfig';
 import './bits/essayBitConfig';
 import './bits/exampleBitConfig';
-import './bits/flashcard1BitConfig';
 import './bits/flashcardBitConfig';
 import './bits/focusImageBitConfig';
 import './bits/highlightTextBitConfig';

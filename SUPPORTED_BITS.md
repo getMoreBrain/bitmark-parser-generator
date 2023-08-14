@@ -126,8 +126,8 @@
 | essay | ✅ | ✅ | ✅ |  |
 | example | ✅ | ✅ | ✅ |  |
 | featured | ✅ | ✅ | ✅ |  |
-| flashcard | ➖ | ➖ | ➖ | LEGACY? |
-| flashcard-1 | ➖ | ➖ | ➖ | LEGACY? |
+| flashcard | ✅ | ✅ | ✅ |  |
+| flashcard-1 | ✅ | ✅ | ✅ |  |
 | flashcard-language-1 | ➖ | ➖ | ➖ | LEGACY? |
 | flashcard-language-set | ➖ | ➖ | ➖ | LEGACY? |
 | flashcard-set | ➖ | ➖ | ➖ | LEGACY? |

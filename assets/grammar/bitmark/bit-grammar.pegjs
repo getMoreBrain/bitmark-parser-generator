@@ -203,7 +203,7 @@ Cards_V2
   = value: CardLineOrDivider_V2 { return helper.handleCards(value); }
 
 CardLineOrDivider_V2
-  = value: ("====" WNL / "--" WNL / "++" WNL / CardLine_V2) { return helper.handleCardLineOrDivider(value, 2); }
+  = value: ("====" (WNL / WEOL) / "--" (WNL / WEOL) / "++" (WNL / WEOL) / CardLine_V2) { return helper.handleCardLineOrDivider(value, 2); }
 
 CardLine_V2
 //  = value: $(Line NL) { return helper.handleCardLine(value); }

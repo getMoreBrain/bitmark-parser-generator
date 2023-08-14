@@ -7,6 +7,24 @@ import { TagType } from '../../../model/enum/TagType';
 import { TAGS_CHAIN_TRUE_FALSE } from './chainBitConfigs';
 import { TAGS_ITEM_LEAD_INSTRUCTION_HINT, TAGS_PROPERTY_EXAMPLE } from './standardBitConfigs';
 
+// flashcards
+
+const CARD_SET_FLASHCARDS: CardSetConfig = {
+  type: CardSetType.flashcards,
+  variants: [
+    [
+      {
+        tags: {
+          ...TAGS_ITEM_LEAD_INSTRUCTION_HINT,
+          ...TAGS_PROPERTY_EXAMPLE,
+        },
+        bodyAllowed: true,
+        infiniteRepeat: true,
+      },
+    ],
+  ],
+};
+
 // elements
 
 const CARD_SET_ELEMENTS: CardSetConfig = {
@@ -182,6 +200,7 @@ const CARD_SET_BOT_ACTION_RESPONSES: CardSetConfig = {
 };
 
 export {
+  CARD_SET_FLASHCARDS,
   CARD_SET_ELEMENTS,
   CARD_SET_STATEMENTS,
   CARD_SET_QUIZ,

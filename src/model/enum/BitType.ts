@@ -93,7 +93,6 @@ const RootBitType = superenum({
   essay: 'essay',
   example: 'example',
   flashcard: 'flashcard',
-  flashcard1: 'flashcard-1',
   focusImage: 'focus-image',
   highlightText: 'highlight-text',
   image: 'image',
@@ -235,6 +234,7 @@ const AliasBitType = superenum({
   editorial: 'editorial',
   editorNote: 'editor-note',
   featured: 'featured',
+  flashcard1: 'flashcard-1',
   footNote: 'foot-note',
   groupBorn: 'group-born',
   groupDied: 'group-died',
@@ -459,6 +459,10 @@ const RootBitTypeToAliasMap = {
     AliasBitType.videoTranscript,
     AliasBitType.warning,
     AliasBitType.workbookArticle,
+  ],
+  [RootBitType.flashcard]: [
+    //
+    AliasBitType.flashcard1,
   ],
   [RootBitType.image]: [
     //

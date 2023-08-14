@@ -80,6 +80,7 @@ export interface BitJson {
   elements: string[];
   statement: string;
   isCorrect: boolean;
+  cards: FlashcardJson[];
   statements: StatementJson[];
   responses: ResponseJson[] | BotResponseJson[];
   quizzes: QuizJson[];
@@ -101,6 +102,18 @@ export interface MarkConfigJson {
   mark: string;
   color: string;
   emphasis: string;
+}
+
+export interface FlashcardJson {
+  question: string;
+  answer: string;
+  alternativeAnswers: string[];
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
+  isExample: boolean;
+  example: ExampleJson;
 }
 
 export interface StatementJson {
