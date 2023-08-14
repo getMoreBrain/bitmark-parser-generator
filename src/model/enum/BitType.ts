@@ -259,6 +259,7 @@ const AliasBitType = superenum({
   langLearningStrategy: 'lang-learning-strategy',
   langLevelDown: 'lang-level-down',
   langLevelUp: 'lang-level-up',
+  langLifeSkillIcon: 'lang-life-skill-icon',
   langLifeSkills: 'lang-life-skills',
   langLikeALocal: 'lang-like-a-local',
   langMaterial: 'lang-material',
@@ -472,6 +473,7 @@ const RootBitTypeToAliasMap = {
     AliasBitType.imagePrototype,
     AliasBitType.imageSuperWide,
     AliasBitType.imageZoom,
+    AliasBitType.langLifeSkillIcon,
   ],
   [RootBitType.interview]: [
     //
