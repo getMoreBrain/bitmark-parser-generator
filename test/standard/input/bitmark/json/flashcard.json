@@ -1,0 +1,160 @@
+[
+  {
+    "bit": {
+      "type": "flashcard",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "instruction": "",
+      "isExample": false,
+      "body": "Somebody",
+      "footer": "Footer anyone?",
+      "cards": [
+        {
+          "question": "Question 1?\nCard 1, Side 1",
+          "answer": "Answer 1\nCard 1, Side 2",
+          "alternativeAnswers": [],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": "Question 2?\nCard 2, Side 1",
+          "answer": "Answer 2\nCard 2, Side 2",
+          "alternativeAnswers": ["Alternative Answer 2\nCard 2, Side 2"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
+  },
+  {
+    "bit": {
+      "type": "flashcard",
+      "format": "bitmark--",
+      "item": "",
+      "hint": "",
+      "instruction": "",
+      "isExample": false,
+      "body": "Somebody",
+      "cards": [
+        {
+          "question": "Question 1?\nCard 1, Side 1",
+          "answer": "Answer 1\nCard 1, Side 2",
+          "alternativeAnswers": ["Alternative Answer 2\nCard 1, Side 2"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": "Question 2?\nCard 2, Side 1",
+          "answer": "Answer 2\nCard 2, Side 2, No footer",
+          "alternativeAnswers": [],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer"
+  },
+  {
+    "bit": {
+      "type": "flashcard",
+      "format": "bitmark--",
+      "item": "item",
+      "lead": "lead",
+      "hint": "",
+      "instruction": "",
+      "isExample": true,
+      "body": "Somebody",
+      "cards": [
+        {
+          "question": "Question 1?\nCard 1, Side 1",
+          "answer": "Answer 1\nCard 1, Side 2",
+          "alternativeAnswers": ["Alternative Answer 2\nCard 1, Side 2"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": true
+        },
+        {
+          "question": "Question 2?\nCard 2, Side 1",
+          "answer": "Answer 2\nCard 2, Side 2, No footer",
+          "alternativeAnswers": [],
+          "item": "item",
+          "lead": "lead",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": true
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.flashcard]\n[@example]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]"
+  },
+  {
+    "bit": {
+      "type": "flashcard",
+      "format": "bitmark--",
+      "item": "item",
+      "lead": "lead",
+      "hint": "",
+      "instruction": "",
+      "isExample": true,
+      "body": "Somebody",
+      "footer": "Footer anyone?",
+      "cards": [
+        {
+          "question": "Question 1?\nCard 1, Side 1",
+          "answer": "Answer 1\nCard 1, Side 2",
+          "alternativeAnswers": ["Alternative Answer 2\nCard 1, Side 2"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": "Question 2?\nCard 2, Side 1",
+          "answer": "Answer 2\nCard 2, Side 2, No footer",
+          "alternativeAnswers": [],
+          "item": "item",
+          "lead": "lead",
+          "hint": "",
+          "instruction": "",
+          "isExample": true,
+          "example": true
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.0.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.flashcard]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]"
+  }
+]

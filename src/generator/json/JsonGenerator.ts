@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { BodyBit, BodyPart, BodyText, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
+import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { AudioEmbedResource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
@@ -64,6 +64,7 @@ import {
   BotResponseJson,
   ChoiceJson,
   ExampleJson,
+  FlashcardJson,
   HeadingJson,
   MarkConfigJson,
   MatrixCellJson,
@@ -683,6 +684,41 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (elements && elements.length > 0) {
       this.bitJson.elements = elements;
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
+
+  protected enter_flashcards(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const flashcards = node.value as Flashcard[];
+
+    // Ignore responses that are not at the correct level as they are potentially handled elsewhere
+    if (parent?.key !== NodeType.cardNode) return;
+
+    const flashcardsJson: FlashcardJson[] = [];
+    if (flashcards) {
+      for (const c of flashcards) {
+        // Create the flashcard
+        const flashcardJson: Partial<FlashcardJson> = {
+          question: c.question ?? '',
+          answer: c.answer ?? '',
+          alternativeAnswers: c.alternativeAnswers ?? [],
+          ...this.toItemLeadHintInstruction(c),
+          ...this.toExample(c, {
+            defaultExample: c.isDefaultExample,
+            isBoolean: true,
+          }),
+        };
+
+        // Delete unwanted properties
+        if (c.itemLead?.lead == null) delete flashcardJson.lead;
+
+        flashcardsJson.push(flashcardJson as FlashcardJson);
+      }
+    }
+
+    if (flashcardsJson.length > 0) {
+      this.bitJson.cards = flashcardsJson;
     }
   }
 
@@ -2280,6 +2316,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       case RootBitType.clozeAndMultipleChoiceText:
       case RootBitType.sequence:
       case RootBitType.mark:
+      case RootBitType.flashcard:
         if (bitJson.item == null) bitJson.item = this.textDefault;
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.instruction == null) bitJson.instruction = this.textDefault;

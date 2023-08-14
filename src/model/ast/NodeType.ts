@@ -1,6 +1,8 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 /**
+ * Defines the type of a node in the AST.
+ * All valid node types should be defined here.
  *
  * @enum
  */
@@ -197,6 +199,13 @@ const NodeType = superenum({
   mark: 'mark',
   color: 'color',
   emphasis: 'emphasis',
+
+  // Flashcard
+  flashcards: 'flashcards',
+  flashcardsValue: 'flashcardsValue',
+  answer: 'answer',
+  alternativeAnswers: 'alternativeAnswers',
+  alternativeAnswersValue: 'alternativeAnswersValue',
 
   // Resources
   resource: 'resource',

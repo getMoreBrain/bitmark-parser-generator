@@ -188,26 +188,26 @@ BitTag
 BodyChar
   = value: . { return { type: TypeKey.BodyChar, value: value } }
 
+
 // Modern CardSet
 CardSet_V2
   = value: (CardSetStart_V2 Cards_V2* CardSetEnd_V2) { return helper.handleCardSet(value[1].flat()); }
 
 CardSetStart_V2
-  = NL "++" WNL &("====" WNL) { helper.handleCardSetStart(); }
+  = NL &("====" WNL) { helper.handleCardSetStart(); }
 
 CardSetEnd_V2
-  = ("====" WNL "++" &WEOL) / (WS* EOF) { helper.handleCardSetEnd(); }
+  = ("~~~~"? &WEOL) { helper.handleCardSetEnd(); }
 
-// Matches anything that is NOT !("====" followed by anything except a !("====" to the EOF, so matches the
-// rest of the card set without consuming the final !("====" which is consumed by the CardSetEnd rule
 Cards_V2
-  = !("====" WNL "++" WEOL) value: CardLineOrDivider_V2 { return helper.handleCards(value); }
+  = value: CardLineOrDivider_V2 { return helper.handleCards(value); }
 
 CardLineOrDivider_V2
-  = value: ("====" WNL / "--" WNL / "~~" WNL / CardLine_V2) { return helper.handleCardLineOrDivider(value, 2); }
+  = value: ("====" (WNL / WEOL) / "--" (WNL / WEOL) / "++" (WNL / WEOL) / CardLine_V2) { return helper.handleCardLineOrDivider(value, 2); }
 
 CardLine_V2
- = value: $(Line NL) { return helper.handleCardLine(value); }
+//  = value: $(Line NL) { return helper.handleCardLine(value); }
+ = !("~~~~" WEOL) value: $(Line NL / Char+ EOL) { return helper.handleCardLine(value); }
 
 
 // Legacy CardSet

@@ -36,11 +36,12 @@ import {
   ImageResource,
   Comment,
   MarkConfig,
+  Flashcard,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
 const CARD_SIDE_DIVIDER_V2 = '--';
-const CARD_VARIANT_DIVIDER_V2 = '~~';
+const CARD_VARIANT_DIVIDER_V2 = '++';
 
 const CARD_DIVIDER_V1 = '===';
 const CARD_SIDE_DIVIDER_V1 = '==';
@@ -159,6 +160,7 @@ export interface StatementsOrChoicesOrResponses {
 export interface BitSpecificCards {
   sampleSolution?: string | string[];
   elements?: string[];
+  flashcards?: Flashcard[];
   statements?: Statement[];
   responses?: Response[];
   quizzes?: Quiz[];
@@ -265,7 +267,9 @@ export interface ParsedCardSide {
   variants: ParsedCardContent[];
 }
 
-type ParsedCardContent = BitContent[];
+interface ParsedCardContent extends ParserData {
+  content: BitContent[];
+}
 
 export interface ProcessedCardSet {
   cards: ProcessedCard[];
@@ -282,7 +286,7 @@ export interface ProcessedCardSide {
   variants: ProcessedCardVariant[];
 }
 
-export interface ProcessedCardVariant {
+export interface ProcessedCardVariant extends ParserData {
   no: number;
   data: BitContentProcessorResult;
 }

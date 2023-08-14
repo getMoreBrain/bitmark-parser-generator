@@ -166,6 +166,20 @@ export interface Decision {
   example?: Example;
 }
 
+// Flashcard
+
+export interface Flashcard {
+  question: string;
+  answer?: string;
+  alternativeAnswers?: string[];
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
+}
+
 // Bot Response
 export interface BotResponse {
   response: string;
@@ -360,6 +374,7 @@ export interface HighlightText {
 export interface CardNode {
   questions?: Question[];
   elements?: string[];
+  flashcards?: Flashcard[];
   statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];
