@@ -17,6 +17,7 @@
  */
 
 import { Bit } from '../../../model/ast/Nodes';
+import { CardSetVersion } from '../../../model/enum/CardSetVersion';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserLocation } from '../../../model/parser/ParserLocation';
 
@@ -358,7 +359,7 @@ class BitmarkPegParserHelper {
 
     if (Array.isArray(value) && value.length === 2) {
       value = value[0];
-      if (version === 1) {
+      if (version === CardSetVersion.v1) {
         isCardDivider = value === CARD_DIVIDER_V1;
         isSideDivider = value === CARD_SIDE_DIVIDER_V1;
         isVariantDivider = value === CARD_VARIANT_DIVIDER_V1;

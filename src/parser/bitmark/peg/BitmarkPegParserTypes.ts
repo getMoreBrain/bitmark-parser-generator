@@ -40,7 +40,7 @@ import {
 
 const CARD_DIVIDER_V2 = '====';
 const CARD_SIDE_DIVIDER_V2 = '--';
-const CARD_VARIANT_DIVIDER_V2 = '~~';
+const CARD_VARIANT_DIVIDER_V2 = '++';
 
 const CARD_DIVIDER_V1 = '===';
 const CARD_SIDE_DIVIDER_V1 = '==';
