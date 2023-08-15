@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { BodyBit, BodyPart, BodyText, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
+import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { AudioEmbedResource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
@@ -64,6 +64,7 @@ import {
   BotResponseJson,
   ChoiceJson,
   ExampleJson,
+  FlashcardJson,
   HeadingJson,
   MarkConfigJson,
   MatrixCellJson,
@@ -686,6 +687,41 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
+
+  protected enter_flashcards(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const flashcards = node.value as Flashcard[];
+
+    // Ignore responses that are not at the correct level as they are potentially handled elsewhere
+    if (parent?.key !== NodeType.cardNode) return;
+
+    const flashcardsJson: FlashcardJson[] = [];
+    if (flashcards) {
+      for (const c of flashcards) {
+        // Create the flashcard
+        const flashcardJson: Partial<FlashcardJson> = {
+          question: c.question ?? '',
+          answer: c.answer ?? '',
+          alternativeAnswers: c.alternativeAnswers ?? [],
+          ...this.toItemLeadHintInstruction(c),
+          ...this.toExample(c, {
+            defaultExample: c.isDefaultExample,
+            isBoolean: true,
+          }),
+        };
+
+        // Delete unwanted properties
+        if (c.itemLead?.lead == null) delete flashcardJson.lead;
+
+        flashcardsJson.push(flashcardJson as FlashcardJson);
+      }
+    }
+
+    if (flashcardsJson.length > 0) {
+      this.bitJson.cards = flashcardsJson;
+    }
+  }
+
   // bitmarkAst -> bits -> bitsValue -> statement
 
   protected enter_statement(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -921,6 +957,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (pairs) {
       for (const p of pairs) {
+        // Get default example
+        const defaultExample = Array.isArray(p.values) && p.values.length > 0 && p.values[0];
+
         // Create the question
         const pairJson: Partial<PairJson> = {
           key: p.key ?? '',
@@ -931,8 +970,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           isCaseSensitive: p.isCaseSensitive ?? true,
           isLongAnswer: !p.isShortAnswer ?? false,
           ...this.toExample(p, {
-            defaultExample: true,
-            isBoolean: true,
+            defaultExample,
+            isBoolean: false,
           }),
         };
 
@@ -972,13 +1011,16 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         const matrixCellsJson: MatrixCellJson[] = [];
         if (m.cells) {
           for (const c of m.cells) {
+            // Get default example
+            const defaultExample = Array.isArray(c.values) && c.values.length > 0 && c.values[0];
+
             // Create the choice
             const matrixCellJson: Partial<MatrixCellJson> = {
               values: c.values ?? [],
               ...this.toItemLeadHintInstruction(c),
               ...this.toExample(c, {
-                defaultExample: true,
-                isBoolean: true,
+                defaultExample,
+                isBoolean: false,
               }),
             };
 
@@ -2129,6 +2171,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       ageRange: undefined,
       language: undefined,
       computerLanguage: undefined,
+      target: undefined,
+      tag: undefined,
+      icon: undefined,
+      iconTag: undefined,
+      colorTag: undefined,
       subtype: undefined,
       coverImage: undefined,
       publisher: undefined,
@@ -2280,6 +2327,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       case RootBitType.clozeAndMultipleChoiceText:
       case RootBitType.sequence:
       case RootBitType.mark:
+      case RootBitType.flashcard:
         if (bitJson.item == null) bitJson.item = this.textDefault;
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
@@ -2389,6 +2437,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.ageRange == null) delete bitJson.ageRange;
     if (bitJson.language == null) delete bitJson.language;
     if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
+    if (bitJson.target == null) delete bitJson.target;
+    if (bitJson.tag == null) delete bitJson.tag;
+    if (bitJson.icon == null) delete bitJson.icon;
+    if (bitJson.iconTag == null) delete bitJson.iconTag;
+    if (bitJson.colorTag == null) delete bitJson.colorTag;
     if (bitJson.subtype == null) delete bitJson.subtype;
     if (bitJson.coverImage == null) delete bitJson.coverImage;
     if (bitJson.publisher == null) delete bitJson.publisher;

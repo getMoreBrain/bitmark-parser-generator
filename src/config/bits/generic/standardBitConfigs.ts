@@ -22,6 +22,24 @@ const TAGS_ALL_BITS: TagDataMap = {
     isProperty: true,
     maxCount: INFINITE_COUNT,
   },
+  [PropertyKey.target]: {
+    isProperty: true,
+    maxCount: INFINITE_COUNT,
+  },
+  [PropertyKey.tag]: {
+    isProperty: true,
+    maxCount: INFINITE_COUNT,
+  },
+  [PropertyKey.icon]: {
+    isProperty: true,
+  },
+  [PropertyKey.iconTag]: {
+    isProperty: true,
+  },
+  [PropertyKey.colorTag]: {
+    isProperty: true,
+    maxCount: INFINITE_COUNT,
+  },
   [TagType.Anchor]: {},
 };
 const TAGS_ITEM_LEAD_INSTRUCTION_HINT: TagDataMap = {

@@ -43,6 +43,9 @@
 | book-imprint | ✅ | ✅ | ✅ |  |
 | book-inciting-incident | ✅ | ✅ | ✅ |  |
 | book-introduction | ✅ | ✅ | ✅ |  |
+| book-link | ✅ | ✅ | ✅ |  |
+| book-link-prev | ✅ | ✅ | ✅ |  |
+| book-link-next | ✅ | ✅ | ✅ |  |
 | book-list-of-contributors | ✅ | ✅ | ✅ |  |
 | book-notes | ✅ | ✅ | ✅ |  |
 | book-postscript | ✅ | ✅ | ✅ |  |
@@ -126,8 +129,8 @@
 | essay | ✅ | ✅ | ✅ |  |
 | example | ✅ | ✅ | ✅ |  |
 | featured | ✅ | ✅ | ✅ |  |
-| flashcard | ➖ | ➖ | ➖ | LEGACY? |
-| flashcard-1 | ➖ | ➖ | ➖ | LEGACY? |
+| flashcard | ✅ | ✅ | ✅ |  |
+| flashcard-1 | ✅ | ✅ | ✅ |  |
 | flashcard-language-1 | ➖ | ➖ | ➖ | LEGACY? |
 | flashcard-language-set | ➖ | ➖ | ➖ | LEGACY? |
 | flashcard-set | ➖ | ➖ | ➖ | LEGACY? |

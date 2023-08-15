@@ -1,6 +1,7 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 const CardSetType = superenum({
+  flashcards: 'flashcards',
   elements: 'elements',
   statements: 'statements',
   quiz: 'quiz',

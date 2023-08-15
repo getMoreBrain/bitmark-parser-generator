@@ -1,6 +1,8 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 /**
+ * Defines the type of a node in the AST.
+ * All valid node types should be defined here.
  *
  * @enum
  */
@@ -81,6 +83,16 @@ const NodeType = superenum({
   languageValue: 'languageValue',
   computerLanguage: 'computerLanguage',
   computerLanguageValue: 'computerLanguageValue',
+  target: 'target',
+  targetValue: 'targetValue',
+  tag: 'tag',
+  tagValue: 'tagValue',
+  icon: 'icon',
+  iconValue: 'iconValue',
+  iconTag: 'iconTag',
+  iconTagValue: 'iconTagValue',
+  colorTag: 'colorTag',
+  colorTagValue: 'colorTagValue',
   subtype: 'subtype',
   subtypeValue: 'subtypeValue',
   coverImage: 'coverImage',
@@ -197,6 +209,13 @@ const NodeType = superenum({
   mark: 'mark',
   color: 'color',
   emphasis: 'emphasis',
+
+  // Flashcard
+  flashcards: 'flashcards',
+  flashcardsValue: 'flashcardsValue',
+  answer: 'answer',
+  alternativeAnswers: 'alternativeAnswers',
+  alternativeAnswersValue: 'alternativeAnswersValue',
 
   // Resources
   resource: 'resource',

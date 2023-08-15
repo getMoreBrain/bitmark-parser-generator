@@ -560,6 +560,70 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     //
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards
+
+  protected between_flashcards(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
+
+  protected between_flashcardsValue(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    if (right.key === NodeType.answer) {
+      this.writeNL();
+      this.writeCardSetSideDivider();
+      this.writeNL();
+    } else if (right.key === NodeType.alternativeAnswers) {
+      this.writeNL();
+      this.writeCardSetVariantDivider();
+      this.writeNL();
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue -> answer
+
+  protected leaf_answer(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore responses that are not at the flashcardsValue level as they are handled elsewhere
+    if (parent?.key !== NodeType.flashcardsValue) return;
+
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue -> alternativeAnswers
+
+  protected between_alternativeAnswers(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writeCardSetVariantDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue -> alternativeAnswers -> alternativeAnswersValue
+
+  protected leaf_alternativeAnswersValue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore responses that are not at the alternativeAnswers level as they are handled elsewhere
+    if (parent?.key !== NodeType.alternativeAnswers) return;
+
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> statements
 
   protected enter_statements(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1227,8 +1291,12 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> question
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue -> question
 
-  protected leaf_question(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_question(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore responses that are not at the questionsValue level as they are handled elsewhere
+    if (parent?.key !== NodeType.questionsValue && parent?.key !== NodeType.flashcardsValue) return;
+
     if (node.value) {
       this.writeString(node.value);
       // this.writeNL();
@@ -1510,7 +1578,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
-      this.write('++\n====');
+      this.write('====');
     }
   }
 
@@ -1518,7 +1586,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
-      this.write('====\n++');
+      this.write('~~~~');
     }
   }
 
@@ -1542,7 +1610,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('--');
     } else {
-      this.write('~~');
+      this.write('++');
     }
   }
 

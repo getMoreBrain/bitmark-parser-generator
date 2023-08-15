@@ -20,6 +20,7 @@ import {
   BodyText,
   BotResponse,
   Choice,
+  Flashcard,
   FooterText,
   Gap,
   Heading,
@@ -48,6 +49,7 @@ import {
   MatrixCellJson,
   PairJson,
   QuestionJson,
+  FlashcardJson,
   QuizJson,
   ResponseJson,
   StatementJson,
@@ -222,6 +224,11 @@ class JsonParser {
       ageRange,
       language,
       computerLanguage,
+      target,
+      tag,
+      icon,
+      iconTag,
+      colorTag,
       subtype,
       coverImage,
       publisher,
@@ -270,6 +277,7 @@ class JsonParser {
       elements,
       statement,
       isCorrect,
+      cards,
       statements,
       responses,
       quizzes,
@@ -299,6 +307,9 @@ class JsonParser {
 
     // Mark Config
     const markConfigNode = this.markConfigBitToAst(marks);
+
+    // flashcards
+    const flashcardNodes = this.flashcardBitsToAst(cards);
 
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements, example);
@@ -346,6 +357,11 @@ class JsonParser {
       ageRange,
       language,
       computerLanguage,
+      target,
+      tag,
+      icon,
+      iconTag,
+      colorTag,
       subtype,
       coverImage,
       publisher,
@@ -390,6 +406,7 @@ class JsonParser {
       body: bodyNode,
       sampleSolution: sampleSolution,
       elements,
+      flashcards: flashcardNodes,
       statements: statementNodes,
       responses: responseNodes,
       quizzes: quizNodes,
@@ -425,6 +442,27 @@ class JsonParser {
           mark,
           color,
           emphasis,
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private flashcardBitsToAst(flashcards?: FlashcardJson[]): Flashcard[] | undefined {
+    const nodes: Flashcard[] = [];
+    if (Array.isArray(flashcards)) {
+      for (const c of flashcards) {
+        const { question, answer, alternativeAnswers, item, lead, hint, instruction, example } = c;
+        const node = builder.flashcard({
+          question,
+          answer,
+          alternativeAnswers,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example),
         });
         nodes.push(node);
       }

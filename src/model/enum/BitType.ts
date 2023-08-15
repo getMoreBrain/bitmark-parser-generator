@@ -93,7 +93,6 @@ const RootBitType = superenum({
   essay: 'essay',
   example: 'example',
   flashcard: 'flashcard',
-  flashcard1: 'flashcard-1',
   focusImage: 'focus-image',
   highlightText: 'highlight-text',
   image: 'image',
@@ -170,6 +169,9 @@ const AliasBitType = superenum({
   bookIntroduction: 'book-introduction',
   bookListOfContributors: 'book-list-of-contributors',
   bookNotes: 'book-notes',
+  bookLink: 'book-link',
+  bookLinkNext: 'book-link-next',
+  bookLinkPrev: 'book-link-prev',
   bookPostscript: 'book-postscript',
   bookPreface: 'book-preface',
   bookPrologue: 'book-prologue',
@@ -235,6 +237,7 @@ const AliasBitType = superenum({
   editorial: 'editorial',
   editorNote: 'editor-note',
   featured: 'featured',
+  flashcard1: 'flashcard-1',
   footNote: 'foot-note',
   groupBorn: 'group-born',
   groupDied: 'group-died',
@@ -259,6 +262,7 @@ const AliasBitType = superenum({
   langLearningStrategy: 'lang-learning-strategy',
   langLevelDown: 'lang-level-down',
   langLevelUp: 'lang-level-up',
+  langLifeSkillIcon: 'lang-life-skill-icon',
   langLifeSkills: 'lang-life-skills',
   langLikeALocal: 'lang-like-a-local',
   langMaterial: 'lang-material',
@@ -460,6 +464,10 @@ const RootBitTypeToAliasMap = {
     AliasBitType.warning,
     AliasBitType.workbookArticle,
   ],
+  [RootBitType.flashcard]: [
+    //
+    AliasBitType.flashcard1,
+  ],
   [RootBitType.image]: [
     //
     AliasBitType.imageLandscape,
@@ -468,6 +476,7 @@ const RootBitTypeToAliasMap = {
     AliasBitType.imagePrototype,
     AliasBitType.imageSuperWide,
     AliasBitType.imageZoom,
+    AliasBitType.langLifeSkillIcon,
   ],
   [RootBitType.interview]: [
     //
@@ -476,6 +485,9 @@ const RootBitTypeToAliasMap = {
   ],
   [RootBitType.learningPathBook]: [
     //
+    AliasBitType.bookLink,
+    AliasBitType.bookLinkNext,
+    AliasBitType.bookLinkPrev,
     AliasBitType.learningPathBotTraining,
     AliasBitType.learningPathClassroomEvent,
     AliasBitType.learningPathClassroomTraining,

@@ -16,22 +16,27 @@ export interface BitJson {
   releaseVersion: string | string[];
   ageRange: number | number[];
   language: string | string[];
-  computerLanguage: string | string[];
+  computerLanguage: string;
+  target: string | string[];
+  tag: string | string[];
+  icon: string;
+  iconTag: string;
+  colorTag: string | string[];
   subtype: string | string[];
   coverImage: string | string[];
   publisher: string | string[];
   publications: string | string[];
   author: string | string[];
   subject: string | string[];
-  date: string | string[];
-  location: string | string[];
+  date: string;
+  location: string;
   theme: string | string[];
-  kind: string | string[];
-  action: string | string[];
-  thumbImage: string | string[];
+  kind: string;
+  action: string;
+  thumbImage: string;
   focusX: number;
   focusY: number;
-  duration: string | string[];
+  duration: string;
   deeplink: string | string[];
   externalLink: string;
   externalLinkText: string;
@@ -80,6 +85,7 @@ export interface BitJson {
   elements: string[];
   statement: string;
   isCorrect: boolean;
+  cards: FlashcardJson[];
   statements: StatementJson[];
   responses: ResponseJson[] | BotResponseJson[];
   quizzes: QuizJson[];
@@ -101,6 +107,18 @@ export interface MarkConfigJson {
   mark: string;
   color: string;
   emphasis: string;
+}
+
+export interface FlashcardJson {
+  question: string;
+  answer: string;
+  alternativeAnswers: string[];
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
+  isExample: boolean;
+  example: ExampleJson;
 }
 
 export interface StatementJson {

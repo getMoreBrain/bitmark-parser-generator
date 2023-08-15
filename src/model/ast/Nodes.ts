@@ -32,6 +32,11 @@ export interface Bit {
   ageRange?: Property;
   language?: Property;
   computerLanguage?: Property;
+  target?: Property;
+  tag?: Property;
+  icon?: Property;
+  iconTag?: Property;
+  colorTag?: Property;
   subtype?: Property;
   coverImage?: Property;
   publisher?: Property;
@@ -161,6 +166,20 @@ export interface Decision {
   hint?: string;
   instruction?: string;
   isCaseSensitive?: boolean;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
+}
+
+// Flashcard
+
+export interface Flashcard {
+  question: string;
+  answer?: string;
+  alternativeAnswers?: string[];
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -360,6 +379,7 @@ export interface HighlightText {
 export interface CardNode {
   questions?: Question[];
   elements?: string[];
+  flashcards?: Flashcard[];
   statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];

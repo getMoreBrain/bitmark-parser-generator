@@ -22,6 +22,11 @@ const PropertyKey = superenum({
   ageRange: 'ageRange',
   language: 'language',
   computerLanguage: 'computerLanguage', // single
+  target: 'target',
+  tag: 'tag',
+  icon: 'icon', // single
+  iconTag: 'iconTag', // single
+  colorTag: 'colorTag',
   subtype: 'subtype',
   coverImage: 'coverImage',
   publisher: 'publisher',
@@ -33,7 +38,7 @@ const PropertyKey = superenum({
   theme: 'theme',
   kind: 'kind', // single
   action: 'action', // single
-  thumbImage: 'thumbImage',
+  thumbImage: 'thumbImage', // single
   focusX: 'focusX', // single, number
   focusY: 'focusY', // single, number
   deeplink: 'deeplink',
