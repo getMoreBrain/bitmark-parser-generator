@@ -94,6 +94,11 @@ class Builder extends BaseBuilder {
     ageRange?: number | number[];
     language?: string | string[];
     computerLanguage?: string | string[];
+    target?: string | string[];
+    tag?: string | string[];
+    icon?: string | string[];
+    iconTag?: string | string[];
+    colorTag?: string | string[];
     subtype?: string | string[];
     coverImage?: string | string[];
     publisher?: string | string[];
@@ -179,6 +184,11 @@ class Builder extends BaseBuilder {
       ageRange,
       language,
       computerLanguage,
+      target,
+      tag,
+      icon,
+      iconTag,
+      colorTag,
       subtype,
       coverImage,
       publisher,
@@ -254,6 +264,11 @@ class Builder extends BaseBuilder {
       ageRange: this.toAstProperty(PropertyKey.ageRange, ageRange),
       language: this.toAstProperty(PropertyKey.language, language),
       computerLanguage: this.toAstProperty(PropertyKey.computerLanguage, computerLanguage),
+      target: this.toAstProperty(PropertyKey.target, target),
+      tag: this.toAstProperty(PropertyKey.tag, tag),
+      icon: this.toAstProperty(PropertyKey.icon, icon),
+      iconTag: this.toAstProperty(PropertyKey.iconTag, iconTag),
+      colorTag: this.toAstProperty(PropertyKey.colorTag, colorTag),
       subtype: this.toAstProperty(PropertyKey.subtype, subtype),
       coverImage: this.toAstProperty(PropertyKey.coverImage, coverImage),
       publisher: this.toAstProperty(PropertyKey.publisher, publisher),

@@ -2171,6 +2171,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       ageRange: undefined,
       language: undefined,
       computerLanguage: undefined,
+      target: undefined,
+      tag: undefined,
+      icon: undefined,
+      iconTag: undefined,
+      colorTag: undefined,
       subtype: undefined,
       coverImage: undefined,
       publisher: undefined,
@@ -2432,6 +2437,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.ageRange == null) delete bitJson.ageRange;
     if (bitJson.language == null) delete bitJson.language;
     if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
+    if (bitJson.target == null) delete bitJson.target;
+    if (bitJson.tag == null) delete bitJson.tag;
+    if (bitJson.icon == null) delete bitJson.icon;
+    if (bitJson.iconTag == null) delete bitJson.iconTag;
+    if (bitJson.colorTag == null) delete bitJson.colorTag;
     if (bitJson.subtype == null) delete bitJson.subtype;
     if (bitJson.coverImage == null) delete bitJson.coverImage;
     if (bitJson.publisher == null) delete bitJson.publisher;
