@@ -1302,7 +1302,7 @@ class Builder extends BaseBuilder {
         }
         if (cardNode.matrix) {
           for (const m of cardNode.matrix) {
-            this.pushExampleDownTreeBoolean(isDefaultExample, example, false, m.cells);
+            this.pushExampleDownTreeString(isDefaultExample, example, m.cells);
           }
         }
       }

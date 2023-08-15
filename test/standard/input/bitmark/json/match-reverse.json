@@ -20,7 +20,7 @@
           "isCaseSensitive": true,
           "isLongAnswer": false,
           "isExample": true,
-          "example": true
+          "example": "das"
         },
         {
           "key": "Kuh",

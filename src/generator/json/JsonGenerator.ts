@@ -1011,13 +1011,16 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         const matrixCellsJson: MatrixCellJson[] = [];
         if (m.cells) {
           for (const c of m.cells) {
+            // Get default example
+            const defaultExample = Array.isArray(c.values) && c.values.length > 0 && c.values[0];
+
             // Create the choice
             const matrixCellJson: Partial<MatrixCellJson> = {
               values: c.values ?? [],
               ...this.toItemLeadHintInstruction(c),
               ...this.toExample(c, {
-                defaultExample: true,
-                isBoolean: true,
+                defaultExample,
+                isBoolean: false,
               }),
             };
 
