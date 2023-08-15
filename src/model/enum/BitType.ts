@@ -169,6 +169,9 @@ const AliasBitType = superenum({
   bookIntroduction: 'book-introduction',
   bookListOfContributors: 'book-list-of-contributors',
   bookNotes: 'book-notes',
+  bookLink: 'book-link',
+  bookLinkNext: 'book-link-next',
+  bookLinkPrev: 'book-link-prev',
   bookPostscript: 'book-postscript',
   bookPreface: 'book-preface',
   bookPrologue: 'book-prologue',
@@ -482,6 +485,9 @@ const RootBitTypeToAliasMap = {
   ],
   [RootBitType.learningPathBook]: [
     //
+    AliasBitType.bookLink,
+    AliasBitType.bookLinkNext,
+    AliasBitType.bookLinkPrev,
     AliasBitType.learningPathBotTraining,
     AliasBitType.learningPathClassroomEvent,
     AliasBitType.learningPathClassroomTraining,
