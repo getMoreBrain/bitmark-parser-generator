@@ -152,6 +152,8 @@ Ein Ehepaar installiert eine Alarmanlage im Haus.
 B
 ===
 
+|| [@example] tests follow ||
+
 
 [.match:bitmark--]
 ===
@@ -161,14 +163,19 @@ B
 ==
 [#Heading3]
 ===
-[@example]
 Herr De Weck kauft Milch und Brot im Supermarkt.
 ==
 A
 ==
 B
 ===
-
+[@example]
+should be the text not the value
+==
+C
+==
+D
+===
 
 [.match:bitmark--]
 ===
@@ -182,5 +189,165 @@ Herr De Weck kauft Milch und Brot im Supermarkt.
 ==
 A
 ==
-B[@example]
+B
+===
+[@example:X]
+should be the text not the value
+==
+C
+==
+D
+===
+
+[.match:bitmark--]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+[@example:X]
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+===
+should be the text not the value
+==
+C
+==
+D
+===
+
+[.match:bitmark--]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A[@example:X]
+==
+B
+===
+should be the text not the value
+==
+C
+==
+D
+===
+
+[.match:bitmark--]
+===
+[#Heading1]
+==
+[@example:X]
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+===
+should be the text not the value
+==
+C
+==
+D
+===
+
+[.match:bitmark--]
+===
+[#Heading1]
+==
+[@example]
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+===
+should be the text not the value
+==
+C
+==
+D
+===
+
+[.match:bitmark--]
+[@example]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+===
+should be the text not the value
+==
+C
+==
+D
+===
+
+[.match:bitmark--]
+[@example:X]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+===
+should be the text not the value
+==
+C
+==
+D
+===
+
+[.match:bitmark--]
+[@example:X]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+[@example]Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+===
+should be the text not the value
+==
+C
+==
+D[@example]
 ===

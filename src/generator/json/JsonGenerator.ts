@@ -957,6 +957,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (pairs) {
       for (const p of pairs) {
+        // Get default example
+        const defaultExample = Array.isArray(p.values) && p.values.length > 0 && p.values[0];
+
         // Create the question
         const pairJson: Partial<PairJson> = {
           key: p.key ?? '',
@@ -967,8 +970,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           isCaseSensitive: p.isCaseSensitive ?? true,
           isLongAnswer: !p.isShortAnswer ?? false,
           ...this.toExample(p, {
-            defaultExample: true,
-            isBoolean: true,
+            defaultExample,
+            isBoolean: false,
           }),
         };
 
@@ -1008,13 +1011,16 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         const matrixCellsJson: MatrixCellJson[] = [];
         if (m.cells) {
           for (const c of m.cells) {
+            // Get default example
+            const defaultExample = Array.isArray(c.values) && c.values.length > 0 && c.values[0];
+
             // Create the choice
             const matrixCellJson: Partial<MatrixCellJson> = {
               values: c.values ?? [],
               ...this.toItemLeadHintInstruction(c),
               ...this.toExample(c, {
-                defaultExample: true,
-                isBoolean: true,
+                defaultExample,
+                isBoolean: false,
               }),
             };
 

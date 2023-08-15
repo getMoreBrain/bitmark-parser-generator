@@ -124,7 +124,7 @@
           "isCaseSensitive": true,
           "isLongAnswer": false,
           "isExample": true,
-          "example": true
+          "example": "a) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt."
         },
         {
           "key": "1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__",
@@ -195,7 +195,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.2.0",
       "bitmarkVersion": "3",
       "warnings": [
         {
@@ -203,14 +203,14 @@
           "text": "[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]",
           "location": {
             "start": {
-              "line": 73,
+              "line": 15,
               "column": 1,
-              "offset": 1308
+              "offset": 408
             },
             "end": {
-              "line": 73,
+              "line": 15,
               "column": 66,
-              "offset": 1373
+              "offset": 473
             }
           }
         },
@@ -219,14 +219,14 @@
           "text": "[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]",
           "location": {
             "start": {
-              "line": 75,
+              "line": 17,
               "column": 1,
-              "offset": 1377
+              "offset": 477
             },
             "end": {
-              "line": 75,
+              "line": 17,
               "column": 73,
-              "offset": 1449
+              "offset": 549
             }
           }
         },
@@ -235,14 +235,14 @@
           "text": "[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]",
           "location": {
             "start": {
-              "line": 79,
+              "line": 21,
               "column": 1,
-              "offset": 1553
+              "offset": 653
             },
             "end": {
-              "line": 79,
+              "line": 21,
               "column": 101,
-              "offset": 1653
+              "offset": 753
             }
           }
         },
@@ -251,14 +251,14 @@
           "text": "[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]",
           "location": {
             "start": {
-              "line": 81,
+              "line": 23,
               "column": 1,
-              "offset": 1657
+              "offset": 757
             },
             "end": {
-              "line": 81,
+              "line": 23,
               "column": 108,
-              "offset": 1764
+              "offset": 864
             }
           }
         },
@@ -267,14 +267,14 @@
           "text": "[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]",
           "location": {
             "start": {
-              "line": 85,
+              "line": 27,
               "column": 1,
-              "offset": 1893
+              "offset": 993
             },
             "end": {
-              "line": 85,
+              "line": 27,
               "column": 125,
-              "offset": 2017
+              "offset": 1117
             }
           }
         },
@@ -283,14 +283,14 @@
           "text": "[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]",
           "location": {
             "start": {
-              "line": 87,
+              "line": 29,
               "column": 1,
-              "offset": 2021
+              "offset": 1121
             },
             "end": {
-              "line": 87,
+              "line": 29,
               "column": 132,
-              "offset": 2152
+              "offset": 1252
             }
           }
         },
@@ -299,14 +299,14 @@
           "text": "[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]",
           "location": {
             "start": {
-              "line": 91,
+              "line": 33,
               "column": 1,
-              "offset": 2323
+              "offset": 1423
             },
             "end": {
-              "line": 91,
+              "line": 33,
               "column": 168,
-              "offset": 2490
+              "offset": 1590
             }
           }
         },
@@ -315,14 +315,14 @@
           "text": "[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]",
           "location": {
             "start": {
-              "line": 93,
+              "line": 35,
               "column": 1,
-              "offset": 2494
+              "offset": 1594
             },
             "end": {
-              "line": 93,
+              "line": 35,
               "column": 175,
-              "offset": 2668
+              "offset": 1768
             }
           }
         },
@@ -331,14 +331,14 @@
           "text": "[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]",
           "location": {
             "start": {
-              "line": 97,
+              "line": 39,
               "column": 1,
-              "offset": 2761
+              "offset": 1861
             },
             "end": {
-              "line": 97,
+              "line": 39,
               "column": 89,
-              "offset": 2849
+              "offset": 1949
             }
           }
         },
@@ -347,14 +347,14 @@
           "text": "[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]",
           "location": {
             "start": {
-              "line": 99,
+              "line": 41,
               "column": 1,
-              "offset": 2853
+              "offset": 1953
             },
             "end": {
-              "line": 99,
+              "line": 41,
               "column": 132,
-              "offset": 2984
+              "offset": 2084
             }
           }
         },
@@ -363,14 +363,14 @@
           "text": "[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]",
           "location": {
             "start": {
-              "line": 103,
+              "line": 45,
               "column": 1,
-              "offset": 3076
+              "offset": 2176
             },
             "end": {
-              "line": 103,
+              "line": 45,
               "column": 89,
-              "offset": 3164
+              "offset": 2264
             }
           }
         },
@@ -379,14 +379,14 @@
           "text": "[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]",
           "location": {
             "start": {
-              "line": 105,
+              "line": 47,
               "column": 1,
-              "offset": 3168
+              "offset": 2268
             },
             "end": {
-              "line": 105,
+              "line": 47,
               "column": 130,
-              "offset": 3297
+              "offset": 2397
             }
           }
         }
@@ -485,7 +485,7 @@
           "isCaseSensitive": true,
           "isLongAnswer": false,
           "isExample": true,
-          "example": true
+          "example": "Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."
         },
         {
           "key": "die Gäste – das Restaurant Milano – auf dem Stadtplan – zeigen",
@@ -559,7 +559,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.2.0",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-all]\n[%C11]\n[!Bilden Sie Fragen und antworten Sie wie im Beispiel.]\n\nKannst Du ...?\n\n===\n◇ ich – dein Bleistift – mal – leihen[@example]\n==\nKannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir.\n===\n[%1]die Gäste – das Restaurant Milano – auf dem Stadtplan – zeigen\n==\nKannst du den Gästen auf dem Stadtplan das Restaurant „Milano“ zeigen?\n--\nJa, ich zeige es ihnen.\n===\n[%2]die Firma Krüger – das Angebot – faxen\n==\nKannst du der Firma Krüger das Angebot faxen?\n--\nJa, ich faxe es ihr.\n===\n[%3]ich – die Hausarbeit – am Wochenende – abnehmen\n==\nKannst du mir am Wochenende die Hausarbeit abnehmen?\n--\nJa, ich nehme sie dir ab.\n===\n[%4]der Chef – das Protokoll der Sitzung – heute noch – geben\n==\nKannst du dem Chef heute noch das Protokoll der Sitzung geben?\n--\nJa, ich gebe es ihm.\n===\n[%5]ich – dein Auto – schenken\n==\nKannst du mir dein Auto schenken?\n--\nNein, ich schenke es dir nicht.\n===\n[%6]wir – zwei Flaschen Mineralwasser – mitbringen\n==\nKannst du uns zwei Flaschen Mineralwasser mitbringen?\n--\nJa, ich bringe sie euch mit.\n==="

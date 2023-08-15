@@ -428,6 +428,10 @@ function parseMatchPairs(
   let keyAudio: AudioResource | undefined = undefined;
   let keyImage: ImageResource | undefined = undefined;
   let extraTags = {};
+  let isDefaultExampleCard = false;
+  let exampleCard: string | undefined;
+  let isDefaultExampleSide = false;
+  let exampleSide: string | undefined;
   // let variant: ProcessedCardVariant | undefined;
 
   for (const card of cardSet.cards) {
@@ -438,12 +442,17 @@ function parseMatchPairs(
     keyImage = undefined;
     sideIdx = 0;
     extraTags = {};
+    isDefaultExampleSide = false;
+    exampleSide = '';
 
     for (const side of card.sides) {
       for (const content of side.variants) {
         // variant = content;
         const { cardBody, title, resources, isDefaultExample, example, ...tags } = content.data;
-        const isExample = isDefaultExample || example != undefined;
+
+        // Example
+        isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
+        exampleSide = example ? example : exampleSide;
 
         // Get the 'heading' which is the [#title] at level 1
         const heading = title && title[1];
@@ -452,6 +461,8 @@ function parseMatchPairs(
           // First side
           if (heading != null) {
             forKeys = heading;
+            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+            exampleCard = example ? example : exampleCard;
           } else if (Array.isArray(resources) && resources.length > 0) {
             // TODO - should search the correct resource type based on the bit type
             const resource = resources[0];
@@ -469,9 +480,13 @@ function parseMatchPairs(
           // Subsequent sides
           if (heading != null) {
             forValues.push(heading);
+            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+            exampleCard = example ? example : exampleCard;
           } else if (title == null) {
             // If not a heading, it is a pair
-            pairValues.push(cardBody ?? '');
+            const value = cardBody ?? '';
+            pairValues.push(value);
+            if ((isDefaultExampleCard || isDefaultExampleSide) && !exampleSide) exampleSide = value;
           }
         }
 
@@ -481,9 +496,6 @@ function parseMatchPairs(
           ...tags,
           isCaseSensitive: true,
         };
-        // Allow example from any card side
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (isExample) (extraTags as any).isDefaultExample = true;
       }
       sideIdx++;
     }
@@ -495,6 +507,11 @@ function parseMatchPairs(
       });
     } else {
       // if (pairKey || keyAudio || keyImage) {
+      // Calculate final example and isDefaultExample
+      if (isDefaultExampleSide) exampleCard = undefined;
+      const isDefaultExample = isDefaultExampleSide || isDefaultExampleCard;
+      const example = exampleSide || exampleCard;
+
       const pair = builder.pair({
         key: pairKey ?? '',
         keyAudio,
@@ -502,6 +519,8 @@ function parseMatchPairs(
         values: pairValues,
         isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         ...extraTags,
+        isDefaultExample,
+        example,
       });
       pairs.push(pair);
       // } else {
@@ -530,9 +549,12 @@ function parseMatchMatrix(
   let matrixCells: MatrixCell[] = [];
   let matrixCellValues: string[] = [];
   let matrixCellTags = {};
-  let extraTagsSideLevel = {};
-  let isDefaultExampleAllLevel = false;
-  let isDefaultExampleMartixLevel = false;
+  let isDefaultExampleCard = false;
+  let exampleCard: string | undefined;
+  let isDefaultExampleSide = false;
+  let exampleSide: string | undefined;
+  let isDefaultExampleVariant = false;
+  let exampleVariant: string | undefined;
   // let keyAudio: AudioResource | undefined = undefined;
   // let keyImage: ImageResource | undefined = undefined;
   // let variant: ProcessedCardVariant | undefined;
@@ -545,19 +567,24 @@ function parseMatchMatrix(
     matrixCells = [];
     matrixCellValues = [];
     sideIdx = 0;
-    isDefaultExampleMartixLevel = false;
+    isDefaultExampleSide = false;
+    exampleSide = '';
 
     for (const side of card.sides) {
       matrixCellValues = [];
       matrixCellTags = {};
-      extraTagsSideLevel = {};
+      isDefaultExampleVariant = false;
+      exampleVariant = '';
 
       for (const content of side.variants) {
         // variant = content;
         const tags = content.data;
 
         const { title, cardBody, isDefaultExample, example, ...restTags } = tags;
-        const isExample = isDefaultExample || example != undefined;
+
+        // Example
+        isDefaultExampleVariant = isDefaultExample === true ? true : isDefaultExampleVariant;
+        exampleVariant = example ? example : exampleVariant;
 
         // Merge the tags into the matrix cell tags
         Object.assign(matrixCellTags, restTags);
@@ -576,34 +603,42 @@ function parseMatchMatrix(
             //   } else if (tags.resource.type === ResourceType.image) {
             //     keyImage = tags.resource as ImageResource;
             //   }
-            isDefaultExampleAllLevel = isExample ? true : isDefaultExampleAllLevel;
+            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+            exampleCard = example ? example : exampleCard;
           } else {
             // If not a heading or resource, it is a matrix
             matrixKey = cardBody;
-            isDefaultExampleMartixLevel = isExample ? true : isDefaultExampleMartixLevel;
+            isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
+            exampleSide = example ? example : exampleSide;
           }
         } else {
           // Subsequent sides
           if (heading != null) {
             forValues.push(heading);
-            // isDefaultExampleMartixLevel = isExample ? true : isDefaultExampleAllLevel;
+            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+            exampleCard = example ? example : exampleCard;
           } else if (tags.title == null) {
-            // If not a heading, it is a  matrix
-            matrixCellValues.push(cardBody ?? '');
+            // If not a heading, it is a matrix cell value
+            const value = cardBody ?? '';
+            matrixCellValues.push(value);
+            if ((isDefaultExampleCard || isDefaultExampleVariant) && !exampleVariant) exampleVariant = value;
           }
         }
-
-        // Allow example from any card side
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (isExample) (extraTagsSideLevel as any).isDefaultExample = true;
       }
 
       // Finished looping variants, create matrix cell
       if (sideIdx > 0) {
+        // Calculate final example and isDefaultExample
+        if (isDefaultExampleVariant) exampleSide = exampleCard = undefined;
+        if (isDefaultExampleSide) exampleCard = undefined;
+        const isDefaultExample = isDefaultExampleVariant || isDefaultExampleSide || isDefaultExampleCard;
+        const example = exampleVariant || exampleSide || exampleCard;
+
         const matrixCell = builder.matrixCell({
           values: matrixCellValues,
           ...matrixCellTags,
-          ...extraTagsSideLevel,
+          isDefaultExample,
+          example,
         });
         matrixCells.push(matrixCell);
       }
@@ -625,7 +660,6 @@ function parseMatchMatrix(
         cells: matrixCells,
         isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         isCaseSensitive: true,
-        isDefaultExample: isDefaultExampleAllLevel || isDefaultExampleMartixLevel,
       });
       matrix.push(m);
       // } else {

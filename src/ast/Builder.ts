@@ -312,33 +312,7 @@ class Builder extends BaseBuilder {
     };
 
     // If isDefaultExample is set at the bit level, push the default example down the tree to the relevant nodes
-    if (isDefaultExample) {
-      if (cardNode) {
-        this.setDefaultExamplesFlags(false, cardNode.flashcards as WithExample[]);
-        this.setDefaultExamplesFlags(true, cardNode.choices as WithExample[]);
-        this.setDefaultExamplesFlags(
-          false,
-          cardNode.responses as WithExample[],
-          cardNode.statements as WithExample[],
-          cardNode.statement as WithExample,
-          cardNode.pairs as WithExample[],
-        );
-        if (cardNode.quizzes) {
-          for (const quiz of cardNode.quizzes) {
-            this.setDefaultExamplesFlags(true, quiz.choices);
-            this.setDefaultExamplesFlags(false, quiz.responses);
-          }
-        }
-        if (cardNode.matrix) {
-          for (const m of cardNode.matrix) {
-            this.setDefaultExamplesFlags(false, m.cells);
-          }
-        }
-      }
-      if (body) {
-        this.setDefaultExamplesBodyBits(body);
-      }
-    }
+    this.pushExampleDownTree(body, cardNode, isDefaultExample, example);
 
     // Set default values
     this.setDefaultBitValues(node);
@@ -485,10 +459,9 @@ class Builder extends BaseBuilder {
   }): Quiz {
     const { choices, responses, item, lead, hint, instruction, isDefaultExample } = data;
 
-    if (isDefaultExample) {
-      this.setDefaultExamplesFlags(true, choices);
-      this.setDefaultExamplesFlags(false, responses);
-    }
+    // Push isDefaultExample down the tree
+    this.pushExampleDownTreeBoolean(isDefaultExample, undefined, true, choices);
+    this.pushExampleDownTreeBoolean(isDefaultExample, undefined, false, responses);
 
     // NOTE: Node order is important and is defined here
     const node: Quiz = {
@@ -1256,34 +1229,135 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Set every correct answer as an example for Decision node(s)
+   * Set examples for boolean nodes
    *
-   * @param answers - array of answers
+   * @param isDefaultExample
+   * @param example
+   * @param onlyCorrect
+   * @param nodes
    * @returns true if any of the answers has an example, otherwise undefined
    */
-  private setDefaultExamplesFlags(onlyCorrect: boolean, ...nodes: (WithExample | WithExample[] | undefined)[]): void {
+  private pushExampleDownTreeBoolean(
+    isDefaultExample: boolean | undefined,
+    example: Example | undefined,
+    onlyCorrect: boolean,
+    ...nodes: (WithExample | WithExample[] | undefined)[]
+  ): void {
+    if (!isDefaultExample && !example) return;
+
+    const fillExample = (node: WithExample) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (!node.isExample && (!onlyCorrect || (node as any).isCorrect)) {
+        node.isDefaultExample = true;
+        node.isExample = true;
+      }
+    };
+
     if (Array.isArray(nodes)) {
       for (const ds of nodes) {
         if (Array.isArray(ds)) {
           for (const d of ds) {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            if (!d.isExample && (!onlyCorrect || (d as any).isCorrect)) {
-              d.isDefaultExample = true;
-              d.isExample = true;
-            }
+            fillExample(d);
           }
         } else if (ds) {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          if (!ds.isExample && (!onlyCorrect || (ds as any).isCorrect)) {
-            ds.isDefaultExample = true;
-            ds.isExample = true;
-          }
+          fillExample(ds);
         }
       }
     }
   }
 
-  private setDefaultExamplesBodyBits(body: Body | undefined): void {
+  /**
+   * Set examples down the tree
+   *
+   * @param body
+   * @param cardNode
+   * @param isDefaultExample
+   * @param example
+   * @returns true if any of the answers has an example, otherwise undefined
+   */
+  private pushExampleDownTree(
+    body: Body | undefined,
+    cardNode: CardNode | undefined,
+    isDefaultExample: boolean | undefined,
+    example: Example | undefined,
+  ): void {
+    if (isDefaultExample || example) {
+      if (cardNode) {
+        this.pushExampleDownTreeString(isDefaultExample, example, cardNode.pairs as WithExample[]);
+        this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.flashcards as WithExample[]);
+        this.pushExampleDownTreeBoolean(isDefaultExample, example, true, cardNode.choices as WithExample[]);
+        this.pushExampleDownTreeBoolean(
+          isDefaultExample,
+          example,
+          false,
+          cardNode.responses as WithExample[],
+          cardNode.statements as WithExample[],
+          cardNode.statement as WithExample,
+        );
+        if (cardNode.quizzes) {
+          for (const quiz of cardNode.quizzes) {
+            this.pushExampleDownTreeBoolean(isDefaultExample, example, true, quiz.choices);
+            this.pushExampleDownTreeBoolean(isDefaultExample, example, false, quiz.responses);
+          }
+        }
+        if (cardNode.matrix) {
+          for (const m of cardNode.matrix) {
+            this.pushExampleDownTreeString(isDefaultExample, example, m.cells);
+          }
+        }
+      }
+      if (body) {
+        this.pushExampleDownTreeBodyBits(isDefaultExample, example, body);
+      }
+    }
+  }
+
+  /**
+   * Set examples for string nodes
+   *
+   * @param isDefaultExample
+   * @param example
+   * @param nodes
+   * @returns true if any of the answers has an example, otherwise undefined
+   */
+  private pushExampleDownTreeString(
+    isDefaultExample: boolean | undefined,
+    example: Example | undefined,
+    ...nodes: (WithExample | WithExample[] | undefined)[]
+  ): void {
+    if (!isDefaultExample && !example) return;
+
+    const fillExample = (node: WithExample) => {
+      if (!node.isExample) {
+        if (isDefaultExample) {
+          node.isDefaultExample = true;
+          node.isExample = true;
+        } else {
+          node.isDefaultExample = false;
+          node.example = example;
+        }
+      }
+    };
+
+    if (Array.isArray(nodes)) {
+      for (const ds of nodes) {
+        if (Array.isArray(ds)) {
+          for (const d of ds) {
+            fillExample(d);
+          }
+        } else if (ds) {
+          fillExample(ds);
+        }
+      }
+    }
+  }
+
+  private pushExampleDownTreeBodyBits(
+    isDefaultExample: boolean | undefined,
+    example: Example | undefined,
+    body: Body | undefined,
+  ): void {
+    if (!isDefaultExample && !example) return;
     if (!body || !body.bodyParts || body.bodyParts.length === 0) return;
 
     for (const part of body.bodyParts) {

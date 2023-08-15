@@ -55,9 +55,11 @@ function handleGapOrSelectExample(
   if (trueFalse) {
     if (example === true) {
       trueFalse.isDefaultExample = true;
+      trueFalse.example = undefined;
     } else {
       // TODO: This should raise a warning, because a value on the example tag is not allowed for select
       trueFalse.isDefaultExample = true;
+      trueFalse.example = undefined;
     }
   } else if (Array.isArray(target.solutions) && target.solutions.length > 0) {
     if (example === true) {
@@ -78,6 +80,7 @@ function handleDefaultOnlyExample(
   target: BitContentProcessorResult,
 ): void {
   target.isDefaultExample = true;
+  target.example = undefined;
 }
 
 function handleStandardExample(
@@ -88,6 +91,7 @@ function handleStandardExample(
 ): void {
   if (example === true) {
     target.isDefaultExample = true;
+    target.example = undefined;
   } else {
     target.example = example as string;
   }

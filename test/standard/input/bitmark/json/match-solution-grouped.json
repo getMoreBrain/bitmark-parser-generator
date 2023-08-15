@@ -94,7 +94,7 @@
           "isCaseSensitive": true,
           "isLongAnswer": false,
           "isExample": true,
-          "example": true
+          "example": "packen"
         },
         {
           "key": "in den Urlaub",

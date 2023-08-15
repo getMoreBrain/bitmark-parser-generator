@@ -381,16 +381,69 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isLongAnswer": false,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
           "isExample": true,
-          "example": true
+          "example": "C"
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.2.0",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example]\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n==="
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\n[@example]\nshould be the text not the value\n==\nC\n==\nD\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "X"
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.2.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\n[@example:X]\nshould be the text not the value\n==\nC\n==\nD\n==="
   },
   {
     "bit": {
@@ -413,14 +466,277 @@
           "isCaseSensitive": true,
           "isLongAnswer": false,
           "isExample": true,
-          "example": true
+          "example": "X"
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": false,
+          "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.2.0",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB[@example]\n==="
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example:X]\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "X"
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.2.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA[@example:X]\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "X"
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "X"
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.2.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[@example:X]\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "A"
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "C"
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.2.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[@example]\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "A"
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "C"
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.2.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n[@example]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "X"
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "X"
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.2.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n[@example:X]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": "",
+      "isExample": true,
+      "body": "",
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "A"
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isCaseSensitive": true,
+          "isLongAnswer": false,
+          "isExample": true,
+          "example": "D"
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.2.0",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n[@example:X]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example]Herr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD[@example]\n==="
   }
 ]

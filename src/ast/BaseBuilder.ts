@@ -14,23 +14,15 @@ export interface WithExample {
 class BaseBuilder {
   /**
    * Convert example to an Example.
-   * - If example is undefined, then undefined will be returned.
-   * - If example is null, then the defaultValue will be used.
-   * - Recognises boolean strings and converts them to boolean values.
+   * - If example is set, then the isExample will be true and example with be example as a string.
+   * - Else if isDefaultExample is true, then isDefaultExample / isExample will both be true.
+   * - Else isDefaultExample / isExample will both be false.
    *
-   * @param isDefaultExample - true is the example is the default value
+   * @param isDefaultExample - true if the example is the default value
    * @param example - the example to convert (string, boolean) or undefined if none / default
    * @returns example/isDefaultExample resolved to an Example object
    */
   protected toExample(isDefaultExample: boolean | undefined, example: string | boolean | undefined): WithExample {
-    // Default example
-    if (isDefaultExample) {
-      return {
-        isDefaultExample: true,
-        isExample: true,
-      };
-    }
-
     // Example
     if (example != undefined) {
       // Convert to boolean to string
@@ -44,6 +36,14 @@ class BaseBuilder {
       };
     }
 
+    // Default example
+    if (isDefaultExample) {
+      return {
+        isDefaultExample: true,
+        isExample: true,
+      };
+    }
+
     // Not an example
     return {
       isDefaultExample: false,
@@ -53,11 +53,11 @@ class BaseBuilder {
 
   /**
    * Convert example to an Example, only allowing boolean values.
-   * - If example is undefined, then undefined will be returned.
-   * - If example is null, then the defaultValue will be used.
-   * - Recognises boolean strings and converts them to boolean values.
+   * - If example is set, then the isExample will be true and example with be example as a boolean.
+   * - Else if isDefaultExample is true, then isDefaultExample / isExample will both be true.
+   * - Else isDefaultExample / isExample will both be false.
    *
-   * @param isDefaultExample - true is the example is the default value
+   * @param isDefaultExample - true if the example is the default value
    * @param example - the example to convert (string, boolean) or undefined if none / default
    * @returns example/isDefaultExample resolved to an Example object
    */
@@ -67,20 +67,20 @@ class BaseBuilder {
   ): WithExample {
     const isExampleButNotBoolean = example != undefined && !BooleanUtils.isBooleanString(example);
 
+    // Example
+    if (example != undefined && !isExampleButNotBoolean) {
+      return {
+        isDefaultExample: false,
+        isExample: true,
+        example: BooleanUtils.toBoolean(example),
+      };
+    }
+
     // Default example
     if (isDefaultExample || isExampleButNotBoolean) {
       return {
         isDefaultExample: true,
         isExample: true,
-      };
-    }
-
-    // Example
-    if (example != undefined) {
-      return {
-        isDefaultExample: false,
-        isExample: true,
-        example: BooleanUtils.toBoolean(example),
       };
     }
 
