@@ -15,7 +15,6 @@
 [@id:287883]
 [%][%true-false]
 [@labelTrue:rather yes][@labelFalse:rather no]
-++
 ====
 [+A house is bigger than a car.]
 ====
@@ -32,7 +31,6 @@
 [@id:287883]
 [%][%true-false]
 [@labelTrue:rather yes][@labelFalse:rather no]
-++
 ====
 [+A house
 

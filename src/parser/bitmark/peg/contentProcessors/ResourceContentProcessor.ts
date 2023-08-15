@@ -133,6 +133,7 @@ function resourceContentProcessor(
   const type = ResourceType.fromValue(key);
   if (type) {
     // Parse the resource chain
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, chain);
 
     const resource = resourceBuilder.resource({

@@ -1,5 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
-import { BitType, RootBitType, RootBitTypeMetadata } from '../../../../model/enum/BitType';
+import { AliasBitType, BitType, RootBitType, RootBitTypeMetadata } from '../../../../model/enum/BitType';
 import { CardSetType } from '../../../../model/enum/CardSetType';
 import { ResourceType } from '../../../../model/enum/ResourceType';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
@@ -8,6 +8,7 @@ import {
   AudioResource,
   BotResponse,
   Choice,
+  Flashcard,
   Heading,
   ImageResource,
   Matrix,
@@ -54,6 +55,10 @@ function buildCards(
   const cardSetType = meta && meta.cardSet?.type;
 
   switch (cardSetType) {
+    case CardSetType.flashcards:
+      result = parseFlashcards(context, bitType, processedCardSet);
+      break;
+
     case CardSetType.elements:
       result = parseElements(context, bitType, processedCardSet);
       break;
@@ -123,14 +128,16 @@ function processCardSet(
         variants: [],
       };
       processedCard.sides.push(processedSide);
-      for (const content of side.variants) {
+      for (const variant of side.variants) {
+        const { parser, content } = variant;
         const processedVariant: ProcessedCardVariant = {
+          parser,
           no: variantNo++,
         } as ProcessedCardVariant;
         processedSide.variants.push(processedVariant);
         const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, content);
 
-        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags (elements)', tags);
+        if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags', tags);
 
         // Validate the cardBody
         tags.cardBody = BitmarkPegParserValidator.checkCardBody(
@@ -156,6 +163,80 @@ function processCardSet(
   return processedCardSet;
 }
 
+function parseFlashcards(
+  context: BitmarkPegParserContext,
+  bitType: BitType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
+  const flashcards: Flashcard[] = [];
+  let question = '';
+  let answer: string | undefined;
+  let alternativeAnswers: string[] = [];
+  let cardIndex = 0;
+  let variantIndex = 0;
+  let extraTags = {};
+  let questionVariant: ProcessedCardVariant | undefined;
+  const onlyOneCardAllowed = bitType.alias === AliasBitType.flashcard1;
+
+  for (const card of cardSet.cards) {
+    // Reset the question and answers
+    question = '';
+    answer = undefined;
+    alternativeAnswers = [];
+    variantIndex = 0;
+    extraTags = {};
+
+    for (const side of card.sides) {
+      for (const content of side.variants) {
+        const { cardBody, ...tags } = content.data;
+        extraTags = {
+          ...extraTags,
+          ...tags,
+        };
+
+        if (variantIndex === 0) {
+          questionVariant = content;
+          question = cardBody ?? '';
+        } else if (variantIndex === 1) {
+          answer = cardBody ?? '';
+        } else {
+          alternativeAnswers.push(cardBody ?? '');
+        }
+        variantIndex++;
+      }
+    }
+
+    // Add the flashcard
+    if (cardIndex === 0 || !onlyOneCardAllowed) {
+      // if (question) {
+      flashcards.push(
+        builder.flashcard({
+          question,
+          answer,
+          alternativeAnswers: alternativeAnswers.length > 0 ? alternativeAnswers : undefined,
+          ...extraTags,
+        }),
+      );
+      // } else {
+      //   context.addWarning('Ignoring card with empty question', questionVariant);
+      // }
+    } else {
+      // Only one card allowed, add a warning and ignore the card
+      context.addWarning(
+        `Bit '${bitType.alias}' should only contain one card. Ignore subsequent card: '${question}'`,
+        questionVariant,
+      );
+      break;
+    }
+
+    cardIndex++;
+  }
+
+  return {
+    flashcards: flashcards.length > 0 ? flashcards : undefined,
+  };
+}
+
 function parseElements(
   _context: BitmarkPegParserContext,
   _bitType: BitType,
@@ -168,7 +249,11 @@ function parseElements(
       for (const content of side.variants) {
         const tags = content.data;
 
+        // if (tags.cardBody) {
         elements.push(tags.cardBody ?? '');
+        // } else {
+        //   context.addWarning('Ignoring card with empty element', content);
+        // }
       }
     }
   }
@@ -197,12 +282,16 @@ function parseStatements(
         // As .true-false only has one statement per card, we can just add the extra tags to the statement.
         if (Array.isArray(chainedStatements)) {
           for (const s of chainedStatements) {
+            // if (s.text) {
             const statement = builder.statement({
               ...s,
               ...s.itemLead,
               ...tags,
             });
             statements.push(statement);
+            // } else {
+            //   context.addWarning('Ignoring card with empty statement', content);
+            // }
           }
         }
       }
@@ -261,11 +350,15 @@ function parseQuiz(
           }
         }
 
+        // if (tags.choices || tags.responses) {
         const quiz = builder.quiz({
           ...tags,
           isDefaultExample,
         });
         quizzes.push(quiz);
+        // } else {
+        //   context.addWarning('Ignoring card with empty quiz', content);
+        // }
       }
     }
   }
@@ -301,12 +394,16 @@ function parseQuestions(
       for (const content of side.variants) {
         const tags = content.data;
 
+        // if (tags.cardBody) {
         const q = builder.question({
           question: tags.cardBody ?? '',
           ...tags,
         });
-
         questions.push(q);
+        // }
+        // else {
+        //   context.addWarning('Ignoring card with empty body text', content);
+        // }
       }
     }
   }
@@ -331,6 +428,11 @@ function parseMatchPairs(
   let keyAudio: AudioResource | undefined = undefined;
   let keyImage: ImageResource | undefined = undefined;
   let extraTags = {};
+  let isDefaultExampleCard = false;
+  let exampleCard: string | undefined;
+  let isDefaultExampleSide = false;
+  let exampleSide: string | undefined;
+  // let variant: ProcessedCardVariant | undefined;
 
   for (const card of cardSet.cards) {
     forKeys = undefined;
@@ -340,11 +442,17 @@ function parseMatchPairs(
     keyImage = undefined;
     sideIdx = 0;
     extraTags = {};
+    isDefaultExampleSide = false;
+    exampleSide = '';
 
     for (const side of card.sides) {
       for (const content of side.variants) {
+        // variant = content;
         const { cardBody, title, resources, isDefaultExample, example, ...tags } = content.data;
-        const isExample = isDefaultExample || example != undefined;
+
+        // Example
+        isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
+        exampleSide = example ? example : exampleSide;
 
         // Get the 'heading' which is the [#title] at level 1
         const heading = title && title[1];
@@ -353,6 +461,8 @@ function parseMatchPairs(
           // First side
           if (heading != null) {
             forKeys = heading;
+            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+            exampleCard = example ? example : exampleCard;
           } else if (Array.isArray(resources) && resources.length > 0) {
             // TODO - should search the correct resource type based on the bit type
             const resource = resources[0];
@@ -370,9 +480,13 @@ function parseMatchPairs(
           // Subsequent sides
           if (heading != null) {
             forValues.push(heading);
+            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+            exampleCard = example ? example : exampleCard;
           } else if (title == null) {
             // If not a heading, it is a pair
-            pairValues.push(cardBody ?? '');
+            const value = cardBody ?? '';
+            pairValues.push(value);
+            if ((isDefaultExampleCard || isDefaultExampleSide) && !exampleSide) exampleSide = value;
           }
         }
 
@@ -382,9 +496,6 @@ function parseMatchPairs(
           ...tags,
           isCaseSensitive: true,
         };
-        // Allow example from any card side
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (isExample) (extraTags as any).isDefaultExample = true;
       }
       sideIdx++;
     }
@@ -395,6 +506,12 @@ function parseMatchPairs(
         forValues,
       });
     } else {
+      // if (pairKey || keyAudio || keyImage) {
+      // Calculate final example and isDefaultExample
+      if (isDefaultExampleSide) exampleCard = undefined;
+      const isDefaultExample = isDefaultExampleSide || isDefaultExampleCard;
+      const example = exampleSide || exampleCard;
+
       const pair = builder.pair({
         key: pairKey ?? '',
         keyAudio,
@@ -402,8 +519,13 @@ function parseMatchPairs(
         values: pairValues,
         isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         ...extraTags,
+        isDefaultExample,
+        example,
       });
       pairs.push(pair);
+      // } else {
+      //   context.addWarning('Ignoring card with empty body text', variant);
+      // }
     }
   }
 
@@ -427,11 +549,15 @@ function parseMatchMatrix(
   let matrixCells: MatrixCell[] = [];
   let matrixCellValues: string[] = [];
   let matrixCellTags = {};
-  let extraTagsSideLevel = {};
-  let isDefaultExampleAllLevel = false;
-  let isDefaultExampleMartixLevel = false;
+  let isDefaultExampleCard = false;
+  let exampleCard: string | undefined;
+  let isDefaultExampleSide = false;
+  let exampleSide: string | undefined;
+  let isDefaultExampleVariant = false;
+  let exampleVariant: string | undefined;
   // let keyAudio: AudioResource | undefined = undefined;
   // let keyImage: ImageResource | undefined = undefined;
+  // let variant: ProcessedCardVariant | undefined;
 
   for (const card of cardSet.cards) {
     forKeys = undefined;
@@ -441,18 +567,24 @@ function parseMatchMatrix(
     matrixCells = [];
     matrixCellValues = [];
     sideIdx = 0;
-    isDefaultExampleMartixLevel = false;
+    isDefaultExampleSide = false;
+    exampleSide = '';
 
     for (const side of card.sides) {
       matrixCellValues = [];
       matrixCellTags = {};
-      extraTagsSideLevel = {};
+      isDefaultExampleVariant = false;
+      exampleVariant = '';
 
       for (const content of side.variants) {
+        // variant = content;
         const tags = content.data;
 
         const { title, cardBody, isDefaultExample, example, ...restTags } = tags;
-        const isExample = isDefaultExample || example != undefined;
+
+        // Example
+        isDefaultExampleVariant = isDefaultExample === true ? true : isDefaultExampleVariant;
+        exampleVariant = example ? example : exampleVariant;
 
         // Merge the tags into the matrix cell tags
         Object.assign(matrixCellTags, restTags);
@@ -471,34 +603,42 @@ function parseMatchMatrix(
             //   } else if (tags.resource.type === ResourceType.image) {
             //     keyImage = tags.resource as ImageResource;
             //   }
-            isDefaultExampleAllLevel = isExample ? true : isDefaultExampleAllLevel;
+            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+            exampleCard = example ? example : exampleCard;
           } else {
             // If not a heading or resource, it is a matrix
             matrixKey = cardBody;
-            isDefaultExampleMartixLevel = isExample ? true : isDefaultExampleMartixLevel;
+            isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
+            exampleSide = example ? example : exampleSide;
           }
         } else {
           // Subsequent sides
           if (heading != null) {
             forValues.push(heading);
-            // isDefaultExampleMartixLevel = isExample ? true : isDefaultExampleAllLevel;
+            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+            exampleCard = example ? example : exampleCard;
           } else if (tags.title == null) {
-            // If not a heading, it is a  matrix
-            matrixCellValues.push(cardBody ?? '');
+            // If not a heading, it is a matrix cell value
+            const value = cardBody ?? '';
+            matrixCellValues.push(value);
+            if ((isDefaultExampleCard || isDefaultExampleVariant) && !exampleVariant) exampleVariant = value;
           }
         }
-
-        // Allow example from any card side
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (isExample) (extraTagsSideLevel as any).isDefaultExample = true;
       }
 
       // Finished looping variants, create matrix cell
       if (sideIdx > 0) {
+        // Calculate final example and isDefaultExample
+        if (isDefaultExampleVariant) exampleSide = exampleCard = undefined;
+        if (isDefaultExampleSide) exampleCard = undefined;
+        const isDefaultExample = isDefaultExampleVariant || isDefaultExampleSide || isDefaultExampleCard;
+        const example = exampleVariant || exampleSide || exampleCard;
+
         const matrixCell = builder.matrixCell({
           values: matrixCellValues,
           ...matrixCellTags,
-          ...extraTagsSideLevel,
+          isDefaultExample,
+          example,
         });
         matrixCells.push(matrixCell);
       }
@@ -512,6 +652,7 @@ function parseMatchMatrix(
         forValues,
       });
     } else {
+      // if (matrixKey) {
       const m = builder.matrix({
         key: matrixKey ?? '',
         // keyAudio,
@@ -519,9 +660,11 @@ function parseMatchMatrix(
         cells: matrixCells,
         isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         isCaseSensitive: true,
-        isDefaultExample: isDefaultExampleAllLevel || isDefaultExampleMartixLevel,
       });
       matrix.push(m);
+      // } else {
+      //   context.addWarning('Ignoring card with empty body text', variant);
+      // }
     }
   }
 

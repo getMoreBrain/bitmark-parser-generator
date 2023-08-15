@@ -30,6 +30,10 @@ function exampleTagContentProcessor(
     case RootBitType.highlightText:
       handleGapOrSelectExample(context, bitType, example, target);
       break;
+    case RootBitType.mark:
+      // Default only example handling
+      handleDefaultOnlyExample(context, bitType, example, target);
+      break;
     default:
       // Standard example handling
       handleStandardExample(context, bitType, example, target);
@@ -51,9 +55,11 @@ function handleGapOrSelectExample(
   if (trueFalse) {
     if (example === true) {
       trueFalse.isDefaultExample = true;
+      trueFalse.example = undefined;
     } else {
       // TODO: This should raise a warning, because a value on the example tag is not allowed for select
       trueFalse.isDefaultExample = true;
+      trueFalse.example = undefined;
     }
   } else if (Array.isArray(target.solutions) && target.solutions.length > 0) {
     if (example === true) {
@@ -67,6 +73,16 @@ function handleGapOrSelectExample(
   }
 }
 
+function handleDefaultOnlyExample(
+  _context: BitmarkPegParserContext,
+  _bitType: BitType,
+  _example: string | boolean,
+  target: BitContentProcessorResult,
+): void {
+  target.isDefaultExample = true;
+  target.example = undefined;
+}
+
 function handleStandardExample(
   _context: BitmarkPegParserContext,
   _bitType: BitType,
@@ -75,6 +91,7 @@ function handleStandardExample(
 ): void {
   if (example === true) {
     target.isDefaultExample = true;
+    target.example = undefined;
   } else {
     target.example = example as string;
   }

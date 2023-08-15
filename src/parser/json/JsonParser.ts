@@ -20,12 +20,15 @@ import {
   BodyText,
   BotResponse,
   Choice,
+  Flashcard,
   FooterText,
   Gap,
   Heading,
   Highlight,
   HighlightText,
   ImageResource,
+  Mark,
+  MarkConfig,
   Matrix,
   MatrixCell,
   Pair,
@@ -46,12 +49,14 @@ import {
   MatrixCellJson,
   PairJson,
   QuestionJson,
+  FlashcardJson,
   QuizJson,
   ResponseJson,
   StatementJson,
   PartnerJson,
   BotResponseJson,
   ExampleJson,
+  MarkConfigJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -61,6 +66,7 @@ import {
   GapJson,
   SelectJson,
   HighlightJson,
+  MarkJson,
 } from '../../model/json/BodyBitJson';
 
 interface ReferenceAndReferenceProperty {
@@ -264,12 +270,14 @@ class JsonParser {
       instruction,
       example,
       partner,
+      marks,
       resource,
       body,
       sampleSolution,
       elements,
       statement,
       isCorrect,
+      cards,
       statements,
       responses,
       quizzes,
@@ -294,7 +302,14 @@ class JsonParser {
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
 
+    // Partner
     const partnerNode = this.partnerBitToAst(partner);
+
+    // Mark Config
+    const markConfigNode = this.markConfigBitToAst(marks);
+
+    // flashcards
+    const flashcardNodes = this.flashcardBitsToAst(cards);
 
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements, example);
@@ -386,10 +401,12 @@ class JsonParser {
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
       partner: partnerNode,
+      markConfig: markConfigNode,
       resource: resourceNode,
       body: bodyNode,
       sampleSolution: sampleSolution,
       elements,
+      flashcards: flashcardNodes,
       statements: statementNodes,
       responses: responseNodes,
       quizzes: quizNodes,
@@ -414,6 +431,46 @@ class JsonParser {
     }
 
     return node;
+  }
+
+  private markConfigBitToAst(marks?: MarkConfigJson[]): MarkConfig[] | undefined {
+    const nodes: MarkConfig[] = [];
+    if (Array.isArray(marks)) {
+      for (const m of marks) {
+        const { mark, color, emphasis } = m;
+        const node = builder.markConfig({
+          mark,
+          color,
+          emphasis,
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private flashcardBitsToAst(flashcards?: FlashcardJson[]): Flashcard[] | undefined {
+    const nodes: Flashcard[] = [];
+    if (Array.isArray(flashcards)) {
+      for (const c of flashcards) {
+        const { question, answer, alternativeAnswers, item, lead, hint, instruction, example } = c;
+        const node = builder.flashcard({
+          question,
+          answer,
+          alternativeAnswers,
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example),
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
   }
 
   private statementBitsToAst(
@@ -861,6 +918,10 @@ class JsonParser {
         const gap = this.gapBitToAst(bit);
         return gap;
       }
+      case BodyBitType.mark: {
+        const mark = this.markBitToAst(bit);
+        return mark;
+      }
       case BodyBitType.select: {
         const select = this.selectBitToAst(bit);
         return select;
@@ -905,6 +966,20 @@ class JsonParser {
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
       isCaseSensitive,
+    });
+
+    return bitNode;
+  }
+
+  private markBitToAst(bit: MarkJson): Mark {
+    const { solution, mark, item, lead, hint, instruction, example } = bit;
+
+    // Build bit
+    const bitNode = builder.mark({
+      solution,
+      mark,
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+      ...this.parseExample(example),
     });
 
     return bitNode;

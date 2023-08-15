@@ -1,0 +1,30 @@
+[
+  {
+    "bitmark": "[.review-author-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt.",
+    "bit": {
+      "type": "review-author-note",
+      "format": "bitmark--",
+      "body": "Nach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["210022"],
+      "lead": "**Lernziele**"
+    }
+  },
+  {
+    "bitmark": "[.review-author-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n• die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.\n• erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.\n• verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird.",
+    "bit": {
+      "type": "review-author-note",
+      "format": "bitmark++",
+      "body": "Nach der Bearbeitung dieses Kapitels können Sie ...\n• die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.\n• erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.\n• verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird.",
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "id": ["210040"],
+      "lead": "**Lernziele**"
+    }
+  }
+]

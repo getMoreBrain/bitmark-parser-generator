@@ -6,7 +6,7 @@ export interface BodyBitsJson {
   [key: string]: BodyBitJson;
 }
 
-export type BodyBitJson = GapJson | SelectJson | HighlightJson;
+export type BodyBitJson = GapJson | MarkJson | SelectJson | HighlightJson;
 
 export interface BaseBodyBitJson {
   type: string; // body bit type
@@ -28,6 +28,18 @@ export interface GapJson extends BaseBodyBitJson {
   isExample: boolean;
   example: ExampleJson;
   solutions: string[];
+}
+
+export interface MarkJson extends BaseBodyBitJson {
+  type: 'mark'; // body bit type
+  solution: string;
+  mark: string;
+  // item: Text;
+  // lead: Text;
+  // hint: Text;
+  // instruction: Text;
+  isExample: boolean;
+  example: ExampleJson;
 }
 
 export interface SelectJson extends BaseBodyBitJson {

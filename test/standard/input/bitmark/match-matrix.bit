@@ -24,6 +24,8 @@ sie sprachen
 ===
 
 
+|| [@example] tests follow ||
+
 [.match-matrix:bitmark--]
 ===
 [#Heading1]
@@ -32,7 +34,81 @@ sie sprachen
 ==
 [#Heading3]
 ===
-[@example]
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B[@example]
+--
+C
+===
+should be the text not the value
+==
+D
+==
+E
+--
+F[@example]
+===
+
+[.match-matrix:bitmark--]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B[@example:Y]
+--
+C
+===
+should be the text not the value
+==
+D[@example]
+==
+E
+--
+F[@example:X]
+===
+
+[.match-matrix:bitmark--]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+[@example]Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+--
+C
+===
+[@example:Y]should be the text not the value
+==
+D
+==
+E
+--
+F[@example:X]
+===
+
+[.match-matrix:bitmark--]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[@example:X][#Heading3]
+===
 Herr De Weck kauft Milch und Brot im Supermarkt.
 ==
 A
@@ -41,9 +117,42 @@ B
 --
 C
 ===
-
+should be the text not the value
+==
+D
+==
+E
+--
+F[@example]
+===
 
 [.match-matrix:bitmark--]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[@example][#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+--
+C
+===
+should be the text not the value
+==
+D
+==
+E
+--
+F
+===
+
+[.match-matrix:bitmark--]
+[@example]
 ===
 [#Heading1]
 ==
@@ -57,5 +166,64 @@ A
 ==
 B
 --
+C
+===
+should be the text not the value
+==
+D
+==
+E
+--
+F
+===
+
+[.match-matrix:bitmark--]
+[@example:X]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+--
+C
+===
+should be the text not the value
+==
+D
+==
+E
+--
+F
+===
+
+[.match-matrix:bitmark--]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[@example:99][#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A
+==
+B
+--
 C[@example]
+===
+[@example:Y]should be the text not the value
+==
+D[@example:X]
+==
+E
+--
+F
 ===

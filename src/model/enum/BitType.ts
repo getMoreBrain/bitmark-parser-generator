@@ -80,6 +80,7 @@ const RootBitType = superenum({
   botActionResponse: 'bot-action-response',
   botActionSend: 'bot-action-send',
   browserImage: 'browser-image',
+  card1: 'card-1',
   chapter: 'chapter',
   cloze: 'cloze',
   clozeAndMultipleChoiceText: 'cloze-and-multiple-choice-text',
@@ -92,7 +93,6 @@ const RootBitType = superenum({
   essay: 'essay',
   example: 'example',
   flashcard: 'flashcard',
-  flashcard1: 'flashcard-1',
   focusImage: 'focus-image',
   highlightText: 'highlight-text',
   image: 'image',
@@ -136,13 +136,6 @@ const RootBitType = superenum({
 });
 
 const AliasBitType = superenum({
-  card1: 'card-1',
-  question1: 'question-1',
-  survey1: 'survey-1',
-  surveyAnonymous1: 'survey-anonymous-1',
-  conclusion: 'conclusion',
-  footNote: 'foot-note',
-  stickyNote: 'sticky-note',
   aiPrompt: 'ai-prompt',
   anchor: 'anchor',
   appAiPrompt: 'app-ai-prompt',
@@ -176,6 +169,9 @@ const AliasBitType = superenum({
   bookIntroduction: 'book-introduction',
   bookListOfContributors: 'book-list-of-contributors',
   bookNotes: 'book-notes',
+  bookLink: 'book-link',
+  bookLinkNext: 'book-link-next',
+  bookLinkPrev: 'book-link-prev',
   bookPostscript: 'book-postscript',
   bookPreface: 'book-preface',
   bookPrologue: 'book-prologue',
@@ -213,6 +209,7 @@ const AliasBitType = superenum({
   coachSelfReflectionMultipleResponse1: 'coach-self-reflection-multiple-response-1',
   coachSelfReflectionRating: 'coach-self-reflection-rating',
   coachVideoTranscript: 'coach-video-transcript',
+  conclusion: 'conclusion',
   conversationLeft1Scream: 'conversation-left-1-scream',
   conversationLeft1Thought: 'conversation-left-1-thought',
   conversationRight1: 'conversation-right-1',
@@ -240,6 +237,8 @@ const AliasBitType = superenum({
   editorial: 'editorial',
   editorNote: 'editor-note',
   featured: 'featured',
+  flashcard1: 'flashcard-1',
+  footNote: 'foot-note',
   groupBorn: 'group-born',
   groupDied: 'group-died',
   help: 'help',
@@ -263,6 +262,7 @@ const AliasBitType = superenum({
   langLearningStrategy: 'lang-learning-strategy',
   langLevelDown: 'lang-level-down',
   langLevelUp: 'lang-level-up',
+  langLifeSkillIcon: 'lang-life-skill-icon',
   langLifeSkills: 'lang-life-skills',
   langLikeALocal: 'lang-like-a-local',
   langMaterial: 'lang-material',
@@ -293,14 +293,23 @@ const AliasBitType = superenum({
   notebookArticle: 'notebook-article',
   page: 'page',
   preparationNote: 'preparation-note',
+  question1: 'question-1',
   recordAudio: 'record-audio',
   releaseNotesSummary: 'release-notes-summary',
   remark: 'remark',
+  reviewApprovedNote: 'review-approved-note',
+  reviewAuthorNote: 'review-author-note',
+  reviewNote: 'review-note',
+  reviewRequestForReviewNote: 'review-request-for-review-note',
+  reviewReviewerNote: 'review-reviewer-note',
   selfAssessment: 'self-assessment',
   sideNote: 'side-note',
   statement: 'statement',
+  stickyNote: 'sticky-note',
   summary: 'summary',
   summaryAi: 'summary-ai',
+  survey1: 'survey-1',
+  surveyAnonymous1: 'survey-anonymous-1',
   takePicture: 'take-picture',
   videoLandscape: 'video-landscape',
   videoPortrait: 'video-portrait',
@@ -372,6 +381,7 @@ const RootBitTypeToAliasMap = {
     AliasBitType.coachSelfReflectionEssay,
     AliasBitType.coachCallToActionEssay,
   ],
+  // .article with example
   [RootBitType.example]: [
     AliasBitType.appAiPrompt,
     AliasBitType.aiPrompt,
@@ -440,6 +450,11 @@ const RootBitTypeToAliasMap = {
     AliasBitType.preparationNote,
     AliasBitType.releaseNotesSummary,
     AliasBitType.remark,
+    AliasBitType.reviewNote,
+    AliasBitType.reviewAuthorNote,
+    AliasBitType.reviewReviewerNote,
+    AliasBitType.reviewRequestForReviewNote,
+    AliasBitType.reviewApprovedNote,
     AliasBitType.selfAssessment,
     AliasBitType.sideNote,
     // BitTypeAlias.statement,
@@ -449,6 +464,10 @@ const RootBitTypeToAliasMap = {
     AliasBitType.warning,
     AliasBitType.workbookArticle,
   ],
+  [RootBitType.flashcard]: [
+    //
+    AliasBitType.flashcard1,
+  ],
   [RootBitType.image]: [
     //
     AliasBitType.imageLandscape,
@@ -457,6 +476,7 @@ const RootBitTypeToAliasMap = {
     AliasBitType.imagePrototype,
     AliasBitType.imageSuperWide,
     AliasBitType.imageZoom,
+    AliasBitType.langLifeSkillIcon,
   ],
   [RootBitType.interview]: [
     //
@@ -465,6 +485,9 @@ const RootBitTypeToAliasMap = {
   ],
   [RootBitType.learningPathBook]: [
     //
+    AliasBitType.bookLink,
+    AliasBitType.bookLinkNext,
+    AliasBitType.bookLinkPrev,
     AliasBitType.learningPathBotTraining,
     AliasBitType.learningPathClassroomEvent,
     AliasBitType.learningPathClassroomTraining,
@@ -475,9 +498,8 @@ const RootBitTypeToAliasMap = {
     AliasBitType.learningPathSign,
     AliasBitType.learningPathStep,
   ],
-  [RootBitType.mark]: [
+  [RootBitType.card1]: [
     //
-    AliasBitType.card1,
     AliasBitType.question1,
     AliasBitType.survey1,
     AliasBitType.surveyAnonymous1,

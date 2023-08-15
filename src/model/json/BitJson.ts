@@ -71,6 +71,8 @@ export interface BitJson {
 
   partner: PartnerJson;
 
+  marks: MarkConfigJson[];
+
   // NEW property - not in the ANTLR parser
   extraProperties: {
     [key: string]: unknown | unknown[];
@@ -83,6 +85,7 @@ export interface BitJson {
   elements: string[];
   statement: string;
   isCorrect: boolean;
+  cards: FlashcardJson[];
   statements: StatementJson[];
   responses: ResponseJson[] | BotResponseJson[];
   quizzes: QuizJson[];
@@ -98,6 +101,24 @@ export interface BitJson {
 export interface PartnerJson {
   name: string;
   avatarImage: ImageResourceJson;
+}
+
+export interface MarkConfigJson {
+  mark: string;
+  color: string;
+  emphasis: string;
+}
+
+export interface FlashcardJson {
+  question: string;
+  answer: string;
+  alternativeAnswers: string[];
+  item: Text;
+  lead: Text;
+  hint: Text;
+  instruction: Text;
+  isExample: boolean;
+  example: ExampleJson;
 }
 
 export interface StatementJson {

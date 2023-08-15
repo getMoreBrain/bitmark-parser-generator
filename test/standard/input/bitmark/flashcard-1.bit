@@ -1,0 +1,73 @@
+[.flashcard-1]
+
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2
+++
+Alternative Answer 2
+Card 1, Side 2
+~~~~
+
+Footer anyone?
+
+[.flashcard-1]
+
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2
+++
+Alternative Answer 2
+Card 1, Side 2
+
+
+[.flashcard-1]
+[@example]
+[%item][%lead]
+Somebody
+====
+Question 2?
+Card 2, Side 1
+--
+Answer 2
+Card 2, Side 2, No footer
+[%item][%lead]
+
+
+[.flashcard-1]
+[%item][%lead]
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2, No footer
+[%item][%lead]
+[@example]
+
+[.flashcard-1]
+[%item][%lead]
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2, No footer
+====
+Question Too Many?
+Card 2, Side 1
+--
+Answer Too Many
+Card 2, Side 2,
+~~~~
+
+Footer anyone?

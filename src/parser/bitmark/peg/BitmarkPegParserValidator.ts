@@ -697,7 +697,8 @@ class BitmarkPegParserValidator {
       sideIndex = 0;
       for (const side of card.sides) {
         variantIndex = 0;
-        for (const variantContent of side.variants) {
+        for (const variant of side.variants) {
+          const variantContent = variant.content;
           let validatedContent: BitContent[] | undefined;
           const variantConfig = this.getVariantConfig(cardSetConfig.variants, sideIndex, variantIndex);
 
@@ -719,10 +720,16 @@ class BitmarkPegParserValidator {
 
           // TODO - add the validated content to the card set, or remove the invalid variant
           if (validatedContent && validatedContent.length > 0) {
-            side.variants[variantIndex] = validatedContent;
+            side.variants[variantIndex] = {
+              parser: variant.parser,
+              content: validatedContent,
+            };
           } else {
             // Variant is invalid, remove it
-            side.variants[variantIndex] = [];
+            side.variants[variantIndex] = {
+              parser: variant.parser,
+              content: [],
+            };
           }
 
           variantIndex++;

@@ -17,8 +17,10 @@
  */
 
 import { Bit } from '../../../model/ast/Nodes';
+import { CardSetVersion } from '../../../model/enum/CardSetVersion';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserLocation } from '../../../model/parser/ParserLocation';
+import { StringUtils } from '../../../utils/StringUtils';
 
 import { PeggyGrammarLocation } from './PeggyGrammarLocation';
 
@@ -237,6 +239,12 @@ class BitmarkPegParserHelper {
     };
 
     if (cards) {
+      // Get current parser location
+      const parser = {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      };
+
       for (const content of cards) {
         if (!content) continue;
         const { type, value: cardData, parser } = content as TypeValue;
@@ -272,6 +280,16 @@ class BitmarkPegParserHelper {
           side.variants[cardContentIndex].value += value;
         }
       }
+
+      // Remove any completely empty cards
+      unparsedCardSet.cards = unparsedCardSet.cards.filter((card) => {
+        return card.sides.some((side) => {
+          return side.variants.some((variant) => {
+            const trimmed = StringUtils.trimmedString(variant.value);
+            return trimmed.length !== 0;
+          });
+        });
+      });
 
       // Parse the card data
       for (const unparsedCard of unparsedCardSet.cards) {
@@ -312,7 +330,10 @@ class BitmarkPegParserHelper {
 
             if (DEBUG_TRACE_CARD_PARSED) this.debugPrint('parsedCardContent', content);
 
-            side.variants.push(content);
+            side.variants.push({
+              parser,
+              content,
+            });
           }
         }
       }
@@ -358,7 +379,7 @@ class BitmarkPegParserHelper {
 
     if (Array.isArray(value) && value.length === 2) {
       value = value[0];
-      if (version === 1) {
+      if (version === CardSetVersion.v1) {
         isCardDivider = value === CARD_DIVIDER_V1;
         isSideDivider = value === CARD_SIDE_DIVIDER_V1;
         isVariantDivider = value === CARD_VARIANT_DIVIDER_V1;

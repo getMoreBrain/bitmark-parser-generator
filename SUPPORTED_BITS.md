@@ -43,6 +43,9 @@
 | book-imprint | ✅ | ✅ | ✅ |  |
 | book-inciting-incident | ✅ | ✅ | ✅ |  |
 | book-introduction | ✅ | ✅ | ✅ |  |
+| book-link | ✅ | ✅ | ✅ |  |
+| book-link-prev | ✅ | ✅ | ✅ |  |
+| book-link-next | ✅ | ✅ | ✅ |  |
 | book-list-of-contributors | ✅ | ✅ | ✅ |  |
 | book-notes | ✅ | ✅ | ✅ |  |
 | book-postscript | ✅ | ✅ | ✅ |  |
@@ -126,8 +129,8 @@
 | essay | ✅ | ✅ | ✅ |  |
 | example | ✅ | ✅ | ✅ |  |
 | featured | ✅ | ✅ | ✅ |  |
-| flashcard | ➖ | ➖ | ➖ | LEGACY? |
-| flashcard-1 | ➖ | ➖ | ➖ | LEGACY? |
+| flashcard | ✅ | ✅ | ✅ |  |
+| flashcard-1 | ✅ | ✅ | ✅ |  |
 | flashcard-language-1 | ➖ | ➖ | ➖ | LEGACY? |
 | flashcard-language-set | ➖ | ➖ | ➖ | LEGACY? |
 | flashcard-set | ➖ | ➖ | ➖ | LEGACY? |
@@ -182,8 +185,8 @@
 | learning-path-sign | ➖ | ➖ | ➖ | LEGACY? |
 | learning-path-step | ✅ | ✅ | ✅ |  |
 | learning-path-video-call | ✅ | ✅ | ✅ |  |
-| mark | ✅ | ❌ | ❌ | NOT WORKING IN ANTLR PARSER, not sure how to implement |
-| match | ✅ | ✅ | ❌ |  |
+| mark | ✅ | ✅ | ✅ |  |
+| match | ✅ | ✅ | ✅ |  |
 | match-all | ✅ | ✅ | ✅ |  |
 | match-all-reverse | ✅ | ✅ | ✅ |  |
 | match-audio | ➖ | ➖ | ➖ | LEGACY? |
@@ -212,6 +215,11 @@
 | release-note | ✅ | ✅ | ✅ |  |
 | release-notes-summary | ✅ | ✅ | ✅ |  |
 | remark | ✅ | ✅ | ✅ |  |
+| review-note | ✅ | ✅ | ✅ |  |
+| review-author-note | ✅ | ✅ | ✅ |  |
+| review-reviewer-note | ✅ | ✅ | ✅ |  |
+| review-request-for-review-note | ✅ | ✅ | ✅ |  |
+| review-approved-note | ✅ | ✅ | ✅ |  |
 | sample-solution | ✅ | ✅ | ✅ |  |
 | scorm | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |
 | screenshot | ✅ | ❌ | ❌ | TODO - CREATE TEST |

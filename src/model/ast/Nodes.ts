@@ -66,6 +66,7 @@ export interface Bit {
   labelFalse?: Property;
   quotedPerson?: Property;
   partialAnswer?: Property;
+  markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: string;
   title?: string;
@@ -134,6 +135,12 @@ export interface Partner {
   avatarImage?: ImageResource;
 }
 
+export interface MarkConfig {
+  mark: string;
+  color?: string;
+  emphasis?: string;
+}
+
 // Statement
 
 export interface Statement extends Decision {
@@ -159,6 +166,20 @@ export interface Decision {
   hint?: string;
   instruction?: string;
   isCaseSensitive?: boolean;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
+}
+
+// Flashcard
+
+export interface Flashcard {
+  question: string;
+  answer?: string;
+  alternativeAnswers?: string[];
+  itemLead?: ItemLead;
+  hint?: string;
+  instruction?: string;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -264,7 +285,7 @@ export interface BodyPart {
 }
 
 export interface BodyBit extends BodyPart {
-  type: 'gap' | 'select' | 'highlight';
+  type: 'gap' | 'mark' | 'select' | 'highlight';
 }
 
 // Gap
@@ -277,6 +298,20 @@ export interface Gap extends BodyBit {
     hint?: string;
     instruction?: string;
     isCaseSensitive?: boolean;
+    isExample: boolean;
+    isDefaultExample: boolean;
+    example?: Example;
+  };
+}
+
+export interface Mark extends BodyBit {
+  type: 'mark';
+  data: {
+    solution: string;
+    mark?: string;
+    itemLead?: ItemLead;
+    hint?: string;
+    instruction?: string;
     isExample: boolean;
     isDefaultExample: boolean;
     example?: Example;
@@ -344,6 +379,7 @@ export interface HighlightText {
 export interface CardNode {
   questions?: Question[];
   elements?: string[];
+  flashcards?: Flashcard[];
   statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];
