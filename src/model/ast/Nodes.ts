@@ -121,6 +121,12 @@ export interface ItemLead {
 
 export type Example = string | boolean;
 
+export interface WithExample {
+  isDefaultExample: boolean;
+  isExample: boolean;
+  example?: Example;
+}
+
 // Extra Properties
 
 export interface ExtraProperties {

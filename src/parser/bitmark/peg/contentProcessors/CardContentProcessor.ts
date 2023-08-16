@@ -325,35 +325,48 @@ function parseQuiz(
   const insertResponses = bitType.root === RootBitType.multipleResponse;
   if (!insertChoices && !insertResponses) return {};
 
+  let isDefaultExampleCard = false;
+  let exampleCard: string | undefined;
+
   for (const card of cardSet.cards) {
+    isDefaultExampleCard = false;
+    exampleCard = '';
+
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const tags = content.data;
-        const isDefaultExample = tags.isDefaultExample || tags.example != undefined;
+        const { isDefaultExample, example, ...tags } = content.data;
 
-        if (insertResponses) {
-          if (tags.trueFalse && tags.trueFalse.length > 0) {
-            tags.responses = [];
-            for (const tf of tags.trueFalse) {
-              const response = builder.response(tf);
-              tags.responses.push(response);
-            }
+        // Example
+        isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+        exampleCard = example ? example : exampleCard;
+
+        // Insert choices / responses
+        if (tags.trueFalse && tags.trueFalse.length > 0) {
+          const responsesOrChoices: Choice[] | Response[] = [];
+          const builderFunc = insertResponses ? builder.response : builder.choice;
+
+          for (const tf of tags.trueFalse) {
+            const { isDefaultExample: isDefaultExampleTf, example: exampleTf, ...tfTags } = tf;
+            const isDefaultExample = isDefaultExampleTf || isDefaultExampleCard;
+            const example = exampleTf || exampleCard;
+
+            const response = builderFunc({
+              ...tfTags,
+              isDefaultExample,
+              example,
+            });
+            responsesOrChoices.push(response);
           }
-        }
-        if (insertChoices) {
-          if (tags.trueFalse && tags.trueFalse.length > 0) {
-            tags.choices = [];
-            for (const tf of tags.trueFalse) {
-              const response = builder.choice(tf);
-              tags.choices.push(response);
-            }
-          }
+
+          if (insertResponses) tags.responses = responsesOrChoices;
+          else tags.choices = responsesOrChoices;
         }
 
         // if (tags.choices || tags.responses) {
         const quiz = builder.quiz({
           ...tags,
-          isDefaultExample,
+          isDefaultExample: isDefaultExampleCard,
+          example: exampleCard,
         });
         quizzes.push(quiz);
         // } else {
@@ -428,10 +441,10 @@ function parseMatchPairs(
   let keyAudio: AudioResource | undefined = undefined;
   let keyImage: ImageResource | undefined = undefined;
   let extraTags = {};
+  let isDefaultExampleCardSet = false;
+  let exampleCardSet: string | undefined;
   let isDefaultExampleCard = false;
   let exampleCard: string | undefined;
-  let isDefaultExampleSide = false;
-  let exampleSide: string | undefined;
   // let variant: ProcessedCardVariant | undefined;
 
   for (const card of cardSet.cards) {
@@ -442,8 +455,8 @@ function parseMatchPairs(
     keyImage = undefined;
     sideIdx = 0;
     extraTags = {};
-    isDefaultExampleSide = false;
-    exampleSide = '';
+    isDefaultExampleCard = false;
+    exampleCard = '';
 
     for (const side of card.sides) {
       for (const content of side.variants) {
@@ -451,8 +464,8 @@ function parseMatchPairs(
         const { cardBody, title, resources, isDefaultExample, example, ...tags } = content.data;
 
         // Example
-        isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
-        exampleSide = example ? example : exampleSide;
+        isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+        exampleCard = example ? example : exampleCard;
 
         // Get the 'heading' which is the [#title] at level 1
         const heading = title && title[1];
@@ -461,8 +474,8 @@ function parseMatchPairs(
           // First side
           if (heading != null) {
             forKeys = heading;
-            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
-            exampleCard = example ? example : exampleCard;
+            isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
+            exampleCardSet = example ? example : exampleCardSet;
           } else if (Array.isArray(resources) && resources.length > 0) {
             // TODO - should search the correct resource type based on the bit type
             const resource = resources[0];
@@ -480,13 +493,13 @@ function parseMatchPairs(
           // Subsequent sides
           if (heading != null) {
             forValues.push(heading);
-            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
-            exampleCard = example ? example : exampleCard;
+            isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
+            exampleCardSet = example ? example : exampleCardSet;
           } else if (title == null) {
             // If not a heading, it is a pair
             const value = cardBody ?? '';
             pairValues.push(value);
-            if ((isDefaultExampleCard || isDefaultExampleSide) && !exampleSide) exampleSide = value;
+            if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = value;
           }
         }
 
@@ -508,9 +521,9 @@ function parseMatchPairs(
     } else {
       // if (pairKey || keyAudio || keyImage) {
       // Calculate final example and isDefaultExample
-      if (isDefaultExampleSide) exampleCard = undefined;
-      const isDefaultExample = isDefaultExampleSide || isDefaultExampleCard;
-      const example = exampleSide || exampleCard;
+      if (isDefaultExampleCard) exampleCardSet = undefined;
+      const isDefaultExample = isDefaultExampleCard || isDefaultExampleCardSet;
+      const example = exampleCard || exampleCardSet;
 
       const pair = builder.pair({
         key: pairKey ?? '',
@@ -549,12 +562,12 @@ function parseMatchMatrix(
   let matrixCells: MatrixCell[] = [];
   let matrixCellValues: string[] = [];
   let matrixCellTags = {};
+  let isDefaultExampleCardSet = false;
+  let exampleCardSet: string | undefined;
   let isDefaultExampleCard = false;
   let exampleCard: string | undefined;
   let isDefaultExampleSide = false;
   let exampleSide: string | undefined;
-  let isDefaultExampleVariant = false;
-  let exampleVariant: string | undefined;
   // let keyAudio: AudioResource | undefined = undefined;
   // let keyImage: ImageResource | undefined = undefined;
   // let variant: ProcessedCardVariant | undefined;
@@ -567,14 +580,14 @@ function parseMatchMatrix(
     matrixCells = [];
     matrixCellValues = [];
     sideIdx = 0;
-    isDefaultExampleSide = false;
-    exampleSide = '';
+    isDefaultExampleCard = false;
+    exampleCard = '';
 
     for (const side of card.sides) {
       matrixCellValues = [];
       matrixCellTags = {};
-      isDefaultExampleVariant = false;
-      exampleVariant = '';
+      isDefaultExampleSide = false;
+      exampleSide = '';
 
       for (const content of side.variants) {
         // variant = content;
@@ -583,8 +596,8 @@ function parseMatchMatrix(
         const { title, cardBody, isDefaultExample, example, ...restTags } = tags;
 
         // Example
-        isDefaultExampleVariant = isDefaultExample === true ? true : isDefaultExampleVariant;
-        exampleVariant = example ? example : exampleVariant;
+        isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
+        exampleSide = example ? example : exampleSide;
 
         // Merge the tags into the matrix cell tags
         Object.assign(matrixCellTags, restTags);
@@ -603,25 +616,25 @@ function parseMatchMatrix(
             //   } else if (tags.resource.type === ResourceType.image) {
             //     keyImage = tags.resource as ImageResource;
             //   }
-            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
-            exampleCard = example ? example : exampleCard;
+            isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
+            exampleCardSet = example ? example : exampleCardSet;
           } else {
             // If not a heading or resource, it is a matrix
             matrixKey = cardBody;
-            isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
-            exampleSide = example ? example : exampleSide;
+            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
+            exampleCard = example ? example : exampleCard;
           }
         } else {
           // Subsequent sides
           if (heading != null) {
             forValues.push(heading);
-            isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
-            exampleCard = example ? example : exampleCard;
+            isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
+            exampleCardSet = example ? example : exampleCardSet;
           } else if (tags.title == null) {
             // If not a heading, it is a matrix cell value
             const value = cardBody ?? '';
             matrixCellValues.push(value);
-            if ((isDefaultExampleCard || isDefaultExampleVariant) && !exampleVariant) exampleVariant = value;
+            if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = value;
           }
         }
       }
@@ -629,10 +642,10 @@ function parseMatchMatrix(
       // Finished looping variants, create matrix cell
       if (sideIdx > 0) {
         // Calculate final example and isDefaultExample
-        if (isDefaultExampleVariant) exampleSide = exampleCard = undefined;
-        if (isDefaultExampleSide) exampleCard = undefined;
-        const isDefaultExample = isDefaultExampleVariant || isDefaultExampleSide || isDefaultExampleCard;
-        const example = exampleVariant || exampleSide || exampleCard;
+        if (isDefaultExampleSide) exampleCard = exampleCardSet = undefined;
+        if (isDefaultExampleCard) exampleCardSet = undefined;
+        const isDefaultExample = isDefaultExampleSide || isDefaultExampleCard || isDefaultExampleCardSet;
+        const example = exampleSide || exampleCard || exampleCardSet;
 
         const matrixCell = builder.matrixCell({
           values: matrixCellValues,
