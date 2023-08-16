@@ -93,6 +93,8 @@ const NodeType = superenum({
   iconTagValue: 'iconTagValue',
   colorTag: 'colorTag',
   colorTagValue: 'colorTagValue',
+  flashcardSet: 'flashcardSet',
+  flashcardSetValue: 'flashcardSetValue',
   subtype: 'subtype',
   subtypeValue: 'subtypeValue',
   coverImage: 'coverImage',

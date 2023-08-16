@@ -319,6 +319,11 @@ export interface BitmarkPegParserContext {
   addWarning(message: string, parserData?: ParserData, parserDataOriginal?: ParserData): void;
   addError(message: string, parserData?: ParserData, parserDataOriginal?: ParserData): void;
   debugPrint(header: string, data: unknown): void;
+
+  // Parser global parse state
+  state: {
+    //
+  };
 }
 
 export {

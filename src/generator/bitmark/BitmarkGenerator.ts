@@ -407,6 +407,12 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeProperty('sampleSolution', node.value);
   }
 
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> sampleSolution
+
+  protected leaf_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('sampleSolution', node.value);
+  }
+
   // bitmarkAst -> bits -> bitsValue -> itemLead
 
   protected enter_itemLead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1300,16 +1306,6 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (node.value) {
       this.writeString(node.value);
       // this.writeNL();
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> sampleSolution
-
-  protected leaf_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    if (node.value) {
-      this.writeOPDOLLAR();
-      this.writeString(node.value);
-      this.writeCL();
     }
   }
 

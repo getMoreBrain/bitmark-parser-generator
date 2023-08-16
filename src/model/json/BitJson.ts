@@ -22,6 +22,7 @@ export interface BitJson {
   icon: string;
   iconTag: string;
   colorTag: string | string[];
+  flashcardSet: string | string[];
   subtype: string | string[];
   coverImage: string | string[];
   publisher: string | string[];

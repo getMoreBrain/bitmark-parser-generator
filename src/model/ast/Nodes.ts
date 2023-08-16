@@ -37,6 +37,7 @@ export interface Bit {
   icon?: Property;
   iconTag?: Property;
   colorTag?: Property;
+  flashcardSet?: Property;
   subtype?: Property;
   coverImage?: Property;
   publisher?: Property;
@@ -120,6 +121,12 @@ export interface ItemLead {
 }
 
 export type Example = string | boolean;
+
+export interface WithExample {
+  isDefaultExample: boolean;
+  isExample: boolean;
+  example?: Example;
+}
 
 // Extra Properties
 

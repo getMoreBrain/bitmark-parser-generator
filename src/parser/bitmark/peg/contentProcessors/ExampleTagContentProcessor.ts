@@ -1,4 +1,5 @@
 import { RootBitType, BitType } from '../../../../model/enum/BitType';
+import { BooleanUtils } from '../../../../utils/BooleanUtils';
 
 import {
   BitContent,
@@ -22,27 +23,33 @@ function exampleTagContentProcessor(
   const example = value as string | boolean;
 
   // Each bit type handles example tags differently
-
   switch (bitType.root) {
     case RootBitType.cloze:
     case RootBitType.clozeAndMultipleChoiceText:
     case RootBitType.multipleChoiceText:
     case RootBitType.highlightText:
-      handleGapOrSelectExample(context, bitType, example, target);
+    case RootBitType.trueFalse:
+    case RootBitType.trueFalse1:
+    case RootBitType.multipleResponse:
+    case RootBitType.multipleResponse1:
+    case RootBitType.multipleChoice:
+    case RootBitType.multipleChoice1:
+      handleGapOrSelectOrTrueFalseExample(context, bitType, content, example, target);
       break;
     case RootBitType.mark:
       // Default only example handling
-      handleDefaultOnlyExample(context, bitType, example, target);
+      handleDefaultOnlyExample(context, bitType, content, example, target);
       break;
     default:
       // Standard example handling
-      handleStandardExample(context, bitType, example, target);
+      handleStandardStringExample(context, bitType, content, example, target);
   }
 }
 
-function handleGapOrSelectExample(
+function handleGapOrSelectOrTrueFalseExample(
   context: BitmarkPegParserContext,
   bitType: BitType,
+  content: BitContent,
   example: string | boolean,
   target: BitContentProcessorResult,
 ): void {
@@ -53,15 +60,22 @@ function handleGapOrSelectExample(
   }
 
   if (trueFalse) {
+    // Example is set on the true/false tag [+...] / [-...]
     if (example === true) {
       trueFalse.isDefaultExample = true;
       trueFalse.example = undefined;
     } else {
-      // TODO: This should raise a warning, because a value on the example tag is not allowed for select
-      trueFalse.isDefaultExample = true;
-      trueFalse.example = undefined;
+      if (BooleanUtils.isBooleanString(example)) {
+        trueFalse.example = example as string;
+      } else {
+        // Example is set to a value other than true / false which is not valid in the case of select
+        trueFalse.isDefaultExample = true;
+        trueFalse.example = undefined;
+        context.addWarning(`Only 'true' / 'false' / default are allowed here, using default`, content);
+      }
     }
   } else if (Array.isArray(target.solutions) && target.solutions.length > 0) {
+    // Example is set on the gap solution tag [_...]
     if (example === true) {
       // Extract the solution nearest [@example] tag as the example value
       target.example = target.solutions[target.solutions.length - 1] ?? undefined;
@@ -69,23 +83,83 @@ function handleGapOrSelectExample(
       target.example = example as string;
     }
   } else {
-    handleStandardExample(context, bitType, example, target);
+    // Example is higher up the chain, so how it is handled depends on the bit type
+    switch (bitType.root) {
+      default:
+      case RootBitType.cloze:
+        // Treat as a standard string
+        handleStandardStringExample(context, bitType, content, example, target);
+        break;
+      case RootBitType.multipleChoiceText:
+      case RootBitType.highlightText:
+      case RootBitType.trueFalse:
+      case RootBitType.trueFalse1:
+      case RootBitType.multipleResponse:
+      case RootBitType.multipleResponse1:
+        // Treat as a standard boolean
+        handleStandardBooleanExample(context, bitType, content, example, target);
+        break;
+      case RootBitType.clozeAndMultipleChoiceText:
+      case RootBitType.multipleChoice:
+      case RootBitType.multipleChoice1: {
+        // For these bits, a specific example value higher up the chain makes no sense
+        // Set example to default, and raise a warning if any value is set.
+        target.isDefaultExample = true;
+        target.example = undefined;
+
+        if (example !== true) {
+          // Example is set to a value other than true / false which is not valid in the case of select
+          context.addWarning(`At this level, only default [@example] is allowed, using default`, content);
+        }
+        break;
+      }
+    }
   }
 }
 
 function handleDefaultOnlyExample(
-  _context: BitmarkPegParserContext,
+  context: BitmarkPegParserContext,
   _bitType: BitType,
-  _example: string | boolean,
+  content: BitContent,
+  example: string | boolean,
   target: BitContentProcessorResult,
 ): void {
+  // This bit can have only default examples - nothing else makes sense
   target.isDefaultExample = true;
   target.example = undefined;
+
+  if (example !== true) {
+    // Example is set to a value other than true / false which is not valid in the case of select
+    context.addWarning(`Only default [@example] is allowed, using default`, content);
+  }
 }
 
-function handleStandardExample(
+function handleStandardBooleanExample(
+  context: BitmarkPegParserContext,
+  _bitType: BitType,
+  content: BitContent,
+  example: string | boolean,
+  target: BitContentProcessorResult,
+): void {
+  if (example === true) {
+    target.isDefaultExample = true;
+    target.example = undefined;
+  } else {
+    if (BooleanUtils.isBooleanString(example)) {
+      target.example = example as string;
+    } else {
+      // Example is set to a value other than true / false which is not valid in the case of select
+      target.isDefaultExample = true;
+      target.example = undefined;
+      context.addWarning(`Only 'true' / 'false' / default are allowed here, using default`, content);
+    }
+  }
+}
+
+function handleStandardStringExample(
   _context: BitmarkPegParserContext,
   _bitType: BitType,
+  _content: BitContent,
   example: string | boolean,
   target: BitContentProcessorResult,
 ): void {
