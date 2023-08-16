@@ -1,5 +1,6 @@
 // Bit configs
 import './bits/_errorBitConfig';
+import './bits/appFlashcardsBitConfig';
 import './bits/appLinkBitConfig';
 import './bits/articleBitConfig';
 import './bits/articleEmbedBitConfig';
@@ -78,6 +79,7 @@ import './properties/examplePropertyConfig';
 import './properties/externalIdPropertyConfig';
 import './properties/externalLinkPropertyConfig';
 import './properties/externalLinkTextPropertyConfig';
+import './properties/flashcardSetPropertyConfig';
 import './properties/focusXPropertyConfig';
 import './properties/focusYPropertyConfig';
 import './properties/iconPropertyConfig';

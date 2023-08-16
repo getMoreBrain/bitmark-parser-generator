@@ -99,6 +99,7 @@ class Builder extends BaseBuilder {
     icon?: string | string[];
     iconTag?: string | string[];
     colorTag?: string | string[];
+    flashcardSet?: string | string[];
     subtype?: string | string[];
     coverImage?: string | string[];
     publisher?: string | string[];
@@ -189,6 +190,7 @@ class Builder extends BaseBuilder {
       icon,
       iconTag,
       colorTag,
+      flashcardSet,
       subtype,
       coverImage,
       publisher,
@@ -269,6 +271,7 @@ class Builder extends BaseBuilder {
       icon: this.toAstProperty(PropertyKey.icon, icon),
       iconTag: this.toAstProperty(PropertyKey.iconTag, iconTag),
       colorTag: this.toAstProperty(PropertyKey.colorTag, colorTag),
+      flashcardSet: this.toAstProperty(PropertyKey.flashcardSet, flashcardSet),
       subtype: this.toAstProperty(PropertyKey.subtype, subtype),
       coverImage: this.toAstProperty(PropertyKey.coverImage, coverImage),
       publisher: this.toAstProperty(PropertyKey.publisher, publisher),

@@ -27,6 +27,7 @@ const PropertyKey = superenum({
   icon: 'icon', // single
   iconTag: 'iconTag', // single
   colorTag: 'colorTag',
+  flashcardSet: 'flashcardSet',
   subtype: 'subtype',
   coverImage: 'coverImage',
   publisher: 'publisher',
