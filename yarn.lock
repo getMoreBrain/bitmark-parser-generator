@@ -1610,7 +1610,7 @@ __metadata:
     "@types/node": ^20.3.1
     "@typescript-eslint/eslint-plugin": ^5.60.0
     "@typescript-eslint/parser": ^5.60.0
-    bitmark-grammar: 1.0.74
+    bitmark-grammar: 1.0.92
     esbuild: ^0.18.4
     esbuild-register: ^3.4.2
     eslint: ^8.43.0
@@ -3056,9 +3056,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bitmark-grammar@npm:1.0.74":
-  version: 1.0.74
-  resolution: "bitmark-grammar@npm:1.0.74"
+"bitmark-grammar@npm:1.0.92":
+  version: 1.0.92
+  resolution: "bitmark-grammar@npm:1.0.92"
   dependencies:
     "@types/diff": ^5.0.3
     antlr4ts: ^0.5.0-alpha.4
@@ -3071,7 +3071,7 @@ __metadata:
     ramda: ^0.28.0
     safe-buffer: ^5.2.1
     utf8-length: 0.0.1
-  checksum: f26740a617226aef500ceb35806e757f99e73380419e1eafa4803b62f241c046645eab6dde8ea297c03043aafc53ca296b8d11f124c88cc11e8f5219b687428f
+  checksum: 847c5f6a6b6bab2e57bdbc2b71e336defeb00a3354e9864effb58abe54244986ccb7f2c2fe0be93d19f031736006f27de883577909d6c84c8a0809f501f3894c
   languageName: node
   linkType: hard
 

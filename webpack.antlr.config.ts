@@ -51,7 +51,7 @@ const config: Configuration = {
   },
   plugins: [
     new NodePolyfillPlugin({
-      includeAliases: ['constants', 'os', 'path', 'process', 'stream'],
+      includeAliases: ['constants', 'os', 'path', 'process', 'stream', 'console'],
     }),
     new DefinePlugin({
       'process.env.BPG_ENV': JSON.stringify('production'),
