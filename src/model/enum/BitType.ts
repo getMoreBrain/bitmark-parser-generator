@@ -68,6 +68,7 @@ export interface CardSetVariantConfig {
 
 const RootBitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
+  appFlashcards: 'app-flashcards',
   appLink: 'app-link',
   article: 'article',
   articleEmbed: 'article-embed',
@@ -139,6 +140,8 @@ const AliasBitType = superenum({
   aiPrompt: 'ai-prompt',
   anchor: 'anchor',
   appAiPrompt: 'app-ai-prompt',
+  appFlashcardsQuiz: 'app-flashcards-quiz',
+  appFlashcardsLearn: 'app-flashcards-learn',
   articleAi: 'article-ai',
   articleAttachment: 'article-attachment',
   assignment: 'assignment',
@@ -319,6 +322,11 @@ const AliasBitType = superenum({
 });
 
 const RootBitTypeToAliasMap = {
+  [RootBitType.appFlashcards]: [
+    //
+    AliasBitType.appFlashcardsQuiz,
+    AliasBitType.appFlashcardsLearn,
+  ],
   [RootBitType.article]: [
     //
     AliasBitType.page,

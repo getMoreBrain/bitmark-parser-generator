@@ -2,6 +2,9 @@
 | ------ | -- | -- | -- | -- |
 | _error | ✅ | ✅ | ✅ | Used for error handling to indicate a bit type that is not supported or a bit parse error |
 | app-ai-prompt | ✅ | ✅ | ✅ |  |
+| app-flashcards | ✅ | ✅ | ✅ |  |
+| app-flashcards-learn | ✅ | ✅ | ✅ |  |
+| app-flashcards-quiz | ✅ | ✅ | ✅ |  |
 | ai-prompt | ✅ | ✅ | ✅ |  |
 | anchor | ➖ | ➖ | ➖ | LEGACY? |
 | annotation-bookmark | ✅ | ❌ | ❌ | TODO: NEED EXAMPLE TO TEST |

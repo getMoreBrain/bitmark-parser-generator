@@ -12,6 +12,9 @@ if (process.env.CI) {
 let TEST_FILES: string[] = [
   // // '_simple.bit',
   // 'app-ai-prompt.bit',
+  // 'app-flashcards.bit',
+  // 'app-flashcards-learn.bit',
+  // 'app-flashcards-quiz.bit',
   // 'ai-prompt.bit',
   // 'app-link.bit',
   // 'article.bit',
@@ -238,6 +241,9 @@ let TEST_FILES: string[] = [
 if (TEST_ALL) {
   TEST_FILES = [
     'app-ai-prompt.bit',
+    'app-flashcards.bit',
+    'app-flashcards-learn.bit',
+    'app-flashcards-quiz.bit',
     'ai-prompt.bit',
     'app-link.bit',
     'article.bit',

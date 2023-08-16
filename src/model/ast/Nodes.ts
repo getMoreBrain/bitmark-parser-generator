@@ -37,6 +37,7 @@ export interface Bit {
   icon?: Property;
   iconTag?: Property;
   colorTag?: Property;
+  flashcardSet?: Property;
   subtype?: Property;
   coverImage?: Property;
   publisher?: Property;
