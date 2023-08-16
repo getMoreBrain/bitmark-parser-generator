@@ -469,21 +469,22 @@ class Builder extends BaseBuilder {
     hint?: string;
     instruction?: string;
     isDefaultExample?: boolean;
+    example?: Example;
     choices?: Choice[];
     responses?: Response[];
   }): Quiz {
-    const { choices, responses, item, lead, hint, instruction, isDefaultExample } = data;
+    const { choices, responses, item, lead, hint, instruction, isDefaultExample, example } = data;
 
     // Push isDefaultExample down the tree
-    this.pushExampleDownTreeBoolean(isDefaultExample, undefined, true, choices);
-    this.pushExampleDownTreeBoolean(isDefaultExample, undefined, false, responses);
+    this.pushExampleDownTreeBoolean(isDefaultExample, example, true, choices);
+    this.pushExampleDownTreeBoolean(isDefaultExample, example, false, responses);
 
     // NOTE: Node order is important and is defined here
     const node: Quiz = {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      isExample: isDefaultExample,
+      isExample: isDefaultExample || example != null,
       choices,
       responses,
     };
@@ -1244,44 +1245,6 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Set examples for boolean nodes
-   *
-   * @param isDefaultExample
-   * @param example
-   * @param onlyCorrect
-   * @param nodes
-   * @returns true if any of the answers has an example, otherwise undefined
-   */
-  private pushExampleDownTreeBoolean(
-    isDefaultExample: boolean | undefined,
-    example: Example | undefined,
-    onlyCorrect: boolean,
-    ...nodes: (WithExample | WithExample[] | undefined)[]
-  ): void {
-    if (!isDefaultExample && !example) return;
-
-    const fillExample = (node: WithExample) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      if (!node.isExample && (!onlyCorrect || (node as any).isCorrect)) {
-        node.isDefaultExample = true;
-        node.isExample = true;
-      }
-    };
-
-    if (Array.isArray(nodes)) {
-      for (const ds of nodes) {
-        if (Array.isArray(ds)) {
-          for (const d of ds) {
-            fillExample(d);
-          }
-        } else if (ds) {
-          fillExample(ds);
-        }
-      }
-    }
-  }
-
-  /**
    * Set examples down the tree
    *
    * @param body
@@ -1328,6 +1291,33 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Set examples for boolean nodes
+   *
+   * @param isDefaultExample
+   * @param example
+   * @param onlyCorrect
+   * @param nodes
+   * @returns true if any of the answers has an example, otherwise undefined
+   */
+  private pushExampleDownTreeBoolean(
+    isDefaultExample: boolean | undefined,
+    example: Example | undefined,
+    onlyCorrect: boolean,
+    ...nodes: (WithExample | WithExample[] | undefined)[]
+  ): void {
+    if (!isDefaultExample && !example) return;
+
+    if (Array.isArray(nodes)) {
+      for (const ds of nodes) {
+        if (ds) {
+          const exampleNodes = Array.isArray(ds) ? ds : [ds];
+          BitUtils.fillBooleanExample(exampleNodes, isDefaultExample, example, onlyCorrect);
+        }
+      }
+    }
+  }
+
+  /**
    * Set examples for string nodes
    *
    * @param isDefaultExample
@@ -1342,26 +1332,11 @@ class Builder extends BaseBuilder {
   ): void {
     if (!isDefaultExample && !example) return;
 
-    const fillExample = (node: WithExample) => {
-      if (!node.isExample) {
-        if (isDefaultExample) {
-          node.isDefaultExample = true;
-          node.isExample = true;
-        } else {
-          node.isDefaultExample = false;
-          node.example = example;
-        }
-      }
-    };
-
     if (Array.isArray(nodes)) {
       for (const ds of nodes) {
-        if (Array.isArray(ds)) {
-          for (const d of ds) {
-            fillExample(d);
-          }
-        } else if (ds) {
-          fillExample(ds);
+        if (ds) {
+          const exampleNodes = Array.isArray(ds) ? ds : [ds];
+          BitUtils.fillStringExample(exampleNodes, isDefaultExample, example, false);
         }
       }
     }
@@ -1380,38 +1355,22 @@ class Builder extends BaseBuilder {
         switch (part.type) {
           case BodyBitType.gap: {
             const gap = part as Gap;
-            if (!gap.data.isExample) {
-              gap.data.isDefaultExample = true;
-              gap.data.isExample = true;
-            }
+            BitUtils.fillStringExample([gap.data], isDefaultExample, example, false);
             break;
           }
           case BodyBitType.mark: {
             const mark = part as Mark;
-            if (!mark.data.isExample) {
-              mark.data.isDefaultExample = true;
-              mark.data.isExample = true;
-            }
+            BitUtils.fillBooleanExample([mark.data], isDefaultExample, example, false);
             break;
           }
           case BodyBitType.select: {
             const select = part as Select;
-            for (const option of select.data.options) {
-              if (!option.isExample && option.isCorrect) {
-                option.isDefaultExample = true;
-                option.isExample = true;
-              }
-            }
+            BitUtils.fillBooleanExample(select.data.options, isDefaultExample, example, true);
             break;
           }
           case BodyBitType.highlight: {
             const highlight = part as Highlight;
-            for (const text of highlight.data.texts) {
-              if (!text.isExample && text.isCorrect) {
-                text.isDefaultExample = true;
-                text.isExample = true;
-              }
-            }
+            BitUtils.fillBooleanExample(highlight.data.texts, isDefaultExample, example, true);
             break;
           }
         }

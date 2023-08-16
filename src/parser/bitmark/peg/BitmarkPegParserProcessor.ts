@@ -163,6 +163,10 @@ class BitmarkPegParserProcessor {
       addWarning: this.addWarning.bind(this),
       addError: this.addError.bind(this),
       debugPrint: this.debugPrint.bind(this),
+
+      state: {
+        //
+      },
     };
   }
 
@@ -209,6 +213,9 @@ class BitmarkPegParserProcessor {
     const isMultipleResponseV1 = bitType.root === RootBitType.multipleResponse1;
 
     if (DEBUG_BIT_CONTENT) this.debugPrint('BIT CONTENT', bitContent);
+
+    // Rest the parser state
+    this.resetParserState();
 
     // Validate the bit tags
     bitContent = BitmarkPegParserValidator.validateBitTags(this.context, bitType, bitContent);
@@ -320,6 +327,14 @@ class BitmarkPegParserProcessor {
     processValue(value2);
 
     return res;
+  }
+
+  /**
+   * Reset the parser state
+   *
+   */
+  private resetParserState() {
+    this.context.state = {};
   }
 
   /**
