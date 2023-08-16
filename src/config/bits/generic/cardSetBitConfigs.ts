@@ -86,7 +86,8 @@ const CARD_SET_QUESTIONS: CardSetConfig = {
     [
       {
         tags: {
-          [TagType.SampleSolution]: {},
+          [TagType.SampleSolution]: {}, // 16.08.2023 Deprecated, but currently still supported
+          [PropertyKey.sampleSolution]: { isProperty: true },
           [PropertyKey.shortAnswer]: { isProperty: true },
           ...TAGS_ITEM_LEAD_INSTRUCTION_HINT,
           ...TAGS_PROPERTY_EXAMPLE,

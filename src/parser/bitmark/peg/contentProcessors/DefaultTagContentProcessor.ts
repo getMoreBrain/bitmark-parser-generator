@@ -11,7 +11,7 @@ import {
 } from '../BitmarkPegParserTypes';
 
 function defaultTagContentProcessor(
-  _context: BitmarkPegParserContext,
+  context: BitmarkPegParserContext,
   _bitLevel: BitContentLevelType,
   _bitType: BitType,
   content: BitContent,
@@ -42,8 +42,10 @@ function defaultTagContentProcessor(
       break;
     }
 
+    // 16.08.2023 Deprecated, but currently still supported
     case TypeKey.SampleSolution: {
       target.sampleSolution = trimmedStringValue;
+      context.addWarning('[$...] tag is deprecated, use [@sampleSolution:...] instead', content);
       break;
     }
 

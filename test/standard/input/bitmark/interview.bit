@@ -31,48 +31,49 @@ Die Geschichte von Anton und Barbara, ihrer Tochter Clara und der Aktiengesellsc
 Dabei sind Mehrfachnennungen von verschiedenen Steuern bei einzelnen Ereignissen möglich. Die nachstehende Tabelle soll der einfacheren Erfassung dienen.
 ===
 Ereignis Steuern
+|| Deprecated but still supported sampleSolution $ tag ||
 [$Erbvorbezug, Schenkung Eltern
 In vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.]
 ===
 Ereignis Steuern
-[$Erbvorbezug, Schenkung Onkel Tante
+[@sampleSolution:Erbvorbezug, Schenkung Onkel Tante
 In den meisten Kantonen steuerbar bei der Schenkungssteuer. Sonst aber Kantone LU und SZ. Nach Erhalt Einkommens- und Vermögenssteuer.]
 ===
 [@example]
 Ereignis Steuern
-[$Selbständigkeit
+[@sampleSolution:Selbständigkeit
 Wechsel bei der Einkommenssteuer von unselbständig zu selbständig, u.a. Buchwertprinzip.]
 ===
 Ereignis Steuern
-[$Heirat und Tochter
+[@sampleSolution:Heirat und Tochter
 Wechsel zur Familienbesteuerung für Einkommens- und Vermögensbesteuerung.]
 ===
 Ereignis Steuern
-[$Hauskauf
+[@sampleSolution:Hauskauf
 Eigenmietwert, Schuldzinsenabzug, LUK, Vermögenssteuerwert, Schulden bei Einkommens- und Vermögenssteuer.]
 ===
 Ereignis Steuern
-[$Bezug Säule 2
+[@sampleSolution:Bezug Säule 2
 Kapitalleistungen aus Vorsorge mit reduzierter Einkommenssteuer.]
 ===
 Ereignis Steuern
-[$Umwandlung EU in AG
+[@sampleSolution:Umwandlung EU in AG
 Grundsätzlich Steuerneutralität, Wechsel selbständig zu unselbständig, Beginn Arbeitstätigkeit Ehefrau bei Einkommens und Vermögenssteuer, ggf Emissionsabgabe]
 ===
 Ereignis Steuern
-[$Mitarbeiteraktien
+[@sampleSolution:Mitarbeiteraktien
 Ggf Verkauf Aktien grundsätzlich steuerfrei bei Einkommenssteuer wenn aus Privatvermögen. Kapitalgewinn aus Verkauf eigene Aktien unterliegt bei Aktiengesellschaft der Gewinnsteuer]
 ===
 Ereignis Steuern
-[$Dividende
+[@sampleSolution:Dividende
 Einkommenssteuer, allenfalls reduziert, wenn Voraussetzungen erfüllt.]
 ===
 Ereignis Steuern
-[$Eigene Aktien
+[@sampleSolution:Eigene Aktien
 Plafonierung und Veräusserungsfrist, ansonsten Einkommens- und Verrechnungssteuer.]
 ===
 Ereignis Steuern
-[$Hausvermietung
+[@sampleSolution:Hausvermietung
 Mietertrag und LUK Einkommenssteuer, interkantonale Steuerausscheidung]
 ===
 
