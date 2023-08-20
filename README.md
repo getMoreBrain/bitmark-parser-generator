@@ -5,6 +5,8 @@
 
 A bitmark parser and generator using Peggy.js.
 
+[Try out bitmark - visit the bitmark Playground](https://getmorebrain.github.io/bitmark-playground/)
+
 Features:
 - Convert bitmark to JSON, and vice-versa.
 - Programmatically create or modify bitmark.
