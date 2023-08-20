@@ -240,6 +240,7 @@ const AliasBitType = superenum({
   editorial: 'editorial',
   editorNote: 'editor-note',
   featured: 'featured',
+  figure: 'figure',
   flashcard1: 'flashcard-1',
   footNote: 'foot-note',
   groupBorn: 'group-born',
@@ -478,6 +479,7 @@ const RootBitTypeToAliasMap = {
   ],
   [RootBitType.image]: [
     //
+    AliasBitType.figure,
     AliasBitType.imageLandscape,
     AliasBitType.imageOnDevice,
     AliasBitType.imagePortrait,
