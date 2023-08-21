@@ -410,6 +410,7 @@ export interface FooterText {
 
 export interface Resource {
   type: ResourceTypeType;
+  typeAlias: ResourceTypeType;
   format?: string;
   value?: string; // url / src / body / etc
   license?: string;
@@ -428,6 +429,12 @@ export interface ImageResource extends Resource {
   width?: number;
   height?: number;
   alt?: string;
+}
+
+export interface ImageResponsiveResource extends Resource {
+  type: 'image-responsive';
+  imagePortrait: ImageResource;
+  imageLandscape: ImageResource;
 }
 
 export interface ImageLinkResource extends Resource {

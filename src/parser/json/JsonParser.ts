@@ -7,7 +7,6 @@ import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { ResourceJson, ResourceDataJson, StillImageFilmResourceJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
 
 import {
@@ -68,6 +67,12 @@ import {
   HighlightJson,
   MarkJson,
 } from '../../model/json/BodyBitJson';
+import {
+  ResourceJson,
+  ResourceDataJson,
+  StillImageFilmResourceJson,
+  ImageResponsiveResourceJson,
+} from '../../model/json/ResourceJson';
 
 interface ReferenceAndReferenceProperty {
   reference?: string;
@@ -771,8 +776,19 @@ class JsonParser {
       const resourceKey = ResourceType.keyFromValue(resource.type) ?? ResourceType.unknown;
       let data: ResourceDataJson | undefined;
 
-      // Special case for 'still-image-film'
-      if (resource.type === ResourceType.stillImageFilm) {
+      // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
+      if (resource.type === ResourceType.imageResponsive) {
+        const r = resource as unknown as ImageResponsiveResourceJson;
+        const imagePortraitNode = this.resourceDataToAst(ResourceType.imagePortrait, r.imagePortrait) as ImageResource;
+        const imageLandscapeNode = this.resourceDataToAst(
+          ResourceType.imageLandscape,
+          r.imageLandscape,
+        ) as ImageResource;
+        node = resourceBuilder.imageResponsiveResource({
+          imagePortrait: imagePortraitNode,
+          imageLandscape: imageLandscapeNode,
+        });
+      } else if (resource.type === ResourceType.stillImageFilm) {
         const r = resource as unknown as StillImageFilmResourceJson;
         const imageNode = this.resourceDataToAst(ResourceType.image, r.image) as ImageResource;
         const audioNode = this.resourceDataToAst(ResourceType.audio, r.audio) as AudioResource;

@@ -223,6 +223,8 @@ const NodeType = superenum({
   resource: 'resource',
   resourceType: 'resourceType',
   image: 'image',
+  imagePortrait: 'imagePortrait',
+  imageLandscape: 'imageLandscape',
   audio: 'audio',
   type: 'type',
   format: 'format',
