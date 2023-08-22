@@ -98,6 +98,7 @@ const RootBitType = superenum({
   highlightText: 'highlight-text',
   image: 'image',
   imageLink: 'image-link',
+  imageResponsive: 'image-responsive',
   internalLink: 'internal-link',
   interview: 'interview',
   learningPathBook: 'learning-path-book',

@@ -13,6 +13,9 @@ import {
   TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
+const IMAGE_RESPONSIVE_RESOURCE_TYPES_MSG = ' The expected resource types are [&image-portrait] and [&image-landscape]';
+const STILL_IMAGE_FILM_EXPECTED_RESOURCE_TYPES_MSG = ' The expected resource types are [&image] and [&audio]';
+
 // const builder = new Builder();
 const resourceBuilder = new ResourceBuilder();
 
@@ -41,8 +44,28 @@ function buildResource(
   const rt = resourceAttachmentAllowed ? resourceType : undefined;
   const validResourceType = BitUtils.calculateValidResourceType(bitType, rt, undefined);
 
-  // Handle special case for stillImageFilm
-  if (validResourceType === ResourceType.stillImageFilm) {
+  // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
+  if (validResourceType === ResourceType.imageResponsive) {
+    if (resources) {
+      filteredResources = [];
+      let imagePortraitResource: ImageResource | undefined;
+      let imageLandscapeResource: ImageResource | undefined;
+
+      for (const r of resources.reverse()) {
+        if (!imagePortraitResource && ResourceType.imagePortrait === r.typeAlias) {
+          imagePortraitResource = r as ImageResource;
+        } else if (!imageLandscapeResource && ResourceType.imageLandscape === r.typeAlias) {
+          imageLandscapeResource = r as ImageResource;
+        } else {
+          filteredResources.push(r);
+        }
+      }
+      resource = resourceBuilder.imageResponsiveResource({
+        imagePortrait: imagePortraitResource,
+        imageLandscape: imageLandscapeResource,
+      });
+    }
+  } else if (validResourceType === ResourceType.stillImageFilm) {
     if (resources) {
       filteredResources = [];
       let imageResource: ImageResource | undefined;
@@ -78,10 +101,10 @@ function buildResource(
   }
 
   if (!resourceAttachmentAllowed && resourceType) {
-    let warningMsg = `Resource type '&${resourceType}' is specified in the bit header, but no extra resource is allowed for this bit.`;
+    let warningMsg = `Resource type [&${resourceType}] is specified in the bit header, but no extra resource is allowed for this bit.`;
 
     if (validResourceType) {
-      warningMsg += ` The resource type '&${validResourceType}' is automatically expected and should not be added.`;
+      warningMsg += ` The resource type [&${validResourceType}] is automatically expected and should not be added.`;
     }
     context.addWarning(warningMsg);
   }
@@ -89,10 +112,21 @@ function buildResource(
   if (!resource) {
     if (resourceType) {
       context.addWarning(
-        `Resource type '&${resourceType}' is specified in the bit header, but no such a resource is present in the bit`,
+        `Resource type [&${resourceType}] is specified in the bit header, but no such a resource is present in the bit`,
       );
     } else if (validResourceType) {
-      context.addWarning(`Resource type '&${validResourceType}' is required but is not present in the bit`);
+      let warningMsg = `A resource is required but is not present in the bit.`;
+      // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
+      if (validResourceType === RootBitType.imageResponsive) {
+        warningMsg += IMAGE_RESPONSIVE_RESOURCE_TYPES_MSG;
+      } else if (validResourceType === RootBitType.stillImageFilm) {
+        warningMsg += STILL_IMAGE_FILM_EXPECTED_RESOURCE_TYPES_MSG;
+      } else {
+        const resourceTypeString = `[&${validResourceType}]`;
+        warningMsg += ` The expected resource type is ${resourceTypeString}`;
+      }
+
+      context.addWarning(warningMsg);
     }
   }
 
@@ -102,12 +136,14 @@ function buildResource(
 
     // Add an error to warn about the excess resources
     let warningMsg = `${excessResources.length} excess resource(s) present in the bit.`;
-    if (validResourceType === RootBitType.stillImageFilm) {
-      // Special case for stillImageFilm
-      warningMsg += ` The expected resource types are '&image' and '&audio'`;
+    // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
+    if (validResourceType === RootBitType.imageResponsive) {
+      warningMsg += IMAGE_RESPONSIVE_RESOURCE_TYPES_MSG;
+    } else if (validResourceType === RootBitType.stillImageFilm) {
+      warningMsg += STILL_IMAGE_FILM_EXPECTED_RESOURCE_TYPES_MSG;
     } else {
-      const resourceTypeString = validResourceType ? `&${validResourceType}` : 'NONE';
-      warningMsg += ` The expected resource type is '${resourceTypeString}'`;
+      const resourceTypeString = validResourceType ? `[&${validResourceType}]` : 'NONE';
+      warningMsg += ` The expected resource type is ${resourceTypeString}`;
     }
 
     context.addWarning(warningMsg);

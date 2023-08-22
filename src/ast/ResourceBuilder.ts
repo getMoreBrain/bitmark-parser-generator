@@ -25,6 +25,7 @@ import {
   AudioEmbedResource,
   VideoEmbedResource,
   StillImageFilmEmbedResource,
+  ImageResponsiveResource,
 } from '../model/ast/Nodes';
 
 /**
@@ -69,6 +70,38 @@ class ResourceBuilder extends BaseBuilder {
 
       // WebsiteLinkResource
       siteName?: string;
+
+      // ImageResponsiveResource
+      imagePortrait?: {
+        format: string;
+        value: string; //src
+        src1x?: string;
+        src2x?: string;
+        src3x?: string;
+        src4x?: string;
+        width?: number;
+        height?: number;
+        alt?: string;
+        license?: string;
+        copyright?: string;
+        showInIndex?: boolean;
+        caption?: string;
+      };
+      imageLandscape?: {
+        format: string;
+        value: string; //src
+        src1x?: string;
+        src2x?: string;
+        src3x?: string;
+        src4x?: string;
+        width?: number;
+        height?: number;
+        alt?: string;
+        license?: string;
+        copyright?: string;
+        showInIndex?: boolean;
+        caption?: string;
+      };
 
       // StillImageFilmLikeResource
       image?: {
@@ -141,8 +174,28 @@ class ResourceBuilder extends BaseBuilder {
 
     switch (type) {
       case ResourceType.image:
-        node = this.imageResource(finalData);
+      case ResourceType.imagePortrait:
+      case ResourceType.imageLandscape:
+        node = this.imageResource(finalData, type);
         break;
+
+      case ResourceType.imageResponsive: {
+        node = this.imageResponsiveResource({
+          imagePortrait: this.imageResource(
+            finalData.imagePortrait ?? {
+              format: '',
+              value: '',
+            },
+          ),
+          imageLandscape: this.imageResource(
+            finalData.imageLandscape ?? {
+              format: '',
+              value: '',
+            },
+          ),
+        });
+        break;
+      }
 
       case ResourceType.imageLink:
         node = this.imageLinkResource(finalData);
@@ -238,26 +291,30 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  imageResource(data: {
-    format: string;
-    value: string; //src
-    src1x?: string;
-    src2x?: string;
-    src3x?: string;
-    src4x?: string;
-    width?: number;
-    height?: number;
-    alt?: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: string;
-  }): ImageResource {
+  imageResource(
+    data: {
+      format: string;
+      value: string; //src
+      src1x?: string;
+      src2x?: string;
+      src3x?: string;
+      src4x?: string;
+      width?: number;
+      height?: number;
+      alt?: string;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: string;
+    },
+    typeAlias?: ResourceTypeType,
+  ): ImageResource {
     const { value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ImageResource = {
       type: ResourceType.image,
+      typeAlias: typeAlias ?? ResourceType.image,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -279,6 +336,33 @@ class ResourceBuilder extends BaseBuilder {
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node) as ImageResource;
+  }
+
+  /**
+   * Build imageResponsiveResource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  imageResponsiveResource(data: {
+    imagePortrait?: ImageResource;
+    imageLandscape?: ImageResource;
+  }): ImageResponsiveResource {
+    const { imagePortrait, imageLandscape } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: ImageResponsiveResource = {
+      type: ResourceType.imageResponsive,
+      typeAlias: ResourceType.imageResponsive,
+      imagePortrait: imagePortrait ?? this.imageResource({ format: '', value: '' }),
+      imageLandscape: imageLandscape ?? this.imageResource({ format: '', value: '' }),
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    // Validate and correct invalid bits as much as possible
+    return NodeValidator.validateResource(node) as ImageResponsiveResource;
   }
 
   /**
@@ -307,6 +391,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: ImageLinkResource = {
       type: ResourceType.imageLink,
+      typeAlias: ResourceType.imageLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -352,6 +437,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AudioResource = {
       type: ResourceType.audio,
+      typeAlias: ResourceType.audio,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -393,6 +479,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResource = {
       type: ResourceType.audioEmbed,
+      typeAlias: ResourceType.audioEmbed,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -434,6 +521,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResource = {
       type: ResourceType.audioLink,
+      typeAlias: ResourceType.audioLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -498,6 +586,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: VideoResource = {
       type: ResourceType.video,
+      typeAlias: ResourceType.video,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -569,6 +658,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: VideoEmbedResource = {
       type: ResourceType.videoEmbed,
+      typeAlias: ResourceType.videoEmbed,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -640,6 +730,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: VideoLinkResource = {
       type: ResourceType.videoLink,
+      typeAlias: ResourceType.videoLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -678,6 +769,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmResource = {
       type: ResourceType.stillImageFilm,
+      typeAlias: ResourceType.stillImageFilm,
       image: image ?? this.imageResource({ format: '', value: '' }),
       audio: audio ?? this.audioResource({ format: '', value: '' }),
     };
@@ -734,6 +826,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmEmbedResource = {
       type: ResourceType.stillImageFilmEmbed,
+      typeAlias: ResourceType.stillImageFilmEmbed,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -805,6 +898,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmLinkResource = {
       type: ResourceType.stillImageFilmLink,
+      typeAlias: ResourceType.stillImageFilmLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -850,6 +944,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: ArticleResource = {
       type: ResourceType.article,
+      typeAlias: ResourceType.article,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -885,6 +980,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentResource = {
       type: ResourceType.document,
+      typeAlias: ResourceType.document,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -920,6 +1016,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentEmbedResource = {
       type: ResourceType.documentEmbed,
+      typeAlias: ResourceType.documentEmbed,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -955,6 +1052,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentLinkResource = {
       type: ResourceType.documentLink,
+      typeAlias: ResourceType.documentLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -990,6 +1088,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentDownloadResource = {
       type: ResourceType.documentDownload,
+      typeAlias: ResourceType.documentDownload,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -1024,6 +1123,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AppLinkResource = {
       type: ResourceType.appLink,
+      typeAlias: ResourceType.appLink,
       value,
       license,
       copyright,
@@ -1057,6 +1157,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResource = {
       type: ResourceType.websiteLink,
+      typeAlias: ResourceType.websiteLink,
       value,
       siteName,
       license,
