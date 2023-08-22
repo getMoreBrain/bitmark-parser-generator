@@ -30,6 +30,7 @@ import './bits/focusImageBitConfig';
 import './bits/highlightTextBitConfig';
 import './bits/imageBitConfig';
 import './bits/imageLinkBitConfig';
+import './bits/imageResponsiveBitConfig';
 import './bits/internalLinkBitConfig';
 import './bits/interviewBitConfig';
 import './bits/learningPathBitConfig';

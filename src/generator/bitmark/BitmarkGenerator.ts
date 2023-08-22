@@ -28,6 +28,7 @@ import {
   Example,
   MarkConfig,
   BodyPart,
+  ImageResponsiveResource,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -1634,8 +1635,13 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // // Resource is not valid, cancel walking it's tree.
       // if (!valid) return false;
 
-      // Special case for embedded resources
-      if (resource.type === ResourceType.stillImageFilm) {
+      // Special cases for embedded resources
+      if (resource.type === ResourceType.imageResponsive) {
+        const r = resource as ImageResponsiveResource;
+        this.writeResource(r.imagePortrait);
+        this.writeNL();
+        this.writeResource(r.imageLandscape);
+      } else if (resource.type === ResourceType.stillImageFilm) {
         const r = resource as StillImageFilmResource;
         this.writeResource(r.image);
         this.writeNL();
@@ -1643,7 +1649,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       } else {
         // Standard case
         this.writeOPAMP();
-        this.writeString(resource.type);
+        this.writeString(resource.typeAlias ?? resource.type);
         if (resource.type === ResourceType.article && resourceAsArticle.value) {
           this.writeColon();
           // this.writeNL();

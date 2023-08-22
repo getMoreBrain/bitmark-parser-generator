@@ -1,7 +1,6 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { AudioEmbedResource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
@@ -30,6 +29,16 @@ import { StringUtils } from '../../utils/StringUtils';
 import { UrlUtils } from '../../utils/UrlUtils';
 import { Generator } from '../Generator';
 
+import {
+  BodyBit,
+  BodyPart,
+  BodyText,
+  Flashcard,
+  ImageLinkResource,
+  ImageResponsiveResource,
+  Mark,
+  MarkConfig,
+} from '../../model/ast/Nodes';
 import {
   BotResponse,
   Example,
@@ -1477,6 +1486,22 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         };
         break;
 
+      case ResourceType.imageResponsive: {
+        const imageResponsiveResource = resource as ImageResponsiveResource;
+        // Only write the resource if it has both an image and audio
+        if (
+          imageResponsiveResource.imagePortrait.value != null &&
+          imageResponsiveResource.imageLandscape.value != null
+        ) {
+          resourceJson = {
+            type: ResourceType.imageResponsive,
+            imagePortrait: this.addImageResource(imageResponsiveResource.imagePortrait),
+            imageLandscape: this.addImageResource(imageResponsiveResource.imageLandscape),
+          };
+        }
+        break;
+      }
+
       case ResourceType.imageLink:
         resourceJson = {
           type: ResourceType.imageLink,
@@ -1618,6 +1643,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       const value = resource as string;
       resource = {
         type: ResourceType.image,
+        typeAlias: ResourceType.image,
         value,
         format: UrlUtils.fileExtensionFromUrl(value),
         provider: UrlUtils.domainFromUrl(value),
@@ -1649,6 +1675,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       const value = resource as string;
       resource = {
         type: ResourceType.imageLink,
+        typeAlias: ResourceType.imageLink,
         value,
         format: UrlUtils.fileExtensionFromUrl(value),
         provider: UrlUtils.domainFromUrl(value),

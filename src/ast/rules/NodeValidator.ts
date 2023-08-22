@@ -1,4 +1,4 @@
-import { Bit, Resource, StillImageFilmResource } from '../../model/ast/Nodes';
+import { Bit, ImageResponsiveResource, Resource, StillImageFilmResource } from '../../model/ast/Nodes';
 import { RootBitType } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { StringUtils } from '../../utils/StringUtils';
@@ -24,13 +24,28 @@ class NodeValidator {
     let valid = false;
 
     switch (resource.type) {
-      case ResourceType.stillImageFilm: {
-        const r = resource as unknown as StillImageFilmResource;
-        r.image = this.validateResource(r.image) ?? { type: ResourceType.image };
-        r.audio = this.validateResource(r.audio) ?? { type: ResourceType.audio };
-        valid = !!r.image || !!r.audio; // Allow valid is just image or audio is valid
+      case ResourceType.imageResponsive: {
+        const r = resource as unknown as ImageResponsiveResource;
+        r.imagePortrait = this.validateResource(r.imagePortrait) ?? {
+          type: ResourceType.image,
+          typeAlias: ResourceType.imagePortrait,
+        };
+        r.imageLandscape = this.validateResource(r.imageLandscape) ?? {
+          type: ResourceType.image,
+          typeAlias: ResourceType.imageLandscape,
+        };
+        valid = true;
         break;
       }
+
+      case ResourceType.stillImageFilm: {
+        const r = resource as unknown as StillImageFilmResource;
+        r.image = this.validateResource(r.image) ?? { type: ResourceType.image, typeAlias: ResourceType.image };
+        r.audio = this.validateResource(r.audio) ?? { type: ResourceType.audio, typeAlias: ResourceType.image };
+        valid = true;
+        break;
+      }
+
       default:
         valid = !!resource.value;
     }
@@ -41,6 +56,7 @@ class NodeValidator {
       if (resource.type) {
         ret = {
           type: resource.type,
+          typeAlias: resource.type,
         } as T;
       }
     }

@@ -1,6 +1,7 @@
 import { Text } from '../ast/TextNodes';
 
 export type ResourceDataJson = ImageResourceJson &
+  ImageResponsiveResourceJson &
   ImageLinkResourceJson &
   AudioResourceJson &
   AudioEmbedResourceJson &
@@ -21,6 +22,7 @@ export type ResourceDataJson = ImageResourceJson &
 
 export type ResourceJson =
   | ImageResourceWrapperJson
+  | ImageResponsiveResourceWrapperJson
   | ImageLinkResourceWrapperJson
   | AudioResourceWrapperJson
   | AudioEmbedResourceWrapperJson
@@ -47,6 +49,13 @@ export interface ImageResourceWrapperJson extends ResourceWrapperJson {
   type: 'image'; // resource type
   image: ImageResourceJson;
 }
+
+export interface ImageResponsiveResourceWrapperJson extends ResourceWrapperJson {
+  type: 'image-responsive'; // resource type
+  imagePortrait: ImageResourceJson;
+  imageLandscape: ImageResourceJson;
+}
+
 export interface ImageLinkResourceWrapperJson extends ResourceWrapperJson {
   type: 'image-link'; // resource type
   imageLink: ImageLinkResourceJson;
@@ -167,6 +176,11 @@ export interface ImageLinkResourceJson extends BaseResourceJson {
   width: number | null;
   height: number | null;
   alt: string;
+}
+
+export interface ImageResponsiveResourceJson extends BaseResourceJson {
+  imagePortrait: ImageResourceJson;
+  imageLandscape: ImageResourceJson;
 }
 
 export interface AudioResourceJson extends BaseResourceJson {
