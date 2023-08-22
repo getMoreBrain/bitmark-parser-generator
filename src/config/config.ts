@@ -86,6 +86,7 @@ import './properties/focusYPropertyConfig';
 import './properties/iconPropertyConfig';
 import './properties/iconTagPropertyConfig';
 import './properties/idPropertyConfig';
+import './properties/imageSourcePropertyConfig';
 import './properties/indicationPropertyConfig';
 import './properties/isInfoOnlyPropertyConfig';
 import './properties/isTrackedPropertyConfig';

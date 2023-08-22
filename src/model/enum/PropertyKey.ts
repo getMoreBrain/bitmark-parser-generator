@@ -79,6 +79,9 @@ const PropertyKey = superenum({
   caseSensitive: 'caseSensitive', // single
   reaction: 'reaction', // single - botResponse
 
+  // Image source (mockuuups API)
+  imageSource: 'imageSource', // single
+
   // Only in resources
   width: 'width', // single
   height: 'height', // single
