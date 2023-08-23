@@ -199,6 +199,12 @@ const NodeType = superenum({
   reaction: 'reaction',
   feedback: 'feedback',
 
+  // ImageSource
+  imageSource: 'imageSource',
+  mockupId: 'mockupId',
+  size: 'size',
+  trim: 'trim',
+
   // Partner
   partner: 'partner',
   name: 'name',
@@ -227,6 +233,7 @@ const NodeType = superenum({
   imageLandscape: 'imageLandscape',
   audio: 'audio',
   type: 'type',
+  typeAlias: 'typeAlias',
   format: 'format',
   value: 'value',
   url: 'url',

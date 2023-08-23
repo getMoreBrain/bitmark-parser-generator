@@ -8,6 +8,7 @@ import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVers
 import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { TextFormat } from '../../model/enum/TextFormat';
+import { BooleanUtils } from '../../utils/BooleanUtils';
 import { Generator } from '../Generator';
 
 import {
@@ -29,6 +30,7 @@ import {
   MarkConfig,
   BodyPart,
   ImageResponsiveResource,
+  ImageSource,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -365,6 +367,25 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bit) {
       if (value != '') this.writeProperty(PropertyKey.labelTrue, value, true);
       if (bit.labelFalse && bit.labelFalse[0] != '') this.writeProperty(PropertyKey.labelFalse, bit.labelFalse, true);
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> imageSource
+
+  protected enter_imageSource(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const imageSource = node.value as ImageSource;
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const { url, mockupId, size, format, trim } = imageSource;
+
+    this.writeProperty('imageSource', url, true);
+    if (url) {
+      if (mockupId) this.writeProperty('mockupId', mockupId, true);
+      if (size) this.writeProperty('size', size, true);
+      if (format) this.writeProperty('format', format, true);
+      if (BooleanUtils.isBoolean(trim)) this.writeProperty('trim', trim, true);
     }
   }
 
@@ -1435,6 +1456,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (astKey === PropertyKey.labelTrue) continue;
       if (astKey === PropertyKey.labelFalse) continue;
       if (astKey === PropertyKey.posterImage) continue;
+      if (astKey === PropertyKey.imageSource) continue;
       if (astKey === PropertyKey.partner) continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

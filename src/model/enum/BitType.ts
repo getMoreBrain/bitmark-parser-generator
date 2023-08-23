@@ -27,6 +27,9 @@ export interface RootBitTypeMetadata {
   // Resource type that is valid for this bit type
   resourceType?: ResourceTypeType;
 
+  // Is the resource optional?
+  resourceOptional?: boolean;
+
   // Type of card set that is valid for this bit type (if any)
   cardSet?: CardSetConfig;
 
@@ -98,6 +101,7 @@ const RootBitType = superenum({
   highlightText: 'highlight-text',
   image: 'image',
   imageLink: 'image-link',
+  imageOnDevice: 'image-on-device',
   imageResponsive: 'image-responsive',
   internalLink: 'internal-link',
   interview: 'interview',
@@ -249,7 +253,6 @@ const AliasBitType = superenum({
   help: 'help',
   hint: 'hint',
   imageLandscape: 'image-landscape',
-  imageOnDevice: 'image-on-device',
   imagePortrait: 'image-portrait',
   imagePrototype: 'image-prototype',
   imageSuperWide: 'image-super-wide',
@@ -482,7 +485,6 @@ const RootBitTypeToAliasMap = {
     //
     AliasBitType.figure,
     AliasBitType.imageLandscape,
-    AliasBitType.imageOnDevice,
     AliasBitType.imagePortrait,
     AliasBitType.imagePrototype,
     AliasBitType.imageSuperWide,
