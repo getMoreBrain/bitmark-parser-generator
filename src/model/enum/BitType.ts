@@ -27,6 +27,9 @@ export interface RootBitTypeMetadata {
   // Resource type that is valid for this bit type
   resourceType?: ResourceTypeType;
 
+  // Is the resource optional?
+  resourceOptional?: boolean;
+
   // Type of card set that is valid for this bit type (if any)
   cardSet?: CardSetConfig;
 

@@ -1,6 +1,7 @@
 import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
 import { ResourceType } from '../../model/enum/ResourceType';
 
+import { TAGS_CHAIN_IMAGE_SOURCE } from './generic/chainBitConfigs';
 import { TAGS_CHAIN_IMAGE_RESOURCE } from './generic/resourceChainBitConfigs';
 import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
@@ -14,5 +15,6 @@ RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.imageOnDevice, {
   },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.image,
+  resourceOptional: true,
   bodyAllowed: true,
 });

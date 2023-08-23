@@ -26,6 +26,7 @@ import {
   Highlight,
   HighlightText,
   ImageResource,
+  ImageSource,
   Mark,
   MarkConfig,
   Matrix,
@@ -56,6 +57,7 @@ import {
   BotResponseJson,
   ExampleJson,
   MarkConfigJson,
+  ImageSourceJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -275,6 +277,7 @@ class JsonParser {
       hint,
       instruction,
       example,
+      imageSource,
       partner,
       marks,
       resource,
@@ -307,6 +310,9 @@ class JsonParser {
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
+
+    // imageSource
+    const imageSourceNode = this.imageSourceBitToAst(imageSource);
 
     // Partner
     const partnerNode = this.partnerBitToAst(partner);
@@ -407,6 +413,7 @@ class JsonParser {
       referenceEnd,
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
+      imageSource: imageSourceNode,
       partner: partnerNode,
       markConfig: markConfigNode,
       resource: resourceNode,
@@ -427,6 +434,17 @@ class JsonParser {
     });
 
     return bitNode;
+  }
+
+  private imageSourceBitToAst(imageSource?: ImageSourceJson): ImageSource | undefined {
+    let node: ImageSource | undefined;
+
+    if (imageSource) {
+      const { url, mockupId, format, size, trim } = imageSource;
+      node = builder.imageSource({ url, mockupId, format, size, trim });
+    }
+
+    return node;
   }
 
   private partnerBitToAst(partner?: PartnerJson): Partner | undefined {

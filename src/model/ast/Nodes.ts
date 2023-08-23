@@ -85,6 +85,7 @@ export interface Bit {
   isExample?: boolean;
   isDefaultExample: boolean;
   example?: Example;
+  imageSource?: ImageSource;
   partner?: Partner;
   resource?: Resource;
   body?: Body;
@@ -135,6 +136,15 @@ export interface ExtraProperties {
 }
 
 export type Property = string[] | number[] | boolean[] | unknown[];
+
+// (image-on-device) ImageSource
+export interface ImageSource {
+  url: string;
+  mockupId: string;
+  size?: number;
+  format?: string;
+  trim?: boolean;
+}
 
 // (chat) Partner
 export interface Partner {

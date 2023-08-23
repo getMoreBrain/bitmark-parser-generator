@@ -6,6 +6,7 @@ import { StringUtils } from '../../../../utils/StringUtils';
 
 import { bookChainContentProcessor } from './BookChainContentProcessor';
 import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
+import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { partnerChainContentProcessor } from './PartnerChainContentProcessor';
 
@@ -36,6 +37,9 @@ function propertyContentProcessor(
     return;
   } else if (key === PropertyKey.partner) {
     partnerChainContentProcessor(context, bitLevel, bitType, content, target);
+    return;
+  } else if (key === PropertyKey.imageSource) {
+    imageSourceChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
   } else if (key === PropertyKey.book) {
     bookChainContentProcessor(context, bitLevel, bitType, content, target);

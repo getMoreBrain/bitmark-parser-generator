@@ -1,7 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioEmbedResource } from '../../model/ast/Nodes';
+import { AudioEmbedResource, ImageSource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
@@ -75,6 +75,7 @@ import {
   ExampleJson,
   FlashcardJson,
   HeadingJson,
+  ImageSourceJson,
   MarkConfigJson,
   MatrixCellJson,
   MatrixJson,
@@ -480,12 +481,32 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.cleanAndSetDefaultsForBitJson(this.bitJson);
   }
 
+  // bitmarkAst -> bits -> bitsValue -> imageSource
+
+  protected enter_imageSource(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const imageSource = node.value as ImageSource;
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const { url, mockupId, size, format, trim } = imageSource;
+
+    const imageSourceJson = {} as ImageSourceJson;
+    this.addProperty(imageSourceJson, 'url', url ?? '', true);
+    this.addProperty(imageSourceJson, 'mockupId', mockupId ?? '', true);
+    this.addProperty(imageSourceJson, 'size', size ?? null, true);
+    this.addProperty(imageSourceJson, 'format', format ?? null, true);
+    this.addProperty(imageSourceJson, 'trim', BooleanUtils.isBoolean(trim) ? trim : null, true);
+
+    this.bitJson.imageSource = imageSourceJson;
+  }
+
   // bitmarkAst -> bits -> bitsValue -> partner
 
   protected enter_partner(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const partner = node.value as Partner;
 
-    // Ignore example that is not at the bit level as it are handled elsewhere
+    // Ignore values that are not at the bit level as they might be handled elsewhere
     if (parent?.key !== NodeType.bitsValue) return;
 
     const { name, avatarImage } = partner;
@@ -1299,6 +1320,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
       // Special cases (handled outside of the automatically generated handlers)
       if (astKey === PropertyKey.example) continue;
+      if (astKey === PropertyKey.imageSource) continue;
       if (astKey === PropertyKey.partner) continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

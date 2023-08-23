@@ -1,30 +1,124 @@
 [
   {
-    "bitmark": "[.image-on-device]\n[@id:342343]\n[&image:https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg]",
     "bit": {
       "type": "image-on-device",
       "format": "bitmark--",
-      "body": "",
+      "id": ["342343"],
       "item": "",
       "hint": "",
       "isExample": false,
       "example": null,
+      "body": "",
+      "imageSource": {
+        "url": "http://url.to/an/image.png",
+        "mockupId": "YXpoZdyRLAKQHgQA",
+        "size": 1000,
+        "format": "image/webp",
+        "trim": false
+      }
+    },
+    "parser": {
+      "version": "1.2.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.image-on-device]\n[@id:342343]\n[@imageSource:http://url.to/an/image.png][@mockupId:YXpoZdyRLAKQHgQA][@size:1000][@format:image/webp][@trim:false]"
+  },
+  {
+    "bit": {
+      "type": "image-on-device",
+      "format": "bitmark--",
       "id": ["342343"],
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "body": "",
       "resource": {
         "type": "image",
         "image": {
-          "src": "https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg",
-          "showInIndex": false,
           "format": "jpg",
+          "provider": "www.apple.com",
+          "src": "https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg",
           "width": null,
           "height": null,
           "alt": "",
-          "caption": "",
           "license": "",
-          "provider": "www.apple.com",
-          "copyright": ""
+          "copyright": "",
+          "showInIndex": false,
+          "caption": ""
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.2.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.image-on-device]\n[@id:342343]\n[&image:https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg]"
+  },
+  {
+    "bit": {
+      "type": "image-on-device",
+      "format": "bitmark--",
+      "id": ["342343"],
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "body": "",
+      "imageSource": {
+        "url": "http://url.to/an/image.png",
+        "mockupId": "",
+        "size": 1000,
+        "format": "image/webp",
+        "trim": false
+      }
+    },
+    "parser": {
+      "version": "1.2.2",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[@mockupId:xxx] is missing from [@imageSource]",
+          "text": "[@imageSource:http://url.to/an/image.png]",
+          "location": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 317
+            },
+            "end": {
+              "line": 13,
+              "column": 42,
+              "offset": 358
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.image-on-device]\n[@id:342343]\n[@imageSource:http://url.to/an/image.png][@size:1000][@format:image/webp][@trim:false]"
+  },
+  {
+    "bit": {
+      "type": "image-on-device",
+      "format": "bitmark--",
+      "id": ["342343"],
+      "item": "",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "body": "",
+      "imageSource": {
+        "url": "http://url.to/an/image.png",
+        "mockupId": "YXpoZdyRLAKQHgQA",
+        "size": null,
+        "format": null,
+        "trim": null
+      }
+    },
+    "parser": {
+      "version": "1.2.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.image-on-device]\n[@id:342343]\n[@imageSource:http://url.to/an/image.png][@mockupId:YXpoZdyRLAKQHgQA]"
   }
 ]

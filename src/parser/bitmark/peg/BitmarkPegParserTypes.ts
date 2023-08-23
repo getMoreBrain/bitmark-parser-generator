@@ -37,6 +37,7 @@ import {
   Comment,
   MarkConfig,
   Flashcard,
+  ImageSource,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -94,6 +95,7 @@ export interface BitContentProcessorResult {
   cardBody?: string;
   body?: Body;
   footer?: FooterText;
+  imageSource?: ImageSource;
   partner?: Partner;
   trueFalse?: TrueFalseValue[];
   isDefaultExample?: boolean;
@@ -140,6 +142,10 @@ export interface BitContentProcessorResult {
   showSubtitles?: boolean;
   posterImage?: ImageResource;
   siteName?: string;
+  imageSourceUrl?: string;
+  mockupId?: string;
+  size?: number;
+  format?: string;
 
   extraProperties?: ExtraProperties;
   comments?: Comment[];

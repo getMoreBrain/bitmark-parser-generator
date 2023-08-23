@@ -2,11 +2,6 @@ import { TagDataMap } from '../../../model/config/TagData';
 import { PropertyKey } from '../../../model/enum/PropertyKey';
 import { ResourceType } from '../../../model/enum/ResourceType';
 
-// ImageSource property ([.image-on-device])
-const TAGS_CHAIN_IMAGE_SOURCE_PROPERTY: TagDataMap = {
-  [PropertyKey.imageSource]: { isProperty: true },
-};
-
 // Default resource chain
 const TAGS_DEFAULT_RESOURCE_CHAIN: TagDataMap = {
   [PropertyKey.license]: { isProperty: true },
@@ -317,7 +312,6 @@ const TAGS_CHAIN_ANY_RESOURCE: TagDataMap = {
 };
 
 export {
-  TAGS_CHAIN_IMAGE_SOURCE_PROPERTY,
   TAGS_CHAIN_IMAGE_RESOURCE,
   TAGS_CHAIN_IMAGE_EMBED_RESOURCE,
   TAGS_CHAIN_IMAGE_LINK_RESOURCE,
