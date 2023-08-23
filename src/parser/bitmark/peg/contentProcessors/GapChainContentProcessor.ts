@@ -23,7 +23,7 @@ function gapChainContentProcessor(
   bodyParts: BodyPart[],
 ): void {
   if (bitLevel === BitContentLevel.Chain) {
-    clozeTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
+    clozeTagContentProcessor(context, bitLevel, bitType, content, target);
   } else {
     const gap = buildGap(context, bitType, content);
     if (gap) bodyParts.push(gap);

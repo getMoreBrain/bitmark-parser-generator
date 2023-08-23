@@ -49,6 +49,7 @@ import {
   MarkConfig,
   Example,
   Flashcard,
+  ImageSource,
 } from '../model/ast/Nodes';
 
 /**
@@ -147,6 +148,7 @@ class Builder extends BaseBuilder {
     instruction?: string;
     isDefaultExample?: boolean;
     example?: Example;
+    imageSource?: ImageSource;
     partner?: Partner;
     extraProperties?: {
       [key: string]: unknown | unknown[];
@@ -236,6 +238,7 @@ class Builder extends BaseBuilder {
       instruction,
       isDefaultExample,
       example,
+      imageSource,
       partner,
       markConfig,
       extraProperties,
@@ -315,6 +318,7 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
+      imageSource,
       partner,
       resource,
       body,
@@ -1110,6 +1114,32 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+    });
+
+    return node;
+  }
+
+  /**
+   * Build (image-on-device) imageSource node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  imageSource(data: { url: string; mockupId: string; size?: number; format?: string; trim?: boolean }): ImageSource {
+    const { url, mockupId, size, format, trim } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: ImageSource = {
+      url,
+      mockupId,
+      size,
+      format,
+      trim,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreFalse: ['trim'],
     });
 
     return node;

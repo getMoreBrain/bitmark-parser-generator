@@ -39,6 +39,7 @@ function buildResource(
   // Get the meta data for the bit
   const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bitType.root);
   const resourceAttachmentAllowed = meta?.resourceAttachmentAllowed;
+  const resourceOptional = meta?.resourceOptional;
 
   // Get the valid resource types for the bit
   const rt = resourceAttachmentAllowed ? resourceType : undefined;
@@ -60,10 +61,12 @@ function buildResource(
           filteredResources.push(r);
         }
       }
-      resource = resourceBuilder.imageResponsiveResource({
-        imagePortrait: imagePortraitResource,
-        imageLandscape: imageLandscapeResource,
-      });
+      if (imagePortraitResource && imageLandscapeResource) {
+        resource = resourceBuilder.imageResponsiveResource({
+          imagePortrait: imagePortraitResource,
+          imageLandscape: imageLandscapeResource,
+        });
+      }
     }
   } else if (validResourceType === ResourceType.stillImageFilm) {
     if (resources) {
@@ -80,10 +83,12 @@ function buildResource(
           filteredResources.push(r);
         }
       }
-      resource = resourceBuilder.stillImageFilmResource({
-        image: imageResource,
-        audio: audioResource,
-      });
+      if (imageResource && audioResource) {
+        resource = resourceBuilder.stillImageFilmResource({
+          image: imageResource,
+          audio: audioResource,
+        });
+      }
     }
   } else {
     filteredResources = resources;
@@ -114,7 +119,7 @@ function buildResource(
       context.addWarning(
         `Resource type [&${resourceType}] is specified in the bit header, but no such a resource is present in the bit`,
       );
-    } else if (validResourceType) {
+    } else if (validResourceType && !resourceOptional) {
       let warningMsg = `A resource is required but is not present in the bit.`;
       // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
       if (validResourceType === RootBitType.imageResponsive) {

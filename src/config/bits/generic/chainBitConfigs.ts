@@ -5,6 +5,20 @@ import { TagType } from '../../../model/enum/TagType';
 import { TAGS_CHAIN_IMAGE_RESOURCE } from './resourceChainBitConfigs';
 import { TAGS_ITEM_LEAD_INSTRUCTION_HINT, TAGS_PROPERTY_EXAMPLE } from './standardBitConfigs';
 
+// ImageSource ([.image-on-device])
+
+const TAGS_CHAIN_IMAGE_SOURCE: TagDataMap = {
+  [PropertyKey.imageSource]: {
+    isProperty: true,
+    chain: {
+      [PropertyKey.mockupId]: { isProperty: true },
+      [PropertyKey.size]: { isProperty: true },
+      [PropertyKey.format]: { isProperty: true },
+      [PropertyKey.trim]: { isProperty: true },
+    },
+  },
+};
+
 // Partner
 
 const TAGS_CHAIN_PARTNER: TagDataMap = {
@@ -96,4 +110,11 @@ const TAGS_CHAIN_MARK: TagDataMap = {
   },
 };
 
-export { TAGS_CHAIN_PARTNER, TAGS_CHAIN_GAP, TAGS_CHAIN_TRUE_FALSE, TAGS_CHAIN_MARK_CONFIG, TAGS_CHAIN_MARK };
+export {
+  TAGS_CHAIN_IMAGE_SOURCE,
+  TAGS_CHAIN_PARTNER,
+  TAGS_CHAIN_GAP,
+  TAGS_CHAIN_TRUE_FALSE,
+  TAGS_CHAIN_MARK_CONFIG,
+  TAGS_CHAIN_MARK,
+};

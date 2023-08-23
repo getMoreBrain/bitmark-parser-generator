@@ -70,6 +70,7 @@ export interface BitJson {
   isExample: boolean;
   example: ExampleJson;
 
+  imageSource: ImageSourceJson;
   partner: PartnerJson;
 
   marks: MarkConfigJson[];
@@ -97,6 +98,14 @@ export interface BitJson {
   questions: QuestionJson[];
   footer: Text;
   placeholders: BodyBitsJson;
+}
+
+export interface ImageSourceJson {
+  url: string;
+  mockupId: string;
+  size?: number;
+  format?: string;
+  trim?: boolean;
 }
 
 export interface PartnerJson {
