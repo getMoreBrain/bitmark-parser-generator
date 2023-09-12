@@ -29,11 +29,13 @@ const BOLD_HALF_MARK = '*';
 const LIGHT_HALF_MARK = '`';
 const ITALIC_HALF_MARK = '_';
 const HIGHLIGHT_HALF_MARK = '!';
+const INLINE_HALF_MARK = '=';
 
 const BOLD_MARK = BOLD_HALF_MARK + BOLD_HALF_MARK;
 const LIGHT_MARK = LIGHT_HALF_MARK + LIGHT_HALF_MARK;
 const ITALIC_MARK = ITALIC_HALF_MARK + ITALIC_HALF_MARK;
 const HIGHLIGHT_MARK = HIGHLIGHT_HALF_MARK + HIGHLIGHT_HALF_MARK;
+const INLINE_MARK = INLINE_HALF_MARK + INLINE_HALF_MARK;
 
 // const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHLIGHT_HALF_MARK];
 
@@ -538,15 +540,38 @@ class TextGenerator implements AstWalkCallbacks {
     return false;
   }
 
+  /**
+   * Write the marks for the node.
+   *
+   * All marks need to be considered at once, because if there are multiple marks, they need to be written in
+   * a combined manner.
+   *
+   * e.g. if there are bold and italic marks, they need to be written as
+   *
+   * ==the text==|bold|italic|
+   * rather than
+   * **__the text__**
+   * or
+   * **__the text**__
+   *
+   * @param node the text node
+   * @param enter true if entering (before) the text, false if exiting (after) the text
+   */
   protected writeMarks(node: TextNode, enter: boolean): void {
     if (node.marks) {
-      for (const mark of node.marks) {
+      // Single marks are only valid if there is only one mark for this text
+      const singleMark = node.marks.length === 1;
+
+      // Get the correct mark start / end
+      const markStartEnd = node.marks.reduce((acc, mark) => {
+        if (acc) return acc;
         switch (mark.type) {
           case TextMarkType.bold:
           case TextMarkType.light:
           case TextMarkType.italic:
           case TextMarkType.highlight:
-            this.writeStandardMark(mark);
+            if (singleMark) return STANDARD_MARKS[mark.type];
+            return INLINE_MARK;
             break;
           case TextMarkType.strike:
           case TextMarkType.sub:
@@ -556,16 +581,63 @@ class TextGenerator implements AstWalkCallbacks {
           case TextMarkType.var:
           case TextMarkType.code:
           case TextMarkType.color:
-            this.writeInlineMark(mark, enter);
-            break;
+          case TextMarkType.comment:
+            return INLINE_MARK;
 
-          case TextMarkType.comment: {
-            this.writeCommentMark(mark as CommentMark, enter);
-            break;
-          }
           case TextMarkType.link:
           default:
           // Do nothing (link is handled in writeText)
+        }
+        return acc;
+      }, undefined as string | undefined);
+
+      const haveMark = markStartEnd != null;
+
+      if (haveMark) {
+        // Write the mark start / end around the text
+        this.writeMarkTextWrapper(markStartEnd);
+
+        // Write the inline/comment mark if not entering
+        if (!enter) {
+          let inlineMarkWritten = false;
+          for (const mark of node.marks) {
+            switch (mark.type) {
+              case TextMarkType.bold:
+              case TextMarkType.light:
+              case TextMarkType.italic:
+              case TextMarkType.highlight:
+                if (!singleMark) {
+                  this.writeInlineMarkStartEnd();
+                  this.writeInlineMark(mark);
+                  inlineMarkWritten = true;
+                }
+                break;
+              case TextMarkType.strike:
+              case TextMarkType.sub:
+              case TextMarkType.super:
+              case TextMarkType.ins:
+              case TextMarkType.del:
+              case TextMarkType.var:
+              case TextMarkType.code:
+              case TextMarkType.color:
+                this.writeInlineMarkStartEnd();
+                this.writeInlineMark(mark);
+                inlineMarkWritten = true;
+                break;
+
+              case TextMarkType.comment: {
+                this.writeInlineMarkStartEnd();
+                this.writeCommentMark(mark as CommentMark);
+                inlineMarkWritten = true;
+                break;
+              }
+              case TextMarkType.link:
+              default:
+              // Do nothing (link is handled in writeText)
+            }
+          }
+          // Write the mark end
+          if (inlineMarkWritten) this.writeInlineMarkStartEnd();
         }
       }
     }
@@ -676,37 +748,31 @@ class TextGenerator implements AstWalkCallbacks {
     this.write(s);
   }
 
-  protected writeStandardMark(mark: TextMark) {
-    const s = STANDARD_MARKS[mark.type];
+  protected writeMarkTextWrapper(s: string) {
     if (s) this.write(s);
   }
 
-  protected writeInlineMark(mark: TextMark, enter: boolean) {
-    if (enter) {
-      this.write('==');
-    } else {
-      let s = `==|${mark.type}`;
-      if (mark.attrs) {
-        for (const [k, v] of Object.entries(mark.attrs)) {
-          if ((k === 'language' && v !== 'plain text') || k === 'color') {
-            s = `${s}:${v}`;
-          }
+  protected writeInlineMark(mark: TextMark) {
+    let s = `${mark.type}`;
+    if (mark.attrs) {
+      for (const [k, v] of Object.entries(mark.attrs)) {
+        if ((k === 'language' && v !== 'plain text') || k === 'color') {
+          s = `${s}:${v}`;
         }
       }
-      s = `${s}|`;
+    }
+    this.write(s);
+  }
+
+  protected writeCommentMark(mark: CommentMark) {
+    if (mark.comment) {
+      const s = `#${mark.comment}`;
       this.write(s);
     }
   }
 
-  protected writeCommentMark(mark: CommentMark, enter: boolean) {
-    if (enter) {
-      // Do nothing
-    } else {
-      if (mark.comment) {
-        const s = `#${mark.comment}|`;
-        this.write(s);
-      }
-    }
+  protected writeInlineMarkStartEnd() {
+    this.write('|');
   }
 
   protected writeString(s?: string): void {
