@@ -75,7 +75,6 @@ export interface BitJson {
 
   marks: MarkConfigJson[];
 
-  // NEW property - not in the ANTLR parser
   extraProperties: {
     [key: string]: unknown | unknown[];
   };

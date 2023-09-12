@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-parser-generator",
-  "version": "1.2.4",
+  "version": "1.3.0",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Richard Sewell",
   "license": "ISC",
@@ -13,11 +13,10 @@
   ],
   "scripts": {
     "start": "run start-parser",
-    "build": "run clean && run generate-build-info && run build-grammar-bit && run build-grammar-text && run lint && run build-cjs && run build-esm && run build-umd && run build-umd-antlr",
+    "build": "run clean && run generate-build-info && run build-grammar-bit && run build-grammar-text && run lint && run build-cjs && run build-esm && run build-umd",
     "build-cjs": "tsc",
     "build-esm": "tsc --module ES6 --outDir 'dist/esm'",
     "build-umd": "webpack",
-    "build-umd-antlr": "webpack --config webpack.antlr.config.ts",
     "build-doc": "typedoc",
     "build-grammar-bit": "node -r esbuild-register ./scripts/grammar/bitmark/generate-bitmark-parser.ts --bit",
     "build-grammar-bit-test": "BPG_ENV=development node -r esbuild-register ./scripts/grammar/bitmark/generate-bitmark-parser.ts --bit --test",
@@ -57,14 +56,6 @@
   "contributors": [
     "Richard Sewell (https://github.com/zx-ncoderz)"
   ],
-  "resolutions": {
-    "antlr4ts": "0.5.0-alpha.4",
-    "npm-exists": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.2.1.tgz"
-  },
-  "overrides": {
-    "antlr4ts": "0.5.0-alpha.4",
-    "npm-exists": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.2.1.tgz"
-  },
   "devDependencies": {
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@types/jest": "^29.5.2",
@@ -100,7 +91,6 @@
   "dependencies": {
     "@ncoderz/superenum": "^0.2.0",
     "@types/fs-extra": "^11.0.1",
-    "bitmark-grammar": "1.0.92",
     "fs-extra": "^11.1.1"
   }
 }
