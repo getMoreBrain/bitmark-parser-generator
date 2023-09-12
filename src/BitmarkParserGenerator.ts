@@ -18,7 +18,7 @@ import { env } from './utils/env/Env';
  * Any code between the comments STRIP:START and STRIP:END will be removed.
  *
  * However, the Typescript compiler will remove comments that it does not believe are associated with code.
- * Therefore we have to use some dummy code to prevent it from removing the ANTLR stripping comments.
+ * Therefore we have to use some dummy code to prevent it from removing the STRIP stripping comments.
  */
 const STRIP = 0;
 
@@ -27,7 +27,6 @@ STRIP;
 
 /* eslint-disable arca/import-ordering */
 import * as fs from 'fs-extra';
-import path from 'path';
 
 import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
@@ -189,7 +188,7 @@ class BitmarkParserGenerator {
   async convert(input: string | fs.PathLike | unknown, options?: ConvertOptions): Promise<string | unknown | void> {
     let res: string | unknown | void;
     const opts: ConvertOptions = Object.assign({}, options);
-    const fileOptions = Object.assign({}, opts.fileOptions);
+    // const fileOptions = Object.assign({}, opts.fileOptions);
     // const bitmarkOptions = Object.assign({}, opts.bitmarkOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
 
@@ -197,7 +196,7 @@ class BitmarkParserGenerator {
     const outputBitmark = outputFormat === Output.bitmark;
     const outputJson = outputFormat === Output.json;
     const outputAst = outputFormat === Output.ast;
-    const bitmarkParserType = opts.bitmarkParserType;
+    const bitmarkParserType = BitmarkParserType.peggy; // Option is no longer used as only Peggy parser supported
 
     let inStr: string = input as string;
 
@@ -240,25 +239,8 @@ class BitmarkParserGenerator {
     };
 
     const bitmarkToJson = async (bitmarkStr: string) => {
-      if (bitmarkParserType === BitmarkParserType.antlr) {
-        // Convert the bitmark to JSON using the antlr parser
-        const json = this.bitmarkParser.parseUsingAntlr(bitmarkStr);
-
-        if (opts.outputFile) {
-          const jsonStr = this.jsonStringifyPrettify(json, jsonOptions, true) as string;
-
-          // Write JSON to file
-          const flag = fileOptions.append ? 'a' : 'w';
-          fs.ensureDirSync(path.dirname(opts.outputFile.toString()));
-          fs.writeFileSync(opts.outputFile, jsonStr, {
-            flag,
-          });
-        } else {
-          // Return JSON as object or string depending on prettify/stringify option
-          res = this.jsonStringifyPrettify(json, jsonOptions);
-        }
-      } else {
-        // Convert the bitmark to JSON using the peggy parser
+      if (bitmarkParserType === BitmarkParserType.peggy) {
+        // Convert the bitmark to JSON using the peggy parser (aways true, only peggy parser supported)
 
         // Generate AST from the Bitmark markup
         ast = this.bitmarkParser.toAst(bitmarkStr, {

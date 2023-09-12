@@ -5,7 +5,7 @@
  * Any code between the comments STRIP:START and STRIP:END will be removed.
  *
  * However, the Typescript compiler will remove comments that it does not believe are associated with code.
- * Therefore we have to use some dummy code to prevent it from removing the ANTLR stripping comments.
+ * Therefore we have to use some dummy code to prevent it from removing the STRIP stripping comments.
  */
 
 import { init } from './init/init';

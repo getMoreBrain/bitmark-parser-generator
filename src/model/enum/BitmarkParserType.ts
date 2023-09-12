@@ -1,7 +1,6 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 const BitmarkParserType = superenum({
-  antlr: 'antlr',
   peggy: 'peggy',
 });
 
