@@ -14,10 +14,9 @@ import { JsonCleanupUtils } from '../utils/JsonCleanupUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 import { getTestFiles, getTestFilesDir } from './config/config-bitmark-files';
-import { isDebugPerformance, isTestAgainstAntlrParser } from './config/config-test';
+import { isDebugPerformance } from './config/config-test';
 
 const DEBUG_PERFORMANCE = isDebugPerformance();
-const TEST_AGAINST_ANTLR_PARSER = isTestAgainstAntlrParser();
 
 const TEST_FILES = getTestFiles();
 const TEST_INPUT_DIR = getTestFilesDir();
@@ -102,28 +101,13 @@ describe('bitmark-parser', () => {
         // Read in the test markup file
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
-        let originalJson: unknown;
+        // TEST AGAINST JSON FILES
 
-        if (TEST_AGAINST_ANTLR_PARSER) {
-          // Generate JSON from generated bitmark markup using the ANTLR parser
-          performance.mark('ANTLR:Start');
-          originalJson = bitmarkParser.parseUsingAntlr(originalMarkup);
+        // Copy the original expected JSON file to the output folder
+        fs.copySync(testJsonFile, originalJsonFile);
 
-          // Write the new JSON
-          fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
-            encoding: 'utf8',
-          });
-
-          performance.mark('ANTLR:End');
-        } else {
-          // TEST AGAINST JSON FILES
-
-          // Copy the original expected JSON file to the output folder
-          fs.copySync(testJsonFile, originalJsonFile);
-
-          // Read in the test expected JSON file
-          originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
-        }
+        // Read in the test expected JSON file
+        const originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
         JsonCleanupUtils.cleanupBitJson(originalJson, { removeParser: true, removeErrors: true });
@@ -168,13 +152,7 @@ describe('bitmark-parser', () => {
         // Print performance information
         if (DEBUG_PERFORMANCE) {
           const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
-          if (TEST_AGAINST_ANTLR_PARSER) {
-            const antlrTimeSecs = Math.round(performance.measure('ANTLR', 'ANTLR:Start', 'ANTLR:End').duration) / 1000;
-            const speedUp = Math.round((antlrTimeSecs / pegTimeSecs) * 100) / 100;
-            console.log(`'${fileId}' timing; ANTLR: ${antlrTimeSecs} s, PEG: ${pegTimeSecs} s, speedup: x${speedUp}`);
-          } else {
-            console.log(`'${fileId}' timing; PEG: ${pegTimeSecs} s`);
-          }
+          console.log(`'${fileId}' timing; PEG: ${pegTimeSecs} s`);
         }
 
         expect(newJson).toEqual(originalJson);

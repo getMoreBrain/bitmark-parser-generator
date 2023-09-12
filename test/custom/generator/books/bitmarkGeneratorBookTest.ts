@@ -10,7 +10,7 @@ import { JsonFileGenerator } from '../../../../src/generator/json/JsonFileGenera
 import { BitmarkParser } from '../../../../src/parser/bitmark/BitmarkParser';
 import { JsonParser } from '../../../../src/parser/json/JsonParser';
 import { FileUtils } from '../../../../src/utils/FileUtils';
-import { isDebugPerformance, isTestAgainstAntlrParser } from '../../../standard/config/config-test';
+import { isDebugPerformance } from '../../../standard/config/config-test';
 import { JsonCleanupUtils } from '../../../utils/JsonCleanupUtils';
 import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 
@@ -55,7 +55,6 @@ import { deepDiffMapper } from '../../../utils/deepDiffMapper';
 const SINGLE_FILE_START = 0;
 const SINGLE_FILE_COUNT = 1000;
 
-const TEST_AGAINST_ANTLR_PARSER = isTestAgainstAntlrParser();
 const DEBUG_PERFORMANCE = isDebugPerformance();
 
 const TEST_INPUT_DIR = path.resolve(__dirname, '../../../../assets/test/books/bits');
@@ -115,7 +114,7 @@ describe('bitmark-parser-generator', () => {
         // Calculate the filenames
         // const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
         const originalMarkupFile = path.resolve(fullFolder, `${id}.bit`);
-        const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
+        // const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
         const generatedMarkupFile = path.resolve(fullFolder, `${id}.gen.bit`);
         const generatedJsonFile = path.resolve(fullFolder, `${id}.gen.json`);
         const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
@@ -136,34 +135,19 @@ describe('bitmark-parser-generator', () => {
         // Read in the test markup file
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
-        // Generate JSON from original bitmark markup using the parser
-        let originalJson: unknown;
+        // Generate JSON from original bitmark markup using the PEG parser
 
-        if (TEST_AGAINST_ANTLR_PARSER) {
-          // Generate JSON from original bitmark markup using the ANTLR parser
-          performance.mark('ANTLR:Start');
-          originalJson = bitmarkParser.parseUsingAntlr(originalMarkup);
+        const originalBitmarkAst = bitmarkParser.toAst(originalMarkup);
 
-          // Write the new JSON
-          fs.writeFileSync(originalJsonFile, JSON.stringify(originalJson, null, 2), {
-            encoding: 'utf8',
-          });
+        // Generate JSON from AST
+        const originalGenerator = new JsonFileGenerator(generatedJsonFile, {
+          jsonOptions,
+        });
 
-          performance.mark('ANTLR:End');
-        } else {
-          // Generate JSON from original bitmark markup using the PEG parser
-          const bitmarkAst = bitmarkParser.toAst(originalMarkup);
+        await originalGenerator.generate(originalBitmarkAst);
 
-          // Generate JSON from AST
-          const generator = new JsonFileGenerator(generatedJsonFile, {
-            jsonOptions,
-          });
-
-          await generator.generate(bitmarkAst);
-
-          // Read in the test JSON file
-          originalJson = fs.readJsonSync(generatedJsonFile, 'utf8');
-        }
+        // Read in the test JSON file
+        const originalJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
         JsonCleanupUtils.cleanupBitJson(originalJson, { removeParser: true, removeErrors: true });
@@ -181,47 +165,34 @@ describe('bitmark-parser-generator', () => {
         });
 
         // Generate markup code from AST
-        const generator = new BitmarkFileGenerator(generatedMarkupFile, {
+        const bitmarkGenerator = new BitmarkFileGenerator(generatedMarkupFile, {
           bitmarkOptions,
         });
 
-        await generator.generate(bitmarkAst);
+        await bitmarkGenerator.generate(bitmarkAst);
 
         performance.mark('GEN:End');
 
         // Read in the generated markup file
         const newMarkup = fs.readFileSync(generatedMarkupFile, 'utf8');
 
-        // Generate JSON from generated bitmark markup using the parser
-        let newJson: unknown;
+        // Generate JSON from generated bitmark markup using the PEG parser
+        const newBitmarkAst = bitmarkParser.toAst(newMarkup);
 
-        if (TEST_AGAINST_ANTLR_PARSER) {
-          // Generate JSON from generated bitmark markup using the ANTLR parser
-          newJson = bitmarkParser.parseUsingAntlr(newMarkup);
+        // Write the new AST
+        fs.writeFileSync(generatedAstFile, JSON.stringify(newBitmarkAst, null, 2), {
+          encoding: 'utf8',
+        });
 
-          // Write the new JSON
-          fs.writeFileSync(generatedJsonFile, JSON.stringify(newJson, null, 2), {
-            encoding: 'utf8',
-          });
-        } else {
-          // Generate JSON from generated bitmark markup using the PEG parser
-          const bitmarkAst = bitmarkParser.toAst(newMarkup);
+        // Generate JSON from AST
+        const jsonGenerator = new JsonFileGenerator(generatedJsonFile, {
+          jsonOptions,
+        });
 
-          // Write the new AST
-          fs.writeFileSync(generatedAstFile, JSON.stringify(bitmarkAst, null, 2), {
-            encoding: 'utf8',
-          });
+        await jsonGenerator.generate(newBitmarkAst);
 
-          // Generate JSON from AST
-          const generator = new JsonFileGenerator(generatedJsonFile, {
-            jsonOptions,
-          });
-
-          await generator.generate(bitmarkAst);
-
-          // Read in the generated JSON file
-          newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
-        }
+        // Read in the generated JSON file
+        const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
         JsonCleanupUtils.cleanupBitJson(originalJson, { removeMarkup: true });
