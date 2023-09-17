@@ -321,6 +321,10 @@ const AliasBitType = superenum({
   takePicture: 'take-picture',
   videoLandscape: 'video-landscape',
   videoPortrait: 'video-portrait',
+  videoEmbedLandscape: 'video-embed-landscape',
+  videoEmbedPortrait: 'video-embed-portrait',
+  videoLinkLandscape: 'video-link-landscape',
+  videoLinkPortrait: 'video-link-portrait',
   videoTranscript: 'video-transcript',
   warning: 'warning',
   workbookArticle: 'workbook-article',
@@ -574,6 +578,16 @@ const RootBitTypeToAliasMap = {
     //
     AliasBitType.videoLandscape,
     AliasBitType.videoPortrait,
+  ],
+  [RootBitType.videoEmbed]: [
+    //
+    AliasBitType.videoEmbedLandscape,
+    AliasBitType.videoEmbedPortrait,
+  ],
+  [RootBitType.videoLink]: [
+    //
+    AliasBitType.videoLinkLandscape,
+    AliasBitType.videoLinkPortrait,
   ],
 };
 
