@@ -47,7 +47,6 @@ import './bits/quoteBitConfig';
 import './bits/ratingBitConfig';
 import './bits/releaseNoteBitConfig';
 import './bits/sampleSolutionBitConfig';
-import './bits/screenshotBitConfig';
 import './bits/sequenceBitConfig';
 import './bits/stillImageFilmBitConfig';
 import './bits/stillImageFilmEmbedBitConfig';
