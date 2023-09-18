@@ -1,6 +1,11 @@
 // Bit configs
-import { PropertiesConfig } from '../model/config/NewConfig';
+import { _BitConfig, _BitsConfig, _PropertiesConfig, _PropertyConfig } from '../model/config/RawConfig';
+import { BitTagTypeType } from '../model/enum/BitTagType';
+import { BitType } from '../model/enum/BitType';
+import { CountType } from '../model/enum/Count';
+import { ExampleTypeType } from '../model/enum/ExampleType';
 
+import { BITS } from './new/bits';
 import { PROPERTIES } from './new/properties';
 import './bits/_errorBitConfig';
 import './bits/appFlashcardsBitConfig';
@@ -131,9 +136,66 @@ import './properties/trimPropertyConfig';
 import './properties/typePropertyConfig';
 import './properties/videoCallLinkPropertyConfig';
 
+export interface BitConfig {
+  tags: TagsInfoConfig;
+  cardSet?: CardConfig;
+  bodyAllowed?: boolean; // Default: false
+  bodyRequired?: boolean; // Default: false
+  footerAllowed?: boolean; // Default: false
+  footerRequired?: boolean; // Default: false
+  resourceAttachmentAllowed?: boolean; // Default: false
+  rootExampleType?: ExampleTypeType;
+}
+
+export interface TagsInfoConfig {
+  [key: string]: TagInfoConfig;
+}
+
+export interface TagInfoConfig {
+  type: BitTagTypeType;
+  id: string;
+  tag: string;
+  maxCount?: CountType; // Default: 1
+  minCount?: CountType; // Default: 1
+  chain?: TagInfoConfig[];
+}
+
+export interface CardConfig {
+  variants: CardVariantConfig[][];
+}
+
+export interface CardVariantConfig {
+  tags: TagsInfoConfig;
+  bodyAllowed?: boolean; // Default: false
+  bodyRequired?: boolean; // Default: false
+  repeatCount?: CountType; // Default: 1
+}
+
 class Config {
-  getProperties(): PropertiesConfig {
+  // Need to return a resolved bit configuration (with back references to the config tags.)
+  public getBit(bit: BitType): _BitConfig {}
+
+  getBits(): _BitsConfig {
+    return BITS;
+  }
+
+  getProperties(): _PropertiesConfig {
     return PROPERTIES;
+  }
+
+  getPropertyFromTag(bit: BitType, tag: string): _PropertyConfig | undefined {
+    const bits = this.getBits();
+    const bitConfig = bits[bit.root];
+    if (!bitConfig) return undefined;
+
+    // Search the properties in the bit config for the matching tag.
+    for (const t of bitConfig.tags) {
+      if (t.id === tag) {
+        return this.getProperties()[t.id];
+      }
+    }
+
+    return undefined;
   }
 }
 

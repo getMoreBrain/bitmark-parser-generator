@@ -1,5 +1,5 @@
+import { PropertyConfigKey } from '../../model/config/PropertyConfigKey';
 import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
-import { PropertyKey } from '../../model/enum/PropertyKey';
 
 import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
@@ -8,7 +8,7 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.code, {
   tags: {
     ...TAGS_DEFAULT,
-    [PropertyKey.computerLanguage]: { isProperty: true },
+    [PropertyConfigKey._computerLanguage]: { isProperty: true },
   },
   resourceAttachmentAllowed: false,
   bodyAllowed: true,

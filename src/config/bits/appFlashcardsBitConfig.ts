@@ -1,7 +1,7 @@
+import { PropertyConfigKey } from '../../model/config/PropertyConfigKey';
 import { INFINITE_COUNT } from '../../model/config/TagData';
 import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
 import { ExampleType } from '../../model/enum/ExampleType';
-import { PropertyKey } from '../../model/enum/PropertyKey';
 import { TagType } from '../../model/enum/TagType';
 
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
@@ -13,7 +13,7 @@ RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.appFlashcards, {
   tags: {
     ...TAGS_DEFAULT,
     [TagType.Title]: {},
-    [PropertyKey.flashcardSet]: {
+    [PropertyConfigKey._flashcardSet]: {
       isProperty: true,
       maxCount: INFINITE_COUNT,
     },

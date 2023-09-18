@@ -1,6 +1,6 @@
+import { PropertyConfigKey } from '../../model/config/PropertyConfigKey';
 import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
 import { ExampleType } from '../../model/enum/ExampleType';
-import { PropertyKey } from '../../model/enum/PropertyKey';
 import { TagType } from '../../model/enum/TagType';
 
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
@@ -12,8 +12,8 @@ RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.trueFalse1, {
   tags: {
     ...TAGS_DEFAULT,
     ...TAGS_CHAIN_ANY_RESOURCE,
-    [PropertyKey.labelTrue]: { isProperty: true },
-    [PropertyKey.labelFalse]: { isProperty: true },
+    [PropertyConfigKey._labelTrue]: { isProperty: true },
+    [PropertyConfigKey._labelFalse]: { isProperty: true },
     [TagType.True]: {},
     [TagType.False]: {},
   },

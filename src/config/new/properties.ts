@@ -1,399 +1,399 @@
-import { PropertiesConfig } from '../../model/config/NewConfig';
-import { PropertyKey } from '../../model/enum/PropertyKey';
+import { PropertyConfigKey } from '../../model/config/PropertyConfigKey';
+import { _PropertiesConfig } from '../../model/config/RawConfig';
 
-const PROPERTIES: PropertiesConfig = {
-  [PropertyKey.id]: {
+const PROPERTIES: _PropertiesConfig = {
+  [PropertyConfigKey._id]: {
     tag: 'id',
     format: 'trimmedString',
   },
-  [PropertyKey.externalId]: {
+  [PropertyConfigKey._externalId]: {
     tag: 'externalId',
     format: 'trimmedString',
   },
-  [PropertyKey.spaceId]: {
+  [PropertyConfigKey._spaceId]: {
     tag: 'spaceId',
     format: 'trimmedString',
   },
-  [PropertyKey.padletId]: {
+  [PropertyConfigKey._padletId]: {
     tag: 'padletId',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.aiGenerated]: {
+  [PropertyConfigKey._aiGenerated]: {
     tag: 'AIGenerated',
     single: true,
     format: 'boolean',
     astKey: 'aiGenerated',
   },
-  [PropertyKey.releaseVersion]: {
+  [PropertyConfigKey._releaseVersion]: {
     tag: 'releaseVersion',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.ageRange]: {
+  [PropertyConfigKey._ageRange]: {
     tag: 'ageRange',
     format: 'trimmedString',
   },
-  [PropertyKey.language]: {
+  [PropertyConfigKey._language]: {
     tag: 'language',
     format: 'trimmedString',
   },
-  [PropertyKey.computerLanguage]: {
+  [PropertyConfigKey._computerLanguage]: {
     tag: 'computerLanguage',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.target]: {
+  [PropertyConfigKey._target]: {
     tag: 'target',
     format: 'trimmedString',
   },
-  [PropertyKey.tag]: {
+  [PropertyConfigKey._tag]: {
     tag: 'tag',
     format: 'trimmedString',
   },
-  [PropertyKey.icon]: {
+  [PropertyConfigKey._icon]: {
     tag: 'icon',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.iconTag]: {
+  [PropertyConfigKey._iconTag]: {
     tag: 'iconTag',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.colorTag]: {
+  [PropertyConfigKey._colorTag]: {
     tag: 'colorTag',
     format: 'trimmedString',
   },
-  [PropertyKey.flashcardSet]: {
+  [PropertyConfigKey._flashcardSet]: {
     tag: 'flashcardSet',
     format: 'trimmedString',
   },
-  [PropertyKey.subtype]: {
+  [PropertyConfigKey._subtype]: {
     tag: 'subtype',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.coverImage]: {
+  [PropertyConfigKey._coverImage]: {
     tag: 'coverImage',
     format: 'trimmedString',
   },
-  [PropertyKey.publisher]: {
+  [PropertyConfigKey._publisher]: {
     tag: 'publisher',
     format: 'trimmedString',
   },
-  [PropertyKey.publications]: {
+  [PropertyConfigKey._publications]: {
     tag: 'publications',
     format: 'trimmedString',
   },
-  [PropertyKey.author]: {
+  [PropertyConfigKey._author]: {
     tag: 'author',
     format: 'trimmedString',
   },
-  [PropertyKey.subject]: {
+  [PropertyConfigKey._subject]: {
     tag: 'subject',
     format: 'trimmedString',
   },
-  [PropertyKey.date]: {
+  [PropertyConfigKey._date]: {
     tag: 'date',
     single: true,
     format: 'string',
   },
-  [PropertyKey.location]: {
+  [PropertyConfigKey._location]: {
     tag: 'location',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.theme]: {
+  [PropertyConfigKey._theme]: {
     tag: 'theme',
     format: 'trimmedString',
   },
-  [PropertyKey.kind]: {
+  [PropertyConfigKey._kind]: {
     tag: 'kind',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.action]: {
+  [PropertyConfigKey._action]: {
     tag: 'action',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.thumbImage]: {
+  [PropertyConfigKey._thumbImage]: {
     tag: 'thumbImage',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.focusX]: {
+  [PropertyConfigKey._focusX]: {
     tag: 'focusX',
     single: true,
     format: 'number',
   },
-  [PropertyKey.focusY]: {
+  [PropertyConfigKey._focusY]: {
     tag: 'focusY',
     single: true,
     format: 'number',
   },
-  [PropertyKey.deeplink]: {
+  [PropertyConfigKey._deeplink]: {
     tag: 'deeplink',
     format: 'trimmedString',
   },
-  [PropertyKey.externalLink]: {
+  [PropertyConfigKey._externalLink]: {
     tag: 'externalLink',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.externalLinkText]: {
+  [PropertyConfigKey._externalLinkText]: {
     tag: 'externalLinkText',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.videoCallLink]: {
+  [PropertyConfigKey._videoCallLink]: {
     tag: 'videoCallLink',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.bot]: {
+  [PropertyConfigKey._bot]: {
     tag: 'bot',
     format: 'string',
   },
-  [PropertyKey.duration]: {
+  [PropertyConfigKey._duration]: {
     tag: 'duration',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.reference]: {
+  [PropertyConfigKey._reference]: {
     tag: 'reference',
     format: 'trimmedString',
     astKey: 'referenceProperty',
   },
-  [PropertyKey.list]: {
+  [PropertyConfigKey._list]: {
     tag: 'list',
     format: 'trimmedString',
   },
-  [PropertyKey.textReference]: {
+  [PropertyConfigKey._textReference]: {
     tag: 'textReference',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.isTracked]: {
+  [PropertyConfigKey._isTracked]: {
     tag: 'isTracked',
     single: true,
     format: 'boolean',
   },
-  [PropertyKey.isInfoOnly]: {
+  [PropertyConfigKey._isInfoOnly]: {
     tag: 'isInfoOnly',
     single: true,
     format: 'boolean',
   },
-  [PropertyKey.labelTrue]: {
+  [PropertyConfigKey._labelTrue]: {
     tag: 'labelTrue',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.labelFalse]: {
+  [PropertyConfigKey._labelFalse]: {
     tag: 'labelFalse',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.quotedPerson]: {
+  [PropertyConfigKey._quotedPerson]: {
     tag: 'quotedPerson',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.partialAnswer]: {
+  [PropertyConfigKey._partialAnswer]: {
     tag: 'partialAnswer',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.example]: {
+  [PropertyConfigKey._example]: {
     tag: 'example',
     single: true,
     format: 'string',
   },
-  [PropertyKey.toc]: {
+  [PropertyConfigKey._toc]: {
     tag: 'toc',
     single: true,
     format: 'boolean',
     defaultValue: 'true',
   },
-  [PropertyKey.progress]: {
+  [PropertyConfigKey._progress]: {
     tag: 'progress',
     single: true,
     format: 'boolean',
     defaultValue: 'true',
   },
-  [PropertyKey.level]: {
+  [PropertyConfigKey._level]: {
     tag: 'level',
     single: true,
     format: 'string',
     astKey: 'levelProperty',
   },
-  [PropertyKey.book]: {
+  [PropertyConfigKey._book]: {
     tag: 'book',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.partner]: {
+  [PropertyConfigKey._partner]: {
     tag: 'partner',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.sampleSolution]: {
+  [PropertyConfigKey._sampleSolution]: {
     tag: 'sampleSolution',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.mark]: {
+  [PropertyConfigKey._mark]: {
     tag: 'mark',
     format: 'trimmedString',
   },
-  [PropertyKey.type]: {
+  [PropertyConfigKey._type]: {
     tag: 'type',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.color]: {
+  [PropertyConfigKey._color]: {
     tag: 'color',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.emphasis]: {
+  [PropertyConfigKey._emphasis]: {
     tag: 'emphasis',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.shortAnswer]: {
+  [PropertyConfigKey._shortAnswer]: {
     tag: 'shortAnswer',
     single: true,
     format: 'boolean',
     astKey: 'isShortAnswer',
     jsonKey: 'isShortAnswer',
   },
-  [PropertyKey.longAnswer]: {
+  [PropertyConfigKey._longAnswer]: {
     tag: 'longAnswer',
     single: true,
     format: 'invertedBoolean',
     astKey: 'isShortAnswer',
     jsonKey: 'isShortAnswer',
   },
-  [PropertyKey.caseSensitive]: {
+  [PropertyConfigKey._caseSensitive]: {
     tag: 'caseSensitive',
     single: true,
     format: 'boolean',
     astKey: 'isCaseSensitive',
     jsonKey: 'isCaseSensitive',
   },
-  [PropertyKey.reaction]: {
+  [PropertyConfigKey._reaction]: {
     tag: 'reaction',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.imageSource]: {
+  [PropertyConfigKey._imageSource]: {
     tag: 'imageSource',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.mockupId]: {
+  [PropertyConfigKey._mockupId]: {
     tag: 'mockupId',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.size]: {
+  [PropertyConfigKey._size]: {
     tag: 'size',
     single: true,
     format: 'number',
   },
-  [PropertyKey.format]: {
+  [PropertyConfigKey._format]: {
     tag: 'format',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.trim]: {
+  [PropertyConfigKey._trim]: {
     tag: 'trim',
     single: true,
     format: 'boolean',
   },
-  [PropertyKey.width]: {
+  [PropertyConfigKey._width]: {
     tag: 'width',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.height]: {
+  [PropertyConfigKey._height]: {
     tag: 'height',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.license]: {
+  [PropertyConfigKey._license]: {
     tag: 'license',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.copyright]: {
+  [PropertyConfigKey._copyright]: {
     tag: 'copyright',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.caption]: {
+  [PropertyConfigKey._caption]: {
     tag: 'caption',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.showInIndex]: {
+  [PropertyConfigKey._showInIndex]: {
     tag: 'showInIndex',
     single: true,
     format: 'boolean',
   },
-  [PropertyKey.alt]: {
+  [PropertyConfigKey._alt]: {
     tag: 'alt',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.src1x]: {
+  [PropertyConfigKey._src1x]: {
     tag: 'src1x',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.src2x]: {
+  [PropertyConfigKey._src2x]: {
     tag: 'src2x',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.src3x]: {
+  [PropertyConfigKey._src3x]: {
     tag: 'src3x',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.src4x]: {
+  [PropertyConfigKey._src4x]: {
     tag: 'src4x',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.mute]: {
+  [PropertyConfigKey._mute]: {
     tag: 'mute',
     single: true,
     format: 'boolean',
   },
-  [PropertyKey.autoplay]: {
+  [PropertyConfigKey._autoplay]: {
     tag: 'autoplay',
     single: true,
     format: 'boolean',
   },
-  [PropertyKey.allowSubtitles]: {
+  [PropertyConfigKey._allowSubtitles]: {
     tag: 'allowSubtitles',
     single: true,
     format: 'boolean',
   },
-  [PropertyKey.showSubtitles]: {
+  [PropertyConfigKey._showSubtitles]: {
     tag: 'showSubtitles',
     single: true,
     format: 'boolean',
   },
-  [PropertyKey.siteName]: {
+  [PropertyConfigKey._siteName]: {
     tag: 'siteName',
     single: true,
     format: 'trimmedString',
   },
-  [PropertyKey.posterImage]: {
+  [PropertyConfigKey._posterImage]: {
     tag: 'posterImage',
     single: true,
     format: 'trimmedString',

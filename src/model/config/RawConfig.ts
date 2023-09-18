@@ -1,26 +1,26 @@
-import { CardKeyType } from '../../config/new/CardKey';
-import { CountType } from '../../config/new/Count';
 import { BitTagTypeType } from '../enum/BitTagType';
+import { CountType } from '../enum/Count';
 import { ExampleTypeType } from '../enum/ExampleType';
 import { PropertyFormatType } from '../enum/PropertyFormat';
 
-export interface NewConfig {
-  bits: BitsConfig;
-  groups: GroupsConfig; // DONE
-  tags: TagsConfig; // DONE
-  properties: PropertiesConfig; // DONE
-  resources: ResourcesConfig; // DONE
-  cardSets: CardsConfig;
-  // resourceAttachments: ResourceAttachmentsConfig;
+import { CardConfigKeyType } from './CardConfigKey';
+
+export interface _Config {
+  bits: _BitsConfig;
+  groups: _GroupsConfig;
+  tags: _TagsConfig;
+  properties: _PropertiesConfig;
+  resources: _ResourcesConfig;
+  cardSets: _CardsConfig;
 }
 
-export interface BitsConfig {
-  [key: string]: BitConfig;
+export interface _BitsConfig {
+  [configKey: string]: _BitConfig;
 }
 
-export interface BitConfig {
-  tags: TagInfoConfig[];
-  cardSet?: CardKeyType;
+export interface _BitConfig {
+  tags: _TagInfoConfig[];
+  cardSet?: CardConfigKeyType;
   bodyAllowed?: boolean; // Default: false
   bodyRequired?: boolean; // Default: false
   footerAllowed?: boolean; // Default: false
@@ -29,27 +29,27 @@ export interface BitConfig {
   rootExampleType?: ExampleTypeType;
 }
 
-export interface GroupsConfig {
-  [key: string]: GroupConfig;
+export interface _GroupsConfig {
+  [configKey: string]: _GroupConfig;
 }
 
-export interface GroupConfig {
-  tags: TagInfoConfig[];
+export interface _GroupConfig {
+  tags: _TagInfoConfig[];
 }
 
-export interface TagsConfig {
-  [key: string]: TagConfig;
+export interface _TagsConfig {
+  [configKey: string]: _TagConfig;
 }
 
-export interface TagConfig {
+export interface _TagConfig {
   tag: string;
 }
 
-export interface PropertiesConfig {
-  [key: string]: PropertyConfig;
+export interface _PropertiesConfig {
+  [configKey: string]: _PropertyConfig;
 }
 
-export interface PropertyConfig {
+export interface _PropertyConfig {
   tag: string;
   single?: boolean; // If the property is treated as single rather than an array
   format?: PropertyFormatType; // How the property is formatted
@@ -58,32 +58,32 @@ export interface PropertyConfig {
   jsonKey?: string; // If the json key is different from the markup property key
 }
 
-export interface ResourcesConfig {
-  [key: string]: ResourceConfig;
+export interface _ResourcesConfig {
+  [configKey: string]: _ResourceConfig;
 }
 
-export interface ResourceConfig {
+export interface _ResourceConfig {
   tag: string;
 }
 
-export interface TagInfoConfig {
+export interface _TagInfoConfig {
   type: BitTagTypeType;
   id: string;
   maxCount?: CountType; // Default: 1
   minCount?: CountType; // Default: 1
-  chain?: TagInfoConfig[];
+  chain?: _TagInfoConfig[];
 }
 
-export interface CardsConfig {
-  [key: string]: CardConfig;
+export interface _CardsConfig {
+  [configKey: string]: _CardConfig;
 }
 
-export interface CardConfig {
-  variants: CardVariantConfig[][];
+export interface _CardConfig {
+  variants: _CardVariantConfig[][];
 }
 
-export interface CardVariantConfig {
-  tags: TagInfoConfig[];
+export interface _CardVariantConfig {
+  tags: _TagInfoConfig[];
   bodyAllowed?: boolean; // Default: false
   bodyRequired?: boolean; // Default: false
   repeatCount?: CountType; // Default: 1

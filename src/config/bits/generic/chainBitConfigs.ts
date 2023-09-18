@@ -1,5 +1,5 @@
+import { PropertyConfigKey } from '../../../model/config/PropertyConfigKey';
 import { INFINITE_COUNT, TagDataMap } from '../../../model/config/TagData';
-import { PropertyKey } from '../../../model/enum/PropertyKey';
 import { TagType } from '../../../model/enum/TagType';
 
 import { TAGS_CHAIN_IMAGE_RESOURCE } from './resourceChainBitConfigs';
@@ -8,13 +8,13 @@ import { TAGS_ITEM_LEAD_INSTRUCTION_HINT, TAGS_PROPERTY_EXAMPLE } from './standa
 // ImageSource ([.image-on-device])
 
 const TAGS_CHAIN_IMAGE_SOURCE: TagDataMap = {
-  [PropertyKey.imageSource]: {
+  [PropertyConfigKey._imageSource]: {
     isProperty: true,
     chain: {
-      [PropertyKey.mockupId]: { isProperty: true },
-      [PropertyKey.size]: { isProperty: true },
-      [PropertyKey.format]: { isProperty: true },
-      [PropertyKey.trim]: { isProperty: true },
+      [PropertyConfigKey._mockupId]: { isProperty: true },
+      [PropertyConfigKey._size]: { isProperty: true },
+      [PropertyConfigKey._format]: { isProperty: true },
+      [PropertyConfigKey._trim]: { isProperty: true },
     },
   },
 };
@@ -22,7 +22,7 @@ const TAGS_CHAIN_IMAGE_SOURCE: TagDataMap = {
 // Partner
 
 const TAGS_CHAIN_PARTNER: TagDataMap = {
-  [PropertyKey.partner]: {
+  [PropertyConfigKey._partner]: {
     isProperty: true,
     chain: {
       ...TAGS_CHAIN_IMAGE_RESOURCE,
@@ -88,12 +88,12 @@ const TAGS_CHAIN_TRUE_FALSE: TagDataMap = {
 // Mark configuration
 
 const TAGS_CHAIN_MARK_CONFIG: TagDataMap = {
-  [PropertyKey.mark]: {
+  [PropertyConfigKey._mark]: {
     isProperty: true,
     maxCount: INFINITE_COUNT,
     chain: {
-      [PropertyKey.color]: { isProperty: true },
-      [PropertyKey.emphasis]: { isProperty: true },
+      [PropertyConfigKey._color]: { isProperty: true },
+      [PropertyConfigKey._emphasis]: { isProperty: true },
     },
   },
 };
@@ -104,7 +104,7 @@ const TAGS_CHAIN_MARK: TagDataMap = {
   [TagType.Mark]: {
     maxCount: INFINITE_COUNT,
     chain: {
-      [PropertyKey.mark]: { isProperty: true },
+      [PropertyConfigKey._mark]: { isProperty: true },
       ...TAGS_PROPERTY_EXAMPLE,
     },
   },

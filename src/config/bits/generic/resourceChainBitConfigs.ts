@@ -1,25 +1,25 @@
+import { PropertyConfigKey } from '../../../model/config/PropertyConfigKey';
 import { TagDataMap } from '../../../model/config/TagData';
-import { PropertyKey } from '../../../model/enum/PropertyKey';
 import { ResourceType } from '../../../model/enum/ResourceType';
 
 // Default resource chain
 const TAGS_DEFAULT_RESOURCE_CHAIN: TagDataMap = {
-  [PropertyKey.license]: { isProperty: true },
-  [PropertyKey.copyright]: { isProperty: true },
-  [PropertyKey.caption]: { isProperty: true },
-  [PropertyKey.showInIndex]: { isProperty: true },
+  [PropertyConfigKey._license]: { isProperty: true },
+  [PropertyConfigKey._copyright]: { isProperty: true },
+  [PropertyConfigKey._caption]: { isProperty: true },
+  [PropertyConfigKey._showInIndex]: { isProperty: true },
 };
 
 // Image chain (reused for image, image-responsive, image-portrait, image-landscape, image-embed, image-link)
 const TAGS_IMAGE_CHAIN = {
   ...TAGS_DEFAULT_RESOURCE_CHAIN,
-  [PropertyKey.src1x]: { isProperty: true },
-  [PropertyKey.src2x]: { isProperty: true },
-  [PropertyKey.src3x]: { isProperty: true },
-  [PropertyKey.src4x]: { isProperty: true },
-  [PropertyKey.width]: { isProperty: true },
-  [PropertyKey.height]: { isProperty: true },
-  [PropertyKey.alt]: { isProperty: true },
+  [PropertyConfigKey._src1x]: { isProperty: true },
+  [PropertyConfigKey._src2x]: { isProperty: true },
+  [PropertyConfigKey._src3x]: { isProperty: true },
+  [PropertyConfigKey._src4x]: { isProperty: true },
+  [PropertyConfigKey._width]: { isProperty: true },
+  [PropertyConfigKey._height]: { isProperty: true },
+  [PropertyConfigKey._alt]: { isProperty: true },
 };
 
 // Image
@@ -75,9 +75,9 @@ const TAGS_CHAIN_IMAGE_RESPONSIVE_RESOURCE: TagDataMap = {
 // Audio chain (reused for audio, audio-embed, audio-link)
 const TAGS_AUDIO_CHAIN = {
   ...TAGS_DEFAULT_RESOURCE_CHAIN,
-  [PropertyKey.duration]: { isProperty: true },
-  [PropertyKey.mute]: { isProperty: true },
-  [PropertyKey.autoplay]: { isProperty: true },
+  [PropertyConfigKey._duration]: { isProperty: true },
+  [PropertyConfigKey._mute]: { isProperty: true },
+  [PropertyConfigKey._autoplay]: { isProperty: true },
 };
 
 const TAGS_CHAIN_AUDIO_RESOURCE: TagDataMap = {
@@ -112,20 +112,20 @@ const TAGS_CHAIN_AUDIO_LINK_RESOURCE: TagDataMap = {
 // Video chain (reused for video, video-embed, video-link)
 const TAGS_VIDEO_CHAIN = {
   ...TAGS_DEFAULT_RESOURCE_CHAIN,
-  [PropertyKey.width]: { isProperty: true },
-  [PropertyKey.height]: { isProperty: true },
-  [PropertyKey.duration]: { isProperty: true },
-  [PropertyKey.mute]: { isProperty: true },
-  [PropertyKey.autoplay]: { isProperty: true },
-  [PropertyKey.allowSubtitles]: { isProperty: true },
-  [PropertyKey.showSubtitles]: { isProperty: true },
-  [PropertyKey.alt]: { isProperty: true },
-  [PropertyKey.posterImage]: { isProperty: true },
+  [PropertyConfigKey._width]: { isProperty: true },
+  [PropertyConfigKey._height]: { isProperty: true },
+  [PropertyConfigKey._duration]: { isProperty: true },
+  [PropertyConfigKey._mute]: { isProperty: true },
+  [PropertyConfigKey._autoplay]: { isProperty: true },
+  [PropertyConfigKey._allowSubtitles]: { isProperty: true },
+  [PropertyConfigKey._showSubtitles]: { isProperty: true },
+  [PropertyConfigKey._alt]: { isProperty: true },
+  [PropertyConfigKey._posterImage]: { isProperty: true },
   // For thumbnails - not sure they make sense the way they are
-  [PropertyKey.src1x]: { isProperty: true },
-  [PropertyKey.src2x]: { isProperty: true },
-  [PropertyKey.src3x]: { isProperty: true },
-  [PropertyKey.src4x]: { isProperty: true },
+  [PropertyConfigKey._src1x]: { isProperty: true },
+  [PropertyConfigKey._src2x]: { isProperty: true },
+  [PropertyConfigKey._src3x]: { isProperty: true },
+  [PropertyConfigKey._src4x]: { isProperty: true },
 };
 
 const TAGS_CHAIN_VIDEO_RESOURCE: TagDataMap = {
@@ -279,7 +279,7 @@ const TAGS_CHAIN_WEBSITE_LINK_RESOURCE: TagDataMap = {
     isResource: true,
     chain: {
       ...TAGS_DEFAULT_RESOURCE_CHAIN,
-      [PropertyKey.siteName]: { isProperty: true },
+      [PropertyConfigKey._siteName]: { isProperty: true },
     },
   },
 };

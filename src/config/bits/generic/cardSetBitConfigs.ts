@@ -1,6 +1,6 @@
+import { PropertyConfigKey } from '../../../model/config/PropertyConfigKey';
 import { CardSetConfig } from '../../../model/enum/BitType';
 import { CardSetType } from '../../../model/enum/CardSetType';
-import { PropertyKey } from '../../../model/enum/PropertyKey';
 import { ResourceType } from '../../../model/enum/ResourceType';
 import { TagType } from '../../../model/enum/TagType';
 
@@ -87,8 +87,8 @@ const CARD_SET_QUESTIONS: CardSetConfig = {
       {
         tags: {
           [TagType.SampleSolution]: {}, // 16.08.2023 Deprecated, but currently still supported
-          [PropertyKey.sampleSolution]: { isProperty: true },
-          [PropertyKey.shortAnswer]: { isProperty: true },
+          [PropertyConfigKey._sampleSolution]: { isProperty: true },
+          [PropertyConfigKey._shortAnswer]: { isProperty: true },
           ...TAGS_ITEM_LEAD_INSTRUCTION_HINT,
           ...TAGS_PROPERTY_EXAMPLE,
         },
@@ -190,7 +190,7 @@ const CARD_SET_BOT_ACTION_RESPONSES: CardSetConfig = {
     [
       {
         tags: {
-          [PropertyKey.reaction]: { isProperty: true },
+          [PropertyConfigKey._reaction]: { isProperty: true },
           ...TAGS_ITEM_LEAD_INSTRUCTION_HINT,
           ...TAGS_PROPERTY_EXAMPLE,
         },

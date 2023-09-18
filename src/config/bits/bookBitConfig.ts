@@ -1,6 +1,6 @@
+import { PropertyConfigKey } from '../../model/config/PropertyConfigKey';
 import { INFINITE_COUNT } from '../../model/config/TagData';
 import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
-import { PropertyKey } from '../../model/enum/PropertyKey';
 import { TagType } from '../../model/enum/TagType';
 
 import { TAGS_DEFAULT } from './generic/standardBitConfigs';
@@ -10,17 +10,17 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.book, {
   tags: {
     ...TAGS_DEFAULT,
-    [PropertyKey.spaceId]: {
+    [PropertyConfigKey._spaceId]: {
       isProperty: true,
       maxCount: INFINITE_COUNT,
     },
     [TagType.Title]: { maxCount: 2 },
-    [PropertyKey.subtype]: { isProperty: true },
-    [PropertyKey.coverImage]: { isProperty: true },
-    [PropertyKey.publisher]: { isProperty: true },
-    [PropertyKey.subject]: { isProperty: true },
-    [PropertyKey.author]: { isProperty: true },
-    [PropertyKey.theme]: { isProperty: true },
+    [PropertyConfigKey._subtype]: { isProperty: true },
+    [PropertyConfigKey._coverImage]: { isProperty: true },
+    [PropertyConfigKey._publisher]: { isProperty: true },
+    [PropertyConfigKey._subject]: { isProperty: true },
+    [PropertyConfigKey._author]: { isProperty: true },
+    [PropertyConfigKey._theme]: { isProperty: true },
   },
   resourceAttachmentAllowed: false,
   bodyAllowed: true,

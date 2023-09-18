@@ -1,80 +1,80 @@
-import { ResourcesConfig } from '../../model/config/NewConfig';
-import { ResourceKey } from '../../model/config/ResourceKey';
+import { _ResourcesConfig } from '../../model/config/RawConfig';
+import { ResourceConfigKey } from '../../model/config/ResourceConfigKey';
 
-const RESOURCES: ResourcesConfig = {
-  [ResourceKey.unknown]: {
+const RESOURCES: _ResourcesConfig = {
+  [ResourceConfigKey._unknown]: {
     tag: 'unknown',
   },
-  [ResourceKey.image]: {
+  [ResourceConfigKey._image]: {
     tag: 'image',
   },
-  [ResourceKey.imageResponsive]: {
+  [ResourceConfigKey._imageResponsive]: {
     tag: 'image-responsive',
   },
-  [ResourceKey.imagePortrait]: {
+  [ResourceConfigKey._imagePortrait]: {
     tag: 'image-portrait',
   },
-  [ResourceKey.imageLandscape]: {
+  [ResourceConfigKey._imageLandscape]: {
     tag: 'image-landscape',
   },
-  [ResourceKey.imageEmbed]: {
+  [ResourceConfigKey._imageEmbed]: {
     tag: 'image-embed',
   },
-  [ResourceKey.imageLink]: {
+  [ResourceConfigKey._imageLink]: {
     tag: 'image-link',
   },
-  [ResourceKey.audio]: {
+  [ResourceConfigKey._audio]: {
     tag: 'audio',
   },
-  [ResourceKey.audioEmbed]: {
+  [ResourceConfigKey._audioEmbed]: {
     tag: 'audio-embed',
   },
-  [ResourceKey.audioLink]: {
+  [ResourceConfigKey._audioLink]: {
     tag: 'audio-link',
   },
-  [ResourceKey.video]: {
+  [ResourceConfigKey._video]: {
     tag: 'video',
   },
-  [ResourceKey.videoEmbed]: {
+  [ResourceConfigKey._videoEmbed]: {
     tag: 'video-embed',
   },
-  [ResourceKey.videoLink]: {
+  [ResourceConfigKey._videoLink]: {
     tag: 'video-link',
   },
-  [ResourceKey.stillImageFilm]: {
+  [ResourceConfigKey._stillImageFilm]: {
     tag: 'still-image-film',
   },
-  [ResourceKey.stillImageFilmEmbed]: {
+  [ResourceConfigKey._stillImageFilmEmbed]: {
     tag: 'still-image-film-embed',
   },
-  [ResourceKey.stillImageFilmLink]: {
+  [ResourceConfigKey._stillImageFilmLink]: {
     tag: 'still-image-film-link',
   },
-  [ResourceKey.article]: {
+  [ResourceConfigKey._article]: {
     tag: 'article',
   },
-  [ResourceKey.articleEmbed]: {
+  [ResourceConfigKey._articleEmbed]: {
     tag: 'article-embed',
   },
-  [ResourceKey.articleLink]: {
+  [ResourceConfigKey._articleLink]: {
     tag: 'article-link',
   },
-  [ResourceKey.document]: {
+  [ResourceConfigKey._document]: {
     tag: 'document',
   },
-  [ResourceKey.documentEmbed]: {
+  [ResourceConfigKey._documentEmbed]: {
     tag: 'document-embed',
   },
-  [ResourceKey.documentLink]: {
+  [ResourceConfigKey._documentLink]: {
     tag: 'document-link',
   },
-  [ResourceKey.documentDownload]: {
+  [ResourceConfigKey._documentDownload]: {
     tag: 'document-download',
   },
-  [ResourceKey.appLink]: {
+  [ResourceConfigKey._appLink]: {
     tag: 'app-link',
   },
-  [ResourceKey.websiteLink]: {
+  [ResourceConfigKey._websiteLink]: {
     tag: 'website-link',
   },
 };

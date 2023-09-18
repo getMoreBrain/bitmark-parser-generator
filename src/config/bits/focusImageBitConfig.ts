@@ -1,5 +1,5 @@
+import { PropertyConfigKey } from '../../model/config/PropertyConfigKey';
 import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
-import { PropertyKey } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
 
 import { TAGS_CHAIN_IMAGE_RESOURCE } from './generic/resourceChainBitConfigs';
@@ -11,8 +11,8 @@ RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.focusImage, {
   tags: {
     ...TAGS_DEFAULT,
     ...TAGS_CHAIN_IMAGE_RESOURCE,
-    [PropertyKey.focusX]: { isProperty: true },
-    [PropertyKey.focusY]: { isProperty: true },
+    [PropertyConfigKey._focusX]: { isProperty: true },
+    [PropertyConfigKey._focusY]: { isProperty: true },
   },
   resourceAttachmentAllowed: false,
   resourceType: ResourceType.image,

@@ -1,22 +1,22 @@
+import { PropertyConfigKey, PropertyKeyMetadata } from '../model/config/PropertyConfigKey';
 import { TagData } from '../model/config/TagData';
 import { BitTagType, BitTagTypeType } from '../model/enum/BitTagType';
 import { RootBitType, RootBitTypeMetadata } from '../model/enum/BitType';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
-import { PropertyKey, PropertyKeyMetadata } from '../model/enum/PropertyKey';
 import { ResourceType } from '../model/enum/ResourceType';
 
 import {
   ChainConfig,
   ChainsConfig,
-  NewConfig,
-  PropertiesConfig,
-  PropertyConfig,
-  ResourceConfig,
-  GroupsConfig,
-  TagInfoConfig,
-  GroupConfig,
-  TagsConfig,
-} from '../model/config/NewConfig';
+  _Config,
+  _PropertiesConfig,
+  _PropertyConfig,
+  _ResourceConfig,
+  _GroupsConfig,
+  _TagInfoConfig,
+  _GroupConfig,
+  _TagsConfig,
+} from '../model/config/RawConfig';
 
 import {
   TAGS_AUDIO_CHAIN,
@@ -26,9 +26,9 @@ import {
 } from './bits/generic/resourceChainBitConfigs';
 
 class ConfigBuilder {
-  build(): NewConfig {
+  build(): _Config {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const config: Partial<NewConfig> = {};
+    const config: Partial<_Config> = {};
 
     // const bits: { [key: string]: any } = {};
     // for (const bit of RootBitType.values()) {
@@ -70,7 +70,7 @@ class ConfigBuilder {
       if (v.isProperty) type = BitTagType.property;
       if (v.isResource) type = BitTagType.resource;
 
-      const tagInfo: TagInfoConfig = {
+      const tagInfo: _TagInfoConfig = {
         type,
         id: k,
         maxCount: v.maxCount,
@@ -80,10 +80,10 @@ class ConfigBuilder {
       return tagInfo;
     };
 
-    const tagGroups: GroupsConfig = {};
+    const tagGroups: _GroupsConfig = {};
 
     // TAGS_DEFAULT_RESOURCE_CHAIN
-    const defaultResource: GroupConfig = {
+    const defaultResource: _GroupConfig = {
       tags: [],
     };
     for (const [k, v] of Object.entries(TAGS_DEFAULT_RESOURCE_CHAIN)) {
@@ -93,7 +93,7 @@ class ConfigBuilder {
     tagGroups.resource_default = defaultResource;
 
     // TAGS_IMAGE_CHAIN
-    const imageResource: GroupConfig = {
+    const imageResource: _GroupConfig = {
       tags: [],
     };
     let i = -1;
@@ -114,7 +114,7 @@ class ConfigBuilder {
     tagGroups.resource_image = imageResource;
 
     // TAGS_AUDIO_CHAIN
-    const audioResource: GroupConfig = {
+    const audioResource: _GroupConfig = {
       tags: [],
     };
     i = -1;
@@ -135,7 +135,7 @@ class ConfigBuilder {
     tagGroups.resource_audio = audioResource;
 
     // TAGS_VIDEO_CHAIN
-    const videoResource: GroupConfig = {
+    const videoResource: _GroupConfig = {
       tags: [],
     };
     i = -1;
@@ -172,7 +172,7 @@ class ConfigBuilder {
     // }
     // config.chains = chains;
 
-    return config as NewConfig;
+    return config as _Config;
   }
 }
 

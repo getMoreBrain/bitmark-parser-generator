@@ -1,5 +1,7 @@
+import { Config } from '../config/config';
 import { Example, Property } from '../model/ast/Nodes';
-import { PropertyKey, PropertyKeyMetadata, PropertyKeyType } from '../model/enum/PropertyKey';
+import { PropertyConfigKeyType } from '../model/config/PropertyConfigKey';
+import { PropertyFormat } from '../model/enum/PropertyFormat';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
@@ -98,20 +100,33 @@ class BaseBuilder {
    * @param value
    * @returns
    */
-  protected toAstProperty(key: PropertyKeyType, value: unknown | unknown[] | undefined): Property | undefined {
-    const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(key) ?? {};
-
+  protected toAstProperty(key: PropertyConfigKeyType, value: unknown | unknown[] | undefined): Property | undefined {
     if (value == null) return undefined;
+
+    const propertiesConfig = Config.getProperties();
+    const propertyConfig = propertiesConfig[key];
 
     // if (key === 'progress') debugger;
 
     // Convert property as needed
     const processValue = (v: unknown) => {
       if (v == null) return undefined;
-      if (meta.isTrimmedString) v = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
-      if (meta.isNumber) v = NumberUtils.asNumber(v);
-      if (meta.isBoolean) v = BooleanUtils.toBoolean(v, true);
-      if (meta.isInvertedBoolean) v = !BooleanUtils.toBoolean(v, true);
+      switch (propertyConfig.format) {
+        case PropertyFormat.string:
+          return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
+
+        case PropertyFormat.trimmedString:
+          return StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
+
+        case PropertyFormat.number:
+          return NumberUtils.asNumber(v);
+
+        case PropertyFormat.boolean:
+          return BooleanUtils.toBoolean(v, true);
+
+        case PropertyFormat.invertedBoolean:
+          return !BooleanUtils.toBoolean(v, true);
+      }
       return v;
     };
     if (Array.isArray(value)) {

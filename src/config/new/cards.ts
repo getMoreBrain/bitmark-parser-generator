@@ -1,25 +1,25 @@
-import { CardKey } from '../../model/config/CardKey';
-import { GroupKey } from '../../model/config/GroupKey';
-import { CardsConfig } from '../../model/config/NewConfig';
-import { ResourceKey } from '../../model/config/ResourceKey';
-import { TagKey } from '../../model/config/TagKey';
+import { CardConfigKey } from '../../model/config/CardConfigKey';
+import { GroupConfigKey } from '../../model/config/GroupConfigKey';
+import { PropertyConfigKey } from '../../model/config/PropertyConfigKey';
+import { _CardsConfig } from '../../model/config/RawConfig';
+import { ResourceConfigKey } from '../../model/config/ResourceConfigKey';
+import { TagConfigKey } from '../../model/config/TagConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
 import { Count } from '../../model/enum/Count';
-import { PropertyKey } from '../../model/enum/PropertyKey';
 
-const CARDS: CardsConfig = {
-  [CardKey.flashcards]: {
+const CARDS: _CardsConfig = {
+  [CardConfigKey._flashcards]: {
     variants: [
       [
         {
           tags: [
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
           ],
           bodyAllowed: true,
@@ -28,18 +28,18 @@ const CARDS: CardsConfig = {
       ],
     ],
   },
-  [CardKey.elements]: {
+  [CardConfigKey._elements]: {
     variants: [
       [
         {
           tags: [
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
           ],
           bodyAllowed: true,
@@ -48,80 +48,80 @@ const CARDS: CardsConfig = {
       ],
     ],
   },
-  [CardKey.statements]: {
+  [CardConfigKey._statements]: {
     variants: [
       [
         {
           tags: [
             {
               type: BitTagType.tag,
-              id: TagKey.true,
+              id: TagConfigKey._true,
               maxCount: 1,
             },
             {
               type: BitTagType.tag,
-              id: TagKey.false,
+              id: TagConfigKey._false,
               maxCount: 1,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
           ],
         },
       ],
     ],
   },
-  [CardKey.quiz]: {
+  [CardConfigKey._quiz]: {
     variants: [
       [
         {
           tags: [
             {
               type: BitTagType.group,
-              id: GroupKey.trueFalse,
+              id: GroupConfigKey._trueFalse,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
           ],
         },
       ],
     ],
   },
-  [CardKey.questions]: {
+  [CardConfigKey._questions]: {
     variants: [
       [
         {
           tags: [
             {
               type: BitTagType.tag,
-              id: TagKey.sampleSolution,
+              id: TagConfigKey._sampleSolution,
             },
             {
               type: BitTagType.property,
-              id: PropertyKey.sampleSolution,
+              id: PropertyConfigKey._sampleSolution,
             },
             {
               type: BitTagType.property,
-              id: PropertyKey.shortAnswer,
+              id: PropertyConfigKey._shortAnswer,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
           ],
           bodyAllowed: true,
@@ -134,7 +134,7 @@ const CARDS: CardsConfig = {
   // TODO: We actually need to allow for different card configurations, because titles are valid on the first card only.
   // For now we allow them to be valid on all cards, but we need to change this.
 
-  [CardKey.matchPairs]: {
+  [CardConfigKey._matchPairs]: {
     variants: [
       // Side 1
       [
@@ -143,15 +143,15 @@ const CARDS: CardsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
             {
               type: BitTagType.tag,
-              id: TagKey.title,
+              id: TagConfigKey._title,
             },
           ],
           bodyAllowed: true,
@@ -160,7 +160,7 @@ const CARDS: CardsConfig = {
       ],
     ],
   },
-  [CardKey.matchAudioPairs]: {
+  [CardConfigKey._matchAudioPairs]: {
     variants: [
       // Side 1
       [
@@ -169,19 +169,19 @@ const CARDS: CardsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
             {
               type: BitTagType.tag,
-              id: TagKey.title,
+              id: TagConfigKey._title,
             },
             {
               type: BitTagType.resource,
-              id: ResourceKey.audio,
+              id: ResourceConfigKey._audio,
             },
           ],
           bodyAllowed: true,
@@ -190,7 +190,7 @@ const CARDS: CardsConfig = {
       ],
     ],
   },
-  [CardKey.matchImagePairs]: {
+  [CardConfigKey._matchImagePairs]: {
     variants: [
       // Side 1
       [
@@ -199,19 +199,19 @@ const CARDS: CardsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
             {
               type: BitTagType.tag,
-              id: TagKey.title,
+              id: TagConfigKey._title,
             },
             {
               type: BitTagType.resource,
-              id: ResourceKey.image,
+              id: ResourceConfigKey._image,
             },
           ],
           bodyAllowed: true,
@@ -220,7 +220,7 @@ const CARDS: CardsConfig = {
       ],
     ],
   },
-  [CardKey.matchMatrix]: {
+  [CardConfigKey._matchMatrix]: {
     variants: [
       // Side 1
       [
@@ -229,15 +229,15 @@ const CARDS: CardsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
             {
               type: BitTagType.tag,
-              id: TagKey.title,
+              id: TagConfigKey._title,
             },
           ],
           bodyAllowed: true,
@@ -246,22 +246,22 @@ const CARDS: CardsConfig = {
       ],
     ],
   },
-  [CardKey.botActionResponses]: {
+  [CardConfigKey._botActionResponses]: {
     variants: [
       [
         {
           tags: [
             {
               type: BitTagType.property,
-              id: PropertyKey.reaction,
+              id: PropertyConfigKey._reaction,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardItemLeadInstructionHint,
+              id: GroupConfigKey._standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              id: GroupKey.standardExample,
+              id: GroupConfigKey._standardExample,
             },
           ],
           bodyAllowed: true,

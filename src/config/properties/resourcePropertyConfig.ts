@@ -1,58 +1,58 @@
-import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
+import { PropertyConfigKey, PropertyKeyMetadata } from '../../model/config/PropertyConfigKey';
 
 // Set metadata on the property keys to describe specific behaviour
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.width, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._width, {
   isSingle: true,
   isTrimmedString: true, // isNumber?
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.height, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._height, {
   isSingle: true,
   isTrimmedString: true, // isNumber?
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.license, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._license, {
   isSingle: true,
   isTrimmedString: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.copyright, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._copyright, {
   isSingle: true,
   isTrimmedString: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.caption, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._caption, {
   isSingle: true,
   isTrimmedString: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.showInIndex, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._showInIndex, {
   isSingle: true,
   isBoolean: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.alt, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._alt, {
   isSingle: true,
   isTrimmedString: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.src1x, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._src1x, {
   isSingle: true,
   isTrimmedString: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.src2x, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._src2x, {
   isSingle: true,
   isTrimmedString: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.src3x, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._src3x, {
   isSingle: true,
   isTrimmedString: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.src4x, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._src4x, {
   isSingle: true,
   isTrimmedString: true,
 });
@@ -63,32 +63,32 @@ PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.src4x, {
 //   isTrimmedString: true, // isNumber?
 // });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.mute, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._mute, {
   isSingle: true,
   isBoolean: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.autoplay, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._autoplay, {
   isSingle: true,
   isBoolean: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.allowSubtitles, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._allowSubtitles, {
   isSingle: true,
   isBoolean: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.showSubtitles, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._showSubtitles, {
   isSingle: true,
   isBoolean: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.siteName, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._siteName, {
   isSingle: true,
   isTrimmedString: true,
 });
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.posterImage, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._posterImage, {
   isSingle: true,
   isTrimmedString: true,
 });

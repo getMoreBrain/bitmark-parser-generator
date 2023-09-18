@@ -1,7 +1,7 @@
-import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
+import { PropertyConfigKey, PropertyKeyMetadata } from '../../model/config/PropertyConfigKey';
 
 // Set metadata on the property keys to describe specific behaviour
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.deeplink, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._deeplink, {
   isTrimmedString: true,
 });

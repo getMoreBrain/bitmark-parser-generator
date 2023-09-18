@@ -1,5 +1,5 @@
+import { PropertyConfigKey } from '../../model/config/PropertyConfigKey';
 import { RootBitType, RootBitTypeMetadata } from '../../model/enum/BitType';
-import { PropertyKey } from '../../model/enum/PropertyKey';
 
 import { CARD_SET_STATEMENTS } from './generic/cardSetBitConfigs';
 import { TAGS_CHAIN_ANY_RESOURCE } from './generic/resourceChainBitConfigs';
@@ -11,8 +11,8 @@ RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.trueFalse, {
   tags: {
     ...TAGS_DEFAULT,
     ...TAGS_CHAIN_ANY_RESOURCE,
-    [PropertyKey.labelTrue]: { isProperty: true },
-    [PropertyKey.labelFalse]: { isProperty: true },
+    [PropertyConfigKey._labelTrue]: { isProperty: true },
+    [PropertyConfigKey._labelFalse]: { isProperty: true },
   },
   resourceAttachmentAllowed: true,
   cardSet: CARD_SET_STATEMENTS,

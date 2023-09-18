@@ -1,5 +1,6 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
+import { Config } from '../../config/config';
 import { NodeType } from '../../model/ast/NodeType';
 import { AudioEmbedResource, ImageSource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
@@ -13,11 +14,11 @@ import { DocumentDownloadResource } from '../../model/ast/Nodes';
 import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
 import { Text, TextAst } from '../../model/ast/TextNodes';
+import { PropertyConfigKey, PropertyKeyMetadata } from '../../model/config/PropertyConfigKey';
 import { AliasBitType, RootBitType, RootBitTypeMetadata, BitTypeUtils, BitType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ExampleType } from '../../model/enum/ExampleType';
-import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
@@ -1312,16 +1313,16 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * Generate the handlers for properties, as they are mostly the same, but not quite
    */
   protected generatePropertyHandlers() {
-    for (const key of PropertyKey.values()) {
-      const validatedKey = PropertyKey.fromValue(key);
-      const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(validatedKey) ?? {};
-      const astKey = meta.astKey ? meta.astKey : key;
+    const propertiesConfig = Config.getProperties();
+
+    for (const propertyConfig of Object.values(propertiesConfig)) {
+      const astKey = propertyConfig.astKey ?? propertyConfig.tag;
       const funcName = `enter_${astKey}`;
 
       // Special cases (handled outside of the automatically generated handlers)
-      if (astKey === PropertyKey.example) continue;
-      if (astKey === PropertyKey.imageSource) continue;
-      if (astKey === PropertyKey.partner) continue;
+      if (astKey === PropertyConfigKey._example) continue;
+      if (astKey === PropertyConfigKey._imageSource) continue;
+      if (astKey === PropertyConfigKey._partner) continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
@@ -1334,11 +1335,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (parent?.key !== NodeType.bitsValue) return;
 
         // Convert key as needed
-        let jsonKey = key as string;
-        if (meta.jsonKey) jsonKey = meta.jsonKey;
+        const jsonKey = propertyConfig.jsonKey ?? propertyConfig.tag;
 
         // Add the property
-        this.addProperty(this.bitJson, jsonKey, value, meta.isSingle);
+        this.addProperty(this.bitJson, jsonKey, value, propertyConfig.single);
       };
 
       // Bind this

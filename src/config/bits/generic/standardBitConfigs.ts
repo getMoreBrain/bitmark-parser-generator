@@ -1,42 +1,42 @@
+import { PropertyConfigKey } from '../../../model/config/PropertyConfigKey';
 import { INFINITE_COUNT, TagDataMap } from '../../../model/config/TagData';
-import { PropertyKey } from '../../../model/enum/PropertyKey';
 import { TagType } from '../../../model/enum/TagType';
 
 const TAGS_ALL_BITS: TagDataMap = {
-  [PropertyKey.id]: {
+  [PropertyConfigKey._id]: {
     isProperty: true,
     maxCount: INFINITE_COUNT,
   },
-  [PropertyKey.externalId]: {
+  [PropertyConfigKey._externalId]: {
     isProperty: true,
     maxCount: INFINITE_COUNT,
   },
-  [PropertyKey.aiGenerated]: {
+  [PropertyConfigKey._aiGenerated]: {
     isProperty: true,
   },
-  [PropertyKey.ageRange]: {
-    isProperty: true,
-    maxCount: INFINITE_COUNT,
-  },
-  [PropertyKey.language]: {
+  [PropertyConfigKey._ageRange]: {
     isProperty: true,
     maxCount: INFINITE_COUNT,
   },
-  [PropertyKey.target]: {
+  [PropertyConfigKey._language]: {
     isProperty: true,
     maxCount: INFINITE_COUNT,
   },
-  [PropertyKey.tag]: {
+  [PropertyConfigKey._target]: {
     isProperty: true,
     maxCount: INFINITE_COUNT,
   },
-  [PropertyKey.icon]: {
+  [PropertyConfigKey._tag]: {
+    isProperty: true,
+    maxCount: INFINITE_COUNT,
+  },
+  [PropertyConfigKey._icon]: {
     isProperty: true,
   },
-  [PropertyKey.iconTag]: {
+  [PropertyConfigKey._iconTag]: {
     isProperty: true,
   },
-  [PropertyKey.colorTag]: {
+  [PropertyConfigKey._colorTag]: {
     isProperty: true,
     maxCount: INFINITE_COUNT,
   },
@@ -50,7 +50,7 @@ const TAGS_ITEM_LEAD_INSTRUCTION_HINT: TagDataMap = {
   [TagType.Hint]: {},
 };
 const TAGS_PROPERTY_EXAMPLE: TagDataMap = {
-  [PropertyKey.example]: {
+  [PropertyConfigKey._example]: {
     isProperty: true,
   },
 };

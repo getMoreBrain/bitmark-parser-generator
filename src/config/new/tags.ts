@@ -1,50 +1,50 @@
-import { TagsConfig } from '../../model/config/NewConfig';
-import { TagKey } from '../../model/config/TagKey';
+import { _TagsConfig } from '../../model/config/RawConfig';
+import { TagConfigKey } from '../../model/config/TagConfigKey';
 
-const TAGS: TagsConfig = {
-  [TagKey.title]: {
+const TAGS: _TagsConfig = {
+  [TagConfigKey._title]: {
     tag: '#',
   },
-  [TagKey.anchor]: {
+  [TagConfigKey._anchor]: {
     tag: '▼',
   },
-  [TagKey.reference]: {
+  [TagConfigKey._reference]: {
     tag: '►',
   },
-  [TagKey.property]: {
+  [TagConfigKey._property]: {
     tag: '@',
   },
-  [TagKey.itemLead]: {
+  [TagConfigKey._itemLead]: {
     tag: '%',
   },
-  [TagKey.instruction]: {
+  [TagConfigKey._instruction]: {
     tag: '!',
   },
-  [TagKey.hint]: {
+  [TagConfigKey._hint]: {
     tag: '?',
   },
-  [TagKey.true]: {
+  [TagConfigKey._true]: {
     tag: '+',
   },
-  [TagKey.false]: {
+  [TagConfigKey._false]: {
     tag: '-',
   },
-  [TagKey.sampleSolution]: {
+  [TagConfigKey._sampleSolution]: {
     tag: '$',
   },
-  [TagKey.gap]: {
+  [TagConfigKey._gap]: {
     tag: '_',
   },
-  [TagKey.mark]: {
+  [TagConfigKey._mark]: {
     tag: '=',
   },
-  [TagKey.resource]: {
+  [TagConfigKey._resource]: {
     tag: '&',
   },
-  [TagKey.remark]: {
+  [TagConfigKey._remark]: {
     tag: '::',
   },
-  [TagKey.comment]: {
+  [TagConfigKey._comment]: {
     tag: '||',
   },
 };

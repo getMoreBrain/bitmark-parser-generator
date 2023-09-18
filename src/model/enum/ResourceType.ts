@@ -1,6 +1,6 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-const ResourceTypeRaw = {
+const ResourceType = superenum({
   unknown: 'unknown',
 
   image: 'image',
@@ -27,11 +27,8 @@ const ResourceTypeRaw = {
   documentDownload: 'document-download',
   appLink: 'app-link',
   websiteLink: 'website-link',
-} as const;
+});
 
-const ResourceType = superenum(ResourceTypeRaw);
-
-export type ResourceTypeKeys = keyof typeof ResourceTypeRaw;
 export type ResourceTypeType = EnumType<typeof ResourceType>;
 
 export { ResourceType };

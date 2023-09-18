@@ -1,11 +1,12 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
+import { Config } from '../../config/config';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
+import { PropertyConfigKey, PropertyKeyMetadata } from '../../model/config/PropertyConfigKey';
 import { BitType, RootBitType, RootBitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
-import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
 import { ResourceType } from '../../model/enum/ResourceType';
 import { TextFormat } from '../../model/enum/TextFormat';
 import { BooleanUtils } from '../../utils/BooleanUtils';
@@ -365,8 +366,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     const bit = parent?.value as Bit;
     if (bit) {
-      if (value != '') this.writeProperty(PropertyKey.labelTrue, value, true);
-      if (bit.labelFalse && bit.labelFalse[0] != '') this.writeProperty(PropertyKey.labelFalse, bit.labelFalse, true);
+      if (value != '') this.writeProperty(PropertyConfigKey._labelTrue, value, true);
+      if (bit.labelFalse && bit.labelFalse[0] != '')
+        this.writeProperty(PropertyConfigKey._labelFalse, bit.labelFalse, true);
     }
   }
 
@@ -1446,31 +1448,38 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   // }
 
   protected generatePropertyHandlers() {
-    for (const key of PropertyKey.values()) {
-      const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(PropertyKey.fromValue(key)) ?? {};
-      const astKey = meta.astKey ? meta.astKey : key;
+    const propertiesConfig = Config.getProperties();
+
+    for (const propertyConfig of Object.values(propertiesConfig)) {
+      const astKey = propertyConfig.astKey ?? propertyConfig.tag;
       const funcName = `enter_${astKey}`;
 
       // Special cases (handled outside of the automatically generated handlers)
-      if (astKey === PropertyKey.example) continue;
-      if (astKey === PropertyKey.labelTrue) continue;
-      if (astKey === PropertyKey.labelFalse) continue;
-      if (astKey === PropertyKey.posterImage) continue;
-      if (astKey === PropertyKey.imageSource) continue;
-      if (astKey === PropertyKey.partner) continue;
+      if (astKey === PropertyConfigKey._example) continue;
+      if (astKey === PropertyConfigKey._labelTrue) continue;
+      if (astKey === PropertyConfigKey._labelFalse) continue;
+      if (astKey === PropertyConfigKey._posterImage) continue;
+      if (astKey === PropertyConfigKey._imageSource) continue;
+      if (astKey === PropertyConfigKey._partner) continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
         const value = node.value as unknown[] | undefined;
         if (value == null) return;
 
-        // if (key === 'progress') debugger;
+        // if (propertyConfig.tag === 'progress') debugger;
 
         // Ignore any property that is not at the bit level as that will be handled by a different handler
         if (parent?.key !== NodeType.bitsValue) return;
 
         // Write the property
-        this.writeProperty(key, node.value, meta.isSingle, meta.ignoreFalse, meta.ignoreTrue);
+        this.writeProperty(
+          propertyConfig.tag,
+          node.value,
+          propertyConfig.single,
+          propertyConfig.defaultValue === 'false',
+          propertyConfig.defaultValue === 'true',
+        );
       };
 
       // Bind this

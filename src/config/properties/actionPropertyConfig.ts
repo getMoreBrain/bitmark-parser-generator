@@ -1,8 +1,8 @@
-import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
+import { PropertyConfigKey, PropertyKeyMetadata } from '../../model/config/PropertyConfigKey';
 
 // Set metadata on the property keys to describe specific behaviour
 
-PropertyKey.setMetadata<PropertyKeyMetadata>(PropertyKey.action, {
+PropertyConfigKey.setMetadata<PropertyKeyMetadata>(PropertyConfigKey._action, {
   isSingle: true,
   isTrimmedString: true,
 });

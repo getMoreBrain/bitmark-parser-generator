@@ -1,862 +1,862 @@
-import { GroupKey } from '../../model/config/GroupKey';
-import { GroupsConfig } from '../../model/config/NewConfig';
-import { ResourceKey } from '../../model/config/ResourceKey';
-import { TagKey } from '../../model/config/TagKey';
+import { GroupConfigKey } from '../../model/config/GroupConfigKey';
+import { PropertyConfigKey } from '../../model/config/PropertyConfigKey';
+import { _GroupsConfig } from '../../model/config/RawConfig';
+import { ResourceConfigKey } from '../../model/config/ResourceConfigKey';
+import { TagConfigKey } from '../../model/config/TagConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
 import { Count } from '../../model/enum/Count';
-import { PropertyKey } from '../../model/enum/PropertyKey';
 
-const GROUPS: GroupsConfig = {
-  [GroupKey.standardAllBits]: {
+const GROUPS: _GroupsConfig = {
+  [GroupConfigKey._standardAllBits]: {
     tags: [
       {
         type: BitTagType.property,
-        id: PropertyKey.id,
+        id: PropertyConfigKey._id,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.externalId,
+        id: PropertyConfigKey._externalId,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.aiGenerated,
+        id: PropertyConfigKey._aiGenerated,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.ageRange,
+        id: PropertyConfigKey._ageRange,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.language,
+        id: PropertyConfigKey._language,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.target,
+        id: PropertyConfigKey._target,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.tag,
+        id: PropertyConfigKey._tag,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.icon,
+        id: PropertyConfigKey._icon,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.iconTag,
+        id: PropertyConfigKey._iconTag,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.colorTag,
+        id: PropertyConfigKey._colorTag,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.tag,
-        id: TagKey.anchor,
+        id: TagConfigKey._anchor,
       },
     ],
   },
-  [GroupKey.standardItemLeadInstructionHint]: {
+  [GroupConfigKey._standardItemLeadInstructionHint]: {
     tags: [
       {
         type: BitTagType.tag,
-        id: TagKey.itemLead,
+        id: TagConfigKey._itemLead,
         maxCount: 2,
       },
       {
         type: BitTagType.tag,
-        id: TagKey.instruction,
+        id: TagConfigKey._instruction,
       },
       {
         type: BitTagType.tag,
-        id: TagKey.hint,
+        id: TagConfigKey._hint,
       },
     ],
   },
-  [GroupKey.standardExample]: {
+  [GroupConfigKey._standardExample]: {
     tags: [
       {
         type: BitTagType.property,
-        id: PropertyKey.example,
+        id: PropertyConfigKey._example,
       },
     ],
   },
-  [GroupKey.standardTags]: {
+  [GroupConfigKey._standardTags]: {
     tags: [
       {
         type: BitTagType.group,
-        id: GroupKey.standardAllBits,
+        id: GroupConfigKey._standardAllBits,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.standardItemLeadInstructionHint,
+        id: GroupConfigKey._standardItemLeadInstructionHint,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.standardExample,
+        id: GroupConfigKey._standardExample,
       },
     ],
   },
-  [GroupKey.imageSource]: {
+  [GroupConfigKey._imageSource]: {
     tags: [
       {
         type: BitTagType.property,
-        id: PropertyKey.imageSource,
+        id: PropertyConfigKey._imageSource,
         chain: [
           {
             type: BitTagType.property,
-            id: PropertyKey.mockupId,
+            id: PropertyConfigKey._mockupId,
           },
           {
             type: BitTagType.property,
-            id: PropertyKey.size,
+            id: PropertyConfigKey._size,
           },
           {
             type: BitTagType.property,
-            id: PropertyKey.format,
+            id: PropertyConfigKey._format,
           },
           {
             type: BitTagType.property,
-            id: PropertyKey.trim,
+            id: PropertyConfigKey._trim,
           },
         ],
       },
     ],
   },
-  [GroupKey.partner]: {
+  [GroupConfigKey._partner]: {
     tags: [
       {
         type: BitTagType.property,
-        id: PropertyKey.partner,
+        id: PropertyConfigKey._partner,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceImage,
+            id: GroupConfigKey._resourceImage,
           },
         ],
       },
     ],
   },
-  [GroupKey.gap]: {
-    tags: [
-      {
-        type: BitTagType.tag,
-        id: TagKey.gap,
-        maxCount: Count.infinity,
-        chain: [
-          {
-            type: BitTagType.tag,
-            id: TagKey.gap,
-            maxCount: Count.infinity,
-          },
-          {
-            type: BitTagType.group,
-            id: GroupKey.standardItemLeadInstructionHint,
-          },
-          {
-            type: BitTagType.group,
-            id: GroupKey.standardExample,
-          },
-        ],
-      },
-    ],
-  },
-  [GroupKey.trueFalse]: {
+  [GroupConfigKey._gap]: {
     tags: [
       {
         type: BitTagType.tag,
-        id: TagKey.true,
+        id: TagConfigKey._gap,
         maxCount: Count.infinity,
         chain: [
           {
             type: BitTagType.tag,
-            id: TagKey.true,
+            id: TagConfigKey._gap,
+            maxCount: Count.infinity,
+          },
+          {
+            type: BitTagType.group,
+            id: GroupConfigKey._standardItemLeadInstructionHint,
+          },
+          {
+            type: BitTagType.group,
+            id: GroupConfigKey._standardExample,
+          },
+        ],
+      },
+    ],
+  },
+  [GroupConfigKey._trueFalse]: {
+    tags: [
+      {
+        type: BitTagType.tag,
+        id: TagConfigKey._true,
+        maxCount: Count.infinity,
+        chain: [
+          {
+            type: BitTagType.tag,
+            id: TagConfigKey._true,
             maxCount: Count.infinity,
           },
           {
             type: BitTagType.tag,
-            id: TagKey.false,
+            id: TagConfigKey._false,
             maxCount: Count.infinity,
           },
           {
             type: BitTagType.group,
-            id: GroupKey.standardItemLeadInstructionHint,
+            id: GroupConfigKey._standardItemLeadInstructionHint,
           },
           {
             type: BitTagType.group,
-            id: GroupKey.standardExample,
+            id: GroupConfigKey._standardExample,
           },
         ],
       },
       {
         type: BitTagType.tag,
-        id: TagKey.false,
+        id: TagConfigKey._false,
         maxCount: Count.infinity,
         chain: [
           {
             type: BitTagType.tag,
-            id: TagKey.true,
+            id: TagConfigKey._true,
             maxCount: Count.infinity,
           },
           {
             type: BitTagType.tag,
-            id: TagKey.false,
+            id: TagConfigKey._false,
             maxCount: Count.infinity,
           },
           {
             type: BitTagType.group,
-            id: GroupKey.standardItemLeadInstructionHint,
+            id: GroupConfigKey._standardItemLeadInstructionHint,
           },
           {
             type: BitTagType.group,
-            id: GroupKey.standardExample,
+            id: GroupConfigKey._standardExample,
           },
         ],
       },
     ],
   },
-  [GroupKey.markConfig]: {
+  [GroupConfigKey._markConfig]: {
     tags: [
       {
         type: BitTagType.property,
-        id: PropertyKey.mark,
+        id: PropertyConfigKey._mark,
         maxCount: Count.infinity,
         chain: [
           {
             type: BitTagType.property,
-            id: PropertyKey.color,
+            id: PropertyConfigKey._color,
           },
           {
             type: BitTagType.property,
-            id: PropertyKey.emphasis,
+            id: PropertyConfigKey._emphasis,
           },
         ],
       },
     ],
   },
-  [GroupKey.mark]: {
+  [GroupConfigKey._mark]: {
     tags: [
       {
         type: BitTagType.tag,
-        id: TagKey.mark,
+        id: TagConfigKey._mark,
         maxCount: Count.infinity,
         chain: [
           {
             type: BitTagType.property,
-            id: PropertyKey.mark,
+            id: PropertyConfigKey._mark,
           },
           {
             type: BitTagType.group,
-            id: GroupKey.standardExample,
+            id: GroupConfigKey._standardExample,
           },
         ],
       },
     ],
   },
-  [GroupKey.learningPathCommon]: {
+  [GroupConfigKey._learningPathCommon]: {
     tags: [
       {
         type: BitTagType.property,
-        id: PropertyKey.action,
+        id: PropertyConfigKey._action,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.duration,
+        id: PropertyConfigKey._duration,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.date,
+        id: PropertyConfigKey._date,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.location,
+        id: PropertyConfigKey._location,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.list,
+        id: PropertyConfigKey._list,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.textReference,
+        id: PropertyConfigKey._textReference,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.isTracked,
+        id: PropertyConfigKey._isTracked,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.isInfoOnly,
+        id: PropertyConfigKey._isInfoOnly,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.book,
+        id: PropertyConfigKey._book,
         chain: [
           {
             type: BitTagType.tag,
-            id: TagKey.reference,
+            id: TagConfigKey._reference,
             maxCount: 2,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceCommon]: {
+  [GroupConfigKey._resourceCommon]: {
     tags: [
       {
         type: BitTagType.property,
-        id: PropertyKey.license,
+        id: PropertyConfigKey._license,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.copyright,
+        id: PropertyConfigKey._copyright,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.caption,
+        id: PropertyConfigKey._caption,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.showInIndex,
+        id: PropertyConfigKey._showInIndex,
       },
     ],
   },
-  [GroupKey.resourceImageCommon]: {
+  [GroupConfigKey._resourceImageCommon]: {
     tags: [
       {
         type: BitTagType.group,
-        id: GroupKey.resourceCommon,
+        id: GroupConfigKey._resourceCommon,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.src1x,
+        id: PropertyConfigKey._src1x,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.src2x,
+        id: PropertyConfigKey._src2x,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.src3x,
+        id: PropertyConfigKey._src3x,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.src4x,
+        id: PropertyConfigKey._src4x,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.width,
+        id: PropertyConfigKey._width,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.height,
+        id: PropertyConfigKey._height,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.alt,
+        id: PropertyConfigKey._alt,
       },
     ],
   },
-  [GroupKey.resourceAudioCommon]: {
+  [GroupConfigKey._resourceAudioCommon]: {
     tags: [
       {
         type: BitTagType.group,
-        id: GroupKey.resourceCommon,
+        id: GroupConfigKey._resourceCommon,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.duration,
+        id: PropertyConfigKey._duration,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.mute,
+        id: PropertyConfigKey._mute,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.autoplay,
+        id: PropertyConfigKey._autoplay,
       },
     ],
   },
-  [GroupKey.resourceVideoCommon]: {
+  [GroupConfigKey._resourceVideoCommon]: {
     tags: [
       {
         type: BitTagType.group,
-        id: GroupKey.resourceCommon,
+        id: GroupConfigKey._resourceCommon,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.width,
+        id: PropertyConfigKey._width,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.height,
+        id: PropertyConfigKey._height,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.duration,
+        id: PropertyConfigKey._duration,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.mute,
+        id: PropertyConfigKey._mute,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.autoplay,
+        id: PropertyConfigKey._autoplay,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.allowSubtitles,
+        id: PropertyConfigKey._allowSubtitles,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.showSubtitles,
+        id: PropertyConfigKey._showSubtitles,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.alt,
+        id: PropertyConfigKey._alt,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.posterImage,
+        id: PropertyConfigKey._posterImage,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.src1x,
+        id: PropertyConfigKey._src1x,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.src2x,
+        id: PropertyConfigKey._src2x,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.src3x,
+        id: PropertyConfigKey._src3x,
       },
       {
         type: BitTagType.property,
-        id: PropertyKey.src4x,
+        id: PropertyConfigKey._src4x,
       },
     ],
   },
-  [GroupKey.resourceImage]: {
+  [GroupConfigKey._resourceImage]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.image,
+        id: ResourceConfigKey._image,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceImageCommon,
-          },
-        ],
-      },
-    ],
-  },
-  [GroupKey.resourceImageEmbed]: {
-    tags: [
-      {
-        type: BitTagType.resource,
-        id: ResourceKey.imageEmbed,
-        chain: [
-          {
-            type: BitTagType.group,
-            id: GroupKey.resourceImageCommon,
+            id: GroupConfigKey._resourceImageCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceImageLink]: {
+  [GroupConfigKey._resourceImageEmbed]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.imageLink,
+        id: ResourceConfigKey._imageEmbed,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceImageCommon,
+            id: GroupConfigKey._resourceImageCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceImageResponsive]: {
+  [GroupConfigKey._resourceImageLink]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.imagePortrait,
+        id: ResourceConfigKey._imageLink,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceImageCommon,
-          },
-        ],
-      },
-      {
-        type: BitTagType.resource,
-        id: ResourceKey.imageLandscape,
-        chain: [
-          {
-            type: BitTagType.group,
-            id: GroupKey.resourceImageCommon,
+            id: GroupConfigKey._resourceImageCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceAudio]: {
+  [GroupConfigKey._resourceImageResponsive]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.audio,
+        id: ResourceConfigKey._imagePortrait,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceAudioCommon,
+            id: GroupConfigKey._resourceImageCommon,
+          },
+        ],
+      },
+      {
+        type: BitTagType.resource,
+        id: ResourceConfigKey._imageLandscape,
+        chain: [
+          {
+            type: BitTagType.group,
+            id: GroupConfigKey._resourceImageCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceAudioEmbed]: {
+  [GroupConfigKey._resourceAudio]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.audioEmbed,
+        id: ResourceConfigKey._audio,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceAudioCommon,
+            id: GroupConfigKey._resourceAudioCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceAudioLink]: {
+  [GroupConfigKey._resourceAudioEmbed]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.audioLink,
+        id: ResourceConfigKey._audioEmbed,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceAudioCommon,
+            id: GroupConfigKey._resourceAudioCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceVideo]: {
+  [GroupConfigKey._resourceAudioLink]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.audio,
+        id: ResourceConfigKey._audioLink,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceVideoCommon,
+            id: GroupConfigKey._resourceAudioCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceVideoEmbed]: {
+  [GroupConfigKey._resourceVideo]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.audioEmbed,
+        id: ResourceConfigKey._audio,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceVideoCommon,
+            id: GroupConfigKey._resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceVideoLink]: {
+  [GroupConfigKey._resourceVideoEmbed]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.audioLink,
+        id: ResourceConfigKey._audioEmbed,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceVideoCommon,
+            id: GroupConfigKey._resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceStillImageFilm]: {
+  [GroupConfigKey._resourceVideoLink]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.image,
+        id: ResourceConfigKey._audioLink,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceImageCommon,
-          },
-        ],
-      },
-      {
-        type: BitTagType.resource,
-        id: ResourceKey.audio,
-        chain: [
-          {
-            type: BitTagType.group,
-            id: GroupKey.resourceAudioCommon,
+            id: GroupConfigKey._resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceStillImageFilmEmbed]: {
+  [GroupConfigKey._resourceStillImageFilm]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.stillImageFilmEmbed,
+        id: ResourceConfigKey._image,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceVideoCommon,
+            id: GroupConfigKey._resourceImageCommon,
+          },
+        ],
+      },
+      {
+        type: BitTagType.resource,
+        id: ResourceConfigKey._audio,
+        chain: [
+          {
+            type: BitTagType.group,
+            id: GroupConfigKey._resourceAudioCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceStillImageFilmLink]: {
+  [GroupConfigKey._resourceStillImageFilmEmbed]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.stillImageFilmLink,
+        id: ResourceConfigKey._stillImageFilmEmbed,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceVideoCommon,
+            id: GroupConfigKey._resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceArticle]: {
+  [GroupConfigKey._resourceStillImageFilmLink]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.article,
+        id: ResourceConfigKey._stillImageFilmLink,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceCommon,
+            id: GroupConfigKey._resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceArticleEmbed]: {
+  [GroupConfigKey._resourceArticle]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.articleEmbed,
+        id: ResourceConfigKey._article,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceCommon,
+            id: GroupConfigKey._resourceCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceArticleLink]: {
+  [GroupConfigKey._resourceArticleEmbed]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.articleLink,
+        id: ResourceConfigKey._articleEmbed,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceCommon,
+            id: GroupConfigKey._resourceCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceDocument]: {
+  [GroupConfigKey._resourceArticleLink]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.document,
+        id: ResourceConfigKey._articleLink,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceCommon,
+            id: GroupConfigKey._resourceCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceDocumentEmbed]: {
+  [GroupConfigKey._resourceDocument]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.documentEmbed,
+        id: ResourceConfigKey._document,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceCommon,
+            id: GroupConfigKey._resourceCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceDocumentLink]: {
+  [GroupConfigKey._resourceDocumentEmbed]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.documentLink,
+        id: ResourceConfigKey._documentEmbed,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceCommon,
+            id: GroupConfigKey._resourceCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceDocumentDownload]: {
+  [GroupConfigKey._resourceDocumentLink]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.documentDownload,
+        id: ResourceConfigKey._documentLink,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceCommon,
+            id: GroupConfigKey._resourceCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceAppLink]: {
+  [GroupConfigKey._resourceDocumentDownload]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.appLink,
+        id: ResourceConfigKey._documentDownload,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceCommon,
+            id: GroupConfigKey._resourceCommon,
           },
         ],
       },
     ],
   },
-  [GroupKey.resourceWebsiteLink]: {
+  [GroupConfigKey._resourceAppLink]: {
     tags: [
       {
         type: BitTagType.resource,
-        id: ResourceKey.websiteLink,
+        id: ResourceConfigKey._appLink,
         chain: [
           {
             type: BitTagType.group,
-            id: GroupKey.resourceCommon,
+            id: GroupConfigKey._resourceCommon,
+          },
+        ],
+      },
+    ],
+  },
+  [GroupConfigKey._resourceWebsiteLink]: {
+    tags: [
+      {
+        type: BitTagType.resource,
+        id: ResourceConfigKey._websiteLink,
+        chain: [
+          {
+            type: BitTagType.group,
+            id: GroupConfigKey._resourceCommon,
           },
         ],
       },
     ],
   },
   // All resources
-  [GroupKey.resourceAll]: {
+  [GroupConfigKey._resourceAll]: {
     tags: [
       {
         type: BitTagType.group,
-        id: GroupKey.resourceImage,
+        id: GroupConfigKey._resourceImage,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceImageEmbed,
+        id: GroupConfigKey._resourceImageEmbed,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceImageLink,
+        id: GroupConfigKey._resourceImageLink,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceImageResponsive,
+        id: GroupConfigKey._resourceImageResponsive,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceAudio,
+        id: GroupConfigKey._resourceAudio,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceAudioEmbed,
+        id: GroupConfigKey._resourceAudioEmbed,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceAudioLink,
+        id: GroupConfigKey._resourceAudioLink,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceVideo,
+        id: GroupConfigKey._resourceVideo,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceVideoEmbed,
+        id: GroupConfigKey._resourceVideoEmbed,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceVideoLink,
+        id: GroupConfigKey._resourceVideoLink,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceStillImageFilm,
+        id: GroupConfigKey._resourceStillImageFilm,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceStillImageFilmEmbed,
+        id: GroupConfigKey._resourceStillImageFilmEmbed,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceStillImageFilmLink,
+        id: GroupConfigKey._resourceStillImageFilmLink,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceArticleEmbed,
+        id: GroupConfigKey._resourceArticleEmbed,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceArticleLink,
+        id: GroupConfigKey._resourceArticleLink,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceDocument,
+        id: GroupConfigKey._resourceDocument,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceDocumentEmbed,
+        id: GroupConfigKey._resourceDocumentEmbed,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceDocumentLink,
+        id: GroupConfigKey._resourceDocumentLink,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceDocumentDownload,
+        id: GroupConfigKey._resourceDocumentDownload,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceAppLink,
+        id: GroupConfigKey._resourceAppLink,
       },
       {
         type: BitTagType.group,
-        id: GroupKey.resourceWebsiteLink,
+        id: GroupConfigKey._resourceWebsiteLink,
       },
     ],
   },
