@@ -32,6 +32,7 @@ import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { BitmarkVersionType } from './model/enum/BitmarkVersion';
+import { ConfigBuilder } from './config/ConfigBuilder';
 
 /* STRIP:END */
 STRIP;
@@ -155,8 +156,16 @@ class BitmarkParserGenerator {
   /**
    * Get the version of the bitmark-parser-generator library
    */
-  version(): string {
+  public version(): string {
     return env.appVersion.full;
+  }
+
+  /**
+   * Get the configuration of the bitmark-parser-generator library
+   */
+  public config(): unknown {
+    const configBuilder = new ConfigBuilder();
+    return configBuilder.build();
   }
 
   /**
@@ -185,7 +194,10 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  async convert(input: string | fs.PathLike | unknown, options?: ConvertOptions): Promise<string | unknown | void> {
+  public async convert(
+    input: string | fs.PathLike | unknown,
+    options?: ConvertOptions,
+  ): Promise<string | unknown | void> {
     let res: string | unknown | void;
     const opts: ConvertOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -393,7 +405,10 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  async upgrade(input: string | fs.PathLike | unknown, options?: UpgradeOptions): Promise<string | unknown | void> {
+  public async upgrade(
+    input: string | fs.PathLike | unknown,
+    options?: UpgradeOptions,
+  ): Promise<string | unknown | void> {
     let res: string | unknown | void;
     const opts: UpgradeOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -483,7 +498,7 @@ class BitmarkParserGenerator {
    * @returns bitmark AST
    * @throws Error if any error occurs
    */
-  createAst(input: unknown): BitmarkAst {
+  public createAst(input: unknown): BitmarkAst {
     let res: BitmarkAst;
     let inStr: string = input as string;
 

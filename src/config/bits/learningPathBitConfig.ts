@@ -25,36 +25,3 @@ const TAGS_LEARNING_PATH_RESOURCE: TagDataMap = {
     },
   },
 };
-
-RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.learningPathBook, {
-  tags: {
-    ...TAGS_DEFAULT,
-    ...TAGS_CHAIN_ANY_RESOURCE,
-    ...TAGS_LEARNING_PATH_RESOURCE,
-  },
-  resourceAttachmentAllowed: true,
-  bodyAllowed: true,
-});
-
-RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.learningPathExternalLink, {
-  tags: {
-    ...TAGS_DEFAULT,
-    ...TAGS_CHAIN_ANY_RESOURCE,
-    ...TAGS_LEARNING_PATH_RESOURCE,
-    [PropertyKey.externalLink]: { isProperty: true },
-    [PropertyKey.externalLinkText]: { isProperty: true },
-  },
-  resourceAttachmentAllowed: true,
-  bodyAllowed: true,
-});
-
-RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.learningPathVideoCall, {
-  tags: {
-    ...TAGS_DEFAULT,
-    ...TAGS_CHAIN_ANY_RESOURCE,
-    ...TAGS_LEARNING_PATH_RESOURCE,
-    [PropertyKey.videoCallLink]: { isProperty: true },
-  },
-  resourceAttachmentAllowed: true,
-  bodyAllowed: true,
-});

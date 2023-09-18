@@ -1,0 +1,46 @@
+import { EnumType, superenum } from '@ncoderz/superenum';
+
+const GroupKey = superenum({
+  standardAllBits: 'standardAllBits',
+  standardItemLeadInstructionHint: 'standardItemLeadInstructionHint',
+  standardExample: 'standardExample',
+  standardTags: 'standardTags',
+  imageSource: 'imageSource',
+  partner: 'partner',
+  gap: 'gap',
+  trueFalse: 'trueFalse',
+  markConfig: 'markConfig',
+  mark: 'mark',
+  learningPathCommon: 'learningPathCommon',
+  resourceCommon: 'resourceCommon',
+  resourceImageCommon: 'resourceImageCommon',
+  resourceAudioCommon: 'resourceAudioCommon',
+  resourceVideoCommon: 'resourceVideoCommon',
+  resourceImage: 'resourceImage',
+  resourceImageEmbed: 'resourceImageEmbed',
+  resourceImageLink: 'resourceImageLink',
+  resourceImageResponsive: 'resourceImageResponsive',
+  resourceAudio: 'resourceAudio',
+  resourceAudioEmbed: 'resourceAudioEmbed',
+  resourceAudioLink: 'resourceAudioLink',
+  resourceVideo: 'resourceVideo',
+  resourceVideoEmbed: 'resourceVideoEmbed',
+  resourceVideoLink: 'resourceVideoLink',
+  resourceStillImageFilm: 'resourceStillImageFilm',
+  resourceStillImageFilmEmbed: 'resourceStillImageFilmEmbed',
+  resourceStillImageFilmLink: 'resourceStillImageFilmLink',
+  resourceArticle: 'resourceArticle',
+  resourceArticleEmbed: 'resourceArticleEmbed',
+  resourceArticleLink: 'resourceArticleLink',
+  resourceDocument: 'resourceDocument',
+  resourceDocumentEmbed: 'resourceDocumentEmbed',
+  resourceDocumentLink: 'resourceDocumentLink',
+  resourceDocumentDownload: 'resourceDocumentDownload',
+  resourceAppLink: 'resourceAppLink',
+  resourceWebsiteLink: 'resourceWebsiteLink',
+  resourceAll: 'resourceAll',
+});
+
+export type GroupKeyType = EnumType<typeof GroupKey>;
+
+export { GroupKey };

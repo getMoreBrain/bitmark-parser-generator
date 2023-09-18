@@ -6,10 +6,8 @@ import { TAGS_DEFAULT } from './generic/standardBitConfigs';
 
 // Set metadata on the bit types to describe specific behaviour
 
-const CLOZE_CONFIG: RootBitTypeMetadata = {
+RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.cloze, {
   tags: { ...TAGS_DEFAULT, ...TAGS_CHAIN_GAP, ...TAGS_CHAIN_ANY_RESOURCE },
   resourceAttachmentAllowed: true,
   bodyAllowed: true,
-};
-
-RootBitType.setMetadata<RootBitTypeMetadata>(RootBitType.cloze, CLOZE_CONFIG);
+});

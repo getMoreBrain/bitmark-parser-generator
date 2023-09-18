@@ -1,4 +1,7 @@
 // Bit configs
+import { PropertiesConfig } from '../model/config/NewConfig';
+
+import { PROPERTIES } from './new/properties';
 import './bits/_errorBitConfig';
 import './bits/appFlashcardsBitConfig';
 import './bits/appLinkBitConfig';
@@ -127,3 +130,13 @@ import './properties/tocPropertyConfig';
 import './properties/trimPropertyConfig';
 import './properties/typePropertyConfig';
 import './properties/videoCallLinkPropertyConfig';
+
+class Config {
+  getProperties(): PropertiesConfig {
+    return PROPERTIES;
+  }
+}
+
+const instance = new Config();
+
+export { instance as Config };

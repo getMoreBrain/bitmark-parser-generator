@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "start": "run start-parser",
+    "start-config": "node -r esbuild-register ./test/custom/dev/devConfig.ts",
     "start-parser": "node -r esbuild-register ./test/custom/dev/devParser.ts",
     "start-generator": "node -r esbuild-register ./test/custom/dev/devGenerator.ts",
     "start-prettify": "node -r esbuild-register ./test/custom/dev/devPrettify.ts",
