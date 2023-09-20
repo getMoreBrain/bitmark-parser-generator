@@ -39,7 +39,6 @@
     "bit": {
       "type": "still-image-film",
       "format": "bitmark--",
-      "duration": "PT12M31S",
       "item": "",
       "hint": "",
       "example": null,

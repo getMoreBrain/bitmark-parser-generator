@@ -1,7 +1,7 @@
-import { PropertyConfigKey } from '../model/config/PropertyConfigKey';
+import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { AliasBitType, BitType } from '../model/enum/BitType';
 import { BodyBitType } from '../model/enum/BodyBitType';
-import { ResourceTypeType } from '../model/enum/ResourceType';
+import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
@@ -85,7 +85,7 @@ class Builder extends BaseBuilder {
   bit(data: {
     bitType: BitType;
     textFormat?: TextFormatType;
-    resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
+    resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
     id?: string | string[];
     externalId?: string | string[];
     spaceId?: string | string[];
@@ -154,7 +154,7 @@ class Builder extends BaseBuilder {
       [key: string]: unknown | unknown[];
     };
     markConfig?: MarkConfig[];
-    resource?: Resource;
+    resources?: Resource | Resource[];
     body?: Body;
     sampleSolution?: string | string[];
     elements?: string[];
@@ -242,7 +242,7 @@ class Builder extends BaseBuilder {
       partner,
       markConfig,
       extraProperties,
-      resource,
+      resources: _resources,
       body,
       sampleSolution,
       footer,
@@ -251,6 +251,9 @@ class Builder extends BaseBuilder {
       parser,
     } = data;
 
+    // Convert resources into an array
+    const resources = ArrayUtils.asArray(_resources);
+
     // Set the card node data
     const cardNode = this.cardNode(data);
 
@@ -258,7 +261,7 @@ class Builder extends BaseBuilder {
     const node: Bit = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
-      resourceType: BitUtils.calculateValidResourceType(bitType, resourceType, resource),
+      resourceType: ResourceTag.fromValue(resourceType),
       id: this.toAstProperty(PropertyConfigKey._id, id),
       externalId: this.toAstProperty(PropertyConfigKey._externalId, externalId),
       spaceId: this.toAstProperty(PropertyConfigKey._spaceId, spaceId),
@@ -320,7 +323,7 @@ class Builder extends BaseBuilder {
       ...this.toExample(isDefaultExample, example),
       imageSource,
       partner,
-      resource,
+      resources,
       body,
       sampleSolution: ArrayUtils.asArray(sampleSolution),
       cardNode,

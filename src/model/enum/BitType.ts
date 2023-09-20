@@ -1,11 +1,5 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-import { TagDataMap } from '../config/TagData';
-
-import { CardSetTypeType } from './CardSetType';
-import { ExampleTypeType } from './ExampleType';
-import { ResourceTypeType } from './ResourceType';
-
 // Type containing both the root and alias bit types
 export interface BitType {
   alias: RootOrAliasBitTypeType;
@@ -15,59 +9,6 @@ export interface BitType {
 export type RootBitTypeType = EnumType<typeof RootBitType>;
 export type AliasBitTypeType = EnumType<typeof AliasBitType>;
 export type RootOrAliasBitTypeType = RootBitTypeType | AliasBitTypeType;
-
-export interface RootBitTypeMetadata {
-  // Tags, Property Tags, and Tag chains that are valid for this bit type
-  tags: TagDataMap;
-
-  // Is a resource attachment allowed (e.g. not for [.image], but for [.article&image])
-  // (default: false)
-  resourceAttachmentAllowed?: boolean;
-
-  // Resource type that is valid for this bit type
-  resourceType?: ResourceTypeType;
-
-  // Is the resource optional?
-  resourceOptional?: boolean;
-
-  // Type of card set that is valid for this bit type (if any)
-  cardSet?: CardSetConfig;
-
-  // Is a body allowed? (default: false)
-  bodyAllowed?: boolean;
-
-  // Is a footer allowed? (default: false)
-  footerAllowed?: boolean;
-
-  // Top-level example type (default: none)
-  rootExampleType?: ExampleTypeType;
-}
-
-/**
- * TODO: The CardSetConfig needs improving to handle more use cases
- * - Different card configurations
- * - Infinitely repeating cards (this is the default, but maybe there could also be limited cards)
- * - Infinitely repeating sides (this is hacked in at the moment, but the config is not really correct)
- */
-export interface CardSetConfig {
-  type: CardSetTypeType;
-
-  // Configuration for each variant from the card set
-  // - all cards have the same config
-  // - each variant is indexed via side and variant
-  variants: CardSetVariantConfig[][];
-}
-
-export interface CardSetVariantConfig {
-  // Tags, Property Tags, and Tag chains that are valid for this bit type
-  tags: TagDataMap;
-
-  // Is a body allowed in this card variant? (default: false)
-  bodyAllowed?: boolean;
-
-  // If true, this config repeats infinitely
-  infiniteRepeat?: boolean;
-}
 
 const RootBitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error

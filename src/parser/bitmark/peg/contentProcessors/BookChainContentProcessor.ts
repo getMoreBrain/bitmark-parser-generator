@@ -1,3 +1,4 @@
+import { Config } from '../../../../config/Config_RENAME';
 import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -7,6 +8,7 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
+  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 // const builder = new Builder();
@@ -37,11 +39,13 @@ function buildBook(
   reference: string | undefined;
   referenceEnd: string | undefined;
 } {
-  // const { value } = content as TypeValue;
-
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('book content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, content.chain);
+  // Build the variables required to process the chain
+  const { key } = content as TypeKeyValue;
+  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
+
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, parentTagConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('book TAGS', tags);
 

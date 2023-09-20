@@ -47,7 +47,7 @@ import {
   TypeValue,
 } from './BitmarkPegParserTypes';
 
-import '../../../config/config';
+import '../../../config/Config_RENAME';
 
 const ENABLE_DEBUG = true;
 const DEBUG_DATA = true;

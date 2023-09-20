@@ -1,7 +1,8 @@
 import { Builder } from '../../../../ast/Builder';
-import { AliasBitType, BitType, RootBitType, RootBitTypeMetadata } from '../../../../model/enum/BitType';
-import { CardSetType } from '../../../../model/enum/CardSetType';
-import { ResourceType } from '../../../../model/enum/ResourceType';
+import { Config } from '../../../../config/Config_RENAME';
+import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
+import { AliasBitType, BitType, RootBitType } from '../../../../model/enum/BitType';
+import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
@@ -51,41 +52,41 @@ function buildCards(
   // Parse the card contents according to the card set type
 
   // Get the bit metadata to check how to parse the card set
-  const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bitType.root);
-  const cardSetType = meta && meta.cardSet?.type;
+  const bitConfig = Config.getBitConfig(bitType);
+  const cardSetType = bitConfig.cardSet?.configKey;
 
   switch (cardSetType) {
-    case CardSetType.flashcards:
+    case CardSetConfigKey._flashcards:
       result = parseFlashcards(context, bitType, processedCardSet);
       break;
 
-    case CardSetType.elements:
+    case CardSetConfigKey._elements:
       result = parseElements(context, bitType, processedCardSet);
       break;
 
-    case CardSetType.statements:
+    case CardSetConfigKey._statements:
       result = parseStatements(context, bitType, processedCardSet, statementV1, statementsV1);
       break;
 
-    case CardSetType.quiz:
+    case CardSetConfigKey._quiz:
       result = parseQuiz(context, bitType, processedCardSet, choicesV1, responsesV1);
       break;
 
-    case CardSetType.questions:
+    case CardSetConfigKey._questions:
       result = parseQuestions(context, bitType, processedCardSet);
       break;
 
-    case CardSetType.matchPairs:
+    case CardSetConfigKey._matchPairs:
       // ==> heading / pairs
       result = parseMatchPairs(context, bitType, processedCardSet);
       break;
 
-    case CardSetType.matchMatrix:
+    case CardSetConfigKey._matchMatrix:
       // ==> heading / matrix
       result = parseMatchMatrix(context, bitType, processedCardSet);
       break;
 
-    case CardSetType.botActionResponses:
+    case CardSetConfigKey._botActionResponses:
       result = parseBotActionResponses(context, bitType, processedCardSet);
       break;
 
@@ -135,7 +136,7 @@ function processCardSet(
           no: variantNo++,
         } as ProcessedCardVariant;
         processedSide.variants.push(processedVariant);
-        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, content);
+        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, undefined, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags', tags);
 
@@ -480,9 +481,9 @@ function parseMatchPairs(
             // TODO - should search the correct resource type based on the bit type
             const resource = resources[0];
             // console.log('WARNING: Match card has resource on first side', tags.resource);
-            if (resource.type === ResourceType.audio) {
+            if (resource.type === ResourceTag.audio) {
               keyAudio = resource as AudioResource;
-            } else if (resource.type === ResourceType.image) {
+            } else if (resource.type === ResourceTag.image) {
               keyImage = resource as ImageResource;
             }
           } else {
@@ -611,9 +612,9 @@ function parseMatchMatrix(
             forKeys = heading;
             // } else if (tags.resource) {
             //   console.log('WARNING: Match card has resource on first side', tags.resource);
-            //   if (tags.resource.type === ResourceType.audio) {
+            //   if (tags.resource.type === ResourceTag.audio) {
             //     keyAudio = tags.resource as AudioResource;
-            //   } else if (tags.resource.type === ResourceType.image) {
+            //   } else if (tags.resource.type === ResourceTag.image) {
             //     keyImage = tags.resource as ImageResource;
             //   }
             isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;

@@ -1,7 +1,8 @@
 import { Builder } from '../../../../ast/Builder';
+import { Config } from '../../../../config/Config_RENAME';
 import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { BitType } from '../../../../model/enum/BitType';
-import { ResourceType } from '../../../../model/enum/ResourceType';
+import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -10,6 +11,7 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
+  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
@@ -25,7 +27,11 @@ function partnerChainContentProcessor(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('partner content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, content.chain);
+  // Build the variables required to process the chain
+  const { key } = content as TypeKeyValue;
+  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
+
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, parentTagConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('partner TAGS', tags);
 
@@ -56,7 +62,7 @@ function extractAvatarImage(
 
   if (resources) {
     for (const r of resources.reverse()) {
-      if (!avatarImage && ResourceType.image === r.type) {
+      if (!avatarImage && ResourceTag.image === r.type) {
         avatarImage = r as ImageResource;
       } else {
         excessResources.push(r);

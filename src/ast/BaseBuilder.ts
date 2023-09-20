@@ -1,6 +1,6 @@
-import { Config } from '../config/config';
+import { Config } from '../config/Config_RENAME';
 import { Example, Property } from '../model/ast/Nodes';
-import { PropertyConfigKeyType } from '../model/config/PropertyConfigKey';
+import { PropertyConfigKeyType } from '../model/config/enum/PropertyConfigKey';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
@@ -103,7 +103,7 @@ class BaseBuilder {
   protected toAstProperty(key: PropertyConfigKeyType, value: unknown | unknown[] | undefined): Property | undefined {
     if (value == null) return undefined;
 
-    const propertiesConfig = Config.getProperties();
+    const propertiesConfig = Config.getRawPropertiesConfig();
     const propertyConfig = propertiesConfig[key];
 
     // if (key === 'progress') debugger;

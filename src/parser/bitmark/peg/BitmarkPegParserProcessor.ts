@@ -64,9 +64,10 @@
 
 import { Builder } from '../../../ast/Builder';
 import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
+import { TagConfig } from '../../../model/config/TagConfig';
 import { BitType, BitTypeUtils, RootBitType } from '../../../model/enum/BitType';
 import { BodyBitType } from '../../../model/enum/BodyBitType';
-import { ResourceType } from '../../../model/enum/ResourceType';
+import { ResourceTag } from '../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
@@ -81,7 +82,7 @@ import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagCont
 import { markChainContentProcessor } from './contentProcessors/MarkChainContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
 import { referenceTagContentProcessor } from './contentProcessors/ReferenceTagContentProcessor';
-import { buildResource, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
+import { buildResources, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
 import { buildTitles, titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
 import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseChainContentProcessor';
 
@@ -218,11 +219,11 @@ class BitmarkPegParserProcessor {
     this.resetParserState();
 
     // Validate the bit tags
-    bitContent = BitmarkPegParserValidator.validateBitTags(this.context, bitType, bitContent);
+    bitContent = BitmarkPegParserValidator.validateBitTags(this.context, bitType, resourceType, bitContent);
 
     // Parse the bit content into a an object with the appropriate keys
     const { body, footer, cardSet, title, statement, statements, choices, responses, resources, comments, ...tags } =
-      this.bitContentProcessor(BitContentLevel.Bit, bitType, bitContent);
+      this.bitContentProcessor(BitContentLevel.Bit, bitType, undefined, bitContent);
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
     if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
@@ -235,7 +236,7 @@ class BitmarkPegParserProcessor {
     const bitSpecificCards = buildCards(this.context, bitType, cardSet, statement, statements, choices, responses);
 
     // Build the resources
-    const resource = buildResource(this.context, bitType, resourceType, resources);
+    const filteredResources = buildResources(this.context, bitType, resourceType, resources);
 
     // Build the comments for the parser object
     if (comments || bitSpecificCards.comments) {
@@ -260,7 +261,7 @@ class BitmarkPegParserProcessor {
       choices: isMultipleChoiceV1 ? choices : undefined,
       responses: isMultipleResponseV1 ? responses : undefined,
       ...tags,
-      resource,
+      resources: filteredResources,
       ...bitSpecificCards,
       body,
       footer,
@@ -316,7 +317,7 @@ class BitmarkPegParserProcessor {
           res.textFormat = res.textFormat ?? TextFormat.bitmarkMinusMinus;
         } else {
           // Parse resource type, adding error if invalid
-          res.resourceType = ResourceType.fromValue(value.value);
+          res.resourceType = ResourceTag.fromValue(value.value);
           if (value.value && !res.resourceType) {
             this.addWarning(`Invalid resource type '${value.value}', it will be ignored`);
           }
@@ -348,6 +349,7 @@ class BitmarkPegParserProcessor {
   private bitContentProcessor(
     bitLevel: BitContentLevelType,
     bitType: BitType,
+    parentTagConfig: TagConfig | undefined,
     data: BitContent[] | undefined,
   ): BitContentProcessorResult {
     const result: BitContentProcessorResult = {};
@@ -419,7 +421,7 @@ class BitmarkPegParserProcessor {
           break;
 
         case TypeKey.Property:
-          propertyContentProcessor(this.context, bitLevel, bitType, content, result);
+          propertyContentProcessor(this.context, bitLevel, bitType, parentTagConfig, content, result);
           break;
 
         case TypeKey.Gap: {

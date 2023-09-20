@@ -1,4 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
+import { Config } from '../../../../config/Config_RENAME';
 import { BodyPart, Mark } from '../../../../model/ast/Nodes';
 import { BitType } from '../../../../model/enum/BitType';
 import { ArrayUtils } from '../../../../utils/ArrayUtils';
@@ -11,6 +12,7 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
+  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
@@ -34,13 +36,17 @@ function markChainContentProcessor(
 function buildMark(context: BitmarkPegParserContext, bitType: BitType, content: BitContent): Mark | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('mark content', content);
 
-  const chainContent = [content, ...(content.chain ?? [])];
+  // Build the variables required to process the chain
+  const { key } = content as TypeKeyValue;
+  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, chainContent);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, undefined, [content]);
+  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, bitType, parentTagConfig, content.chain);
 
-  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('mark TAGS', tags);
+  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('mark TAGS', chainTags);
 
-  const { solution, mark: markType, ...rest } = tags;
+  const { solution } = tags;
+  const { mark: markType, ...rest } = chainTags;
 
   const mark = builder.mark({
     solution: solution ?? '',

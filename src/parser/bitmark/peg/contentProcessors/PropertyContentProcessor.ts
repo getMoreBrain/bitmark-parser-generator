@@ -1,10 +1,9 @@
-import { Config } from '../../../../config/config';
-import {
-  PropertyConfigKey,
-  PropertyKeyMetadata,
-  PropertyConfigKeyType,
-} from '../../../../model/config/PropertyConfigKey';
+import { Config } from '../../../../config/Config_RENAME';
+import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
+import { TagConfig } from '../../../../model/config/TagConfig';
+import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
 import { BitType } from '../../../../model/enum/BitType';
+import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -28,69 +27,88 @@ function propertyContentProcessor(
   context: BitmarkPegParserContext,
   bitLevel: BitContentLevelType,
   bitType: BitType,
+  parentTagConfig: TagConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
   const { key: tag, value } = content as TypeKeyValue;
   const isChain = bitLevel === BitContentLevel.Chain;
 
-  const propertyConfig = Config.getPropertyFromTag(bitType, tag);
-  const propertyConfigKey = PropertyConfigKey.fromValue(propertyConfig.);
+  // Get the property config for the tag (if it exists)
+  const propertyConfig = Config.getTagConfigFromTag(bitType, tag, parentTagConfig);
+  const configKey = propertyConfig ? propertyConfig.configKey : undefined;
 
   // Check for chains
   // Generally, the chain will only be present in the correct bit as the data was already validated. The bit type
   // should also be checked here if the property may occur in another bit with a different meaning.
-  if (propertyConfigKey === PropertyConfigKey._example) {
+  if (configKey === PropertyConfigKey._example) {
     exampleTagContentProcessor(context, bitLevel, bitType, content, target);
     return;
-  } else if (propertyConfigKey === PropertyConfigKey._partner) {
+  } else if (configKey === PropertyConfigKey._partner) {
     partnerChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
-  } else if (propertyConfigKey === PropertyConfigKey._imageSource) {
+  } else if (configKey === PropertyConfigKey._imageSource) {
     imageSourceChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
-  } else if (propertyConfigKey === PropertyConfigKey._book) {
+  } else if (configKey === PropertyConfigKey._book) {
     bookChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
-  } else if (propertyConfigKey === PropertyConfigKey._mark && !isChain) {
+  } else if (configKey === PropertyConfigKey._mark && !isChain) {
     markConfigChainContentProcessor(context, bitLevel, bitType, content, target);
     return;
   }
 
   // Helper for building the properties
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const addProperty = (obj: any, key: PropertyConfigKeyType, v: unknown) => {
-    const meta = PropertyConfigKey.getMetadata<PropertyKeyMetadata>(PropertyConfigKey.fromValue(key)) ?? {};
-
+  const addProperty = (obj: any, tag: string, v: unknown, c: PropertyTagConfig | undefined) => {
     // if (key === 'progress') debugger;
 
-    // Convert property and key as needed
-    if (meta.astKey) key = meta.astKey;
-    if (meta.isTrimmedString) v = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
-    if (meta.isNumber) v = NumberUtils.asNumber(v);
-    if (meta.isBoolean) v = BooleanUtils.toBoolean(v, true);
-    if (meta.isInvertedBoolean) v = !BooleanUtils.toBoolean(v, true);
+    // Convert property as needed
+    const processValue = (v: unknown) => {
+      if (v == null) return undefined;
+      if (c) {
+        switch (c.format) {
+          case PropertyFormat.string:
+            return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
 
-    if (meta.isSingle) {
-      obj[key] = v;
+          case PropertyFormat.trimmedString:
+            return StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
+
+          case PropertyFormat.number:
+            return NumberUtils.asNumber(v);
+
+          case PropertyFormat.boolean:
+            return BooleanUtils.toBoolean(v, true);
+
+          case PropertyFormat.invertedBoolean:
+            return !BooleanUtils.toBoolean(v, true);
+        }
+      }
+      return v;
+    };
+
+    // Convert property and key as needed
+    v = processValue(v);
+    if (c?.astKey) tag = c.astKey;
+
+    if (c?.single) {
+      obj[tag] = v;
     } else {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        const originalValue = obj[key];
-        obj[key] = [...originalValue, v];
+      if (Object.prototype.hasOwnProperty.call(obj, tag)) {
+        const originalValue = obj[tag];
+        obj[tag] = [...originalValue, v];
       } else {
-        obj[key] = [v];
+        obj[tag] = [v];
       }
     }
   };
 
-  // TODO: We need to look the property up via the bit and key (the property may be different across bits)
-
-  if (PropertyConfigKey.fromValue(tag)) {
-    // Known property
-    addProperty(target, tag, value);
+  if (propertyConfig) {
+    // Known property in correct position
+    addProperty(target, tag, value, propertyConfig);
   } else {
     // Unknown (extra) property
-    addProperty(target.extraProperties, tag, value);
+    addProperty(target.extraProperties, tag, value, propertyConfig);
   }
 }
 

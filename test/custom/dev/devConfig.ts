@@ -13,8 +13,14 @@ const bitmarkParserGenerator = new BitmarkParserGenerator();
 class DevConfig {
   async run(): Promise<void> {
     const config = bitmarkParserGenerator.config();
-    const configJson = JSON.stringify(config, undefined, 2);
-    console.log(configJson);
+    // const configJson = JSON.stringify(config, undefined, 2);
+    // console.log(configJson);
+    console.log(
+      config.toString({
+        includeChains: true,
+        includeConfigs: true,
+      }),
+    );
   }
 }
 

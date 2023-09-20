@@ -7,6 +7,16 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Dev Config",
+      "program": "${workspaceFolder}/test/custom/dev/devConfig.ts",
+      "runtimeArgs": ["-r", "esbuild-register"],
+      "console": "integratedTerminal",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Dev Bitmark Parser",
       "program": "${workspaceFolder}/test/custom/dev/devParser.ts",
       "runtimeArgs": ["-r", "esbuild-register"],

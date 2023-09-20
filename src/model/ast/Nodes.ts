@@ -1,6 +1,6 @@
 import { BitType } from '../enum/BitType';
 import { BodyBitTypeType } from '../enum/BodyBitType';
-import { ResourceTypeType } from '../enum/ResourceType';
+import { ResourceTagType } from '../enum/ResourceTag';
 import { TextFormatType } from '../enum/TextFormat';
 import { ParserError } from '../parser/ParserError';
 import { ParserInfo } from '../parser/ParserInfo';
@@ -22,7 +22,7 @@ export interface BitmarkAst {
 export interface Bit {
   bitType: BitType;
   textFormat: TextFormatType;
-  resourceType?: ResourceTypeType;
+  resourceType?: ResourceTagType;
   id?: Property;
   externalId?: Property;
   spaceId?: Property;
@@ -87,7 +87,7 @@ export interface Bit {
   example?: Example;
   imageSource?: ImageSource;
   partner?: Partner;
-  resource?: Resource;
+  resources?: Resource[];
   body?: Body;
   sampleSolution?: string[];
   statement?: Statement;
@@ -419,8 +419,8 @@ export interface FooterText {
 //
 
 export interface Resource {
-  type: ResourceTypeType;
-  typeAlias: ResourceTypeType;
+  type: ResourceTagType;
+  typeAlias: ResourceTagType;
   format?: string;
   value?: string; // url / src / body / etc
   license?: string;
@@ -441,11 +441,11 @@ export interface ImageResource extends Resource {
   alt?: string;
 }
 
-export interface ImageResponsiveResource extends Resource {
-  type: 'image-responsive';
-  imagePortrait: ImageResource;
-  imageLandscape: ImageResource;
-}
+// export interface ImageResponsiveResource extends Resource {
+//   type: 'image-responsive';
+//   imagePortrait: ImageResource;
+//   imageLandscape: ImageResource;
+// }
 
 export interface ImageLinkResource extends Resource {
   type: 'image-link';
@@ -521,11 +521,11 @@ export interface VideoLinkResource extends Resource {
   thumbnails?: ImageResource[];
 }
 
-export interface StillImageFilmResource extends Resource {
-  type: 'still-image-film';
-  image: ImageResource;
-  audio: AudioResource;
-}
+// export interface StillImageFilmResource extends Resource {
+//   type: 'still-image-film';
+//   image: ImageResource;
+//   audio: AudioResource;
+// }
 
 export interface StillImageFilmEmbedResource extends Resource {
   type: 'still-image-film-embed';

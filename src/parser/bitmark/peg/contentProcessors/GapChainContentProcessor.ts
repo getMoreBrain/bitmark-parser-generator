@@ -1,4 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
+import { Config } from '../../../../config/Config_RENAME';
 import { BodyPart, Gap } from '../../../../model/ast/Nodes';
 import { BitType } from '../../../../model/enum/BitType';
 
@@ -10,6 +11,7 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
+  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
@@ -33,13 +35,17 @@ function gapChainContentProcessor(
 function buildGap(context: BitmarkPegParserContext, bitType: BitType, content: BitContent): Gap | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
+  // Build the variables required to process the chain
+  const { key } = content as TypeKeyValue;
+  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
+
   const chainContent = [content, ...(content.chain ?? [])];
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, chainContent);
+  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, bitType, parentTagConfig, chainContent);
 
-  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', tags);
+  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', chainTags);
 
-  const { solutions, ...rest } = tags;
+  const { solutions, ...rest } = chainTags;
 
   const gap = builder.gap({
     solutions: solutions ?? [],

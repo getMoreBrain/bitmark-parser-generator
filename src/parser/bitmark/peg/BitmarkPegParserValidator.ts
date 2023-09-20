@@ -7,17 +7,18 @@
  *
  */
 
+import { Config } from '../../../config/Config_RENAME';
 import { Body } from '../../../model/ast/Nodes';
-import { INFINITE_COUNT, TagData, TagDataMap } from '../../../model/config/TagData';
+import { CardSetConfig } from '../../../model/config/CardSetConfig';
+import { CardVariantConfig } from '../../../model/config/CardVariantConfig';
+import { TagConfig } from '../../../model/config/TagConfig';
+import { TagsConfig } from '../../../model/config/TagsConfig';
+import { BitTagType } from '../../../model/enum/BitTagType';
+import { BitType } from '../../../model/enum/BitType';
+import { Count } from '../../../model/enum/Count';
+import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { ParserData } from '../../../model/parser/ParserData';
-
-import {
-  RootBitType,
-  RootBitTypeMetadata,
-  CardSetConfig,
-  CardSetVariantConfig,
-  BitType,
-} from '../../../model/enum/BitType';
+import { TagValidationData } from '../../../model/parser/TagValidationData';
 
 import {
   BitContent,
@@ -87,17 +88,27 @@ class BitmarkPegParserValidator {
    *
    * @param context
    * @param bitType
+   * @param resourceType the resource type specified in the bit header
    * @param data the unvalidated bit content from the parser
    *
    * @returns the validated and potentially unchained bit content
    */
-  validateBitTags(context: BitmarkPegParserContext, bitType: BitType, data: BitContent[]): BitContent[] {
+  validateBitTags(
+    context: BitmarkPegParserContext,
+    bitType: BitType,
+    resourceType: ResourceTagType,
+    data: BitContent[],
+  ): BitContent[] {
     // if (context.DEBUG_BIT_TAG_VALIDATION) context.debugPrint('bit tag validation', data);
     if (!data) return [];
 
-    // Get the bit metadata to check how to parse the bit
-    const meta = this.getMetadataForBitType(bitType);
-    const { tags, cardSet: cardSetConfig } = meta;
+    // Get the bit config to check how to parse the bit
+    const bitConfig = Config.getBitConfig(bitType);
+    const { tags: bitTags, cardSet: cardSetConfig } = bitConfig;
+
+    // Insert the resource tags from the resources config (which can depends on the resource type attachment in the bit header).
+    const resourcesConfig = Config.getBitResourcesConfig(bitType, resourceType);
+    const tags = { ...bitTags, ...resourcesConfig.tags };
 
     // Validate and convert the tag chains
     const res: BitContent[] = this.validateTagChainsRecursive(
@@ -128,8 +139,7 @@ class BitmarkPegParserValidator {
   // validateCardSetType(
   //   context: BitmarkPegParserContext,
   //   _bitLevel: BitContentLevelType,
-  //   aliasedBitType: RootOrAliasBitType,
-  //   rootBitType: RootBitTypeType,
+  //   bitType: BitType,
   //   cardSet: BitContent[] | undefined,
   //   cardSetType: CardSetTypeType | undefined,
   // ): void {
@@ -158,9 +168,9 @@ class BitmarkPegParserValidator {
   ): Body | undefined {
     if (!body) return body;
 
-    // Get the bit metadata to check how to parse the bit
-    const meta = this.getMetadataForBitType(bitType);
-    const { bodyAllowed } = meta;
+    // Get the bit config to check how to parse the bit
+    const bitConfig = Config.getBitConfig(bitType);
+    const { bodyAllowed } = bitConfig;
 
     const hasBody = body.bodyParts.length > 0;
 
@@ -210,9 +220,9 @@ class BitmarkPegParserValidator {
   ): string {
     if (!footer) return footer;
 
-    // Get the bit metadata to check how to parse the bit
-    const meta = this.getMetadataForBitType(bitType);
-    const { footerAllowed } = meta;
+    // Get the bit config to check how to parse the bit
+    const bitConfig = Config.getBitConfig(bitType);
+    const { footerAllowed } = bitConfig;
 
     this.checkBodyForCommonPotentialMistakes(context, bitLevel, bitType, footer);
 
@@ -243,11 +253,11 @@ class BitmarkPegParserValidator {
   ): string | undefined {
     if (!cardBody) return cardBody;
 
-    // Get the bit metadata to check how to parse the bit
-    const meta = this.getMetadataForBitType(bitType);
-    if (!meta.cardSet) return cardBody; // Won't happen. Just to make TS happy
+    // Get the bit config to check how to parse the bit
+    const bitConfig = Config.getBitConfig(bitType);
+    if (!bitConfig.cardSet) return cardBody; // Won't happen. Just to make TS happy
 
-    const variantConfig = this.getVariantConfig(meta.cardSet.variants, sideNo, variantNo);
+    const variantConfig = this.getVariantConfig(bitConfig.cardSet.variants, sideNo, variantNo);
     if (!variantConfig) return cardBody; // Won't happen. Just to make TS happy
 
     const { bodyAllowed } = variantConfig;
@@ -277,13 +287,15 @@ class BitmarkPegParserValidator {
    * @param bitLevel
    * @param bitType
    * @param data
+   * @param tags
+   * @param cardSetConfig
    */
   private validateTagChainsRecursive(
     context: BitmarkPegParserContext,
     bitLevel: BitContentLevelType,
     bitType: BitType,
     data: BitContent[],
-    tags: TagDataMap,
+    tags: TagsConfig,
     cardSetConfig?: CardSetConfig,
   ): BitContent[] {
     if (!data) return [];
@@ -294,24 +306,26 @@ class BitmarkPegParserValidator {
     const seenTypeKeys = new Map<TypeKeyType | string, SeenData>();
 
     // Get valid type keys from the tags
-    const validTypeKeys = this.convertTagsToTypeKeyMap(tags);
+    const validTypeKeys = this.convertTagsToTypeKeyMap(context, bitLevel, bitType, tags);
 
     // Comment tags are allowed anywhere
-    validTypeKeys.set(TypeKey.Comment, { maxCount: INFINITE_COUNT });
+    validTypeKeys.set(TypeKey.Comment, { maxCount: Count.infinity, minCount: 0 });
 
     if (bitLevel === BitContentLevel.Bit) {
       // Add the extra valid tags dependent on bit configuration
       if (cardSetConfig)
         validTypeKeys.set(TypeKey.CardSet, {
-          _key: cardSetConfig.type,
+          _key: cardSetConfig.configKey,
+          maxCount: 1,
+          minCount: 0,
         });
 
       // These tags are always allowed here, and validated later
-      validTypeKeys.set(TypeKey.TextFormat, {});
-      validTypeKeys.set(TypeKey.BodyText, { maxCount: INFINITE_COUNT });
+      validTypeKeys.set(TypeKey.TextFormat, {} as TagConfig);
+      validTypeKeys.set(TypeKey.BodyText, { maxCount: Count.infinity, minCount: 0 });
     } else if (bitLevel === BitContentLevel.Card) {
       // These tags are always allowed here, and validated later
-      validTypeKeys.set(TypeKey.CardText, { maxCount: INFINITE_COUNT });
+      validTypeKeys.set(TypeKey.CardText, { maxCount: Count.infinity, minCount: 0 });
     }
 
     // const end = data.length;
@@ -368,7 +382,8 @@ class BitmarkPegParserValidator {
             validatedTagContent.chain = undefined;
           }
         } else {
-          // Tag chain does not exist in bit config. Expand chain as individual tags.
+          // Tag chain does not exist in bit config. Expand chain as individual tags
+          // This allows for 'bugs' such as [%item][%lead] - works chained or not chained.
           dataOrNull.splice(i + 1, 0, ...validatedTagContent.chain);
           validatedTagContent.chain = undefined;
         }
@@ -387,10 +402,10 @@ class BitmarkPegParserValidator {
    * @param context
    * @param bitLevel
    *
-   * @param rootBitType
+   * @param bitType
    * @param content
    * @param typeKey
-   * @param tagData
+   * @param tagValidationData
    * @param seenTypeKeys
    * @param seenPropertyKeys
    * @param seenResourceKeys
@@ -404,7 +419,7 @@ class BitmarkPegParserValidator {
     content: BitContent,
     typeKey: TypeKeyType,
     typeKeyPlusKey: TypeKeyType | string,
-    tagData: TagData | undefined,
+    tagValidationData: TagValidationData | undefined,
     seenTypeKeys: Map<TypeKeyType | string, SeenData>,
     cardSetConfig: CardSetConfig | undefined,
   ): BitContent | undefined {
@@ -430,7 +445,7 @@ class BitmarkPegParserValidator {
     let previousContent = seen.previous;
     seen.count++;
 
-    if (tagData) {
+    if (tagValidationData) {
       // This type key is valid. Now check if it's been seen before and if so, how many times
       switch (typeKey) {
         case TypeKey.Property: {
@@ -438,7 +453,7 @@ class BitmarkPegParserValidator {
             context,
             bitLevel,
             bitType,
-            tagData,
+            tagValidationData,
             content as TypeKeyValue,
             seen,
           );
@@ -452,7 +467,7 @@ class BitmarkPegParserValidator {
             context,
             bitLevel,
             bitType,
-            tagData,
+            tagValidationData,
             content as TypeKeyValue,
             seen,
           );
@@ -465,7 +480,7 @@ class BitmarkPegParserValidator {
           const { content: c, warning: w } = this.validateCardSet(
             context,
             bitType,
-            tagData as TagData,
+            tagValidationData as TagConfig,
             content as TypeKeyValue,
             cardSetConfig,
           );
@@ -479,7 +494,7 @@ class BitmarkPegParserValidator {
             context,
             bitLevel,
             bitType,
-            tagData,
+            tagValidationData,
             content as TypeKeyValue,
             seen,
           );
@@ -516,8 +531,11 @@ class BitmarkPegParserValidator {
       // TODO - warning and ignore
       if (warning.invalid || warning.excessResource) {
         warningStr = `'${type}'${keyStr} is not valid here.${ignoredStr}`;
-      } else if (warning.tooMany) {
-        warningStr = `'${type}'${keyStr} is included more than ${warning.tooMany} time(s). The earlier ones will be ignored`;
+      } else if (warning.tooMany != null) {
+        warningStr = `'${type}'${keyStr} is included more than ${warning.tooMany} time(s).`;
+        if (warning.tooMany > 0) warningStr += 'The earlier ones will be ignored';
+        // } else if (warning.tooFew != null) {
+        //   warningStr = `'${type}'${keyStr} is not included enough times(s). It should be included ${warning.tooFew} time(s)`;
       } else if (warning.extraProperty) {
         warningStr = `'${type}'${keyStr} is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag`;
       } else if (warning.unexpectedCardSet) {
@@ -544,7 +562,7 @@ class BitmarkPegParserValidator {
    * @param context
    * @param bitLevel
    * @param bitType
-   * @param tagData
+   * @param tagValidationData
    * @param content
    * @param seen
    *
@@ -554,16 +572,16 @@ class BitmarkPegParserValidator {
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
     _bitType: BitType,
-    tagData: TagData,
+    tagValidationData: TagValidationData,
     content: TypeKeyValue,
     seen: SeenData,
   ): ValidateReturn {
     // Check if the property is valid for this bit type
 
-    const validCount = tagData.maxCount == null ? 1 : tagData.maxCount;
+    const validCount = tagValidationData.maxCount == null ? 1 : tagValidationData.maxCount;
 
-    // If validCount is 0 or less, then an infinite number of this type is allowed
-    if (validCount > 0) {
+    // If validCount is infinity, an infinite number of this type is allowed
+    if (validCount !== Count.infinity) {
       if (seen.count > validCount) {
         return {
           warning: { tooMany: validCount },
@@ -584,7 +602,7 @@ class BitmarkPegParserValidator {
    * @param context
    * @param bitLevel
    * @param bitType
-   * @param tagData
+   * @param tagValidationData
    * @param content
    * @param seen
    *
@@ -594,16 +612,16 @@ class BitmarkPegParserValidator {
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
     _bitType: BitType,
-    tagData: TagData,
+    tagValidationData: TagValidationData,
     content: TypeKeyValue,
     seen: SeenData,
   ): ValidateReturn {
     // Check if the property is valid for this bit type
 
-    const validCount = tagData.maxCount == null ? 1 : tagData.maxCount;
+    const validCount = tagValidationData.maxCount == null ? 1 : tagValidationData.maxCount;
 
-    // If validCount is 0 or less, then an infinite number of this type is allowed
-    if (validCount > 0) {
+    // If validCount is infinity, an infinite number of this type is allowed
+    if (validCount !== Count.infinity) {
       if (seen.count > validCount) {
         return {
           warning: { tooMany: validCount },
@@ -624,7 +642,7 @@ class BitmarkPegParserValidator {
    * @param context
    * @param bitLevel
    * @param bitType
-   * @param tagData
+   * @param tagValidationData
    * @param content
    * @param seen
    *
@@ -634,16 +652,16 @@ class BitmarkPegParserValidator {
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
     _bitType: BitType,
-    tagData: TagData,
+    tagValidationData: TagValidationData,
     content: TypeKeyValue,
     seen: SeenData,
   ): ValidateReturn {
     // Check if the property is valid for this bit type
 
-    const validCount = tagData.maxCount == null ? 1 : tagData.maxCount;
+    const validCount = tagValidationData.maxCount == null ? 1 : tagValidationData.maxCount;
 
-    // If validCount is 0 or less, then an infinite number of this type is allowed
-    if (validCount > 0) {
+    // If validCount is infinity, an infinite number of this type is allowed
+    if (validCount !== Count.infinity) {
       if (seen && seen.count > validCount) {
         return {
           warning: { tooMany: validCount },
@@ -663,17 +681,18 @@ class BitmarkPegParserValidator {
    *
    * @param context
    * @param bitLevel
-   * @param rootBitType
-   * @param tagDatas
+   * @param bitType
+   * @param _tagValidationData
    * @param content
-   * @param seenResourceKeys
+   * @param cardSetConfig
+   * @param depth recursion depth
    *
    * @returns validated tag (plus warning message if one is generated) or undefined if the tag is invalid
    */
   private validateCardSet(
     context: BitmarkPegParserContext,
     bitType: BitType,
-    _tagData: TagData,
+    _tagValidationData: TagValidationData,
     content: TypeKeyValue,
     cardSetConfig: CardSetConfig | undefined,
   ): ValidateReturn {
@@ -749,7 +768,7 @@ class BitmarkPegParserValidator {
    *
    * @param context
    * @param _bitLevel
-   * @param rootBitType
+   * @param bitType
    * @param body
    * @returns
    */
@@ -783,27 +802,44 @@ class BitmarkPegParserValidator {
   /**
    * Convert the tag data configuration to TypeKeys
    *
+   * @param context
+   * @param _bitLevel
+   * @param bitType
    * @param tags
+   * @param depth recursion depth
    * @returns
    */
-  private convertTagsToTypeKeyMap(tags: TagDataMap): Map<TypeKeyType | string, TagData> {
+  private convertTagsToTypeKeyMap(
+    _context: BitmarkPegParserContext,
+    _bitLevel: BitContentLevelType,
+    _bitType: BitType,
+    tags: TagsConfig,
+  ): Map<TypeKeyType | string, TagValidationData> {
     // Using a map here as we might add the 'count' of tags valid at a later stage
-    const res = new Map<TypeKeyType | string, TagData>();
+    const res = new Map<TypeKeyType | string, TagValidationData>();
 
     // Add the tags
-    for (const [k, v] of Object.entries(tags)) {
+    for (const v of Object.values(tags)) {
       // Save the key in the TagData
-      v._key = k;
+      const tagValidationData: TagValidationData = {
+        _key: v.tag,
+        minCount: v.minCount,
+        maxCount: v.maxCount,
+        isTag: v.type === BitTagType.tag,
+        isProperty: v.type === BitTagType.property,
+        isResource: v.type === BitTagType.resource,
+        chain: v.chain,
+      };
 
-      if (v.isProperty) {
-        res.set(`${TypeKey.Property}:${k}`, v);
-      } else if (v.isResource) {
-        res.set(`${TypeKey.Resource}:${k}`, v);
+      if (tagValidationData.isProperty) {
+        res.set(`${TypeKey.Property}:${v.tag}`, tagValidationData);
+      } else if (tagValidationData.isResource) {
+        res.set(`${TypeKey.Resource}:${v.tag}`, tagValidationData);
       } else {
-        // Take advantage of the same naming convention
-        const typeKey = TypeKey.fromValue(k);
+        // Take advantage of the same naming convention (dangerous - should be improved)
+        const typeKey = TypeKey.fromValue(v.tag);
         if (typeKey) {
-          res.set(typeKey, v);
+          res.set(typeKey, tagValidationData);
         }
       }
     }
@@ -822,11 +858,11 @@ class BitmarkPegParserValidator {
    * @returns the config if found, otherwise undefined
    */
   private getVariantConfig(
-    config: CardSetVariantConfig[][],
+    config: CardVariantConfig[][],
     side: number,
     variant: number,
-  ): CardSetVariantConfig | undefined {
-    let ret: CardSetVariantConfig | undefined;
+  ): CardVariantConfig | undefined {
+    let ret: CardVariantConfig | undefined;
 
     if (config.length === 0) return undefined;
 
@@ -838,27 +874,12 @@ class BitmarkPegParserValidator {
     const maxVariantIndex = variantConfigs.length - 1;
     if (variant > maxVariantIndex) {
       ret = variantConfigs[maxVariantIndex];
-      if (!ret.infiniteRepeat) return undefined;
+      if (ret.repeatCount !== Count.infinity) return undefined;
     } else {
       ret = variantConfigs[variant];
     }
 
     return ret;
-  }
-
-  /**
-   * Get the metadata for a bit type
-   * @param bitType bit type
-   * @returns the metadata
-   * @throws if the bit type has no metadata
-   */
-  private getMetadataForBitType(bitType: BitType): RootBitTypeMetadata {
-    const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bitType.root);
-    if (!meta) {
-      throw new Error(`Root bit type ${bitType.root} has no metadata`);
-    }
-
-    return meta;
   }
 }
 

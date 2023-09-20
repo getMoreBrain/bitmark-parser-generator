@@ -1,4 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
+import { Config } from '../../../../config/Config_RENAME';
 import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -8,6 +9,7 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
+  TypeKeyValue,
   TypeValue,
 } from '../BitmarkPegParserTypes';
 
@@ -51,13 +53,17 @@ function buildImageSource(
 ): void {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('imageSource content', content);
 
-  const chainContent = [content, ...(content.chain ?? [])];
+  // Build the variables required to process the chain
+  const { key } = content as TypeKeyValue;
+  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, chainContent);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, undefined, [content]);
+  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, bitType, parentTagConfig, content.chain);
 
-  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('imageSource TAGS', tags);
+  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('imageSource TAGS', chainTags);
 
-  const { imageSourceUrl: url, mockupId, ...rest } = tags;
+  const { imageSourceUrl: url } = tags;
+  const { mockupId, ...rest } = chainTags;
 
   if (!url) {
     context.addWarning('[@imageSource] is missing the image url', content);
