@@ -34,9 +34,6 @@ function buildResource(
   const filteredResources: Resource[] = [];
   const excessResources: Resource[] = [];
 
-  // TODO - the validation checks MUST be moved to the BitmarkPegParserValidator (probably)
-  // Especially the minimum count check
-
   const validatedResourceTypeAttachemnt = ResourceTag.fromValue(resourceTypeAttachment);
 
   // Get the bit configuration for the bit
@@ -80,26 +77,9 @@ function buildResource(
     );
   }
 
-  // Raise warnings for required resources that are not present in the bit
-  // (only applies when resource attachment is NOT allowed, as that implies only one resource is allowed)
-  if (!resourceAttachmentAllowed) {
-    for (const [type, count] of countsMin.entries()) {
-      if (count > 0) {
-        const warningMsg = `${count} resource(s) of type [&${type}] are required but are not present`;
-        context.addWarning(warningMsg);
-      }
-    }
-  }
-
   if (excessResources.length > 0) {
     // Set the excess resources in the parser info
     context.parser.excessResources = excessResources;
-
-    // Not longer needed - handled by the validator
-    // // Add an error to warn about the excess resources
-    // const warningMsg = `${excessResources.length} excess resource(s) present in the bit`;
-
-    // context.addWarning(warningMsg);
   }
 
   return filteredResources;
