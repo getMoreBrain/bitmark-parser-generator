@@ -66,7 +66,7 @@ import { Builder } from '../../../ast/Builder';
 import { Config } from '../../../config/Config';
 import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
-import { BitType, BitTypeUtils, RootBitType } from '../../../model/enum/BitType';
+import { BitType, RootBitType } from '../../../model/enum/BitType';
 import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../model/enum/TextFormat';
@@ -283,7 +283,7 @@ class BitmarkPegParserProcessor {
 
     // Build the error bit
     const bit = builder.bit({
-      bitType: BitTypeUtils.getBitType(RootBitType._error),
+      bitType: Config.getBitType(RootBitType._error),
       parser: this.parser,
     });
 
@@ -293,7 +293,7 @@ class BitmarkPegParserProcessor {
   // Build bit header
   buildBitHeader(bitType: string, textFormatAndResourceType: Partial<BitHeader>): BitHeader {
     // Get / check bit type
-    const validBitType = BitTypeUtils.getBitType(bitType);
+    const validBitType = Config.getBitType(bitType);
     if (validBitType.root === RootBitType._error) {
       this.addError(`Invalid bit type: '${bitType}'`);
     }

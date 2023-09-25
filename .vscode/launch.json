@@ -7,8 +7,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Config",
-      "program": "${workspaceFolder}/test/custom/dev/devConfig.ts",
+      "name": "Dev Info",
+      "program": "${workspaceFolder}/test/custom/dev/devInfo.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
       "console": "integratedTerminal",
       "sourceMaps": true,

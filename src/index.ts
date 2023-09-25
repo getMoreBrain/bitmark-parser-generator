@@ -28,7 +28,7 @@ export { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerat
 export { Writer } from './ast/writer/Writer';
 export { StringWriter } from './ast/writer/StringWriter';
 
-export { RootBitType, AliasBitType, BitTypeUtils } from './model/enum/BitType';
+export { RootBitType, AliasBitType } from './model/enum/BitType';
 export { TextFormat } from './model/enum/TextFormat';
 export { ResourceTag } from './model/enum/ResourceTag';
 export { NodeType } from './model/ast/NodeType';

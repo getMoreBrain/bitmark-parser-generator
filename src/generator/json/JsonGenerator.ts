@@ -14,7 +14,7 @@ import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
 import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { Text, TextAst } from '../../model/ast/TextNodes';
-import { AliasBitType, RootBitType, BitTypeUtils, BitType } from '../../model/enum/BitType';
+import { AliasBitType, RootBitType, BitType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ExampleType } from '../../model/enum/ExampleType';
@@ -2361,7 +2361,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * @returns
    */
   protected cleanAndSetDefaultsForBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
-    const bitType = BitTypeUtils.getBitType(bitJson.type);
+    const bitType = Config.getBitType(bitJson.type);
     const plainText = this.options.textAsPlainText;
 
     // Clear 'item' which may be an empty string if 'lead' was set but item not

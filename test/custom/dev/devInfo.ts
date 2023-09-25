@@ -7,20 +7,20 @@ Copyright ©2023 Get More Brain
 */
 
 import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
+import { InfoType } from '../../../src/model/info/enum/InfoType';
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
 class DevConfig {
   async run(): Promise<void> {
-    const config = bitmarkParserGenerator.config();
-    // const configJson = JSON.stringify(config, undefined, 2);
-    // console.log(configJson);
-    console.log(
-      config.toString({
-        includeChains: true,
-        includeConfigs: true,
-      }),
-    );
+    const info = bitmarkParserGenerator.info({
+      type: InfoType.all,
+      // type: InfoType.bit,
+      // bit: RootBitType.cloze,
+      // outputFormat: InfoFormat.json,
+      // prettify: true,
+    });
+    console.log(info);
   }
 }
 

@@ -1,4 +1,5 @@
-import { BitType, RootBitTypeType } from '../enum/BitType';
+import { AliasBitTypeType, BitType, RootBitTypeType } from '../enum/BitType';
+import { Count } from '../enum/Count';
 import { ExampleTypeType } from '../enum/ExampleType';
 import { ResourceTagType } from '../enum/ResourceTag';
 
@@ -11,7 +12,9 @@ interface ToStringOptions {
 }
 
 class BitConfig {
+  readonly since: string; // Supported since version
   readonly rootBitType: RootBitTypeType;
+  readonly aliases: AliasBitTypeType[]; // Bit aliases
   readonly tags: TagsConfig = {};
   readonly cardSet?: CardSetConfig;
   readonly deprecated?: string; // Deprecated version
@@ -24,7 +27,9 @@ class BitConfig {
   readonly comboResourceType?: ResourceTagType;
 
   public constructor(
+    since: string,
     bitType: BitType,
+    aliases: AliasBitTypeType[],
     tags: TagsConfig,
     cardSet: CardSetConfig | undefined,
     deprecated: string | undefined,
@@ -36,7 +41,9 @@ class BitConfig {
     rootExampleType: ExampleTypeType | undefined,
     comboResourceType: ResourceTagType | undefined,
   ) {
+    this.since = since;
     this.rootBitType = bitType.root;
+    this.aliases = aliases;
     this.tags = tags;
     this.cardSet = cardSet;
     this.deprecated = deprecated;
@@ -54,8 +61,16 @@ class BitConfig {
 
     let s = `[Bit]\n${this.rootBitType}`;
 
+    // Aliases
+    if (this.aliases.length > 0) {
+      s += `\n\n[Aliases]`;
+
+      s += `\n${this.aliases.join(', ')}`;
+    }
+
     // Flags
     const flags: string[] = [];
+    if (this.since != null) flags.push(`since=${this.since}`);
     if (this.deprecated != null) flags.push(`deprecated=${this.deprecated}`);
     if (this.bodyAllowed) flags.push('bodyAllowed');
     if (this.bodyRequired) flags.push('bodyRequired');
@@ -63,14 +78,16 @@ class BitConfig {
     if (this.footerRequired) flags.push('footerRequired');
     if (this.resourceAttachmentAllowed) flags.push('resourceAttachmentAllowed');
     if (this.rootExampleType != null) flags.push(`rootExampleType=${this.rootExampleType}`);
-    if (this.rootExampleType != null) flags.push(`comboResourceType=${this.comboResourceType}`);
+    if (this.comboResourceType != null) flags.push(`comboResourceType=${this.comboResourceType}`);
     s += `\n\n[Flags]\n${flags.join(', ')}`;
 
     // Tags
     s += `\n\n[Tags]`;
 
     for (const tag of Object.values(this.tags)) {
-      s += `\n${tag.toString(opts)}`;
+      if (tag.maxCount === Count.infinity || tag.maxCount > 0) {
+        s += `\n${tag.toString(opts)}`;
+      }
     }
 
     // Cards

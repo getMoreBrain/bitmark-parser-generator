@@ -31,6 +31,7 @@ export interface _BitsConfig {
 }
 
 export interface _BitConfig {
+  since: string; // Supported since version
   tags: _TagInfoConfig[];
   cardSet?: CardSetConfigKeyType;
   deprecated?: string; // Deprecated version
@@ -40,6 +41,16 @@ export interface _BitConfig {
   footerRequired?: boolean; // Default: false
   resourceAttachmentAllowed?: boolean; // Default: false
   rootExampleType?: ExampleTypeType;
+  aliases?: _BitAliasesConfig;
+}
+
+export interface _BitAliasesConfig {
+  [configKey: string]: _BitAliasConfig;
+}
+
+export interface _BitAliasConfig {
+  since: string; // Supported since version
+  deprecated?: string; // Deprecated version
 }
 
 export interface _GroupsConfig {

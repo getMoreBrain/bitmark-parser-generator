@@ -3,10 +3,9 @@ import { ResourceTagConfig } from '../model/config/ResourceTagConfig';
 import { ResourcesConfig } from '../model/config/ResourcesConfig';
 import { TagConfig } from '../model/config/TagConfig';
 import { TagsConfig } from '../model/config/TagsConfig';
-import { _PropertiesConfig } from '../model/config/_Config';
+import { _BitAliasConfig, _PropertiesConfig } from '../model/config/_Config';
 import { GroupConfigType } from '../model/config/enum/GroupConfigType';
 import { BitTagType } from '../model/enum/BitTagType';
-import { RootBitTypeType, BitType } from '../model/enum/BitType';
 import { ResourceJsonKeyType } from '../model/enum/ResourceJsonKey';
 import { ResourceTagType } from '../model/enum/ResourceTag';
 
@@ -15,14 +14,46 @@ import { BITS } from './raw/bits';
 import { GROUPS } from './raw/groups';
 import { PROPERTIES } from './raw/properties';
 
+import {
+  RootBitTypeType,
+  BitType,
+  RootOrAliasBitTypeType,
+  RootBitType,
+  AliasBitType,
+  AliasBitTypeType,
+} from '../model/enum/BitType';
+
 export interface ComboResources {
   [configKey: string]: TagsConfig;
 }
 
 class Config {
-  private bitCache: Map<RootBitTypeType, BitConfig> = new Map();
+  private bitTypeAliasMap: Map<RootOrAliasBitTypeType, RootBitTypeType> = new Map();
+  private bitCache: Map<RootOrAliasBitTypeType, BitConfig> = new Map();
   private allResourcesCache: TagsConfig | undefined;
   private comboResourcesCache: Map<ResourceTagType, TagsConfig | undefined> = new Map();
+
+  constructor() {
+    // Build the bitTypeAliasMap
+    this.buildBitTypeAliasMap();
+  }
+
+  /**
+   * Return the bitType (root and alias types) given a root or alias bit type
+   *
+   * If the bit type is not found, the returned bitType will contain the  _error bit type
+   *
+   * @param aliasOrRootBitType bit type in (root or alias, may be invalid)
+   * @returns valid bitType (root and alias types) which will contain _error bit types if the bit type is invalid
+   */
+  public getBitType(aliasOrRootBitType: RootOrAliasBitTypeType | string | undefined): BitType {
+    const alias = this.getAliasedBitType(aliasOrRootBitType);
+    const root = this.getRootBitType(alias);
+    return {
+      alias,
+      root,
+    };
+  }
 
   /**
    * Get the configuration for a bit.
@@ -31,15 +62,39 @@ class Config {
    * @returns the bit configuration
    */
   public getBitConfig(bitType: BitType): BitConfig {
-    let bitConfig = this.bitCache.get(bitType.root);
+    let bitConfig = this.bitCache.get(bitType.alias);
     if (!bitConfig) {
-      const _bitConfig = BITS[bitType.root];
-      if (!_bitConfig) throw new Error(`No config found for bit '${bitType.root}'`);
+      const throwNotFoundError = () => {
+        throw new Error(`No config found for bit: ALIAS:${bitType.alias}, ROOT:${bitType.root}`);
+      };
 
+      const _bitConfig = BITS[bitType.root];
+      if (!_bitConfig) throwNotFoundError();
+
+      const isAlias = bitType.root !== bitType.alias;
+      let alias: _BitAliasConfig | undefined;
+
+      if (isAlias) {
+        // Looking up an alias
+        if (_bitConfig.aliases) {
+          alias = _bitConfig.aliases[bitType.alias];
+        }
+      }
+
+      if (isAlias && !alias) throwNotFoundError();
+
+      // Extract alias specific config that overrides the root config
+      const { since, deprecated } = alias ? alias : _bitConfig;
+
+      // Get bit aliases
+      const aliases: AliasBitTypeType[] = _bitConfig.aliases
+        ? (Object.keys(_bitConfig.aliases).map((t) => AliasBitType.fromValue(t)) as AliasBitTypeType[])
+        : [];
+
+      // Extract the root config
       const {
         tags: _tags,
         cardSet: _cardSet,
-        deprecated,
         bodyAllowed,
         bodyRequired,
         footerAllowed,
@@ -64,7 +119,9 @@ class Config {
 
       // Create the bit config
       bitConfig = new BitConfig(
+        since,
         bitType,
+        aliases,
         tags,
         cardSet,
         deprecated,
@@ -89,7 +146,7 @@ class Config {
   }
 
   /**
-   * Look up the tag configuration for a tag.
+   * Look up the tag configuration by tag (rather than by config key).
    *
    * @param bitType
    * @param tag
@@ -332,6 +389,45 @@ class Config {
     }
 
     return allResourcesTags;
+  }
+
+  /**
+   * Builds a map to enable fast lookup of the bit type from the bit type alias.
+   */
+  private buildBitTypeAliasMap(): void {
+    // Ensure bit type aliases to itself
+    for (const v of RootBitType.values()) {
+      this.bitTypeAliasMap.set(v as RootOrAliasBitTypeType, v as RootBitTypeType);
+    }
+    // Aliases to bit type
+    for (const [k, v] of Object.entries(BITS)) {
+      if (v.aliases) {
+        for (const kAlias of Object.keys(v.aliases)) {
+          this.bitTypeAliasMap.set(kAlias as RootOrAliasBitTypeType, k as RootBitTypeType);
+        }
+      }
+    }
+  }
+
+  /**
+   * Get the root bit type from a root or alias bit type.
+   *
+   * @param bitTypeOrAlias
+   * @returns
+   */
+  private getRootBitType(bitTypeOrAlias: RootOrAliasBitTypeType | undefined): RootBitTypeType {
+    if (!bitTypeOrAlias) return RootBitType._error;
+    return this.bitTypeAliasMap.get(bitTypeOrAlias) ?? RootBitType._error;
+  }
+
+  /**
+   * Get the aliased bit type from a root or alias bit type.
+   *
+   * @param bitTypeOrAlias
+   * @returns
+   */
+  private getAliasedBitType(bitTypeOrAlias: string | undefined): RootOrAliasBitTypeType {
+    return AliasBitType.fromValue(bitTypeOrAlias) ?? RootBitType.fromValue(bitTypeOrAlias) ?? RootBitType._error;
   }
 }
 

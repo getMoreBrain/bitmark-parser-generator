@@ -1,8 +1,9 @@
 import { Builder } from '../../ast/Builder';
 import { ResourceBuilder } from '../../ast/ResourceBuilder';
+import { Config } from '../../config/Config';
 import { TextGenerator } from '../../generator/text/TextGenerator';
 import { Text } from '../../model/ast/TextNodes';
-import { BitType, BitTypeUtils, RootBitType } from '../../model/enum/BitType';
+import { BitType, RootBitType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
@@ -201,7 +202,7 @@ class JsonParser {
   isBit(bit: unknown): boolean {
     if (Object.prototype.hasOwnProperty.call(bit, 'type')) {
       const b = bit as BitJson;
-      return BitTypeUtils.getBitType(b.type).root !== RootBitType._error;
+      return Config.getBitType(b.type).root !== RootBitType._error;
     }
     return false;
   }
@@ -300,7 +301,7 @@ class JsonParser {
     } = bit;
 
     // Bit type
-    const bitType = BitTypeUtils.getBitType(type);
+    const bitType = Config.getBitType(type);
 
     // Text Format
     const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
