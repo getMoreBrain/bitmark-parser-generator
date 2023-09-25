@@ -14,8 +14,8 @@ import {
 
 function exampleTagContentProcessor(
   context: BitmarkPegParserContext,
-  _bitLevel: BitContentLevelType,
   bitType: BitType,
+  _bitLevel: BitContentLevelType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {

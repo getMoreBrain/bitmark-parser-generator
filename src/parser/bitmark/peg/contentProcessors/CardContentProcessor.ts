@@ -1,5 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
-import { Config } from '../../../../config/Config_RENAME';
+import { Config } from '../../../../config/Config';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
 import { AliasBitType, BitType, RootBitType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
@@ -136,15 +136,18 @@ function processCardSet(
           no: variantNo++,
         } as ProcessedCardVariant;
         processedSide.variants.push(processedVariant);
-        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, undefined, content);
+
+        const tagsConfig = Config.getTagsConfigForCardSet(bitType, sideNo, variantNo);
+
+        const tags = context.bitContentProcessor(bitType, BitContentLevel.Card, tagsConfig, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags', tags);
 
         // Validate the cardBody
         tags.cardBody = BitmarkPegParserValidator.checkCardBody(
           context,
-          BitContentLevel.Card,
           bitType,
+          BitContentLevel.Card,
           tags.cardBody,
           processedCard.no,
           processedSide.no,

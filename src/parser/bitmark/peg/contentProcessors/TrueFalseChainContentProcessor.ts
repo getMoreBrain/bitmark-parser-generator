@@ -1,6 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
-import { Config } from '../../../../config/Config_RENAME';
-import { TagConfig } from '../../../../model/config/TagConfig';
+import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { RootBitType, BitType } from '../../../../model/enum/BitType';
 
 import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor';
@@ -23,15 +22,15 @@ import {
   BitmarkPegParserContext,
   StatementsOrChoicesOrResponses,
   TypeKey,
-  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
 
 function trueFalseChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
   bitType: BitType,
+  bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
@@ -39,21 +38,19 @@ function trueFalseChainContentProcessor(
   if (bitLevel === BitContentLevel.Chain) {
     trueFalseTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
   } else {
-    buildTrueFalse(context, bitLevel, bitType, content, target, bodyParts);
+    buildTrueFalse(context, bitType, bitLevel, tagsConfig, content, target, bodyParts);
   }
 }
 
 function buildTrueFalse(
   context: BitmarkPegParserContext,
-  _bitLevel: BitContentLevelType,
   bitType: BitType,
+  _bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
 ): void {
-  // Build the variables required to process the chain
-  const { key } = content as TypeKeyValue;
-  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
   const chainContent = [content, ...(content.chain ?? [])];
 
   const statements = target.statements;
@@ -64,7 +61,7 @@ function buildTrueFalse(
 
   if (bitType.root === RootBitType.trueFalse1) {
     // Treat as true/false for statement
-    target.statement = buildStatement(context, bitType, parentTagConfig, chainContent);
+    target.statement = buildStatement(context, bitType, tagsConfig, chainContent);
   } else if (
     bitType.root === RootBitType.trueFalse ||
     bitType.root === RootBitType.multipleChoice ||
@@ -73,18 +70,18 @@ function buildTrueFalse(
     bitType.root === RootBitType.multipleResponse1
   ) {
     // Treat as true/false for choices / responses
-    const tf = buildStatementsChoicesResponses(context, bitType, parentTagConfig, chainContent);
+    const tf = buildStatementsChoicesResponses(context, bitType, tagsConfig, chainContent);
 
     if (tf.statements) statements.push(...tf.statements);
     if (tf.choices) choices.push(...tf.choices);
     if (tf.responses) responses.push(...tf.responses);
   } else if (bitType.root === RootBitType.highlightText) {
     // Treat as highlight text
-    const highlight = buildHighlight(context, bitType, parentTagConfig, chainContent);
+    const highlight = buildHighlight(context, bitType, tagsConfig, chainContent);
     if (highlight) bodyParts.push(highlight);
   } else {
     // Treat as select
-    const select = buildSelect(context, bitType, parentTagConfig, chainContent);
+    const select = buildSelect(context, bitType, tagsConfig, chainContent);
     if (select) bodyParts.push(select);
   }
 }
@@ -100,7 +97,7 @@ function buildTrueFalse(
 function buildStatement(
   context: BitmarkPegParserContext,
   bitType: BitType,
-  parentTagConfig: TagConfig | undefined,
+  tagsConfig: TagsConfig | undefined,
   trueFalseContent: BitContent[],
 ): Statement | undefined {
   if (bitType.root !== RootBitType.trueFalse1) return undefined;
@@ -108,9 +105,9 @@ function buildStatement(
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
 
   const { trueFalse, ...tags } = context.bitContentProcessor(
-    BitContentLevel.Chain,
     bitType,
-    parentTagConfig,
+    BitContentLevel.Chain,
+    tagsConfig,
     trueFalseContent,
   );
 
@@ -136,7 +133,7 @@ function buildStatement(
 function buildStatementsChoicesResponses(
   context: BitmarkPegParserContext,
   bitType: BitType,
-  parentTagConfig: TagConfig | undefined,
+  tagsConfig: TagsConfig | undefined,
   trueFalseContent: BitContent[],
 ): StatementsOrChoicesOrResponses {
   // NOTE: We handle V1 tags in V2 multiple-choice / multiple-response for maxium backwards compatibility
@@ -157,12 +154,7 @@ function buildStatementsChoicesResponses(
   }
 
   for (const contents of trueFalseContents) {
-    const { trueFalse, ...tags } = context.bitContentProcessor(
-      BitContentLevel.Chain,
-      bitType,
-      parentTagConfig,
-      contents,
-    );
+    const { trueFalse, ...tags } = context.bitContentProcessor(bitType, BitContentLevel.Chain, tagsConfig, contents);
 
     if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (choices/responses)', tags);
 
@@ -199,15 +191,15 @@ function buildStatementsChoicesResponses(
 function buildHighlight(
   context: BitmarkPegParserContext,
   bitType: BitType,
-  parentTagConfig: TagConfig | undefined,
+  tagsConfig: TagsConfig | undefined,
   highlightContent: BitContent[],
 ): Highlight | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('highlight content', highlightContent);
 
   const { trueFalse, ...tags } = context.bitContentProcessor(
-    BitContentLevel.Chain,
     bitType,
-    parentTagConfig,
+    BitContentLevel.Chain,
+    tagsConfig,
     highlightContent,
   );
 
@@ -231,17 +223,12 @@ function buildHighlight(
 function buildSelect(
   context: BitmarkPegParserContext,
   bitType: BitType,
-  parentTagConfig: TagConfig | undefined,
+  tagsConfig: TagsConfig | undefined,
   selectContent: BitContent[],
 ): Select | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('select content', selectContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(
-    BitContentLevel.Chain,
-    bitType,
-    parentTagConfig,
-    selectContent,
-  );
+  const { trueFalse, ...tags } = context.bitContentProcessor(bitType, BitContentLevel.Chain, tagsConfig, selectContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('select TAGS', { trueFalse, ...tags });
 

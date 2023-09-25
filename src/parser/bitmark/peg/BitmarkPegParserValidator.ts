@@ -7,7 +7,7 @@
  *
  */
 
-import { Config } from '../../../config/Config_RENAME';
+import { Config } from '../../../config/Config';
 import { Body } from '../../../model/ast/Nodes';
 import { CardSetConfig } from '../../../model/config/CardSetConfig';
 import { CardVariantConfig } from '../../../model/config/CardVariantConfig';
@@ -17,6 +17,7 @@ import { BitTagType } from '../../../model/enum/BitTagType';
 import { BitType } from '../../../model/enum/BitType';
 import { Count } from '../../../model/enum/Count';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
+import { TagType } from '../../../model/enum/TagType';
 import { ParserData } from '../../../model/parser/ParserData';
 import { TagValidationData } from '../../../model/parser/TagValidationData';
 
@@ -96,7 +97,7 @@ class BitmarkPegParserValidator {
   validateBitTags(
     context: BitmarkPegParserContext,
     bitType: BitType,
-    resourceType: ResourceTagType,
+    resourceType: ResourceTagType | undefined,
     data: BitContent[],
   ): BitContent[] {
     // if (context.DEBUG_BIT_TAG_VALIDATION) context.debugPrint('bit tag validation', data);
@@ -113,8 +114,8 @@ class BitmarkPegParserValidator {
     // Validate and convert the tag chains
     const res: BitContent[] = this.validateTagChainsRecursive(
       context,
-      BitContentLevel.Bit,
       bitType,
+      BitContentLevel.Bit,
       data,
       tags,
       cardSetConfig,
@@ -155,15 +156,15 @@ class BitmarkPegParserValidator {
    * Check the body of the bit.
    *
    * @param context
-   * @param _bitLevel
    * @param bitType
+   * @param _bitLevel
    * @param body
    * @returns
    */
   checkBody(
     context: BitmarkPegParserContext,
-    _bitLevel: BitContentLevelType,
     bitType: BitType,
+    _bitLevel: BitContentLevelType,
     body: Body | undefined,
   ): Body | undefined {
     if (!body) return body;
@@ -192,8 +193,8 @@ class BitmarkPegParserValidator {
    */
   checkBodyPart(
     context: BitmarkPegParserContext,
-    bitLevel: BitContentLevelType,
     bitType: BitType,
+    bitLevel: BitContentLevelType,
     bodyPart: string,
   ): string {
     if (!bodyPart) return bodyPart;
@@ -214,8 +215,8 @@ class BitmarkPegParserValidator {
    */
   checkFooter(
     context: BitmarkPegParserContext,
-    bitLevel: BitContentLevelType,
     bitType: BitType,
+    bitLevel: BitContentLevelType,
     footer: string,
   ): string {
     if (!footer) return footer;
@@ -244,8 +245,8 @@ class BitmarkPegParserValidator {
    */
   checkCardBody(
     context: BitmarkPegParserContext,
-    bitLevel: BitContentLevelType,
     bitType: BitType,
+    bitLevel: BitContentLevelType,
     cardBody: string | undefined,
     cardNo: number,
     sideNo: number,
@@ -292,8 +293,8 @@ class BitmarkPegParserValidator {
    */
   private validateTagChainsRecursive(
     context: BitmarkPegParserContext,
-    bitLevel: BitContentLevelType,
     bitType: BitType,
+    bitLevel: BitContentLevelType,
     data: BitContent[],
     tags: TagsConfig,
     cardSetConfig?: CardSetConfig,
@@ -348,8 +349,8 @@ class BitmarkPegParserValidator {
       // Validate the single tag
       const validatedTagContent = this.validateSingleTag(
         context,
-        bitLevel,
         bitType,
+        bitLevel,
         content,
         typeKey,
         typeKeyPlusKey,
@@ -370,8 +371,8 @@ class BitmarkPegParserValidator {
         if (tagData && tagData.chain) {
           const validatedTagChainContent = this.validateTagChainsRecursive(
             context,
-            BitContentLevel.Chain,
             bitType,
+            BitContentLevel.Chain,
             validatedTagContent.chain,
             tagData.chain,
           );
@@ -384,8 +385,11 @@ class BitmarkPegParserValidator {
         } else {
           // Tag chain does not exist in bit config. Expand chain as individual tags
           // This allows for 'bugs' such as [%item][%lead] - works chained or not chained.
-          dataOrNull.splice(i + 1, 0, ...validatedTagContent.chain);
-          validatedTagContent.chain = undefined;
+          // (except for resource chains)
+          if (validatedTagContent.type !== TagType.Resource) {
+            dataOrNull.splice(i + 1, 0, ...validatedTagContent.chain);
+            validatedTagContent.chain = undefined;
+          }
         }
       }
     }
@@ -414,8 +418,8 @@ class BitmarkPegParserValidator {
    */
   private validateSingleTag(
     context: BitmarkPegParserContext,
-    bitLevel: BitContentLevelType,
     bitType: BitType,
+    bitLevel: BitContentLevelType,
     content: BitContent,
     typeKey: TypeKeyType,
     typeKeyPlusKey: TypeKeyType | string,
@@ -725,8 +729,8 @@ class BitmarkPegParserValidator {
             // Validate the variant against the config
             validatedContent = this.validateTagChainsRecursive(
               context,
-              BitContentLevel.Card,
               bitType,
+              BitContentLevel.Card,
               variantContent,
               variantConfig.tags,
             );

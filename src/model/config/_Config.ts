@@ -14,11 +14,8 @@ import { ResourceTagType } from '../enum/ResourceTag';
 import { TagType } from '../enum/Tag';
 
 import { CardSetConfigKeyType } from './enum/CardSetConfigKey';
-import { GroupConfigKeyType } from './enum/GroupConfigKey';
+import { ConfigKeyType } from './enum/ConfigKey';
 import { GroupConfigTypeType } from './enum/GroupConfigType';
-import { PropertyConfigKeyType } from './enum/PropertyConfigKey';
-import { ResourceConfigKeyType } from './enum/ResourceConfigKey';
-import { TagConfigKeyType } from './enum/TagConfigKey';
 
 export interface _Config {
   bits: _BitsConfig;
@@ -100,11 +97,9 @@ export interface _ResourceConfig {
   jsonKey?: ResourceJsonKeyType; // If the json key is different from the tag
 }
 
-export type ConfigKey = TagConfigKeyType | PropertyConfigKeyType | ResourceConfigKeyType | GroupConfigKeyType;
-
 export interface _TagInfoConfig {
   type: BitTagTypeType;
-  configKey: ConfigKey;
+  configKey: ConfigKeyType;
   maxCount?: CountType; // Default: 1
   minCount?: number; // Default: 0
   chain?: _TagInfoConfig[];

@@ -1,9 +1,6 @@
 import { _CardSetsConfig } from '../../model/config/_Config';
 import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey';
-import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
-import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
-import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey';
-import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
+import { ConfigKey } from '../../model/config/enum/ConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
 import { Count } from '../../model/enum/Count';
 
@@ -15,11 +12,11 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
           ],
           bodyAllowed: true,
@@ -35,11 +32,11 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
           ],
           bodyAllowed: true,
@@ -55,21 +52,21 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.tag,
-              configKey: TagConfigKey._true,
+              configKey: ConfigKey._tag_true,
               maxCount: 1,
             },
             {
               type: BitTagType.tag,
-              configKey: TagConfigKey._false,
+              configKey: ConfigKey._tag_false,
               maxCount: 1,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
           ],
         },
@@ -83,15 +80,15 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._trueFalse,
+              configKey: ConfigKey._group_trueFalse,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
           ],
         },
@@ -105,23 +102,27 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.tag,
-              configKey: TagConfigKey._sampleSolution,
+              configKey: ConfigKey._tag_sampleSolution,
             },
             {
               type: BitTagType.property,
-              configKey: PropertyConfigKey._sampleSolution,
+              configKey: ConfigKey._property_sampleSolution,
             },
             {
               type: BitTagType.property,
-              configKey: PropertyConfigKey._shortAnswer,
+              configKey: ConfigKey._property_shortAnswer,
+            },
+            {
+              type: BitTagType.property,
+              configKey: ConfigKey._property_longAnswer,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
           ],
           bodyAllowed: true,
@@ -143,15 +144,15 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
             {
               type: BitTagType.tag,
-              configKey: TagConfigKey._title,
+              configKey: ConfigKey._tag_title,
             },
           ],
           bodyAllowed: true,
@@ -169,19 +170,19 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
             {
               type: BitTagType.tag,
-              configKey: TagConfigKey._title,
+              configKey: ConfigKey._tag_title,
             },
             {
               type: BitTagType.resource,
-              configKey: ResourceConfigKey._audio,
+              configKey: ConfigKey._resource_audio,
             },
           ],
           bodyAllowed: true,
@@ -199,19 +200,19 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
             {
               type: BitTagType.tag,
-              configKey: TagConfigKey._title,
+              configKey: ConfigKey._tag_title,
             },
             {
               type: BitTagType.resource,
-              configKey: ResourceConfigKey._image,
+              configKey: ConfigKey._resource_image,
             },
           ],
           bodyAllowed: true,
@@ -229,15 +230,15 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
             {
               type: BitTagType.tag,
-              configKey: TagConfigKey._title,
+              configKey: ConfigKey._tag_title,
             },
           ],
           bodyAllowed: true,
@@ -253,15 +254,15 @@ const CARDSETS: _CardSetsConfig = {
           tags: [
             {
               type: BitTagType.property,
-              configKey: PropertyConfigKey._reaction,
+              configKey: ConfigKey._property_reaction,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardItemLeadInstructionHint,
+              configKey: ConfigKey._group_standardItemLeadInstructionHint,
             },
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey._standardExample,
+              configKey: ConfigKey._group_standardExample,
             },
           ],
           bodyAllowed: true,

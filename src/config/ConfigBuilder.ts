@@ -1,7 +1,7 @@
 import { BitConfig } from '../model/config/BitConfig';
 import { AliasBitType, RootBitType } from '../model/enum/BitType';
 
-import { Config } from './Config_RENAME';
+import { Config } from './Config';
 
 class ConfigBuilder {
   build(): BitConfig {

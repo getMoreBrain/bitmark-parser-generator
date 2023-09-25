@@ -1,11 +1,12 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
-import { Config } from '../../config/Config_RENAME';
+import { Config } from '../../config/Config';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
 import { BitType, RootBitType, RootBitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
+import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
 import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat } from '../../model/enum/TextFormat';
@@ -291,6 +292,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     const bit = node.value as Bit;
 
     const bitConfig = Config.getBitConfig(bit.bitType);
+    const bitResourcesConfig = Config.getBitResourcesConfig(bit.bitType, bit.resourceType);
 
     this.writeOPD();
     this.writeString(bit.bitType.alias);
@@ -306,9 +308,19 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // Use the bitConfig to see if we need to write the resourceType attachment
     let resourceType: ResourceTagType | undefined;
-    if (bitConfig.resourceAttachmentAllowed) {
-      // Get the resourceType from the first resource and write it as the attachment resourceType
-      if (bit.resources && bit.resources.length > 0) {
+    if (bitConfig.resourceAttachmentAllowed && bit.resources && bit.resources.length > 0) {
+      const comboMap = bitResourcesConfig.comboResourceTagTypesMap;
+
+      if (bitResourcesConfig.comboResourceTagTypesMap.size > 0) {
+        // The resource is a combo resource
+        // Extract the resource types from the combo resource
+        // NOTE: There should only ever be one combo resource per bit, but the code can handle multiple
+        // except for overwriting resourceJson
+        for (const comboTagType of comboMap.keys()) {
+          resourceType = comboTagType;
+        }
+      } else {
+        // Get the resourceType from the first resource and write it as the attachment resourceType
         resourceType = bit.resources[0].type;
       }
     }
@@ -1478,6 +1490,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (astKey === PropertyTag.posterImage) continue;
       if (astKey === PropertyTag.imageSource) continue;
       if (astKey === PropertyTag.partner) continue;
+      if (astKey === PropertyAstKey.markConfig) continue;
 
       const funcName = `enter_${astKey}`;
 

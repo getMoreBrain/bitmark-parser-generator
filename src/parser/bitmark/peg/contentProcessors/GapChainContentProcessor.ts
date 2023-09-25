@@ -1,6 +1,7 @@
 import { Builder } from '../../../../ast/Builder';
-import { Config } from '../../../../config/Config_RENAME';
+import { Config } from '../../../../config/Config';
 import { BodyPart, Gap } from '../../../../model/ast/Nodes';
+import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 
 import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
@@ -11,37 +12,41 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
 
 function gapChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
   bitType: BitType,
+  bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
 ): void {
   if (bitLevel === BitContentLevel.Chain) {
-    clozeTagContentProcessor(context, bitLevel, bitType, content, target);
+    clozeTagContentProcessor(context, bitType, bitLevel, tagsConfig, content, target);
   } else {
-    const gap = buildGap(context, bitType, content);
+    const gap = buildGap(context, bitType, bitLevel, tagsConfig, content);
     if (gap) bodyParts.push(gap);
   }
 }
 
-function buildGap(context: BitmarkPegParserContext, bitType: BitType, content: BitContent): Gap | undefined {
+function buildGap(
+  context: BitmarkPegParserContext,
+  bitType: BitType,
+  _bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
+  content: BitContent,
+): Gap | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
-  // Build the variables required to process the chain
-  const { key } = content as TypeKeyValue;
-  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
+  const gapConfig = Config.getTagConfigForTag(tagsConfig, content.type);
 
   const chainContent = [content, ...(content.chain ?? [])];
 
-  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, bitType, parentTagConfig, chainContent);
+  const chainTags = context.bitContentProcessor(bitType, BitContentLevel.Chain, gapConfig?.chain, chainContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', chainTags);
 

@@ -7,10 +7,11 @@ import { EnumType, superenum } from '@ncoderz/superenum';
  */
 const PropertyAstKey = superenum({
   aiGenerated: 'aiGenerated',
-  caseSensitive: 'isCaseSensitive',
-  level: 'levelProperty',
-  reference: 'referenceProperty',
-  shortAnswer: 'isShortAnswer',
+  isCaseSensitive: 'isCaseSensitive',
+  levelProperty: 'levelProperty',
+  referenceProperty: 'referenceProperty',
+  isShortAnswer: 'isShortAnswer',
+  markConfig: 'markConfig',
 });
 
 export type PropertyAstKeyType = EnumType<typeof PropertyAstKey>;

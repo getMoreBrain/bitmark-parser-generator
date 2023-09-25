@@ -1,6 +1,6 @@
 import { Builder } from '../../../../ast/Builder';
-import { Config } from '../../../../config/Config_RENAME';
 import { ImageResource, Resource } from '../../../../model/ast/Nodes';
+import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -11,15 +11,15 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
 
 function partnerChainContentProcessor(
   context: BitmarkPegParserContext,
-  _bitLevel: BitContentLevelType,
   bitType: BitType,
+  _bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -27,11 +27,7 @@ function partnerChainContentProcessor(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('partner content', content);
 
-  // Build the variables required to process the chain
-  const { key } = content as TypeKeyValue;
-  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
-
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, parentTagConfig, content.chain);
+  const tags = context.bitContentProcessor(bitType, BitContentLevel.Chain, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('partner TAGS', tags);
 

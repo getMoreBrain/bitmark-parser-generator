@@ -8,13 +8,11 @@ import { ResourceTagType } from '../enum/ResourceTag';
 import { TagType } from '../enum/Tag';
 
 import { TagsConfig } from './TagsConfig';
-import { PropertyConfigKeyType } from './enum/PropertyConfigKey';
-import { ResourceConfigKeyType } from './enum/ResourceConfigKey';
-import { TagConfigKeyType } from './enum/TagConfigKey';
+import { ConfigKeyType } from './enum/ConfigKey';
 
 abstract class AbstractTagConfig {
   readonly type: BitTagTypeType;
-  readonly configKey: TagConfigKeyType | PropertyConfigKeyType | ResourceConfigKeyType;
+  readonly configKey: ConfigKeyType;
   readonly tag: TagType | ResourceTagType | PropertyTagType;
   readonly maxCount: CountType; // Default: 1
   readonly minCount: number; // Default: 0
@@ -27,7 +25,7 @@ abstract class AbstractTagConfig {
 
   public constructor(
     type: BitTagTypeType,
-    configKey: TagConfigKeyType | PropertyConfigKeyType | ResourceConfigKeyType,
+    configKey: ConfigKeyType,
     tag: TagType | ResourceTagType | PropertyTagType,
     maxCount: CountType,
     minCount: number,

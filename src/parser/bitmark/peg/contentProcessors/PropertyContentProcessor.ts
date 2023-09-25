@@ -1,7 +1,7 @@
-import { Config } from '../../../../config/Config_RENAME';
+import { Config } from '../../../../config/Config';
 import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
-import { TagConfig } from '../../../../model/config/TagConfig';
-import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
+import { TagsConfig } from '../../../../model/config/TagsConfig';
+import { ConfigKey } from '../../../../model/config/enum/ConfigKey';
 import { BitType } from '../../../../model/enum/BitType';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
@@ -25,9 +25,9 @@ import {
 
 function propertyContentProcessor(
   context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
   bitType: BitType,
-  parentTagConfig: TagConfig | undefined,
+  bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -35,27 +35,29 @@ function propertyContentProcessor(
   const isChain = bitLevel === BitContentLevel.Chain;
 
   // Get the property config for the tag (if it exists)
-  const propertyConfig = Config.getTagConfigFromTag(bitType, tag, parentTagConfig);
+  const propertyConfig = Config.getTagConfigForTag(tagsConfig, tag);
   const configKey = propertyConfig ? propertyConfig.configKey : undefined;
 
   // Check for chains
   // Generally, the chain will only be present in the correct bit as the data was already validated. The bit type
   // should also be checked here if the property may occur in another bit with a different meaning.
-  if (configKey === PropertyConfigKey._example) {
-    exampleTagContentProcessor(context, bitLevel, bitType, content, target);
-    return;
-  } else if (configKey === PropertyConfigKey._partner) {
-    partnerChainContentProcessor(context, bitLevel, bitType, content, target);
-    return;
-  } else if (configKey === PropertyConfigKey._imageSource) {
-    imageSourceChainContentProcessor(context, bitLevel, bitType, content, target);
-    return;
-  } else if (configKey === PropertyConfigKey._book) {
-    bookChainContentProcessor(context, bitLevel, bitType, content, target);
-    return;
-  } else if (configKey === PropertyConfigKey._mark && !isChain) {
-    markConfigChainContentProcessor(context, bitLevel, bitType, content, target);
-    return;
+  if (propertyConfig) {
+    if (configKey === ConfigKey._property_example) {
+      exampleTagContentProcessor(context, bitType, bitLevel, content, target);
+      return;
+    } else if (configKey === ConfigKey._property_partner) {
+      partnerChainContentProcessor(context, bitType, bitLevel, propertyConfig.chain, content, target);
+      return;
+    } else if (configKey === ConfigKey._property_imageSource) {
+      imageSourceChainContentProcessor(context, bitType, bitLevel, tagsConfig, content, target);
+      return;
+    } else if (configKey === ConfigKey._property_book) {
+      bookChainContentProcessor(context, bitType, bitLevel, propertyConfig.chain, content, target);
+      return;
+    } else if (configKey === ConfigKey._property_markConfig && !isChain) {
+      markConfigChainContentProcessor(context, bitType, bitLevel, tagsConfig, content, target);
+      return;
+    }
   }
 
   // Helper for building the properties

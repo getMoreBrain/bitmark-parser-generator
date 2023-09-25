@@ -1,5 +1,6 @@
 import { Builder } from '../../../../ast/Builder';
-import { Config } from '../../../../config/Config_RENAME';
+import { Config } from '../../../../config/Config';
+import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -16,12 +17,13 @@ const builder = new Builder();
 
 function markConfigChainContentProcessor(
   context: BitmarkPegParserContext,
-  _bitLevel: BitContentLevelType,
   bitType: BitType,
+  _bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
-  // const { value } = content as TypeValue;
+  const { key: tag } = content as TypeKeyValue;
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('mark content', content);
 
@@ -29,15 +31,13 @@ function markConfigChainContentProcessor(
 
   if (!markConfig) return;
 
-  // Build the variables required to process the chain
-  const { key } = content as TypeKeyValue;
-  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
+  const markTagConfig = Config.getTagConfigForTag(tagsConfig, tag);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { mark: _ignoreMark, ...tags } = context.bitContentProcessor(
-    BitContentLevel.Chain,
     bitType,
-    parentTagConfig,
+    BitContentLevel.Chain,
+    markTagConfig?.chain,
     content.chain,
   );
 

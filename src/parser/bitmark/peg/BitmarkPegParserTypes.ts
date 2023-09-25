@@ -9,7 +9,7 @@
 
 import { EnumType, superenum } from '@ncoderz/superenum';
 
-import { TagConfig } from '../../../model/config/TagConfig';
+import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag } from '../../../model/enum/Tag';
@@ -318,11 +318,10 @@ export interface BitmarkPegParserContext {
 
   parse: ParseFunction;
   bitContentProcessor(
-    bitLevel: BitContentLevelType,
     bitType: BitType,
-    parentTagConfig: TagConfig | undefined,
+    bitLevel: BitContentLevelType,
+    tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,
-    /*validTypes: TypeKeyType[],*/
   ): BitContentProcessorResult;
   splitBitContent(bitContent: BitContent[], types: TypeKeyType[]): BitContent[][];
   addWarning(message: string, parserData?: ParserData, parserDataOriginal?: ParserData): void;

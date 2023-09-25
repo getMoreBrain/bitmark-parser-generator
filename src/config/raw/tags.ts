@@ -1,51 +1,51 @@
 import { _TagsConfig } from '../../model/config/_Config';
-import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
+import { ConfigKey } from '../../model/config/enum/ConfigKey';
 import { Tag } from '../../model/enum/Tag';
 
 const TAGS: _TagsConfig = {
-  [TagConfigKey._title]: {
+  [ConfigKey._tag_title]: {
     tag: Tag.title,
   },
-  [TagConfigKey._anchor]: {
+  [ConfigKey._tag_anchor]: {
     tag: Tag.anchor,
   },
-  [TagConfigKey._reference]: {
+  [ConfigKey._tag_reference]: {
     tag: Tag.reference,
   },
-  [TagConfigKey._property]: {
+  [ConfigKey._tag_property]: {
     tag: Tag.property,
   },
-  [TagConfigKey._itemLead]: {
+  [ConfigKey._tag_itemLead]: {
     tag: Tag.itemLead,
   },
-  [TagConfigKey._instruction]: {
+  [ConfigKey._tag_instruction]: {
     tag: Tag.instruction,
   },
-  [TagConfigKey._hint]: {
+  [ConfigKey._tag_hint]: {
     tag: Tag.hint,
   },
-  [TagConfigKey._true]: {
+  [ConfigKey._tag_true]: {
     tag: Tag.true,
   },
-  [TagConfigKey._false]: {
+  [ConfigKey._tag_false]: {
     tag: Tag.false,
   },
-  [TagConfigKey._sampleSolution]: {
+  [ConfigKey._tag_sampleSolution]: {
     tag: Tag.sampleSolution,
   },
-  [TagConfigKey._gap]: {
+  [ConfigKey._tag_gap]: {
     tag: Tag.gap,
   },
-  [TagConfigKey._mark]: {
+  [ConfigKey._tag_mark]: {
     tag: Tag.mark,
   },
-  [TagConfigKey._resource]: {
+  [ConfigKey._tag_resource]: {
     tag: Tag.resource,
   },
-  [TagConfigKey._remark]: {
+  [ConfigKey._tag_remark]: {
     tag: Tag.remark,
   },
-  [TagConfigKey._comment]: {
+  [ConfigKey._tag_comment]: {
     tag: Tag.comment,
   },
 };

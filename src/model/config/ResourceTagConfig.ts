@@ -5,7 +5,7 @@ import { ResourceTagType } from '../enum/ResourceTag';
 
 import { AbstractTagConfig } from './AbstractTagConfig';
 import { TagsConfig } from './TagsConfig';
-import { ResourceConfigKeyType } from './enum/ResourceConfigKey';
+import { ConfigKeyType } from './enum/ConfigKey';
 
 interface ToStringOptions {
   includeChains?: boolean;
@@ -16,7 +16,7 @@ class ResourceTagConfig extends AbstractTagConfig {
   readonly type: BitTagTypeType = BitTagType.resource;
 
   public constructor(
-    configKey: ResourceConfigKeyType,
+    configKey: ConfigKeyType,
     tag: ResourceTagType,
     maxCount: CountType,
     minCount: number,

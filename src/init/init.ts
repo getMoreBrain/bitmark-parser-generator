@@ -1,6 +1,6 @@
 import { buildInfo } from '../generated/build-info';
 import { initEnv } from '../utils/env/Env';
-import '../config/Config_RENAME';
+import '../config/Config';
 
 let initialised = false;
 

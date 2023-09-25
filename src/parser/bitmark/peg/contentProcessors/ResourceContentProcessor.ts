@@ -1,6 +1,7 @@
 import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
-import { Config } from '../../../../config/Config_RENAME';
+import { Config } from '../../../../config/Config';
 import { Resource } from '../../../../model/ast/Nodes';
+import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 import { Count } from '../../../../model/enum/Count';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
@@ -106,8 +107,9 @@ function buildResource(
 
 function resourceContentProcessor(
   context: BitmarkPegParserContext,
-  _bitLevel: BitContentLevelType,
   bitType: BitType,
+  _bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
@@ -121,12 +123,10 @@ function resourceContentProcessor(
   const type = ResourceTag.fromValue(key);
   if (type) {
     // Parse the resource chain
-
-    // Build the variables required to process the chain
-    const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
+    const resourceConfig = Config.getTagConfigForTag(tagsConfig, key);
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, parentTagConfig, chain);
+    const tags = context.bitContentProcessor(bitType, BitContentLevel.Chain, resourceConfig?.chain, chain);
 
     const resource = resourceBuilder.resource({
       type,

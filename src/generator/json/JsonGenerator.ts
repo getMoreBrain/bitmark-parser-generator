@@ -1,6 +1,6 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
-import { Config } from '../../config/Config_RENAME';
+import { Config } from '../../config/Config';
 import { NodeType } from '../../model/ast/NodeType';
 import { AudioEmbedResource, ImageSource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
@@ -18,6 +18,7 @@ import { AliasBitType, RootBitType, BitTypeUtils, BitType } from '../../model/en
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ExampleType } from '../../model/enum/ExampleType';
+import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
 import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
@@ -1158,6 +1159,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     let resourceJson: ResourceJson | undefined;
 
+    const bitConfig = Config.getBitConfig(bitType);
     const bitResourcesConfig = Config.getBitResourcesConfig(bitType, resourceType);
     const comboMap = bitResourcesConfig.comboResourceTagTypesMap;
 
@@ -1177,7 +1179,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           const r = resources.find((r) => r.typeAlias === rt);
           // Extract everything except the type from the resource
           if (r) {
-            const tagConfig = Config.getTagConfigFromTag(bitType, r.typeAlias);
+            const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.typeAlias);
             const key = tagConfig?.jsonKey ?? r.typeAlias;
             const json = this.parseResourceToJson(r);
             if (json) {
@@ -1360,6 +1362,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (astKey === PropertyTag.example) continue;
       if (astKey === PropertyTag.imageSource) continue;
       if (astKey === PropertyTag.partner) continue;
+      if (astKey === PropertyAstKey.markConfig) continue;
 
       const funcName = `enter_${astKey}`;
 

@@ -305,6 +305,9 @@ class JsonParser {
     // Text Format
     const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
 
+    // Resource attachement type
+    const resourceAttachmentType = this.getResourceType(resource);
+
     // resource(s)
     const resourcesNode = this.resourceBitToAst(resource);
 
@@ -360,6 +363,7 @@ class JsonParser {
     const bitNode = builder.bit({
       bitType,
       textFormat: format as TextFormatType,
+      resourceType: resourceAttachmentType,
       id,
       externalId,
       spaceId,
@@ -787,12 +791,23 @@ class JsonParser {
     return nodes;
   }
 
+  private getResourceType(resource?: ResourceJson): ResourceTagType | undefined {
+    if (resource) {
+      const resourceKey = ResourceTag.fromValue(resource.type);
+      return resourceKey;
+    }
+
+    return undefined;
+  }
+
   private resourceBitToAst(resource?: ResourceJson): Resource[] | undefined {
     const nodes: Resource[] | undefined = [];
 
     if (resource) {
       const resourceKey = ResourceTag.keyFromValue(resource.type) ?? ResourceTag.unknown;
       let data: ResourceDataJson | undefined;
+
+      // TODO: This code should use the config to handle the combo resources. For now the logic is hardcoded
 
       // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
       if (resource.type === ResourceTag.imageResponsive) {

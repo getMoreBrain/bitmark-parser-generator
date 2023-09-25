@@ -1,6 +1,6 @@
-import { Config } from '../config/Config_RENAME';
+import { Config } from '../config/Config';
 import { Example, Property } from '../model/ast/Nodes';
-import { PropertyConfigKeyType } from '../model/config/enum/PropertyConfigKey';
+import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
@@ -100,7 +100,7 @@ class BaseBuilder {
    * @param value
    * @returns
    */
-  protected toAstProperty(key: PropertyConfigKeyType, value: unknown | unknown[] | undefined): Property | undefined {
+  protected toAstProperty(key: ConfigKeyType, value: unknown | unknown[] | undefined): Property | undefined {
     if (value == null) return undefined;
 
     const propertiesConfig = Config.getRawPropertiesConfig();

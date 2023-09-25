@@ -63,8 +63,9 @@
  */
 
 import { Builder } from '../../../ast/Builder';
+import { Config } from '../../../config/Config';
 import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
-import { TagConfig } from '../../../model/config/TagConfig';
+import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType, BitTypeUtils, RootBitType } from '../../../model/enum/BitType';
 import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../model/enum/ResourceTag';
@@ -222,8 +223,9 @@ class BitmarkPegParserProcessor {
     bitContent = BitmarkPegParserValidator.validateBitTags(this.context, bitType, resourceType, bitContent);
 
     // Parse the bit content into a an object with the appropriate keys
+    const bitConfig = Config.getBitConfig(bitType);
     const { body, footer, cardSet, title, statement, statements, choices, responses, resources, comments, ...tags } =
-      this.bitContentProcessor(BitContentLevel.Bit, bitType, undefined, bitContent);
+      this.bitContentProcessor(bitType, BitContentLevel.Bit, bitConfig.tags, bitContent);
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
     if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
@@ -341,15 +343,16 @@ class BitmarkPegParserProcessor {
   /**
    * Process Type/Key/Value data, building the bit parts as AST nodes.
    *
-   * @param bitType
+   * @param bitType bit type
+   * @param bitLevel bit level (in chain, in card etc)
+   * @param tagsConfig tags configuration at this parser level (pass undef)
    * @param data
-   * @param validTypes
    * @returns
    */
   private bitContentProcessor(
-    bitLevel: BitContentLevelType,
     bitType: BitType,
-    parentTagConfig: TagConfig | undefined,
+    bitLevel: BitContentLevelType,
+    tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,
   ): BitContentProcessorResult {
     const result: BitContentProcessorResult = {};
@@ -380,7 +383,7 @@ class BitmarkPegParserProcessor {
     const addBodyText = () => {
       if (bodyPart) {
         // Validate the body part
-        bodyPart = BitmarkPegParserValidator.checkBodyPart(this.context, bitLevel, bitType, bodyPart);
+        bodyPart = BitmarkPegParserValidator.checkBodyPart(this.context, bitType, bitLevel, bodyPart);
 
         const bodyText = builder.bodyText({ text: bodyPart });
         bodyParts.push(bodyText);
@@ -394,12 +397,12 @@ class BitmarkPegParserProcessor {
 
       switch (type) {
         case TypeKey.Comment: {
-          commentTagContentProcessor(this.context, bitLevel, bitType, content, result);
+          commentTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
           break;
         }
 
         case TypeKey.ItemLead: {
-          itemLeadTagContentProcessor(this.context, bitLevel, bitType, content, result, seenItem);
+          itemLeadTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, seenItem);
           seenItem = true;
           break;
         }
@@ -408,43 +411,43 @@ class BitmarkPegParserProcessor {
         case TypeKey.Hint:
         case TypeKey.Anchor:
         case TypeKey.SampleSolution:
-          defaultTagContentProcessor(this.context, bitLevel, bitType, content, result);
+          defaultTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Reference:
-          referenceTagContentProcessor(this.context, bitLevel, bitType, content, result, seenReference);
+          referenceTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, seenReference);
           seenReference = true;
           break;
 
         case TypeKey.Title:
-          titleTagContentProcessor(this.context, bitLevel, bitType, content, result);
+          titleTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Property:
-          propertyContentProcessor(this.context, bitLevel, bitType, parentTagConfig, content, result);
+          propertyContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Gap: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          gapChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
+          gapChainContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, bodyParts);
           break;
         }
 
         case TypeKey.Mark: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          markChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
+          markChainContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, bodyParts);
           break;
         }
 
         case TypeKey.True:
         case TypeKey.False: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          trueFalseChainContentProcessor(this.context, bitLevel, bitType, content, result, bodyParts);
+          trueFalseChainContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, bodyParts);
           break;
         }
 
         case TypeKey.Resource:
-          resourceContentProcessor(this.context, bitLevel, bitType, content, result);
+          resourceContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.CardSet: {
@@ -477,12 +480,12 @@ class BitmarkPegParserProcessor {
 
     // Validate and build the body (trimmed)
     result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
-    BitmarkPegParserValidator.checkBody(this.context, bitLevel, bitType, result.body);
+    BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, result.body);
 
     // Validate and build the footer (trimmed)
     footer = footer.trim();
     if (footer) {
-      footer = BitmarkPegParserValidator.checkFooter(this.context, bitLevel, bitType, footer);
+      footer = BitmarkPegParserValidator.checkFooter(this.context, bitType, bitLevel, footer);
       if (footer) {
         result.footer = builder.footerText({ text: footer });
       }

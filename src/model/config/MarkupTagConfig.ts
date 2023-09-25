@@ -4,7 +4,7 @@ import { TagType } from '../enum/Tag';
 
 import { AbstractTagConfig } from './AbstractTagConfig';
 import { TagsConfig } from './TagsConfig';
-import { TagConfigKeyType } from './enum/TagConfigKey';
+import { ConfigKeyType } from './enum/ConfigKey';
 
 interface ToStringOptions {
   includeChains?: boolean;
@@ -15,7 +15,7 @@ class MarkupTagConfig extends AbstractTagConfig {
   readonly type: BitTagTypeType = BitTagType.tag;
 
   public constructor(
-    configKey: TagConfigKeyType,
+    configKey: ConfigKeyType,
     tag: TagType,
     maxCount: CountType,
     minCount: number,

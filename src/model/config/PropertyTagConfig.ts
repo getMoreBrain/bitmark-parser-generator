@@ -7,7 +7,7 @@ import { PropertyTagType } from '../enum/PropertyTag';
 
 import { AbstractTagConfig } from './AbstractTagConfig';
 import { TagsConfig } from './TagsConfig';
-import { PropertyConfigKeyType } from './enum/PropertyConfigKey';
+import { ConfigKeyType } from './enum/ConfigKey';
 
 interface ToStringOptions {
   includeChains?: boolean;
@@ -22,7 +22,7 @@ class PropertyTagConfig extends AbstractTagConfig {
   readonly defaultValue?: string; // The default value of the property - this value can be omitted from the markup
 
   public constructor(
-    configKey: PropertyConfigKeyType,
+    configKey: ConfigKeyType,
     tag: PropertyTagType,
     maxCount: CountType,
     minCount: number,

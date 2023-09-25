@@ -1,4 +1,4 @@
-import { Config } from '../../../../config/Config_RENAME';
+import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -8,22 +8,22 @@ import {
   BitContentLevelType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
-  TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
 // const builder = new Builder();
 
 function bookChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
   bitType: BitType,
+  bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
   if (bitLevel === BitContentLevel.Chain) {
     // Do nothing
   } else {
-    const book = buildBook(context, bitType, content);
+    const book = buildBook(context, bitType, bitLevel, tagsConfig, content);
     target.book = book.book;
     target.reference = book.reference;
     target.referenceEnd = book.referenceEnd;
@@ -33,6 +33,8 @@ function bookChainContentProcessor(
 function buildBook(
   context: BitmarkPegParserContext,
   bitType: BitType,
+  _bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
 ): {
   book: string | undefined;
@@ -41,11 +43,7 @@ function buildBook(
 } {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('book content', content);
 
-  // Build the variables required to process the chain
-  const { key } = content as TypeKeyValue;
-  const parentTagConfig = Config.getTagConfigFromTag(bitType, key);
-
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, parentTagConfig, content.chain);
+  const tags = context.bitContentProcessor(bitType, BitContentLevel.Chain, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('book TAGS', tags);
 

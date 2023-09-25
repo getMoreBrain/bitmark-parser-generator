@@ -5,7 +5,6 @@ import { TagConfig } from '../model/config/TagConfig';
 import { TagsConfig } from '../model/config/TagsConfig';
 import { _PropertiesConfig } from '../model/config/_Config';
 import { GroupConfigType } from '../model/config/enum/GroupConfigType';
-import { ResourceConfigKeyType } from '../model/config/enum/ResourceConfigKey';
 import { BitTagType } from '../model/enum/BitTagType';
 import { RootBitTypeType, BitType } from '../model/enum/BitType';
 import { ResourceJsonKeyType } from '../model/enum/ResourceJsonKey';
@@ -97,20 +96,42 @@ class Config {
    * @param parentTagConfig
    * @returns
    */
-  public getTagConfigFromTag(bitType: BitType, tag: string, parentTagConfig?: TagConfig): TagConfig | undefined {
-    const bitConfig = this.getBitConfig(bitType);
-    if (!bitConfig) return undefined;
-
-    const tags = parentTagConfig && parentTagConfig.chain ? parentTagConfig.chain : bitConfig.tags;
+  public getTagConfigForTag(tagsConfig: TagsConfig | undefined, tag: string): TagConfig | undefined {
+    if (!tagsConfig) return undefined;
 
     // Search the properties in the bit config for the matching tag.
-    for (const [, t] of Object.entries(tags)) {
+    for (const [, t] of Object.entries(tagsConfig)) {
       if (t.tag === tag) {
         return t;
       }
     }
 
     return undefined;
+  }
+
+  /**
+   * Look up the tag configuration for a cardSet.
+   *
+   * @param bitType
+   * @param sideNo
+   * @param variantNo
+   * @param tag
+   * @param parentTagConfig
+   * @returns
+   */
+  public getTagsConfigForCardSet(bitType: BitType, sideNo: number, variantNo: number): TagsConfig | undefined {
+    const bitConfig = this.getBitConfig(bitType);
+    if (!bitConfig) return undefined;
+
+    const cardSet = bitConfig.cardSet;
+    if (!cardSet) return undefined;
+
+    sideNo = Math.min(sideNo, cardSet.variants.length - 1);
+    const variants = cardSet.variants[sideNo];
+    variantNo = Math.min(variantNo, variants.length - 1);
+    const variant = variants[variantNo];
+
+    return variant.tags;
   }
 
   /**
@@ -182,7 +203,7 @@ class Config {
           if (singleTagMatch) {
             // Single tag match for a resource specified in the bit header
             const newTag = new ResourceTagConfig(
-              tag.configKey as ResourceConfigKeyType,
+              tag.configKey,
               tag.tag as ResourceTagType,
               1,
               1,
