@@ -1,24 +1,26 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
+import { Config } from '../../config/Config';
 import { NodeType } from '../../model/ast/NodeType';
 import { AudioEmbedResource, ImageSource } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
-import { StillImageFilmResource } from '../../model/ast/Nodes';
 import { DocumentResource } from '../../model/ast/Nodes';
 import { DocumentEmbedResource } from '../../model/ast/Nodes';
 import { DocumentLinkResource } from '../../model/ast/Nodes';
 import { DocumentDownloadResource } from '../../model/ast/Nodes';
 import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
+import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { Text, TextAst } from '../../model/ast/TextNodes';
-import { AliasBitType, RootBitType, RootBitTypeMetadata, BitTypeUtils, BitType } from '../../model/enum/BitType';
+import { AliasBitType, RootBitType, BitType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ExampleType } from '../../model/enum/ExampleType';
-import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
-import { ResourceType } from '../../model/enum/ResourceType';
+import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
+import { PropertyTag } from '../../model/enum/PropertyTag';
+import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
@@ -29,16 +31,6 @@ import { StringUtils } from '../../utils/StringUtils';
 import { UrlUtils } from '../../utils/UrlUtils';
 import { Generator } from '../Generator';
 
-import {
-  BodyBit,
-  BodyPart,
-  BodyText,
-  Flashcard,
-  ImageLinkResource,
-  ImageResponsiveResource,
-  Mark,
-  MarkConfig,
-} from '../../model/ast/Nodes';
 import {
   BotResponse,
   Example,
@@ -109,6 +101,7 @@ import {
   ImageLinkResourceJson,
   ImageResourceJson,
   ResourceJson,
+  ResourceWrapperJson,
   StillImageFilmEmbedResourceJson,
   StillImageFilmLinkResourceJson,
   VideoEmbedResourceJson,
@@ -445,9 +438,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     // required, and this is bit depenedent.
     // This is ugly, but it is even uglier if the defaults at set in the AST.
 
-    const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bit.bitType.root);
-    const hasRootExample = !!meta?.rootExampleType;
-    const isBoolean = meta?.rootExampleType === ExampleType.boolean;
+    const bitConfig = Config.getBitConfig(bit.bitType);
+    const hasRootExample = !!bitConfig.rootExampleType;
+    const isBoolean = bitConfig.rootExampleType === ExampleType.boolean;
 
     if (hasRootExample) {
       // Calculate the value of the default example
@@ -515,7 +508,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.addProperty(partnerJson, 'name', name ?? '', true);
     if (avatarImage) {
       const res = this.parseResourceToJson(avatarImage);
-      if (res && res.type === ResourceType.image) {
+      if (res && res.type === ResourceTag.image) {
         partnerJson.avatarImage = res.image;
       }
     }
@@ -1155,13 +1148,61 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> resource
+  // bitmarkAst -> bits -> bitsValue -> resources
 
-  protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
-    const resource = node.value as Resource;
+  protected enter_resources(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+    const resources = node.value as Resource[];
+    const bitType = this.getBitType(route);
+    const resourceType = this.getResourceType(route);
 
-    // This is a resource - handle it with the common code
-    this.bitJson.resource = this.parseResourceToJson(resource);
+    if (!resources || !bitType) return;
+
+    let resourceJson: ResourceJson | undefined;
+
+    const bitConfig = Config.getBitConfig(bitType);
+    const bitResourcesConfig = Config.getBitResourcesConfig(bitType, resourceType);
+    const comboMap = bitResourcesConfig.comboResourceTagTypesMap;
+
+    if (bitResourcesConfig.comboResourceTagTypesMap.size > 0) {
+      // The resource is a combo resource
+      // Extract the resource types from the combo resource
+      // NOTE: There should only ever be one combo resource per bit, but the code can handle multiple
+      // except for overwriting resourceJson
+      for (const [comboTagType, resourceTags] of comboMap.entries()) {
+        // Create the combo resource wrapper
+        const wrapper: ResourceWrapperJson = {
+          type: comboTagType,
+        };
+
+        // For each of the resources in this combo resource, find the actual resource and add it to the JSON
+        for (const rt of resourceTags) {
+          const r = resources.find((r) => r.typeAlias === rt);
+          // Extract everything except the type from the resource
+          if (r) {
+            const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.typeAlias);
+            const key = tagConfig?.jsonKey ?? r.typeAlias;
+            const json = this.parseResourceToJson(r);
+            if (json) {
+              for (const [k, v] of Object.entries(json)) {
+                if (k !== 'type') {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  (wrapper as any)[key] = v;
+                }
+              }
+            }
+          }
+        }
+        resourceJson = wrapper as ResourceJson;
+      }
+    } else {
+      // This is a standard resource. If there is more than one resource, use the first one.
+      // There should not be more than one because of validation
+      if (resources.length >= 1) {
+        resourceJson = this.parseResourceToJson(resources[0]);
+      }
+    }
+
+    this.bitJson.resource = resourceJson;
   }
 
   //
@@ -1312,16 +1353,18 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * Generate the handlers for properties, as they are mostly the same, but not quite
    */
   protected generatePropertyHandlers() {
-    for (const key of PropertyKey.values()) {
-      const validatedKey = PropertyKey.fromValue(key);
-      const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(validatedKey) ?? {};
-      const astKey = meta.astKey ? meta.astKey : key;
-      const funcName = `enter_${astKey}`;
+    const propertiesConfig = Config.getRawPropertiesConfig();
+
+    for (const propertyConfig of Object.values(propertiesConfig)) {
+      const astKey = propertyConfig.astKey ?? propertyConfig.tag;
 
       // Special cases (handled outside of the automatically generated handlers)
-      if (astKey === PropertyKey.example) continue;
-      if (astKey === PropertyKey.imageSource) continue;
-      if (astKey === PropertyKey.partner) continue;
+      if (astKey === PropertyTag.example) continue;
+      if (astKey === PropertyTag.imageSource) continue;
+      if (astKey === PropertyTag.partner) continue;
+      if (astKey === PropertyAstKey.markConfig) continue;
+
+      const funcName = `enter_${astKey}`;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
@@ -1334,11 +1377,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (parent?.key !== NodeType.bitsValue) return;
 
         // Convert key as needed
-        let jsonKey = key as string;
-        if (meta.jsonKey) jsonKey = meta.jsonKey;
+        const jsonKey = propertyConfig.jsonKey ?? propertyConfig.tag;
 
         // Add the property
-        this.addProperty(this.bitJson, jsonKey, value, meta.isSingle);
+        this.addProperty(this.bitJson, jsonKey, value, propertyConfig.single);
       };
 
       // Bind this
@@ -1501,67 +1543,51 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     let resourceJson: ResourceJson | undefined;
 
     switch (resource.type) {
-      case ResourceType.image:
+      case ResourceTag.image:
         resourceJson = {
-          type: ResourceType.image,
+          type: ResourceTag.image,
           image: this.addImageResource(resource as ImageResource),
         };
         break;
 
-      case ResourceType.imageResponsive: {
-        const imageResponsiveResource = resource as ImageResponsiveResource;
-        // Only write the resource if it has both an image and audio
-        if (
-          imageResponsiveResource.imagePortrait.value != null &&
-          imageResponsiveResource.imageLandscape.value != null
-        ) {
-          resourceJson = {
-            type: ResourceType.imageResponsive,
-            imagePortrait: this.addImageResource(imageResponsiveResource.imagePortrait),
-            imageLandscape: this.addImageResource(imageResponsiveResource.imageLandscape),
-          };
-        }
-        break;
-      }
-
-      case ResourceType.imageLink:
+      case ResourceTag.imageLink:
         resourceJson = {
-          type: ResourceType.imageLink,
+          type: ResourceTag.imageLink,
           imageLink: this.addImageLinkResource(resource as ImageLinkResource),
         };
         break;
 
-      case ResourceType.audio:
+      case ResourceTag.audio:
         resourceJson = {
-          type: ResourceType.audio,
+          type: ResourceTag.audio,
           audio: this.addAudioResource(resource as AudioResource),
         };
         break;
 
-      case ResourceType.audioEmbed:
+      case ResourceTag.audioEmbed:
         resourceJson = {
-          type: ResourceType.audioEmbed,
+          type: ResourceTag.audioEmbed,
           audioEmbed: this.addAudioEmbedResource(resource as AudioEmbedResource),
         };
         break;
 
-      case ResourceType.audioLink:
+      case ResourceTag.audioLink:
         resourceJson = {
-          type: ResourceType.audioLink,
+          type: ResourceTag.audioLink,
           audioLink: this.addAudioLinkResource(resource as AudioLinkResource),
         };
         break;
 
-      case ResourceType.video:
+      case ResourceTag.video:
         resourceJson = {
-          type: ResourceType.video,
+          type: ResourceTag.video,
           video: this.addVideoResource(resource as VideoResource),
         };
         break;
 
-      case ResourceType.videoEmbed:
+      case ResourceTag.videoEmbed:
         resourceJson = {
-          type: ResourceType.videoEmbed,
+          type: ResourceTag.videoEmbed,
           videoEmbed: this.addVideoEmbedResource(resource as VideoEmbedResource),
         };
         (resourceJson as VideoEmbedResourceWrapperJson).videoEmbed = this.addVideoLinkResource(
@@ -1569,85 +1595,72 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         );
         break;
 
-      case ResourceType.videoLink:
+      case ResourceTag.videoLink:
         resourceJson = {
-          type: ResourceType.videoLink,
+          type: ResourceTag.videoLink,
           videoLink: this.addVideoLinkResource(resource as VideoLinkResource),
         };
         break;
 
-      case ResourceType.stillImageFilm: {
-        const stillImageFilmResource = resource as StillImageFilmResource;
-        // Only write the resource if it has both an image and audio
-        if (stillImageFilmResource.image.value != null && stillImageFilmResource.audio.value != null) {
-          resourceJson = {
-            type: ResourceType.stillImageFilm,
-            image: this.addImageResource(stillImageFilmResource.image),
-            audio: this.addAudioResource(stillImageFilmResource.audio),
-          };
-        }
-        break;
-      }
-
-      case ResourceType.stillImageFilmEmbed:
+      case ResourceTag.stillImageFilmEmbed:
         resourceJson = {
-          type: ResourceType.stillImageFilmEmbed,
+          type: ResourceTag.stillImageFilmEmbed,
           stillImageFilmEmbed: this.addStillImageFilmEmbedResource(resource as StillImageFilmEmbedResource),
         };
         break;
 
-      case ResourceType.stillImageFilmLink:
+      case ResourceTag.stillImageFilmLink:
         resourceJson = {
-          type: ResourceType.stillImageFilmLink,
+          type: ResourceTag.stillImageFilmLink,
           stillImageFilmLink: this.addStillImageFilmLinkResource(resource as StillImageFilmLinkResource),
         };
         break;
 
-      case ResourceType.article:
+      case ResourceTag.article:
         resourceJson = {
-          type: ResourceType.article,
+          type: ResourceTag.article,
           article: this.addArticleResource(resource as ArticleResource),
         };
         break;
 
-      case ResourceType.document:
+      case ResourceTag.document:
         resourceJson = {
-          type: ResourceType.document,
+          type: ResourceTag.document,
           document: this.addDocumentResource(resource as DocumentResource),
         };
         break;
 
-      case ResourceType.documentEmbed:
+      case ResourceTag.documentEmbed:
         resourceJson = {
-          type: ResourceType.documentEmbed,
+          type: ResourceTag.documentEmbed,
           documentEmbed: this.addDocumentEmbedResource(resource as DocumentEmbedResource),
         };
         break;
 
-      case ResourceType.documentLink:
+      case ResourceTag.documentLink:
         resourceJson = {
-          type: ResourceType.documentLink,
+          type: ResourceTag.documentLink,
           documentLink: this.addDocumentLinkResource(resource as DocumentLinkResource),
         };
         break;
 
-      case ResourceType.documentDownload:
+      case ResourceTag.documentDownload:
         resourceJson = {
-          type: ResourceType.documentDownload,
+          type: ResourceTag.documentDownload,
           documentDownload: this.addDocumentDownloadResource(resource as DocumentDownloadResource),
         };
         break;
 
-      case ResourceType.appLink:
+      case ResourceTag.appLink:
         resourceJson = {
-          type: ResourceType.appLink,
+          type: ResourceTag.appLink,
           appLink: this.addAppLinkResource(resource as AppLinkResource),
         };
         break;
 
-      case ResourceType.websiteLink:
+      case ResourceTag.websiteLink:
         resourceJson = {
-          type: ResourceType.websiteLink,
+          type: ResourceTag.websiteLink,
           websiteLink: this.addWebsiteLinkResource(resource as WebsiteLinkResource),
         };
         break;
@@ -1664,8 +1677,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (StringUtils.isString(resource)) {
       const value = resource as string;
       resource = {
-        type: ResourceType.image,
-        typeAlias: ResourceType.image,
+        type: ResourceTag.image,
+        typeAlias: ResourceTag.image,
         value,
         format: UrlUtils.fileExtensionFromUrl(value),
         provider: UrlUtils.domainFromUrl(value),
@@ -1696,8 +1709,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (StringUtils.isString(resource)) {
       const value = resource as string;
       resource = {
-        type: ResourceType.imageLink,
-        typeAlias: ResourceType.imageLink,
+        type: ResourceTag.imageLink,
+        typeAlias: ResourceTag.imageLink,
         value,
         format: UrlUtils.fileExtensionFromUrl(value),
         provider: UrlUtils.domainFromUrl(value),
@@ -2122,6 +2135,23 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   /**
+   * Get the bit resourceType atttachment from any node
+   *
+   * @param route the route to the node
+   * @returns the bit type
+   */
+  protected getResourceType(route: NodeInfo[]): ResourceTagType | undefined {
+    for (const node of route) {
+      if (node.key === NodeType.bitsValue) {
+        const n = node.value as Bit;
+        return n?.resourceType;
+      }
+    }
+
+    return undefined;
+  }
+
+  /**
    * Convert parse a string to TextAst if required, otherwise just return the string as is.
    * @param text
    * @returns
@@ -2312,7 +2342,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // Add the resource template if there should be a resource (indicated by resourceType) but there is none defined.
     // if (bit.resourceType && !bitJson.resource) {
-    //   const jsonKey = ResourceType.keyFromValue(bit.resourceType);
+    //   const jsonKey = ResourceTag.keyFromValue(bit.resourceType);
     //   bitJson.resource = {
     //     type: bit.resourceType,
     //   } as ResourceJson;
@@ -2331,7 +2361,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * @returns
    */
   protected cleanAndSetDefaultsForBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
-    const bitType = BitTypeUtils.getBitType(bitJson.type);
+    const bitType = Config.getBitType(bitJson.type);
     const plainText = this.options.textAsPlainText;
 
     // Clear 'item' which may be an empty string if 'lead' was set but item not

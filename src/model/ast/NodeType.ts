@@ -226,8 +226,9 @@ const NodeType = superenum({
   alternativeAnswersValue: 'alternativeAnswersValue',
 
   // Resources
-  resource: 'resource',
   resourceType: 'resourceType',
+  resources: 'resources',
+  resourcesValue: 'resourcesValue',
   image: 'image',
   imagePortrait: 'imagePortrait',
   imageLandscape: 'imageLandscape',

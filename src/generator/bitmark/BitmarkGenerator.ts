@@ -1,12 +1,14 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
+import { Config } from '../../config/Config';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
 import { BitType, RootBitType, RootBitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
-import { PropertyKey, PropertyKeyMetadata } from '../../model/enum/PropertyKey';
-import { ResourceType } from '../../model/enum/ResourceType';
+import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
+import { PropertyTag } from '../../model/enum/PropertyTag';
+import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat } from '../../model/enum/TextFormat';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { Generator } from '../Generator';
@@ -24,12 +26,10 @@ import {
   ImageResource,
   Resource,
   ArticleResource,
-  StillImageFilmResource,
   Partner,
   Example,
   MarkConfig,
   BodyPart,
-  ImageResponsiveResource,
   ImageSource,
 } from '../../model/ast/Nodes';
 
@@ -291,6 +291,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected enter_bitsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bit = node.value as Bit;
 
+    const bitConfig = Config.getBitConfig(bit.bitType);
+    const bitResourcesConfig = Config.getBitResourcesConfig(bit.bitType, bit.resourceType);
+
     this.writeOPD();
     this.writeString(bit.bitType.alias);
 
@@ -303,11 +306,28 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       }
     }
 
-    // Write the resource type if there is a resource (unless the bit itself is the resource)
-    const resourceType = bit.resource?.type;
-    if (resourceType && resourceType !== bit.bitType.root) {
+    // Use the bitConfig to see if we need to write the resourceType attachment
+    let resourceType: ResourceTagType | undefined;
+    if (bitConfig.resourceAttachmentAllowed && bit.resources && bit.resources.length > 0) {
+      const comboMap = bitResourcesConfig.comboResourceTagTypesMap;
+
+      if (bitResourcesConfig.comboResourceTagTypesMap.size > 0) {
+        // The resource is a combo resource
+        // Extract the resource types from the combo resource
+        // NOTE: There should only ever be one combo resource per bit, but the code can handle multiple
+        // except for overwriting resourceJson
+        for (const comboTagType of comboMap.keys()) {
+          resourceType = comboTagType;
+        }
+      } else {
+        // Get the resourceType from the first resource and write it as the attachment resourceType
+        resourceType = bit.resources[0].type;
+      }
+    }
+
+    if (resourceType) {
       this.writeAmpersand();
-      this.writeString(bit.resource?.type);
+      this.writeString(resourceType);
     }
 
     this.writeCL();
@@ -365,8 +385,8 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     const bit = parent?.value as Bit;
     if (bit) {
-      if (value != '') this.writeProperty(PropertyKey.labelTrue, value, true);
-      if (bit.labelFalse && bit.labelFalse[0] != '') this.writeProperty(PropertyKey.labelFalse, bit.labelFalse, true);
+      if (value != '') this.writeProperty(PropertyTag.labelTrue, value, true);
+      if (bit.labelFalse && bit.labelFalse[0] != '') this.writeProperty(PropertyTag.labelFalse, bit.labelFalse, true);
     }
   }
 
@@ -1039,9 +1059,21 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> resource
+  // bitmarkAst -> bits -> bitsValue -> resources
 
-  protected enter_resource(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
+  protected between_resources(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> resourcesValue
+
+  protected enter_resourcesValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const resource = node.value as Resource;
 
     // This is a resource, so handle it with the common code
@@ -1446,31 +1478,40 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   // }
 
   protected generatePropertyHandlers() {
-    for (const key of PropertyKey.values()) {
-      const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(PropertyKey.fromValue(key)) ?? {};
-      const astKey = meta.astKey ? meta.astKey : key;
-      const funcName = `enter_${astKey}`;
+    const propertiesConfig = Config.getRawPropertiesConfig();
+
+    for (const propertyConfig of Object.values(propertiesConfig)) {
+      const astKey = propertyConfig.astKey ?? propertyConfig.tag;
 
       // Special cases (handled outside of the automatically generated handlers)
-      if (astKey === PropertyKey.example) continue;
-      if (astKey === PropertyKey.labelTrue) continue;
-      if (astKey === PropertyKey.labelFalse) continue;
-      if (astKey === PropertyKey.posterImage) continue;
-      if (astKey === PropertyKey.imageSource) continue;
-      if (astKey === PropertyKey.partner) continue;
+      if (astKey === PropertyTag.example) continue;
+      if (astKey === PropertyTag.labelTrue) continue;
+      if (astKey === PropertyTag.labelFalse) continue;
+      if (astKey === PropertyTag.posterImage) continue;
+      if (astKey === PropertyTag.imageSource) continue;
+      if (astKey === PropertyTag.partner) continue;
+      if (astKey === PropertyAstKey.markConfig) continue;
+
+      const funcName = `enter_${astKey}`;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
         const value = node.value as unknown[] | undefined;
         if (value == null) return;
 
-        // if (key === 'progress') debugger;
+        // if (propertyConfig.tag === 'progress') debugger;
 
         // Ignore any property that is not at the bit level as that will be handled by a different handler
         if (parent?.key !== NodeType.bitsValue) return;
 
         // Write the property
-        this.writeProperty(key, node.value, meta.isSingle, meta.ignoreFalse, meta.ignoreTrue);
+        this.writeProperty(
+          propertyConfig.tag,
+          node.value,
+          propertyConfig.single,
+          propertyConfig.defaultValue === 'false',
+          propertyConfig.defaultValue === 'true',
+        );
       };
 
       // Bind this
@@ -1657,32 +1698,19 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // // Resource is not valid, cancel walking it's tree.
       // if (!valid) return false;
 
-      // Special cases for embedded resources
-      if (resource.type === ResourceType.imageResponsive) {
-        const r = resource as ImageResponsiveResource;
-        this.writeResource(r.imagePortrait);
+      // Standard case
+      this.writeOPAMP();
+      this.writeString(resource.typeAlias ?? resource.type);
+      if (resource.type === ResourceTag.article && resourceAsArticle.value) {
+        this.writeColon();
+        // this.writeNL();
+        this.writeString(resourceAsArticle.value);
         this.writeNL();
-        this.writeResource(r.imageLandscape);
-      } else if (resource.type === ResourceType.stillImageFilm) {
-        const r = resource as StillImageFilmResource;
-        this.writeResource(r.image);
-        this.writeNL();
-        this.writeResource(r.audio);
-      } else {
-        // Standard case
-        this.writeOPAMP();
-        this.writeString(resource.typeAlias ?? resource.type);
-        if (resource.type === ResourceType.article && resourceAsArticle.value) {
-          this.writeColon();
-          // this.writeNL();
-          this.writeString(resourceAsArticle.value);
-          this.writeNL();
-        } else if (resource.value) {
-          this.writeColon();
-          this.writeString(resource.value);
-        }
-        this.writeCL();
+      } else if (resource.value) {
+        this.writeColon();
+        this.writeString(resource.value);
       }
+      this.writeCL();
     }
   }
 

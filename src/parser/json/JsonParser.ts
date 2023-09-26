@@ -1,10 +1,11 @@
 import { Builder } from '../../ast/Builder';
 import { ResourceBuilder } from '../../ast/ResourceBuilder';
+import { Config } from '../../config/Config';
 import { TextGenerator } from '../../generator/text/TextGenerator';
 import { Text } from '../../model/ast/TextNodes';
-import { BitType, BitTypeUtils, RootBitType } from '../../model/enum/BitType';
+import { BitType, RootBitType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
-import { ResourceType, ResourceTypeType } from '../../model/enum/ResourceType';
+import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { StringUtils } from '../../utils/StringUtils';
@@ -201,7 +202,7 @@ class JsonParser {
   isBit(bit: unknown): boolean {
     if (Object.prototype.hasOwnProperty.call(bit, 'type')) {
       const b = bit as BitJson;
-      return BitTypeUtils.getBitType(b.type).root !== RootBitType._error;
+      return Config.getBitType(b.type).root !== RootBitType._error;
     }
     return false;
   }
@@ -300,13 +301,16 @@ class JsonParser {
     } = bit;
 
     // Bit type
-    const bitType = BitTypeUtils.getBitType(type);
+    const bitType = Config.getBitType(type);
 
     // Text Format
     const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
 
-    // resource
-    const resourceNode = this.resourceBitToAst(resource);
+    // Resource attachement type
+    const resourceAttachmentType = this.getResourceType(resource);
+
+    // resource(s)
+    const resourcesNode = this.resourceBitToAst(resource);
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
@@ -360,6 +364,7 @@ class JsonParser {
     const bitNode = builder.bit({
       bitType,
       textFormat: format as TextFormatType,
+      resourceType: resourceAttachmentType,
       id,
       externalId,
       spaceId,
@@ -416,7 +421,7 @@ class JsonParser {
       imageSource: imageSourceNode,
       partner: partnerNode,
       markConfig: markConfigNode,
-      resource: resourceNode,
+      resources: resourcesNode,
       body: bodyNode,
       sampleSolution: sampleSolution,
       elements,
@@ -451,7 +456,7 @@ class JsonParser {
     let node: Partner | undefined;
 
     if (partner) {
-      const avatarImage = this.resourceDataToAst(ResourceType.image, partner.avatarImage) as ImageResource | undefined;
+      const avatarImage = this.resourceDataToAst(ResourceTag.image, partner.avatarImage) as ImageResource | undefined;
       node = builder.partner({ name: partner.name, avatarImage });
     }
 
@@ -663,8 +668,8 @@ class JsonParser {
           isLongAnswer,
         } = p;
 
-        const audio = this.resourceDataToAst(ResourceType.audio, keyAudio) as AudioResource;
-        const image = this.resourceDataToAst(ResourceType.image, keyImage) as ImageResource;
+        const audio = this.resourceDataToAst(ResourceTag.audio, keyAudio) as AudioResource;
+        const image = this.resourceDataToAst(ResourceTag.image, keyImage) as ImageResource;
 
         const node = builder.pair({
           key,
@@ -787,33 +792,40 @@ class JsonParser {
     return nodes;
   }
 
-  private resourceBitToAst(resource?: ResourceJson): Resource | undefined {
-    let node: Resource | undefined;
+  private getResourceType(resource?: ResourceJson): ResourceTagType | undefined {
+    if (resource) {
+      const resourceKey = ResourceTag.fromValue(resource.type);
+      return resourceKey;
+    }
+
+    return undefined;
+  }
+
+  private resourceBitToAst(resource?: ResourceJson): Resource[] | undefined {
+    const nodes: Resource[] | undefined = [];
 
     if (resource) {
-      const resourceKey = ResourceType.keyFromValue(resource.type) ?? ResourceType.unknown;
+      const resourceKey = ResourceTag.keyFromValue(resource.type) ?? ResourceTag.unknown;
       let data: ResourceDataJson | undefined;
 
+      // TODO: This code should use the config to handle the combo resources. For now the logic is hardcoded
+
       // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
-      if (resource.type === ResourceType.imageResponsive) {
+      if (resource.type === ResourceTag.imageResponsive) {
         const r = resource as unknown as ImageResponsiveResourceJson;
-        const imagePortraitNode = this.resourceDataToAst(ResourceType.imagePortrait, r.imagePortrait) as ImageResource;
+        const imagePortraitNode = this.resourceDataToAst(ResourceTag.imagePortrait, r.imagePortrait);
         const imageLandscapeNode = this.resourceDataToAst(
-          ResourceType.imageLandscape,
+          ResourceTag.imageLandscape,
           r.imageLandscape,
         ) as ImageResource;
-        node = resourceBuilder.imageResponsiveResource({
-          imagePortrait: imagePortraitNode,
-          imageLandscape: imageLandscapeNode,
-        });
-      } else if (resource.type === ResourceType.stillImageFilm) {
+        if (imagePortraitNode) nodes.push(imagePortraitNode);
+        if (imageLandscapeNode) nodes.push(imageLandscapeNode);
+      } else if (resource.type === ResourceTag.stillImageFilm) {
         const r = resource as unknown as StillImageFilmResourceJson;
-        const imageNode = this.resourceDataToAst(ResourceType.image, r.image) as ImageResource;
-        const audioNode = this.resourceDataToAst(ResourceType.audio, r.audio) as AudioResource;
-        node = resourceBuilder.stillImageFilmResource({
-          image: imageNode,
-          audio: audioNode,
-        });
+        const imageNode = this.resourceDataToAst(ResourceTag.image, r.image);
+        const audioNode = this.resourceDataToAst(ResourceTag.audio, r.audio);
+        if (imageNode) nodes.push(imageNode);
+        if (audioNode) nodes.push(audioNode);
       } else {
         // Standard single resource case
 
@@ -822,14 +834,15 @@ class JsonParser {
 
         if (!data) return undefined;
 
-        node = this.resourceDataToAst(resource.type, data);
+        const node = this.resourceDataToAst(resource.type, data);
+        if (node) nodes.push(node);
       }
     }
 
-    return node;
+    return nodes;
   }
 
-  private resourceDataToAst(type: ResourceTypeType, data?: Partial<ResourceDataJson>): Resource | undefined {
+  private resourceDataToAst(type: ResourceTagType, data?: Partial<ResourceDataJson>): Resource | undefined {
     let node: Resource | undefined;
 
     if (data) {
@@ -841,10 +854,10 @@ class JsonParser {
       const url = data.url || data.src || data.href || data.app || data.body || dataAsString;
 
       // Sub resources
-      const posterImage = this.resourceDataToAst(ResourceType.image, data.posterImage) as ImageResource;
+      const posterImage = this.resourceDataToAst(ResourceTag.image, data.posterImage) as ImageResource;
       const thumbnails = data.thumbnails
         ? data.thumbnails.map((t) => {
-            return this.resourceDataToAst(ResourceType.image, t) as ImageResource;
+            return this.resourceDataToAst(ResourceTag.image, t) as ImageResource;
           })
         : undefined;
 

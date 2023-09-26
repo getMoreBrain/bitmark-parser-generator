@@ -9,8 +9,10 @@
 
 import { EnumType, superenum } from '@ncoderz/superenum';
 
+import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType } from '../../../model/enum/BitType';
-import { ResourceTypeType } from '../../../model/enum/ResourceType';
+import { ResourceTagType } from '../../../model/enum/ResourceTag';
+import { Tag } from '../../../model/enum/Tag';
 import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
@@ -73,7 +75,7 @@ export interface SubParserResult<T> {
 export interface BitHeader {
   bitType: BitType;
   textFormat: TextFormatType;
-  resourceType?: ResourceTypeType;
+  resourceType?: ResourceTagType;
 }
 
 export interface TrueFalseValue {
@@ -199,19 +201,19 @@ const TypeKey = superenum({
   TextFormat: 'TextFormat',
   ResourceType: 'ResourceType',
 
-  // Tags
-  Title: 'Title',
-  Anchor: 'Anchor',
-  Reference: 'Reference',
-  ItemLead: 'ItemLead',
-  Instruction: 'Instruction',
-  Hint: 'Hint',
-  True: 'True',
-  False: 'False',
-  Gap: 'Gap',
-  Mark: 'Mark',
-  SampleSolution: 'SampleSolution',
-  Comment: 'Comment',
+  // Tags (NOTE: ALL TAGS MUST USE THEIR CORRECT BITMARK REPRESENTATION HERE so they work with the rest of the code)
+  Title: Tag.title,
+  Anchor: Tag.anchor,
+  Reference: Tag.reference,
+  ItemLead: Tag.itemLead,
+  Instruction: Tag.instruction,
+  Hint: Tag.hint,
+  True: Tag.true,
+  False: Tag.false,
+  Gap: Tag.gap,
+  Mark: Tag.mark,
+  SampleSolution: Tag.sampleSolution,
+  Comment: Tag.comment,
 
   // Generic Tags (converted to specific tags by the BitTagValidator)
   Property: 'Property',
@@ -316,10 +318,10 @@ export interface BitmarkPegParserContext {
 
   parse: ParseFunction;
   bitContentProcessor(
-    bitLevel: BitContentLevelType,
     bitType: BitType,
+    bitLevel: BitContentLevelType,
+    tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,
-    /*validTypes: TypeKeyType[],*/
   ): BitContentProcessorResult;
   splitBitContent(bitContent: BitContent[], types: TypeKeyType[]): BitContent[][];
   addWarning(message: string, parserData?: ParserData, parserDataOriginal?: ParserData): void;

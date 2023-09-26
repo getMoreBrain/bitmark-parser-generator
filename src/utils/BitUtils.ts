@@ -1,44 +1,9 @@
 import { WithExample } from '../ast/BaseBuilder';
-import { Example, Resource } from '../model/ast/Nodes';
-import { BitType, RootBitType, RootBitTypeMetadata } from '../model/enum/BitType';
-import { ResourceType, ResourceTypeType } from '../model/enum/ResourceType';
+import { Example } from '../model/ast/Nodes';
 
 import { BooleanUtils } from './BooleanUtils';
 
 class BitUtils {
-  /**
-   * Calculate the valid bit resource type based on the bit type, resource type, and resource.
-   *
-   * @param bitType if set, and no resourceType or resource is set, it will be used to calculate the valid resource
-   * @param resourceType if set, it will be used as the valid resource type
-   * @param resource if set, and resource type is not set, the resource type will be extracted from the resource
-   * @returns the resource type or undefined if none set
-   */
-  calculateValidResourceType(
-    bitType: BitType,
-    resourceType: string | undefined,
-    resource: Resource | undefined,
-  ): ResourceTypeType | undefined {
-    let ret: ResourceTypeType | undefined;
-
-    if (resourceType) {
-      ret = ResourceType.fromValue(resourceType);
-    }
-    if (!ret && resource) {
-      ret = resource.type;
-    }
-
-    if (!ret) {
-      const meta = RootBitType.getMetadata<RootBitTypeMetadata>(bitType.root);
-
-      if (meta) {
-        ret = meta.resourceType;
-      }
-    }
-
-    return ret;
-  }
-
   /**
    * Helper function to fill in the example / isExample of a node based on the values of isDefaultExample and example.
    * This function if for 'string' examples.

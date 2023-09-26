@@ -1,5 +1,9 @@
+import { Config } from '../../../../config/Config';
+import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
+import { TagsConfig } from '../../../../model/config/TagsConfig';
+import { ConfigKey } from '../../../../model/config/enum/ConfigKey';
 import { BitType } from '../../../../model/enum/BitType';
-import { PropertyKey, PropertyKeyMetadata } from '../../../../model/enum/PropertyKey';
+import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -21,66 +25,92 @@ import {
 
 function propertyContentProcessor(
   context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
   bitType: BitType,
+  bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
-  const { key, value } = content as TypeKeyValue;
+  const { key: tag, value } = content as TypeKeyValue;
   const isChain = bitLevel === BitContentLevel.Chain;
+
+  // Get the property config for the tag (if it exists)
+  const propertyConfig = Config.getTagConfigForTag(tagsConfig, tag);
+  const configKey = propertyConfig ? propertyConfig.configKey : undefined;
 
   // Check for chains
   // Generally, the chain will only be present in the correct bit as the data was already validated. The bit type
   // should also be checked here if the property may occur in another bit with a different meaning.
-  if (key === PropertyKey.example) {
-    exampleTagContentProcessor(context, bitLevel, bitType, content, target);
-    return;
-  } else if (key === PropertyKey.partner) {
-    partnerChainContentProcessor(context, bitLevel, bitType, content, target);
-    return;
-  } else if (key === PropertyKey.imageSource) {
-    imageSourceChainContentProcessor(context, bitLevel, bitType, content, target);
-    return;
-  } else if (key === PropertyKey.book) {
-    bookChainContentProcessor(context, bitLevel, bitType, content, target);
-    return;
-  } else if (key === PropertyKey.mark && !isChain) {
-    markConfigChainContentProcessor(context, bitLevel, bitType, content, target);
-    return;
+  if (propertyConfig) {
+    if (configKey === ConfigKey._property_example) {
+      exampleTagContentProcessor(context, bitType, bitLevel, content, target);
+      return;
+    } else if (configKey === ConfigKey._property_partner) {
+      partnerChainContentProcessor(context, bitType, bitLevel, propertyConfig.chain, content, target);
+      return;
+    } else if (configKey === ConfigKey._property_imageSource) {
+      imageSourceChainContentProcessor(context, bitType, bitLevel, tagsConfig, content, target);
+      return;
+    } else if (configKey === ConfigKey._property_book) {
+      bookChainContentProcessor(context, bitType, bitLevel, propertyConfig.chain, content, target);
+      return;
+    } else if (configKey === ConfigKey._property_markConfig && !isChain) {
+      markConfigChainContentProcessor(context, bitType, bitLevel, tagsConfig, content, target);
+      return;
+    }
   }
 
   // Helper for building the properties
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const addProperty = (obj: any, key: string, v: unknown) => {
-    const meta = PropertyKey.getMetadata<PropertyKeyMetadata>(PropertyKey.fromValue(key)) ?? {};
-
+  const addProperty = (obj: any, tag: string, v: unknown, c: PropertyTagConfig | undefined) => {
     // if (key === 'progress') debugger;
 
-    // Convert property and key as needed
-    if (meta.astKey) key = meta.astKey;
-    if (meta.isTrimmedString) v = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
-    if (meta.isNumber) v = NumberUtils.asNumber(v);
-    if (meta.isBoolean) v = BooleanUtils.toBoolean(v, true);
-    if (meta.isInvertedBoolean) v = !BooleanUtils.toBoolean(v, true);
+    // Convert property as needed
+    const processValue = (v: unknown) => {
+      if (v == null) return undefined;
+      if (c) {
+        switch (c.format) {
+          case PropertyFormat.string:
+            return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
 
-    if (meta.isSingle) {
-      obj[key] = v;
+          case PropertyFormat.trimmedString:
+            return StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
+
+          case PropertyFormat.number:
+            return NumberUtils.asNumber(v);
+
+          case PropertyFormat.boolean:
+            return BooleanUtils.toBoolean(v, true);
+
+          case PropertyFormat.invertedBoolean:
+            return !BooleanUtils.toBoolean(v, true);
+        }
+      }
+      return v;
+    };
+
+    // Convert property and key as needed
+    v = processValue(v);
+    if (c?.astKey) tag = c.astKey;
+
+    if (c?.single) {
+      obj[tag] = v;
     } else {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        const originalValue = obj[key];
-        obj[key] = [...originalValue, v];
+      if (Object.prototype.hasOwnProperty.call(obj, tag)) {
+        const originalValue = obj[tag];
+        obj[tag] = [...originalValue, v];
       } else {
-        obj[key] = [v];
+        obj[tag] = [v];
       }
     }
   };
 
-  if (PropertyKey.fromValue(key)) {
-    // Known property
-    addProperty(target, key, value);
+  if (propertyConfig) {
+    // Known property in correct position
+    addProperty(target, tag, value, propertyConfig);
   } else {
     // Unknown (extra) property
-    addProperty(target.extraProperties, key, value);
+    addProperty(target.extraProperties, tag, value, propertyConfig);
   }
 }
 

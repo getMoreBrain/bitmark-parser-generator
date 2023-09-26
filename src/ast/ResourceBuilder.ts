@@ -1,4 +1,4 @@
-import { ResourceTypeType, ResourceType } from '../model/enum/ResourceType';
+import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { UrlUtils } from '../utils/UrlUtils';
 
@@ -13,7 +13,6 @@ import {
   AudioLinkResource,
   VideoResource,
   VideoLinkResource,
-  StillImageFilmResource,
   StillImageFilmLinkResource,
   ArticleResource,
   DocumentResource,
@@ -25,7 +24,6 @@ import {
   AudioEmbedResource,
   VideoEmbedResource,
   StillImageFilmEmbedResource,
-  ImageResponsiveResource,
 } from '../model/ast/Nodes';
 
 /**
@@ -40,7 +38,7 @@ class ResourceBuilder extends BaseBuilder {
    */
   resource(
     data: {
-      type: ResourceTypeType;
+      type: ResourceTagType;
 
       // Generic part (value of bit tag)
       value?: string; // url / src / href / app / body
@@ -71,62 +69,62 @@ class ResourceBuilder extends BaseBuilder {
       // WebsiteLinkResource
       siteName?: string;
 
-      // ImageResponsiveResource
-      imagePortrait?: {
-        format: string;
-        value: string; //src
-        src1x?: string;
-        src2x?: string;
-        src3x?: string;
-        src4x?: string;
-        width?: number;
-        height?: number;
-        alt?: string;
-        license?: string;
-        copyright?: string;
-        showInIndex?: boolean;
-        caption?: string;
-      };
-      imageLandscape?: {
-        format: string;
-        value: string; //src
-        src1x?: string;
-        src2x?: string;
-        src3x?: string;
-        src4x?: string;
-        width?: number;
-        height?: number;
-        alt?: string;
-        license?: string;
-        copyright?: string;
-        showInIndex?: boolean;
-        caption?: string;
-      };
+      // // ImageResponsiveResource
+      // imagePortrait?: {
+      //   format: string;
+      //   value: string; //src
+      //   src1x?: string;
+      //   src2x?: string;
+      //   src3x?: string;
+      //   src4x?: string;
+      //   width?: number;
+      //   height?: number;
+      //   alt?: string;
+      //   license?: string;
+      //   copyright?: string;
+      //   showInIndex?: boolean;
+      //   caption?: string;
+      // };
+      // imageLandscape?: {
+      //   format: string;
+      //   value: string; //src
+      //   src1x?: string;
+      //   src2x?: string;
+      //   src3x?: string;
+      //   src4x?: string;
+      //   width?: number;
+      //   height?: number;
+      //   alt?: string;
+      //   license?: string;
+      //   copyright?: string;
+      //   showInIndex?: boolean;
+      //   caption?: string;
+      // };
 
-      // StillImageFilmLikeResource
-      image?: {
-        format: string;
-        value: string; //src
-        src1x?: string;
-        src2x?: string;
-        src3x?: string;
-        src4x?: string;
-        width?: number;
-        height?: number;
-        alt?: string;
-        license?: string;
-        copyright?: string;
-        showInIndex?: boolean;
-        caption?: string;
-      };
-      audio?: {
-        format: string;
-        value: string; // src
-        license?: string;
-        copyright?: string;
-        showInIndex?: boolean;
-        caption?: string;
-      };
+      // // StillImageFilmLikeResource
+      // image?: {
+      //   format: string;
+      //   value: string; //src
+      //   src1x?: string;
+      //   src2x?: string;
+      //   src3x?: string;
+      //   src4x?: string;
+      //   width?: number;
+      //   height?: number;
+      //   alt?: string;
+      //   license?: string;
+      //   copyright?: string;
+      //   showInIndex?: boolean;
+      //   caption?: string;
+      // };
+      // audio?: {
+      //   format: string;
+      //   value: string; // src
+      //   license?: string;
+      //   copyright?: string;
+      //   showInIndex?: boolean;
+      //   caption?: string;
+      // };
 
       // Generic Resource
       license?: string;
@@ -148,11 +146,11 @@ class ResourceBuilder extends BaseBuilder {
 
     // Special case for video like tags - build thumbnails from the srcXx properties
     switch (type) {
-      case ResourceType.video:
-      case ResourceType.videoEmbed:
-      case ResourceType.videoLink:
-      case ResourceType.stillImageFilmEmbed:
-      case ResourceType.stillImageFilmLink: {
+      case ResourceTag.video:
+      case ResourceTag.videoEmbed:
+      case ResourceTag.videoLink:
+      case ResourceTag.stillImageFilmEmbed:
+      case ResourceTag.stillImageFilmLink: {
         const thumbnailKeys = ['src1x', 'src2x', 'src3x', 'src4x'];
         const thumbnails: ImageResource[] = [];
         for (const k of thumbnailKeys) {
@@ -161,7 +159,7 @@ class ResourceBuilder extends BaseBuilder {
           const value = dataAsAny[k];
           if (value) {
             const image = this.resource({
-              type: ResourceType.image,
+              type: ResourceTag.image,
               value,
             });
             if (image) thumbnails.push(image as ImageResource);
@@ -173,109 +171,109 @@ class ResourceBuilder extends BaseBuilder {
     }
 
     switch (type) {
-      case ResourceType.image:
-      case ResourceType.imagePortrait:
-      case ResourceType.imageLandscape:
+      case ResourceTag.image:
+      case ResourceTag.imagePortrait:
+      case ResourceTag.imageLandscape:
         node = this.imageResource(finalData, type);
         break;
 
-      case ResourceType.imageResponsive: {
-        node = this.imageResponsiveResource({
-          imagePortrait: this.imageResource(
-            finalData.imagePortrait ?? {
-              format: '',
-              value: '',
-            },
-          ),
-          imageLandscape: this.imageResource(
-            finalData.imageLandscape ?? {
-              format: '',
-              value: '',
-            },
-          ),
-        });
-        break;
-      }
+      // case ResourceTag.imageResponsive: {
+      //   node = this.imageResponsiveResource({
+      //     imagePortrait: this.imageResource(
+      //       finalData.imagePortrait ?? {
+      //         format: '',
+      //         value: '',
+      //       },
+      //     ),
+      //     imageLandscape: this.imageResource(
+      //       finalData.imageLandscape ?? {
+      //         format: '',
+      //         value: '',
+      //       },
+      //     ),
+      //   });
+      //   break;
+      // }
 
-      case ResourceType.imageLink:
+      case ResourceTag.imageLink:
         node = this.imageLinkResource(finalData);
         break;
 
-      case ResourceType.audio:
+      case ResourceTag.audio:
         node = this.audioResource(finalData);
         break;
 
-      case ResourceType.audioEmbed:
+      case ResourceTag.audioEmbed:
         node = this.audioEmbedResource(finalData);
         break;
 
-      case ResourceType.audioLink:
+      case ResourceTag.audioLink:
         node = this.audioLinkResource(finalData);
         break;
 
-      case ResourceType.video:
+      case ResourceTag.video:
         node = this.videoResource(finalData);
         break;
 
-      case ResourceType.videoEmbed:
+      case ResourceTag.videoEmbed:
         node = this.videoEmbedResource(finalData);
         break;
 
-      case ResourceType.videoLink:
+      case ResourceTag.videoLink:
         node = this.videoLinkResource(finalData);
         break;
 
-      case ResourceType.stillImageFilm: {
-        node = this.stillImageFilmResource({
-          image: this.imageResource(
-            finalData.image ?? {
-              format: '',
-              value: '',
-            },
-          ),
-          audio: this.audioResource(
-            finalData.audio ?? {
-              format: '',
-              value: '',
-            },
-          ),
-        });
-        break;
-      }
+      // case ResourceTag.stillImageFilm: {
+      //   node = this.stillImageFilmResource({
+      //     image: this.imageResource(
+      //       finalData.image ?? {
+      //         format: '',
+      //         value: '',
+      //       },
+      //     ),
+      //     audio: this.audioResource(
+      //       finalData.audio ?? {
+      //         format: '',
+      //         value: '',
+      //       },
+      //     ),
+      //   });
+      //   break;
+      // }
 
-      case ResourceType.stillImageFilmEmbed:
+      case ResourceTag.stillImageFilmEmbed:
         node = this.stillImageFilmEmbedResource(finalData);
         break;
 
-      case ResourceType.stillImageFilmLink:
+      case ResourceTag.stillImageFilmLink:
         node = this.stillImageFilmLinkResource(finalData);
         break;
 
-      case ResourceType.article:
+      case ResourceTag.article:
         node = this.articleResource(finalData);
         break;
 
-      case ResourceType.document:
+      case ResourceTag.document:
         node = this.documentResource(finalData);
         break;
 
-      case ResourceType.documentEmbed:
+      case ResourceTag.documentEmbed:
         node = this.documentEmbedResource(finalData);
         break;
 
-      case ResourceType.documentLink:
+      case ResourceTag.documentLink:
         node = this.documentLinkResource(finalData);
         break;
 
-      case ResourceType.documentDownload:
+      case ResourceTag.documentDownload:
         node = this.documentDownloadResource(finalData);
         break;
 
-      case ResourceType.appLink:
+      case ResourceTag.appLink:
         node = this.appLinkResource(finalData);
         break;
 
-      case ResourceType.websiteLink:
+      case ResourceTag.websiteLink:
         node = this.websiteLinkResource(finalData);
         break;
 
@@ -307,14 +305,14 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: string;
     },
-    typeAlias?: ResourceTypeType,
+    typeAlias?: ResourceTagType,
   ): ImageResource {
     const { value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ImageResource = {
-      type: ResourceType.image,
-      typeAlias: typeAlias ?? ResourceType.image,
+      type: ResourceTag.image,
+      typeAlias: typeAlias ?? ResourceTag.image,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -336,33 +334,6 @@ class ResourceBuilder extends BaseBuilder {
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node) as ImageResource;
-  }
-
-  /**
-   * Build imageResponsiveResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  imageResponsiveResource(data: {
-    imagePortrait?: ImageResource;
-    imageLandscape?: ImageResource;
-  }): ImageResponsiveResource {
-    const { imagePortrait, imageLandscape } = data;
-
-    // NOTE: Node order is important and is defined here
-    const node: ImageResponsiveResource = {
-      type: ResourceType.imageResponsive,
-      typeAlias: ResourceType.imageResponsive,
-      imagePortrait: imagePortrait ?? this.imageResource({ format: '', value: '' }),
-      imageLandscape: imageLandscape ?? this.imageResource({ format: '', value: '' }),
-    };
-
-    // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
-
-    // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as ImageResponsiveResource;
   }
 
   /**
@@ -390,8 +361,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: ImageLinkResource = {
-      type: ResourceType.imageLink,
-      typeAlias: ResourceType.imageLink,
+      type: ResourceTag.imageLink,
+      typeAlias: ResourceTag.imageLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -436,8 +407,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: AudioResource = {
-      type: ResourceType.audio,
-      typeAlias: ResourceType.audio,
+      type: ResourceTag.audio,
+      typeAlias: ResourceTag.audio,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -478,8 +449,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResource = {
-      type: ResourceType.audioEmbed,
-      typeAlias: ResourceType.audioEmbed,
+      type: ResourceTag.audioEmbed,
+      typeAlias: ResourceTag.audioEmbed,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -520,8 +491,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResource = {
-      type: ResourceType.audioLink,
-      typeAlias: ResourceType.audioLink,
+      type: ResourceTag.audioLink,
+      typeAlias: ResourceTag.audioLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -585,8 +556,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: VideoResource = {
-      type: ResourceType.video,
-      typeAlias: ResourceType.video,
+      type: ResourceTag.video,
+      typeAlias: ResourceTag.video,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -657,8 +628,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: VideoEmbedResource = {
-      type: ResourceType.videoEmbed,
-      typeAlias: ResourceType.videoEmbed,
+      type: ResourceTag.videoEmbed,
+      typeAlias: ResourceTag.videoEmbed,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -729,8 +700,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: VideoLinkResource = {
-      type: ResourceType.videoLink,
-      typeAlias: ResourceType.videoLink,
+      type: ResourceTag.videoLink,
+      typeAlias: ResourceTag.videoLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -757,29 +728,29 @@ class ResourceBuilder extends BaseBuilder {
     return NodeValidator.validateResource(node) as VideoLinkResource;
   }
 
-  /**
-   * Build stillImageFilmResource node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  stillImageFilmResource(data: { image?: ImageResource; audio?: AudioResource }): StillImageFilmResource {
-    const { image, audio } = data;
+  // /**
+  //  * Build stillImageFilmResource node
+  //  *
+  //  * @param data - data for the node
+  //  * @returns
+  //  */
+  // stillImageFilmResource(data: { image?: ImageResource; audio?: AudioResource }): StillImageFilmResource {
+  //   const { image, audio } = data;
 
-    // NOTE: Node order is important and is defined here
-    const node: StillImageFilmResource = {
-      type: ResourceType.stillImageFilm,
-      typeAlias: ResourceType.stillImageFilm,
-      image: image ?? this.imageResource({ format: '', value: '' }),
-      audio: audio ?? this.audioResource({ format: '', value: '' }),
-    };
+  //   // NOTE: Node order is important and is defined here
+  //   const node: StillImageFilmResource = {
+  //     type: ResourceTag.stillImageFilm,
+  //     typeAlias: ResourceTag.stillImageFilm,
+  //     image: image ?? this.imageResource({ format: '', value: '' }),
+  //     audio: audio ?? this.audioResource({ format: '', value: '' }),
+  //   };
 
-    // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+  //   // Remove Unset Optionals
+  //   ObjectUtils.removeUnwantedProperties(node);
 
-    // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as StillImageFilmResource;
-  }
+  //   // Validate and correct invalid bits as much as possible
+  //   return NodeValidator.validateResource(node) as StillImageFilmResource;
+  // }
 
   /**
    * Build stillImageFilmEmbedResource node
@@ -825,8 +796,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmEmbedResource = {
-      type: ResourceType.stillImageFilmEmbed,
-      typeAlias: ResourceType.stillImageFilmEmbed,
+      type: ResourceTag.stillImageFilmEmbed,
+      typeAlias: ResourceTag.stillImageFilmEmbed,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -897,8 +868,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmLinkResource = {
-      type: ResourceType.stillImageFilmLink,
-      typeAlias: ResourceType.stillImageFilmLink,
+      type: ResourceTag.stillImageFilmLink,
+      typeAlias: ResourceTag.stillImageFilmLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -943,8 +914,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: ArticleResource = {
-      type: ResourceType.article,
-      typeAlias: ResourceType.article,
+      type: ResourceTag.article,
+      typeAlias: ResourceTag.article,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -979,8 +950,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DocumentResource = {
-      type: ResourceType.document,
-      typeAlias: ResourceType.document,
+      type: ResourceTag.document,
+      typeAlias: ResourceTag.document,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -1015,8 +986,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DocumentEmbedResource = {
-      type: ResourceType.documentEmbed,
-      typeAlias: ResourceType.documentEmbed,
+      type: ResourceTag.documentEmbed,
+      typeAlias: ResourceTag.documentEmbed,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -1051,8 +1022,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DocumentLinkResource = {
-      type: ResourceType.documentLink,
-      typeAlias: ResourceType.documentLink,
+      type: ResourceTag.documentLink,
+      typeAlias: ResourceTag.documentLink,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -1087,8 +1058,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DocumentDownloadResource = {
-      type: ResourceType.documentDownload,
-      typeAlias: ResourceType.documentDownload,
+      type: ResourceTag.documentDownload,
+      typeAlias: ResourceTag.documentDownload,
       format: UrlUtils.fileExtensionFromUrl(value),
       provider: UrlUtils.domainFromUrl(value),
       value,
@@ -1122,8 +1093,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: AppLinkResource = {
-      type: ResourceType.appLink,
-      typeAlias: ResourceType.appLink,
+      type: ResourceTag.appLink,
+      typeAlias: ResourceTag.appLink,
       value,
       license,
       copyright,
@@ -1156,8 +1127,8 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResource = {
-      type: ResourceType.websiteLink,
-      typeAlias: ResourceType.websiteLink,
+      type: ResourceTag.websiteLink,
+      typeAlias: ResourceTag.websiteLink,
       value,
       siteName,
       license,
