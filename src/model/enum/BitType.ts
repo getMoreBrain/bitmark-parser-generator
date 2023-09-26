@@ -251,6 +251,7 @@ const AliasBitType = superenum({
   noteAi: 'note-ai',
   notebookArticle: 'notebook-article',
   page: 'page',
+  pageBanner: 'page-banner',
   preparationNote: 'preparation-note',
   question1: 'question-1',
   recordAudio: 'record-audio',
