@@ -129,7 +129,7 @@ class Builder extends BaseBuilder {
     labelTrue?: string | string[];
     labelFalse?: string | string[];
     quotedPerson?: string | string[];
-    partialAnswer?: string | string[];
+    reasonableNumOfChars?: number | number[];
     levelProperty?: string | string[];
     book?: string;
     title?: string;
@@ -157,6 +157,7 @@ class Builder extends BaseBuilder {
     resources?: Resource | Resource[];
     body?: Body;
     sampleSolution?: string | string[];
+    partialAnswer?: string | string[];
     elements?: string[];
     flashcards?: Flashcard[];
     statement?: Statement;
@@ -223,6 +224,7 @@ class Builder extends BaseBuilder {
       book,
       quotedPerson,
       partialAnswer,
+      reasonableNumOfChars,
       levelProperty,
       title,
       subtitle,
@@ -307,6 +309,7 @@ class Builder extends BaseBuilder {
       labelFalse: this.toAstProperty(PropertyConfigKey.labelFalse, labelFalse),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
+      reasonableNumOfChars: this.toAstProperty(PropertyConfigKey.reasonableNumOfChars, reasonableNumOfChars),
       levelProperty: this.toAstProperty(PropertyConfigKey.level, levelProperty),
       title,
       subtitle,
@@ -687,6 +690,7 @@ class Builder extends BaseBuilder {
     instruction?: string;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
+    reasonableNumOfChars?: number;
     isDefaultExample?: boolean;
     example?: Example;
   }): Question {
@@ -699,6 +703,7 @@ class Builder extends BaseBuilder {
       instruction,
       isCaseSensitive,
       isShortAnswer,
+      reasonableNumOfChars,
       sampleSolution,
       isDefaultExample,
       example,
@@ -714,6 +719,7 @@ class Builder extends BaseBuilder {
       ...this.toExample(isDefaultExample, example),
       isCaseSensitive,
       isShortAnswer,
+      reasonableNumOfChars,
       sampleSolution,
     };
 

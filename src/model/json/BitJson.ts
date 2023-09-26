@@ -50,6 +50,7 @@ export interface BitJson {
   labelTrue: string;
   labelFalse: string;
   quotedPerson: string;
+  reasonableNumOfChars: number;
 
   book: string;
 
@@ -229,6 +230,7 @@ export interface QuestionJson {
   instruction: Text;
   isCaseSensitive: boolean;
   isShortAnswer: boolean;
+  reasonableNumOfChars: number;
   isExample: boolean;
   example: ExampleJson;
 }

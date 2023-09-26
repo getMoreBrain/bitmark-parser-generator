@@ -482,6 +482,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.reasonableNumOfChars,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.property_sampleSolution,
       },
     ],

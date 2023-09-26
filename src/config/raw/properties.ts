@@ -297,6 +297,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.reasonableNumOfChars]: {
+    tag: PropertyTag.reasonableNumOfChars,
+    single: true,
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.imageSource]: {
     tag: PropertyTag.imageSource,
     single: true,
