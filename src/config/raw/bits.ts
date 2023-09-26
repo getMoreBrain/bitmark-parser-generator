@@ -673,6 +673,7 @@ const BITS: _BitsConfig = {
       [AliasBitType.imageZoom]: { since: '1.3.0' },
       [AliasBitType.langLifeSkillIcon]: { since: '1.3.0' },
       [AliasBitType.lifeSkillSticker]: { since: '1.3.0' },
+      [AliasBitType.pageBanner]: { since: '1.4.3' },
       [AliasBitType.screenshot]: { since: '1.3.0', deprecated: '1.4.0' },
     },
   },
