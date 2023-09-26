@@ -10,13 +10,23 @@ class StringUtils {
   }
 
   /**
+   * Pass any value and convert it to a string.
+   *
+   * @param str the value to convert to a string
+   * @returns the string or an empty string if the value is undefined
+   */
+  string(str: unknown | undefined): string {
+    return str ? `${str}` : '';
+  }
+
+  /**
    * Pass any value and convert it to a trimmed string.
    *
    * @param str the value to convert to a trimmed string
    * @returns the trimmed string or an empty string if the value is undefined
    */
   trimmedString(str: unknown | undefined): string {
-    return str ? `${str}`.trim() : '';
+    return this.string(str).trim();
   }
 
   /**

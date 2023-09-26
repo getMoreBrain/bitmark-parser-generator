@@ -32,9 +32,48 @@ import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { BitmarkVersionType } from './model/enum/BitmarkVersion';
+import { InfoBuilder, SupportedBit } from './info/InfoBuilder';
+import { InfoType, InfoTypeType } from './model/info/enum/InfoType';
+import { InfoFormat, InfoFormatType } from './model/info/enum/InfoFormat';
+import { Config } from './config/Config';
 
 /* STRIP:END */
 STRIP;
+
+/**
+ * Info options for the parser
+ */
+export interface InfoOptions {
+  /**
+   * Specify the type of information to return, overriding the default (list)
+   * - list: list of supported bits
+   * - deprecated: list of deprecated bits
+   * - all: list of supported bits and deprecated bits
+   * - bit: configuration for a specific bit, or all bits
+   */
+  type?: InfoTypeType;
+
+  /**
+   * Specify the bit type to return, overriding the default (all)
+   */
+  bit?: string;
+
+  /**
+   * Specify the output format, overriding the default (text)
+   */
+  outputFormat?: InfoFormatType;
+
+  /**
+   * Prettify the JSON.
+   *
+   * If not set or false, JSON will not be prettified.
+   * If true, JSON will be prettified with an indent of 2.
+   * If a positive integer, JSON will be prettified with an indent of this number.
+   *
+   * If prettify is set, a string will be returned if possible.
+   */
+  prettify?: boolean | number;
+}
 
 /**
  * Conversion options for bitmark / JSON conversion
@@ -155,8 +194,69 @@ class BitmarkParserGenerator {
   /**
    * Get the version of the bitmark-parser-generator library
    */
-  version(): string {
+  public version(): string {
     return env.appVersion.full;
+  }
+
+  /**
+   * Get information about the bitmark-parser-generator library
+   */
+  public info(options?: InfoOptions): unknown {
+    const opts: InfoOptions = Object.assign({}, options);
+    const builder = new InfoBuilder();
+    let res: unknown;
+    const outputString = !opts.outputFormat || opts.outputFormat === InfoFormat.text;
+    const outputJson = opts.outputFormat === InfoFormat.json;
+    const all = opts.type === InfoType.all;
+    const deprecated = opts.type === InfoType.deprecated;
+    const includeNonDeprecated = all || !deprecated;
+    const includeDeprecated = all || deprecated;
+
+    if (opts.type === InfoType.bit) {
+      const bitConfigs = builder.getSupportedBitConfigs().filter((b) => {
+        if (!opts.bit) return true;
+        const bitType = Config.getBitType(opts.bit);
+        return bitType.root === b.rootBitType; // TODO
+      });
+      if (outputString) {
+        res = bitConfigs
+          .map((b) =>
+            b.toString({
+              includeChains: true,
+              includeConfigs: true,
+            }),
+          )
+          .join('\n\n--------------\n\n');
+      } else {
+        res = bitConfigs;
+      }
+    } else {
+      // List / List Deprecated
+      const supportedBits = builder
+        .getSupportedBits({
+          includeNonDeprecated,
+          includeDeprecated,
+        })
+        .filter((b) => {
+          if (!opts.bit) return true;
+          const bitType = Config.getBitType(opts.bit);
+          if (b.name === bitType.root) return true;
+          const a = b.aliases?.find((a) => a.name === bitType.alias);
+          return !!a;
+        });
+      if (outputString) {
+        res = this.supportedBitsAsString(supportedBits);
+      } else {
+        res = supportedBits;
+      }
+    }
+
+    if (outputJson) {
+      const prettifySpace = opts.prettify === true ? 2 : opts.prettify || undefined;
+      res = JSON.stringify(res, null, prettifySpace);
+    }
+
+    return res;
   }
 
   /**
@@ -185,7 +285,10 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  async convert(input: string | fs.PathLike | unknown, options?: ConvertOptions): Promise<string | unknown | void> {
+  public async convert(
+    input: string | fs.PathLike | unknown,
+    options?: ConvertOptions,
+  ): Promise<string | unknown | void> {
     let res: string | unknown | void;
     const opts: ConvertOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -393,7 +496,10 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  async upgrade(input: string | fs.PathLike | unknown, options?: UpgradeOptions): Promise<string | unknown | void> {
+  public async upgrade(
+    input: string | fs.PathLike | unknown,
+    options?: UpgradeOptions,
+  ): Promise<string | unknown | void> {
     let res: string | unknown | void;
     const opts: UpgradeOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -483,7 +589,7 @@ class BitmarkParserGenerator {
    * @returns bitmark AST
    * @throws Error if any error occurs
    */
-  createAst(input: unknown): BitmarkAst {
+  public createAst(input: unknown): BitmarkAst {
     let res: BitmarkAst;
     let inStr: string = input as string;
 
@@ -535,6 +641,31 @@ class BitmarkParserGenerator {
     }
     return json;
   };
+
+  /**
+   * Get the supported bits as a formatted strings
+   *
+   * @param supportedBits
+   * @returns
+   */
+  private supportedBitsAsString(supportedBits: SupportedBit[]): string {
+    let res = '';
+
+    for (const rootBit of supportedBits) {
+      res += `${rootBit.name} (since: ${rootBit.since}`;
+      if (rootBit.deprecated) res += `, deprecated: ${rootBit.deprecated}`;
+      res += ')\n';
+      if (rootBit.aliases && rootBit.aliases.length > 0) {
+        for (const aliasBit of rootBit.aliases) {
+          res += `|__ ${aliasBit.name} (since: ${aliasBit.since}`;
+          if (aliasBit.deprecated) res += `, deprecated: ${aliasBit.deprecated}`;
+          res += ')\n';
+        }
+      }
+    }
+
+    return res;
+  }
 }
 
 export { BitmarkParserGenerator, Output };

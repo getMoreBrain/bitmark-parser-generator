@@ -1,3 +1,4 @@
+import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -11,8 +12,9 @@ import {
 
 function referenceTagContentProcessor(
   _context: BitmarkPegParserContext,
-  _bitLevel: BitContentLevelType,
   _bitType: BitType,
+  _bitLevel: BitContentLevelType,
+  _tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   isReferenceEnd: boolean,

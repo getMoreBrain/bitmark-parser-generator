@@ -1,5 +1,7 @@
 import { Builder } from '../../../../ast/Builder';
+import { Config } from '../../../../config/Config';
 import { BodyPart, Mark } from '../../../../model/ast/Nodes';
+import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 import { ArrayUtils } from '../../../../utils/ArrayUtils';
 
@@ -17,8 +19,9 @@ const builder = new Builder();
 
 function markChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitLevel: BitContentLevelType,
   bitType: BitType,
+  bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
@@ -26,21 +29,29 @@ function markChainContentProcessor(
   if (bitLevel === BitContentLevel.Chain) {
     markTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
   } else {
-    const mark = buildMark(context, bitType, content);
+    const mark = buildMark(context, bitType, bitLevel, tagsConfig, content);
     if (mark) bodyParts.push(mark);
   }
 }
 
-function buildMark(context: BitmarkPegParserContext, bitType: BitType, content: BitContent): Mark | undefined {
+function buildMark(
+  context: BitmarkPegParserContext,
+  bitType: BitType,
+  _bitLevel: BitContentLevelType,
+  tagsConfig: TagsConfig | undefined,
+  content: BitContent,
+): Mark | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('mark content', content);
 
-  const chainContent = [content, ...(content.chain ?? [])];
+  const markConfig = Config.getTagConfigForTag(tagsConfig, content.type);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, chainContent);
+  const tags = context.bitContentProcessor(bitType, BitContentLevel.Chain, tagsConfig, [content]);
+  const chainTags = context.bitContentProcessor(bitType, BitContentLevel.Chain, markConfig?.chain, content.chain);
 
-  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('mark TAGS', tags);
+  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('mark TAGS', chainTags);
 
-  const { solution, mark: markType, ...rest } = tags;
+  const { solution } = tags;
+  const { mark: markType, ...rest } = chainTags;
 
   const mark = builder.mark({
     solution: solution ?? '',

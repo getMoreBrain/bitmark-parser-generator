@@ -1,7 +1,7 @@
+import { ConfigKey } from '../model/config/enum/ConfigKey';
 import { AliasBitType, BitType } from '../model/enum/BitType';
 import { BodyBitType } from '../model/enum/BodyBitType';
-import { PropertyKey } from '../model/enum/PropertyKey';
-import { ResourceTypeType } from '../model/enum/ResourceType';
+import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
@@ -85,7 +85,7 @@ class Builder extends BaseBuilder {
   bit(data: {
     bitType: BitType;
     textFormat?: TextFormatType;
-    resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
+    resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
     id?: string | string[];
     externalId?: string | string[];
     spaceId?: string | string[];
@@ -154,7 +154,7 @@ class Builder extends BaseBuilder {
       [key: string]: unknown | unknown[];
     };
     markConfig?: MarkConfig[];
-    resource?: Resource;
+    resources?: Resource | Resource[];
     body?: Body;
     sampleSolution?: string | string[];
     elements?: string[];
@@ -242,7 +242,7 @@ class Builder extends BaseBuilder {
       partner,
       markConfig,
       extraProperties,
-      resource,
+      resources: _resources,
       body,
       sampleSolution,
       footer,
@@ -251,6 +251,9 @@ class Builder extends BaseBuilder {
       parser,
     } = data;
 
+    // Convert resources into an array
+    const resources = ArrayUtils.asArray(_resources);
+
     // Set the card node data
     const cardNode = this.cardNode(data);
 
@@ -258,58 +261,58 @@ class Builder extends BaseBuilder {
     const node: Bit = {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
-      resourceType: BitUtils.calculateValidResourceType(bitType, resourceType, resource),
-      id: this.toAstProperty(PropertyKey.id, id),
-      externalId: this.toAstProperty(PropertyKey.externalId, externalId),
-      spaceId: this.toAstProperty(PropertyKey.spaceId, spaceId),
-      padletId: this.toAstProperty(PropertyKey.padletId, padletId),
-      aiGenerated: this.toAstProperty(PropertyKey.aiGenerated, aiGenerated),
-      releaseVersion: this.toAstProperty(PropertyKey.releaseVersion, releaseVersion),
+      resourceType: ResourceTag.fromValue(resourceType),
+      id: this.toAstProperty(ConfigKey._property_id, id),
+      externalId: this.toAstProperty(ConfigKey._property_externalId, externalId),
+      spaceId: this.toAstProperty(ConfigKey._property_spaceId, spaceId),
+      padletId: this.toAstProperty(ConfigKey._property_padletId, padletId),
+      aiGenerated: this.toAstProperty(ConfigKey._property_aiGenerated, aiGenerated),
+      releaseVersion: this.toAstProperty(ConfigKey._property_releaseVersion, releaseVersion),
       book,
-      ageRange: this.toAstProperty(PropertyKey.ageRange, ageRange),
-      language: this.toAstProperty(PropertyKey.language, language),
-      computerLanguage: this.toAstProperty(PropertyKey.computerLanguage, computerLanguage),
-      target: this.toAstProperty(PropertyKey.target, target),
-      tag: this.toAstProperty(PropertyKey.tag, tag),
-      icon: this.toAstProperty(PropertyKey.icon, icon),
-      iconTag: this.toAstProperty(PropertyKey.iconTag, iconTag),
-      colorTag: this.toAstProperty(PropertyKey.colorTag, colorTag),
-      flashcardSet: this.toAstProperty(PropertyKey.flashcardSet, flashcardSet),
-      subtype: this.toAstProperty(PropertyKey.subtype, subtype),
-      coverImage: this.toAstProperty(PropertyKey.coverImage, coverImage),
-      publisher: this.toAstProperty(PropertyKey.publisher, publisher),
-      publications: this.toAstProperty(PropertyKey.publications, publications),
-      author: this.toAstProperty(PropertyKey.author, author),
-      subject: this.toAstProperty(PropertyKey.subject, subject),
-      date: this.toAstProperty(PropertyKey.date, date),
-      location: this.toAstProperty(PropertyKey.location, location),
-      theme: this.toAstProperty(PropertyKey.theme, theme),
-      kind: this.toAstProperty(PropertyKey.kind, kind),
-      action: this.toAstProperty(PropertyKey.action, action),
-      thumbImage: this.toAstProperty(PropertyKey.thumbImage, thumbImage),
-      focusX: this.toAstProperty(PropertyKey.focusX, focusX),
-      focusY: this.toAstProperty(PropertyKey.focusY, focusY),
-      deeplink: this.toAstProperty(PropertyKey.deeplink, deeplink),
-      externalLink: this.toAstProperty(PropertyKey.externalLink, externalLink),
-      externalLinkText: this.toAstProperty(PropertyKey.externalLinkText, externalLinkText),
-      videoCallLink: this.toAstProperty(PropertyKey.videoCallLink, videoCallLink),
-      bot: this.toAstProperty(PropertyKey.bot, bot),
-      duration: this.toAstProperty(PropertyKey.duration, duration),
-      referenceProperty: this.toAstProperty(PropertyKey.reference, referenceProperty),
-      list: this.toAstProperty(PropertyKey.list, list),
-      textReference: this.toAstProperty(PropertyKey.textReference, textReference),
-      isTracked: this.toAstProperty(PropertyKey.isTracked, isTracked),
-      isInfoOnly: this.toAstProperty(PropertyKey.isInfoOnly, isInfoOnly),
-      labelTrue: this.toAstProperty(PropertyKey.labelTrue, labelTrue),
-      labelFalse: this.toAstProperty(PropertyKey.labelFalse, labelFalse),
-      quotedPerson: this.toAstProperty(PropertyKey.quotedPerson, quotedPerson),
-      partialAnswer: this.toAstProperty(PropertyKey.partialAnswer, partialAnswer),
-      levelProperty: this.toAstProperty(PropertyKey.level, levelProperty),
+      ageRange: this.toAstProperty(ConfigKey._property_ageRange, ageRange),
+      language: this.toAstProperty(ConfigKey._property_language, language),
+      computerLanguage: this.toAstProperty(ConfigKey._property_computerLanguage, computerLanguage),
+      target: this.toAstProperty(ConfigKey._property_target, target),
+      tag: this.toAstProperty(ConfigKey._property_tag, tag),
+      icon: this.toAstProperty(ConfigKey._property_icon, icon),
+      iconTag: this.toAstProperty(ConfigKey._property_iconTag, iconTag),
+      colorTag: this.toAstProperty(ConfigKey._property_colorTag, colorTag),
+      flashcardSet: this.toAstProperty(ConfigKey._property_flashcardSet, flashcardSet),
+      subtype: this.toAstProperty(ConfigKey._property_subtype, subtype),
+      coverImage: this.toAstProperty(ConfigKey._property_coverImage, coverImage),
+      publisher: this.toAstProperty(ConfigKey._property_publisher, publisher),
+      publications: this.toAstProperty(ConfigKey._property_publications, publications),
+      author: this.toAstProperty(ConfigKey._property_author, author),
+      subject: this.toAstProperty(ConfigKey._property_subject, subject),
+      date: this.toAstProperty(ConfigKey._property_date, date),
+      location: this.toAstProperty(ConfigKey._property_location, location),
+      theme: this.toAstProperty(ConfigKey._property_theme, theme),
+      kind: this.toAstProperty(ConfigKey._property_kind, kind),
+      action: this.toAstProperty(ConfigKey._property_action, action),
+      thumbImage: this.toAstProperty(ConfigKey._property_thumbImage, thumbImage),
+      focusX: this.toAstProperty(ConfigKey._property_focusX, focusX),
+      focusY: this.toAstProperty(ConfigKey._property_focusY, focusY),
+      deeplink: this.toAstProperty(ConfigKey._property_deeplink, deeplink),
+      externalLink: this.toAstProperty(ConfigKey._property_externalLink, externalLink),
+      externalLinkText: this.toAstProperty(ConfigKey._property_externalLinkText, externalLinkText),
+      videoCallLink: this.toAstProperty(ConfigKey._property_videoCallLink, videoCallLink),
+      bot: this.toAstProperty(ConfigKey._property_bot, bot),
+      duration: this.toAstProperty(ConfigKey._property_duration, duration),
+      referenceProperty: this.toAstProperty(ConfigKey._property_reference, referenceProperty),
+      list: this.toAstProperty(ConfigKey._property_list, list),
+      textReference: this.toAstProperty(ConfigKey._property_textReference, textReference),
+      isTracked: this.toAstProperty(ConfigKey._property_isTracked, isTracked),
+      isInfoOnly: this.toAstProperty(ConfigKey._property_isInfoOnly, isInfoOnly),
+      labelTrue: this.toAstProperty(ConfigKey._property_labelTrue, labelTrue),
+      labelFalse: this.toAstProperty(ConfigKey._property_labelFalse, labelFalse),
+      quotedPerson: this.toAstProperty(ConfigKey._property_quotedPerson, quotedPerson),
+      partialAnswer: this.toAstProperty(ConfigKey._property_partialAnswer, partialAnswer),
+      levelProperty: this.toAstProperty(ConfigKey._property_level, levelProperty),
       title,
       subtitle,
       level: NumberUtils.asNumber(level),
-      toc: this.toAstProperty(PropertyKey.toc, toc),
-      progress: this.toAstProperty(PropertyKey.progress, progress),
+      toc: this.toAstProperty(ConfigKey._property_toc, toc),
+      progress: this.toAstProperty(ConfigKey._property_progress, progress),
       anchor,
       reference,
       referenceEnd,
@@ -320,7 +323,7 @@ class Builder extends BaseBuilder {
       ...this.toExample(isDefaultExample, example),
       imageSource,
       partner,
-      resource,
+      resources,
       body,
       sampleSolution: ArrayUtils.asArray(sampleSolution),
       cardNode,
@@ -1569,7 +1572,7 @@ class Builder extends BaseBuilder {
       case AliasBitType.articleAi:
       case AliasBitType.noteAi:
       case AliasBitType.summaryAi:
-        bit.aiGenerated = this.toAstProperty(PropertyKey.aiGenerated, true);
+        bit.aiGenerated = this.toAstProperty(ConfigKey._property_aiGenerated, true);
         break;
     }
   }
