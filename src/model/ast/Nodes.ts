@@ -65,6 +65,7 @@ export interface Bit {
   isInfoOnly?: Property;
   labelTrue?: Property;
   labelFalse?: Property;
+  content2Buy?: Property;
   quotedPerson?: Property;
   partialAnswer?: Property;
   markConfig?: MarkConfig[];

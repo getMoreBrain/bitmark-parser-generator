@@ -49,6 +49,7 @@ export interface BitJson {
   isInfoOnly: boolean; // only .learningPathExternalLink?
   labelTrue: string;
   labelFalse: string;
+  content2Buy: string | string[];
   quotedPerson: string;
 
   book: string;

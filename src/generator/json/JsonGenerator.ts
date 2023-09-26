@@ -2281,6 +2281,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       isInfoOnly: undefined,
       labelTrue: undefined,
       labelFalse: undefined,
+      content2Buy: undefined,
       quotedPerson: undefined,
       partialAnswer: undefined,
 
@@ -2502,6 +2503,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         break;
+
+      case RootBitType.pageBuyButton:
+        if (bitJson.content2Buy == null) bitJson.content2Buy = '';
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+        break;
     }
 
     // Remove unwanted properties
@@ -2546,6 +2552,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.isInfoOnly == null) delete bitJson.isInfoOnly;
     if (bitJson.labelTrue == null) delete bitJson.labelTrue;
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
+    if (bitJson.content2Buy == null) delete bitJson.content2Buy;
     if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
 
     // Book data
