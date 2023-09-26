@@ -8,6 +8,10 @@ import { TagsConfig } from '../model/config/TagsConfig';
 import { _TagInfoConfig, _CardVariantConfig } from '../model/config/_Config';
 import { CardSetConfigKeyType } from '../model/config/enum/CardSetConfigKey';
 import { ConfigKey } from '../model/config/enum/ConfigKey';
+import { GroupConfigKey } from '../model/config/enum/GroupConfigKey';
+import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
+import { ResourceConfigKey } from '../model/config/enum/ResourceConfigKey';
+import { TagConfigKey } from '../model/config/enum/TagConfigKey';
 import { BitTagType } from '../model/enum/BitTagType';
 
 import { CARDS } from './raw/cardSets';
@@ -84,9 +88,10 @@ class ConfigHydrator {
 
   private hydrateTagConfig(_tag: _TagInfoConfig): TagsConfigWithInfo {
     const { configKey: _configKey, maxCount, minCount, chain: _chain } = _tag;
-    const configKey = ConfigKey.fromKey(_configKey) || ConfigKey._unknown;
+    const configKey = TagConfigKey.fromKey(_configKey) || ConfigKey._unknown;
     const _tagConfig = TAGS[configKey];
     if (!_tagConfig) throw new Error(`No config found for tag config key '${_configKey}'`);
+
     const { tag, deprecated } = _tagConfig;
 
     let chain: TagsConfig | undefined;
@@ -113,7 +118,7 @@ class ConfigHydrator {
 
   private hydratePropertyTagConfig(_tag: _TagInfoConfig): TagsConfigWithInfo {
     const { configKey: _configKey, maxCount, minCount, chain: _chain } = _tag;
-    const configKey = ConfigKey.fromKey(_configKey) || ConfigKey._unknown;
+    const configKey = PropertyConfigKey.fromKey(_configKey) || ConfigKey._unknown;
     const _propertyConfig = PROPERTIES[configKey];
     if (!_propertyConfig) throw new Error(`No config found for property config key '${_configKey}'`);
     const { tag, deprecated, single, format, defaultValue, jsonKey, astKey } = _propertyConfig;
@@ -147,7 +152,7 @@ class ConfigHydrator {
 
   private hydrateResourceTagConfig(_tag: _TagInfoConfig): TagsConfigWithInfo {
     const { configKey: _configKey, maxCount, minCount, chain: _chain } = _tag;
-    const configKey = ConfigKey.fromKey(_configKey) || ConfigKey._unknown;
+    const configKey = ResourceConfigKey.fromKey(_configKey) || ConfigKey._unknown;
     const _resourceConfig = RESOURCES[configKey];
     if (!_resourceConfig) throw new Error(`No config found for resource config key '${_configKey}'`);
     const { tag, deprecated, jsonKey } = _resourceConfig;
@@ -177,9 +182,9 @@ class ConfigHydrator {
 
   private hydrateTagGroupConfig(_tag: _TagInfoConfig): TagsConfigWithInfo {
     const { configKey: _configKey } = _tag;
-    const configKey = ConfigKey.fromKey(_configKey) || ConfigKey._unknown;
+    const configKey = GroupConfigKey.fromKey(_configKey) || ConfigKey._unknown;
     const _groupConfig = GROUPS[configKey];
-    if (!_groupConfig) throw new Error(`No config found for tag config key '${_configKey}'`);
+    if (!_groupConfig) throw new Error(`No config found for group config key '${_configKey}'`);
     const { tags: _tags } = _groupConfig;
 
     const tags = this.hydrateTagsConfig(_tags).tags;

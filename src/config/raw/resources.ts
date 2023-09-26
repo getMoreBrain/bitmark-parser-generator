@@ -1,89 +1,89 @@
 import { _ResourcesConfig } from '../../model/config/_Config';
-import { ConfigKey } from '../../model/config/enum/ConfigKey';
+import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey';
 import { ResourceJsonKey } from '../../model/enum/ResourceJsonKey';
 import { ResourceTag } from '../../model/enum/ResourceTag';
 
 const RESOURCES: _ResourcesConfig = {
-  [ConfigKey._resource_image]: {
+  [ResourceConfigKey.image]: {
     tag: ResourceTag.image,
   },
-  [ConfigKey._resource_imagePortrait]: {
+  [ResourceConfigKey.imagePortrait]: {
     tag: ResourceTag.imagePortrait,
     jsonKey: ResourceJsonKey.imagePortrait,
   },
-  [ConfigKey._resource_imageLandscape]: {
+  [ResourceConfigKey.imageLandscape]: {
     tag: ResourceTag.imageLandscape,
     jsonKey: ResourceJsonKey.imageLandscape,
   },
-  [ConfigKey._resource_imageEmbed]: {
+  [ResourceConfigKey.imageEmbed]: {
     tag: ResourceTag.imageEmbed,
     jsonKey: ResourceJsonKey.imageEmbed,
   },
-  [ConfigKey._resource_imageLink]: {
+  [ResourceConfigKey.imageLink]: {
     tag: ResourceTag.imageLink,
     jsonKey: ResourceJsonKey.imageLink,
   },
-  [ConfigKey._resource_audio]: {
+  [ResourceConfigKey.audio]: {
     tag: ResourceTag.audio,
   },
-  [ConfigKey._resource_audioEmbed]: {
+  [ResourceConfigKey.audioEmbed]: {
     tag: ResourceTag.audioEmbed,
     jsonKey: ResourceJsonKey.audioEmbed,
   },
-  [ConfigKey._resource_audioLink]: {
+  [ResourceConfigKey.audioLink]: {
     tag: ResourceTag.audioLink,
     jsonKey: ResourceJsonKey.audioLink,
   },
-  [ConfigKey._resource_video]: {
+  [ResourceConfigKey.video]: {
     tag: ResourceTag.video,
   },
-  [ConfigKey._resource_videoEmbed]: {
+  [ResourceConfigKey.videoEmbed]: {
     tag: ResourceTag.videoEmbed,
     jsonKey: ResourceJsonKey.videoEmbed,
   },
-  [ConfigKey._resource_videoLink]: {
+  [ResourceConfigKey.videoLink]: {
     tag: ResourceTag.videoLink,
     jsonKey: ResourceJsonKey.videoLink,
   },
-  [ConfigKey._resource_stillImageFilmEmbed]: {
+  [ResourceConfigKey.stillImageFilmEmbed]: {
     tag: ResourceTag.stillImageFilmEmbed,
     jsonKey: ResourceJsonKey.stillImageFilmEmbed,
   },
-  [ConfigKey._resource_stillImageFilmLink]: {
+  [ResourceConfigKey.stillImageFilmLink]: {
     tag: ResourceTag.stillImageFilmLink,
     jsonKey: ResourceJsonKey.stillImageFilmLink,
   },
-  [ConfigKey._resource_article]: {
+  [ResourceConfigKey.article]: {
     tag: ResourceTag.article,
   },
-  [ConfigKey._resource_articleEmbed]: {
+  [ResourceConfigKey.articleEmbed]: {
     tag: ResourceTag.articleEmbed,
     jsonKey: ResourceJsonKey.articleEmbed,
   },
-  [ConfigKey._resource_articleLink]: {
+  [ResourceConfigKey.articleLink]: {
     tag: ResourceTag.articleLink,
     jsonKey: ResourceJsonKey.articleLink,
   },
-  [ConfigKey._resource_document]: {
+  [ResourceConfigKey.document]: {
     tag: ResourceTag.document,
   },
-  [ConfigKey._resource_documentEmbed]: {
+  [ResourceConfigKey.documentEmbed]: {
     tag: ResourceTag.documentEmbed,
     jsonKey: ResourceJsonKey.documentEmbed,
   },
-  [ConfigKey._resource_documentLink]: {
+  [ResourceConfigKey.documentLink]: {
     tag: ResourceTag.documentLink,
     jsonKey: ResourceJsonKey.documentLink,
   },
-  [ConfigKey._resource_documentDownload]: {
+  [ResourceConfigKey.documentDownload]: {
     tag: ResourceTag.documentDownload,
     jsonKey: ResourceJsonKey.documentDownload,
   },
-  [ConfigKey._resource_appLink]: {
+  [ResourceConfigKey.appLink]: {
     tag: ResourceTag.appLink,
     jsonKey: ResourceJsonKey.appLink,
   },
-  [ConfigKey._resource_websiteLink]: {
+  [ResourceConfigKey.websiteLink]: {
     tag: ResourceTag.websiteLink,
     jsonKey: ResourceJsonKey.websiteLink,
   },
