@@ -1,0 +1,16 @@
+[
+  {
+    "bit": {
+      "type": "button-copy-text",
+      "format": "bitmark--",
+      "id": ["342341"],
+      "instruction": ".button-copy-text",
+      "body": "Button Text"
+    },
+    "parser": {
+      "version": "1.4.1",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.button-copy-text]\n[@id:342341]\n[!.button-copy-text]\nButton Text"
+  }
+]

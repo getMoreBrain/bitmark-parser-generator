@@ -145,6 +145,7 @@ const NodeType = superenum({
   isInfoOnlyValue: 'isInfoOnlyValue',
   labelTrue: 'labelTrue',
   labelFalse: 'labelFalse',
+  content2Buy: 'content2Buy',
   quotedPerson: 'quotedPerson',
   partialAnswer: 'partialAnswer',
   partialAnswerValue: 'partialAnswerValue',

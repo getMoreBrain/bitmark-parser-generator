@@ -128,6 +128,7 @@ class Builder extends BaseBuilder {
     isInfoOnly?: boolean;
     labelTrue?: string | string[];
     labelFalse?: string | string[];
+    content2Buy?: string | string[];
     quotedPerson?: string | string[];
     partialAnswer?: string | string[];
     levelProperty?: string | string[];
@@ -220,6 +221,7 @@ class Builder extends BaseBuilder {
       isInfoOnly,
       labelTrue,
       labelFalse,
+      content2Buy,
       book,
       quotedPerson,
       partialAnswer,
@@ -305,6 +307,7 @@ class Builder extends BaseBuilder {
       isInfoOnly: this.toAstProperty(PropertyConfigKey.isInfoOnly, isInfoOnly),
       labelTrue: this.toAstProperty(PropertyConfigKey.labelTrue, labelTrue),
       labelFalse: this.toAstProperty(PropertyConfigKey.labelFalse, labelFalse),
+      content2Buy: this.toAstProperty(PropertyConfigKey.content2Buy, content2Buy),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       levelProperty: this.toAstProperty(PropertyConfigKey.level, levelProperty),
