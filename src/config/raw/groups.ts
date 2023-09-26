@@ -1,320 +1,323 @@
 import { _GroupsConfig } from '../../model/config/_Config';
-import { ConfigKey } from '../../model/config/enum/ConfigKey';
+import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
 import { GroupConfigType } from '../../model/config/enum/GroupConfigType';
+import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
+import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey';
+import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
 import { Count } from '../../model/enum/Count';
 import { ResourceTag } from '../../model/enum/ResourceTag';
 
 const GROUPS: _GroupsConfig = {
-  [ConfigKey._group_standardAllBits]: {
+  [GroupConfigKey.group_standardAllBits]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_id,
+        configKey: PropertyConfigKey.id,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_externalId,
+        configKey: PropertyConfigKey.externalId,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_aiGenerated,
+        configKey: PropertyConfigKey.aiGenerated,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_ageRange,
+        configKey: PropertyConfigKey.ageRange,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_language,
+        configKey: PropertyConfigKey.language,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_target,
+        configKey: PropertyConfigKey.target,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_tag,
+        configKey: PropertyConfigKey.tag,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_icon,
+        configKey: PropertyConfigKey.icon,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_iconTag,
+        configKey: PropertyConfigKey.iconTag,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_colorTag,
+        configKey: PropertyConfigKey.colorTag,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.tag,
-        configKey: ConfigKey._tag_anchor,
+        configKey: TagConfigKey.anchor,
       },
     ],
   },
-  [ConfigKey._group_standardItemLeadInstructionHint]: {
+  [GroupConfigKey.group_standardItemLeadInstructionHint]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.tag,
-        configKey: ConfigKey._tag_itemLead,
+        configKey: TagConfigKey.itemLead,
         maxCount: 2,
       },
       {
         type: BitTagType.tag,
-        configKey: ConfigKey._tag_instruction,
+        configKey: TagConfigKey.instruction,
       },
       {
         type: BitTagType.tag,
-        configKey: ConfigKey._tag_hint,
+        configKey: TagConfigKey.hint,
       },
     ],
   },
-  [ConfigKey._group_standardExample]: {
+  [GroupConfigKey.group_standardExample]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_example,
+        configKey: PropertyConfigKey.example,
       },
     ],
   },
-  [ConfigKey._group_standardTags]: {
+  [GroupConfigKey.group_standardTags]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_standardAllBits,
+        configKey: GroupConfigKey.group_standardAllBits,
       },
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_standardItemLeadInstructionHint,
+        configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
       },
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_standardExample,
+        configKey: GroupConfigKey.group_standardExample,
       },
     ],
   },
-  [ConfigKey._group_imageSource]: {
+  [GroupConfigKey.group_imageSource]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_imageSource,
+        configKey: PropertyConfigKey.imageSource,
         chain: [
           {
             type: BitTagType.property,
-            configKey: ConfigKey._property_mockupId,
+            configKey: PropertyConfigKey.mockupId,
           },
           {
             type: BitTagType.property,
-            configKey: ConfigKey._property_size,
+            configKey: PropertyConfigKey.size,
           },
           {
             type: BitTagType.property,
-            configKey: ConfigKey._property_format,
+            configKey: PropertyConfigKey.format,
           },
           {
             type: BitTagType.property,
-            configKey: ConfigKey._property_trim,
+            configKey: PropertyConfigKey.trim,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_partner]: {
+  [GroupConfigKey.group_partner]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_partner,
+        configKey: PropertyConfigKey.partner,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceImage,
+            configKey: GroupConfigKey.group_resourceImage,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_gap]: {
-    type: GroupConfigType.standard,
-    tags: [
-      {
-        type: BitTagType.tag,
-        configKey: ConfigKey._tag_gap,
-        maxCount: Count.infinity,
-        chain: [
-          {
-            type: BitTagType.tag,
-            configKey: ConfigKey._tag_gap,
-            maxCount: Count.infinity,
-          },
-          {
-            type: BitTagType.group,
-            configKey: ConfigKey._group_standardItemLeadInstructionHint,
-          },
-          {
-            type: BitTagType.group,
-            configKey: ConfigKey._group_standardExample,
-          },
-        ],
-      },
-    ],
-  },
-  [ConfigKey._group_trueFalse]: {
+  [GroupConfigKey.group_gap]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.tag,
-        configKey: ConfigKey._tag_true,
+        configKey: TagConfigKey.gap,
         maxCount: Count.infinity,
         chain: [
           {
             type: BitTagType.tag,
-            configKey: ConfigKey._tag_true,
+            configKey: TagConfigKey.gap,
+            maxCount: Count.infinity,
+          },
+          {
+            type: BitTagType.group,
+            configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+          },
+          {
+            type: BitTagType.group,
+            configKey: GroupConfigKey.group_standardExample,
+          },
+        ],
+      },
+    ],
+  },
+  [GroupConfigKey.group_trueFalse]: {
+    type: GroupConfigType.standard,
+    tags: [
+      {
+        type: BitTagType.tag,
+        configKey: TagConfigKey.true,
+        maxCount: Count.infinity,
+        chain: [
+          {
+            type: BitTagType.tag,
+            configKey: TagConfigKey.true,
             maxCount: Count.infinity,
           },
           {
             type: BitTagType.tag,
-            configKey: ConfigKey._tag_false,
+            configKey: TagConfigKey.false,
             maxCount: Count.infinity,
           },
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_standardItemLeadInstructionHint,
+            configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
           },
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_standardExample,
+            configKey: GroupConfigKey.group_standardExample,
           },
         ],
       },
       {
         type: BitTagType.tag,
-        configKey: ConfigKey._tag_false,
+        configKey: TagConfigKey.false,
         maxCount: Count.infinity,
         chain: [
           {
             type: BitTagType.tag,
-            configKey: ConfigKey._tag_true,
+            configKey: TagConfigKey.true,
             maxCount: Count.infinity,
           },
           {
             type: BitTagType.tag,
-            configKey: ConfigKey._tag_false,
+            configKey: TagConfigKey.false,
             maxCount: Count.infinity,
           },
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_standardItemLeadInstructionHint,
+            configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
           },
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_standardExample,
+            configKey: GroupConfigKey.group_standardExample,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_markConfig]: {
+  [GroupConfigKey.group_markConfig]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_markConfig,
+        configKey: PropertyConfigKey.markConfig,
         maxCount: Count.infinity,
         chain: [
           {
             type: BitTagType.property,
-            configKey: ConfigKey._property_color,
+            configKey: PropertyConfigKey.color,
           },
           {
             type: BitTagType.property,
-            configKey: ConfigKey._property_emphasis,
+            configKey: PropertyConfigKey.emphasis,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_mark]: {
+  [GroupConfigKey.group_mark]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.tag,
-        configKey: ConfigKey._tag_mark,
+        configKey: TagConfigKey.tag_mark,
         maxCount: Count.infinity,
         chain: [
           {
             type: BitTagType.property,
-            configKey: ConfigKey._property_mark,
+            configKey: PropertyConfigKey.property_mark,
           },
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_standardExample,
+            configKey: GroupConfigKey.group_standardExample,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_learningPathCommon]: {
+  [GroupConfigKey.group_learningPathCommon]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_action,
+        configKey: PropertyConfigKey.action,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_duration,
+        configKey: PropertyConfigKey.duration,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_date,
+        configKey: PropertyConfigKey.date,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_location,
+        configKey: PropertyConfigKey.location,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_list,
+        configKey: PropertyConfigKey.list,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_textReference,
+        configKey: PropertyConfigKey.textReference,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_isTracked,
+        configKey: PropertyConfigKey.isTracked,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_isInfoOnly,
+        configKey: PropertyConfigKey.isInfoOnly,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_deeplink,
+        configKey: PropertyConfigKey.deeplink,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_book,
+        configKey: PropertyConfigKey.book,
         chain: [
           {
             type: BitTagType.tag,
-            configKey: ConfigKey._tag_reference,
+            configKey: TagConfigKey.tag_reference,
             maxCount: 2,
           },
         ],
@@ -324,474 +327,474 @@ const GROUPS: _GroupsConfig = {
   //
   // Common resource properties
   //
-  [ConfigKey._group_resourceCommon]: {
+  [GroupConfigKey.group_resourceCommon]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_license,
+        configKey: PropertyConfigKey.license,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_copyright,
+        configKey: PropertyConfigKey.copyright,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_caption,
+        configKey: PropertyConfigKey.caption,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_showInIndex,
+        configKey: PropertyConfigKey.showInIndex,
       },
     ],
   },
-  [ConfigKey._group_resourceImageCommon]: {
+  [GroupConfigKey.group_resourceImageCommon]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_resourceCommon,
+        configKey: GroupConfigKey.group_resourceCommon,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_src1x,
+        configKey: PropertyConfigKey.src1x,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_src2x,
+        configKey: PropertyConfigKey.src2x,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_src3x,
+        configKey: PropertyConfigKey.src3x,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_src4x,
+        configKey: PropertyConfigKey.src4x,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_width,
+        configKey: PropertyConfigKey.width,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_height,
+        configKey: PropertyConfigKey.height,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_alt,
+        configKey: PropertyConfigKey.alt,
       },
     ],
   },
-  [ConfigKey._group_resourceAudioCommon]: {
+  [GroupConfigKey.group_resourceAudioCommon]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_resourceCommon,
+        configKey: GroupConfigKey.group_resourceCommon,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_duration,
+        configKey: PropertyConfigKey.duration,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_mute,
+        configKey: PropertyConfigKey.mute,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_autoplay,
+        configKey: PropertyConfigKey.autoplay,
       },
     ],
   },
-  [ConfigKey._group_resourceVideoCommon]: {
+  [GroupConfigKey.group_resourceVideoCommon]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_resourceCommon,
+        configKey: GroupConfigKey.group_resourceCommon,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_width,
+        configKey: PropertyConfigKey.width,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_height,
+        configKey: PropertyConfigKey.height,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_duration,
+        configKey: PropertyConfigKey.duration,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_mute,
+        configKey: PropertyConfigKey.mute,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_autoplay,
+        configKey: PropertyConfigKey.autoplay,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_allowSubtitles,
+        configKey: PropertyConfigKey.allowSubtitles,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_showSubtitles,
+        configKey: PropertyConfigKey.showSubtitles,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_alt,
+        configKey: PropertyConfigKey.alt,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_posterImage,
+        configKey: PropertyConfigKey.posterImage,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_src1x,
+        configKey: PropertyConfigKey.src1x,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_src2x,
+        configKey: PropertyConfigKey.src2x,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_src3x,
+        configKey: PropertyConfigKey.src3x,
       },
       {
         type: BitTagType.property,
-        configKey: ConfigKey._property_src4x,
+        configKey: PropertyConfigKey.src4x,
       },
     ],
   },
   //
   // Single resources
   //
-  [ConfigKey._group_resourceImage]: {
+  [GroupConfigKey.group_resourceImage]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_image,
+        configKey: ResourceConfigKey.image,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceImageCommon,
+            configKey: GroupConfigKey.group_resourceImageCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceImagePortrait]: {
+  [GroupConfigKey.group_resourceImagePortrait]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_imagePortrait,
+        configKey: ResourceConfigKey.imagePortrait,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceImageCommon,
+            configKey: GroupConfigKey.group_resourceImageCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceImageLandscape]: {
+  [GroupConfigKey.group_resourceImageLandscape]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_imageLandscape,
+        configKey: ResourceConfigKey.imageLandscape,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceImageCommon,
+            configKey: GroupConfigKey.group_resourceImageCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceImageEmbed]: {
+  [GroupConfigKey.group_resourceImageEmbed]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_imageEmbed,
+        configKey: ResourceConfigKey.imageEmbed,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceImageCommon,
+            configKey: GroupConfigKey.group_resourceImageCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceImageLink]: {
+  [GroupConfigKey.group_resourceImageLink]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_imageLink,
+        configKey: ResourceConfigKey.imageLink,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceImageCommon,
+            configKey: GroupConfigKey.group_resourceImageCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceAudio]: {
+  [GroupConfigKey.group_resourceAudio]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_audio,
+        configKey: ResourceConfigKey.audio,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceAudioCommon,
+            configKey: GroupConfigKey.group_resourceAudioCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceAudioEmbed]: {
+  [GroupConfigKey.group_resourceAudioEmbed]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_audioEmbed,
+        configKey: ResourceConfigKey.audioEmbed,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceAudioCommon,
+            configKey: GroupConfigKey.group_resourceAudioCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceAudioLink]: {
+  [GroupConfigKey.group_resourceAudioLink]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_audioLink,
+        configKey: ResourceConfigKey.audioLink,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceAudioCommon,
+            configKey: GroupConfigKey.group_resourceAudioCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceVideo]: {
+  [GroupConfigKey.group_resourceVideo]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_video,
+        configKey: ResourceConfigKey.video,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceVideoCommon,
+            configKey: GroupConfigKey.group_resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceVideoEmbed]: {
+  [GroupConfigKey.group_resourceVideoEmbed]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_videoEmbed,
+        configKey: ResourceConfigKey.videoEmbed,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceVideoCommon,
+            configKey: GroupConfigKey.group_resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceVideoLink]: {
+  [GroupConfigKey.group_resourceVideoLink]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_videoLink,
+        configKey: ResourceConfigKey.videoLink,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceVideoCommon,
+            configKey: GroupConfigKey.group_resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceStillImageFilmEmbed]: {
+  [GroupConfigKey.group_resourceStillImageFilmEmbed]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_stillImageFilmEmbed,
+        configKey: ResourceConfigKey.stillImageFilmEmbed,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceVideoCommon,
+            configKey: GroupConfigKey.group_resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceStillImageFilmLink]: {
+  [GroupConfigKey.group_resourceStillImageFilmLink]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_stillImageFilmLink,
+        configKey: ResourceConfigKey.stillImageFilmLink,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceVideoCommon,
+            configKey: GroupConfigKey.group_resourceVideoCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceArticle]: {
+  [GroupConfigKey.group_resourceArticle]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_article,
+        configKey: ResourceConfigKey.article,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceCommon,
+            configKey: GroupConfigKey.group_resourceCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceArticleEmbed]: {
+  [GroupConfigKey.group_resourceArticleEmbed]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_articleEmbed,
+        configKey: ResourceConfigKey.articleEmbed,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceCommon,
+            configKey: GroupConfigKey.group_resourceCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceArticleLink]: {
+  [GroupConfigKey.group_resourceArticleLink]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_articleLink,
+        configKey: ResourceConfigKey.articleLink,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceCommon,
+            configKey: GroupConfigKey.group_resourceCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceDocument]: {
+  [GroupConfigKey.group_resourceDocument]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_document,
+        configKey: ResourceConfigKey.document,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceCommon,
+            configKey: GroupConfigKey.group_resourceCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceDocumentEmbed]: {
+  [GroupConfigKey.group_resourceDocumentEmbed]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_documentEmbed,
+        configKey: ResourceConfigKey.documentEmbed,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceCommon,
+            configKey: GroupConfigKey.group_resourceCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceDocumentLink]: {
+  [GroupConfigKey.group_resourceDocumentLink]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_documentLink,
+        configKey: ResourceConfigKey.documentLink,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceCommon,
+            configKey: GroupConfigKey.group_resourceCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceDocumentDownload]: {
+  [GroupConfigKey.group_resourceDocumentDownload]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_documentDownload,
+        configKey: ResourceConfigKey.documentDownload,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceCommon,
+            configKey: GroupConfigKey.group_resourceCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceAppLink]: {
+  [GroupConfigKey.group_resourceAppLink]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_appLink,
+        configKey: ResourceConfigKey.appLink,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceCommon,
+            configKey: GroupConfigKey.group_resourceCommon,
           },
         ],
       },
     ],
   },
-  [ConfigKey._group_resourceWebsiteLink]: {
+  [GroupConfigKey.group_resourceWebsiteLink]: {
     type: GroupConfigType.resource,
     tags: [
       {
         type: BitTagType.resource,
-        configKey: ConfigKey._resource_websiteLink,
+        configKey: ResourceConfigKey.websiteLink,
         chain: [
           {
             type: BitTagType.group,
-            configKey: ConfigKey._group_resourceCommon,
+            configKey: GroupConfigKey.group_resourceCommon,
           },
         ],
       },
@@ -800,37 +803,37 @@ const GROUPS: _GroupsConfig = {
   //
   // Combo resources - these are resources made up of a combination of multiple resources.
   //
-  [ConfigKey._group_resourceStillImageFilm]: {
+  [GroupConfigKey.group_resourceStillImageFilm]: {
     type: GroupConfigType.comboResource,
     comboResourceType: ResourceTag.stillImageFilm,
     tags: [
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_resourceImage,
+        configKey: GroupConfigKey.group_resourceImage,
         maxCount: 1,
         minCount: 1,
       },
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_resourceAudio,
+        configKey: GroupConfigKey.group_resourceAudio,
         maxCount: 1,
         minCount: 1,
       },
     ],
   },
-  [ConfigKey._group_resourceImageResponsive]: {
+  [GroupConfigKey.group_resourceImageResponsive]: {
     type: GroupConfigType.comboResource,
     comboResourceType: ResourceTag.imageResponsive,
     tags: [
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_resourceImagePortrait,
+        configKey: GroupConfigKey.group_resourceImagePortrait,
         maxCount: 1,
         minCount: 1,
       },
       {
         type: BitTagType.group,
-        configKey: ConfigKey._group_resourceImageLandscape,
+        configKey: GroupConfigKey.group_resourceImageLandscape,
         maxCount: 1,
         minCount: 1,
       },

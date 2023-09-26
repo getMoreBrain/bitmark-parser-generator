@@ -1,7 +1,7 @@
 import { Config } from '../../../../config/Config';
 import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { ConfigKey } from '../../../../model/config/enum/ConfigKey';
+import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
 import { BitType } from '../../../../model/enum/BitType';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
@@ -42,19 +42,19 @@ function propertyContentProcessor(
   // Generally, the chain will only be present in the correct bit as the data was already validated. The bit type
   // should also be checked here if the property may occur in another bit with a different meaning.
   if (propertyConfig) {
-    if (configKey === ConfigKey._property_example) {
+    if (configKey === PropertyConfigKey.example) {
       exampleTagContentProcessor(context, bitType, bitLevel, content, target);
       return;
-    } else if (configKey === ConfigKey._property_partner) {
+    } else if (configKey === PropertyConfigKey.partner) {
       partnerChainContentProcessor(context, bitType, bitLevel, propertyConfig.chain, content, target);
       return;
-    } else if (configKey === ConfigKey._property_imageSource) {
+    } else if (configKey === PropertyConfigKey.imageSource) {
       imageSourceChainContentProcessor(context, bitType, bitLevel, tagsConfig, content, target);
       return;
-    } else if (configKey === ConfigKey._property_book) {
+    } else if (configKey === PropertyConfigKey.book) {
       bookChainContentProcessor(context, bitType, bitLevel, propertyConfig.chain, content, target);
       return;
-    } else if (configKey === ConfigKey._property_markConfig && !isChain) {
+    } else if (configKey === PropertyConfigKey.markConfig && !isChain) {
       markConfigChainContentProcessor(context, bitType, bitLevel, tagsConfig, content, target);
       return;
     }
