@@ -35,6 +35,8 @@ export { NodeType } from './model/ast/NodeType';
 export { BitmarkParserType } from './model/enum/BitmarkParserType';
 export { BitmarkVersion } from './model/enum/BitmarkVersion';
 export { CardSetVersion } from './model/enum/CardSetVersion';
+export { InfoType } from './model/info/enum/InfoType';
+export { InfoFormat } from './model/info/enum/InfoFormat';
 
 const STRIP = 0;
 /* STRIP:START */
@@ -52,7 +54,14 @@ STRIP;
 // Type only exports
 //
 
-export type { ConvertOptions, UpgradeOptions as PrettifyOptions, OutputType } from './BitmarkParserGenerator';
+export type {
+  InfoOptions,
+  ConvertOptions,
+  UpgradeOptions as PrettifyOptions,
+  OutputType,
+} from './BitmarkParserGenerator';
+export type { InfoTypeType } from './model/info/enum/InfoType';
+export type { InfoFormatType } from './model/info/enum/InfoFormat';
 export type { FileOptions } from './ast/writer/FileWriter';
 export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
 export type { JsonOptions } from './generator/json/JsonGenerator';
