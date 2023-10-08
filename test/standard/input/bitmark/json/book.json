@@ -11,6 +11,7 @@
       "example": null,
       "id": ["135647"],
       "spaceId": ["sl"],
+      "kind": "learning-path",
       "subtype": "draft-book",
       "author": ["Philippe Pointet"],
       "externalId": ["e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"],
