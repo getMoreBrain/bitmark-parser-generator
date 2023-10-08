@@ -90,6 +90,8 @@ class Builder extends BaseBuilder {
     externalId?: string | string[];
     spaceId?: string | string[];
     padletId?: string | string[];
+    jupyterId?: string | string[];
+    jupyterExecutionCount?: string | string[];
     aiGenerated?: boolean;
     releaseVersion?: string | string[];
     ageRange?: number | number[];
@@ -183,6 +185,8 @@ class Builder extends BaseBuilder {
       externalId,
       spaceId,
       padletId,
+      jupyterId,
+      jupyterExecutionCount,
       aiGenerated,
       releaseVersion,
       ageRange,
@@ -268,6 +272,8 @@ class Builder extends BaseBuilder {
       externalId: this.toAstProperty(PropertyConfigKey.externalId, externalId),
       spaceId: this.toAstProperty(PropertyConfigKey.spaceId, spaceId),
       padletId: this.toAstProperty(PropertyConfigKey.padletId, padletId),
+      jupyterId: this.toAstProperty(PropertyConfigKey.padletId, padletId),
+      jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.padletId, padletId),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, releaseVersion),
       book,

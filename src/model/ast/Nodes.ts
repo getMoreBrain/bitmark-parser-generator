@@ -27,6 +27,8 @@ export interface Bit {
   externalId?: Property;
   spaceId?: Property;
   padletId?: Property;
+  jupyterId?: Property;
+  jupyterExecutionCount?: Property;
   aiGenerated?: Property;
   releaseVersion?: Property;
   ageRange?: Property;

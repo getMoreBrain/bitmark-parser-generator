@@ -388,8 +388,16 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.computerLanguage,
       },
     ],
-
     bodyAllowed: true,
+    aliases: {
+      [AliasBitType.appCodeCell]: { since: '1.4.3' },
+      [AliasBitType.appCodeEditor]: { since: '1.4.3' },
+      [AliasBitType.appCodeIde]: { since: '1.4.3' },
+      [AliasBitType.codeRuntime]: { since: '1.4.3' },
+      [AliasBitType.consoleLog]: { since: '1.4.3' },
+      [AliasBitType.output]: { since: '1.4.3' },
+      [AliasBitType.stdout]: { since: '1.4.3' },
+    },
   },
   [RootBitType.conversationLeft1]: {
     since: '1.3.0',
@@ -1276,8 +1284,35 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.padletId,
       },
     ],
-
     bodyAllowed: true,
+  },
+  [RootBitType.vendorJupyterOutput]: {
+    since: '1.4.3',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.jupyterId,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.jupyterExecutionCount,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.computerLanguage,
+      },
+    ],
+    bodyAllowed: true,
+    aliases: {
+      [AliasBitType.vendorJupyterCellCode]: { since: '1.4.3' },
+      [AliasBitType.vendorJupyterCellMarkdown]: { since: '1.4.3' },
+      [AliasBitType.vendorJupyterCellRaw]: { since: '1.4.3' },
+      [AliasBitType.vendorJupyterIpynb]: { since: '1.4.3' },
+    },
   },
   [RootBitType.video]: {
     since: '1.3.0',
