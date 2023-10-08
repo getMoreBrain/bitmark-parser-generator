@@ -180,6 +180,11 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.language,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.spaceId,
         maxCount: Count.infinity,
       },

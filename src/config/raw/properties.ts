@@ -38,6 +38,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.ageRange,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.lang]: {
+    tag: PropertyTag.lang,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.language]: {
     tag: PropertyTag.language,
     format: PropertyFormat.trimmedString,

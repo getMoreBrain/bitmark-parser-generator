@@ -30,6 +30,7 @@ export interface Bit {
   aiGenerated?: Property;
   releaseVersion?: Property;
   ageRange?: Property;
+  lang?: Property;
   language?: Property;
   computerLanguage?: Property;
   target?: Property;
@@ -90,7 +91,7 @@ export interface Bit {
   partner?: Partner;
   resources?: Resource[];
   body?: Body;
-  sampleSolution?: string[];
+  sampleSolution?: string;
   statement?: Statement;
   choices?: Choice[];
   responses?: Response[];

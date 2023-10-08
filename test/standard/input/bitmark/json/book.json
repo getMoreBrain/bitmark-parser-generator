@@ -10,6 +10,8 @@
       "isExample": false,
       "example": null,
       "id": ["135647"],
+      "lang": "en-US",
+      "language": ["de"],
       "spaceId": ["sl"],
       "subtype": "draft-book",
       "author": ["Philippe Pointet"],

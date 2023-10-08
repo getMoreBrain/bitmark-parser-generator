@@ -4,7 +4,6 @@
       "type": "app-flashcards-learn",
       "format": "bitmark++",
       "ageRange": ["18", "120"],
-      "language": ["en", "jp", "cn"],
       "flashcardSet": ["e-876z78z87og87g8zg", "e-8768768768768767"],
       "item": "",
       "hint": "",
