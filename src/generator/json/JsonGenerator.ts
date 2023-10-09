@@ -2264,6 +2264,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       colorTag: undefined,
       flashcardSet: undefined,
       subtype: undefined,
+      bookAlias: undefined,
       coverImage: undefined,
       publisher: undefined,
       publications: undefined,
@@ -2541,6 +2542,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.colorTag == null) delete bitJson.colorTag;
     if (bitJson.flashcardSet == null) delete bitJson.flashcardSet;
     if (bitJson.subtype == null) delete bitJson.subtype;
+    if (bitJson.bookAlias == null) delete bitJson.bookAlias;
     if (bitJson.coverImage == null) delete bitJson.coverImage;
     if (bitJson.publisher == null) delete bitJson.publisher;
     if (bitJson.publications == null) delete bitJson.publications;

@@ -270,6 +270,54 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [GroupConfigKey.group_bookCommon]: {
+    type: GroupConfigType.standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.language,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.spaceId,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.kind,
+      },
+      {
+        type: BitTagType.tag,
+        configKey: TagConfigKey.title,
+        maxCount: 2,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.subtype,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.coverImage,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.publisher,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.subject,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.author,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.theme,
+      },
+    ],
+  },
   [GroupConfigKey.group_learningPathCommon]: {
     type: GroupConfigType.standard,
     tags: [

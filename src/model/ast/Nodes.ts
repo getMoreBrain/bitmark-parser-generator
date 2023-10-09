@@ -42,6 +42,7 @@ export interface Bit {
   colorTag?: Property;
   flashcardSet?: Property;
   subtype?: Property;
+  bookAlias?: Property;
   coverImage?: Property;
   publisher?: Property;
   publications?: Property;
