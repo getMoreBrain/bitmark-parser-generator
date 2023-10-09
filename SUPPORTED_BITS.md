@@ -1,256 +1,284 @@
-| BIT | PARSER | GENERATOR | NOTES |
-| ------ | -- | -- | -- |
-| _error | ✅ | ✅ | Used for error handling to indicate a bit type that is not supported or a bit parse error |
-| ai-prompt | ✅ | ✅ |  |
-| anchor | ❌ | ❌ |  |
-| annotation-bookmark | ❌ | ❌ |  |
-| annotation-favorite | ❌ | ❌ |  |
-| annotation-handwritten | ❌ | ❌ |  |
-| annotation-note | ❌ | ❌ |  |
-| app-ai-prompt | ✅ | ✅ |  |
-| app-flashcards | ✅ | ✅ |  |
-| app-flashcards-learn | ✅ | ✅ |  |
-| app-flashcards-quiz | ✅ | ✅ |  |
-| app-link | ✅ | ✅ |  |
-| article | ✅ | ✅ |  |
-| article-ai | ✅ | ✅ |  |
-| article-attachment | ❌ | ❌ |  |
-| assignment | ✅ | ✅ |  |
-| audio | ✅ | ✅ |  |
-| audio-embed | ✅ | ✅ |  |
-| audio-link | ✅ | ✅ |  |
-| audio-transcript | ✅ | ✅ |  |
-| bit-alias | ✅ | ✅ |  |
-| bit-book-ending | ✅ | ✅ |  |
-| bit-book-summary | ✅ | ✅ |  |
-| bitmark-example | ✅ | ✅ |  |
-| blog-article | ✅ | ✅ |  |
-| book | ✅ | ✅ |  |
-| book-acknowledgments | ✅ | ✅ |  |
-| book-addendum | ✅ | ✅ |  |
-| book-afterword | ✅ | ✅ |  |
-| book-appendix | ✅ | ✅ |  |
-| book-article | ✅ | ✅ |  |
-| book-author-bio | ✅ | ✅ |  |
-| book-bibliography | ✅ | ✅ |  |
-| book-coming-soon | ✅ | ✅ |  |
-| book-conclusion | ✅ | ✅ |  |
-| book-copyright | ✅ | ✅ |  |
-| book-copyright-permissions | ✅ | ✅ |  |
-| book-dedication | ✅ | ✅ |  |
-| book-endnotes | ✅ | ✅ |  |
-| book-epigraph | ✅ | ✅ |  |
-| book-epilogue | ✅ | ✅ |  |
-| book-foreword | ✅ | ✅ |  |
-| book-frontispiece | ✅ | ✅ |  |
-| book-imprint | ✅ | ✅ |  |
-| book-inciting-incident | ✅ | ✅ |  |
-| book-introduction | ✅ | ✅ |  |
-| book-link | ✅ | ✅ |  |
-| book-link-next | ✅ | ✅ |  |
-| book-link-prev | ✅ | ✅ |  |
-| book-list-of-contributors | ✅ | ✅ |  |
-| book-notes | ✅ | ✅ |  |
-| book-postscript | ✅ | ✅ |  |
-| book-preface | ✅ | ✅ |  |
-| book-prologue | ✅ | ✅ |  |
-| book-read-more | ✅ | ✅ |  |
-| book-reference-list | ✅ | ✅ |  |
-| book-request-for-a-book-review | ✅ | ✅ |  |
-| book-summary | ✅ | ✅ |  |
-| book-teaser | ✅ | ✅ |  |
-| book-title | ✅ | ✅ |  |
-| bot-action-announce | ✅ | ✅ |  |
-| bot-action-rating-number | ➖ | ➖ |  |
-| bot-action-remind | ✅ | ✅ |  |
-| bot-action-response | ✅ | ✅ |  |
-| bot-action-save | ✅ | ✅ |  |
-| bot-action-send | ✅ | ✅ |  |
-| bot-action-true-false | ❌ | ❌ |  |
-| bot-interview | ❌ | ❌ |  |
-| browser-image | ✅ | ✅ |  |
-| bug | ✅ | ✅ |  |
-| button-copy-text | ❌ | ❌ |  |
-| card-1 | ✅ | ✅ |  |
-| chapter | ✅ | ✅ |  |
-| chapter-subject-matter | ✅ | ✅ |  |
-| chat | ❌ | ❌ |  |
-| checklist | ✅ | ✅ |  |
-| cloze | ✅ | ✅ |  |
-| cloze-and-multiple-choice-text | ✅ | ✅ |  |
-| cloze-instruction-grouped | ✅ | ✅ |  |
-| cloze-solution-grouped | ✅ | ✅ |  |
-| coach-audio-transcript | ✅ | ✅ |  |
-| coach-call-to-action-checklist | ✅ | ✅ |  |
-| coach-call-to-action-cloze | ✅ | ✅ |  |
-| coach-call-to-action-cloze-and-multiple-choice-text | ✅ | ✅ |  |
-| coach-call-to-action-essay | ✅ | ✅ |  |
-| coach-call-to-action-multiple-choice-text | ✅ | ✅ |  |
-| coach-home-rules | ✅ | ✅ |  |
-| coach-self-reflection-cloze | ✅ | ✅ |  |
-| coach-self-reflection-essay | ✅ | ✅ |  |
-| coach-self-reflection-multiple-choice | ✅ | ✅ |  |
-| coach-self-reflection-multiple-choice-1 | ✅ | ✅ |  |
-| coach-self-reflection-multiple-choice-text | ✅ | ✅ |  |
-| coach-self-reflection-multiple-response | ✅ | ✅ |  |
-| coach-self-reflection-multiple-response-1 | ✅ | ✅ |  |
-| coach-self-reflection-rating | ✅ | ✅ |  |
-| coach-video-transcript | ✅ | ✅ |  |
-| code | ✅ | ✅ |  |
-| conclusion | ✅ | ✅ |  |
-| conversation | ❌ | ❌ |  |
-| conversation-left-1 | ✅ | ✅ |  |
-| conversation-left-1-scream | ✅ | ✅ |  |
-| conversation-left-1-thought | ✅ | ✅ |  |
-| conversation-right-1 | ✅ | ✅ |  |
-| conversation-right-1-scream | ✅ | ✅ |  |
-| conversation-right-1-thought | ✅ | ✅ |  |
-| cook-arrangement | ✅ | ✅ |  |
-| cook-ingredients | ✅ | ✅ |  |
-| cook-insert | ✅ | ✅ |  |
-| cook-personal-recommendation | ✅ | ✅ |  |
-| cook-plate | ✅ | ✅ |  |
-| cook-practice-advise | ✅ | ✅ |  |
-| cook-recommendation | ✅ | ✅ |  |
-| cook-remark | ✅ | ✅ |  |
-| cook-side-dish | ✅ | ✅ |  |
-| cook-side-drink | ✅ | ✅ |  |
-| cook-step | ✅ | ✅ |  |
-| cook-timer | ✅ | ✅ |  |
-| cook-variation | ✅ | ✅ |  |
-| correction | ❌ | ❌ |  |
-| danger | ✅ | ✅ |  |
-| details | ❌ | ❌ |  |
-| details-1 | ✅ | ✅ |  |
-| document | ✅ | ✅ |  |
-| document-download | ✅ | ✅ |  |
-| document-embed | ✅ | ✅ |  |
-| document-link | ✅ | ✅ |  |
-| document-upload | ❌ | ❌ |  |
-| editor-note | ✅ | ✅ |  |
-| editorial | ✅ | ✅ |  |
-| essay | ✅ | ✅ |  |
-| example | ✅ | ✅ |  |
-| featured | ✅ | ✅ |  |
-| flashcard | ✅ | ✅ |  |
-| flashcard-1 | ✅ | ✅ |  |
-| flashcard-language-1 | ❌ | ❌ |  |
-| flashcard-language-set | ❌ | ❌ |  |
-| flashcard-set | ❌ | ❌ |  |
-| focus-image | ✅ | ✅ |  |
-| foot-note | ✅ | ✅ |  |
-| group-born | ❌ | ❌ |  |
-| group-died | ❌ | ❌ |  |
-| help | ✅ | ✅ |  |
-| highlight | ❌ | ❌ |  |
-| highlight-text | ✅ | ✅ |  |
-| hint | ✅ | ✅ |  |
-| image | ✅ | ✅ |  |
-| image-landscape | ✅ | ✅ |  |
-| image-link | ✅ | ✅ |  |
-| image-on-device | ✅ | ✅ |  |
-| image-portrait | ✅ | ✅ |  |
-| image-prototype | ✅ | ✅ |  |
-| image-super-wide | ✅ | ✅ |  |
-| image-zoom | ✅ | ✅ |  |
-| info | ✅ | ✅ |  |
-| internal-link | ✅ | ✅ |  |
-| interview | ✅ | ✅ |  |
-| interview-instruction-grouped | ✅ | ✅ |  |
-| lang-audio-script | ✅ | ✅ |  |
-| lang-enabling-language-skills | ✅ | ✅ |  |
-| lang-english-around-world | ✅ | ✅ |  |
-| lang-extra-activity | ✅ | ✅ |  |
-| lang-good-to-know | ✅ | ✅ |  |
-| lang-homework | ✅ | ✅ |  |
-| lang-learning-goal | ✅ | ✅ |  |
-| lang-learning-outcomes | ✅ | ✅ |  |
-| lang-learning-strategy | ✅ | ✅ |  |
-| lang-level-down | ✅ | ✅ |  |
-| lang-level-up | ✅ | ✅ |  |
-| lang-life-skills | ✅ | ✅ |  |
-| lang-like-a-local | ✅ | ✅ |  |
-| lang-material | ✅ | ✅ |  |
-| lang-teacher-note | ✅ | ✅ |  |
-| lang-teacher-pronunciation | ✅ | ✅ |  |
-| lang-useful-phrases | ✅ | ✅ |  |
-| lang-video-script | ✅ | ✅ |  |
-| lang-vocabulary | ✅ | ✅ |  |
-| learning-path-book | ✅ | ✅ |  |
-| learning-path-bot-training | ❌ | ❌ |  |
-| learning-path-classroom-event | ✅ | ✅ |  |
-| learning-path-classroom-training | ✅ | ✅ |  |
-| learning-path-closing | ✅ | ✅ |  |
-| learning-path-external-link | ✅ | ✅ |  |
-| learning-path-feedback | ❌ | ❌ |  |
-| learning-path-learning-goal | ✅ | ✅ |  |
-| learning-path-lti | ✅ | ✅ |  |
-| learning-path-sign | ❌ | ❌ |  |
-| learning-path-step | ✅ | ✅ |  |
-| learning-path-video-call | ✅ | ✅ |  |
-| mark | ✅ | ✅ |  |
-| match | ✅ | ✅ |  |
-| match-all | ✅ | ✅ |  |
-| match-all-reverse | ✅ | ✅ |  |
-| match-audio | ❌ | ❌ |  |
-| match-matrix | ✅ | ✅ |  |
-| match-picture | ❌ | ❌ |  |
-| match-reverse | ✅ | ✅ |  |
-| match-solution-grouped | ✅ | ✅ |  |
-| message | ❌ | ❌ |  |
-| multiple-choice | ✅ | ✅ |  |
-| multiple-choice-1 | ✅ | ✅ |  |
-| multiple-choice-text | ✅ | ✅ |  |
-| multiple-response | ✅ | ✅ |  |
-| multiple-response-1 | ✅ | ✅ |  |
-| newspaper-article | ✅ | ✅ |  |
-| note | ✅ | ✅ |  |
-| note-ai | ✅ | ✅ |  |
-| notebook-article | ✅ | ✅ |  |
-| page | ✅ | ✅ |  |
-| photo | ✅ | ✅ |  |
-| preparation-note | ✅ | ✅ |  |
-| question-1 | ✅ | ✅ |  |
-| quote | ✅ | ✅ |  |
-| rating | ❌ | ❌ |  |
-| record | ❌ | ❌ |  |
-| record-audio | ❌ | ❌ |  |
-| release-note | ✅ | ✅ |  |
-| release-notes-summary | ✅ | ✅ |  |
-| remark | ✅ | ✅ |  |
-| review-approved-note | ✅ | ✅ |  |
-| review-author-note | ✅ | ✅ |  |
-| review-note | ✅ | ✅ |  |
-| review-request-for-review-note | ✅ | ✅ |  |
-| review-reviewer-note | ✅ | ✅ |  |
-| sample-solution | ✅ | ✅ |  |
-| scorm | ❌ | ❌ |  |
-| screenshot | ❌ | ❌ |  |
-| self-assessment | ❌ | ❌ |  |
-| sequence | ✅ | ✅ |  |
-| side-note | ✅ | ✅ |  |
-| statement | ✅ | ✅ |  |
-| sticky-note | ✅ | ✅ |  |
-| still-image-film | ✅ | ✅ |  |
-| still-image-film-embed | ✅ | ✅ |  |
-| still-image-film-link | ✅ | ✅ |  |
-| summary | ✅ | ✅ |  |
-| summary-ai | ✅ | ✅ |  |
-| survey | ❌ | ❌ |  |
-| survey-1 | ❌ | ❌ |  |
-| survey-anonymous | ❌ | ❌ |  |
-| survey-anonymous-1 | ❌ | ❌ |  |
-| take-picture | ✅ | ✅ |  |
-| toc | ✅ | ✅ |  |
-| true-false | ✅ | ✅ |  |
-| true-false-1 | ✅ | ✅ |  |
-| vendor-padlet-embed | ✅ | ✅ |  |
-| video | ✅ | ✅ |  |
-| video-embed | ✅ | ✅ |  |
-| video-landscape | ✅ | ✅ |  |
-| video-link |  ✅ | ✅ |  |
-| video-portrait | ✅ | ✅ |  |
-| video-transcript | ✅ | ✅ |  |
-| warning | ✅ | ✅ |  |
-| website-link | ✅ | ✅ |  |
-| workbook-article | ✅ | ✅ |  |
+# bitmark-parser-generator
+
+Version: 1.4.3
+## Supported Bits
+<pre>
+app-flashcards (since: 1.3.0)
+|__ app-flashcards-learn (since: 1.3.0)
+|__ app-flashcards-quiz (since: 1.3.0)
+app-link (since: 1.3.0)
+article (since: 1.3.0)
+|__ button-copy-text (since: 1.4.3)
+|__ page (since: 1.3.0)
+|__ statement (since: 1.3.0)
+article-embed (since: 1.3.0)
+article-link (since: 1.3.0)
+audio (since: 1.3.0)
+audio-embed (since: 1.3.0)
+audio-link (since: 1.3.0)
+bit-alias (since: 1.3.0)
+book (since: 1.3.0)
+|__ book-acknowledgments (since: 1.3.0)
+|__ book-addendum (since: 1.3.0)
+|__ book-afterword (since: 1.3.0)
+|__ book-appendix (since: 1.3.0)
+|__ book-article (since: 1.3.0)
+|__ book-author-bio (since: 1.3.0)
+|__ book-bibliography (since: 1.3.0)
+|__ book-coming-soon (since: 1.3.0)
+|__ book-conclusion (since: 1.3.0)
+|__ book-copyright (since: 1.3.0)
+|__ book-copyright-permissions (since: 1.3.0)
+|__ book-dedication (since: 1.3.0)
+|__ book-endnotes (since: 1.3.0)
+|__ book-epigraph (since: 1.3.0)
+|__ book-epilogue (since: 1.3.0)
+|__ book-foreword (since: 1.3.0)
+|__ book-frontispiece (since: 1.3.0)
+|__ book-imprint (since: 1.3.0)
+|__ book-inciting-incident (since: 1.3.0)
+|__ book-introduction (since: 1.3.0)
+|__ book-list-of-contributors (since: 1.3.0)
+|__ book-notes (since: 1.3.0)
+|__ book-postscript (since: 1.3.0)
+|__ book-preface (since: 1.3.0)
+|__ book-prologue (since: 1.3.0)
+|__ book-read-more (since: 1.3.0)
+|__ book-reference-list (since: 1.3.0)
+|__ book-request-for-a-book-review (since: 1.3.0)
+|__ book-summary (since: 1.3.0)
+|__ book-teaser (since: 1.3.0)
+|__ book-title (since: 1.3.0)
+bot-action-response (since: 1.3.0)
+bot-action-send (since: 1.3.0)
+browser-image (since: 1.3.0)
+card-1 (since: 1.3.0)
+|__ question-1 (since: 1.3.0)
+|__ survey-1 (since: 1.3.0)
+|__ survey-anonymous-1 (since: 1.3.0)
+chapter (since: 1.3.0)
+cloze (since: 1.3.0)
+|__ cloze-instruction-grouped (since: 1.3.0)
+|__ cloze-solution-grouped (since: 1.3.0)
+|__ coach-call-to-action-cloze (since: 1.3.0)
+|__ coach-self-reflection-cloze (since: 1.3.0)
+cloze-and-multiple-choice-text (since: 1.3.0)
+|__ coach-call-to-action-cloze-and-multiple-choice-text (since: 1.3.0)
+code (since: 1.3.0)
+|__ app-code-cell (since: 1.4.3)
+|__ app-code-editor (since: 1.4.3)
+|__ app-code-ide (since: 1.4.3)
+|__ code-runtime (since: 1.4.3)
+|__ console-log (since: 1.4.3)
+|__ output (since: 1.4.3)
+|__ stdout (since: 1.4.3)
+conversation-left-1 (since: 1.3.0)
+|__ conversation-left-1-scream (since: 1.3.0)
+|__ conversation-left-1-thought (since: 1.3.0)
+|__ conversation-right-1 (since: 1.3.0)
+|__ conversation-right-1-scream (since: 1.3.0)
+|__ conversation-right-1-thought (since: 1.3.0)
+document (since: 1.3.0)
+document-download (since: 1.3.0)
+document-embed (since: 1.3.0)
+document-link (since: 1.3.0)
+essay (since: 1.3.0)
+|__ coach-call-to-action-essay (since: 1.3.0)
+|__ coach-self-reflection-essay (since: 1.3.0)
+example (since: 1.3.0)
+|__ ai-prompt (since: 1.3.0)
+|__ app-ai-prompt (since: 1.3.0)
+|__ article-ai (since: 1.3.0)
+|__ article-attachment (since: 1.3.0)
+|__ assignment (since: 1.3.0)
+|__ audio-transcript (since: 1.3.0)
+|__ bitmark-example (since: 1.3.0)
+|__ blog-article (since: 1.3.0)
+|__ bug (since: 1.3.0)
+|__ checklist (since: 1.3.0)
+|__ coach-audio-transcript (since: 1.3.0)
+|__ coach-call-to-action-checklist (since: 1.3.0)
+|__ coach-home-rules (since: 1.3.0)
+|__ coach-video-transcript (since: 1.3.0)
+|__ cook-arrangement (since: 1.3.0)
+|__ cook-ingredients (since: 1.3.0)
+|__ cook-insert (since: 1.3.0)
+|__ cook-personal-recommendation (since: 1.3.0)
+|__ cook-plate (since: 1.3.0)
+|__ cook-practice-advise (since: 1.3.0)
+|__ cook-preparation (since: 1.3.0)
+|__ cook-recommendation (since: 1.3.0)
+|__ cook-remark (since: 1.3.0)
+|__ cook-side-dish (since: 1.3.0)
+|__ cook-side-drink (since: 1.3.0)
+|__ cook-step (since: 1.3.0)
+|__ cook-timer (since: 1.3.0)
+|__ cook-variation (since: 1.3.0)
+|__ correction (since: 1.3.0)
+|__ danger (since: 1.3.0)
+|__ details (since: 1.3.0)
+|__ details-1 (since: 1.3.0)
+|__ editorial (since: 1.3.0)
+|__ editor-note (since: 1.3.0)
+|__ featured (since: 1.3.0)
+|__ help (since: 1.3.0)
+|__ hint (since: 1.3.0)
+|__ info (since: 1.3.0)
+|__ lang-audio-script (since: 1.3.0)
+|__ lang-enabling-language-skills (since: 1.3.0)
+|__ lang-english-around-world (since: 1.3.0)
+|__ lang-extra-activity (since: 1.3.0)
+|__ lang-good-to-know (since: 1.3.0)
+|__ lang-homework (since: 1.3.0)
+|__ lang-learning-goal (since: 1.3.0)
+|__ lang-learning-outcomes (since: 1.3.0)
+|__ lang-learning-strategy (since: 1.3.0)
+|__ lang-level-down (since: 1.3.0)
+|__ lang-level-up (since: 1.3.0)
+|__ lang-life-skills (since: 1.3.0)
+|__ lang-like-a-local (since: 1.3.0)
+|__ lang-material (since: 1.3.0)
+|__ lang-teacher-note (since: 1.3.0)
+|__ lang-teacher-pronunciation (since: 1.3.0)
+|__ lang-useful-phrases (since: 1.3.0)
+|__ lang-video-script (since: 1.3.0)
+|__ lang-vocabulary (since: 1.3.0)
+|__ message (since: 1.3.0)
+|__ newspaper-article (since: 1.3.0)
+|__ note (since: 1.3.0)
+|__ note-ai (since: 1.3.0)
+|__ notebook-article (since: 1.3.0)
+|__ preparation-note (since: 1.3.0)
+|__ release-notes-summary (since: 1.3.0)
+|__ remark (since: 1.3.0)
+|__ review-approved-note (since: 1.3.0)
+|__ review-author-note (since: 1.3.0)
+|__ review-note (since: 1.3.0)
+|__ review-request-for-review-note (since: 1.3.0)
+|__ review-reviewer-note (since: 1.3.0)
+|__ self-assessment (since: 1.3.0)
+|__ side-note (since: 1.3.0)
+|__ summary (since: 1.3.0)
+|__ summary-ai (since: 1.3.0)
+|__ video-transcript (since: 1.3.0)
+|__ warning (since: 1.3.0)
+|__ workbook-article (since: 1.3.0)
+flashcard (since: 1.3.0)
+|__ flashcard-1 (since: 1.3.0)
+focus-image (since: 1.3.0)
+highlight-text (since: 1.3.0)
+image (since: 1.3.0)
+|__ app-create-bits-from-image (since: 1.3.0)
+|__ app-get-screenshot (since: 1.3.0)
+|__ details-image (since: 1.3.0)
+|__ figure (since: 1.3.0, deprecated: 1.4.0)
+|__ image-banner (since: 1.3.0)
+|__ image-figure (since: 1.3.0)
+|__ image-landscape (since: 1.3.0)
+|__ image-mood (since: 1.3.0)
+|__ image-portrait (since: 1.3.0)
+|__ image-prototype (since: 1.3.0)
+|__ image-screenshot (since: 1.3.0)
+|__ image-styled (since: 1.3.0)
+|__ image-super-wide (since: 1.3.0)
+|__ image-zoom (since: 1.3.0)
+|__ lang-life-skill-icon (since: 1.3.0)
+|__ life-skill-sticker (since: 1.3.0)
+|__ page-banner (since: 1.4.3)
+|__ screenshot (since: 1.3.0, deprecated: 1.4.0)
+image-link (since: 1.3.0)
+image-on-device (since: 1.3.0)
+image-responsive (since: 1.3.0)
+internal-link (since: 1.3.0)
+interview (since: 1.3.0)
+|__ bot-interview (since: 1.3.0)
+|__ interview-instruction-grouped (since: 1.3.0)
+learning-path-book (since: 1.3.0)
+|__ book-link (since: 1.3.0)
+|__ book-link-next (since: 1.3.0)
+|__ book-link-prev (since: 1.3.0)
+|__ learning-path-classroom-event (since: 1.3.0)
+|__ learning-path-classroom-training (since: 1.3.0)
+|__ learning-path-closing (since: 1.3.0)
+|__ learning-path-feedback (since: 1.3.0)
+|__ learning-path-learning-goal (since: 1.3.0)
+|__ learning-path-lti (since: 1.3.0)
+|__ learning-path-sign (since: 1.3.0)
+|__ learning-path-step (since: 1.3.0)
+learning-path-bot-training (since: 1.3.0)
+learning-path-external-link (since: 1.3.0)
+|__ learning-path-external-link (since: 1.3.0)
+learning-path-video-call (since: 1.3.0)
+|__ learning-path-video-call (since: 1.3.0)
+mark (since: 1.3.0)
+match (since: 1.3.0)
+|__ match-all (since: 1.3.0)
+|__ match-all-reverse (since: 1.3.0)
+|__ match-reverse (since: 1.3.0)
+|__ match-solution-grouped (since: 1.3.0)
+match-audio (since: 1.3.0)
+match-matrix (since: 1.3.0)
+match-picture (since: 1.3.0)
+multiple-choice (since: 1.3.0)
+|__ coach-self-reflection-multiple-choice (since: 1.3.0)
+multiple-choice-1 (since: 1.3.0)
+|__ coach-self-reflection-multiple-choice-1 (since: 1.3.0)
+multiple-choice-text (since: 1.3.0)
+|__ coach-call-to-action-multiple-choice-text (since: 1.3.0)
+|__ coach-self-reflection-multiple-choice-text (since: 1.3.0)
+multiple-response (since: 1.3.0)
+|__ coach-self-reflection-multiple-response (since: 1.3.0)
+multiple-response-1 (since: 1.3.0)
+|__ coach-self-reflection-multiple-response-1 (since: 1.3.0)
+page-buy-button (since: 1.4.3)
+photo (since: 1.3.0)
+quote (since: 1.3.0)
+rating (since: 1.3.0)
+|__ coach-self-reflection-rating (since: 1.3.0)
+release-note (since: 1.3.0)
+sample-solution (since: 1.3.0)
+sequence (since: 1.3.0)
+still-image-film (since: 1.3.0)
+still-image-film-embed (since: 1.3.0)
+still-image-film-link (since: 1.3.0)
+survey (since: 1.3.0)
+survey-anonymous (since: 1.3.0)
+toc (since: 1.3.0)
+|__ anchor (since: 1.3.0)
+|__ bit-book-ending (since: 1.3.0)
+|__ bit-book-summary (since: 1.3.0)
+|__ bot-action-announce (since: 1.3.0)
+|__ bot-action-rating-number (since: 1.3.0)
+|__ bot-action-remind (since: 1.3.0)
+|__ bot-action-save (since: 1.3.0)
+|__ bot-action-true-false (since: 1.3.0)
+|__ chapter-subject-matter (since: 1.3.0)
+|__ chat (since: 1.3.0)
+|__ conclusion (since: 1.3.0)
+|__ document-upload (since: 1.3.0)
+|__ foot-note (since: 1.3.0)
+|__ group-born (since: 1.3.0)
+|__ group-died (since: 1.3.0)
+|__ record-audio (since: 1.3.0)
+|__ sticky-note (since: 1.3.0)
+|__ take-picture (since: 1.3.0)
+true-false (since: 1.3.0)
+true-false-1 (since: 1.3.0)
+vendor-padlet-embed (since: 1.3.0)
+vendor-jupyter-output (since: 1.4.3)
+|__ vendor-jupyter-cell-code (since: 1.4.3)
+|__ vendor-jupyter-cell-markdown (since: 1.4.3)
+|__ vendor-jupyter-cell-raw (since: 1.4.3)
+|__ vendor-jupyter-ipynb (since: 1.4.3)
+video (since: 1.3.0)
+|__ video-landscape (since: 1.3.0)
+|__ video-portrait (since: 1.3.0)
+video-embed (since: 1.3.0)
+|__ video-embed-landscape (since: 1.3.0)
+|__ video-embed-portrait (since: 1.3.0)
+video-link (since: 1.3.0)
+|__ video-link-landscape (since: 1.3.0)
+|__ video-link-portrait (since: 1.3.0)
+website-link (since: 1.3.0)
+
+</pre>

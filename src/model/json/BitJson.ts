@@ -12,6 +12,8 @@ export interface BitJson {
   externalId: string | string[];
   spaceId: string | string[];
   padletId: string;
+  jupyterId: string;
+  jupyterExecutionCount: string;
   AIGenerated: boolean;
   releaseVersion: string;
   ageRange: number | number[];

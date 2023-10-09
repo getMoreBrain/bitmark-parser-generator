@@ -2248,6 +2248,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       externalId: undefined,
       spaceId: undefined,
       padletId: undefined,
+      jupyterId: undefined,
+      jupyterExecutionCount: undefined,
       AIGenerated: undefined,
       releaseVersion: undefined,
       book: undefined,
@@ -2523,6 +2525,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.externalId == null) delete bitJson.externalId;
     if (bitJson.spaceId == null) delete bitJson.spaceId;
     if (bitJson.padletId == null) delete bitJson.padletId;
+    if (bitJson.jupyterId == null) delete bitJson.jupyterId;
+    if (bitJson.jupyterExecutionCount == null) delete bitJson.jupyterExecutionCount;
     if (bitJson.AIGenerated == null) delete bitJson.AIGenerated;
     if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
     if (bitJson.book == null) delete bitJson.book;

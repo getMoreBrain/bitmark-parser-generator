@@ -1,0 +1,23 @@
+[
+  {
+    "bit": {
+      "type": "vendor-jupyter-cell-code",
+      "format": "bitmark--",
+      "id": ["51861"],
+      "jupyterId": "f265c4ba-ae94-451d-aa19-e7528d33cf23",
+      "jupyterExecutionCount": 10,
+      "computerLanguage": "python",
+      "item": "",
+      "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+      "hint": "",
+      "isExample": false,
+      "example": null,
+      "body": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+    },
+    "parser": {
+      "version": "1.4.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.vendor-jupyter-cell-code]\n[@id:51861]\n[@jupyterId:f265c4ba-ae94-451d-aa19-e7528d33cf23]\n[@jupyterExecutionCount:10]\n[@computerLanguage:python]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  }
+]

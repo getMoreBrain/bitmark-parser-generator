@@ -23,6 +23,16 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.jupyterId]: {
+    tag: PropertyTag.jupyterId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.jupyterExecutionCount]: {
+    tag: PropertyTag.jupyterExecutionCount,
+    single: true,
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.aiGenerated]: {
     tag: PropertyTag.aiGenerated,
     single: true,
