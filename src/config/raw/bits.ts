@@ -76,6 +76,24 @@ const BITS: _BitsConfig = {
       [AliasBitType.buttonCopyText]: { since: '1.4.3' },
     },
   },
+  [RootBitType.appBitmarkFromJavascript]: {
+    since: '1.4.5',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.maxCreatedBits,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+    aliases: {
+      [AliasBitType.appBitmarkFromEditor]: { since: '1.4.5' },
+    },
+  },
   [RootBitType.articleEmbed]: {
     since: '1.3.0',
     tags: [

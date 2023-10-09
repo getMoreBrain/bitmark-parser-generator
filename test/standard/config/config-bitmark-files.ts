@@ -13,6 +13,8 @@ let TEST_FILES: string[] = [
   // // '_simple.bit',
   // 'ai-prompt.bit',
   // 'app-ai-prompt.bit',
+  // 'app-bitmark-from-editor.bit',
+  // 'app-bitmark-from-javascript.bit',
   // 'app-code-editor.bit',
   // 'app-code-ide.bit',
   // 'app-code-cell.bit',
@@ -267,6 +269,8 @@ if (TEST_ALL) {
   TEST_FILES = [
     'ai-prompt.bit',
     'app-ai-prompt.bit',
+    'app-bitmark-from-editor.bit',
+    'app-bitmark-from-javascript.bit',
     'app-code-editor.bit',
     'app-code-ide.bit',
     'app-code-cell.bit',
