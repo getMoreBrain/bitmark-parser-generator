@@ -131,7 +131,7 @@ class Builder extends BaseBuilder {
     labelFalse?: string;
     content2Buy?: string;
     quotedPerson?: string;
-    reasonableNumOfChars?: number;    
+    reasonableNumOfChars?: number;
     partialAnswer?: string;
     levelProperty?: string;
     book?: string;

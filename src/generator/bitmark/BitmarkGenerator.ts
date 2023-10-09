@@ -450,6 +450,13 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeProperty('sampleSolution', node.value);
   }
 
+  // bitmarkAst -> bits -> bitsValue -> reasonableNumOfChars
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> reasonableNumOfChars
+
+  protected leaf_reasonableNumOfChars(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('reasonableNumOfChars', node.value);
+  }
+
   // bitmarkAst -> bits -> bitsValue -> itemLead
 
   protected enter_itemLead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1355,6 +1362,18 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (node.value) {
       this.writeString(node.value);
       // this.writeNL();
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> question -> isShortAnswer
+
+  protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Generally, shortAnswer is the default.
+    // Write long answer if shortAnswer is specifically false.
+    if (node.value === false) {
+      this.writeOPA();
+      this.writeString('longAnswer');
+      this.writeCL();
     }
   }
 
