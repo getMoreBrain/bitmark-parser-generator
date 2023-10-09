@@ -83,6 +83,8 @@ const NodeType = superenum({
   aiGeneratedValue: 'aiGeneratedValue',
   ageRange: 'ageRange',
   ageRangeValue: 'ageRangeValue',
+  lang: 'lang',
+  langValue: 'langValue',
   language: 'language',
   languageValue: 'languageValue',
   computerLanguage: 'computerLanguage',

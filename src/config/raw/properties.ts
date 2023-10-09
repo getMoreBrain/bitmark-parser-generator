@@ -48,6 +48,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.ageRange,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.lang]: {
+    tag: PropertyTag.lang,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.language]: {
     tag: PropertyTag.language,
     format: PropertyFormat.trimmedString,
@@ -212,7 +217,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.content2Buy]: {
     tag: PropertyTag.content2Buy,
     single: true,
-    format: PropertyFormat.string,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.quotedPerson]: {
     tag: PropertyTag.quotedPerson,

@@ -11,12 +11,13 @@ export interface BitJson {
   id: string | string[];
   externalId: string | string[];
   spaceId: string | string[];
-  padletId: string | string[];
-  jupyterId: string | string[];
-  jupyterExecutionCount: string | string[];
+  padletId: string;
+  jupyterId: string;
+  jupyterExecutionCount: string;
   AIGenerated: boolean;
-  releaseVersion: string | string[];
+  releaseVersion: string;
   ageRange: number | number[];
+  lang: string;
   language: string | string[];
   computerLanguage: string;
   target: string | string[];
@@ -25,7 +26,7 @@ export interface BitJson {
   iconTag: string;
   colorTag: string | string[];
   flashcardSet: string | string[];
-  subtype: string | string[];
+  subtype: string;
   coverImage: string | string[];
   publisher: string | string[];
   publications: string | string[];
@@ -43,7 +44,7 @@ export interface BitJson {
   deeplink: string | string[];
   externalLink: string;
   externalLinkText: string;
-  videoCallLink: string | string[];
+  videoCallLink: string;
   bot: string | string[];
   list: string | string[];
   textReference: string;
@@ -51,7 +52,7 @@ export interface BitJson {
   isInfoOnly: boolean; // only .learningPathExternalLink?
   labelTrue: string;
   labelFalse: string;
-  content2Buy: string | string[];
+  content2Buy: string;
   quotedPerson: string;
 
   book: string;

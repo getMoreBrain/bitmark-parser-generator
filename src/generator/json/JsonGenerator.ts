@@ -455,7 +455,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         }
       } else {
         // String example
-        defaultExample = ArrayUtils.asSingle(bit.sampleSolution) ?? '';
+        defaultExample = bit.sampleSolution ?? '';
       }
 
       const exampleRes = this.toExample(bit as ExampleNode, {
@@ -538,7 +538,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> sampleSolution
 
-  protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_sampleSolution(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Ignore example that is not at the correct level
+    if (parent?.key !== NodeType.bitsValue) return;
+
     if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value, true);
   }
 
@@ -2250,6 +2253,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       releaseVersion: undefined,
       book: undefined,
       ageRange: undefined,
+      lang: undefined,
       language: undefined,
       computerLanguage: undefined,
       target: undefined,
@@ -2525,6 +2529,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
     if (bitJson.book == null) delete bitJson.book;
     if (bitJson.ageRange == null) delete bitJson.ageRange;
+    if (bitJson.lang == null) delete bitJson.lang;
     if (bitJson.language == null) delete bitJson.language;
     if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
     if (bitJson.target == null) delete bitJson.target;

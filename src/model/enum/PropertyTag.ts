@@ -42,6 +42,8 @@ const PropertyTag = superenum({
   kind: 'kind',
   labelFalse: 'labelFalse',
   labelTrue: 'labelTrue',
+  content2Buy: 'content2Buy',
+  lang: 'lang',
   language: 'language',
   level: 'level',
   license: 'license',

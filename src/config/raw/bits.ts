@@ -180,8 +180,17 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.language,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.spaceId,
         maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.kind,
       },
       {
         type: BitTagType.tag,
@@ -784,7 +793,6 @@ const BITS: _BitsConfig = {
       [AliasBitType.bookLink]: { since: '1.3.0' },
       [AliasBitType.bookLinkNext]: { since: '1.3.0' },
       [AliasBitType.bookLinkPrev]: { since: '1.3.0' },
-      [AliasBitType.learningPathBotTraining]: { since: '1.3.0' },
       [AliasBitType.learningPathClassroomEvent]: { since: '1.3.0' },
       [AliasBitType.learningPathClassroomTraining]: { since: '1.3.0' },
       [AliasBitType.learningPathClosing]: { since: '1.3.0' },
@@ -795,7 +803,25 @@ const BITS: _BitsConfig = {
       [AliasBitType.learningPathStep]: { since: '1.3.0' },
     },
   },
-
+  [RootBitType.learningPathBotTraining]: {
+    since: '1.3.0',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_learningPathCommon,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.bot,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+  },
   [RootBitType.learningPathExternalLink]: {
     since: '1.3.0',
     tags: [
