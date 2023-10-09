@@ -45,7 +45,6 @@ const PropertyTag = superenum({
   labelTrue: 'labelTrue',
   lang: 'lang',
   language: 'language',
-  level: 'level',
   license: 'license',
   list: 'list',
   location: 'location',
@@ -86,7 +85,6 @@ const PropertyTag = superenum({
   thumbImage: 'thumbImage',
   toc: 'toc',
   trim: 'trim',
-  type: 'type',
   videoCallLink: 'videoCallLink',
   width: 'width',
 });

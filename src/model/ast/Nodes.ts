@@ -79,7 +79,6 @@ export interface Bit {
   book?: string;
   title?: string;
   subtitle?: string;
-  levelProperty?: Property; // 'level' can be a property [@level:2] - string
   level?: number; // 'level' can either the subtitle level [##subtitle]
   toc?: Property;
   progress?: Property;

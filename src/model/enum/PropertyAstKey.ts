@@ -8,7 +8,6 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 const PropertyAstKey = superenum({
   aiGenerated: 'aiGenerated',
   isCaseSensitive: 'isCaseSensitive',
-  levelProperty: 'levelProperty',
   referenceProperty: 'referenceProperty',
   isShortAnswer: 'isShortAnswer',
   markConfig: 'markConfig',

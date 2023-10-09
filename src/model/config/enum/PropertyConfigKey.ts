@@ -48,7 +48,6 @@ const propertyConfigKeys = {
   labelTrue: 'labelTrue',
   lang: 'lang',
   language: 'language',
-  level: 'level',
   license: 'license',
   list: 'list',
   location: 'location',
@@ -90,7 +89,6 @@ const propertyConfigKeys = {
   thumbImage: 'thumbImage',
   toc: 'toc',
   trim: 'trim',
-  type: 'type',
   videoCallLink: 'videoCallLink',
   width: 'width',
 } as const;

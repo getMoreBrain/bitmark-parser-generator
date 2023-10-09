@@ -260,12 +260,6 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.boolean,
     defaultValue: 'true',
   },
-  [PropertyConfigKey.level]: {
-    tag: PropertyTag.level,
-    single: true,
-    format: PropertyFormat.string,
-    astKey: PropertyAstKey.levelProperty,
-  },
   [PropertyConfigKey.book]: {
     tag: PropertyTag.book,
     single: true,
@@ -288,11 +282,6 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.property_mark]: {
     tag: PropertyTag.mark,
-    format: PropertyFormat.trimmedString,
-  },
-  [PropertyConfigKey.type]: {
-    tag: PropertyTag.type,
-    single: true,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.color]: {
