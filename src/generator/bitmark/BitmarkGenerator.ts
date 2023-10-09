@@ -444,15 +444,17 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   // bitmarkAst -> bits -> bitsValue -> sampleSolution
-
-  protected enter_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('sampleSolution', node.value);
-  }
-
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> sampleSolution
 
   protected leaf_sampleSolution(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeProperty('sampleSolution', node.value);
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> reasonableNumOfChars
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> reasonableNumOfChars
+
+  protected leaf_reasonableNumOfChars(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('reasonableNumOfChars', node.value);
   }
 
   // bitmarkAst -> bits -> bitsValue -> itemLead

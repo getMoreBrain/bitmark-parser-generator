@@ -166,7 +166,7 @@ export interface StatementsOrChoicesOrResponses {
 }
 
 export interface BitSpecificCards {
-  sampleSolution?: string | string[];
+  sampleSolution?: string;
   elements?: string[];
   flashcards?: Flashcard[];
   statements?: Statement[];

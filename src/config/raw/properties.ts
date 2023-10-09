@@ -23,6 +23,16 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.jupyterId]: {
+    tag: PropertyTag.jupyterId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.jupyterExecutionCount]: {
+    tag: PropertyTag.jupyterExecutionCount,
+    single: true,
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.aiGenerated]: {
     tag: PropertyTag.aiGenerated,
     single: true,
@@ -36,6 +46,11 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.ageRange]: {
     tag: PropertyTag.ageRange,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.lang]: {
+    tag: PropertyTag.lang,
+    single: true,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.language]: {
@@ -76,6 +91,10 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.subtype]: {
     tag: PropertyTag.subtype,
     single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.bookAlias]: {
+    tag: PropertyTag.bookAlias,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.coverImage]: {
@@ -199,6 +218,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.content2Buy]: {
+    tag: PropertyTag.content2Buy,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.quotedPerson]: {
     tag: PropertyTag.quotedPerson,
     single: true,
@@ -296,6 +320,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.reaction,
     single: true,
     format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.reasonableNumOfChars]: {
+    tag: PropertyTag.reasonableNumOfChars,
+    single: true,
+    format: PropertyFormat.number,
   },
   [PropertyConfigKey.imageSource]: {
     tag: PropertyTag.imageSource,

@@ -27,9 +27,12 @@ export interface Bit {
   externalId?: Property;
   spaceId?: Property;
   padletId?: Property;
+  jupyterId?: Property;
+  jupyterExecutionCount?: Property;
   aiGenerated?: Property;
   releaseVersion?: Property;
   ageRange?: Property;
+  lang?: Property;
   language?: Property;
   computerLanguage?: Property;
   target?: Property;
@@ -39,6 +42,7 @@ export interface Bit {
   colorTag?: Property;
   flashcardSet?: Property;
   subtype?: Property;
+  bookAlias?: Property;
   coverImage?: Property;
   publisher?: Property;
   publications?: Property;
@@ -65,8 +69,10 @@ export interface Bit {
   isInfoOnly?: Property;
   labelTrue?: Property;
   labelFalse?: Property;
+  content2Buy?: Property;
   quotedPerson?: Property;
   partialAnswer?: Property;
+  reasonableNumOfChars?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: string;
@@ -89,7 +95,7 @@ export interface Bit {
   partner?: Partner;
   resources?: Resource[];
   body?: Body;
-  sampleSolution?: string[];
+  sampleSolution?: string;
   statement?: Statement;
   choices?: Choice[];
   responses?: Response[];
@@ -278,6 +284,7 @@ export interface Question {
   instruction?: string;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
+  reasonableNumOfChars?: number;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
