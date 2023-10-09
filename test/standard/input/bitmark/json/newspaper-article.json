@@ -9,8 +9,7 @@
       "hint": "",
       "isExample": false,
       "example": null,
-      "ageRange": ["18", "120"],
-      "language": ["jp"]
+      "ageRange": ["18", "120"]
     }
   }
 ]

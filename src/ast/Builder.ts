@@ -89,49 +89,50 @@ class Builder extends BaseBuilder {
     id?: string | string[];
     externalId?: string | string[];
     spaceId?: string | string[];
-    padletId?: string | string[];
+    padletId?: string;
     aiGenerated?: boolean;
-    releaseVersion?: string | string[];
+    releaseVersion?: string;
     ageRange?: number | number[];
+    lang?: string;
     language?: string | string[];
-    computerLanguage?: string | string[];
+    computerLanguage?: string;
     target?: string | string[];
     tag?: string | string[];
-    icon?: string | string[];
-    iconTag?: string | string[];
+    icon?: string;
+    iconTag?: string;
     colorTag?: string | string[];
     flashcardSet?: string | string[];
-    subtype?: string | string[];
+    subtype?: string;
     coverImage?: string | string[];
     publisher?: string | string[];
     publications?: string | string[];
     author?: string | string[];
     subject?: string | string[];
-    date?: string | string[];
-    location?: string | string[];
+    date?: string;
+    location?: string;
     theme?: string | string[];
-    kind?: string | string[];
-    action?: string | string[];
-    thumbImage?: string | string[];
-    focusX?: number | number[];
-    focusY?: number | number[];
-    duration?: string | string[];
+    kind?: string;
+    action?: string;
+    thumbImage?: string;
+    focusX?: number;
+    focusY?: number;
+    duration?: string;
     referenceProperty?: string | string[];
     deeplink?: string | string[];
-    externalLink?: string | string[];
-    externalLinkText?: string | string[];
-    videoCallLink?: string | string[];
+    externalLink?: string;
+    externalLinkText?: string;
+    videoCallLink?: string;
     bot?: string | string[];
     list?: string | string[];
-    textReference?: string | string[];
+    textReference?: string;
     isTracked?: boolean;
     isInfoOnly?: boolean;
-    labelTrue?: string | string[];
-    labelFalse?: string | string[];
-    content2Buy?: string | string[];
-    quotedPerson?: string | string[];
-    partialAnswer?: string | string[];
-    levelProperty?: string | string[];
+    labelTrue?: string;
+    labelFalse?: string;
+    content2Buy?: string;
+    quotedPerson?: string;
+    partialAnswer?: string;
+    levelProperty?: string;
     book?: string;
     title?: string;
     subtitle?: string;
@@ -157,7 +158,7 @@ class Builder extends BaseBuilder {
     markConfig?: MarkConfig[];
     resources?: Resource | Resource[];
     body?: Body;
-    sampleSolution?: string | string[];
+    sampleSolution?: string;
     elements?: string[];
     flashcards?: Flashcard[];
     statement?: Statement;
@@ -186,6 +187,7 @@ class Builder extends BaseBuilder {
       aiGenerated,
       releaseVersion,
       ageRange,
+      lang,
       language,
       computerLanguage,
       target,
@@ -272,6 +274,7 @@ class Builder extends BaseBuilder {
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, releaseVersion),
       book,
       ageRange: this.toAstProperty(PropertyConfigKey.ageRange, ageRange),
+      lang: this.toAstProperty(PropertyConfigKey.lang, lang),
       language: this.toAstProperty(PropertyConfigKey.language, language),
       computerLanguage: this.toAstProperty(PropertyConfigKey.computerLanguage, computerLanguage),
       target: this.toAstProperty(PropertyConfigKey.target, target),
@@ -328,7 +331,7 @@ class Builder extends BaseBuilder {
       partner,
       resources,
       body,
-      sampleSolution: ArrayUtils.asArray(sampleSolution),
+      sampleSolution: ArrayUtils.asSingle(sampleSolution),
       cardNode,
       footer,
 

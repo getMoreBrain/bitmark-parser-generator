@@ -22,8 +22,7 @@
       "hint": "",
       "isExample": false,
       "example": null,
-      "ageRange": ["18", "120"],
-      "language": ["en", "jp", "cn"]
+      "ageRange": ["18", "120"]
     },
     "parser": {
       "excessResources": [
