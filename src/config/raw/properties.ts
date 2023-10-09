@@ -202,7 +202,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.content2Buy]: {
     tag: PropertyTag.content2Buy,
     single: true,
-    format: PropertyFormat.string,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.quotedPerson]: {
     tag: PropertyTag.quotedPerson,
