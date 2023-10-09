@@ -13,6 +13,7 @@
       "lang": "en-US",
       "language": ["de"],
       "spaceId": ["sl"],
+      "kind": "learning-path",
       "subtype": "draft-book",
       "author": ["Philippe Pointet"],
       "externalId": ["e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"],
