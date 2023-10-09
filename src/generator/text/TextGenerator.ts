@@ -563,33 +563,36 @@ class TextGenerator implements AstWalkCallbacks {
       const singleMark = node.marks.length === 1;
 
       // Get the correct mark start / end
-      const markStartEnd = node.marks.reduce((acc, mark) => {
-        if (acc) return acc;
-        switch (mark.type) {
-          case TextMarkType.bold:
-          case TextMarkType.light:
-          case TextMarkType.italic:
-          case TextMarkType.highlight:
-            if (singleMark) return STANDARD_MARKS[mark.type];
-            return INLINE_MARK;
-            break;
-          case TextMarkType.strike:
-          case TextMarkType.sub:
-          case TextMarkType.super:
-          case TextMarkType.ins:
-          case TextMarkType.del:
-          case TextMarkType.var:
-          case TextMarkType.code:
-          case TextMarkType.color:
-          case TextMarkType.comment:
-            return INLINE_MARK;
+      const markStartEnd = node.marks.reduce(
+        (acc, mark) => {
+          if (acc) return acc;
+          switch (mark.type) {
+            case TextMarkType.bold:
+            case TextMarkType.light:
+            case TextMarkType.italic:
+            case TextMarkType.highlight:
+              if (singleMark) return STANDARD_MARKS[mark.type];
+              return INLINE_MARK;
+              break;
+            case TextMarkType.strike:
+            case TextMarkType.sub:
+            case TextMarkType.super:
+            case TextMarkType.ins:
+            case TextMarkType.del:
+            case TextMarkType.var:
+            case TextMarkType.code:
+            case TextMarkType.color:
+            case TextMarkType.comment:
+              return INLINE_MARK;
 
-          case TextMarkType.link:
-          default:
-          // Do nothing (link is handled in writeText)
-        }
-        return acc;
-      }, undefined as string | undefined);
+            case TextMarkType.link:
+            default:
+            // Do nothing (link is handled in writeText)
+          }
+          return acc;
+        },
+        undefined as string | undefined,
+      );
 
       const haveMark = markStartEnd != null;
 
