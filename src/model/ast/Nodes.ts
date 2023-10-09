@@ -73,6 +73,7 @@ export interface Bit {
   quotedPerson?: Property;
   partialAnswer?: Property;
   reasonableNumOfChars?: Property;
+  maxCreatedBits?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: string;

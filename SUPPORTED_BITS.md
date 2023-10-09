@@ -1,8 +1,10 @@
 # bitmark-parser-generator
 
-Version: 1.4.4
+Version: 1.4.5
 ## Supported Bits
 <pre>
+app-bitmark-from-javascript (since: 1.4.5)
+|__ app-bitmark-from-editor (since: 1.4.5)
 app-flashcards (since: 1.3.0)
 |__ app-flashcards-learn (since: 1.3.0)
 |__ app-flashcards-quiz (since: 1.3.0)

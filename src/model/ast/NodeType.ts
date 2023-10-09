@@ -159,6 +159,8 @@ const NodeType = superenum({
   partialAnswerValue: 'partialAnswerValue',
   reasonableNumOfChars: 'reasonableNumOfChars',
   reasonableNumOfCharsValue: 'reasonableNumOfCharsValue',
+  maxCreatedBits: 'maxCreatedBits',
+  maxCreatedBitsValue: 'maxCreatedBitsValue',
 
   book: 'book',
 
