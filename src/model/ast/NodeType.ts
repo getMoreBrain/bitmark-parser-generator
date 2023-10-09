@@ -182,8 +182,6 @@ const NodeType = superenum({
   tocValue: 'tocValue',
   progress: 'progress',
   progressValue: 'progressValue',
-  levelProperty: 'levelProperty',
-  levelPropertyValue: 'LevelPropertyValue',
   anchor: 'anchor',
   reference: 'reference',
   referenceEnd: 'referenceEnd',
