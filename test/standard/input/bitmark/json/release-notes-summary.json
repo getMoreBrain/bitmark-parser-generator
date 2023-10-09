@@ -4,7 +4,6 @@
       "type": "release-notes-summary",
       "format": "bitmark--",
       "ageRange": ["18", "120"],
-      "language": ["en", "jp", "cn"],
       "item": "",
       "hint": "",
       "example": null,

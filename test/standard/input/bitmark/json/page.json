@@ -5,15 +5,7 @@
       "type": "page",
       "format": "bitmark++",
       "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\n\nSome more text.\n::remark::\n::",
-      "ageRange": [
-        "18",
-        "120"
-      ],
-      "language": [
-        "en",
-        "jp",
-        "cn"
-      ]
+      "ageRange": ["18", "120"]
     },
     "parser": {
       "excessResources": [

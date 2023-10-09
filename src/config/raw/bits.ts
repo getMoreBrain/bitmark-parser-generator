@@ -73,9 +73,9 @@ const BITS: _BitsConfig = {
     aliases: {
       [AliasBitType.page]: { since: '1.3.0' },
       [AliasBitType.statement]: { since: '1.3.0' },
+      [AliasBitType.buttonCopyText]: { since: '1.4.3' },
     },
   },
-
   [RootBitType.articleEmbed]: {
     since: '1.3.0',
     tags: [
@@ -180,8 +180,17 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.language,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.spaceId,
         maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.kind,
       },
       {
         type: BitTagType.tag,
@@ -546,7 +555,6 @@ const BITS: _BitsConfig = {
       [AliasBitType.details1]: { since: '1.3.0' },
       [AliasBitType.details]: { since: '1.3.0' },
       [AliasBitType.editorial]: { since: '1.3.0' },
-      // [AliasBitType.example]:{ since: '1.3.0'},
       [AliasBitType.editorNote]: { since: '1.3.0' },
       [AliasBitType.featured]: { since: '1.3.0' },
       [AliasBitType.help]: { since: '1.3.0' },
@@ -576,7 +584,6 @@ const BITS: _BitsConfig = {
       [AliasBitType.note]: { since: '1.3.0' },
       [AliasBitType.noteAi]: { since: '1.3.0' },
       [AliasBitType.notebookArticle]: { since: '1.3.0' },
-      // [AliasBitType.page]:{ since: '1.3.0'},
       [AliasBitType.preparationNote]: { since: '1.3.0' },
       [AliasBitType.releaseNotesSummary]: { since: '1.3.0' },
       [AliasBitType.remark]: { since: '1.3.0' },
@@ -587,7 +594,6 @@ const BITS: _BitsConfig = {
       [AliasBitType.reviewApprovedNote]: { since: '1.3.0' },
       [AliasBitType.selfAssessment]: { since: '1.3.0' },
       [AliasBitType.sideNote]: { since: '1.3.0' },
-      // [AliasBitType.statement]:{ since: '1.3.0'},
       [AliasBitType.summary]: { since: '1.3.0' },
       [AliasBitType.summaryAi]: { since: '1.3.0' },
       [AliasBitType.videoTranscript]: { since: '1.3.0' },
@@ -680,6 +686,7 @@ const BITS: _BitsConfig = {
       [AliasBitType.imageZoom]: { since: '1.3.0' },
       [AliasBitType.langLifeSkillIcon]: { since: '1.3.0' },
       [AliasBitType.lifeSkillSticker]: { since: '1.3.0' },
+      [AliasBitType.pageBanner]: { since: '1.4.3' },
       [AliasBitType.screenshot]: { since: '1.3.0', deprecated: '1.4.0' },
     },
   },
@@ -786,7 +793,6 @@ const BITS: _BitsConfig = {
       [AliasBitType.bookLink]: { since: '1.3.0' },
       [AliasBitType.bookLinkNext]: { since: '1.3.0' },
       [AliasBitType.bookLinkPrev]: { since: '1.3.0' },
-      [AliasBitType.learningPathBotTraining]: { since: '1.3.0' },
       [AliasBitType.learningPathClassroomEvent]: { since: '1.3.0' },
       [AliasBitType.learningPathClassroomTraining]: { since: '1.3.0' },
       [AliasBitType.learningPathClosing]: { since: '1.3.0' },
@@ -797,7 +803,25 @@ const BITS: _BitsConfig = {
       [AliasBitType.learningPathStep]: { since: '1.3.0' },
     },
   },
-
+  [RootBitType.learningPathBotTraining]: {
+    since: '1.3.0',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_learningPathCommon,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.bot,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+  },
   [RootBitType.learningPathExternalLink]: {
     since: '1.3.0',
     tags: [
@@ -1015,6 +1039,21 @@ const BITS: _BitsConfig = {
     aliases: {
       [AliasBitType.coachSelfReflectionMultipleResponse]: { since: '1.3.0' },
     },
+  },
+  [RootBitType.pageBuyButton]: {
+    since: '1.4.3',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.content2Buy,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
   },
   [RootBitType.photo]: {
     since: '1.3.0',

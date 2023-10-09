@@ -1,0 +1,17 @@
+[
+  {
+    "bit": {
+      "type": "page-buy-button",
+      "format": "bitmark--",
+      "id": ["342341"],
+      "content2Buy": "testing 123",
+      "instruction": ".page-buy-button",
+      "body": "Button Text"
+    },
+    "parser": {
+      "version": "1.4.1",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.page-buy-button]\n[@id:342341]\n[!.page-buy-button]\n[@content2Buy:testing 123 ]\nButton Text"
+  }
+]
