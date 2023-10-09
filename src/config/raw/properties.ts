@@ -120,7 +120,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.date]: {
     tag: PropertyTag.date,
     single: true,
-    format: PropertyFormat.string,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.location]: {
     tag: PropertyTag.location,
@@ -177,7 +177,7 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.bot]: {
     tag: PropertyTag.bot,
-    format: PropertyFormat.string,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.duration]: {
     tag: PropertyTag.duration,
@@ -246,7 +246,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.example]: {
     tag: PropertyTag.example,
     single: true,
-    format: PropertyFormat.string,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.toc]: {
     tag: PropertyTag.toc,
