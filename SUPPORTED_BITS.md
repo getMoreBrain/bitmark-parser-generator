@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.4.3
+Version: 1.4.4
 ## Supported Bits
 <pre>
 app-flashcards (since: 1.3.0)
