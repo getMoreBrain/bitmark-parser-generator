@@ -104,6 +104,10 @@ const CARDSETS: _CardSetsConfig = {
         {
           tags: [
             {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.reasonableNumOfChars,
+            },
+            {
               type: BitTagType.tag,
               configKey: TagConfigKey.sampleSolution,
             },

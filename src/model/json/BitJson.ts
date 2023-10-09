@@ -52,6 +52,7 @@ export interface BitJson {
   labelFalse: string;
   content2Buy: string;
   quotedPerson: string;
+  reasonableNumOfChars: number;
 
   book: string;
 
@@ -231,6 +232,7 @@ export interface QuestionJson {
   instruction: Text;
   isCaseSensitive: boolean;
   isShortAnswer: boolean;
+  reasonableNumOfChars: number;
   isExample: boolean;
   example: ExampleJson;
 }

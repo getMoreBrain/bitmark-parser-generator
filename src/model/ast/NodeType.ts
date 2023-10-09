@@ -151,6 +151,8 @@ const NodeType = superenum({
   quotedPerson: 'quotedPerson',
   partialAnswer: 'partialAnswer',
   partialAnswerValue: 'partialAnswerValue',
+  reasonableNumOfChars: 'reasonableNumOfChars',
+  reasonableNumOfCharsValue: 'reasonableNumOfCharsValue',
 
   book: 'book',
 

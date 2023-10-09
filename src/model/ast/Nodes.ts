@@ -69,6 +69,7 @@ export interface Bit {
   content2Buy?: Property;
   quotedPerson?: Property;
   partialAnswer?: Property;
+  reasonableNumOfChars?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: string;
@@ -280,6 +281,7 @@ export interface Question {
   instruction?: string;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
+  reasonableNumOfChars?: number;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;

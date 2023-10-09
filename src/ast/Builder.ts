@@ -1,6 +1,6 @@
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
-import { AliasBitType, BitType } from '../model/enum/BitType';
-import { BodyBitType } from '../model/enum/BodyBitType';
+import { AliasBitType, BitType, RootBitType } from '../model/enum/BitType';
+import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
@@ -131,6 +131,7 @@ class Builder extends BaseBuilder {
     labelFalse?: string;
     content2Buy?: string;
     quotedPerson?: string;
+    reasonableNumOfChars?: number;
     partialAnswer?: string;
     levelProperty?: string;
     book?: string;
@@ -227,6 +228,7 @@ class Builder extends BaseBuilder {
       book,
       quotedPerson,
       partialAnswer,
+      reasonableNumOfChars,
       levelProperty,
       title,
       subtitle,
@@ -260,6 +262,12 @@ class Builder extends BaseBuilder {
 
     // Set the card node data
     const cardNode = this.cardNode(data);
+
+    // Add reasonableNumOfChars to the bit only for essay bits (in other cases it will be pushed down the tree)
+    const reasonableNumOfCharsProperty =
+      bitType.root === RootBitType.essay
+        ? this.toAstProperty(PropertyConfigKey.reasonableNumOfChars, reasonableNumOfChars)
+        : undefined;
 
     // NOTE: Node order is important and is defined here
     const node: Bit = {
@@ -313,6 +321,7 @@ class Builder extends BaseBuilder {
       content2Buy: this.toAstProperty(PropertyConfigKey.content2Buy, content2Buy),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
+      reasonableNumOfChars: reasonableNumOfCharsProperty,
       levelProperty: this.toAstProperty(PropertyConfigKey.level, levelProperty),
       title,
       subtitle,
@@ -341,6 +350,18 @@ class Builder extends BaseBuilder {
       // Must always be last in the AST so key clashes are avoided correctly with other properties
       extraProperties: this.parseExtraProperties(extraProperties),
     };
+
+    // Push reasonableNumOfChars down the tree for the interview bit
+    if (bitType.root === RootBitType.interview) {
+      this.pushDownTree(
+        undefined,
+        undefined,
+        cardNode,
+        'questions',
+        PropertyConfigKey.reasonableNumOfChars,
+        reasonableNumOfChars,
+      );
+    }
 
     // If isDefaultExample is set at the bit level, push the default example down the tree to the relevant nodes
     this.pushExampleDownTree(body, cardNode, isDefaultExample, example);
@@ -693,6 +714,7 @@ class Builder extends BaseBuilder {
     instruction?: string;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
+    reasonableNumOfChars?: number;
     isDefaultExample?: boolean;
     example?: Example;
   }): Question {
@@ -705,6 +727,7 @@ class Builder extends BaseBuilder {
       instruction,
       isCaseSensitive,
       isShortAnswer,
+      reasonableNumOfChars,
       sampleSolution,
       isDefaultExample,
       example,
@@ -720,6 +743,7 @@ class Builder extends BaseBuilder {
       ...this.toExample(isDefaultExample, example),
       isCaseSensitive,
       isShortAnswer,
+      reasonableNumOfChars,
       sampleSolution,
     };
 
@@ -1414,6 +1438,55 @@ class Builder extends BaseBuilder {
             const highlight = part as Highlight;
             BitUtils.fillBooleanExample(highlight.data.texts, isDefaultExample, example, true);
             break;
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Push a value down the tree, without overriding existing values
+   *
+   * This function is not type safe and should be used with care
+   *
+   * @param body set if the value should be passed down the body to the body bits
+   * @param bodyBitTypes body bit types to push the value down to
+   * @param cardNode set if the value should be passed down the card node
+   * @param path path for the value
+   * @param value the value to push down
+   */
+  private pushDownTree(
+    body: Body | undefined,
+    bodyBitTypes: BodyBitTypeType[] | undefined,
+    cardNode: CardNode | undefined,
+    cardNodePath: string | undefined,
+    path: string,
+    value: unknown,
+  ): void {
+    if (value === undefined) return;
+
+    // Add value to card nodes if required (TODO - nested paths)
+    if (cardNode && cardNodePath) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const cardNodeAny = cardNode as any;
+      const cards = cardNodeAny[cardNodePath];
+      if (Array.isArray(cards)) {
+        for (const card of cards) {
+          if (card[path] == null) {
+            card[path] = value;
+          }
+        }
+      }
+    }
+
+    // Add value to body bit types if required
+    if (bodyBitTypes && body && body.bodyParts && body.bodyParts.length > 0) {
+      for (const part of body.bodyParts) {
+        if (part) {
+          if (bodyBitTypes.indexOf(part.type) !== -1) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const data = part.data as any;
+            data[path] = value;
           }
         }
       }

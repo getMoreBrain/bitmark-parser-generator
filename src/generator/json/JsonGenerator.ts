@@ -1098,6 +1098,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           ...this.toItemLeadHintInstruction(q),
           // isCaseSensitive: q.isCaseSensitive ?? true,
           isShortAnswer: q.isShortAnswer ?? true,
+          reasonableNumOfChars: q.reasonableNumOfChars,
           ...this.toExample(q, {
             defaultExample: q.sampleSolution || '',
             isBoolean: false,
@@ -2287,7 +2288,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       labelFalse: undefined,
       content2Buy: undefined,
       quotedPerson: undefined,
-      partialAnswer: undefined,
+      reasonableNumOfChars: undefined,
 
       // Book data
       title: undefined,
@@ -2328,6 +2329,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       statement: undefined,
       isCorrect: undefined,
       sampleSolution: undefined,
+      partialAnswer: undefined,
       elements: undefined,
       statements: undefined,
       responses: undefined,
