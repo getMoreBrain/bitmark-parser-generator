@@ -67,6 +67,7 @@ const propertyConfigKeys = {
   publisher: 'publisher',
   quotedPerson: 'quotedPerson',
   reaction: 'reaction',
+  reasonableNumOfChars: 'reasonableNumOfChars',
   releaseVersion: 'releaseVersion',
   shortAnswer: 'shortAnswer',
   showInIndex: 'showInIndex',

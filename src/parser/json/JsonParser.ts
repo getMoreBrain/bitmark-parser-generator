@@ -268,6 +268,7 @@ class JsonParser {
       labelFalse,
       content2Buy,
       quotedPerson,
+      reasonableNumOfChars,
       book,
       title,
       subtitle,
@@ -415,6 +416,7 @@ class JsonParser {
       labelFalse,
       content2Buy,
       quotedPerson,
+      reasonableNumOfChars,
       book,
       title: this.parseText(title),
       subtitle: this.parseText(subtitle),
@@ -755,6 +757,7 @@ class JsonParser {
           example,
           isCaseSensitive,
           isShortAnswer,
+          reasonableNumOfChars,
         } = q;
         const node = builder.question({
           question,
@@ -764,6 +767,7 @@ class JsonParser {
           ...this.parseExample(example),
           isCaseSensitive,
           isShortAnswer,
+          reasonableNumOfChars,
         });
         nodes.push(node);
       }

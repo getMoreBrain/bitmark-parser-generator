@@ -61,6 +61,7 @@ const PropertyTag = superenum({
   publisher: 'publisher',
   quotedPerson: 'quotedPerson',
   reaction: 'reaction',
+  reasonableNumOfChars: 'reasonableNumOfChars',
   reference: 'reference',
   releaseVersion: 'releaseVersion',
   sampleSolution: 'sampleSolution',

@@ -3,6 +3,62 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "id": ["198779"],
+      "item": "1",
+      "hint": "",
+      "instruction": "Erklären Sie den Begriff „Steuerüberwälzung“.",
+      "isExample": false,
+      "body": "",
+      "questions": [
+        {
+          "question": "",
+          "partialAnswer": "",
+          "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "reasonableNumOfChars": 101,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": "",
+          "partialAnswer": "",
+          "sampleSolution": "Some other text.",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "reasonableNumOfChars": 20,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": "",
+          "partialAnswer": "",
+          "sampleSolution": "Some other text again.",
+          "item": "",
+          "hint": "",
+          "instruction": "",
+          "isShortAnswer": true,
+          "reasonableNumOfChars": 100,
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "footer": ""
+    },
+    "parser": {
+      "version": "1.4.3",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.interview:bitmark--]\n[@id:198779]\n[@reasonableNumOfChars:100]\n[%1]\n[!Erklären Sie den Begriff „Steuerüberwälzung“.]\n===\n[@reasonableNumOfChars:101]\n[@sampleSolution:Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]\n===\n[@reasonableNumOfChars:20]\n[@sampleSolution:Some other text.]\n===\n[@sampleSolution:Some other text again.]\n==="
+  },
+  {
+    "bit": {
+      "type": "interview",
+      "format": "bitmark--",
       "id": ["136528"],
       "item": "3a",
       "hint": "",

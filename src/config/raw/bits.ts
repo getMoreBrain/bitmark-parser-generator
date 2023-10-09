@@ -499,6 +499,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.reasonableNumOfChars,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.property_sampleSolution,
       },
     ],
@@ -764,6 +768,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.reasonableNumOfChars,
       },
     ],
     cardSet: CardSetConfigKey._questions,

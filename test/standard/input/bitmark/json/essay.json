@@ -3,6 +3,7 @@
     "bit": {
       "type": "essay",
       "format": "bitmark--",
+      "reasonableNumOfChars": 100,
       "partialAnswer": "",
       "item": "1",
       "hint": "",
