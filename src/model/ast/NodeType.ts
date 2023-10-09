@@ -103,6 +103,8 @@ const NodeType = superenum({
   flashcardSetValue: 'flashcardSetValue',
   subtype: 'subtype',
   subtypeValue: 'subtypeValue',
+  bookAlias: 'bookAlias',
+  bookAliasValue: 'bookAliasValue',
   coverImage: 'coverImage',
   coverImageValue: 'coverImageValue',
   publisher: 'publisher',

@@ -22,6 +22,7 @@ const RootBitType = superenum({
   audioLink: 'audio-link',
   bitAlias: 'bit-alias',
   book: 'book',
+  bookAlias: 'book-alias',
   botActionResponse: 'bot-action-response',
   botActionSend: 'bot-action-send',
   browserImage: 'browser-image',

@@ -93,6 +93,10 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.bookAlias]: {
+    tag: PropertyTag.bookAlias,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.coverImage]: {
     tag: PropertyTag.coverImage,
     format: PropertyFormat.trimmedString,

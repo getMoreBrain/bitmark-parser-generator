@@ -179,47 +179,8 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.language,
-        maxCount: Count.infinity,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.spaceId,
-        maxCount: Count.infinity,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.kind,
-      },
-      {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.title,
-        maxCount: 2,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.subtype,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.coverImage,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.publisher,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.subject,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.author,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.theme,
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_bookCommon,
       },
     ],
     bodyAllowed: true,
@@ -256,6 +217,25 @@ const BITS: _BitsConfig = {
       [AliasBitType.bookTeaser]: { since: '1.3.0' },
       [AliasBitType.bookTitle]: { since: '1.3.0' },
     },
+  },
+  [RootBitType.bookAlias]: {
+    since: '1.4.3',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_bookCommon,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.bookAlias,
+        maxCount: Count.infinity,
+      },
+    ],
+    bodyAllowed: true,
   },
   [RootBitType.botActionResponse]: {
     since: '1.3.0',

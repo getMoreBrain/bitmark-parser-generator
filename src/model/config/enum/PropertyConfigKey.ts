@@ -12,6 +12,7 @@ const propertyConfigKeys = {
   author: 'author',
   autoplay: 'autoplay',
   book: 'book',
+  bookAlias: 'bookAlias',
   bot: 'bot',
   caption: 'caption',
   caseSensitive: 'caseSensitive',
