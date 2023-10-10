@@ -1,5 +1,6 @@
 import { TextAst } from '../../model/ast/TextNodes';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { StringUtils } from '../../utils/StringUtils';
 
 import { parse as bitmarkTextParse } from './peg/TextPegParser';
 
@@ -8,6 +9,47 @@ export interface BitmarkTextParserOptions {
 }
 
 class TextParser {
+  /**
+   * Preprocess bitmark text AST into a standard format (TextAst object) from bitmark text AST either as a string
+   * or a plain JS object
+   *
+   * @param ast - bitmark text AST as a string or a plain JS object
+   * @returns bitmark text AST in a standard format (BitmarkAst object)
+   */
+  preprocessAst(ast: string | unknown): TextAst | undefined {
+    if (StringUtils.isString(ast)) {
+      const str = ast as string;
+      try {
+        ast = JSON.parse(str);
+      } catch (e) {
+        // Failed to parse JSON, return empty array
+        return undefined;
+      }
+    }
+
+    if (this.isAst(ast)) {
+      return ast as TextAst;
+    }
+    return undefined;
+  }
+
+  /**
+   * Check if a plain JS object is valid text AST
+   *
+   * @param ast - a plain JS object that might be text AST
+   * @returns true if text AST, otherwise false
+   */
+  isAst(ast: unknown): boolean {
+    if (Array.isArray(ast)) {
+      if (ast.length === 0) return true;
+
+      if (Object.prototype.hasOwnProperty.call(ast[0], 'type')) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   /**
    * Convert Bitmark text to text AST.
    *

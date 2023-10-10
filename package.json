@@ -21,6 +21,8 @@
     "start-text-plusplus-generator": "node -r esbuild-register ./test/custom/dev/devTextPlusPlusGenerator.ts",
     "start-text-minusminus-parser": "node -r esbuild-register ./test/custom/dev/devTextMinusMinusParser.ts",
     "start-text-minusminus-generator": "node -r esbuild-register ./test/custom/dev/devTextMinusMinusGenerator.ts",
+    "start-text-breakscape": "node -r esbuild-register ./test/custom/dev/devTextBreakscape.ts",
+    "start-text-unbreakscape": "node -r esbuild-register ./test/custom/dev/devTextUnbreakscape.ts",
     "build": "run clean && run generate-build-info && run build-grammar-bit && run build-grammar-text && run lint && run build-cjs && run build-esm && run build-umd && run build-supported-info",
     "build-cjs": "tsc",
     "build-esm": "tsc --module ES6 --outDir 'dist/esm'",

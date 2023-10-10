@@ -96,7 +96,7 @@ function s(_string) {
   return _string ?? ""
 }
 
-function unbreakscape(_str) {
+export function unbreakscape(_str) {
 	let u_ = _str || ""
 
   function replacer(match, p1, offset, string, groups) {
