@@ -60,6 +60,8 @@ export type {
   UpgradeOptions as PrettifyOptions,
   OutputType,
   ConvertTextOptions,
+  BreakscapeOptions,
+  UnbreakscapeOptions,
 } from './BitmarkParserGenerator';
 export type { InfoTypeType } from './model/info/enum/InfoType';
 export type { InfoFormatType } from './model/info/enum/InfoFormat';
