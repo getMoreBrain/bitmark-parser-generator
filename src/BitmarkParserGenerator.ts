@@ -1,3 +1,4 @@
+/* eslint-disable arca/import-ordering */
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 import { Ast } from './ast/Ast';
@@ -10,6 +11,15 @@ import { BitmarkParserType, BitmarkParserTypeType } from './model/enum/BitmarkPa
 import { BitmarkParser } from './parser/bitmark/BitmarkParser';
 import { JsonParser } from './parser/json/JsonParser';
 import { env } from './utils/env/Env';
+import { BitmarkVersionType } from './model/enum/BitmarkVersion';
+import { InfoBuilder, SupportedBit } from './info/InfoBuilder';
+import { InfoType, InfoTypeType } from './model/info/enum/InfoType';
+import { InfoFormat, InfoFormatType } from './model/info/enum/InfoFormat';
+import { Config } from './config/Config';
+import { TextFormat, TextFormatType } from './model/enum/TextFormat';
+import { BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER, TextGenerator } from './generator/text/TextGenerator';
+import { TextParser } from './parser/text/TextParser';
+import { unbreakscape } from './generated/parser/text/text-peggy-parser';
 
 /*
  * NOTE:
@@ -32,15 +42,6 @@ import path from 'path';
 import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
-import { BitmarkVersionType } from './model/enum/BitmarkVersion';
-import { InfoBuilder, SupportedBit } from './info/InfoBuilder';
-import { InfoType, InfoTypeType } from './model/info/enum/InfoType';
-import { InfoFormat, InfoFormatType } from './model/info/enum/InfoFormat';
-import { Config } from './config/Config';
-import { TextFormat, TextFormatType } from './model/enum/TextFormat';
-import { BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER, TextGenerator } from './generator/text/TextGenerator';
-import { TextParser } from './parser/text/TextParser';
-import { unbreakscape } from './generated/parser/text/text-peggy-parser';
 
 /* STRIP:END */
 STRIP;
