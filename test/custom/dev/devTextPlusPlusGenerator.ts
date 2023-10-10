@@ -9,11 +9,13 @@ Copyright ©2023 Get More Brain
 import * as fs from 'fs-extra';
 import path from 'path';
 
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
 import { Ast } from '../../../src/ast/Ast';
 import { TextGenerator } from '../../../src/generator/text/TextGenerator';
 import { NodeType } from '../../../src/model/ast/NodeType';
 import { TextFormat } from '../../../src/model/enum/TextFormat';
 
+const bitmarkParserGenerator = new BitmarkParserGenerator();
 const ast = new Ast();
 const textGenerator = new TextGenerator();
 
@@ -34,9 +36,10 @@ class DevTextGenerator {
       ast.printTree(textAst, NodeType.textAst);
       console.log(text);
     } else {
-      // const res = await bitmarkParserGenerator.convertText(filename);
-      // // BitmarkGenerator.convert(json);
-      // console.log(res);
+      const res = await bitmarkParserGenerator.convertText(filename, {
+        textFormat: TextFormat.bitmarkPlusPlus,
+      });
+      console.log(res);
     }
   }
 }

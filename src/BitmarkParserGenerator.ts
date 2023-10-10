@@ -27,6 +27,7 @@ STRIP;
 
 /* eslint-disable arca/import-ordering */
 import * as fs from 'fs-extra';
+import path from 'path';
 
 import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
@@ -36,6 +37,11 @@ import { InfoBuilder, SupportedBit } from './info/InfoBuilder';
 import { InfoType, InfoTypeType } from './model/info/enum/InfoType';
 import { InfoFormat, InfoFormatType } from './model/info/enum/InfoFormat';
 import { Config } from './config/Config';
+import { TextFormat, TextFormatType } from './model/enum/TextFormat';
+import { BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER, TextGenerator } from './generator/text/TextGenerator';
+import { TextParser } from './parser/text/TextParser';
+import { StringUtils } from './utils/StringUtils';
+import { unbreakscape } from './generated/parser/text/text-peggy-parser';
 
 /* STRIP:END */
 STRIP;
@@ -163,6 +169,28 @@ export interface UpgradeOptions {
 }
 
 /**
+ * Conversion options for bitmark text / JSON conversion
+ */
+export interface ConvertTextOptions {
+  /**
+   * Specify the text format (default: bitmark--)
+   */
+  textFormat?: TextFormatType;
+  /**
+   * Specify a file to write the output to
+   */
+  outputFile?: fs.PathLike;
+  /**
+   * Options for the output file
+   */
+  fileOptions?: FileOptions;
+  /**
+   * Options for JSON generation
+   */
+  jsonOptions?: TextJsonOptions;
+}
+
+/**
  * Output type enumeration
  */
 const Output = superenum({
@@ -183,6 +211,38 @@ const Output = superenum({
 export type OutputType = EnumType<typeof Output>;
 
 /**
+ * Options for bitmark text JSON generation
+ */
+export interface TextJsonOptions {
+  /**
+   * Prettify the JSON.
+   *
+   * If not set or false, JSON will not be prettified.
+   * If true, JSON will be prettified with an indent of 2.
+   * If a positive integer, JSON will be prettified with an indent of this number.
+   *
+   * If prettify is set, a string will be returned if possible.
+   */
+  prettify?: boolean | number;
+
+  /**
+   * Stringify the JSON.
+   *
+   * If not set or false, JSON will be returned as a plain JS object.
+   * It true, JSON will be stringified.
+   *
+   * If prettify is set, it will override this setting.
+   */
+  stringify?: boolean;
+
+  /**
+   * [development only]
+   * Generate debug information in the output.
+   */
+  debugGenerationInline?: boolean;
+}
+
+/**
  * Bitmark tool for manipulating bitmark in all its formats.
  *
  */
@@ -190,6 +250,8 @@ class BitmarkParserGenerator {
   protected ast = new Ast();
   protected jsonParser = new JsonParser();
   protected bitmarkParser = new BitmarkParser();
+  protected textParser = new TextParser();
+  protected textGenerator = new TextGenerator();
 
   /**
    * Get the version of the bitmark-parser-generator library
@@ -622,6 +684,115 @@ class BitmarkParserGenerator {
     }
 
     return res;
+  }
+
+  /**
+   * Convert bitmark text from JSON, or JSON to bitmark text.
+   *
+   * Input type is detected automatically and may be:
+   * - string: bitmark text or JSON
+   * - object: JSON
+   * - file: bitmark text or JSON
+   *
+   * Output type is selected automatically based on input type detection:
+   * - input(JSON) ==> output(bitmark text)
+   * - input(bitmark text)  ==> output(JSON)
+   *
+   * By default, the result is returned as a string for bitmark text, or a plain JS object for JSON.
+   *
+   * The options can be used to write the output to a file and to set conversion options or override defaults.
+   *
+   * @param input - bitmark text or JSON as a string, JSON as plain JS object, or path to a file containing
+   * bitmark text or JSON.
+   * @param options - the conversion options
+   * @returns Promise that resolves to string if converting to bitmark text, a plain JS object if converting to JSON, or
+   * void if writing to a file
+   * @throws Error if any error occurs
+   */
+  public async convertText(
+    input: string | fs.PathLike | unknown,
+    options?: ConvertTextOptions,
+  ): Promise<string | unknown | void> {
+    let res: string | unknown | void;
+    let preRes: string | unknown | void;
+    const opts: ConvertTextOptions = Object.assign({}, options);
+    const fileOptions = Object.assign({}, opts.fileOptions);
+    const jsonOptions = Object.assign({}, opts.jsonOptions);
+    const textFormat = opts.textFormat ?? TextFormat.bitmarkMinusMinus;
+
+    let inStr: string = input as string;
+
+    // Check if we are trying to write to a file in the browser
+    if (env.isBrowser && opts.outputFile) {
+      throw new Error('Cannot write to file in browser environment');
+    }
+
+    // If a file, read the file in
+    if (env.isNode) {
+      if (fs.existsSync(inStr)) {
+        inStr = fs.readFileSync(inStr, {
+          encoding: 'utf8',
+        });
+      }
+    }
+
+    // Preprocess as text AST to see if text AST
+    const ast = this.textParser.preprocessAst(inStr);
+    const isAst = !!ast;
+
+    if (!isAst) {
+      preRes = this.textParser.toAst(inStr, {
+        textFormat,
+      });
+    } else {
+      preRes = await this.textGenerator.generate(ast, textFormat);
+    }
+
+    if (opts.outputFile) {
+      const output = opts.outputFile.toString();
+      let strRes: string = preRes as string;
+      if (!isAst) {
+        strRes = this.jsonStringifyPrettify(preRes, jsonOptions, true) as string;
+      }
+
+      // Write JSON to file
+      const flag = fileOptions.append ? 'a' : 'w';
+      fs.ensureDirSync(path.dirname(output));
+      fs.writeFileSync(output, strRes, {
+        flag,
+      });
+    } else {
+      if (!isAst) {
+        res = this.jsonStringifyPrettify(preRes, jsonOptions) as string;
+      } else {
+        res = preRes;
+      }
+    }
+
+    return res;
+  }
+
+  /**
+   * Escape (breakscape) bitmark text
+   *
+   * @param text
+   * @returns
+   */
+  public breakscapeText(text: string): string {
+    if (!text) return text;
+    return text.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
+  }
+
+  /**
+   * Unescape (unbreakscape) bitmark text
+   *
+   * @param text
+   * @returns
+   */
+  public unbreakscapeText(text: string): string {
+    if (!text) return text;
+    // TODO
+    return unbreakscape(text);
   }
 
   /**
