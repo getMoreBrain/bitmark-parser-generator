@@ -135,8 +135,8 @@ class Builder extends BaseBuilder {
     content2Buy?: string;
     quotedPerson?: string;
     reasonableNumOfChars?: number;
+    maxCreatedBits?: number;
     partialAnswer?: string;
-    levelProperty?: string;
     book?: string;
     title?: string;
     subtitle?: string;
@@ -235,7 +235,7 @@ class Builder extends BaseBuilder {
       quotedPerson,
       partialAnswer,
       reasonableNumOfChars,
-      levelProperty,
+      maxCreatedBits,
       title,
       subtitle,
       level,
@@ -331,7 +331,7 @@ class Builder extends BaseBuilder {
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
-      levelProperty: this.toAstProperty(PropertyConfigKey.level, levelProperty),
+      maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, maxCreatedBits),
       title,
       subtitle,
       level: NumberUtils.asNumber(level),

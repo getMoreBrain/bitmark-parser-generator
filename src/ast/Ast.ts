@@ -204,8 +204,8 @@ class Ast {
   /**
    * Check if a plain JS object is valid AST
    *
-   * @param bitWrapper - a plain JS object that might be Bit JSON
-   * @returns true if Bit JSON, otherwise false
+   * @param ast - a plain JS object that might be AST
+   * @returns true if AST, otherwise false
    */
   isAst(ast: unknown): boolean {
     if (Object.prototype.hasOwnProperty.call(ast, 'bits')) {

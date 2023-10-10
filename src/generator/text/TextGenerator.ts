@@ -858,4 +858,4 @@ class TextGenerator implements AstWalkCallbacks {
   }
 }
 
-export { TextGenerator };
+export { TextGenerator, BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER };

@@ -71,9 +71,26 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     aliases: {
-      [AliasBitType.page]: { since: '1.3.0' },
       [AliasBitType.statement]: { since: '1.3.0' },
       [AliasBitType.buttonCopyText]: { since: '1.4.3' },
+    },
+  },
+  [RootBitType.appBitmarkFromJavascript]: {
+    since: '1.4.5',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.maxCreatedBits,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+    aliases: {
+      [AliasBitType.appBitmarkFromEditor]: { since: '1.4.5' },
     },
   },
   [RootBitType.articleEmbed]: {
@@ -318,6 +335,14 @@ const BITS: _BitsConfig = {
         type: BitTagType.tag,
         configKey: TagConfigKey.title,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.toc,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.progress,
+      },
     ],
 
     bodyAllowed: true,
@@ -484,6 +509,15 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.property_sampleSolution,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.partialAnswer,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.property_reference,
+        maxCount: Count.infinity,
       },
     ],
     resourceAttachmentAllowed: true,
@@ -1027,6 +1061,25 @@ const BITS: _BitsConfig = {
     aliases: {
       [AliasBitType.coachSelfReflectionMultipleResponse]: { since: '1.3.0' },
     },
+  },
+  [RootBitType.page]: {
+    since: '1.3.0',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.tag,
+        configKey: TagConfigKey.title,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.thumbImage,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
   },
   [RootBitType.pageBuyButton]: {
     since: '1.4.3',

@@ -120,7 +120,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.date]: {
     tag: PropertyTag.date,
     single: true,
-    format: PropertyFormat.string,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.location]: {
     tag: PropertyTag.location,
@@ -177,7 +177,7 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.bot]: {
     tag: PropertyTag.bot,
-    format: PropertyFormat.string,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.duration]: {
     tag: PropertyTag.duration,
@@ -233,10 +233,20 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.reasonableNumOfChars]: {
+    tag: PropertyTag.reasonableNumOfChars,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.maxCreatedBits]: {
+    tag: PropertyTag.maxCreatedBits,
+    single: true,
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.example]: {
     tag: PropertyTag.example,
     single: true,
-    format: PropertyFormat.string,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.toc]: {
     tag: PropertyTag.toc,
@@ -249,12 +259,6 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
     defaultValue: 'true',
-  },
-  [PropertyConfigKey.level]: {
-    tag: PropertyTag.level,
-    single: true,
-    format: PropertyFormat.string,
-    astKey: PropertyAstKey.levelProperty,
   },
   [PropertyConfigKey.book]: {
     tag: PropertyTag.book,
@@ -278,11 +282,6 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.property_mark]: {
     tag: PropertyTag.mark,
-    format: PropertyFormat.trimmedString,
-  },
-  [PropertyConfigKey.type]: {
-    tag: PropertyTag.type,
-    single: true,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.color]: {
@@ -320,11 +319,6 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.reaction,
     single: true,
     format: PropertyFormat.trimmedString,
-  },
-  [PropertyConfigKey.reasonableNumOfChars]: {
-    tag: PropertyTag.reasonableNumOfChars,
-    single: true,
-    format: PropertyFormat.number,
   },
   [PropertyConfigKey.imageSource]: {
     tag: PropertyTag.imageSource,

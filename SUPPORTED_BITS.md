@@ -1,15 +1,16 @@
 # bitmark-parser-generator
 
-Version: 1.4.4
+Version: 1.4.5
 ## Supported Bits
 <pre>
+app-bitmark-from-javascript (since: 1.4.5)
+|__ app-bitmark-from-editor (since: 1.4.5)
 app-flashcards (since: 1.3.0)
 |__ app-flashcards-learn (since: 1.3.0)
 |__ app-flashcards-quiz (since: 1.3.0)
 app-link (since: 1.3.0)
 article (since: 1.3.0)
 |__ button-copy-text (since: 1.4.3)
-|__ page (since: 1.3.0)
 |__ statement (since: 1.3.0)
 article-embed (since: 1.3.0)
 article-link (since: 1.3.0)
@@ -231,6 +232,7 @@ multiple-response (since: 1.3.0)
 |__ coach-self-reflection-multiple-response (since: 1.3.0)
 multiple-response-1 (since: 1.3.0)
 |__ coach-self-reflection-multiple-response-1 (since: 1.3.0)
+page (since: 1.3.0)
 page-buy-button (since: 1.4.3)
 photo (since: 1.3.0)
 quote (since: 1.3.0)
