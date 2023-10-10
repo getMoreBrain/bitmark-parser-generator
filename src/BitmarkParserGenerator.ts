@@ -190,6 +190,34 @@ export interface ConvertTextOptions {
 }
 
 /**
+ * Breakscape options
+ */
+export interface BreakscapeOptions {
+  /**
+   * Specify a file to write the output to
+   */
+  outputFile?: fs.PathLike;
+  /**
+   * Options for the output file
+   */
+  fileOptions?: FileOptions;
+}
+
+/**
+ * Unbreakscape options
+ */
+export interface UnbreakscapeOptions {
+  /**
+   * Specify a file to write the output to
+   */
+  outputFile?: fs.PathLike;
+  /**
+   * Options for the output file
+   */
+  fileOptions?: FileOptions;
+}
+
+/**
  * Output type enumeration
  */
 const Output = superenum({
@@ -772,26 +800,115 @@ class BitmarkParserGenerator {
   }
 
   /**
-   * Escape (breakscape) bitmark text
+   * Escape (breakscape) bitmark text.
    *
-   * @param text
-   * @returns
+   * Input type is detected automatically and may be:
+   * - string: text
+   * - file: path to a file containing text
+   *
+   * By default, the result is returned as a string.
+   *
+   * The options can be used to write the output to a file.
+   *
+   * @param input - text, or path to a file containing text.
+   * @param options - the conversion options
+   * @returns breakscaped string, or void if writing to a file
+   * @throws Error if any error occurs
    */
-  public breakscapeText(text: string): string {
-    if (!text) return text;
-    return text.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
+  public breakscapeText(input: string, options?: BreakscapeOptions): string | void {
+    if (!input) return input;
+
+    const opts: ConvertTextOptions = Object.assign({}, options);
+    const fileOptions = Object.assign({}, opts.fileOptions);
+
+    let inStr: string = input as string;
+
+    // Check if we are trying to write to a file in the browser
+    if (env.isBrowser && opts.outputFile) {
+      throw new Error('Cannot write to file in browser environment');
+    }
+
+    // If a file, read the file in
+    if (env.isNode) {
+      if (fs.existsSync(inStr)) {
+        inStr = fs.readFileSync(inStr, {
+          encoding: 'utf8',
+        });
+      }
+    }
+
+    // Do the breakscape
+    const res = inStr.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
+
+    if (opts.outputFile) {
+      const output = opts.outputFile.toString();
+
+      // Write JSON to file
+      const flag = fileOptions.append ? 'a' : 'w';
+      fs.ensureDirSync(path.dirname(output));
+      fs.writeFileSync(output, res, {
+        flag,
+      });
+    } else {
+      return res;
+    }
   }
 
   /**
    * Unescape (unbreakscape) bitmark text
    *
-   * @param text
-   * @returns
+   * Input type is detected automatically and may be:
+   * - string: text
+   * - file: path to a file containing text
+   *
+   * By default, the result is returned as a string.
+   *
+   * The options can be used to write the output to a file.
+   *
+   * @param input - text, or path to a file containing text.
+   * @param options - the conversion options
+   * @returns unbreakscaped string, or void if writing to a file
+   * @throws Error if any error occurs
    */
-  public unbreakscapeText(text: string): string {
-    if (!text) return text;
-    // TODO
-    return unbreakscape(text);
+  public unbreakscapeText(input: string, options?: UnbreakscapeOptions): string | void {
+    if (!input) return input;
+
+    const opts: ConvertTextOptions = Object.assign({}, options);
+    const fileOptions = Object.assign({}, opts.fileOptions);
+
+    let inStr: string = input as string;
+
+    // Check if we are trying to write to a file in the browser
+    if (env.isBrowser && opts.outputFile) {
+      throw new Error('Cannot write to file in browser environment');
+    }
+
+    // If a file, read the file in
+    if (env.isNode) {
+      if (fs.existsSync(inStr)) {
+        inStr = fs.readFileSync(inStr, {
+          encoding: 'utf8',
+        });
+      }
+    }
+
+    // Do the unbreakscape
+    const res = unbreakscape(inStr);
+
+    if (opts.outputFile) {
+      const output = opts.outputFile.toString();
+
+      // Write JSON to file
+      const flag = fileOptions.append ? 'a' : 'w';
+      fs.ensureDirSync(path.dirname(output));
+      fs.writeFileSync(output, res, {
+        flag,
+      });
+    } else {
+      return res;
+    }
+
+    return;
   }
 
   /**
