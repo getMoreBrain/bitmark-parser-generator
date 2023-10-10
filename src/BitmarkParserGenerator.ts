@@ -40,7 +40,6 @@ import { Config } from './config/Config';
 import { TextFormat, TextFormatType } from './model/enum/TextFormat';
 import { BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER, TextGenerator } from './generator/text/TextGenerator';
 import { TextParser } from './parser/text/TextParser';
-import { StringUtils } from './utils/StringUtils';
 import { unbreakscape } from './generated/parser/text/text-peggy-parser';
 
 /* STRIP:END */
