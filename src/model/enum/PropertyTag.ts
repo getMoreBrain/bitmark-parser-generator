@@ -12,7 +12,7 @@ const PropertyTag = superenum({
   bookAlias: 'bookAlias',
   bot: 'bot',
   caption: 'caption',
-  caseSensitive: 'caseSensitive',
+  isCaseSensitive: 'isCaseSensitive',
   color: 'color',
   colorTag: 'colorTag',
   computerLanguage: 'computerLanguage',

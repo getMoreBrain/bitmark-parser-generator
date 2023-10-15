@@ -1314,6 +1314,10 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue ->  * -> isCaseSensitive
 
+  protected leaf_isCaseSensitive(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('isCaseSensitive', node.value, true, false, true);
+  }
+
   // bitmarkAst -> bits -> bitsValue ->  * -> isLongAnswer
 
   // bitmarkAst -> bits -> bitsValue ->  * -> isCorrect

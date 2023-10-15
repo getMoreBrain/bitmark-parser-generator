@@ -95,7 +95,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
+          "isCaseSensitive": false,
           "isLongAnswer": false,
           "isExample": false,
           "example": null
@@ -117,7 +117,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isCaseSensitive": true,
+          "isCaseSensitive": false,
           "isLongAnswer": false,
           "isExample": false,
           "example": null
@@ -136,10 +136,10 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.match:bitmark--]\n[@id:197919]\n[!Verfallene Verluste per 01.01.2018]\n===\n[#Jahr]\n==\n[#CHF]\n===\n[%1.]\n2008\n==\n- 150'000.00\n===\n[%2.]\n2009\n==\n- 70'000.00\n===\n2010\n==\n0\n===\n2011\n==\n0\n===\n2012\n==\n0\n===\n2013\n==\n0\n===\n2014\n==\n0\n===\n2015\n==\n0\n===\n2016\n==\n0\n===\n2017\n==\n0\n===\nTotal\n==\n- 220'000.00\n==="
+    "bitmark": "[.match:bitmark--]\n[@id:197919]\n[!Verfallene Verluste per 01.01.2018]\n===\n[#Jahr]\n==\n[#CHF]\n===\n[%1.]\n2008\n==\n- 150'000.00\n===\n[%2.]\n2009\n==\n- 70'000.00\n===\n2010\n==\n0\n===\n2011\n==\n0\n===\n2012\n==\n0\n===\n2013\n==\n0\n===\n2014\n==\n0\n===\n2015\n==\n0[@isCaseSensitive:false]\n===\n2016\n==\n0\n===\n2017[@isCaseSensitive:false]\n==\n0\n===\nTotal\n==\n- 220'000.00\n==="
   },
   {
     "bit": {
@@ -246,7 +246,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n[@id:213782]\n[%1][%Geschlossene Fragen]\n[!Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich.]\n\nA. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung\n===\n[#Aussage]\n==\n[#Bedürfnis]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n===\nAls Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.\n==\nE\n===\nMarcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.\n==\nC\n===\nCorinne bildet sich mit Abendkursen weiter.\n==\nE\n===\nZwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.\n==\nC\n===\nStefan freut sich über ein Lob seiner Vorgesetzten.\n==\nD\n===\nDaniel Gerber verbringt den Abend vor dem Computer, um zu chatten.\n==\nC\n===\nEin Ehepaar installiert eine Alarmanlage im Haus.\n==\nB\n==="
@@ -356,10 +356,27 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
-      "bitmarkVersion": "3"
+      "version": "1.4.7",
+      "bitmarkVersion": "3",
+      "comments": [
+        {
+          "text": " [@example] tests follow ",
+          "location": {
+            "start": {
+              "line": 155,
+              "column": 1,
+              "offset": 2171
+            },
+            "end": {
+              "line": 155,
+              "column": 30,
+              "offset": 2200
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.match:bitmark--]\n[@id:208467]\n[%1][%Geschlossene Fragen]\n[!Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich.]\n\nA. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung\n===\n[#Aussage]\n==\n[#Bedürfnis]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n===\nAls Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.\n==\nE\n===\nMarcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.\n==\nC\n===\nCorinne bildet sich mit Abendkursen weiter.\n==\nE\n===\nZwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.\n==\nC\n===\nStefan freut sich über ein Lob seiner Vorgesetzten.\n==\nD\n===\nDaniel Gerber verbringt den Abend vor dem Computer, um zu chatten.\n==\nC\n===\nEin Ehepaar installiert eine Alarmanlage im Haus.\n==\nB\n==="
+    "bitmark": "[.match:bitmark--]\n[@id:208467]\n[%1][%Geschlossene Fragen]\n[!Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich.]\n\nA. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung\n===\n[#Aussage]\n==\n[#Bedürfnis]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n===\nAls Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.\n==\nE\n===\nMarcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.\n==\nC\n===\nCorinne bildet sich mit Abendkursen weiter.\n==\nE\n===\nZwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.\n==\nC\n===\nStefan freut sich über ein Lob seiner Vorgesetzten.\n==\nD\n===\nDaniel Gerber verbringt den Abend vor dem Computer, um zu chatten.\n==\nC\n===\nEin Ehepaar installiert eine Alarmanlage im Haus.\n==\nB\n===\n\n|| [@example] tests follow ||"
   },
   {
     "bit": {
@@ -398,7 +415,7 @@
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\n[@example]\nshould be the text not the value\n==\nC\n==\nD\n==="
@@ -440,7 +457,7 @@
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\n[@example:X]\nshould be the text not the value\n==\nC\n==\nD\n==="
@@ -482,7 +499,7 @@
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example:X]\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
@@ -524,7 +541,7 @@
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA[@example:X]\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
@@ -566,7 +583,7 @@
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[@example:X]\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
@@ -608,7 +625,7 @@
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[@example]\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
@@ -650,7 +667,7 @@
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n[@example]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
@@ -692,7 +709,7 @@
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n[@example:X]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
@@ -734,7 +751,7 @@
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n[@example:X]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example]Herr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD[@example]\n==="

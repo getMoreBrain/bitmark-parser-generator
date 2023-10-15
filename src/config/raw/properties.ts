@@ -308,12 +308,10 @@ const PROPERTIES: _PropertiesConfig = {
     astKey: PropertyAstKey.isShortAnswer,
     jsonKey: PropertyJsonKey.shortAnswer,
   },
-  [PropertyConfigKey.caseSensitive]: {
-    tag: PropertyTag.caseSensitive,
+  [PropertyConfigKey.isCaseSensitive]: {
+    tag: PropertyTag.isCaseSensitive,
     single: true,
     format: PropertyFormat.boolean,
-    astKey: PropertyAstKey.isCaseSensitive,
-    jsonKey: PropertyJsonKey.caseSensitive,
   },
   [PropertyConfigKey.reaction]: {
     tag: PropertyTag.reaction,

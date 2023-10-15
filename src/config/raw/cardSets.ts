@@ -161,6 +161,10 @@ const CARDSETS: _CardSetsConfig = {
               type: BitTagType.tag,
               configKey: TagConfigKey.title,
             },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.isCaseSensitive,
+            },
           ],
           bodyAllowed: true,
           repeatCount: Count.infinity,
@@ -246,6 +250,10 @@ const CARDSETS: _CardSetsConfig = {
             {
               type: BitTagType.tag,
               configKey: TagConfigKey.title,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.isCaseSensitive,
             },
           ],
           bodyAllowed: true,
