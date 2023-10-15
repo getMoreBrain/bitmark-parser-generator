@@ -123,7 +123,6 @@ export interface BitContentProcessorResult {
   reference?: string;
   referenceEnd?: string;
   sampleSolution?: string;
-  isShortAnswer?: boolean;
   isCaseSensitive?: boolean;
   reaction?: string;
   license?: string;

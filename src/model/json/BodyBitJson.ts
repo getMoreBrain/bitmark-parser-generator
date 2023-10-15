@@ -57,7 +57,6 @@ export interface SelectOptionJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
 }
@@ -77,7 +76,6 @@ export interface HighlightTextJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
 }

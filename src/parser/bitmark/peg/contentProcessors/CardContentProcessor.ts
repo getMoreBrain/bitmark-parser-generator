@@ -511,7 +511,6 @@ function parseMatchPairs(
         extraTags = {
           ...extraTags,
           ...tags,
-          isCaseSensitive: true,
         };
       }
       sideIdx++;
@@ -534,7 +533,6 @@ function parseMatchPairs(
         keyAudio,
         keyImage,
         values: pairValues,
-        isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         ...extraTags,
         isDefaultExample,
         example,
@@ -572,6 +570,9 @@ function parseMatchMatrix(
   let exampleCard: string | undefined;
   let isDefaultExampleSide = false;
   let exampleSide: string | undefined;
+  let isCaseSensitiveMatrix: boolean | undefined;
+  let isCaseSensitiveCell: boolean | undefined;
+
   // let keyAudio: AudioResource | undefined = undefined;
   // let keyImage: ImageResource | undefined = undefined;
   // let variant: ProcessedCardVariant | undefined;
@@ -586,18 +587,20 @@ function parseMatchMatrix(
     sideIdx = 0;
     isDefaultExampleCard = false;
     exampleCard = '';
+    isCaseSensitiveMatrix = undefined;
 
     for (const side of card.sides) {
       matrixCellValues = [];
       matrixCellTags = {};
       isDefaultExampleSide = false;
       exampleSide = '';
+      isCaseSensitiveCell = undefined;
 
       for (const content of side.variants) {
         // variant = content;
         const tags = content.data;
 
-        const { title, cardBody, isDefaultExample, example, ...restTags } = tags;
+        const { title, cardBody, isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
 
         // Example
         isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
@@ -627,6 +630,7 @@ function parseMatchMatrix(
             matrixKey = cardBody;
             isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
             exampleCard = example ? example : exampleCard;
+            isCaseSensitiveMatrix = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
           }
         } else {
           // Subsequent sides
@@ -639,6 +643,7 @@ function parseMatchMatrix(
             const value = cardBody ?? '';
             matrixCellValues.push(value);
             if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = value;
+            isCaseSensitiveCell = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
           }
         }
       }
@@ -656,6 +661,7 @@ function parseMatchMatrix(
           ...matrixCellTags,
           isDefaultExample,
           example,
+          isCaseSensitive: isCaseSensitiveCell,
         });
         matrixCells.push(matrixCell);
       }
@@ -675,8 +681,6 @@ function parseMatchMatrix(
         // keyAudio,
         // keyImage,
         cells: matrixCells,
-        isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
-        isCaseSensitive: true,
       });
       matrix.push(m);
       // } else {

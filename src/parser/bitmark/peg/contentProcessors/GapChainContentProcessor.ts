@@ -55,7 +55,6 @@ function buildGap(
   const gap = builder.gap({
     solutions: solutions ?? [],
     ...rest,
-    isCaseSensitive: true,
   });
 
   return gap;

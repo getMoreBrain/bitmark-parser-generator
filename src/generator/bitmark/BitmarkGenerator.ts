@@ -1314,7 +1314,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue ->  * -> isCaseSensitive
 
-  // bitmarkAst -> bits -> bitsValue ->  * -> isLongAnswer
+  protected leaf_isCaseSensitive(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.writeProperty('isCaseSensitive', node.value, true, false, true);
+  }
 
   // bitmarkAst -> bits -> bitsValue ->  * -> isCorrect
 
@@ -1362,18 +1364,6 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (node.value) {
       this.writeString(node.value);
       // this.writeNL();
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> question -> isShortAnswer
-
-  protected leaf_isShortAnswer(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    // Generally, shortAnswer is the default.
-    // Write long answer if shortAnswer is specifically false.
-    if (node.value === false) {
-      this.writeOPA();
-      this.writeString('longAnswer');
-      this.writeCL();
     }
   }
 
