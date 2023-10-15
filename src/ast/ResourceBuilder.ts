@@ -1,4 +1,6 @@
+import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
+import { BreakscapeUtils } from '../utils/BreakscapeUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { UrlUtils } from '../utils/UrlUtils';
 
@@ -41,24 +43,24 @@ class ResourceBuilder extends BaseBuilder {
       type: ResourceTagType;
 
       // Generic part (value of bit tag)
-      value?: string; // url / src / href / app / body
+      value?: BreakscapedString; // url / src / href / app / body
 
       // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
-      format?: string;
+      format?: BreakscapedString;
 
       // ImageLikeResource
-      src1x?: string;
-      src2x?: string;
-      src3x?: string;
-      src4x?: string;
+      src1x?: BreakscapedString;
+      src2x?: BreakscapedString;
+      src3x?: BreakscapedString;
+      src4x?: BreakscapedString;
 
       // ImageLikeResource / VideoLikeResource
       width?: number;
       height?: number;
-      alt?: string;
+      alt?: BreakscapedString;
 
       // VideoLikeResource
-      duration?: number; // string?
+      duration?: number; // BreakscapedString?
       mute?: boolean;
       autoplay?: boolean;
       allowSubtitles?: boolean;
@@ -67,70 +69,70 @@ class ResourceBuilder extends BaseBuilder {
       thumbnails?: ImageResource[];
 
       // WebsiteLinkResource
-      siteName?: string;
+      siteName?: BreakscapedString;
 
       // // ImageResponsiveResource
       // imagePortrait?: {
-      //   format: string;
-      //   value: string; //src
-      //   src1x?: string;
-      //   src2x?: string;
-      //   src3x?: string;
-      //   src4x?: string;
+      //   format: BreakscapedString;
+      //   value: BreakscapedString; //src
+      //   src1x?: BreakscapedString;
+      //   src2x?: BreakscapedString;
+      //   src3x?: BreakscapedString;
+      //   src4x?: BreakscapedString;
       //   width?: number;
       //   height?: number;
-      //   alt?: string;
-      //   license?: string;
-      //   copyright?: string;
+      //   alt?: BreakscapedString;
+      //   license?: BreakscapedString;
+      //   copyright?: BreakscapedString;
       //   showInIndex?: boolean;
-      //   caption?: string;
+      //   caption?: BreakscapedString;
       // };
       // imageLandscape?: {
-      //   format: string;
-      //   value: string; //src
-      //   src1x?: string;
-      //   src2x?: string;
-      //   src3x?: string;
-      //   src4x?: string;
+      //   format: BreakscapedString;
+      //   value: BreakscapedString; //src
+      //   src1x?: BreakscapedString;
+      //   src2x?: BreakscapedString;
+      //   src3x?: BreakscapedString;
+      //   src4x?: BreakscapedString;
       //   width?: number;
       //   height?: number;
-      //   alt?: string;
-      //   license?: string;
-      //   copyright?: string;
+      //   alt?: BreakscapedString;
+      //   license?: BreakscapedString;
+      //   copyright?: BreakscapedString;
       //   showInIndex?: boolean;
-      //   caption?: string;
+      //   caption?: BreakscapedString;
       // };
 
       // // StillImageFilmLikeResource
       // image?: {
-      //   format: string;
-      //   value: string; //src
-      //   src1x?: string;
-      //   src2x?: string;
-      //   src3x?: string;
-      //   src4x?: string;
+      //   format: BreakscapedString;
+      //   value: BreakscapedString; //src
+      //   src1x?: BreakscapedString;
+      //   src2x?: BreakscapedString;
+      //   src3x?: BreakscapedString;
+      //   src4x?: BreakscapedString;
       //   width?: number;
       //   height?: number;
-      //   alt?: string;
-      //   license?: string;
-      //   copyright?: string;
+      //   alt?: BreakscapedString;
+      //   license?: BreakscapedString;
+      //   copyright?: BreakscapedString;
       //   showInIndex?: boolean;
-      //   caption?: string;
+      //   caption?: BreakscapedString;
       // };
       // audio?: {
-      //   format: string;
-      //   value: string; // src
-      //   license?: string;
-      //   copyright?: string;
+      //   format: BreakscapedString;
+      //   value: BreakscapedString; // src
+      //   license?: BreakscapedString;
+      //   copyright?: BreakscapedString;
       //   showInIndex?: boolean;
-      //   caption?: string;
+      //   caption?: BreakscapedString;
       // };
 
       // Generic Resource
-      license?: string;
-      copyright?: string;
+      license?: BreakscapedString;
+      copyright?: BreakscapedString;
       showInIndex?: boolean;
-      caption?: string;
+      caption?: BreakscapedString;
     },
     //
   ): Resource | undefined {
@@ -139,8 +141,8 @@ class ResourceBuilder extends BaseBuilder {
     const { type, value: valueIn, format: formatIn, ...rest } = data;
     const finalData = {
       type,
-      value: valueIn ?? '',
-      format: formatIn ?? '',
+      value: valueIn ?? BreakscapeUtils.EMPTY_STRING,
+      format: formatIn ?? BreakscapeUtils.EMPTY_STRING,
       ...rest,
     };
 
@@ -291,19 +293,19 @@ class ResourceBuilder extends BaseBuilder {
    */
   imageResource(
     data: {
-      format: string;
-      value: string; //src
-      src1x?: string;
-      src2x?: string;
-      src3x?: string;
-      src4x?: string;
+      format: BreakscapedString;
+      value: BreakscapedString; //src
+      src1x?: BreakscapedString;
+      src2x?: BreakscapedString;
+      src3x?: BreakscapedString;
+      src4x?: BreakscapedString;
       width?: number;
       height?: number;
-      alt?: string;
-      license?: string;
-      copyright?: string;
+      alt?: BreakscapedString;
+      license?: BreakscapedString;
+      copyright?: BreakscapedString;
       showInIndex?: boolean;
-      caption?: string;
+      caption?: BreakscapedString;
     },
     typeAlias?: ResourceTagType,
   ): ImageResource {
@@ -313,8 +315,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: ImageResource = {
       type: ResourceTag.image,
       typeAlias: typeAlias ?? ResourceTag.image,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       src1x,
       src2x,
@@ -343,19 +345,19 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   imageLinkResource(data: {
-    format: string;
-    value: string;
-    src1x?: string;
-    src2x?: string;
-    src3x?: string;
-    src4x?: string;
+    format: BreakscapedString;
+    value: BreakscapedString;
+    src1x?: BreakscapedString;
+    src2x?: BreakscapedString;
+    src3x?: BreakscapedString;
+    src4x?: BreakscapedString;
     width?: number;
     height?: number;
-    alt?: string;
-    license?: string;
-    copyright?: string;
+    alt?: BreakscapedString;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): ImageLinkResource {
     const { value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } = data;
 
@@ -363,8 +365,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: ImageLinkResource = {
       type: ResourceTag.imageLink,
       typeAlias: ResourceTag.imageLink,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       src1x,
       src2x,
@@ -393,15 +395,15 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   audioResource(data: {
-    format: string;
-    value: string; // src
+    format: BreakscapedString;
+    value: BreakscapedString; // src
     duration?: number; // string?
     mute?: boolean;
     autoplay?: boolean;
-    license?: string;
-    copyright?: string;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): AudioResource {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
@@ -409,8 +411,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: AudioResource = {
       type: ResourceTag.audio,
       typeAlias: ResourceTag.audio,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       duration,
       mute,
@@ -435,15 +437,15 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   audioEmbedResource(data: {
-    format: string;
-    value: string; // src
-    duration?: number; // string?
+    format: BreakscapedString;
+    value: BreakscapedString; // src
+    duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
-    license?: string;
-    copyright?: string;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): AudioEmbedResource {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
@@ -451,8 +453,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: AudioEmbedResource = {
       type: ResourceTag.audioEmbed,
       typeAlias: ResourceTag.audioEmbed,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       duration,
       mute,
@@ -477,15 +479,15 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   audioLinkResource(data: {
-    format: string;
-    value: string;
-    duration?: number; // string?
+    format: BreakscapedString;
+    value: BreakscapedString;
+    duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
-    license?: string;
-    copyright?: string;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): AudioLinkResource {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
 
@@ -493,8 +495,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: AudioLinkResource = {
       type: ResourceTag.audioLink,
       typeAlias: ResourceTag.audioLink,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       duration,
       mute,
@@ -519,22 +521,22 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   videoResource(data: {
-    format: string;
-    value: string; // src
+    format: BreakscapedString;
+    value: BreakscapedString; // src
     width?: number;
     height?: number;
-    duration?: number; // string?
+    duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: string;
+    alt?: BreakscapedString;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): VideoResource {
     const {
       value,
@@ -558,8 +560,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: VideoResource = {
       type: ResourceTag.video,
       typeAlias: ResourceTag.video,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       width,
       height,
@@ -591,22 +593,22 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   videoEmbedResource(data: {
-    format: string;
-    value: string; // src
+    format: BreakscapedString;
+    value: BreakscapedString; // src
     width?: number;
     height?: number;
-    duration?: number; // string?
+    duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: string;
+    alt?: BreakscapedString;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): VideoEmbedResource {
     const {
       value,
@@ -630,8 +632,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: VideoEmbedResource = {
       type: ResourceTag.videoEmbed,
       typeAlias: ResourceTag.videoEmbed,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       width,
       height,
@@ -663,22 +665,22 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   videoLinkResource(data: {
-    format: string;
-    value: string;
+    format: BreakscapedString;
+    value: BreakscapedString;
     width?: number;
     height?: number;
-    duration?: number; // string?
+    duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: string;
+    alt?: BreakscapedString;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): VideoLinkResource {
     const {
       value,
@@ -702,8 +704,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: VideoLinkResource = {
       type: ResourceTag.videoLink,
       typeAlias: ResourceTag.videoLink,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       width,
       height,
@@ -759,22 +761,22 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   stillImageFilmEmbedResource(data: {
-    format: string;
-    value: string; // src
+    format: BreakscapedString;
+    value: BreakscapedString; // src
     width?: number;
     height?: number;
-    duration?: number; // string?
+    duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: string;
+    alt?: BreakscapedString;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): StillImageFilmEmbedResource {
     const {
       value,
@@ -798,8 +800,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: StillImageFilmEmbedResource = {
       type: ResourceTag.stillImageFilmEmbed,
       typeAlias: ResourceTag.stillImageFilmEmbed,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       width,
       height,
@@ -831,22 +833,22 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   stillImageFilmLinkResource(data: {
-    format: string;
-    value: string;
+    format: BreakscapedString;
+    value: BreakscapedString;
     width?: number;
     height?: number;
-    duration?: number; // string?
+    duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: string;
+    alt?: BreakscapedString;
     posterImage?: ImageResource;
     thumbnails?: ImageResource[];
-    license?: string;
-    copyright?: string;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): StillImageFilmLinkResource {
     const {
       value,
@@ -870,8 +872,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: StillImageFilmLinkResource = {
       type: ResourceTag.stillImageFilmLink,
       typeAlias: ResourceTag.stillImageFilmLink,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       width,
       height,
@@ -903,12 +905,12 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   articleResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
+    format: BreakscapedString;
+    value: BreakscapedString;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): ArticleResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -916,8 +918,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: ArticleResource = {
       type: ResourceTag.article,
       typeAlias: ResourceTag.article,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       license,
       copyright,
@@ -939,12 +941,12 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   documentResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
+    format: BreakscapedString;
+    value: BreakscapedString;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): DocumentResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -952,8 +954,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: DocumentResource = {
       type: ResourceTag.document,
       typeAlias: ResourceTag.document,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       license,
       copyright,
@@ -975,12 +977,12 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   documentEmbedResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
+    format: BreakscapedString;
+    value: BreakscapedString;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): DocumentEmbedResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -988,8 +990,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: DocumentEmbedResource = {
       type: ResourceTag.documentEmbed,
       typeAlias: ResourceTag.documentEmbed,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       license,
       copyright,
@@ -1011,12 +1013,12 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   documentLinkResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
+    format: BreakscapedString;
+    value: BreakscapedString;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): DocumentLinkResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -1024,8 +1026,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: DocumentLinkResource = {
       type: ResourceTag.documentLink,
       typeAlias: ResourceTag.documentLink,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       license,
       copyright,
@@ -1047,12 +1049,12 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   documentDownloadResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
+    format: BreakscapedString;
+    value: BreakscapedString;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): DocumentDownloadResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -1060,8 +1062,8 @@ class ResourceBuilder extends BaseBuilder {
     const node: DocumentDownloadResource = {
       type: ResourceTag.documentDownload,
       typeAlias: ResourceTag.documentDownload,
-      format: UrlUtils.fileExtensionFromUrl(value),
-      provider: UrlUtils.domainFromUrl(value),
+      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
+      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
       value,
       license,
       copyright,
@@ -1083,11 +1085,11 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   appLinkResource(data: {
-    value: string;
-    license?: string;
-    copyright?: string;
+    value: BreakscapedString;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): AppLinkResource {
     const { value, license, copyright, showInIndex, caption } = data;
 
@@ -1116,12 +1118,12 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   websiteLinkResource(data: {
-    value: string;
-    siteName?: string;
-    license?: string;
-    copyright?: string;
+    value: BreakscapedString;
+    siteName?: BreakscapedString;
+    license?: BreakscapedString;
+    copyright?: BreakscapedString;
     showInIndex?: boolean;
-    caption?: string;
+    caption?: BreakscapedString;
   }): WebsiteLinkResource | undefined {
     const { value, siteName, license, copyright, showInIndex, caption } = data;
 

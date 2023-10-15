@@ -90,13 +90,13 @@ Das war's
 {{
 
 // const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
-const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
+export const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\^(\^*)\]|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
 
 function s(_string) {
   return _string ?? ""
 }
 
-export function unbreakscape(_str) {
+function unbreakscape(_str) {
 	let u_ = _str || ""
 
   function replacer(match, p1, offset, string, groups) {

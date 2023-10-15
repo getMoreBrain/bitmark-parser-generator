@@ -17,9 +17,8 @@ import { InfoType, InfoTypeType } from './model/info/enum/InfoType';
 import { InfoFormat, InfoFormatType } from './model/info/enum/InfoFormat';
 import { Config } from './config/Config';
 import { TextFormat, TextFormatType } from './model/enum/TextFormat';
-import { BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER, TextGenerator } from './generator/text/TextGenerator';
+import { TextGenerator } from './generator/text/TextGenerator';
 import { TextParser } from './parser/text/TextParser';
-import { unbreakscape } from './generated/parser/text/text-peggy-parser';
 
 /*
  * NOTE:
@@ -42,6 +41,8 @@ import path from 'path';
 import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
+import { BreakscapeUtils } from './utils/BreakscapeUtils';
+import { BreakscapedString } from './model/ast/BreakscapedString';
 
 /* STRIP:END */
 STRIP;
@@ -839,7 +840,7 @@ class BitmarkParserGenerator {
     }
 
     // Do the breakscape
-    const res = inStr.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
+    const res = BreakscapeUtils.breakscape(inStr);
 
     if (opts.outputFile) {
       const output = opts.outputFile.toString();
@@ -877,7 +878,7 @@ class BitmarkParserGenerator {
     const opts: ConvertTextOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
 
-    let inStr: string = input as string;
+    let inStr: BreakscapedString = input as BreakscapedString;
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -889,12 +890,12 @@ class BitmarkParserGenerator {
       if (fs.existsSync(inStr)) {
         inStr = fs.readFileSync(inStr, {
           encoding: 'utf8',
-        });
+        }) as BreakscapedString;
       }
     }
 
     // Do the unbreakscape
-    const res = unbreakscape(inStr);
+    const res = BreakscapeUtils.unbreakscape(inStr);
 
     if (opts.outputFile) {
       const output = opts.outputFile.toString();

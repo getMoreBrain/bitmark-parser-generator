@@ -4,6 +4,7 @@ import { BodyPart, Mark } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 import { ArrayUtils } from '../../../../utils/ArrayUtils';
+import { BreakscapeUtils } from '../../../../utils/BreakscapeUtils';
 
 import { markTagContentProcessor } from './MarkTagContentProcessor';
 
@@ -54,8 +55,8 @@ function buildMark(
   const { mark: markType, ...rest } = chainTags;
 
   const mark = builder.mark({
-    solution: solution ?? '',
-    mark: ArrayUtils.asSingle(markType) ?? '',
+    solution: solution ?? BreakscapeUtils.EMPTY_STRING,
+    mark: ArrayUtils.asSingle(markType) ?? BreakscapeUtils.EMPTY_STRING,
     ...rest,
   });
 

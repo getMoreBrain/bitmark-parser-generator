@@ -1,8 +1,10 @@
 import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
 import { AliasBitType, BitType, RootBitType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
+import { BreakscapeUtils } from '../../../../utils/BreakscapeUtils';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
@@ -173,9 +175,9 @@ function parseFlashcards(
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const flashcards: Flashcard[] = [];
-  let question = '';
-  let answer: string | undefined;
-  let alternativeAnswers: string[] = [];
+  let question = BreakscapeUtils.EMPTY_STRING;
+  let answer: BreakscapedString | undefined;
+  let alternativeAnswers: BreakscapedString[] = [];
   let cardIndex = 0;
   let variantIndex = 0;
   let extraTags = {};
@@ -184,7 +186,7 @@ function parseFlashcards(
 
   for (const card of cardSet.cards) {
     // Reset the question and answers
-    question = '';
+    question = BreakscapeUtils.EMPTY_STRING;
     answer = undefined;
     alternativeAnswers = [];
     variantIndex = 0;
@@ -200,11 +202,11 @@ function parseFlashcards(
 
         if (variantIndex === 0) {
           questionVariant = content;
-          question = cardBody ?? '';
+          question = cardBody ?? BreakscapeUtils.EMPTY_STRING;
         } else if (variantIndex === 1) {
-          answer = cardBody ?? '';
+          answer = cardBody ?? BreakscapeUtils.EMPTY_STRING;
         } else {
-          alternativeAnswers.push(cardBody ?? '');
+          alternativeAnswers.push(cardBody ?? BreakscapeUtils.EMPTY_STRING);
         }
         variantIndex++;
       }
@@ -246,7 +248,7 @@ function parseElements(
   _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const elements: string[] = [];
+  const elements: BreakscapedString[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
@@ -254,7 +256,7 @@ function parseElements(
         const tags = content.data;
 
         // if (tags.cardBody) {
-        elements.push(tags.cardBody ?? '');
+        elements.push(tags.cardBody ?? BreakscapeUtils.EMPTY_STRING);
         // } else {
         //   context.addWarning('Ignoring card with empty element', content);
         // }
@@ -330,11 +332,11 @@ function parseQuiz(
   if (!insertChoices && !insertResponses) return {};
 
   let isDefaultExampleCard = false;
-  let exampleCard: string | undefined;
+  let exampleCard: BreakscapedString | undefined;
 
   for (const card of cardSet.cards) {
     isDefaultExampleCard = false;
-    exampleCard = '';
+    exampleCard = BreakscapeUtils.EMPTY_STRING;
 
     for (const side of card.sides) {
       for (const content of side.variants) {
@@ -413,7 +415,7 @@ function parseQuestions(
 
         // if (tags.cardBody) {
         const q = builder.question({
-          question: tags.cardBody ?? '',
+          question: tags.cardBody ?? BreakscapeUtils.EMPTY_STRING,
           ...tags,
         });
         questions.push(q);
@@ -438,17 +440,17 @@ function parseMatchPairs(
   let sideIdx = 0;
   let heading: Heading | undefined;
   const pairs: Pair[] = [];
-  let forKeys: string | undefined = undefined;
-  const forValues: string[] = [];
-  let pairKey: string | undefined = undefined;
-  let pairValues: string[] = [];
+  let forKeys: BreakscapedString | undefined = undefined;
+  const forValues: BreakscapedString[] = [];
+  let pairKey: BreakscapedString | undefined = undefined;
+  let pairValues: BreakscapedString[] = [];
   let keyAudio: AudioResource | undefined = undefined;
   let keyImage: ImageResource | undefined = undefined;
   let extraTags = {};
   let isDefaultExampleCardSet = false;
-  let exampleCardSet: string | undefined;
+  let exampleCardSet: BreakscapedString | undefined;
   let isDefaultExampleCard = false;
-  let exampleCard: string | undefined;
+  let exampleCard: BreakscapedString | undefined;
   // let variant: ProcessedCardVariant | undefined;
 
   for (const card of cardSet.cards) {
@@ -460,7 +462,7 @@ function parseMatchPairs(
     sideIdx = 0;
     extraTags = {};
     isDefaultExampleCard = false;
-    exampleCard = '';
+    exampleCard = BreakscapeUtils.EMPTY_STRING;
 
     for (const side of card.sides) {
       for (const content of side.variants) {
@@ -501,7 +503,7 @@ function parseMatchPairs(
             exampleCardSet = example ? example : exampleCardSet;
           } else if (title == null) {
             // If not a heading, it is a pair
-            const value = cardBody ?? '';
+            const value = cardBody ?? BreakscapeUtils.EMPTY_STRING;
             pairValues.push(value);
             if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = value;
           }
@@ -530,7 +532,7 @@ function parseMatchPairs(
       const example = exampleCard || exampleCardSet;
 
       const pair = builder.pair({
-        key: pairKey ?? '',
+        key: pairKey ?? BreakscapeUtils.EMPTY_STRING,
         keyAudio,
         keyImage,
         values: pairValues,
@@ -559,19 +561,19 @@ function parseMatchMatrix(
 ): BitSpecificCards {
   let sideIdx = 0;
   let heading: Heading | undefined;
-  let forKeys: string | undefined = undefined;
-  const forValues: string[] = [];
-  let matrixKey: string | undefined = undefined;
+  let forKeys: BreakscapedString | undefined = undefined;
+  const forValues: BreakscapedString[] = [];
+  let matrixKey: BreakscapedString | undefined = undefined;
   const matrix: Matrix[] = [];
   let matrixCells: MatrixCell[] = [];
-  let matrixCellValues: string[] = [];
+  let matrixCellValues: BreakscapedString[] = [];
   let matrixCellTags = {};
   let isDefaultExampleCardSet = false;
-  let exampleCardSet: string | undefined;
+  let exampleCardSet: BreakscapedString | undefined;
   let isDefaultExampleCard = false;
-  let exampleCard: string | undefined;
+  let exampleCard: BreakscapedString | undefined;
   let isDefaultExampleSide = false;
-  let exampleSide: string | undefined;
+  let exampleSide: BreakscapedString | undefined;
   // let keyAudio: AudioResource | undefined = undefined;
   // let keyImage: ImageResource | undefined = undefined;
   // let variant: ProcessedCardVariant | undefined;
@@ -585,13 +587,13 @@ function parseMatchMatrix(
     matrixCellValues = [];
     sideIdx = 0;
     isDefaultExampleCard = false;
-    exampleCard = '';
+    exampleCard = BreakscapeUtils.EMPTY_STRING;
 
     for (const side of card.sides) {
       matrixCellValues = [];
       matrixCellTags = {};
       isDefaultExampleSide = false;
-      exampleSide = '';
+      exampleSide = BreakscapeUtils.EMPTY_STRING;
 
       for (const content of side.variants) {
         // variant = content;
@@ -636,7 +638,7 @@ function parseMatchMatrix(
             exampleCardSet = example ? example : exampleCardSet;
           } else if (tags.title == null) {
             // If not a heading, it is a matrix cell value
-            const value = cardBody ?? '';
+            const value = cardBody ?? BreakscapeUtils.EMPTY_STRING;
             matrixCellValues.push(value);
             if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = value;
           }
@@ -671,7 +673,7 @@ function parseMatchMatrix(
     } else {
       // if (matrixKey) {
       const m = builder.matrix({
-        key: matrixKey ?? '',
+        key: matrixKey ?? BreakscapeUtils.EMPTY_STRING,
         // keyAudio,
         // keyImage,
         cells: matrixCells,
@@ -704,9 +706,9 @@ function parseBotActionResponses(
         const { instruction, reaction, cardBody: feedback, ...tags } = content.data;
 
         const botResponse = builder.botResponse({
-          response: instruction ?? '',
-          reaction: reaction ?? '',
-          feedback: feedback ?? '',
+          response: instruction ?? BreakscapeUtils.EMPTY_STRING,
+          reaction: reaction ?? BreakscapeUtils.EMPTY_STRING,
+          feedback: feedback ?? BreakscapeUtils.EMPTY_STRING,
           ...tags,
         });
         botResponses.push(botResponse);

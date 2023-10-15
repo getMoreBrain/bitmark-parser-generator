@@ -1,4 +1,5 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
+import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
 import { Bit } from '../../model/ast/Nodes';
 import { BitType } from '../../model/enum/BitType';
@@ -7,6 +8,7 @@ import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextMarkType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
+import { BreakscapeUtils } from '../../utils/BreakscapeUtils';
 
 import {
   CodeBlockTextNode,
@@ -47,24 +49,6 @@ const STANDARD_MARKS: { [key: string]: string } = {
   [TextMarkType.italic]: ITALIC_MARK,
   [TextMarkType.highlight]: HIGHLIGHT_MARK,
 };
-
-// Regex explanation:
-// - match a single character of a text mark = * ` ! ! and capture in group 1
-// - match zero or more ^ characters and capture in group 2
-// - match the same character as group 1
-// - match a single | or [ and capture in group 3
-// This will capture all double marks, escaped double marks, and [ or |
-// Replace with group 1 (half mark), ^, group 2 (captured ^s), group 1 (half mark)
-// Or if captured [ or |, it will be replaced with [^ or [^
-const BREAKSCAPE_REGEX = new RegExp('([=*_`!])([\\^]*)\\1|([\\|\\[])', 'g');
-const BREAKSCAPE_REGEX_REPLACER = '$1$3^$2$1';
-
-// Regex explanation:
-// - match a single | or • or # character at the start of a line and capture in group 1
-// This will capture all new block characters within the code text.
-// Replace with group 1, ^
-const BREAKSCAPE_CODE_REGEX = new RegExp('^(\\||•|#)', 'gm');
-const BREAKSCAPE_CODE_REGEX_REPLACER = '$1^';
 
 // Regex explanation:
 // - Match newline or carriage return + newline
@@ -136,14 +120,14 @@ class TextGenerator implements AstWalkCallbacks {
    *
    * @param ast bitmark text AST
    */
-  public async generate(ast: TextAst, textFormat?: TextFormatType): Promise<string> {
+  public async generate(ast: TextAst, textFormat?: TextFormatType): Promise<BreakscapedString> {
     // Reset the state
     this.resetState(textFormat);
 
     // Walk the text AST
     this.walkAndWrite(ast);
 
-    return this.writerText;
+    return this.writerText as BreakscapedString;
   }
 
   /**
@@ -151,14 +135,14 @@ class TextGenerator implements AstWalkCallbacks {
    *
    * @param ast bitmark text AST
    */
-  public generateSync(ast: TextAst, textFormat?: TextFormatType): string {
+  public generateSync(ast: TextAst, textFormat?: TextFormatType): BreakscapedString {
     // Reset the state
     this.resetState(textFormat);
 
     // Walk the text AST
     this.walkAndWrite(ast);
 
-    return this.writerText;
+    return this.writerText as BreakscapedString;
   }
 
   public getPlaceholders(): BodyBitsJson {
@@ -493,9 +477,9 @@ class TextGenerator implements AstWalkCallbacks {
     // Breakscape the text
     let s: string = node.text;
     if (!codeBreakscaping) {
-      s = s.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
+      s = BreakscapeUtils.breakscape(s);
     } else {
-      s = s.replace(BREAKSCAPE_CODE_REGEX, BREAKSCAPE_CODE_REGEX_REPLACER);
+      s = BreakscapeUtils.breakscapeCode(s);
     }
 
     // Apply any required indentation
@@ -514,12 +498,12 @@ class TextGenerator implements AstWalkCallbacks {
     const href = this.getLinkHref(node);
     if (href) {
       // Breakscape the text
-      let s = node.text.replace(BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER);
+      let s = BreakscapeUtils.breakscape(node.text);
 
       // Apply any required indentation
       if (this.currentIndent > 1) {
         const indentationString = this.getIndentationString();
-        s = s.replace(INDENTATION_REGEX, `$1${indentationString}`);
+        s = s.replace(INDENTATION_REGEX, `$1${indentationString}`) as BreakscapedString;
       }
 
       // The node is a link.
@@ -530,7 +514,7 @@ class TextGenerator implements AstWalkCallbacks {
         this.write(href);
       } else {
         // Write as an inline mark
-        s = `==${s}==|link:${href}|`;
+        s = `==${s}==|link:${href}|` as BreakscapedString;
         this.write(s);
       }
 
@@ -858,4 +842,4 @@ class TextGenerator implements AstWalkCallbacks {
   }
 }
 
-export { TextGenerator, BREAKSCAPE_REGEX, BREAKSCAPE_REGEX_REPLACER };
+export { TextGenerator };

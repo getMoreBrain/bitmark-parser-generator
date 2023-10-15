@@ -1,3 +1,4 @@
+import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { AliasBitType, BitType, RootBitType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
@@ -8,6 +9,7 @@ import { ParserInfo } from '../model/parser/ParserInfo';
 import { ParserLocation } from '../model/parser/ParserLocation';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BitUtils } from '../utils/BitUtils';
+import { BreakscapeUtils } from '../utils/BreakscapeUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { env } from '../utils/env/Env';
@@ -86,72 +88,72 @@ class Builder extends BaseBuilder {
     bitType: BitType;
     textFormat?: TextFormatType;
     resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
-    id?: string | string[];
-    externalId?: string | string[];
-    spaceId?: string | string[];
-    padletId?: string;
-    jupyterId?: string;
-    jupyterExecutionCount?: string;
+    id?: BreakscapedString | BreakscapedString[];
+    externalId?: BreakscapedString | BreakscapedString[];
+    spaceId?: BreakscapedString | BreakscapedString[];
+    padletId?: BreakscapedString;
+    jupyterId?: BreakscapedString;
+    jupyterExecutionCount?: number;
     aiGenerated?: boolean;
-    releaseVersion?: string;
+    releaseVersion?: BreakscapedString;
     ageRange?: number | number[];
-    lang?: string;
-    language?: string | string[];
-    computerLanguage?: string;
-    target?: string | string[];
-    tag?: string | string[];
-    icon?: string;
-    iconTag?: string;
-    colorTag?: string | string[];
-    flashcardSet?: string | string[];
-    subtype?: string;
-    bookAlias?: string | string[];
-    coverImage?: string | string[];
-    publisher?: string | string[];
-    publications?: string | string[];
-    author?: string | string[];
-    subject?: string | string[];
-    date?: string;
-    location?: string;
-    theme?: string | string[];
-    kind?: string;
-    action?: string;
-    thumbImage?: string;
+    lang?: BreakscapedString;
+    language?: BreakscapedString | BreakscapedString[];
+    computerLanguage?: BreakscapedString;
+    target?: BreakscapedString | BreakscapedString[];
+    tag?: BreakscapedString | BreakscapedString[];
+    icon?: BreakscapedString;
+    iconTag?: BreakscapedString;
+    colorTag?: BreakscapedString | BreakscapedString[];
+    flashcardSet?: BreakscapedString | BreakscapedString[];
+    subtype?: BreakscapedString;
+    bookAlias?: BreakscapedString | BreakscapedString[];
+    coverImage?: BreakscapedString | BreakscapedString[];
+    publisher?: BreakscapedString | BreakscapedString[];
+    publications?: BreakscapedString | BreakscapedString[];
+    author?: BreakscapedString | BreakscapedString[];
+    subject?: BreakscapedString | BreakscapedString[];
+    date?: BreakscapedString;
+    location?: BreakscapedString;
+    theme?: BreakscapedString | BreakscapedString[];
+    kind?: BreakscapedString;
+    action?: BreakscapedString;
+    thumbImage?: BreakscapedString;
     focusX?: number;
     focusY?: number;
-    duration?: string;
-    referenceProperty?: string | string[];
-    deeplink?: string | string[];
-    externalLink?: string;
-    externalLinkText?: string;
-    videoCallLink?: string;
-    bot?: string | string[];
-    list?: string | string[];
-    textReference?: string;
+    duration?: BreakscapedString;
+    referenceProperty?: BreakscapedString | BreakscapedString[];
+    deeplink?: BreakscapedString | BreakscapedString[];
+    externalLink?: BreakscapedString;
+    externalLinkText?: BreakscapedString;
+    videoCallLink?: BreakscapedString;
+    bot?: BreakscapedString | BreakscapedString[];
+    list?: BreakscapedString | BreakscapedString[];
+    textReference?: BreakscapedString;
     isTracked?: boolean;
     isInfoOnly?: boolean;
-    labelTrue?: string;
-    labelFalse?: string;
-    content2Buy?: string;
-    quotedPerson?: string;
+    labelTrue?: BreakscapedString;
+    labelFalse?: BreakscapedString;
+    content2Buy?: BreakscapedString;
+    quotedPerson?: BreakscapedString;
     reasonableNumOfChars?: number;
     maxCreatedBits?: number;
-    partialAnswer?: string;
-    book?: string;
-    title?: string;
-    subtitle?: string;
-    level?: number | string;
+    partialAnswer?: BreakscapedString;
+    book?: BreakscapedString;
+    title?: BreakscapedString;
+    subtitle?: BreakscapedString;
+    level?: number | BreakscapedString;
     toc?: boolean;
     progress?: boolean;
-    anchor?: string;
+    anchor?: BreakscapedString;
     // If an array is passed to reference, it will be considered an "[@reference:Some text]" property
-    // If a string is passed to reference, it will be considered a "[►Reference]" tag
-    reference?: string;
-    referenceEnd?: string;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    // If a BreakscapedText is passed to reference, it will be considered a "[►Reference]" tag
+    reference?: BreakscapedString;
+    referenceEnd?: BreakscapedString;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
     imageSource?: ImageSource;
@@ -162,8 +164,8 @@ class Builder extends BaseBuilder {
     markConfig?: MarkConfig[];
     resources?: Resource | Resource[];
     body?: Body;
-    sampleSolution?: string;
-    elements?: string[];
+    sampleSolution?: BreakscapedString;
+    elements?: BreakscapedString[];
     flashcards?: Flashcard[];
     statement?: Statement;
     statements?: Statement[];
@@ -401,12 +403,12 @@ class Builder extends BaseBuilder {
    * @returns
    */
   choice(data: {
-    text: string;
+    text: BreakscapedString;
     isCorrect: boolean;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
@@ -439,12 +441,12 @@ class Builder extends BaseBuilder {
    * @returns
    */
   response(data: {
-    text: string;
+    text: BreakscapedString;
     isCorrect: boolean;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
@@ -477,12 +479,12 @@ class Builder extends BaseBuilder {
    * @returns
    */
   botResponse(data: {
-    response: string;
-    reaction: string;
-    feedback: string;
-    item?: string;
-    lead?: string;
-    hint?: string;
+    response: BreakscapedString;
+    reaction: BreakscapedString;
+    feedback: BreakscapedString;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
   }): BotResponse {
     const { response, reaction, feedback, item, lead, hint } = data;
 
@@ -510,10 +512,10 @@ class Builder extends BaseBuilder {
    * @returns
    */
   quiz(data: {
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
     choices?: Choice[];
@@ -549,14 +551,17 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  heading(data: { forKeys: string; forValues: string | string[] }): Heading | undefined {
+  heading(data: {
+    forKeys: BreakscapedString;
+    forValues: BreakscapedString | BreakscapedString[];
+  }): Heading | undefined {
     const { forKeys, forValues } = data;
 
     if (forKeys == null) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: Heading = {
-      forKeys: forKeys || '',
+      forKeys: forKeys || BreakscapeUtils.EMPTY_STRING,
       forValues: ArrayUtils.asArray(forValues) ?? [],
     };
 
@@ -573,14 +578,14 @@ class Builder extends BaseBuilder {
    * @returns
    */
   pair(data: {
-    key?: string;
+    key?: BreakscapedString;
     keyAudio?: AudioResource;
     keyImage?: ImageResource;
-    values: string[];
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    values: BreakscapedString[];
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
     isDefaultExample?: boolean;
@@ -630,12 +635,12 @@ class Builder extends BaseBuilder {
    * @returns
    */
   matrix(data: {
-    key: string;
+    key: BreakscapedString;
     cells: MatrixCell[];
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
     isDefaultExample?: boolean;
@@ -680,11 +685,11 @@ class Builder extends BaseBuilder {
    * @returns
    */
   matrixCell(data: {
-    values: string[];
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    values: BreakscapedString[];
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
   }): MatrixCell {
@@ -714,13 +719,13 @@ class Builder extends BaseBuilder {
    * @returns
    */
   question(data: {
-    question: string;
-    partialAnswer?: string;
-    sampleSolution?: string;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    question: BreakscapedString;
+    partialAnswer?: BreakscapedString;
+    sampleSolution?: BreakscapedString;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isShortAnswer?: boolean;
     reasonableNumOfChars?: number;
@@ -787,7 +792,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  bodyText(data: { text: string }): BodyText {
+  bodyText(data: { text: BreakscapedString }): BodyText {
     const { text } = data;
 
     // NOTE: Node order is important and is defined here
@@ -806,7 +811,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  footerText(data: { text: string }): FooterText {
+  footerText(data: { text: BreakscapedString }): FooterText {
     const { text } = data;
 
     // NOTE: Node order is important and is defined here
@@ -823,11 +828,11 @@ class Builder extends BaseBuilder {
    * @returns
    */
   gap(data: {
-    solutions: string[];
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    solutions: BreakscapedString[];
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
@@ -863,7 +868,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  markConfig(data: { mark: string; color?: string; emphasis?: string }): MarkConfig {
+  markConfig(data: { mark: BreakscapedString; color?: BreakscapedString; emphasis?: BreakscapedString }): MarkConfig {
     const { mark, color, emphasis } = data;
 
     // NOTE: Node order is important and is defined here
@@ -886,14 +891,14 @@ class Builder extends BaseBuilder {
    * @returns
    */
   mark(data: {
-    solution: string;
-    mark?: string;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    solution: BreakscapedString;
+    mark?: BreakscapedString;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isDefaultExample?: boolean;
-    example?: string | boolean;
+    example?: BreakscapedString | boolean;
   }): Mark {
     const { solution, mark, item, lead, hint, instruction, isDefaultExample, example } = data;
 
@@ -924,12 +929,12 @@ class Builder extends BaseBuilder {
    */
   select(data: {
     options: SelectOption[];
-    prefix?: string;
-    postfix?: string;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    prefix?: BreakscapedString;
+    postfix?: BreakscapedString;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
   }): Select {
     const { options, prefix, postfix, item, lead, hint, instruction, isCaseSensitive } = data;
@@ -963,12 +968,12 @@ class Builder extends BaseBuilder {
    * @returns
    */
   selectOption(data: {
-    text: string;
+    text: BreakscapedString;
     isCorrect: boolean;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
@@ -1002,12 +1007,12 @@ class Builder extends BaseBuilder {
    */
   highlight(data: {
     texts: HighlightText[];
-    prefix?: string;
-    postfix?: string;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    prefix?: BreakscapedString;
+    postfix?: BreakscapedString;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
   }): Highlight {
     const { texts, prefix, postfix, item, lead, hint, instruction, isCaseSensitive } = data;
@@ -1041,13 +1046,13 @@ class Builder extends BaseBuilder {
    * @returns
    */
   highlightText(data: {
-    text: string;
+    text: BreakscapedString;
     isCorrect: boolean;
     isHighlighted: boolean;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
@@ -1092,13 +1097,13 @@ class Builder extends BaseBuilder {
    * @returns
    */
   flashcard(data: {
-    question: string;
-    answer?: string;
-    alternativeAnswers?: string[];
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    question: BreakscapedString;
+    answer?: BreakscapedString;
+    alternativeAnswers?: BreakscapedString[];
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
   }): Flashcard {
@@ -1130,12 +1135,12 @@ class Builder extends BaseBuilder {
    * @returns
    */
   statement(data: {
-    text: string;
+    text: BreakscapedString;
     isCorrect: boolean;
-    item?: string;
-    lead?: string;
-    hint?: string;
-    instruction?: string;
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
@@ -1167,7 +1172,13 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  imageSource(data: { url: string; mockupId: string; size?: number; format?: string; trim?: boolean }): ImageSource {
+  imageSource(data: {
+    url: BreakscapedString;
+    mockupId: BreakscapedString;
+    size?: number;
+    format?: BreakscapedString;
+    trim?: boolean;
+  }): ImageSource {
     const { url, mockupId, size, format, trim } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1193,7 +1204,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  partner(data: { name: string; avatarImage?: ImageResource }): Partner {
+  partner(data: { name: BreakscapedString; avatarImage?: ImageResource }): Partner {
     const { name, avatarImage } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1239,7 +1250,7 @@ class Builder extends BaseBuilder {
   // Private
   //
 
-  private itemLead(item: string | undefined, lead: string | undefined): ItemLead | undefined {
+  private itemLead(item: BreakscapedString | undefined, lead: BreakscapedString | undefined): ItemLead | undefined {
     let node: ItemLead | undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1256,7 +1267,7 @@ class Builder extends BaseBuilder {
   private cardNode(data: {
     flashcards?: Flashcard[];
     questions?: Question[];
-    elements?: string[];
+    elements?: BreakscapedString[];
     statement?: Statement;
     statements?: Statement[];
     choices?: Choice[];
