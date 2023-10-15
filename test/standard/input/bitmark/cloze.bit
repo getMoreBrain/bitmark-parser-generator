@@ -28,7 +28,7 @@ Nettosteuer		CHF	[_74.434]
 [▼Ref_Roche]
 [%][%Leitbild 6]
 Our people make our business. Our people discover, develop and manufacture our products and ensure that they reach the patients who need them. Therefore, we’ve created a supportive work environment where people can be truly invested in their work. We encourage big thinking and give our people the support and flexibility they need to make their mark. This is more than just a job. It’s an international family dedicated to making a real impact on the world around us. We believe that employees who are engaged are key to delivering the highest standards and the greatest levels of innovation. That’s why we care about what makes working here a rewarding experience for our employees.
-[_Roche]
+[_Roche][@isCaseSensitive:false]
 
 [.cloze:bitmark++]
 [@id:193276]

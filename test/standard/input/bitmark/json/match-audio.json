@@ -18,8 +18,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         }
       ],
       "body": "[Listen to the audio and name the animal you are hearing.]",

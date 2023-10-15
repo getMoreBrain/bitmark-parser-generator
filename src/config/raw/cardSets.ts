@@ -116,14 +116,6 @@ const CARDSETS: _CardSetsConfig = {
               configKey: PropertyConfigKey.property_sampleSolution,
             },
             {
-              type: BitTagType.property,
-              configKey: PropertyConfigKey.shortAnswer,
-            },
-            {
-              type: BitTagType.property,
-              configKey: PropertyConfigKey.longAnswer,
-            },
-            {
               type: BitTagType.group,
               configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
             },
@@ -160,6 +152,10 @@ const CARDSETS: _CardSetsConfig = {
             {
               type: BitTagType.tag,
               configKey: TagConfigKey.title,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.isCaseSensitive,
             },
           ],
           bodyAllowed: true,
@@ -246,6 +242,10 @@ const CARDSETS: _CardSetsConfig = {
             {
               type: BitTagType.tag,
               configKey: TagConfigKey.title,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.isCaseSensitive,
             },
           ],
           bodyAllowed: true,

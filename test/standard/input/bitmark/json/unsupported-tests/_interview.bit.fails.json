@@ -1,6 +1,6 @@
 [
   {
-    "bitmark": "[.interview:bitmark--]\n|| ANTLR parser loses the \\n's from the body ||\n[@id:136399]\n[%11_Planung und Steuerung_048 (Freitext)]\nEin Projekt meldet folgende Zahlen:\n\nGesamtbudget (Budget at Completion, BAC)    1 000 000 CHF\nPlan-Kosten (Planned Value, PV)    500 000 CHF\nEarned Value (EV)    400 000 CHF\nIst-Aufwand (Actual Cost, AC)    550 000 CHF\nProjektdauer\t12 Monate\n\n[!Berechnen und kommentieren Sie unten stehende Kennzahlen:]\n===\n**Terminabweichung: SV**\nBerechnung\n===\nFeststellung[@shortAnswer]\n[?Das Projekt liegt aktuell hinter dem Plan.]\n===\n\n**Kostenabweichung: CV**\nBerechnung\n===\nFeststellung[@shortAnswer]\n[?Das Projekt hat aktuell das Budget überzogen.]\n===\n\n**Geschätzte Kosten bei Fertigstellung: EAC**\nBerechnung\n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt teurer werden.]\n===\n\n**Geschätzte Kostenabweichung Projektabschluss: VAC**\nBerechnung\n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt teurer werden.]\n===\n\n**Kosteneffizienz: CPI**\nBerechnung\n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt teurer werden.]\n===\n**Zeiteffizienz: SPI**\nBerechnung\n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt länger dauern.]\n===\n**Geschätzte Gesamtdauer: ETAC**\nBerechnung\n===\nFeststellung[@shortAnswer]\n[?Wenn es so weitergeht, wird das Projekt länger dauern.]\n===\n**Benötigte Kosteneffizienz: TCPI**\nBerechnung\n===\nFeststellung[@shortAnswer]\n[?Um das Projektbudget einzuhalten, brauchte es eine 33%ige Effizienzsteigerung.]\n===\n\n||TODO: add the results of the calculations||",
+    "bitmark": "[.interview:bitmark--]\n|| ANTLR parser loses the \\n's from the body ||\n[@id:136399]\n[%11_Planung und Steuerung_048 (Freitext)]\nEin Projekt meldet folgende Zahlen:\n\nGesamtbudget (Budget at Completion, BAC)    1 000 000 CHF\nPlan-Kosten (Planned Value, PV)    500 000 CHF\nEarned Value (EV)    400 000 CHF\nIst-Aufwand (Actual Cost, AC)    550 000 CHF\nProjektdauer\t12 Monate\n\n[!Berechnen und kommentieren Sie unten stehende Kennzahlen:]\n===\n**Terminabweichung: SV**\nBerechnung\n===\nFeststellung\n[?Das Projekt liegt aktuell hinter dem Plan.]\n===\n\n**Kostenabweichung: CV**\nBerechnung\n===\nFeststellung\n[?Das Projekt hat aktuell das Budget überzogen.]\n===\n\n**Geschätzte Kosten bei Fertigstellung: EAC**\nBerechnung\n===\nFeststellung\n[?Wenn es so weitergeht, wird das Projekt teurer werden.]\n===\n\n**Geschätzte Kostenabweichung Projektabschluss: VAC**\nBerechnung\n===\nFeststellung\n[?Wenn es so weitergeht, wird das Projekt teurer werden.]\n===\n\n**Kosteneffizienz: CPI**\nBerechnung\n===\nFeststellung\n[?Wenn es so weitergeht, wird das Projekt teurer werden.]\n===\n**Zeiteffizienz: SPI**\nBerechnung\n===\nFeststellung\n[?Wenn es so weitergeht, wird das Projekt länger dauern.]\n===\n**Geschätzte Gesamtdauer: ETAC**\nBerechnung\n===\nFeststellung\n[?Wenn es so weitergeht, wird das Projekt länger dauern.]\n===\n**Benötigte Kosteneffizienz: TCPI**\nBerechnung\n===\nFeststellung\n[?Um das Projektbudget einzuhalten, brauchte es eine 33%ige Effizienzsteigerung.]\n===\n\n||TODO: add the results of the calculations||",
     "bit": {
       "type": "interview",
       "format": "bitmark--",
@@ -18,8 +18,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -29,8 +28,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -40,8 +38,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -51,8 +48,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -62,8 +58,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -73,8 +68,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -84,8 +78,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -95,8 +88,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -106,8 +98,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -117,8 +108,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -128,8 +118,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -139,8 +128,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -150,8 +138,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -161,8 +148,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -172,8 +158,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -183,8 +168,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         }
       ],
       "id": ["136399"]
@@ -209,8 +193,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "have travel documents and boarding pass ready, passengers with small children and passengers who need extra help boarding now, regular boarding in about ten minutes",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "2",
@@ -220,8 +203,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "the departure gate for this flight has changed",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "3",
@@ -231,8 +213,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "final call, go to gate now",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "4",
@@ -242,8 +223,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "don’t leave bags alone, bags will be removed and destroyed",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         }
       ],
       "id": ["301927"],
@@ -275,8 +255,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "inseparable",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "2",
@@ -286,8 +265,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "Can you help put the dishes away, please?",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "3",
@@ -297,8 +275,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "inseparable",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "4",
@@ -308,8 +285,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "I’m dying to show my new cake baking skills off.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "5",
@@ -319,8 +295,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "After 15 minutes turn the oven down to 120°C.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "6",
@@ -330,8 +305,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "I added salt instead of sugar. I’ll have to throw the mixture away and start again.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "7",
@@ -341,8 +315,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "I can’t figure this recipe out.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "8",
@@ -352,8 +325,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "inseparable",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         }
       ],
       "id": ["302059"]
@@ -392,8 +364,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "- Bei der Verrechnungssteuer: Eine Bank überwälzt die Steuerzahllast, indem sie auf dem Zinsertrag 35% an die ESTV abliefert und dem Steuerträger nur 65% ausbezahlt\n- Bei der MWST, indem der MWST-Betrag auf dem Umsatz eingerechnet wird und dem Verbraucher / Konsumenten belastet wird\n(Annahme: Konsument ist nicht selbst MWSTpflichtig, sondern der Endverbraucher !)",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         }
       ],
       "id": ["198780"]
@@ -432,8 +403,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "Es gibt zwei verschiedene Unterscheidungskriterien für direkte und indirekte Steuern:\n\n1. Kriterium:\nSteuersubjekt und Steuerträger sind bei den direkten Steuern identisch. Indirekte Steuern sind nach diesem Kriterium somit die zu überwälzenden Steuern. Steuersubjekt ist der Leistungsschuldner und Steuerträger der Leistungsempfänger. Gemäss dem Kriterium 1 lassen sich die Mehrwertsteuer und Einkommenssteuer wie folgt klassifizieren:\n\nElemente        Mehrwertsteuer      Einkommenssteuer\nSteuersubjekt   Leistungserbringer  Einkommensempfänger\nSteuerträger    Leistungsempfänger  Einkommensempfänger\nKlassigizierung Indirekte Steuer    Direkte Steuer\n\n2. Kriterium:\nDirekte Steuern sind jene, bei welchen die Steuerberechnungsgrundlage und das Steuerobjekt unmittelbar miteinander verbunden sind, indem die Steuerberechnungsgrundlage zugleich das Steuerobjekt bildet. Gemäss dem Kriterium 2 lassen sich die Mehrwertsteuer und Einkommenssteuer wie folgt klassifizieren:\n\nElemente                    Mehrwertsteuer                  Einkommenssteuer\nSteuerobjekt                Tätigen steuerbarer Umsätze     Erzielen steuerbarer Umsätze\nSteuerberechnungsgrundlage  Entgelt                         Einkomme\nKlassifizierung             Indirekte Steuer                Direkte Steuer",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         }
       ],
       "id": ["198789"]
@@ -472,8 +442,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "Sofern folgende Voraussetzungen erfüllt sind, handelt es sich beim Arbeitszimmer des Lehrers um Gewinnungskosten:\n Am Arbeitsort steht kein Raum zur Verfügung;\n der Raum muss in der Wohnstätte ausgeschieden sein.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -483,8 +452,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "Es handelt sich dabei um typische Unterhaltskosten, mithin Gewinnungskosten.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -494,8 +462,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "Es handelt sich bei den Garagen um wertvermehrende Anlagekosten, die keine Gewinnungskosten darstellen.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         }
       ],
       "id": ["196218"]
@@ -534,8 +501,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -545,8 +511,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -556,8 +521,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         }
       ],
       "id": ["136477"],
@@ -596,8 +560,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "les vacances d'automne Lise fait beaucoup de promenades avec son chien. / les vacances d'automne, Lise fait avec son chien beaucoup de promenades.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         },
         {
           "item": "",
@@ -607,8 +570,7 @@
           "isExample": false,
           "example": null,
           "sampleSolution": "vont inviter leurs amis à leur fête au bord du lac. / vont inviter leurs amis au bord du lac à leur fête.",
-          "partialAnswer": "",
-          "isShortAnswer": true
+          "partialAnswer": ""
         }
       ],
       "id": ["136417"]

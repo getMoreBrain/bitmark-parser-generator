@@ -19,7 +19,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -30,7 +30,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -41,7 +41,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -52,7 +52,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -63,7 +63,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         }
@@ -92,7 +92,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true,
           "example": "packen"
         },
@@ -103,7 +103,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -114,7 +114,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -125,7 +125,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -136,7 +136,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -147,7 +147,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -158,7 +158,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -169,7 +169,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -180,7 +180,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -191,7 +191,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -202,7 +202,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -213,7 +213,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         }

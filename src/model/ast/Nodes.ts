@@ -188,7 +188,6 @@ export interface Decision {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  isCaseSensitive?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -246,7 +245,6 @@ export interface Pair {
   hint?: string;
   instruction?: string;
   isCaseSensitive?: boolean;
-  isShortAnswer?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -257,8 +255,6 @@ export interface Matrix {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  isCaseSensitive?: boolean;
-  isShortAnswer?: boolean;
   isExample: boolean;
   cells: MatrixCell[];
 }
@@ -268,6 +264,7 @@ export interface MatrixCell {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
+  isCaseSensitive?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -282,8 +279,6 @@ export interface Question {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  isCaseSensitive?: boolean;
-  isShortAnswer?: boolean;
   reasonableNumOfChars?: number;
   isExample: boolean;
   isDefaultExample: boolean;
@@ -353,7 +348,6 @@ export interface Select extends BodyBit {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    isCaseSensitive?: boolean;
     isExample?: boolean;
   };
 }
@@ -364,7 +358,6 @@ export interface SelectOption {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  isCaseSensitive?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -381,7 +374,6 @@ export interface Highlight extends BodyBit {
     itemLead?: ItemLead;
     hint?: string;
     instruction?: string;
-    isCaseSensitive?: boolean;
     isExample?: boolean;
   };
 }
@@ -393,7 +385,6 @@ export interface HighlightText {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  isCaseSensitive?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;

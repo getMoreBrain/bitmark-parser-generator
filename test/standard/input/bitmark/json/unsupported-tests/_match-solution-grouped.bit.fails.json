@@ -15,8 +15,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Vergabe der Entwicklung eines Teilergebnisses in einem Innovationsprojekt",
@@ -26,8 +25,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Bereitstellung der Infrastruktur für ein grosses Musikkonzert durch einen spezialisierten Lieferanten",
@@ -37,8 +35,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Konfiguration und Einführung einer unternehmensumspannenden ERP-Software (Enterprise Resource Planning) durch eine Dienstleistungsfirma",
@@ -48,8 +45,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Zusammenarbeit mit einer spezialisierten Consultingfirma zur Optimierung des aktuellen Projektmanagement-Systems im Unternehmen",
@@ -59,8 +55,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Ausarbeitung eines externen Gutachtens zum Aufzeigen der relevanten IT-Risiken in einem Unternehmen",
@@ -70,8 +65,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         }
       ],
       "body": "",
@@ -95,8 +89,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Aufbau eines neuen Verschlüsselungssystems für Zeichnungen, Teile, Materialien, Stücklisten, Arbeitspläne in einem Maschinenbauunternehmen",
@@ -106,8 +99,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Pflegen von Kundenstammdaten für 50000 Kunden auf einer vorliegenden Vordrucksammlung",
@@ -117,8 +109,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Evaluation einer IT-Anlage",
@@ -128,8 +119,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Abwicklung einer Fusion zweier Unternehmen",
@@ -139,8 +129,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Erweiterung der Gehaltsabrechnung um eine weitere Statistikauswertung",
@@ -150,8 +139,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         }
       ],
       "body": "",
@@ -175,8 +163,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Kalkulierbare Kosten",
@@ -186,8 +173,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Wenig Hierarchie",
@@ -197,8 +183,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Dauerhaft",
@@ -208,8 +193,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Einmalig",
@@ -219,8 +203,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Funktions- oder stellenorientiert",
@@ -230,8 +213,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         }
       ],
       "body": "",
@@ -255,8 +237,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Ziele",
@@ -266,8 +247,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Strategien",
@@ -277,8 +257,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Instrumente",
@@ -288,8 +267,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Budget",
@@ -299,8 +277,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "key": "Kontrolle",
@@ -310,8 +287,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         }
       ],
       "body": "",
