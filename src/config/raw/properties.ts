@@ -2,7 +2,6 @@ import { _PropertiesConfig } from '../../model/config/_Config';
 import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
 import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
 import { PropertyFormat } from '../../model/enum/PropertyFormat';
-import { PropertyJsonKey } from '../../model/enum/PropertyJsonKey';
 import { PropertyTag } from '../../model/enum/PropertyTag';
 
 const PROPERTIES: _PropertiesConfig = {
@@ -293,20 +292,6 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.emphasis,
     single: true,
     format: PropertyFormat.trimmedString,
-  },
-  [PropertyConfigKey.shortAnswer]: {
-    tag: PropertyTag.shortAnswer,
-    single: true,
-    format: PropertyFormat.boolean,
-    astKey: PropertyAstKey.isShortAnswer,
-    jsonKey: PropertyJsonKey.shortAnswer,
-  },
-  [PropertyConfigKey.longAnswer]: {
-    tag: PropertyTag.longAnswer,
-    single: true,
-    format: PropertyFormat.invertedBoolean,
-    astKey: PropertyAstKey.isShortAnswer,
-    jsonKey: PropertyJsonKey.shortAnswer,
   },
   [PropertyConfigKey.isCaseSensitive]: {
     tag: PropertyTag.isCaseSensitive,

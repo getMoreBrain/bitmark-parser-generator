@@ -245,7 +245,6 @@ export interface Pair {
   hint?: string;
   instruction?: string;
   isCaseSensitive?: boolean;
-  isShortAnswer?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -256,7 +255,6 @@ export interface Matrix {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  isShortAnswer?: boolean;
   isExample: boolean;
   cells: MatrixCell[];
 }
@@ -281,7 +279,6 @@ export interface Question {
   itemLead?: ItemLead;
   hint?: string;
   instruction?: string;
-  isShortAnswer?: boolean;
   reasonableNumOfChars?: number;
   isExample: boolean;
   isDefaultExample: boolean;

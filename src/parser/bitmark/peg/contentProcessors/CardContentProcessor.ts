@@ -533,7 +533,6 @@ function parseMatchPairs(
         keyAudio,
         keyImage,
         values: pairValues,
-        isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
         ...extraTags,
         isDefaultExample,
         example,
@@ -682,7 +681,6 @@ function parseMatchMatrix(
         // keyAudio,
         // keyImage,
         cells: matrixCells,
-        isShortAnswer: true, // Default shortAnswer to true - will be overridden by @shortAnswer:false or @longAnswer?
       });
       matrix.push(m);
       // } else {

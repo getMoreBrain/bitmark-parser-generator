@@ -578,7 +578,6 @@ class Builder extends BaseBuilder {
     hint?: string;
     instruction?: string;
     isCaseSensitive?: boolean;
-    isShortAnswer?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): Pair {
@@ -592,7 +591,6 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       isCaseSensitive,
-      isShortAnswer,
       isDefaultExample,
       example,
     } = data;
@@ -607,7 +605,6 @@ class Builder extends BaseBuilder {
       instruction,
       ...this.toExample(isDefaultExample, example),
       isCaseSensitive: isCaseSensitive ?? true, // default to true
-      isShortAnswer,
       values,
     };
 
@@ -632,10 +629,9 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    isShortAnswer?: boolean;
     isDefaultExample?: boolean;
   }): Matrix {
-    const { key, cells, item, lead, hint, instruction, isShortAnswer, isDefaultExample } = data;
+    const { key, cells, item, lead, hint, instruction, isDefaultExample } = data;
 
     let isExample = false;
 
@@ -654,7 +650,6 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      isShortAnswer,
       isExample,
       cells,
     };
@@ -717,7 +712,6 @@ class Builder extends BaseBuilder {
     lead?: string;
     hint?: string;
     instruction?: string;
-    isShortAnswer?: boolean;
     reasonableNumOfChars?: number;
     isDefaultExample?: boolean;
     example?: Example;
@@ -729,7 +723,6 @@ class Builder extends BaseBuilder {
       lead,
       hint,
       instruction,
-      isShortAnswer,
       reasonableNumOfChars,
       sampleSolution,
       isDefaultExample,
@@ -744,7 +737,6 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
-      isShortAnswer,
       reasonableNumOfChars,
       sampleSolution,
     };

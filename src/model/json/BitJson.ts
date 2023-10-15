@@ -195,7 +195,6 @@ export interface PairJson {
   hint: Text;
   instruction: Text;
   isCaseSensitive: boolean;
-  isLongAnswer: boolean;
   isExample: boolean;
   example: ExampleJson;
 }
@@ -207,7 +206,6 @@ export interface MatrixJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  isLongAnswer: boolean;
   isExample: boolean;
   example: ExampleJson;
 }
@@ -231,7 +229,6 @@ export interface QuestionJson {
   lead: Text;
   hint: Text;
   instruction: Text;
-  isShortAnswer: boolean;
   reasonableNumOfChars: number;
   isExample: boolean;
   example: ExampleJson;

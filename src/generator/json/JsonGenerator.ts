@@ -994,7 +994,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           values: p.values ?? [],
           ...this.toItemLeadHintInstruction(p),
           isCaseSensitive: p.isCaseSensitive ?? true,
-          isLongAnswer: !p.isShortAnswer ?? false,
           ...this.toExample(p, {
             defaultExample,
             isBoolean: false,
@@ -1065,7 +1064,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           cells: matrixCellsJson ?? [],
           ...this.toItemLeadHintInstruction(m),
           // ...this.toExample(m.example, m.isExample),
-          isLongAnswer: !m.isShortAnswer ?? false,
           isExample: m.isExample ?? false,
         };
 
@@ -1096,7 +1094,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           partialAnswer: ArrayUtils.asSingle(q.partialAnswer) ?? '',
           sampleSolution: q.sampleSolution ?? '',
           ...this.toItemLeadHintInstruction(q),
-          isShortAnswer: q.isShortAnswer ?? true,
           reasonableNumOfChars: q.reasonableNumOfChars,
           ...this.toExample(q, {
             defaultExample: q.sampleSolution || '',

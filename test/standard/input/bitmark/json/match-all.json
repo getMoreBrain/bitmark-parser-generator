@@ -16,7 +16,6 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
           "isExample": false,
           "example": null
         },
@@ -27,7 +26,6 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
           "isExample": false,
           "example": null
         },
@@ -38,7 +36,6 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
           "isExample": false,
           "example": null
         },
@@ -49,7 +46,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -60,7 +57,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         }
@@ -90,7 +87,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         }
@@ -122,7 +119,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true,
           "example": "a) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt."
         },
@@ -133,7 +130,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -144,7 +141,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -155,7 +152,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -166,7 +163,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -177,7 +174,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -188,7 +185,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         }
@@ -410,7 +407,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -421,7 +418,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -432,7 +429,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -443,7 +440,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -454,7 +451,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         }
@@ -483,7 +480,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true,
           "example": "Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."
         },
@@ -497,7 +494,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -508,7 +505,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -519,7 +516,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -530,7 +527,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -541,7 +538,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         },
@@ -552,7 +549,7 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false,
           "example": null
         }

@@ -663,19 +663,7 @@ class JsonParser {
     const nodes: Pair[] = [];
     if (Array.isArray(pairs)) {
       for (const p of pairs) {
-        const {
-          key,
-          keyAudio,
-          keyImage,
-          values,
-          item,
-          lead,
-          hint,
-          instruction,
-          example,
-          isCaseSensitive,
-          isLongAnswer,
-        } = p;
+        const { key, keyAudio, keyImage, values, item, lead, hint, instruction, example, isCaseSensitive } = p;
 
         const audio = this.resourceDataToAst(ResourceTag.audio, keyAudio) as AudioResource;
         const image = this.resourceDataToAst(ResourceTag.image, keyImage) as ImageResource;
@@ -688,7 +676,6 @@ class JsonParser {
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
           isCaseSensitive,
-          isShortAnswer: !isLongAnswer,
         });
         nodes.push(node);
       }
@@ -703,13 +690,12 @@ class JsonParser {
     const nodes: Matrix[] = [];
     if (Array.isArray(matrix)) {
       for (const m of matrix) {
-        const { key, cells, item, lead, hint, instruction, example, isLongAnswer } = m;
+        const { key, cells, item, lead, hint, instruction, example } = m;
         const node = builder.matrix({
           key,
           cells: this.matrixCellsToAst(cells) ?? [],
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
-          isShortAnswer: !isLongAnswer,
         });
         nodes.push(node);
       }
@@ -754,7 +740,6 @@ class JsonParser {
           hint,
           instruction,
           example,
-          isShortAnswer,
           reasonableNumOfChars,
         } = q;
         const node = builder.question({
@@ -763,7 +748,6 @@ class JsonParser {
           sampleSolution,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
-          isShortAnswer,
           reasonableNumOfChars,
         });
         nodes.push(node);

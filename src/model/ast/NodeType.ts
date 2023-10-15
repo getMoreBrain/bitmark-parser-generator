@@ -191,7 +191,6 @@ const NodeType = superenum({
   prefix: 'prefix',
   postfix: 'postfix',
   isCaseSensitive: 'isCaseSensitive',
-  isShortAnswer: 'isShortAnswer',
   isCorrect: 'isCorrect',
   forKeys: 'forKeys',
   forValuesValue: 'forValuesValue',

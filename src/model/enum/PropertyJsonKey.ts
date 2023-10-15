@@ -6,7 +6,7 @@ import { EnumType, superenum } from '@ncoderz/superenum';
  * Only keys that vary from the markup default are included.
  */
 const PropertyJsonKey = superenum({
-  shortAnswer: 'isShortAnswer',
+  //
 });
 
 export type PropertyJsonKeyType = EnumType<typeof PropertyJsonKey>;
