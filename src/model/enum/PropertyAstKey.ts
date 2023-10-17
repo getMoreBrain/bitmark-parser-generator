@@ -9,7 +9,6 @@ const PropertyAstKey = superenum({
   aiGenerated: 'aiGenerated',
   isCaseSensitive: 'isCaseSensitive',
   referenceProperty: 'referenceProperty',
-  isShortAnswer: 'isShortAnswer',
   markConfig: 'markConfig',
 });
 

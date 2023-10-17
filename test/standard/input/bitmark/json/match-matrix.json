@@ -21,6 +21,7 @@
               "values": ["ich werde gehen"],
               "item": "",
               "instruction": "Instruction",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "ich werde gehen"
             },
@@ -28,14 +29,14 @@
               "values": ["sie gingen"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": false,
               "isExample": true,
               "example": "sie gingen"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         },
         {
@@ -45,6 +46,7 @@
               "values": ["ich werde sprechen"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": false,
               "example": null
             },
@@ -52,23 +54,40 @@
               "values": ["sie sprachen"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": false
         }
       ]
     },
     "parser": {
-      "version": "1.2.0",
-      "bitmarkVersion": "3"
+      "version": "1.4.7",
+      "bitmarkVersion": "3",
+      "comments": [
+        {
+          "text": " [@example] tests follow ",
+          "location": {
+            "start": {
+              "line": 27,
+              "column": 1,
+              "offset": 358
+            },
+            "end": {
+              "line": 27,
+              "column": 30,
+              "offset": 387
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.match-matrix]\n[@id:287966]\n[%][%match-matrix]\n[!Bring the german verbs into the correct tense.]\n\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen\n==\nich werde gehen[@example][!Instruction]\n==\nsie gingen[@example]\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n==="
+    "bitmark": "[.match-matrix]\n[@id:287966]\n[%][%match-matrix]\n[!Bring the german verbs into the correct tense.]\n\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen[@isCaseSensitive:false]\n==\nich werde gehen[@example][!Instruction][@isCaseSensitive:true]\n==\nsie gingen[@example]\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n===\n\n\n|| [@example] tests follow ||"
   },
   {
     "bit": {
@@ -89,6 +108,7 @@
               "values": ["A"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": false,
               "example": null
             },
@@ -96,14 +116,14 @@
               "values": ["B", "C"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "B"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         },
         {
@@ -113,6 +133,7 @@
               "values": ["D"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": false,
               "example": null
             },
@@ -120,23 +141,23 @@
               "values": ["E", "F"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": false,
               "isExample": true,
               "example": "F"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         }
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB[@example]\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF[@example]\n==="
+    "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB[@example]\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF[@example][@isCaseSensitive:false]\n==="
   },
   {
     "bit": {
@@ -157,6 +178,7 @@
               "values": ["A"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": false,
               "example": null
             },
@@ -164,14 +186,14 @@
               "values": ["B", "C"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "Y"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         },
         {
@@ -181,6 +203,7 @@
               "values": ["D"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "D"
             },
@@ -188,20 +211,20 @@
               "values": ["E", "F"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         }
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB[@example:Y]\n--\nC\n===\nshould be the text not the value\n==\nD[@example]\n==\nE\n--\nF[@example:X]\n==="
@@ -225,6 +248,7 @@
               "values": ["A"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "A"
             },
@@ -232,14 +256,14 @@
               "values": ["B", "C"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "B"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         },
         {
@@ -249,6 +273,7 @@
               "values": ["D"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "Y"
             },
@@ -256,20 +281,20 @@
               "values": ["E", "F"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         }
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example]Herr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\n[@example:Y]should be the text not the value\n==\nD\n==\nE\n--\nF[@example:X]\n==="
@@ -293,6 +318,7 @@
               "values": ["A"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             },
@@ -300,14 +326,14 @@
               "values": ["B", "C"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         },
         {
@@ -317,6 +343,7 @@
               "values": ["D"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             },
@@ -324,20 +351,20 @@
               "values": ["E", "F"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "F"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         }
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[@example:X][#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF[@example]\n==="
@@ -361,6 +388,7 @@
               "values": ["A"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "A"
             },
@@ -368,14 +396,14 @@
               "values": ["B", "C"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "B"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         },
         {
@@ -385,6 +413,7 @@
               "values": ["D"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "D"
             },
@@ -392,20 +421,20 @@
               "values": ["E", "F"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "E"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         }
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[@example][#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
@@ -429,6 +458,7 @@
               "values": ["A"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "A"
             },
@@ -436,14 +466,14 @@
               "values": ["B", "C"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "B"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         },
         {
@@ -453,6 +483,7 @@
               "values": ["D"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "D"
             },
@@ -460,20 +491,20 @@
               "values": ["E", "F"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "E"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         }
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-matrix:bitmark--]\n[@example]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
@@ -497,6 +528,7 @@
               "values": ["A"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             },
@@ -504,14 +536,14 @@
               "values": ["B", "C"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         },
         {
@@ -521,6 +553,7 @@
               "values": ["D"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             },
@@ -528,20 +561,20 @@
               "values": ["E", "F"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         }
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-matrix:bitmark--]\n[@example:X]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
@@ -565,6 +598,7 @@
               "values": ["A"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "99"
             },
@@ -572,14 +606,14 @@
               "values": ["B", "C"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "C"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         },
         {
@@ -589,6 +623,7 @@
               "values": ["D"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "X"
             },
@@ -596,20 +631,20 @@
               "values": ["E", "F"],
               "item": "",
               "instruction": "",
+              "isCaseSensitive": true,
               "isExample": true,
               "example": "Y"
             }
           ],
           "item": "",
           "hint": "",
-          "isCaseSensitive": true,
-          "isLongAnswer": false,
+
           "isExample": true
         }
       ]
     },
     "parser": {
-      "version": "1.2.0",
+      "version": "1.4.7",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[@example:99][#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC[@example]\n===\n[@example:Y]should be the text not the value\n==\nD[@example:X]\n==\nE\n--\nF\n==="

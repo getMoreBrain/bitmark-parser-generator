@@ -17,7 +17,6 @@
           "hint": "",
           "instruction": "",
           "isCaseSensitive": true,
-          "isLongAnswer": false,
           "isExample": false,
           "example": null
         }

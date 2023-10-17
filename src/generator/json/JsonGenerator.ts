@@ -998,7 +998,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           values: Breakscape.unbreakscape(p.values) ?? [],
           ...this.toItemLeadHintInstruction(p),
           isCaseSensitive: p.isCaseSensitive ?? true,
-          isLongAnswer: !p.isShortAnswer ?? false,
           ...this.toExample(p, {
             defaultExample,
             isBoolean: false,
@@ -1048,6 +1047,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
             const matrixCellJson: Partial<MatrixCellJson> = {
               values: Breakscape.unbreakscape(c.values) ?? [],
               ...this.toItemLeadHintInstruction(c),
+              isCaseSensitive: c.isCaseSensitive ?? true,
               ...this.toExample(c, {
                 defaultExample,
                 isBoolean: false,
@@ -1068,8 +1068,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           cells: matrixCellsJson ?? [],
           ...this.toItemLeadHintInstruction(m),
           // ...this.toExample(m.example, m.isExample),
-          isCaseSensitive: m.isCaseSensitive ?? true,
-          isLongAnswer: !m.isShortAnswer ?? false,
           isExample: m.isExample ?? false,
         };
 
@@ -1100,8 +1098,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           partialAnswer: Breakscape.unbreakscape(ArrayUtils.asSingle(q.partialAnswer)) ?? '',
           sampleSolution: Breakscape.unbreakscape(q.sampleSolution) ?? '',
           ...this.toItemLeadHintInstruction(q),
-          // isCaseSensitive: q.isCaseSensitive ?? true,
-          isShortAnswer: q.isShortAnswer ?? true,
           reasonableNumOfChars: q.reasonableNumOfChars,
           ...this.toExample(q, {
             defaultExample: q.sampleSolution || '',
@@ -1468,7 +1464,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (!optionJson.item) delete optionJson.item;
       if (!optionJson.lead) delete optionJson.lead;
       if (!optionJson.instruction) delete optionJson.instruction;
-      if (!optionJson.isCaseSensitive) delete optionJson.isCaseSensitive;
 
       options.push(optionJson as SelectOptionJson);
     }
@@ -1510,7 +1505,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (!textJson.item) delete textJson.item;
       if (!textJson.lead) delete textJson.lead;
       if (!textJson.hint) delete textJson.hint;
-      if (!textJson.isCaseSensitive) delete textJson.isCaseSensitive;
 
       texts.push(textJson as HighlightTextJson);
     }

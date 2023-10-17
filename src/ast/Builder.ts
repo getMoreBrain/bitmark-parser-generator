@@ -409,11 +409,10 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
-    isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): Choice {
-    const { text, isCorrect, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
+    const { text, isCorrect, item, lead, hint, instruction, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Choice = {
@@ -423,7 +422,6 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExampleBoolean(isDefaultExample, example),
-      isCaseSensitive,
     };
 
     // Remove Unset Optionals
@@ -447,11 +445,10 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
-    isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): Response {
-    const { text, isCorrect, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
+    const { text, isCorrect, item, lead, hint, instruction, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Response = {
@@ -461,7 +458,6 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExampleBoolean(isDefaultExample, example),
-      isCaseSensitive,
     };
 
     // Remove Unset Optionals
@@ -587,7 +583,6 @@ class Builder extends BaseBuilder {
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
-    isShortAnswer?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): Pair {
@@ -601,7 +596,6 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       isCaseSensitive,
-      isShortAnswer,
       isDefaultExample,
       example,
     } = data;
@@ -615,8 +609,7 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
-      isCaseSensitive,
-      isShortAnswer,
+      isCaseSensitive: isCaseSensitive ?? true, // default to true
       values,
     };
 
@@ -641,11 +634,9 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
-    isCaseSensitive?: boolean;
-    isShortAnswer?: boolean;
     isDefaultExample?: boolean;
   }): Matrix {
-    const { key, cells, item, lead, hint, instruction, isCaseSensitive, isShortAnswer, isDefaultExample } = data;
+    const { key, cells, item, lead, hint, instruction, isDefaultExample } = data;
 
     let isExample = false;
 
@@ -664,8 +655,6 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
-      isCaseSensitive,
-      isShortAnswer,
       isExample,
       cells,
     };
@@ -690,10 +679,11 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
+    isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): MatrixCell {
-    const { values, item, lead, hint, instruction, isDefaultExample, example } = data;
+    const { values, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCell = {
@@ -701,6 +691,7 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead),
       hint,
       instruction,
+      isCaseSensitive: isCaseSensitive ?? true, // default to true
       ...this.toExample(isDefaultExample, example),
     };
 
@@ -726,8 +717,6 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
-    isCaseSensitive?: boolean;
-    isShortAnswer?: boolean;
     reasonableNumOfChars?: number;
     isDefaultExample?: boolean;
     example?: Example;
@@ -739,8 +728,6 @@ class Builder extends BaseBuilder {
       lead,
       hint,
       instruction,
-      isCaseSensitive,
-      isShortAnswer,
       reasonableNumOfChars,
       sampleSolution,
       isDefaultExample,
@@ -755,8 +742,6 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
-      isCaseSensitive,
-      isShortAnswer,
       reasonableNumOfChars,
       sampleSolution,
     };
@@ -849,8 +834,8 @@ class Builder extends BaseBuilder {
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,
+        isCaseSensitive: isCaseSensitive ?? true, // default to true
         ...this.toExample(isDefaultExample, example),
-        isCaseSensitive,
       },
     };
 
@@ -935,9 +920,8 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
-    isCaseSensitive?: boolean;
   }): Select {
-    const { options, prefix, postfix, item, lead, hint, instruction, isCaseSensitive } = data;
+    const { options, prefix, postfix, item, lead, hint, instruction } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Select = {
@@ -949,7 +933,6 @@ class Builder extends BaseBuilder {
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,
-        isCaseSensitive,
       },
     };
 
@@ -974,11 +957,10 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
-    isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): SelectOption {
-    const { text, isCorrect, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
+    const { text, isCorrect, item, lead, hint, instruction, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: SelectOption = {
@@ -988,7 +970,6 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
-      isCaseSensitive,
     };
 
     // Remove Unset Optionals
@@ -1013,9 +994,8 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
-    isCaseSensitive?: boolean;
   }): Highlight {
-    const { texts, prefix, postfix, item, lead, hint, instruction, isCaseSensitive } = data;
+    const { texts, prefix, postfix, item, lead, hint, instruction } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Highlight = {
@@ -1027,7 +1007,6 @@ class Builder extends BaseBuilder {
         itemLead: this.itemLead(item, lead),
         hint,
         instruction,
-        isCaseSensitive,
       },
     };
 
@@ -1053,22 +1032,10 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
-    isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): HighlightText {
-    const {
-      text,
-      isCorrect,
-      isHighlighted,
-      item,
-      lead,
-      hint,
-      instruction,
-      isCaseSensitive,
-      isDefaultExample,
-      example,
-    } = data;
+    const { text, isCorrect, isHighlighted, item, lead, hint, instruction, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: HighlightText = {
@@ -1079,7 +1046,6 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
-      isCaseSensitive,
     };
 
     // Remove Unset Optionals
@@ -1141,11 +1107,10 @@ class Builder extends BaseBuilder {
     lead?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
-    isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): Statement {
-    const { text, isCorrect, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
+    const { text, isCorrect, item, lead, hint, instruction, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Statement = {
@@ -1155,7 +1120,6 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExampleBoolean(isDefaultExample, example),
-      isCaseSensitive,
     };
 
     // Remove Unset Optionals

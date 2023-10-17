@@ -89,8 +89,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "keyImage": {
@@ -104,8 +103,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "keyImage": {
@@ -119,8 +117,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "keyImage": {
@@ -134,8 +131,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "keyImage": {
@@ -149,8 +145,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         },
         {
           "keyImage": {
@@ -164,8 +159,7 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null,
-          "isLongAnswer": false
+          "example": null
         }
       ],
       "body": "",

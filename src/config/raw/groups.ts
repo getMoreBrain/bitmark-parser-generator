@@ -171,6 +171,10 @@ const GROUPS: _GroupsConfig = {
             type: BitTagType.group,
             configKey: GroupConfigKey.group_standardExample,
           },
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.isCaseSensitive,
+          },
         ],
       },
     ],

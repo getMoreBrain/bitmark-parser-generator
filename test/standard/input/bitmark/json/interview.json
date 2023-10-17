@@ -17,7 +17,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "reasonableNumOfChars": 101,
           "isExample": false,
           "example": null
@@ -29,7 +29,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "reasonableNumOfChars": 20,
           "isExample": false,
           "example": null
@@ -41,7 +41,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "reasonableNumOfChars": 100,
           "isExample": false,
           "example": null
@@ -82,13 +82,12 @@
       },
       "questions": [
         {
-          "question": "",
+          "question": "Nothing here",
           "partialAnswer": "",
           "sampleSolution": "",
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": false,
           "isExample": false,
           "example": null
         }
@@ -114,27 +113,9 @@
             }
           }
         }
-      ],
-      "warnings": [
-        {
-          "message": "'Property' with key 'longAnswer' is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
-          "text": "[@longAnswer]",
-          "location": {
-            "start": {
-              "line": 8,
-              "column": 1,
-              "offset": 345
-            },
-            "end": {
-              "line": 8,
-              "column": 14,
-              "offset": 358
-            }
-          }
-        }
       ]
     },
-    "bitmark": "[.interview:bitmark--&image]\n[@id:136528]\n[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]\n[%3a]\n[!Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.]\nWarum bist du hier? Wie fühlst du dich? Was denkst du gerade?\n===\n[@longAnswer]\n===\n||adapt instructions||"
+    "bitmark": "[.interview:bitmark--&image]\n[@id:136528]\n[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]\n[%3a]\n[!Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.]\nWarum bist du hier? Wie fühlst du dich? Was denkst du gerade?\n===\n===\n||adapt instructions||"
   },
   {
     "bit": {
@@ -154,7 +135,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         }
@@ -185,7 +166,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -196,7 +177,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -207,7 +188,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": true,
           "example": "Selbständigkeit\nWechsel bei der Einkommenssteuer von unselbständig zu selbständig, u.a. Buchwertprinzip."
         },
@@ -218,7 +199,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -229,7 +210,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -240,7 +221,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -251,7 +232,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -262,7 +243,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -273,7 +254,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -284,7 +265,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -295,7 +276,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         }
@@ -326,7 +307,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         }
@@ -357,7 +338,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -368,7 +349,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -379,7 +360,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -390,7 +371,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -401,7 +382,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         }
@@ -412,7 +393,7 @@
       "version": "1.0.16",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.interview]\n[@id:187612]\n[%12]\n[!Datum / Unterschriften]\n===\nDieser Bildungsbericht wurde am[@shortAnswer]\n===\nbesprochen.\n**Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:**[@shortAnswer]\n===\n**Unterschrift der lernenden Person:**[@shortAnswer]\n===\n**Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:**\nDatum:[@shortAnswer]\n===\nUnterschrift:[@shortAnswer]\n==="
+    "bitmark": "[.interview]\n[@id:187612]\n[%12]\n[!Datum / Unterschriften]\n===\nDieser Bildungsbericht wurde am\n===\nbesprochen.\n**Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:**\n===\n**Unterschrift der lernenden Person:**\n===\n**Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:**\nDatum:\n===\nUnterschrift:\n==="
   },
   {
     "bit": {
@@ -447,7 +428,7 @@
           "item": "a",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -458,7 +439,7 @@
           "item": "b",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -469,7 +450,7 @@
           "item": "c",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -480,7 +461,7 @@
           "item": "d",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         }
@@ -511,7 +492,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -522,7 +503,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -533,7 +514,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -544,7 +525,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         }
@@ -555,7 +536,7 @@
       "version": "1.0.16",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.interview:bitmark--]\n[@id:136405]\n[%Persönliche Angaben]\n\n===\nName:[@shortAnswer]\n===\nVorname:[@shortAnswer]\n===\nPrüfungsnummer:[@shortAnswer]\n===\nKantonsschule:[@shortAnswer]\n==="
+    "bitmark": "[.interview:bitmark--]\n[@id:136405]\n[%Persönliche Angaben]\n\n===\nName:\n===\nVorname:\n===\nPrüfungsnummer:\n===\nKantonsschule:\n==="
   },
   {
     "bit": {
@@ -575,7 +556,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -586,7 +567,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         }
@@ -635,7 +616,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -646,7 +627,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         },
@@ -657,7 +638,7 @@
           "item": "",
           "hint": "",
           "instruction": "",
-          "isShortAnswer": true,
+
           "isExample": false,
           "example": null
         }

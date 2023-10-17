@@ -10,9 +10,9 @@
 ==
 [#Past, 3rd Person, Plural]
 ===
-gehen
+gehen[@isCaseSensitive:false]
 ==
-ich werde gehen[@example][!Instruction]
+ich werde gehen[@example][!Instruction][@isCaseSensitive:true]
 ==
 sie gingen[@example]
 ===
@@ -48,7 +48,7 @@ D
 ==
 E
 --
-F[@example]
+F[@example][@isCaseSensitive:false]
 ===
 
 [.match-matrix:bitmark--]
