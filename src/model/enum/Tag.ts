@@ -14,7 +14,6 @@ const Tag = superenum({
   gap: '_',
   mark: '=',
   resource: '&',
-  remark: '::',
   comment: '||',
 });
 

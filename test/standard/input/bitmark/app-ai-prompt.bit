@@ -5,8 +5,7 @@
 followed by some plain text. cloze open close cloze1 book.
 
 Some more text.
-::remark::
-::
+
 
 
 [.app-ai-prompt:bitmark++]
@@ -17,8 +16,7 @@ Some more text.
 followed by some plain text. cloze open close cloze1 book.
 
 Some more text.
-::remark::
-::
+
 
 [.app-ai-prompt:bitmark++]
 [@AIGenerated:false]

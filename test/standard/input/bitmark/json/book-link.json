@@ -42,7 +42,17 @@
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "list": ["One", "Two", "Three", "Four"],
-      "id": ["119760"]
+      "id": ["119760"],
+      "resource": {
+        "type": "website-link",
+        "websiteLink": {
+          "caption": "",
+          "copyright": "",
+          "license": "",
+          "showInIndex": false,
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
+        }
+      }
     }
   }
 ]

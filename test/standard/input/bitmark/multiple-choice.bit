@@ -276,7 +276,6 @@ die richtige Antwort.]
 [-Moment bitte.]
 
 [.multiple-choice:bitmark--]
-|| FIXED: PEG parser is not correctly parsing the chained [%item] tags - it is adding them at the quizzes level ||
 [@id:291806]
 [%]
 [!Teilen Sie die folgenden Begriffe in der entsprechenden Spalte korrekt zu:]
