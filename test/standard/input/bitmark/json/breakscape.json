@@ -13,10 +13,10 @@
       ],
       "externalId": ["[externalId with square bracked at end]"],
       "lang": "[lang] with square bracked in middle",
-      "item": "[%item]",
-      "lead": "[%lead]:)",
+      "item": "[%item^]",
+      "lead": "[%lead^]:)",
       "hint": "",
-      "instruction": "Instruc[tion]",
+      "instruction": "Instruc[tion^]",
       "isExample": true,
       "body": "Here\n\n\n\n\nis\n\nthe body and here is a {0} with square brackets",
       "resource": {
@@ -42,13 +42,13 @@
           "instruction": "",
           "isCaseSensitive": true,
           "isExample": true,
-          "example": "] with square bracked at beginning [",
+          "example": "^] with square bracked at beginning [",
           "solutions": ["[gap]"]
         }
       }
     },
     "parser": {
-      "version": "1.4.9",
+      "version": "1.4.10",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.cloze:bitmark++&image]\n[@id:1234]\n[@id:[1234^]]\n[@id:[1234^]4321]\n[@id:id-with-a-^]-in-it-and-at-the-end-^]]\n[@id:id-with-a-^^]-in-it-and-at-the-end-^^]]\n[@id:id-with-a-^^^]-in-it-and-at-the-end-^^^]]\n\nHere\n\n[%[%item^]][%[%lead^]:)]\n[!Instruc[tion^]]\n[@externalId:[externalId with square bracked at end^]]\nis\n[@lang:[lang^] with square bracked in middle]\nthe body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets\n\n[&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]"

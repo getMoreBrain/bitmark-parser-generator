@@ -8,11 +8,11 @@
       "hint": "",
       "isExample": false,
       "example": null,
-      "body": "bitmark.print(\"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")\nbitmark.console.log(\"This is a [_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")",
+      "body": "bitmark.print(\"[^.cloze]\\nThis is a [^_gap text].\\n[.cloze]\\nThis is another [^_gap text].\")\nbitmark.console.log(\"This is a [^_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[^.cloze]\\nThis is a [^_gap text].\\n[^.cloze]\\nThis is another [^_gap text].\")",
       "maxCreatedBits": 100
     },
     "parser": {
-      "version": "1.4.4",
+      "version": "1.4.10",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.app-bitmark-from-javascript]\n[@id:342341]\n[@maxCreatedBits:100]\n\nbitmark.print(\"[^.cloze]\\nThis is a [^_gap text].\\n[.cloze]\\nThis is another [^_gap text].\")\nbitmark.console.log(\"This is a [^_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[^.cloze]\\nThis is a [^_gap text].\\n[^.cloze]\\nThis is another [^_gap text].\")"
