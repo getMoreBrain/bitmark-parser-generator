@@ -9,13 +9,13 @@
       "hint": "",
       "example": null,
       "isExample": false,
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::"
+      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n"
     },
     "parser": {
       "version": "1.0.6",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.article-ai:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@language:en]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::"
+    "bitmark": "[.article-ai:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@language:en]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n"
   },
   {
     "bit": {
@@ -27,13 +27,13 @@
       "hint": "",
       "example": null,
       "isExample": false,
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::"
+      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n"
     },
     "parser": {
       "version": "1.0.6",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.article-ai:bitmark++]\n[@AIGenerated:true]\n[@ageRange:18][@ageRange:120]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::"
+    "bitmark": "[.article-ai:bitmark++]\n[@AIGenerated:true]\n[@ageRange:18][@ageRange:120]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n"
   },
   {
     "bit": {

@@ -375,13 +375,13 @@
       "hint": "",
       "instruction": "",
       "isExample": false,
-      "body": "::remark::\n[!instruction in remark]\n[!hint in remark]"
+      "body": "\n[!instruction in remark]\n[!hint in remark]"
     },
     "parser": {
       "version": "1.0.16",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.true-false]\n[@id:287883]\n::remark::\n[!instruction in remark]\n[!hint in remark]"
+    "bitmark": "[.true-false]\n[@id:287883]\n\n[!instruction in remark]\n[!hint in remark]"
   },
   {
     "bit": {
