@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.4.7
+Version: 1.4.9
 ## Supported Bits
 <pre>
 app-bitmark-from-javascript (since: 1.4.5)
