@@ -91,8 +91,8 @@ bitmark
   = BM_Bitmark
 
 BM_Bitmark
-  = (WS / CommentTag)* firstBit: BM_FirstBit bits: BM_Bits { return processor.buildBits([ firstBit, ...bits]) }
-  / (WS / CommentTag)* bit: $Anything { return processor.buildBits([ bit ]) }
+  = WS* firstBit: BM_FirstBit bits: BM_Bits { return processor.buildBits([ firstBit, ...bits]) }
+  / WS* bit: $Anything { return processor.buildBits([ bit ]) }
 
 // First bit (matches any content before the first bit header that starts with a NL)
 // This is because the first text could be something that is not a bit header, which is an error
@@ -106,11 +106,9 @@ BM_Bits
 
 // A bit with potential blank lines before it
 BM_NL_Bit
-  // = BlankLine* bit: $(BM_BitHeader BM_BodyLine*) { return helper.handleRawBit(bit); }
   = BlankLine* NL? bit: BM_Bit { return bit; }
 
 BM_Bit
-  // = BlankLine* bit: $(BM_BitHeader BM_BodyLine*) { return helper.handleRawBit(bit); }
   = bit: $(BM_BitHeader BM_BodyLine*) { return helper.handleRawBit(bit); }
 
 // A bit header
@@ -167,9 +165,7 @@ ChainedBitTag
 // Bit tag
 BitTag
   = value: (
-    CommentTag
-  / RemarkTag
-  / IDTag
+    IDTag
   / PropertyTag
   / TitleTag
   / AnchorTag
@@ -305,14 +301,6 @@ MarkTag
 ResourceTag
   = "[&" key: KeyValueTag_Key value: KeyValueTag_Value Tag_CloseOrEOF { return helper.handleResourceTag(key, value); }
 
-// Remark (unparsed body)
-RemarkTag
-  = value: $("::" RemarkTag_Key "::" RemarkTag_Value RemarkTag_CloseOrEOF) { return helper.handleTag(TypeKey.BodyText, value); }
-
-// Comment Tag
-CommentTag
-  = "||" value: Comment_Value Comment_CloseOrEOF { return helper.handleTag(TypeKey.Comment, value); }
-
 
 //
 // Bitmark generic
@@ -336,21 +324,6 @@ Bit_Value
 KeyValueTag_Value
   = ":" value: Tag_Value { return value ? value.trim() : '' }
   / '' { return true }
-
-RemarkTag_Key
-  = value: $(!"::" Char)* { return value }
-
-RemarkTag_Value
-  = value: $(!"::" .)* { return value }
-
-RemarkTag_CloseOrEOF
-  = "::" / (WS* EOF)
-
-Comment_Value
-  = value: $(!"||" .)* { return value }
-
-Comment_CloseOrEOF
-  = "||" / (WS* EOF)
 
 //
 // Enumerations

@@ -5,13 +5,11 @@
 [@sampleSolution:The train now approaching Platform 2 is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]
 
 [.essay:bitmark--]
-|| PEG parser does not consider the instruction [!] at the end of the body line valid, but the ANTLR parser does ||
 [@id:245552]
 [%][%Lernaufgabe E – 22]
 Fachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen. [!Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.]
 
 [.essay::bitmark++]
-|| double :: in the bit declaration confuses the ANTLR parser ||
 [@id:272740]
 [%2][%Situationen und Aufgaben gemäss Lehrplan]
 Ein Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.
@@ -53,7 +51,7 @@ Investitionen 7,7% = 50% des Umsatzes
 80.000 - Kurse und Schulungen im Ausland
 40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte
 140.000 - Aufwendungen (7,7%)
-||despite it being a table with three columns I didn't want to do it as an image since it would need two separate images with only one line in the second one||
+
 
 [?|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|
 1)VOST: 3.200.000 * 60% * 7,70%				VOST	**147.840**

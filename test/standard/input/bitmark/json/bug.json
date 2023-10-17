@@ -4,7 +4,7 @@
     "bit": {
       "type": "bug",
       "format": "bitmark++",
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\n\nSome more text.\n",
+      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\n\nSome more text.",
       "item": "",
       "hint": "",
       "isExample": false,

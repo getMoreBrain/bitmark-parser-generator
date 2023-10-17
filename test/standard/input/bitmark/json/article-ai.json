@@ -9,7 +9,7 @@
       "hint": "",
       "example": null,
       "isExample": false,
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n"
+      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
     },
     "parser": {
       "version": "1.0.6",
@@ -27,7 +27,7 @@
       "hint": "",
       "example": null,
       "isExample": false,
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n"
+      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
     },
     "parser": {
       "version": "1.0.6",

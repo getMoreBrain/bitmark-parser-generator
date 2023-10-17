@@ -23,7 +23,7 @@ Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?
 ===
 Nothing here
 ===
-||adapt instructions||
+
 
 
 
@@ -47,7 +47,7 @@ Die Geschichte von Anton und Barbara, ihrer Tochter Clara und der Aktiengesellsc
 Dabei sind Mehrfachnennungen von verschiedenen Steuern bei einzelnen Ereignissen möglich. Die nachstehende Tabelle soll der einfacheren Erfassung dienen.
 ===
 Ereignis Steuern
-|| Deprecated but still supported sampleSolution $ tag ||
+
 [$Erbvorbezug, Schenkung Eltern
 In vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.]
 ===
@@ -160,7 +160,7 @@ müssen? Begründen Sie Ihre Antwort mit Hinweis auf das MWSTG.
 [$Ja, die Eintragung ist zwingend, da die Geschwister eine unternehmerische Tätigkeit im Sinne von Art. 10 MWSTG ausüben und der Umsatz von CHF 100'000 mit dem Verkauf der Wohnung 1 (Verkauf vor Baubeginn stellt eine steuerbare Tätigkeit dar) überschritten wird.]
 ===
 Erstellen Sie die MWST-Abrechnung (davon ausgehend, dass die Geschwister unabhängig Ihrer Antwort in Aufgabe 1 registriert sind) für die Baute. Der Einfachheit halber erstellen Sie nur eine Abrechnung über das gesamte Bauwerk (keine Quartalsabrechnungen).
-||correct answer as image||
+
 ===
 
 [.interview:bitmark--]
@@ -195,5 +195,5 @@ Variante 2: Verkauf mit Option gemäss Art. 22 MWSTG
 ===
 Variante 3: Verkauf mittels Meldeverfahren gemäss Art. 38 MWSTG.
 ===
-||correct answers as pictures||
+
 

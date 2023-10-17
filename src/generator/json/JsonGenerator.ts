@@ -2419,6 +2419,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     //       The properties used in the antlr parser are a bit random sometimes?
     switch (bitType.root) {
       case RootBitType._error:
+      case RootBitType._comment:
+        delete bitJson.format;
         break;
 
       case RootBitType.article:

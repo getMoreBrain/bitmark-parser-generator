@@ -21,7 +21,7 @@ class InfoBuilder {
     const supportedBits: SupportedBit[] = [];
 
     for (const root of RootBitType.values()) {
-      if (root === RootBitType._error) continue;
+      if (root === RootBitType._error || root === RootBitType._comment) continue;
 
       const bitType = Config.getBitType(root);
       const bitConfig = Config.getBitConfig(bitType);
@@ -49,7 +49,7 @@ class InfoBuilder {
     const res: BitConfig[] = [];
 
     for (const root of RootBitType.values()) {
-      if (root === RootBitType._error) continue;
+      if (root === RootBitType._error || root === RootBitType._comment) continue;
 
       const bitType = Config.getBitType(root);
       const config: BitConfig = Config.getBitConfig(bitType);

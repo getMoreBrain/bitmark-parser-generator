@@ -1614,16 +1614,6 @@
         "type": "hardBreak"
       },
       {
-        "text": "|| And here is a comment for good luck ||",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
         "text": "The end!",
         "type": "text"
       }
