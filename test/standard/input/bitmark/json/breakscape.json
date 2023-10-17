@@ -3,7 +3,14 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark++",
-      "id": ["1234", "[1234]", "[1234]4321"],
+      "id": [
+        "1234",
+        "[1234]",
+        "[1234]4321",
+        "id-with-a-]-in-it-and-at-the-end-]",
+        "id-with-a-^]-in-it-and-at-the-end-^]",
+        "id-with-a-^^]-in-it-and-at-the-end-^^]"
+      ],
       "externalId": ["[externalId with square bracked at end]"],
       "lang": "[lang] with square bracked in middle",
       "item": "[%item]",
@@ -41,9 +48,9 @@
       }
     },
     "parser": {
-      "version": "1.4.7",
+      "version": "1.4.9",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.cloze:bitmark++&image]\n[@id:1234]\n[@id:[1234^]]\n[@id:[1234^]4321]\n\nHere\n\n[%[%item^]][%[%lead^]:)]\n[!Instruc[tion^]]\n[@externalId:[externalId with square bracked at end^]]\nis\n[@lang:[lang^] with square bracked in middle]\nthe body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets\n\n[&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]"
+    "bitmark": "[.cloze:bitmark++&image]\n[@id:1234]\n[@id:[1234^]]\n[@id:[1234^]4321]\n[@id:id-with-a-^]-in-it-and-at-the-end-^]]\n[@id:id-with-a-^^]-in-it-and-at-the-end-^^]]\n[@id:id-with-a-^^^]-in-it-and-at-the-end-^^^]]\n\nHere\n\n[%[%item^]][%[%lead^]:)]\n[!Instruc[tion^]]\n[@externalId:[externalId with square bracked at end^]]\nis\n[@lang:[lang^] with square bracked in middle]\nthe body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets\n\n[&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]"
   }
 ]
