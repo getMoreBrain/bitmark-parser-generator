@@ -1,4 +1,6 @@
+import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
+import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { Example, Property } from '../model/ast/Nodes';
 import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
@@ -16,20 +18,23 @@ export interface WithExample {
 class BaseBuilder {
   /**
    * Convert example to an Example.
-   * - If example is set, then the isExample will be true and example with be example as a string.
+   * - If example is set, then the isExample will be true and example with be example as a BreakscapedText.
    * - Else if isDefaultExample is true, then isDefaultExample / isExample will both be true.
    * - Else isDefaultExample / isExample will both be false.
    *
    * @param isDefaultExample - true if the example is the default value
-   * @param example - the example to convert (string, boolean) or undefined if none / default
+   * @param example - the example to convert (BreakscapedText, boolean) or undefined if none / default
    * @returns example/isDefaultExample resolved to an Example object
    */
-  protected toExample(isDefaultExample: boolean | undefined, example: string | boolean | undefined): WithExample {
+  protected toExample(
+    isDefaultExample: boolean | undefined,
+    example: BreakscapedString | boolean | undefined,
+  ): WithExample {
     // Example
     if (example != undefined) {
-      // Convert to boolean to string
-      if (example === true) example = 'true';
-      if (example === false) example = 'false';
+      // Convert to boolean to BreakscapedText
+      if (example === true) example = Breakscape.breakscape('true');
+      if (example === false) example = Breakscape.breakscape('false');
 
       return {
         isDefaultExample: false,

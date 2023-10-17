@@ -1,3 +1,4 @@
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -21,7 +22,7 @@ function referenceTagContentProcessor(
 ): void {
   const { value } = content as TypeValue;
 
-  const trimmedStringValue = StringUtils.trimmedString(value);
+  const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
   if (isReferenceEnd) {
     target.referenceEnd = trimmedStringValue;

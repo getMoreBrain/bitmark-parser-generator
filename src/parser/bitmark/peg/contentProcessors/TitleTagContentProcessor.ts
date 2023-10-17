@@ -1,3 +1,4 @@
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType, RootBitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -28,7 +29,7 @@ function titleTagContentProcessor(
   // Parse the title and its level
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const titleValue: { title: string; level: string[] } = value as any;
-  const titleText = StringUtils.trimmedString(titleValue.title);
+  const titleText = StringUtils.trimmedString(titleValue.title) as BreakscapedString;
   const level = titleValue.level.length;
   title[level] = titleText;
 }
@@ -36,13 +37,13 @@ function titleTagContentProcessor(
 function buildTitles(
   _context: BitmarkPegParserContext,
   bitType: BitType,
-  title: string[] | undefined,
+  title: BreakscapedString[] | undefined,
 ): BitSpecificTitles {
   title = title ?? [];
 
   switch (bitType.root) {
     case RootBitType.chapter: {
-      let t: string | undefined;
+      let t: BreakscapedString | undefined;
       if (title.length > 0) t = title[title.length - 1];
 
       return {

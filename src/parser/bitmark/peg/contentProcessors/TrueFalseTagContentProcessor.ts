@@ -1,3 +1,4 @@
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -23,7 +24,7 @@ function trueFalseTagContentProcessor(
 
   if (!trueFalse) return;
 
-  const trimmedStringValue = StringUtils.trimmedString(value);
+  const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
   trueFalse.push({
     text: trimmedStringValue,

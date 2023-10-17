@@ -5,6 +5,15 @@ import { TextFormatType } from '../enum/TextFormat';
 import { ParserError } from '../parser/ParserError';
 import { ParserInfo } from '../parser/ParserInfo';
 
+// TODO:
+// Store all data in the AST as SandardString (NOT Breakscaped).
+// This means that strings from the bitmark parser must be unbreakscaped before being stored in the AST via Builder.
+// It also means that the bitmark++/bitmark-- string must be converted before being passed to the Builder.
+// It also means that the body will need to be stored in the v3 format in the AST rather than in bodyParts.
+// But it means that breakscaping is kept to where it is needed - i.e. in the bitmark markup, and not anywhere else.
+
+import { BreakscapedString } from './BreakscapedString';
+
 // Node
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -76,18 +85,18 @@ export interface Bit {
   maxCreatedBits?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
-  book?: string;
-  title?: string;
-  subtitle?: string;
+  book?: BreakscapedString;
+  title?: BreakscapedString; // TextAst;
+  subtitle?: BreakscapedString; // TextAst;
   level?: number; // 'level' can either the subtitle level [##subtitle]
   toc?: Property;
   progress?: Property;
-  anchor?: string;
-  reference?: string;
-  referenceEnd?: string;
+  anchor?: BreakscapedString;
+  reference?: BreakscapedString;
+  referenceEnd?: BreakscapedString;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample?: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -95,7 +104,7 @@ export interface Bit {
   partner?: Partner;
   resources?: Resource[];
   body?: Body;
-  sampleSolution?: string;
+  sampleSolution?: BreakscapedString;
   statement?: Statement;
   choices?: Choice[];
   responses?: Response[];
@@ -123,11 +132,11 @@ export interface Comment {
 }
 
 export interface ItemLead {
-  item?: string;
-  lead?: string;
+  item?: BreakscapedString; // TextAst;
+  lead?: BreakscapedString; // TextAst;
 }
 
-export type Example = string | boolean;
+export type Example = BreakscapedString | boolean; // TextAst | boolean;
 
 export interface WithExample {
   isDefaultExample: boolean;
@@ -145,23 +154,23 @@ export type Property = string[] | number[] | boolean[] | unknown[];
 
 // (image-on-device) ImageSource
 export interface ImageSource {
-  url: string;
-  mockupId: string;
+  url: BreakscapedString;
+  mockupId: BreakscapedString;
   size?: number;
-  format?: string;
+  format?: BreakscapedString;
   trim?: boolean;
 }
 
 // (chat) Partner
 export interface Partner {
-  name: string;
+  name: BreakscapedString;
   avatarImage?: ImageResource;
 }
 
 export interface MarkConfig {
-  mark: string;
-  color?: string;
-  emphasis?: string;
+  mark: BreakscapedString;
+  color?: BreakscapedString;
+  emphasis?: BreakscapedString;
 }
 
 // Statement
@@ -183,11 +192,11 @@ export interface Response extends Decision {
 }
 
 export interface Decision {
-  text: string;
+  text: BreakscapedString;
   isCorrect: boolean;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -196,12 +205,12 @@ export interface Decision {
 // Flashcard
 
 export interface Flashcard {
-  question: string;
-  answer?: string;
-  alternativeAnswers?: string[];
+  question: BreakscapedString;
+  answer?: BreakscapedString;
+  alternativeAnswers?: BreakscapedString[];
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -209,19 +218,19 @@ export interface Flashcard {
 
 // Bot Response
 export interface BotResponse {
-  response: string;
-  reaction: string;
-  feedback: string;
+  response: BreakscapedString;
+  reaction: BreakscapedString;
+  feedback: BreakscapedString;
   itemLead?: ItemLead;
-  hint?: string;
+  hint?: BreakscapedString; // TextAst;
 }
 
 // Quiz
 
 export interface Quiz {
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample?: boolean;
   choices?: Choice[];
   responses?: Response[];
@@ -230,20 +239,20 @@ export interface Quiz {
 // Heading
 
 export interface Heading {
-  forKeys: string;
-  forValues: string[];
+  forKeys: BreakscapedString;
+  forValues: BreakscapedString[];
 }
 
 // Pair
 
 export interface Pair {
-  key?: string;
+  key?: BreakscapedString;
   keyAudio?: AudioResource;
   keyImage?: ImageResource;
-  values?: string[];
+  values?: BreakscapedString[];
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isCaseSensitive?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
@@ -251,19 +260,19 @@ export interface Pair {
 }
 
 export interface Matrix {
-  key: string;
+  key: BreakscapedString;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample: boolean;
   cells: MatrixCell[];
 }
 
 export interface MatrixCell {
-  values?: string[];
+  values?: BreakscapedString[];
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isCaseSensitive?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
@@ -273,12 +282,12 @@ export interface MatrixCell {
 // Question
 
 export interface Question {
-  question: string;
-  partialAnswer?: string;
-  sampleSolution?: string;
+  question: BreakscapedString;
+  partialAnswer?: BreakscapedString;
+  sampleSolution?: BreakscapedString;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   reasonableNumOfChars?: number;
   isExample: boolean;
   isDefaultExample: boolean;
@@ -287,6 +296,7 @@ export interface Question {
 
 // Body
 
+// TODO - we cannot store the body like this. we have to store it as an already processed v3 body.
 export interface Body {
   bodyParts: BodyPart[];
 }
@@ -294,7 +304,7 @@ export interface Body {
 export interface BodyText extends BodyPart {
   type: 'text';
   data: {
-    bodyText: string;
+    bodyText: BreakscapedString;
   };
 }
 
@@ -312,10 +322,10 @@ export interface BodyBit extends BodyPart {
 export interface Gap extends BodyBit {
   type: 'gap';
   data: {
-    solutions: string[];
+    solutions: BreakscapedString[];
     itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
+    hint?: BreakscapedString; // TextAst;
+    instruction?: BreakscapedString; // TextAst;
     isCaseSensitive?: boolean;
     isExample: boolean;
     isDefaultExample: boolean;
@@ -326,11 +336,11 @@ export interface Gap extends BodyBit {
 export interface Mark extends BodyBit {
   type: 'mark';
   data: {
-    solution: string;
-    mark?: string;
+    solution: BreakscapedString;
+    mark?: BreakscapedString;
     itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
+    hint?: BreakscapedString; // TextAst;
+    instruction?: BreakscapedString; // TextAst;
     isExample: boolean;
     isDefaultExample: boolean;
     example?: Example;
@@ -342,22 +352,22 @@ export interface Mark extends BodyBit {
 export interface Select extends BodyBit {
   type: 'select';
   data: {
-    prefix?: string;
+    prefix?: BreakscapedString;
     options: SelectOption[];
-    postfix?: string;
+    postfix?: BreakscapedString;
     itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
+    hint?: BreakscapedString; // TextAst;
+    instruction?: BreakscapedString; // TextAst;
     isExample?: boolean;
   };
 }
 
 export interface SelectOption {
-  text: string;
+  text: BreakscapedString;
   isCorrect: boolean;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -368,23 +378,23 @@ export interface SelectOption {
 export interface Highlight extends BodyBit {
   type: 'highlight';
   data: {
-    prefix?: string;
+    prefix?: BreakscapedString;
     texts: HighlightText[];
-    postfix?: string;
+    postfix?: BreakscapedString;
     itemLead?: ItemLead;
-    hint?: string;
-    instruction?: string;
+    hint?: BreakscapedString; // TextAst;
+    instruction?: BreakscapedString; // TextAst;
     isExample?: boolean;
   };
 }
 
 export interface HighlightText {
-  text: string;
+  text: BreakscapedString;
   isCorrect: boolean;
   isHighlighted: boolean;
   itemLead?: ItemLead;
-  hint?: string;
-  instruction?: string;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -393,7 +403,7 @@ export interface HighlightText {
 // Card Node
 export interface CardNode {
   questions?: Question[];
-  elements?: string[];
+  elements?: BreakscapedString[];
   flashcards?: Flashcard[];
   statement?: Statement;
   statements?: Statement[];
@@ -409,7 +419,7 @@ export interface CardNode {
 // Footer
 
 export interface FooterText {
-  footerText: string;
+  footerText: BreakscapedString;
 }
 
 //
@@ -419,24 +429,24 @@ export interface FooterText {
 export interface Resource {
   type: ResourceTagType;
   typeAlias: ResourceTagType;
-  format?: string;
-  value?: string; // url / src / body / etc
-  license?: string;
-  copyright?: string;
-  provider?: string;
+  format?: BreakscapedString;
+  value?: BreakscapedString; // url / src / body / etc
+  license?: BreakscapedString;
+  copyright?: BreakscapedString;
+  provider?: BreakscapedString;
   showInIndex?: boolean;
-  caption?: string;
+  caption?: BreakscapedString; // TextAst;
 }
 
 export interface ImageResource extends Resource {
   type: 'image';
-  src1x?: string;
-  src2x?: string;
-  src3x?: string;
-  src4x?: string;
+  src1x?: BreakscapedString;
+  src2x?: BreakscapedString;
+  src3x?: BreakscapedString;
+  src4x?: BreakscapedString;
   width?: number;
   height?: number;
-  alt?: string;
+  alt?: BreakscapedString;
 }
 
 // export interface ImageResponsiveResource extends Resource {
@@ -447,13 +457,13 @@ export interface ImageResource extends Resource {
 
 export interface ImageLinkResource extends Resource {
   type: 'image-link';
-  src1x?: string;
-  src2x?: string;
-  src3x?: string;
-  src4x?: string;
+  src1x?: BreakscapedString;
+  src2x?: BreakscapedString;
+  src3x?: BreakscapedString;
+  src4x?: BreakscapedString;
   width?: number;
   height?: number;
-  alt?: string;
+  alt?: BreakscapedString;
 }
 
 export interface AudioResource extends Resource {
@@ -486,7 +496,7 @@ export interface VideoResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: string;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -500,7 +510,7 @@ export interface VideoEmbedResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: string;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -514,7 +524,7 @@ export interface VideoLinkResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: string;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -534,7 +544,7 @@ export interface StillImageFilmEmbedResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: string;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -548,7 +558,7 @@ export interface StillImageFilmLinkResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: string;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -579,5 +589,5 @@ export interface AppLinkResource extends Resource {
 
 export interface WebsiteLinkResource extends Resource {
   type: 'website-link';
-  siteName?: string;
+  siteName?: BreakscapedString;
 }

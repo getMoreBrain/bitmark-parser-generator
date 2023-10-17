@@ -8,6 +8,7 @@
  */
 
 import { Config } from '../../../config/Config';
+import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Body } from '../../../model/ast/Nodes';
 import { CardSetConfig } from '../../../model/config/CardSetConfig';
 import { CardVariantConfig } from '../../../model/config/CardVariantConfig';
@@ -163,8 +164,8 @@ class BitmarkPegParserValidator {
     context: BitmarkPegParserContext,
     bitType: BitType,
     bitLevel: BitContentLevelType,
-    bodyPart: string,
-  ): string {
+    bodyPart: BreakscapedString,
+  ): BreakscapedString {
     if (!bodyPart) return bodyPart;
 
     this.checkBodyForCommonPotentialMistakes(context, bitLevel, bitType, bodyPart);
@@ -185,8 +186,8 @@ class BitmarkPegParserValidator {
     context: BitmarkPegParserContext,
     bitType: BitType,
     bitLevel: BitContentLevelType,
-    footer: string,
-  ): string {
+    footer: BreakscapedString,
+  ): BreakscapedString {
     if (!footer) return footer;
 
     // Get the bit config to check how to parse the bit
@@ -215,11 +216,11 @@ class BitmarkPegParserValidator {
     context: BitmarkPegParserContext,
     bitType: BitType,
     bitLevel: BitContentLevelType,
-    cardBody: string | undefined,
+    cardBody: BreakscapedString | undefined,
     cardNo: number,
     sideNo: number,
     variantNo: number,
-  ): string | undefined {
+  ): BreakscapedString | undefined {
     if (!cardBody) return cardBody;
 
     // Get the bit config to check how to parse the bit

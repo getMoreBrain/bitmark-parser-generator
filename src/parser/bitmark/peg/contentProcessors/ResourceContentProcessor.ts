@@ -1,5 +1,6 @@
 import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
 import { Config } from '../../../../config/Config';
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
@@ -94,7 +95,7 @@ function resourceContentProcessor(
   target: BitContentProcessorResult,
 ): void {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { type: _ignoreType, key, value, chain } = content as TypeKeyValue<string>;
+  const { type: _ignoreType, key, value, chain } = content as TypeKeyValue<BreakscapedString>;
 
   const resources = target.resources;
 

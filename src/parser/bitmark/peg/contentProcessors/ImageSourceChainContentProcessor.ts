@@ -1,5 +1,7 @@
 import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -42,7 +44,7 @@ function imageSourceTagContentProcessor(
   const { value } = content as TypeValue;
 
   // Extract the url from the content tag
-  const url = StringUtils.trimmedString(value);
+  const url = StringUtils.trimmedString(value) as BreakscapedString;
 
   target.imageSourceUrl = url;
 }
@@ -81,8 +83,8 @@ function buildImageSource(
   }
 
   const imageSource = builder.imageSource({
-    url: url ?? '',
-    mockupId: mockupId ?? '',
+    url: url ?? Breakscape.EMPTY_STRING,
+    mockupId: mockupId ?? Breakscape.EMPTY_STRING,
     ...rest,
   });
 

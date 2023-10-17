@@ -1,3 +1,4 @@
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { BitType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -19,7 +20,7 @@ function markTagContentProcessor(
   const { value } = content as TypeValue;
 
   if (StringUtils.isString(value)) {
-    target.solution = value as string;
+    target.solution = value as BreakscapedString;
   }
 }
 export { markTagContentProcessor };

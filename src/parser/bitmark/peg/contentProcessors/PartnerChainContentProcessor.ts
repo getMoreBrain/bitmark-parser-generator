@@ -1,4 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
@@ -34,7 +35,7 @@ function partnerChainContentProcessor(
   const { resources } = tags;
 
   // Extract the name from the content tag
-  const name = StringUtils.trimmedString(content.value);
+  const name = StringUtils.trimmedString(content.value) as BreakscapedString;
 
   // Extract avatarImage from the resources
   const avatarImage = extractAvatarImage(context, resources);
