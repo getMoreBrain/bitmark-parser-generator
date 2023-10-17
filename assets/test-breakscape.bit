@@ -12,8 +12,7 @@ Here
 [@externalId:[externalId with square bracked at end^]]
 is
 [@lang:[lang^] with square bracked in middle]
-the body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets
+[@example:^] with square bracked at beginning []
+the body and here is a [_[gap^]] with square brackets
 
 [&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]
-
-

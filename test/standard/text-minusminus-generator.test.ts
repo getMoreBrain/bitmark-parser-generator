@@ -97,7 +97,7 @@ describe('text-generation', () => {
         // Read in the test markup file
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
-        // Generate JSON from original bitmark markup using the PEG parser
+        // Generate JSON from breakscaped markup text
         const textAst = textParser.toAst(originalMarkup, {
           textFormat: TextFormat.bitmarkMinusMinus,
         });
@@ -124,10 +124,10 @@ describe('text-generation', () => {
 
         performance.mark('GEN:End');
 
-        // Read in the generated markup file
+        // Read in the generated text file
         const newMarkup = fs.readFileSync(generatedMarkupFile, 'utf8');
 
-        // Generate JSON from generated bitmark markup using the PEG parser
+        // Generate JSON from generated text
         const newTextAst = textParser.toAst(newMarkup, {
           textFormat: TextFormat.bitmarkMinusMinus,
         });

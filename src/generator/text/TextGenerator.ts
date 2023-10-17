@@ -1,4 +1,5 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
+import { Breakscape } from '../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
 import { Bit } from '../../model/ast/Nodes';
@@ -8,7 +9,6 @@ import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextMarkType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
-import { BreakscapeUtils } from '../../utils/BreakscapeUtils';
 
 import {
   CodeBlockTextNode,
@@ -240,8 +240,8 @@ class TextGenerator implements AstWalkCallbacks {
 
   // * -> textAstValue
 
-  protected enter_textAstValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.handleEnterNode(node.value);
+  protected enter_textAstValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void | false {
+    return this.handleEnterNode(node.value);
   }
 
   protected between_textAstValue(
@@ -250,18 +250,18 @@ class TextGenerator implements AstWalkCallbacks {
     _right: NodeInfo,
     _parent: NodeInfo | undefined,
     _route: NodeInfo[],
-  ): void {
-    this.handleBetweenNode(node.value);
+  ): void | false {
+    return this.handleBetweenNode(node.value);
   }
 
-  protected exit_textAstValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.handleExitNode(node.value);
+  protected exit_textAstValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void | false {
+    return this.handleExitNode(node.value);
   }
 
   // * -> contentValue
 
-  protected enter_contentValueValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.handleEnterNode(node.value);
+  protected enter_contentValueValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void | false {
+    return this.handleEnterNode(node.value);
   }
 
   protected between_contentValueValue(
@@ -274,13 +274,13 @@ class TextGenerator implements AstWalkCallbacks {
     this.handleBetweenNode(node.value);
   }
 
-  protected exit_contentValueValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.handleExitNode(node.value);
+  protected exit_contentValueValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void | false {
+    return this.handleExitNode(node.value);
   }
 
   // END NODE HANDLERS
 
-  protected handleEnterNode(node: TextNode): void {
+  protected handleEnterNode(node: TextNode): void | false {
     this.handleIndent(node);
 
     switch (node.type) {
@@ -323,7 +323,8 @@ class TextGenerator implements AstWalkCallbacks {
       case TextNodeType.select:
       case TextNodeType.highlight:
         this.writeBodyBit(node);
-        break;
+        // Stop parsing the body bit
+        return false;
       default:
       // Ignore unknown type
     }
@@ -339,7 +340,7 @@ class TextGenerator implements AstWalkCallbacks {
     }
   }
 
-  protected handleExitNode(node: TextNode): void {
+  protected handleExitNode(node: TextNode): void | false {
     switch (node.type) {
       case TextNodeType.text:
         this.writeMarks(node, false);
@@ -477,9 +478,10 @@ class TextGenerator implements AstWalkCallbacks {
     // Breakscape the text
     let s: string = node.text;
     if (!codeBreakscaping) {
-      s = BreakscapeUtils.breakscape(s);
+      s = Breakscape.breakscape(s);
     } else {
-      s = BreakscapeUtils.breakscapeCode(s);
+      // s = Breakscape.breakscapeCode(s);
+      s = Breakscape.breakscape(s);
     }
 
     // Apply any required indentation
@@ -498,7 +500,7 @@ class TextGenerator implements AstWalkCallbacks {
     const href = this.getLinkHref(node);
     if (href) {
       // Breakscape the text
-      let s = BreakscapeUtils.breakscape(node.text);
+      let s = Breakscape.breakscape(node.text);
 
       // Apply any required indentation
       if (this.currentIndent > 1) {

@@ -16,7 +16,7 @@ type SourceOptions = SourceBuildOptions<'source'> & {
 // `;
 
 const dependencies = {
-  // None for now
+  '{ Breakscape }': '../../../breakscaping/Breakscape',
 };
 
 const inputPath = path.resolve(__dirname, '../../..', 'assets/grammar/text/', 'text-grammar.pegjs');

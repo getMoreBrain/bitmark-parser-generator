@@ -1,3 +1,4 @@
+import { Breakscape } from '../breakscaping/Breakscape';
 import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { AliasBitType, BitType, RootBitType } from '../model/enum/BitType';
@@ -9,7 +10,6 @@ import { ParserInfo } from '../model/parser/ParserInfo';
 import { ParserLocation } from '../model/parser/ParserLocation';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BitUtils } from '../utils/BitUtils';
-import { BreakscapeUtils } from '../utils/BreakscapeUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { env } from '../utils/env/Env';
@@ -561,7 +561,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: Heading = {
-      forKeys: forKeys || BreakscapeUtils.EMPTY_STRING,
+      forKeys: forKeys || Breakscape.EMPTY_STRING,
       forValues: ArrayUtils.asArray(forValues) ?? [],
     };
 

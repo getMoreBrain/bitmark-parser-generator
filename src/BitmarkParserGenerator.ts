@@ -41,7 +41,7 @@ import path from 'path';
 import { FileOptions } from './ast/writer/FileWriter';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
-import { BreakscapeUtils } from './utils/BreakscapeUtils';
+import { Breakscape } from './breakscaping/Breakscape';
 import { BreakscapedString } from './model/ast/BreakscapedString';
 
 /* STRIP:END */
@@ -195,6 +195,15 @@ export interface ConvertTextOptions {
  * Breakscape options
  */
 export interface BreakscapeOptions {
+  // /**
+  //  * Breakscape as if in a tag (default: in the body)
+  //  */
+  // inTag?: boolean;
+  // /**
+  //  * Specify the text format (default: bitmark--)
+  //  * Irrelevant if inTag is true as only bitmark-- is supported in tags
+  //  */
+  // textFormat?: TextFormatType;
   /**
    * Specify a file to write the output to
    */
@@ -820,7 +829,7 @@ class BitmarkParserGenerator {
   public breakscapeText(input: string, options?: BreakscapeOptions): string | void {
     if (!input) return input;
 
-    const opts: ConvertTextOptions = Object.assign({}, options);
+    const opts: BreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
 
     let inStr: string = input as string;
@@ -840,7 +849,10 @@ class BitmarkParserGenerator {
     }
 
     // Do the breakscape
-    const res = BreakscapeUtils.breakscape(inStr);
+    const res = Breakscape.breakscape(inStr, {
+      // inTag: opts.inTag,
+      // textFormat: opts.textFormat,
+    });
 
     if (opts.outputFile) {
       const output = opts.outputFile.toString();
@@ -895,7 +907,7 @@ class BitmarkParserGenerator {
     }
 
     // Do the unbreakscape
-    const res = BreakscapeUtils.unbreakscape(inStr);
+    const res = Breakscape.unbreakscape(inStr);
 
     if (opts.outputFile) {
       const output = opts.outputFile.toString();

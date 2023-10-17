@@ -63,6 +63,7 @@
  */
 
 import { Builder } from '../../../ast/Builder';
+import { Breakscape } from '../../../breakscaping/Breakscape';
 import { Config } from '../../../config/Config';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
@@ -74,7 +75,6 @@ import { TextFormat } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
-import { BreakscapeUtils } from '../../../utils/BreakscapeUtils';
 
 import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
@@ -375,9 +375,9 @@ class BitmarkPegParserProcessor {
     let seenReference = false;
     let inFooter = false;
     const bodyParts: BodyPart[] = [];
-    let bodyPart: BreakscapedString = BreakscapeUtils.EMPTY_STRING;
-    let footer: BreakscapedString = BreakscapeUtils.EMPTY_STRING;
-    let cardBody: BreakscapedString = BreakscapeUtils.EMPTY_STRING;
+    let bodyPart: BreakscapedString = Breakscape.EMPTY_STRING;
+    let footer: BreakscapedString = Breakscape.EMPTY_STRING;
+    let cardBody: BreakscapedString = Breakscape.EMPTY_STRING;
 
     const inChain = bitLevel === BitContentLevel.Chain;
 
@@ -390,7 +390,7 @@ class BitmarkPegParserProcessor {
         const bodyText = builder.bodyText({ text: bodyPart });
         bodyParts.push(bodyText);
       }
-      bodyPart = BreakscapeUtils.EMPTY_STRING;
+      bodyPart = Breakscape.EMPTY_STRING;
     };
 
     // Reduce the Type/Key/Value data to a single object that can be used to build the bit
@@ -460,15 +460,15 @@ class BitmarkPegParserProcessor {
 
         case TypeKey.BodyText: {
           if (inFooter) {
-            footer = BreakscapeUtils.concatenate(footer, value as BreakscapedString);
+            footer = Breakscape.concatenate(footer, value as BreakscapedString);
           } else {
-            bodyPart = BreakscapeUtils.concatenate(bodyPart, value as BreakscapedString);
+            bodyPart = Breakscape.concatenate(bodyPart, value as BreakscapedString);
           }
           break;
         }
 
         case TypeKey.CardText: {
-          cardBody = BreakscapeUtils.concatenate(cardBody, value as BreakscapedString);
+          cardBody = Breakscape.concatenate(cardBody, value as BreakscapedString);
           break;
         }
 

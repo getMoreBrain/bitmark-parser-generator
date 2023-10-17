@@ -1,10 +1,10 @@
 import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
 import { AliasBitType, BitType, RootBitType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
-import { BreakscapeUtils } from '../../../../utils/BreakscapeUtils';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
@@ -175,7 +175,7 @@ function parseFlashcards(
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const flashcards: Flashcard[] = [];
-  let question = BreakscapeUtils.EMPTY_STRING;
+  let question = Breakscape.EMPTY_STRING;
   let answer: BreakscapedString | undefined;
   let alternativeAnswers: BreakscapedString[] = [];
   let cardIndex = 0;
@@ -186,7 +186,7 @@ function parseFlashcards(
 
   for (const card of cardSet.cards) {
     // Reset the question and answers
-    question = BreakscapeUtils.EMPTY_STRING;
+    question = Breakscape.EMPTY_STRING;
     answer = undefined;
     alternativeAnswers = [];
     variantIndex = 0;
@@ -202,11 +202,11 @@ function parseFlashcards(
 
         if (variantIndex === 0) {
           questionVariant = content;
-          question = cardBody ?? BreakscapeUtils.EMPTY_STRING;
+          question = cardBody ?? Breakscape.EMPTY_STRING;
         } else if (variantIndex === 1) {
-          answer = cardBody ?? BreakscapeUtils.EMPTY_STRING;
+          answer = cardBody ?? Breakscape.EMPTY_STRING;
         } else {
-          alternativeAnswers.push(cardBody ?? BreakscapeUtils.EMPTY_STRING);
+          alternativeAnswers.push(cardBody ?? Breakscape.EMPTY_STRING);
         }
         variantIndex++;
       }
@@ -256,7 +256,7 @@ function parseElements(
         const tags = content.data;
 
         // if (tags.cardBody) {
-        elements.push(tags.cardBody ?? BreakscapeUtils.EMPTY_STRING);
+        elements.push(tags.cardBody ?? Breakscape.EMPTY_STRING);
         // } else {
         //   context.addWarning('Ignoring card with empty element', content);
         // }
@@ -336,7 +336,7 @@ function parseQuiz(
 
   for (const card of cardSet.cards) {
     isDefaultExampleCard = false;
-    exampleCard = BreakscapeUtils.EMPTY_STRING;
+    exampleCard = Breakscape.EMPTY_STRING;
 
     for (const side of card.sides) {
       for (const content of side.variants) {
@@ -415,7 +415,7 @@ function parseQuestions(
 
         // if (tags.cardBody) {
         const q = builder.question({
-          question: tags.cardBody ?? BreakscapeUtils.EMPTY_STRING,
+          question: tags.cardBody ?? Breakscape.EMPTY_STRING,
           ...tags,
         });
         questions.push(q);
@@ -462,7 +462,7 @@ function parseMatchPairs(
     sideIdx = 0;
     extraTags = {};
     isDefaultExampleCard = false;
-    exampleCard = BreakscapeUtils.EMPTY_STRING;
+    exampleCard = Breakscape.EMPTY_STRING;
 
     for (const side of card.sides) {
       for (const content of side.variants) {
@@ -503,7 +503,7 @@ function parseMatchPairs(
             exampleCardSet = example ? example : exampleCardSet;
           } else if (title == null) {
             // If not a heading, it is a pair
-            const value = cardBody ?? BreakscapeUtils.EMPTY_STRING;
+            const value = cardBody ?? Breakscape.EMPTY_STRING;
             pairValues.push(value);
             if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = value;
           }
@@ -532,7 +532,7 @@ function parseMatchPairs(
       const example = exampleCard || exampleCardSet;
 
       const pair = builder.pair({
-        key: pairKey ?? BreakscapeUtils.EMPTY_STRING,
+        key: pairKey ?? Breakscape.EMPTY_STRING,
         keyAudio,
         keyImage,
         values: pairValues,
@@ -587,13 +587,13 @@ function parseMatchMatrix(
     matrixCellValues = [];
     sideIdx = 0;
     isDefaultExampleCard = false;
-    exampleCard = BreakscapeUtils.EMPTY_STRING;
+    exampleCard = Breakscape.EMPTY_STRING;
 
     for (const side of card.sides) {
       matrixCellValues = [];
       matrixCellTags = {};
       isDefaultExampleSide = false;
-      exampleSide = BreakscapeUtils.EMPTY_STRING;
+      exampleSide = Breakscape.EMPTY_STRING;
 
       for (const content of side.variants) {
         // variant = content;
@@ -638,7 +638,7 @@ function parseMatchMatrix(
             exampleCardSet = example ? example : exampleCardSet;
           } else if (tags.title == null) {
             // If not a heading, it is a matrix cell value
-            const value = cardBody ?? BreakscapeUtils.EMPTY_STRING;
+            const value = cardBody ?? Breakscape.EMPTY_STRING;
             matrixCellValues.push(value);
             if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = value;
           }
@@ -673,7 +673,7 @@ function parseMatchMatrix(
     } else {
       // if (matrixKey) {
       const m = builder.matrix({
-        key: matrixKey ?? BreakscapeUtils.EMPTY_STRING,
+        key: matrixKey ?? Breakscape.EMPTY_STRING,
         // keyAudio,
         // keyImage,
         cells: matrixCells,
@@ -706,9 +706,9 @@ function parseBotActionResponses(
         const { instruction, reaction, cardBody: feedback, ...tags } = content.data;
 
         const botResponse = builder.botResponse({
-          response: instruction ?? BreakscapeUtils.EMPTY_STRING,
-          reaction: reaction ?? BreakscapeUtils.EMPTY_STRING,
-          feedback: feedback ?? BreakscapeUtils.EMPTY_STRING,
+          response: instruction ?? Breakscape.EMPTY_STRING,
+          reaction: reaction ?? Breakscape.EMPTY_STRING,
+          feedback: feedback ?? Breakscape.EMPTY_STRING,
           ...tags,
         });
         botResponses.push(botResponse);

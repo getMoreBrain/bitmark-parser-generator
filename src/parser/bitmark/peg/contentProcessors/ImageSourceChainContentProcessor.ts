@@ -1,9 +1,9 @@
 import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType } from '../../../../model/enum/BitType';
-import { BreakscapeUtils } from '../../../../utils/BreakscapeUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -83,8 +83,8 @@ function buildImageSource(
   }
 
   const imageSource = builder.imageSource({
-    url: url ?? BreakscapeUtils.EMPTY_STRING,
-    mockupId: mockupId ?? BreakscapeUtils.EMPTY_STRING,
+    url: url ?? Breakscape.EMPTY_STRING,
+    mockupId: mockupId ?? Breakscape.EMPTY_STRING,
     ...rest,
   });
 

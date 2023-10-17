@@ -1,3 +1,4 @@
+import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
 import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { Example, Property } from '../model/ast/Nodes';
@@ -5,7 +6,6 @@ import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
-import { BreakscapeUtils } from '../utils/BreakscapeUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { StringUtils } from '../utils/StringUtils';
 
@@ -33,8 +33,8 @@ class BaseBuilder {
     // Example
     if (example != undefined) {
       // Convert to boolean to BreakscapedText
-      if (example === true) example = BreakscapeUtils.breakscape('true');
-      if (example === false) example = BreakscapeUtils.breakscape('false');
+      if (example === true) example = Breakscape.breakscape('true');
+      if (example === false) example = Breakscape.breakscape('false');
 
       return {
         isDefaultExample: false,

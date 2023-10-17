@@ -13,8 +13,6 @@ import { ParserInfo } from '../parser/ParserInfo';
 // But it means that breakscaping is kept to where it is needed - i.e. in the bitmark markup, and not anywhere else.
 
 import { BreakscapedString } from './BreakscapedString';
-import { StandardString } from './StardardString';
-import { TextAst } from './TextNodes';
 
 // Node
 
@@ -87,18 +85,18 @@ export interface Bit {
   maxCreatedBits?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
-  book?: StandardString;
-  title?: TextAst;
-  subtitle?: TextAst;
+  book?: BreakscapedString;
+  title?: BreakscapedString; // TextAst;
+  subtitle?: BreakscapedString; // TextAst;
   level?: number; // 'level' can either the subtitle level [##subtitle]
   toc?: Property;
   progress?: Property;
-  anchor?: StandardString;
-  reference?: StandardString;
-  referenceEnd?: StandardString;
+  anchor?: BreakscapedString;
+  reference?: BreakscapedString;
+  referenceEnd?: BreakscapedString;
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample?: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -106,7 +104,7 @@ export interface Bit {
   partner?: Partner;
   resources?: Resource[];
   body?: Body;
-  sampleSolution?: StandardString;
+  sampleSolution?: BreakscapedString;
   statement?: Statement;
   choices?: Choice[];
   responses?: Response[];
@@ -134,11 +132,11 @@ export interface Comment {
 }
 
 export interface ItemLead {
-  item?: TextAst;
-  lead?: TextAst;
+  item?: BreakscapedString; // TextAst;
+  lead?: BreakscapedString; // TextAst;
 }
 
-export type Example = TextAst | boolean;
+export type Example = BreakscapedString | boolean; // TextAst | boolean;
 
 export interface WithExample {
   isDefaultExample: boolean;
@@ -156,23 +154,23 @@ export type Property = string[] | number[] | boolean[] | unknown[];
 
 // (image-on-device) ImageSource
 export interface ImageSource {
-  url: StandardString;
-  mockupId: StandardString;
+  url: BreakscapedString;
+  mockupId: BreakscapedString;
   size?: number;
-  format?: StandardString;
+  format?: BreakscapedString;
   trim?: boolean;
 }
 
 // (chat) Partner
 export interface Partner {
-  name: StandardString;
+  name: BreakscapedString;
   avatarImage?: ImageResource;
 }
 
 export interface MarkConfig {
-  mark: StandardString;
-  color?: StandardString;
-  emphasis?: StandardString;
+  mark: BreakscapedString;
+  color?: BreakscapedString;
+  emphasis?: BreakscapedString;
 }
 
 // Statement
@@ -194,11 +192,11 @@ export interface Response extends Decision {
 }
 
 export interface Decision {
-  text: StandardString;
+  text: BreakscapedString;
   isCorrect: boolean;
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isCaseSensitive?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
@@ -208,12 +206,12 @@ export interface Decision {
 // Flashcard
 
 export interface Flashcard {
-  question: StandardString;
-  answer?: StandardString;
-  alternativeAnswers?: StandardString[];
+  question: BreakscapedString;
+  answer?: BreakscapedString;
+  alternativeAnswers?: BreakscapedString[];
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -221,19 +219,19 @@ export interface Flashcard {
 
 // Bot Response
 export interface BotResponse {
-  response: StandardString;
-  reaction: StandardString;
-  feedback: StandardString;
+  response: BreakscapedString;
+  reaction: BreakscapedString;
+  feedback: BreakscapedString;
   itemLead?: ItemLead;
-  hint?: TextAst;
+  hint?: BreakscapedString; // TextAst;
 }
 
 // Quiz
 
 export interface Quiz {
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample?: boolean;
   choices?: Choice[];
   responses?: Response[];
@@ -242,20 +240,20 @@ export interface Quiz {
 // Heading
 
 export interface Heading {
-  forKeys: StandardString;
-  forValues: StandardString[];
+  forKeys: BreakscapedString;
+  forValues: BreakscapedString[];
 }
 
 // Pair
 
 export interface Pair {
-  key?: StandardString;
+  key?: BreakscapedString;
   keyAudio?: AudioResource;
   keyImage?: ImageResource;
-  values?: StandardString[];
+  values?: BreakscapedString[];
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
   isExample: boolean;
@@ -264,10 +262,10 @@ export interface Pair {
 }
 
 export interface Matrix {
-  key: StandardString;
+  key: BreakscapedString;
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
   isExample: boolean;
@@ -275,10 +273,10 @@ export interface Matrix {
 }
 
 export interface MatrixCell {
-  values?: StandardString[];
+  values?: BreakscapedString[];
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
@@ -287,12 +285,12 @@ export interface MatrixCell {
 // Question
 
 export interface Question {
-  question: StandardString;
-  partialAnswer?: StandardString;
-  sampleSolution?: StandardString;
+  question: BreakscapedString;
+  partialAnswer?: BreakscapedString;
+  sampleSolution?: BreakscapedString;
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isCaseSensitive?: boolean;
   isShortAnswer?: boolean;
   reasonableNumOfChars?: number;
@@ -311,7 +309,7 @@ export interface Body {
 export interface BodyText extends BodyPart {
   type: 'text';
   data: {
-    bodyText: StandardString;
+    bodyText: BreakscapedString;
   };
 }
 
@@ -329,10 +327,10 @@ export interface BodyBit extends BodyPart {
 export interface Gap extends BodyBit {
   type: 'gap';
   data: {
-    solutions: StandardString[];
+    solutions: BreakscapedString[];
     itemLead?: ItemLead;
-    hint?: TextAst;
-    instruction?: TextAst;
+    hint?: BreakscapedString; // TextAst;
+    instruction?: BreakscapedString; // TextAst;
     isCaseSensitive?: boolean;
     isExample: boolean;
     isDefaultExample: boolean;
@@ -343,11 +341,11 @@ export interface Gap extends BodyBit {
 export interface Mark extends BodyBit {
   type: 'mark';
   data: {
-    solution: StandardString;
-    mark?: StandardString;
+    solution: BreakscapedString;
+    mark?: BreakscapedString;
     itemLead?: ItemLead;
-    hint?: TextAst;
-    instruction?: TextAst;
+    hint?: BreakscapedString; // TextAst;
+    instruction?: BreakscapedString; // TextAst;
     isExample: boolean;
     isDefaultExample: boolean;
     example?: Example;
@@ -359,23 +357,23 @@ export interface Mark extends BodyBit {
 export interface Select extends BodyBit {
   type: 'select';
   data: {
-    prefix?: StandardString;
+    prefix?: BreakscapedString;
     options: SelectOption[];
-    postfix?: StandardString;
+    postfix?: BreakscapedString;
     itemLead?: ItemLead;
-    hint?: TextAst;
-    instruction?: TextAst;
+    hint?: BreakscapedString; // TextAst;
+    instruction?: BreakscapedString; // TextAst;
     isCaseSensitive?: boolean;
     isExample?: boolean;
   };
 }
 
 export interface SelectOption {
-  text: StandardString;
+  text: BreakscapedString;
   isCorrect: boolean;
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isCaseSensitive?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
@@ -387,24 +385,24 @@ export interface SelectOption {
 export interface Highlight extends BodyBit {
   type: 'highlight';
   data: {
-    prefix?: StandardString;
+    prefix?: BreakscapedString;
     texts: HighlightText[];
-    postfix?: StandardString;
+    postfix?: BreakscapedString;
     itemLead?: ItemLead;
-    hint?: TextAst;
-    instruction?: TextAst;
+    hint?: BreakscapedString; // TextAst;
+    instruction?: BreakscapedString; // TextAst;
     isCaseSensitive?: boolean;
     isExample?: boolean;
   };
 }
 
 export interface HighlightText {
-  text: StandardString;
+  text: BreakscapedString;
   isCorrect: boolean;
   isHighlighted: boolean;
   itemLead?: ItemLead;
-  hint?: TextAst;
-  instruction?: TextAst;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
   isCaseSensitive?: boolean;
   isExample: boolean;
   isDefaultExample: boolean;
@@ -414,7 +412,7 @@ export interface HighlightText {
 // Card Node
 export interface CardNode {
   questions?: Question[];
-  elements?: StandardString[];
+  elements?: BreakscapedString[];
   flashcards?: Flashcard[];
   statement?: Statement;
   statements?: Statement[];
@@ -430,7 +428,7 @@ export interface CardNode {
 // Footer
 
 export interface FooterText {
-  footerText: StandardString;
+  footerText: BreakscapedString;
 }
 
 //
@@ -440,24 +438,24 @@ export interface FooterText {
 export interface Resource {
   type: ResourceTagType;
   typeAlias: ResourceTagType;
-  format?: StandardString;
-  value?: StandardString; // url / src / body / etc
-  license?: StandardString;
-  copyright?: StandardString;
-  provider?: StandardString;
+  format?: BreakscapedString;
+  value?: BreakscapedString; // url / src / body / etc
+  license?: BreakscapedString;
+  copyright?: BreakscapedString;
+  provider?: BreakscapedString;
   showInIndex?: boolean;
-  caption?: TextAst;
+  caption?: BreakscapedString; // TextAst;
 }
 
 export interface ImageResource extends Resource {
   type: 'image';
-  src1x?: StandardString;
-  src2x?: StandardString;
-  src3x?: StandardString;
-  src4x?: StandardString;
+  src1x?: BreakscapedString;
+  src2x?: BreakscapedString;
+  src3x?: BreakscapedString;
+  src4x?: BreakscapedString;
   width?: number;
   height?: number;
-  alt?: StandardString;
+  alt?: BreakscapedString;
 }
 
 // export interface ImageResponsiveResource extends Resource {
@@ -468,13 +466,13 @@ export interface ImageResource extends Resource {
 
 export interface ImageLinkResource extends Resource {
   type: 'image-link';
-  src1x?: StandardString;
-  src2x?: StandardString;
-  src3x?: StandardString;
-  src4x?: StandardString;
+  src1x?: BreakscapedString;
+  src2x?: BreakscapedString;
+  src3x?: BreakscapedString;
+  src4x?: BreakscapedString;
   width?: number;
   height?: number;
-  alt?: StandardString;
+  alt?: BreakscapedString;
 }
 
 export interface AudioResource extends Resource {
@@ -507,7 +505,7 @@ export interface VideoResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: StandardString;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -521,7 +519,7 @@ export interface VideoEmbedResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: StandardString;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -535,7 +533,7 @@ export interface VideoLinkResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: StandardString;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -555,7 +553,7 @@ export interface StillImageFilmEmbedResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: StandardString;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -569,7 +567,7 @@ export interface StillImageFilmLinkResource extends Resource {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  alt?: StandardString;
+  alt?: BreakscapedString;
   posterImage?: ImageResource;
   thumbnails?: ImageResource[];
 }
@@ -600,5 +598,5 @@ export interface AppLinkResource extends Resource {
 
 export interface WebsiteLinkResource extends Resource {
   type: 'website-link';
-  siteName?: StandardString;
+  siteName?: BreakscapedString;
 }

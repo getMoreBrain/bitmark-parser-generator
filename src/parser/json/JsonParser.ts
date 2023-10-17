@@ -1,5 +1,6 @@
 import { Builder } from '../../ast/Builder';
 import { ResourceBuilder } from '../../ast/ResourceBuilder';
+import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { TextGenerator } from '../../generator/text/TextGenerator';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
@@ -9,7 +10,6 @@ import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { BreakscapeUtils } from '../../utils/BreakscapeUtils';
 import { StringUtils } from '../../utils/StringUtils';
 import { TextParser } from '../text/TextParser';
 
@@ -466,8 +466,8 @@ class JsonParser {
     if (imageSource) {
       const { url, mockupId, format, size, trim } = imageSource;
       node = builder.imageSource({
-        url: this.parseText(url) ?? BreakscapeUtils.EMPTY_STRING,
-        mockupId: this.parseText(mockupId) ?? BreakscapeUtils.EMPTY_STRING,
+        url: this.parseText(url) ?? Breakscape.EMPTY_STRING,
+        mockupId: this.parseText(mockupId) ?? Breakscape.EMPTY_STRING,
         format: this.parseText(format),
         size,
         trim,
@@ -483,7 +483,7 @@ class JsonParser {
     if (partner) {
       const avatarImage = this.resourceDataToAst(ResourceTag.image, partner.avatarImage) as ImageResource | undefined;
       node = builder.partner({
-        name: this.parseText(partner.name) ?? BreakscapeUtils.EMPTY_STRING,
+        name: this.parseText(partner.name) ?? Breakscape.EMPTY_STRING,
         avatarImage,
       });
     }
@@ -497,7 +497,7 @@ class JsonParser {
       for (const m of marks) {
         const { mark, color, emphasis } = m;
         const node = builder.markConfig({
-          mark: this.parseText(mark) ?? BreakscapeUtils.EMPTY_STRING,
+          mark: this.parseText(mark) ?? Breakscape.EMPTY_STRING,
           color: this.parseText(color),
           emphasis: this.parseText(emphasis),
         });
@@ -516,7 +516,7 @@ class JsonParser {
       for (const c of flashcards) {
         const { question, answer, alternativeAnswers, item, lead, hint, instruction, example } = c;
         const node = builder.flashcard({
-          question: this.parseText(question) ?? BreakscapeUtils.EMPTY_STRING,
+          question: this.parseText(question) ?? Breakscape.EMPTY_STRING,
           answer: this.parseText(answer),
           alternativeAnswers: this.parseText(alternativeAnswers),
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
@@ -541,7 +541,7 @@ class JsonParser {
 
     if (statement) {
       const node = builder.statement({
-        text: this.parseText(statement) ?? BreakscapeUtils.EMPTY_STRING,
+        text: this.parseText(statement) ?? Breakscape.EMPTY_STRING,
         isCorrect: isCorrect ?? false,
         ...this.parseExample(example),
       });
@@ -552,7 +552,7 @@ class JsonParser {
       for (const s of statements) {
         const { statement, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = s;
         const node = builder.statement({
-          text: this.parseText(statement) ?? BreakscapeUtils.EMPTY_STRING,
+          text: this.parseText(statement) ?? Breakscape.EMPTY_STRING,
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -573,7 +573,7 @@ class JsonParser {
       for (const c of choices) {
         const { choice, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = c;
         const node = builder.choice({
-          text: this.parseText(choice) ?? BreakscapeUtils.EMPTY_STRING,
+          text: this.parseText(choice) ?? Breakscape.EMPTY_STRING,
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -598,7 +598,7 @@ class JsonParser {
       for (const r of responses) {
         const { response, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = r;
         const node = builder.response({
-          text: this.parseText(response) ?? BreakscapeUtils.EMPTY_STRING,
+          text: this.parseText(response) ?? Breakscape.EMPTY_STRING,
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -619,7 +619,7 @@ class JsonParser {
       for (const o of options) {
         const { text, isCorrect, item, lead, hint, instruction, example, isCaseSensitive } = o;
         const node = builder.selectOption({
-          text: this.parseText(text) ?? BreakscapeUtils.EMPTY_STRING,
+          text: this.parseText(text) ?? Breakscape.EMPTY_STRING,
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -638,7 +638,7 @@ class JsonParser {
       for (const t of highlightTexts) {
         const { text, isCorrect, isHighlighted, item, lead, hint, instruction, example, isCaseSensitive } = t;
         const node = builder.highlightText({
-          text: this.parseText(text) ?? BreakscapeUtils.EMPTY_STRING,
+          text: this.parseText(text) ?? Breakscape.EMPTY_STRING,
           isCorrect,
           isHighlighted,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
@@ -677,7 +677,7 @@ class JsonParser {
     let node: Heading | undefined;
     if (heading) {
       node = builder.heading({
-        forKeys: this.parseText(heading.forKeys) ?? BreakscapeUtils.EMPTY_STRING,
+        forKeys: this.parseText(heading.forKeys) ?? Breakscape.EMPTY_STRING,
         forValues: this.parseText(heading.forValues) ?? [],
       });
     }
@@ -731,7 +731,7 @@ class JsonParser {
       for (const m of matrix) {
         const { key, cells, item, lead, hint, instruction, example, isCaseSensitive, isLongAnswer } = m;
         const node = builder.matrix({
-          key: this.parseText(key) ?? BreakscapeUtils.EMPTY_STRING,
+          key: this.parseText(key) ?? Breakscape.EMPTY_STRING,
           cells: this.matrixCellsToAst(cells) ?? [],
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -785,7 +785,7 @@ class JsonParser {
           reasonableNumOfChars,
         } = q;
         const node = builder.question({
-          question: this.parseText(question) ?? BreakscapeUtils.EMPTY_STRING,
+          question: this.parseText(question) ?? Breakscape.EMPTY_STRING,
           partialAnswer: this.parseText(partialAnswer),
           sampleSolution: this.parseText(sampleSolution),
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
@@ -813,9 +813,9 @@ class JsonParser {
       for (const r of responses) {
         const { response, reaction, feedback, item, lead, hint } = r;
         const node = builder.botResponse({
-          response: this.parseText(response) ?? BreakscapeUtils.EMPTY_STRING,
-          reaction: this.parseText(reaction) ?? BreakscapeUtils.EMPTY_STRING,
-          feedback: this.parseText(feedback) ?? BreakscapeUtils.EMPTY_STRING,
+          response: this.parseText(response) ?? Breakscape.EMPTY_STRING,
+          reaction: this.parseText(reaction) ?? Breakscape.EMPTY_STRING,
+          feedback: this.parseText(feedback) ?? Breakscape.EMPTY_STRING,
           item: this.parseText(item),
           lead: this.parseText(lead),
           hint: this.parseText(hint),
@@ -995,7 +995,7 @@ class JsonParser {
   }
 
   private bodyTextToAst(bodyText: string): BodyText {
-    return builder.bodyText({ text: this.parseText(bodyText) ?? BreakscapeUtils.EMPTY_STRING });
+    return builder.bodyText({ text: this.parseText(bodyText) ?? Breakscape.EMPTY_STRING });
   }
 
   private bodyBitToAst(bit: BodyBitJson): BodyPart {
@@ -1062,7 +1062,7 @@ class JsonParser {
 
     // Build bit
     const bitNode = builder.mark({
-      solution: this.parseText(solution) ?? BreakscapeUtils.EMPTY_STRING,
+      solution: this.parseText(solution) ?? Breakscape.EMPTY_STRING,
       mark: this.parseText(mark),
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
@@ -1128,12 +1128,12 @@ class JsonParser {
   }
 
   /**
-   * Parse the text from the JSON to convert it to an internal (breakscaped) format
+   * Parse the text from the JSON to convert it to the breakscaped format
    * The text in is either a string or TextAst.
    *
-   * @param text
-   * @param textFormat
-   * @returns
+   * @param text string or TextAst or string[] or TextAst[]
+   * @param textFormat format of TextAst
+   * @returns Breakscaped string or breakscaped string[]
    */
   private parseText<T extends Text | string | (Text | string)[] | undefined>(
     text: T,
@@ -1158,13 +1158,13 @@ class JsonParser {
 
           strArray[i] = parsedText;
         } else {
-          strArray[i] = BreakscapeUtils.breakscape(t as string);
+          strArray[i] = Breakscape.breakscape(t as string);
         }
       }
       return strArray as R;
     }
 
-    return BreakscapeUtils.breakscape(text as string) as R;
+    return Breakscape.breakscape(text as string) as R;
   }
 }
 

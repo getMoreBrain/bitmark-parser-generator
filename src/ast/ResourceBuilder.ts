@@ -1,6 +1,6 @@
+import { Breakscape } from '../breakscaping/Breakscape';
 import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
-import { BreakscapeUtils } from '../utils/BreakscapeUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { UrlUtils } from '../utils/UrlUtils';
 
@@ -141,8 +141,8 @@ class ResourceBuilder extends BaseBuilder {
     const { type, value: valueIn, format: formatIn, ...rest } = data;
     const finalData = {
       type,
-      value: valueIn ?? BreakscapeUtils.EMPTY_STRING,
-      format: formatIn ?? BreakscapeUtils.EMPTY_STRING,
+      value: valueIn ?? Breakscape.EMPTY_STRING,
+      format: formatIn ?? Breakscape.EMPTY_STRING,
       ...rest,
     };
 

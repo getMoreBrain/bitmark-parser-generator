@@ -319,7 +319,7 @@ CommentTag
 //
 
 Tag_Value
-  = value: $("^]" / [^\]])* { return value }
+  = value: $("^^" "^"* / "^]" / [^\]])* { return value }
 
 KeyValueTag_Key
   = !"id:" value: $[^:\]]* { return value ? value.trim() : '' }
