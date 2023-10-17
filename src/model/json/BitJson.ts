@@ -1,4 +1,4 @@
-import { Text } from '../ast/TextNodes';
+import { JsonText } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
 import { AudioResourceJson, ImageResourceJson, ResourceJson } from './ResourceJson';
@@ -60,8 +60,8 @@ export interface BitJson {
 
   book: string;
 
-  title: Text;
-  subtitle: Text;
+  title: JsonText;
+  subtitle: JsonText;
   level: number;
   toc: boolean;
   progress: boolean;
@@ -69,10 +69,10 @@ export interface BitJson {
   reference: string | string[]; // Has 2 meanings, depending on bit (anchor/reference, or @reference)
   referenceEnd: string;
 
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
 
   isExample: boolean;
   example: ExampleJson;
@@ -86,7 +86,7 @@ export interface BitJson {
     [key: string]: unknown | unknown[];
   };
   resource: ResourceJson;
-  body: Text;
+  body: JsonText;
 
   sampleSolution: string;
   partialAnswer: string;
@@ -102,7 +102,7 @@ export interface BitJson {
   matrix: MatrixJson[];
   choices: ChoiceJson[];
   questions: QuestionJson[];
-  footer: Text;
+  footer: JsonText;
   placeholders: BodyBitsJson;
 }
 
@@ -129,10 +129,10 @@ export interface FlashcardJson {
   question: string;
   answer: string;
   alternativeAnswers: string[];
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
 }
@@ -140,10 +140,10 @@ export interface FlashcardJson {
 export interface StatementJson {
   statement: string;
   isCorrect: boolean;
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
 }
@@ -151,10 +151,10 @@ export interface StatementJson {
 export interface ChoiceJson {
   choice: string;
   isCorrect: boolean;
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
 }
@@ -162,19 +162,19 @@ export interface ChoiceJson {
 export interface ResponseJson {
   response: string;
   isCorrect: boolean;
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
 }
 
 export interface QuizJson {
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
   isExample: boolean;
   choices: ChoiceJson[];
   responses: ResponseJson[];
@@ -190,10 +190,10 @@ export interface PairJson {
   keyAudio: AudioResourceJson;
   keyImage: ImageResourceJson;
   values: string[];
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
@@ -202,20 +202,20 @@ export interface PairJson {
 export interface MatrixJson {
   key: string;
   cells: MatrixCellJson[];
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
 }
 
 export interface MatrixCellJson {
   values: string[];
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
@@ -225,10 +225,10 @@ export interface QuestionJson {
   question: string;
   partialAnswer: string;
   sampleSolution: string;
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
   reasonableNumOfChars: number;
   isExample: boolean;
   example: ExampleJson;
@@ -238,9 +238,9 @@ export interface BotResponseJson {
   response: string;
   reaction: string;
   feedback: string;
-  item: Text;
-  lead: Text;
-  hint: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
 }
 
-export type ExampleJson = Text | boolean | null;
+export type ExampleJson = JsonText | boolean | null;
