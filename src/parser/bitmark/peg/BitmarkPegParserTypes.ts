@@ -95,7 +95,7 @@ export interface CardData {
 
 export interface BitContentProcessorResult {
   cardSet?: ParsedCardSet;
-  cardBody?: BreakscapedString;
+  cardBody?: Body;
   body?: Body;
   footer?: FooterText;
   imageSource?: ImageSource;

@@ -9,6 +9,7 @@ import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
   AudioResource,
+  Body,
   BotResponse,
   Choice,
   Flashcard,
@@ -92,6 +93,10 @@ function buildCards(
       result = parseBotActionResponses(context, bitType, processedCardSet);
       break;
 
+    case CardSetConfigKey._clozeList:
+      result = parseClozeList(context, bitType, processedCardSet);
+      break;
+
     default:
     // Return default empty object
   }
@@ -155,6 +160,8 @@ function processCardSet(
           processedSide.no,
           processedVariant.no,
         );
+
+        cardBodyToString(tags.cardBody);
 
         processedVariant.data = tags;
 
@@ -723,6 +730,42 @@ function parseBotActionResponses(
   return {
     botResponses: botResponses.length > 0 ? botResponses : undefined,
   };
+}
+
+function parseClozeList(
+  _context: BitmarkPegParserContext,
+  _bitType: BitType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
+  const botResponses: BotResponse[] = [];
+
+  for (const card of cardSet.cards) {
+    for (const side of card.sides) {
+      for (const content of side.variants) {
+        debugger;
+        // const { instruction, reaction, cardBody: feedback, ...tags } = content.data;
+
+        // const botResponse = builder.botResponse({
+        //   response: instruction ?? Breakscape.EMPTY_STRING,
+        //   reaction: reaction ?? Breakscape.EMPTY_STRING,
+        //   feedback: feedback ?? Breakscape.EMPTY_STRING,
+        //   ...tags,
+        // });
+        // botResponses.push(botResponse);
+      }
+    }
+  }
+
+  return {
+    botResponses: botResponses.length > 0 ? botResponses : undefined,
+  };
+}
+
+function cardBodyToString(cardBody: Body | undefined): BreakscapedString {
+  let bodyStr = '';
+  debugger;
+
+  return '';
 }
 
 export { buildCards };

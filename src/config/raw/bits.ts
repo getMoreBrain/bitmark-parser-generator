@@ -390,6 +390,19 @@ const BITS: _BitsConfig = {
       [AliasBitType.coachCallToActionCloze]: { since: '1.3.0' },
     },
   },
+  [RootBitType.clozeList]: {
+    since: '1.4.11',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+    ],
+    cardSet: CardSetConfigKey._clozeList,
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+    footerAllowed: true,
+  },
   [RootBitType.code]: {
     since: '1.3.0',
     tags: [

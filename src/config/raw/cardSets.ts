@@ -277,6 +277,25 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
+  [CardSetConfigKey._clozeList]: {
+    variants: [
+      [
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardTags,
+            },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_gap,
+            },
+          ],
+          bodyAllowed: true,
+        },
+      ],
+    ],
+  },
 };
 
 export { CARDSETS as CARDS };
