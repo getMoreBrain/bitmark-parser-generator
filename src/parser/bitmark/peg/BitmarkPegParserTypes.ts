@@ -9,6 +9,7 @@
 
 import { EnumType, superenum } from '@ncoderz/superenum';
 
+import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
@@ -79,10 +80,10 @@ export interface BitHeader {
 }
 
 export interface TrueFalseValue {
-  text: string;
+  text: BreakscapedString;
   isCorrect: boolean;
   isDefaultExample: boolean;
-  example?: string;
+  example?: BreakscapedString;
 }
 
 export interface CardData {
@@ -94,67 +95,67 @@ export interface CardData {
 
 export interface BitContentProcessorResult {
   cardSet?: ParsedCardSet;
-  cardBody?: string;
+  cardBody?: BreakscapedString;
   body?: Body;
   footer?: FooterText;
   imageSource?: ImageSource;
   partner?: Partner;
   trueFalse?: TrueFalseValue[];
   isDefaultExample?: boolean;
-  example?: string;
+  example?: BreakscapedString;
   isCorrect?: boolean;
   markConfig?: MarkConfig[];
-  solutions?: string[];
+  solutions?: BreakscapedString[];
   statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];
   responses?: Response[];
-  solution?: string;
-  mark?: string[];
-  title?: string[];
-  subtitle?: string;
+  solution?: BreakscapedString;
+  mark?: BreakscapedString[];
+  title?: BreakscapedString[];
+  subtitle?: BreakscapedString;
   resources?: Resource[];
-  item?: string;
-  lead?: string;
-  instruction?: string;
-  hint?: string;
-  anchor?: string;
-  book?: string;
-  reference?: string;
-  referenceEnd?: string;
-  sampleSolution?: string;
+  item?: BreakscapedString;
+  lead?: BreakscapedString;
+  instruction?: BreakscapedString;
+  hint?: BreakscapedString;
+  anchor?: BreakscapedString;
+  book?: BreakscapedString;
+  reference?: BreakscapedString;
+  referenceEnd?: BreakscapedString;
+  sampleSolution?: BreakscapedString;
   isCaseSensitive?: boolean;
-  reaction?: string;
-  license?: string;
-  copyright?: string;
+  reaction?: BreakscapedString;
+  license?: BreakscapedString;
+  copyright?: BreakscapedString;
   showInIndex?: boolean;
-  caption?: string;
-  src1x?: string;
-  src2x?: string;
-  src3x?: string;
-  src4x?: string;
+  caption?: BreakscapedString;
+  src1x?: BreakscapedString;
+  src2x?: BreakscapedString;
+  src3x?: BreakscapedString;
+  src4x?: BreakscapedString;
   width?: number;
   height?: number;
-  alt?: string;
-  // duration?: string | string[]; // number? - there is a collision between duration at bit level, and duration in resource.
+  alt?: BreakscapedString;
+  // duration?: BreakscapedString | BreakscapedString[]; // number? - there is a collision between duration at bit level, and duration in resource.
   mute?: boolean;
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
   posterImage?: ImageResource;
-  siteName?: string;
-  imageSourceUrl?: string;
-  mockupId?: string;
+  siteName?: BreakscapedString;
+  imageSourceUrl?: BreakscapedString;
+  mockupId?: BreakscapedString;
   size?: number;
-  format?: string;
+  format?: BreakscapedString;
 
   extraProperties?: ExtraProperties;
   comments?: Comment[];
 }
 
 export interface BitSpecificTitles {
-  title?: string;
-  subtitle?: string;
+  title?: BreakscapedString;
+  subtitle?: BreakscapedString;
   level?: number;
 }
 
@@ -165,8 +166,8 @@ export interface StatementsOrChoicesOrResponses {
 }
 
 export interface BitSpecificCards {
-  sampleSolution?: string;
-  elements?: string[];
+  sampleSolution?: BreakscapedString;
+  elements?: BreakscapedString[];
   flashcards?: Flashcard[];
   statements?: Statement[];
   responses?: Response[];
