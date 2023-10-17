@@ -63,7 +63,9 @@
  */
 
 import { Builder } from '../../../ast/Builder';
+import { Breakscape } from '../../../breakscaping/Breakscape';
 import { Config } from '../../../config/Config';
+import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType, RootBitType } from '../../../model/enum/BitType';
@@ -373,9 +375,9 @@ class BitmarkPegParserProcessor {
     let seenReference = false;
     let inFooter = false;
     const bodyParts: BodyPart[] = [];
-    let bodyPart = '';
-    let footer = '';
-    let cardBody = '';
+    let bodyPart: BreakscapedString = Breakscape.EMPTY_STRING;
+    let footer: BreakscapedString = Breakscape.EMPTY_STRING;
+    let cardBody: BreakscapedString = Breakscape.EMPTY_STRING;
 
     const inChain = bitLevel === BitContentLevel.Chain;
 
@@ -388,7 +390,7 @@ class BitmarkPegParserProcessor {
         const bodyText = builder.bodyText({ text: bodyPart });
         bodyParts.push(bodyText);
       }
-      bodyPart = '';
+      bodyPart = Breakscape.EMPTY_STRING;
     };
 
     // Reduce the Type/Key/Value data to a single object that can be used to build the bit
@@ -458,15 +460,15 @@ class BitmarkPegParserProcessor {
 
         case TypeKey.BodyText: {
           if (inFooter) {
-            footer += value;
+            footer = Breakscape.concatenate(footer, value as BreakscapedString);
           } else {
-            bodyPart += value;
+            bodyPart = Breakscape.concatenate(bodyPart, value as BreakscapedString);
           }
           break;
         }
 
         case TypeKey.CardText: {
-          cardBody += value;
+          cardBody = Breakscape.concatenate(cardBody, value as BreakscapedString);
           break;
         }
 
@@ -483,7 +485,7 @@ class BitmarkPegParserProcessor {
     BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, result.body);
 
     // Validate and build the footer (trimmed)
-    footer = footer.trim();
+    footer = footer.trim() as BreakscapedString;
     if (footer) {
       footer = BitmarkPegParserValidator.checkFooter(this.context, bitType, bitLevel, footer);
       if (footer) {
@@ -492,7 +494,7 @@ class BitmarkPegParserProcessor {
     }
 
     // Add card body (validated elsewhere)
-    cardBody = cardBody.trim();
+    cardBody = cardBody.trim() as BreakscapedString;
     if (cardBody) {
       result.cardBody = cardBody;
     }
@@ -571,7 +573,7 @@ class BitmarkPegParserProcessor {
     let trimmedBodyParts: BodyPart[] = bodyParts.reduce((acc, bodyPart) => {
       const bodyText = bodyPart as BodyText;
       if (!foundBodyText && bodyText.type === BodyBitType.text) {
-        const t = bodyText.data.bodyText.trimStart();
+        const t = bodyText.data.bodyText.trimStart() as BreakscapedString;
         if (t) {
           foundBodyText = true;
           bodyText.data.bodyText = t;
@@ -590,7 +592,7 @@ class BitmarkPegParserProcessor {
     trimmedBodyParts = trimmedBodyParts.reduceRight((acc, bodyPart) => {
       const bodyText = bodyPart as BodyText;
       if (!foundBodyText && bodyText.type === BodyBitType.text) {
-        const t = bodyText.data.bodyText.trimEnd();
+        const t = bodyText.data.bodyText.trimEnd() as BreakscapedString;
         if (t) {
           foundBodyText = true;
           bodyText.data.bodyText = t;

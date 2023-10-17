@@ -89,22 +89,22 @@ Das war's
 
 {{
 
-// const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
-const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
+// export const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\^(\^*)\]|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\^(\^*)/, "g")
 
 function s(_string) {
   return _string ?? ""
 }
 
-export function unbreakscape(_str) {
+function unbreakscape(_str) {
 	let u_ = _str || ""
 
-  function replacer(match, p1, offset, string, groups) {
-  		return match.replace("^", "");
-	}
+  // function replacer(match, p1, offset, string, groups) {
+  // 		return match.replace("^", "");
+	// }
 
-  let re_ = UNBREAKSCAPE_REGEX;
-  u_ = u_.replace(re_, replacer)
+  // let re_ = UNBREAKSCAPE_REGEX;
+  // u_ = u_.replace(re_, replacer)
+  u_ = Breakscape.unbreakscape(u_);
 
   return u_
 }

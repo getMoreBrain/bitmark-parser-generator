@@ -24,12 +24,12 @@
     // "downlevelIteration": true,
     // "importHelpers": true,
     "allowJs": true, // Required for PEG parser
-    "removeComments": false,
+    "removeComments": false
     // "incremental": true,
     // "strictPropertyInitialization": false
     // "resolveJsonModule": true,
     // "typeRoots": ["./@types", "./node_modules/@types"]
   },
-  "include": ["src/**/*.ts"],
-   "exclude": ["node_modules"],
+  "include": ["src/**/*.ts", "src/breakscaping/BreakscapeUtils.ts.complex"],
+  "exclude": ["node_modules"]
 }

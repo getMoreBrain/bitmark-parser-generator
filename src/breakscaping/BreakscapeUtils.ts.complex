@@ -1,0 +1,337 @@
+import { UNBREAKSCAPE_REGEX } from '../generated/parser/text/text-peggy-parser';
+import { BreakscapedString } from '../model/ast/BreakscapedString';
+import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
+import { StringUtils } from '../utils/StringUtils';
+
+/**
+ * Utility class for breakscaping strings.
+ *
+ * Breakscaping is the process of escaping certain character sequences in a string so that they are not interpreted as
+ * special sequences by the parser.
+ *
+ * This is different from escaping in that when escaping, single characters tend to be escaped, rather than sequences
+ * being broken (split) by a special charater.
+ *
+ * The special character is ^
+ * To include the special character in a text, use ^^ (once), ^^^ (twice), etc.
+ *
+ * The following sequences can be breakscaped:
+ *  - bold:                      tag/body    --/++          **         ==>   *^*
+ *  - light:                     tag/body    --/++          ``         ==>   `^`
+ *  - italic:                    tag/body    --/++          __         ==>   _^_
+ *  - highlight:                 tag/body    --/++          !!         ==>   !^!
+ *  - inline:                    body        ++             ==         ==>   =^=
+ *  - comment:                   body        ++             ||         ==>   |^|
+ *  - remark:                    body        ++             ::         ==>   :^:
+ *  - title block:               body        ++     (SOL)[##]#(space)  ==>   (SOL)[##]#^(space)
+ *  - new block:                 body        ++     (SOL)|(WS EOL)     ==>   (SOL)|^(WS EOL)
+ *  - code block:                body        ++     (SOL)|code(:type)  ==>   (SOL)|^code(:type)
+ *  - image block:               body        ++     (SOL)|image:(url)  ==>   (SOL)|^image:(url)
+ *  - bullet list:               body        ++     (SOL)•(space)      ==>   (SOL)•^(space)
+ *  - ordered list:              body        ++     (SOL)•1(space)     ==>   (SOL)•^1(space)
+ *  - tag list +:                body        ++     (SOL)•+(space)     ==>   (SOL)•^+(space)
+ *  - tag list -:                body        ++     (SOL)•-(space)     ==>   (SOL)•^-(space)
+ *  - start of bit:              tag         --/++          [.         ==>   [^.
+ *  - start of property:         tag         --/++          [@         ==>   [^@
+ *  - start of title:            tag         --/++          [#         ==>   [^#
+ *  - start of anchor:           tag         --/++          [▼         ==>   [^▼
+ *  - start of reference:        tag         --/++          [►         ==>   [^►
+ *  - start of item/lead:        tag         --/++          [%         ==>   [^%
+ *  - start of instruction:      tag         --/++          [!         ==>   [^!
+ *  - start of hint:             tag         --/++          [?         ==>   [^?
+ *  - start of true statement:   tag         --/++          [+         ==>   [^+
+ *  - start of false statement:  tag         --/++          [-         ==>   [^-
+ *  - start of sample solution:  tag         --/++          [$         ==>   [^$
+ *  - start of gap:              tag         --/++          [_         ==>   [^_
+ *  - start of mark:             tag         --/++          [=         ==>   [^=
+ *  - start of resource:         tag         --/++          [&         ==>   [^&
+ *  - end of tag:                tag         --             ]          ==>   ^]
+ *
+ *
+ * The following are breakscaped with ^ in between. Just add more ^s to increase the number of ^ string:
+ *  - bold:                      tag/body    --/++          *^*         ==>   *^^*
+ *  - light:                     tag/body    --/++          `^`         ==>   `^^`
+ *  - italic:                    tag/body    --/++          _^_         ==>   _^^_
+ *  - highlight:                 tag/body    --/++          !^!         ==>   !^^!
+ *  - inline:                    body        ++             =^=         ==>   =^^=
+ *  - comment:                   body        ++             |^|         ==>   |^^|
+ *  - remark:                    body        ++             :^:         ==>   :^^:
+ *  - title block:               body        ++     (SOL)[##]#^(space)  ==>   (SOL)[##]#^^(space)
+ *  - new block:                 body        ++     (SOL)|^(WS EOL)     ==>   (SOL)|^^(WS EOL)
+ *  - code block:                body        ++     (SOL)|^code(:type)  ==>   (SOL)|^^code(:type)
+ *  - image block:               body        ++     (SOL)|^image:(url)  ==>   (SOL)|^^image:(url)
+ *  - bullet list:               body        ++     (SOL)•^(space)      ==>   (SOL)•^^(space)
+ *  - ordered list:              body        ++     (SOL)•^1(space)     ==>   (SOL)•^^1(space)
+ *  - tag list +:                body        ++     (SOL)•^+(space)     ==>   (SOL)•^^+(space)
+ *  - tag list -:                body        ++     (SOL)•^-(space)     ==>   (SOL)•^^-(space)
+ *  - start of bit:              tag         --/++          [^.         ==>   [^^.
+ *  - start of property:         tag         --/++          [^@         ==>   [^^@
+ *  - start of title:            tag         --/++          [^#         ==>   [^^#
+ *  - start of anchor:           tag         --/++          [^▼         ==>   [^^▼
+ *  - start of reference:        tag         --/++          [^►         ==>   [^^►
+ *  - start of item/lead:        tag         --/++          [^%         ==>   [^^%
+ *  - start of instruction:      tag         --/++          [^!         ==>   [^^!
+ *  - start of hint:             tag         --/++          [^?         ==>   [^^?
+ *  - start of true statement:   tag         --/++          [^+         ==>   [^^+
+ *  - start of false statement:  tag         --/++          [^-         ==>   [^^-
+ *  - start of sample solution:  tag         --/++          [^$         ==>   [^^$
+ *  - start of gap:              tag         --/++          [^_         ==>   [^^_
+ *  - start of mark:             tag         --/++          [^=         ==>   [^^=
+ *  - start of resource:         tag         --/++          [^&         ==>   [^^&
+ *  - end of tag:                tag         --             ^]          ==>   ^^]
+ */
+
+//
+// Breakscaping
+//
+
+const BREAKSCAPE_REGEX_MARKS = /([*`_!])([\^]*)\1/;
+const BREAKSCAPE_REGEX_MARKS_PLUSPLUS = /([|:=])([\^]*)\3/;
+const BREAKSCAPE_REGEX_BLOCKS = /^(\|)([\^]*)(code[\s]*|code:|image:|[\s]*$)/;
+const BREAKSCAPE_REGEX_TITLE_BLOCKS = /^([\s]*[#]{1,3})([\^]*)([^\S\r\n]+)/;
+const BREAKSCAPE_REGEX_LIST_BLOCKS = /^(•)([\^]*)(1|\+|-|)([^\S\r\n]+)/;
+const BREAKSCAPE_REGEX_START_OF_TAG = /(\[)([\^]*)([.@#▼►%!?+\-$_=&])/;
+const BREAKSCAPE_REGEX_END_OF_TAG = /([\^]*)(])/;
+
+// Regex groups in TAG (bitmark-- only):
+// 1: start of MARK
+// 2: ^ in MARK
+// 3: ^ in END_OF_TAG
+// 4: end of END_OF_TAG
+
+const BREAKSCAPE_REGEX_IN_TAG = new RegExp(
+  `${BREAKSCAPE_REGEX_MARKS.source}|${BREAKSCAPE_REGEX_END_OF_TAG.source}`,
+  'gm',
+);
+const BREAKSCAPE_REGEX_REPLACER_IN_TAG = '$1^$2$1$3$4';
+
+// Regex groups in BODY (bitmark--):
+// 1: start of MARK
+// 2: ^ in MARK
+// 3: start of START_OF_TAG block
+// 4: ^ in START_OF_TAG block
+// 5: end of START_OF_TAG block
+
+const BREAKSCAPE_REGEX_IN_BODY_MINUSMINUS = new RegExp(
+  `${BREAKSCAPE_REGEX_MARKS.source}|${BREAKSCAPE_REGEX_START_OF_TAG.source}`,
+  'gm',
+);
+const BREAKSCAPE_REGEX_REPLACER_IN_BODY_MINUSMINUS = '$1$3^$2$1$4$5';
+
+// Regex groups in BODY (bitmark++):
+// 1: start of MARK
+// 2: ^ in MARK
+// 3: start of MARK_PLUSPLUS
+// 4: ^ in MARK_PLUSPLUS
+// 5: start of BLOCK
+// 6: ^ in BLOCK
+// 7: end of BLOCK
+// 8: start of TITLE_BLOCK
+// 9: ^ in TITLE_BLOCK
+// 10: end of TITLE_BLOCK
+// 11: start of LIST_BLOCK
+// 12: ^ in LIST_BLOCK
+// 13: end of LIST_BLOCK part 1
+// 14: end of LIST_BLOCK part 2
+// 15: start of START_OF_TAG block
+// 16: ^ in START_OF_TAG block
+// 17: end of START_OF_TAG block
+
+// ([*`_!])([\^]*)\1|([|:=])([\^]*)\3|^(\|)([\^]*)(code[\s]*|code:|image:|[\s]*$)|^([\s]*[#]{1,3})([\^]*)([^\S\r\n]+)|^(•)([\^]*)(1|\+|-|)([^\S\r\n]+)|(\[)([\^]*)([.@#▼►%!?+\-$_=&])
+const BREAKSCAPE_REGEX_IN_BODY_PLUSPLUS = new RegExp(
+  `${BREAKSCAPE_REGEX_MARKS.source}${BREAKSCAPE_REGEX_MARKS_PLUSPLUS.source}|${BREAKSCAPE_REGEX_BLOCKS.source}|${BREAKSCAPE_REGEX_TITLE_BLOCKS.source}|${BREAKSCAPE_REGEX_LIST_BLOCKS.source}|${BREAKSCAPE_REGEX_START_OF_TAG.source}`,
+  'gm',
+);
+const BREAKSCAPE_REGEX_REPLACER_IN_BODY_PLUSPLUS = '$1$3$5$8$11$15^$2$1$4$3$6$7$9$10$12$13$14$16$17';
+
+// Regex explanation:
+// - match a single | or • or # character at the start of a line and capture in group 1
+// This will capture all new block characters within the code text.
+// Replace with group 1, ^
+const BREAKSCAPE_CODE_REGEX = new RegExp('^(\\||•|#)', 'gm');
+const BREAKSCAPE_CODE_REGEX_REPLACER = '$1^';
+
+export interface BreakscapeOptions {
+  /**
+   * If false or not set, opening tags will be breakscaped, otherwise closing tags will be breakscaped.
+   * Defaults to false.
+   */
+  inTag?: boolean;
+
+  /**
+   * Format to use for breakscaping, defaults to bitmark--
+   * Irrelevant if inTag is true (in tags, only bitmark-- is used)
+   */
+  textFormat?: TextFormatType;
+
+  /**
+   * if true, the original array will be modified rather than a copy being made
+   */
+  modifyArray?: boolean;
+}
+
+class BreakscapeUtils {
+  public readonly EMPTY_STRING = '' as BreakscapedString;
+
+  /**
+   * Breakscape a string or an array of strings.
+   * If the input is an array, a new array will be returned.
+   *
+   * @param val input value
+   * @param options options for breakscaping
+   * @param modifyArray
+   * @returns the input value with any strings breakscaped.
+   */
+  public breakscape<T extends string | string[] | undefined>(
+    val: T,
+    options?: BreakscapeOptions,
+  ): T extends string ? BreakscapedString : T extends string[] ? BreakscapedString[] : undefined {
+    type R = T extends string ? BreakscapedString : T extends string[] ? BreakscapedString[] : undefined;
+
+    if (val == null) return val as unknown as R;
+
+    const opts = Object.assign({}, options);
+
+    opts.textFormat = opts.textFormat ?? TextFormat.bitmarkMinusMinus;
+    opts.inTag = opts.inTag ?? false;
+
+    let breakscapeRegex = BREAKSCAPE_REGEX_IN_TAG;
+    let breakscapeRegexReplacer = BREAKSCAPE_REGEX_REPLACER_IN_TAG;
+
+    if (!opts.inTag) {
+      if (opts.textFormat === TextFormat.bitmarkPlusPlus) {
+        // In body, bitmark++
+        breakscapeRegex = BREAKSCAPE_REGEX_IN_BODY_PLUSPLUS;
+        breakscapeRegexReplacer = BREAKSCAPE_REGEX_REPLACER_IN_BODY_PLUSPLUS;
+      } else {
+        // In body, bitmark--
+        breakscapeRegex = BREAKSCAPE_REGEX_IN_BODY_MINUSMINUS;
+        breakscapeRegexReplacer = BREAKSCAPE_REGEX_REPLACER_IN_BODY_MINUSMINUS;
+      }
+    } else {
+      // In tags, only bitmark-- is used
+    }
+
+    const breakscapeStr = (str: string) => {
+      if (!str) return str;
+      str = str.replace(breakscapeRegex, breakscapeRegexReplacer);
+
+      return str;
+    };
+
+    if (Array.isArray(val)) {
+      const newVal: unknown[] = opts.modifyArray ? val : [val.length];
+      for (let i = 0, len = val.length; i < len; i++) {
+        const v = val[i];
+        if (StringUtils.isString(v)) {
+          newVal[i] = breakscapeStr(v);
+        }
+      }
+      val = newVal as T;
+    } else if (StringUtils.isString(val)) {
+      val = breakscapeStr(val as string) as T;
+    }
+
+    return val as unknown as R;
+  }
+
+  /**
+   * Unbreakscape a string or an array of strings.
+   * If the input is an array, a new array will be returned.
+   *
+   * @param val input value
+   * @param modifyArray if true, the original array will be modified rather than a copy being made
+   * @returns the input value with any strings unbreakscaped.
+   */
+  public unbreakscape<T extends BreakscapedString | BreakscapedString[] | undefined>(
+    val: T,
+    modifyArray?: boolean,
+  ): T extends BreakscapedString ? string : T extends BreakscapedString[] ? string[] : undefined {
+    type R = T extends BreakscapedString ? string : T extends BreakscapedString[] ? string[] : undefined;
+
+    if (val == null) return val as unknown as R;
+
+    const unbreakscapeStr = (str: string) => {
+      if (!str) return str;
+      let u = str;
+
+      function replacer(match: string) {
+        return match.replace('^', '');
+      }
+
+      const regex = UNBREAKSCAPE_REGEX;
+      u = u.replace(regex, replacer);
+
+      return u;
+    };
+
+    if (Array.isArray(val)) {
+      const newVal: unknown[] = modifyArray ? val : [];
+      for (let i = 0, len = val.length; i < len; i++) {
+        const v = val[i];
+        if (StringUtils.isString(v)) {
+          newVal[i] = unbreakscapeStr(v);
+        } else {
+          newVal[i] = v;
+        }
+      }
+      val = newVal as T;
+    } else if (StringUtils.isString(val)) {
+      val = unbreakscapeStr(val as string) as T;
+    }
+
+    return val as unknown as R;
+  }
+
+  /**
+   * Breakscape a code string or an array of code strings.
+   * If the input is an array, a new array will be returned.
+   *
+   * @param val input value
+   * @param modifyArray if true, the original array will be modified rather than a copy being made
+   * @returns the input value with any strings breakscaped
+   */
+  public breakscapeCode<T extends unknown | unknown[] | undefined>(
+    val: T,
+    modifyArray?: boolean,
+  ): T extends string ? BreakscapedString : T extends string[] ? BreakscapedString[] : undefined {
+    type R = T extends string ? BreakscapedString : T extends string[] ? BreakscapedString[] : undefined;
+
+    if (val == null) return val as unknown as R;
+
+    const breakscapeStr = (str: string) => {
+      if (!str) return str;
+      return str.replace(BREAKSCAPE_CODE_REGEX, BREAKSCAPE_CODE_REGEX_REPLACER);
+    };
+
+    if (Array.isArray(val)) {
+      const newVal: unknown[] = modifyArray ? val : [val.length];
+      for (let i = 0, len = val.length; i < len; i++) {
+        const v = val[i];
+        if (StringUtils.isString(v)) {
+          val[i] = breakscapeStr(v);
+        }
+      }
+      val = newVal as T;
+    } else if (StringUtils.isString(val)) {
+      val = breakscapeStr(val as string) as T;
+    }
+
+    return val as unknown as R;
+  }
+
+  /**
+   * Concatenate two breakscaped strings.
+   *
+   * @param s1 first string
+   * @param s2 second string
+   * @returns the concatenated string
+   */
+  public concatenate(s1: BreakscapedString, s2: BreakscapedString): BreakscapedString {
+    return (s1 + s2) as BreakscapedString;
+  }
+}
+
+const instance = new BreakscapeUtils();
+
+export { instance as BreakscapeUtils };

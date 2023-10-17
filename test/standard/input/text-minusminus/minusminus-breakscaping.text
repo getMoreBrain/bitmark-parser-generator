@@ -1,5 +1,18 @@
 The parser un-breakscapes the following:
 
+[^.article^]
+
+
+^]
+^^]
+=^]
+=^^]
+^=]
+^^=]
+=^=]
+=^^=]
+=^^^=]
+
 ^
 ^^
 =^
@@ -208,3 +221,7 @@ This is some *^** BOLD **^* text^
 **
 ^^No end tag, so NOT bold *
 
+
+|^| And here is a comment for good luck |^|
+
+The end!

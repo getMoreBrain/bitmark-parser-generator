@@ -1,3 +1,4 @@
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { RootBitType, BitType } from '../../../../model/enum/BitType';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 
@@ -66,7 +67,7 @@ function handleGapOrSelectOrTrueFalseExample(
       trueFalse.example = undefined;
     } else {
       if (BooleanUtils.isBooleanString(example)) {
-        trueFalse.example = example as string;
+        trueFalse.example = example as BreakscapedString;
       } else {
         // Example is set to a value other than true / false which is not valid in the case of select
         trueFalse.isDefaultExample = true;
@@ -80,7 +81,7 @@ function handleGapOrSelectOrTrueFalseExample(
       // Extract the solution nearest [@example] tag as the example value
       target.example = target.solutions[target.solutions.length - 1] ?? undefined;
     } else {
-      target.example = example as string;
+      target.example = example as BreakscapedString;
     }
   } else {
     // Example is higher up the chain, so how it is handled depends on the bit type
@@ -146,7 +147,7 @@ function handleStandardBooleanExample(
     target.example = undefined;
   } else {
     if (BooleanUtils.isBooleanString(example)) {
-      target.example = example as string;
+      target.example = example as BreakscapedString;
     } else {
       // Example is set to a value other than true / false which is not valid in the case of select
       target.isDefaultExample = true;
@@ -167,7 +168,7 @@ function handleStandardStringExample(
     target.isDefaultExample = true;
     target.example = undefined;
   } else {
-    target.example = example as string;
+    target.example = example as BreakscapedString;
   }
 }
 

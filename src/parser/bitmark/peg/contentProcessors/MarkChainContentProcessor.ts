@@ -1,4 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BodyPart, Mark } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
@@ -54,8 +55,8 @@ function buildMark(
   const { mark: markType, ...rest } = chainTags;
 
   const mark = builder.mark({
-    solution: solution ?? '',
-    mark: ArrayUtils.asSingle(markType) ?? '',
+    solution: solution ?? Breakscape.EMPTY_STRING,
+    mark: ArrayUtils.asSingle(markType) ?? Breakscape.EMPTY_STRING,
     ...rest,
   });
 

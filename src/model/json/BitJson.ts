@@ -13,7 +13,7 @@ export interface BitJson {
   spaceId: string | string[];
   padletId: string;
   jupyterId: string;
-  jupyterExecutionCount: string;
+  jupyterExecutionCount: number;
   AIGenerated: boolean;
   releaseVersion: string;
   ageRange: number | number[];

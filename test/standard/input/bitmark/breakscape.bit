@@ -1,0 +1,19 @@
+|| Testing breakscaping ||
+
+[.cloze:bitmark++&image]
+[@id:1234]
+[@id:[1234^]]
+[@id:[1234^]4321]
+
+Here
+
+[%[%item^]][%[%lead^]:)]
+[!Instruc[tion^]]
+[@externalId:[externalId with square bracked at end^]]
+is
+[@lang:[lang^] with square bracked in middle]
+the body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets
+
+[&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]
+
+

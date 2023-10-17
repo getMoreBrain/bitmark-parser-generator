@@ -3,7 +3,7 @@
     "type": "paragraph",
     "content": [
       {
-        "text": "The parser un-breakscapes the following:\n\n^\n^^\n=^\n=^^\n^=\n^^=\n==\n=^=\n=^^=\n*^\n*^^\n^*\n^^*\n**\n*^*\n*^^*\n^_\n^^_\n_^\n_^^\n__\n_^_\n_^^_\n^`\n^^`\n`^\n`^^\n``\n`^`\n`^^`\n^!\n^^!\n!^\n!^^\n!!\n!^!\n!^^!\n^[\n^^[\n[\n[^\n[^^\n^|\n^^|\n|\n|^\n|^^\n\nStart^\nStart^^\nStart=^\nStart=^^\nStart^=\nStart^^=\nStart==\nStart=^=\nStart=^^=\nStart*^\nStart*^^\nStart^*\nStart^^*\nStart**\nStart*^*\nStart*^^*\nStart^_\nStart^^_\nStart_^\nStart_^^\nStart__\nStart_^_\nStart_^^_\nStart^`\nStart^^`\nStart`^\nStart`^^\nStart``\nStart`^`\nStart`^^`\nStart^!\nStart^^!\nStart!^\nStart!^^\nStart!!\nStart!^!\nStart!^^!\nStart^[\nStart^^[\nStart[\nStart[^\nStart[^^\nStart^|\nStart^^|\nStart|\nStart|^\nStart|^^\n\n^End\n^^End\n=^End\n=^^End\n^=End\n^^=End\n==End\n=^=End\n=^^=End\n*^End\n*^^End\n^*End\n^^*End\n**End\n*^*End\n*^^*End\n^_End\n^^_End\n_^End\n_^^End\n__End\n_^_End\n_^^_End\n^`End\n^^`End\n`^End\n`^^End\n``End\n`^`End\n`^^`End\n^!End\n^^!End\n!^End\n!^^End\n!!End\n!^!End\n!^^!End\n^[End\n^^[End\n[End\n[^End\n[^^End\n^|End\n^^|End\n|End\n|^End\n|^^End\n\nMiddle^Middle\nMiddle^^Middle\nMiddle=^Middle\nMiddle=^^Middle\nMiddle^=Middle\nMiddle^^=Middle\nMiddle==Middle\nMiddle=^=Middle\nMiddle=^^=Middle\nMiddle*^Middle\nMiddle*^^Middle\nMiddle^*Middle\nMiddle^^*Middle\nMiddle**Middle\nMiddle*^*Middle\nMiddle*^^*Middle\nMiddle^_Middle\nMiddle^^_Middle\nMiddle_^Middle\nMiddle_^^Middle\nMiddle__Middle\nMiddle_^_Middle\nMiddle_^^_Middle\nMiddle^`Middle\nMiddle^^`Middle\nMiddle`^Middle\nMiddle`^^Middle\nMiddle``Middle\nMiddle`^`Middle\nMiddle`^^`Middle\nMiddle^!Middle\nMiddle^^!Middle\nMiddle!^Middle\nMiddle!^^Middle\nMiddle!!Middle\nMiddle!^!Middle\nMiddle!^^!Middle\nMiddle^[Middle\nMiddle^^[Middle\nMiddle[Middle\nMiddle[^Middle\nMiddle[^^Middle\nMiddle^|Middle\nMiddle^^|Middle\nMiddle|Middle\nMiddle|^Middle\nMiddle|^^Middle\n\nHere are some edgy-cases:\n_^",
+        "text": "The parser un-breakscapes the following:\n\n[.article]\n\n\n]\n^]\n=]\n=^]\n^=]\n^^=]\n==]\n=^=]\n=^^=]\n\n^\n^^\n=^\n=^^\n^=\n^^=\n==\n=^=\n=^^=\n*^\n*^^\n^*\n^^*\n**\n*^*\n*^^*\n^_\n^^_\n_^\n_^^\n__\n_^_\n_^^_\n^`\n^^`\n`^\n`^^\n``\n`^`\n`^^`\n^!\n^^!\n!^\n!^^\n!!\n!^!\n!^^!\n^[\n^^[\n[^\n[^^\n[^^^\n^|\n^^|\n|\n|^\n|^^\n\nStart^\nStart^^\nStart=^\nStart=^^\nStart^=\nStart^^=\nStart==\nStart=^=\nStart=^^=\nStart*^\nStart*^^\nStart^*\nStart^^*\nStart**\nStart*^*\nStart*^^*\nStart^_\nStart^^_\nStart_^\nStart_^^\nStart__\nStart_^_\nStart_^^_\nStart^`\nStart^^`\nStart`^\nStart`^^\nStart``\nStart`^`\nStart`^^`\nStart^!\nStart^^!\nStart!^\nStart!^^\nStart!!\nStart!^!\nStart!^^!\nStart^[\nStart^^[\nStart[^\nStart[^^\nStart[^^^\nStart^|\nStart^^|\nStart|^\nStart|^^\nStart|^^^\n\n^End\n^^End\n=^End\n=^^End\n^=End\n^^=End\n==End\n=^=End\n=^^=End\n*^End\n*^^End\n^*End\n^^*End\n**End\n*^*End\n*^^*End\n^_End\n^^_End\n_^End\n_^^End\n__End\n_^_End\n_^^_End\n^`End\n^^`End\n`^End\n`^^End\n``End\n`^`End\n`^^`End\n^!End\n^^!End\n!^End\n!^^End\n!!End\n!^!End\n!^^!End\n^[End\n^^[End\n[^End\n[^^End\n[^^^End\n^|End\n^^|End\n|^End\n|^^End\n|^^^End\n\nMiddle^Middle\nMiddle^^Middle\nMiddle=^Middle\nMiddle=^^Middle\nMiddle^=Middle\nMiddle^^=Middle\nMiddle==Middle\nMiddle=^=Middle\nMiddle=^^=Middle\nMiddle*^Middle\nMiddle*^^Middle\nMiddle^*Middle\nMiddle^^*Middle\nMiddle**Middle\nMiddle*^*Middle\nMiddle*^^*Middle\nMiddle^_Middle\nMiddle^^_Middle\nMiddle_^Middle\nMiddle_^^Middle\nMiddle__Middle\nMiddle_^_Middle\nMiddle_^^_Middle\nMiddle^`Middle\nMiddle^^`Middle\nMiddle`^Middle\nMiddle`^^Middle\nMiddle``Middle\nMiddle`^`Middle\nMiddle`^^`Middle\nMiddle^!Middle\nMiddle^^!Middle\nMiddle!^Middle\nMiddle!^^Middle\nMiddle!!Middle\nMiddle!^!Middle\nMiddle!^^!Middle\nMiddle^[Middle\nMiddle^^[Middle\nMiddle[^Middle\nMiddle[^^Middle\nMiddle[^^^Middle\nMiddle^|Middle\nMiddle^^|Middle\nMiddle|^Middle\nMiddle|^^Middle\nMiddle|^^^Middle\n\nHere are some edgy-cases:\n_^",
         "type": "text"
       },
       {
@@ -42,7 +42,7 @@
         "type": "text"
       },
       {
-        "text": "**^_\n[This|is|a|list] - same as below\n[This|is|a|list] - same as above\n\n\n^^This is some *^",
+        "text": "**^_\n[This|is|a|list] - same as below\n[^This|^is|^a|^list] - same as above\n\n\n^^This is some *^",
         "type": "text"
       },
       {
@@ -94,7 +94,7 @@
         "type": "text"
       },
       {
-        "text": "^* text^\n^\n**\n^^No end tag, so NOT bold *",
+        "text": "^* text^\n^\n**\n^^No end tag, so NOT bold *\n\n\n|| And here is a comment for good luck ||\n\nThe end!",
         "type": "text"
       }
     ],
