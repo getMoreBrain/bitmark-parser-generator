@@ -15,7 +15,7 @@ import { DocumentDownloadResource } from '../../model/ast/Nodes';
 import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
 import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
-import { Text, TextAst } from '../../model/ast/TextNodes';
+import { JsonText, TextAst } from '../../model/ast/TextNodes';
 import { AliasBitType, RootBitType, BitType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
@@ -204,10 +204,10 @@ interface ItemLeadHintInstructionNode {
 }
 
 interface ItemLeadHintInstuction {
-  item: Text;
-  lead: Text;
-  hint: Text;
-  instruction: Text;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
 }
 
 interface ExampleNode {
@@ -240,8 +240,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   private json: Partial<BitWrapperJson>[] = [];
   private bitWrapperJson: Partial<BitWrapperJson> = {};
   private bitJson: Partial<BitJson> = {};
-  private textDefault: Text = '';
-  private bodyDefault: Text = '';
+  private textDefault: JsonText = Breakscape.EMPTY_STRING;
+  private bodyDefault: JsonText = Breakscape.EMPTY_STRING;
 
   // Debug
   private printed: boolean = false;
@@ -327,8 +327,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.json = [];
     this.bitWrapperJson = {};
     this.bitJson = {};
-    this.textDefault = this.options.textAsPlainText ? '' : [];
-    this.bodyDefault = this.options.textAsPlainText ? '' : [];
+    this.textDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
+    this.bodyDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
 
     this.printed = false;
   }
@@ -557,10 +557,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (parent?.key !== NodeType.bitsValue) return;
 
     if (item != null) {
-      this.bitJson.item = this.toTextAstOrString(item, TextFormat.bitmarkMinusMinus);
+      this.bitJson.item = this.convertBreakscapedStringToJsonText(item, TextFormat.bitmarkMinusMinus);
     }
     if (lead != null) {
-      this.bitJson.lead = this.toTextAstOrString(lead, TextFormat.bitmarkMinusMinus);
+      this.bitJson.lead = this.convertBreakscapedStringToJsonText(lead, TextFormat.bitmarkMinusMinus);
     }
   }
 
@@ -638,7 +638,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
 
     // Add string or AST to the body
-    this.bitJson.body = this.toTextAstOrString(fullBodyTextStr, textFormat);
+    this.bitJson.body = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
     const bodyAst = this.bitJson.body as TextAst;
 
     // Loop the body parts again to create the body bits:
@@ -1216,13 +1216,13 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   // bitmarkAst -> bits -> bitsValue -> title
 
   protected leaf_title(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.bitJson.title = this.toTextAstOrString(node.value, TextFormat.bitmarkMinusMinus);
+    this.bitJson.title = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
   }
 
   //  bitmarkAst -> bits -> bitsValue -> subtitle
 
   protected leaf_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.bitJson.subtitle = this.toTextAstOrString(node.value, TextFormat.bitmarkMinusMinus);
+    this.bitJson.subtitle = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
   }
 
   // //  bitmarkAst -> bits -> bitsValue -> level
@@ -1263,7 +1263,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     // Ignore hint that is not at the bit level as it are handled elsewhere
     if (parent?.key !== NodeType.bitsValue) return;
 
-    this.bitJson.hint = this.toTextAstOrString(hint, TextFormat.bitmarkMinusMinus);
+    this.bitJson.hint = this.convertBreakscapedStringToJsonText(hint, TextFormat.bitmarkMinusMinus);
   }
 
   // bitmarkAst -> bits -> bitsValue ->  * -> instruction
@@ -1274,7 +1274,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     // Ignore instruction that is not at the bit level as it are handled elsewhere
     if (parent?.key !== NodeType.bitsValue) return;
 
-    this.bitJson.instruction = this.toTextAstOrString(instruction, TextFormat.bitmarkMinusMinus);
+    this.bitJson.instruction = this.convertBreakscapedStringToJsonText(instruction, TextFormat.bitmarkMinusMinus);
   }
 
   // bitmarkAst -> bits -> footer -> footerText
@@ -1282,7 +1282,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const footer = node.value as BreakscapedString;
 
-    this.bitJson.footer = this.toTextAstOrString(footer, TextFormat.bitmarkMinusMinus);
+    this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, TextFormat.bitmarkMinusMinus);
   }
 
   // bitmarkAst -> bits -> bitsValue -> markup
@@ -2030,13 +2030,16 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
       if (resource.showInIndex != null) resourceJson.showInIndex = resource.showInIndex ?? false;
       if (resource.caption != null)
-        resourceJson.caption = this.toTextAstOrString(resource.caption ?? '', TextFormat.bitmarkMinusMinus);
+        resourceJson.caption = this.convertBreakscapedStringToJsonText(
+          resource.caption ?? '',
+          TextFormat.bitmarkMinusMinus,
+        );
     } else {
       resourceJson.license = Breakscape.unbreakscape(resource.license) ?? '';
       resourceJson.copyright = Breakscape.unbreakscape(resource.copyright) ?? '';
       if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
       resourceJson.showInIndex = resource.showInIndex ?? false;
-      resourceJson.caption = this.toTextAstOrString(
+      resourceJson.caption = this.convertBreakscapedStringToJsonText(
         resource.caption ?? Breakscape.EMPTY_STRING,
         TextFormat.bitmarkMinusMinus,
       );
@@ -2047,10 +2050,19 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected toItemLeadHintInstruction(item: ItemLeadHintInstructionNode): ItemLeadHintInstuction {
     return {
-      item: this.toTextAstOrString(item.itemLead?.item ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
-      lead: this.toTextAstOrString(item.itemLead?.lead ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
-      hint: this.toTextAstOrString(item.hint ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
-      instruction: this.toTextAstOrString(item.instruction ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
+      item: this.convertBreakscapedStringToJsonText(
+        item.itemLead?.item ?? Breakscape.EMPTY_STRING,
+        TextFormat.bitmarkMinusMinus,
+      ),
+      lead: this.convertBreakscapedStringToJsonText(
+        item.itemLead?.lead ?? Breakscape.EMPTY_STRING,
+        TextFormat.bitmarkMinusMinus,
+      ),
+      hint: this.convertBreakscapedStringToJsonText(item.hint ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
+      instruction: this.convertBreakscapedStringToJsonText(
+        item.instruction ?? Breakscape.EMPTY_STRING,
+        TextFormat.bitmarkMinusMinus,
+      ),
     };
   }
 
@@ -2075,11 +2087,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (isDefaultExample) {
       exampleValue = isBoolean
         ? BooleanUtils.toBoolean(defaultExample)
-        : this.toTextAstOrString(defaultExample as BreakscapedString, TextFormat.bitmarkMinusMinus);
+        : this.convertBreakscapedStringToJsonText(defaultExample as BreakscapedString, TextFormat.bitmarkMinusMinus);
     } else {
       exampleValue = isBoolean
         ? BooleanUtils.toBoolean(example)
-        : this.toTextAstOrString(example as BreakscapedString, TextFormat.bitmarkMinusMinus);
+        : this.convertBreakscapedStringToJsonText(example as BreakscapedString, TextFormat.bitmarkMinusMinus);
     }
 
     return {
@@ -2168,18 +2180,26 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   /**
-   * Convert parse a string to TextAst if required, otherwise just return the string but unbreakscaped.
+   * Convert the text from the AST to the JSON format:
+   * Input:
+   *  - breakscaped string
+   * Output:
+   *  - Bitmark v2: breakscaped string
+   *  - Bitmark v3: bitmark text JSON (TextAst)
+   *
+   * In the case of Bitmark v2 type texts, there is nothing to do but cast the type.
+   *
    * @param text
    * @returns
    */
-  protected toTextAstOrString(
+  protected convertBreakscapedStringToJsonText(
     text: BreakscapedString | undefined,
     format: TextFormatType, // = TextFormat.bitmarkMinusMinus,
-  ): Text {
+  ): JsonText {
     if (!text) undefined;
 
     if (this.options.textAsPlainText || format === TextFormat.text) {
-      return Breakscape.unbreakscape(text as BreakscapedString);
+      return text || Breakscape.EMPTY_STRING;
     }
 
     // Use the text parser to parse the text

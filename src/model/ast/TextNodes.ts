@@ -1,7 +1,9 @@
 import { TextMarkTypeType } from '../enum/TextMarkType';
 import { TextNodeTypeType } from '../enum/TextNodeType';
 
-export type Text = string | TextAst;
+import { BreakscapedString } from './BreakscapedString';
+
+export type JsonText = BreakscapedString | TextAst;
 
 export type TextAst = TextNode[];
 
