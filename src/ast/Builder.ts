@@ -177,6 +177,7 @@ class Builder extends BaseBuilder {
     choices?: Choice[];
     questions?: Question[];
     botResponses?: BotResponse[];
+    clozeList?: Body[];
     footer?: FooterText;
 
     markup?: string;
@@ -1241,6 +1242,7 @@ class Builder extends BaseBuilder {
     pairs?: Pair[];
     matrix?: Matrix[];
     botResponses?: BotResponse[];
+    clozeList?: Body[];
   }): CardNode | undefined {
     let node: CardNode | undefined;
     const {
@@ -1256,6 +1258,7 @@ class Builder extends BaseBuilder {
       pairs,
       matrix,
       botResponses,
+      clozeList,
     } = data;
 
     if (
@@ -1270,7 +1273,8 @@ class Builder extends BaseBuilder {
       heading ||
       pairs ||
       matrix ||
-      botResponses
+      botResponses ||
+      clozeList
     ) {
       node = {
         questions,
@@ -1285,6 +1289,7 @@ class Builder extends BaseBuilder {
         pairs,
         matrix,
         botResponses,
+        clozeList,
       };
 
       // Remove Unset Optionals

@@ -394,7 +394,7 @@ const BITS: _BitsConfig = {
     },
   },
   [RootBitType.clozeList]: {
-    since: '1.4.11',
+    since: '1.4.13',
     tags: [
       {
         type: BitTagType.group,

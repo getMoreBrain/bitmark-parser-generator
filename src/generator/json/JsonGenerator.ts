@@ -63,6 +63,7 @@ import {
   Select,
 } from '../../model/ast/Nodes';
 import {
+  BodyJson,
   BitJson,
   BotResponseJson,
   ChoiceJson,
@@ -242,6 +243,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   private bitJson: Partial<BitJson> = {};
   private textDefault: JsonText = Breakscape.EMPTY_STRING;
   private bodyDefault: JsonText = Breakscape.EMPTY_STRING;
+  private bodyJson: Partial<BodyJson> = this.bitJson;
+  private startPlaceholderIndex = 0;
 
   // Debug
   private printed: boolean = false;
@@ -329,6 +332,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.bitJson = {};
     this.textDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
     this.bodyDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
+    this.bodyJson = this.bitJson;
+    this.startPlaceholderIndex = 0;
 
     this.printed = false;
   }
@@ -580,17 +585,47 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> body -> bodyParts
+  // bitmarkAst -> bits -> bitsValue -> body
+
+  protected enter_body(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.bodyJson = this.bitJson as BodyJson;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> clozeList -> clozeListValue
+
+  protected enter_clozeListValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    // Create the listItems
+    if (!this.bitJson.listItems) this.bitJson.listItems = [];
+
+    // Create the body for this listItem value
+    const listItem = this.bodyDefault;
+    const bodyJson = {
+      body: listItem,
+      placeholders: this.bitJson.placeholders,
+    } as Partial<BodyJson>;
+    this.bodyJson = bodyJson;
+  }
+
+  protected exit_clozeListValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (!this.bitJson.listItems || !this.bodyJson.body) return;
+
+    // Add the newly created listItem to the listItems
+    this.bitJson.listItems.push(this.bodyJson.body);
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> * -> bodyParts (body, clozeList value)
 
   protected enter_bodyParts(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): boolean {
     const bodyParts = node.value as BodyPart[];
     const plainText = this.options.textAsPlainText;
     const textFormat = this.getTextFormat(route);
     let fullBodyTextStr: BreakscapedString = '' as BreakscapedString;
-    let placeholderIndex = 0;
+    let placeholderIndex = this.startPlaceholderIndex;
+
+    const bitBodyJson = this.bodyJson;
 
     // Ensure body exists
-    if (this.bitJson.body == null) this.bitJson.body = this.bodyDefault;
+    if (bitBodyJson.body == null) bitBodyJson.body = this.bodyDefault;
 
     // Function for creating the placeholder keys
     const createPlaceholderKeys = (
@@ -638,13 +673,13 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
 
     // Add string or AST to the body
-    this.bitJson.body = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
-    const bodyAst = this.bitJson.body as TextAst;
+    bitBodyJson.body = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
+    const bodyAst = bitBodyJson.body as TextAst;
 
     // Loop the body parts again to create the body bits:
     // - For text output the body bits are inserted into the 'placeholders' object
     // - For JSON output the body bits are inserted into body AST, replacing the placeholders created by the text parser
-    placeholderIndex = 0;
+    placeholderIndex = this.startPlaceholderIndex;
     for (let i = 0; i < bodyParts.length; i++) {
       const bodyPart = bodyParts[i];
 
@@ -687,10 +722,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (bodyBitJson) {
         if (plainText) {
           // Ensure placeholders exists
-          if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
+          if (!bitBodyJson.placeholders) bitBodyJson.placeholders = {};
 
           // Add the body bit to the placeholders
-          this.bitJson.placeholders[legacyPlaceholderKey] = bodyBitJson;
+          bitBodyJson.placeholders[legacyPlaceholderKey] = bodyBitJson;
         } else {
           // Insert the body bit into the body AST
           this.replacePlaceholderWithBodyBit(bodyAst, bodyBitJson, placeholderIndex);
@@ -699,6 +734,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
       placeholderIndex++;
     }
+
+    // Save the current placeholder index for the next body (body, card bodies)
+    this.startPlaceholderIndex = placeholderIndex;
 
     // Stop traversal of this branch for efficiency
     return false;
@@ -2377,6 +2415,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       matrix: undefined,
       choices: undefined,
       questions: undefined,
+      listItems: undefined,
 
       // Placeholders
       placeholders: undefined,
@@ -2655,6 +2694,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.matrix == null) delete bitJson.matrix;
     if (bitJson.choices == null) delete bitJson.choices;
     if (bitJson.questions == null) delete bitJson.questions;
+    if (bitJson.listItems == null) delete bitJson.listItems;
 
     // Placeholders
     if (!plainText || bitJson.placeholders == null) delete bitJson.placeholders;

@@ -102,7 +102,13 @@ export interface BitJson {
   matrix: MatrixJson[];
   choices: ChoiceJson[];
   questions: QuestionJson[];
+  listItems: JsonText[];
   footer: JsonText;
+  placeholders: BodyBitsJson;
+}
+
+export interface BodyJson {
+  body: JsonText;
   placeholders: BodyBitsJson;
 }
 
