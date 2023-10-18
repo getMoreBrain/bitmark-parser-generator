@@ -1,15 +1,32 @@
 [
   {
-    "bitmark": "[.editorial]\n[@id:342338]\nEditorial\nIt's exactly the same as an .article.",
     "bit": {
       "type": "editorial",
       "format": "bitmark--",
-      "body": "Editorial\nIt's exactly the same as an .article.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "342338"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["342338"]
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Editorial\nIt's exactly the same as an .article.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.editorial]\n[@id:342338]\nEditorial\nIt's exactly the same as an .article."
   }
 ]

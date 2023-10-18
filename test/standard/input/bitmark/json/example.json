@@ -1,44 +1,158 @@
 [
   {
-    "bitmark": "[.example]\n[@id:210051]\n[%][%Beispiel]\nDie Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet.",
     "bit": {
       "type": "example",
       "format": "bitmark--",
-      "body": "Die Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "210051"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Beispiel",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["210051"],
-      "lead": "Beispiel"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.example]\n[@id:210051]\n[%][%Beispiel]\nDie Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet."
   },
   {
-    "bitmark": "[.example:bitmark--]\n[@id:208411]\n[%][%Beispiel]\nClaudia und Stefan Walder haben für heute Abend Gäste eingeladen. Gemeinsam gehen sie auf den Wochenmarkt, um die verschiedenen Zutaten für das Essen einzukaufen. Sie brauchen dazu unter anderem Brot, Olivenöl, Zitronen, Spinat und Fische, die sich zum Braten eignen. Claudia und Stefan kommen an einem Blumenstand vorbei. «Sieh nur, diese wunderschönen Tulpen», ruft Stefan aus und kauft spontan einen grossen Strauss davon.",
     "bit": {
       "type": "example",
       "format": "bitmark--",
-      "body": "Claudia und Stefan Walder haben für heute Abend Gäste eingeladen. Gemeinsam gehen sie auf den Wochenmarkt, um die verschiedenen Zutaten für das Essen einzukaufen. Sie brauchen dazu unter anderem Brot, Olivenöl, Zitronen, Spinat und Fische, die sich zum Braten eignen. Claudia und Stefan kommen an einem Blumenstand vorbei. «Sieh nur, diese wunderschönen Tulpen», ruft Stefan aus und kauft spontan einen grossen Strauss davon.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "208411"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Beispiel",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["208411"],
-      "lead": "Beispiel"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Claudia und Stefan Walder haben für heute Abend Gäste eingeladen. Gemeinsam gehen sie auf den Wochenmarkt, um die verschiedenen Zutaten für das Essen einzukaufen. Sie brauchen dazu unter anderem Brot, Olivenöl, Zitronen, Spinat und Fische, die sich zum Braten eignen. Claudia und Stefan kommen an einem Blumenstand vorbei. «Sieh nur, diese wunderschönen Tulpen», ruft Stefan aus und kauft spontan einen grossen Strauss davon.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.example:bitmark--]\n[@id:208411]\n[%][%Beispiel]\nClaudia und Stefan Walder haben für heute Abend Gäste eingeladen. Gemeinsam gehen sie auf den Wochenmarkt, um die verschiedenen Zutaten für das Essen einzukaufen. Sie brauchen dazu unter anderem Brot, Olivenöl, Zitronen, Spinat und Fische, die sich zum Braten eignen. Claudia und Stefan kommen an einem Blumenstand vorbei. «Sieh nur, diese wunderschönen Tulpen», ruft Stefan aus und kauft spontan einen grossen Strauss davon."
   },
   {
-    "bitmark": "[.example:bitmark++]\n[@id:208422]\n[%][%Beispiel]\n• Trotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.\n• Älteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit.",
     "bit": {
       "type": "example",
       "format": "bitmark++",
-      "body": "• Trotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.\n• Älteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "208422"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Beispiel",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["208422"],
-      "lead": "Beispiel"
-    }
+      "body": [
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Trotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ],
+              "parent": "bulletList",
+              "attrs": {}
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Älteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ],
+              "parent": "bulletList",
+              "attrs": {}
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.example:bitmark++]\n[@id:208422]\n[%][%Beispiel]\n• Trotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.\n• Älteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit."
   }
 ]

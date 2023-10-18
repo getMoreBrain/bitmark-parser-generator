@@ -322,6 +322,7 @@ class TextGenerator implements AstWalkCallbacks {
       case TextNodeType.gap:
       case TextNodeType.select:
       case TextNodeType.highlight:
+      case TextNodeType.mark:
         this.writeBodyBit(node);
         // Stop parsing the body bit
         return false;
@@ -545,6 +546,14 @@ class TextGenerator implements AstWalkCallbacks {
    */
   protected writeMarks(node: TextNode, enter: boolean): void {
     if (node.marks) {
+      // Empty marks occur when the inline mark has no attributes - write an inline mark with no attributes
+      const emptyMarks = node.marks.length === 0;
+      if (emptyMarks) {
+        // Write the mark start / end around the text
+        this.writeMarkTextWrapper(INLINE_MARK);
+        return;
+      }
+
       // Single marks are only valid if there is only one mark for this text
       const singleMark = node.marks.length === 1;
 

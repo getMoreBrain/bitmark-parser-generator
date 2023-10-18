@@ -3,27 +3,51 @@
     "bit": {
       "type": "flashcard-1",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
-      "body": "Somebody",
-      "footer": "Footer anyone?",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Footer anyone?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "cards": [
         {
           "question": "Question 1?\nCard 1, Side 1",
           "answer": "Answer 1\nCard 1, Side 2",
-          "alternativeAnswers": ["Alternative Answer 2\nCard 1, Side 2"],
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "alternativeAnswers": [
+            "Alternative Answer 2\nCard 1, Side 2"
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.11",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n~~~~\n\nFooter anyone?"
@@ -32,26 +56,39 @@
     "bit": {
       "type": "flashcard-1",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
-      "body": "Somebody",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "cards": [
         {
           "question": "Question 1?\nCard 1, Side 1",
           "answer": "Answer 1\nCard 1, Side 2",
-          "alternativeAnswers": ["Alternative Answer 2\nCard 1, Side 2"],
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "alternativeAnswers": [
+            "Alternative Answer 2\nCard 1, Side 2"
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.11",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2"
@@ -60,28 +97,83 @@
     "bit": {
       "type": "flashcard-1",
       "format": "bitmark--",
-      "item": "item",
-      "lead": "lead",
-      "hint": "",
-      "instruction": "",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "Somebody",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "cards": [
         {
           "question": "Question 2?\nCard 2, Side 1",
           "answer": "Answer 2\nCard 2, Side 2, No footer",
           "alternativeAnswers": [],
-          "item": "item",
-          "lead": "lead",
-          "hint": "",
-          "instruction": "",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "lead",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": true
         }
       ]
     },
     "parser": {
-      "version": "1.0.11",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.flashcard-1]\n[@example]\n[%item][%lead]\nSomebody\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]"
@@ -90,28 +182,83 @@
     "bit": {
       "type": "flashcard-1",
       "format": "bitmark--",
-      "item": "item",
-      "lead": "lead",
-      "hint": "",
-      "instruction": "",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "Somebody",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "cards": [
         {
           "question": "Question 1?\nCard 1, Side 1",
           "answer": "Answer 1\nCard 1, Side 2, No footer",
           "alternativeAnswers": [],
-          "item": "item",
-          "lead": "lead",
-          "hint": "",
-          "instruction": "",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "lead",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": true
         }
       ]
     },
     "parser": {
-      "version": "1.0.11",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.flashcard-1]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2, No footer\n[%item][%lead]\n[@example]"
@@ -120,47 +267,73 @@
     "bit": {
       "type": "flashcard-1",
       "format": "bitmark--",
-      "item": "item",
-      "lead": "lead",
-      "hint": "",
-      "instruction": "",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
-      "body": "Somebody",
-      "footer": "Footer anyone?",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Footer anyone?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "cards": [
         {
           "question": "Question 1?\nCard 1, Side 1",
           "answer": "Answer 1\nCard 1, Side 2, No footer",
           "alternativeAnswers": [],
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.11",
-      "bitmarkVersion": "3",
-      "warnings": [
-        {
-          "message": "Bit 'flashcard-1' should only contain one card. Ignore subsequent card: 'Question Too Many?\nCard 2, Side 1'",
-          "text": "[.flashcard-1]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2, No footer\n====\nQuestion Too Many?\nCard 2, Side 1\n--\nAnswer Too Many\nCard 2, Side 2,\n~~~~\n\nFooter anyone?\n",
-          "location": {
-            "start": {
-              "line": 56,
-              "column": 1,
-              "offset": 543
-            },
-            "end": {
-              "line": 74,
-              "column": 1,
-              "offset": 747
-            }
-          }
-        }
-      ]
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.flashcard-1]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2, No footer\n====\nQuestion Too Many?\nCard 2, Side 1\n--\nAnswer Too Many\nCard 2, Side 2,\n~~~~\n\nFooter anyone?"
   }

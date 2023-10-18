@@ -3,12 +3,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -21,12 +23,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
@@ -35,12 +37,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -53,12 +57,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif]"
@@ -67,12 +71,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -85,12 +91,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.med'ium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ'.gif]"
@@ -99,12 +105,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -117,12 +125,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ%.gif]"
@@ -131,12 +139,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -149,12 +159,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ&.gif]"
@@ -163,12 +173,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -181,12 +193,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ+.gif]"
@@ -195,12 +207,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -213,12 +227,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLG,zzOzBQ.gif]"
@@ -227,12 +241,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -245,12 +261,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ;.gif]"
@@ -259,12 +275,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -277,12 +295,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ=.gif]"
@@ -291,12 +309,14 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -309,12 +329,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGz(zOzBQ)'.gif]"
@@ -323,12 +343,25 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": ".gif]",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".gif]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -340,12 +373,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[1].gif]"
@@ -354,83 +387,43 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "id": ["304379"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "304379"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": ".gif]\n.gif]"
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".gif]\n.gif]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3",
-      "warnings": [
-        {
-          "message": "'Resource' with key 'video-link' is not valid here. It will be ignored",
-          "text": "[&video-link:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[]",
-          "location": {
-            "start": {
-              "line": 47,
-              "column": 1,
-              "offset": 1149
-            },
-            "end": {
-              "line": 47,
-              "column": 80,
-              "offset": 1228
-            }
-          }
-        },
-        {
-          "message": "'Resource' with key 'image-link' is not valid here. It will be ignored",
-          "text": "[&image-link:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[]",
-          "location": {
-            "start": {
-              "line": 48,
-              "column": 1,
-              "offset": 1234
-            },
-            "end": {
-              "line": 48,
-              "column": 80,
-              "offset": 1313
-            }
-          }
-        },
-        {
-          "message": "Resource type '&image' is required but is not present in the bit",
-          "text": "[.image]\n[@id:304379]\n[&video-link:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[].gif]\n[&image-link:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[].gif]\n\n",
-          "location": {
-            "start": {
-              "line": 45,
-              "column": 1,
-              "offset": 1127
-            },
-            "end": {
-              "line": 50,
-              "column": 1,
-              "offset": 1320
-            }
-          }
-        },
-        {
-          "message": "2 excess resource(s) present in the bit. The expected resource type is '&image'",
-          "text": "[.image]\n[@id:304379]\n[&video-link:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[].gif]\n[&image-link:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[].gif]\n\n",
-          "location": {
-            "start": {
-              "line": 45,
-              "column": 1,
-              "offset": 1127
-            },
-            "end": {
-              "line": 50,
-              "column": 1,
-              "offset": 1320
-            }
-          }
-        }
-      ],
       "excessResources": [
+        {
+          "type": "video-link",
+          "videoLink": {
+            "provider": "miro.medium.com",
+            "url": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[",
+            "width": null,
+            "height": null,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
         {
           "type": "image-link",
           "imageLink": {
@@ -442,20 +435,7 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": ""
-          }
-        },
-        {
-          "type": "video-link",
-          "videoLink": {
-            "provider": "miro.medium.com",
-            "url": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ[",
-            "width": null,
-            "height": null,
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": ""
+            "caption": []
           }
         }
       ]
@@ -466,11 +446,35 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Texte und Aufgaben in diesem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "fakultativen Teil B",
+              "type": "text"
+            },
+            {
+              "text": " stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -483,12 +487,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
@@ -497,11 +501,69 @@
     "bit": {
       "type": "image",
       "format": "bitmark++",
-      "item": "",
-      "hint": "",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\nMein Vater zum Beispiel hat drei Studiengänge absolviert, danach vierzig Jahre in einem Betrieb gearbeitet, der Schiffsausrüstungen produzierte, aber viel Spaß hat es ihm nicht gemacht. Nur im Wald fühlte er sich richtig glücklich. In Moskau widmete er seine ganze Freizeit dem Sammeln von ==Birkensaft==(@note:Saft der Birke (eines Baumes)). Viele sowjetische Bürger gingen damals auf die Suche nach ausgefallenen Lebensmitteln und Getränken. Sie vertrauten der Natur mehr als den staatlichen ==Versorgungseinrichtungen==(@note:Geschäften). Der Wald ==bescherte==(@noteschenkte) ihnen Pilze, Beeren, Kräuter und nicht zuletzt Birkensaft.",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Texte und Aufgaben in diesem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "fakultativen Teil B",
+              "type": "text"
+            },
+            {
+              "text": " stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Mein Vater zum Beispiel hat drei Studiengänge absolviert, danach vierzig Jahre in einem Betrieb gearbeitet, der Schiffsausrüstungen produzierte, aber viel Spaß hat es ihm nicht gemacht. Nur im Wald fühlte er sich richtig glücklich. In Moskau widmete er seine ganze Freizeit dem Sammeln von ",
+              "type": "text"
+            },
+            {
+              "marks": [],
+              "text": "Birkensaft",
+              "type": "text"
+            },
+            {
+              "text": "(@note:Saft der Birke (eines Baumes)). Viele sowjetische Bürger gingen damals auf die Suche nach ausgefallenen Lebensmitteln und Getränken. Sie vertrauten der Natur mehr als den staatlichen ",
+              "type": "text"
+            },
+            {
+              "marks": [],
+              "text": "Versorgungseinrichtungen",
+              "type": "text"
+            },
+            {
+              "text": "(@note:Geschäften). Der Wald ",
+              "type": "text"
+            },
+            {
+              "marks": [],
+              "text": "bescherte",
+              "type": "text"
+            },
+            {
+              "text": "(@noteschenkte) ihnen Pilze, Beeren, Kräuter und nicht zuletzt Birkensaft.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -514,12 +576,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.1.0",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image:bitmark++]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\nMein Vater zum Beispiel hat drei Studiengänge absolviert, danach vierzig Jahre in einem Betrieb gearbeitet, der Schiffsausrüstungen produzierte, aber viel Spaß hat es ihm nicht gemacht. Nur im Wald fühlte er sich richtig glücklich. In Moskau widmete er seine ganze Freizeit dem Sammeln von ==Birkensaft==(@note:Saft der Birke (eines Baumes)). Viele sowjetische Bürger gingen damals auf die Suche nach ausgefallenen Lebensmitteln und Getränken. Sie vertrauten der Natur mehr als den staatlichen ==Versorgungseinrichtungen==(@note:Geschäften). Der Wald ==bescherte==(@noteschenkte) ihnen Pilze, Beeren, Kräuter und nicht zuletzt Birkensaft.\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"

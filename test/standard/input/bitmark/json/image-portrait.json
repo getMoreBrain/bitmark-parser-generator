@@ -1,30 +1,36 @@
 [
   {
-    "bitmark": "[.image-portrait]\n[@id:342343]\n[&image:https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg]",
     "bit": {
       "type": "image-portrait",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "id": [
+        "342343"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["342343"],
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
-          "src": "https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg",
-          "showInIndex": false,
           "format": "jpg",
+          "provider": "www.apple.com",
+          "src": "https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg",
           "width": null,
           "height": null,
           "alt": "",
-          "caption": "",
           "license": "",
-          "provider": "www.apple.com",
-          "copyright": ""
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.image-portrait]\n[@id:342343]\n[&image:https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg]"
   }
 ]

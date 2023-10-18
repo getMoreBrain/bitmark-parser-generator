@@ -1,17 +1,45 @@
 [
   {
-    "bitmark": "[.output]\n[@id:51861]\n[@computerLanguage:javascript]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
     "bit": {
       "type": "output",
       "format": "bitmark--",
-      "body": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "51861"
+      ],
+      "computerLanguage": "javascript",
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["51861"],
-      "computerLanguage": "javascript",
-      "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.output]\n[@id:51861]\n[@computerLanguage:javascript]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   }
 ]

@@ -1,14 +1,46 @@
 [
   {
-    "bitmark": "[.photo]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
     "bit": {
       "type": "photo",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "example": null,
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig",
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "◼︎ Ausgewählte temporale Adjektive",
+              "type": "text"
+            },
+            {
+              "text": "\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Vergangenheit:",
+              "type": "text"
+            },
+            {
+              "text": "\n* gestrig, ehemalig, vorherig, damalig",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -21,21 +53,58 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.photo]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
   {
-    "bitmark": "[.photo&image]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
     "bit": {
       "type": "photo",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "example": null,
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig",
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "◼︎ Ausgewählte temporale Adjektive",
+              "type": "text"
+            },
+            {
+              "text": "\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Vergangenheit:",
+              "type": "text"
+            },
+            {
+              "text": "\n* gestrig, ehemalig, vorherig, damalig",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -48,9 +117,14 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
-    }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.photo&image]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   }
 ]

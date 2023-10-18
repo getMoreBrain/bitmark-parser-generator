@@ -4,50 +4,145 @@
       "type": "note-ai",
       "format": "bitmark++",
       "AIGenerated": true,
-      "ageRange": ["18", "120"],
-      "item": "",
-      "hint": "",
-      "example": null,
+      "ageRange": [
+        "18",
+        "120"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.6",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.note-ai:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@language:en]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n"
+    "bitmark": "[.note-ai:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   },
   {
     "bit": {
       "type": "note-ai",
       "format": "bitmark++",
       "AIGenerated": true,
-      "ageRange": ["18", "120"],
-      "item": "",
-      "hint": "",
-      "example": null,
+      "ageRange": [
+        "18",
+        "120"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.6",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.note-ai:bitmark++]\n[@AIGenerated:true]\n[@ageRange:18][@ageRange:120]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n"
+    "bitmark": "[.note-ai:bitmark++]\n[@AIGenerated:true]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   },
   {
     "bit": {
       "type": "note-ai",
       "format": "bitmark++",
       "AIGenerated": true,
-      "item": "",
-      "hint": "",
-      "example": null,
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book."
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.6",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.note-ai:bitmark++]\n[@AIGenerated:false]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book."

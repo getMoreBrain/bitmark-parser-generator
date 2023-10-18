@@ -3,15 +3,28 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": ["287883"],
+      "id": [
+        "287883"
+      ],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
-      "item": "",
-      "lead": "true-false",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "true-false",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
-      "body": "",
+      "body": [],
       "statements": [
         {
           "statement": "A house is bigger than a car.",
@@ -34,7 +47,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n===\n[+A house is bigger than a car.]\n===\n[+A tiger is bigger than a cat.]\n===\n[-A cow is bigger than a dog.]\n==="
@@ -43,15 +56,39 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": ["287885"],
+      "id": [
+        "287885"
+      ],
       "labelTrue": "",
       "labelFalse": "",
-      "item": "",
-      "lead": "true-false",
-      "hint": "",
-      "instruction": "What colors can cows have in Switzerland?",
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "true-false",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "What colors can cows have in Switzerland?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "statements": [
         {
           "statement": "brown",
@@ -80,7 +117,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false]\n[@id:287885]\n[%][%true-false]\n[!What colors can cows have in Switzerland?]\n===\n[+brown]\n===\n[+purple, but only in chocolate ads]\n===\n[-blue]\n===\n[-green]\n==="
@@ -89,15 +126,28 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": ["287887"],
+      "id": [
+        "287887"
+      ],
       "labelTrue": "",
       "labelFalse": "",
-      "item": "",
-      "lead": "true-false",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "true-false",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -110,7 +160,7 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       },
       "statements": [
@@ -129,7 +179,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false:bitmark--&image]\n[@id:287887]\n[%][%true-false]\n[&image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png][@width:928]\n===\n[-On the picture, you see a mouse.]\n===\n[+There is a cat on the picture.]\n==="
@@ -138,15 +188,28 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark++",
-      "id": ["249542"],
+      "id": [
+        "249542"
+      ],
       "labelTrue": "Richtig",
       "labelFalse": "Falsch",
-      "item": "",
-      "lead": "Selbsttest Grundlagen E",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Selbsttest Grundlagen E",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
-      "body": "",
+      "body": [],
       "statements": [
         {
           "statement": "Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.",
@@ -289,7 +352,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false:bitmark++]\n[@id:249542]\n[%][%Selbsttest Grundlagen E]\n[@labelTrue:Richtig][@labelFalse:Falsch]\n===\n[-Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.]\n===\n[-Die Leukozyten haben die Fächigkeit, sich aktiv fortzubewegen. Sie können fremde Zellen erkennen und diese imitieren, indem sie spezielle Substanzen freisetzen.]\n===\n[+Zu den Schutzbarrieren des Körpers gehören u.a. der Säureschutzmantel (pH-Wert), die Melanozyten (pigmentbildend gegen UV-Strahlen) und die Hornschicht der Haut.]\n===\n[-Lzmphozyten werden auch als spezifisches Immunsystem bezeichnet, da sie nur an spezifischen Geweben des Körpers ihre Immunabwehr verrichten.]\n===\n[+Makrophagen werden angelockt, indem die Antikörper aus den B-Lymphozyten die Antigene auf dem eingedrungenen Erreger besetzen.]\n===\n[-T- und B-Lymphozyten, Granulozyten und Makrophagen sind von Geburt an zur Abwehr von Krankeitserregern im Einsatz.]\n===\n[+Fieber zeigt an, dass das Immunsystem der Körpers aktiv ist, denn ab einer Körpertemperatur von 37°C können sich die Lymphoyzten besser vermehren und sind aktiver.]\n===\n[+Bei einer aktiven Impfung werden abgeschwächte Krankheitserreger in den Körper gespritzt, woraufhin die T- und B-Lzmphozyten gegen die Antigene bilden.]\n===\n[+Zu den Mikroorganismen zählen z. B. Pilze, Bakterien und Viren.]\n===\n[-Um sich zu vermehren und den Stoffwechsel aufrechtzuerhalten, benötigen Bakterien Wärme, Feuchtigkeit, Nährszoffe und einen Wirt (z. B. den Menschen).]\n===\n[-Eine Mzkosen werden Kugelbakterien (Kokken) verursacht.]\n===\n[+Medikamente, die gegen Pilze wirken, heissen Antimykotika. Medikamente gegen Viren sint Virostatika und solche gegen Bakkterien Antibiotika.]\n===\n[+Stresshormone dienen dem Körper dazu, um in lebensbedrohlichen Situationen sofort reagieren zu können.]\n===\n[-Bei der therapeutischen Nutzung von Kortison muss grundsätzlich bei alle Anwendungen, ob lokal oder systemisch, mit erheblichen Nebenwirkungen gerechnet werden.]\n===\n[-Bei den sogenannten Superinfektionen handelt es sich um die jeweiligen Varianten der Influenza, die gerade in Umlauf sind und viele Menschenleben kosten können.]\n===\n[-Sobald die klassischen Entzündungszeichen erkennbar sind, liegt immer eine Infektion mit Krankheitserregern vor.]\n===\n[+Bei der indirekten Übertragung werden Keime beispielsweise über die Türklinke weitergegeben, bei der direkten Übertragung zum Beispiel über Tröpfchen.]\n===\n[+Bei der vektoriellen Übertragung werden Krankheitserreger von z. B. Mücken oder Zecken auf den Menschen übertragen.]\n===\n[+Eine nosokomiale Infektion wurde in einer Einrichtung der Gesundheitswesens (z- B- Spital, Pflegeheim, Arztpraxis) erworben.]\n===\n[+MRSA ist die Abkürzung für Methicillin resistenter Staphylococcus aureus.]\n===\n[-Eine Händedesinfektion hat nach WHO immer zu erfolgen:\n\n• bei Arbeitsbeginn und -Ende\n• vor Mahlzeitzubereitung\n• vor und nach dem Engpässen\n• vor und nach Pausen\n• bei sichtbarer Verschmutzung der Hände\n• nach der Toilettenbenutzung]\n===\n[+Zur persönlicher Hygiene (Individualhyhiene) gehören die Haut-, die Haar-, die Nagel- und die Mundpflege.]\n===\n[+Hygiene bezieht such nicht nur auf die persönliche Hygiene (Individualhygiene). Hygiene umfasst auch Themen wie:\n\n• Lebensmittel gyhiene\n• Wasserhygiene (Trinkwasser und Abwasser)\n• Umwelthygiene (Luft, Boden)\n• Abfallentsorgung\n• Arbeitsschutz, die\n• Sozialhygiene und Psychohygiene]\n==="
@@ -298,15 +361,17 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": ["165223"],
+      "id": [
+        "165223"
+      ],
       "labelTrue": "richtig",
       "labelFalse": "falsch",
-      "item": "",
-      "lead": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
-      "body": "",
+      "body": [],
       "statements": [
         {
           "statement": "Der Säureschutzmantel und die Lipidbarriere sind in oder auf der Epidermis zu finden.",
@@ -371,7 +436,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false:bitmark--]\n[@id:165223]\n[@labelTrue:richtig][@labelFalse:falsch]\n===\n[+Der Säureschutzmantel und die Lipidbarriere sind in oder auf der Epidermis zu finden.]\n===\n[+Glycerin und Hyaluronsäure binden Feuchtigkeit in der Haut.]\n===\n[-Zu den Funktionen der Haut gehören die Bildung einer Lichtschwiele und die Ausscheidung von Urin.]\n===\n[+Die Haut verändert sich mit dem Alter, unter anderem verliert sie an Elastizität.]\n===\n[-Pflegeprodukte sind dazu da, gesunde Haut für Krankheiten empfänglicher zu machen.]\n===\n[-Wird Wasser zur Reinigung der Haut eingesetzt, so löst es vor allem Fett und hat dadurch eine austrocknende Wirkung.]\n===\n[+Wer seine Ernährung fettarm gestaltet oder die falschen Fette zu sich nimmt, kann unter trockener Haut und Juckreiz leiden.]\n===\n[+Schwitzen ist ein Mechanismus, der dem Körper hilft, die Temperatur zu regulieren.]\n===\n[+Deos beeinflussen den Geruch, Antitranispirantien reduzieren das Schwitzen.]\n===\n[+Meditation kann dabei helfen, Stress abzubauen und damit auch weniger zu schwitzen.]\n==="
@@ -380,15 +445,39 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": ["213731"],
+      "id": [
+        "213731"
+      ],
       "labelTrue": "p",
       "labelFalse": "s",
-      "item": "9",
-      "lead": "",
-      "hint": "",
-      "instruction": "Welche Art der Datenerhebung gehört zur Primär- (P), welche zur Sekundärmarktforschung (S)?",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "9",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Welche Art der Datenerhebung gehört zur Primär- (P), welche zur Sekundärmarktforschung (S)?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "statements": [
         {
           "statement": "Beobachtung",
@@ -429,7 +518,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false:bitmark--]\n[@id:213731]\n[%9]\n[!Welche Art der Datenerhebung gehört zur Primär- (P), welche zur Sekundärmarktforschung (S)?]\n[@labelTrue:p][@labelFalse:s]\n===\n[+Beobachtung]\n===\n[+Test]\n===\n[-Daten aus ausserbetrieblichen Quellen]\n===\n[-Daten aus innerbetrieblichen Quellen]\n===\n[+Telefonische Befragungen]\n===\n[+Panel]\n==="
@@ -440,12 +529,12 @@
       "format": "bitmark--",
       "labelTrue": "",
       "labelFalse": "",
-      "item": "",
-      "lead": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "",
+      "body": [],
       "statements": [
         {
           "statement": "TrueAnswer",
@@ -462,7 +551,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false]\n[@example]\n===\n[+TrueAnswer]\n===\n[-FalseAnswer]\n==="
@@ -473,12 +562,12 @@
       "format": "bitmark--",
       "labelTrue": "",
       "labelFalse": "",
-      "item": "",
-      "lead": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "",
+      "body": [],
       "statements": [
         {
           "statement": "TrueAnswer",
@@ -495,7 +584,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false]\n===\n[+TrueAnswer][@example]\n===\n[-FalseAnswer][@example]\n==="
@@ -506,12 +595,12 @@
       "format": "bitmark--",
       "labelTrue": "",
       "labelFalse": "",
-      "item": "",
-      "lead": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "",
+      "body": [],
       "statements": [
         {
           "statement": "TrueAnswer",
@@ -528,7 +617,7 @@
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.true-false]\n===\n[+TrueAnswer][@example:false]\n===\n[-FalseAnswer][@example:true]\n==="

@@ -1,27 +1,37 @@
 [
   {
-    "bitmark": "[.toc]\n[@id:92374]",
     "bit": {
       "type": "toc",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "id": [
+        "92374"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["92374"]
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.toc]\n[@id:92374]"
   },
   {
-    "bitmark": "[.toc]",
     "bit": {
       "type": "toc",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "example": null
-    }
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.toc]"
   }
 ]

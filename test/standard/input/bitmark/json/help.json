@@ -1,58 +1,190 @@
 [
   {
-    "bitmark": "[.help]\n[@id:210023]\n[%][%**Schlüsselbegriffe**]\nBedürfnis, Kundenorientierung, Marketing",
     "bit": {
       "type": "help",
       "format": "bitmark--",
-      "body": "Bedürfnis, Kundenorientierung, Marketing",
-      "item": "",
-      "hint": "",
+      "id": [
+        "210023"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Schlüsselbegriffe",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["210023"],
-      "lead": "**Schlüsselbegriffe**"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bedürfnis, Kundenorientierung, Marketing",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.help]\n[@id:210023]\n[%][%**Schlüsselbegriffe**]\nBedürfnis, Kundenorientierung, Marketing"
   },
   {
-    "bitmark": "[.help]\n[@id:210041]\n[%][%**Schlüsselbegriffe**]\nAnalyse, Budget, Instrumente, Kontrolle, Marketingkonzept, Strategien, Ziele",
     "bit": {
       "type": "help",
       "format": "bitmark--",
-      "body": "Analyse, Budget, Instrumente, Kontrolle, Marketingkonzept, Strategien, Ziele",
-      "item": "",
-      "hint": "",
+      "id": [
+        "210041"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Schlüsselbegriffe",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["210041"],
-      "lead": "**Schlüsselbegriffe**"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Analyse, Budget, Instrumente, Kontrolle, Marketingkonzept, Strategien, Ziele",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.help]\n[@id:210041]\n[%][%**Schlüsselbegriffe**]\nAnalyse, Budget, Instrumente, Kontrolle, Marketingkonzept, Strategien, Ziele"
   },
   {
-    "bitmark": "[.help]\n[@id:210064]\n[%][%**Schlüsselbegriffe**]\nBefragung, Beobachtung, externe Quellen, Fokusgruppen, interne Quellen, Markttest, Methoden, Mystery Shopping, Online-Befragung, Panel, persönliche Befragung, Primärmarktforschung, Produkttest, qualitative Marktforschung, quantitative Marktforschung, Secundärmarktforschung, Stichprobe, telefonische Befragung, Test, Werbetest",
     "bit": {
       "type": "help",
       "format": "bitmark--",
-      "body": "Befragung, Beobachtung, externe Quellen, Fokusgruppen, interne Quellen, Markttest, Methoden, Mystery Shopping, Online-Befragung, Panel, persönliche Befragung, Primärmarktforschung, Produkttest, qualitative Marktforschung, quantitative Marktforschung, Secundärmarktforschung, Stichprobe, telefonische Befragung, Test, Werbetest",
-      "item": "",
-      "hint": "",
+      "id": [
+        "210064"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Schlüsselbegriffe",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["210064"],
-      "lead": "**Schlüsselbegriffe**"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Befragung, Beobachtung, externe Quellen, Fokusgruppen, interne Quellen, Markttest, Methoden, Mystery Shopping, Online-Befragung, Panel, persönliche Befragung, Primärmarktforschung, Produkttest, qualitative Marktforschung, quantitative Marktforschung, Secundärmarktforschung, Stichprobe, telefonische Befragung, Test, Werbetest",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.help]\n[@id:210064]\n[%][%**Schlüsselbegriffe**]\nBefragung, Beobachtung, externe Quellen, Fokusgruppen, interne Quellen, Markttest, Methoden, Mystery Shopping, Online-Befragung, Panel, persönliche Befragung, Primärmarktforschung, Produkttest, qualitative Marktforschung, quantitative Marktforschung, Secundärmarktforschung, Stichprobe, telefonische Befragung, Test, Werbetest"
   },
   {
-    "bitmark": "[.help:bitmark--]\n[@id:208484]\n[%][%**Schlüsselbegriffe**]\nAufwand, Effektivität, Effizienz, Erfolg, Ertrag, Gewinn, Mehrwert, primäre Aktivitäten, Produktivität, sekundäre Aktivitäten, Verlust, Wertkette, Wertschöpfung, Wirtschaftlichkeit",
     "bit": {
       "type": "help",
       "format": "bitmark--",
-      "body": "Aufwand, Effektivität, Effizienz, Erfolg, Ertrag, Gewinn, Mehrwert, primäre Aktivitäten, Produktivität, sekundäre Aktivitäten, Verlust, Wertkette, Wertschöpfung, Wirtschaftlichkeit",
-      "item": "",
-      "hint": "",
+      "id": [
+        "208484"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Schlüsselbegriffe",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["208484"],
-      "lead": "**Schlüsselbegriffe**"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Aufwand, Effektivität, Effizienz, Erfolg, Ertrag, Gewinn, Mehrwert, primäre Aktivitäten, Produktivität, sekundäre Aktivitäten, Verlust, Wertkette, Wertschöpfung, Wirtschaftlichkeit",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.help:bitmark--]\n[@id:208484]\n[%][%**Schlüsselbegriffe**]\nAufwand, Effektivität, Effizienz, Erfolg, Ertrag, Gewinn, Mehrwert, primäre Aktivitäten, Produktivität, sekundäre Aktivitäten, Verlust, Wertkette, Wertschöpfung, Wirtschaftlichkeit"
   }
 ]

@@ -3,44 +3,57 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["186300"],
-      "item": "",
-      "hint": "",
-      "instruction": "Bitte wählen Sie alle zutreffenden Antworten",
+      "id": [
+        "186300"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bitte wählen Sie alle zutreffenden Antworten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Die Qualicard ist ein branchenspezifisches Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildun.",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Die Qualicard ist eine gesetzliche Vorschrift für die Ausbildungsbewilligung.",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Die Qualicard ist ein berufsunabhängiges Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildung.",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1]\n[@id:186300]\n[!Bitte wählen Sie alle zutreffenden Antworten]\n[-Die Qualicard ist ein branchenspezifisches Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildun.]\n[-Die Qualicard ist eine gesetzliche Vorschrift für die Ausbildungsbewilligung.]\n[+Die Qualicard ist ein berufsunabhängiges Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildung.]"
@@ -49,53 +62,66 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["186301"],
-      "item": "",
-      "hint": "",
-      "instruction": "Kreuze zwei Bereiche an, die in der Qualicard geregelt werden",
+      "id": [
+        "186301"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kreuze zwei Bereiche an, die in der Qualicard geregelt werden",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Anstellung",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Einführung in die Arbeitswelt",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Verhalten der Lernenden",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Schulische Leistungen",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1]\n[@id:186301]\n[!Kreuze zwei Bereiche an, die in der Qualicard geregelt werden]\n[+Anstellung]\n[+Einführung in die Arbeitswelt]\n[-Verhalten der Lernenden]\n[-Schulische Leistungen]"
@@ -104,53 +130,66 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["186302"],
-      "item": "",
-      "hint": "",
-      "instruction": "Welche Punkte gehören in den Einführungszprozess?",
+      "id": [
+        "186302"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Welche Punkte gehören in den Einführungszprozess?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Die Leistungen der Lernenden in der Berufsfachschule und in den überbetrieblichen Kursen werden kontrolliert und besprochen.",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Die Lernenden werden bei Lehrbeginn über Sinn und Zweck der Bildungsverordnung und des Bildungsplans (betrieblicher Bildungsplan, Modelllehrgang, etc.) informiert.",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Die Lernenden werden über die Tätigkeiten und das Arbeitsumfeld des Lehrbetriebs informiert.",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Die für die Ausbildung zuständigen Personen sind bestimmt.",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1]\n[@id:186302]\n[!Welche Punkte gehören in den Einführungszprozess?]\n[-Die Leistungen der Lernenden in der Berufsfachschule und in den überbetrieblichen Kursen werden kontrolliert und besprochen.]\n[-Die Lernenden werden bei Lehrbeginn über Sinn und Zweck der Bildungsverordnung und des Bildungsplans (betrieblicher Bildungsplan, Modelllehrgang, etc.) informiert.]\n[+Die Lernenden werden über die Tätigkeiten und das Arbeitsumfeld des Lehrbetriebs informiert.]\n[+Die für die Ausbildung zuständigen Personen sind bestimmt.]"
@@ -159,53 +198,66 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["187540"],
-      "item": "",
-      "hint": "",
-      "instruction": "Was ist das Ziel eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten",
+      "id": [
+        "187540"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Was ist das Ziel eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Die Lerndokumentation überprüfen",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Die Lernenden besser kennenzulernen",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Rückmeldung zum Verhalten und Leistung",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Überprüfen der betrieblichen Ausbildung und deren Zielen",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187540]\n[!Was ist das Ziel eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten]\n[-Die Lerndokumentation überprüfen]\n[-Die Lernenden besser kennenzulernen]\n[+Rückmeldung zum Verhalten und Leistung]\n[+Überprüfen der betrieblichen Ausbildung und deren Zielen]"
@@ -214,53 +266,66 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["187541"],
-      "item": "",
-      "hint": "",
-      "instruction": "Welche Informationsquellen für die Vorbereitung eines Gesprächs kennst du?\nBitte wählen Sie alle zutreffenden Antworten",
+      "id": [
+        "187541"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Welche Informationsquellen für die Vorbereitung eines Gesprächs kennst du?\nBitte wählen Sie alle zutreffenden Antworten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Rückmeldungen Praxisbildner/Berufsbildner",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Beobachtungen am Arbeitsplatz",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Gehörtes von Arbeitskollegen",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Lerndokumentation",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187541]\n[!Welche Informationsquellen für die Vorbereitung eines Gesprächs kennst du?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Rückmeldungen Praxisbildner/Berufsbildner]\n[+Beobachtungen am Arbeitsplatz]\n[-Gehörtes von Arbeitskollegen]\n[+Lerndokumentation]"
@@ -269,53 +334,66 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["187542"],
-      "item": "",
-      "hint": "",
-      "instruction": "Wie schaffst du eine angenehme Gesprächsumgebung? Bitte wählen Sie alle zutreffenden Antworten",
+      "id": [
+        "187542"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wie schaffst du eine angenehme Gesprächsumgebung? Bitte wählen Sie alle zutreffenden Antworten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Die Dauer des Gesprächs definieren",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Mit den Zielen für das nächste Semester beginnen",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Mit einem 'Eisbrecher' starten",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Der Sinn des Gesprächs erklären",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187542]\n[!Wie schaffst du eine angenehme Gesprächsumgebung? Bitte wählen Sie alle zutreffenden Antworten]\n[+Die Dauer des Gesprächs definieren]\n[-Mit den Zielen für das nächste Semester beginnen]\n[+Mit einem 'Eisbrecher' starten]\n[+Der Sinn des Gesprächs erklären]"
@@ -324,53 +402,66 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["187543"],
-      "item": "",
-      "hint": "",
-      "instruction": "Wenn du das Beurteilungsgespräch alleine führst, was ist dabei zu beachten?\nBitte wählen Sie alle zutreffenden Antworten",
+      "id": [
+        "187543"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wenn du das Beurteilungsgespräch alleine führst, was ist dabei zu beachten?\nBitte wählen Sie alle zutreffenden Antworten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Genügend Zeit einberechnen",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Rückmeldungen bei anderen Berufsbildner/Praxisbildner K° einholen",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Dass der Raum gross genug ist",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Mich absichern was ich von den anderen BB/PB rückmelden darf",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187543]\n[!Wenn du das Beurteilungsgespräch alleine führst, was ist dabei zu beachten?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Genügend Zeit einberechnen]\n[+Rückmeldungen bei anderen Berufsbildner/Praxisbildner K° einholen]\n[-Dass der Raum gross genug ist]\n[+Mich absichern was ich von den anderen BB/PB rückmelden darf]"
@@ -379,53 +470,66 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["187544"],
-      "item": "",
-      "hint": "",
-      "instruction": "Nach welchen Beurteilungsmerkmalen beurteilst du die Teamfähigkeit? Bitte wählen Sie alle zutreffenden Antworten",
+      "id": [
+        "187544"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nach welchen Beurteilungsmerkmalen beurteilst du die Teamfähigkeit? Bitte wählen Sie alle zutreffenden Antworten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Umgang mit Kritik",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Beteiligt sich der Lernende in Gesprächen aktiv",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Bringt sich der Lernende ins Team ein",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Pünktlichkeit",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187544]\n[!Nach welchen Beurteilungsmerkmalen beurteilst du die Teamfähigkeit? Bitte wählen Sie alle zutreffenden Antworten]\n[+Umgang mit Kritik]\n[+Beteiligt sich der Lernende in Gesprächen aktiv]\n[+Bringt sich der Lernende ins Team ein]\n[-Pünktlichkeit]"
@@ -434,53 +538,66 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["187233"],
-      "item": "",
-      "hint": "",
-      "instruction": "Was sind die Vorteile einer Lerndokumentation für den Lernenden?\nBitte wählen Sie alle zutreffenden Antworten",
+      "id": [
+        "187233"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Was sind die Vorteile einer Lerndokumentation für den Lernenden?\nBitte wählen Sie alle zutreffenden Antworten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Reflexion des Gelernten",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Neue Lernstrategien sammeln",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Zusammenfassung der neugelernten Arbeitstechniken",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Die Lerndoku dient als Nachschlagewerk",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187233]\n[!Was sind die Vorteile einer Lerndokumentation für den Lernenden?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Reflexion des Gelernten]\n[-Neue Lernstrategien sammeln]\n[+Zusammenfassung der neugelernten Arbeitstechniken]\n[+Die Lerndoku dient als Nachschlagewerk]"
@@ -489,44 +606,57 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["187234"],
-      "item": "",
-      "hint": "",
-      "instruction": "Was sind die Vorteile für den Berufsbildner/Praxisbildner\nBitte wählen Sie alle zutreffenden Antworten",
+      "id": [
+        "187234"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Was sind die Vorteile für den Berufsbildner/Praxisbildner\nBitte wählen Sie alle zutreffenden Antworten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "Lernender lernt eine Arbeit zu schreiben",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Führungsinstrument",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Übersicht über den effektiv erfolgten Bildungsverlauf",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187234]\n[!Was sind die Vorteile für den Berufsbildner/Praxisbildner\nBitte wählen Sie alle zutreffenden Antworten]\n[-Lernender lernt eine Arbeit zu schreiben]\n[+Führungsinstrument]\n[+Übersicht über den effektiv erfolgten Bildungsverlauf]"
@@ -535,80 +665,115 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "id": ["208470"],
-      "item": "4",
-      "hint": "",
-      "instruction": "Markieren Sie die Produktionsfaktoren.",
+      "id": [
+        "208470"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Markieren Sie die Produktionsfaktoren.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "Die für die Produktion von Gütern eingesetzten Mittel nennt man Produktionsfaktoren. Davon gibt es 4.",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die für die Produktion von Gütern eingesetzten Mittel nennt man Produktionsfaktoren. Davon gibt es 4.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "responses": [
         {
           "response": "Know-how",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Arbeit",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Arbeitslosigkeit",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Werkstoffe",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Betriebsmittel",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Ressourcen",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "Konsumgüter",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1]\n[@id:208470]\n[%4]\nDie für die Produktion von Gütern eingesetzten Mittel nennt man Produktionsfaktoren. Davon gibt es 4.\n[!Markieren Sie die Produktionsfaktoren.]\n[+Know-how]\n[+Arbeit]\n[-Arbeitslosigkeit]\n[+Werkstoffe]\n[+Betriebsmittel]\n[-Ressourcen]\n[-Konsumgüter]"
@@ -617,43 +782,43 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "CorrectAnswer1",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": true
         },
         {
           "response": "CorrectAnswer2",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": true
         },
         {
           "response": "FalseAnswer3",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": false
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@example]\n[+CorrectAnswer1]\n[+CorrectAnswer2]\n[-FalseAnswer3]"
@@ -662,43 +827,43 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "CorrectAnswer1",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": true
         },
         {
           "response": "CorrectAnswer2",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": true
         },
         {
           "response": "FalseAnswer3",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": false
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[+CorrectAnswer1][@example]\n[+CorrectAnswer2][@example]\n[-FalseAnswer3][@example]"
@@ -707,43 +872,43 @@
     "bit": {
       "type": "multiple-response-1",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "",
+      "body": [],
       "responses": [
         {
           "response": "CorrectAnswer1",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": false
         },
         {
           "response": "CorrectAnswer2",
           "isCorrect": true,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": false,
           "example": null
         },
         {
           "response": "FalseAnswer3",
           "isCorrect": false,
-          "item": "",
-          "hint": "",
-          "instruction": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
           "isExample": true,
           "example": true
         }
       ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[+CorrectAnswer1][@example:false]\n[+CorrectAnswer2]\n[-FalseAnswer3][@example:true]"

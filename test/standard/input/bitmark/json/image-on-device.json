@@ -3,12 +3,14 @@
     "bit": {
       "type": "image-on-device",
       "format": "bitmark--",
-      "id": ["342343"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "342343"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "imageSource": {
         "url": "http://url.to/an/image.png",
         "mockupId": "YXpoZdyRLAKQHgQA",
@@ -18,7 +20,7 @@
       }
     },
     "parser": {
-      "version": "1.2.2",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image-on-device]\n[@id:342343]\n[@imageSource:http://url.to/an/image.png][@mockupId:YXpoZdyRLAKQHgQA][@size:1000][@format:image/webp][@trim:false]"
@@ -27,12 +29,14 @@
     "bit": {
       "type": "image-on-device",
       "format": "bitmark--",
-      "id": ["342343"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "342343"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -45,12 +49,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.2.2",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image-on-device]\n[@id:342343]\n[&image:https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg]"
@@ -59,12 +63,14 @@
     "bit": {
       "type": "image-on-device",
       "format": "bitmark--",
-      "id": ["342343"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "342343"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "imageSource": {
         "url": "http://url.to/an/image.png",
         "mockupId": "",
@@ -74,26 +80,8 @@
       }
     },
     "parser": {
-      "version": "1.2.2",
-      "bitmarkVersion": "3",
-      "warnings": [
-        {
-          "message": "[@mockupId:xxx] is missing from [@imageSource]",
-          "text": "[@imageSource:http://url.to/an/image.png]",
-          "location": {
-            "start": {
-              "line": 13,
-              "column": 1,
-              "offset": 317
-            },
-            "end": {
-              "line": 13,
-              "column": 42,
-              "offset": 358
-            }
-          }
-        }
-      ]
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.image-on-device]\n[@id:342343]\n[@imageSource:http://url.to/an/image.png][@size:1000][@format:image/webp][@trim:false]"
   },
@@ -101,12 +89,14 @@
     "bit": {
       "type": "image-on-device",
       "format": "bitmark--",
-      "id": ["342343"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "342343"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "imageSource": {
         "url": "http://url.to/an/image.png",
         "mockupId": "YXpoZdyRLAKQHgQA",
@@ -116,7 +106,7 @@
       }
     },
     "parser": {
-      "version": "1.2.2",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image-on-device]\n[@id:342343]\n[@imageSource:http://url.to/an/image.png][@mockupId:YXpoZdyRLAKQHgQA]"

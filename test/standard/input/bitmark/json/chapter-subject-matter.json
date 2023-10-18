@@ -1,15 +1,32 @@
 [
   {
-    "bitmark": "[.chapter-subject-matter]\n[@id:342336]\nChapter subject matter\nIt's exactly the same as an .article.",
     "bit": {
       "type": "chapter-subject-matter",
       "format": "bitmark--",
-      "body": "Chapter subject matter\nIt's exactly the same as an .article.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "342336"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["342336"]
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Chapter subject matter\nIt's exactly the same as an .article.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.chapter-subject-matter]\n[@id:342336]\nChapter subject matter\nIt's exactly the same as an .article."
   }
 ]
