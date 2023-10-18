@@ -12,6 +12,7 @@ export type RootOrAliasBitTypeType = RootBitTypeType | AliasBitTypeType;
 
 const RootBitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
+  _comment: '_comment', // Used to indicate a bit is commented out
   appBitmarkFromJavascript: 'app-bitmark-from-javascript',
   appFlashcards: 'app-flashcards',
   appLink: 'app-link',

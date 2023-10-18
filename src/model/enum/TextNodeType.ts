@@ -21,6 +21,7 @@ const TextNodeType = superenum({
   gap: 'gap',
   select: 'select',
   highlight: 'highlight',
+  mark: 'mark',
 });
 
 export type TextNodeTypeType = EnumType<typeof TextNodeType>;

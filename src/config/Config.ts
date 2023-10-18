@@ -417,7 +417,14 @@ class Config {
    */
   private getRootBitType(bitTypeOrAlias: RootOrAliasBitTypeType | undefined): RootBitTypeType {
     if (!bitTypeOrAlias) return RootBitType._error;
-    return this.bitTypeAliasMap.get(bitTypeOrAlias) ?? RootBitType._error;
+
+    let bitType = this.bitTypeAliasMap.get(bitTypeOrAlias) ?? RootBitType._error;
+
+    if (bitType === RootBitType._error && bitTypeOrAlias && bitTypeOrAlias.startsWith('|')) {
+      bitType = RootBitType._comment;
+    }
+
+    return bitType;
   }
 
   /**
@@ -427,7 +434,14 @@ class Config {
    * @returns
    */
   private getAliasedBitType(bitTypeOrAlias: string | undefined): RootOrAliasBitTypeType {
-    return AliasBitType.fromValue(bitTypeOrAlias) ?? RootBitType.fromValue(bitTypeOrAlias) ?? RootBitType._error;
+    let bitType: RootOrAliasBitTypeType =
+      AliasBitType.fromValue(bitTypeOrAlias) ?? RootBitType.fromValue(bitTypeOrAlias) ?? RootBitType._error;
+
+    if (bitType === RootBitType._error && bitTypeOrAlias && bitTypeOrAlias.startsWith('|')) {
+      bitType = RootBitType._comment;
+    }
+
+    return bitType;
   }
 }
 

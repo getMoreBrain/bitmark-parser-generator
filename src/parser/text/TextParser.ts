@@ -62,7 +62,11 @@ class TextParser {
   toAst(text: string | TextAst | undefined, options?: BitmarkTextParserOptions): TextAst {
     // If input is not a string, return it as is
     if (Array.isArray(text)) return text;
-    const str = text as string;
+    const str = (text as string) ?? '';
+
+    // If the str is empty, return an empty array (as otherwise the parser will
+    // return an empty paragraph which is unnecessary)
+    if (!str) return [];
 
     // Ensure options is an object
     const opts = Object.assign({}, options);
@@ -72,7 +76,7 @@ class TextParser {
 
     const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
 
-    return bitmarkTextParse(str ?? '', {
+    return bitmarkTextParse(str, {
       startRule,
     });
   }

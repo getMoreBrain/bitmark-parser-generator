@@ -210,6 +210,9 @@ class BitmarkPegParserProcessor {
     // Bit type was invalid, so ignore the bit, returning instead the parsing errors
     if (!bitType || bitType.root === RootBitType._error) return this.invalidBit();
 
+    // Bit type was comment, so ignore the bit, returning the comment info instead
+    if (bitType.root === RootBitType._comment) return this.commentBit();
+
     if (DEBUG_BIT_CONTENT_RAW) this.debugPrint('BIT CONTENT RAW', bitContent);
 
     const isTrueFalseV1 = bitType.root === RootBitType.trueFalse1;
@@ -292,12 +295,28 @@ class BitmarkPegParserProcessor {
     return { value: bit };
   }
 
+  // Build bit for commented bit
+  commentBit(): SubParserResult<Bit> {
+    // Build the errors
+    this.parser.errors = this.buildBitLevelErrors();
+
+    // Build the error bit
+    const bit = builder.bit({
+      bitType: Config.getBitType(RootBitType._comment),
+      parser: this.parser,
+    });
+
+    return { value: bit };
+  }
+
   // Build bit header
   buildBitHeader(bitType: string, textFormatAndResourceType: Partial<BitHeader>): BitHeader {
     // Get / check bit type
     const validBitType = Config.getBitType(bitType);
     if (validBitType.root === RootBitType._error) {
       this.addError(`Invalid bit type: '${bitType}'`);
+    } else if (validBitType.root === RootBitType._comment) {
+      this.parser.commentedBitType = `[.${bitType.slice(1)}]`;
     }
 
     return {

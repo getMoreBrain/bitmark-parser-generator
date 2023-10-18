@@ -12,8 +12,11 @@ const BITS: _BitsConfig = {
   [RootBitType._error]: {
     since: '1.3.0',
     tags: [],
-    bodyAllowed: true,
-    aliases: {},
+  },
+
+  [RootBitType._comment]: {
+    since: '1.4.12',
+    tags: [],
   },
 
   [RootBitType.appFlashcards]: {
