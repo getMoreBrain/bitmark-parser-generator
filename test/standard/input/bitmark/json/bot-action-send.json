@@ -1,15 +1,19 @@
 [
   {
-    "bitmark": "[.bot-action-send]\n[@date:2022-10-01T08:00:00CET]",
     "bit": {
       "type": "bot-action-send",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "date": "2022-10-01T08:00:00CET",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "date": "2022-10-01T08:00:00CET"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bot-action-send]\n[@date:2022-10-01T08:00:00CET]"
   }
 ]

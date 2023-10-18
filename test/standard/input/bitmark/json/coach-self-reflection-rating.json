@@ -3,16 +3,40 @@
     "bit": {
       "type": "coach-self-reflection-rating",
       "format": "bitmark--",
-      "id": ["239803"],
-      "item": "",
-      "lead": "Reflexion",
-      "hint": "",
+      "id": [
+        "239803"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Reflexion",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "Halte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest, du kannst diese auch auf diese Seite im Buch heften und später zurückkommen, um für dich zu sehen, was sich über die Zeit an deiner Perspektive verändert."
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Halte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest, du kannst diese auch auf diese Seite im Buch heften und später zurückkommen, um für dich zu sehen, was sich über die Zeit an deiner Perspektive verändert.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.17",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-rating]\n[@id:239803]\n[%][%Reflexion]\nHalte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest, du kannst diese auch auf diese Seite im Buch heften und später zurückkommen, um für dich zu sehen, was sich über die Zeit an deiner Perspektive verändert."
@@ -21,98 +45,38 @@
     "bit": {
       "type": "coach-self-reflection-rating",
       "format": "bitmark--",
-      "id": ["239896"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "239896"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "**Avatar – Ein Avatar ist ein*e grafische*r Stellvertreter*in für eine echte Person**, dies können auch echte Bilder der Schüler*innen sein oder eigene gewählte Symbole, Zeichnungen oder künstlich erstelle Personen."
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Avatar – Ein Avatar ist ein*e grafische*r Stellvertreter*in für eine echte Person",
+              "type": "text"
+            },
+            {
+              "text": ", dies können auch echte Bilder der Schüler*innen sein oder eigene gewählte Symbole, Zeichnungen oder künstlich erstelle Personen.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.17",
+      "version": "1.4.12",
       "bitmarkVersion": "3",
-      "warnings": [
-        {
-          "message": "'Resource' with key 'image' is not valid here. It will be ignored",
-          "text": "[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png]",
-          "location": {
-            "start": {
-              "line": 8,
-              "column": 1,
-              "offset": 302
-            },
-            "end": {
-              "line": 8,
-              "column": 135,
-              "offset": 436
-            }
-          }
-        },
-        {
-          "message": "'Property' with key 'width' is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
-          "text": "[@width:150]",
-          "location": {
-            "start": {
-              "line": 8,
-              "column": 135,
-              "offset": 436
-            },
-            "end": {
-              "line": 8,
-              "column": 147,
-              "offset": 448
-            }
-          }
-        },
-        {
-          "message": "Resource type '&image' is specified in the bit header, but no extra resource is allowed for this bit.",
-          "text": "[.coach-self-reflection-rating:bitmark--&image]\n[@id:239896]\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png][@width:150]\n**Avatar – Ein Avatar ist ein*e grafische*r Stellvertreter*in für eine echte Person**, dies können auch echte Bilder der Schüler*innen sein oder eigene gewählte Symbole, Zeichnungen oder künstlich erstelle Personen.\n\n",
-          "location": {
-            "start": {
-              "line": 6,
-              "column": 1,
-              "offset": 263
-            },
-            "end": {
-              "line": 11,
-              "column": 1,
-              "offset": 666
-            }
-          }
-        },
-        {
-          "message": "Resource type '&image' is specified in the bit header, but no such a resource is present in the bit",
-          "text": "[.coach-self-reflection-rating:bitmark--&image]\n[@id:239896]\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png][@width:150]\n**Avatar – Ein Avatar ist ein*e grafische*r Stellvertreter*in für eine echte Person**, dies können auch echte Bilder der Schüler*innen sein oder eigene gewählte Symbole, Zeichnungen oder künstlich erstelle Personen.\n\n",
-          "location": {
-            "start": {
-              "line": 6,
-              "column": 1,
-              "offset": 263
-            },
-            "end": {
-              "line": 11,
-              "column": 1,
-              "offset": 666
-            }
-          }
-        },
-        {
-          "message": "1 excess resource(s) present in the bit. The expected resource type is 'NONE'",
-          "text": "[.coach-self-reflection-rating:bitmark--&image]\n[@id:239896]\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png][@width:150]\n**Avatar – Ein Avatar ist ein*e grafische*r Stellvertreter*in für eine echte Person**, dies können auch echte Bilder der Schüler*innen sein oder eigene gewählte Symbole, Zeichnungen oder künstlich erstelle Personen.\n\n",
-          "location": {
-            "start": {
-              "line": 6,
-              "column": 1,
-              "offset": 263
-            },
-            "end": {
-              "line": 11,
-              "column": 1,
-              "offset": 666
-            }
-          }
-        }
-      ],
       "excessResources": [
         {
           "type": "image",
@@ -120,13 +84,13 @@
             "format": "png",
             "provider": "docs.bitmark.cloud",
             "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png",
-            "width": null,
+            "width": "150",
             "height": null,
             "alt": "",
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": ""
+            "caption": []
           }
         }
       ]
@@ -137,16 +101,218 @@
     "bit": {
       "type": "coach-self-reflection-rating",
       "format": "bitmark--",
-      "id": ["234993"],
-      "item": "",
-      "lead": "Agendabeispiel 1: Inhaltlicher Einstieg – Beispielthema: Einnerungskultur & Deutsche Geschichte",
-      "hint": "",
+      "id": [
+        "234993"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Agendabeispiel 1: Inhaltlicher Einstieg – Beispielthema: Einnerungskultur & Deutsche Geschichte",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "**09:50 Uhr** – Ankommen (bei Onlinesession Videokonferenzraum öffnen)\n**10:00 Uhr** – Gemeinsamer Start\n• Check-In/Warm-Up – z.B. mit __Drei Hashtags__: Welche nationalen/internationalen Gedenktage kennst du?\n**10:05 Uhr** – Einstieg ins Thema\n• Austausch in __Breakout-Räumen__ (3er bis 4er Gruppen). Leitenden Fragen z.B.:\n• Welche Formen gibt es, um an historische Ereignisse zu erinnern?\n• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?\n• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?\n• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.\n• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.\n**10:30 Uhr** – Thema vertiefen & Inhalte erarbeiten\n• __Breakout-Räume__: Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.\n**11:00 Uhr** – Kurze Pause oder Energizer\n**11:05 Uhr** – Kritische Auseinandersetzung\n• Mit einer __stillen Diskussion__ erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.\n**11:20 Uhr** – Zusammenfassung (durch dich oder Schüler*innen)\n**11:25 Uhr** – Reflexion & Check-Out\n• __Klebezettel-Methode__: Was möchte ich für mich mitnehmen?\n**11:30 Uhr** – ENDE"
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "09:50 Uhr",
+              "type": "text"
+            },
+            {
+              "text": " – Ankommen (bei Onlinesession Videokonferenzraum öffnen)\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "10:00 Uhr",
+              "type": "text"
+            },
+            {
+              "text": " – Gemeinsamer Start\n• Check-In/Warm-Up – z.B. mit ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "Drei Hashtags",
+              "type": "text"
+            },
+            {
+              "text": ": Welche nationalen/internationalen Gedenktage kennst du?\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "10:05 Uhr",
+              "type": "text"
+            },
+            {
+              "text": " – Einstieg ins Thema\n• Austausch in ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "Breakout-Räumen",
+              "type": "text"
+            },
+            {
+              "text": " (3er bis 4er Gruppen). Leitenden Fragen z.B.:\n• Welche Formen gibt es, um an historische Ereignisse zu erinnern?\n• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?\n• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?\n• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.\n• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "10:30 Uhr",
+              "type": "text"
+            },
+            {
+              "text": " – Thema vertiefen & Inhalte erarbeiten\n• ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "Breakout-Räume",
+              "type": "text"
+            },
+            {
+              "text": ": Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "11:00 Uhr",
+              "type": "text"
+            },
+            {
+              "text": " – Kurze Pause oder Energizer\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "11:05 Uhr",
+              "type": "text"
+            },
+            {
+              "text": " – Kritische Auseinandersetzung\n• Mit einer ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "stillen Diskussion",
+              "type": "text"
+            },
+            {
+              "text": " erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "11:20 Uhr",
+              "type": "text"
+            },
+            {
+              "text": " – Zusammenfassung (durch dich oder Schüler*innen)\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "11:25 Uhr",
+              "type": "text"
+            },
+            {
+              "text": " – Reflexion & Check-Out\n• ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "Klebezettel-Methode",
+              "type": "text"
+            },
+            {
+              "text": ": Was möchte ich für mich mitnehmen?\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "11:30 Uhr",
+              "type": "text"
+            },
+            {
+              "text": " – ENDE",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.17",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-rating]\n[@id:234993]\n[%][%Agendabeispiel 1: Inhaltlicher Einstieg – Beispielthema: Einnerungskultur & Deutsche Geschichte]\n**09:50 Uhr** – Ankommen (bei Onlinesession Videokonferenzraum öffnen)\n**10:00 Uhr** – Gemeinsamer Start\n• Check-In/Warm-Up – z.B. mit __Drei Hashtags__: Welche nationalen/internationalen Gedenktage kennst du?\n**10:05 Uhr** – Einstieg ins Thema\n• Austausch in __Breakout-Räumen__ (3er bis 4er Gruppen). Leitenden Fragen z.B.:\n• Welche Formen gibt es, um an historische Ereignisse zu erinnern?\n• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?\n• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?\n• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.\n• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.\n**10:30 Uhr** – Thema vertiefen & Inhalte erarbeiten\n• __Breakout-Räume__: Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.\n**11:00 Uhr** – Kurze Pause oder Energizer\n**11:05 Uhr** – Kritische Auseinandersetzung\n• Mit einer __stillen Diskussion__ erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.\n**11:20 Uhr** – Zusammenfassung (durch dich oder Schüler*innen)\n**11:25 Uhr** – Reflexion & Check-Out\n• __Klebezettel-Methode__: Was möchte ich für mich mitnehmen?\n**11:30 Uhr** – ENDE"

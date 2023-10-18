@@ -3,11 +3,11 @@
     "bit": {
       "type": "image-responsive",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image-responsive",
         "imagePortrait": {
@@ -20,7 +20,7 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         },
         "imageLandscape": {
           "format": "jpg",
@@ -32,12 +32,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.2.2",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.image-responsive]\n[&image-portrait:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]\n[&image-landscape:https://docs.bitmark.cloud/bit-books/ef/unit_1/web-resources/audio/b1_1_1_6_j.jpg]"
@@ -46,75 +46,47 @@
     "bit": {
       "type": "image-responsive",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten."
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Texte und Aufgaben in diesem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "fakultativen Teil B",
+              "type": "text"
+            },
+            {
+              "text": " stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.2.2",
-      "bitmarkVersion": "3",
-      "comments": [
-        {
-          "text": " This bit is incorrect as it should have an image-portrait resource and an image-landscape resource ",
-          "location": {
-            "start": {
-              "line": 7,
-              "column": 1,
-              "offset": 288
-            },
-            "end": {
-              "line": 7,
-              "column": 105,
-              "offset": 392
-            }
-          }
-        }
-      ],
-      "warnings": [
-        {
-          "message": "'Resource' with key 'image-responsive' is not valid here. It will be ignored",
-          "text": "[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
-          "location": {
-            "start": {
-              "line": 9,
-              "column": 1,
-              "offset": 566
-            },
-            "end": {
-              "line": 9,
-              "column": 151,
-              "offset": 716
-            }
-          }
-        },
-        {
-          "message": "1 excess resource(s) present in the bit. The expected resource types are [&image-portrait] and [&image-landscape]",
-          "text": "[.image-responsive]\n|| This bit is incorrect as it should have an image-portrait resource and an image-landscape resource ||\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n",
-          "location": {
-            "start": {
-              "line": 6,
-              "column": 1,
-              "offset": 268
-            },
-            "end": {
-              "line": 11,
-              "column": 1,
-              "offset": 718
-            }
-          }
-        }
-      ],
-      "excessResources": []
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
-    "bitmark": "[.image-responsive]\n|| This bit is incorrect as it should have an image-portrait resource and an image-landscape resource ||\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
+    "bitmark": "[.image-responsive]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
   {
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "body": "",
+      "body": [],
       "resource": {
         "type": "image-responsive",
         "imagePortrait": {
@@ -127,7 +99,7 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         },
         "imageLandscape": {
           "format": "jpg",
@@ -139,12 +111,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.2.2",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark--&image-responsive]\n[&image-portrait:https://docs.bitmark.cloud/bit-books/alemania/book_1/web-resources/images/alemania_book1_01_v2.png]\n[&image-landscape:https://docs.bitmark.cloud/bit-books/alemania/book_1/web-resources/images/alemania_book1_01_v2.jpg]"

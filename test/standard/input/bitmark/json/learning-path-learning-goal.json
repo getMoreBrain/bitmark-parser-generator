@@ -1,19 +1,45 @@
 [
   {
-    "bitmark": "[.learning-path-learning-goal]\n[!Nullserie]\n[@action:Päsenz-Seminar]\n[@duration:3600s]\nCan also contain resources like all bits",
     "bit": {
       "type": "learning-path-learning-goal",
       "format": "bitmark--",
-      "body": "Can also contain resources like all bits",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": null,
+      "action": "Päsenz-Seminar",
+      "duration": "3600s",
       "isTracked": true,
       "isInfoOnly": false,
-      "instruction": "Nullserie",
-      "action": "Päsenz-Seminar",
-      "duration": "3600s"
-    }
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nullserie",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can also contain resources like all bits",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.learning-path-learning-goal]\n[!Nullserie]\n[@action:Päsenz-Seminar]\n[@duration:3600s]\nCan also contain resources like all bits"
   }
 ]

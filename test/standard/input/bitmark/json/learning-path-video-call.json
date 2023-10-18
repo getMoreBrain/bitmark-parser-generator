@@ -1,17 +1,21 @@
 [
   {
-    "bitmark": "[.learning-path-video-call]\n[@videoCallLink:https://yasminboland.com/video/call.php]",
     "bit": {
       "type": "learning-path-video-call",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": null,
+      "videoCallLink": "https://yasminboland.com/video/call.php",
       "isTracked": true,
       "isInfoOnly": false,
-      "videoCallLink": "https://yasminboland.com/video/call.php"
-    }
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.learning-path-video-call]\n[@videoCallLink:https://yasminboland.com/video/call.php]"
   }
 ]

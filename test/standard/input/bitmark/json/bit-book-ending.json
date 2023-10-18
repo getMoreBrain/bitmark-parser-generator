@@ -3,11 +3,15 @@
     "bit": {
       "type": "bit-book-ending",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "example": null,
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": ""
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.bit-book-ending]"
   }

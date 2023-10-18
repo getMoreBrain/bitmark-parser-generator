@@ -1,120 +1,156 @@
 [
   {
-    "bitmark": "[.bit-alias][►com.firstpub.09823409h44]",
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "reference": "com.firstpub.09823409h44",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "reference": "com.firstpub.09823409h44"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bit-alias][►com.firstpub.09823409h44]"
   },
   {
-    "bitmark": "[.bit-alias][►com.firstpub.09823409h50][▼b1_c03]",
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": null,
+      "anchor": "b1_c03",
       "reference": "com.firstpub.09823409h50",
-      "anchor": "b1_c03"
-    }
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bit-alias][►com.firstpub.09823409h50][▼b1_c03]"
   },
   {
-    "bitmark": "[.bit-alias][►com.firstpub.09823409h54]",
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "reference": "com.firstpub.09823409h54",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "reference": "com.firstpub.09823409h54"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bit-alias][►com.firstpub.09823409h54]"
   },
   {
-    "bitmark": "[.bit-alias][►com.firstpub.09823409h56]",
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "reference": "com.firstpub.09823409h56",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "reference": "com.firstpub.09823409h56"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bit-alias][►com.firstpub.09823409h56]"
   },
   {
-    "bitmark": "[.bit-alias][►com.firstpub.09823409h42]",
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "reference": "com.firstpub.09823409h42",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "reference": "com.firstpub.09823409h42"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bit-alias][►com.firstpub.09823409h42]"
   },
   {
-    "bitmark": "[.bit-alias][►com.firstpub.09823409h43]",
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "reference": "com.firstpub.09823409h43",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "reference": "com.firstpub.09823409h43"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bit-alias][►com.firstpub.09823409h43]"
   },
   {
-    "bitmark": "[.bit-alias][►com.firstpub.09823409h44]",
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "reference": "com.firstpub.09823409h44",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "reference": "com.firstpub.09823409h44"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bit-alias][►com.firstpub.09823409h44]"
   },
   {
-    "bitmark": "[.bit-alias][►com.firstpub.09823409h45]",
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "reference": "com.firstpub.09823409h45",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "reference": "com.firstpub.09823409h45"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bit-alias][►com.firstpub.09823409h45]"
   },
   {
-    "bitmark": "[.bit-alias][►com.firstpub.09823409h47]",
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "reference": "com.firstpub.09823409h47",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "reference": "com.firstpub.09823409h47"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bit-alias][►com.firstpub.09823409h47]"
   }
 ]

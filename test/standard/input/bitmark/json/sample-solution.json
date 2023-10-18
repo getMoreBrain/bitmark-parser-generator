@@ -1,13 +1,28 @@
 [
   {
-    "bitmark": "[.sample-solution][!More examples and quizzes...][►Ref4.2.34]\n\n[▼I am an anchor]",
     "bit": {
       "type": "sample-solution",
       "format": "bitmark--",
-      "body": "",
-      "instruction": "More examples and quizzes...",
+      "anchor": "I am an anchor",
       "reference": "Ref4.2.34",
-      "anchor": "I am an anchor"
-    }
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "More examples and quizzes...",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.sample-solution][!More examples and quizzes...][►Ref4.2.34]\n\n[▼I am an anchor]"
   }
 ]

@@ -1,35 +1,63 @@
 [
   {
-    "bitmark": "[.learning-path-lti&image]\n[&image:https://our.s3/book_cover.jpg]\n[!Nullserie]\n[@action:Übungsprüfung]\n[@deeplink:https://other.platform/path/to/quiz]\n[@duration:3600s]\nOf course, it exists without the image resource like any other bit.\nIt works like a .article (instruction, body, resources, …)\nIt just adds action, duration and deepLink\nThree strings",
     "bit": {
       "type": "learning-path-lti",
       "format": "bitmark--",
-      "body": "Of course, it exists without the image resource like any other bit.\nIt works like a .article (instruction, body, resources, …)\nIt just adds action, duration and deepLink\nThree strings",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": null,
+      "action": "Übungsprüfung",
+      "deeplink": [
+        "https://other.platform/path/to/quiz"
+      ],
+      "duration": "3600s",
       "isTracked": true,
       "isInfoOnly": false,
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nullserie",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Of course, it exists without the image resource like any other bit.\nIt works like a .article (instruction, body, resources, …)\nIt just adds action, duration and deepLink\nThree strings",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "image",
         "image": {
-          "src": "https://our.s3/book_cover.jpg",
-          "showInIndex": false,
           "format": "jpg",
+          "provider": "our.s3",
+          "src": "https://our.s3/book_cover.jpg",
           "width": null,
           "height": null,
           "alt": "",
-          "caption": "",
           "license": "",
-          "provider": "our.s3",
-          "copyright": ""
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
         }
-      },
-      "instruction": "Nullserie",
-      "action": "Übungsprüfung",
-      "deeplink": ["https://other.platform/path/to/quiz"],
-      "duration": "3600s"
-    }
+      }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.learning-path-lti&image]\n[&image:https://our.s3/book_cover.jpg]\n[!Nullserie]\n[@action:Übungsprüfung]\n[@deeplink:https://other.platform/path/to/quiz]\n[@duration:3600s]\nOf course, it exists without the image resource like any other bit.\nIt works like a .article (instruction, body, resources, …)\nIt just adds action, duration and deepLink\nThree strings"
   }
 ]

@@ -1,14 +1,97 @@
 [
   {
-    "bitmark": "[.question-1]\n\n**Hier finden Sie wichtigen Wortschatz des Kapitels:**\n[%D1]\n[@language:Indonesian]\n**Angaben zur eigenen Person**\n* Ich heiße ...\n* Mein Name ist ...\n* Ich komme aus ...\n* Ich wohne in ...\n* Ich bin von Beruf ...\n* Ich arbeite bei ... als ...\n* Ich bin ledig/Single, verheiratet, geschieden.\n* Ich habe die __(deutsche)__ Staatsbürgerschaft.\n* Ich bin __(Deutsche(r)). __\n* In meiner Freizeit ...\n\n**Schule und Ausbildung**",
     "bit": {
       "type": "question-1",
       "format": "bitmark--",
-      "body": "**Hier finden Sie wichtigen Wortschatz des Kapitels:**\n\n\n**Angaben zur eigenen Person**\n* Ich heiße ...\n* Mein Name ist ...\n* Ich komme aus ...\n* Ich wohne in ...\n* Ich bin von Beruf ...\n* Ich arbeite bei ... als ...\n* Ich bin ledig/Single, verheiratet, geschieden.\n* Ich habe die __(deutsche)__ Staatsbürgerschaft.\n* Ich bin __(Deutsche(r)). __\n* In meiner Freizeit ...\n\n**Schule und Ausbildung**",
-      "item": "D1",
-      "hint": "",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "D1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
-      "example": null
-    }
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Hier finden Sie wichtigen Wortschatz des Kapitels:",
+              "type": "text"
+            },
+            {
+              "text": "\n\n\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Angaben zur eigenen Person",
+              "type": "text"
+            },
+            {
+              "text": "\n* Ich heiße ...\n* Mein Name ist ...\n* Ich komme aus ...\n* Ich wohne in ...\n* Ich bin von Beruf ...\n* Ich arbeite bei ... als ...\n* Ich bin ledig/Single, verheiratet, geschieden.\n* Ich habe die ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "(deutsche)",
+              "type": "text"
+            },
+            {
+              "text": " Staatsbürgerschaft.\n* Ich bin ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "(Deutsche(r)).",
+              "type": "text"
+            },
+            {
+              "text": "\n* In meiner Freizeit ...\n\n",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Schule und Ausbildung",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.question-1]\n\n**Hier finden Sie wichtigen Wortschatz des Kapitels:**\n[%D1]\n\n**Angaben zur eigenen Person**\n* Ich heiße ...\n* Mein Name ist ...\n* Ich komme aus ...\n* Ich wohne in ...\n* Ich bin von Beruf ...\n* Ich arbeite bei ... als ...\n* Ich bin ledig/Single, verheiratet, geschieden.\n* Ich habe die __(deutsche)__ Staatsbürgerschaft.\n* Ich bin __(Deutsche(r)). __\n* In meiner Freizeit ...\n\n**Schule und Ausbildung**"
   }
 ]

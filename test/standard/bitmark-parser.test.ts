@@ -87,11 +87,12 @@ describe('bitmark-parser', () => {
         const originalMarkupFile = path.resolve(fullFolder, `${id}.bit`);
         const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
         const generatedJsonFile = path.resolve(fullFolder, `${id}.gen.json`);
+        // const generatedJsonFile = path.resolve(fullFolder, 'hack', `${id}.json`); // For regenerating JSON to compare against
         const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
         const jsonOptions = {
-          textAsPlainText: true, // For testing the parser, use plain text rather than JSON for text
+          textAsPlainText: false, // For testing the parser, use v3 json text rather than plain text in the JSON
           prettify: true, // For testing the output is easier to read if it is prettified
         };
 

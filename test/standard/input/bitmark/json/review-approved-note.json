@@ -1,30 +1,153 @@
 [
   {
-    "bitmark": "[.review-approved-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt.",
     "bit": {
       "type": "review-approved-note",
       "format": "bitmark--",
-      "body": "Nach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "210022"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Lernziele",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["210022"],
-      "lead": "**Lernziele**"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.review-approved-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt."
   },
   {
-    "bitmark": "[.review-approved-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n• die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.\n• erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.\n• verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird.",
     "bit": {
       "type": "review-approved-note",
       "format": "bitmark++",
-      "body": "Nach der Bearbeitung dieses Kapitels können Sie ...\n• die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.\n• erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.\n• verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "210040"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Lernziele",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["210040"],
-      "lead": "**Lernziele**"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ],
+              "parent": "bulletList",
+              "attrs": {}
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ],
+              "parent": "bulletList",
+              "attrs": {}
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ],
+              "parent": "bulletList",
+              "attrs": {}
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.review-approved-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n• die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.\n• erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.\n• verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird."
   }
 ]

@@ -3,12 +3,14 @@
     "bit": {
       "type": "video-embed",
       "format": "bitmark--",
-      "id": ["301454"],
-      "item": "",
-      "hint": "",
-      "example": null,
+      "id": [
+        "301454"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "",
+      "example": null,
+      "body": [],
       "resource": {
         "type": "video-embed",
         "videoEmbed": {
@@ -27,14 +29,18 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": ""
+            "caption": []
           },
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.video-embed]\n[@id:301454]\n[&video-embed:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
   },
@@ -42,14 +48,18 @@
     "bit": {
       "type": "video-embed",
       "format": "bitmark--",
-      "id": ["300497"],
-      "item": "",
-      "hint": "",
-      "example": null,
+      "id": [
+        "300497"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": ""
+      "example": null,
+      "body": []
     },
     "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3",
       "excessResources": [
         {
           "type": "video",
@@ -69,30 +79,12 @@
               "license": "",
               "copyright": "",
               "showInIndex": false,
-              "caption": ""
+              "caption": []
             },
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": ""
-          }
-        }
-      ],
-      "warnings": [
-        {
-          "message": "1 excess resource(s) present in the bit. The bit resource type is 'NOT SET'",
-          "text": "[.video-embed]\n[@id:300497]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0280.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_ruesten1.png]\n",
-          "location": {
-            "start": {
-              "offset": 1,
-              "line": 2,
-              "column": 1
-            },
-            "end": {
-              "offset": 257,
-              "line": 5,
-              "column": 1
-            }
+            "caption": []
           }
         }
       ]
@@ -103,12 +95,14 @@
     "bit": {
       "type": "video-embed",
       "format": "bitmark--",
-      "id": ["301460"],
-      "item": "",
-      "hint": "",
-      "example": null,
+      "id": [
+        "301460"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "",
+      "example": null,
+      "body": [],
       "resource": {
         "type": "video-embed",
         "videoEmbed": {
@@ -127,14 +121,18 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": ""
+            "caption": []
           },
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.video-embed]\n[@id:301460]\n[&video-embed:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
   }

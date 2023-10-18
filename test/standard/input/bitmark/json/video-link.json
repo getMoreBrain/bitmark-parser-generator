@@ -3,13 +3,39 @@
     "bit": {
       "type": "video-link",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "example": null,
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten."
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Texte und Aufgaben in diesem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "fakultativen Teil B",
+              "type": "text"
+            },
+            {
+              "text": " stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3",
       "excessResources": [
         {
           "type": "video",
@@ -22,57 +48,7 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": ""
-          }
-        }
-      ],
-      "warnings": [
-        {
-          "message": "'Resource' with key 'video' is not valid here. It will be ignored",
-          "text": "[&video:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]",
-          "location": {
-            "start": {
-              "offset": 187,
-              "line": 3,
-              "column": 1
-            },
-            "end": {
-              "offset": 326,
-              "line": 3,
-              "column": 140
-            }
-          }
-        },
-        {
-          "message": "Resource type '&video-link' is required but is not present in the bit",
-          "text": "[.video-link]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&video:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]\n",
-          "location": {
-            "start": {
-              "offset": 0,
-              "line": 1,
-              "column": 1
-            },
-            "end": {
-              "offset": 327,
-              "line": 4,
-              "column": 1
-            }
-          }
-        },
-        {
-          "message": "1 excess resource(s) present in the bit. The expected resource type is '&video-link'",
-          "text": "[.video-link]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&video:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]\n",
-          "location": {
-            "start": {
-              "offset": 0,
-              "line": 1,
-              "column": 1
-            },
-            "end": {
-              "offset": 327,
-              "line": 4,
-              "column": 1
-            }
+            "caption": []
           }
         }
       ]
@@ -83,12 +59,14 @@
     "bit": {
       "type": "video-link",
       "format": "bitmark--",
-      "id": ["119760"],
-      "item": "",
-      "hint": "",
-      "example": null,
+      "id": [
+        "119760"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "",
+      "example": null,
+      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -109,7 +87,7 @@
               "license": "",
               "copyright": "",
               "showInIndex": false,
-              "caption": ""
+              "caption": []
             },
             {
               "format": "png",
@@ -121,15 +99,19 @@
               "license": "",
               "copyright": "",
               "showInIndex": false,
-              "caption": ""
+              "caption": []
             }
           ],
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.video-link]\n[@id:119760]\n[&video-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@src1x:https://www.youtube.com/tumb_201809210816.png][@src2x:https://www.youtube.com/tumb_201809210816.png][@width:740][@height:540][@duration:PT12M31S]"
   },
@@ -137,11 +119,35 @@
     "bit": {
       "type": "video-link",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "example": null,
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Texte und Aufgaben in diesem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "fakultativen Teil B",
+              "type": "text"
+            },
+            {
+              "text": " stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -153,9 +159,13 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.video-link]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&video-link:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]"
   },
@@ -163,8 +173,10 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": ["186837"],
-      "body": "",
+      "id": [
+        "186837"
+      ],
+      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -175,9 +187,24 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": "Erklärvideo zum Bildungsbericht (1/2): Zielsetzung"
+          "caption": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Erklärvideo zum Bildungsbericht (1/2): Zielsetzung",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         }
       }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark--&video-link]\n[@id:186837]\n[&video-link:https://www.youtube.com/watch?v=E41oFn8EdqY][@caption:Erklärvideo zum Bildungsbericht (1/2): Zielsetzung]"
   },
@@ -185,8 +212,10 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": ["187546"],
-      "body": "",
+      "id": [
+        "187546"
+      ],
+      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -197,9 +226,24 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": "Erklärvideo die Lerndokumentation"
+          "caption": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Erklärvideo die Lerndokumentation",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         }
       }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark--&video-link]\n[@id:187546]\n[&video-link:https://www.youtube.com/watch?v=FW47I-KbmF4&t=6s][@caption:Erklärvideo die Lerndokumentation]"
   },
@@ -207,8 +251,10 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": ["185332"],
-      "body": "",
+      "id": [
+        "185332"
+      ],
+      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -219,9 +265,13 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.article&video-link]\n[@id:185332]\n\n[&video-link:https://vimeo.com/585451927]"
   },
@@ -229,8 +279,10 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": ["185329"],
-      "body": "",
+      "id": [
+        "185329"
+      ],
+      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -241,9 +293,13 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.article&video-link]\n[@id:185329]\n[&video-link:https://vimeo.com/585450701]"
   },
@@ -251,8 +307,10 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": ["185330"],
-      "body": "",
+      "id": [
+        "185330"
+      ],
+      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -263,9 +321,13 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
     },
     "bitmark": "[.article&video-link]\n[@id:185330]\n\n[&video-link:https://vimeo.com/585457783]"
   }

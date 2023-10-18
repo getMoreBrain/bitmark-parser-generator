@@ -1,24 +1,54 @@
 [
   {
-    "bitmark": "[.statement]\n[@id:191210]\nAlle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen.",
     "bit": {
       "type": "statement",
       "format": "bitmark--",
-      "body": "Alle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen.",
       "id": [
         "191210"
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Alle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
       ]
-    }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.statement]\n[@id:191210]\nAlle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen."
   },
   {
-    "bitmark": "[.statement]\n[@id:191207]\nRuhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)",
     "bit": {
       "type": "statement",
       "format": "bitmark--",
-      "body": "Ruhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)",
       "id": [
         "191207"
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ruhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
       ]
-    }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.statement]\n[@id:191207]\nRuhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)"
   }
 ]
