@@ -96,7 +96,7 @@ describe('web-bitmark-generator', () => {
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
         const jsonOptions = {
-          textAsPlainText: true, // For testing the generator, use plain text rather than JSON for text
+          textAsPlainText: true, // For testing the WEB generator, use plain text rather than JSON for text
           prettify: true, // For testing the output is easier to read if it is prettified
         };
 

@@ -1,24 +1,60 @@
 [
   {
-    "bitmark": "[.release-note]\n[@releaseVersion:1.0.2]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
     "bit": {
       "type": "release-note",
       "format": "bitmark--",
-      "body": "Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
-      "item": "",
-      "hint": "",
+      "releaseVersion": "1.0.2",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "releaseVersion": "1.0.2"
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Texte und Aufgaben in diesem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "fakultativen Teil B",
+              "type": "text"
+            },
+            {
+              "text": " stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3",
       "excessResources": [
         {
           "type": "image",
-          "format": "png",
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png"
+          "image": {
+            "format": "png",
+            "provider": "docs.bitbook.education",
+            "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
         }
       ]
-    }
+    },
+    "bitmark": "[.release-note]\n[@releaseVersion:1.0.2]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   }
 ]

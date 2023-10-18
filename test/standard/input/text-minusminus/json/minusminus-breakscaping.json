@@ -94,7 +94,7 @@
         "type": "text"
       },
       {
-        "text": "^* text^\n^\n**\n^^No end tag, so NOT bold *\n\n\n|| And here is a comment for good luck ||\n\nThe end!",
+        "text": "^* text^\n^\n**\n^^No end tag, so NOT bold *\n\n\nThe end!",
         "type": "text"
       }
     ],

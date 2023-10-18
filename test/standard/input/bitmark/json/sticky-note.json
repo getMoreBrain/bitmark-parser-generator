@@ -1,15 +1,55 @@
 [
   {
-    "bitmark": "[.sticky-note:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@language:en]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::",
     "bit": {
       "type": "sticky-note",
       "format": "bitmark++",
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text.\n::remark::\n::",
-      "item": "",
-      "hint": "",
+      "ageRange": [
+        "18",
+        "120"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "ageRange": ["18", "120"]
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.sticky-note:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   }
 ]

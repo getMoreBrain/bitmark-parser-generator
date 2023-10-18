@@ -1,4 +1,4 @@
-import { Text } from '../ast/TextNodes';
+import { JsonText } from '../ast/TextNodes';
 
 export type ResourceDataJson = ImageResourceJson &
   ImageResponsiveResourceJson &
@@ -149,7 +149,7 @@ export interface BaseResourceJson {
   copyright: string;
   provider: string;
   showInIndex: boolean;
-  caption: Text;
+  caption: JsonText;
 }
 
 export interface ImageResourceJson extends BaseResourceJson {

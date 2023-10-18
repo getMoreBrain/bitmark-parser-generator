@@ -3,47 +3,185 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark++",
-      "id": ["152331"],
-      "item": "",
-      "hint": "",
-      "instruction": "",
+      "id": [
+        "152331"
+      ],
+      "item": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
-      "body": "Umsatzsteuern\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png|\n\nVOST-Berechnungen\n\nSchulungs AG\nDirekt:\t 27,5 % auf CHF 20.000\tCHF\t5.500\nIndirekt:\t\tCHF\t0\n\nVerlag AG\nDirekt:\t85,7 % auf CHF 80.000\tCHF\t68.560\nIndirekt:\t14,3 % auf 27,5 % auf CHF 80.000\tCHF\t3.146\n\nTotal Vorsteuern Gruppe\tCHF\t77.206\n\nMWST-Abrechnung\n\nUmsatzsteuer\t\tCHF\t{0}\n\n./. Vorsteuern\t\tCHF\t{1}\n\nNettosteuer\t\tCHF\t{2}",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["151.640"]
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Umsatzsteuern",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
         },
-        "{1}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["-77.206"]
+        {
+          "type": "image",
+          "attrs": {
+            "textAlign": "left",
+            "src": "https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png",
+            "alt": null,
+            "title": null,
+            "class": "center"
+          }
         },
-        "{2}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["74.434"]
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "VOST-Berechnungen",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Schulungs AG",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Direkt:\t 27,5 % auf CHF 20.000\tCHF\t5.500",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Indirekt:\t\tCHF\t0",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Verlag AG",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Direkt:\t85,7 % auf CHF 80.000\tCHF\t68.560",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Indirekt:\t14,3 % auf 27,5 % auf CHF 80.000\tCHF\t3.146",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Total Vorsteuern Gruppe\tCHF\t77.206",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "MWST-Abrechnung",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Umsatzsteuer\t\tCHF\t",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "151.640"
+              ]
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "./. Vorsteuern\t\tCHF\t",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "-77.206"
+              ]
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Nettosteuer\t\tCHF\t",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "74.434"
+              ]
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark++]\n[@id:152331]\nUmsatzsteuern\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png|\n\nVOST-Berechnungen\n\nSchulungs AG\nDirekt:\t 27,5 % auf CHF 20.000\tCHF\t5.500\nIndirekt:\t\tCHF\t0\n\nVerlag AG\nDirekt:\t85,7 % auf CHF 80.000\tCHF\t68.560\nIndirekt:\t14,3 % auf 27,5 % auf CHF 80.000\tCHF\t3.146\n\nTotal Vorsteuern Gruppe\tCHF\t77.206\n\nMWST-Abrechnung\n\nUmsatzsteuer\t\tCHF\t[_151.640]\n\n./. Vorsteuern\t\tCHF\t[_-77.206]\n\nNettosteuer\t\tCHF\t[_74.434]"
@@ -52,29 +190,57 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark++",
-      "id": ["193275"],
+      "id": [
+        "193275"
+      ],
       "anchor": "Ref_Roche",
-      "item": "",
-      "lead": "Leitbild 6",
-      "hint": "",
-      "instruction": "",
-      "isExample": false,
-      "body": "Our people make our business. Our people discover, develop and manufacture our products and ensure that they reach the patients who need them. Therefore, we’ve created a supportive work environment where people can be truly invested in their work. We encourage big thinking and give our people the support and flexibility they need to make their mark. This is more than just a job. It’s an international family dedicated to making a real impact on the world around us. We believe that employees who are engaged are key to delivering the highest standards and the greatest levels of innovation. That’s why we care about what makes working here a rewarding experience for our employees.\n{0}",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Roche"]
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Leitbild 6",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ],
+      "hint": [],
+      "instruction": [],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Our people make our business. Our people discover, develop and manufacture our products and ensure that they reach the patients who need them. Therefore, we’ve created a supportive work environment where people can be truly invested in their work. We encourage big thinking and give our people the support and flexibility they need to make their mark. This is more than just a job. It’s an international family dedicated to making a real impact on the world around us. We believe that employees who are engaged are key to delivering the highest standards and the greatest levels of innovation. That’s why we care about what makes working here a rewarding experience for our employees.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Roche"
+              ]
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark++]\n[@id:193275]\n[▼Ref_Roche]\n[%][%Leitbild 6]\nOur people make our business. Our people discover, develop and manufacture our products and ensure that they reach the patients who need them. Therefore, we’ve created a supportive work environment where people can be truly invested in their work. We encourage big thinking and give our people the support and flexibility they need to make their mark. This is more than just a job. It’s an international family dedicated to making a real impact on the world around us. We believe that employees who are engaged are key to delivering the highest standards and the greatest levels of innovation. That’s why we care about what makes working here a rewarding experience for our employees.\n[_Roche]"
@@ -83,29 +249,57 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark++",
-      "id": ["193276"],
+      "id": [
+        "193276"
+      ],
       "anchor": "Ref_Emmi",
-      "item": "",
-      "lead": "Leitbild 7",
-      "hint": "",
-      "instruction": "",
-      "isExample": false,
-      "body": "Die Mitarbeitenden sind unser wichtigstes Kapital. Respekt, Menschlichkeit und Vertrauen prägen unsere Zusammenarbeit. Die Personalpolitik stellt die Attraktivität von uns als Arbeitgeberin sicher und erschliesst für die Umsetzung der Unternehmenspolitik die notwendigen personellen Ressourcen. Träger der Personalpolitik sind die Vorgesetzten. Grundsätze: Mit geeigneten Personalgewinnungs- und Auswahlverfahren werden die richtigen Mitarbeitenden am richtigen Arbeitsplatz eingesetzt. Bei der Personalauswahl wird neben der fachlichen Qualifikationen auf soziale Kompetenzen geachtet. Aus- und Weiterbildungsmassnahmen werden gezielt auf die Bedürfnisse der Mitarbeitenden und Firma abgestimmt. Die Personalentwicklungsmassnahmen sichern die Qualifikation der Mitarbeitenden für die momentanen und zukünftigen Anforderungen Die Mitarbeitenden werden offen und transparent informiert. Auf der Basis gegenseitiger Offenheit und gegenseitigen Vertrauens pflegen wir eine intensive Zusammenarbeit mit den Personalkommissionen Führung wahrnehmen und vorleben heisst: regelmässig Ziele verständlich und offen zu kommunizieren und die Aufgaben darauf auszurichten, Mitarbeitende und Teams befähigen, lösungs- und eigenverantwortlich zu handeln, Kompetenzen und Verantwortungen so weit wie möglich delegieren\n{0}",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Emmi"]
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Leitbild 7",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ],
+      "hint": [],
+      "instruction": [],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Mitarbeitenden sind unser wichtigstes Kapital. Respekt, Menschlichkeit und Vertrauen prägen unsere Zusammenarbeit. Die Personalpolitik stellt die Attraktivität von uns als Arbeitgeberin sicher und erschliesst für die Umsetzung der Unternehmenspolitik die notwendigen personellen Ressourcen. Träger der Personalpolitik sind die Vorgesetzten. Grundsätze: Mit geeigneten Personalgewinnungs- und Auswahlverfahren werden die richtigen Mitarbeitenden am richtigen Arbeitsplatz eingesetzt. Bei der Personalauswahl wird neben der fachlichen Qualifikationen auf soziale Kompetenzen geachtet. Aus- und Weiterbildungsmassnahmen werden gezielt auf die Bedürfnisse der Mitarbeitenden und Firma abgestimmt. Die Personalentwicklungsmassnahmen sichern die Qualifikation der Mitarbeitenden für die momentanen und zukünftigen Anforderungen Die Mitarbeitenden werden offen und transparent informiert. Auf der Basis gegenseitiger Offenheit und gegenseitigen Vertrauens pflegen wir eine intensive Zusammenarbeit mit den Personalkommissionen Führung wahrnehmen und vorleben heisst: regelmässig Ziele verständlich und offen zu kommunizieren und die Aufgaben darauf auszurichten, Mitarbeitende und Teams befähigen, lösungs- und eigenverantwortlich zu handeln, Kompetenzen und Verantwortungen so weit wie möglich delegieren",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Emmi"
+              ]
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark++]\n[@id:193276]\n[▼Ref_Emmi]\n[%][%Leitbild 7]\nDie Mitarbeitenden sind unser wichtigstes Kapital. Respekt, Menschlichkeit und Vertrauen prägen unsere Zusammenarbeit. Die Personalpolitik stellt die Attraktivität von uns als Arbeitgeberin sicher und erschliesst für die Umsetzung der Unternehmenspolitik die notwendigen personellen Ressourcen. Träger der Personalpolitik sind die Vorgesetzten. Grundsätze: Mit geeigneten Personalgewinnungs- und Auswahlverfahren werden die richtigen Mitarbeitenden am richtigen Arbeitsplatz eingesetzt. Bei der Personalauswahl wird neben der fachlichen Qualifikationen auf soziale Kompetenzen geachtet. Aus- und Weiterbildungsmassnahmen werden gezielt auf die Bedürfnisse der Mitarbeitenden und Firma abgestimmt. Die Personalentwicklungsmassnahmen sichern die Qualifikation der Mitarbeitenden für die momentanen und zukünftigen Anforderungen Die Mitarbeitenden werden offen und transparent informiert. Auf der Basis gegenseitiger Offenheit und gegenseitigen Vertrauens pflegen wir eine intensive Zusammenarbeit mit den Personalkommissionen Führung wahrnehmen und vorleben heisst: regelmässig Ziele verständlich und offen zu kommunizieren und die Aufgaben darauf auszurichten, Mitarbeitende und Teams befähigen, lösungs- und eigenverantwortlich zu handeln, Kompetenzen und Verantwortungen so weit wie möglich delegieren\n[_Emmi]"
@@ -114,12 +308,115 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
-      "id": ["136524"],
-      "item": "2a",
-      "hint": "",
-      "instruction": "Forum „Fußball-WM 2018“. Welcher Beitrag passt zu welchem Foto? Lesen Sie und ordnen Sie zu. (Zu einem Text gibt es kein Foto. Schreiben Sie dann X.)",
+      "id": [
+        "136524"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2a",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Forum „Fußball-WM 2018“. Welcher Beitrag passt zu welchem Foto? Lesen Sie und ordnen Sie zu. (Zu einem Text gibt es kein Foto. Schreiben Sie dann X.)",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
-      "body": "Wo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!\n{0} ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!\n\n{1} Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.\n\n{2} RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.\n\n{3} JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner.",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "c"
+              ]
+            },
+            {
+              "text": " ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!\n\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "x"
+              ]
+            },
+            {
+              "text": " Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.\n\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "a"
+              ]
+            },
+            {
+              "text": " RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.\n\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "b"
+              ]
+            },
+            {
+              "text": " JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -132,54 +429,12 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
-        }
-      },
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["c"]
-        },
-        "{1}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["x"]
-        },
-        "{2}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["a"]
-        },
-        "{3}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["b"]
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--&image]\n[@id:136524]\n[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]\n[%2a]\n[!Forum „Fußball-WM 2018“. Welcher Beitrag passt zu welchem Foto? Lesen Sie und ordnen Sie zu. (Zu einem Text gibt es kein Foto. Schreiben Sie dann X.)]\n\nWo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!\n[_c] ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!\n\n[_x] Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.\n\n[_a] RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.\n\n[_b] JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner."
@@ -188,28 +443,71 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
-      "id": ["245337"],
-      "item": "4",
-      "lead": "HK E.1 Infektionslehre",
-      "hint": "",
-      "instruction": "Wie heißt der Oberbegriff für die Tiere, die die vektorielle Übertragung verursachen?",
-      "isExample": false,
-      "body": "{0}",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Insekten"]
+      "id": [
+        "245337"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "HK E.1 Infektionslehre",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wie heißt der Oberbegriff für die Tiere, die die vektorielle Übertragung verursachen?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Insekten"
+              ]
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--]\n[@id:245337]\n[%4][%HK E.1 Infektionslehre]\n[!Wie heißt der Oberbegriff für die Tiere, die die vektorielle Übertragung verursachen?]\n[_Insekten]"
@@ -218,107 +516,203 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
-      "id": ["273397"],
-      "item": "10",
-      "hint": "",
-      "instruction": "Ergänzen Sie den folgenden Lückentext.",
-      "isExample": false,
-      "body": "Mit der {0} Marktforschung versucht man, mehr Klarheit zu einer {1} Fragestellung zu erhalten. Bei der quantitativen Marktforschung hingegen geht es um geschlossene Fragestellungen. Bei der {2} arbeitet man mit bereits vorhandenen Daten. Diese liegen aus internen oder externen Quellen vor. Ein Vorteil ist, dass die Daten schnell zu beschaffen sind. Ein Nachteil ist, dass die Daten nicht mehr {3} sein können.\nIn der Regel sichtet man bei Marktforschungsprojekten zuerst Sekundärdaten, bevor eine {4} durchgeführt wird. Hierbei erhebt man {5} zur Erforschung einer bestimmten Fragestellung, meistens mit einem professionellen Marktforschungsinstitut zusammen. Die folgenden Methoden gibt es: {6}, Beobachtung / Test, Mystery Shopping, Panel oder {7}. Die Nachteile sind der zeitliche Aufwand und die {8}. Dafür passen die gewonnenen Daten genau auf die Fragestellung des Unternehmens.",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["qualitativen"]
-        },
-        "{1}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["offenen"]
-        },
-        "{2}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Sekundärmarktforschung"]
-        },
-        "{3}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["aktuell"]
-        },
-        "{4}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Primärmarktforschung"]
-        },
-        "{5}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["eigene Daten"]
-        },
-        "{6}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Befragung"]
-        },
-        "{7}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Fokusgruppen"]
-        },
-        "{8}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Kosten"]
+      "id": [
+        "273397"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "10",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ergänzen Sie den folgenden Lückentext.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mit der ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "qualitativen"
+              ]
+            },
+            {
+              "text": " Marktforschung versucht man, mehr Klarheit zu einer ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "offenen"
+              ]
+            },
+            {
+              "text": " Fragestellung zu erhalten. Bei der quantitativen Marktforschung hingegen geht es um geschlossene Fragestellungen. Bei der ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Sekundärmarktforschung"
+              ]
+            },
+            {
+              "text": " arbeitet man mit bereits vorhandenen Daten. Diese liegen aus internen oder externen Quellen vor. Ein Vorteil ist, dass die Daten schnell zu beschaffen sind. Ein Nachteil ist, dass die Daten nicht mehr ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "aktuell"
+              ]
+            },
+            {
+              "text": " sein können.\nIn der Regel sichtet man bei Marktforschungsprojekten zuerst Sekundärdaten, bevor eine ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Primärmarktforschung"
+              ]
+            },
+            {
+              "text": " durchgeführt wird. Hierbei erhebt man ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "eigene Daten"
+              ]
+            },
+            {
+              "text": " zur Erforschung einer bestimmten Fragestellung, meistens mit einem professionellen Marktforschungsinstitut zusammen. Die folgenden Methoden gibt es: ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Befragung"
+              ]
+            },
+            {
+              "text": ", Beobachtung / Test, Mystery Shopping, Panel oder ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Fokusgruppen"
+              ]
+            },
+            {
+              "text": ". Die Nachteile sind der zeitliche Aufwand und die ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Kosten"
+              ]
+            },
+            {
+              "text": ". Dafür passen die gewonnenen Daten genau auf die Fragestellung des Unternehmens.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--]\n[@id:273397]\n[%10]\n[!Ergänzen Sie den folgenden Lückentext.]\nMit der [_qualitativen] Marktforschung versucht man, mehr Klarheit zu einer [_offenen] Fragestellung zu erhalten. Bei der quantitativen Marktforschung hingegen geht es um geschlossene Fragestellungen. Bei der [_Sekundärmarktforschung] arbeitet man mit bereits vorhandenen Daten. Diese liegen aus internen oder externen Quellen vor. Ein Vorteil ist, dass die Daten schnell zu beschaffen sind. Ein Nachteil ist, dass die Daten nicht mehr [_aktuell] sein können.\nIn der Regel sichtet man bei Marktforschungsprojekten zuerst Sekundärdaten, bevor eine [_Primärmarktforschung] durchgeführt wird. Hierbei erhebt man [_eigene Daten] zur Erforschung einer bestimmten Fragestellung, meistens mit einem professionellen Marktforschungsinstitut zusammen. Die folgenden Methoden gibt es: [_Befragung], Beobachtung / Test, Mystery Shopping, Panel oder [_Fokusgruppen]. Die Nachteile sind der zeitliche Aufwand und die [_Kosten]. Dafür passen die gewonnenen Daten genau auf die Fragestellung des Unternehmens."
@@ -327,97 +721,194 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
-      "id": ["273304"],
-      "item": "3",
-      "hint": "",
-      "instruction": "Um welche Güter handelt es sich bei den in der Tabelle aufgeführten Beispielen?",
-      "isExample": false,
-      "body": "Tragen Sie den richtigen Buchstaben in die Tabelle ein. Zuordnungen sind mehrfach möglich. Je Beispiel können mehrere Buchstaben zutreffen.\n\nA - Materielle Güter\nB - Rechte\nC - Investitionsgüter\nD - Verbrauchsgüter\nE - Gebrauchsgüter\nF - immaterielle Güter\nG - Dienstleistungen\n\n{0} Neue Kaffeerostanlage in einer Rosterei\n{1} Beratungen durch Steuerberater\n{2} Patente für die Herstellung von Energie aus Kompost\n{3} Putzmittel im Haushalt\n{4} Autos von Privatpersonen\n{5} Haarschnitte beim Coiffeur\n{6} Zwei moderne Autowaschanlagen\n{7} Medikamente gegen Migräne",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["A", "C"]
-        },
-        "{1}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["F", "G"]
-        },
-        "{2}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["F", "B"]
-        },
-        "{3}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["A", "D"]
-        },
-        "{4}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["A", "E"]
-        },
-        "{5}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["F", "G"]
-        },
-        "{6}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["A", "C"]
-        },
-        "{7}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["A", "D"]
+      "id": [
+        "273304"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Um welche Güter handelt es sich bei den in der Tabelle aufgeführten Beispielen?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Tragen Sie den richtigen Buchstaben in die Tabelle ein. Zuordnungen sind mehrfach möglich. Je Beispiel können mehrere Buchstaben zutreffen.\n\nA - Materielle Güter\nB - Rechte\nC - Investitionsgüter\nD - Verbrauchsgüter\nE - Gebrauchsgüter\nF - immaterielle Güter\nG - Dienstleistungen\n\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "A",
+                "C"
+              ]
+            },
+            {
+              "text": " Neue Kaffeerostanlage in einer Rosterei\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "F",
+                "G"
+              ]
+            },
+            {
+              "text": " Beratungen durch Steuerberater\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "F",
+                "B"
+              ]
+            },
+            {
+              "text": " Patente für die Herstellung von Energie aus Kompost\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "A",
+                "D"
+              ]
+            },
+            {
+              "text": " Putzmittel im Haushalt\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "A",
+                "E"
+              ]
+            },
+            {
+              "text": " Autos von Privatpersonen\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "F",
+                "G"
+              ]
+            },
+            {
+              "text": " Haarschnitte beim Coiffeur\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "A",
+                "C"
+              ]
+            },
+            {
+              "text": " Zwei moderne Autowaschanlagen\n",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "A",
+                "D"
+              ]
+            },
+            {
+              "text": " Medikamente gegen Migräne",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--]\n[@id:273304]\n[%3]\n[!Um welche Güter handelt es sich bei den in der Tabelle aufgeführten Beispielen?]\nTragen Sie den richtigen Buchstaben in die Tabelle ein. Zuordnungen sind mehrfach möglich. Je Beispiel können mehrere Buchstaben zutreffen.\n\nA - Materielle Güter\nB - Rechte\nC - Investitionsgüter\nD - Verbrauchsgüter\nE - Gebrauchsgüter\nF - immaterielle Güter\nG - Dienstleistungen\n\n[_A][_C] Neue Kaffeerostanlage in einer Rosterei\n[_F][_G] Beratungen durch Steuerberater\n[_F][_B] Patente für die Herstellung von Energie aus Kompost\n[_A][_D] Putzmittel im Haushalt\n[_A][_E] Autos von Privatpersonen\n[_F][_G] Haarschnitte beim Coiffeur\n[_A][_C] Zwei moderne Autowaschanlagen\n[_A][_D] Medikamente gegen Migräne"
@@ -426,87 +917,193 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
-      "id": ["272904"],
-      "item": "34",
-      "hint": "",
-      "instruction": "Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.",
-      "isExample": false,
-      "body": "Beim {0} verkauft eigene {1} einrichten, {2} einstellen. Beim {3} läuft den {4} {5} und / oder den {6}.",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "Hint",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["direkten Vertrieb", "direkten Vertrieb2"]
-        },
-        "{1}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Verkaufsstellen"]
-        },
-        "{2}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Verkaufsmitarbeitende"]
-        },
-        "{3}": {
-          "type": "gap",
-          "item": "",
-          "hint": "HINT?",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["indirekten Vertrieb", "indirekten Vertrieb2"]
-        },
-        "{4}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Grosshandel"]
-        },
-        "{5}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["NOT Grosshandel2"]
-        },
-        "{6}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": false,
-          "example": null,
-          "solutions": ["Einzelhandel"]
+      "id": [
+        "272904"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "34",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Beim ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Hint",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "direkten Vertrieb",
+                "direkten Vertrieb2"
+              ]
+            },
+            {
+              "text": " verkauft eigene ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Verkaufsstellen"
+              ]
+            },
+            {
+              "text": " einrichten, ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Verkaufsmitarbeitende"
+              ]
+            },
+            {
+              "text": " einstellen. Beim ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "HINT?",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "indirekten Vertrieb",
+                "indirekten Vertrieb2"
+              ]
+            },
+            {
+              "text": " läuft den ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Grosshandel"
+              ]
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "NOT Grosshandel2"
+              ]
+            },
+            {
+              "text": " und / oder den ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": [
+                "Einzelhandel"
+              ]
+            },
+            {
+              "text": ".",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--]\n[@id:272904]\n[%34]\n[!Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.]\nBeim [_direkten Vertrieb][_direkten Vertrieb2][?Hint] verkauft eigene [_Verkaufsstellen] einrichten, [_Verkaufsmitarbeitende] einstellen. Beim [_indirekten Vertrieb][_indirekten Vertrieb2][?HINT?] läuft den [_Grosshandel] [_NOT Grosshandel2] und / oder den [_Einzelhandel]."
@@ -515,26 +1112,50 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "This is a multiple gap {0}",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": true,
-          "example": "solution",
-          "solutions": ["solution", "problem"]
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a multiple gap ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": true,
+              "example": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "solution",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "solutions": [
+                "solution",
+                "problem"
+              ]
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze]\nThis is a multiple gap [_solution][@example][_problem]"
@@ -543,26 +1164,50 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "instruction": "",
+      "item": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
-      "body": "This is a multiple gap {0}",
-      "placeholders": {
-        "{0}": {
-          "type": "gap",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isCaseSensitive": true,
-          "isExample": true,
-          "example": "wrong answer",
-          "solutions": ["solution", "problem"]
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a multiple gap ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": true,
+              "example": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "wrong answer",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "solutions": [
+                "solution",
+                "problem"
+              ]
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ]
     },
     "parser": {
-      "version": "1.0.16",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-self-reflection-cloze]\nThis is a multiple gap [_solution][_problem][@example:wrong answer]"

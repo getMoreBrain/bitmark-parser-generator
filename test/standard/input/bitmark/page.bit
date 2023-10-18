@@ -1,4 +1,3 @@
-|| ok ||
 [.page:bitmark++]
 [@ageRange:18][@ageRange:120]
 
@@ -7,11 +6,9 @@ followed by some plain text. cloze open close cloze1 book.
 [&image:https://cdn.bitbook.education/cat.jpg]
 
 Some more text.
-::remark::
-::
 
 
-|| okay ||
+
 [.page:bitmark++]
 **Erfolg um jeden Preis**
 

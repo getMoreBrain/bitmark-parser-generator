@@ -127,7 +127,7 @@ export type {
   AppLinkResource,
   WebsiteLinkResource,
 } from './model/ast/Nodes';
-export type { Text, TextAst } from './model/ast/TextNodes';
+export type { JsonText as Text, TextAst } from './model/ast/TextNodes';
 export type { BitWrapperJson } from './model/json/BitWrapperJson';
 export type {
   BitJson,

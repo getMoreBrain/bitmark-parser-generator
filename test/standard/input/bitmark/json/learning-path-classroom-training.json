@@ -1,26 +1,71 @@
 [
   {
-    "bitmark": "[.learning-path-classroom-training]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[@list:One]\n[@list:Two]\n[@list:Three]\n[@list:Four]\n[@id:119760]\n||[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]||",
     "bit": {
       "type": "learning-path-classroom-training",
       "format": "bitmark--",
-      "body": "First one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:",
-      "item": "",
-      "hint": "",
-      "isExample": false,
-      "example": null,
-      "isTracked": true,
-      "isInfoOnly": false,
-      "instruction": "Skript «Grundausbildung Altersvorsorge»",
-      "action": "Selbststudium",
-      "duration": "3600s",
+      "id": [
+        "119760"
+      ],
       "book": "e-876z78z87og87g8zg",
-      "reference": "Ref4.2.34",
-      "referenceEnd": "Ref4.3.1",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
-      "list": ["One", "Two", "Three", "Four"],
-      "id": ["119760"]
-    }
+      "action": "Selbststudium",
+      "duration": "3600s",
+      "list": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "isTracked": true,
+      "isInfoOnly": false,
+      "reference": "Ref4.2.34",
+      "referenceEnd": "Ref4.3.1",
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Skript «Grundausbildung Altersvorsorge»",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "First one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3",
+      "excessResources": [
+        {
+          "type": "website-link",
+          "websiteLink": {
+            "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ]
+    },
+    "bitmark": "[.learning-path-classroom-training]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[@list:One]\n[@list:Two]\n[@list:Three]\n[@list:Four]\n[@id:119760]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]"
   }
 ]

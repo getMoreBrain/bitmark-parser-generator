@@ -1,37 +1,151 @@
 [
   {
-    "bitmark": "[.page:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@language:en]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]\n\nSome more text.\n::remark::\n::\n\n\n|| okay ||",
     "bit": {
       "type": "page",
       "format": "bitmark++",
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\n\nSome more text.\n::remark::\n::",
-      "ageRange": ["18", "120"]
+      "ageRange": [
+        "18",
+        "120"
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3",
       "excessResources": [
         {
           "type": "image",
-          "format": "jpg",
-          "src": "https://cdn.bitbook.education/cat.jpg"
+          "image": {
+            "format": "jpg",
+            "provider": "cdn.bitbook.education",
+            "src": "https://cdn.bitbook.education/cat.jpg",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
         }
       ]
-    }
+    },
+    "bitmark": "[.page:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]\n\nSome more text."
   },
   {
-    "bitmark": "[.page:bitmark++]\n**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)==",
     "bit": {
       "type": "page",
       "format": "bitmark++",
-      "body": "**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)=="
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Erfolg um jeden Preis",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Immer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Was sind dagegen ein paar anabole Steroide ",
+              "type": "text"
+            },
+            {
+              "marks": [],
+              "text": "anabole Steroide",
+              "type": "text"
+            },
+            {
+              "text": "(*synthetisch hergestellte Mittel zur Leistungssteigerung)==",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3",
       "excessResources": [
         {
           "type": "image",
-          "format": "jpg",
-          "src": "http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg"
+          "image": {
+            "format": "jpg",
+            "provider": "cdn.bitbook.education",
+            "src": "http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
         }
       ]
-    }
+    },
+    "bitmark": "[.page:bitmark++]\n**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)=="
   }
 ]

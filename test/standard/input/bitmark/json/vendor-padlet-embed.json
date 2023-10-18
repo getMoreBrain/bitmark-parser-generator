@@ -1,16 +1,22 @@
 [
   {
-    "bitmark": "[.vendor-padlet-embed]\n[@id:342346]\n[@padletId:2c7rc1zj8jdo25ed]",
     "bit": {
       "type": "vendor-padlet-embed",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "id": [
+        "342346"
+      ],
+      "padletId": "2c7rc1zj8jdo25ed",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["342346"],
-      "padletId": "2c7rc1zj8jdo25ed"
-    }
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.vendor-padlet-embed]\n[@id:342346]\n[@padletId:2c7rc1zj8jdo25ed]"
   }
 ]

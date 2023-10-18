@@ -3,12 +3,36 @@
     "bit": {
       "type": "button-copy-text",
       "format": "bitmark--",
-      "id": ["342341"],
-      "instruction": ".button-copy-text",
-      "body": "Button Text"
+      "id": [
+        "342341"
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".button-copy-text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Button Text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
     },
     "parser": {
-      "version": "1.4.1",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.button-copy-text]\n[@id:342341]\n[!.button-copy-text]\nButton Text"

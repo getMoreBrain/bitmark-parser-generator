@@ -3,9 +3,20 @@
     "bit": {
       "type": "mark",
       "format": "bitmark--",
-      "item": "",
-      "hint": "",
-      "instruction": "Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.",
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": true,
       "marks": [
         {
@@ -24,122 +35,186 @@
           "emphasis": "underline"
         }
       ],
-      "body": "In der {0} Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis\nmit der {1} Backgroundsängerin Sharika.\n\nJetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine:\n„Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“\nCorinna hat bereits den {2} Scheidungsanwalt Otto August von\nUnmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens\nund das {3} Sorgerecht für den {4} Sohn Lucas (6 Jahre).\nWas das Finanzielle betrifft, so räumen Experten der {5} Ehefrau wenig Chancen ein. Sie\nhatte vor der Hochzeit einen Ehevertrag unterschrieben und auf {6} Ansprüche im Fall\neiner Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren\nEhen, für die er Unterhalt zahlen muss.\n\nDoch vielleicht gibt es eine {7} Wendung. Ein {8} Juwelier\nbestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist\nder {9} Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende\nsogar eine {10} Versöhnung?",
-      "placeholders": {
-        "{0}": {
-          "type": "mark",
-          "solution": "letzten",
-          "mark": "adjective",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": false,
-          "example": null
-        },
-        "{1}": {
-          "type": "mark",
-          "solution": "schönen",
-          "mark": "adjective",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": false,
-          "example": null
-        },
-        "{2}": {
-          "type": "mark",
-          "solution": "erfolgreichen",
-          "mark": "adjective",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": false,
-          "example": null
-        },
-        "{3}": {
-          "type": "mark",
-          "solution": "alleinige",
-          "mark": "adjective",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": false,
-          "example": null
-        },
-        "{4}": {
-          "type": "mark",
-          "solution": "gemeinsamen",
-          "mark": "adjective",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": false,
-          "example": null
-        },
-        "{5}": {
-          "type": "mark",
-          "solution": "betrogenen",
-          "mark": "verb",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": false,
-          "example": null
-        },
-        "{6}": {
-          "type": "mark",
-          "solution": "finanzielle",
-          "mark": "adjective",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": false,
-          "example": null
-        },
-        "{7}": {
-          "type": "mark",
-          "solution": "unerwartete",
-          "mark": "adjective",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": false,
-          "example": null
-        },
-        "{8}": {
-          "type": "mark",
-          "solution": "stadtbekannter",
-          "mark": "adjective",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": true,
-          "example": true
-        },
-        "{9}": {
-          "type": "mark",
-          "solution": "wertvolle",
-          "mark": "",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": false,
-          "example": null
-        },
-        "{10}": {
-          "type": "mark",
-          "solution": "romantische",
-          "mark": "adjective",
-          "item": "",
-          "hint": "",
-          "instruction": "",
-          "isExample": true,
-          "example": true
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "In der ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "letzten",
+              "mark": "adjective",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": " Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis\nmit der ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "schönen",
+              "mark": "adjective",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": " Backgroundsängerin Sharika.\n\nJetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine:\n„Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“\nCorinna hat bereits den ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "erfolgreichen",
+              "mark": "adjective",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": " Scheidungsanwalt Otto August von\nUnmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens\nund das ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "alleinige",
+              "mark": "adjective",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": " Sorgerecht für den ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "gemeinsamen",
+              "mark": "adjective",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": " Sohn Lucas (6 Jahre).\nWas das Finanzielle betrifft, so räumen Experten der ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "betrogenen",
+              "mark": "verb",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": " Ehefrau wenig Chancen ein. Sie\nhatte vor der Hochzeit einen Ehevertrag unterschrieben und auf ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "finanzielle",
+              "mark": "adjective",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": " Ansprüche im Fall\neiner Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren\nEhen, für die er Unterhalt zahlen muss.\n\nDoch vielleicht gibt es eine ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "unerwartete",
+              "mark": "adjective",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": " Wendung. Ein ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "stadtbekannter",
+              "mark": "adjective",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": true,
+              "example": true
+            },
+            {
+              "text": " Juwelier\nbestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist\nder ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "wertvolle",
+              "mark": "",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "text": " Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende\nsogar eine ",
+              "type": "text"
+            },
+            {
+              "type": "mark",
+              "solution": "romantische",
+              "mark": "adjective",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": true,
+              "example": true
+            },
+            {
+              "text": " Versöhnung?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
         }
-      }
+      ]
     },
     "parser": {
-      "version": "1.1.1",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.mark]\n[!Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.]\n[@mark:adjective][@color:blue][@emphasis:underline]\n[@mark:verb][@color:red][@emphasis:circle]\n[@mark:noun][@color:blue]\n\nIn der [=letzten][@mark:adjective] Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis\nmit der [=schönen][@mark:adjective] Backgroundsängerin Sharika.\n\nJetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine:\n„Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“\nCorinna hat bereits den [=erfolgreichen][@mark:adjective] Scheidungsanwalt Otto August von\nUnmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens\nund das [=alleinige][@mark:adjective] Sorgerecht für den [=gemeinsamen][@mark:adjective] Sohn Lucas (6 Jahre).\nWas das Finanzielle betrifft, so räumen Experten der [=betrogenen][@mark:verb] Ehefrau wenig Chancen ein. Sie\nhatte vor der Hochzeit einen Ehevertrag unterschrieben und auf [=finanzielle][@mark:adjective] Ansprüche im Fall\neiner Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren\nEhen, für die er Unterhalt zahlen muss.\n\nDoch vielleicht gibt es eine [=unerwartete][@mark:adjective] Wendung. Ein [=stadtbekannter][@mark:adjective][@example:hello] Juwelier\nbestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist\nder [=wertvolle] Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende\nsogar eine [=romantische][@mark:adjective][@example] Versöhnung?"

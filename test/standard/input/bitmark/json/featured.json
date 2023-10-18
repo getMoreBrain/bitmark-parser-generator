@@ -1,15 +1,32 @@
 [
   {
-    "bitmark": "[.featured]\n[@id:342339]\nFeatured\nIt's exactly the same as an .article.",
     "bit": {
       "type": "featured",
       "format": "bitmark--",
-      "body": "Featured\nIt's exactly the same as an .article.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "342339"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["342339"]
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Featured\nIt's exactly the same as an .article.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.featured]\n[@id:342339]\nFeatured\nIt's exactly the same as an .article."
   }
 ]

@@ -41,7 +41,7 @@ class DevParser {
       const generator = new JsonObjectGenerator({
         jsonOptions: {
           enableWarnings: true,
-          textAsPlainText: true,
+          textAsPlainText: false,
           prettify: true,
         },
       });

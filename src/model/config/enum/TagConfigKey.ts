@@ -17,7 +17,6 @@ const tagConfigKeys = {
   gap: 'gap',
   tag_mark: 'tag_mark',
   resource: 'resource',
-  remark: 'remark',
   comment: 'comment',
 } as const;
 

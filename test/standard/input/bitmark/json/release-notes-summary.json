@@ -3,12 +3,35 @@
     "bit": {
       "type": "release-notes-summary",
       "format": "bitmark--",
-      "ageRange": ["18", "120"],
-      "item": "",
-      "hint": "",
-      "example": null,
+      "ageRange": [
+        "18",
+        "120"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
-      "body": "**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.",
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "text": "\nfollowed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -21,14 +44,14 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": ""
+          "caption": []
         }
       }
     },
     "parser": {
-      "version": "1.0.4",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.release-notes-summary&image]\n[@ageRange:18][@ageRange:120]\n[@language:en]\n[@language:jp]\n[@language:cn]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]"
+    "bitmark": "[.release-notes-summary&image]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]"
   }
 ]

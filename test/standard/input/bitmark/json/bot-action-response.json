@@ -1,117 +1,366 @@
 [
   {
-    "bitmark": "[.bot-action-response]\n[!\nWusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?\n]\n\nDer Entscheid darüber liegt nicht bei der Versicherung, sondern ist **gesetzlich vorgeschrieben.**\n\n===\n[%A]\n[!Ja, das weiss ich]\n[@reaction:celebrate]\n👍 Cool!\n===\n[%B]\n[!Das war mir nicht bewusst]\n😅\n[@reaction:like]\n===",
     "bit": {
       "type": "bot-action-response",
       "format": "bitmark--",
-      "body": "Der Entscheid darüber liegt nicht bei der Versicherung, sondern ist **gesetzlich vorgeschrieben.**",
-      "item": "",
-      "hint": "",
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wusstest du, dass du einen ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Teil der Kosten selbst bezahlen",
+              "type": "text"
+            },
+            {
+              "text": " musst, wenn du bekifft einen Unfall verursachst?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
       "example": null,
-      "instruction": "Wusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Der Entscheid darüber liegt nicht bei der Versicherung, sondern ist ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "gesetzlich vorgeschrieben.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "responses": [
         {
           "response": "Ja, das weiss ich",
           "reaction": "celebrate",
-          "item": "A",
-          "feedback": "👍 Cool!"
+          "feedback": "👍 Cool!",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "response": "Das war mir nicht bewusst",
           "reaction": "like",
-          "item": "B",
-          "feedback": "😅"
+          "feedback": "😅",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "B",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         }
       ]
-    }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bot-action-response]\n[!\nWusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?\n]\n\nDer Entscheid darüber liegt nicht bei der Versicherung, sondern ist **gesetzlich vorgeschrieben.**\n\n===\n[%A]\n[!Ja, das weiss ich]\n[@reaction:celebrate]\n👍 Cool!\n===\n[%B]\n[!Das war mir nicht bewusst]\n😅\n[@reaction:like]\n==="
   },
   {
-    "bitmark": "[.bot-action-response:bitmark++]\n[!Wenn du Cannabis konsumiert hast, musst du übrigens lange warten, bis du dich wieder hinters Steuer setzen darfst. THC wird nicht regelmässig abgebaut: Im Blut kann Cannabis 8 bis 30 Stunden nach dem Konsum nachgewiesen werden.]\n\nWie sich legale CBD-Hanf-Zigaretten auf dein Fahrverhalten auswirken, erfährst du in unserem ==Blog.==|link:http://https://www.axa.ch/de/privatkunden/blog/unterwegs/sicherheit-auf-der-strasse/cbd-hanfzigaretten-und-fahrtuechtigkeit.html|\n\n\n===\n[!Okay]\n[@reaction:insightful]\n|image:http://memes.com/funny.gif|\n===\nBei regelmässigem Cannabiskonsum muss ganz auf das Autofahren verzichtet werden, weil der THC-Gehalt im Blut nicht mehr auf Null fällt.",
     "bit": {
       "type": "bot-action-response",
       "format": "bitmark++",
-      "body": "Wie sich legale CBD-Hanf-Zigaretten auf dein Fahrverhalten auswirken, erfährst du in unserem ==Blog.==|link:http://https://www.axa.ch/de/privatkunden/blog/unterwegs/sicherheit-auf-der-strasse/cbd-hanfzigaretten-und-fahrtuechtigkeit.html|",
-      "item": "",
-      "hint": "",
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wenn du Cannabis konsumiert hast, musst du übrigens lange warten, bis du dich wieder hinters Steuer setzen darfst. THC wird nicht regelmässig abgebaut: Im Blut kann Cannabis 8 bis 30 Stunden nach dem Konsum nachgewiesen werden.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
       "example": null,
-      "instruction": "Wenn du Cannabis konsumiert hast, musst du übrigens lange warten, bis du dich wieder hinters Steuer setzen darfst. THC wird nicht regelmässig abgebaut: Im Blut kann Cannabis 8 bis 30 Stunden nach dem Konsum nachgewiesen werden.",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wie sich legale CBD-Hanf-Zigaretten auf dein Fahrverhalten auswirken, erfährst du in unserem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "http://https://www.axa.ch/de/privatkunden/blog/unterwegs/sicherheit-auf-der-strasse/cbd-hanfzigaretten-und-fahrtuechtigkeit.html",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "text": "Blog.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "responses": [
         {
           "response": "Okay",
           "reaction": "insightful",
-          "item": "",
-          "feedback": "|image:http://memes.com/funny.gif|"
+          "feedback": "|image:http://memes.com/funny.gif|",
+          "item": []
         }
       ],
-      "footer": "Bei regelmässigem Cannabiskonsum muss ganz auf das Autofahren verzichtet werden, weil der THC-Gehalt im Blut nicht mehr auf Null fällt."
-    }
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bei regelmässigem Cannabiskonsum muss ganz auf das Autofahren verzichtet werden, weil der THC-Gehalt im Blut nicht mehr auf Null fällt.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bot-action-response:bitmark++]\n[!Wenn du Cannabis konsumiert hast, musst du übrigens lange warten, bis du dich wieder hinters Steuer setzen darfst. THC wird nicht regelmässig abgebaut: Im Blut kann Cannabis 8 bis 30 Stunden nach dem Konsum nachgewiesen werden.]\n\nWie sich legale CBD-Hanf-Zigaretten auf dein Fahrverhalten auswirken, erfährst du in unserem ==Blog.==|link:http://https://www.axa.ch/de/privatkunden/blog/unterwegs/sicherheit-auf-der-strasse/cbd-hanfzigaretten-und-fahrtuechtigkeit.html|\n\n\n===\n[!Okay]\n[@reaction:insightful]\n|image:http://memes.com/funny.gif|\n===\nBei regelmässigem Cannabiskonsum muss ganz auf das Autofahren verzichtet werden, weil der THC-Gehalt im Blut nicht mehr auf Null fällt."
   },
   {
-    "bitmark": "[.bot-action-response]\n[!\nWusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?\n]\n\nDer Entscheid darüber liegt nicht bei der Versicherung, sondern ist **gesetzlich vorgeschrieben.**\n\n===\n[%A]\n[!👍 Cool! Ja, das weiss ich]\n[@reaction:celebrate]\n👍 Cool!\n===\n[%B]\n[!👍 Cool n groovy!]\n[@reaction:like]\n👍 Cool n groovy!\n===\n[%C]\n[!Das war mir nicht bewusst]\n[@reaction:like]\n👍 Cool n groovy n farout!\n===\n[%D]\n\n\n👍 Cool n groovy n good!\n[@reaction:like]\n===",
     "bit": {
       "type": "bot-action-response",
       "format": "bitmark--",
-      "body": "Der Entscheid darüber liegt nicht bei der Versicherung, sondern ist **gesetzlich vorgeschrieben.**",
-      "item": "",
-      "hint": "",
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wusstest du, dass du einen ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Teil der Kosten selbst bezahlen",
+              "type": "text"
+            },
+            {
+              "text": " musst, wenn du bekifft einen Unfall verursachst?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isExample": false,
       "example": null,
-      "instruction": "Wusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Der Entscheid darüber liegt nicht bei der Versicherung, sondern ist ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "gesetzlich vorgeschrieben.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "responses": [
         {
           "response": "👍 Cool! Ja, das weiss ich",
           "reaction": "celebrate",
-          "item": "A",
-          "feedback": "👍 Cool!"
+          "feedback": "👍 Cool!",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "response": "👍 Cool n groovy!",
           "reaction": "like",
-          "item": "B",
-          "feedback": "👍 Cool n groovy!"
+          "feedback": "👍 Cool n groovy!",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "B",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "response": "Das war mir nicht bewusst",
           "reaction": "like",
-          "item": "C",
-          "feedback": "👍 Cool n groovy n farout!"
+          "feedback": "👍 Cool n groovy n farout!",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "C",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "response": "",
           "reaction": "like",
-          "item": "D",
-          "feedback": "👍 Cool n groovy n good!"
+          "feedback": "👍 Cool n groovy n good!",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "D",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         }
       ]
-    }
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bot-action-response]\n[!\nWusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst, wenn du bekifft einen Unfall verursachst?\n]\n\nDer Entscheid darüber liegt nicht bei der Versicherung, sondern ist **gesetzlich vorgeschrieben.**\n\n===\n[%A]\n[!👍 Cool! Ja, das weiss ich]\n[@reaction:celebrate]\n👍 Cool!\n===\n[%B]\n[!👍 Cool n groovy!]\n[@reaction:like]\n👍 Cool n groovy!\n===\n[%C]\n[!Das war mir nicht bewusst]\n[@reaction:like]\n👍 Cool n groovy n farout!\n===\n[%D]\n\n\n👍 Cool n groovy n good!\n[@reaction:like]\n==="
   },
   {
-    "bitmark": "[.bot-action-response]\n===\n[!Ja, das weiss ich]\n[%A]\n[@reaction:celebrate]\n👍 Cool!\n===\n[!Das war mir nicht bewusst]\n[%B]\n😅\n[@reaction:like]\n===\nTHIS IS THE FOOTER",
     "bit": {
       "type": "bot-action-response",
       "format": "bitmark--",
-      "body": "",
-      "item": "",
-      "hint": "",
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
+      "body": [],
       "responses": [
         {
           "response": "Ja, das weiss ich",
           "reaction": "celebrate",
-          "item": "A",
-          "feedback": "👍 Cool!"
+          "feedback": "👍 Cool!",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "response": "Das war mir nicht bewusst",
           "reaction": "like",
-          "item": "B",
-          "feedback": "😅"
+          "feedback": "😅",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "B",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         }
       ],
-      "footer": "THIS IS THE FOOTER"
-    }
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "THIS IS THE FOOTER",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.bot-action-response]\n===\n[!Ja, das weiss ich]\n[%A]\n[@reaction:celebrate]\n👍 Cool!\n===\n[!Das war mir nicht bewusst]\n[%B]\n😅\n[@reaction:like]\n===\nTHIS IS THE FOOTER"
   }
 ]

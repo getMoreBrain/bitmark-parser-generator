@@ -1,15 +1,32 @@
 [
   {
-    "bitmark": "[.conclusion]\n[@id:342337]\nConclusion\nIt's exactly the same as an .article.",
     "bit": {
       "type": "conclusion",
       "format": "bitmark--",
-      "body": "Conclusion\nIt's exactly the same as an .article.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "342337"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["342337"]
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Conclusion\nIt's exactly the same as an .article.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.conclusion]\n[@id:342337]\nConclusion\nIt's exactly the same as an .article."
   }
 ]

@@ -1,16 +1,44 @@
 [
   {
-    "bitmark": "[.hint]\n[@id:210048]\n[%][%Hinweis]\nDieses Lehrmittel ist auf die Lernziele der Berufsprüfung Technische Kaufleute ausgerichtet. Da Budget und Kontrolle im Marketingkonzept nicht in den Lernzielen vorkommen, behandeln wir Budget und Kontrolle nicht als eigenes Kapitel, sondern punktuell bei den Instrumenten des Marketingmix.",
     "bit": {
       "type": "hint",
       "format": "bitmark--",
-      "body": "Dieses Lehrmittel ist auf die Lernziele der Berufsprüfung Technische Kaufleute ausgerichtet. Da Budget und Kontrolle im Marketingkonzept nicht in den Lernzielen vorkommen, behandeln wir Budget und Kontrolle nicht als eigenes Kapitel, sondern punktuell bei den Instrumenten des Marketingmix.",
-      "item": "",
-      "hint": "",
+      "id": [
+        "210048"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hinweis",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "id": ["210048"],
-      "lead": "Hinweis"
-    }
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Dieses Lehrmittel ist auf die Lernziele der Berufsprüfung Technische Kaufleute ausgerichtet. Da Budget und Kontrolle im Marketingkonzept nicht in den Lernzielen vorkommen, behandeln wir Budget und Kontrolle nicht als eigenes Kapitel, sondern punktuell bei den Instrumenten des Marketingmix.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.hint]\n[@id:210048]\n[%][%Hinweis]\nDieses Lehrmittel ist auf die Lernziele der Berufsprüfung Technische Kaufleute ausgerichtet. Da Budget und Kontrolle im Marketingkonzept nicht in den Lernzielen vorkommen, behandeln wir Budget und Kontrolle nicht als eigenes Kapitel, sondern punktuell bei den Instrumenten des Marketingmix."
   }
 ]

@@ -92,7 +92,7 @@ describe('web-bitmark-parser', () => {
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
         const jsonOptions = {
-          textAsPlainText: true, // For testing the parser, use plain text rather than JSON for text
+          textAsPlainText: false, // For testing the parser, use v3 json text rather than plain text in the JSON
           prettify: true, // For testing the output is easier to read if it is prettified
         };
 

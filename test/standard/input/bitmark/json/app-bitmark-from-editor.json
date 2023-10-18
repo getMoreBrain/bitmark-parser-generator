@@ -3,16 +3,29 @@
     "bit": {
       "type": "app-bitmark-from-editor",
       "format": "bitmark--",
-      "id": ["342341"],
-      "item": "",
-      "hint": "",
+      "id": [
+        "342341"
+      ],
+      "item": [],
+      "hint": [],
       "isExample": false,
       "example": null,
-      "body": "bitmark.print(\"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")\nbitmark.console.log(\"This is a [_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "bitmark.print(\"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")\nbitmark.console.log(\"This is a [_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "maxCreatedBits": 100
     },
     "parser": {
-      "version": "1.4.4",
+      "version": "1.4.12",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.app-bitmark-from-editor]\n[@id:342341]\n[@maxCreatedBits:100]\n\nbitmark.print(\"[^.cloze]\\nThis is a [^_gap text].\\n[.cloze]\\nThis is another [^_gap text].\")\nbitmark.console.log(\"This is a [^_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[^.cloze]\\nThis is a [^_gap text].\\n[^.cloze]\\nThis is another [^_gap text].\")"
