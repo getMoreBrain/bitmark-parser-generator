@@ -414,6 +414,7 @@ export interface CardNode {
   pairs?: Pair[];
   matrix?: Matrix[];
   botResponses?: BotResponse[];
+  clozeList?: Body[];
 }
 
 // Footer

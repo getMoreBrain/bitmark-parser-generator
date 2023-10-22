@@ -4,11 +4,14 @@ import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
 import { AliasBitType, BitType, RootBitType } from '../../../../model/enum/BitType';
+import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
   AudioResource,
+  Body,
+  BodyText,
   BotResponse,
   Choice,
   Flashcard,
@@ -92,6 +95,10 @@ function buildCards(
       result = parseBotActionResponses(context, bitType, processedCardSet);
       break;
 
+    case CardSetConfigKey._clozeList:
+      result = parseClozeList(context, bitType, processedCardSet);
+      break;
+
     default:
     // Return default empty object
   }
@@ -155,6 +162,8 @@ function processCardSet(
           processedSide.no,
           processedVariant.no,
         );
+        // Reduce the card body parts to a breakscaped string
+        tags.cardBodyStr = cardBodyToBreakscapedString(tags.cardBody);
 
         processedVariant.data = tags;
 
@@ -194,7 +203,7 @@ function parseFlashcards(
 
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { cardBody, ...tags } = content.data;
+        const { cardBodyStr, ...tags } = content.data;
         extraTags = {
           ...extraTags,
           ...tags,
@@ -202,11 +211,11 @@ function parseFlashcards(
 
         if (variantIndex === 0) {
           questionVariant = content;
-          question = cardBody ?? Breakscape.EMPTY_STRING;
+          question = cardBodyStr ?? Breakscape.EMPTY_STRING;
         } else if (variantIndex === 1) {
-          answer = cardBody ?? Breakscape.EMPTY_STRING;
+          answer = cardBodyStr ?? Breakscape.EMPTY_STRING;
         } else {
-          alternativeAnswers.push(cardBody ?? Breakscape.EMPTY_STRING);
+          alternativeAnswers.push(cardBodyStr ?? Breakscape.EMPTY_STRING);
         }
         variantIndex++;
       }
@@ -256,7 +265,7 @@ function parseElements(
         const tags = content.data;
 
         // if (tags.cardBody) {
-        elements.push(tags.cardBody ?? Breakscape.EMPTY_STRING);
+        elements.push(tags.cardBodyStr ?? Breakscape.EMPTY_STRING);
         // } else {
         //   context.addWarning('Ignoring card with empty element', content);
         // }
@@ -415,7 +424,7 @@ function parseQuestions(
 
         // if (tags.cardBody) {
         const q = builder.question({
-          question: tags.cardBody ?? Breakscape.EMPTY_STRING,
+          question: tags.cardBodyStr ?? Breakscape.EMPTY_STRING,
           ...tags,
         });
         questions.push(q);
@@ -467,7 +476,7 @@ function parseMatchPairs(
     for (const side of card.sides) {
       for (const content of side.variants) {
         // variant = content;
-        const { cardBody, title, resources, isDefaultExample, example, ...tags } = content.data;
+        const { cardBodyStr, title, resources, isDefaultExample, example, ...tags } = content.data;
 
         // Example
         isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
@@ -493,7 +502,7 @@ function parseMatchPairs(
             }
           } else {
             // If not a heading or resource, it is a pair
-            pairKey = cardBody;
+            pairKey = cardBodyStr;
           }
         } else {
           // Subsequent sides
@@ -503,7 +512,7 @@ function parseMatchPairs(
             exampleCardSet = example ? example : exampleCardSet;
           } else if (title == null) {
             // If not a heading, it is a pair
-            const value = cardBody ?? Breakscape.EMPTY_STRING;
+            const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
             pairValues.push(value);
             if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = value;
           }
@@ -602,7 +611,7 @@ function parseMatchMatrix(
         // variant = content;
         const tags = content.data;
 
-        const { title, cardBody, isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
+        const { title, cardBodyStr, isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
 
         // Example
         isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
@@ -629,7 +638,7 @@ function parseMatchMatrix(
             exampleCardSet = example ? example : exampleCardSet;
           } else {
             // If not a heading or resource, it is a matrix
-            matrixKey = cardBody;
+            matrixKey = cardBodyStr;
             isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
             exampleCard = example ? example : exampleCard;
             isCaseSensitiveMatrix = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
@@ -642,7 +651,7 @@ function parseMatchMatrix(
             exampleCardSet = example ? example : exampleCardSet;
           } else if (tags.title == null) {
             // If not a heading, it is a matrix cell value
-            const value = cardBody ?? Breakscape.EMPTY_STRING;
+            const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
             matrixCellValues.push(value);
             if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = value;
             isCaseSensitiveCell = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
@@ -707,7 +716,7 @@ function parseBotActionResponses(
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { instruction, reaction, cardBody: feedback, ...tags } = content.data;
+        const { instruction, reaction, cardBodyStr: feedback, ...tags } = content.data;
 
         const botResponse = builder.botResponse({
           response: instruction ?? Breakscape.EMPTY_STRING,
@@ -723,6 +732,45 @@ function parseBotActionResponses(
   return {
     botResponses: botResponses.length > 0 ? botResponses : undefined,
   };
+}
+
+function parseClozeList(
+  _context: BitmarkPegParserContext,
+  _bitType: BitType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
+  const body: Body[] = [];
+
+  for (const card of cardSet.cards) {
+    for (const side of card.sides) {
+      for (const content of side.variants) {
+        const { cardBody } = content.data;
+
+        if (cardBody) body.push(cardBody);
+      }
+    }
+  }
+
+  return {
+    clozeList: body.length > 0 ? body : undefined,
+  };
+}
+
+function cardBodyToBreakscapedString(cardBody: Body | undefined): BreakscapedString {
+  let bodyStr = '';
+
+  if (cardBody && cardBody.bodyParts) {
+    for (const bodyPart of cardBody.bodyParts) {
+      if (bodyPart.type === BodyBitType.text) {
+        const asText = bodyPart as BodyText;
+        const bodyTextPart = asText.data.bodyText;
+
+        bodyStr += bodyTextPart;
+      }
+    }
+  }
+
+  return bodyStr as BreakscapedString;
 }
 
 export { buildCards };

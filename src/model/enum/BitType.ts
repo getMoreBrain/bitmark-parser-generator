@@ -32,6 +32,7 @@ const RootBitType = superenum({
   chapter: 'chapter',
   cloze: 'cloze',
   clozeAndMultipleChoiceText: 'cloze-and-multiple-choice-text',
+  clozeList: 'cloze-list',
   code: 'code',
   conversationLeft1: 'conversation-left-1',
   document: 'document',

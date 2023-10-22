@@ -95,7 +95,8 @@ export interface CardData {
 
 export interface BitContentProcessorResult {
   cardSet?: ParsedCardSet;
-  cardBody?: BreakscapedString;
+  cardBody?: Body;
+  cardBodyStr?: BreakscapedString;
   body?: Body;
   footer?: FooterText;
   imageSource?: ImageSource;
@@ -178,6 +179,7 @@ export interface BitSpecificCards {
   choices?: Choice[];
   questions?: Question[];
   botResponses?: BotResponse[];
+  clozeList?: Body[];
   comments?: Comment[];
 }
 
