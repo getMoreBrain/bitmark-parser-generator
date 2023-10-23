@@ -400,6 +400,17 @@ export interface HighlightText {
   example?: Example;
 }
 
+export interface CardBit {
+  itemLead?: ItemLead;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
+  isExample?: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
+  extraProperties?: ExtraProperties;
+  body?: Body;
+}
+
 // Card Node
 export interface CardNode {
   questions?: Question[];
@@ -414,7 +425,7 @@ export interface CardNode {
   pairs?: Pair[];
   matrix?: Matrix[];
   botResponses?: BotResponse[];
-  clozeList?: Body[];
+  cardBits?: CardBit[];
 }
 
 // Footer

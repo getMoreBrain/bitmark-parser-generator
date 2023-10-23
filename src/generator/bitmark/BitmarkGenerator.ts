@@ -586,6 +586,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     this.writeNL();
     this.writeCardSetEnd();
+    this.writeNL();
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
@@ -1036,6 +1037,28 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected exit_botResponsesValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBits
+
+  protected enter_cardBits(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    //
+  }
+
+  protected between_cardBits(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _parent: NodeInfo | undefined,
+    _route: NodeInfo[],
+  ): void {
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  protected exit_cardBits(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    //
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> response

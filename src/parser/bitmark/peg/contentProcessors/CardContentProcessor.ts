@@ -13,6 +13,7 @@ import {
   Body,
   BodyText,
   BotResponse,
+  CardBit,
   Choice,
   Flashcard,
   Heading,
@@ -96,7 +97,8 @@ function buildCards(
       break;
 
     case CardSetConfigKey._clozeList:
-      result = parseClozeList(context, bitType, processedCardSet);
+    case CardSetConfigKey._pageFooterSections:
+      result = parseCardBits(context, bitType, processedCardSet);
       break;
 
     default:
@@ -734,25 +736,29 @@ function parseBotActionResponses(
   };
 }
 
-function parseClozeList(
+function parseCardBits(
   _context: BitmarkPegParserContext,
   _bitType: BitType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const body: Body[] = [];
+  const cardBits: CardBit[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { cardBody } = content.data;
+        const { cardBody: body, ...rest } = content.data;
 
-        if (cardBody) body.push(cardBody);
+        const cardBit = builder.cardBit({
+          body,
+          ...rest,
+        });
+        if (cardBit) cardBits.push(cardBit);
       }
     }
   }
 
   return {
-    clozeList: body.length > 0 ? body : undefined,
+    cardBits: cardBits.length > 0 ? cardBits : undefined,
   };
 }
 
