@@ -639,6 +639,28 @@ const BITS: _BitsConfig = {
       [AliasBitType.workbookArticle]: { since: '1.3.0' },
     },
   },
+  [RootBitType.exampleList]: {
+    since: '1.4.13',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.tag,
+        configKey: TagConfigKey.title,
+      },
+    ],
+    cardSet: CardSetConfigKey._exampleBitList,
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+    footerAllowed: true,
+    rootExampleType: ExampleType.string,
+    aliases: {
+      [AliasBitType.assignmentList]: { since: '1.4.13' },
+      [AliasBitType.pageFooter]: { since: '1.4.13' },
+    },
+  },
   [RootBitType.flashcard]: {
     since: '1.3.0',
     tags: [
@@ -1096,19 +1118,6 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-  },
-  [RootBitType.pageFooter]: {
-    since: '1.4.13',
-    tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
-      },
-    ],
-    cardSet: CardSetConfigKey._pageFooterSections,
-    resourceAttachmentAllowed: false,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [RootBitType.pageBuyButton]: {
     since: '1.4.3',

@@ -2474,7 +2474,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       case RootBitType.article:
       case RootBitType.sampleSolution:
       case RootBitType.page:
-      case RootBitType.pageFooter:
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         break;
 

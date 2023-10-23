@@ -3,6 +3,10 @@
     "bit": {
       "type": "page-footer",
       "format": "bitmark++",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
       "body": [],
       "listItems": [
         {
