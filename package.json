@@ -77,18 +77,18 @@
     "Richard Sewell (https://github.com/zx-ncoderz)"
   ],
   "devDependencies": {
-    "@types/eslint-plugin-prettier": "^3.1.1",
-    "@types/jest": "^29.5.5",
-    "@types/node": "^20.8.3",
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@typescript-eslint/parser": "^6.7.4",
-    "esbuild": "^0.19.4",
+    "@types/eslint-plugin-prettier": "^3.1.2",
+    "@types/jest": "^29.5.6",
+    "@types/node": "^20.8.7",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "esbuild": "^0.19.5",
     "esbuild-register": "^3.5.0",
-    "eslint": "^8.51.0",
+    "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-arca": "^0.16.0",
     "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-environment-node": "^29.7.0",
@@ -103,14 +103,14 @@
     "typedoc": "^0.25.2",
     "typedoc-plugin-markdown": "^3.16.0",
     "typescript": "5.2.2",
-    "webpack": "^5.88.2",
+    "webpack": "^5.89.0",
     "webpack-bundle-analyzer": "^4.9.1",
     "webpack-cli": "^5.1.4",
     "webpack-strip-block": "^0.3.0"
   },
   "dependencies": {
     "@ncoderz/superenum": "^0.2.3",
-    "@types/fs-extra": "^11.0.2",
+    "@types/fs-extra": "^11.0.3",
     "fs-extra": "^11.1.1"
   }
 }
