@@ -97,7 +97,7 @@ function buildCards(
       break;
 
     case CardSetConfigKey._clozeList:
-    case CardSetConfigKey._pageFooterSections:
+    case CardSetConfigKey._exampleBitList:
       result = parseCardBits(context, bitType, processedCardSet);
       break;
 

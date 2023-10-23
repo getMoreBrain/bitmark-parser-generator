@@ -296,14 +296,18 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
-  [CardSetConfigKey._pageFooterSections]: {
+  [CardSetConfigKey._exampleBitList]: {
     variants: [
       [
         {
           tags: [
             {
               type: BitTagType.group,
-              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+              configKey: GroupConfigKey.group_standardTags,
+            },
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
             },
           ],
           bodyAllowed: true,
