@@ -1097,6 +1097,19 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
+  [RootBitType.pageFooter]: {
+    since: '1.4.13',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+      },
+    ],
+    cardSet: CardSetConfigKey._pageFooterSections,
+    resourceAttachmentAllowed: false,
+    bodyAllowed: true,
+    footerAllowed: true,
+  },
   [RootBitType.pageBuyButton]: {
     since: '1.4.3',
     tags: [

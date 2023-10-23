@@ -1,0 +1,195 @@
+[
+  {
+    "bit": {
+      "type": "cloze-list",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Some body",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "listItems": [
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [],
+          "hint": [],
+          "instruction": [],
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "This is a ",
+                  "type": "text"
+                },
+                {
+                  "type": "gap",
+                  "item": [],
+                  "lead": [],
+                  "hint": [],
+                  "instruction": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "instruction",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "isCaseSensitive": true,
+                  "isExample": false,
+                  "example": null,
+                  "solutions": ["gap"]
+                },
+                {
+                  "text": " text with another ",
+                  "type": "text"
+                },
+                {
+                  "type": "gap",
+                  "item": [],
+                  "lead": [],
+                  "hint": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "hint",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "instruction": [],
+                  "isCaseSensitive": true,
+                  "isExample": false,
+                  "example": null,
+                  "solutions": ["cloze"]
+                },
+                {
+                  "text": ".",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "2.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [],
+          "hint": [],
+          "instruction": [],
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "This is another ",
+                  "type": "text"
+                },
+                {
+                  "type": "gap",
+                  "item": [],
+                  "lead": [],
+                  "hint": [],
+                  "instruction": [],
+                  "isCaseSensitive": true,
+                  "isExample": false,
+                  "example": null,
+                  "solutions": ["gap"]
+                },
+                {
+                  "text": " text.\nWith ",
+                  "type": "text"
+                },
+                {
+                  "type": "gap",
+                  "item": [],
+                  "lead": [],
+                  "hint": [],
+                  "instruction": [],
+                  "isCaseSensitive": true,
+                  "isExample": false,
+                  "example": null,
+                  "solutions": ["two"]
+                },
+                {
+                  "text": " lines.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Optional Footer",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.13",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.cloze-list:bitmark--]\n[!Instruction]\n\nSome body\n\n====\n[%1.] This is a [_gap][!instruction] text with another [_cloze][?hint].\n====\n[%2.] This is another [_gap] text.\nWith [_two] lines.\n\n~~~~\nOptional Footer"
+  }
+]

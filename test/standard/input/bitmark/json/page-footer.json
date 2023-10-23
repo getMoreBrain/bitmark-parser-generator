@@ -1,0 +1,418 @@
+[
+  {
+    "bit": {
+      "type": "page-footer",
+      "format": "bitmark++",
+      "body": [],
+      "listItems": [
+        {
+          "item": [],
+          "lead": [],
+          "hint": [],
+          "instruction": [],
+          "body": [
+            {
+              "type": "image",
+              "attrs": {
+                "textAlign": "left",
+                "src": "https://www.additiv.com/logo.png",
+                "alt": "additov logo",
+                "title": null,
+                "class": "center"
+              }
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.linkedin.com/company/additiv/",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "in",
+                  "type": "text"
+                },
+                {
+                  "text": "icon:",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/linkedin_icon.svg",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "www.additiv.com/linkedin_icon.svg",
+                  "type": "text"
+                },
+                {
+                  "text": "| ",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.youtube.com/channel/UC1B4S1TtFeBe43RAnSAVhhQ",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "yt",
+                  "type": "text"
+                },
+                {
+                  "text": "icon:",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/youtube_icon.svg",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "www.additiv.com/youtube_icon.svg",
+                  "type": "text"
+                },
+                {
+                  "text": "| ",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://twitter.com/additivAG",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "X",
+                  "type": "text"
+                },
+                {
+                  "text": "icon:",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/twitter_icon.svg",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "www.additiv.com/twitter_icon.svg",
+                  "type": "text"
+                },
+                {
+                  "text": "|",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "item": [],
+          "lead": [],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Platform",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/orchestration-platform/",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "Orchestration by additiv",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "[https://www.server2.com/",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "Types of orchestration",
+                  "type": "text"
+                },
+                {
+                  "text": "](",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/types-of-orchestration/",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "www.additiv.com/types-of-orchestration/",
+                  "type": "text"
+                },
+                {
+                  "text": "|",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "item": [],
+          "lead": [],
+          "hint": [],
+          "instruction": [],
+          "body": [
+            {
+              "type": "image",
+              "attrs": {
+                "textAlign": "left",
+                "src": "https://www.additiv.com/logo.png",
+                "alt": "additov logo",
+                "title": null,
+                "class": "center"
+              }
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.linkedin.com/company/additiv/",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "in",
+                  "type": "text"
+                },
+                {
+                  "text": "icon:",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/linkedin_icon.svg",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "www.additiv.com/linkedin_icon.svg",
+                  "type": "text"
+                },
+                {
+                  "text": "| ",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.youtube.com/channel/UC1B4S1TtFeBe43RAnSAVhhQ",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "yt",
+                  "type": "text"
+                },
+                {
+                  "text": "icon:",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/youtube_icon.svg",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "www.additiv.com/youtube_icon.svg",
+                  "type": "text"
+                },
+                {
+                  "text": "| ",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://twitter.com/additivAG",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "X",
+                  "type": "text"
+                },
+                {
+                  "text": "icon:",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/twitter_icon.svg",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "www.additiv.com/twitter_icon.svg",
+                  "type": "text"
+                },
+                {
+                  "text": "|",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "item": [],
+          "lead": [],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Platform",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "body": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/orchestration-platform/",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "Orchestration by additiv",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "[https://www.server2.com/",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "Types of orchestration",
+                  "type": "text"
+                },
+                {
+                  "text": "](",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://www.additiv.com/types-of-orchestration/",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "www.additiv.com/types-of-orchestration/",
+                  "type": "text"
+                },
+                {
+                  "text": "|",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.13",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.page-footer:bitmark++]\n====\n|image:https://www.additiv.com/logo.png|alt:additov logo|\n==in==|link:https://www.linkedin.com/company/additiv/|icon:https://www.additiv.com/linkedin_icon.svg| ==yt==|link:https://www.youtube.com/channel/UC1B4S1TtFeBe43RAnSAVhhQ|icon:https://www.additiv.com/youtube_icon.svg| ==X==|link:https://twitter.com/additivAG|icon:https://www.additiv.com/twitter_icon.svg|\n====\n[! Platform]\n==Orchestration by additiv==|link:https://www.additiv.com/orchestration-platform/|\n==Types of orchestration==|link:[https://www.server2.com/|](https://www.additiv.com/types-of-orchestration/|\n====\n|image:https://www.additiv.com/logo.png|alt:additov logo|\n==in==|link:https://www.linkedin.com/company/additiv/|icon:https://www.additiv.com/linkedin_icon.svg| ==yt==|link:https://www.youtube.com/channel/UC1B4S1TtFeBe43RAnSAVhhQ|icon:https://www.additiv.com/youtube_icon.svg| ==X==|link:https://twitter.com/additivAG|icon:https://www.additiv.com/twitter_icon.svg|\n====\n[! Platform]\n==Orchestration by additiv==|link:https://www.additiv.com/orchestration-platform/|\n==Types of orchestration==|link:[https://www.server2.com/|](https://www.additiv.com/types-of-orchestration/|"
+  }
+]

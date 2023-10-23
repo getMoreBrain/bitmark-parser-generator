@@ -65,6 +65,7 @@ const RootBitType = superenum({
   multipleResponse: 'multiple-response',
   multipleResponse1: 'multiple-response-1',
   page: 'page',
+  pageFooter: 'page-footer',
   pageBuyButton: 'page-buy-button',
   photo: 'photo',
   quote: 'quote',

@@ -12,6 +12,7 @@ const CardSetConfigKey = superenum({
   _matchMatrix: '_matchMatrix',
   _botActionResponses: '_botActionResponses',
   _clozeList: '_clozeList',
+  _pageFooterSections: '_pageFooterSections',
 });
 
 export type CardSetConfigKeyType = EnumType<typeof CardSetConfigKey>;

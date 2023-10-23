@@ -1,0 +1,13 @@
+[.cloze-list:bitmark--]
+[!Instruction]
+
+Some body
+
+====
+[%1.] This is a [_gap][!instruction] text with another [_cloze][?hint].
+====
+[%2.] This is another [_gap] text.
+With [_two] lines.
+
+~~~~
+Optional Footer

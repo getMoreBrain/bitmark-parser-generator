@@ -22,6 +22,7 @@ import {
   BodyPart,
   BodyText,
   BotResponse,
+  CardBit,
   Choice,
   Flashcard,
   FooterText,
@@ -62,6 +63,7 @@ import {
   ExampleJson,
   MarkConfigJson,
   ImageSourceJson,
+  ListItemJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -308,6 +310,7 @@ class JsonParser {
       matrix,
       choices,
       questions,
+      listItems,
       footer,
       placeholders,
     } = bit;
@@ -365,6 +368,9 @@ class JsonParser {
 
     // botResponses
     const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
+
+    // listItems (cardBits)
+    const cardBitNodes = this.listItemsToAst(listItems, textFormat, placeholders);
 
     // footer
     const footerNode = this.footerToAst(footer, textFormat);
@@ -454,6 +460,7 @@ class JsonParser {
       choices: choiceNodes,
       questions: questionNodes,
       botResponses: botResponseNodes,
+      cardBits: cardBitNodes,
       footer: footerNode,
     });
 
@@ -798,6 +805,32 @@ class JsonParser {
           hint: this.convertJsonTextToBreakscapedString(hint),
         });
         nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private listItemsToAst(
+    listItems: ListItemJson[],
+    textFormat: TextFormatType,
+    placeholders: BodyBitsJson,
+  ): CardBit[] | undefined {
+    const nodes: CardBit[] = [];
+
+    if (Array.isArray(listItems)) {
+      for (const li of listItems) {
+        const { item, lead, hint, instruction, body } = li;
+        const node = builder.cardBit({
+          item: this.convertJsonTextToBreakscapedString(item),
+          lead: this.convertJsonTextToBreakscapedString(lead),
+          hint: this.convertJsonTextToBreakscapedString(hint),
+          instruction: this.convertJsonTextToBreakscapedString(instruction),
+          body: this.bodyToAst(body, textFormat, placeholders),
+        });
+        if (node) nodes.push(node);
       }
     }
 

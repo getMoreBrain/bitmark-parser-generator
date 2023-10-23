@@ -296,6 +296,22 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
+  [CardSetConfigKey._pageFooterSections]: {
+    variants: [
+      [
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+            },
+          ],
+          bodyAllowed: true,
+          repeatCount: Count.infinity,
+        },
+      ],
+    ],
+  },
 };
 
 export { CARDSETS as CARDS };

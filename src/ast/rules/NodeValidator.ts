@@ -1,17 +1,34 @@
-import { Bit, Resource } from '../../model/ast/Nodes';
+import { Bit, CardBit, Resource } from '../../model/ast/Nodes';
 import { RootBitType } from '../../model/enum/BitType';
 import { StringUtils } from '../../utils/StringUtils';
 
+/**
+ * Validates a node as the builder level (i.e. when creating AST).
+ *
+ * This is not really implemented yet.
+ * Validation happens in the bitmark parsing, but not when creating the AST.
+ * This means that the JSON => bitmark conversion is not well validated yet.
+ */
 class NodeValidator {
   validateBit(bit: Bit | undefined): Bit | undefined {
     if (!bit) return bit;
 
+    // TODO
     let ret: Bit | undefined = bit;
     switch (bit.bitType.root) {
       case RootBitType.interview:
         ret = this.validateInterviewBit(bit);
         break;
     }
+
+    return ret;
+  }
+
+  validateCardBit(bit: CardBit | undefined): CardBit | undefined {
+    if (!bit) return bit;
+
+    const ret: CardBit | undefined = bit;
+    // TODO
 
     return ret;
   }

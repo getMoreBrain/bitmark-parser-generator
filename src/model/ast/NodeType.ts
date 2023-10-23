@@ -63,8 +63,8 @@ const NodeType = superenum({
   questionsValue: 'questionsValue',
   botResponses: 'botResponses',
   botResponsesValue: 'botResponsesValue',
-  clozeList: 'clozeList',
-  clozeListValue: 'clozeListValue',
+  cardBits: 'cardBits',
+  cardBitsValue: 'cardBitsValue',
 
   // Properties
   id: 'id',
