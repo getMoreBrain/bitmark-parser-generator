@@ -103,6 +103,7 @@ export interface BitJson {
   choices: ChoiceJson[];
   questions: QuestionJson[];
   listItems: ListItemJson[];
+  sections: ListItemJson[]; // sections is just a pseudonym for listItems
   footer: JsonText;
   placeholders: BodyBitsJson;
 }

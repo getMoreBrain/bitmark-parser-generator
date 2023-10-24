@@ -2,7 +2,18 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 
 // Type containing both the root and alias bit types
 export interface BitType {
+  /**
+   * The bit type
+   *
+   * This will be a root bit type or alias bit type, and is the definitive type of the bit
+   */
   alias: RootOrAliasBitTypeType;
+
+  /**
+   * The root bit type
+   *
+   * This defines the behaviour of the bit.
+   */
   root: RootBitTypeType;
 }
 
