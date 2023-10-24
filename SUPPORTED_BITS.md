@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.4.12
+Version: 1.4.13
 ## Supported Bits
 <pre>
 app-bitmark-from-javascript (since: 1.4.5)
@@ -66,6 +66,7 @@ cloze (since: 1.3.0)
 |__ coach-self-reflection-cloze (since: 1.3.0)
 cloze-and-multiple-choice-text (since: 1.3.0)
 |__ coach-call-to-action-cloze-and-multiple-choice-text (since: 1.3.0)
+cloze-list (since: 1.4.13)
 code (since: 1.3.0)
 |__ app-code-cell (since: 1.4.3)
 |__ app-code-editor (since: 1.4.3)
@@ -165,6 +166,9 @@ example (since: 1.3.0)
 |__ video-transcript (since: 1.3.0)
 |__ warning (since: 1.3.0)
 |__ workbook-article (since: 1.3.0)
+example-list (since: 1.4.13)
+|__ assignment-list (since: 1.4.13)
+|__ page-footer (since: 1.4.13)
 flashcard (since: 1.3.0)
 |__ flashcard-1 (since: 1.3.0)
 focus-image (since: 1.3.0)

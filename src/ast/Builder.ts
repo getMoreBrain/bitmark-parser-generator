@@ -52,6 +52,7 @@ import {
   Example,
   Flashcard,
   ImageSource,
+  CardBit,
 } from '../model/ast/Nodes';
 
 /**
@@ -177,6 +178,7 @@ class Builder extends BaseBuilder {
     choices?: Choice[];
     questions?: Question[];
     botResponses?: BotResponse[];
+    cardBits?: CardBit[];
     footer?: FooterText;
 
     markup?: string;
@@ -1228,6 +1230,48 @@ class Builder extends BaseBuilder {
     return node;
   }
 
+  /**
+   * Build card bit node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  cardBit(data: {
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
+    isDefaultExample?: boolean;
+    example?: Example;
+    extraProperties?: {
+      [key: string]: unknown | unknown[];
+    };
+    body?: Body;
+  }): CardBit | undefined {
+    const { item, lead, hint, instruction, isDefaultExample, example, extraProperties, body } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: CardBit = {
+      itemLead: this.itemLead(item, lead),
+      hint,
+      instruction,
+      ...this.toExample(isDefaultExample, example),
+      body,
+
+      // Must always be last in the AST so key clashes are avoided correctly with other properties
+      extraProperties: this.parseExtraProperties(extraProperties),
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyString: ['example'],
+    });
+
+    // Validate and correct invalid bits as much as possible
+    return NodeValidator.validateCardBit(node);
+  }
+
   private cardNode(data: {
     flashcards?: Flashcard[];
     questions?: Question[];
@@ -1241,6 +1285,7 @@ class Builder extends BaseBuilder {
     pairs?: Pair[];
     matrix?: Matrix[];
     botResponses?: BotResponse[];
+    cardBits?: CardBit[];
   }): CardNode | undefined {
     let node: CardNode | undefined;
     const {
@@ -1256,6 +1301,7 @@ class Builder extends BaseBuilder {
       pairs,
       matrix,
       botResponses,
+      cardBits,
     } = data;
 
     if (
@@ -1270,7 +1316,8 @@ class Builder extends BaseBuilder {
       heading ||
       pairs ||
       matrix ||
-      botResponses
+      botResponses ||
+      cardBits
     ) {
       node = {
         questions,
@@ -1285,6 +1332,7 @@ class Builder extends BaseBuilder {
         pairs,
         matrix,
         botResponses,
+        cardBits,
       };
 
       // Remove Unset Optionals

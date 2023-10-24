@@ -102,6 +102,8 @@ export interface BitJson {
   matrix: MatrixJson[];
   choices: ChoiceJson[];
   questions: QuestionJson[];
+  listItems: ListItemJson[];
+  sections: ListItemJson[]; // sections is just a pseudonym for listItems
   footer: JsonText;
   placeholders: BodyBitsJson;
 }
@@ -241,6 +243,14 @@ export interface BotResponseJson {
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
+}
+
+export interface ListItemJson {
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
+  body: JsonText;
 }
 
 export type ExampleJson = JsonText | boolean | null;

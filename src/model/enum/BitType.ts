@@ -2,7 +2,18 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 
 // Type containing both the root and alias bit types
 export interface BitType {
+  /**
+   * The bit type
+   *
+   * This will be a root bit type or alias bit type, and is the definitive type of the bit
+   */
   alias: RootOrAliasBitTypeType;
+
+  /**
+   * The root bit type
+   *
+   * This defines the behaviour of the bit.
+   */
   root: RootBitTypeType;
 }
 
@@ -32,6 +43,7 @@ const RootBitType = superenum({
   chapter: 'chapter',
   cloze: 'cloze',
   clozeAndMultipleChoiceText: 'cloze-and-multiple-choice-text',
+  clozeList: 'cloze-list',
   code: 'code',
   conversationLeft1: 'conversation-left-1',
   document: 'document',
@@ -40,6 +52,7 @@ const RootBitType = superenum({
   documentLink: 'document-link',
   essay: 'essay',
   example: 'example',
+  exampleList: 'example-list',
   flashcard: 'flashcard',
   focusImage: 'focus-image',
   highlightText: 'highlight-text',
@@ -103,6 +116,7 @@ const AliasBitType = superenum({
   articleAi: 'article-ai',
   articleAttachment: 'article-attachment',
   assignment: 'assignment',
+  assignmentList: 'assignment-list',
   audioTranscript: 'audio-transcript',
   bitBookEnding: 'bit-book-ending',
   bitBookSummary: 'bit-book-summary',
@@ -263,6 +277,7 @@ const AliasBitType = superenum({
   notebookArticle: 'notebook-article',
   output: 'output',
   pageBanner: 'page-banner',
+  pageFooter: 'page-footer',
   preparationNote: 'preparation-note',
   question1: 'question-1',
   recordAudio: 'record-audio',

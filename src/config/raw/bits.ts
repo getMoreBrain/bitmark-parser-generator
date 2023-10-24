@@ -393,6 +393,19 @@ const BITS: _BitsConfig = {
       [AliasBitType.coachCallToActionCloze]: { since: '1.3.0' },
     },
   },
+  [RootBitType.clozeList]: {
+    since: '1.4.13',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+    ],
+    cardSet: CardSetConfigKey._clozeList,
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+    footerAllowed: true,
+  },
   [RootBitType.code]: {
     since: '1.3.0',
     tags: [
@@ -624,6 +637,28 @@ const BITS: _BitsConfig = {
       [AliasBitType.videoTranscript]: { since: '1.3.0' },
       [AliasBitType.warning]: { since: '1.3.0' },
       [AliasBitType.workbookArticle]: { since: '1.3.0' },
+    },
+  },
+  [RootBitType.exampleList]: {
+    since: '1.4.13',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.tag,
+        configKey: TagConfigKey.title,
+      },
+    ],
+    cardSet: CardSetConfigKey._exampleBitList,
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+    footerAllowed: true,
+    rootExampleType: ExampleType.string,
+    aliases: {
+      [AliasBitType.assignmentList]: { since: '1.4.13' },
+      [AliasBitType.pageFooter]: { since: '1.4.13' },
     },
   },
   [RootBitType.flashcard]: {

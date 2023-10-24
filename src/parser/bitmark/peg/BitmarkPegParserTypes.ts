@@ -41,6 +41,7 @@ import {
   MarkConfig,
   Flashcard,
   ImageSource,
+  CardBit,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -95,7 +96,8 @@ export interface CardData {
 
 export interface BitContentProcessorResult {
   cardSet?: ParsedCardSet;
-  cardBody?: BreakscapedString;
+  cardBody?: Body;
+  cardBodyStr?: BreakscapedString;
   body?: Body;
   footer?: FooterText;
   imageSource?: ImageSource;
@@ -178,6 +180,7 @@ export interface BitSpecificCards {
   choices?: Choice[];
   questions?: Question[];
   botResponses?: BotResponse[];
+  cardBits?: CardBit[];
   comments?: Comment[];
 }
 

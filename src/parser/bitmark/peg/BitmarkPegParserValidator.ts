@@ -215,12 +215,12 @@ class BitmarkPegParserValidator {
   checkCardBody(
     context: BitmarkPegParserContext,
     bitType: BitType,
-    bitLevel: BitContentLevelType,
-    cardBody: BreakscapedString | undefined,
+    _bitLevel: BitContentLevelType,
+    cardBody: Body | undefined,
     cardNo: number,
     sideNo: number,
     variantNo: number,
-  ): BreakscapedString | undefined {
+  ): Body | undefined {
     if (!cardBody) return cardBody;
 
     // Get the bit config to check how to parse the bit
@@ -232,9 +232,11 @@ class BitmarkPegParserValidator {
 
     const { bodyAllowed } = variantConfig;
 
-    this.checkBodyForCommonPotentialMistakes(context, bitLevel, bitType, cardBody);
+    const hasBody = cardBody.bodyParts.length > 0;
 
-    if (!bodyAllowed) {
+    // this.checkBodyForCommonPotentialMistakes(context, bitLevel, bitType, cardBody);
+
+    if (hasBody && !bodyAllowed) {
       context.addWarning(
         `Bit '${bitType.alias}' should not have a card body at card:${cardNo + 1}, side:${sideNo + 1}, variant:${
           variantNo + 1

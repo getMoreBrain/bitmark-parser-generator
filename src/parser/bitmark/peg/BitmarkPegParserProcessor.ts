@@ -396,8 +396,10 @@ class BitmarkPegParserProcessor {
     const bodyParts: BodyPart[] = [];
     let bodyPart: BreakscapedString = Breakscape.EMPTY_STRING;
     let footer: BreakscapedString = Breakscape.EMPTY_STRING;
-    let cardBody: BreakscapedString = Breakscape.EMPTY_STRING;
+    // let cardBody: BreakscapedString = Breakscape.EMPTY_STRING;
 
+    const inBit = bitLevel === BitContentLevel.Bit;
+    const inCard = bitLevel === BitContentLevel.Card;
     const inChain = bitLevel === BitContentLevel.Chain;
 
     // Helper for building the body text
@@ -477,7 +479,8 @@ class BitmarkPegParserProcessor {
           break;
         }
 
-        case TypeKey.BodyText: {
+        case TypeKey.BodyText:
+        case TypeKey.CardText: {
           if (inFooter) {
             footer = Breakscape.concatenate(footer, value as BreakscapedString);
           } else {
@@ -486,10 +489,10 @@ class BitmarkPegParserProcessor {
           break;
         }
 
-        case TypeKey.CardText: {
-          cardBody = Breakscape.concatenate(cardBody, value as BreakscapedString);
-          break;
-        }
+        // case TypeKey.CardText: {
+        //   cardBody = Breakscape.concatenate(cardBody, value as BreakscapedString);
+        //   break;
+        // }
 
         default:
         // Unknown tag
@@ -500,8 +503,13 @@ class BitmarkPegParserProcessor {
     addBodyText();
 
     // Validate and build the body (trimmed)
-    result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
-    BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, result.body);
+    if (inBit) {
+      result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
+      BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, result.body);
+    } else if (inCard) {
+      result.cardBody = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
+      // Card body is validated in CardContentProcessor:processCardSet()
+    }
 
     // Validate and build the footer (trimmed)
     footer = footer.trim() as BreakscapedString;
@@ -512,11 +520,11 @@ class BitmarkPegParserProcessor {
       }
     }
 
-    // Add card body (validated elsewhere)
-    cardBody = cardBody.trim() as BreakscapedString;
-    if (cardBody) {
-      result.cardBody = cardBody;
-    }
+    // // Add card body (validated elsewhere)
+    // cardBody = cardBody.trim() as BreakscapedString;
+    // if (cardBody) {
+    //   result.cardBody = cardBody;
+    // }
 
     // Remove the extra properties if there are none
     if (Object.keys(result.extraProperties).length === 0) delete result.extraProperties;

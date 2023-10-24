@@ -70,6 +70,7 @@ import {
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
+  ListItemJson,
   MarkConfigJson,
   MatrixCellJson,
   MatrixJson,
@@ -242,6 +243,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   private bitJson: Partial<BitJson> = {};
   private textDefault: JsonText = Breakscape.EMPTY_STRING;
   private bodyDefault: JsonText = Breakscape.EMPTY_STRING;
+  private bodyJson: JsonText = this.bodyDefault;
+  private listItem: ListItemJson | undefined;
+  private startPlaceholderIndex = 0;
 
   // Debug
   private printed: boolean = false;
@@ -329,6 +333,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.bitJson = {};
     this.textDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
     this.bodyDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
+    this.bodyJson = this.bodyDefault;
+    this.startPlaceholderIndex = 0;
 
     this.printed = false;
   }
@@ -580,17 +586,62 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> body -> bodyParts
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBits -> cardBitsValue
+
+  protected enter_cardBitsValue(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+    // How cardBits are handled depends on the bit type
+    const bitType = this.getBitType(route);
+    if (!bitType) return;
+
+    // Create the listItems / sections if not already created
+    let listItems: ListItemJson[] | undefined;
+    if (bitType.alias === AliasBitType.pageFooter) {
+      if (!this.bitJson.sections) this.bitJson.sections = [];
+      listItems = this.bitJson.sections;
+    } else {
+      if (!this.bitJson.listItems) this.bitJson.listItems = [];
+      listItems = this.bitJson.listItems;
+    }
+
+    // Create this list item
+    this.listItem = {
+      ...this.toItemLeadHintInstruction(node.value),
+      body: this.bodyDefault,
+    };
+
+    listItems.push(this.listItem);
+  }
+
+  protected exit_cardBitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.listItem = undefined;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> body
+
+  protected enter_body(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    this.bodyJson = this.bodyDefault;
+  }
+
+  protected exit_body(_node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (!parent) return;
+
+    if (parent.key === NodeType.bitsValue) {
+      // Body is at the bit level
+      this.bitJson.body = this.bodyJson;
+    } else if (parent.key === NodeType.cardBitsValue) {
+      // Body is at the list item (card bit) level
+      if (this.listItem) this.listItem.body = this.bodyJson;
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> * -> bodyParts (body, cardBody (e.g. cloze-list, page-footer))
 
   protected enter_bodyParts(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): boolean {
     const bodyParts = node.value as BodyPart[];
     const plainText = this.options.textAsPlainText;
     const textFormat = this.getTextFormat(route);
     let fullBodyTextStr: BreakscapedString = '' as BreakscapedString;
-    let placeholderIndex = 0;
-
-    // Ensure body exists
-    if (this.bitJson.body == null) this.bitJson.body = this.bodyDefault;
+    let placeholderIndex = this.startPlaceholderIndex;
 
     // Function for creating the placeholder keys
     const createPlaceholderKeys = (
@@ -638,13 +689,13 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
 
     // Add string or AST to the body
-    this.bitJson.body = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
-    const bodyAst = this.bitJson.body as TextAst;
+    this.bodyJson = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
+    const bodyAst = this.bodyJson as TextAst;
 
     // Loop the body parts again to create the body bits:
     // - For text output the body bits are inserted into the 'placeholders' object
     // - For JSON output the body bits are inserted into body AST, replacing the placeholders created by the text parser
-    placeholderIndex = 0;
+    placeholderIndex = this.startPlaceholderIndex;
     for (let i = 0; i < bodyParts.length; i++) {
       const bodyPart = bodyParts[i];
 
@@ -699,6 +750,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
       placeholderIndex++;
     }
+
+    // Save the current placeholder index for the next body (body, card bodies)
+    this.startPlaceholderIndex = placeholderIndex;
 
     // Stop traversal of this branch for efficiency
     return false;
@@ -2377,6 +2431,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       matrix: undefined,
       choices: undefined,
       questions: undefined,
+      listItems: undefined,
+      sections: undefined,
 
       // Placeholders
       placeholders: undefined,
@@ -2655,6 +2711,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.matrix == null) delete bitJson.matrix;
     if (bitJson.choices == null) delete bitJson.choices;
     if (bitJson.questions == null) delete bitJson.questions;
+    if (bitJson.listItems == null) delete bitJson.listItems;
+    if (bitJson.sections == null) delete bitJson.sections;
 
     // Placeholders
     if (!plainText || bitJson.placeholders == null) delete bitJson.placeholders;
