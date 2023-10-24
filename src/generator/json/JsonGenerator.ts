@@ -588,13 +588,20 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBits -> cardBitsValue
 
-  protected enter_cardBitsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    // // How cardBits are handled depends on the bit type
-    // const bitType = this.getBitType(route);
-    // if (!bitType) return;
+  protected enter_cardBitsValue(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+    // How cardBits are handled depends on the bit type
+    const bitType = this.getBitType(route);
+    if (!bitType) return;
 
-    // Create the listItems if not already created
-    if (!this.bitJson.listItems) this.bitJson.listItems = [];
+    // Create the listItems / sections if not already created
+    let listItems: ListItemJson[] | undefined;
+    if (bitType.alias === AliasBitType.pageFooter) {
+      if (!this.bitJson.sections) this.bitJson.sections = [];
+      listItems = this.bitJson.sections;
+    } else {
+      if (!this.bitJson.listItems) this.bitJson.listItems = [];
+      listItems = this.bitJson.listItems;
+    }
 
     // Create this list item
     this.listItem = {
@@ -602,7 +609,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       body: this.bodyDefault,
     };
 
-    this.bitJson.listItems.push(this.listItem);
+    listItems.push(this.listItem);
   }
 
   protected exit_cardBitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -2425,6 +2432,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       choices: undefined,
       questions: undefined,
       listItems: undefined,
+      sections: undefined,
 
       // Placeholders
       placeholders: undefined,
@@ -2704,6 +2712,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.choices == null) delete bitJson.choices;
     if (bitJson.questions == null) delete bitJson.questions;
     if (bitJson.listItems == null) delete bitJson.listItems;
+    if (bitJson.sections == null) delete bitJson.sections;
 
     // Placeholders
     if (!plainText || bitJson.placeholders == null) delete bitJson.placeholders;

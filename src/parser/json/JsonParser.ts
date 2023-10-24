@@ -311,6 +311,7 @@ class JsonParser {
       choices,
       questions,
       listItems,
+      sections,
       footer,
       placeholders,
     } = bit;
@@ -369,8 +370,8 @@ class JsonParser {
     // botResponses
     const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
 
-    // listItems (cardBits)
-    const cardBitNodes = this.listItemsToAst(listItems, textFormat, placeholders);
+    // listItems / sections (cardBits)
+    const cardBitNodes = this.listItemsToAst(listItems ?? sections, textFormat, placeholders);
 
     // footer
     const footerNode = this.footerToAst(footer, textFormat);
