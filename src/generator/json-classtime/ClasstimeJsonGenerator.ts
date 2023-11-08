@@ -25,6 +25,7 @@ import { ResourceType } from '../../model/enum/ResourceType';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { ClasstimeBitJson, ClasstimeContentJson, ClasstimeTextJson } from '../../model/json-classtime/ClasstimeBitJson';
 import { ClasstimeBitWrapperJson } from '../../model/json-classtime/ClasstimeBitWrapperJson';
+import { ChoiceJson, QuizJson, ResponseJson, StatementJson } from '../../model/json/BitJson';
 import { GapJson, HighlightJson, HighlightTextJson, SelectJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
 import { TextParser } from '../../parser/text/TextParser';
@@ -60,15 +61,6 @@ import {
   ClasstimeCategoryJson,
   ClasstimeItemJson,
 } from '../../model/json-classtime/ClasstimeBodyBitJson';
-import {
-  ChoiceJson,
-  HeadingJson,
-  MatrixCellJson,
-  MatrixJson,
-  QuizJson,
-  ResponseJson,
-  StatementJson,
-} from '../../model/json/BitJson';
 import {
   AppLinkResourceJson,
   ArticleResourceJson,
@@ -356,6 +348,10 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
   protected exit_bitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const bitType = this.getBitType(_route) ?? BitType._error;
 
+    if (bitType === BitType._error) {
+      this.bitJson.errors = this.bitWrapperJson.parser?.errors;
+    }
+
     // Clean up the bit JSON, removing any unwanted values
     this.cleanAndSetDefaultsForBitJson(bitType, this.bitJson);
   }
@@ -491,21 +487,7 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       this.bitJson.raw_content = bodyText;
     } else {
       if (bodyText) {
-        const description: ClasstimeTextJson = {
-          blocks: [],
-          entityMap: {},
-        };
-        description.blocks.push({
-          key: ObjectUtils.alphanumericKey(DEFAULT_ALPHANUMERIC_KEY_LENGTH),
-          text: bodyText as string,
-          type: 'unstyled',
-          depth: 0,
-          inlineStyleRanges: [],
-          entityRanges: [],
-          data: {},
-        });
-
-        this.bitJson.description = description;
+        this.bitJson.content = this.createClasstimeContent(bodyText as string);
       }
     }
 
@@ -2107,8 +2089,6 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
         return 'sorter';
       case BitType.multipleChoiceText:
         return 'cloze';
-      case BitType.chapter: // TODO - is this correct?
-        return BitType._error;
       case BitType._error:
         // Ignore
         break;
@@ -2286,14 +2266,14 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
       case BitType._error:
         break;
 
-      case BitType.article:
-      case BitType.highlightText:
-      case BitType.message:
-      case BitType.sampleSolution:
-      case BitType.page:
-      case BitType.statement:
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
+      // case BitType.article:
+      // case BitType.highlightText:
+      // case BitType.message:
+      // case BitType.sampleSolution:
+      // case BitType.page:
+      // case BitType.statement:
+      //   if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //   break;
 
       default: // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
         if (bitJson.title == null) bitJson.title = '';
@@ -2331,28 +2311,28 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
         if (bitJson.gaps == null) bitJson.gaps = null;
         break;
 
-      case BitType.trueFalse:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.lead == null) bitJson.lead = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-        if (bitJson.labelFalse == null) bitJson.labelFalse = '';
-        if (bitJson.labelTrue == null) bitJson.labelTrue = '';
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
+      // case BitType.trueFalse:
+      //   if (bitJson.item == null) bitJson.item = this.textDefault;
+      //   if (bitJson.lead == null) bitJson.lead = this.textDefault;
+      //   if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      //   if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      //   if (bitJson.labelFalse == null) bitJson.labelFalse = '';
+      //   if (bitJson.labelTrue == null) bitJson.labelTrue = '';
+      //   if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //   break;
 
-      case BitType.chapter:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = this.textDefault;
-        if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
-        if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
-        if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
+      // case BitType.chapter:
+      //   if (bitJson.item == null) bitJson.item = this.textDefault;
+      //   if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      //   if (bitJson.isExample == null) bitJson.isExample = false;
+      //   if (bitJson.example == null) bitJson.example = this.textDefault;
+      //   if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
+      //   if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
+      //   if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
+      //   if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //   break;
 
-      case BitType.multipleChoice:
+      // case BitType.multipleChoice:
       case BitType.multipleResponse:
         if (bitJson.item == null) bitJson.item = this.textDefault;
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
@@ -2361,57 +2341,57 @@ class ClasstimeJsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks 
         if (bitJson.footer == null) bitJson.footer = this.textDefault;
         break;
 
-      case BitType.interview:
-      case BitType.interviewInstructionGrouped:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        if (bitJson.footer == null) bitJson.footer = this.textDefault;
-        if (bitJson.questions == null) bitJson.questions = [];
-        break;
+      // case BitType.interview:
+      // case BitType.interviewInstructionGrouped:
+      //   if (bitJson.item == null) bitJson.item = this.textDefault;
+      //   if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      //   if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      //   if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //   if (bitJson.footer == null) bitJson.footer = this.textDefault;
+      //   if (bitJson.questions == null) bitJson.questions = [];
+      //   break;
 
-      // case BitType.match:
-      case BitType.matchReverse:
-      case BitType.matchSolutionGrouped:
-      case BitType.matchAll:
-      case BitType.matchAllReverse:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
+      // // case BitType.match:
+      // case BitType.matchReverse:
+      // case BitType.matchSolutionGrouped:
+      // case BitType.matchAll:
+      // case BitType.matchAllReverse:
+      //   if (bitJson.item == null) bitJson.item = this.textDefault;
+      //   if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
+      //   if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //   break;
 
-      case BitType.learningPathBook:
-      case BitType.learningPathBotTraining:
-      case BitType.learningPathClassroomEvent:
-      case BitType.learningPathClassroomTraining:
-      case BitType.learningPathClosing:
-      case BitType.learningPathExternalLink:
-      case BitType.learningPathFeedback:
-      case BitType.learningPathLearningGoal:
-      case BitType.learningPathLti:
-      case BitType.learningPathSign:
-      case BitType.learningPathStep:
-      case BitType.learningPathVideoCall:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = this.textDefault;
-        if (bitJson.isTracked == null) bitJson.isTracked = true;
-        if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
+      // case BitType.learningPathBook:
+      // case BitType.learningPathBotTraining:
+      // case BitType.learningPathClassroomEvent:
+      // case BitType.learningPathClassroomTraining:
+      // case BitType.learningPathClosing:
+      // case BitType.learningPathExternalLink:
+      // case BitType.learningPathFeedback:
+      // case BitType.learningPathLearningGoal:
+      // case BitType.learningPathLti:
+      // case BitType.learningPathSign:
+      // case BitType.learningPathStep:
+      // case BitType.learningPathVideoCall:
+      //   if (bitJson.item == null) bitJson.item = this.textDefault;
+      //   if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      //   if (bitJson.isExample == null) bitJson.isExample = false;
+      //   if (bitJson.example == null) bitJson.example = this.textDefault;
+      //   if (bitJson.isTracked == null) bitJson.isTracked = true;
+      //   if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
+      //   if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //   break;
 
-      case BitType.articleAi:
-      case BitType.noteAi:
-      case BitType.summaryAi:
-        if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = this.textDefault;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
+      // case BitType.articleAi:
+      // case BitType.noteAi:
+      // case BitType.summaryAi:
+      //   if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
+      //   if (bitJson.item == null) bitJson.item = this.textDefault;
+      //   if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      //   if (bitJson.isExample == null) bitJson.isExample = false;
+      //   if (bitJson.example == null) bitJson.example = this.textDefault;
+      //   if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //   break;
     }
 
     // Remove unwanted properties

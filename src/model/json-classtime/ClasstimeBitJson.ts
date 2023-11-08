@@ -1,4 +1,5 @@
 import { Text } from '../ast/TextNodes';
+import { ParserError } from '../parser/ParserError';
 
 import { ClasstimeBodyBitsJson, ClasstimeChoiceJson, ClasstimeClozeJson } from './ClasstimeBodyBitJson';
 import { AudioResourceJson, ImageResourceJson, ResourceJson } from './ResourceJson';
@@ -120,6 +121,8 @@ export interface ClasstimeBitJson {
   questions: QuestionJson[];
   footer: Text;
   placeholders: ClasstimeBodyBitsJson;
+
+  errors?: ParserError[];
 }
 
 export interface ClasstimeContentJson {
