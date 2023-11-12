@@ -2206,10 +2206,15 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * @returns the text format
    */
   protected getTextFormat(route: NodeInfo[]): TextFormatType {
-    for (const node of route) {
-      if (node.key === NodeType.bitsValue) {
-        const n = node.value as Bit;
-        return TextFormat.fromValue(n?.textFormat) ?? TextFormat.bitmarkMinusMinus;
+    const bitType = this.getBitType(route);
+
+    if (bitType) {
+      const bitConfig = Config.getBitConfig(bitType);
+      for (const node of route) {
+        if (node.key === NodeType.bitsValue) {
+          const n = node.value as Bit;
+          return TextFormat.fromValue(n?.textFormat) ?? bitConfig.textFormatDefault;
+        }
       }
     }
 

@@ -322,8 +322,11 @@ class JsonParser {
     // Bit type
     const bitType = Config.getBitType(type);
 
+    // Get the bit config for the bit type
+    const bitConfig = Config.getBitConfig(bitType);
+
     // Text Format
-    const textFormat = TextFormat.fromValue(format) ?? TextFormat.bitmarkMinusMinus;
+    const textFormat = TextFormat.fromValue(format) ?? bitConfig.textFormatDefault;
 
     // Resource attachement type
     const resourceAttachmentType = this.getResourceType(resource);
@@ -1170,6 +1173,9 @@ class JsonParser {
     textFormat?: TextFormatType,
   ): (T extends JsonText[] ? BreakscapedString[] : BreakscapedString) | undefined {
     type R = T extends JsonText[] ? BreakscapedString[] : BreakscapedString;
+    // NOTE: it is ok to default to bitmarkMinusMinus here as if the text is text then it will not be an array or
+    // return true from isAst() and so will be treated as a string
+    textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
 
     if (text == null) return undefined;
     if (this.textParser.isAst(text)) {

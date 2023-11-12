@@ -74,6 +74,11 @@ export interface SubParserResult<T> {
   errors?: ParserError[];
 }
 
+export interface RawTextAndResourceType {
+  textFormat?: string;
+  resourceType?: string;
+}
+
 export interface BitHeader {
   bitType: BitType;
   textFormat: TextFormatType;

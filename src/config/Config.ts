@@ -8,6 +8,7 @@ import { GroupConfigType } from '../model/config/enum/GroupConfigType';
 import { BitTagType } from '../model/enum/BitTagType';
 import { ResourceJsonKeyType } from '../model/enum/ResourceJsonKey';
 import { ResourceTagType } from '../model/enum/ResourceTag';
+import { TextFormat } from '../model/enum/TextFormat';
 
 import { ConfigHydrator } from './ConfigHydrator';
 import { BITS } from './raw/bits';
@@ -93,6 +94,7 @@ class Config {
 
       // Extract the root config
       const {
+        textFormatDefault,
         tags: _tags,
         cardSet: _cardSet,
         bodyAllowed,
@@ -122,6 +124,7 @@ class Config {
         since,
         bitType,
         aliases,
+        textFormatDefault ?? TextFormat.bitmarkMinusMinus,
         tags,
         cardSet,
         deprecated,

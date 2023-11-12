@@ -2,19 +2,17 @@
   {
     "bit": {
       "type": "vendor-padlet-embed",
-      "format": "bitmark--",
-      "id": [
-        "342346"
-      ],
+      "format": "text",
+      "id": ["342346"],
       "padletId": "2c7rc1zj8jdo25ed",
       "item": [],
       "hint": [],
       "isExample": false,
       "example": null,
-      "body": []
+      "body": ""
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.4.13",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.vendor-padlet-embed]\n[@id:342346]\n[@padletId:2c7rc1zj8jdo25ed]"
