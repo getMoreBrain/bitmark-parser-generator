@@ -3,9 +3,10 @@
     "bit": {
       "type": "review-request-for-review-note",
       "format": "bitmark--",
-      "id": [
-        "210022"
-      ],
+      "id": ["210022"],
+      "resolved": false,
+      "resolvedDate": "",
+      "resolvedBy": "",
       "item": [],
       "lead": [
         {
@@ -50,9 +51,10 @@
     "bit": {
       "type": "review-request-for-review-note",
       "format": "bitmark++",
-      "id": [
-        "210040"
-      ],
+      "id": ["210040"],
+      "resolved": false,
+      "resolvedDate": "",
+      "resolvedBy": "",
       "item": [],
       "lead": [
         {

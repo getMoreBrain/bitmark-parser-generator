@@ -82,6 +82,9 @@ export interface Bit {
   quotedPerson?: Property;
   partialAnswer?: Property;
   reasonableNumOfChars?: Property;
+  resolved?: Property;
+  resolvedDate?: Property;
+  resolvedBy?: Property;
   maxCreatedBits?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;

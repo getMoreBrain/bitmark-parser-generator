@@ -43,6 +43,21 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.resolved]: {
+    tag: PropertyTag.resolved,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.resolvedDate]: {
+    tag: PropertyTag.resolvedDate,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.resolvedBy]: {
+    tag: PropertyTag.resolvedBy,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.ageRange]: {
     tag: PropertyTag.ageRange,
     format: PropertyFormat.trimmedString,
