@@ -1,4 +1,5 @@
 import { Breakscape } from '../breakscaping/Breakscape';
+import { Config } from '../config/Config';
 import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { AliasBitType, BitType, RootBitType } from '../model/enum/BitType';
@@ -267,6 +268,8 @@ class Builder extends BaseBuilder {
       parser,
     } = data;
 
+    const bitConfig = Config.getBitConfig(bitType);
+
     // Convert resources into an array
     const resources = ArrayUtils.asArray(_resources);
 
@@ -282,7 +285,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: Bit = {
       bitType,
-      textFormat: TextFormat.fromValue(textFormat) ?? TextFormat.bitmarkMinusMinus,
+      textFormat: TextFormat.fromValue(textFormat) ?? bitConfig.textFormatDefault,
       resourceType: ResourceTag.fromValue(resourceType),
       id: this.toAstProperty(PropertyConfigKey.id, id),
       externalId: this.toAstProperty(PropertyConfigKey.externalId, externalId),

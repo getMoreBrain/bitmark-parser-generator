@@ -75,6 +75,7 @@ import { TextFormat } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
+import { StringUtils } from '../../../utils/StringUtils';
 
 import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
@@ -104,6 +105,7 @@ import {
   TypeValue,
   BitmarkPegParserContext,
   ParsedCardSet,
+  RawTextAndResourceType,
 } from './BitmarkPegParserTypes';
 
 // Debugging flags for helping develop and debug the parser
@@ -310,7 +312,7 @@ class BitmarkPegParserProcessor {
   }
 
   // Build bit header
-  buildBitHeader(bitType: string, textFormatAndResourceType: Partial<BitHeader>): BitHeader {
+  buildBitHeader(bitType: string, textFormatAndResourceType: RawTextAndResourceType): BitHeader {
     // Get / check bit type
     const validBitType = Config.getBitType(bitType);
     if (validBitType.root === RootBitType._error) {
@@ -319,31 +321,41 @@ class BitmarkPegParserProcessor {
       this.parser.commentedBitType = `[.${bitType.slice(1)}]`;
     }
 
+    const bitConfig = Config.getBitConfig(validBitType);
+
+    // Text format
+    let textFormat = TextFormat.fromValue(textFormatAndResourceType.textFormat);
+    if (textFormatAndResourceType.textFormat && !textFormat) {
+      this.addWarning(
+        `Invalid text format '${textFormatAndResourceType.textFormat}', defaulting to '${bitConfig.textFormatDefault}'`,
+      );
+    }
+    textFormat = textFormat ?? bitConfig.textFormatDefault;
+
+    // Resource type
+    const resourceType = ResourceTag.fromValue(textFormatAndResourceType.resourceType);
+    if (textFormatAndResourceType.resourceType && !resourceType) {
+      this.addWarning(`Invalid resource type '${textFormatAndResourceType.resourceType}', it will be ignored`);
+    }
+
     return {
       bitType: validBitType,
-      textFormat: textFormatAndResourceType.textFormat ?? TextFormat.bitmarkMinusMinus,
-      resourceType: textFormatAndResourceType.resourceType,
+      textFormat: textFormat ?? bitConfig.textFormatDefault,
+      resourceType,
     };
   }
 
   // Build text and resource type
-  buildTextAndResourceType(value1: TypeValue | undefined, value2: TypeValue | undefined): Partial<BitHeader> {
-    const res: Partial<BitHeader> = { textFormat: TextFormat.bitmarkMinusMinus };
+  buildTextAndResourceType(value1: TypeValue | undefined, value2: TypeValue | undefined): RawTextAndResourceType {
+    const res: RawTextAndResourceType = {};
     const processValue = (value: TypeValue | undefined) => {
       if (value) {
         if (value.type === TypeKey.TextFormat) {
-          // Parse text format, adding default if not set / invalid
-          res.textFormat = TextFormat.fromValue(value.value);
-          if (value.value && !res.textFormat) {
-            this.addWarning(`Invalid text format '${value.value}', defaulting to '${TextFormat.bitmarkMinusMinus}'`);
-          }
-          res.textFormat = res.textFormat ?? TextFormat.bitmarkMinusMinus;
+          // Set text format
+          res.textFormat = StringUtils.string(value.value);
         } else {
-          // Parse resource type, adding error if invalid
-          res.resourceType = ResourceTag.fromValue(value.value);
-          if (value.value && !res.resourceType) {
-            this.addWarning(`Invalid resource type '${value.value}', it will be ignored`);
-          }
+          // Set resource type
+          res.resourceType = StringUtils.string(value.value);
         }
       }
     };

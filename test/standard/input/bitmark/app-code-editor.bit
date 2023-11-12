@@ -2,4 +2,43 @@
 [@id:51861]
 [@computerLanguage:javascript]
 [%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]
-Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.
+
+int mess_up(int **doublePointer) {
+  return "take that!!"
+}
+
+void veryNastyCode() {
+  int xor = 1 ^ 0x1234; // This is fine, not breakscaped away
+  int or  = 1 // Inline comment followed by no indentation
+| 0x1234; // This is going to break things
+}
+
+
+/**
+  * Convert Bitmark text to text AST.
+  *
+  * The Bitmark text should be a string.
+  * If parsed bitmark text AST is passed to this function, it will be returned as is.
+  *
+  * @param text - bitmark text
+  * @returns bitmark text AST as plain JS object
+  */
+toAst(text: string | TextAst | undefined, options?: BitmarkTextParserOptions): TextAst {
+  // If input is not a string, return it as is
+  if (Array.isArray(text)) return text;
+  const str = text as string;
+
+  const testXor = 2 ^ 0x12345678;
+
+  // Ensure options is an object
+  const opts = Object.assign({}, options);
+
+  // Default text format to bitmark-- if not specified
+  if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
+
+  const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
+
+  return bitmarkTextParse(str ?? '', {
+    startRule,
+  });
+}
