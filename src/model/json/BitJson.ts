@@ -56,6 +56,9 @@ export interface BitJson {
   content2Buy: string;
   quotedPerson: string;
   reasonableNumOfChars: number;
+  resolved: boolean;
+  resolvedDate: string;
+  resolvedBy: string;
   maxCreatedBits: number;
 
   book: string;

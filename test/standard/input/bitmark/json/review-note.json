@@ -3,9 +3,10 @@
     "bit": {
       "type": "review-note",
       "format": "bitmark--",
-      "id": [
-        "210022"
-      ],
+      "id": ["210022"],
+      "resolved": false,
+      "resolvedDate": "",
+      "resolvedBy": "",
       "item": [],
       "lead": [
         {
@@ -50,9 +51,7 @@
     "bit": {
       "type": "review-note",
       "format": "bitmark++",
-      "id": [
-        "210040"
-      ],
+      "id": ["210040"],
       "item": [],
       "lead": [
         {
@@ -72,6 +71,9 @@
         }
       ],
       "hint": [],
+      "resolved": true,
+      "resolvedDate": "1992",
+      "resolvedBy": "Kayo",
       "isExample": false,
       "example": null,
       "body": [

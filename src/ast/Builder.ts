@@ -138,6 +138,9 @@ class Builder extends BaseBuilder {
     content2Buy?: BreakscapedString;
     quotedPerson?: BreakscapedString;
     reasonableNumOfChars?: number;
+    resolved?: boolean;
+    resolvedDate?: BreakscapedString;
+    resolvedBy?: BreakscapedString;
     maxCreatedBits?: number;
     partialAnswer?: BreakscapedString;
     book?: BreakscapedString;
@@ -239,6 +242,9 @@ class Builder extends BaseBuilder {
       quotedPerson,
       partialAnswer,
       reasonableNumOfChars,
+      resolved,
+      resolvedDate,
+      resolvedBy,
       maxCreatedBits,
       title,
       subtitle,
@@ -335,6 +341,9 @@ class Builder extends BaseBuilder {
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
+      resolved: this.toAstProperty(PropertyConfigKey.resolved, resolved),
+      resolvedDate: this.toAstProperty(PropertyConfigKey.resolvedDate, resolvedDate),
+      resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, resolvedBy),
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, maxCreatedBits),
       title,
       subtitle,

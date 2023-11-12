@@ -625,11 +625,6 @@ const BITS: _BitsConfig = {
       [AliasBitType.preparationNote]: { since: '1.3.0' },
       [AliasBitType.releaseNotesSummary]: { since: '1.3.0' },
       [AliasBitType.remark]: { since: '1.3.0' },
-      [AliasBitType.reviewNote]: { since: '1.3.0' },
-      [AliasBitType.reviewAuthorNote]: { since: '1.3.0' },
-      [AliasBitType.reviewReviewerNote]: { since: '1.3.0' },
-      [AliasBitType.reviewRequestForReviewNote]: { since: '1.3.0' },
-      [AliasBitType.reviewApprovedNote]: { since: '1.3.0' },
       [AliasBitType.selfAssessment]: { since: '1.3.0' },
       [AliasBitType.sideNote]: { since: '1.3.0' },
       [AliasBitType.summary]: { since: '1.3.0' },
@@ -1193,7 +1188,40 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-
+  [RootBitType.reviewNote]: {
+    since: '1.3.0',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.tag,
+        configKey: TagConfigKey.title,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.resolved,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.resolvedDate,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.resolvedBy,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+    rootExampleType: ExampleType.string,
+    aliases: {
+      [AliasBitType.reviewAuthorNote]: { since: '1.3.0' },
+      [AliasBitType.reviewReviewerNote]: { since: '1.3.0' },
+      [AliasBitType.reviewRequestForReviewNote]: { since: '1.3.0' },
+      [AliasBitType.reviewApprovedNote]: { since: '1.3.0' },
+    },
+  },
   [RootBitType.sampleSolution]: {
     since: '1.3.0',
     tags: [

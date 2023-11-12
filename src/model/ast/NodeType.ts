@@ -161,6 +161,12 @@ const NodeType = superenum({
   partialAnswerValue: 'partialAnswerValue',
   reasonableNumOfChars: 'reasonableNumOfChars',
   reasonableNumOfCharsValue: 'reasonableNumOfCharsValue',
+  resolved: 'resolved',
+  resolvedValue: 'resolvedValue',
+  resolvedDate: 'resolvedDate',
+  resolvedDateValue: 'resolvedDateValue',
+  resolvedBy: 'resolvedBy',
+  resolvedByValue: 'resolvedByValue',
   maxCreatedBits: 'maxCreatedBits',
   maxCreatedBitsValue: 'maxCreatedBitsValue',
 
