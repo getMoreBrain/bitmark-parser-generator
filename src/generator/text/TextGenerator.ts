@@ -120,7 +120,7 @@ class TextGenerator implements AstWalkCallbacks {
    *
    * @param ast bitmark text AST
    */
-  public async generate(ast: TextAst, textFormat?: TextFormatType): Promise<BreakscapedString> {
+  public async generate(ast: TextAst, textFormat: TextFormatType): Promise<BreakscapedString> {
     // Reset the state
     this.resetState(textFormat);
 
@@ -135,7 +135,7 @@ class TextGenerator implements AstWalkCallbacks {
    *
    * @param ast bitmark text AST
    */
-  public generateSync(ast: TextAst, textFormat?: TextFormatType): BreakscapedString {
+  public generateSync(ast: TextAst, textFormat: TextFormatType): BreakscapedString {
     // Reset the state
     this.resetState(textFormat);
 
@@ -149,10 +149,10 @@ class TextGenerator implements AstWalkCallbacks {
     return this.placeholders;
   }
 
-  private resetState(textFormat?: TextFormatType): void {
+  private resetState(textFormat: TextFormatType): void {
     this.printed = false;
 
-    this.textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
+    this.textFormat = textFormat;
     this.writerText = '';
     this.currentIndent = 0;
     this.prevIndent = 0;

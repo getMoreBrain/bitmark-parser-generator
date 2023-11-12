@@ -9,7 +9,7 @@ import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVers
 import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
 import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
-import { TextFormat } from '../../model/enum/TextFormat';
+import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { Generator } from '../Generator';
 
@@ -42,8 +42,8 @@ const DEFAULT_OPTIONS: BitmarkOptions = {
  */
 export interface BitmarkOptions {
   /**
-   * If true, always include bitmark text format even if it is 'bitmark--'
-   * If false, only include bitmark text format if it is not 'bitmark--'
+   * If true, always include bitmark text format even if it is the default for the bit
+   * If false, only include bitmark text format if it is not the default for the bit
    */
 
   explicitTextFormat?: boolean;
@@ -298,7 +298,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeString(bit.bitType.alias);
 
     if (bit.textFormat) {
-      const write = this.isWriteTextFormat(bit.textFormat);
+      const write = this.isWriteTextFormat(bit.textFormat, bitConfig.textFormatDefault);
 
       if (write) {
         this.writeColon();
@@ -1782,9 +1782,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeString(tag);
   }
 
-  protected isWriteTextFormat(bitsValue: string): boolean {
-    const isMinusMinus = TextFormat.fromValue(bitsValue) === TextFormat.bitmarkMinusMinus;
-    const writeFormat = !isMinusMinus || this.options.explicitTextFormat;
+  protected isWriteTextFormat(bitsValue: string, textFormatDefault: TextFormatType): boolean {
+    const isDefault = TextFormat.fromValue(bitsValue) === textFormatDefault;
+    const writeFormat = !isDefault || this.options.explicitTextFormat;
     return !!writeFormat;
   }
 

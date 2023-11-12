@@ -2206,10 +2206,15 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * @returns the text format
    */
   protected getTextFormat(route: NodeInfo[]): TextFormatType {
-    for (const node of route) {
-      if (node.key === NodeType.bitsValue) {
-        const n = node.value as Bit;
-        return TextFormat.fromValue(n?.textFormat) ?? TextFormat.bitmarkMinusMinus;
+    const bitType = this.getBitType(route);
+
+    if (bitType) {
+      const bitConfig = Config.getBitConfig(bitType);
+      for (const node of route) {
+        if (node.key === NodeType.bitsValue) {
+          const n = node.value as Bit;
+          return TextFormat.fromValue(n?.textFormat) ?? bitConfig.textFormatDefault;
+        }
       }
     }
 
@@ -2381,6 +2386,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       content2Buy: undefined,
       quotedPerson: undefined,
       reasonableNumOfChars: undefined,
+      resolved: undefined,
+      resolvedDate: undefined,
+      resolvedBy: undefined,
+      maxCreatedBits: undefined,
 
       // Book data
       title: undefined,
@@ -2472,7 +2481,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // Add default properties to the bit.
     // NOTE: Not all bits have the same default properties.
-    //       The properties used in the antlr parser are a bit random sometimes?
+    //       The properties used are a bit random sometimes?
+    //       It would be better if this functionality was generated from the bit config
     switch (bitType.root) {
       case RootBitType._error:
       case RootBitType._comment:
@@ -2500,6 +2510,14 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         ) {
           if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
         }
+
+        // Special case for 'review-...' bits
+        if (bitType.root === RootBitType.reviewNote) {
+          if (bitJson.resolved == null) bitJson.resolved = false;
+          if (bitJson.resolvedDate == null) bitJson.resolvedDate = '';
+          if (bitJson.resolvedBy == null) bitJson.resolvedBy = '';
+        }
+
         break;
 
       // Default, but with no 'example' at the bit level.
@@ -2661,6 +2679,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
     if (bitJson.content2Buy == null) delete bitJson.content2Buy;
     if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
+    if (bitJson.resolved == null) delete bitJson.resolved;
+    if (bitJson.resolvedDate == null) delete bitJson.resolvedDate;
+    if (bitJson.resolvedBy == null) delete bitJson.resolvedBy;
+    if (bitJson.maxCreatedBits == null) delete bitJson.maxCreatedBits;
 
     // Book data
     if (bitJson.title == null) delete bitJson.title;

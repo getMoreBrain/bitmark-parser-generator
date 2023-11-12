@@ -2,6 +2,7 @@ import { AliasBitTypeType, BitType, RootBitTypeType } from '../enum/BitType';
 import { Count } from '../enum/Count';
 import { ExampleTypeType } from '../enum/ExampleType';
 import { ResourceTagType } from '../enum/ResourceTag';
+import { TextFormatType } from '../enum/TextFormat';
 
 import { CardSetConfig } from './CardSetConfig';
 import { TagsConfig } from './TagsConfig';
@@ -15,6 +16,7 @@ class BitConfig {
   readonly since: string; // Supported since version
   readonly rootBitType: RootBitTypeType;
   readonly aliases: AliasBitTypeType[]; // Bit aliases
+  readonly textFormatDefault: TextFormatType; // Default text format
   readonly tags: TagsConfig = {};
   readonly cardSet?: CardSetConfig;
   readonly deprecated?: string; // Deprecated version
@@ -30,6 +32,7 @@ class BitConfig {
     since: string,
     bitType: BitType,
     aliases: AliasBitTypeType[],
+    textFormatDefault: TextFormatType,
     tags: TagsConfig,
     cardSet: CardSetConfig | undefined,
     deprecated: string | undefined,
@@ -44,6 +47,7 @@ class BitConfig {
     this.since = since;
     this.rootBitType = bitType.root;
     this.aliases = aliases;
+    this.textFormatDefault = textFormatDefault;
     this.tags = tags;
     this.cardSet = cardSet;
     this.deprecated = deprecated;
@@ -67,6 +71,9 @@ class BitConfig {
 
       s += `\n${this.aliases.join(', ')}`;
     }
+
+    // Default text format
+    s += `\n\n[Default text format]\n${this.textFormatDefault}`;
 
     // Flags
     const flags: string[] = [];

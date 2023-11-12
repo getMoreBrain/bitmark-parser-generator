@@ -12,6 +12,7 @@ import { PropertyTagType } from '../enum/PropertyTag';
 import { ResourceJsonKeyType } from '../enum/ResourceJsonKey';
 import { ResourceTagType } from '../enum/ResourceTag';
 import { TagType } from '../enum/Tag';
+import { TextFormatType } from '../enum/TextFormat';
 
 import { CardSetConfigKeyType } from './enum/CardSetConfigKey';
 import { ConfigKeyType } from './enum/ConfigKey';
@@ -32,6 +33,7 @@ export interface _BitsConfig {
 
 export interface _BitConfig {
   since: string; // Supported since version
+  textFormatDefault?: TextFormatType; // Default text format
   tags: _TagInfoConfig[];
   cardSet?: CardSetConfigKeyType;
   deprecated?: string; // Deprecated version
