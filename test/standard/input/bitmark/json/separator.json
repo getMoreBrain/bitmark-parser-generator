@@ -1,0 +1,46 @@
+[
+  {
+    "bit": {
+      "type": "separator",
+      "format": "bitmark--",
+      "id": ["92375"],
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a separator",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.separator]\n[@id:92375]\nThis is a separator"
+  },
+  {
+    "bit": {
+      "type": "separator",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.separator]"
+  }
+]
