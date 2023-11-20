@@ -1,0 +1,313 @@
+[
+  {
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark--",
+      "id": ["186986"],
+      "item": [],
+      "hint": [],
+      "instruction": [],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Qualitätsanforderungen - Beurteilung",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "quizzes": [
+        {
+          "item": [],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "24 - Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "isExample": false,
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "isCorrect": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        {
+          "item": [],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "25 - Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "isExample": false,
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "isCorrect": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        {
+          "item": [],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "26 - Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "isExample": false,
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "isCorrect": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        {
+          "item": [],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "27 - Der/die Berufsbildner/in bildet sich regelmässig weiter.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "isExample": false,
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "isCorrect": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ]
+        },
+        {
+          "item": [],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "28 - Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "isExample": false,
+          "choices": [
+            {
+              "choice": "Anforderungen nicht erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen teilweise erfüllt",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen erfüllt (Optimierungspotenzial vorhanden)",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Anforderungen gut erfüllt",
+              "isCorrect": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ]
+        }
+      ],
+      "footer": []
+    },
+    "parser": {
+      "version": "1.4.14",
+      "bitmarkVersion": "3",
+      "comments": [
+        "This is a simple comment",
+        "This is a comment with a breakscaped ] in it",
+        "This comment is in a card - it will be moved to the top of the bit"
+      ]
+    },
+    "bitmark": "[.multiple-choice]\n[@internalComment: This is a simple comment   ]\n[@id:186986]\n[@internalComment: This is a comment with a breakscaped ^] in it]\nQualitätsanforderungen - Beurteilung\n===\n[!24 - Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!25 - Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!26 - Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.]\n[-Anforderungen nicht erfüllt]\n[@internalComment: This comment is in a card - it will be moved to the top of the bit]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!27 - Der/die Berufsbildner/in bildet sich regelmässig weiter.]\n[-Anforderungen nicht erfüllt][@internalComment: This comment is chained and will be ignored]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!28 - Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n==="
+  }
+]

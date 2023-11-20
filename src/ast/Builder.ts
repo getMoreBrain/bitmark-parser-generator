@@ -8,7 +8,6 @@ import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
-import { ParserLocation } from '../model/parser/ParserLocation';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BitUtils } from '../utils/BitUtils';
 import { NumberUtils } from '../utils/NumberUtils';
@@ -47,7 +46,6 @@ import {
   BodyText,
   BodyPart,
   CardNode,
-  Comment,
   Mark,
   MarkConfig,
   Example,
@@ -91,6 +89,7 @@ class Builder extends BaseBuilder {
     textFormat?: TextFormatType;
     resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
     id?: BreakscapedString | BreakscapedString[];
+    internalComment?: BreakscapedString | BreakscapedString[];
     externalId?: BreakscapedString | BreakscapedString[];
     spaceId?: BreakscapedString | BreakscapedString[];
     padletId?: BreakscapedString;
@@ -193,6 +192,7 @@ class Builder extends BaseBuilder {
       textFormat,
       resourceType,
       id,
+      internalComment,
       externalId,
       spaceId,
       padletId,
@@ -294,6 +294,7 @@ class Builder extends BaseBuilder {
       textFormat: TextFormat.fromValue(textFormat) ?? bitConfig.textFormatDefault,
       resourceType: ResourceTag.fromValue(resourceType),
       id: this.toAstProperty(PropertyConfigKey.id, id),
+      internalComment: this.toAstProperty(PropertyConfigKey.internalComment, internalComment),
       externalId: this.toAstProperty(PropertyConfigKey.externalId, externalId),
       spaceId: this.toAstProperty(PropertyConfigKey.spaceId, spaceId),
       padletId: this.toAstProperty(PropertyConfigKey.padletId, padletId),
@@ -1189,33 +1190,6 @@ class Builder extends BaseBuilder {
     const node: Partner = {
       name,
       avatarImage,
-    };
-
-    // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
-
-    return node;
-  }
-
-  /**
-   * Build comment node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  comment(data: {
-    text: string;
-    location?: {
-      start: ParserLocation;
-      end: ParserLocation;
-    };
-  }): Comment {
-    const { text, location } = data;
-
-    // NOTE: Node order is important and is defined here
-    const node: Comment = {
-      text,
-      location,
     };
 
     // Remove Unset Optionals

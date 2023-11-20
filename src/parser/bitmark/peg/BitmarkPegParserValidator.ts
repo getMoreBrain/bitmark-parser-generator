@@ -16,8 +16,9 @@ import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTagType, BitTagTypeType } from '../../../model/enum/BitTagType';
 import { BitType } from '../../../model/enum/BitType';
 import { Count, CountType } from '../../../model/enum/Count';
+import { PropertyTag, PropertyTagType } from '../../../model/enum/PropertyTag';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
-import { TagType } from '../../../model/enum/Tag';
+import { Tag, TagType } from '../../../model/enum/Tag';
 import { TagValidationData } from '../../../model/parser/TagValidationData';
 
 import {
@@ -278,18 +279,29 @@ class BitmarkPegParserValidator {
     const validTypeKeys = this.convertTagsToTypeKeyMap(context, bitLevel, bitType, tags);
 
     // Helper function for add extra valid type keys
-    const addExtraValidTypeKeys = (typeKey: TypeKeyType, maxCount: CountType, minCount: number) => {
-      validTypeKeys.set(typeKey, {
+    const addExtraValidTypeKeys = (key: TypeKeyType, maxCount: CountType, minCount: number) => {
+      validTypeKeys.set(key, {
         maxCount,
         minCount,
-        _type: typeKey as BitTagTypeType,
-        _tag: typeKey as TagType,
+        _type: key as BitTagTypeType,
+        _tag: key as TagType,
         _seenCount: 0,
       });
     };
 
-    // Comment tags are allowed anywhere
-    addExtraValidTypeKeys(TypeKey.Comment, Count.infinity, 0);
+    // Helper function for add extra valid property keys
+    const addExtraValidPropertyKeys = (key: PropertyTagType, maxCount: CountType, minCount: number) => {
+      validTypeKeys.set(`${TypeKey.Property}:${key}`, {
+        maxCount,
+        minCount,
+        _type: BitTagType.property,
+        _tag: Tag.property,
+        _seenCount: 0,
+      });
+    };
+
+    // Comment property tags are allowed anywhere
+    addExtraValidPropertyKeys(PropertyTag.internalComment, Count.infinity, 0);
 
     if (bitLevel === BitContentLevel.Bit) {
       // Add the extra valid tags dependent on bit configuration

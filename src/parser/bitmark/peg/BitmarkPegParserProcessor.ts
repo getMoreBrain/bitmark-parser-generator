@@ -79,7 +79,6 @@ import { StringUtils } from '../../../utils/StringUtils';
 
 import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
-import { commentTagContentProcessor } from './contentProcessors/CommentTagContentProcessor';
 import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
 import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
 import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
@@ -247,12 +246,8 @@ class BitmarkPegParserProcessor {
     // Build the resources
     const filteredResources = buildResources(this.context, bitType, resourceType, resources);
 
-    // Build the comments for the parser object
-    if (comments || bitSpecificCards.comments) {
-      this.parser.comments = [];
-      if (comments) this.parser.comments.push(...comments);
-      if (bitSpecificCards.comments) this.parser.comments.push(...bitSpecificCards.comments);
-    }
+    // Build the final internal comments
+    const internalComment = [...(comments ?? []), ...(bitSpecificCards.comments ?? [])];
 
     // Build the warnings and errors for the parser object
     const warnings = this.buildBitLevelWarnings();
@@ -274,6 +269,7 @@ class BitmarkPegParserProcessor {
       ...bitSpecificCards,
       body,
       footer,
+      internalComment,
       parser: this.parser,
     });
 
@@ -431,11 +427,6 @@ class BitmarkPegParserProcessor {
       const { type, value } = content as TypeKeyValue;
 
       switch (type) {
-        case TypeKey.Comment: {
-          commentTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
-          break;
-        }
-
         case TypeKey.ItemLead: {
           itemLeadTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, seenItem);
           seenItem = true;
