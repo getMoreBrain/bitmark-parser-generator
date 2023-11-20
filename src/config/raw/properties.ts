@@ -9,6 +9,10 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.id,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.internalComment]: {
+    tag: PropertyTag.internalComment,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.externalId]: {
     tag: PropertyTag.externalId,
     format: PropertyFormat.trimmedString,

@@ -39,6 +39,7 @@ const propertyConfigKeys = {
   iconTag: 'iconTag',
   id: 'id',
   imageSource: 'imageSource',
+  internalComment: 'internalComment',
   isInfoOnly: 'isInfoOnly',
   isTracked: 'isTracked',
   jupyterExecutionCount: 'jupyterExecutionCount',

@@ -1,6 +1,7 @@
 import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { Config } from '../../config/Config';
+import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
 import { BitType, RootBitType, RootBitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
@@ -372,6 +373,22 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (!noNl) {
       this.writeNL();
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> internalComment
+
+  protected enter_internalComment(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    const internalComment = node.value as BreakscapedString[];
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    for (let i = 0; i < internalComment.length; i++) {
+      const comment = internalComment[i];
+      const last = i === internalComment.length - 1;
+      this.writeProperty('internalComment', comment);
+      if (!last) this.writeNL();
     }
   }
 
@@ -1499,6 +1516,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       const astKey = propertyConfig.astKey ?? propertyConfig.tag;
 
       // Special cases (handled outside of the automatically generated handlers)
+      if (astKey === PropertyTag.internalComment) continue;
       if (astKey === PropertyTag.example) continue;
       if (astKey === PropertyTag.labelTrue) continue;
       if (astKey === PropertyTag.labelFalse) continue;

@@ -37,7 +37,6 @@ import {
   Partner,
   ExtraProperties,
   ImageResource,
-  Comment,
   MarkConfig,
   Flashcard,
   ImageSource,
@@ -157,7 +156,7 @@ export interface BitContentProcessorResult {
   format?: BreakscapedString;
 
   extraProperties?: ExtraProperties;
-  comments?: Comment[];
+  comments?: BreakscapedString[];
 }
 
 export interface BitSpecificTitles {
@@ -186,7 +185,7 @@ export interface BitSpecificCards {
   questions?: Question[];
   botResponses?: BotResponse[];
   cardBits?: CardBit[];
-  comments?: Comment[];
+  comments?: BreakscapedString[];
 }
 
 export type BitContent = TypeValue | TypeKeyValue;
@@ -221,7 +220,6 @@ const TypeKey = superenum({
   Gap: Tag.gap,
   Mark: Tag.mark,
   SampleSolution: Tag.sampleSolution,
-  Comment: Tag.comment,
 
   // Generic Tags (converted to specific tags by the BitTagValidator)
   Property: 'Property',
@@ -289,7 +287,7 @@ interface ParsedCardContent extends ParserData {
 
 export interface ProcessedCardSet {
   cards: ProcessedCard[];
-  comments: Comment[];
+  comments: BreakscapedString[];
 }
 
 export interface ProcessedCard {

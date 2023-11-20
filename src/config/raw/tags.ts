@@ -42,9 +42,6 @@ const TAGS: _TagsConfig = {
   [TagConfigKey.resource]: {
     tag: Tag.resource,
   },
-  [TagConfigKey.comment]: {
-    tag: Tag.comment,
-  },
 };
 
 export { TAGS };
