@@ -17,7 +17,6 @@ const tagConfigKeys = {
   gap: 'gap',
   tag_mark: 'tag_mark',
   resource: 'resource',
-  comment: 'comment',
 } as const;
 
 const TagConfigKey = superenum(tagConfigKeys);

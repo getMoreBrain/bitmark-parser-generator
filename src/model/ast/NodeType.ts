@@ -69,6 +69,8 @@ const NodeType = superenum({
   // Properties
   id: 'id',
   idValue: 'idValue',
+  internalComment: 'internalComment',
+  internalCommentValue: 'internalCommentValue',
   externalId: 'externalId',
   externalIdValue: 'externalIdValue',
   spaceId: 'spaceId',

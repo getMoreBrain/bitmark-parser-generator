@@ -4,11 +4,13 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
 import { BitType } from '../../../../model/enum/BitType';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
+import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import { bookChainContentProcessor } from './BookChainContentProcessor';
+import { commentTagContentProcessor } from './CommentTagContentProcessor';
 import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
 import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
@@ -37,6 +39,12 @@ function propertyContentProcessor(
   // Get the property config for the tag (if it exists)
   const propertyConfig = Config.getTagConfigForTag(tagsConfig, tag);
   const configKey = propertyConfig ? propertyConfig.configKey : undefined;
+
+  // Handle internal comments
+  if (tag === PropertyTag.internalComment) {
+    commentTagContentProcessor(context, bitType, bitLevel, content, target);
+    return;
+  }
 
   // Check for chains
   // Generally, the chain will only be present in the correct bit as the data was already validated. The bit type

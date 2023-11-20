@@ -126,10 +126,10 @@ class JsonParser {
     const bitsNodes: Bit[] | undefined = [];
 
     for (const bitWrapper of bitWrappers) {
-      const { bit } = bitWrapper;
+      const { bit, parser } = bitWrapper;
 
       // Transform to AST
-      const bitsNode = this.bitToAst(bit);
+      const bitsNode = this.bitToAst(bit, parser?.comments);
       if (bitsNode) {
         bitsNodes.push(bitsNode);
       }
@@ -226,7 +226,7 @@ class JsonParser {
     };
   }
 
-  private bitToAst(bit: BitJson): Bit | undefined {
+  private bitToAst(bit: BitJson, comments: string[] | undefined): Bit | undefined {
     const {
       type,
       format,
@@ -391,6 +391,7 @@ class JsonParser {
       textFormat: format as TextFormatType,
       resourceType: resourceAttachmentType,
       id: this.convertStringToBreakscapedString(id),
+      internalComment: this.convertStringToBreakscapedString(comments),
       externalId: this.convertStringToBreakscapedString(externalId),
       spaceId: this.convertStringToBreakscapedString(spaceId),
       padletId: this.convertStringToBreakscapedString(padletId),

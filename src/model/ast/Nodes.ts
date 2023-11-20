@@ -33,6 +33,7 @@ export interface Bit {
   textFormat: TextFormatType;
   resourceType?: ResourceTagType;
   id?: Property;
+  internalComment?: Property;
   externalId?: Property;
   spaceId?: Property;
   padletId?: Property;
@@ -118,22 +119,6 @@ export interface Bit {
   parser?: ParserInfo;
 }
 
-export interface Comment {
-  text: string;
-  location?: {
-    start: {
-      offset: number;
-      line: number;
-      column: number;
-    };
-    end: {
-      offset: number;
-      line: number;
-      column: number;
-    };
-  };
-}
-
 export interface ItemLead {
   item?: BreakscapedString; // TextAst;
   lead?: BreakscapedString; // TextAst;
@@ -153,7 +138,7 @@ export interface ExtraProperties {
   [key: string]: Property;
 }
 
-export type Property = string[] | number[] | boolean[] | unknown[];
+export type Property = BreakscapedString[] | number[] | boolean[] | unknown[];
 
 // (image-on-device) ImageSource
 export interface ImageSource {

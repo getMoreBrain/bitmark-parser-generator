@@ -9,6 +9,7 @@ export interface BitJson {
 
   // Properties
   id: string | string[];
+  internalComment: string | string[];
   externalId: string | string[];
   spaceId: string | string[];
   padletId: string;

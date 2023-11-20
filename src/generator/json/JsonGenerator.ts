@@ -1347,8 +1347,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   // bitmarkAst -> bits -> bitsValue -> parser
+  // bitmarkAst -> bits -> bitsValue -> * -> internalComment
 
-  protected enter_parser(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_parser(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
     const parser = node.value as ParserInfo | undefined;
     if (parser) {
       const { version, excessResources: parserExcessResources, warnings, errors, ...parserRest } = parser;
@@ -1364,11 +1365,15 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         }
       }
 
+      // Extract comments from the AST and add to the parser
+      const comments = Breakscape.unbreakscape(this.getInternalComments(route));
+
       if (parent?.key === NodeType.bitsValue) {
         // Bit level parser information
         this.bitWrapperJson.parser = {
           version,
           bitmarkVersion,
+          comments,
           ...parserRest,
           warnings,
           errors,
@@ -1417,6 +1422,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       const astKey = propertyConfig.astKey ?? propertyConfig.tag;
 
       // Special cases (handled outside of the automatically generated handlers)
+      if (astKey === PropertyTag.internalComment) continue;
       if (astKey === PropertyTag.example) continue;
       if (astKey === PropertyTag.imageSource) continue;
       if (astKey === PropertyTag.partner) continue;
@@ -2185,7 +2191,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   /**
    * Get the bit type from any node
    *
-   * @param route the route to the node
+   * @param route the route to the current node
    * @returns the bit type
    */
   protected getBitType(route: NodeInfo[]): BitType | undefined {
@@ -2202,7 +2208,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   /**
    * Get the text format from any node
    *
-   * @param route the route to the node
+   * @param route the route to the current node
    * @returns the text format
    */
   protected getTextFormat(route: NodeInfo[]): TextFormatType {
@@ -2224,7 +2230,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   /**
    * Get the bit resourceType atttachment from any node
    *
-   * @param route the route to the node
+   * @param route the route to the current node
    * @returns the bit type
    */
   protected getResourceType(route: NodeInfo[]): ResourceTagType | undefined {
@@ -2232,6 +2238,27 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (node.key === NodeType.bitsValue) {
         const n = node.value as Bit;
         return n?.resourceType;
+      }
+    }
+
+    return undefined;
+  }
+
+  /**
+   * Get the internal comments from any node
+   *
+   * @param route the route to the current node
+   * @returns the text format
+   */
+  protected getInternalComments(route: NodeInfo[]): BreakscapedString[] | undefined {
+    const bitType = this.getBitType(route);
+
+    if (bitType) {
+      for (const node of route) {
+        if (node.key === NodeType.bitsValue) {
+          const n = node.value as Bit;
+          return n.internalComment as BreakscapedString[];
+        }
       }
     }
 
@@ -2339,6 +2366,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
       // Properties
       id: undefined,
+      internalComment: undefined,
       externalId: undefined,
       spaceId: undefined,
       padletId: undefined,
@@ -2635,6 +2663,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // Properties
     if (bitJson.id == null) delete bitJson.id;
+    if (bitJson.internalComment == null) delete bitJson.internalComment;
     if (bitJson.externalId == null) delete bitJson.externalId;
     if (bitJson.spaceId == null) delete bitJson.spaceId;
     if (bitJson.padletId == null) delete bitJson.padletId;
