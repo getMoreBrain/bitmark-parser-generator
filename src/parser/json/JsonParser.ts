@@ -10,7 +10,6 @@ import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { ParserJson } from '../../model/json/ParserJson';
 import { StringUtils } from '../../utils/StringUtils';
 import { TextParser } from '../text/TextParser';
 
