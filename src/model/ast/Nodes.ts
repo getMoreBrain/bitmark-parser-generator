@@ -447,6 +447,7 @@ export interface ImageResource extends Resource {
   width?: number;
   height?: number;
   alt?: BreakscapedString;
+  zoomDisabled?: boolean;
 }
 
 // export interface ImageResponsiveResource extends Resource {
@@ -464,6 +465,7 @@ export interface ImageLinkResource extends Resource {
   width?: number;
   height?: number;
   alt?: BreakscapedString;
+  zoomDisabled?: boolean;
 }
 
 export interface AudioResource extends Resource {

@@ -382,6 +382,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.zoomDisabled]: {
+    tag: PropertyTag.zoomDisabled,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
   [PropertyConfigKey.src1x]: {
     tag: PropertyTag.src1x,
     single: true,

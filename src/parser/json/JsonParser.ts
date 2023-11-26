@@ -940,6 +940,7 @@ class JsonParser {
         width: data.width ?? undefined,
         height: data.height ?? undefined,
         alt: this.convertStringToBreakscapedString(data.alt),
+        zoomDisabled: data.zoomDisabled,
 
         // VideoLikeResource
         duration: data.duration,
