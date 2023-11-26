@@ -445,6 +445,10 @@ const GROUPS: _GroupsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.alt,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.zoomDisabled,
+      },
     ],
   },
   [GroupConfigKey.group_resourceAudioCommon]: {

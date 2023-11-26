@@ -3,9 +3,7 @@
     "bit": {
       "type": "image-super-wide",
       "format": "bitmark--",
-      "id": [
-        "342343"
-      ],
+      "id": ["342343"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -20,6 +18,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,

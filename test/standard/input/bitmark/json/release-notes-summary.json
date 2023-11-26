@@ -3,10 +3,7 @@
     "bit": {
       "type": "release-notes-summary",
       "format": "bitmark--",
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -41,6 +38,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,

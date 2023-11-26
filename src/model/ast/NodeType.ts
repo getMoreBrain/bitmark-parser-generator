@@ -266,6 +266,7 @@ const NodeType = superenum({
   width: 'width',
   height: 'height',
   alt: 'alt',
+  zoomDisabled: 'zoomDisabled',
   license: 'license',
   copyright: 'copyright',
   provider: 'provider',

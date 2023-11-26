@@ -163,6 +163,7 @@ export interface ImageResourceJson extends BaseResourceJson {
   width: number | null;
   height: number | null;
   alt: string;
+  zoomDisabled: boolean;
 }
 
 export interface ImageLinkResourceJson extends BaseResourceJson {
@@ -176,6 +177,7 @@ export interface ImageLinkResourceJson extends BaseResourceJson {
   width: number | null;
   height: number | null;
   alt: string;
+  zoomDisabled: boolean;
 }
 
 export interface ImageResponsiveResourceJson extends BaseResourceJson {

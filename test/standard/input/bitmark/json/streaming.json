@@ -3,9 +3,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -50,9 +48,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -103,9 +99,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rathe",
       "item": [],
@@ -136,9 +130,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -235,9 +227,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "",
       "labelFalse": "",
       "item": [],
@@ -268,9 +258,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "",
       "labelFalse": "",
       "item": [],
@@ -290,9 +278,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "ra",
       "labelFalse": "",
       "item": [],
@@ -323,9 +309,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "",
       "labelFalse": "",
       "item": [],
@@ -356,9 +340,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "",
       "labelFalse": "",
       "item": [],
@@ -389,9 +371,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "",
       "labelFalse": "",
       "item": [],
@@ -411,9 +391,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "",
       "labelFalse": "",
       "item": [],
@@ -454,9 +432,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "gap tag"
-              ]
+              "solutions": ["gap tag"]
             }
           ],
           "attrs": {}
@@ -473,9 +449,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "",
       "labelFalse": "",
       "item": [],
@@ -492,6 +466,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,

@@ -4,9 +4,7 @@
       "type": "learning-path-lti",
       "format": "bitmark--",
       "action": "Übungsprüfung",
-      "deeplink": [
-        "https://other.platform/path/to/quiz"
-      ],
+      "deeplink": ["https://other.platform/path/to/quiz"],
       "duration": "3600s",
       "isTracked": true,
       "isInfoOnly": false,
@@ -47,6 +45,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,

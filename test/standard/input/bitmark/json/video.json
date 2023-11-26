@@ -3,9 +3,7 @@
     "bit": {
       "type": "video",
       "format": "bitmark--",
-      "id": [
-        "301454"
-      ],
+      "id": ["301454"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -26,6 +24,7 @@
             "width": null,
             "height": null,
             "alt": "",
+            "zoomDisabled": false,
             "license": "",
             "copyright": "",
             "showInIndex": false,
@@ -48,9 +47,7 @@
     "bit": {
       "type": "video",
       "format": "bitmark--",
-      "id": [
-        "300497"
-      ],
+      "id": ["300497"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -71,6 +68,7 @@
             "width": null,
             "height": null,
             "alt": "",
+            "zoomDisabled": false,
             "license": "",
             "copyright": "",
             "showInIndex": false,
@@ -93,9 +91,7 @@
     "bit": {
       "type": "video",
       "format": "bitmark--",
-      "id": [
-        "301460"
-      ],
+      "id": ["301460"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -116,6 +112,7 @@
             "width": null,
             "height": null,
             "alt": "",
+            "zoomDisabled": false,
             "license": "",
             "copyright": "",
             "showInIndex": false,

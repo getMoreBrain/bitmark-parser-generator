@@ -89,6 +89,7 @@ const PropertyTag = superenum({
   trim: 'trim',
   videoCallLink: 'videoCallLink',
   width: 'width',
+  zoomDisabled: 'zoomDisabled',
 });
 
 export type PropertyTagType = EnumType<typeof PropertyTag>;

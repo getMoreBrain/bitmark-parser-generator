@@ -59,9 +59,7 @@
     "bit": {
       "type": "video-link",
       "format": "bitmark--",
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -84,6 +82,7 @@
               "width": null,
               "height": null,
               "alt": "",
+              "zoomDisabled": false,
               "license": "",
               "copyright": "",
               "showInIndex": false,
@@ -96,6 +95,7 @@
               "width": null,
               "height": null,
               "alt": "",
+              "zoomDisabled": false,
               "license": "",
               "copyright": "",
               "showInIndex": false,
@@ -173,9 +173,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": [
-        "186837"
-      ],
+      "id": ["186837"],
       "body": [],
       "resource": {
         "type": "video-link",
@@ -212,9 +210,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": [
-        "187546"
-      ],
+      "id": ["187546"],
       "body": [],
       "resource": {
         "type": "video-link",
@@ -251,9 +247,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": [
-        "185332"
-      ],
+      "id": ["185332"],
       "body": [],
       "resource": {
         "type": "video-link",
@@ -279,9 +273,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": [
-        "185329"
-      ],
+      "id": ["185329"],
       "body": [],
       "resource": {
         "type": "video-link",
@@ -307,9 +299,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
-      "id": [
-        "185330"
-      ],
+      "id": ["185330"],
       "body": [],
       "resource": {
         "type": "video-link",

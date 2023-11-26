@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.4.14
+Version: 1.4.15
 ## Supported Bits
 <pre>
 app-bitmark-from-javascript (since: 1.4.5)
@@ -155,6 +155,7 @@ example (since: 1.3.0)
 |__ release-notes-summary (since: 1.3.0)
 |__ remark (since: 1.3.0)
 |__ self-assessment (since: 1.3.0)
+|__ separator (since: 1.4.15)
 |__ side-note (since: 1.3.0)
 |__ summary (since: 1.3.0)
 |__ summary-ai (since: 1.3.0)
@@ -180,6 +181,7 @@ image (since: 1.3.0)
 |__ image-portrait (since: 1.3.0)
 |__ image-prototype (since: 1.3.0)
 |__ image-screenshot (since: 1.3.0)
+|__ image-separator (since: 1.4.15)
 |__ image-styled (since: 1.3.0)
 |__ image-super-wide (since: 1.3.0)
 |__ image-zoom (since: 1.3.0)
