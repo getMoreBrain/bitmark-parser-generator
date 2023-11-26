@@ -93,6 +93,7 @@ const propertyConfigKeys = {
   trim: 'trim',
   videoCallLink: 'videoCallLink',
   width: 'width',
+  zoomDisabled: 'zoomDisabled',
 } as const;
 
 const PropertyConfigKey = superenum(propertyConfigKeys);

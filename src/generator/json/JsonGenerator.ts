@@ -504,18 +504,19 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> partner
 
-  protected enter_partner(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_partner(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
     const partner = node.value as Partner;
+    const bitType = this.getBitType(route);
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue || !bitType) return;
 
     const { name, avatarImage } = partner;
 
     const partnerJson = {} as PartnerJson;
     this.addProperty(partnerJson, 'name', name ?? '', true);
     if (avatarImage) {
-      const res = this.parseResourceToJson(avatarImage);
+      const res = this.parseResourceToJson(bitType, avatarImage);
       if (res && res.type === ResourceTag.image) {
         partnerJson.avatarImage = res.image;
       }
@@ -1035,11 +1036,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs
 
-  protected enter_pairs(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_pairs(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
     const pairs = node.value as Pair[];
     const pairsJson: PairJson[] = [];
+    const bitType = this.getBitType(route);
 
-    if (pairs) {
+    if (pairs && bitType) {
       for (const p of pairs) {
         // Get default example
         const defaultExample = Array.isArray(p.values) && p.values.length > 0 && p.values[0];
@@ -1047,8 +1049,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         // Create the question
         const pairJson: Partial<PairJson> = {
           key: Breakscape.unbreakscape(p.key) ?? '',
-          keyAudio: p.keyAudio ? this.addAudioResource(p.keyAudio) : undefined,
-          keyImage: p.keyImage ? this.addImageResource(p.keyImage) : undefined,
+          keyAudio: p.keyAudio ? this.addAudioResource(bitType, p.keyAudio) : undefined,
+          keyImage: p.keyImage ? this.addImageResource(bitType, p.keyImage) : undefined,
           values: Breakscape.unbreakscape(p.values) ?? [],
           ...this.toItemLeadHintInstruction(p),
           isCaseSensitive: p.isCaseSensitive ?? true,
@@ -1239,7 +1241,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
           if (r) {
             const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.typeAlias);
             const key = tagConfig?.jsonKey ?? r.typeAlias;
-            const json = this.parseResourceToJson(r);
+            const json = this.parseResourceToJson(bitType, r);
             if (json) {
               for (const [k, v] of Object.entries(json)) {
                 if (k !== 'type') {
@@ -1256,7 +1258,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // This is a standard resource. If there is more than one resource, use the first one.
       // There should not be more than one because of validation
       if (resources.length >= 1) {
-        resourceJson = this.parseResourceToJson(resources[0]);
+        resourceJson = this.parseResourceToJson(bitType, resources[0]);
       }
     }
 
@@ -1351,7 +1353,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected enter_parser(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
     const parser = node.value as ParserInfo | undefined;
-    if (parser) {
+    const bitType = this.getBitType(route);
+
+    if (parser && bitType) {
       const { version, excessResources: parserExcessResources, warnings, errors, ...parserRest } = parser;
       const bitmarkVersion = `${this.bitmarkVersion}`;
 
@@ -1360,7 +1364,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (Array.isArray(parserExcessResources) && parserExcessResources.length > 0) {
         excessResources = [];
         for (const r of parserExcessResources) {
-          const rJson = this.parseResourceToJson(r as Resource);
+          const rJson = this.parseResourceToJson(bitType, r as Resource);
           if (rJson) excessResources.push(rJson);
         }
       }
@@ -1585,7 +1589,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return highlightJson as HighlightJson;
   }
 
-  protected parseResourceToJson(resource: Resource | undefined): ResourceJson | undefined {
+  protected parseResourceToJson(bitType: BitType, resource: Resource | undefined): ResourceJson | undefined {
     if (!resource) return undefined;
 
     // All resources should now be valid as they are validated in the AST
@@ -1608,51 +1612,52 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       case ResourceTag.image:
         resourceJson = {
           type: ResourceTag.image,
-          image: this.addImageResource(resource as ImageResource),
+          image: this.addImageResource(bitType, resource as ImageResource),
         };
         break;
 
       case ResourceTag.imageLink:
         resourceJson = {
           type: ResourceTag.imageLink,
-          imageLink: this.addImageLinkResource(resource as ImageLinkResource),
+          imageLink: this.addImageLinkResource(bitType, resource as ImageLinkResource),
         };
         break;
 
       case ResourceTag.audio:
         resourceJson = {
           type: ResourceTag.audio,
-          audio: this.addAudioResource(resource as AudioResource),
+          audio: this.addAudioResource(bitType, resource as AudioResource),
         };
         break;
 
       case ResourceTag.audioEmbed:
         resourceJson = {
           type: ResourceTag.audioEmbed,
-          audioEmbed: this.addAudioEmbedResource(resource as AudioEmbedResource),
+          audioEmbed: this.addAudioEmbedResource(bitType, resource as AudioEmbedResource),
         };
         break;
 
       case ResourceTag.audioLink:
         resourceJson = {
           type: ResourceTag.audioLink,
-          audioLink: this.addAudioLinkResource(resource as AudioLinkResource),
+          audioLink: this.addAudioLinkResource(bitType, resource as AudioLinkResource),
         };
         break;
 
       case ResourceTag.video:
         resourceJson = {
           type: ResourceTag.video,
-          video: this.addVideoResource(resource as VideoResource),
+          video: this.addVideoResource(bitType, resource as VideoResource),
         };
         break;
 
       case ResourceTag.videoEmbed:
         resourceJson = {
           type: ResourceTag.videoEmbed,
-          videoEmbed: this.addVideoEmbedResource(resource as VideoEmbedResource),
+          videoEmbed: this.addVideoEmbedResource(bitType, resource as VideoEmbedResource),
         };
         (resourceJson as VideoEmbedResourceWrapperJson).videoEmbed = this.addVideoLinkResource(
+          bitType,
           resource as VideoLinkResource,
         );
         break;
@@ -1660,70 +1665,70 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       case ResourceTag.videoLink:
         resourceJson = {
           type: ResourceTag.videoLink,
-          videoLink: this.addVideoLinkResource(resource as VideoLinkResource),
+          videoLink: this.addVideoLinkResource(bitType, resource as VideoLinkResource),
         };
         break;
 
       case ResourceTag.stillImageFilmEmbed:
         resourceJson = {
           type: ResourceTag.stillImageFilmEmbed,
-          stillImageFilmEmbed: this.addStillImageFilmEmbedResource(resource as StillImageFilmEmbedResource),
+          stillImageFilmEmbed: this.addStillImageFilmEmbedResource(bitType, resource as StillImageFilmEmbedResource),
         };
         break;
 
       case ResourceTag.stillImageFilmLink:
         resourceJson = {
           type: ResourceTag.stillImageFilmLink,
-          stillImageFilmLink: this.addStillImageFilmLinkResource(resource as StillImageFilmLinkResource),
+          stillImageFilmLink: this.addStillImageFilmLinkResource(bitType, resource as StillImageFilmLinkResource),
         };
         break;
 
       case ResourceTag.article:
         resourceJson = {
           type: ResourceTag.article,
-          article: this.addArticleResource(resource as ArticleResource),
+          article: this.addArticleResource(bitType, resource as ArticleResource),
         };
         break;
 
       case ResourceTag.document:
         resourceJson = {
           type: ResourceTag.document,
-          document: this.addDocumentResource(resource as DocumentResource),
+          document: this.addDocumentResource(bitType, resource as DocumentResource),
         };
         break;
 
       case ResourceTag.documentEmbed:
         resourceJson = {
           type: ResourceTag.documentEmbed,
-          documentEmbed: this.addDocumentEmbedResource(resource as DocumentEmbedResource),
+          documentEmbed: this.addDocumentEmbedResource(bitType, resource as DocumentEmbedResource),
         };
         break;
 
       case ResourceTag.documentLink:
         resourceJson = {
           type: ResourceTag.documentLink,
-          documentLink: this.addDocumentLinkResource(resource as DocumentLinkResource),
+          documentLink: this.addDocumentLinkResource(bitType, resource as DocumentLinkResource),
         };
         break;
 
       case ResourceTag.documentDownload:
         resourceJson = {
           type: ResourceTag.documentDownload,
-          documentDownload: this.addDocumentDownloadResource(resource as DocumentDownloadResource),
+          documentDownload: this.addDocumentDownloadResource(bitType, resource as DocumentDownloadResource),
         };
         break;
 
       case ResourceTag.appLink:
         resourceJson = {
           type: ResourceTag.appLink,
-          appLink: this.addAppLinkResource(resource as AppLinkResource),
+          appLink: this.addAppLinkResource(bitType, resource as AppLinkResource),
         };
         break;
 
       case ResourceTag.websiteLink:
         resourceJson = {
           type: ResourceTag.websiteLink,
-          websiteLink: this.addWebsiteLinkResource(resource as WebsiteLinkResource),
+          websiteLink: this.addWebsiteLinkResource(bitType, resource as WebsiteLinkResource),
         };
         break;
 
@@ -1733,7 +1738,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson;
   }
 
-  protected addImageResource(resource: ImageResource | BreakscapedString): ImageResourceJson {
+  protected addImageResource(bitType: BitType, resource: ImageResource | BreakscapedString): ImageResourceJson {
     const resourceJson: Partial<ImageResourceJson> = {};
 
     if (StringUtils.isString(resource)) {
@@ -1759,13 +1764,17 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
     resourceJson.alt = Breakscape.unbreakscape(resource.alt) ?? '';
+    resourceJson.zoomDisabled = this.getZoomDisabled(bitType, resource.zoomDisabled);
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as ImageResourceJson;
   }
 
-  protected addImageLinkResource(resource: ImageLinkResource | BreakscapedString): ImageLinkResourceJson {
+  protected addImageLinkResource(
+    bitType: BitType,
+    resource: ImageLinkResource | BreakscapedString,
+  ): ImageLinkResourceJson {
     const resourceJson: Partial<ImageLinkResourceJson> = {};
 
     if (StringUtils.isString(resource)) {
@@ -1791,13 +1800,14 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
     resourceJson.alt = Breakscape.unbreakscape(resource.alt) ?? '';
+    resourceJson.zoomDisabled = this.getZoomDisabled(bitType, resource.zoomDisabled);
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as ImageLinkResourceJson;
   }
 
-  protected addAudioResource(resource: AudioResource): AudioResourceJson {
+  protected addAudioResource(bitType: BitType, resource: AudioResource): AudioResourceJson {
     const resourceJson: Partial<AudioResourceJson | AudioLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1808,12 +1818,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (resource.mute != null) resourceJson.mute = resource.mute;
     if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as AudioResourceJson;
   }
 
-  protected addAudioEmbedResource(resource: AudioEmbedResource): AudioEmbedResourceJson {
+  protected addAudioEmbedResource(bitType: BitType, resource: AudioEmbedResource): AudioEmbedResourceJson {
     const resourceJson: Partial<AudioEmbedResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1824,12 +1834,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (resource.mute != null) resourceJson.mute = resource.mute;
     if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as AudioEmbedResourceJson;
   }
 
-  protected addAudioLinkResource(resource: AudioLinkResource): AudioLinkResourceJson {
+  protected addAudioLinkResource(bitType: BitType, resource: AudioLinkResource): AudioLinkResourceJson {
     const resourceJson: Partial<AudioLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1840,12 +1850,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (resource.mute != null) resourceJson.mute = resource.mute;
     if (resource.autoplay != null) resourceJson.autoplay = resource.autoplay;
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson, true);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson, true);
 
     return resourceJson as AudioLinkResourceJson;
   }
 
-  protected addVideoResource(resource: VideoResource): VideoResourceJson {
+  protected addVideoResource(bitType: BitType, resource: VideoResource): VideoResourceJson {
     const resourceJson: Partial<VideoResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1862,20 +1872,20 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
 
-    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
       resourceJson.thumbnails = [];
       for (const thumbnail of resource.thumbnails) {
-        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
+        resourceJson.thumbnails.push(this.addImageResource(bitType, thumbnail));
       }
     }
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as VideoResourceJson;
   }
 
-  protected addVideoEmbedResource(resource: VideoEmbedResource): VideoEmbedResourceJson {
+  protected addVideoEmbedResource(bitType: BitType, resource: VideoEmbedResource): VideoEmbedResourceJson {
     const resourceJson: Partial<VideoEmbedResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1892,20 +1902,20 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
 
-    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
       resourceJson.thumbnails = [];
       for (const thumbnail of resource.thumbnails) {
-        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
+        resourceJson.thumbnails.push(this.addImageResource(bitType, thumbnail));
       }
     }
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as VideoEmbedResourceJson;
   }
 
-  protected addVideoLinkResource(resource: VideoLinkResource): VideoLinkResourceJson {
+  protected addVideoLinkResource(bitType: BitType, resource: VideoLinkResource): VideoLinkResourceJson {
     const resourceJson: Partial<VideoLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1922,20 +1932,23 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
 
-    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
       resourceJson.thumbnails = [];
       for (const thumbnail of resource.thumbnails) {
-        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
+        resourceJson.thumbnails.push(this.addImageResource(bitType, thumbnail));
       }
     }
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as VideoLinkResourceJson;
   }
 
-  protected addStillImageFilmEmbedResource(resource: StillImageFilmEmbedResource): StillImageFilmEmbedResourceJson {
+  protected addStillImageFilmEmbedResource(
+    bitType: BitType,
+    resource: StillImageFilmEmbedResource,
+  ): StillImageFilmEmbedResourceJson {
     const resourceJson: Partial<StillImageFilmEmbedResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1952,20 +1965,23 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
 
-    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
       resourceJson.thumbnails = [];
       for (const thumbnail of resource.thumbnails) {
-        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
+        resourceJson.thumbnails.push(this.addImageResource(bitType, thumbnail));
       }
     }
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as StillImageFilmEmbedResourceJson;
   }
 
-  protected addStillImageFilmLinkResource(resource: StillImageFilmLinkResource): StillImageFilmLinkResourceJson {
+  protected addStillImageFilmLinkResource(
+    bitType: BitType,
+    resource: StillImageFilmLinkResource,
+  ): StillImageFilmLinkResourceJson {
     const resourceJson: Partial<StillImageFilmLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1982,20 +1998,20 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
 
-    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(resource.posterImage);
+    if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
       resourceJson.thumbnails = [];
       for (const thumbnail of resource.thumbnails) {
-        resourceJson.thumbnails.push(this.addImageResource(thumbnail));
+        resourceJson.thumbnails.push(this.addImageResource(bitType, thumbnail));
       }
     }
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as StillImageFilmLinkResourceJson;
   }
 
-  protected addArticleResource(resource: ArticleResource): ArticleResourceJson {
+  protected addArticleResource(bitType: BitType, resource: ArticleResource): ArticleResourceJson {
     const resourceJson: Partial<ArticleResourceJson | DocumentResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -2003,12 +2019,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (resource.value != null) resourceJson.body = Breakscape.unbreakscape(resource.value);
     // if (resource.href != null) resourceJson.href = BreakscapeUtils.unbreakscape(resource.href); // It is never used (and doesn't exist in the AST model)
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as ArticleResourceJson | DocumentResourceJson;
   }
 
-  protected addDocumentResource(resource: DocumentResource): DocumentResourceJson {
+  protected addDocumentResource(bitType: BitType, resource: DocumentResource): DocumentResourceJson {
     const resourceJson: Partial<DocumentResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -2016,12 +2032,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
     // if (resource.href != null) resourceJson.href = BreakscapeUtils.unbreakscape(resource.href); // It is never used (and doesn't exist in the AST model)
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as DocumentResourceJson;
   }
 
-  protected addDocumentEmbedResource(resource: DocumentEmbedResource): DocumentEmbedResourceJson {
+  protected addDocumentEmbedResource(bitType: BitType, resource: DocumentEmbedResource): DocumentEmbedResourceJson {
     const resourceJson: Partial<DocumentEmbedResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -2029,12 +2045,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
     // if (resource.href != null) resourceJson.href = BreakscapeUtils.unbreakscape(resource.href); // It is never used (and doesn't exist in the AST model)
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as DocumentEmbedResourceJson;
   }
 
-  protected addDocumentLinkResource(resource: DocumentLinkResource): DocumentLinkResourceJson {
+  protected addDocumentLinkResource(bitType: BitType, resource: DocumentLinkResource): DocumentLinkResourceJson {
     const resourceJson: Partial<DocumentLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -2042,12 +2058,15 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
     // if (resource.href != null) resourceJson.href = BreakscapeUtils.unbreakscape(resource.href); // It is never used (and doesn't exist in the AST model)
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as DocumentLinkResourceJson;
   }
 
-  protected addDocumentDownloadResource(resource: DocumentDownloadResource): DocumentDownloadResourceJson {
+  protected addDocumentDownloadResource(
+    bitType: BitType,
+    resource: DocumentDownloadResource,
+  ): DocumentDownloadResourceJson {
     const resourceJson: Partial<DocumentDownloadResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -2055,35 +2074,40 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as DocumentDownloadResourceJson;
   }
 
-  protected addAppLinkResource(resource: AppLinkResource): AppLinkResourceJson {
+  protected addAppLinkResource(bitType: BitType, resource: AppLinkResource): AppLinkResourceJson {
     const resourceJson: Partial<AppLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = BreakscapeUtils.unbreakscape(resource.format);
     if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as AppLinkResourceJson;
   }
 
-  protected addWebsiteLinkResource(resource: WebsiteLinkResource): WebsiteLinkResourceJson {
+  protected addWebsiteLinkResource(bitType: BitType, resource: WebsiteLinkResource): WebsiteLinkResourceJson {
     const resourceJson: Partial<WebsiteLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = BreakscapeUtils.unbreakscape(resource.format);
     if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
     if (resource.siteName != null) resourceJson.siteName = Breakscape.unbreakscape(resource.siteName);
 
-    this.addGenericResourceProperties(resource, resourceJson as BaseResourceJson);
+    this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
     return resourceJson as WebsiteLinkResourceJson;
   }
 
-  protected addGenericResourceProperties(resource: Resource, resourceJson: BaseResourceJson, noDefaults?: boolean) {
+  protected addGenericResourceProperties(
+    _bitType: BitType,
+    resource: Resource,
+    resourceJson: BaseResourceJson,
+    noDefaults?: boolean,
+  ) {
     if (noDefaults) {
       if (resource.license != null) resourceJson.license = Breakscape.unbreakscape(resource.license) ?? '';
       if (resource.copyright != null) resourceJson.copyright = Breakscape.unbreakscape(resource.copyright) ?? '';
@@ -2186,6 +2210,28 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       target[name] = finalValue;
       // }
     }
+  }
+
+  /**
+   * Get the value for the zoomDisabled property, setting the appropriate default value if no value is set.
+   *
+   * @param bitType
+   * @param zoomDisabled
+   * @returns
+   */
+  protected getZoomDisabled(bitType: BitType, zoomDisabled: boolean | undefined): boolean {
+    if (zoomDisabled != null) return zoomDisabled;
+
+    // The default value in the JSON is hardcoded, because there is currently no good way to set a different
+    // default per bit in the BitConfig.
+
+    switch (bitType.alias) {
+      case AliasBitType.imageSeparator:
+      case AliasBitType.pageBanner:
+        return true;
+    }
+
+    return false;
   }
 
   /**

@@ -59,9 +59,7 @@
     "bit": {
       "type": "video-link-landscape",
       "format": "bitmark--",
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -84,6 +82,7 @@
               "width": null,
               "height": null,
               "alt": "",
+              "zoomDisabled": false,
               "license": "",
               "copyright": "",
               "showInIndex": false,
@@ -96,6 +95,7 @@
               "width": null,
               "height": null,
               "alt": "",
+              "zoomDisabled": false,
               "license": "",
               "copyright": "",
               "showInIndex": false,

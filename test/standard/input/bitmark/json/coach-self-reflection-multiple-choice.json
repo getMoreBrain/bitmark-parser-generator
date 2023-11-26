@@ -3,9 +3,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark--",
-      "id": [
-        "187003"
-      ],
+      "id": ["187003"],
       "item": [],
       "hint": [],
       "instruction": [],
@@ -1125,9 +1123,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark--",
-      "id": [
-        "186986"
-      ],
+      "id": ["186986"],
       "item": [],
       "hint": [],
       "instruction": [],
@@ -1433,9 +1429,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark--",
-      "id": [
-        "136408"
-      ],
+      "id": ["136408"],
       "item": [
         {
           "type": "paragraph",
@@ -2369,9 +2363,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark--",
-      "id": [
-        "107942"
-      ],
+      "id": ["107942"],
       "item": [
         {
           "type": "paragraph",
@@ -2408,6 +2400,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,
@@ -2454,9 +2447,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark--",
-      "id": [
-        "107955"
-      ],
+      "id": ["107955"],
       "item": [
         {
           "type": "paragraph",
@@ -2493,6 +2484,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,
@@ -2548,9 +2540,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark--",
-      "id": [
-        "107956"
-      ],
+      "id": ["107956"],
       "item": [
         {
           "type": "paragraph",
@@ -2627,9 +2617,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark--",
-      "id": [
-        "291806"
-      ],
+      "id": ["291806"],
       "item": [],
       "hint": [],
       "instruction": [

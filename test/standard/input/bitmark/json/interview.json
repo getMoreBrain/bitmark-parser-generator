@@ -3,9 +3,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
-      "id": [
-        "198779"
-      ],
+      "id": ["198779"],
       "item": [
         {
           "type": "paragraph",
@@ -80,9 +78,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
-      "id": [
-        "136528"
-      ],
+      "id": ["136528"],
       "item": [
         {
           "type": "paragraph",
@@ -130,6 +126,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,
@@ -160,9 +157,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
-      "id": [
-        "198779"
-      ],
+      "id": ["198779"],
       "item": [
         {
           "type": "paragraph",
@@ -214,9 +209,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark++",
-      "id": [
-        "198781"
-      ],
+      "id": ["198781"],
       "item": [
         {
           "type": "paragraph",
@@ -410,9 +403,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
-      "id": [
-        "198782"
-      ],
+      "id": ["198782"],
       "item": [
         {
           "type": "paragraph",
@@ -464,9 +455,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
-      "id": [
-        "187612"
-      ],
+      "id": ["187612"],
       "item": [
         {
           "type": "paragraph",
@@ -558,9 +547,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
-      "id": [
-        "136484"
-      ],
+      "id": ["136484"],
       "item": [
         {
           "type": "paragraph",
@@ -597,6 +584,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,
@@ -701,9 +689,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
-      "id": [
-        "136405"
-      ],
+      "id": ["136405"],
       "item": [
         {
           "type": "paragraph",
@@ -774,9 +760,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
-      "id": [
-        "198264"
-      ],
+      "id": ["198264"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -827,9 +811,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
-      "id": [
-        "198267"
-      ],
+      "id": ["198267"],
       "item": [
         {
           "type": "paragraph",

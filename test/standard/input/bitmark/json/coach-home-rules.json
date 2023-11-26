@@ -3,9 +3,7 @@
     "bit": {
       "type": "coach-home-rules",
       "format": "bitmark--",
-      "id": [
-        "239803"
-      ],
+      "id": ["239803"],
       "item": [],
       "lead": [
         {
@@ -45,9 +43,7 @@
     "bit": {
       "type": "coach-home-rules",
       "format": "bitmark--",
-      "id": [
-        "239896"
-      ],
+      "id": ["239896"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -82,6 +78,7 @@
           "width": "150",
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,
@@ -99,9 +96,7 @@
     "bit": {
       "type": "coach-home-rules",
       "format": "bitmark--",
-      "id": [
-        "234993"
-      ],
+      "id": ["234993"],
       "item": [],
       "lead": [
         {

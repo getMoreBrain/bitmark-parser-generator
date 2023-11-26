@@ -39,9 +39,7 @@
         "id-with-a-^]-in-it-and-at-the-end-^]",
         "id-with-a-^^]-in-it-and-at-the-end-^^]"
       ],
-      "externalId": [
-        "[externalId with square bracked at end]"
-      ],
+      "externalId": ["[externalId with square bracked at end]"],
       "lang": "[lang] with square bracked in middle",
       "item": [
         {
@@ -138,9 +136,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "[gap]"
-              ]
+              "solutions": ["[gap]"]
             },
             {
               "text": " with square brackets",
@@ -159,6 +155,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,

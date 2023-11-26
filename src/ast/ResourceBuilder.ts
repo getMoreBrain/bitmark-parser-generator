@@ -58,6 +58,7 @@ class ResourceBuilder extends BaseBuilder {
       width?: number;
       height?: number;
       alt?: BreakscapedString;
+      zoomDisabled?: boolean;
 
       // VideoLikeResource
       duration?: number; // BreakscapedString?
@@ -70,63 +71,6 @@ class ResourceBuilder extends BaseBuilder {
 
       // WebsiteLinkResource
       siteName?: BreakscapedString;
-
-      // // ImageResponsiveResource
-      // imagePortrait?: {
-      //   format: BreakscapedString;
-      //   value: BreakscapedString; //src
-      //   src1x?: BreakscapedString;
-      //   src2x?: BreakscapedString;
-      //   src3x?: BreakscapedString;
-      //   src4x?: BreakscapedString;
-      //   width?: number;
-      //   height?: number;
-      //   alt?: BreakscapedString;
-      //   license?: BreakscapedString;
-      //   copyright?: BreakscapedString;
-      //   showInIndex?: boolean;
-      //   caption?: BreakscapedString;
-      // };
-      // imageLandscape?: {
-      //   format: BreakscapedString;
-      //   value: BreakscapedString; //src
-      //   src1x?: BreakscapedString;
-      //   src2x?: BreakscapedString;
-      //   src3x?: BreakscapedString;
-      //   src4x?: BreakscapedString;
-      //   width?: number;
-      //   height?: number;
-      //   alt?: BreakscapedString;
-      //   license?: BreakscapedString;
-      //   copyright?: BreakscapedString;
-      //   showInIndex?: boolean;
-      //   caption?: BreakscapedString;
-      // };
-
-      // // StillImageFilmLikeResource
-      // image?: {
-      //   format: BreakscapedString;
-      //   value: BreakscapedString; //src
-      //   src1x?: BreakscapedString;
-      //   src2x?: BreakscapedString;
-      //   src3x?: BreakscapedString;
-      //   src4x?: BreakscapedString;
-      //   width?: number;
-      //   height?: number;
-      //   alt?: BreakscapedString;
-      //   license?: BreakscapedString;
-      //   copyright?: BreakscapedString;
-      //   showInIndex?: boolean;
-      //   caption?: BreakscapedString;
-      // };
-      // audio?: {
-      //   format: BreakscapedString;
-      //   value: BreakscapedString; // src
-      //   license?: BreakscapedString;
-      //   copyright?: BreakscapedString;
-      //   showInIndex?: boolean;
-      //   caption?: BreakscapedString;
-      // };
 
       // Generic Resource
       license?: BreakscapedString;
@@ -302,6 +246,7 @@ class ResourceBuilder extends BaseBuilder {
       width?: number;
       height?: number;
       alt?: BreakscapedString;
+      zoomDisabled?: boolean;
       license?: BreakscapedString;
       copyright?: BreakscapedString;
       showInIndex?: boolean;
@@ -309,7 +254,21 @@ class ResourceBuilder extends BaseBuilder {
     },
     typeAlias?: ResourceTagType,
   ): ImageResource {
-    const { value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } = data;
+    const {
+      value,
+      src1x,
+      src2x,
+      src3x,
+      src4x,
+      width,
+      height,
+      alt,
+      zoomDisabled,
+      license,
+      copyright,
+      showInIndex,
+      caption,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ImageResource = {
@@ -325,6 +284,7 @@ class ResourceBuilder extends BaseBuilder {
       width,
       height,
       alt,
+      zoomDisabled,
       license,
       copyright,
       showInIndex,
@@ -332,7 +292,9 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreFalse: ['zoomDisabled'],
+    });
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node) as ImageResource;
@@ -354,12 +316,27 @@ class ResourceBuilder extends BaseBuilder {
     width?: number;
     height?: number;
     alt?: BreakscapedString;
+    zoomDisabled?: boolean;
     license?: BreakscapedString;
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
   }): ImageLinkResource {
-    const { value, src1x, src2x, src3x, src4x, width, height, alt, license, copyright, showInIndex, caption } = data;
+    const {
+      value,
+      src1x,
+      src2x,
+      src3x,
+      src4x,
+      width,
+      height,
+      alt,
+      zoomDisabled,
+      license,
+      copyright,
+      showInIndex,
+      caption,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ImageLinkResource = {
@@ -372,6 +349,7 @@ class ResourceBuilder extends BaseBuilder {
       src2x,
       src3x,
       src4x,
+      zoomDisabled,
       width,
       height,
       alt,
@@ -382,7 +360,9 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreFalse: ['zoomDisabled'],
+    });
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node) as ImageLinkResource;

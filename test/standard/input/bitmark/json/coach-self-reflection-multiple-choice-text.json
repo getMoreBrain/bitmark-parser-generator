@@ -3,9 +3,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-text",
       "format": "bitmark--",
-      "id": [
-        "287839"
-      ],
+      "id": ["287839"],
       "item": [],
       "lead": [
         {
@@ -137,9 +135,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-text",
       "format": "bitmark--",
-      "id": [
-        "213773"
-      ],
+      "id": ["213773"],
       "item": [
         {
           "type": "paragraph",
@@ -409,9 +405,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-text",
       "format": "bitmark--",
-      "id": [
-        "213840"
-      ],
+      "id": ["213840"],
       "item": [
         {
           "type": "paragraph",
@@ -641,9 +635,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-text",
       "format": "bitmark--",
-      "id": [
-        "208481"
-      ],
+      "id": ["208481"],
       "item": [
         {
           "type": "paragraph",
@@ -869,9 +861,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-text",
       "format": "bitmark--",
-      "id": [
-        "107949"
-      ],
+      "id": ["107949"],
       "item": [
         {
           "type": "paragraph",
@@ -1027,6 +1017,7 @@
           "width": null,
           "height": null,
           "alt": "",
+          "zoomDisabled": false,
           "license": "",
           "copyright": "",
           "showInIndex": false,
