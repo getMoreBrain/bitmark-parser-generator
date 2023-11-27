@@ -156,7 +156,7 @@ export interface BitContentProcessorResult {
   format?: BreakscapedString;
 
   extraProperties?: ExtraProperties;
-  comments?: BreakscapedString[];
+  internalComments?: BreakscapedString[];
 }
 
 export interface BitSpecificTitles {
@@ -185,7 +185,7 @@ export interface BitSpecificCards {
   questions?: Question[];
   botResponses?: BotResponse[];
   cardBits?: CardBit[];
-  comments?: BreakscapedString[];
+  internalComments?: BreakscapedString[];
 }
 
 export type BitContent = TypeValue | TypeKeyValue;
@@ -287,7 +287,7 @@ interface ParsedCardContent extends ParserData {
 
 export interface ProcessedCardSet {
   cards: ProcessedCard[];
-  comments: BreakscapedString[];
+  internalComments: BreakscapedString[];
 }
 
 export interface ProcessedCard {

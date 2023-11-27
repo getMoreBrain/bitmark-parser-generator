@@ -6,7 +6,7 @@ export interface ParserJson {
   version?: string;
   bitmarkVersion?: string;
   commentedBitType?: string;
-  comments?: string[]; // [@interalComment]
+  internalComments?: string[]; // [@interalComment]
   excessResources?: ResourceJson[];
   warnings?: ParserError[];
   errors?: ParserError[];

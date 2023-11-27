@@ -230,8 +230,19 @@ class BitmarkPegParserProcessor {
 
     // Parse the bit content into a an object with the appropriate keys
     const bitConfig = Config.getBitConfig(bitType);
-    const { body, footer, cardSet, title, statement, statements, choices, responses, resources, comments, ...tags } =
-      this.bitContentProcessor(bitType, BitContentLevel.Bit, bitConfig.tags, bitContent);
+    const {
+      body,
+      footer,
+      cardSet,
+      title,
+      statement,
+      statements,
+      choices,
+      responses,
+      resources,
+      internalComments,
+      ...tags
+    } = this.bitContentProcessor(bitType, BitContentLevel.Bit, bitConfig.tags, bitContent);
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
     if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
@@ -247,7 +258,7 @@ class BitmarkPegParserProcessor {
     const filteredResources = buildResources(this.context, bitType, resourceType, resources);
 
     // Build the final internal comments
-    const internalComment = [...(comments ?? []), ...(bitSpecificCards.comments ?? [])];
+    const internalComment = [...(internalComments ?? []), ...(bitSpecificCards.internalComments ?? [])];
 
     // Build the warnings and errors for the parser object
     const warnings = this.buildBitLevelWarnings();
@@ -396,7 +407,7 @@ class BitmarkPegParserProcessor {
     result.trueFalse = [];
     result.markConfig = [];
     result.extraProperties = {};
-    result.comments = [];
+    result.internalComments = [];
 
     let seenItem = false;
     let seenReference = false;
@@ -541,7 +552,7 @@ class BitmarkPegParserProcessor {
     if (result.trueFalse.length === 0) delete result.trueFalse;
     if (result.markConfig.length === 0) delete result.markConfig;
     if (result.resources.length === 0) delete result.resources;
-    if (result.comments.length === 0) delete result.comments;
+    if (result.internalComments.length === 0) delete result.internalComments;
 
     return result;
   }
