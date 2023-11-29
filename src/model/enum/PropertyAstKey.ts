@@ -10,6 +10,8 @@ const PropertyAstKey = superenum({
   isCaseSensitive: 'isCaseSensitive',
   referenceProperty: 'referenceProperty',
   markConfig: 'markConfig',
+  productList: 'productList',
+  productVideoList: 'productVideoList',
 });
 
 export type PropertyAstKeyType = EnumType<typeof PropertyAstKey>;

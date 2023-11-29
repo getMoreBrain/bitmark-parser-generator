@@ -1369,15 +1369,15 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         }
       }
 
-      // Extract comments from the AST and add to the parser
-      const comments = Breakscape.unbreakscape(this.getInternalComments(route));
+      // Extract internal comments from the AST and add to the parser
+      const internalComments = Breakscape.unbreakscape(this.getInternalComments(route));
 
       if (parent?.key === NodeType.bitsValue) {
         // Bit level parser information
         this.bitWrapperJson.parser = {
           version,
           bitmarkVersion,
-          comments,
+          internalComments,
           ...parserRest,
           warnings,
           errors,
@@ -2464,6 +2464,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       resolvedDate: undefined,
       resolvedBy: undefined,
       maxCreatedBits: undefined,
+      product: undefined,
+      productVideo: undefined,
+      productFolder: undefined,
 
       // Book data
       title: undefined,
@@ -2758,6 +2761,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.resolvedDate == null) delete bitJson.resolvedDate;
     if (bitJson.resolvedBy == null) delete bitJson.resolvedBy;
     if (bitJson.maxCreatedBits == null) delete bitJson.maxCreatedBits;
+    if (bitJson.product == null) delete bitJson.product;
+    if (bitJson.productVideo == null) delete bitJson.productVideo;
+    if (bitJson.productFolder == null) delete bitJson.productFolder;
 
     // Book data
     if (bitJson.title == null) delete bitJson.title;

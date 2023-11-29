@@ -129,7 +129,7 @@ class JsonParser {
       const { bit, parser } = bitWrapper;
 
       // Transform to AST
-      const bitsNode = this.bitToAst(bit, parser?.comments);
+      const bitsNode = this.bitToAst(bit, parser?.internalComments);
       if (bitsNode) {
         bitsNodes.push(bitsNode);
       }
@@ -226,7 +226,7 @@ class JsonParser {
     };
   }
 
-  private bitToAst(bit: BitJson, comments: string[] | undefined): Bit | undefined {
+  private bitToAst(bit: BitJson, internalComments: string[] | undefined): Bit | undefined {
     const {
       type,
       format,
@@ -281,6 +281,9 @@ class JsonParser {
       resolvedDate,
       resolvedBy,
       maxCreatedBits,
+      product,
+      productVideo,
+      productFolder,
       book,
       title,
       subtitle,
@@ -391,7 +394,7 @@ class JsonParser {
       textFormat: format as TextFormatType,
       resourceType: resourceAttachmentType,
       id: this.convertStringToBreakscapedString(id),
-      internalComment: this.convertStringToBreakscapedString(comments),
+      internalComment: this.convertStringToBreakscapedString(internalComments),
       externalId: this.convertStringToBreakscapedString(externalId),
       spaceId: this.convertStringToBreakscapedString(spaceId),
       padletId: this.convertStringToBreakscapedString(padletId),
@@ -443,6 +446,9 @@ class JsonParser {
       resolvedDate: this.convertStringToBreakscapedString(resolvedDate),
       resolvedBy: this.convertStringToBreakscapedString(resolvedBy),
       maxCreatedBits,
+      productList: this.convertStringToBreakscapedString(product),
+      productVideoList: this.convertStringToBreakscapedString(productVideo),
+      productFolder: this.convertStringToBreakscapedString(productFolder),
       book: this.convertStringToBreakscapedString(book),
       title: this.convertJsonTextToBreakscapedString(title),
       subtitle: this.convertJsonTextToBreakscapedString(subtitle),

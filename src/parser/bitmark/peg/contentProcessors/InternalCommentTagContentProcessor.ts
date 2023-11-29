@@ -17,15 +17,15 @@ function commentTagContentProcessor(
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
-  if (!target.comments) return;
+  if (!target.internalComments) return;
 
   const { value } = content as TypeValue;
 
-  const comment: BreakscapedString | undefined = StringUtils.isString(value)
+  const internalComment: BreakscapedString | undefined = StringUtils.isString(value)
     ? (StringUtils.trimmedString(value) as BreakscapedString)
     : undefined;
-  if (!comment) return;
+  if (!internalComment) return;
 
-  target.comments.push(comment);
+  target.internalComments.push(internalComment);
 }
 export { commentTagContentProcessor };
