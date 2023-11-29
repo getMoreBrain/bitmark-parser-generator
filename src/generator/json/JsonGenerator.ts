@@ -1369,15 +1369,15 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         }
       }
 
-      // Extract comments from the AST and add to the parser
-      const comments = Breakscape.unbreakscape(this.getInternalComments(route));
+      // Extract internal comments from the AST and add to the parser
+      const internalComments = Breakscape.unbreakscape(this.getInternalComments(route));
 
       if (parent?.key === NodeType.bitsValue) {
         // Bit level parser information
         this.bitWrapperJson.parser = {
           version,
           bitmarkVersion,
-          comments,
+          internalComments,
           ...parserRest,
           warnings,
           errors,

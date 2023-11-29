@@ -10,9 +10,9 @@ import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import { bookChainContentProcessor } from './BookChainContentProcessor';
-import { commentTagContentProcessor } from './CommentTagContentProcessor';
 import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
 import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor';
+import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { partnerChainContentProcessor } from './PartnerChainContentProcessor';
 
@@ -42,7 +42,7 @@ function propertyContentProcessor(
 
   // Handle internal comments
   if (tag === PropertyTag.internalComment) {
-    commentTagContentProcessor(context, bitType, bitLevel, content, target);
+    internalCommentTagContentProcessor(context, bitType, bitLevel, content, target);
     return;
   }
 

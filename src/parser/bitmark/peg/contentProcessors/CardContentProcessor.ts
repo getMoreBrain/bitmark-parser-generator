@@ -105,8 +105,9 @@ function buildCards(
     // Return default empty object
   }
 
-  // Add the comments
-  result.comments = processedCardSet.comments.length > 0 ? processedCardSet.comments : undefined;
+  // Add the internal comments
+  result.internalComments =
+    processedCardSet.internalComments.length > 0 ? processedCardSet.internalComments : undefined;
 
   return result;
 }
@@ -118,7 +119,7 @@ function processCardSet(
 ): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
     cards: [],
-    comments: [],
+    internalComments: [],
   };
 
   // Early return if no card set
@@ -169,8 +170,8 @@ function processCardSet(
 
         processedVariant.data = tags;
 
-        // Add any comments
-        if (tags.comments) processedCardSet.comments.push(...tags.comments);
+        // Add any internal comments
+        if (tags.internalComments) processedCardSet.internalComments.push(...tags.internalComments);
       }
       variantNo = 0;
     }
