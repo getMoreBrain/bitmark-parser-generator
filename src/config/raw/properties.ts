@@ -272,6 +272,17 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.boolean,
     defaultValue: 'true',
   },
+  [PropertyConfigKey.product]: {
+    tag: PropertyTag.product,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.productList]: {
+    tag: PropertyTag.product,
+    single: false,
+    format: PropertyFormat.trimmedString,
+    astKey: PropertyAstKey.productList,
+  },
   [PropertyConfigKey.productVideo]: {
     tag: PropertyTag.productVideo,
     single: true,

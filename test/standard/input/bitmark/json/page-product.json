@@ -1,0 +1,71 @@
+[
+  {
+    "bit": {
+      "type": "page-product",
+      "format": "bitmark--",
+      "id": ["151970"],
+      "product": "https://123.com",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.page-product]\n[@id:151970]\n[@product:https://123.com]"
+  },
+  {
+    "bit": {
+      "type": "page-product",
+      "format": "bitmark--",
+      "id": ["304379"],
+      "product": "https://1234.com",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.16",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[@product] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@product:https://1234.com]",
+          "location": {
+            "start": {
+              "line": 8,
+              "column": 32,
+              "offset": 135
+            },
+            "end": {
+              "line": 8,
+              "column": 64,
+              "offset": 167
+            }
+          },
+          "original": {
+            "text": "[@product:https://123.com]",
+            "location": {
+              "start": {
+                "line": 8,
+                "column": 1,
+                "offset": 104
+              },
+              "end": {
+                "line": 8,
+                "column": 32,
+                "offset": 135
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.page-product]\n[@id:304379]\n[@product:https://123.com][@product:https://1234.com]"
+  }
+]

@@ -2464,8 +2464,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       resolvedDate: undefined,
       resolvedBy: undefined,
       maxCreatedBits: undefined,
+      product: undefined,
       productVideo: undefined,
-      productVideoList: undefined,
 
       // Book data
       title: undefined,
@@ -2760,8 +2760,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.resolvedDate == null) delete bitJson.resolvedDate;
     if (bitJson.resolvedBy == null) delete bitJson.resolvedBy;
     if (bitJson.maxCreatedBits == null) delete bitJson.maxCreatedBits;
+    if (bitJson.product == null) delete bitJson.product;
     if (bitJson.productVideo == null) delete bitJson.productVideo;
-    if (bitJson.productVideoList == null) delete bitJson.productVideoList;
 
     // Book data
     if (bitJson.title == null) delete bitJson.title;

@@ -10,6 +10,7 @@ const PropertyAstKey = superenum({
   isCaseSensitive: 'isCaseSensitive',
   referenceProperty: 'referenceProperty',
   markConfig: 'markConfig',
+  productList: 'productList',
   productVideoList: 'productVideoList',
 });
 

@@ -78,6 +78,8 @@ const RootBitType = superenum({
   multipleResponse1: 'multiple-response-1',
   page: 'page',
   pageBuyButton: 'page-buy-button',
+  pageProduct: 'page-product',
+  pageProductList: 'page-product-list',
   pageProductVideo: 'page-product-video',
   pageProductVideoList: 'page-product-video-list',
   photo: 'photo',

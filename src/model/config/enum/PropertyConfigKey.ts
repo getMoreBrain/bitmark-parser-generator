@@ -60,6 +60,8 @@ const propertyConfigKeys = {
   partialAnswer: 'partialAnswer',
   partner: 'partner',
   posterImage: 'posterImage',
+  product: 'product',
+  productList: 'productList',
   productVideo: 'productVideo',
   productVideoList: 'productVideoList',
   progress: 'progress',

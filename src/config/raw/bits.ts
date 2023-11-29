@@ -1134,6 +1134,37 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
+  [RootBitType.pageProduct]: {
+    since: '1.4.17',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.product,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+  },
+  [RootBitType.pageProductList]: {
+    since: '1.4.17',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.productList,
+        maxCount: Count.infinity,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+  },
   [RootBitType.pageProductVideo]: {
     since: '1.4.17',
     tags: [
