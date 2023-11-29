@@ -179,6 +179,8 @@ const NodeType = superenum({
   productVideoValue: 'productVideoValue',
   productVideoList: 'productVideoList',
   productVideoListValue: 'productVideoListValue',
+  productFolder: 'productFolder',
+  productFolderValue: 'productFolderValue',
 
   book: 'book',
 
@@ -309,6 +311,7 @@ const NodeType = superenum({
   errorsValue: 'errorsValue',
   message: 'message',
   // location: 'location', - NOTE: clash with bit.location / error.location (be careful when walking the tree)
+  original: 'original',
   start: 'start',
   end: 'end',
   offset: 'offset',
