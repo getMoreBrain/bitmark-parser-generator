@@ -1,0 +1,38 @@
+[
+  {
+    "bit": {
+      "type": "page-product-video-list",
+      "format": "bitmark--",
+      "id": ["151970"],
+      "productVideo": ["https://123.com"],
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.page-product-video-list]\n[@id:151970]\n[@productVideo:https://123.com]"
+  },
+  {
+    "bit": {
+      "type": "page-product-video-list",
+      "format": "bitmark--",
+      "id": ["304379"],
+      "productVideo": ["https://123.com", "https://1234.com"],
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.page-product-video-list]\n[@id:304379]\n[@productVideo:https://123.com][@productVideo:https://1234.com]"
+  }
+]

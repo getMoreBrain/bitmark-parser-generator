@@ -272,6 +272,17 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.boolean,
     defaultValue: 'true',
   },
+  [PropertyConfigKey.productVideo]: {
+    tag: PropertyTag.productVideo,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.productVideoList]: {
+    tag: PropertyTag.productVideo,
+    single: false,
+    format: PropertyFormat.trimmedString,
+    astKey: PropertyAstKey.productVideoList,
+  },
   [PropertyConfigKey.progress]: {
     tag: PropertyTag.progress,
     single: true,

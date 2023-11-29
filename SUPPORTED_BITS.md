@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.4.16
+Version: 1.4.17
 ## Supported Bits
 <pre>
 app-bitmark-from-javascript (since: 1.4.5)
@@ -235,6 +235,8 @@ multiple-response-1 (since: 1.3.0)
 |__ coach-self-reflection-multiple-response-1 (since: 1.3.0)
 page (since: 1.3.0)
 page-buy-button (since: 1.4.3)
+page-product-video (since: 1.4.17)
+page-product-video-list (since: 1.4.17)
 photo (since: 1.3.0)
 quote (since: 1.3.0)
 rating (since: 1.3.0)
