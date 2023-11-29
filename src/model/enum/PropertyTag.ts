@@ -57,6 +57,7 @@ const PropertyTag = superenum({
   partialAnswer: 'partialAnswer',
   partner: 'partner',
   posterImage: 'posterImage',
+  productVideo: 'productVideo',
   progress: 'progress',
   publications: 'publications',
   publisher: 'publisher',

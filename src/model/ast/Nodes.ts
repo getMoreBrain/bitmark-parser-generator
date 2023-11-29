@@ -87,6 +87,8 @@ export interface Bit {
   resolvedDate?: Property;
   resolvedBy?: Property;
   maxCreatedBits?: Property;
+  productVideo?: Property;
+  productVideoList?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: BreakscapedString;

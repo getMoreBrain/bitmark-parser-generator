@@ -171,6 +171,10 @@ const NodeType = superenum({
   resolvedByValue: 'resolvedByValue',
   maxCreatedBits: 'maxCreatedBits',
   maxCreatedBitsValue: 'maxCreatedBitsValue',
+  productVideo: 'productVideo',
+  productVideoValue: 'productVideoValue',
+  productVideoList: 'productVideoList',
+  productVideoListValue: 'productVideoListValue',
 
   book: 'book',
 
@@ -294,6 +298,7 @@ const NodeType = superenum({
   parser: 'parser',
   version: 'version',
   bitmarkVersion: 'bitmarkVersion',
+  commentedBitType: 'commentedBitType',
   warnings: 'warnings',
   warningsValue: 'warningsValue',
   errors: 'errors',
