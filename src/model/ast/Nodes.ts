@@ -91,6 +91,7 @@ export interface Bit {
   productList?: Property;
   productVideo?: Property;
   productVideoList?: Property;
+  productFolder?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: BreakscapedString;

@@ -1,0 +1,71 @@
+[
+  {
+    "bit": {
+      "type": "page-section-folder",
+      "format": "bitmark--",
+      "id": ["151970"],
+      "productFolder": "123",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.17",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.page-section-folder]\n[@id:151970]\n[@productFolder:123]"
+  },
+  {
+    "bit": {
+      "type": "page-section-folder",
+      "format": "bitmark--",
+      "id": ["304379"],
+      "productFolder": "124",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.17",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[@productFolder] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@productFolder:124]",
+          "location": {
+            "start": {
+              "line": 8,
+              "column": 21,
+              "offset": 115
+            },
+            "end": {
+              "line": 8,
+              "column": 41,
+              "offset": 135
+            }
+          },
+          "original": {
+            "text": "[@productFolder:123]",
+            "location": {
+              "start": {
+                "line": 8,
+                "column": 1,
+                "offset": 95
+              },
+              "end": {
+                "line": 8,
+                "column": 21,
+                "offset": 115
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.page-section-folder]\n[@id:304379]\n[@productFolder:123][@productFolder:124]"
+  }
+]

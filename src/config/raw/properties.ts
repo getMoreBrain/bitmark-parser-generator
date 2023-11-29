@@ -294,6 +294,11 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.trimmedString,
     astKey: PropertyAstKey.productVideoList,
   },
+  [PropertyConfigKey.productFolder]: {
+    tag: PropertyTag.productFolder,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.progress]: {
     tag: PropertyTag.progress,
     single: true,

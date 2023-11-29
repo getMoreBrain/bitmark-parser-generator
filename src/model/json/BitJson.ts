@@ -63,6 +63,7 @@ export interface BitJson {
   maxCreatedBits: number;
   product: string;
   productVideo: string;
+  productFolder: string;
 
   book: string;
 
