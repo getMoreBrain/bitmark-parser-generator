@@ -66,6 +66,8 @@ export interface Bit {
   thumbImage?: Property;
   focusX?: Property;
   focusY?: Property;
+  pointerLeft?: Property;
+  pointerTop?: Property;
   duration?: Property;
   deeplink?: Property;
   externalLink?: Property;

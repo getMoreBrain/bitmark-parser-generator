@@ -1,0 +1,149 @@
+[
+  {
+    "bit": {
+      "type": "step",
+      "format": "bitmark--",
+      "id": ["210022"],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Lernziele",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.18",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.step]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt."
+  },
+  {
+    "bit": {
+      "type": "step",
+      "format": "bitmark++",
+      "id": ["210040"],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Lernziele",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ],
+              "parent": "bulletList",
+              "attrs": {}
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ],
+              "parent": "bulletList",
+              "attrs": {}
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ],
+              "parent": "bulletList",
+              "attrs": {}
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.18",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.step:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n• die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.\n• erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.\n• verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird."
+  }
+]
