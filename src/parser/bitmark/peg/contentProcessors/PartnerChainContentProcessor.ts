@@ -2,7 +2,7 @@ import { Builder } from '../../../../ast/Builder';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -18,7 +18,7 @@ const builder = new Builder();
 
 function partnerChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,

@@ -1,4 +1,4 @@
-import { BitType } from '../enum/BitType';
+import { BitTypeType } from '../enum/BitType';
 import { BodyBitTypeType } from '../enum/BodyBitType';
 import { ResourceTagType } from '../enum/ResourceTag';
 import { TextFormatType } from '../enum/TextFormat';
@@ -29,7 +29,7 @@ export interface BitmarkAst {
 // Bit
 
 export interface Bit {
-  bitType: BitType;
+  bitType: BitTypeType;
   textFormat: TextFormatType;
   resourceType?: ResourceTagType;
   id?: Property;
@@ -66,6 +66,8 @@ export interface Bit {
   thumbImage?: Property;
   focusX?: Property;
   focusY?: Property;
+  pointerLeft?: Property;
+  pointerTop?: Property;
   duration?: Property;
   deeplink?: Property;
   externalLink?: Property;

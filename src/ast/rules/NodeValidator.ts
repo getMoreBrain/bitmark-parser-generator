@@ -1,5 +1,4 @@
 import { Bit, CardBit, Resource } from '../../model/ast/Nodes';
-import { RootBitType } from '../../model/enum/BitType';
 import { StringUtils } from '../../utils/StringUtils';
 
 /**
@@ -14,12 +13,12 @@ class NodeValidator {
     if (!bit) return bit;
 
     // TODO
-    let ret: Bit | undefined = bit;
-    switch (bit.bitType.root) {
-      case RootBitType.interview:
-        ret = this.validateInterviewBit(bit);
-        break;
-    }
+    const ret: Bit | undefined = bit;
+    // switch (bit.bitType.root) {
+    //   case BitType.interview:
+    //     ret = this.validateInterviewBit(bit);
+    //     break;
+    // }
 
     return ret;
   }
@@ -149,21 +148,21 @@ class NodeValidator {
   // private
   //
 
-  private validateInterviewBit(bit: Bit): Bit | undefined {
-    // Ensure bit has a questions array as the
-    // ===
-    // ===
-    // must be included in the markup
-    if (!bit.cardNode) {
-      bit.cardNode = {};
-    }
+  // private validateInterviewBit(bit: Bit): Bit | undefined {
+  //   // Ensure bit has a questions array as the
+  //   // ===
+  //   // ===
+  //   // must be included in the markup
+  //   if (!bit.cardNode) {
+  //     bit.cardNode = {};
+  //   }
 
-    if (!bit.cardNode.questions) {
-      bit.cardNode.questions = [];
-    }
+  //   if (!bit.cardNode.questions) {
+  //     bit.cardNode.questions = [];
+  //   }
 
-    return bit;
-  }
+  //   return bit;
+  // }
 }
 
 const nodeValidator = new NodeValidator();

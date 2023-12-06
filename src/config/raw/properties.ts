@@ -459,6 +459,16 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.pointerLeft]: {
+    tag: PropertyTag.pointerLeft,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.pointerTop]: {
+    tag: PropertyTag.pointerTop,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.posterImage]: {
     tag: PropertyTag.posterImage,
     single: true,

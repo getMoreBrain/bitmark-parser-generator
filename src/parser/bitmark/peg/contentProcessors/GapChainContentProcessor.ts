@@ -2,7 +2,7 @@ import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
 import { BodyPart, Gap } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 
 import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
 
@@ -18,7 +18,7 @@ const builder = new Builder();
 
 function gapChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -35,7 +35,7 @@ function gapChainContentProcessor(
 
 function buildGap(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,

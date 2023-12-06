@@ -2,7 +2,7 @@ import { Config } from '../../../../config/Config';
 import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
-import { BitType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
@@ -27,7 +27,7 @@ import {
 
 function propertyContentProcessor(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,

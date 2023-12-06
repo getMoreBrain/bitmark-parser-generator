@@ -3,7 +3,7 @@ import { Writer } from '../../ast/writer/Writer';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
-import { BitType, RootBitType, RootBitTypeType } from '../../model/enum/BitType';
+import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
@@ -296,7 +296,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     const bitResourcesConfig = Config.getBitResourcesConfig(bit.bitType, bit.resourceType);
 
     this.writeOPD();
-    this.writeString(bit.bitType.alias);
+    this.writeString(bit.bitType);
 
     if (bit.textFormat) {
       const write = this.isWriteTextFormat(bit.textFormat, bitConfig.textFormatDefault);
@@ -573,7 +573,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected enter_cardNode(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
     // Ignore cards for xxx-1
-    const isBitType1 = this.isRootBitType1(route);
+    const isBitType1 = this.isOfBitType1(route);
     if (isBitType1) return;
 
     this.writeCardSetStart();
@@ -588,7 +588,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     route: NodeInfo[],
   ): void {
     // Ignore cards for xxx-1
-    const isBitType1 = this.isRootBitType1(route);
+    const isBitType1 = this.isOfBitType1(route);
     if (isBitType1) return;
 
     this.writeNL();
@@ -598,7 +598,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected exit_cardNode(_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
     // Ignore cards for xxx-1
-    const isBitType1 = this.isRootBitType1(route);
+    const isBitType1 = this.isOfBitType1(route);
     if (isBitType1) return;
 
     this.writeNL();
@@ -705,7 +705,7 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     _parent: NodeInfo | undefined,
     route: NodeInfo[],
   ): void {
-    const isTrueFalse1 = this.isRootBitType(route, RootBitType.trueFalse1);
+    const isTrueFalse1 = this.isOfBitType(route, BitType.trueFalse1);
 
     if (!isTrueFalse1) {
       this.writeNL();
@@ -1810,20 +1810,16 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return !!writeFormat;
   }
 
-  protected isRootBitType1(route: NodeInfo[]): boolean {
-    return (
-      this.isRootBitType(route, RootBitType.trueFalse1) ||
-      this.isRootBitType(route, RootBitType.multipleChoice1) ||
-      this.isRootBitType(route, RootBitType.multipleResponse1)
-    );
+  protected isOfBitType1(route: NodeInfo[]): boolean {
+    return this.isOfBitType(route, [BitType.trueFalse1, BitType.multipleChoice1, BitType.multipleResponse1]);
   }
 
-  protected isRootBitType(route: NodeInfo[], rootBitType: RootBitTypeType): boolean {
+  protected isOfBitType(route: NodeInfo[], baseBitType: BitTypeType | BitTypeType[]): boolean {
     const bt = this.getBitType(route);
-    return bt?.root === rootBitType;
+    return Config.isOfBitType(bt, baseBitType);
   }
 
-  protected getBitType(route: NodeInfo[]): BitType | undefined {
+  protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
     for (const node of route) {
       if (node.key === NodeType.bitsValue) {
         const n = node.value as Bit;

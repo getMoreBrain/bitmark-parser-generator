@@ -3,7 +3,7 @@ import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BodyPart, Mark } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 import { ArrayUtils } from '../../../../utils/ArrayUtils';
 
 import { markTagContentProcessor } from './MarkTagContentProcessor';
@@ -20,7 +20,7 @@ const builder = new Builder();
 
 function markChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -37,7 +37,7 @@ function markChainContentProcessor(
 
 function buildMark(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,

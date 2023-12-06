@@ -3,7 +3,7 @@ import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -20,7 +20,7 @@ const builder = new Builder();
 
 function imageSourceChainContentProcessor(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -35,7 +35,7 @@ function imageSourceChainContentProcessor(
 
 function imageSourceTagContentProcessor(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   _tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -51,7 +51,7 @@ function imageSourceTagContentProcessor(
 
 function buildImageSource(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,

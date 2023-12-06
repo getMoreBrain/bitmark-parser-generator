@@ -68,7 +68,7 @@ import { Config } from '../../../config/Config';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
-import { BitType, RootBitType } from '../../../model/enum/BitType';
+import { BitType, BitTypeType } from '../../../model/enum/BitType';
 import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../model/enum/TextFormat';
@@ -209,16 +209,16 @@ class BitmarkPegParserProcessor {
     const { bitType, textFormat, resourceType } = bitHeader;
 
     // Bit type was invalid, so ignore the bit, returning instead the parsing errors
-    if (!bitType || bitType.root === RootBitType._error) return this.invalidBit();
+    if (!bitType || Config.isOfBitType(bitType, BitType._error)) return this.invalidBit();
 
     // Bit type was comment, so ignore the bit, returning the comment info instead
-    if (bitType.root === RootBitType._comment) return this.commentBit();
+    if (Config.isOfBitType(bitType, BitType._comment)) return this.commentBit();
 
     if (DEBUG_BIT_CONTENT_RAW) this.debugPrint('BIT CONTENT RAW', bitContent);
 
-    const isTrueFalseV1 = bitType.root === RootBitType.trueFalse1;
-    const isMultipleChoiceV1 = bitType.root === RootBitType.multipleChoice1;
-    const isMultipleResponseV1 = bitType.root === RootBitType.multipleResponse1;
+    const isTrueFalseV1 = Config.isOfBitType(bitType, BitType.trueFalse1);
+    const isMultipleChoiceV1 = Config.isOfBitType(bitType, BitType.multipleChoice1);
+    const isMultipleResponseV1 = Config.isOfBitType(bitType, BitType.multipleResponse1);
 
     if (DEBUG_BIT_CONTENT) this.debugPrint('BIT CONTENT', bitContent);
 
@@ -297,7 +297,7 @@ class BitmarkPegParserProcessor {
 
     // Build the error bit
     const bit = builder.bit({
-      bitType: Config.getBitType(RootBitType._error),
+      bitType: Config.getBitType(BitType._error),
       parser: this.parser,
     });
 
@@ -311,7 +311,7 @@ class BitmarkPegParserProcessor {
 
     // Build the error bit
     const bit = builder.bit({
-      bitType: Config.getBitType(RootBitType._comment),
+      bitType: Config.getBitType(BitType._comment),
       parser: this.parser,
     });
 
@@ -322,9 +322,9 @@ class BitmarkPegParserProcessor {
   buildBitHeader(bitType: string, textFormatAndResourceType: RawTextAndResourceType): BitHeader {
     // Get / check bit type
     const validBitType = Config.getBitType(bitType);
-    if (validBitType.root === RootBitType._error) {
+    if (Config.isOfBitType(validBitType, BitType._error)) {
       this.addError(`Invalid bit type: '${bitType}'`);
-    } else if (validBitType.root === RootBitType._comment) {
+    } else if (Config.isOfBitType(validBitType, BitType._comment)) {
       this.parser.commentedBitType = `[.${bitType.slice(1)}]`;
     }
 
@@ -390,7 +390,7 @@ class BitmarkPegParserProcessor {
    * @returns
    */
   private bitContentProcessor(
-    bitType: BitType,
+    bitType: BitTypeType,
     bitLevel: BitContentLevelType,
     tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,

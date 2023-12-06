@@ -14,7 +14,7 @@ import { CardSetConfig } from '../../../model/config/CardSetConfig';
 import { CardVariantConfig } from '../../../model/config/CardVariantConfig';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTagType, BitTagTypeType } from '../../../model/enum/BitTagType';
-import { BitType } from '../../../model/enum/BitType';
+import { BitTypeType } from '../../../model/enum/BitType';
 import { Count, CountType } from '../../../model/enum/Count';
 import { PropertyTag, PropertyTagType } from '../../../model/enum/PropertyTag';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
@@ -91,7 +91,7 @@ class BitmarkPegParserValidator {
    */
   validateBitTags(
     context: BitmarkPegParserContext,
-    bitType: BitType,
+    bitType: BitTypeType,
     resourceType: ResourceTagType | undefined,
     data: BitContent[],
   ): BitContent[] {
@@ -133,7 +133,7 @@ class BitmarkPegParserValidator {
    */
   checkBody(
     context: BitmarkPegParserContext,
-    bitType: BitType,
+    bitType: BitTypeType,
     _bitLevel: BitContentLevelType,
     body: Body | undefined,
   ): Body | undefined {
@@ -146,7 +146,7 @@ class BitmarkPegParserValidator {
     const hasBody = body.bodyParts.length > 0;
 
     if (hasBody && !bodyAllowed) {
-      context.addWarning(`Bit '${bitType.alias}' should not have a body.`);
+      context.addWarning(`Bit '${bitType}' should not have a body.`);
     }
 
     return body;
@@ -163,7 +163,7 @@ class BitmarkPegParserValidator {
    */
   checkBodyPart(
     context: BitmarkPegParserContext,
-    bitType: BitType,
+    bitType: BitTypeType,
     bitLevel: BitContentLevelType,
     bodyPart: BreakscapedString,
   ): BreakscapedString {
@@ -185,7 +185,7 @@ class BitmarkPegParserValidator {
    */
   checkFooter(
     context: BitmarkPegParserContext,
-    bitType: BitType,
+    bitType: BitTypeType,
     bitLevel: BitContentLevelType,
     footer: BreakscapedString,
   ): BreakscapedString {
@@ -198,7 +198,7 @@ class BitmarkPegParserValidator {
     this.checkBodyForCommonPotentialMistakes(context, bitLevel, bitType, footer);
 
     if (!footerAllowed) {
-      context.addWarning(`Bit '${bitType.alias}' should not have a footer.`);
+      context.addWarning(`Bit '${bitType}' should not have a footer.`);
     }
 
     return footer;
@@ -215,7 +215,7 @@ class BitmarkPegParserValidator {
    */
   checkCardBody(
     context: BitmarkPegParserContext,
-    bitType: BitType,
+    bitType: BitTypeType,
     _bitLevel: BitContentLevelType,
     cardBody: Body | undefined,
     cardNo: number,
@@ -239,7 +239,7 @@ class BitmarkPegParserValidator {
 
     if (hasBody && !bodyAllowed) {
       context.addWarning(
-        `Bit '${bitType.alias}' should not have a card body at card:${cardNo + 1}, side:${sideNo + 1}, variant:${
+        `Bit '${bitType}' should not have a card body at card:${cardNo + 1}, side:${sideNo + 1}, variant:${
           variantNo + 1
         }.`,
       );
@@ -265,7 +265,7 @@ class BitmarkPegParserValidator {
    */
   private validateTagChainsRecursive(
     context: BitmarkPegParserContext,
-    bitType: BitType,
+    bitType: BitTypeType,
     bitLevel: BitContentLevelType,
     data: BitContent[],
     tags: TagsConfig,
@@ -408,7 +408,7 @@ class BitmarkPegParserValidator {
    */
   private validateSingleTag(
     context: BitmarkPegParserContext,
-    bitType: BitType,
+    bitType: BitTypeType,
     bitLevel: BitContentLevelType,
     content: BitContent,
     typeKey: TypeKeyType,
@@ -562,7 +562,7 @@ class BitmarkPegParserValidator {
   private validateStandardTag(
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    _bitType: BitType,
+    _bitType: BitTypeType,
     tagValidationData: TagValidationData,
     content: TypeKeyValue,
   ): ValidateReturn {
@@ -601,7 +601,7 @@ class BitmarkPegParserValidator {
   private validatePropertyTag(
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    _bitType: BitType,
+    _bitType: BitTypeType,
     tagValidationData: TagValidationData,
     content: TypeKeyValue,
   ): ValidateReturn {
@@ -640,7 +640,7 @@ class BitmarkPegParserValidator {
   private validateResourceTag(
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    _bitType: BitType,
+    _bitType: BitTypeType,
     tagValidationData: TagValidationData,
     content: TypeKeyValue,
   ): ValidateReturn {
@@ -679,7 +679,7 @@ class BitmarkPegParserValidator {
    */
   private validateCardSet(
     context: BitmarkPegParserContext,
-    bitType: BitType,
+    bitType: BitTypeType,
     _tagValidationData: TagValidationData,
     content: TypeKeyValue,
     cardSetConfig: CardSetConfig | undefined,
@@ -763,26 +763,26 @@ class BitmarkPegParserValidator {
   private checkBodyForCommonPotentialMistakes(
     context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    bitType: BitType,
+    bitType: BitTypeType,
     body: string,
   ): void {
     if (!body) return;
 
     for (const mistake of COMMON_MISTAKE_STRINGS) {
       if (body.includes(mistake)) {
-        context.addWarning(`Bit '${bitType.alias}' might contain a mistake: ${mistake}`);
+        context.addWarning(`Bit '${bitType}' might contain a mistake: ${mistake}`);
       }
     }
 
     for (const mistake of COMMON_STARTS_WITH_MISTAKE_STRINGS) {
       if (body.startsWith(mistake)) {
-        context.addWarning(`Bit '${bitType.alias}' might contain a mistake: ${mistake}`);
+        context.addWarning(`Bit '${bitType}' might contain a mistake: ${mistake}`);
       }
     }
 
     for (const mistake of COMMON_ENDS_WITH_MISTAKE_STRINGS) {
       if (body.endsWith(mistake)) {
-        context.addWarning(`Bit '${bitType.alias}' might contain a mistake: ${mistake}`);
+        context.addWarning(`Bit '${bitType}' might contain a mistake: ${mistake}`);
       }
     }
   }
@@ -800,7 +800,7 @@ class BitmarkPegParserValidator {
   private convertTagsToTypeKeyMap(
     _context: BitmarkPegParserContext,
     _bitLevel: BitContentLevelType,
-    _bitType: BitType,
+    _bitType: BitTypeType,
     tags: TagsConfig,
   ): Map<TypeKeyType | string, TagValidationData> {
     // Using a map here as we might add the 'count' of tags valid at a later stage

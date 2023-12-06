@@ -1,5 +1,6 @@
+import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { RootBitType, BitType } from '../../../../model/enum/BitType';
+import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 
 import {
@@ -15,7 +16,7 @@ import {
 
 function exampleTagContentProcessor(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -24,32 +25,37 @@ function exampleTagContentProcessor(
   const example = value as string | boolean;
 
   // Each bit type handles example tags differently
-  switch (bitType.root) {
-    case RootBitType.cloze:
-    case RootBitType.clozeAndMultipleChoiceText:
-    case RootBitType.multipleChoiceText:
-    case RootBitType.highlightText:
-    case RootBitType.trueFalse:
-    case RootBitType.trueFalse1:
-    case RootBitType.multipleResponse:
-    case RootBitType.multipleResponse1:
-    case RootBitType.multipleChoice:
-    case RootBitType.multipleChoice1:
-      handleGapOrSelectOrTrueFalseExample(context, bitType, content, example, target);
-      break;
-    case RootBitType.mark:
-      // Default only example handling
-      handleDefaultOnlyExample(context, bitType, content, example, target);
-      break;
-    default:
-      // Standard example handling
-      handleStandardStringExample(context, bitType, content, example, target);
+  if (
+    Config.isOfBitType(bitType, [
+      BitType.cloze,
+      BitType.clozeAndMultipleChoiceText,
+      BitType.multipleChoiceText,
+      BitType.highlightText,
+      BitType.trueFalse,
+      BitType.trueFalse1,
+      BitType.multipleResponse,
+      BitType.multipleResponse1,
+      BitType.multipleChoice,
+      BitType.multipleChoice1,
+    ])
+  ) {
+    //
+    handleGapOrSelectOrTrueFalseExample(context, bitType, content, example, target);
+    //
+  } else if (Config.isOfBitType(bitType, BitType.mark)) {
+    // Default only example handling
+    handleDefaultOnlyExample(context, bitType, content, example, target);
+    //
+  } else {
+    // Standard example handling
+    handleStandardStringExample(context, bitType, content, example, target);
+    //
   }
 }
 
 function handleGapOrSelectOrTrueFalseExample(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   content: BitContent,
   example: string | boolean,
   target: BitContentProcessorResult,
@@ -85,42 +91,44 @@ function handleGapOrSelectOrTrueFalseExample(
     }
   } else {
     // Example is higher up the chain, so how it is handled depends on the bit type
-    switch (bitType.root) {
-      default:
-      case RootBitType.cloze:
-        // Treat as a standard string
-        handleStandardStringExample(context, bitType, content, example, target);
-        break;
-      case RootBitType.multipleChoiceText:
-      case RootBitType.highlightText:
-      case RootBitType.trueFalse:
-      case RootBitType.trueFalse1:
-      case RootBitType.multipleResponse:
-      case RootBitType.multipleResponse1:
-        // Treat as a standard boolean
-        handleStandardBooleanExample(context, bitType, content, example, target);
-        break;
-      case RootBitType.clozeAndMultipleChoiceText:
-      case RootBitType.multipleChoice:
-      case RootBitType.multipleChoice1: {
-        // For these bits, a specific example value higher up the chain makes no sense
-        // Set example to default, and raise a warning if any value is set.
-        target.isDefaultExample = true;
-        target.example = undefined;
+    if (
+      Config.isOfBitType(bitType, [
+        BitType.multipleChoiceText,
+        BitType.highlightText,
+        BitType.trueFalse,
+        BitType.trueFalse1,
+        BitType.multipleResponse,
+        BitType.multipleResponse1,
+      ])
+    ) {
+      // Treat as a standard boolean
+      handleStandardBooleanExample(context, bitType, content, example, target);
+      //
+    }
+    if (
+      Config.isOfBitType(bitType, [BitType.clozeAndMultipleChoiceText, BitType.multipleChoice, BitType.multipleChoice1])
+    ) {
+      // For these bits, a specific example value higher up the chain makes no sense
+      // Set example to default, and raise a warning if any value is set.
+      target.isDefaultExample = true;
+      target.example = undefined;
 
-        if (example !== true) {
-          // Example is set to a value other than true / false which is not valid in the case of select
-          context.addWarning(`At this level, only default [@example] is allowed, using default`, content);
-        }
-        break;
+      if (example !== true) {
+        // Example is set to a value other than true / false which is not valid in the case of select
+        context.addWarning(`At this level, only default [@example] is allowed, using default`, content);
       }
+      //
+    } else {
+      // Treat as a standard string
+      handleStandardStringExample(context, bitType, content, example, target);
+      //
     }
   }
 }
 
 function handleDefaultOnlyExample(
   context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   content: BitContent,
   example: string | boolean,
   target: BitContentProcessorResult,
@@ -137,7 +145,7 @@ function handleDefaultOnlyExample(
 
 function handleStandardBooleanExample(
   context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   content: BitContent,
   example: string | boolean,
   target: BitContentProcessorResult,
@@ -159,7 +167,7 @@ function handleStandardBooleanExample(
 
 function handleStandardStringExample(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   _content: BitContent,
   example: string | boolean,
   target: BitContentProcessorResult,

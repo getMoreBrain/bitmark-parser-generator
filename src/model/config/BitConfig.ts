@@ -1,4 +1,4 @@
-import { AliasBitTypeType, BitType, RootBitTypeType } from '../enum/BitType';
+import { BitTypeType } from '../enum/BitType';
 import { Count } from '../enum/Count';
 import { ExampleTypeType } from '../enum/ExampleType';
 import { ResourceTagType } from '../enum/ResourceTag';
@@ -14,8 +14,9 @@ interface ToStringOptions {
 
 class BitConfig {
   readonly since: string; // Supported since version
-  readonly rootBitType: RootBitTypeType;
-  readonly aliases: AliasBitTypeType[]; // Bit aliases
+  readonly bitType: BitTypeType;
+  readonly inheritedBitTypes: BitTypeType[]; // Bit inheritance tree (array for order)
+  readonly inheritedBitTypesSet: Set<BitTypeType>; // Bit inheritance tree (set for faster lookup)
   readonly textFormatDefault: TextFormatType; // Default text format
   readonly tags: TagsConfig = {};
   readonly cardSet?: CardSetConfig;
@@ -30,8 +31,8 @@ class BitConfig {
 
   public constructor(
     since: string,
-    bitType: BitType,
-    aliases: AliasBitTypeType[],
+    bitType: BitTypeType,
+    inheritedBitTypes: BitTypeType[],
     textFormatDefault: TextFormatType,
     tags: TagsConfig,
     cardSet: CardSetConfig | undefined,
@@ -45,8 +46,9 @@ class BitConfig {
     comboResourceType: ResourceTagType | undefined,
   ) {
     this.since = since;
-    this.rootBitType = bitType.root;
-    this.aliases = aliases;
+    this.bitType = bitType;
+    this.inheritedBitTypes = inheritedBitTypes;
+    this.inheritedBitTypesSet = new Set(inheritedBitTypes);
     this.textFormatDefault = textFormatDefault;
     this.tags = tags;
     this.cardSet = cardSet;
@@ -63,13 +65,13 @@ class BitConfig {
   public toString(options?: ToStringOptions): string {
     const opts = Object.assign({}, options);
 
-    let s = `[Bit]\n${this.rootBitType}`;
+    let s = `[Bit]\n${this.bitType}`;
 
     // Aliases
-    if (this.aliases.length > 0) {
-      s += `\n\n[Aliases]`;
+    if (this.inheritedBitTypes.length > 0) {
+      s += `\n\n[Inheritance]`;
 
-      s += `\n${this.aliases.join(', ')}`;
+      s += `\n${this.inheritedBitTypes.join(' => ')}`;
     }
 
     // Default text format
