@@ -122,6 +122,8 @@ class Builder extends BaseBuilder {
     thumbImage?: BreakscapedString;
     focusX?: number;
     focusY?: number;
+    pointerLeft?: BreakscapedString;
+    pointerTop?: BreakscapedString;
     duration?: BreakscapedString;
     referenceProperty?: BreakscapedString | BreakscapedString[];
     deeplink?: BreakscapedString | BreakscapedString[];
@@ -230,6 +232,8 @@ class Builder extends BaseBuilder {
       thumbImage,
       focusX,
       focusY,
+      pointerLeft,
+      pointerTop,
       duration,
       referenceProperty,
       deeplink,
@@ -337,6 +341,8 @@ class Builder extends BaseBuilder {
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       focusX: this.toAstProperty(PropertyConfigKey.focusX, focusX),
       focusY: this.toAstProperty(PropertyConfigKey.focusY, focusY),
+      pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, pointerLeft),
+      pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, pointerTop),
       deeplink: this.toAstProperty(PropertyConfigKey.deeplink, deeplink),
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, externalLink),
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, externalLinkText),

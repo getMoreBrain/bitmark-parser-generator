@@ -42,6 +42,8 @@ export interface BitJson {
   thumbImage: string;
   focusX: number;
   focusY: number;
+  pointerLeft: string;
+  pointerTop: string;
   duration: string;
   deeplink: string | string[];
   externalLink: string;

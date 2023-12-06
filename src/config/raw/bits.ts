@@ -402,6 +402,26 @@ const BITS: _BitsConfig = {
   [BitType.consoleLog]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.output]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.stdout]: { since: '1.4.3', baseBitType: BitType.code },
+  [BitType.step]: { since: '1.5.0', baseBitType: BitType.example },
+  [BitType.stepImageScreenshot]: { since: '1.5.0', baseBitType: BitType.image },
+  [BitType.stepImageScreenshotWithPointer]: {
+    since: '1.5.0',
+    baseBitType: BitType.image,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.pointerTop,
+        minCount: 1,
+        maxCount: 1,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.pointerLeft,
+        minCount: 1,
+        maxCount: 1,
+      },
+    ],
+  },
   [BitType.conversationLeft1]: {
     since: '1.3.0',
     tags: [
