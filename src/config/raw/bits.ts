@@ -402,10 +402,10 @@ const BITS: _BitsConfig = {
   [BitType.consoleLog]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.output]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.stdout]: { since: '1.4.3', baseBitType: BitType.code },
-  [BitType.step]: { since: '1.5.0', baseBitType: BitType.example },
-  [BitType.stepImageScreenshot]: { since: '1.5.0', baseBitType: BitType.image },
+  [BitType.step]: { since: '1.5.1', baseBitType: BitType.example },
+  [BitType.stepImageScreenshot]: { since: '1.5.1', baseBitType: BitType.image },
   [BitType.stepImageScreenshotWithPointer]: {
-    since: '1.5.0',
+    since: '1.5.1',
     baseBitType: BitType.image,
     tags: [
       {
