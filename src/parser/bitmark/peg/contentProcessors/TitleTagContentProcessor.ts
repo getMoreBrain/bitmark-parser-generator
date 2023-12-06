@@ -1,6 +1,7 @@
+import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType, RootBitType } from '../../../../model/enum/BitType';
+import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -14,7 +15,7 @@ import {
 
 function titleTagContentProcessor(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   _tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -36,29 +37,24 @@ function titleTagContentProcessor(
 
 function buildTitles(
   _context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   title: BreakscapedString[] | undefined,
 ): BitSpecificTitles {
   title = title ?? [];
 
-  switch (bitType.root) {
-    case RootBitType.chapter: {
-      let t: BreakscapedString | undefined;
-      if (title.length > 0) t = title[title.length - 1];
+  if (Config.isOfBitType(bitType, BitType.chapter)) {
+    let t: BreakscapedString | undefined;
+    if (title.length > 0) t = title[title.length - 1];
 
-      return {
-        title: t,
-        level: title.length > 0 ? title.length - 1 : undefined,
-      };
-    }
-
-    case RootBitType.book:
-    default: {
-      return {
-        title: title[1] ?? undefined,
-        subtitle: title[2] ?? undefined,
-      };
-    }
+    return {
+      title: t,
+      level: title.length > 0 ? title.length - 1 : undefined,
+    };
+  } else {
+    return {
+      title: title[1] ?? undefined,
+      subtitle: title[2] ?? undefined,
+    };
   }
 }
 

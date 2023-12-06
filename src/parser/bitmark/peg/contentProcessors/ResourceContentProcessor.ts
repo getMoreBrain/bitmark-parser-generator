@@ -3,7 +3,7 @@ import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 import { Count } from '../../../../model/enum/Count';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 
@@ -28,7 +28,7 @@ const resourceBuilder = new ResourceBuilder();
  */
 function buildResource(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   resourceTypeAttachment: string | undefined,
   resources: Resource[] | undefined,
 ): Resource[] | undefined {
@@ -88,7 +88,7 @@ function buildResource(
 
 function resourceContentProcessor(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,

@@ -5,7 +5,7 @@ import { Config } from '../../config/Config';
 import { TextGenerator } from '../../generator/text/TextGenerator';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { JsonText, TextAst } from '../../model/ast/TextNodes';
-import { BitType, RootBitType } from '../../model/enum/BitType';
+import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
@@ -209,7 +209,7 @@ class JsonParser {
   isBit(bit: unknown): boolean {
     if (Object.prototype.hasOwnProperty.call(bit, 'type')) {
       const b = bit as BitJson;
-      return Config.getBitType(b.type).root !== RootBitType._error;
+      return Config.getBitType(b.type) !== BitType._error;
     }
     return false;
   }
@@ -610,11 +610,11 @@ class JsonParser {
     return nodes;
   }
 
-  private responseBitsToAst(bitType: BitType, responses?: ResponseJson[]): Response[] | undefined {
+  private responseBitsToAst(bitType: BitTypeType, responses?: ResponseJson[]): Response[] | undefined {
     const nodes: Response[] = [];
 
     // Return early if bot response as the responses should be interpreted as bot responses
-    if (bitType.root === RootBitType.botActionResponse) return undefined;
+    if (Config.isOfBitType(bitType, BitType.botActionResponse)) return undefined;
 
     if (Array.isArray(responses)) {
       for (const r of responses) {
@@ -671,7 +671,7 @@ class JsonParser {
     return nodes;
   }
 
-  private quizBitsToAst(bitType: BitType, quizzes?: QuizJson[]): Quiz[] | undefined {
+  private quizBitsToAst(bitType: BitTypeType, quizzes?: QuizJson[]): Quiz[] | undefined {
     const nodes: Quiz[] = [];
     if (Array.isArray(quizzes)) {
       for (const q of quizzes) {
@@ -804,11 +804,11 @@ class JsonParser {
     return nodes;
   }
 
-  private botResponseBitsToAst(bitType: BitType, responses?: BotResponseJson[]): BotResponse[] | undefined {
+  private botResponseBitsToAst(bitType: BitTypeType, responses?: BotResponseJson[]): BotResponse[] | undefined {
     const nodes: BotResponse[] = [];
 
     // Return early if NOT bot response as the responses should be interpreted as standard responses
-    if (bitType.root !== RootBitType.botActionResponse) return undefined;
+    if (!Config.isOfBitType(bitType, BitType.botActionResponse)) return undefined;
 
     if (Array.isArray(responses)) {
       for (const r of responses) {

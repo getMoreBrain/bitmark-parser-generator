@@ -3,7 +3,7 @@ import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
-import { AliasBitType, BitType, RootBitType } from '../../../../model/enum/BitType';
+import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
@@ -41,7 +41,7 @@ const builder = new Builder();
 
 function buildCards(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   parsedCardSet: ParsedCardSet | undefined,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
@@ -114,7 +114,7 @@ function buildCards(
 
 function processCardSet(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   parsedCardSet: ParsedCardSet | undefined,
 ): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
@@ -183,7 +183,7 @@ function processCardSet(
 
 function parseFlashcards(
   context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const flashcards: Flashcard[] = [];
@@ -194,7 +194,7 @@ function parseFlashcards(
   let variantIndex = 0;
   let extraTags = {};
   let questionVariant: ProcessedCardVariant | undefined;
-  const onlyOneCardAllowed = bitType.alias === AliasBitType.flashcard1;
+  const onlyOneCardAllowed = bitType === BitType.flashcard1;
 
   for (const card of cardSet.cards) {
     // Reset the question and answers
@@ -241,7 +241,7 @@ function parseFlashcards(
     } else {
       // Only one card allowed, add a warning and ignore the card
       context.addWarning(
-        `Bit '${bitType.alias}' should only contain one card. Ignore subsequent card: '${question}'`,
+        `Bit '${bitType}' should only contain one card. Ignore subsequent card: '${question}'`,
         questionVariant,
       );
       break;
@@ -257,7 +257,7 @@ function parseFlashcards(
 
 function parseElements(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const elements: BreakscapedString[] = [];
@@ -283,7 +283,7 @@ function parseElements(
 
 function parseStatements(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
@@ -333,14 +333,14 @@ function parseStatements(
 
 function parseQuiz(
   _context: BitmarkPegParserContext,
-  bitType: BitType,
+  bitType: BitTypeType,
   cardSet: ProcessedCardSet,
   choicesV1: Choice[] | undefined,
   responsesV1: Response[] | undefined,
 ): BitSpecificCards {
   const quizzes: Quiz[] = [];
-  const insertChoices = bitType.root === RootBitType.multipleChoice;
-  const insertResponses = bitType.root === RootBitType.multipleResponse;
+  const insertChoices = Config.isOfBitType(bitType, BitType.multipleChoice);
+  const insertResponses = Config.isOfBitType(bitType, BitType.multipleResponse);
   if (!insertChoices && !insertResponses) return {};
 
   let isDefaultExampleCard = false;
@@ -415,7 +415,7 @@ function parseQuiz(
 
 function parseQuestions(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const questions: Question[] = [];
@@ -446,7 +446,7 @@ function parseQuestions(
 
 function parseMatchPairs(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   let sideIdx = 0;
@@ -566,7 +566,7 @@ function parseMatchPairs(
 
 function parseMatchMatrix(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   let sideIdx = 0;
@@ -711,7 +711,7 @@ function parseMatchMatrix(
 
 function parseBotActionResponses(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const botResponses: BotResponse[] = [];
@@ -739,7 +739,7 @@ function parseBotActionResponses(
 
 function parseCardBits(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const cardBits: CardBit[] = [];

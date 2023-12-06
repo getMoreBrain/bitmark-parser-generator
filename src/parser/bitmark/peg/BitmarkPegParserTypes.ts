@@ -11,7 +11,7 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../model/config/TagsConfig';
-import { BitType } from '../../../model/enum/BitType';
+import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag } from '../../../model/enum/Tag';
 import { TextFormatType } from '../../../model/enum/TextFormat';
@@ -79,7 +79,7 @@ export interface RawTextAndResourceType {
 }
 
 export interface BitHeader {
-  bitType: BitType;
+  bitType: BitTypeType;
   textFormat: TextFormatType;
   resourceType?: ResourceTagType;
 }
@@ -324,7 +324,7 @@ export interface BitmarkPegParserContext {
 
   parse: ParseFunction;
   bitContentProcessor(
-    bitType: BitType,
+    bitType: BitTypeType,
     bitLevel: BitContentLevelType,
     tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,

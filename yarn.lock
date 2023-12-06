@@ -627,8 +627,10 @@ __metadata:
     "@types/fs-extra": ^11.0.3
     "@types/jest": ^29.5.6
     "@types/node": ^20.8.7
+    "@types/ungap__structured-clone": ^0.3.3
     "@typescript-eslint/eslint-plugin": ^6.8.0
     "@typescript-eslint/parser": ^6.8.0
+    "@ungap/structured-clone": ^1.2.0
     esbuild: ^0.19.5
     esbuild-register: ^3.5.0
     eslint: ^8.52.0
@@ -1287,6 +1289,13 @@ __metadata:
   version: 4.0.4
   resolution: "@types/tough-cookie@npm:4.0.4"
   checksum: 6be275b09f5fbf33f359fd6d5372c69357cf96dea5d7ba7a6563c76c6cce8b0c7f81caa4805810b0e67427cad381aeef00d8c060d614fee79ca245c2b9887c3a
+  languageName: node
+  linkType: hard
+
+"@types/ungap__structured-clone@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "@types/ungap__structured-clone@npm:0.3.3"
+  checksum: 490a32e176d38407280675a590ae60b5a6ff9129e6b9a5eac5e0b3144e088516236055c197ddb4734562e0587bdedba2b8a4953d52442b082fea1dc201d4eba3
   languageName: node
   linkType: hard
 
