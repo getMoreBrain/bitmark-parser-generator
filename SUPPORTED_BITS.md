@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.0
+Version: 1.5.1
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -259,9 +259,9 @@ sequence (since: 1.3.0)
 side-note (since: 1.3.0)
 statement (since: 1.3.0)
 stdout (since: 1.4.3)
-step (since: 1.5.0)
-step-image-screenshot (since: 1.5.0)
-step-image-screenshot-with-pointer (since: 1.5.0)
+step (since: 1.5.1)
+step-image-screenshot (since: 1.5.1)
+step-image-screenshot-with-pointer (since: 1.5.1)
 sticky-note (since: 1.3.0)
 still-image-film (since: 1.3.0)
 still-image-film-embed (since: 1.3.0)
