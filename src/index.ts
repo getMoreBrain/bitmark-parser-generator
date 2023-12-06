@@ -28,7 +28,7 @@ export { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerat
 export { Writer } from './ast/writer/Writer';
 export { StringWriter } from './ast/writer/StringWriter';
 
-export { RootBitType, AliasBitType } from './model/enum/BitType';
+export { BitType } from './model/enum/BitType';
 export { TextFormat } from './model/enum/TextFormat';
 export { ResourceTag } from './model/enum/ResourceTag';
 export { NodeType } from './model/ast/NodeType';
@@ -69,7 +69,7 @@ export type { InfoFormatType } from './model/info/enum/InfoFormat';
 export type { FileOptions } from './ast/writer/FileWriter';
 export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
 export type { JsonOptions } from './generator/json/JsonGenerator';
-export type { BitType, RootBitTypeType, AliasBitTypeType, RootOrAliasBitTypeType } from './model/enum/BitType';
+export type { BitTypeType } from './model/enum/BitType';
 export type { TextFormatType } from './model/enum/TextFormat';
 export type { ResourceTagType } from './model/enum/ResourceTag';
 export type { NodeTypeType } from './model/ast/NodeType';

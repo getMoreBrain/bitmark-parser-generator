@@ -16,7 +16,7 @@ import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
 import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { JsonText, TextAst } from '../../model/ast/TextNodes';
-import { AliasBitType, RootBitType, BitType } from '../../model/enum/BitType';
+import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ExampleType } from '../../model/enum/ExampleType';
@@ -456,7 +456,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       if (isBoolean) {
         // Boolean example
         defaultExample = true;
-        if (bit.bitType.root === RootBitType.trueFalse1) {
+        if (Config.isOfBitType(bit.bitType, BitType.trueFalse1)) {
           if (bit.cardNode?.statement?.isCorrect !== undefined) {
             defaultExample = bit.cardNode.statement.isCorrect;
           }
@@ -596,7 +596,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // Create the listItems / sections if not already created
     let listItems: ListItemJson[] | undefined;
-    if (bitType.alias === AliasBitType.pageFooter) {
+    if (bitType === BitType.pageFooter) {
       if (!this.bitJson.sections) this.bitJson.sections = [];
       listItems = this.bitJson.sections;
     } else {
@@ -1589,7 +1589,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return highlightJson as HighlightJson;
   }
 
-  protected parseResourceToJson(bitType: BitType, resource: Resource | undefined): ResourceJson | undefined {
+  protected parseResourceToJson(bitType: BitTypeType, resource: Resource | undefined): ResourceJson | undefined {
     if (!resource) return undefined;
 
     // All resources should now be valid as they are validated in the AST
@@ -1738,7 +1738,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson;
   }
 
-  protected addImageResource(bitType: BitType, resource: ImageResource | BreakscapedString): ImageResourceJson {
+  protected addImageResource(bitType: BitTypeType, resource: ImageResource | BreakscapedString): ImageResourceJson {
     const resourceJson: Partial<ImageResourceJson> = {};
 
     if (StringUtils.isString(resource)) {
@@ -1772,7 +1772,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected addImageLinkResource(
-    bitType: BitType,
+    bitType: BitTypeType,
     resource: ImageLinkResource | BreakscapedString,
   ): ImageLinkResourceJson {
     const resourceJson: Partial<ImageLinkResourceJson> = {};
@@ -1807,7 +1807,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as ImageLinkResourceJson;
   }
 
-  protected addAudioResource(bitType: BitType, resource: AudioResource): AudioResourceJson {
+  protected addAudioResource(bitType: BitTypeType, resource: AudioResource): AudioResourceJson {
     const resourceJson: Partial<AudioResourceJson | AudioLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1823,7 +1823,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as AudioResourceJson;
   }
 
-  protected addAudioEmbedResource(bitType: BitType, resource: AudioEmbedResource): AudioEmbedResourceJson {
+  protected addAudioEmbedResource(bitType: BitTypeType, resource: AudioEmbedResource): AudioEmbedResourceJson {
     const resourceJson: Partial<AudioEmbedResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1839,7 +1839,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as AudioEmbedResourceJson;
   }
 
-  protected addAudioLinkResource(bitType: BitType, resource: AudioLinkResource): AudioLinkResourceJson {
+  protected addAudioLinkResource(bitType: BitTypeType, resource: AudioLinkResource): AudioLinkResourceJson {
     const resourceJson: Partial<AudioLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1855,7 +1855,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as AudioLinkResourceJson;
   }
 
-  protected addVideoResource(bitType: BitType, resource: VideoResource): VideoResourceJson {
+  protected addVideoResource(bitType: BitTypeType, resource: VideoResource): VideoResourceJson {
     const resourceJson: Partial<VideoResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1885,7 +1885,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as VideoResourceJson;
   }
 
-  protected addVideoEmbedResource(bitType: BitType, resource: VideoEmbedResource): VideoEmbedResourceJson {
+  protected addVideoEmbedResource(bitType: BitTypeType, resource: VideoEmbedResource): VideoEmbedResourceJson {
     const resourceJson: Partial<VideoEmbedResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1915,7 +1915,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as VideoEmbedResourceJson;
   }
 
-  protected addVideoLinkResource(bitType: BitType, resource: VideoLinkResource): VideoLinkResourceJson {
+  protected addVideoLinkResource(bitType: BitTypeType, resource: VideoLinkResource): VideoLinkResourceJson {
     const resourceJson: Partial<VideoLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -1946,7 +1946,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected addStillImageFilmEmbedResource(
-    bitType: BitType,
+    bitType: BitTypeType,
     resource: StillImageFilmEmbedResource,
   ): StillImageFilmEmbedResourceJson {
     const resourceJson: Partial<StillImageFilmEmbedResourceJson> = {};
@@ -1979,7 +1979,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected addStillImageFilmLinkResource(
-    bitType: BitType,
+    bitType: BitTypeType,
     resource: StillImageFilmLinkResource,
   ): StillImageFilmLinkResourceJson {
     const resourceJson: Partial<StillImageFilmLinkResourceJson> = {};
@@ -2011,7 +2011,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as StillImageFilmLinkResourceJson;
   }
 
-  protected addArticleResource(bitType: BitType, resource: ArticleResource): ArticleResourceJson {
+  protected addArticleResource(bitType: BitTypeType, resource: ArticleResource): ArticleResourceJson {
     const resourceJson: Partial<ArticleResourceJson | DocumentResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -2024,7 +2024,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as ArticleResourceJson | DocumentResourceJson;
   }
 
-  protected addDocumentResource(bitType: BitType, resource: DocumentResource): DocumentResourceJson {
+  protected addDocumentResource(bitType: BitTypeType, resource: DocumentResource): DocumentResourceJson {
     const resourceJson: Partial<DocumentResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -2037,7 +2037,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as DocumentResourceJson;
   }
 
-  protected addDocumentEmbedResource(bitType: BitType, resource: DocumentEmbedResource): DocumentEmbedResourceJson {
+  protected addDocumentEmbedResource(bitType: BitTypeType, resource: DocumentEmbedResource): DocumentEmbedResourceJson {
     const resourceJson: Partial<DocumentEmbedResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -2050,7 +2050,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as DocumentEmbedResourceJson;
   }
 
-  protected addDocumentLinkResource(bitType: BitType, resource: DocumentLinkResource): DocumentLinkResourceJson {
+  protected addDocumentLinkResource(bitType: BitTypeType, resource: DocumentLinkResource): DocumentLinkResourceJson {
     const resourceJson: Partial<DocumentLinkResourceJson> = {};
 
     if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
@@ -2064,7 +2064,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected addDocumentDownloadResource(
-    bitType: BitType,
+    bitType: BitTypeType,
     resource: DocumentDownloadResource,
   ): DocumentDownloadResourceJson {
     const resourceJson: Partial<DocumentDownloadResourceJson> = {};
@@ -2079,7 +2079,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as DocumentDownloadResourceJson;
   }
 
-  protected addAppLinkResource(bitType: BitType, resource: AppLinkResource): AppLinkResourceJson {
+  protected addAppLinkResource(bitType: BitTypeType, resource: AppLinkResource): AppLinkResourceJson {
     const resourceJson: Partial<AppLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = BreakscapeUtils.unbreakscape(resource.format);
@@ -2090,7 +2090,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     return resourceJson as AppLinkResourceJson;
   }
 
-  protected addWebsiteLinkResource(bitType: BitType, resource: WebsiteLinkResource): WebsiteLinkResourceJson {
+  protected addWebsiteLinkResource(bitType: BitTypeType, resource: WebsiteLinkResource): WebsiteLinkResourceJson {
     const resourceJson: Partial<WebsiteLinkResourceJson> = {};
 
     // if (resource.format != null) resourceJson.format = BreakscapeUtils.unbreakscape(resource.format);
@@ -2103,7 +2103,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected addGenericResourceProperties(
-    _bitType: BitType,
+    _bitType: BitTypeType,
     resource: Resource,
     resourceJson: BaseResourceJson,
     noDefaults?: boolean,
@@ -2219,15 +2219,15 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * @param zoomDisabled
    * @returns
    */
-  protected getZoomDisabled(bitType: BitType, zoomDisabled: boolean | undefined): boolean {
+  protected getZoomDisabled(bitType: BitTypeType, zoomDisabled: boolean | undefined): boolean {
     if (zoomDisabled != null) return zoomDisabled;
 
     // The default value in the JSON is hardcoded, because there is currently no good way to set a different
     // default per bit in the BitConfig.
 
-    switch (bitType.alias) {
-      case AliasBitType.imageSeparator:
-      case AliasBitType.pageBanner:
+    switch (bitType) {
+      case BitType.imageSeparator:
+      case BitType.pageBanner:
         return true;
     }
 
@@ -2240,7 +2240,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * @param route the route to the current node
    * @returns the bit type
    */
-  protected getBitType(route: NodeInfo[]): BitType | undefined {
+  protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
     for (const node of route) {
       if (node.key === NodeType.bitsValue) {
         const n = node.value as Bit;
@@ -2407,7 +2407,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    */
   protected createBitJson(bit: Bit): Partial<BitJson> {
     const bitJson: Partial<BitJson> = {
-      type: bit.bitType.alias,
+      type: bit.bitType,
       format: bit.textFormat,
 
       // Properties
@@ -2560,152 +2560,142 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     // NOTE: Not all bits have the same default properties.
     //       The properties used are a bit random sometimes?
     //       It would be better if this functionality was generated from the bit config
-    switch (bitType.root) {
-      case RootBitType._error:
-      case RootBitType._comment:
-        delete bitJson.format;
-        break;
-
-      case RootBitType.article:
-      case RootBitType.sampleSolution:
-      case RootBitType.page:
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
-
-      default: // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-
-        // Special case for 'ai' bits
-        if (
-          bitType.alias === AliasBitType.articleAi ||
-          bitType.alias === AliasBitType.noteAi ||
-          bitType.alias === AliasBitType.summaryAi
-        ) {
-          if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
-        }
-
-        // Special case for 'review-...' bits
-        if (bitType.root === RootBitType.reviewNote) {
-          if (bitJson.resolved == null) bitJson.resolved = false;
-          if (bitJson.resolvedDate == null) bitJson.resolvedDate = '';
-          if (bitJson.resolvedBy == null) bitJson.resolvedBy = '';
-        }
-
-        break;
-
+    if (Config.isOfBitType(bitType, [BitType._error, BitType._comment])) {
+      //
+      delete bitJson.format;
+      //
+    } else if (Config.isOfBitType(bitType, [BitType.article, BitType.sampleSolution, BitType.page])) {
+      //
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (
+      Config.isOfBitType(bitType, [
+        BitType.cloze,
+        BitType.multipleChoice1,
+        BitType.multipleResponse1,
+        BitType.multipleChoiceText,
+        BitType.highlightText,
+        BitType.clozeAndMultipleChoiceText,
+        BitType.sequence,
+        BitType.mark,
+        BitType.flashcard,
+      ])
+    ) {
       // Default, but with no 'example' at the bit level.
-      case RootBitType.cloze:
-      case RootBitType.multipleChoice1:
-      case RootBitType.multipleResponse1:
-      case RootBitType.multipleChoiceText:
-      case RootBitType.highlightText:
-      case RootBitType.clozeAndMultipleChoiceText:
-      case RootBitType.sequence:
-      case RootBitType.mark:
-      case RootBitType.flashcard:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
-
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleResponse])) {
       // Default with a card (and hence a footer possibility)
-      case RootBitType.multipleChoice:
-      case RootBitType.multipleResponse:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        if (bitJson.footer == null) bitJson.footer = this.textDefault;
-        break;
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      if (bitJson.footer == null) bitJson.footer = this.textDefault;
+      //
+    } else if (Config.isOfBitType(bitType, BitType.essay)) {
+      //
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.example == null) bitJson.example = null;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
+      // if (bitJson.sampleSolution == null) bitJson.sampleSolution = '';
+      //
+    } else if (Config.isOfBitType(bitType, BitType.trueFalse1)) {
+      //
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.lead == null) bitJson.lead = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.example == null) bitJson.example = null;
+      if (bitJson.isCorrect == null) bitJson.isCorrect = false;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (Config.isOfBitType(bitType, BitType.trueFalse)) {
+      //
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.lead == null) bitJson.lead = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.labelFalse == null) bitJson.labelFalse = '';
+      if (bitJson.labelTrue == null) bitJson.labelTrue = '';
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (Config.isOfBitType(bitType, BitType.chapter)) {
+      //
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.example == null) bitJson.example = null;
+      if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
+      if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
+      if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (Config.isOfBitType(bitType, BitType.interview)) {
+      //
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      if (bitJson.footer == null) bitJson.footer = this.textDefault;
+      if (bitJson.questions == null) bitJson.questions = [];
+      //
+    } else if (bitType === BitType.matchMatrix) {
+      //
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (Config.isOfBitType(bitType, BitType.match)) {
+      //
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (Config.isOfBitType(bitType, BitType.learningPathBook)) {
+      //
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.example == null) bitJson.example = null;
+      if (bitJson.isTracked == null) bitJson.isTracked = true;
+      if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (Config.isOfBitType(bitType, BitType.pageBuyButton)) {
+      //
+      if (bitJson.content2Buy == null) bitJson.content2Buy = '';
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else {
+      // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.example == null) bitJson.example = null;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
 
-      case RootBitType.essay:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
-        // if (bitJson.sampleSolution == null) bitJson.sampleSolution = '';
-        break;
+      // Special case for 'ai' bits
+      if (bitType === BitType.articleAi || bitType === BitType.noteAi || bitType === BitType.summaryAi) {
+        if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
+      }
 
-      case RootBitType.trueFalse1:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.lead == null) bitJson.lead = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
-        if (bitJson.isCorrect == null) bitJson.isCorrect = false;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
-
-      case RootBitType.trueFalse:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.lead == null) bitJson.lead = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.labelFalse == null) bitJson.labelFalse = '';
-        if (bitJson.labelTrue == null) bitJson.labelTrue = '';
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
-
-      case RootBitType.chapter:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
-        if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
-        if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
-        if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
-
-      case RootBitType.interview:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        if (bitJson.footer == null) bitJson.footer = this.textDefault;
-        if (bitJson.questions == null) bitJson.questions = [];
-        break;
-
-      case RootBitType.match:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
-
-      case RootBitType.matchMatrix:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
-
-      case RootBitType.learningPathBook:
-      case RootBitType.learningPathExternalLink:
-      case RootBitType.learningPathVideoCall:
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
-        if (bitJson.isTracked == null) bitJson.isTracked = true;
-        if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
-
-      case RootBitType.pageBuyButton:
-        if (bitJson.content2Buy == null) bitJson.content2Buy = '';
-        if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        break;
+      // Special case for 'review-...' bits
+      if (Config.isOfBitType(bitType, BitType.reviewNote)) {
+        if (bitJson.resolved == null) bitJson.resolved = false;
+        if (bitJson.resolvedDate == null) bitJson.resolvedDate = '';
+        if (bitJson.resolvedBy == null) bitJson.resolvedBy = '';
+      }
     }
 
     // Remove unwanted properties

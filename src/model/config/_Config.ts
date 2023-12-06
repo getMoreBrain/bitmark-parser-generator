@@ -3,6 +3,7 @@
  *
  */
 import { BitTagTypeType } from '../enum/BitTagType';
+import { BitTypeType } from '../enum/BitType';
 import { CountType } from '../enum/Count';
 import { ExampleTypeType } from '../enum/ExampleType';
 import { PropertyAstKeyType } from '../enum/PropertyAstKey';
@@ -33,8 +34,9 @@ export interface _BitsConfig {
 
 export interface _BitConfig {
   since: string; // Supported since version
+  baseBitType?: BitTypeType; // The base bit type
   textFormatDefault?: TextFormatType; // Default text format
-  tags: _TagInfoConfig[];
+  tags?: _TagInfoConfig[];
   cardSet?: CardSetConfigKeyType;
   deprecated?: string; // Deprecated version
   bodyAllowed?: boolean; // Default: false
@@ -43,11 +45,6 @@ export interface _BitConfig {
   footerRequired?: boolean; // Default: false
   resourceAttachmentAllowed?: boolean; // Default: false
   rootExampleType?: ExampleTypeType;
-  aliases?: _BitAliasesConfig;
-}
-
-export interface _BitAliasesConfig {
-  [configKey: string]: _BitAliasConfig;
 }
 
 export interface _BitAliasConfig {

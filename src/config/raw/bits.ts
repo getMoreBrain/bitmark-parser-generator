@@ -4,23 +4,23 @@ import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
 import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
 import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
-import { AliasBitType, RootBitType } from '../../model/enum/BitType';
+import { BitType } from '../../model/enum/BitType';
 import { Count } from '../../model/enum/Count';
 import { ExampleType } from '../../model/enum/ExampleType';
 import { TextFormat } from '../../model/enum/TextFormat';
 
 const BITS: _BitsConfig = {
-  [RootBitType._error]: {
+  [BitType._error]: {
     since: '1.3.0',
     tags: [],
   },
 
-  [RootBitType._comment]: {
+  [BitType._comment]: {
     since: '1.4.12',
     tags: [],
   },
 
-  [RootBitType.appFlashcards]: {
+  [BitType.appFlashcards]: {
     since: '1.3.0',
     tags: [
       {
@@ -40,12 +40,10 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     rootExampleType: ExampleType.string,
-    aliases: {
-      [AliasBitType.appFlashcardsQuiz]: { since: '1.3.0' },
-      [AliasBitType.appFlashcardsLearn]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.appLink]: {
+  [BitType.appFlashcardsQuiz]: { since: '1.3.0', baseBitType: BitType.appFlashcards },
+  [BitType.appFlashcardsLearn]: { since: '1.3.0', baseBitType: BitType.appFlashcards },
+  [BitType.appLink]: {
     since: '1.3.0',
     tags: [
       {
@@ -60,7 +58,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: false,
   },
-  [RootBitType.article]: {
+  [BitType.article]: {
     since: '1.3.0',
     tags: [
       {
@@ -74,12 +72,10 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.statement]: { since: '1.3.0' },
-      [AliasBitType.buttonCopyText]: { since: '1.4.3' },
-    },
   },
-  [RootBitType.appBitmarkFromJavascript]: {
+  [BitType.statement]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.buttonCopyText]: { since: '1.4.3', baseBitType: BitType.article },
+  [BitType.appBitmarkFromJavascript]: {
     since: '1.4.5',
     tags: [
       {
@@ -94,11 +90,9 @@ const BITS: _BitsConfig = {
     textFormatDefault: TextFormat.text,
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.appBitmarkFromEditor]: { since: '1.4.5' },
-    },
   },
-  [RootBitType.articleEmbed]: {
+  [BitType.appBitmarkFromEditor]: { since: '1.4.5', baseBitType: BitType.appBitmarkFromJavascript },
+  [BitType.articleEmbed]: {
     since: '1.3.0',
     tags: [
       {
@@ -113,7 +107,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.articleLink]: {
+  [BitType.articleLink]: {
     since: '1.3.0',
     tags: [
       {
@@ -128,7 +122,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.audio]: {
+  [BitType.audio]: {
     since: '1.3.0',
     tags: [
       {
@@ -144,7 +138,7 @@ const BITS: _BitsConfig = {
 
     bodyAllowed: true,
   },
-  [RootBitType.audioEmbed]: {
+  [BitType.audioEmbed]: {
     since: '1.3.0',
     tags: [
       {
@@ -159,7 +153,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.audioLink]: {
+  [BitType.audioLink]: {
     since: '1.3.0',
     tags: [
       {
@@ -174,7 +168,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.bitAlias]: {
+  [BitType.bitAlias]: {
     since: '1.3.0',
     tags: [
       {
@@ -193,7 +187,7 @@ const BITS: _BitsConfig = {
 
     bodyAllowed: true,
   },
-  [RootBitType.book]: {
+  [BitType.book]: {
     since: '1.3.0',
     tags: [
       {
@@ -206,60 +200,50 @@ const BITS: _BitsConfig = {
       },
     ],
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.bookAcknowledgments]: { since: '1.3.0' },
-      [AliasBitType.bookAddendum]: { since: '1.3.0' },
-      [AliasBitType.bookAfterword]: { since: '1.3.0' },
-      [AliasBitType.bookAppendix]: { since: '1.3.0' },
-      [AliasBitType.bookArticle]: { since: '1.3.0' },
-      [AliasBitType.bookAutherBio]: { since: '1.3.0' },
-      [AliasBitType.bookBibliography]: { since: '1.3.0' },
-      [AliasBitType.bookComingSoon]: { since: '1.3.0' },
-      [AliasBitType.bookConclusion]: { since: '1.3.0' },
-      [AliasBitType.bookCopyright]: { since: '1.3.0' },
-      [AliasBitType.bookCopyrightPermissions]: { since: '1.3.0' },
-      [AliasBitType.bookDedication]: { since: '1.3.0' },
-      [AliasBitType.bookEndnotes]: { since: '1.3.0' },
-      [AliasBitType.bookEpigraph]: { since: '1.3.0' },
-      [AliasBitType.bookEpilogue]: { since: '1.3.0' },
-      [AliasBitType.bookForword]: { since: '1.3.0' },
-      [AliasBitType.bookFrontispiece]: { since: '1.3.0' },
-      [AliasBitType.bookImprint]: { since: '1.3.0' },
-      [AliasBitType.bookIncitingIncident]: { since: '1.3.0' },
-      [AliasBitType.bookIntroduction]: { since: '1.3.0' },
-      [AliasBitType.bookListOfContributors]: { since: '1.3.0' },
-      [AliasBitType.bookNotes]: { since: '1.3.0' },
-      [AliasBitType.bookPostscript]: { since: '1.3.0' },
-      [AliasBitType.bookPreface]: { since: '1.3.0' },
-      [AliasBitType.bookPrologue]: { since: '1.3.0' },
-      [AliasBitType.bookReadMore]: { since: '1.3.0' },
-      [AliasBitType.bookReferenceList]: { since: '1.3.0' },
-      [AliasBitType.bookRequestForABookReview]: { since: '1.3.0' },
-      [AliasBitType.bookSummary]: { since: '1.3.0' },
-      [AliasBitType.bookTeaser]: { since: '1.3.0' },
-      [AliasBitType.bookTitle]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.bookAlias]: {
+  [BitType.bookAcknowledgments]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookAddendum]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookAfterword]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookAppendix]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookArticle]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookAutherBio]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookBibliography]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookComingSoon]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookConclusion]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookCopyright]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookCopyrightPermissions]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookDedication]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookEndnotes]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookEpigraph]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookEpilogue]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookForword]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookFrontispiece]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookImprint]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookIncitingIncident]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookIntroduction]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookListOfContributors]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookNotes]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookPostscript]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookPreface]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookPrologue]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookReadMore]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookReferenceList]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookRequestForABookReview]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookSummary]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookTeaser]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookTitle]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookAlias]: {
     since: '1.4.3',
+    baseBitType: BitType.book,
     tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_bookCommon,
-      },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.bookAlias,
         maxCount: Count.infinity,
       },
     ],
-    bodyAllowed: true,
   },
-  [RootBitType.botActionResponse]: {
+  [BitType.botActionResponse]: {
     since: '1.3.0',
     tags: [
       {
@@ -271,7 +255,7 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
     footerAllowed: true,
   },
-  [RootBitType.botActionSend]: {
+  [BitType.botActionSend]: {
     since: '1.3.0',
     tags: [
       {
@@ -286,18 +270,10 @@ const BITS: _BitsConfig = {
 
     bodyAllowed: true,
   },
-  [RootBitType.browserImage]: {
+  [BitType.browserImage]: {
     since: '1.3.0',
+    baseBitType: BitType.image,
     tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceImage,
-        minCount: 1,
-      },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.focusX,
@@ -307,9 +283,8 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.focusY,
       },
     ],
-    bodyAllowed: true,
   },
-  [RootBitType.card1]: {
+  [BitType.card1]: {
     since: '1.3.0',
     tags: [
       {
@@ -319,13 +294,11 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.question1]: { since: '1.3.0' },
-      [AliasBitType.survey1]: { since: '1.3.0' },
-      [AliasBitType.surveyAnonymous1]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.chapter]: {
+  [BitType.question1]: { since: '1.3.0', baseBitType: BitType.card1 },
+  [BitType.survey1]: { since: '1.3.0', baseBitType: BitType.card1 },
+  [BitType.surveyAnonymous1]: { since: '1.3.0', baseBitType: BitType.card1 },
+  [BitType.chapter]: {
     since: '1.3.0',
     tags: [
       {
@@ -352,7 +325,7 @@ const BITS: _BitsConfig = {
 
     bodyAllowed: true,
   },
-  [RootBitType.clozeAndMultipleChoiceText]: {
+  [BitType.clozeAndMultipleChoiceText]: {
     since: '1.3.0',
     tags: [
       {
@@ -370,11 +343,12 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.coachCallToActionClozeAndMultipleChoiceText]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.cloze]: {
+  [BitType.coachCallToActionClozeAndMultipleChoiceText]: {
+    since: '1.3.0',
+    baseBitType: BitType.clozeAndMultipleChoiceText,
+  },
+  [BitType.cloze]: {
     since: '1.3.0',
     tags: [
       {
@@ -388,14 +362,12 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.clozeInstructionGrouped]: { since: '1.3.0' },
-      [AliasBitType.clozeSolutionGrouped]: { since: '1.3.0' },
-      [AliasBitType.coachSelfReflectionCloze]: { since: '1.3.0' },
-      [AliasBitType.coachCallToActionCloze]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.clozeList]: {
+  [BitType.clozeInstructionGrouped]: { since: '1.3.0', baseBitType: BitType.cloze },
+  [BitType.clozeSolutionGrouped]: { since: '1.3.0', baseBitType: BitType.cloze },
+  [BitType.coachSelfReflectionCloze]: { since: '1.3.0', baseBitType: BitType.cloze },
+  [BitType.coachCallToActionCloze]: { since: '1.3.0', baseBitType: BitType.cloze },
+  [BitType.clozeList]: {
     since: '1.4.13',
     tags: [
       {
@@ -408,7 +380,7 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
     footerAllowed: true,
   },
-  [RootBitType.code]: {
+  [BitType.code]: {
     since: '1.3.0',
     tags: [
       {
@@ -422,17 +394,15 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.text,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.appCodeCell]: { since: '1.4.3' },
-      [AliasBitType.appCodeEditor]: { since: '1.4.3' },
-      [AliasBitType.appCodeIde]: { since: '1.4.3' },
-      [AliasBitType.codeRuntime]: { since: '1.4.3' },
-      [AliasBitType.consoleLog]: { since: '1.4.3' },
-      [AliasBitType.output]: { since: '1.4.3' },
-      [AliasBitType.stdout]: { since: '1.4.3' },
-    },
   },
-  [RootBitType.conversationLeft1]: {
+  [BitType.appCodeCell]: { since: '1.4.3', baseBitType: BitType.code },
+  [BitType.appCodeEditor]: { since: '1.4.3', baseBitType: BitType.code },
+  [BitType.appCodeIde]: { since: '1.4.3', baseBitType: BitType.code },
+  [BitType.codeRuntime]: { since: '1.4.3', baseBitType: BitType.code },
+  [BitType.consoleLog]: { since: '1.4.3', baseBitType: BitType.code },
+  [BitType.output]: { since: '1.4.3', baseBitType: BitType.code },
+  [BitType.stdout]: { since: '1.4.3', baseBitType: BitType.code },
+  [BitType.conversationLeft1]: {
     since: '1.3.0',
     tags: [
       {
@@ -446,15 +416,13 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.conversationLeft1Scream]: { since: '1.3.0' },
-      [AliasBitType.conversationLeft1Thought]: { since: '1.3.0' },
-      [AliasBitType.conversationRight1]: { since: '1.3.0' },
-      [AliasBitType.conversationRight1Scream]: { since: '1.3.0' },
-      [AliasBitType.conversationRight1Thought]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.document]: {
+  [BitType.conversationLeft1Scream]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.conversationLeft1Thought]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.conversationRight1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.conversationRight1Scream]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.conversationRight1Thought]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.document]: {
     since: '1.3.0',
     tags: [
       {
@@ -469,7 +437,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.documentDownload]: {
+  [BitType.documentDownload]: {
     since: '1.3.0',
     tags: [
       {
@@ -484,7 +452,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.documentEmbed]: {
+  [BitType.documentEmbed]: {
     since: '1.3.0',
     tags: [
       {
@@ -499,7 +467,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.documentLink]: {
+  [BitType.documentLink]: {
     since: '1.3.0',
     tags: [
       {
@@ -514,7 +482,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.essay]: {
+  [BitType.essay]: {
     since: '1.3.0',
     tags: [
       {
@@ -542,12 +510,10 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     rootExampleType: ExampleType.string,
-    aliases: {
-      [AliasBitType.coachSelfReflectionEssay]: { since: '1.3.0' },
-      [AliasBitType.coachCallToActionEssay]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.example]: {
+  [BitType.coachSelfReflectionEssay]: { since: '1.3.0', baseBitType: BitType.essay },
+  [BitType.coachCallToActionEssay]: { since: '1.3.0', baseBitType: BitType.essay },
+  [BitType.example]: {
     since: '1.3.0',
     tags: [
       {
@@ -562,105 +528,92 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     rootExampleType: ExampleType.string,
-    aliases: {
-      [AliasBitType.appAiPrompt]: { since: '1.3.0' },
-      [AliasBitType.aiPrompt]: { since: '1.3.0' },
-      [AliasBitType.articleAi]: { since: '1.3.0' },
-      [AliasBitType.articleAttachment]: { since: '1.3.0' },
-      [AliasBitType.assignment]: { since: '1.3.0' },
-      [AliasBitType.audioTranscript]: { since: '1.3.0' },
-      [AliasBitType.bitmarkExample]: { since: '1.3.0' },
-      [AliasBitType.blogArticle]: { since: '1.3.0' },
-      [AliasBitType.bug]: { since: '1.3.0' },
-      [AliasBitType.checklist]: { since: '1.3.0' },
-      [AliasBitType.coachAudioTranscript]: { since: '1.3.0' },
-      [AliasBitType.coachCallToActionChecklist]: { since: '1.3.0' },
-      [AliasBitType.coachHomeRules]: { since: '1.3.0' },
-      [AliasBitType.coachVideoTranscript]: { since: '1.3.0' },
-      [AliasBitType.correction]: { since: '1.3.0' },
-      [AliasBitType.cookPreparation]: { since: '1.3.0' },
-      [AliasBitType.cookStep]: { since: '1.3.0' },
-      [AliasBitType.cookIngredients]: { since: '1.3.0' },
-      [AliasBitType.cookRemark]: { since: '1.3.0' },
-      [AliasBitType.cookVariation]: { since: '1.3.0' },
-      [AliasBitType.cookInsert]: { since: '1.3.0' },
-      [AliasBitType.cookArrangement]: { since: '1.3.0' },
-      [AliasBitType.cookPracticeAdvise]: { since: '1.3.0' },
-      [AliasBitType.cookPlate]: { since: '1.3.0' },
-      [AliasBitType.cookRecommendation]: { since: '1.3.0' },
-      [AliasBitType.cookPersonalRecommendation]: { since: '1.3.0' },
-      [AliasBitType.cookSideDrink]: { since: '1.3.0' },
-      [AliasBitType.cookSideDish]: { since: '1.3.0' },
-      [AliasBitType.cookTimer]: { since: '1.3.0' },
-      [AliasBitType.danger]: { since: '1.3.0' },
-      [AliasBitType.details1]: { since: '1.3.0' },
-      [AliasBitType.details]: { since: '1.3.0' },
-      [AliasBitType.editorial]: { since: '1.3.0' },
-      [AliasBitType.editorNote]: { since: '1.3.0' },
-      [AliasBitType.featured]: { since: '1.3.0' },
-      [AliasBitType.help]: { since: '1.3.0' },
-      [AliasBitType.hint]: { since: '1.3.0' },
-      [AliasBitType.info]: { since: '1.3.0' },
-      [AliasBitType.langLearningOutcomes]: { since: '1.3.0' },
-      [AliasBitType.langEnablingLanguageSkills]: { since: '1.3.0' },
-      [AliasBitType.langLifeSkills]: { since: '1.3.0' },
-      [AliasBitType.langEnglishAroundWorld]: { since: '1.3.0' },
-      [AliasBitType.langGoodToKnow]: { since: '1.3.0' },
-      [AliasBitType.langLearningGoal]: { since: '1.3.0' },
-      [AliasBitType.langLearningStrategy]: { since: '1.3.0' },
-      [AliasBitType.langLikeALocal]: { since: '1.3.0' },
-      [AliasBitType.langMaterial]: { since: '1.3.0' },
-      [AliasBitType.langUsefulPhrases]: { since: '1.3.0' },
-      [AliasBitType.langLevelDown]: { since: '1.3.0' },
-      [AliasBitType.langLevelUp]: { since: '1.3.0' },
-      [AliasBitType.langExtraActivity]: { since: '1.3.0' },
-      [AliasBitType.langVideoScript]: { since: '1.3.0' },
-      [AliasBitType.langAudioScript]: { since: '1.3.0' },
-      [AliasBitType.langVocabulary]: { since: '1.3.0' },
-      [AliasBitType.langHomework]: { since: '1.3.0' },
-      [AliasBitType.langTeacherNote]: { since: '1.3.0' },
-      [AliasBitType.langTeacherPronunciation]: { since: '1.3.0' },
-      [AliasBitType.message]: { since: '1.3.0' },
-      [AliasBitType.newspaperArticle]: { since: '1.3.0' },
-      [AliasBitType.note]: { since: '1.3.0' },
-      [AliasBitType.noteAi]: { since: '1.3.0' },
-      [AliasBitType.notebookArticle]: { since: '1.3.0' },
-      [AliasBitType.preparationNote]: { since: '1.3.0' },
-      [AliasBitType.releaseNotesSummary]: { since: '1.3.0' },
-      [AliasBitType.remark]: { since: '1.3.0' },
-      [AliasBitType.selfAssessment]: { since: '1.3.0' },
-      [AliasBitType.separator]: { since: '1.4.15' },
-      [AliasBitType.sideNote]: { since: '1.3.0' },
-      [AliasBitType.summary]: { since: '1.3.0' },
-      [AliasBitType.summaryAi]: { since: '1.3.0' },
-      [AliasBitType.videoTranscript]: { since: '1.3.0' },
-      [AliasBitType.warning]: { since: '1.3.0' },
-      [AliasBitType.workbookArticle]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.exampleList]: {
+  [BitType.appAiPrompt]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.aiPrompt]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.articleAi]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.articleAttachment]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.assignment]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.audioTranscript]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.bitmarkExample]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.blogArticle]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.bug]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.checklist]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.coachAudioTranscript]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.coachCallToActionChecklist]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.coachHomeRules]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.coachVideoTranscript]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.correction]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookPreparation]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookStep]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookIngredients]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookRemark]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookVariation]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookInsert]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookArrangement]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookPracticeAdvise]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookPlate]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookRecommendation]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookPersonalRecommendation]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookSideDrink]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookSideDish]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookTimer]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.danger]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.details1]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.details]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.editorial]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.editorNote]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.featured]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.help]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.hint]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.info]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langLearningOutcomes]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langEnablingLanguageSkills]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langLifeSkills]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langEnglishAroundWorld]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langGoodToKnow]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langLearningGoal]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langLearningStrategy]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langLikeALocal]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langMaterial]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langUsefulPhrases]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langLevelDown]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langLevelUp]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langExtraActivity]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langVideoScript]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langAudioScript]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langVocabulary]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langHomework]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langTeacherNote]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.langTeacherPronunciation]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.message]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.newspaperArticle]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.note]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.noteAi]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.notebookArticle]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.preparationNote]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.releaseNotesSummary]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.remark]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.selfAssessment]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.separator]: { since: '1.4.15', baseBitType: BitType.example },
+  [BitType.sideNote]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.summary]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.summaryAi]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.videoTranscript]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.warning]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.workbookArticle]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.exampleList]: {
     since: '1.4.13',
-    tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-      {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.title,
-      },
-    ],
+    baseBitType: BitType.example,
     cardSet: CardSetConfigKey._exampleBitList,
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     footerAllowed: true,
     rootExampleType: ExampleType.string,
-    aliases: {
-      [AliasBitType.assignmentList]: { since: '1.4.13' },
-      [AliasBitType.pageFooter]: { since: '1.4.13' },
-    },
   },
-  [RootBitType.flashcard]: {
+  [BitType.assignmentList]: { since: '1.4.13', baseBitType: BitType.exampleList },
+  [BitType.pageFooter]: { since: '1.4.13', baseBitType: BitType.exampleList },
+  [BitType.flashcard]: {
     since: '1.3.0',
     tags: [
       {
@@ -672,22 +625,12 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     footerAllowed: true,
-    aliases: {
-      [AliasBitType.flashcard1]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.focusImage]: {
+  [BitType.flashcard1]: { since: '1.3.0', baseBitType: BitType.flashcard },
+  [BitType.focusImage]: {
     since: '1.3.0',
+    baseBitType: BitType.image,
     tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceImage,
-        minCount: 1,
-      },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.focusX,
@@ -697,9 +640,8 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.focusY,
       },
     ],
-    bodyAllowed: true,
   },
-  [RootBitType.highlightText]: {
+  [BitType.highlightText]: {
     since: '1.3.0',
     tags: [
       {
@@ -714,7 +656,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.image]: {
+  [BitType.image]: {
     since: '1.3.0',
     tags: [
       {
@@ -728,29 +670,27 @@ const BITS: _BitsConfig = {
       },
     ],
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.appCreateBitsFromImage]: { since: '1.3.0' },
-      [AliasBitType.appGetScreenshot]: { since: '1.3.0' },
-      [AliasBitType.detailsImage]: { since: '1.3.0' },
-      [AliasBitType.figure]: { since: '1.3.0', deprecated: '1.4.0' },
-      [AliasBitType.imageBanner]: { since: '1.3.0' },
-      [AliasBitType.imageFigure]: { since: '1.3.0' },
-      [AliasBitType.imageLandscape]: { since: '1.3.0' },
-      [AliasBitType.imageMood]: { since: '1.3.0' },
-      [AliasBitType.imagePortrait]: { since: '1.3.0' },
-      [AliasBitType.imagePrototype]: { since: '1.3.0' },
-      [AliasBitType.imageSeparator]: { since: '1.4.15' },
-      [AliasBitType.imageScreenshot]: { since: '1.3.0' },
-      [AliasBitType.imageStyled]: { since: '1.3.0' },
-      [AliasBitType.imageSuperWide]: { since: '1.3.0' },
-      [AliasBitType.imageZoom]: { since: '1.3.0' },
-      [AliasBitType.langLifeSkillIcon]: { since: '1.3.0' },
-      [AliasBitType.lifeSkillSticker]: { since: '1.3.0' },
-      [AliasBitType.pageBanner]: { since: '1.4.3' },
-      [AliasBitType.screenshot]: { since: '1.3.0', deprecated: '1.4.0' },
-    },
   },
-  [RootBitType.imageLink]: {
+  [BitType.appCreateBitsFromImage]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.appGetScreenshot]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.detailsImage]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.figure]: { since: '1.3.0', deprecated: '1.4.0', baseBitType: BitType.image },
+  [BitType.imageBanner]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imageFigure]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imageLandscape]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imageMood]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imagePortrait]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imagePrototype]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imageSeparator]: { since: '1.4.15', baseBitType: BitType.image },
+  [BitType.imageScreenshot]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imageStyled]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imageSuperWide]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imageZoom]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.langLifeSkillIcon]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.lifeSkillSticker]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.pageBanner]: { since: '1.4.3', baseBitType: BitType.image },
+  [BitType.screenshot]: { since: '1.3.0', deprecated: '1.4.0', baseBitType: BitType.image },
+  [BitType.imageLink]: {
     since: '1.3.0',
     tags: [
       {
@@ -765,7 +705,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.imageOnDevice]: {
+  [BitType.imageOnDevice]: {
     since: '1.3.0',
     tags: [
       {
@@ -783,7 +723,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.imageResponsive]: {
+  [BitType.imageResponsive]: {
     since: '1.3.0',
     tags: [
       {
@@ -799,7 +739,7 @@ const BITS: _BitsConfig = {
 
     bodyAllowed: true, // false??
   },
-  [RootBitType.internalLink]: {
+  [BitType.internalLink]: {
     since: '1.3.0',
     tags: [
       {
@@ -814,7 +754,7 @@ const BITS: _BitsConfig = {
 
     bodyAllowed: true,
   },
-  [RootBitType.interview]: {
+  [BitType.interview]: {
     since: '1.3.0',
     tags: [
       {
@@ -830,12 +770,10 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     footerAllowed: true,
-    aliases: {
-      [AliasBitType.interviewInstructionGrouped]: { since: '1.3.0' },
-      [AliasBitType.botInterview]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.learningPathBook]: {
+  [BitType.interviewInstructionGrouped]: { since: '1.3.0', baseBitType: BitType.interview },
+  [BitType.botInterview]: { since: '1.3.0', baseBitType: BitType.interview },
+  [BitType.learningPathBook]: {
     since: '1.3.0',
     tags: [
       {
@@ -849,50 +787,32 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.bookLink]: { since: '1.3.0' },
-      [AliasBitType.bookLinkNext]: { since: '1.3.0' },
-      [AliasBitType.bookLinkPrev]: { since: '1.3.0' },
-      [AliasBitType.learningPathClassroomEvent]: { since: '1.3.0' },
-      [AliasBitType.learningPathClassroomTraining]: { since: '1.3.0' },
-      [AliasBitType.learningPathClosing]: { since: '1.3.0' },
-      [AliasBitType.learningPathFeedback]: { since: '1.3.0' },
-      [AliasBitType.learningPathLearningGoal]: { since: '1.3.0' },
-      [AliasBitType.learningPathLti]: { since: '1.3.0' },
-      [AliasBitType.learningPathSign]: { since: '1.3.0' },
-      [AliasBitType.learningPathStep]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.learningPathBotTraining]: {
+  [BitType.bookLink]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.bookLinkNext]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.bookLinkPrev]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathClassroomEvent]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathClassroomTraining]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathClosing]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathFeedback]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathLearningGoal]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathLti]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathSign]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathStep]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathBotTraining]: {
     since: '1.3.0',
+    baseBitType: BitType.learningPathBook,
     tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_learningPathCommon,
-      },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.bot,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
-  [RootBitType.learningPathExternalLink]: {
+  [BitType.learningPathExternalLink]: {
     since: '1.3.0',
+    baseBitType: BitType.learningPathBook,
     tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_learningPathCommon,
-      },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.externalLink,
@@ -902,31 +822,20 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.externalLinkText,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
 
-  [RootBitType.learningPathVideoCall]: {
+  [BitType.learningPathVideoCall]: {
     since: '1.3.0',
+    baseBitType: BitType.learningPathBook,
     tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_learningPathCommon,
-      },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.videoCallLink,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
 
-  [RootBitType.mark]: {
+  [BitType.mark]: {
     since: '1.3.0',
     tags: [
       {
@@ -945,7 +854,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.match]: {
+  [BitType.match]: {
     since: '1.3.0',
     tags: [
       {
@@ -957,55 +866,29 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     footerAllowed: true,
-    aliases: {
-      [AliasBitType.matchAll]: { since: '1.3.0' },
-      [AliasBitType.matchReverse]: { since: '1.3.0' },
-      [AliasBitType.matchAllReverse]: { since: '1.3.0' },
-      [AliasBitType.matchSolutionGrouped]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.matchMatrix]: {
+  [BitType.matchAll]: { since: '1.3.0', baseBitType: BitType.match },
+  [BitType.matchReverse]: { since: '1.3.0', baseBitType: BitType.match },
+  [BitType.matchAllReverse]: { since: '1.3.0', baseBitType: BitType.match },
+  [BitType.matchSolutionGrouped]: { since: '1.3.0', baseBitType: BitType.match },
+  [BitType.matchMatrix]: {
     since: '1.3.0',
-    tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-    ],
+    baseBitType: BitType.match,
     cardSet: CardSetConfigKey._matchMatrix,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
 
-  [RootBitType.matchAudio]: {
+  [BitType.matchAudio]: {
     since: '1.3.0',
-    tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-    ],
+    baseBitType: BitType.match,
     cardSet: CardSetConfigKey._matchAudioPairs,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
 
-  [RootBitType.matchPicture]: {
+  [BitType.matchPicture]: {
     since: '1.3.0',
-    tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-    ],
+    baseBitType: BitType.match,
     cardSet: CardSetConfigKey._matchImagePairs,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
-  [RootBitType.multipleChoice1]: {
+  [BitType.multipleChoice1]: {
     since: '1.3.0',
     tags: [
       {
@@ -1019,11 +902,9 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.coachSelfReflectionMultipleChoice1]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.multipleChoice]: {
+  [BitType.coachSelfReflectionMultipleChoice1]: { since: '1.3.0', baseBitType: BitType.multipleChoice1 },
+  [BitType.multipleChoice]: {
     since: '1.3.0',
     tags: [
       {
@@ -1039,11 +920,9 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     footerAllowed: true,
-    aliases: {
-      [AliasBitType.coachSelfReflectionMultipleChoice]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.multipleChoiceText]: {
+  [BitType.coachSelfReflectionMultipleChoice]: { since: '1.3.0', baseBitType: BitType.multipleChoice },
+  [BitType.multipleChoiceText]: {
     since: '1.3.0',
     tags: [
       {
@@ -1057,12 +936,10 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.coachCallToActionMultipleChoiceText]: { since: '1.3.0' },
-      [AliasBitType.coachSelfReflectionMultipleChoiceText]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.multipleResponse1]: {
+  [BitType.coachCallToActionMultipleChoiceText]: { since: '1.3.0', baseBitType: BitType.multipleChoiceText },
+  [BitType.coachSelfReflectionMultipleChoiceText]: { since: '1.3.0', baseBitType: BitType.multipleChoiceText },
+  [BitType.multipleResponse1]: {
     since: '1.3.0',
     tags: [
       {
@@ -1076,11 +953,9 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.coachSelfReflectionMultipleResponse1]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.multipleResponse]: {
+  [BitType.coachSelfReflectionMultipleResponse1]: { since: '1.3.0', baseBitType: BitType.multipleResponse1 },
+  [BitType.multipleResponse]: {
     since: '1.3.0',
     tags: [
       {
@@ -1096,11 +971,9 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     footerAllowed: true,
-    aliases: {
-      [AliasBitType.coachSelfReflectionMultipleResponse]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.page]: {
+  [BitType.coachSelfReflectionMultipleResponse]: { since: '1.3.0', baseBitType: BitType.multipleResponse },
+  [BitType.page]: {
     since: '1.3.0',
     tags: [
       {
@@ -1119,7 +992,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.pageBuyButton]: {
+  [BitType.pageBuyButton]: {
     since: '1.4.3',
     tags: [
       {
@@ -1134,7 +1007,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.pageProduct]: {
+  [BitType.pageProduct]: {
     since: '1.4.17',
     tags: [
       {
@@ -1149,7 +1022,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.pageProductList]: {
+  [BitType.pageProductList]: {
     since: '1.4.17',
     tags: [
       {
@@ -1165,7 +1038,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.pageProductVideo]: {
+  [BitType.pageProductVideo]: {
     since: '1.4.17',
     tags: [
       {
@@ -1180,7 +1053,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.pageProductVideoList]: {
+  [BitType.pageProductVideoList]: {
     since: '1.4.17',
     tags: [
       {
@@ -1196,7 +1069,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.pageSectionFolder]: {
+  [BitType.pageSectionFolder]: {
     since: '1.4.17',
     tags: [
       {
@@ -1211,23 +1084,11 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.photo]: {
+  [BitType.photo]: {
     since: '1.3.0',
-    tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceImage,
-        minCount: 1,
-      },
-    ],
-
-    bodyAllowed: true,
+    baseBitType: BitType.image,
   },
-  [RootBitType.quote]: {
+  [BitType.quote]: {
     since: '1.3.0',
     tags: [
       {
@@ -1242,7 +1103,7 @@ const BITS: _BitsConfig = {
 
     bodyAllowed: true,
   },
-  [RootBitType.rating]: {
+  [BitType.rating]: {
     since: '1.3.0',
     tags: [
       {
@@ -1251,11 +1112,9 @@ const BITS: _BitsConfig = {
       },
     ],
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.coachSelfReflectionRating]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.releaseNote]: {
+  [BitType.coachSelfReflectionRating]: { since: '1.3.0', baseBitType: BitType.rating },
+  [BitType.releaseNote]: {
     since: '1.3.0',
     tags: [
       {
@@ -1270,7 +1129,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.reviewNote]: {
+  [BitType.reviewNote]: {
     since: '1.3.0',
     tags: [
       {
@@ -1297,14 +1156,12 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
     rootExampleType: ExampleType.string,
-    aliases: {
-      [AliasBitType.reviewAuthorNote]: { since: '1.3.0' },
-      [AliasBitType.reviewReviewerNote]: { since: '1.3.0' },
-      [AliasBitType.reviewRequestForReviewNote]: { since: '1.3.0' },
-      [AliasBitType.reviewApprovedNote]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.sampleSolution]: {
+  [BitType.reviewAuthorNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
+  [BitType.reviewReviewerNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
+  [BitType.reviewRequestForReviewNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
+  [BitType.reviewApprovedNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
+  [BitType.sampleSolution]: {
     since: '1.3.0',
     tags: [
       {
@@ -1325,7 +1182,7 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
   },
 
-  [RootBitType.sequence]: {
+  [BitType.sequence]: {
     since: '1.3.0',
     tags: [
       {
@@ -1339,7 +1196,7 @@ const BITS: _BitsConfig = {
     footerAllowed: true,
     rootExampleType: ExampleType.boolean,
   },
-  [RootBitType.stillImageFilm]: {
+  [BitType.stillImageFilm]: {
     since: '1.3.0',
     tags: [
       {
@@ -1354,7 +1211,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.stillImageFilmEmbed]: {
+  [BitType.stillImageFilmEmbed]: {
     since: '1.3.0',
     tags: [
       {
@@ -1369,7 +1226,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.stillImageFilmLink]: {
+  [BitType.stillImageFilmLink]: {
     since: '1.3.0',
     tags: [
       {
@@ -1384,7 +1241,7 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
-  [RootBitType.surveyAnonymous]: {
+  [BitType.surveyAnonymous]: {
     since: '1.3.0',
     tags: [
       {
@@ -1395,7 +1252,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-  [RootBitType.survey]: {
+  [BitType.survey]: {
     since: '1.3.0',
     tags: [
       {
@@ -1407,7 +1264,7 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
   },
 
-  [RootBitType.toc]: {
+  [BitType.toc]: {
     since: '1.3.0',
     tags: [
       {
@@ -1416,28 +1273,26 @@ const BITS: _BitsConfig = {
       },
     ],
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.anchor]: { since: '1.3.0' },
-      [AliasBitType.bitBookEnding]: { since: '1.3.0' },
-      [AliasBitType.bitBookSummary]: { since: '1.3.0' },
-      [AliasBitType.botActionAnnounce]: { since: '1.3.0' },
-      [AliasBitType.botActionRatingNumber]: { since: '1.3.0' },
-      [AliasBitType.botActionRemind]: { since: '1.3.0' },
-      [AliasBitType.botActionSave]: { since: '1.3.0' },
-      [AliasBitType.botActionTrueFalse]: { since: '1.3.0' },
-      [AliasBitType.chapterSubjectMatter]: { since: '1.3.0' },
-      [AliasBitType.chat]: { since: '1.3.0' },
-      [AliasBitType.conclusion]: { since: '1.3.0' },
-      [AliasBitType.documentUpload]: { since: '1.3.0' },
-      [AliasBitType.footNote]: { since: '1.3.0' },
-      [AliasBitType.groupBorn]: { since: '1.3.0' },
-      [AliasBitType.groupDied]: { since: '1.3.0' },
-      [AliasBitType.recordAudio]: { since: '1.3.0' },
-      [AliasBitType.stickyNote]: { since: '1.3.0' },
-      [AliasBitType.takePicture]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.trueFalse1]: {
+  [BitType.anchor]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.bitBookEnding]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.bitBookSummary]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.botActionAnnounce]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.botActionRatingNumber]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.botActionRemind]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.botActionSave]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.botActionTrueFalse]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.chapterSubjectMatter]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.chat]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.conclusion]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.documentUpload]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.footNote]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.groupBorn]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.groupDied]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.recordAudio]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.stickyNote]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.takePicture]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.trueFalse1]: {
     since: '1.3.0',
     tags: [
       {
@@ -1466,7 +1321,7 @@ const BITS: _BitsConfig = {
     rootExampleType: ExampleType.boolean,
   },
 
-  [RootBitType.trueFalse]: {
+  [BitType.trueFalse]: {
     since: '1.3.0',
     tags: [
       {
@@ -1487,7 +1342,7 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
     footerAllowed: true,
   },
-  [RootBitType.vendorPadletEmbed]: {
+  [BitType.vendorPadletEmbed]: {
     since: '1.3.0',
     tags: [
       {
@@ -1502,13 +1357,10 @@ const BITS: _BitsConfig = {
     textFormatDefault: TextFormat.text,
     bodyAllowed: true,
   },
-  [RootBitType.vendorJupyterOutput]: {
+  [BitType.vendorJupyterOutput]: {
     since: '1.4.3',
+    baseBitType: BitType.code,
     tags: [
-      {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
-      },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.jupyterId,
@@ -1517,21 +1369,15 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.jupyterExecutionCount,
       },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.computerLanguage,
-      },
     ],
     textFormatDefault: TextFormat.text,
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.vendorJupyterCellCode]: { since: '1.4.3' },
-      [AliasBitType.vendorJupyterCellMarkdown]: { since: '1.4.3' },
-      [AliasBitType.vendorJupyterCellRaw]: { since: '1.4.3' },
-      [AliasBitType.vendorJupyterIpynb]: { since: '1.4.3' },
-    },
   },
-  [RootBitType.video]: {
+  [BitType.vendorJupyterCellCode]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
+  [BitType.vendorJupyterCellMarkdown]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
+  [BitType.vendorJupyterCellRaw]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
+  [BitType.vendorJupyterIpynb]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
+  [BitType.video]: {
     since: '1.3.0',
     tags: [
       {
@@ -1545,12 +1391,10 @@ const BITS: _BitsConfig = {
       },
     ],
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.videoLandscape]: { since: '1.3.0' },
-      [AliasBitType.videoPortrait]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.videoEmbed]: {
+  [BitType.videoLandscape]: { since: '1.3.0', baseBitType: BitType.video },
+  [BitType.videoPortrait]: { since: '1.3.0', baseBitType: BitType.video },
+  [BitType.videoEmbed]: {
     since: '1.3.0',
     tags: [
       {
@@ -1564,12 +1408,10 @@ const BITS: _BitsConfig = {
       },
     ],
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.videoEmbedLandscape]: { since: '1.3.0' },
-      [AliasBitType.videoEmbedPortrait]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.videoLink]: {
+  [BitType.videoEmbedLandscape]: { since: '1.3.0', baseBitType: BitType.videoEmbed },
+  [BitType.videoEmbedPortrait]: { since: '1.3.0', baseBitType: BitType.videoEmbed },
+  [BitType.videoLink]: {
     since: '1.3.0',
     tags: [
       {
@@ -1583,12 +1425,10 @@ const BITS: _BitsConfig = {
       },
     ],
     bodyAllowed: true,
-    aliases: {
-      [AliasBitType.videoLinkLandscape]: { since: '1.3.0' },
-      [AliasBitType.videoLinkPortrait]: { since: '1.3.0' },
-    },
   },
-  [RootBitType.websiteLink]: {
+  [BitType.videoLinkLandscape]: { since: '1.3.0', baseBitType: BitType.videoLink },
+  [BitType.videoLinkPortrait]: { since: '1.3.0', baseBitType: BitType.videoLink },
+  [BitType.websiteLink]: {
     since: '1.3.0',
     tags: [
       {

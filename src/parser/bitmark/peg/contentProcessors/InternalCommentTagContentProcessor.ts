@@ -1,5 +1,5 @@
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { BitType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -12,7 +12,7 @@ import {
 
 function commentTagContentProcessor(
   _context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   content: BitContent,
   target: BitContentProcessorResult,

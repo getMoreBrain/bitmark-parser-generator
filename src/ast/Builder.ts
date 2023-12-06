@@ -2,7 +2,7 @@ import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
 import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
-import { AliasBitType, BitType, RootBitType } from '../model/enum/BitType';
+import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
@@ -85,7 +85,7 @@ class Builder extends BaseBuilder {
    * @returns
    */
   bit(data: {
-    bitType: BitType;
+    bitType: BitTypeType;
     textFormat?: TextFormatType;
     resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
     id?: BreakscapedString | BreakscapedString[];
@@ -293,10 +293,9 @@ class Builder extends BaseBuilder {
     const cardNode = this.cardNode(data);
 
     // Add reasonableNumOfChars to the bit only for essay bits (in other cases it will be pushed down the tree)
-    const reasonableNumOfCharsProperty =
-      bitType.root === RootBitType.essay
-        ? this.toAstProperty(PropertyConfigKey.reasonableNumOfChars, reasonableNumOfChars)
-        : undefined;
+    const reasonableNumOfCharsProperty = Config.isOfBitType(bitType, BitType.essay)
+      ? this.toAstProperty(PropertyConfigKey.reasonableNumOfChars, reasonableNumOfChars)
+      : undefined;
 
     // NOTE: Node order is important and is defined here
     const node: Bit = {
@@ -393,7 +392,7 @@ class Builder extends BaseBuilder {
     };
 
     // Push reasonableNumOfChars down the tree for the interview bit
-    if (bitType.root === RootBitType.interview) {
+    if (Config.isOfBitType(bitType, BitType.interview)) {
       this.pushDownTree(
         undefined,
         undefined,
@@ -1680,10 +1679,10 @@ class Builder extends BaseBuilder {
 
   private setDefaultBitValues(bit: Bit) {
     // Set AIGenerated == true for all AI generated bits
-    switch (bit.bitType.alias) {
-      case AliasBitType.articleAi:
-      case AliasBitType.noteAi:
-      case AliasBitType.summaryAi:
+    switch (bit.bitType) {
+      case BitType.articleAi:
+      case BitType.noteAi:
+      case BitType.summaryAi:
         bit.aiGenerated = this.toAstProperty(PropertyConfigKey.aiGenerated, true);
         break;
     }

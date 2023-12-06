@@ -316,7 +316,7 @@ class BitmarkParserGenerator {
       const bitConfigs = builder.getSupportedBitConfigs().filter((b) => {
         if (!opts.bit) return true;
         const bitType = Config.getBitType(opts.bit);
-        return bitType.root === b.rootBitType; // TODO
+        return bitType === b.bitType;
       });
       if (outputString) {
         res = bitConfigs
@@ -340,9 +340,7 @@ class BitmarkParserGenerator {
         .filter((b) => {
           if (!opts.bit) return true;
           const bitType = Config.getBitType(opts.bit);
-          if (b.name === bitType.root) return true;
-          const a = b.aliases?.find((a) => a.name === bitType.alias);
-          return !!a;
+          if (b.name === bitType) return true;
         });
       if (outputString) {
         res = this.supportedBitsAsString(supportedBits);
@@ -956,13 +954,6 @@ class BitmarkParserGenerator {
       res += `${rootBit.name} (since: ${rootBit.since}`;
       if (rootBit.deprecated) res += `, deprecated: ${rootBit.deprecated}`;
       res += ')\n';
-      if (rootBit.aliases && rootBit.aliases.length > 0) {
-        for (const aliasBit of rootBit.aliases) {
-          res += `|__ ${aliasBit.name} (since: ${aliasBit.since}`;
-          if (aliasBit.deprecated) res += `, deprecated: ${aliasBit.deprecated}`;
-          res += ')\n';
-        }
-      }
     }
 
     return res;

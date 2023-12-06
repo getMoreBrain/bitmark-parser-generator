@@ -1,6 +1,6 @@
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -14,7 +14,7 @@ import {
 
 function defaultTagContentProcessor(
   context: BitmarkPegParserContext,
-  _bitType: BitType,
+  _bitType: BitTypeType,
   _bitLevel: BitContentLevelType,
   _tagsConfig: TagsConfig | undefined,
   content: BitContent,
