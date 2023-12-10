@@ -349,3 +349,17 @@ C
 ==
 D[@example]
 ===
+
+
+[.match-solution-grouped]
+===
+[%1]auf eine Schule
+==
+[%b]gehen[@example]
+==
+[%c]denken[@example]
+===
+[%2]an einer Hochschule
+==
+[%f]studieren
+===
