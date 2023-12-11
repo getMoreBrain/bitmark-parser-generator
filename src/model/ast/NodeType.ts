@@ -139,6 +139,8 @@ const NodeType = superenum({
   pointerLeftValue: 'pointerLeftValue',
   pointerTop: 'pointerTop',
   pointerTopValue: 'pointerTopValue',
+  backgroundWallpaper: 'backgroundWallpaper',
+  backgroundWallpaperValue: 'backgroundWallpaperValue',
   duration: 'duration',
   durationValue: 'durationValue',
   deeplink: 'deeplink',

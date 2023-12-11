@@ -469,6 +469,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.backgroundWallpaper]: {
+    tag: PropertyTag.backgroundWallpaper,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.posterImage]: {
     tag: PropertyTag.posterImage,
     single: true,

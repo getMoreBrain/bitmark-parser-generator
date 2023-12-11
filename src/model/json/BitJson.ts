@@ -44,6 +44,7 @@ export interface BitJson {
   focusY: number;
   pointerLeft: string;
   pointerTop: string;
+  backgroundWallpaper: string;
   duration: string;
   deeplink: string | string[];
   externalLink: string;

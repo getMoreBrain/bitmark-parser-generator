@@ -58,6 +58,7 @@ const PropertyTag = superenum({
   partner: 'partner',
   pointerLeft: 'pointerLeft',
   pointerTop: 'pointerTop',
+  backgroundWallpaper: 'backgroundWallpaper',
   posterImage: 'posterImage',
   product: 'product',
   productVideo: 'productVideo',

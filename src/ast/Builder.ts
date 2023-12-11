@@ -124,6 +124,7 @@ class Builder extends BaseBuilder {
     focusY?: number;
     pointerLeft?: BreakscapedString;
     pointerTop?: BreakscapedString;
+    backgroundWallpaper?: BreakscapedString;
     duration?: BreakscapedString;
     referenceProperty?: BreakscapedString | BreakscapedString[];
     deeplink?: BreakscapedString | BreakscapedString[];
@@ -234,6 +235,7 @@ class Builder extends BaseBuilder {
       focusY,
       pointerLeft,
       pointerTop,
+      backgroundWallpaper,
       duration,
       referenceProperty,
       deeplink,
@@ -343,6 +345,7 @@ class Builder extends BaseBuilder {
       focusY: this.toAstProperty(PropertyConfigKey.focusY, focusY),
       pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, pointerLeft),
       pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, pointerTop),
+      backgroundWallpaper: this.toAstProperty(PropertyConfigKey.backgroundWallpaper, backgroundWallpaper),
       deeplink: this.toAstProperty(PropertyConfigKey.deeplink, deeplink),
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, externalLink),
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, externalLinkText),

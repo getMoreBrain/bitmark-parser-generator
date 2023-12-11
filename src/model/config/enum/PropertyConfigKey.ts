@@ -61,6 +61,7 @@ const propertyConfigKeys = {
   partner: 'partner',
   pointerLeft: 'pointerLeft',
   pointerTop: 'pointerTop',
+  backgroundWallpaper: 'backgroundWallpaper',
   posterImage: 'posterImage',
   product: 'product',
   productList: 'productList',

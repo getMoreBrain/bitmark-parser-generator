@@ -68,6 +68,7 @@ export interface Bit {
   focusY?: Property;
   pointerLeft?: Property;
   pointerTop?: Property;
+  backgroundWallpaper?: Property;
   duration?: Property;
   deeplink?: Property;
   externalLink?: Property;
