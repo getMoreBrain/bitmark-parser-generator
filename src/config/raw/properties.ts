@@ -261,6 +261,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
+  [PropertyConfigKey.maxDisplayLevel]: {
+    tag: PropertyTag.maxDisplayLevel,
+    single: true,
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.example]: {
     tag: PropertyTag.example,
     single: true,

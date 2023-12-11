@@ -2467,6 +2467,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       resolvedDate: undefined,
       resolvedBy: undefined,
       maxCreatedBits: undefined,
+      maxDisplayLevel: undefined,
       product: undefined,
       productVideo: undefined,
       productFolder: undefined,
@@ -2737,6 +2738,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.kind == null) delete bitJson.kind;
     if (bitJson.action == null) delete bitJson.action;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;
+    if (bitJson.focusX == null) delete bitJson.focusX;
+    if (bitJson.focusY == null) delete bitJson.focusY;
+    if (bitJson.pointerLeft == null) delete bitJson.pointerLeft;
+    if (bitJson.pointerTop == null) delete bitJson.pointerTop;
+    if (bitJson.backgroundWallpaper == null) delete bitJson.backgroundWallpaper;
     if (bitJson.deeplink == null) delete bitJson.deeplink;
     if (bitJson.externalLink == null) delete bitJson.externalLink;
     if (bitJson.externalLinkText == null) delete bitJson.externalLinkText;
@@ -2754,6 +2760,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.resolvedDate == null) delete bitJson.resolvedDate;
     if (bitJson.resolvedBy == null) delete bitJson.resolvedBy;
     if (bitJson.maxCreatedBits == null) delete bitJson.maxCreatedBits;
+    if (bitJson.maxDisplayLevel == null) delete bitJson.maxDisplayLevel;
     if (bitJson.product == null) delete bitJson.product;
     if (bitJson.productVideo == null) delete bitJson.productVideo;
     if (bitJson.productFolder == null) delete bitJson.productFolder;

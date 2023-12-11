@@ -54,6 +54,7 @@ const propertyConfigKeys = {
   location: 'location',
   markConfig: 'markConfig',
   maxCreatedBits: 'maxCreatedBits',
+  maxDisplayLevel: 'maxDisplayLevel',
   mockupId: 'mockupId',
   mute: 'mute',
   padletId: 'padletId',
