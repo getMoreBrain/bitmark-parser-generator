@@ -350,7 +350,9 @@ class BitmarkPegParserValidator {
 
       if (validatedTagContent && Array.isArray(validatedTagContent.chain) && validatedTagContent.chain.length > 0) {
         // If the content has a chain, but the validation data does not have a chain, then the chain is invalid
-        // The chain is expanded and validated as individual tags
+        // The chain is split off from the single tag for further processing.
+        // This allows non-chained tags to be compressed into a chain without breaking the behaviour, and makes the
+        // parser more forgiving.
 
         if (tagData && tagData.chain) {
           const validatedTagChainContent = this.validateTagChainsRecursive(
@@ -367,11 +369,20 @@ class BitmarkPegParserValidator {
             validatedTagContent.chain = undefined;
           }
         } else {
+          // TODO: Need to decide HOW to handle invalid chaining - whether to be strict or forgiving, and whether
+          // to split chains when an invalid tag is encountered, or to ignore the invalid tag and continue in the chain.
+
           // Tag chain does not exist in bit config. Expand chain as individual tags
           // This allows for 'bugs' such as [%item][%lead] - works chained or not chained.
           // (except for resource chains)
           if (validatedTagContent.type !== TypeKey.Resource) {
-            dataOrNull.splice(i + 1, 0, ...validatedTagContent.chain);
+            // Build the 'split-off' bit content
+            const splitOffContent: BitContent = validatedTagContent.chain[0];
+            if (validatedTagContent.chain.length > 1) {
+              splitOffContent.chain = validatedTagContent.chain.slice(1);
+            }
+            dataOrNull.splice(i + 1, 0, splitOffContent);
+            // Clear the original chain
             validatedTagContent.chain = undefined;
           }
         }
@@ -522,7 +533,7 @@ class BitmarkPegParserValidator {
 
       // TODO - warning and ignore
       if (warning.invalid || warning.excessResource) {
-        warningStr = `${keyStr} is not valid here.${ignoredStr}`;
+        warningStr = `${keyStr} is not valid here (incorrectly chained?).${ignoredStr}`;
       } else if (warning.tooMany != null) {
         warningStr = `${keyStr} is included more than ${warning.tooMany} time(s).`;
         if (warning.tooMany > 0) warningStr += ' The earlier ones will be ignored';
@@ -896,7 +907,7 @@ class BitmarkPegParserValidator {
       case TypeKey.Resource:
         return `[&${tag}]`;
       default:
-        return `'${type}' tag '${tag}'`;
+        return tag ? `'${type}' tag '${tag}'` : `'${type}' tag`;
     }
   }
 }
