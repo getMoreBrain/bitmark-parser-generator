@@ -2448,6 +2448,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       focusY: undefined,
       pointerLeft: undefined,
       pointerTop: undefined,
+      backgroundWallpaper: undefined,
       deeplink: undefined,
       externalLink: undefined,
       externalLinkText: undefined,

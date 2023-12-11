@@ -684,6 +684,10 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
       {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.backgroundWallpaper,
+      },
+      {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceImage,
         minCount: 1,
