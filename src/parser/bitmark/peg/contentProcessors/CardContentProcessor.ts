@@ -28,6 +28,7 @@ import {
 } from '../../../../model/ast/Nodes';
 import {
   BitContentLevel,
+  BitContentProcessorResult,
   BitSpecificCards,
   BitmarkPegParserContext,
   ParsedCardSet,
@@ -458,7 +459,7 @@ function parseMatchPairs(
   let pairValues: BreakscapedString[] = [];
   let keyAudio: AudioResource | undefined = undefined;
   let keyImage: ImageResource | undefined = undefined;
-  let extraTags = {};
+  let extraTags: BitContentProcessorResult = {};
   let isDefaultExampleCardSet = false;
   let exampleCardSet: BreakscapedString | undefined;
   let isDefaultExampleCard = false;
@@ -521,10 +522,20 @@ function parseMatchPairs(
           }
         }
 
+        // Fix: https://github.com/getMoreBrain/cosmic/issues/5454
+        // Consider second 'item' tag as 'lead' tag
+        const finalTags = {
+          ...tags,
+        };
+        if (finalTags.item != null && extraTags.item != null) {
+          finalTags.lead = finalTags.item;
+          delete finalTags.item;
+        }
+
         // Extra tags
         extraTags = {
           ...extraTags,
-          ...tags,
+          ...finalTags,
         };
       }
       sideIdx++;
@@ -577,7 +588,7 @@ function parseMatchMatrix(
   const matrix: Matrix[] = [];
   let matrixCells: MatrixCell[] = [];
   let matrixCellValues: BreakscapedString[] = [];
-  let matrixCellTags = {};
+  let matrixCellTags: BitContentProcessorResult = {};
   let isDefaultExampleCardSet = false;
   let exampleCardSet: BreakscapedString | undefined;
   let isDefaultExampleCard = false;
