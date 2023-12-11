@@ -39,7 +39,13 @@ class Config {
    * @returns valid bitType, or _error if the bit type is invalid
    */
   public getBitType(bitType: BitTypeType | string | undefined): BitTypeType {
-    return BitType.fromValue(bitType) ?? BitType._error;
+    let validBitType = BitType.fromValue(bitType) ?? BitType._error;
+
+    if (validBitType === BitType._error && bitType?.startsWith('|')) {
+      validBitType = BitType._comment;
+    }
+
+    return validBitType;
   }
 
   /**
