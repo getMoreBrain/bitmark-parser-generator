@@ -1298,6 +1298,16 @@ const BITS: _BitsConfig = {
     ],
     bodyAllowed: true,
   },
+  [BitType.tocChapter]: {
+    since: '1.5.5',
+    baseBitType: BitType.toc,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.maxDisplayLevel,
+      },
+    ],
+  },
   [BitType.anchor]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.bitBookEnding]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.bitBookSummary]: { since: '1.3.0', baseBitType: BitType.toc },

@@ -177,6 +177,8 @@ const NodeType = superenum({
   resolvedByValue: 'resolvedByValue',
   maxCreatedBits: 'maxCreatedBits',
   maxCreatedBitsValue: 'maxCreatedBitsValue',
+  maxDisplayLevel: 'maxDisplayLevel',
+  maxDisplayLevelValue: 'maxDisplayLevelValue',
   product: 'product',
   productValue: 'productValue',
   productList: 'productList',

@@ -90,6 +90,7 @@ export interface Bit {
   resolvedDate?: Property;
   resolvedBy?: Property;
   maxCreatedBits?: Property;
+  maxDisplayLevel?: Property;
   product?: Property;
   productList?: Property;
   productVideo?: Property;

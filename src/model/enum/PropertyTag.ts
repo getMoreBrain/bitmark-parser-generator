@@ -51,6 +51,7 @@ const PropertyTag = superenum({
   location: 'location',
   mark: 'mark',
   maxCreatedBits: 'maxCreatedBits',
+  maxDisplayLevel: 'maxDisplayLevel',
   mockupId: 'mockupId',
   mute: 'mute',
   padletId: 'padletId',
