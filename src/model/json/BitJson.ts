@@ -44,6 +44,7 @@ export interface BitJson {
   focusY: number;
   pointerLeft: string;
   pointerTop: string;
+  backgroundWallpaper: string;
   duration: string;
   deeplink: string | string[];
   externalLink: string;
@@ -63,6 +64,7 @@ export interface BitJson {
   resolvedDate: string;
   resolvedBy: string;
   maxCreatedBits: number;
+  maxDisplayLevel: number;
   product: string;
   productVideo: string;
   productFolder: string;

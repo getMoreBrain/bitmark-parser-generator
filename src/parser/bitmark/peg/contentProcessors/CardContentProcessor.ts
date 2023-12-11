@@ -523,19 +523,15 @@ function parseMatchPairs(
         }
 
         // Fix: https://github.com/getMoreBrain/cosmic/issues/5454
-        // Consider second 'item' tag as 'lead' tag
-        const finalTags = {
-          ...tags,
-        };
-        if (finalTags.item != null && extraTags.item != null) {
-          finalTags.lead = finalTags.item;
-          delete finalTags.item;
+        // Ignore subsequent 'item' tags
+        if (tags.item != null && extraTags.item != null) {
+          delete tags.item;
         }
 
         // Extra tags
         extraTags = {
           ...extraTags,
-          ...finalTags,
+          ...tags,
         };
       }
       sideIdx++;

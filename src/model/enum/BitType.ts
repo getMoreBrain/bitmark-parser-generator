@@ -274,6 +274,7 @@ const BitType = superenum({
   surveyAnonymous1: 'survey-anonymous-1',
   takePicture: 'take-picture',
   toc: 'toc',
+  tocChapter: 'toc-chapter',
   trueFalse: 'true-false',
   trueFalse1: 'true-false-1',
   vendorJupyterCellCode: 'vendor-jupyter-cell-code',

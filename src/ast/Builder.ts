@@ -124,6 +124,7 @@ class Builder extends BaseBuilder {
     focusY?: number;
     pointerLeft?: BreakscapedString;
     pointerTop?: BreakscapedString;
+    backgroundWallpaper?: BreakscapedString;
     duration?: BreakscapedString;
     referenceProperty?: BreakscapedString | BreakscapedString[];
     deeplink?: BreakscapedString | BreakscapedString[];
@@ -144,6 +145,7 @@ class Builder extends BaseBuilder {
     resolvedDate?: BreakscapedString;
     resolvedBy?: BreakscapedString;
     maxCreatedBits?: number;
+    maxDisplayLevel?: number;
     product?: BreakscapedString | BreakscapedString[];
     productList?: BreakscapedString | BreakscapedString[];
     productVideo?: BreakscapedString | BreakscapedString[];
@@ -234,6 +236,7 @@ class Builder extends BaseBuilder {
       focusY,
       pointerLeft,
       pointerTop,
+      backgroundWallpaper,
       duration,
       referenceProperty,
       deeplink,
@@ -256,6 +259,7 @@ class Builder extends BaseBuilder {
       resolvedDate,
       resolvedBy,
       maxCreatedBits,
+      maxDisplayLevel,
       product,
       productList,
       productVideo,
@@ -343,6 +347,7 @@ class Builder extends BaseBuilder {
       focusY: this.toAstProperty(PropertyConfigKey.focusY, focusY),
       pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, pointerLeft),
       pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, pointerTop),
+      backgroundWallpaper: this.toAstProperty(PropertyConfigKey.backgroundWallpaper, backgroundWallpaper),
       deeplink: this.toAstProperty(PropertyConfigKey.deeplink, deeplink),
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, externalLink),
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, externalLinkText),
@@ -364,6 +369,7 @@ class Builder extends BaseBuilder {
       resolvedDate: this.toAstProperty(PropertyConfigKey.resolvedDate, resolvedDate),
       resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, resolvedBy),
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, maxCreatedBits),
+      maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, maxDisplayLevel),
       product: this.toAstProperty(PropertyConfigKey.product, product),
       productList: this.toAstProperty(PropertyConfigKey.productList, productList),
       productVideo: this.toAstProperty(PropertyConfigKey.productVideo, productVideo),
