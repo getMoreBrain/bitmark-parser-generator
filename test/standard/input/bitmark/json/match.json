@@ -993,18 +993,6 @@
               "attrs": {}
             }
           ],
-          "lead": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "c",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
@@ -1031,18 +1019,6 @@
               "content": [
                 {
                   "text": "2",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "lead": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "f",
                   "type": "text"
                 }
               ],

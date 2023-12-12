@@ -3,6 +3,7 @@
     "bit": {
       "type": "image-figure",
       "format": "bitmark--",
+      "backgroundWallpaper": "https://miro.medium.com/background.png",
       "item": [],
       "hint": [],
       "isExample": false,

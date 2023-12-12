@@ -261,6 +261,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
+  [PropertyConfigKey.maxDisplayLevel]: {
+    tag: PropertyTag.maxDisplayLevel,
+    single: true,
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.example]: {
     tag: PropertyTag.example,
     single: true,
@@ -466,6 +471,11 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.pointerTop]: {
     tag: PropertyTag.pointerTop,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.backgroundWallpaper]: {
+    tag: PropertyTag.backgroundWallpaper,
     single: true,
     format: PropertyFormat.trimmedString,
   },

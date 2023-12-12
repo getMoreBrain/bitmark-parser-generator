@@ -68,6 +68,7 @@ export interface Bit {
   focusY?: Property;
   pointerLeft?: Property;
   pointerTop?: Property;
+  backgroundWallpaper?: Property;
   duration?: Property;
   deeplink?: Property;
   externalLink?: Property;
@@ -89,6 +90,7 @@ export interface Bit {
   resolvedDate?: Property;
   resolvedBy?: Property;
   maxCreatedBits?: Property;
+  maxDisplayLevel?: Property;
   product?: Property;
   productList?: Property;
   productVideo?: Property;

@@ -520,22 +520,16 @@ function parseMatchPairs(
             pairValues.push(value);
             if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = value;
           }
-        }
 
-        // Fix: https://github.com/getMoreBrain/cosmic/issues/5454
-        // Consider second 'item' tag as 'lead' tag
-        const finalTags = {
-          ...tags,
-        };
-        if (finalTags.item != null && extraTags.item != null) {
-          finalTags.lead = finalTags.item;
-          delete finalTags.item;
+          // Fix: https://github.com/getMoreBrain/cosmic/issues/5454
+          delete tags.item;
+          delete tags.lead;
         }
 
         // Extra tags
         extraTags = {
           ...extraTags,
-          ...finalTags,
+          ...tags,
         };
       }
       sideIdx++;

@@ -1,0 +1,20 @@
+[
+  {
+    "bit": {
+      "type": "toc-chapter",
+      "format": "bitmark--",
+      "id": ["92374"],
+      "maxDisplayLevel": 99,
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.toc-chapter]\n[@id:92374]\n[@maxDisplayLevel:99]"
+  }
+]
