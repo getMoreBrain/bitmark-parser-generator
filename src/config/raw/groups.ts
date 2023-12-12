@@ -70,7 +70,12 @@ const GROUPS: _GroupsConfig = {
       {
         type: BitTagType.tag,
         configKey: TagConfigKey.itemLead,
-        maxCount: 2,
+        chain: [
+          {
+            type: BitTagType.tag,
+            configKey: TagConfigKey.itemLead,
+          },
+        ],
       },
       {
         type: BitTagType.tag,

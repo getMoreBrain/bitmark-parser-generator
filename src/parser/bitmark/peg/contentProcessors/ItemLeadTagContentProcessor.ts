@@ -18,16 +18,11 @@ function itemLeadTagContentProcessor(
   _tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
-  isLead: boolean,
 ): void {
   const { value } = content as TypeValue;
 
   const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
-  if (!isLead) {
-    target.item = trimmedStringValue;
-  } else {
-    target.lead = trimmedStringValue;
-  }
+  target.item = trimmedStringValue;
 }
 export { itemLeadTagContentProcessor };

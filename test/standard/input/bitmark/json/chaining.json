@@ -1,0 +1,607 @@
+[
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.article]\n[%item][%lead]\n[!instruction][?hint]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.article]\n[%item][%lead][!instruction][?hint]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.article]\n[!instruction][%item][%lead][?hint]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[%] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[%lead]",
+          "location": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 164
+            },
+            "end": {
+              "line": 13,
+              "column": 8,
+              "offset": 171
+            }
+          },
+          "original": {
+            "text": "[%item]",
+            "location": {
+              "start": {
+                "line": 12,
+                "column": 1,
+                "offset": 156
+              },
+              "end": {
+                "line": 12,
+                "column": 8,
+                "offset": 163
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.article]\n[%item]\n[%lead][!instruction][?hint]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[%] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[%lead]",
+          "location": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 213
+            },
+            "end": {
+              "line": 17,
+              "column": 8,
+              "offset": 220
+            }
+          },
+          "original": {
+            "text": "[%item]",
+            "location": {
+              "start": {
+                "line": 16,
+                "column": 1,
+                "offset": 205
+              },
+              "end": {
+                "line": 16,
+                "column": 8,
+                "offset": 212
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.article]\n[%item]\n[%lead]\n[!instruction]\n[?hint]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[%] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[%lead]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 29,
+              "offset": 284
+            },
+            "end": {
+              "line": 22,
+              "column": 36,
+              "offset": 291
+            }
+          },
+          "original": {
+            "text": "[%item]",
+            "location": {
+              "start": {
+                "line": 22,
+                "column": 1,
+                "offset": 256
+              },
+              "end": {
+                "line": 22,
+                "column": 8,
+                "offset": 263
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.article]\n[%item][!instruction][?hint][%lead]"
+  },
+  {
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "domain.com",
+          "src": "https://domain.com/image.png",
+          "width": "100",
+          "height": "100",
+          "alt": "alt text",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.image]\n[&image:https://domain.com/image.png][@alt:alt text][@width:100][@height:100]"
+  },
+  {
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "domain.com",
+          "src": "https://domain.com/image.png",
+          "width": "100",
+          "height": "100",
+          "alt": "alt text",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[@wrong] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@wrong]",
+          "location": {
+            "start": {
+              "line": 33,
+              "column": 38,
+              "offset": 517
+            },
+            "end": {
+              "line": 33,
+              "column": 46,
+              "offset": 525
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.image]\n[&image:https://domain.com/image.png][@wrong][@alt:alt text][@width:100][@height:100]"
+  },
+  {
+    "bit": {
+      "type": "image",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "domain.com",
+          "src": "https://domain.com/image.png",
+          "width": "100",
+          "height": "100",
+          "alt": "alt text",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[@wrong] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@wrong:again]",
+          "location": {
+            "start": {
+              "line": 37,
+              "column": 53,
+              "offset": 629
+            },
+            "end": {
+              "line": 37,
+              "column": 67,
+              "offset": 643
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.image]\n[&image:https://domain.com/image.png][@alt:alt text][@wrong:again][@width:100][@height:100]"
+  },
+
+  {
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": [],
+      "isExample": true,
+      "body": [],
+      "heading": {},
+      "pairs": [
+        {
+          "key": "die Koffer",
+          "values": ["packen"],
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "packen",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match-solution-grouped]\n====\ndie Koffer[%1][@example:packen]\n--\npacken\n===="
+  }
+]
