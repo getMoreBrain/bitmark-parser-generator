@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.1
+Version: 1.5.6
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -274,6 +274,7 @@ survey-anonymous (since: 1.3.0)
 survey-anonymous-1 (since: 1.3.0)
 take-picture (since: 1.3.0)
 toc (since: 1.3.0)
+toc-chapter (since: 1.5.5)
 true-false (since: 1.3.0)
 true-false-1 (since: 1.3.0)
 vendor-jupyter-cell-code (since: 1.4.3)

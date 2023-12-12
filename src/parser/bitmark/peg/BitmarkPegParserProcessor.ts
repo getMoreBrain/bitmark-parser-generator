@@ -81,7 +81,7 @@ import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { buildCards } from './contentProcessors/CardContentProcessor';
 import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
 import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
-import { itemLeadTagContentProcessor } from './contentProcessors/ItemLeadTagContentProcessor';
+import { itemLeadChainContentProcessor } from './contentProcessors/ItemLeadChainContentProcessor';
 import { markChainContentProcessor } from './contentProcessors/MarkChainContentProcessor';
 import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
 import { referenceTagContentProcessor } from './contentProcessors/ReferenceTagContentProcessor';
@@ -409,7 +409,6 @@ class BitmarkPegParserProcessor {
     result.extraProperties = {};
     result.internalComments = [];
 
-    let seenItem = false;
     let seenReference = false;
     let inFooter = false;
     const bodyParts: BodyPart[] = [];
@@ -439,8 +438,7 @@ class BitmarkPegParserProcessor {
 
       switch (type) {
         case TypeKey.ItemLead: {
-          itemLeadTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, seenItem);
-          seenItem = true;
+          itemLeadChainContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
           break;
         }
 
