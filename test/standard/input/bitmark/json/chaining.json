@@ -553,5 +553,55 @@
       ]
     },
     "bitmark": "[.image]\n[&image:https://domain.com/image.png][@alt:alt text][@wrong:again][@width:100][@height:100]"
+  },
+
+  {
+    "bit": {
+      "type": "match-solution-grouped",
+      "format": "bitmark--",
+      "item": [],
+      "isExample": true,
+      "body": [],
+      "heading": {},
+      "pairs": [
+        {
+          "key": "die Koffer",
+          "values": ["packen"],
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": true,
+          "example": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "packen",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.2",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match-solution-grouped]\n====\ndie Koffer[%1][@example:packen]\n--\npacken\n===="
   }
 ]

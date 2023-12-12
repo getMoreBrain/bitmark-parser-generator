@@ -70,8 +70,6 @@ interface WarningInfo {
   excessResource?: boolean; // The resource is not allowed, but will be included as an excess resource
   unexpectedCardSet?: boolean; // The card set was not expected for this bit
   unexpectedCardSideVariant?: boolean; // The card side variant is not recognised for the card set
-}
-interface Warning {
   warning: string;
   content?: BitContent;
   previousContent?: ParserData | undefined;
@@ -84,7 +82,7 @@ interface ValidateReturn {
 
 interface ValidateSingleTagReturn {
   validated: BitContent | undefined;
-  warning?: Warning;
+  warning?: WarningInfo;
 }
 
 interface ValidateChainRecursiveReturn {
@@ -365,6 +363,9 @@ class BitmarkPegParserValidator {
         cardSetConfig,
       );
 
+      // HACK to handle 'chain-within-chain' for [@partner] tags (at least to stop the parser splitting the chain)
+      if (typeKey === TypeKey.Resource) chainHeadType = TypeKey.Resource;
+
       // Tag is not valid in this position. Either remove it or reprocess by breaking the current chain
       let addWarning = true;
       if (!validatedTagContent) {
@@ -490,7 +491,6 @@ class BitmarkPegParserValidator {
     let warningStr = '';
     let validatedContent: BitContent | undefined;
     let warning: WarningInfo | undefined;
-    let warningOut: Warning | undefined;
 
     // // Get seen data from the seen cache
     // let seen = seenTypeKeys.get(typeKeyPlusKey);
@@ -567,19 +567,21 @@ class BitmarkPegParserValidator {
         case TypeKey.Property: {
           // The property is not valid for this bit type, but since we allow extra properties, we will return it as
           // ok but with a warning
-          warning = { extraProperty: true };
-          validatedContent = content; // Add tag anyway - we don't remove extra properties
+          warning = { extraProperty: true, warning: '' };
+          if (bitLevel !== BitContentLevel.Chain) {
+            validatedContent = content; // Add tag anyway - we don't remove extra properties (unless in chain)
+          }
           break;
         }
 
         case TypeKey.Resource: {
-          warning = { excessResource: true };
+          warning = { excessResource: true, warning: '' };
           validatedContent = content; // Add tag anyway, will be added as an excess resource
           break;
         }
 
         default:
-          warning = { invalid: true };
+          warning = { invalid: true, warning: '' };
       }
     }
 
@@ -603,11 +605,9 @@ class BitmarkPegParserValidator {
         warningStr = `${keyStr} has a card / side / variant that is not expected here.${ignoredStr}`;
       }
 
-      warningOut = {
-        warning: warningStr,
-        content: validatedContent,
-        previousContent: previousContent,
-      };
+      warning.warning = warningStr;
+      warning.content = validatedContent;
+      warning.previousContent = previousContent;
     }
 
     // Update the seen data
@@ -617,7 +617,7 @@ class BitmarkPegParserValidator {
 
     return {
       validated: validatedContent,
-      warning: warningOut,
+      warning,
     };
   }
 

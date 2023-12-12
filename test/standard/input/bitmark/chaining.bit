@@ -31,3 +31,11 @@
 
 [.image]
 [&image:https://domain.com/image.png][@alt:alt text][@wrong:again][@width:100][@height:100]
+
+
+[.match-solution-grouped]
+====
+die Koffer[%1][@example:packen]
+--
+packen
+====
