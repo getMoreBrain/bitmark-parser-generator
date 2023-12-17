@@ -100,6 +100,8 @@ class Builder extends BaseBuilder {
     ageRange?: number | number[];
     lang?: BreakscapedString;
     language?: BreakscapedString | BreakscapedString[];
+    publisher?: BreakscapedString | BreakscapedString[];
+    theme?: BreakscapedString | BreakscapedString[];
     computerLanguage?: BreakscapedString;
     target?: BreakscapedString | BreakscapedString[];
     tag?: BreakscapedString | BreakscapedString[];
@@ -110,13 +112,11 @@ class Builder extends BaseBuilder {
     subtype?: BreakscapedString;
     bookAlias?: BreakscapedString | BreakscapedString[];
     coverImage?: BreakscapedString | BreakscapedString[];
-    publisher?: BreakscapedString | BreakscapedString[];
     publications?: BreakscapedString | BreakscapedString[];
     author?: BreakscapedString | BreakscapedString[];
     subject?: BreakscapedString | BreakscapedString[];
     date?: BreakscapedString;
     location?: BreakscapedString;
-    theme?: BreakscapedString | BreakscapedString[];
     kind?: BreakscapedString;
     action?: BreakscapedString;
     thumbImage?: BreakscapedString;
@@ -212,6 +212,8 @@ class Builder extends BaseBuilder {
       ageRange,
       lang,
       language,
+      publisher,
+      theme,
       computerLanguage,
       target,
       tag,
@@ -222,13 +224,11 @@ class Builder extends BaseBuilder {
       subtype,
       bookAlias,
       coverImage,
-      publisher,
       publications,
       author,
       subject,
       date,
       location,
-      theme,
       kind,
       action,
       thumbImage,
@@ -323,6 +323,8 @@ class Builder extends BaseBuilder {
       ageRange: this.toAstProperty(PropertyConfigKey.ageRange, ageRange),
       lang: this.toAstProperty(PropertyConfigKey.lang, lang),
       language: this.toAstProperty(PropertyConfigKey.language, language),
+      publisher: this.toAstProperty(PropertyConfigKey.publisher, publisher),
+      theme: this.toAstProperty(PropertyConfigKey.theme, theme),
       computerLanguage: this.toAstProperty(PropertyConfigKey.computerLanguage, computerLanguage),
       target: this.toAstProperty(PropertyConfigKey.target, target),
       tag: this.toAstProperty(PropertyConfigKey.tag, tag),
@@ -333,13 +335,11 @@ class Builder extends BaseBuilder {
       subtype: this.toAstProperty(PropertyConfigKey.subtype, subtype),
       bookAlias: this.toAstProperty(PropertyConfigKey.bookAlias, bookAlias),
       coverImage: this.toAstProperty(PropertyConfigKey.coverImage, coverImage),
-      publisher: this.toAstProperty(PropertyConfigKey.publisher, publisher),
       publications: this.toAstProperty(PropertyConfigKey.publications, publications),
       author: this.toAstProperty(PropertyConfigKey.author, author),
       subject: this.toAstProperty(PropertyConfigKey.subject, subject),
       date: this.toAstProperty(PropertyConfigKey.date, date),
       location: this.toAstProperty(PropertyConfigKey.location, location),
-      theme: this.toAstProperty(PropertyConfigKey.theme, theme),
       kind: this.toAstProperty(PropertyConfigKey.kind, kind),
       action: this.toAstProperty(PropertyConfigKey.action, action),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),

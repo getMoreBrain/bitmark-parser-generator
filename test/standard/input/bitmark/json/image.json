@@ -170,6 +170,8 @@
       "type": "image",
       "format": "bitmark--",
       "id": ["304379"],
+      "publisher": ["kpmg"],
+      "theme": ["grundzuege"],
       "item": [],
       "hint": [],
       "isExample": false,
