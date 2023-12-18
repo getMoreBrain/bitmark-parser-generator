@@ -131,6 +131,8 @@ export interface Bit {
 export interface ItemLead {
   item?: BreakscapedString; // TextAst;
   lead?: BreakscapedString; // TextAst;
+  pageNumber?: BreakscapedString; // TextAst;
+  marginNumber?: BreakscapedString; // TextAst;
 }
 
 export type Example = BreakscapedString | boolean; // TextAst | boolean;

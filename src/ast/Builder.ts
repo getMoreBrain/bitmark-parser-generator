@@ -165,6 +165,8 @@ class Builder extends BaseBuilder {
     referenceEnd?: BreakscapedString;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
@@ -275,6 +277,8 @@ class Builder extends BaseBuilder {
       referenceEnd,
       item,
       lead,
+      pageNumber,
+      marginNumber,
       hint,
       instruction,
       isDefaultExample,
@@ -384,7 +388,7 @@ class Builder extends BaseBuilder {
       reference,
       referenceEnd,
       markConfig,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
@@ -448,18 +452,21 @@ class Builder extends BaseBuilder {
     isCorrect: boolean;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
   }): Choice {
-    const { text, isCorrect, item, lead, hint, instruction, isDefaultExample, example } = data;
+    const { text, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: Choice = {
       text,
       isCorrect: !!isCorrect,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       ...this.toExampleBoolean(isDefaultExample, example),
@@ -484,18 +491,21 @@ class Builder extends BaseBuilder {
     isCorrect: boolean;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
   }): Response {
-    const { text, isCorrect, item, lead, hint, instruction, isDefaultExample, example } = data;
+    const { text, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: Response = {
       text,
       isCorrect: !!isCorrect,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       ...this.toExampleBoolean(isDefaultExample, example),
@@ -521,16 +531,18 @@ class Builder extends BaseBuilder {
     feedback: BreakscapedString;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
   }): BotResponse {
-    const { response, reaction, feedback, item, lead, hint } = data;
+    const { response, reaction, feedback, item, lead, pageNumber, marginNumber, hint } = data;
 
     // NOTE: Node order is important and is defined here
     const node: BotResponse = {
       response,
       reaction,
       feedback,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
     };
 
@@ -551,6 +563,8 @@ class Builder extends BaseBuilder {
   quiz(data: {
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
@@ -558,7 +572,8 @@ class Builder extends BaseBuilder {
     choices?: Choice[];
     responses?: Response[];
   }): Quiz {
-    const { choices, responses, item, lead, hint, instruction, isDefaultExample, example } = data;
+    const { choices, responses, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
+      data;
 
     // Push isDefaultExample down the tree
     this.pushExampleDownTreeBoolean(isDefaultExample, example, true, choices);
@@ -566,7 +581,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: Quiz = {
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       isExample: isDefaultExample || example != null,
@@ -621,6 +636,8 @@ class Builder extends BaseBuilder {
     values: BreakscapedString[];
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
@@ -634,6 +651,8 @@ class Builder extends BaseBuilder {
       values,
       item,
       lead,
+      pageNumber,
+      marginNumber,
       hint,
       instruction,
       isCaseSensitive,
@@ -646,7 +665,7 @@ class Builder extends BaseBuilder {
       key,
       keyAudio,
       keyImage,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
@@ -673,11 +692,13 @@ class Builder extends BaseBuilder {
     cells: MatrixCell[];
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
   }): Matrix {
-    const { key, cells, item, lead, hint, instruction, isDefaultExample } = data;
+    const { key, cells, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample } = data;
 
     let isExample = false;
 
@@ -693,7 +714,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: Matrix = {
       key,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       isExample,
@@ -719,17 +740,30 @@ class Builder extends BaseBuilder {
     item?: BreakscapedString;
     lead?: BreakscapedString;
     hint?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): MatrixCell {
-    const { values, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
+    const {
+      values,
+      item,
+      lead,
+      pageNumber,
+      marginNumber,
+      hint,
+      instruction,
+      isCaseSensitive,
+      isDefaultExample,
+      example,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCell = {
       values,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       isCaseSensitive: isCaseSensitive ?? true, // default to true
@@ -756,6 +790,8 @@ class Builder extends BaseBuilder {
     sampleSolution?: BreakscapedString;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     reasonableNumOfChars?: number;
@@ -767,6 +803,8 @@ class Builder extends BaseBuilder {
       partialAnswer,
       item,
       lead,
+      pageNumber,
+      marginNumber,
       hint,
       instruction,
       reasonableNumOfChars,
@@ -777,7 +815,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: Question = {
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       question,
       partialAnswer,
       hint,
@@ -857,13 +895,26 @@ class Builder extends BaseBuilder {
     solutions: BreakscapedString[];
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
     example?: Example;
   }): Gap {
-    const { solutions, item, lead, hint, instruction, isCaseSensitive, isDefaultExample, example } = data;
+    const {
+      solutions,
+      item,
+      lead,
+      pageNumber,
+      marginNumber,
+      hint,
+      instruction,
+      isCaseSensitive,
+      isDefaultExample,
+      example,
+    } = data;
 
     // const defaultExample = Array.isArray(solutions) && solutions.length === 1 ? solutions[0] : null;
 
@@ -872,7 +923,7 @@ class Builder extends BaseBuilder {
       type: BodyBitType.gap,
       data: {
         solutions,
-        itemLead: this.itemLead(item, lead),
+        itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
         hint,
         instruction,
         isCaseSensitive: isCaseSensitive ?? true, // default to true
@@ -921,12 +972,14 @@ class Builder extends BaseBuilder {
     mark?: BreakscapedString;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: BreakscapedString | boolean;
   }): Mark {
-    const { solution, mark, item, lead, hint, instruction, isDefaultExample, example } = data;
+    const { solution, mark, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Mark = {
@@ -934,7 +987,7 @@ class Builder extends BaseBuilder {
       data: {
         solution,
         mark,
-        itemLead: this.itemLead(item, lead),
+        itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
         hint,
         instruction,
         ...this.toExample(isDefaultExample, example),
@@ -959,10 +1012,12 @@ class Builder extends BaseBuilder {
     postfix?: BreakscapedString;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
   }): Select {
-    const { options, prefix, postfix, item, lead, hint, instruction } = data;
+    const { options, prefix, postfix, item, lead, pageNumber, marginNumber, hint, instruction } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Select = {
@@ -971,7 +1026,7 @@ class Builder extends BaseBuilder {
         prefix,
         options,
         postfix,
-        itemLead: this.itemLead(item, lead),
+        itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
         hint,
         instruction,
       },
@@ -996,18 +1051,21 @@ class Builder extends BaseBuilder {
     isCorrect: boolean;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
   }): SelectOption {
-    const { text, isCorrect, item, lead, hint, instruction, isDefaultExample, example } = data;
+    const { text, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: SelectOption = {
       text,
       isCorrect: !!isCorrect,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
@@ -1033,10 +1091,12 @@ class Builder extends BaseBuilder {
     postfix?: BreakscapedString;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
   }): Highlight {
-    const { texts, prefix, postfix, item, lead, hint, instruction } = data;
+    const { texts, prefix, postfix, item, lead, pageNumber, marginNumber, hint, instruction } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Highlight = {
@@ -1045,7 +1105,7 @@ class Builder extends BaseBuilder {
         prefix,
         texts,
         postfix,
-        itemLead: this.itemLead(item, lead),
+        itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
         hint,
         instruction,
       },
@@ -1071,19 +1131,33 @@ class Builder extends BaseBuilder {
     isHighlighted: boolean;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
   }): HighlightText {
-    const { text, isCorrect, isHighlighted, item, lead, hint, instruction, isDefaultExample, example } = data;
+    const {
+      text,
+      isCorrect,
+      isHighlighted,
+      item,
+      lead,
+      pageNumber,
+      marginNumber,
+      hint,
+      instruction,
+      isDefaultExample,
+      example,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: HighlightText = {
       text,
       isCorrect: !!isCorrect,
       isHighlighted: !!isHighlighted,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
@@ -1109,19 +1183,33 @@ class Builder extends BaseBuilder {
     alternativeAnswers?: BreakscapedString[];
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
   }): Flashcard {
-    const { question, answer, alternativeAnswers, item, lead, hint, instruction, isDefaultExample, example } = data;
+    const {
+      question,
+      answer,
+      alternativeAnswers,
+      item,
+      lead,
+      pageNumber,
+      marginNumber,
+      hint,
+      instruction,
+      isDefaultExample,
+      example,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Flashcard = {
       question,
       answer,
       alternativeAnswers,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       ...this.toExampleBoolean(isDefaultExample, example),
@@ -1146,18 +1234,21 @@ class Builder extends BaseBuilder {
     isCorrect: boolean;
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
   }): Statement {
-    const { text, isCorrect, item, lead, hint, instruction, isDefaultExample, example } = data;
+    const { text, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: Statement = {
       text,
       isCorrect: !!isCorrect,
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       ...this.toExampleBoolean(isDefaultExample, example),
@@ -1228,14 +1319,21 @@ class Builder extends BaseBuilder {
   // Private
   //
 
-  private itemLead(item: BreakscapedString | undefined, lead: BreakscapedString | undefined): ItemLead | undefined {
+  private itemLead(
+    item: BreakscapedString | undefined,
+    lead: BreakscapedString | undefined,
+    pageNumber: BreakscapedString | undefined,
+    marginNumber: BreakscapedString | undefined,
+  ): ItemLead | undefined {
     let node: ItemLead | undefined;
 
     // NOTE: Node order is important and is defined here
-    if (item || lead) {
+    if (item || lead || pageNumber || marginNumber) {
       node = {
         item,
         lead,
+        pageNumber,
+        marginNumber,
       };
     }
 
@@ -1251,6 +1349,8 @@ class Builder extends BaseBuilder {
   cardBit(data: {
     item?: BreakscapedString;
     lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
     hint?: BreakscapedString;
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
@@ -1260,11 +1360,22 @@ class Builder extends BaseBuilder {
     };
     body?: Body;
   }): CardBit | undefined {
-    const { item, lead, hint, instruction, isDefaultExample, example, extraProperties, body } = data;
+    const {
+      item,
+      lead,
+      pageNumber,
+      marginNumber,
+      hint,
+      instruction,
+      isDefaultExample,
+      example,
+      extraProperties,
+      body,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: CardBit = {
-      itemLead: this.itemLead(item, lead),
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),

@@ -33,7 +33,7 @@ function buildItemLead(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  bitLevel: BitContentLevelType,
+  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -42,23 +42,20 @@ function buildItemLead(
 
   // Process the chain (lead)
   const itemLeadConfig = Config.getTagConfigForTag(tagsConfig, content.type);
-  const chainContent = content.chain ?? [];
+  const chainContent = [content, ...(content.chain ?? [])];
+
   const chainTags = context.bitContentProcessor(
     bitType,
     textFormat,
     BitContentLevel.Chain,
     itemLeadConfig?.chain,
-
     chainContent,
   );
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('item lead TAGS', chainTags);
 
-  // Process the item tag
-  itemLeadTagContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
-
   // Set the lead item from the chain
-  target.lead = chainTags.item;
+  target.itemLead = chainTags.itemLead;
 }
 
 export { itemLeadChainContentProcessor };

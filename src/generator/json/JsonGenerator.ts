@@ -207,6 +207,8 @@ interface ItemLeadHintInstructionNode {
 interface ItemLeadHintInstuction {
   item: JsonText;
   lead: JsonText;
+  pageNumber: JsonText;
+  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
 }
@@ -558,7 +560,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected enter_itemLead(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const itemLead = node.value as ItemLead;
-    const { item, lead } = itemLead;
+    const { item, lead, pageNumber, marginNumber } = itemLead;
 
     // Ignore item / lead that are not at the bit level as they are handled elsewhere
     if (parent?.key !== NodeType.bitsValue) return;
@@ -568,6 +570,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
     if (lead != null) {
       this.bitJson.lead = this.convertBreakscapedStringToJsonText(lead, TextFormat.bitmarkMinusMinus);
+    }
+    if (pageNumber != null) {
+      this.bitJson.pageNumber = this.convertBreakscapedStringToJsonText(pageNumber, TextFormat.bitmarkMinusMinus);
+    }
+    if (marginNumber != null) {
+      this.bitJson.marginNumber = this.convertBreakscapedStringToJsonText(marginNumber, TextFormat.bitmarkMinusMinus);
     }
   }
 
@@ -609,6 +617,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       ...this.toItemLeadHintInstruction(node.value),
       body: this.bodyDefault,
     };
+
+    // Delete unwanted properties
+    const nv = node.value;
+    const li: Partial<ListItemJson> = this.listItem;
+    if (nv.pageNumber == null) delete li.pageNumber;
+    if (nv.marginNumber == null) delete li.marginNumber;
 
     listItems.push(this.listItem);
   }
@@ -797,6 +811,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (c.itemLead?.lead == null) delete flashcardJson.lead;
+        if (c.itemLead?.pageNumber == null) delete flashcardJson.pageNumber;
+        if (c.itemLead?.marginNumber == null) delete flashcardJson.marginNumber;
 
         flashcardsJson.push(flashcardJson as FlashcardJson);
       }
@@ -846,6 +862,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         // Delete unwanted properties
         if (s.itemLead?.item == null) delete statementJson.item;
         if (s.itemLead?.lead == null) delete statementJson.lead;
+        if (s.itemLead?.pageNumber == null) delete statementJson.pageNumber;
+        if (s.itemLead?.marginNumber == null) delete statementJson.marginNumber;
         if (s?.hint == null) delete statementJson.hint;
         if (s?.instruction == null) delete statementJson.instruction;
 
@@ -883,6 +901,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (c.itemLead?.lead == null) delete choiceJson.lead;
+        if (c.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
+        if (c.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
 
         choicesJson.push(choiceJson as ChoiceJson);
       }
@@ -918,6 +938,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (r.itemLead?.lead == null) delete responseJson.lead;
+        if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
+        if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
 
         responsesJson.push(responseJson as ResponseJson);
       }
@@ -953,6 +975,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
             // Delete unwanted properties
             if (q.itemLead?.lead == null) delete choiceJson.lead;
+            if (q.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
+            if (q.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
 
             choicesJson.push(choiceJson as ChoiceJson);
           }
@@ -975,6 +999,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
             // Delete unwanted properties
             if (q.itemLead?.lead == null) delete responseJson.lead;
+            if (q.itemLead?.pageNumber == null) delete responseJson.pageNumber;
+            if (q.itemLead?.marginNumber == null) delete responseJson.marginNumber;
 
             responsesJson.push(responseJson as ResponseJson);
           }
@@ -990,6 +1016,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (q.itemLead?.lead == null) delete quizJson.lead;
+        if (q.itemLead?.pageNumber == null) delete quizJson.pageNumber;
+        if (q.itemLead?.marginNumber == null) delete quizJson.marginNumber;
 
         quizzesJson.push(quizJson as QuizJson);
       }
@@ -1062,6 +1090,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (p.itemLead?.lead == null) delete pairJson.lead;
+        if (p.itemLead?.pageNumber == null) delete pairJson.pageNumber;
+        if (p.itemLead?.marginNumber == null) delete pairJson.marginNumber;
         if (pairJson.key) {
           delete pairJson.keyAudio;
           delete pairJson.keyImage;
@@ -1112,6 +1142,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
             // Delete unwanted properties
             if (c.itemLead?.lead == null) delete matrixCellJson.lead;
+            if (c.itemLead?.pageNumber == null) delete matrixCellJson.pageNumber;
+            if (c.itemLead?.marginNumber == null) delete matrixCellJson.marginNumber;
             if (c.hint == null) delete matrixCellJson.hint;
 
             matrixCellsJson.push(matrixCellJson as MatrixCellJson);
@@ -1129,6 +1161,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (m.itemLead?.lead == null) delete matrixJson.lead;
+        if (m.itemLead?.pageNumber == null) delete matrixJson.pageNumber;
+        if (m.itemLead?.marginNumber == null) delete matrixJson.marginNumber;
         if (m.instruction == null) delete matrixJson.instruction;
 
         matrixJsonArray.push(matrixJson as MatrixJson);
@@ -1163,6 +1197,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (q.itemLead?.lead == null) delete questionJson.lead;
+        if (q.itemLead?.pageNumber == null) delete questionJson.pageNumber;
+        if (q.itemLead?.marginNumber == null) delete questionJson.marginNumber;
 
         questionsJson.push(questionJson as QuestionJson);
       }
@@ -1195,6 +1231,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
         // Delete unwanted properties
         if (r.itemLead?.lead == null) delete responseJson.lead;
+        if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
+        if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
         if (r.hint == null) delete responseJson.hint;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         delete (responseJson as any).instruction;
@@ -1481,7 +1519,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     };
 
     // Remove unwanted properties
-    if (!gapJson.lead) delete gapJson.lead;
+    // if (!data.itemLead?.lead) delete gapJson.lead;
+    // if (!data.itemLead?.pageNumber) delete gapJson.pageNumber;
+    // if (!data.itemLead?.marginNumber) delete gapJson.marginNumber;
 
     return gapJson as GapJson;
   }
@@ -1503,7 +1543,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     };
 
     // Remove unwanted properties
-    if (!markJson.lead) delete markJson.lead;
+    // if (!data.itemLead?.lead) delete markJson.lead;
+    // if (!data.itemLead?.pageNumber) delete markJson.pageNumber;
+    // if (!data.itemLead?.marginNumber) delete markJson.marginNumber;
 
     return markJson as MarkJson;
   }
@@ -1525,9 +1567,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       };
 
       // Remove unwanted properties
-      if (!optionJson.item) delete optionJson.item;
-      if (!optionJson.lead) delete optionJson.lead;
-      if (!optionJson.instruction) delete optionJson.instruction;
+      // if (!option.itemLead?.item) delete optionJson.item;
+      // if (!option.itemLead?.lead) delete optionJson.lead;
+      // if (!option.itemLead?.pageNumber) delete optionJson.pageNumber;
+      // if (!option.itemLead?.marginNumber) delete optionJson.marginNumber;
+      // if (!option.instruction) delete optionJson.instruction;
 
       options.push(optionJson as SelectOptionJson);
     }
@@ -1543,7 +1587,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     };
 
     // Remove unwanted properties
-    if (!selectJson.lead) delete selectJson.lead;
+    // if (!data.itemLead?.lead) delete selectJson.lead;
+    // if (!data.itemLead?.pageNumber) delete selectJson.pageNumber;
+    // if (!data.itemLead?.marginNumber) delete selectJson.marginNumber;
 
     return selectJson as SelectJson;
   }
@@ -1566,9 +1612,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       };
 
       // Remove unwanted properties
-      if (!textJson.item) delete textJson.item;
-      if (!textJson.lead) delete textJson.lead;
-      if (!textJson.hint) delete textJson.hint;
+      // if (!text.itemLead?.item) delete textJson.item;
+      // if (!text.itemLead?.lead) delete textJson.lead;
+      // if (!text.itemLead?.pageNumber) delete textJson.pageNumber;
+      // if (!text.itemLead?.marginNumber) delete textJson.marginNumber;
+      // if (!text.hint) delete textJson.hint;
 
       texts.push(textJson as HighlightTextJson);
     }
@@ -1584,7 +1632,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     };
 
     // Remove unwanted properties
-    if (!highlightJson.lead) delete highlightJson.lead;
+    // if (!data.itemLead?.lead) delete highlightJson.lead;
 
     return highlightJson as HighlightJson;
   }
@@ -2142,6 +2190,14 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         item.itemLead?.lead ?? Breakscape.EMPTY_STRING,
         TextFormat.bitmarkMinusMinus,
       ),
+      pageNumber: this.convertBreakscapedStringToJsonText(
+        item.itemLead?.pageNumber ?? Breakscape.EMPTY_STRING,
+        TextFormat.bitmarkMinusMinus,
+      ),
+      marginNumber: this.convertBreakscapedStringToJsonText(
+        item.itemLead?.marginNumber ?? Breakscape.EMPTY_STRING,
+        TextFormat.bitmarkMinusMinus,
+      ),
       hint: this.convertBreakscapedStringToJsonText(item.hint ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
       instruction: this.convertBreakscapedStringToJsonText(
         item.instruction ?? Breakscape.EMPTY_STRING,
@@ -2489,6 +2545,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // Item, Lead, Hint, Instruction
       item: undefined,
       lead: undefined,
+      pageNumber: undefined,
+      marginNumber: undefined,
       hint: undefined,
       instruction: undefined,
 
@@ -2782,6 +2840,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     // Item, Lead, Hint, Instruction
     if (bitJson.item == null) delete bitJson.item;
     if (bitJson.lead == null) delete bitJson.lead;
+    if (bitJson.pageNumber == null) delete bitJson.pageNumber;
+    if (bitJson.marginNumber == null) delete bitJson.marginNumber;
     if (bitJson.hint == null) delete bitJson.hint;
     if (bitJson.instruction == null) delete bitJson.instruction;
 
