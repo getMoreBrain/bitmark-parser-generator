@@ -44,6 +44,8 @@ export interface Bit {
   ageRange?: Property;
   lang?: Property;
   language?: Property;
+  publisher?: Property;
+  theme?: Property;
   computerLanguage?: Property;
   target?: Property;
   tag?: Property;
@@ -54,13 +56,11 @@ export interface Bit {
   subtype?: Property;
   bookAlias?: Property;
   coverImage?: Property;
-  publisher?: Property;
   publications?: Property;
   author?: Property;
   subject?: Property;
   date?: Property;
   location?: Property;
-  theme?: Property;
   kind?: Property;
   action?: Property;
   thumbImage?: Property;

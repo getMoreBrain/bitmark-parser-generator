@@ -2316,6 +2316,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * Input:
    *  - breakscaped string
    * Output:
+   *  - text: plain text
+   *  - json: bitmark text JSON
    *  - Bitmark v2: breakscaped string
    *  - Bitmark v3: bitmark text JSON (TextAst)
    *
@@ -2330,7 +2332,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   ): JsonText {
     if (!text) undefined;
 
-    if (this.options.textAsPlainText || format === TextFormat.text) {
+    const asPlainText = this.options.textAsPlainText || format === TextFormat.text || format === TextFormat.json;
+
+    if (asPlainText) {
       return text || Breakscape.EMPTY_STRING;
     }
 
@@ -2424,6 +2428,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       ageRange: undefined,
       lang: undefined,
       language: undefined,
+      publisher: undefined,
+      theme: undefined,
       computerLanguage: undefined,
       target: undefined,
       tag: undefined,
@@ -2434,13 +2440,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       subtype: undefined,
       bookAlias: undefined,
       coverImage: undefined,
-      publisher: undefined,
       publications: undefined,
       author: undefined,
       subject: undefined,
       date: undefined,
       location: undefined,
-      theme: undefined,
       kind: undefined,
       action: undefined,
       thumbImage: undefined,
@@ -2718,6 +2722,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.ageRange == null) delete bitJson.ageRange;
     if (bitJson.lang == null) delete bitJson.lang;
     if (bitJson.language == null) delete bitJson.language;
+    if (bitJson.publisher == null) delete bitJson.publisher;
+    if (bitJson.theme == null) delete bitJson.theme;
     if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
     if (bitJson.target == null) delete bitJson.target;
     if (bitJson.tag == null) delete bitJson.tag;
@@ -2728,13 +2734,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.subtype == null) delete bitJson.subtype;
     if (bitJson.bookAlias == null) delete bitJson.bookAlias;
     if (bitJson.coverImage == null) delete bitJson.coverImage;
-    if (bitJson.publisher == null) delete bitJson.publisher;
     if (bitJson.publications == null) delete bitJson.publications;
     if (bitJson.author == null) delete bitJson.author;
     if (bitJson.subject == null) delete bitJson.subject;
     if (bitJson.date == null) delete bitJson.date;
     if (bitJson.location == null) delete bitJson.location;
-    if (bitJson.theme == null) delete bitJson.theme;
     if (bitJson.kind == null) delete bitJson.kind;
     if (bitJson.action == null) delete bitJson.action;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;

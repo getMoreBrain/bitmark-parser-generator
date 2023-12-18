@@ -37,6 +37,16 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.publisher,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.theme,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.target,
         maxCount: Count.infinity,
       },
@@ -313,22 +323,12 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
-        configKey: PropertyConfigKey.publisher,
-        maxCount: Count.infinity,
-      },
-      {
-        type: BitTagType.property,
         configKey: PropertyConfigKey.subject,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.author,
-        maxCount: Count.infinity,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.theme,
         maxCount: Count.infinity,
       },
       {

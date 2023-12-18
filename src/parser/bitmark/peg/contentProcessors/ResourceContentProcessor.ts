@@ -6,6 +6,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { Count } from '../../../../model/enum/Count';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
+import { TextFormatType } from '../../../../model/enum/TextFormat';
 
 import {
   BitContent,
@@ -89,6 +90,7 @@ function buildResource(
 function resourceContentProcessor(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
+  textFormat: TextFormatType,
   _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -107,7 +109,7 @@ function resourceContentProcessor(
     const resourceConfig = Config.getTagConfigForTag(tagsConfig, key);
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const tags = context.bitContentProcessor(bitType, BitContentLevel.Chain, resourceConfig?.chain, chain);
+    const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, resourceConfig?.chain, chain);
 
     const resource = resourceBuilder.resource({
       type,

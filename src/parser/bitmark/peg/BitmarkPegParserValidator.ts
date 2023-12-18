@@ -7,18 +7,21 @@
  *
  */
 
+import { Builder } from '../../../ast/Builder';
 import { Config } from '../../../config/Config';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { Body } from '../../../model/ast/Nodes';
+import { Body, BodyText } from '../../../model/ast/Nodes';
 import { CardSetConfig } from '../../../model/config/CardSetConfig';
 import { CardVariantConfig } from '../../../model/config/CardVariantConfig';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTagType, BitTagTypeType } from '../../../model/enum/BitTagType';
 import { BitTypeType } from '../../../model/enum/BitType';
+import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { Count, CountType } from '../../../model/enum/Count';
 import { PropertyTag, PropertyTagType } from '../../../model/enum/PropertyTag';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag, TagType } from '../../../model/enum/Tag';
+import { TextFormat, TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { TagValidationData } from '../../../model/parser/TagValidationData';
 
@@ -90,6 +93,8 @@ interface ValidateChainRecursiveReturn {
   remaining?: BitContent; // Tag split off from the chain
 }
 
+const builder = new Builder();
+
 class BitmarkPegParserValidator {
   /**
    * Validate the bit tags and tag chains.
@@ -149,6 +154,7 @@ class BitmarkPegParserValidator {
     context: BitmarkPegParserContext,
     bitType: BitTypeType,
     _bitLevel: BitContentLevelType,
+    textFormat: TextFormatType,
     body: Body | undefined,
   ): Body | undefined {
     if (!body) return body;
@@ -161,6 +167,28 @@ class BitmarkPegParserValidator {
 
     if (hasBody && !bodyAllowed) {
       context.addWarning(`Bit '${bitType}' should not have a body.`);
+    }
+
+    // If the text format is JSON, check the body is valid JSON
+    // In this case, the body will already have been 'squashed' so will not contain any parsed inline body tags
+    if (textFormat === TextFormat.json) {
+      let bodyJson = body.bodyParts.reduce((acc, val) => {
+        if (val.type === BodyBitType.text && val.data) {
+          const bodyTextVal = val as BodyText;
+          return (acc + (bodyTextVal.data.bodyText ?? '')) as string;
+        }
+        return acc;
+      }, '');
+      try {
+        bodyJson = JSON.stringify(JSON.parse(bodyJson as string)) as BreakscapedString;
+      } catch (e) {
+        bodyJson = JSON.stringify({
+          error: 'Invalid JSON',
+          json: bodyJson,
+        });
+        context.addError(`Body JSON is invalid.`);
+      }
+      body = builder.body({ bodyParts: [builder.bodyText({ text: bodyJson as BreakscapedString })] });
     }
 
     return body;

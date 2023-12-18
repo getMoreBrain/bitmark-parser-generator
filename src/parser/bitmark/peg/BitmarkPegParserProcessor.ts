@@ -71,7 +71,7 @@ import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../model/enum/BitType';
 import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../model/enum/ResourceTag';
-import { TextFormat } from '../../../model/enum/TextFormat';
+import { TextFormat, TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
@@ -225,6 +225,9 @@ class BitmarkPegParserProcessor {
     // Rest the parser state
     this.resetParserState();
 
+    // Squash inline body bits for bits / text formats that do not support inline body bits
+    bitContent = this.squashUnwantedInlineBodyBits(bitType, textFormat, bitContent);
+
     // Validate the bit tags
     bitContent = BitmarkPegParserValidator.validateBitTags(this.context, bitType, resourceType, bitContent);
 
@@ -242,7 +245,7 @@ class BitmarkPegParserProcessor {
       resources,
       internalComments,
       ...tags
-    } = this.bitContentProcessor(bitType, BitContentLevel.Bit, bitConfig.tags, bitContent);
+    } = this.bitContentProcessor(bitType, textFormat, BitContentLevel.Bit, bitConfig.tags, bitContent);
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
     if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
@@ -252,7 +255,16 @@ class BitmarkPegParserProcessor {
     const titles = buildTitles(this.context, bitType, title);
 
     // Build the card data for the specific bit type
-    const bitSpecificCards = buildCards(this.context, bitType, cardSet, statement, statements, choices, responses);
+    const bitSpecificCards = buildCards(
+      this.context,
+      bitType,
+      textFormat,
+      cardSet,
+      statement,
+      statements,
+      choices,
+      responses,
+    );
 
     // Build the resources
     const filteredResources = buildResources(this.context, bitType, resourceType, resources);
@@ -381,16 +393,74 @@ class BitmarkPegParserProcessor {
   }
 
   /**
+   * Process Type/Key/Value data, squashing inline body bits back into text for bits / body text formats that
+   * do not support them.
+   *
+   * @param bitType bit type
+   * @param textFormat bit text format type
+   * @param data the bit content (Type/Key/Value data)
+   * @returns
+   */
+  private squashUnwantedInlineBodyBits(
+    _bitType: BitTypeType,
+    textFormat: TextFormatType,
+    data: BitContent[],
+  ): BitContent[] {
+    const result: BitContent[] = [];
+    if (!data) return result;
+
+    if (textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus) {
+      // Body bits are supported. Return the data as is.
+      return data;
+    }
+
+    const convertTagToTextRecursive = (tag: BitContent, str = ''): string => {
+      const { chain, parser } = tag as TypeKeyValue;
+      str += parser.text;
+      if (chain) {
+        for (const t of chain) {
+          str = convertTagToTextRecursive(t, str);
+        }
+      }
+      return str;
+    };
+
+    let convertNextTagToText = false;
+    for (const content of data) {
+      const { type, value } = content as TypeKeyValue;
+      const valueStr = (value ?? '') as string;
+
+      if (type === TypeKey.BodyText) {
+        const strWithoutSpaces = valueStr.replace(/[\p{Zs}\t]/gmu, '');
+        convertNextTagToText = !strWithoutSpaces.endsWith('\n');
+        result.push(content);
+      } else {
+        if (convertNextTagToText) {
+          const s = convertTagToTextRecursive(content);
+          result.push({ type: TypeKey.BodyText, value: s } as TypeValue);
+        } else {
+          result.push(content);
+        }
+        convertNextTagToText = false;
+      }
+    }
+
+    return result;
+  }
+
+  /**
    * Process Type/Key/Value data, building the bit parts as AST nodes.
    *
    * @param bitType bit type
+   * @param textFormat bit text format type
    * @param bitLevel bit level (in chain, in card etc)
    * @param tagsConfig tags configuration at this parser level (pass undef)
-   * @param data
+   * @param data the bit content (Type/Key/Value data)
    * @returns
    */
   private bitContentProcessor(
     bitType: BitTypeType,
+    textFormat: TextFormatType,
     bitLevel: BitContentLevelType,
     tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,
@@ -438,7 +508,7 @@ class BitmarkPegParserProcessor {
 
       switch (type) {
         case TypeKey.ItemLead: {
-          itemLeadChainContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
+          itemLeadChainContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
         }
 
@@ -446,43 +516,70 @@ class BitmarkPegParserProcessor {
         case TypeKey.Hint:
         case TypeKey.Anchor:
         case TypeKey.SampleSolution:
-          defaultTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
+          defaultTagContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Reference:
-          referenceTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, seenReference);
+          referenceTagContentProcessor(
+            this.context,
+            bitType,
+            textFormat,
+            bitLevel,
+            tagsConfig,
+            content,
+            result,
+            seenReference,
+          );
           seenReference = true;
           break;
 
         case TypeKey.Title:
-          titleTagContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
+          titleTagContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Property:
-          propertyContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
+          propertyContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Gap: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          gapChainContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, bodyParts);
+          gapChainContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result, bodyParts);
           break;
         }
 
         case TypeKey.Mark: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          markChainContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, bodyParts);
+          markChainContentProcessor(
+            this.context,
+            bitType,
+            textFormat,
+            bitLevel,
+            tagsConfig,
+            content,
+            result,
+            bodyParts,
+          );
           break;
         }
 
         case TypeKey.True:
         case TypeKey.False: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          trueFalseChainContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result, bodyParts);
+          trueFalseChainContentProcessor(
+            this.context,
+            bitType,
+            textFormat,
+            bitLevel,
+            tagsConfig,
+            content,
+            result,
+            bodyParts,
+          );
           break;
         }
 
         case TypeKey.Resource:
-          resourceContentProcessor(this.context, bitType, bitLevel, tagsConfig, content, result);
+          resourceContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.CardSet: {
@@ -517,7 +614,7 @@ class BitmarkPegParserProcessor {
     // Validate and build the body (trimmed)
     if (inBit) {
       result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
-      BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, result.body);
+      BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, textFormat, result.body);
     } else if (inCard) {
       result.cardBody = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
       // Card body is validated in CardContentProcessor:processCardSet()

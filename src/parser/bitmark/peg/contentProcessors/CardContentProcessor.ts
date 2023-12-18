@@ -6,6 +6,7 @@ import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
+import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
@@ -43,6 +44,7 @@ const builder = new Builder();
 function buildCards(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
+  textFormat: TextFormatType,
   parsedCardSet: ParsedCardSet | undefined,
   statementV1: Statement | undefined,
   statementsV1: Statement[] | undefined,
@@ -54,7 +56,7 @@ function buildCards(
   let result: BitSpecificCards = {};
 
   // Process the card contents
-  const processedCardSet = processCardSet(context, bitType, parsedCardSet);
+  const processedCardSet = processCardSet(context, bitType, textFormat, parsedCardSet);
 
   // Parse the card contents according to the card set type
 
@@ -116,6 +118,7 @@ function buildCards(
 function processCardSet(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
+  textFormat: TextFormatType,
   parsedCardSet: ParsedCardSet | undefined,
 ): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
@@ -152,7 +155,7 @@ function processCardSet(
 
         const tagsConfig = Config.getTagsConfigForCardSet(bitType, sideNo, variantNo);
 
-        const tags = context.bitContentProcessor(bitType, BitContentLevel.Card, tagsConfig, content);
+        const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Card, tagsConfig, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags', tags);
 

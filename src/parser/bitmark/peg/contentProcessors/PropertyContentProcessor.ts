@@ -5,6 +5,7 @@ import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigK
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
+import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -28,6 +29,7 @@ import {
 function propertyContentProcessor(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
+  textFormat: TextFormatType,
   bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -51,19 +53,19 @@ function propertyContentProcessor(
   // should also be checked here if the property may occur in another bit with a different meaning.
   if (propertyConfig) {
     if (configKey === PropertyConfigKey.example) {
-      exampleTagContentProcessor(context, bitType, bitLevel, content, target);
+      exampleTagContentProcessor(context, bitType, textFormat, bitLevel, content, target);
       return;
     } else if (configKey === PropertyConfigKey.partner) {
-      partnerChainContentProcessor(context, bitType, bitLevel, propertyConfig.chain, content, target);
+      partnerChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.imageSource) {
-      imageSourceChainContentProcessor(context, bitType, bitLevel, tagsConfig, content, target);
+      imageSourceChainContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
       return;
     } else if (configKey === PropertyConfigKey.book) {
-      bookChainContentProcessor(context, bitType, bitLevel, propertyConfig.chain, content, target);
+      bookChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.markConfig && !isChain) {
-      markConfigChainContentProcessor(context, bitType, bitLevel, tagsConfig, content, target);
+      markConfigChainContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
       return;
     }
   }
