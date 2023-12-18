@@ -3,9 +3,7 @@
     "bit": {
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
-      "id": [
-        "287842"
-      ],
+      "id": ["287842"],
       "item": [],
       "lead": [
         {
@@ -34,14 +32,14 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "cloze"
-              ]
+              "solutions": ["cloze"]
             },
             {
               "text": " with the correct verb ",
@@ -53,6 +51,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -62,6 +62,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -72,6 +74,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -89,6 +93,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -98,6 +104,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -108,6 +116,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -125,6 +135,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -134,6 +146,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -144,6 +158,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -161,6 +177,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -170,6 +188,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -187,6 +207,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -196,6 +218,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -213,7 +237,7 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.8",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-call-to-action-cloze-and-multiple-choice-text]\n[@id:287842]\n[%][%coach-call-to-action-cloze-and-multiple-choice-text]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
@@ -222,9 +246,7 @@
     "bit": {
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
-      "id": [
-        "287843"
-      ],
+      "id": ["287843"],
       "item": [],
       "lead": [
         {
@@ -253,6 +275,8 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -269,9 +293,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "cloze"
-              ]
+              "solutions": ["cloze"]
             },
             {
               "text": " with the correct verb ",
@@ -283,6 +305,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -292,6 +316,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": true,
@@ -302,6 +328,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -319,6 +347,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -328,6 +358,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": true,
@@ -338,6 +370,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -355,6 +389,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -364,6 +400,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": true,
@@ -374,6 +412,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -391,6 +431,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -400,6 +442,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": true,
@@ -417,6 +461,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -426,6 +472,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -443,7 +491,7 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.8",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-call-to-action-cloze-and-multiple-choice-text]\n[@id:287843]\n[%][%coach-call-to-action-cloze-and-multiple-choice-text]\n[@example]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
@@ -452,9 +500,7 @@
     "bit": {
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
-      "id": [
-        "287844"
-      ],
+      "id": ["287844"],
       "item": [],
       "lead": [
         {
@@ -483,6 +529,8 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -499,10 +547,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "cloze",
-                "gap"
-              ]
+              "solutions": ["cloze", "gap"]
             },
             {
               "text": " with the correct verb ",
@@ -514,6 +559,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -523,6 +570,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -533,6 +582,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -550,6 +601,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -559,6 +612,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -569,6 +624,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -586,6 +643,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -595,6 +654,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": true,
@@ -605,6 +666,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -622,6 +685,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -631,6 +696,8 @@
                   "isCorrect": true,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -648,6 +715,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -657,6 +726,8 @@
                   "isCorrect": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -674,7 +745,7 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.8",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.coach-call-to-action-cloze-and-multiple-choice-text]\n[@id:287844]\n[%][%coach-call-to-action-cloze-and-multiple-choice-text]\nThe students completed the [_cloze][_gap][@example] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][@example][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"

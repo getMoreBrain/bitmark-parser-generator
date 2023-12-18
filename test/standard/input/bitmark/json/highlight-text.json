@@ -3,9 +3,7 @@
     "bit": {
       "type": "highlight-text",
       "format": "bitmark--",
-      "id": [
-        "285686"
-      ],
+      "id": ["285686"],
       "item": [
         {
           "type": "paragraph",
@@ -47,6 +45,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -57,6 +57,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -68,6 +70,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -85,6 +89,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -95,6 +101,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -106,6 +114,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -117,6 +127,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -134,7 +146,7 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.8",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.highlight-text]\n[@id:285686]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][-trees]."
@@ -143,9 +155,7 @@
     "bit": {
       "type": "highlight-text",
       "format": "bitmark--",
-      "id": [
-        "285687"
-      ],
+      "id": ["285687"],
       "item": [
         {
           "type": "paragraph",
@@ -187,6 +197,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -197,6 +209,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": true,
@@ -208,6 +222,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -225,6 +241,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -235,6 +253,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": true,
@@ -246,6 +266,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -257,6 +279,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -274,7 +298,7 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.8",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.highlight-text]\n[@id:285687]\n[%10][%highlight-text]\n[@example]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][-trees]."
@@ -283,9 +307,7 @@
     "bit": {
       "type": "highlight-text",
       "format": "bitmark--",
-      "id": [
-        "285688"
-      ],
+      "id": ["285688"],
       "item": [
         {
           "type": "paragraph",
@@ -327,6 +349,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -337,6 +361,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -348,6 +374,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -365,6 +393,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -375,6 +405,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -386,6 +418,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": true,
@@ -397,6 +431,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -414,7 +450,7 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.8",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.highlight-text]\n[@id:285688]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][@example][-trees]."
@@ -423,9 +459,7 @@
     "bit": {
       "type": "highlight-text",
       "format": "bitmark--",
-      "id": [
-        "285689"
-      ],
+      "id": ["285689"],
       "item": [
         {
           "type": "paragraph",
@@ -467,6 +501,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -477,6 +513,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -488,6 +526,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -505,6 +545,8 @@
               "postfix": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -515,6 +557,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": true,
@@ -526,6 +570,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -537,6 +583,8 @@
                   "isHighlighted": false,
                   "item": [],
                   "lead": [],
+                  "pageNumber": [],
+                  "marginNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isExample": false,
@@ -554,7 +602,7 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.8",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.highlight-text]\n[@id:285689]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][@example][-fish][-trees]."

@@ -120,6 +120,8 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "marginNumber": [],
+              "pageNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
