@@ -1,6 +1,7 @@
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -16,6 +17,7 @@ import {
 function bookChainContentProcessor(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
+  textFormat: TextFormatType,
   bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -24,7 +26,7 @@ function bookChainContentProcessor(
   if (bitLevel === BitContentLevel.Chain) {
     // Do nothing
   } else {
-    const book = buildBook(context, bitType, bitLevel, tagsConfig, content);
+    const book = buildBook(context, bitType, textFormat, bitLevel, tagsConfig, content);
     target.book = book.book;
     target.reference = book.reference;
     target.referenceEnd = book.referenceEnd;
@@ -34,6 +36,7 @@ function bookChainContentProcessor(
 function buildBook(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
+  textFormat: TextFormatType,
   _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -44,7 +47,7 @@ function buildBook(
 } {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('book content', content);
 
-  const tags = context.bitContentProcessor(bitType, BitContentLevel.Chain, tagsConfig, content.chain);
+  const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('book TAGS', tags);
 

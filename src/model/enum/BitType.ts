@@ -277,6 +277,7 @@ const BitType = superenum({
   tocChapter: 'toc-chapter',
   trueFalse: 'true-false',
   trueFalse1: 'true-false-1',
+  vendorAmcharts5Chart: 'vendor-amcharts-5-chart',
   vendorJupyterCellCode: 'vendor-jupyter-cell-code',
   vendorJupyterCellMarkdown: 'vendor-jupyter-cell-markdown',
   vendorJupyterCellRaw: 'vendor-jupyter-cell-raw',

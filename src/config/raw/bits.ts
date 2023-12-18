@@ -1376,6 +1376,17 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
     footerAllowed: true,
   },
+  [BitType.vendorAmcharts5Chart]: {
+    since: '1.5.8',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+    ],
+    textFormatDefault: TextFormat.json,
+    bodyAllowed: true,
+  },
   [BitType.vendorPadletEmbed]: {
     since: '1.3.0',
     tags: [
