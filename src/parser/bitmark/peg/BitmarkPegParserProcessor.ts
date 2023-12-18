@@ -431,7 +431,7 @@ class BitmarkPegParserProcessor {
       const valueStr = (value ?? '') as string;
 
       if (type === TypeKey.BodyText) {
-        const strWithoutSpaces = valueStr.replace(/[\p{Zs}\t]/gmu, '');
+        const strWithoutSpaces = valueStr.replace(/[ \t]/gm, '');
         convertNextTagToText = !strWithoutSpaces.endsWith('\n');
         result.push(content);
       } else {
@@ -610,6 +610,16 @@ class BitmarkPegParserProcessor {
 
     // Add the last body text part, and trim the body text parts
     addBodyText();
+
+    // Spread the chained item / lead / etc
+    // Set the lead item from the chain
+    if (result.itemLead) {
+      const l = result.itemLead.length;
+      if (l > 0) result.item = result.itemLead[0];
+      if (l > 1) result.lead = result.itemLead[1];
+      if (l > 2) result.pageNumber = result.itemLead[2];
+      if (l > 3) result.marginNumber = result.itemLead[l - 1];
+    }
 
     // Validate and build the body (trimmed)
     if (inBit) {

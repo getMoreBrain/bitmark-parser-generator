@@ -121,8 +121,11 @@ export interface BitContentProcessorResult {
   title?: BreakscapedString[];
   subtitle?: BreakscapedString;
   resources?: Resource[];
+  itemLead?: BreakscapedString[];
   item?: BreakscapedString;
   lead?: BreakscapedString;
+  pageNumber?: BreakscapedString;
+  marginNumber?: BreakscapedString;
   instruction?: BreakscapedString;
   hint?: BreakscapedString;
   anchor?: BreakscapedString;

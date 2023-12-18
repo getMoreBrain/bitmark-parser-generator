@@ -3,6 +3,7 @@
 [@lang:en-UK]
 [@publisher:kpmg]
 [@theme:grundzuege]
+[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]
 
 intern und extern
 • Leitbild
@@ -12,6 +13,7 @@ intern und extern
 
 [.article:bitmark--]
 [@id:151971]
+[%][%][%][%marginNumber]
 
 Man könnte davon ausgehen, dass es reicht, aus zahlreichen Möglichkeiten und Instrumenten diejenigen zu wählen, die am besten zur Unternehmung passen. Damit würde ein Unternehmen einen zu einfachen Weg wählen.
 
@@ -19,12 +21,14 @@ Bereits in der Strategieentwicklung war die Rede vom Kopieren verlockender Ideen
 
 [.article:bitmark++]
 [@id:151972]
+[%][%][%pageNumber]
 
 |example:Beispiel
 Google ist seit Jahren weltweit einer der attraktivsten Arbeitgeber. Man liest von Wäscheservice, Fitness-Centers oder Abenteuerrutschbahnen, welche die Mitarbeitenden gratis nutzen können. Es wäre nicht zielführend, im eigenen Unternehmen eine Abenteuerrutschbahn aufzustellen, ohne Nutzen und Auswirkungen zu hinterfragen.
 
 [.article:bitmark--]
 [@id:151973]
+[%item][%lead][%pageNumber][%marginNumber]
 
 Werfen wir einen Blick ins Marketing. Gängig ist die folgende Kurzdefinition Ein systematischer Ansatz, um unternehmerische Entscheidungen nach den Bedürfnissen des Marktes und der Kunden auszurichten. Diese Definition kann wie folgt erweitert werden … um Wettbewerbsvorteile zu schaffen, zu erhalten und weiter zu entwickeln.
 

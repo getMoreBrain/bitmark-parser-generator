@@ -25,6 +25,7 @@ function itemLeadTagContentProcessor(
 
   const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
-  target.item = trimmedStringValue;
+  if (!target.itemLead) target.itemLead = [];
+  target.itemLead.push(trimmedStringValue);
 }
 export { itemLeadTagContentProcessor };

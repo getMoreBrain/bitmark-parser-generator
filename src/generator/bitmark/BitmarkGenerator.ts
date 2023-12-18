@@ -478,15 +478,27 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected enter_itemLead(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
     const itemLead = node.value as ItemLead;
-    if (itemLead && (itemLead.item || itemLead.lead)) {
+    if (itemLead && (itemLead.item || itemLead.lead || itemLead.pageNumber || itemLead.marginNumber)) {
       // Always write item if item or lead is set
       this.writeOPC();
       this.writeString(itemLead.item || '');
       this.writeCL();
 
-      if (itemLead.lead) {
+      if (itemLead.lead || itemLead.pageNumber || itemLead.marginNumber) {
         this.writeOPC();
-        this.writeString(itemLead.lead);
+        this.writeString(itemLead.lead || '');
+        this.writeCL();
+      }
+
+      if (itemLead.pageNumber || itemLead.marginNumber) {
+        this.writeOPC();
+        this.writeString(itemLead.pageNumber || '');
+        this.writeCL();
+      }
+
+      if (itemLead.marginNumber) {
+        this.writeOPC();
+        this.writeString(itemLead.marginNumber || '');
         this.writeCL();
       }
     }

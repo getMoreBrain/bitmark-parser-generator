@@ -49,6 +49,8 @@
               "mark": "adjective",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -64,6 +66,8 @@
               "mark": "adjective",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -79,6 +83,8 @@
               "mark": "adjective",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -94,6 +100,8 @@
               "mark": "adjective",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -109,6 +117,8 @@
               "mark": "adjective",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -124,6 +134,8 @@
               "mark": "verb",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -139,6 +151,8 @@
               "mark": "adjective",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -154,6 +168,8 @@
               "mark": "adjective",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -169,6 +185,8 @@
               "mark": "adjective",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -184,6 +202,8 @@
               "mark": "",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": false,
@@ -199,6 +219,8 @@
               "mark": "adjective",
               "item": [],
               "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isExample": true,
@@ -214,8 +236,26 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.5.8",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "Only default [@example] is allowed, using default",
+          "text": "[@example:hello]",
+          "location": {
+            "start": {
+              "line": 20,
+              "column": 109,
+              "offset": 1361
+            },
+            "end": {
+              "line": 20,
+              "column": 125,
+              "offset": 1377
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.mark]\n[!Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.]\n[@mark:adjective][@color:blue][@emphasis:underline]\n[@mark:verb][@color:red][@emphasis:circle]\n[@mark:noun][@color:blue]\n\nIn der [=letzten][@mark:adjective] Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis\nmit der [=schönen][@mark:adjective] Backgroundsängerin Sharika.\n\nJetzt reagierte seine Ehefrau. In einem Interview mit der Zeitschrift BLITZ sagte die Blondine:\n„Jetzt ist Schluss! Ich kann es nicht ertragen, dass Bruno schon wieder eine Geliebte hat!“\nCorinna hat bereits den [=erfolgreichen][@mark:adjective] Scheidungsanwalt Otto August von\nUnmut engagiert, der sie im Scheidungsprozess vertreten soll. Sie fordert die Hälfte des Vermögens\nund das [=alleinige][@mark:adjective] Sorgerecht für den [=gemeinsamen][@mark:adjective] Sohn Lucas (6 Jahre).\nWas das Finanzielle betrifft, so räumen Experten der [=betrogenen][@mark:verb] Ehefrau wenig Chancen ein. Sie\nhatte vor der Hochzeit einen Ehevertrag unterschrieben und auf [=finanzielle][@mark:adjective] Ansprüche im Fall\neiner Scheidung verzichtet. Für Bruno wäre es die fünfte Scheidung. Er hat bereits sieben Kinder aus früheren\nEhen, für die er Unterhalt zahlen muss.\n\nDoch vielleicht gibt es eine [=unerwartete][@mark:adjective] Wendung. Ein [=stadtbekannter][@mark:adjective][@example:hello] Juwelier\nbestätigte gestern gegenüber BLITZ, dass Bruno Schmuck im Wert von 50 000 Euro gekauft habe. Ist\nder [=wertvolle] Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende\nsogar eine [=romantische][@mark:adjective][@example] Versöhnung?"
   }

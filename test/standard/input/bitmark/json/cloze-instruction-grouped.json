@@ -3,9 +3,7 @@
     "bit": {
       "type": "cloze-instruction-grouped",
       "format": "bitmark--",
-      "id": [
-        "287822"
-      ],
+      "id": ["287822"],
       "item": [],
       "lead": [
         {
@@ -34,6 +32,8 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "marginNumber": [],
+              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -61,9 +61,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "erfreut"
-              ]
+              "solutions": ["erfreut"]
             },
             {
               "text": " sich nicht nur in Deutschland besonderer Beliebtheit, er ",
@@ -73,6 +71,8 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "marginNumber": [],
+              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -89,9 +89,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "steht"
-              ]
+              "solutions": ["steht"]
             },
             {
               "text": " auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...",
@@ -112,9 +110,7 @@
     "bit": {
       "type": "cloze-instruction-grouped",
       "format": "bitmark--",
-      "id": [
-        "107938"
-      ],
+      "id": ["107938"],
       "item": [
         {
           "type": "paragraph",
@@ -149,6 +145,8 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "marginNumber": [],
+              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -165,9 +163,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Woher"
-              ]
+              "solutions": ["Woher"]
             },
             {
               "text": " kommen Sie?\n",
@@ -177,6 +173,8 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "marginNumber": [],
+              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -193,9 +191,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Wo"
-              ]
+              "solutions": ["Wo"]
             },
             {
               "text": " wohnen Sie?\n",
@@ -205,6 +201,8 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "marginNumber": [],
+              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -221,9 +219,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Was"
-              ]
+              "solutions": ["Was"]
             },
             {
               "text": " studieren Sie?\n",
@@ -233,6 +229,8 @@
               "type": "gap",
               "item": [],
               "lead": [],
+              "marginNumber": [],
+              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -249,9 +247,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Welche"
-              ]
+              "solutions": ["Welche"]
             },
             {
               "text": " Sprachen sprechen Sie?",

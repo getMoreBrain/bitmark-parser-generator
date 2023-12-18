@@ -162,7 +162,9 @@ const NodeType = superenum({
   isInfoOnly: 'isInfoOnly',
   isInfoOnlyValue: 'isInfoOnlyValue',
   labelTrue: 'labelTrue',
+  labelTrueValue: 'labelTrueValue',
   labelFalse: 'labelFalse',
+  labelFalseValue: 'labelFalseValue',
   content2Buy: 'content2Buy',
   quotedPerson: 'quotedPerson',
   partialAnswer: 'partialAnswer',
@@ -194,6 +196,8 @@ const NodeType = superenum({
 
   item: 'item',
   lead: 'lead',
+  pageNumber: 'pageNumber',
+  marginNumber: 'marginNumber',
   hint: 'hint',
   instruction: 'instruction',
   isDefaultExample: 'isDefaultExample',

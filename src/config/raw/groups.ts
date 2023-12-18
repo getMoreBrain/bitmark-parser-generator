@@ -84,6 +84,7 @@ const GROUPS: _GroupsConfig = {
           {
             type: BitTagType.tag,
             configKey: TagConfigKey.itemLead,
+            maxCount: 3,
           },
         ],
       },
