@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.7
+Version: 1.5.8
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -277,6 +277,7 @@ toc (since: 1.3.0)
 toc-chapter (since: 1.5.5)
 true-false (since: 1.3.0)
 true-false-1 (since: 1.3.0)
+vendor-amcharts-5-chart (since: 1.5.8)
 vendor-jupyter-cell-code (since: 1.4.3)
 vendor-jupyter-cell-markdown (since: 1.4.3)
 vendor-jupyter-cell-raw (since: 1.4.3)

@@ -2316,6 +2316,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * Input:
    *  - breakscaped string
    * Output:
+   *  - text: plain text
+   *  - json: bitmark text JSON
    *  - Bitmark v2: breakscaped string
    *  - Bitmark v3: bitmark text JSON (TextAst)
    *
@@ -2330,7 +2332,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   ): JsonText {
     if (!text) undefined;
 
-    if (this.options.textAsPlainText || format === TextFormat.text) {
+    const asPlainText = this.options.textAsPlainText || format === TextFormat.text || format === TextFormat.json;
+
+    if (asPlainText) {
       return text || Breakscape.EMPTY_STRING;
     }
 

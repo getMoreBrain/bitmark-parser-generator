@@ -325,6 +325,7 @@ export interface BitmarkPegParserContext {
   parse: ParseFunction;
   bitContentProcessor(
     bitType: BitTypeType,
+    textFormat: TextFormatType,
     bitLevel: BitContentLevelType,
     tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,

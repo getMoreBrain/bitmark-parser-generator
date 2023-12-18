@@ -4,6 +4,7 @@ import { Config } from '../../../../config/Config';
 import { BodyPart, Mark } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { ArrayUtils } from '../../../../utils/ArrayUtils';
 
 import { markTagContentProcessor } from './MarkTagContentProcessor';
@@ -21,6 +22,7 @@ const builder = new Builder();
 function markChainContentProcessor(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
+  textFormat: TextFormatType,
   bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -30,7 +32,7 @@ function markChainContentProcessor(
   if (bitLevel === BitContentLevel.Chain) {
     markTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
   } else {
-    const mark = buildMark(context, bitType, bitLevel, tagsConfig, content);
+    const mark = buildMark(context, bitType, textFormat, bitLevel, tagsConfig, content);
     if (mark) bodyParts.push(mark);
   }
 }
@@ -38,6 +40,7 @@ function markChainContentProcessor(
 function buildMark(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
+  textFormat: TextFormatType,
   _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
@@ -46,8 +49,14 @@ function buildMark(
 
   const markConfig = Config.getTagConfigForTag(tagsConfig, content.type);
 
-  const tags = context.bitContentProcessor(bitType, BitContentLevel.Chain, tagsConfig, [content]);
-  const chainTags = context.bitContentProcessor(bitType, BitContentLevel.Chain, markConfig?.chain, content.chain);
+  const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, [content]);
+  const chainTags = context.bitContentProcessor(
+    bitType,
+    textFormat,
+    BitContentLevel.Chain,
+    markConfig?.chain,
+    content.chain,
+  );
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('mark TAGS', chainTags);
 

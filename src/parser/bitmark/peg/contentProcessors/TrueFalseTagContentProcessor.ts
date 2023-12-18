@@ -1,5 +1,6 @@
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -13,8 +14,9 @@ import {
 
 function trueFalseTagContentProcessor(
   _context: BitmarkPegParserContext,
-  _bitLevel: BitContentLevelType,
   _bitType: BitTypeType,
+  _textFormat: TextFormatType,
+  _bitLevel: BitContentLevelType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
