@@ -238,6 +238,7 @@ const BitType = superenum({
   pageProductVideo: 'page-product-video',
   pageProductVideoList: 'page-product-video-list',
   pageSectionFolder: 'page-section-folder',
+  pageSubscribe: 'page-subscribe',
   photo: 'photo',
   preparationNote: 'preparation-note',
   question1: 'question-1',
