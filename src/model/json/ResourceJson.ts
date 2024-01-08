@@ -160,8 +160,8 @@ export interface ImageResourceJson extends BaseResourceJson {
   src2x: string;
   src3x: string;
   src4x: string;
-  width: number | null;
-  height: number | null;
+  width: string | null;
+  height: string | null;
   alt: string;
   zoomDisabled: boolean;
 }
@@ -174,8 +174,8 @@ export interface ImageLinkResourceJson extends BaseResourceJson {
   src2x: string;
   src3x: string;
   src4x: string;
-  width: number | null;
-  height: number | null;
+  width: string | null;
+  height: string | null;
   alt: string;
   zoomDisabled: boolean;
 }
@@ -216,8 +216,8 @@ export interface VideoResourceJson extends BaseResourceJson {
   format: string;
   url: string;
   src: string;
-  width: number | null;
-  height: number | null;
+  width: string | null;
+  height: string | null;
   duration: number; // string?
   mute: boolean;
   autoplay: boolean;
@@ -232,8 +232,8 @@ export interface VideoEmbedResourceJson extends BaseResourceJson {
   format: string;
   url: string;
   src: string;
-  width: number | null;
-  height: number | null;
+  width: string | null;
+  height: string | null;
   duration: number; // string?
   mute: boolean;
   autoplay: boolean;
@@ -248,8 +248,8 @@ export interface VideoLinkResourceJson extends BaseResourceJson {
   format: string;
   url: string;
   src: string;
-  width: number | null;
-  height: number | null;
+  width: string | null;
+  height: string | null;
   duration: number; // string?
   mute: boolean;
   autoplay: boolean;
@@ -269,8 +269,8 @@ export interface StillImageFilmEmbedResourceJson extends BaseResourceJson {
   format: string;
   url: string;
   src: string;
-  width: number | null;
-  height: number | null;
+  width: string | null;
+  height: string | null;
   duration: number; // string?
   mute: boolean;
   autoplay: boolean;
@@ -285,8 +285,8 @@ export interface StillImageFilmLinkResourceJson extends BaseResourceJson {
   format: string;
   url: string;
   src: string;
-  width: number | null;
-  height: number | null;
+  width: string | null;
+  height: string | null;
   duration: number; // string?
   mute: boolean;
   autoplay: boolean;

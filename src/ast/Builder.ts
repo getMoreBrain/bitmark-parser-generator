@@ -119,6 +119,8 @@ class Builder extends BaseBuilder {
     location?: BreakscapedString;
     kind?: BreakscapedString;
     action?: BreakscapedString;
+    width?: string;
+    height?: string;
     thumbImage?: BreakscapedString;
     focusX?: number;
     focusY?: number;
@@ -233,6 +235,8 @@ class Builder extends BaseBuilder {
       location,
       kind,
       action,
+      width,
+      height,
       thumbImage,
       focusX,
       focusY,
@@ -346,6 +350,8 @@ class Builder extends BaseBuilder {
       location: this.toAstProperty(PropertyConfigKey.location, location),
       kind: this.toAstProperty(PropertyConfigKey.kind, kind),
       action: this.toAstProperty(PropertyConfigKey.action, action),
+      width: this.toAstProperty(PropertyConfigKey.width, width),
+      height: this.toAstProperty(PropertyConfigKey.height, height),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       focusX: this.toAstProperty(PropertyConfigKey.focusX, focusX),
       focusY: this.toAstProperty(PropertyConfigKey.focusY, focusY),
