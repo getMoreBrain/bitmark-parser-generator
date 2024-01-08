@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.9
+Version: 1.5.10
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -237,6 +237,7 @@ page-product-list (since: 1.4.17)
 page-product-video (since: 1.4.17)
 page-product-video-list (since: 1.4.17)
 page-section-folder (since: 1.4.17)
+page-subscribe (since: 1.5.10)
 photo (since: 1.3.0)
 preparation-note (since: 1.3.0)
 question-1 (since: 1.3.0)

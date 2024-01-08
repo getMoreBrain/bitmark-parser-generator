@@ -611,6 +611,7 @@ const BITS: _BitsConfig = {
   [BitType.note]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.noteAi]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.notebookArticle]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.pageSubscribe]: { since: '1.5.10', baseBitType: BitType.example },
   [BitType.preparationNote]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.releaseNotesSummary]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.remark]: { since: '1.3.0', baseBitType: BitType.example },
