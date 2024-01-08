@@ -232,6 +232,7 @@ const BitType = superenum({
   pageBanner: 'page-banner',
   pageBuyButton: 'page-buy-button',
   pageFooter: 'page-footer',
+  pageOpenBook: 'page-open-book',
   pageProduct: 'page-product',
   pageProductList: 'page-product-list',
   pageProductVideo: 'page-product-video',
