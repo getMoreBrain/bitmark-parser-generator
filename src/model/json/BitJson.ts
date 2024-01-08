@@ -39,6 +39,8 @@ export interface BitJson {
   theme: string | string[];
   kind: string;
   action: string;
+  width: string;
+  height: string;
   thumbImage: string;
   focusX: number;
   focusY: number;

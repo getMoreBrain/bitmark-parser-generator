@@ -1,0 +1,21 @@
+[
+  {
+    "bit": {
+      "type": "vendor-iframely-embed",
+      "format": "text",
+      "id": ["342341"],
+      "width": "100",
+      "height": "120",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": "Here is some code"
+    },
+    "parser": {
+      "version": "1.5.9",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.vendor-iframely-embed]\n[@id:342341]\n[@width:100]\n[@height:120]\nHere is some code"
+  }
+]
