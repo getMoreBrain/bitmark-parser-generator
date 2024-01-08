@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.9
+Version: 1.5.10
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -232,11 +232,13 @@ page (since: 1.3.0)
 page-banner (since: 1.4.3)
 page-buy-button (since: 1.4.3)
 page-footer (since: 1.4.13)
+page-open-book (since: 1.5.10)
 page-product (since: 1.4.17)
 page-product-list (since: 1.4.17)
 page-product-video (since: 1.4.17)
 page-product-video-list (since: 1.4.17)
 page-section-folder (since: 1.4.17)
+page-subscribe (since: 1.5.10)
 photo (since: 1.3.0)
 preparation-note (since: 1.3.0)
 question-1 (since: 1.3.0)
@@ -278,6 +280,10 @@ toc-chapter (since: 1.5.5)
 true-false (since: 1.3.0)
 true-false-1 (since: 1.3.0)
 vendor-amcharts-5-chart (since: 1.5.8)
+vendor-iframely-card (since: 1.5.10)
+vendor-iframely-embed (since: 1.5.10)
+vendor-iframely-preview (since: 1.5.10)
+vendor-iframely-preview-mini (since: 1.5.10)
 vendor-jupyter-cell-code (since: 1.4.3)
 vendor-jupyter-cell-markdown (since: 1.4.3)
 vendor-jupyter-cell-raw (since: 1.4.3)

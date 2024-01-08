@@ -143,8 +143,8 @@ export interface BitContentProcessorResult {
   src2x?: BreakscapedString;
   src3x?: BreakscapedString;
   src4x?: BreakscapedString;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   alt?: BreakscapedString;
   // duration?: BreakscapedString | BreakscapedString[]; // number? - there is a collision between duration at bit level, and duration in resource.
   mute?: boolean;

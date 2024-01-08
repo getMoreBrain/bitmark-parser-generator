@@ -611,6 +611,8 @@ const BITS: _BitsConfig = {
   [BitType.note]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.noteAi]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.notebookArticle]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.pageOpenBook]: { since: '1.5.10', baseBitType: BitType.example },
+  [BitType.pageSubscribe]: { since: '1.5.10', baseBitType: BitType.example },
   [BitType.preparationNote]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.releaseNotesSummary]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.remark]: { since: '1.3.0', baseBitType: BitType.example },
@@ -1378,6 +1380,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorAmcharts5Chart]: {
     since: '1.5.8',
+    baseBitType: BitType.code,
     tags: [
       {
         type: BitTagType.group,
@@ -1387,8 +1390,9 @@ const BITS: _BitsConfig = {
     textFormatDefault: TextFormat.json,
     bodyAllowed: true,
   },
-  [BitType.vendorPadletEmbed]: {
-    since: '1.3.0',
+  [BitType.vendorIframelyEmbed]: {
+    since: '1.5.10',
+    baseBitType: BitType.code,
     tags: [
       {
         type: BitTagType.group,
@@ -1396,12 +1400,19 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
-        configKey: PropertyConfigKey.padletId,
+        configKey: PropertyConfigKey.width, // Same as image
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.height, // Same as image
       },
     ],
     textFormatDefault: TextFormat.text,
     bodyAllowed: true,
   },
+  [BitType.vendorIframelyCard]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
+  [BitType.vendorIframelyPreview]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
+  [BitType.vendorIframelyPreviewMini]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
   [BitType.vendorJupyterOutput]: {
     since: '1.4.3',
     baseBitType: BitType.code,
@@ -1422,6 +1433,22 @@ const BITS: _BitsConfig = {
   [BitType.vendorJupyterCellMarkdown]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
   [BitType.vendorJupyterCellRaw]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
   [BitType.vendorJupyterIpynb]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
+  [BitType.vendorPadletEmbed]: {
+    since: '1.3.0',
+    baseBitType: BitType.code,
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.padletId,
+      },
+    ],
+    textFormatDefault: TextFormat.text,
+    bodyAllowed: true,
+  },
   [BitType.video]: {
     since: '1.3.0',
     tags: [

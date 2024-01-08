@@ -63,6 +63,8 @@ export interface Bit {
   location?: Property;
   kind?: Property;
   action?: Property;
+  width?: Property;
+  height?: Property;
   thumbImage?: Property;
   focusX?: Property;
   focusY?: Property;
@@ -455,8 +457,8 @@ export interface ImageResource extends Resource {
   src2x?: BreakscapedString;
   src3x?: BreakscapedString;
   src4x?: BreakscapedString;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   alt?: BreakscapedString;
   zoomDisabled?: boolean;
 }
@@ -473,8 +475,8 @@ export interface ImageLinkResource extends Resource {
   src2x?: BreakscapedString;
   src3x?: BreakscapedString;
   src4x?: BreakscapedString;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   alt?: BreakscapedString;
   zoomDisabled?: boolean;
 }
@@ -502,8 +504,8 @@ export interface AudioLinkResource extends Resource {
 
 export interface VideoResource extends Resource {
   type: 'video';
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   duration?: number; // string?
   mute?: boolean;
   autoplay?: boolean;
@@ -516,8 +518,8 @@ export interface VideoResource extends Resource {
 
 export interface VideoEmbedResource extends Resource {
   type: 'video-embed';
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   duration?: number; // string?
   mute?: boolean;
   autoplay?: boolean;
@@ -530,8 +532,8 @@ export interface VideoEmbedResource extends Resource {
 
 export interface VideoLinkResource extends Resource {
   type: 'video-link';
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   duration?: number; // string?
   mute?: boolean;
   autoplay?: boolean;
@@ -550,8 +552,8 @@ export interface VideoLinkResource extends Resource {
 
 export interface StillImageFilmEmbedResource extends Resource {
   type: 'still-image-film-embed';
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   duration?: number; // string?
   mute?: boolean;
   autoplay?: boolean;
@@ -564,8 +566,8 @@ export interface StillImageFilmEmbedResource extends Resource {
 
 export interface StillImageFilmLinkResource extends Resource {
   type: 'still-image-film-link';
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   duration?: number; // string?
   mute?: boolean;
   autoplay?: boolean;

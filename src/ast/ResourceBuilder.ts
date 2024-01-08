@@ -55,8 +55,8 @@ class ResourceBuilder extends BaseBuilder {
       src4x?: BreakscapedString;
 
       // ImageLikeResource / VideoLikeResource
-      width?: number;
-      height?: number;
+      width?: string;
+      height?: string;
       alt?: BreakscapedString;
       zoomDisabled?: boolean;
 
@@ -243,8 +243,8 @@ class ResourceBuilder extends BaseBuilder {
       src2x?: BreakscapedString;
       src3x?: BreakscapedString;
       src4x?: BreakscapedString;
-      width?: number;
-      height?: number;
+      width?: string;
+      height?: string;
       alt?: BreakscapedString;
       zoomDisabled?: boolean;
       license?: BreakscapedString;
@@ -313,8 +313,8 @@ class ResourceBuilder extends BaseBuilder {
     src2x?: BreakscapedString;
     src3x?: BreakscapedString;
     src4x?: BreakscapedString;
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
     alt?: BreakscapedString;
     zoomDisabled?: boolean;
     license?: BreakscapedString;
@@ -503,8 +503,8 @@ class ResourceBuilder extends BaseBuilder {
   videoResource(data: {
     format: BreakscapedString;
     value: BreakscapedString; // src
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
     duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
@@ -575,8 +575,8 @@ class ResourceBuilder extends BaseBuilder {
   videoEmbedResource(data: {
     format: BreakscapedString;
     value: BreakscapedString; // src
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
     duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
@@ -647,8 +647,8 @@ class ResourceBuilder extends BaseBuilder {
   videoLinkResource(data: {
     format: BreakscapedString;
     value: BreakscapedString;
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
     duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
@@ -743,8 +743,8 @@ class ResourceBuilder extends BaseBuilder {
   stillImageFilmEmbedResource(data: {
     format: BreakscapedString;
     value: BreakscapedString; // src
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
     duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;
@@ -815,8 +815,8 @@ class ResourceBuilder extends BaseBuilder {
   stillImageFilmLinkResource(data: {
     format: BreakscapedString;
     value: BreakscapedString;
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
     duration?: number; // BreakscapedString?
     mute?: boolean;
     autoplay?: boolean;

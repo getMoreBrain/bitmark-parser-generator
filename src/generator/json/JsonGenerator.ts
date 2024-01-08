@@ -2503,6 +2503,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       location: undefined,
       kind: undefined,
       action: undefined,
+      width: undefined,
+      height: undefined,
       thumbImage: undefined,
       focusX: undefined,
       focusY: undefined,
@@ -2799,6 +2801,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.location == null) delete bitJson.location;
     if (bitJson.kind == null) delete bitJson.kind;
     if (bitJson.action == null) delete bitJson.action;
+    if (bitJson.width == null) delete bitJson.width;
+    if (bitJson.height == null) delete bitJson.height;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;
     if (bitJson.focusX == null) delete bitJson.focusX;
     if (bitJson.focusY == null) delete bitJson.focusY;
