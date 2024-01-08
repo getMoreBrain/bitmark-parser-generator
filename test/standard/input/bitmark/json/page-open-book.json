@@ -1,0 +1,64 @@
+[
+  {
+    "bit": {
+      "type": "page-open-book",
+      "format": "bitmark--",
+      "id": ["342341"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Publisher, optional",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Document Type, optional",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Book title",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Open",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.10",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.page-open-book]\n[@id:342341]\n[%Publisher, optional]\n[!Book title]\n[?Document Type, optional]\nOpen"
+  }
+]
