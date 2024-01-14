@@ -66,6 +66,8 @@ export interface Bit {
   width?: Property;
   height?: Property;
   thumbImage?: Property;
+  scormSource?: Property;
+  posterImage?: Property;
   focusX?: Property;
   focusY?: Property;
   pointerLeft?: Property;

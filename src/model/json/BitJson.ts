@@ -42,6 +42,8 @@ export interface BitJson {
   width: string;
   height: string;
   thumbImage: string;
+  scormSource: string;
+  posterImage: string;
   focusX: number;
   focusY: number;
   pointerLeft: string;

@@ -1,0 +1,31 @@
+[
+  {
+    "bit": {
+      "type": "scorm",
+      "format": "bitmark--",
+      "scormSource": "http://scorm.com/scorm",
+      "posterImage": "http://scorm.com/scorm/poster.png",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is SCORM",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.10",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.scorm]\n\n[@scormSource:http://scorm.com/scorm]\n\n[@posterImage:http://scorm.com/scorm/poster.png]\n\nThis is SCORM"
+  }
+]

@@ -1134,12 +1134,22 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeResource(resource);
   }
 
+  // bitmarkAst -> bits -> bitsValue -> posterImage
   // bitmarkAst -> bits -> bitsValue -> resource -> posterImage
 
-  protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const posterImage = node.value as ImageResource;
-    if (posterImage && posterImage.value) {
-      this.writeProperty('posterImage', posterImage.value);
+  protected enter_posterImage(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (parent?.key === NodeType.bitsValue) {
+      // Bit poster image
+      const posterImage = node.value as string;
+      if (posterImage) {
+        this.writeProperty('posterImage', posterImage);
+      }
+    } else {
+      // Resource poster image
+      const posterImage = node.value as ImageResource;
+      if (posterImage && posterImage.value) {
+        this.writeProperty('posterImage', posterImage.value);
+      }
     }
   }
 

@@ -164,6 +164,16 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.scormSource]: {
+    tag: PropertyTag.scormSource,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.posterImage]: {
+    tag: PropertyTag.posterImage,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.focusX]: {
     tag: PropertyTag.focusX,
     single: true,
@@ -476,11 +486,6 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.backgroundWallpaper]: {
     tag: PropertyTag.backgroundWallpaper,
-    single: true,
-    format: PropertyFormat.trimmedString,
-  },
-  [PropertyConfigKey.posterImage]: {
-    tag: PropertyTag.posterImage,
     single: true,
     format: PropertyFormat.trimmedString,
   },
