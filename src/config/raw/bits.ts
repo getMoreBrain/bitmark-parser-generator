@@ -1033,6 +1033,7 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
+  [BitType.pageBuyButtonPromotion]: { since: '1.5.11', baseBitType: BitType.pageBuyButton },
   [BitType.pageProduct]: {
     since: '1.4.17',
     tags: [
