@@ -409,6 +409,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.buttonCaption]: {
+    tag: PropertyTag.buttonCaption,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.caption]: {
     tag: PropertyTag.caption,
     single: true,

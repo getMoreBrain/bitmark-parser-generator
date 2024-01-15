@@ -2533,6 +2533,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       labelTrue: undefined,
       labelFalse: undefined,
       content2Buy: undefined,
+      buttonCaption: undefined,
       quotedPerson: undefined,
       reasonableNumOfChars: undefined,
       resolved: undefined,
@@ -2839,6 +2840,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.labelTrue == null) delete bitJson.labelTrue;
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
     if (bitJson.content2Buy == null) delete bitJson.content2Buy;
+    if (bitJson.buttonCaption == null) delete bitJson.buttonCaption;
     if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
     if (bitJson.resolved == null) delete bitJson.resolved;
     if (bitJson.resolvedDate == null) delete bitJson.resolvedDate;

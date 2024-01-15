@@ -74,7 +74,16 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
   },
   [BitType.statement]: { since: '1.3.0', baseBitType: BitType.article },
-  [BitType.buttonCopyText]: { since: '1.4.3', baseBitType: BitType.article },
+  [BitType.buttonCopyText]: {
+    since: '1.4.3',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+  },
   [BitType.appBitmarkFromJavascript]: {
     since: '1.4.5',
     tags: [
@@ -611,8 +620,6 @@ const BITS: _BitsConfig = {
   [BitType.note]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.noteAi]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.notebookArticle]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.pageOpenBook]: { since: '1.5.10', baseBitType: BitType.example },
-  [BitType.pageSubscribe]: { since: '1.5.10', baseBitType: BitType.example },
   [BitType.preparationNote]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.releaseNotesSummary]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.remark]: { since: '1.3.0', baseBitType: BitType.example },
@@ -632,6 +639,26 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
     footerAllowed: true,
     rootExampleType: ExampleType.string,
+  },
+  [BitType.pageOpenBook]: {
+    since: '1.5.10',
+    baseBitType: BitType.example,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+  },
+  [BitType.pageSubscribe]: {
+    since: '1.5.10',
+    baseBitType: BitType.example,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
   },
   [BitType.assignmentList]: { since: '1.4.13', baseBitType: BitType.exampleList },
   [BitType.pageFooter]: { since: '1.4.13', baseBitType: BitType.exampleList },
@@ -1046,6 +1073,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.content2Buy,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
       },
     ],
     resourceAttachmentAllowed: true,

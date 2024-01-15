@@ -12,6 +12,7 @@ const PropertyTag = superenum({
   book: 'book',
   bookAlias: 'bookAlias',
   bot: 'bot',
+  buttonCaption: 'buttonCaption',
   caption: 'caption',
   color: 'color',
   colorTag: 'colorTag',
