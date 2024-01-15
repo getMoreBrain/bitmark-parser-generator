@@ -1823,7 +1823,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
     resourceJson.alt = Breakscape.unbreakscape(resource.alt) ?? '';
-    resourceJson.zoomDisabled = resource.zoomDisabled ?? false;
+    resourceJson.zoomDisabled = this.getZoomDisabled(bitType, resource.zoomDisabled);
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -1859,7 +1859,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
     resourceJson.alt = Breakscape.unbreakscape(resource.alt) ?? '';
-    resourceJson.zoomDisabled = resource.zoomDisabled ?? false;
+    resourceJson.zoomDisabled = this.getZoomDisabled(bitType, resource.zoomDisabled);
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -2277,6 +2277,25 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       target[name] = finalValue;
       // }
     }
+  }
+
+  /**
+   * Get the value for the zoomDisabled property, setting the appropriate default value if no value is set.
+   *
+   * @param bitType
+   * @param zoomDisabled
+   * @returns
+   */
+  protected getZoomDisabled(bitType: BitTypeType, zoomDisabled: boolean | undefined): boolean {
+    if (zoomDisabled != null) return zoomDisabled;
+
+    // The default value in the JSON is hardcoded, because there is currently no good way to set a different
+    // default per bit in the BitConfig.
+    if (Config.isOfBitType(bitType, [BitType.imageSeparator, BitType.pageBanner])) {
+      return true;
+    }
+
+    return false;
   }
 
   /**

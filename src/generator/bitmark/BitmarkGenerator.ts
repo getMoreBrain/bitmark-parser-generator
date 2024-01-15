@@ -1455,7 +1455,13 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected leaf_zoomDisabled(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('zoomDisabled', node.value);
+    const bitType = this.getBitType(_route);
+
+    if (Config.isOfBitType(bitType, [BitType.imageSeparator, BitType.pageBanner])) {
+      this.writeProperty('zoomDisabled', node.value, undefined, false, true);
+    } else {
+      this.writeProperty('zoomDisabled', node.value, undefined, true, false);
+    }
   }
 
   protected leaf_license(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1685,9 +1691,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected writeCardSetStart(): void {
     if (this.options.cardSetVersion === CardSetVersion.v1) {
-      this.write('===');
+      this.write('\n===');
     } else {
-      this.write('====');
+      this.write('\n====');
     }
   }
 
