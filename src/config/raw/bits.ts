@@ -1307,7 +1307,25 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-
+  [BitType.scorm]: {
+    since: '1.5.11',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.scormSource,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.posterImage,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+  },
   [BitType.toc]: {
     since: '1.3.0',
     tags: [

@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.10
+Version: 1.5.11
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -255,6 +255,7 @@ review-note (since: 1.3.0)
 review-request-for-review-note (since: 1.3.0)
 review-reviewer-note (since: 1.3.0)
 sample-solution (since: 1.3.0)
+scorm (since: 1.5.11)
 screenshot (since: 1.3.0, deprecated: 1.4.0)
 self-assessment (since: 1.3.0)
 separator (since: 1.4.15)

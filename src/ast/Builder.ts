@@ -122,6 +122,8 @@ class Builder extends BaseBuilder {
     width?: string;
     height?: string;
     thumbImage?: BreakscapedString;
+    scormSource?: BreakscapedString;
+    posterImage?: BreakscapedString;
     focusX?: number;
     focusY?: number;
     pointerLeft?: BreakscapedString;
@@ -238,6 +240,8 @@ class Builder extends BaseBuilder {
       width,
       height,
       thumbImage,
+      scormSource,
+      posterImage,
       focusX,
       focusY,
       pointerLeft,
@@ -353,6 +357,8 @@ class Builder extends BaseBuilder {
       width: this.toAstProperty(PropertyConfigKey.width, width),
       height: this.toAstProperty(PropertyConfigKey.height, height),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
+      scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
+      posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),
       focusX: this.toAstProperty(PropertyConfigKey.focusX, focusX),
       focusY: this.toAstProperty(PropertyConfigKey.focusY, focusY),
       pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, pointerLeft),

@@ -243,6 +243,7 @@ class BitmarkPegParserProcessor {
       choices,
       responses,
       resources,
+      posterImage,
       internalComments,
       ...tags
     } = this.bitContentProcessor(bitType, textFormat, BitContentLevel.Bit, bitConfig.tags, bitContent);
@@ -284,6 +285,7 @@ class BitmarkPegParserProcessor {
       textFormat,
       resourceType,
       ...titles,
+      posterImage: posterImage as BreakscapedString,
       statement: isTrueFalseV1 ? statement : undefined,
       choices: isMultipleChoiceV1 ? choices : undefined,
       responses: isMultipleResponseV1 ? responses : undefined,

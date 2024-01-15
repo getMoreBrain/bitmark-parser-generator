@@ -1,7 +1,7 @@
 import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { Resource } from '../../../../model/ast/Nodes';
+import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { Count } from '../../../../model/enum/Count';
@@ -109,11 +109,18 @@ function resourceContentProcessor(
     const resourceConfig = Config.getTagConfigForTag(tagsConfig, key);
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, resourceConfig?.chain, chain);
+    const { posterImage, ...tags } = context.bitContentProcessor(
+      bitType,
+      textFormat,
+      BitContentLevel.Chain,
+      resourceConfig?.chain,
+      chain,
+    );
 
     const resource = resourceBuilder.resource({
       type,
       value,
+      posterImage: posterImage as ImageResource,
       ...tags,
     });
     if (resource) resources.push(resource);

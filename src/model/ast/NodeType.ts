@@ -135,6 +135,10 @@ const NodeType = superenum({
   actionValue: 'actionValue',
   thumbImage: 'thumbImage',
   thumbImageValue: 'thumbImageValue',
+  scormSource: 'scormSource',
+  scormSourceValue: 'scormSourceValue',
+  posterImage: 'posterImage',
+  posterImageValue: 'posterImageValue',
   focusX: 'focusX',
   focusXValue: 'focusXValue',
   focusY: 'focusY',
@@ -299,7 +303,6 @@ const NodeType = superenum({
   showInIndex: 'showInIndex',
   caption: 'caption',
   // duration: 'duration', - NOTE: clash with bit.duration / resource...duration (be careful when walking the tree)
-  posterImage: 'posterImage',
   thumbnails: 'thumbnails',
   thumbnailsValue: 'thumbnailsValue',
 

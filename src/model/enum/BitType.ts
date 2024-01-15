@@ -255,6 +255,7 @@ const BitType = superenum({
   reviewRequestForReviewNote: 'review-request-for-review-note',
   reviewReviewerNote: 'review-reviewer-note',
   sampleSolution: 'sample-solution',
+  scorm: 'scorm',
   screenshot: 'screenshot',
   selfAssessment: 'self-assessment',
   separator: 'separator',
