@@ -292,9 +292,7 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
-      ignoreFalse: ['zoomDisabled'],
-    });
+    ObjectUtils.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node) as ImageResource;
@@ -360,9 +358,7 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
-      ignoreFalse: ['zoomDisabled'],
-    });
+    ObjectUtils.removeUnwantedProperties(node);
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node) as ImageLinkResource;
