@@ -41,7 +41,7 @@
           "width": null,
           "height": null,
           "alt": "",
-          "zoomDisabled": false,
+          "zoomDisabled": true,
           "license": "",
           "copyright": "",
           "showInIndex": false,
