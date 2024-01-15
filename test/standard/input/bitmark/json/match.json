@@ -464,7 +464,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": "Heading3"
       },
       "pairs": [
         {
@@ -515,7 +515,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": "Heading3"
       },
       "pairs": [
         {
@@ -566,7 +566,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": "Heading3"
       },
       "pairs": [
         {
@@ -617,7 +617,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": "Heading3"
       },
       "pairs": [
         {
@@ -668,7 +668,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": "Heading3"
       },
       "pairs": [
         {
@@ -730,7 +730,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": "Heading3"
       },
       "pairs": [
         {
@@ -792,7 +792,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": "Heading3"
       },
       "pairs": [
         {
@@ -854,7 +854,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": "Heading3"
       },
       "pairs": [
         {
@@ -916,7 +916,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": "Heading3"
       },
       "pairs": [
         {
@@ -1038,5 +1038,176 @@
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-solution-grouped]\n===\n[%1]auf eine Schule\n==\n[%b]gehen[@example]\n==\n[%c]denken[@example]\n===\n[%2]an einer Hochschule\n==\n[%f]studieren\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "",
+        "forValues": "Heading2"
+      },
+      "pairs": [
+        {
+          "key": "K",
+          "values": ["A", "B"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#]\n==\n[#Heading2]\n===\nK\n==\nA\n--\nB\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "",
+        "forValues": "Heading2"
+      },
+      "pairs": [
+        {
+          "key": "K",
+          "values": ["A", "B"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n==\n[#Heading2]\n===\nK\n==\nA\n--\nB\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ""
+      },
+      "pairs": [
+        {
+          "key": "K",
+          "values": ["A", "B"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#]\n===\nK\n==\nA\n--\nB\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ""
+      },
+      "pairs": [
+        {
+          "key": "K",
+          "values": ["A", "B"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n===\nK\n==\nA\n--\nB\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "",
+        "forValues": ""
+      },
+      "pairs": [
+        {
+          "key": "K",
+          "values": ["A", "B"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n[#]\n==\n[#]\n===\nK\n==\nA\n--\nB\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {},
+      "pairs": [
+        {
+          "key": "K",
+          "values": ["A", "B"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.11",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match:bitmark--]\n===\n==\n==\n===\nK\n==\nA\n==\nB\n==="
   }
 ]

@@ -1034,30 +1034,31 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
     const heading = node.value as Heading;
 
-    // Ensure the heading is valid for writing out (it will be valid, but if it is empty, it should not be written)
-    let valid = false;
-    if (heading && heading.forKeys /*&& heading.forValues && heading.forValues.length > 0*/) {
-      valid = true;
-    }
-
-    if (!valid) return false;
+    // Check if the heading is for a match or a match matrix
+    const bitType = this.getBitType(_route);
+    const isMatrix = Config.isOfBitType(bitType, BitType.matchMatrix);
 
     // Create the heading
     const headingJson: Partial<HeadingJson> = {
       forKeys: Breakscape.unbreakscape(heading.forKeys) ?? '',
     };
 
-    // TODO: Should probably check wether bit is a match or a matrix and add a string for match and array for matrix
-    if (Array.isArray(heading.forValues)) {
-      if (heading.forValues.length > 1) {
-        headingJson.forValues = Breakscape.unbreakscape(heading.forValues);
-      } else if (heading.forValues.length === 1) {
-        headingJson.forValues = Breakscape.unbreakscape(heading.forValues[0]);
-      } else {
-        headingJson.forValues = Breakscape.unbreakscape(heading.forValues);
+    if (isMatrix) {
+      // Matrix match, forValues is an array
+      headingJson.forValues = [];
+      if (Array.isArray(heading.forValues)) {
+        if (heading.forValues.length >= 1) {
+          headingJson.forValues = Breakscape.unbreakscape(heading.forValues);
+        }
       }
     } else {
-      headingJson.forValues = Breakscape.unbreakscape(heading.forValues) ?? '';
+      // Standard match, forValues is a string
+      headingJson.forValues = '';
+      if (Array.isArray(heading.forValues)) {
+        if (heading.forValues.length >= 1) {
+          headingJson.forValues = Breakscape.unbreakscape(heading.forValues[heading.forValues.length - 1]);
+        }
+      }
     }
 
     this.bitJson.heading = headingJson as HeadingJson;

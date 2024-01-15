@@ -636,7 +636,7 @@ class Builder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    // ObjectUtils.removeUnwantedProperties(node);
 
     return node;
   }

@@ -731,7 +731,7 @@ class JsonParser {
 
   private headingBitToAst(heading?: HeadingJson): Heading | undefined {
     let node: Heading | undefined;
-    if (heading) {
+    if (heading && Object.keys(heading).length > 0) {
       node = builder.heading({
         forKeys: this.convertStringToBreakscapedString(heading.forKeys) ?? Breakscape.EMPTY_STRING,
         forValues: this.convertStringToBreakscapedString(heading.forValues) ?? [],
