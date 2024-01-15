@@ -765,6 +765,24 @@ const BITS: _BitsConfig = {
 
     bodyAllowed: true, // false??
   },
+  [BitType.imagesLogoGrave]: {
+    since: '1.5.11',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        // Image resource
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceImage,
+        minCount: 1,
+        maxCount: Count.infinity,
+      },
+    ],
+
+    bodyAllowed: true, // false??
+  },
   [BitType.internalLink]: {
     since: '1.3.0',
     tags: [

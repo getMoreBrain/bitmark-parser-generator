@@ -1,0 +1,107 @@
+[
+  {
+    "bit": {
+      "type": "images-logo-grave",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Trusted by leading brands",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": [],
+      "logos": [
+        {
+          "type": "image",
+          "image": {
+            "provider": "1.png",
+            "src": "https://1.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "2.png",
+            "src": "https://2.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "3.png",
+            "src": "https://3.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "4.png",
+            "src": "https://4.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "5.png",
+            "src": "https://5.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.10",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.images-logo-grave]\n[!Trusted by leading brands]\n\n[&image:https://1.png]\n[&image:https://2.png]\n[&image:https://3.png]\n[&image:https://4.png]\n[&image:https://5.png]"
+  }
+]

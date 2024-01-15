@@ -171,6 +171,7 @@ const BitType = superenum({
   imageStyled: 'image-styled',
   imageSuperWide: 'image-super-wide',
   imageZoom: 'image-zoom',
+  imagesLogoGrave: 'images-logo-grave',
   info: 'info',
   internalLink: 'internal-link',
   interview: 'interview',

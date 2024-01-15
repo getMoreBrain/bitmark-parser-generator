@@ -103,6 +103,7 @@ import {
   DocumentResourceJson,
   ImageLinkResourceJson,
   ImageResourceJson,
+  ImageResourceWrapperJson,
   ResourceJson,
   ResourceWrapperJson,
   StillImageFilmEmbedResourceJson,
@@ -1292,6 +1293,16 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         }
         resourceJson = wrapper as ResourceJson;
       }
+    } else if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
+      // The resource is a logo grave resource
+      const logos: ImageResourceWrapperJson[] = [];
+      for (const r of resources) {
+        const json = this.parseResourceToJson(bitType, r) as ImageResourceWrapperJson;
+        if (json) {
+          logos.push(json);
+        }
+      }
+      this.bitJson.logos = logos;
     } else {
       // This is a standard resource. If there is more than one resource, use the first one.
       // There should not be more than one because of validation
@@ -1812,7 +1823,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
     resourceJson.alt = Breakscape.unbreakscape(resource.alt) ?? '';
-    resourceJson.zoomDisabled = this.getZoomDisabled(bitType, resource.zoomDisabled);
+    resourceJson.zoomDisabled = resource.zoomDisabled ?? false;
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -1848,7 +1859,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
     resourceJson.alt = Breakscape.unbreakscape(resource.alt) ?? '';
-    resourceJson.zoomDisabled = this.getZoomDisabled(bitType, resource.zoomDisabled);
+    resourceJson.zoomDisabled = resource.zoomDisabled ?? false;
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -2269,28 +2280,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   /**
-   * Get the value for the zoomDisabled property, setting the appropriate default value if no value is set.
-   *
-   * @param bitType
-   * @param zoomDisabled
-   * @returns
-   */
-  protected getZoomDisabled(bitType: BitTypeType, zoomDisabled: boolean | undefined): boolean {
-    if (zoomDisabled != null) return zoomDisabled;
-
-    // The default value in the JSON is hardcoded, because there is currently no good way to set a different
-    // default per bit in the BitConfig.
-
-    switch (bitType) {
-      case BitType.imageSeparator:
-      case BitType.pageBanner:
-        return true;
-    }
-
-    return false;
-  }
-
-  /**
    * Get the bit type from any node
    *
    * @param route the route to the current node
@@ -2570,6 +2559,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
       // Resource
       resource: undefined,
+      logos: undefined,
 
       // Children
       statement: undefined,
@@ -2764,6 +2754,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.resolvedDate == null) bitJson.resolvedDate = '';
         if (bitJson.resolvedBy == null) bitJson.resolvedBy = '';
       }
+
+      // Special case for 'images-logos-grave' bit
+      if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
+        if (bitJson.logos == null) bitJson.logos = [];
+      }
     }
 
     // Remove unwanted properties
@@ -2867,6 +2862,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // Resource
     if (bitJson.resource == null) delete bitJson.resource;
+    if (bitJson.logos == null) delete bitJson.logos;
 
     // Children
     if (bitJson.statement == null) delete bitJson.statement;

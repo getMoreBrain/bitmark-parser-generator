@@ -80,6 +80,7 @@ import {
   ResourceDataJson,
   StillImageFilmResourceJson,
   ImageResponsiveResourceJson,
+  ImageResourceWrapperJson,
 } from '../../model/json/ResourceJson';
 
 interface ReferenceAndReferenceProperty {
@@ -312,6 +313,7 @@ class JsonParser {
       partner,
       marks,
       resource,
+      logos,
       body,
       sampleSolution,
       elements,
@@ -345,7 +347,7 @@ class JsonParser {
     const resourceAttachmentType = this.getResourceType(resource);
 
     // resource(s)
-    const resourcesNode = this.resourceBitToAst(resource);
+    const resourcesNode = this.resourceBitToAst(bitType, resource, logos);
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
@@ -902,7 +904,11 @@ class JsonParser {
     return undefined;
   }
 
-  private resourceBitToAst(resource?: ResourceJson): Resource[] | undefined {
+  private resourceBitToAst(
+    bitType: BitTypeType,
+    resource: ResourceJson | undefined,
+    logos: ImageResourceWrapperJson[] | undefined,
+  ): Resource[] | undefined {
     const nodes: Resource[] | undefined = [];
 
     if (resource) {
@@ -937,6 +943,16 @@ class JsonParser {
 
         const node = this.resourceDataToAst(resource.type, data);
         if (node) nodes.push(node);
+      }
+    }
+
+    if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
+      // Add the logo images
+      if (Array.isArray(logos)) {
+        for (const logo of logos) {
+          const node = this.resourceDataToAst(ResourceTag.image, logo.image);
+          if (node) nodes.push(node);
+        }
       }
     }
 
