@@ -203,6 +203,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.vendorUrl]: {
+    tag: PropertyTag.vendorUrl,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.bot]: {
     tag: PropertyTag.bot,
     format: PropertyFormat.trimmedString,

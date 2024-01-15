@@ -157,6 +157,8 @@ const NodeType = superenum({
   externalLinkText: 'externalLinkText',
   videoCallLink: 'videoCallLink',
   videoCallLinkValue: 'videoCallLinkValue',
+  vendorUrl: 'vendorUrl',
+  vendorUrlValue: 'vendorUrlValue',
   bot: 'bot',
   botValue: 'botValue',
   referenceProperty: 'referenceProperty',

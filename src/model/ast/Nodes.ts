@@ -78,6 +78,7 @@ export interface Bit {
   externalLink?: Property;
   externalLinkText?: Property;
   videoCallLink?: Property;
+  vendorUrl?: Property;
   bot?: Property;
   referenceProperty?: Property;
   list?: Property;
