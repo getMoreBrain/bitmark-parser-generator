@@ -122,6 +122,8 @@ class Builder extends BaseBuilder {
     width?: string;
     height?: string;
     thumbImage?: BreakscapedString;
+    scormSource?: BreakscapedString;
+    posterImage?: BreakscapedString;
     focusX?: number;
     focusY?: number;
     pointerLeft?: BreakscapedString;
@@ -133,6 +135,7 @@ class Builder extends BaseBuilder {
     externalLink?: BreakscapedString;
     externalLinkText?: BreakscapedString;
     videoCallLink?: BreakscapedString;
+    vendorUrl?: BreakscapedString;
     bot?: BreakscapedString | BreakscapedString[];
     list?: BreakscapedString | BreakscapedString[];
     textReference?: BreakscapedString;
@@ -141,6 +144,7 @@ class Builder extends BaseBuilder {
     labelTrue?: BreakscapedString;
     labelFalse?: BreakscapedString;
     content2Buy?: BreakscapedString;
+    buttonCaption?: BreakscapedString;
     quotedPerson?: BreakscapedString;
     reasonableNumOfChars?: number;
     resolved?: boolean;
@@ -238,6 +242,8 @@ class Builder extends BaseBuilder {
       width,
       height,
       thumbImage,
+      scormSource,
+      posterImage,
       focusX,
       focusY,
       pointerLeft,
@@ -249,6 +255,7 @@ class Builder extends BaseBuilder {
       externalLink,
       externalLinkText,
       videoCallLink,
+      vendorUrl,
       bot,
       list,
       textReference,
@@ -257,6 +264,7 @@ class Builder extends BaseBuilder {
       labelTrue,
       labelFalse,
       content2Buy,
+      buttonCaption,
       book,
       quotedPerson,
       partialAnswer,
@@ -353,6 +361,8 @@ class Builder extends BaseBuilder {
       width: this.toAstProperty(PropertyConfigKey.width, width),
       height: this.toAstProperty(PropertyConfigKey.height, height),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
+      scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
+      posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),
       focusX: this.toAstProperty(PropertyConfigKey.focusX, focusX),
       focusY: this.toAstProperty(PropertyConfigKey.focusY, focusY),
       pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, pointerLeft),
@@ -362,6 +372,7 @@ class Builder extends BaseBuilder {
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, externalLink),
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, externalLinkText),
       videoCallLink: this.toAstProperty(PropertyConfigKey.videoCallLink, videoCallLink),
+      vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, vendorUrl),
       bot: this.toAstProperty(PropertyConfigKey.bot, bot),
       duration: this.toAstProperty(PropertyConfigKey.duration, duration),
       referenceProperty: this.toAstProperty(PropertyConfigKey.property_reference, referenceProperty),
@@ -372,6 +383,7 @@ class Builder extends BaseBuilder {
       labelTrue: this.toAstProperty(PropertyConfigKey.labelTrue, labelTrue),
       labelFalse: this.toAstProperty(PropertyConfigKey.labelFalse, labelFalse),
       content2Buy: this.toAstProperty(PropertyConfigKey.content2Buy, content2Buy),
+      buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, buttonCaption),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       reasonableNumOfChars: reasonableNumOfCharsProperty,

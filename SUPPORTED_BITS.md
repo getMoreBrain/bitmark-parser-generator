@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.10
+Version: 1.5.11
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -171,6 +171,7 @@ image-separator (since: 1.4.15)
 image-styled (since: 1.3.0)
 image-super-wide (since: 1.3.0)
 image-zoom (since: 1.3.0)
+images-logo-grave (since: 1.5.11)
 info (since: 1.3.0)
 internal-link (since: 1.3.0)
 interview (since: 1.3.0)
@@ -231,6 +232,7 @@ output (since: 1.4.3)
 page (since: 1.3.0)
 page-banner (since: 1.4.3)
 page-buy-button (since: 1.4.3)
+page-buy-button-promotion (since: 1.5.11)
 page-footer (since: 1.4.13)
 page-open-book (since: 1.5.10)
 page-product (since: 1.4.17)
@@ -254,6 +256,7 @@ review-note (since: 1.3.0)
 review-request-for-review-note (since: 1.3.0)
 review-reviewer-note (since: 1.3.0)
 sample-solution (since: 1.3.0)
+scorm (since: 1.5.11)
 screenshot (since: 1.3.0, deprecated: 1.4.0)
 self-assessment (since: 1.3.0)
 separator (since: 1.4.15)

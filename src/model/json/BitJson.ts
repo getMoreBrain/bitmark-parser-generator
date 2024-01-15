@@ -1,7 +1,7 @@
 import { JsonText } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
-import { AudioResourceJson, ImageResourceJson, ResourceJson } from './ResourceJson';
+import { AudioResourceJson, ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
 
 export interface BitJson {
   type: string; // bit type
@@ -42,6 +42,8 @@ export interface BitJson {
   width: string;
   height: string;
   thumbImage: string;
+  scormSource: string;
+  posterImage: string;
   focusX: number;
   focusY: number;
   pointerLeft: string;
@@ -52,6 +54,7 @@ export interface BitJson {
   externalLink: string;
   externalLinkText: string;
   videoCallLink: string;
+  vendorUrl: string;
   bot: string | string[];
   list: string | string[];
   textReference: string;
@@ -60,6 +63,7 @@ export interface BitJson {
   labelTrue: string;
   labelFalse: string;
   content2Buy: string;
+  buttonCaption: string;
   quotedPerson: string;
   reasonableNumOfChars: number;
   resolved: boolean;
@@ -100,7 +104,10 @@ export interface BitJson {
   extraProperties: {
     [key: string]: unknown | unknown[];
   };
+
   resource: ResourceJson;
+  logos: ImageResourceWrapperJson[];
+
   body: JsonText;
 
   sampleSolution: string;
@@ -119,7 +126,9 @@ export interface BitJson {
   questions: QuestionJson[];
   listItems: ListItemJson[];
   sections: ListItemJson[]; // sections is just a pseudonym for listItems
+
   footer: JsonText;
+
   placeholders: BodyBitsJson;
 }
 

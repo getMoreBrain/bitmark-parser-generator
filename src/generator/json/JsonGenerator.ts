@@ -103,6 +103,7 @@ import {
   DocumentResourceJson,
   ImageLinkResourceJson,
   ImageResourceJson,
+  ImageResourceWrapperJson,
   ResourceJson,
   ResourceWrapperJson,
   StillImageFilmEmbedResourceJson,
@@ -1292,6 +1293,16 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         }
         resourceJson = wrapper as ResourceJson;
       }
+    } else if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
+      // The resource is a logo grave resource
+      const logos: ImageResourceWrapperJson[] = [];
+      for (const r of resources) {
+        const json = this.parseResourceToJson(bitType, r) as ImageResourceWrapperJson;
+        if (json) {
+          logos.push(json);
+        }
+      }
+      this.bitJson.logos = logos;
     } else {
       // This is a standard resource. If there is more than one resource, use the first one.
       // There should not be more than one because of validation
@@ -2280,11 +2291,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // The default value in the JSON is hardcoded, because there is currently no good way to set a different
     // default per bit in the BitConfig.
-
-    switch (bitType) {
-      case BitType.imageSeparator:
-      case BitType.pageBanner:
-        return true;
+    if (Config.isOfBitType(bitType, [BitType.imageSeparator, BitType.pageBanner])) {
+      return true;
     }
 
     return false;
@@ -2506,6 +2514,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       width: undefined,
       height: undefined,
       thumbImage: undefined,
+      scormSource: undefined,
+      posterImage: undefined,
       focusX: undefined,
       focusY: undefined,
       pointerLeft: undefined,
@@ -2515,6 +2525,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       externalLink: undefined,
       externalLinkText: undefined,
       videoCallLink: undefined,
+      vendorUrl: undefined,
       duration: undefined,
       list: undefined,
       textReference: undefined,
@@ -2523,6 +2534,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       labelTrue: undefined,
       labelFalse: undefined,
       content2Buy: undefined,
+      buttonCaption: undefined,
       quotedPerson: undefined,
       reasonableNumOfChars: undefined,
       resolved: undefined,
@@ -2570,6 +2582,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
       // Resource
       resource: undefined,
+      logos: undefined,
 
       // Children
       statement: undefined,
@@ -2764,6 +2777,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
         if (bitJson.resolvedDate == null) bitJson.resolvedDate = '';
         if (bitJson.resolvedBy == null) bitJson.resolvedBy = '';
       }
+
+      // Special case for 'images-logos-grave' bit
+      if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
+        if (bitJson.logos == null) bitJson.logos = [];
+      }
     }
 
     // Remove unwanted properties
@@ -2804,6 +2822,8 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.width == null) delete bitJson.width;
     if (bitJson.height == null) delete bitJson.height;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;
+    if (bitJson.scormSource == null) delete bitJson.scormSource;
+    if (bitJson.posterImage == null) delete bitJson.posterImage;
     if (bitJson.focusX == null) delete bitJson.focusX;
     if (bitJson.focusY == null) delete bitJson.focusY;
     if (bitJson.pointerLeft == null) delete bitJson.pointerLeft;
@@ -2813,6 +2833,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.externalLink == null) delete bitJson.externalLink;
     if (bitJson.externalLinkText == null) delete bitJson.externalLinkText;
     if (bitJson.videoCallLink == null) delete bitJson.videoCallLink;
+    if (bitJson.vendorUrl == null) delete bitJson.vendorUrl;
     if (bitJson.duration == null) delete bitJson.duration;
     if (bitJson.list == null) delete bitJson.list;
     if (bitJson.textReference == null) delete bitJson.textReference;
@@ -2821,6 +2842,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.labelTrue == null) delete bitJson.labelTrue;
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
     if (bitJson.content2Buy == null) delete bitJson.content2Buy;
+    if (bitJson.buttonCaption == null) delete bitJson.buttonCaption;
     if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
     if (bitJson.resolved == null) delete bitJson.resolved;
     if (bitJson.resolvedDate == null) delete bitJson.resolvedDate;
@@ -2867,6 +2889,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
     // Resource
     if (bitJson.resource == null) delete bitJson.resource;
+    if (bitJson.logos == null) delete bitJson.logos;
 
     // Children
     if (bitJson.statement == null) delete bitJson.statement;

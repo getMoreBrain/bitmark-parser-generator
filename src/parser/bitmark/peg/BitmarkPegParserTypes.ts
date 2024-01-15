@@ -151,7 +151,7 @@ export interface BitContentProcessorResult {
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  posterImage?: ImageResource;
+  posterImage?: ImageResource | BreakscapedString;
   siteName?: BreakscapedString;
   imageSourceUrl?: BreakscapedString;
   mockupId?: BreakscapedString;

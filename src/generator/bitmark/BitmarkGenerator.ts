@@ -1134,12 +1134,22 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.writeResource(resource);
   }
 
+  // bitmarkAst -> bits -> bitsValue -> posterImage
   // bitmarkAst -> bits -> bitsValue -> resource -> posterImage
 
-  protected enter_posterImage(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    const posterImage = node.value as ImageResource;
-    if (posterImage && posterImage.value) {
-      this.writeProperty('posterImage', posterImage.value);
+  protected enter_posterImage(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+    if (parent?.key === NodeType.bitsValue) {
+      // Bit poster image
+      const posterImage = node.value as string;
+      if (posterImage) {
+        this.writeProperty('posterImage', posterImage);
+      }
+    } else {
+      // Resource poster image
+      const posterImage = node.value as ImageResource;
+      if (posterImage && posterImage.value) {
+        this.writeProperty('posterImage', posterImage.value);
+      }
     }
   }
 
@@ -1455,7 +1465,13 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   }
 
   protected leaf_zoomDisabled(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
-    this.writeProperty('zoomDisabled', node.value);
+    const bitType = this.getBitType(_route);
+
+    if (Config.isOfBitType(bitType, [BitType.imageSeparator, BitType.pageBanner])) {
+      this.writeProperty('zoomDisabled', node.value, undefined, false, true);
+    } else {
+      this.writeProperty('zoomDisabled', node.value, undefined, true, false);
+    }
   }
 
   protected leaf_license(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
@@ -1685,9 +1701,9 @@ class BitmarkGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   protected writeCardSetStart(): void {
     if (this.options.cardSetVersion === CardSetVersion.v1) {
-      this.write('===');
+      this.write('\n===');
     } else {
-      this.write('====');
+      this.write('\n====');
     }
   }
 

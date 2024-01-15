@@ -66,6 +66,8 @@ export interface Bit {
   width?: Property;
   height?: Property;
   thumbImage?: Property;
+  scormSource?: Property;
+  posterImage?: Property;
   focusX?: Property;
   focusY?: Property;
   pointerLeft?: Property;
@@ -76,6 +78,7 @@ export interface Bit {
   externalLink?: Property;
   externalLinkText?: Property;
   videoCallLink?: Property;
+  vendorUrl?: Property;
   bot?: Property;
   referenceProperty?: Property;
   list?: Property;
@@ -85,6 +88,7 @@ export interface Bit {
   labelTrue?: Property;
   labelFalse?: Property;
   content2Buy?: Property;
+  buttonCaption?: Property;
   quotedPerson?: Property;
   partialAnswer?: Property;
   reasonableNumOfChars?: Property;

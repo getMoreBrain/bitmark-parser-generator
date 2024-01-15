@@ -74,7 +74,16 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
   },
   [BitType.statement]: { since: '1.3.0', baseBitType: BitType.article },
-  [BitType.buttonCopyText]: { since: '1.4.3', baseBitType: BitType.article },
+  [BitType.buttonCopyText]: {
+    since: '1.4.3',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+  },
   [BitType.appBitmarkFromJavascript]: {
     since: '1.4.5',
     tags: [
@@ -611,8 +620,6 @@ const BITS: _BitsConfig = {
   [BitType.note]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.noteAi]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.notebookArticle]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.pageOpenBook]: { since: '1.5.10', baseBitType: BitType.example },
-  [BitType.pageSubscribe]: { since: '1.5.10', baseBitType: BitType.example },
   [BitType.preparationNote]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.releaseNotesSummary]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.remark]: { since: '1.3.0', baseBitType: BitType.example },
@@ -632,6 +639,26 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
     footerAllowed: true,
     rootExampleType: ExampleType.string,
+  },
+  [BitType.pageOpenBook]: {
+    since: '1.5.10',
+    baseBitType: BitType.example,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+  },
+  [BitType.pageSubscribe]: {
+    since: '1.5.10',
+    baseBitType: BitType.example,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
   },
   [BitType.assignmentList]: { since: '1.4.13', baseBitType: BitType.exampleList },
   [BitType.pageFooter]: { since: '1.4.13', baseBitType: BitType.exampleList },
@@ -760,6 +787,24 @@ const BITS: _BitsConfig = {
         // Combo resource
         type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceImageResponsive,
+      },
+    ],
+
+    bodyAllowed: true, // false??
+  },
+  [BitType.imagesLogoGrave]: {
+    since: '1.5.11',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        // Image resource
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceImage,
+        minCount: 1,
+        maxCount: Count.infinity,
       },
     ],
 
@@ -1029,10 +1074,15 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.content2Buy,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
+  [BitType.pageBuyButtonPromotion]: { since: '1.5.11', baseBitType: BitType.pageBuyButton },
   [BitType.pageProduct]: {
     since: '1.4.17',
     tags: [
@@ -1289,7 +1339,25 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: true,
     bodyAllowed: true,
   },
-
+  [BitType.scorm]: {
+    since: '1.5.11',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.scormSource,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.posterImage,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+  },
   [BitType.toc]: {
     since: '1.3.0',
     tags: [
@@ -1405,6 +1473,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.height, // Same as image
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.vendorUrl,
       },
     ],
     textFormatDefault: TextFormat.text,

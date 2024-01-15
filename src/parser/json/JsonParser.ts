@@ -80,6 +80,7 @@ import {
   ResourceDataJson,
   StillImageFilmResourceJson,
   ImageResponsiveResourceJson,
+  ImageResourceWrapperJson,
 } from '../../model/json/ResourceJson';
 
 interface ReferenceAndReferenceProperty {
@@ -264,6 +265,8 @@ class JsonParser {
       height,
       action,
       thumbImage,
+      scormSource,
+      posterImage,
       focusX,
       focusY,
       pointerLeft,
@@ -274,6 +277,7 @@ class JsonParser {
       externalLink,
       externalLinkText,
       videoCallLink,
+      vendorUrl,
       bot,
       list,
       textReference,
@@ -282,6 +286,7 @@ class JsonParser {
       labelTrue,
       labelFalse,
       content2Buy,
+      buttonCaption,
       quotedPerson,
       reasonableNumOfChars,
       resolved,
@@ -312,6 +317,7 @@ class JsonParser {
       partner,
       marks,
       resource,
+      logos,
       body,
       sampleSolution,
       elements,
@@ -345,7 +351,7 @@ class JsonParser {
     const resourceAttachmentType = this.getResourceType(resource);
 
     // resource(s)
-    const resourcesNode = this.resourceBitToAst(resource);
+    const resourcesNode = this.resourceBitToAst(bitType, resource, logos);
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
@@ -438,6 +444,8 @@ class JsonParser {
       width,
       height,
       thumbImage: this.convertStringToBreakscapedString(thumbImage),
+      scormSource: this.convertStringToBreakscapedString(scormSource),
+      posterImage: this.convertStringToBreakscapedString(posterImage),
       focusX,
       focusY,
       pointerLeft: this.convertStringToBreakscapedString(pointerLeft),
@@ -447,6 +455,7 @@ class JsonParser {
       externalLink: this.convertStringToBreakscapedString(externalLink),
       externalLinkText: this.convertStringToBreakscapedString(externalLinkText),
       videoCallLink: this.convertStringToBreakscapedString(videoCallLink),
+      vendorUrl: this.convertStringToBreakscapedString(vendorUrl),
       bot: this.convertStringToBreakscapedString(bot),
       list: this.convertStringToBreakscapedString(list),
       textReference: this.convertStringToBreakscapedString(textReference),
@@ -455,6 +464,7 @@ class JsonParser {
       labelTrue: this.convertStringToBreakscapedString(labelTrue),
       labelFalse: this.convertStringToBreakscapedString(labelFalse),
       content2Buy: this.convertStringToBreakscapedString(content2Buy),
+      buttonCaption: this.convertStringToBreakscapedString(buttonCaption),
       quotedPerson: this.convertStringToBreakscapedString(quotedPerson),
       reasonableNumOfChars,
       resolved,
@@ -902,7 +912,11 @@ class JsonParser {
     return undefined;
   }
 
-  private resourceBitToAst(resource?: ResourceJson): Resource[] | undefined {
+  private resourceBitToAst(
+    bitType: BitTypeType,
+    resource: ResourceJson | undefined,
+    logos: ImageResourceWrapperJson[] | undefined,
+  ): Resource[] | undefined {
     const nodes: Resource[] | undefined = [];
 
     if (resource) {
@@ -937,6 +951,16 @@ class JsonParser {
 
         const node = this.resourceDataToAst(resource.type, data);
         if (node) nodes.push(node);
+      }
+    }
+
+    if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
+      // Add the logo images
+      if (Array.isArray(logos)) {
+        for (const logo of logos) {
+          const node = this.resourceDataToAst(ResourceTag.image, logo.image);
+          if (node) nodes.push(node);
+        }
       }
     }
 
