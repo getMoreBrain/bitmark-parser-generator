@@ -4,6 +4,7 @@
       "type": "page-buy-button-promotion",
       "format": "bitmark--",
       "id": ["342341"],
+      "buttonCaption": "OK!",
       "content2Buy": "testing 123",
       "item": [],
       "lead": [

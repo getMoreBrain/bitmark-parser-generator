@@ -318,7 +318,8 @@
       "hint": [],
       "isExample": false,
       "example": null,
-      "body": []
+      "body": [],
+      "buttonCaption": "OK!"
     },
     "parser": {
       "version": "1.4.12",

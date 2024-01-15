@@ -143,6 +143,7 @@ class Builder extends BaseBuilder {
     labelTrue?: BreakscapedString;
     labelFalse?: BreakscapedString;
     content2Buy?: BreakscapedString;
+    buttonCaption?: BreakscapedString;
     quotedPerson?: BreakscapedString;
     reasonableNumOfChars?: number;
     resolved?: boolean;
@@ -261,6 +262,7 @@ class Builder extends BaseBuilder {
       labelTrue,
       labelFalse,
       content2Buy,
+      buttonCaption,
       book,
       quotedPerson,
       partialAnswer,
@@ -378,6 +380,7 @@ class Builder extends BaseBuilder {
       labelTrue: this.toAstProperty(PropertyConfigKey.labelTrue, labelTrue),
       labelFalse: this.toAstProperty(PropertyConfigKey.labelFalse, labelFalse),
       content2Buy: this.toAstProperty(PropertyConfigKey.content2Buy, content2Buy),
+      buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, buttonCaption),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       reasonableNumOfChars: reasonableNumOfCharsProperty,

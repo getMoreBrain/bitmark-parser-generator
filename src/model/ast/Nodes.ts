@@ -87,6 +87,7 @@ export interface Bit {
   labelTrue?: Property;
   labelFalse?: Property;
   content2Buy?: Property;
+  buttonCaption?: Property;
   quotedPerson?: Property;
   partialAnswer?: Property;
   reasonableNumOfChars?: Property;
