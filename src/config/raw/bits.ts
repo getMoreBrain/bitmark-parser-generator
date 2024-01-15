@@ -1474,6 +1474,10 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.height, // Same as image
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.vendorUrl,
+      },
     ],
     textFormatDefault: TextFormat.text,
     bodyAllowed: true,

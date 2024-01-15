@@ -2525,6 +2525,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       externalLink: undefined,
       externalLinkText: undefined,
       videoCallLink: undefined,
+      vendorUrl: undefined,
       duration: undefined,
       list: undefined,
       textReference: undefined,
@@ -2832,6 +2833,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     if (bitJson.externalLink == null) delete bitJson.externalLink;
     if (bitJson.externalLinkText == null) delete bitJson.externalLinkText;
     if (bitJson.videoCallLink == null) delete bitJson.videoCallLink;
+    if (bitJson.vendorUrl == null) delete bitJson.vendorUrl;
     if (bitJson.duration == null) delete bitJson.duration;
     if (bitJson.list == null) delete bitJson.list;
     if (bitJson.textReference == null) delete bitJson.textReference;

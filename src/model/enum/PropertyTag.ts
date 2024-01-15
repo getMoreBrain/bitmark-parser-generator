@@ -96,6 +96,7 @@ const PropertyTag = superenum({
   thumbImage: 'thumbImage',
   toc: 'toc',
   trim: 'trim',
+  vendorUrl: 'vendorUrl',
   videoCallLink: 'videoCallLink',
   width: 'width',
   zoomDisabled: 'zoomDisabled',
