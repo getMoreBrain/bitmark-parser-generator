@@ -454,10 +454,11 @@ function parseMatchPairs(
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   let sideIdx = 0;
+  let isHeading = false;
   let heading: Heading | undefined;
   const pairs: Pair[] = [];
   let forKeys: BreakscapedString | undefined = undefined;
-  const forValues: BreakscapedString[] = [];
+  let forValues: BreakscapedString[] = [];
   let pairKey: BreakscapedString | undefined = undefined;
   let pairValues: BreakscapedString[] = [];
   let keyAudio: AudioResource | undefined = undefined;
@@ -470,7 +471,9 @@ function parseMatchPairs(
   // let variant: ProcessedCardVariant | undefined;
 
   for (const card of cardSet.cards) {
+    isHeading = false;
     forKeys = undefined;
+    forValues = [];
     pairKey = undefined;
     pairValues = [];
     keyAudio = undefined;
@@ -491,11 +494,12 @@ function parseMatchPairs(
 
         // Get the 'heading' which is the [#title] at level 1
         const heading = title && title[1];
+        if (heading != null) isHeading = true;
 
         if (sideIdx === 0) {
           // First side
+          forKeys = heading;
           if (heading != null) {
-            forKeys = heading;
             isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
             exampleCardSet = example ? example : exampleCardSet;
           } else if (Array.isArray(resources) && resources.length > 0) {
@@ -513,8 +517,8 @@ function parseMatchPairs(
           }
         } else {
           // Subsequent sides
+          forValues.push(heading ?? Breakscape.EMPTY_STRING);
           if (heading != null) {
-            forValues.push(heading);
             isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
             exampleCardSet = example ? example : exampleCardSet;
           } else if (title == null) {
@@ -538,9 +542,9 @@ function parseMatchPairs(
       sideIdx++;
     }
 
-    if (forKeys != null) {
+    if (isHeading) {
       heading = builder.heading({
-        forKeys,
+        forKeys: forKeys ?? Breakscape.EMPTY_STRING,
         forValues,
       });
     } else {
@@ -578,9 +582,10 @@ function parseMatchMatrix(
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   let sideIdx = 0;
+  let isHeading = false;
   let heading: Heading | undefined;
   let forKeys: BreakscapedString | undefined = undefined;
-  const forValues: BreakscapedString[] = [];
+  let forValues: BreakscapedString[] = [];
   let matrixKey: BreakscapedString | undefined = undefined;
   const matrix: Matrix[] = [];
   let matrixCells: MatrixCell[] = [];
@@ -600,8 +605,10 @@ function parseMatchMatrix(
   // let variant: ProcessedCardVariant | undefined;
 
   for (const card of cardSet.cards) {
+    isHeading = false;
     forKeys = undefined;
     matrixKey = undefined;
+    forValues = [];
     // keyAudio = undefined;
     // keyImage = undefined;
     matrixCells = [];
@@ -633,11 +640,12 @@ function parseMatchMatrix(
 
         // Get the 'heading' which is the [#title] at level 1
         const heading = title && title[1];
+        if (heading != null) isHeading = true;
 
         if (sideIdx === 0) {
           // First side
+          forKeys = heading;
           if (heading != null) {
-            forKeys = heading;
             // } else if (tags.resource) {
             //   console.log('WARNING: Match card has resource on first side', tags.resource);
             //   if (tags.resource.type === ResourceTag.audio) {
@@ -656,8 +664,8 @@ function parseMatchMatrix(
           }
         } else {
           // Subsequent sides
+          forValues.push(heading ?? Breakscape.EMPTY_STRING);
           if (heading != null) {
-            forValues.push(heading);
             isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
             exampleCardSet = example ? example : exampleCardSet;
           } else if (tags.title == null) {
@@ -691,9 +699,9 @@ function parseMatchMatrix(
       sideIdx++;
     }
 
-    if (forKeys != null) {
+    if (isHeading) {
       heading = builder.heading({
-        forKeys,
+        forKeys: forKeys ?? Breakscape.EMPTY_STRING,
         forValues,
       });
     } else {

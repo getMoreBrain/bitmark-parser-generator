@@ -6,7 +6,7 @@ import { Bit } from '../../model/ast/Nodes';
 import { BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { TextMarkType } from '../../model/enum/TextMarkType';
+import { TextMarkType, TextMarkTypeType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
 
@@ -49,6 +49,36 @@ const STANDARD_MARKS: { [key: string]: string } = {
   [TextMarkType.italic]: ITALIC_MARK,
   [TextMarkType.highlight]: HIGHLIGHT_MARK,
 };
+
+const STANDARD_MARK_TYPES: TextMarkTypeType[] = [
+  TextMarkType.bold,
+  TextMarkType.light,
+  TextMarkType.italic,
+  TextMarkType.highlight,
+];
+const INLINE_MARK_TYPES: TextMarkTypeType[] = [
+  TextMarkType.strike,
+  TextMarkType.subscript,
+  TextMarkType.superscript,
+  TextMarkType.ins,
+  TextMarkType.del,
+  TextMarkType.underline,
+  TextMarkType.doubleUnderline,
+  TextMarkType.circle,
+  TextMarkType.languageEm,
+  TextMarkType.userUnderline,
+  TextMarkType.userDoubleUnderline,
+  TextMarkType.userStrike,
+  TextMarkType.userCircle,
+  TextMarkType.userHighlight,
+  //
+  TextMarkType.var,
+  TextMarkType.code,
+  TextMarkType.timer,
+  TextMarkType.duration,
+  TextMarkType.color,
+  TextMarkType.comment,
+];
 
 // Regex explanation:
 // - Match newline or carriage return + newline
@@ -561,28 +591,13 @@ class TextGenerator implements AstWalkCallbacks {
       const markStartEnd = node.marks.reduce(
         (acc, mark) => {
           if (acc) return acc;
-          switch (mark.type) {
-            case TextMarkType.bold:
-            case TextMarkType.light:
-            case TextMarkType.italic:
-            case TextMarkType.highlight:
-              if (singleMark) return STANDARD_MARKS[mark.type];
-              return INLINE_MARK;
-              break;
-            case TextMarkType.strike:
-            case TextMarkType.sub:
-            case TextMarkType.super:
-            case TextMarkType.ins:
-            case TextMarkType.del:
-            case TextMarkType.var:
-            case TextMarkType.code:
-            case TextMarkType.color:
-            case TextMarkType.comment:
-              return INLINE_MARK;
-
-            case TextMarkType.link:
-            default:
-            // Do nothing (link is handled in writeText)
+          if (STANDARD_MARK_TYPES.indexOf(mark.type) !== -1) {
+            if (singleMark) return STANDARD_MARKS[mark.type];
+            return INLINE_MARK;
+          } else if (INLINE_MARK_TYPES.indexOf(mark.type) !== -1) {
+            return INLINE_MARK;
+          } else {
+            // Do nothing (NOTE: link is handled in writeText)
           }
           return acc;
         },
@@ -599,39 +614,22 @@ class TextGenerator implements AstWalkCallbacks {
         if (!enter) {
           let inlineMarkWritten = false;
           for (const mark of node.marks) {
-            switch (mark.type) {
-              case TextMarkType.bold:
-              case TextMarkType.light:
-              case TextMarkType.italic:
-              case TextMarkType.highlight:
-                if (!singleMark) {
-                  this.writeInlineMarkStartEnd();
-                  this.writeInlineMark(mark);
-                  inlineMarkWritten = true;
-                }
-                break;
-              case TextMarkType.strike:
-              case TextMarkType.sub:
-              case TextMarkType.super:
-              case TextMarkType.ins:
-              case TextMarkType.del:
-              case TextMarkType.var:
-              case TextMarkType.code:
-              case TextMarkType.color:
+            if (STANDARD_MARK_TYPES.indexOf(mark.type) !== -1) {
+              if (!singleMark) {
                 this.writeInlineMarkStartEnd();
                 this.writeInlineMark(mark);
                 inlineMarkWritten = true;
-                break;
-
-              case TextMarkType.comment: {
-                this.writeInlineMarkStartEnd();
-                this.writeCommentMark(mark as CommentMark);
-                inlineMarkWritten = true;
-                break;
               }
-              case TextMarkType.link:
-              default:
-              // Do nothing (link is handled in writeText)
+            } else if (TextMarkType.comment === mark.type) {
+              this.writeInlineMarkStartEnd();
+              this.writeCommentMark(mark as CommentMark);
+              inlineMarkWritten = true;
+            } else if (INLINE_MARK_TYPES.indexOf(mark.type) !== -1) {
+              this.writeInlineMarkStartEnd();
+              this.writeInlineMark(mark);
+              inlineMarkWritten = true;
+            } else {
+              // Do nothing (NOTE: link is handled in writeText)
             }
           }
           // Write the mark end
@@ -754,7 +752,7 @@ class TextGenerator implements AstWalkCallbacks {
     let s = `${mark.type}`;
     if (mark.attrs) {
       for (const [k, v] of Object.entries(mark.attrs)) {
-        if ((k === 'language' && v !== 'plain text') || k === 'color') {
+        if ((k === 'language' && v !== 'plain text') || k === 'color' || k === 'name' || k === 'duration') {
           s = `${s}:${v}`;
         }
       }

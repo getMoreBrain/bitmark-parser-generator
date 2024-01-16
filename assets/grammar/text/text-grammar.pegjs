@@ -1,5 +1,5 @@
 // bitmark Text parser
-// v8.3.2+BPG
+// v8.7.1+BPG
 
 //Parser peggy.js
 
@@ -89,8 +89,6 @@ Das war's
 
 {{
 
-// export const UNBREAKSCAPE_REGEX = new RegExp(/=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\^(\^*)\]|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\^(\^*)/, "g")
-
 function s(_string) {
   return _string ?? ""
 }
@@ -98,11 +96,12 @@ function s(_string) {
 function unbreakscape(_str) {
 	let u_ = _str || ""
 
-  // function replacer(match, p1, offset, string, groups) {
+	// function replacer(match, p1, offset, string, groups) {
   // 		return match.replace("^", "");
 	// }
 
-  // let re_ = UNBREAKSCAPE_REGEX;
+  // let re_ = new RegExp( /=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
+
   // u_ = u_.replace(re_, replacer)
   u_ = Breakscape.unbreakscape(u_);
 
@@ -110,42 +109,45 @@ function unbreakscape(_str) {
 }
 
 function bitmarkPlusPlus(_str) {
-  if (typeof parser !== 'undefined') {
-  	return parser.parse(_str, { startRule: "bitmarkPlusPlus" })
-  }
-  return peg$parse(_str, { startRule: "bitmarkPlusPlus" })
+
   // if (parser) {
   // 	return parser.parse(_str, { startRule: "bitmarkPlusPlus" })
   // } else {
   //   // embedded in Get More Brain
   //   return parse(_str, { startRule: "bitmarkPlusPlus" })
   // }
+  if (typeof parser !== 'undefined') {
+  	return parser.parse(_str, { startRule: "bitmarkPlusPlus" })
+  }
+  return peg$parse(_str, { startRule: "bitmarkPlusPlus" })
 }
 
 function bitmarkPlusString(_str) {
-  if (typeof parser !== 'undefined') {
-    return parser.parse(_str, { startRule: "bitmarkPlusString" })
-  }
-  return peg$parse(_str, { startRule: "bitmarkPlusString" })
+
   // if (parser) {
   // 	return parser.parse(_str, { startRule: "bitmarkPlusString" })
   // } else {
   //   // embedded in Get More Brain
   //   return parse(_str, { startRule: "bitmarkPlusString" })
   // }
+  if (typeof parser !== 'undefined') {
+    return parser.parse(_str, { startRule: "bitmarkPlusString" })
+  }
+  return peg$parse(_str, { startRule: "bitmarkPlusString" })
 }
 
 function bitmarkMinusMinusString(_str) {
-  if (typeof parser !== 'undefined') {
-  	return parser.parse(_str, { startRule: "bitmarkMinusMinusString" })
-  }
-  return peg$parse(_str, { startRule: "bitmarkMinusMinusString" })
+
   // if (parser) {
   // 	return parser.parse(_str, { startRule: "bitmarkMinusMinusString" })
   // } else {
   //   // embedded in Get More Brain
   //   return parse(_str, { startRule: "bitmarkMinusMinusString" })
   // }
+  if (typeof parser !== 'undefined') {
+  	return parser.parse(_str, { startRule: "bitmarkMinusMinusString" })
+  }
+  return peg$parse(_str, { startRule: "bitmarkMinusMinusString" })
 }
 
 }}
@@ -392,6 +394,7 @@ ImageBlock
     let alt_ = chain.alt || null; delete chain.alt
     let title_ = chain.caption || null; delete chain.caption
     let class_ = chain.align || "center"; delete chain.align
+	let zoomDisabled_ = chain.zoomDisabled || Boolean(chain.zoomDisabled); delete chain.zoomDisabled
 
     let image = {
       type: t,
@@ -401,6 +404,7 @@ ImageBlock
         alt: alt_,
         title: title_,
         class: class_,
+		zoomDisabled: zoomDisabled_,
         ...chain
       }
     }
@@ -414,12 +418,12 @@ MediaChain
 
 MediaChainItem
   = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
-  / '@'? p: MediaNumberTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
-  / '@'? p: MediaNumberTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be an positive integer.', found: v }}
+  / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
+  / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be an positive integer.', found: v }}
   / '@'? p: $((!(BlockTag / ':') char)*) ':' ' '? v: $((!BlockTag char)*) BlockTag { return { [p]: v } }
   / '@'? p: $((!BlockTag char)*) BlockTag {return { [p]: true } }
 
-MediaNumberTags
+MediaSizeTags
   = 'width' / 'height'
 
 
@@ -452,7 +456,7 @@ InlineLaTexTag = InlineLaTexHalfTag InlineLaTexHalfTag
 
 InlineStyledText
   = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
-  / InlineTag ' '? t: $((!(' '? InlineTag) .)* ) ' '? InlineTag marks: AttrChain? { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
+  / InlineTag ' '? t: $((!(' '? InlineTag) .)* ) ' '? InlineTag marks: AttrChain { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
   / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
   / ItalicTag ' '? t: $((!(' '? ItalicTag) .)* ) ' '? ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
   / LightTag ' '? t: $((!(' '? LightTag) .)* ) ' '? LightTag { return { marks: [{type: "light"}], text: unbreakscape(t), type: "text" } }
@@ -466,7 +470,7 @@ InlineTagTags
   / $(HighlightTag HighlightHalfTag+)
 
 AttrChain
-  = '|' ch: AttrChainItem* { return ch }
+  = '|' ch: AttrChainItem+ { return ch }
 
 // ==This is a link==|link:https://www.apple.com/|
 // ==503==|var:AHV Mindestbeitrag|
@@ -478,6 +482,9 @@ AttrChainItem
   / 'var:' str: $((!BlockTag char)*) BlockTag {return { type: 'var', attrs: { name: str.trim() } }}
   / 'code' BlockTag {return { type: 'code', attrs: { language: "plain text" } }}
   / 'code:' lang: $((!BlockTag char)*) BlockTag {return { type: 'code', attrs: { language: lang.trim().toLowerCase() } }}
+  / 'timer' BlockTag {return { type: 'timer', attrs: { name: "" } }}
+  / 'timer:' str: $((!BlockTag char)*) BlockTag {return { type: 'timer', attrs: { name: str.trim() } }}
+  / 'duration:' str: $('P' $((!BlockTag char)*)) BlockTag {return { type: 'duration', attrs: { duration: str } }}
   / 'color:' color: Color BlockTag {return { type: 'color', attrs: { color } }}
   / style: AlternativeStyleTags BlockTag {return { type: style }}
   / '#' str: $((!BlockTag char)*) BlockTag {return { type: "comment", comment: str }}
@@ -490,11 +497,19 @@ AlternativeStyleTags
   / 'light'
   / 'highlight'
   / 'strike'
-  / 'sub'
-  / 'super'
+  / 'subscript'
+  / 'superscript'
   / 'ins'
   / 'del'
-
+  / 'underline'
+  / 'doubleUnderline'
+  / 'circle'
+  / 'languageEm'
+   / 'userUnderline'
+  / 'userDoubleUnderline'
+  / 'userStrike'
+  / 'userCircle'
+  / 'userHighlight'
 
 Color
   = 'aqua'
