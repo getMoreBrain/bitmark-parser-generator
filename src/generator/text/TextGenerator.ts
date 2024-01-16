@@ -1,4 +1,4 @@
-import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
+import { Ast, NodeInfo } from '../../ast/Ast';
 import { Breakscape } from '../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
@@ -9,6 +9,7 @@ import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextMarkType, TextMarkTypeType } from '../../model/enum/TextMarkType';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
+import { AstWalkerGenerator } from '../AstWalkerGenerator';
 
 import {
   CodeBlockTextNode,
@@ -100,7 +101,7 @@ export interface TextOptions {
 /**
  * Generate text from a bitmark text AST
  */
-class TextGenerator implements AstWalkCallbacks {
+class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   protected ast = new Ast();
   private bitmarkVersion: BitmarkVersionType;
   private options: TextOptions;
@@ -116,9 +117,6 @@ class TextGenerator implements AstWalkCallbacks {
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
 
-  // Debug
-  private printed = false;
-
   /**
    * Generate text from a bitmark text AST
    *
@@ -126,11 +124,15 @@ class TextGenerator implements AstWalkCallbacks {
    * @param options - text generation options
    */
   constructor(bitmarkVersion?: BitmarkVersionType, options?: TextOptions) {
+    super();
+
     this.bitmarkVersion = BitmarkVersion.fromValue(bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
       ...options,
     };
+
+    this.debugGenerationInline = this.options.debugGenerationInline ?? false;
 
     // Set defaults according to bitmark version
     if (this.bitmarkVersion === BitmarkVersion.v2) {
@@ -198,119 +200,41 @@ class TextGenerator implements AstWalkCallbacks {
     this.ast.walk(ast, NodeType.textAst, this, undefined);
   }
 
-  enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
-    let res: boolean | void = void 0;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this as any;
-    const funcName = `enter_${node.key}`;
-
-    if (!this.printed) {
-      this.printed = true;
-    }
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { open: true });
-
-    if (typeof gen[funcName] === 'function') {
-      res = gen[funcName](node, parent, route);
-    }
-
-    return res;
-  }
-
-  between(
-    node: NodeInfo,
-    left: NodeInfo,
-    right: NodeInfo,
-    parent: NodeInfo | undefined,
-    route: NodeInfo[],
-  ): boolean | void {
-    let res: boolean | void = void 0;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this as any;
-    const funcName = `between_${node.key}`;
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { single: true });
-
-    if (typeof gen[funcName] === 'function') {
-      res = gen[funcName](node, left, right, parent, route);
-    }
-
-    return res;
-  }
-
-  exit(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this as any;
-    const funcName = `exit_${node.key}`;
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { close: true });
-
-    if (typeof gen[funcName] === 'function') {
-      gen[funcName](node, parent, route);
-    }
-  }
-
-  leaf(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this as any;
-    const funcName = `leaf_${node.key}`;
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { open: true });
-
-    if (typeof gen[funcName] === 'function') {
-      gen[funcName](node, parent, route);
-    }
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { close: true });
-  }
-
   //
   // NODE HANDLERS
   //
 
   // * -> textAstValue
 
-  protected enter_textAstValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void | false {
-    return this.handleEnterNode(node.value);
+  protected enter_textAstValue(node: NodeInfo, route: NodeInfo[]): void | false {
+    return this.handleEnterNode(node.value, route);
   }
 
-  protected between_textAstValue(
-    node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void | false {
-    return this.handleBetweenNode(node.value);
+  protected between_textAstValue(node: NodeInfo, left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void | false {
+    return this.handleBetweenNode(node.value, left, right, route);
   }
 
-  protected exit_textAstValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void | false {
-    return this.handleExitNode(node.value);
+  protected exit_textAstValue(node: NodeInfo, route: NodeInfo[]): void | false {
+    return this.handleExitNode(node.value, route);
   }
 
   // * -> contentValue
 
-  protected enter_contentValueValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void | false {
-    return this.handleEnterNode(node.value);
+  protected enter_contentValueValue(node: NodeInfo, route: NodeInfo[]): void | false {
+    return this.handleEnterNode(node.value, route);
   }
 
-  protected between_contentValueValue(
-    node: NodeInfo,
-    _left: NodeInfo,
-    _right: NodeInfo,
-    _parent: NodeInfo | undefined,
-    _route: NodeInfo[],
-  ): void {
-    this.handleBetweenNode(node.value);
+  protected between_contentValueValue(node: NodeInfo, left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+    this.handleBetweenNode(node.value, left, right, route);
   }
 
-  protected exit_contentValueValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void | false {
-    return this.handleExitNode(node.value);
+  protected exit_contentValueValue(node: NodeInfo, route: NodeInfo[]): void | false {
+    return this.handleExitNode(node.value, route);
   }
 
   // END NODE HANDLERS
 
-  protected handleEnterNode(node: TextNode): void | false {
+  protected handleEnterNode(node: TextNode, route: NodeInfo[]): void | false {
     this.handleIndent(node);
 
     switch (node.type) {
@@ -337,7 +261,7 @@ class TextGenerator implements AstWalkCallbacks {
 
       case TextNodeType.listItem:
       case TextNodeType.taskItem:
-        this.writeBullet(node);
+        this.writeBullet(node, route);
         break;
 
       case TextNodeType.image:
@@ -364,14 +288,14 @@ class TextGenerator implements AstWalkCallbacks {
     this.exitedCodeBlock = false;
   }
 
-  protected handleBetweenNode(node: TextNode): void {
+  protected handleBetweenNode(node: TextNode, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
     switch (node.type) {
       default:
       // Ignore unknown type
     }
   }
 
-  protected handleExitNode(node: TextNode): void | false {
+  protected handleExitNode(node: TextNode, _route: NodeInfo[]): void | false {
     switch (node.type) {
       case TextNodeType.text:
         this.writeMarks(node, false);
@@ -680,16 +604,18 @@ class TextGenerator implements AstWalkCallbacks {
     this.write(s);
   }
 
-  protected writeBullet(node: TextNode) {
+  protected writeBullet(node: TextNode, route: NodeInfo[]) {
     // Add indentation
     let bullet = this.getIndentationString();
+    const listParent = this.getParentNode(route, 2);
+    const listType = node.parent ?? listParent?.value.type;
 
     // Add bullet
-    if (node.parent === TextNodeType.bulletList) {
+    if (listType === TextNodeType.bulletList) {
       bullet += '• ';
-    } else if (node.parent === TextNodeType.orderedList) {
+    } else if (listType === TextNodeType.orderedList) {
       bullet += '•1 ';
-    } else if (node.parent === TextNodeType.taskList) {
+    } else if (listType === TextNodeType.taskList) {
       const taskList = node as TaskItemTextNode;
       const checked = taskList.attrs?.checked ?? false;
       bullet += checked ? '•+ ' : '•- ';
@@ -795,6 +721,10 @@ class TextGenerator implements AstWalkCallbacks {
 
     this.writeString(tag);
   }
+
+  //
+  // Helper functions
+  //
 
   protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
     for (const node of route) {
