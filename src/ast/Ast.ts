@@ -29,11 +29,10 @@ export interface AstWalkCallbacks<C = undefined> {
    * Called when a branch node is entered
    *
    * @param node - this node info
-   * @param parent - parent node info
    * @param route - route to this node from the root
    * @returns
    */
-  enter?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[], context: C) => void | boolean;
+  enter?: (node: NodeInfo, route: NodeInfo[], context: C) => void | boolean;
 
   /**
    * Called when between child nodes
@@ -41,36 +40,26 @@ export interface AstWalkCallbacks<C = undefined> {
    * @param node - this node info (the parent of the children in leftNode / rightNode)
    * @param leftNode - the left (previous) child node info
    * @param rightNode - the right (next) child node info
-   * @param parent - parent node info (parent of node)
    * @param route
    * @returns
    */
-  between?: (
-    node: NodeInfo,
-    leftNode: NodeInfo,
-    rightNode: NodeInfo,
-    parent: NodeInfo | undefined,
-    route: NodeInfo[],
-    context: C,
-  ) => void | boolean;
+  between?: (node: NodeInfo, leftNode: NodeInfo, rightNode: NodeInfo, route: NodeInfo[], context: C) => void | boolean;
 
   /**
    * Called when a branch node is exited
    * @param node - this node info
-   * @param parent - parent node info
    * @param route - route to this node from the root
    * @returns
    */
-  exit?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[], context: C) => void;
+  exit?: (node: NodeInfo, route: NodeInfo[], context: C) => void;
 
   /**
    * Called when a leaf node is entered
    * @param node - this node info
-   * @param parent - parent node info
    * @param route - route to this node from the root
    * @returns
    */
-  leaf?: (node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[], context: C) => void;
+  leaf?: (node: NodeInfo, route: NodeInfo[], context: C) => void;
 }
 
 /**
@@ -118,7 +107,7 @@ class Ast {
    * @param callbacks - set of callbacks to call while walking the tree
    */
   walk<C>(ast: Node, type: NodeTypeType, callbacks: AstWalkCallbacks<C>, context: C): void {
-    this.walkRecursive(ast, undefined, callbacks, [{ index: 0, key: type, value: ast }], context);
+    this.walkRecursive(ast, [{ index: 0, key: type, value: ast }], callbacks, context);
   }
 
   /**
@@ -151,28 +140,21 @@ class Ast {
   printTree(ast: Node, rootKey: NodeTypeType = NodeType.bitmarkAst): void {
     this.walkRecursive(
       ast,
-      undefined,
+      [{ index: 0, key: rootKey, value: ast }],
       {
-        enter: (_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]) => {
+        enter: (_node: NodeInfo, route: NodeInfo[]) => {
           console.log('Enter:   ' + this.getRouteKey(route));
         },
-        between: (
-          _node: NodeInfo,
-          _left: NodeInfo,
-          _right: NodeInfo,
-          _parent: NodeInfo | undefined,
-          route: NodeInfo[],
-        ) => {
+        between: (_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]) => {
           console.log('Between: ' + this.getRouteKey(route));
         },
-        exit: (_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]) => {
+        exit: (_node: NodeInfo, route: NodeInfo[]) => {
           console.log('Exit:    ' + this.getRouteKey(route));
         },
-        leaf: (_node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]) => {
+        leaf: (_node: NodeInfo, route: NodeInfo[]) => {
           console.log('Leaf:    ' + this.getRouteKey(route));
         },
       },
-      [{ index: 0, key: rootKey, value: ast }],
       undefined,
     );
   }
@@ -215,14 +197,7 @@ class Ast {
     return false;
   }
 
-  private walkRecursive<C>(
-    node: Node,
-    parent: NodeInfo | undefined,
-    callbacks: AstWalkCallbacks<C>,
-    route: NodeInfo[],
-
-    context: C,
-  ): void {
+  private walkRecursive<C>(node: Node, route: NodeInfo[], callbacks: AstWalkCallbacks<C>, context: C): void {
     const { enter, between, exit, leaf } = callbacks;
 
     const parentKey = route[route.length - 1].key;
@@ -233,12 +208,12 @@ class Ast {
     // Call the enter callback for the node before walking children
     if (isBranch) {
       if (enter) {
-        const res = enter(nodeInfo, parent, route, context);
+        const res = enter(nodeInfo, route, context);
         // If return is false, stop walking this node
         if (res === false) return;
       }
     } else {
-      if (leaf) leaf(nodeInfo, parent, route, context);
+      if (leaf) leaf(nodeInfo, route, context);
     }
 
     // Walk child nodes
@@ -262,7 +237,7 @@ class Ast {
 
           const r = route.slice();
           r.push(childNodeInfo);
-          this.walkRecursive(child, nodeInfo, callbacks, r, context);
+          this.walkRecursive(child, r, callbacks, context);
 
           if (!lastChild) {
             const nextKey = keys[i + 1];
@@ -275,7 +250,7 @@ class Ast {
 
             // Call the between callback when between children
             if (between) {
-              const res = between(nodeInfo, childNodeInfo, nextChildNodeInfo, parent, route, context);
+              const res = between(nodeInfo, childNodeInfo, nextChildNodeInfo, route, context);
               // If return is false, stop looping children
               if (res === false) break;
             }
@@ -286,7 +261,7 @@ class Ast {
 
     // Call the exit callback for the node before walking children
     if (isBranch) {
-      if (exit) exit(nodeInfo, parent, route, context);
+      if (exit) exit(nodeInfo, route, context);
     }
   }
 

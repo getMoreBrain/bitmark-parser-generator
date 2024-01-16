@@ -1,5 +1,5 @@
 // bitmark Text parser
-// v8.7.1+BPG
+// v8.8.2+BPG
 
 //Parser peggy.js
 
@@ -53,8 +53,8 @@ Alex
 	•1 Num 2
 	Second Line
 • Three
-	• Sub Three
-	• More Sub Three
+	•A Sub Three
+	•A More Sub Three
 
 
 •+ Milk
@@ -108,6 +108,17 @@ function unbreakscape(_str) {
   return u_
 }
 
+function removeTempParsingParent(obj) {
+    if (obj && typeof obj === 'object') {
+        delete obj._tempParsingParent; // Remove the property if exists
+
+        Object.keys(obj).forEach(key => {
+            // Recursively call the function for all sub-objects
+            removeTempParsingParent(obj[key]);
+        });
+    }
+}
+
 function bitmarkPlusPlus(_str) {
 
   // if (parser) {
@@ -153,7 +164,7 @@ function bitmarkMinusMinusString(_str) {
 }}
 
 // per-parse initializer
-//   instance variables
+// instance variables
 
 {
     var indentStack = [], indent = ""
@@ -182,7 +193,7 @@ bitmarkPlusPlus "StyledText"
 
 Block
   = b: TitleBlock { return { ...b }}
-  / b: ListBlock { return { ...b }}
+  / b: ListBlock { let lb_ = { ...b }; removeTempParsingParent(lb_); return lb_ }
   / b: ImageBlock { return { ...b }}
   / b: CodeBlock { return { ...b }}
   / b: Paragraph { return { ...b }}
@@ -265,20 +276,25 @@ CodeLine
 
 BulletListTag = '• '
 OrderedListTag = '•1 '
+LetteredListTag = '•A '
 TaskListTag = '•+ ' / "•- "
+
 
 ListTags
   = BulletListTag
   / OrderedListTag
+  / LetteredListTag
   / TaskListTag
 
 ListBlock
   = c: BulletListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { } } }
   / c: OrderedListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { } } }
+  / c: LetteredListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { } } }
   / c: TaskListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: { } } }
 
 BulletListContainer = &BulletListTag { return { type: "bulletList" } }
 OrderedListContainer = &OrderedListTag { return { type: "orderedList" } }
+LetteredListContainer = &LetteredListTag { return { type: "letteredList" } }
 TaskListContainer = &TaskListTag { return { type: "taskList" } }
 
 BulletListLine
@@ -287,15 +303,18 @@ BulletListLine
     children: ( INDENT c: BulletListLine* DEDENT { return c })?
     {
 
-      let parent = 'bulletList'
+      let _tempParsingParent = 'bulletList'
       if ('•1 ' == lt) {
-        parent = 'orderedList'
+        _tempParsingParent = 'orderedList'
+      }
+      if ('•A ' == lt) {
+        _tempParsingParent = 'letteredList'
       }
       if ('•+ ' == lt || '•- ' == lt ) {
-        parent = 'taskList'
+        _tempParsingParent = 'taskList'
       }
 
-	    let li = (listItem + lines.join("")).trim()
+	  let li = (listItem + lines.join("")).trim()
 
       let item = {
       	type: "paragraph",
@@ -303,17 +322,17 @@ BulletListLine
       	content: bitmarkPlusString(li)
       }
 
-	    let content = [item]
+	  let content = [item]
 
-      if (children && children[0] && children[0].parent) {
+      if (children && children[0] && children[0]._tempParsingParent) {
         let sublist = {
-          type: children[0].parent,
+          type: children[0]._tempParsingParent,
           attrs: { start: 1 },
           content: children,
-          parent: ""
+          _tempParsingParent: ""
         }
 
-        if ("orderedList" == sublist.parent) {
+        if ("orderedList" == sublist._tempParsingParent || "letteredList" == sublist._tempParsingParent) {
         	sublist.attrs.start = 1
         }
 
@@ -323,7 +342,7 @@ BulletListLine
       let t = "listItem"
       let attrs = {}
 
-      if ("taskList" == parent) {
+      if ("taskList" == _tempParsingParent) {
         t = "taskItem"
         let checked = false
         if ('•+ ' == lt) {
@@ -332,7 +351,7 @@ BulletListLine
         attrs = { checked }
       }
 
-      return { type: t, content, parent, attrs }
+      return { type: t, content, _tempParsingParent, attrs }
     }
 
 ListLine
