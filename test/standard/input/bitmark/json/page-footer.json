@@ -22,7 +22,8 @@
                 "src": "https://www.additiv.com/logo.png",
                 "alt": "additov logo",
                 "title": null,
-                "class": "center"
+                "class": "center",
+                "zoomDisabled": false
               }
             },
             {
@@ -223,7 +224,8 @@
                 "src": "https://www.additiv.com/logo.png",
                 "alt": "additov logo",
                 "title": null,
-                "class": "center"
+                "class": "center",
+                "zoomDisabled": false
               }
             },
             {

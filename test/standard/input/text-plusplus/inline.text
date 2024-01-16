@@ -11,3 +11,18 @@ Here is some inline 'style' applied ==^^Break^scape^^!==|strike|, nice huh?
 
 Here is some inline 'style' applied ==here is the text==|strike|#With a comment as well|, nice huh?
 
+Here is some inline 'style' applied ==here is the text==|subscript|, nice huh?
+Here is some inline 'style' applied ==here is the text==|superscript|, nice huh?
+Here is some inline 'style' applied ==here is the text==|ins|, nice huh?
+Here is some inline 'style' applied ==here is the text==|del|, nice huh?
+Here is some inline 'style' applied ==here is the text==|underline|, nice huh?
+Here is some inline 'style' applied ==here is the text==|doubleUnderline|, nice huh?
+Here is some inline 'style' applied ==here is the text==|circle|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEm|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userUnderline|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userDoubleUnderline|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userStrike|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userCircle|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userHighlight|, nice huh?
+
+

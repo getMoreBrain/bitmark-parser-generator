@@ -16,7 +16,8 @@
       "src": "https://t.com/simple.png",
       "alt": null,
       "title": null,
-      "class": "center"
+      "class": "center",
+      "zoomDisabled": false
     }
   },
   {
@@ -28,7 +29,8 @@
       "title": null,
       "class": "center",
       "width": 928,
-      "height": 10
+      "height": 10,
+      "zoomDisabled": false
     }
   },
   {
@@ -39,7 +41,8 @@
       "alt": "Alt text",
       "title": null,
       "class": "center",
-      "comment": "A caption"
+      "comment": "A caption",
+      "zoomDisabled": false
     }
   }
 ]

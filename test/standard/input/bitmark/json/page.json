@@ -3,10 +3,7 @@
     "bit": {
       "type": "page",
       "format": "bitmark++",
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "body": [
         {
           "type": "paragraph",
@@ -108,16 +105,7 @@
               "type": "hardBreak"
             },
             {
-              "text": "Was sind dagegen ein paar anabole Steroide ",
-              "type": "text"
-            },
-            {
-              "marks": [],
-              "text": "anabole Steroide",
-              "type": "text"
-            },
-            {
-              "text": "(*synthetisch hergestellte Mittel zur Leistungssteigerung)==",
+              "text": "Was sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)==",
               "type": "text"
             }
           ],

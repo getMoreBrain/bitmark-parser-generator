@@ -3,9 +3,7 @@
     "bit": {
       "type": "side-note",
       "format": "bitmark++",
-      "id": [
-        "210103"
-      ],
+      "id": ["210103"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -210,7 +208,8 @@
             "src": "https://docs.bitmark.cloud/bit-books/compendio/tk_marketing/web-resources/images/compendio_tk_marketing_22.png",
             "alt": null,
             "title": null,
-            "class": "center"
+            "class": "center",
+            "zoomDisabled": false
           }
         },
         {
@@ -267,10 +266,7 @@
     "bit": {
       "type": "side-note",
       "format": "bitmark++",
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "hint": [],
       "isExample": false,
