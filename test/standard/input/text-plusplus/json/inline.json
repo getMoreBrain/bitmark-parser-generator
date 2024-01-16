@@ -133,6 +133,269 @@
       {
         "text": ", nice huh?",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "subscript"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "superscript"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "ins"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "del"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "underline"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "doubleUnderline"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "circle"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEm"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userUnderline"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userDoubleUnderline"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userStrike"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userCircle"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userHighlight"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
       }
     ],
     "attrs": {}

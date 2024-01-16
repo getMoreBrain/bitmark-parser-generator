@@ -82,7 +82,8 @@
             "src": "https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png",
             "alt": null,
             "title": null,
-            "class": "center"
+            "class": "center",
+            "zoomDisabled": false
           }
         },
         {
@@ -315,7 +316,8 @@
             "src": "https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/kermit.gif",
             "alt": null,
             "title": null,
-            "class": "center"
+            "class": "center",
+            "zoomDisabled": false
           }
         }
       ]

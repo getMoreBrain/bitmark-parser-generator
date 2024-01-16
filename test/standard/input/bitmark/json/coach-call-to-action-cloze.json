@@ -26,7 +26,8 @@
             "src": "https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png",
             "alt": null,
             "title": null,
-            "class": "center"
+            "class": "center",
+            "zoomDisabled": false
           }
         },
         {

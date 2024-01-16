@@ -1,0 +1,66 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Intro text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "timer",
+            "attrs": {
+              "name": ""
+            }
+          }
+        ],
+        "text": "Timer text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "timer",
+            "attrs": {
+              "name": "name of timer"
+            }
+          }
+        ],
+        "text": "Timer text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "==Timer text==|timerz:1234| there you don't go",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

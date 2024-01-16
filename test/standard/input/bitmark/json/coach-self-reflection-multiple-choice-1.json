@@ -3,9 +3,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "186304"
-      ],
+      "id": ["186304"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -53,9 +51,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "186305"
-      ],
+      "id": ["186305"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -112,9 +108,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "186703"
-      ],
+      "id": ["186703"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -180,9 +174,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "187235"
-      ],
+      "id": ["187235"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -239,9 +231,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "187236"
-      ],
+      "id": ["187236"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -298,9 +288,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "187237"
-      ],
+      "id": ["187237"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -348,9 +336,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "107936"
-      ],
+      "id": ["107936"],
       "item": [
         {
           "type": "paragraph",
@@ -439,9 +425,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "107937"
-      ],
+      "id": ["107937"],
       "item": [
         {
           "type": "paragraph",
@@ -521,9 +505,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "107943"
-      ],
+      "id": ["107943"],
       "item": [
         {
           "type": "paragraph",
@@ -594,9 +576,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "131345"
-      ],
+      "id": ["131345"],
       "item": [
         {
           "type": "paragraph",
@@ -673,9 +653,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "131346"
-      ],
+      "id": ["131346"],
       "item": [
         {
           "type": "paragraph",
@@ -752,9 +730,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "186303"
-      ],
+      "id": ["186303"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -813,9 +789,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "232614"
-      ],
+      "id": ["232614"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -890,9 +864,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark++",
-      "id": [
-        "232875"
-      ],
+      "id": ["232875"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -916,7 +888,8 @@
             "src": "https://docs.bitmark.cloud/bit-books/card2brain/uebungsaufgaben_wi_bba/web-resources/images/uebungsaufgaben_wi_bba_3.jpg",
             "alt": null,
             "title": null,
-            "class": "center"
+            "class": "center",
+            "zoomDisabled": false
           }
         }
       ],
@@ -978,9 +951,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "232876"
-      ],
+      "id": ["232876"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -1055,9 +1026,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "232876"
-      ],
+      "id": ["232876"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -1132,9 +1101,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
-      "id": [
-        "232876"
-      ],
+      "id": ["232876"],
       "item": [],
       "hint": [],
       "instruction": [

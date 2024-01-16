@@ -44,9 +44,7 @@
     "bit": {
       "type": "coach-call-to-action-essay",
       "format": "bitmark--",
-      "id": [
-        "245552"
-      ],
+      "id": ["245552"],
       "item": [],
       "lead": [
         {
@@ -99,9 +97,7 @@
     "bit": {
       "type": "coach-call-to-action-essay",
       "format": "bitmark++",
-      "id": [
-        "272740"
-      ],
+      "id": ["272740"],
       "item": [
         {
           "type": "paragraph",
@@ -218,9 +214,7 @@
     "bit": {
       "type": "coach-call-to-action-essay",
       "format": "bitmark++",
-      "id": [
-        "152151"
-      ],
+      "id": ["152151"],
       "item": [],
       "hint": [
         {
@@ -343,7 +337,8 @@
             "src": "https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png",
             "alt": null,
             "title": null,
-            "class": "center"
+            "class": "center",
+            "zoomDisabled": false
           }
         },
         {
@@ -588,9 +583,7 @@
     "bit": {
       "type": "coach-call-to-action-essay",
       "format": "bitmark--",
-      "id": [
-        "136476"
-      ],
+      "id": ["136476"],
       "item": [
         {
           "type": "paragraph",

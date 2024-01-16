@@ -3,9 +3,7 @@
     "bit": {
       "type": "take-picture",
       "format": "bitmark--",
-      "id": [
-        "189522"
-      ],
+      "id": ["189522"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -45,9 +43,7 @@
     "bit": {
       "type": "take-picture",
       "format": "bitmark++",
-      "id": [
-        "213729"
-      ],
+      "id": ["213729"],
       "item": [
         {
           "type": "paragraph",
@@ -84,7 +80,8 @@
             "alt": null,
             "title": null,
             "class": "center",
-            "width": 650
+            "width": 650,
+            "zoomDisabled": false
           }
         }
       ]
@@ -99,9 +96,7 @@
     "bit": {
       "type": "take-picture",
       "format": "bitmark--",
-      "id": [
-        "213734"
-      ],
+      "id": ["213734"],
       "item": [
         {
           "type": "paragraph",
@@ -141,9 +136,7 @@
     "bit": {
       "type": "take-picture",
       "format": "bitmark--",
-      "id": [
-        "213737"
-      ],
+      "id": ["213737"],
       "item": [
         {
           "type": "paragraph",
@@ -206,9 +199,7 @@
     "bit": {
       "type": "take-picture",
       "format": "bitmark--",
-      "id": [
-        "197943"
-      ],
+      "id": ["197943"],
       "item": [],
       "hint": [],
       "isExample": false,
