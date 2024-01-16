@@ -178,7 +178,6 @@
                   ]
                 }
               ],
-              "parent": "bulletList",
               "attrs": {}
             },
             {
@@ -195,7 +194,6 @@
                   ]
                 }
               ],
-              "parent": "bulletList",
               "attrs": {}
             }
           ],
@@ -418,7 +416,6 @@
                   ]
                 }
               ],
-              "parent": "bulletList",
               "attrs": {}
             }
           ],
@@ -469,7 +466,6 @@
                   ]
                 }
               ],
-              "parent": "bulletList",
               "attrs": {}
             }
           ],
@@ -513,7 +509,6 @@
                   ]
                 }
               ],
-              "parent": "bulletList",
               "attrs": {}
             }
           ],
@@ -564,7 +559,6 @@
                   ]
                 }
               ],
-              "parent": "bulletList",
               "attrs": {}
             }
           ],

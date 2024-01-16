@@ -25,10 +25,14 @@ list item 5
 			item 10.3.1.1
 	• Bullet list item 10.4
 	• Bullet list item 10.5
+		•A Lettered list item 10.5.1
+		•A Lettered list item 10.5.2
 •1 Ordered list item 11
 •1 Ordered list item 12
-• **Bullet list item 1**
-• Bullet list item 2
+• Not allowed, will be part of the ordered list, not '**Bullet list item 1**'
+• Not allowed, will be part of the ordered list, not 'Bullet list item 2'
+•A Not allowed, will be part of the ordered list, not '**Lettered list item 1**'
+•A Not allowed, will be part of the ordered list, not 'Lettered list item 2'
 
 Some text after the list
 

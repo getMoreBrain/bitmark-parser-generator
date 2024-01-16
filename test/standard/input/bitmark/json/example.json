@@ -3,9 +3,7 @@
     "bit": {
       "type": "example",
       "format": "bitmark--",
-      "id": [
-        "210051"
-      ],
+      "id": ["210051"],
       "item": [],
       "lead": [
         {
@@ -45,9 +43,7 @@
     "bit": {
       "type": "example",
       "format": "bitmark--",
-      "id": [
-        "208411"
-      ],
+      "id": ["208411"],
       "item": [],
       "lead": [
         {
@@ -87,9 +83,7 @@
     "bit": {
       "type": "example",
       "format": "bitmark++",
-      "id": [
-        "208422"
-      ],
+      "id": ["208422"],
       "item": [],
       "lead": [
         {
@@ -124,7 +118,6 @@
                   ]
                 }
               ],
-              "parent": "bulletList",
               "attrs": {}
             },
             {
@@ -141,7 +134,6 @@
                   ]
                 }
               ],
-              "parent": "bulletList",
               "attrs": {}
             }
           ],

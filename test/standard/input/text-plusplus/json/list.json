@@ -26,7 +26,6 @@
             ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -48,7 +47,6 @@
             ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -84,7 +82,6 @@
                     ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               },
               {
@@ -101,14 +98,11 @@
                     ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               }
-            ],
-            "parent": ""
+            ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -125,7 +119,6 @@
             ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -149,7 +142,6 @@
             ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -217,21 +209,16 @@
                             ]
                           }
                         ],
-                        "parent": "bulletList",
                         "attrs": {}
                       }
-                    ],
-                    "parent": ""
+                    ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               }
-            ],
-            "parent": ""
+            ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -248,7 +235,6 @@
             ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -284,14 +270,11 @@
                     ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               }
-            ],
-            "parent": ""
+            ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -317,7 +300,6 @@
             ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -360,7 +342,6 @@
                     ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               },
               {
@@ -377,7 +358,6 @@
                     ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               },
               {
@@ -448,21 +428,16 @@
                                     ]
                                   }
                                 ],
-                                "parent": "orderedList",
                                 "attrs": {}
                               }
-                            ],
-                            "parent": ""
+                            ]
                           }
                         ],
-                        "parent": "orderedList",
                         "attrs": {}
                       }
-                    ],
-                    "parent": ""
+                    ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               },
               {
@@ -479,7 +454,6 @@
                     ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               },
               {
@@ -494,16 +468,53 @@
                         "type": "text"
                       }
                     ]
+                  },
+                  {
+                    "type": "letteredList",
+                    "attrs": {
+                      "start": 1
+                    },
+                    "content": [
+                      {
+                        "type": "listItem",
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "attrs": {},
+                            "content": [
+                              {
+                                "text": "Lettered list item 10.5.1",
+                                "type": "text"
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {}
+                      },
+                      {
+                        "type": "listItem",
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "attrs": {},
+                            "content": [
+                              {
+                                "text": "Lettered list item 10.5.2",
+                                "type": "text"
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {}
+                      }
+                    ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               }
-            ],
-            "parent": ""
+            ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -520,7 +531,6 @@
             ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -537,7 +547,6 @@
             ]
           }
         ],
-        "parent": "orderedList",
         "attrs": {}
       },
       {
@@ -547,6 +556,10 @@
             "type": "paragraph",
             "attrs": {},
             "content": [
+              {
+                "text": "Not allowed, will be part of the ordered list, not '",
+                "type": "text"
+              },
               {
                 "marks": [
                   {
@@ -555,11 +568,14 @@
                 ],
                 "text": "Bullet list item 1",
                 "type": "text"
+              },
+              {
+                "text": "'",
+                "type": "text"
               }
             ]
           }
         ],
-        "parent": "bulletList",
         "attrs": {}
       },
       {
@@ -570,13 +586,57 @@
             "attrs": {},
             "content": [
               {
-                "text": "Bullet list item 2",
+                "text": "Not allowed, will be part of the ordered list, not 'Bullet list item 2'",
                 "type": "text"
               }
             ]
           }
         ],
-        "parent": "bulletList",
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "Not allowed, will be part of the ordered list, not '",
+                "type": "text"
+              },
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "Lettered list item 1",
+                "type": "text"
+              },
+              {
+                "text": "'",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "attrs": {}
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "Not allowed, will be part of the ordered list, not 'Lettered list item 2'",
+                "type": "text"
+              }
+            ]
+          }
+        ],
         "attrs": {}
       }
     ],
@@ -641,16 +701,13 @@
                     ]
                   }
                 ],
-                "parent": "taskList",
                 "attrs": {
                   "checked": true
                 }
               }
-            ],
-            "parent": ""
+            ]
           }
         ],
-        "parent": "taskList",
         "attrs": {
           "checked": true
         }
@@ -669,7 +726,6 @@
             ]
           }
         ],
-        "parent": "taskList",
         "attrs": {
           "checked": true
         }
@@ -695,7 +751,6 @@
             ]
           }
         ],
-        "parent": "taskList",
         "attrs": {
           "checked": false
         }
@@ -714,7 +769,6 @@
             ]
           }
         ],
-        "parent": "taskList",
         "attrs": {
           "checked": false
         }
@@ -740,7 +794,6 @@
             ]
           }
         ],
-        "parent": "taskList",
         "attrs": {
           "checked": true
         }
