@@ -11,6 +11,7 @@ const TextNodeType = superenum({
   section: 'section',
   bulletList: 'bulletList',
   orderedList: 'orderedList',
+  letteredList: 'letteredList',
   taskList: 'taskList',
   listItem: 'listItem',
   taskItem: 'taskItem',

@@ -328,6 +328,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
       case TextNodeType.bulletList:
       case TextNodeType.orderedList:
+      case TextNodeType.letteredList:
       case TextNodeType.taskList:
         // List Block type nodes, write a newline only if there is no indent
         if (this.currentIndent <= 1) this.writeNL();
@@ -344,6 +345,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     switch (node.type) {
       case TextNodeType.bulletList:
       case TextNodeType.orderedList:
+      case TextNodeType.letteredList:
       case TextNodeType.taskList:
         this.currentIndent++;
         break;
@@ -357,6 +359,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     switch (node.type) {
       case TextNodeType.bulletList:
       case TextNodeType.orderedList:
+      case TextNodeType.letteredList:
       case TextNodeType.taskList:
         this.currentIndent--;
         break;
@@ -608,13 +611,15 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     // Add indentation
     let bullet = this.getIndentationString();
     const listParent = this.getParentNode(route, 2);
-    const listType = node.parent ?? listParent?.value.type;
+    const listType = listParent?.value.type;
 
     // Add bullet
     if (listType === TextNodeType.bulletList) {
       bullet += '• ';
     } else if (listType === TextNodeType.orderedList) {
       bullet += '•1 ';
+    } else if (listType === TextNodeType.letteredList) {
+      bullet += '•A ';
     } else if (listType === TextNodeType.taskList) {
       const taskList = node as TaskItemTextNode;
       const checked = taskList.attrs?.checked ?? false;

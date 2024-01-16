@@ -112,7 +112,6 @@
             ]
           }
         ],
-        "parent": "bulletList",
         "attrs": {}
       },
       {
@@ -146,7 +145,6 @@
             ]
           }
         ],
-        "parent": "bulletList",
         "attrs": {}
       }
     ],
@@ -210,14 +208,11 @@
                     ]
                   }
                 ],
-                "parent": "bulletList",
                 "attrs": {}
               }
-            ],
-            "parent": ""
+            ]
           }
         ],
-        "parent": "bulletList",
         "attrs": {}
       }
     ],
