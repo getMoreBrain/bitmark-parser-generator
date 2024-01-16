@@ -1,4 +1,4 @@
-import { AstWalkCallbacks, Ast, NodeInfo } from '../../ast/Ast';
+import { Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
@@ -31,7 +31,7 @@ import { ArrayUtils } from '../../utils/ArrayUtils';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { StringUtils } from '../../utils/StringUtils';
 import { UrlUtils } from '../../utils/UrlUtils';
-import { Generator } from '../Generator';
+import { AstWalkerGenerator } from '../AstWalkerGenerator';
 
 import {
   BotResponse,
@@ -228,9 +228,9 @@ interface ExampleJsonWrapper {
 /**
  * Generate bitmark JSON from a bitmark AST
  *
- * TODO: NOT IMPLEMENTED!
+ *
  */
-class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
+class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected ast = new Ast();
   private bitmarkVersion: BitmarkVersionType;
   private textParser = new TextParser();
@@ -250,9 +250,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   private listItem: ListItemJson | undefined;
   private startPlaceholderIndex = 0;
 
-  // Debug
-  private printed: boolean = false;
-
   /**
    * Generate bitmark JSON from a bitmark AST
    *
@@ -260,12 +257,15 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
    * @param options - JSON generation options
    */
   constructor(writer: Writer, options?: JsonGeneratorOptions) {
+    super();
+
     this.bitmarkVersion = BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
       ...options?.jsonOptions,
     };
 
+    this.debugGenerationInline = this.options.debugGenerationInline ?? false;
     this.jsonPrettifySpace = this.options.prettify === true ? 2 : this.options.prettify || undefined;
 
     // Set defaults according to bitmark version
@@ -347,72 +347,6 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     this.ast.walk(ast, NodeType.bitmarkAst, this, undefined);
   }
 
-  enter(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
-    let res: boolean | void = void 0;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this as any;
-    const funcName = `enter_${node.key}`;
-
-    if (!this.printed) {
-      this.printed = true;
-    }
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { open: true });
-
-    if (typeof gen[funcName] === 'function') {
-      res = gen[funcName](node, parent, route);
-    }
-
-    return res;
-  }
-
-  between(
-    node: NodeInfo,
-    left: NodeInfo,
-    right: NodeInfo,
-    parent: NodeInfo | undefined,
-    route: NodeInfo[],
-  ): boolean | void {
-    let res: boolean | void = void 0;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this as any;
-    const funcName = `between_${node.key}`;
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { single: true });
-
-    if (typeof gen[funcName] === 'function') {
-      res = gen[funcName](node, left, right, parent, route);
-    }
-
-    return res;
-  }
-
-  exit(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this as any;
-    const funcName = `exit_${node.key}`;
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { close: true });
-
-    if (typeof gen[funcName] === 'function') {
-      gen[funcName](node, parent, route);
-    }
-  }
-
-  leaf(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const gen = this as any;
-    const funcName = `leaf_${node.key}`;
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { open: true });
-
-    if (typeof gen[funcName] === 'function') {
-      gen[funcName](node, parent, route);
-    }
-
-    if (this.options.debugGenerationInline) this.writeInlineDebug(node.key, { close: true });
-  }
-
   //
   // NODE HANDLERS
   //
@@ -423,7 +357,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmark
 
-  protected enter_bitmarkAst(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_bitmarkAst(_node: NodeInfo, _route: NodeInfo[]): void {
     // Reset the JSON
     this.json = [];
   }
@@ -432,7 +366,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue
 
-  protected enter_bitsValue(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_bitsValue(node: NodeInfo, _route: NodeInfo[]): void {
     const bit = node.value as Bit;
 
     // Reset
@@ -480,17 +414,18 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     }
   }
 
-  protected exit_bitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected exit_bitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
     // Clean up the bit JSON, removing any unwanted values
     this.cleanAndSetDefaultsForBitJson(this.bitJson);
   }
 
   // bitmarkAst -> bits -> bitsValue -> imageSource
 
-  protected enter_imageSource(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_imageSource(node: NodeInfo, route: NodeInfo[]): void {
     const imageSource = node.value as ImageSource;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
     const { url, mockupId, size, format, trim } = imageSource;
@@ -507,11 +442,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> partner
 
-  protected enter_partner(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
+  protected enter_partner(node: NodeInfo, route: NodeInfo[]): void {
     const partner = node.value as Partner;
     const bitType = this.getBitType(route);
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue || !bitType) return;
 
     const { name, avatarImage } = partner;
@@ -530,10 +466,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
 
-  protected enter_markConfigValue(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): void {
     const markConfig = node.value as MarkConfig;
 
     // Ignore example that is not at the correct level
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.markConfig) return;
 
     const { mark, color, emphasis } = markConfig;
@@ -550,8 +487,9 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> sampleSolution
 
-  protected leaf_sampleSolution(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_sampleSolution(node: NodeInfo, route: NodeInfo[]): void {
     // Ignore example that is not at the correct level
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
     if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value, true);
@@ -559,11 +497,12 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> itemLead
 
-  protected enter_itemLead(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_itemLead(node: NodeInfo, route: NodeInfo[]): void {
     const itemLead = node.value as ItemLead;
     const { item, lead, pageNumber, marginNumber } = itemLead;
 
     // Ignore item / lead that are not at the bit level as they are handled elsewhere
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
     if (item != null) {
@@ -582,7 +521,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> extraProperties
 
-  protected enter_extraProperties(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_extraProperties(node: NodeInfo, _route: NodeInfo[]): void {
     const extraProperties = node.value as ExtraProperties | undefined;
 
     if (!this.options.excludeUnknownProperties && extraProperties) {
@@ -598,7 +537,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBits -> cardBitsValue
 
-  protected enter_cardBitsValue(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+  protected enter_cardBitsValue(node: NodeInfo, route: NodeInfo[]): void {
     // How cardBits are handled depends on the bit type
     const bitType = this.getBitType(route);
     if (!bitType) return;
@@ -628,17 +567,18 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
     listItems.push(this.listItem);
   }
 
-  protected exit_cardBitsValue(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected exit_cardBitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
     this.listItem = undefined;
   }
 
   // bitmarkAst -> bits -> bitsValue -> body
 
-  protected enter_body(_node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_body(_node: NodeInfo, _route: NodeInfo[]): void {
     this.bodyJson = this.bodyDefault;
   }
 
-  protected exit_body(_node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected exit_body(_node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
     if (!parent) return;
 
     if (parent.key === NodeType.bitsValue) {
@@ -652,7 +592,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> * -> bodyParts (body, cardBody (e.g. cloze-list, page-footer))
 
-  protected enter_bodyParts(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): boolean {
+  protected enter_bodyParts(node: NodeInfo, route: NodeInfo[]): boolean {
     const bodyParts = node.value as BodyPart[];
     const plainText = this.options.textAsPlainText;
     const textFormat = this.getTextFormat(route);
@@ -776,7 +716,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
 
-  protected enter_elements(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_elements(node: NodeInfo, _route: NodeInfo[]): void {
     const elements = node.value as BreakscapedString[];
 
     // Ignore elements that are not at the bit level as they are handled elsewhere as quizzes
@@ -789,10 +729,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
 
-  protected enter_flashcards(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_flashcards(node: NodeInfo, route: NodeInfo[]): void {
     const flashcards = node.value as Flashcard[];
 
     // Ignore responses that are not at the correct level as they are potentially handled elsewhere
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
     const flashcardsJson: FlashcardJson[] = [];
@@ -826,10 +767,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> statement
 
-  protected enter_statement(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_statement(node: NodeInfo, route: NodeInfo[]): void {
     const statement = node.value as Statement;
 
     // Ignore statement that is not at the cardNode level as it is handled elsewhere
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
     if (statement) {
@@ -840,10 +782,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> statements -> statementsValue
 
-  protected enter_statements(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_statements(node: NodeInfo, route: NodeInfo[]): void {
     const statements = node.value as Statement[];
 
     // Ignore statements that are not at the card node level as they are handled elsewhere
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
     const statementsJson: StatementJson[] = [];
@@ -880,10 +823,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   // bitmarkAst -> bits -> bitsValue -> choices
   // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices
 
-  protected enter_choices(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_choices(node: NodeInfo, route: NodeInfo[]): void {
     const choices = node.value as Choice[];
 
     // Ignore choices that are not at the bit level as they are handled elsewhere as quizzes
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
     const choicesJson: ChoiceJson[] = [];
@@ -917,10 +861,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   // bitmarkAst -> bits -> bitsValue -> responses
   // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses
 
-  protected enter_responses(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_responses(node: NodeInfo, route: NodeInfo[]): void {
     const responses = node.value as Response[];
 
     // Ignore responses that are not at the correct level as they are handled elsewhere as quizzes
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
     const responsesJson: ResponseJson[] = [];
@@ -953,7 +898,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes
 
-  protected enter_quizzes(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_quizzes(node: NodeInfo, _route: NodeInfo[]): void {
     const quizzes = node.value as Quiz[];
     const quizzesJson: QuizJson[] = [];
 
@@ -1031,7 +976,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> heading
 
-  protected enter_heading(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): boolean | void {
+  protected enter_heading(node: NodeInfo, _route: NodeInfo[]): boolean | void {
     const heading = node.value as Heading;
 
     // Check if the heading is for a match or a match matrix
@@ -1066,7 +1011,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs
 
-  protected enter_pairs(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): void {
+  protected enter_pairs(node: NodeInfo, route: NodeInfo[]): void {
     const pairs = node.value as Pair[];
     const pairsJson: PairJson[] = [];
     const bitType = this.getBitType(route);
@@ -1118,7 +1063,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix
 
-  protected enter_matrix(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_matrix(node: NodeInfo, _route: NodeInfo[]): void {
     const matrix = node.value as Matrix[];
     const matrixJsonArray: MatrixJson[] = [];
 
@@ -1178,7 +1123,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
 
-  protected enter_questions(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_questions(node: NodeInfo, _route: NodeInfo[]): void {
     const questions = node.value as Question[];
     const questionsJson: QuestionJson[] = [];
 
@@ -1213,10 +1158,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
 
-  protected enter_botResponses(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected enter_botResponses(node: NodeInfo, route: NodeInfo[]): void {
     const botResponses = node.value as BotResponse[];
 
     // Ignore responses that are not at the cardNode level as they are handled elsewhere
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
     const responsesJson: BotResponseJson[] = [];
@@ -1250,7 +1196,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> resources
 
-  protected enter_resources(node: NodeInfo, _parent: NodeInfo | undefined, route: NodeInfo[]): boolean | void {
+  protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean | void {
     const resources = node.value as Resource[];
     const bitType = this.getBitType(route);
     const resourceType = this.getResourceType(route);
@@ -1321,52 +1267,53 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> title
 
-  protected leaf_title(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_title(node: NodeInfo, _route: NodeInfo[]): void {
     this.bitJson.title = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
   }
 
   //  bitmarkAst -> bits -> bitsValue -> subtitle
 
-  protected leaf_subtitle(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_subtitle(node: NodeInfo, _route: NodeInfo[]): void {
     this.bitJson.subtitle = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
   }
 
   // //  bitmarkAst -> bits -> bitsValue -> level
 
-  protected leaf_level(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_level(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'level', node.value ?? 1, true);
   }
 
   // bitmarkAst -> bits -> bitsValue -> book
 
-  protected leaf_book(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_book(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'book', node.value, true);
   }
 
   //  bitmarkAst -> bits -> bitsValue -> anchor
 
-  protected leaf_anchor(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_anchor(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'anchor', node.value, true);
   }
 
   //  bitmarkAst -> bits -> bitsValue -> reference
 
-  protected leaf_reference(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_reference(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'reference', node.value, true);
   }
 
   //  bitmarkAst -> bits -> bitsValue -> referenceEnd
 
-  protected leaf_referenceEnd(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_referenceEnd(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value != null) this.addProperty(this.bitJson, 'referenceEnd', node.value, true);
   }
 
   //  bitmarkAst -> bits -> bitsValue ->  * -> hint
 
-  protected leaf_hint(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_hint(node: NodeInfo, route: NodeInfo[]): void {
     const hint = node.value as BreakscapedString;
 
     // Ignore hint that is not at the bit level as it are handled elsewhere
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
     this.bitJson.hint = this.convertBreakscapedStringToJsonText(hint, TextFormat.bitmarkMinusMinus);
@@ -1374,10 +1321,11 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue ->  * -> instruction
 
-  protected leaf_instruction(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_instruction(node: NodeInfo, route: NodeInfo[]): void {
     const instruction = node.value as BreakscapedString;
 
     // Ignore instruction that is not at the bit level as it are handled elsewhere
+    const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
     this.bitJson.instruction = this.convertBreakscapedStringToJsonText(instruction, TextFormat.bitmarkMinusMinus);
@@ -1385,7 +1333,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> footer -> footerText
 
-  protected leaf_footerText(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_footerText(node: NodeInfo, _route: NodeInfo[]): void {
     const footer = node.value as BreakscapedString;
 
     this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, TextFormat.bitmarkMinusMinus);
@@ -1393,7 +1341,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> bits -> bitsValue -> markup
 
-  protected leaf_markup(node: NodeInfo, _parent: NodeInfo | undefined, _route: NodeInfo[]): void {
+  protected leaf_markup(node: NodeInfo, _route: NodeInfo[]): void {
     const bitmark = node.value as string | undefined;
     if (bitmark) this.bitWrapperJson.bitmark = bitmark;
   }
@@ -1401,9 +1349,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
   // bitmarkAst -> bits -> bitsValue -> parser
   // bitmarkAst -> bits -> bitsValue -> * -> internalComment
 
-  protected enter_parser(node: NodeInfo, parent: NodeInfo | undefined, route: NodeInfo[]): void {
+  protected enter_parser(node: NodeInfo, route: NodeInfo[]): void {
     const parser = node.value as ParserInfo | undefined;
     const bitType = this.getBitType(route);
+    const parent = this.getParentNode(route);
 
     if (parser && bitType) {
       const { version, excessResources: parserExcessResources, warnings, errors, ...parserRest } = parser;
@@ -1450,7 +1399,7 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
 
   // bitmarkAst -> errors
 
-  // protected enter_errors(node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[],
+  // protected enter_errors(node: NodeInfo, _route: NodeInfo[],
   // context: Context): void {
   //   const errors = node.value as ParserError[] | undefined;
   //   if (errors && errors.length > 0) {
@@ -1485,13 +1434,14 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       const funcName = `enter_${astKey}`;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[funcName] = (node: NodeInfo, parent: NodeInfo | undefined, _route: NodeInfo[]) => {
+      (this as any)[funcName] = (node: NodeInfo, route: NodeInfo[]) => {
         const value = node.value as unknown[] | undefined;
         if (value == null) return;
 
         // if (key === 'progress') debugger;
 
         // Ignore any property that is not at the bit level as that will be handled by a different handler
+        const parent = this.getParentNode(route);
         if (parent?.key !== NodeType.bitsValue) return;
 
         // Convert key as needed
@@ -2279,6 +2229,10 @@ class JsonGenerator implements Generator<BitmarkAst>, AstWalkCallbacks {
       // }
     }
   }
+
+  //
+  // Helper functions
+  //
 
   /**
    * Get the value for the zoomDisabled property, setting the appropriate default value if no value is set.
