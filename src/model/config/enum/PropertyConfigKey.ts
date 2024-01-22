@@ -14,6 +14,7 @@ const propertyConfigKeys = {
   backgroundWallpaper: 'backgroundWallpaper',
   book: 'book',
   bookAlias: 'bookAlias',
+  bookId: 'bookId',
   bot: 'bot',
   buttonCaption: 'buttonCaption',
   caption: 'caption',
