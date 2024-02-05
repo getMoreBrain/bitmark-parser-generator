@@ -81,7 +81,8 @@
             "title": null,
             "class": "center",
             "width": 650,
-            "zoomDisabled": false
+            "zoomDisabled": false,
+            "alignment": "center"
           }
         }
       ]

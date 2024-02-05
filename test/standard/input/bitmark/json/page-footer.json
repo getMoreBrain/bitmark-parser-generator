@@ -23,7 +23,8 @@
                 "alt": "additov logo",
                 "title": null,
                 "class": "center",
-                "zoomDisabled": false
+                "zoomDisabled": false,
+                "alignment": "center"
               }
             },
             {
@@ -225,7 +226,8 @@
                 "alt": "additov logo",
                 "title": null,
                 "class": "center",
-                "zoomDisabled": false
+                "zoomDisabled": false,
+                "alignment": "center"
               }
             },
             {
