@@ -17,7 +17,8 @@
       "alt": null,
       "title": null,
       "class": "center",
-      "zoomDisabled": false
+      "zoomDisabled": false,
+      "alignment": "center"
     }
   },
   {
@@ -30,7 +31,8 @@
       "class": "center",
       "width": 928,
       "height": 10,
-      "zoomDisabled": false
+      "zoomDisabled": false,
+      "alignment": "center"
     }
   },
   {
@@ -42,7 +44,8 @@
       "title": null,
       "class": "center",
       "comment": "A caption",
-      "zoomDisabled": false
+      "zoomDisabled": false,
+      "alignment": "right"
     }
   }
 ]

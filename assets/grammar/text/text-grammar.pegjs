@@ -1,5 +1,5 @@
 // bitmark Text parser
-// v8.8.2+BPG
+// v8.9.1+BPG
 
 //Parser peggy.js
 
@@ -409,6 +409,7 @@ ImageBlock
 
     const chain = Object.assign({}, ...ch)
 
+    let imageAlignment_ = chain.alignment || "center"; delete chain.alignment
     let textAlign_ = chain.captionAlign || "left"; delete chain.captionAlign
     let alt_ = chain.alt || null; delete chain.alt
     let title_ = chain.caption || null; delete chain.caption
@@ -418,6 +419,7 @@ ImageBlock
     let image = {
       type: t,
       attrs: {
+		alignment: imageAlignment_,
         textAlign: textAlign_,
         src: u,
         alt: alt_,
@@ -439,13 +441,18 @@ MediaChainItem
   = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
   / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
   / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be an positive integer.', found: v }}
-  / '@'? p: $((!(BlockTag / ':') char)*) ':' ' '? v: $((!BlockTag char)*) BlockTag { return { [p]: v } }
-  / '@'? p: $((!BlockTag char)*) BlockTag {return { [p]: true } }
+  / '@'? p: AlignmentTags ':' ' '* v: Alignment BlockTag  { return { [p]: v } }
+  / '@'? p: $((!(BlockTag / ':' / AlignmentTags ':') char)*) ':' ' '? v: $((!BlockTag char)*) BlockTag { return { [p]: v } }
+  / '@'? p: $((!(BlockTag / AlignmentTags ':') char)*) BlockTag {return { [p]: true } }
 
 MediaSizeTags
   = 'width' / 'height'
 
+AlignmentTags
+  = 'alignment' / 'captionAlign'
 
+Alignment
+  = 'left' / 'center' / 'right'
 
 
 
