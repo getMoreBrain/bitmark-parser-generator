@@ -640,6 +640,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         case 'textAlign':
           if (v !== 'left') s += `@captionAlign:${v}|`;
           break;
+        case 'alignment':
+          if (v !== 'center') if (v) s += `@alignment:${v}|`;
+          break;
         case 'title':
           if (v) s += `@caption:${v}|`;
           break;
