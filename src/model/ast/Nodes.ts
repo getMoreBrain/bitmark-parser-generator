@@ -35,6 +35,7 @@ export interface Bit {
   id?: Property;
   internalComment?: Property;
   externalId?: Property;
+  bookId?: Property;
   spaceId?: Property;
   padletId?: Property;
   jupyterId?: Property;

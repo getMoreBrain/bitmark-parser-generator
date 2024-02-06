@@ -646,6 +646,10 @@ const BITS: _BitsConfig = {
     tags: [
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.bookId,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.buttonCaption,
       },
     ],

@@ -4,6 +4,7 @@
       "type": "page-open-book",
       "format": "bitmark--",
       "id": ["342341"],
+      "bookId": "the_book",
       "item": [
         {
           "type": "paragraph",

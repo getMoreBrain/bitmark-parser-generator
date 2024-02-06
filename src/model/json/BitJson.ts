@@ -11,6 +11,7 @@ export interface BitJson {
   id: string | string[];
   internalComment: string | string[];
   externalId: string | string[];
+  bookId: string | string[];
   spaceId: string | string[];
   padletId: string;
   jupyterId: string;
