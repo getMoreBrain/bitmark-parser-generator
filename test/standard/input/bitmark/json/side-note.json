@@ -205,7 +205,8 @@
             "alt": null,
             "title": null,
             "class": "center",
-            "zoomDisabled": false
+            "zoomDisabled": false,
+            "alignment": "center"
           }
         },
         {

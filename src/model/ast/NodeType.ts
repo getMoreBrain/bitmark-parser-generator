@@ -323,6 +323,9 @@ const NodeType = superenum({
   marks: 'marks',
   marksValue: 'marksValue',
   comment: 'comment',
+  alignment: 'alignment',
+  textAlign: 'textAlign',
+  class: 'class',
 
   // Parser Info / Errors
   parser: 'parser',
