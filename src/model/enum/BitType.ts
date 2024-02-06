@@ -277,6 +277,8 @@ const BitType = superenum({
   survey1: 'survey-1',
   surveyAnonymous: 'survey-anonymous',
   surveyAnonymous1: 'survey-anonymous-1',
+  table: 'table',
+  tableImage: 'table-image',
   takePicture: 'take-picture',
   toc: 'toc',
   tocChapter: 'toc-chapter',

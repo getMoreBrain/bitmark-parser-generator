@@ -1,0 +1,35 @@
+[
+  {
+    "bit": {
+      "type": "table-image",
+      "format": "bitmark--",
+      "id": ["78954"],
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.5.13",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.table-image]\n[@id:78954]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
+  }
+]
