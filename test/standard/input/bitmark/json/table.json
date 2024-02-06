@@ -1,0 +1,18 @@
+[
+  {
+    "bit": {
+      "type": "table",
+      "format": "json",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": "{\"Test\": 100, \"Test2\": \"Json\"}"
+    },
+    "parser": {
+      "version": "1.5.13",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.table]\n{\"Test\": 100, \"Test2\": \"Json\"}"
+  }
+]
