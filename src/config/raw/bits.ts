@@ -374,6 +374,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.clozeInstructionGrouped]: { since: '1.3.0', baseBitType: BitType.cloze },
   [BitType.clozeSolutionGrouped]: { since: '1.3.0', baseBitType: BitType.cloze },
+  [BitType.gapText]: { since: '1.5.15', baseBitType: BitType.cloze },
+  [BitType.gapTextInstructionGrouped]: { since: '1.5.15', baseBitType: BitType.cloze },
   [BitType.coachSelfReflectionCloze]: { since: '1.3.0', baseBitType: BitType.cloze },
   [BitType.coachCallToActionCloze]: { since: '1.3.0', baseBitType: BitType.cloze },
   [BitType.clozeList]: {
@@ -661,6 +663,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.buttonCaption,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.mailingList,
       },
     ],
   },

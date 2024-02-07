@@ -2490,6 +2490,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       labelTrue: undefined,
       labelFalse: undefined,
       content2Buy: undefined,
+      mailingList: undefined,
       buttonCaption: undefined,
       quotedPerson: undefined,
       reasonableNumOfChars: undefined,
@@ -2799,6 +2800,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.labelTrue == null) delete bitJson.labelTrue;
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
     if (bitJson.content2Buy == null) delete bitJson.content2Buy;
+    if (bitJson.mailingList == null) delete bitJson.mailingList;
     if (bitJson.buttonCaption == null) delete bitJson.buttonCaption;
     if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
     if (bitJson.resolved == null) delete bitJson.resolved;

@@ -178,6 +178,7 @@ const NodeType = superenum({
   labelFalse: 'labelFalse',
   labelFalseValue: 'labelFalseValue',
   content2Buy: 'content2Buy',
+  mailingList: 'mailingList',
   buttonCaption: 'buttonCaption',
   quotedPerson: 'quotedPerson',
   partialAnswer: 'partialAnswer',
