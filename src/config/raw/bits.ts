@@ -1412,6 +1412,14 @@ const BITS: _BitsConfig = {
   [BitType.recordAudio]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.stickyNote]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.takePicture]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.handInAudio]: { since: '1.5.15', baseBitType: BitType.takePicture },
+  [BitType.handInContact]: { since: '1.5.15', baseBitType: BitType.takePicture },
+  [BitType.handInDocument]: { since: '1.5.15', baseBitType: BitType.takePicture },
+  [BitType.handInLocation]: { since: '1.5.15', baseBitType: BitType.takePicture },
+  [BitType.handInPhoto]: { since: '1.5.15', baseBitType: BitType.takePicture },
+  [BitType.handInScan]: { since: '1.5.15', baseBitType: BitType.takePicture },
+  [BitType.handInVideo]: { since: '1.5.15', baseBitType: BitType.takePicture },
+  [BitType.handInVoice]: { since: '1.5.15', baseBitType: BitType.takePicture },
   [BitType.trueFalse1]: {
     since: '1.3.0',
     tags: [
