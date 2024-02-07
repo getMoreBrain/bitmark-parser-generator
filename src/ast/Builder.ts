@@ -52,6 +52,7 @@ import {
   Flashcard,
   ImageSource,
   CardBit,
+  Ingredient,
 } from '../model/ast/Nodes';
 
 /**
@@ -158,6 +159,7 @@ class Builder extends BaseBuilder {
     productVideo?: BreakscapedString | BreakscapedString[];
     productVideoList?: BreakscapedString | BreakscapedString[];
     productFolder?: BreakscapedString;
+    portions?: number;
     partialAnswer?: BreakscapedString;
     book?: BreakscapedString;
     title?: BreakscapedString;
@@ -199,6 +201,7 @@ class Builder extends BaseBuilder {
     choices?: Choice[];
     questions?: Question[];
     botResponses?: BotResponse[];
+    ingredients?: Ingredient[];
     cardBits?: CardBit[];
     footer?: FooterText;
 
@@ -281,6 +284,7 @@ class Builder extends BaseBuilder {
       productVideo,
       productVideoList,
       productFolder,
+      portions,
       title,
       subtitle,
       level,
@@ -400,6 +404,7 @@ class Builder extends BaseBuilder {
       productVideo: this.toAstProperty(PropertyConfigKey.productVideo, productVideo),
       productVideoList: this.toAstProperty(PropertyConfigKey.productVideoList, productVideoList),
       productFolder: this.toAstProperty(PropertyConfigKey.productFolder, productFolder),
+      portions: this.toAstProperty(PropertyConfigKey.portions, portions),
       title,
       subtitle,
       level: NumberUtils.asNumber(level),
@@ -849,6 +854,40 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreEmptyString: ['question'],
+      ignoreAllFalse: true,
+    });
+
+    return node;
+  }
+
+  /**
+   * Build ingredient node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  ingredient(data: {
+    checked?: boolean;
+    item?: BreakscapedString;
+    quantity?: number;
+    unit?: BreakscapedString;
+    unitAbbr?: BreakscapedString;
+    disableCalculation?: boolean;
+  }): Ingredient {
+    const { checked, item, quantity, unit, unitAbbr, disableCalculation } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Ingredient = {
+      checked: checked ?? false,
+      item,
+      quantity,
+      unit,
+      unitAbbr,
+      disableCalculation,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
     });
 
@@ -1429,6 +1468,7 @@ class Builder extends BaseBuilder {
     pairs?: Pair[];
     matrix?: Matrix[];
     botResponses?: BotResponse[];
+    ingredients?: Ingredient[];
     cardBits?: CardBit[];
   }): CardNode | undefined {
     let node: CardNode | undefined;
@@ -1445,6 +1485,7 @@ class Builder extends BaseBuilder {
       pairs,
       matrix,
       botResponses,
+      ingredients,
       cardBits,
     } = data;
 
@@ -1461,6 +1502,7 @@ class Builder extends BaseBuilder {
       pairs ||
       matrix ||
       botResponses ||
+      ingredients ||
       cardBits
     ) {
       node = {
@@ -1476,6 +1518,7 @@ class Builder extends BaseBuilder {
         pairs,
         matrix,
         botResponses,
+        ingredients,
         cardBits,
       };
 

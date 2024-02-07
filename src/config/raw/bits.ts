@@ -451,6 +451,23 @@ const BITS: _BitsConfig = {
   [BitType.conversationRight1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Scream]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Thought]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.cookingIngredients]: {
+    since: '1.5.15',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.portions,
+      },
+    ],
+    cardSet: CardSetConfigKey._ingredients,
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+    footerAllowed: true,
+  },
   [BitType.document]: {
     since: '1.3.0',
     tags: [

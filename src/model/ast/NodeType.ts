@@ -165,6 +165,8 @@ const NodeType = superenum({
   botValue: 'botValue',
   referenceProperty: 'referenceProperty',
   referencePropertyValue: 'referencePropertyValue',
+  ingredients: 'ingredients',
+  ingredientsValue: 'ingredientsValue',
   list: 'list',
   listValue: 'listValue',
   textReference: 'textReference',
@@ -204,6 +206,8 @@ const NodeType = superenum({
   productVideoListValue: 'productVideoListValue',
   productFolder: 'productFolder',
   productFolderValue: 'productFolderValue',
+  portions: 'portions',
+  portionsValue: 'portionsValue',
 
   book: 'book',
 
@@ -253,6 +257,11 @@ const NodeType = superenum({
   response: 'response',
   reaction: 'reaction',
   feedback: 'feedback',
+  checked: 'checked',
+  quantity: 'quantity',
+  unit: 'unit',
+  unitAbbr: 'unitAbbr',
+  disableCalculation: 'disableCalculation',
 
   // ImageSource
   imageSource: 'imageSource',

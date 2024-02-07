@@ -41,6 +41,7 @@ import {
   Flashcard,
   ImageSource,
   CardBit,
+  Ingredient,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -157,6 +158,9 @@ export interface BitContentProcessorResult {
   mockupId?: BreakscapedString;
   size?: number;
   format?: BreakscapedString;
+  unit?: BreakscapedString;
+  unitAbbr?: BreakscapedString;
+  disableCalculation?: boolean;
 
   extraProperties?: ExtraProperties;
   internalComments?: BreakscapedString[];
@@ -187,6 +191,7 @@ export interface BitSpecificCards {
   choices?: Choice[];
   questions?: Question[];
   botResponses?: BotResponse[];
+  ingredients?: Ingredient[];
   cardBits?: CardBit[];
   internalComments?: BreakscapedString[];
 }

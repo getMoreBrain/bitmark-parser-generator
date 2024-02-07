@@ -103,6 +103,7 @@ export interface Bit {
   productVideo?: Property;
   productVideoList?: Property;
   productFolder?: Property;
+  portions?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: BreakscapedString;
@@ -300,6 +301,17 @@ export interface Question {
   example?: Example;
 }
 
+// Ingredient
+
+export interface Ingredient {
+  checked?: boolean;
+  item?: BreakscapedString; // TextAst;
+  quantity?: number;
+  unit?: BreakscapedString;
+  unitAbbr?: BreakscapedString;
+  disableCalculation?: boolean;
+}
+
 // Body
 
 // TODO - we cannot store the body like this. we have to store it as an already processed v3 body.
@@ -432,6 +444,7 @@ export interface CardNode {
   matrix?: Matrix[];
   botResponses?: BotResponse[];
   cardBits?: CardBit[];
+  ingredients?: Ingredient[];
 }
 
 // Footer

@@ -1,0 +1,110 @@
+[
+  {
+    "bit": {
+      "type": "cooking-ingredients",
+      "format": "bitmark--",
+      "portions": 4.5,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "ZUTATEN",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Kraftbrühe Murillo",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "[@specialistLanguage: Consommé Murillo ][lang:fr]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "ingredients": [
+        {
+          "checked": true,
+          "item": "Geflügelkraftbrühe",
+          "quantity": 2,
+          "unit": "Liter",
+          "unitAbbr": "Lt",
+          "disableCalculation": false
+        },
+        {
+          "checked": false,
+          "item": "Scheiben vom Eierstich mit Kürbis ...",
+          "quantity": 30,
+          "unit": "Stück",
+          "unitAbbr": "Stk",
+          "disableCalculation": false
+        },
+        {
+          "checked": false,
+          "item": "Erbsen ...",
+          "quantity": 5,
+          "unit": "Stück",
+          "unitAbbr": "Stk",
+          "disableCalculation": false
+        },
+        {
+          "checked": false,
+          "item": "Salz",
+          "quantity": 1,
+          "unit": "Prise",
+          "disableCalculation": false
+        },
+        {
+          "checked": false,
+          "item": "Mehl",
+          "quantity": 2.5,
+          "unit": "kg",
+          "disableCalculation": false
+        },
+        {
+          "checked": false,
+          "item": "Cooking time",
+          "quantity": 10,
+          "unit": "minutes",
+          "unitAbbr": "min",
+          "disableCalculation": true
+        },
+        {
+          "checked": true,
+          "item": "Cooking time",
+          "quantity": 20,
+          "unit": "minutes",
+          "unitAbbr": "min",
+          "disableCalculation": true
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.15",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.cooking-ingredients]\n[%][%ZUTATEN]\n\n[!Kraftbrühe Murillo]\n[^@specialistLanguage: Consommé Murillo ][lang:fr]\n[@portions:4.5]\n\n====\n[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe\n====\n[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...\n====\n[!5][@unitAbbr:Stk][@unit:Stück] Erbsen ...\n====\n[!1][@unit:Prise] Salz\n====\n[!2.5][@unit:kg] Mehl\n====\n[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time\n====\n[+]\n[!20]\n[@unit:minutes]\n[@unitAbbr:min]\n[@disableCalculation]\nCooking time\n===="
+  }
+]

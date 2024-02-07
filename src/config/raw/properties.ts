@@ -286,6 +286,28 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
+
+  [PropertyConfigKey.portions]: {
+    tag: PropertyTag.portions,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.unit]: {
+    tag: PropertyTag.unit,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.unitAbbr]: {
+    tag: PropertyTag.unitAbbr,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.disableCalculation]: {
+    tag: PropertyTag.disableCalculation,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+
   [PropertyConfigKey.example]: {
     tag: PropertyTag.example,
     single: true,

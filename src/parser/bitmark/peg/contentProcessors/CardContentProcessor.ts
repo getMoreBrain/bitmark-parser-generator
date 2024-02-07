@@ -7,6 +7,7 @@ import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { NumberUtils } from '../../../../utils/NumberUtils';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
@@ -16,6 +17,7 @@ import {
   BotResponse,
   CardBit,
   Choice,
+  Ingredient,
   Flashcard,
   Heading,
   ImageResource,
@@ -26,6 +28,7 @@ import {
   Quiz,
   Response,
   Statement,
+  Select,
 } from '../../../../model/ast/Nodes';
 import {
   BitContentLevel,
@@ -97,6 +100,10 @@ function buildCards(
 
     case CardSetConfigKey._botActionResponses:
       result = parseBotActionResponses(context, bitType, processedCardSet);
+      break;
+
+    case CardSetConfigKey._ingredients:
+      result = parseIngredients(context, bitType, processedCardSet);
       break;
 
     case CardSetConfigKey._clozeList:
@@ -750,6 +757,53 @@ function parseBotActionResponses(
 
   return {
     botResponses: botResponses.length > 0 ? botResponses : undefined,
+  };
+}
+
+function parseIngredients(
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
+  const ingredients: Ingredient[] = [];
+
+  for (const card of cardSet.cards) {
+    for (const side of card.sides) {
+      for (const content of side.variants) {
+        const { instruction, unit, unitAbbr, cardBodyStr: item, cardBody, disableCalculation, ...tags } = content.data;
+
+        // Extract 'quantity' from either then unchained instruction, or from the select (otherwise use 0)
+        // Extract checked from the select options (if present, otherwise checked is false))
+        let checked = false;
+        let quantity: number | undefined = NumberUtils.asNumber(instruction);
+        if (cardBody) {
+          const select = cardBody.bodyParts.find((part) => part.type === BodyBitType.select) as Select | undefined;
+          if (select) {
+            quantity = select.data.instruction ? NumberUtils.asNumber(select.data.instruction) : quantity;
+            if (select.data.options && select.data.options.length > 0) {
+              checked = select.data.options[0].isCorrect;
+            }
+          }
+        }
+
+        const trimmedItem: BreakscapedString = item ? (item.trim() as BreakscapedString) : Breakscape.EMPTY_STRING;
+
+        const ingredient = builder.ingredient({
+          checked,
+          item: trimmedItem,
+          quantity,
+          unit: unit ?? Breakscape.EMPTY_STRING,
+          unitAbbr: unitAbbr ?? Breakscape.EMPTY_STRING,
+          disableCalculation: disableCalculation,
+          ...tags,
+        });
+        ingredients.push(ingredient);
+      }
+    }
+  }
+
+  return {
+    ingredients: ingredients.length > 0 ? ingredients : undefined,
   };
 }
 
