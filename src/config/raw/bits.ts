@@ -662,6 +662,10 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.buttonCaption,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.mailingList,
+      },
     ],
   },
   [BitType.assignmentList]: { since: '1.4.13', baseBitType: BitType.exampleList },

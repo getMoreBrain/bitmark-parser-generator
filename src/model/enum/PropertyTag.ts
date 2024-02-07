@@ -52,6 +52,7 @@ const PropertyTag = superenum({
   license: 'license',
   list: 'list',
   location: 'location',
+  mailingList: 'mailingList',
   mark: 'mark',
   maxCreatedBits: 'maxCreatedBits',
   maxDisplayLevel: 'maxDisplayLevel',
