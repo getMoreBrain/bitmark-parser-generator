@@ -55,6 +55,7 @@ const propertyConfigKeys = {
   license: 'license',
   list: 'list',
   location: 'location',
+  mailingList: 'mailingList',
   markConfig: 'markConfig',
   maxCreatedBits: 'maxCreatedBits',
   maxDisplayLevel: 'maxDisplayLevel',

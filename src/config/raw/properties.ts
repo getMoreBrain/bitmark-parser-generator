@@ -419,6 +419,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.mailingList]: {
+    tag: PropertyTag.mailingList,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.buttonCaption]: {
     tag: PropertyTag.buttonCaption,
     single: true,
