@@ -151,6 +151,8 @@ const BitType = superenum({
   flashcard1: 'flashcard-1',
   focusImage: 'focus-image',
   footNote: 'foot-note',
+  gapText: 'gap-text',
+  gapTextInstructionGrouped: 'gap-text-instruction-grouped',
   groupBorn: 'group-born',
   groupDied: 'group-died',
   help: 'help',
