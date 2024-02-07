@@ -1160,7 +1160,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // ? -> solutions -> solution
 
   protected leaf_solutionsValue(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value) {
+    if (node.value != null) {
       this.writeOPU();
       this.writeString(node.value);
       this.writeCL();

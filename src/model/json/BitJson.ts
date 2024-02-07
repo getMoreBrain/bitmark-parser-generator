@@ -11,6 +11,7 @@ export interface BitJson {
   id: string | string[];
   internalComment: string | string[];
   externalId: string | string[];
+  bookId: string | string[];
   spaceId: string | string[];
   padletId: string;
   jupyterId: string;
@@ -63,6 +64,7 @@ export interface BitJson {
   labelTrue: string;
   labelFalse: string;
   content2Buy: string;
+  mailingList: string;
   buttonCaption: string;
   quotedPerson: string;
   reasonableNumOfChars: number;

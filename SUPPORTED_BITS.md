@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.13
+Version: 1.5.15
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -151,8 +151,18 @@ flashcard (since: 1.3.0)
 flashcard-1 (since: 1.3.0)
 focus-image (since: 1.3.0)
 foot-note (since: 1.3.0)
+gap-text (since: 1.5.15)
+gap-text-instruction-grouped (since: 1.5.15)
 group-born (since: 1.3.0)
 group-died (since: 1.3.0)
+hand-in-audio (since: 1.5.15)
+hand-in-contact (since: 1.5.15)
+hand-in-document (since: 1.5.15)
+hand-in-location (since: 1.5.15)
+hand-in-photo (since: 1.5.15)
+hand-in-scan (since: 1.5.15)
+hand-in-video (since: 1.5.15)
+hand-in-voice (since: 1.5.15)
 help (since: 1.3.0)
 highlight-text (since: 1.3.0)
 hint (since: 1.3.0)
@@ -277,6 +287,8 @@ survey (since: 1.3.0)
 survey-1 (since: 1.3.0)
 survey-anonymous (since: 1.3.0)
 survey-anonymous-1 (since: 1.3.0)
+table (since: 1.5.15)
+table-image (since: 1.5.15)
 take-picture (since: 1.3.0)
 toc (since: 1.3.0)
 toc-chapter (since: 1.5.5)

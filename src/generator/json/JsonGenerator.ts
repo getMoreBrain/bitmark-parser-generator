@@ -2437,6 +2437,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       id: undefined,
       internalComment: undefined,
       externalId: undefined,
+      bookId: undefined,
       spaceId: undefined,
       padletId: undefined,
       jupyterId: undefined,
@@ -2489,6 +2490,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       labelTrue: undefined,
       labelFalse: undefined,
       content2Buy: undefined,
+      mailingList: undefined,
       buttonCaption: undefined,
       quotedPerson: undefined,
       reasonableNumOfChars: undefined,
@@ -2745,6 +2747,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.id == null) delete bitJson.id;
     if (bitJson.internalComment == null) delete bitJson.internalComment;
     if (bitJson.externalId == null) delete bitJson.externalId;
+    if (bitJson.bookId == null) delete bitJson.bookId;
     if (bitJson.spaceId == null) delete bitJson.spaceId;
     if (bitJson.padletId == null) delete bitJson.padletId;
     if (bitJson.jupyterId == null) delete bitJson.jupyterId;
@@ -2797,6 +2800,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.labelTrue == null) delete bitJson.labelTrue;
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
     if (bitJson.content2Buy == null) delete bitJson.content2Buy;
+    if (bitJson.mailingList == null) delete bitJson.mailingList;
     if (bitJson.buttonCaption == null) delete bitJson.buttonCaption;
     if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
     if (bitJson.resolved == null) delete bitJson.resolved;
