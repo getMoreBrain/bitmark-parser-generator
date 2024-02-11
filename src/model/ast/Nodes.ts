@@ -104,6 +104,8 @@ export interface Bit {
   productVideo?: Property;
   productVideoList?: Property;
   productFolder?: Property;
+  technicalTerm?: TechnicalTerm;
+  portions?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: BreakscapedString;
@@ -301,6 +303,23 @@ export interface Question {
   example?: Example;
 }
 
+// Professional Name
+export interface TechnicalTerm {
+  term: BreakscapedString;
+  lang?: BreakscapedString;
+}
+
+// Ingredient
+
+export interface Ingredient {
+  checked?: boolean;
+  item?: BreakscapedString; // TextAst;
+  quantity?: number;
+  unit?: BreakscapedString;
+  unitAbbr?: BreakscapedString;
+  disableCalculation?: boolean;
+}
+
 // Body
 
 // TODO - we cannot store the body like this. we have to store it as an already processed v3 body.
@@ -433,6 +452,7 @@ export interface CardNode {
   matrix?: Matrix[];
   botResponses?: BotResponse[];
   cardBits?: CardBit[];
+  ingredients?: Ingredient[];
 }
 
 // Footer

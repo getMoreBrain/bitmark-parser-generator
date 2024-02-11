@@ -151,6 +151,21 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [GroupConfigKey.group_technicalTerm]: {
+    type: GroupConfigType.standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.technicalTerm,
+        chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.lang,
+          },
+        ],
+      },
+    ],
+  },
   [GroupConfigKey.group_partner]: {
     type: GroupConfigType.standard,
     tags: [

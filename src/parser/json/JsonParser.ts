@@ -24,6 +24,7 @@ import {
   BotResponse,
   CardBit,
   Choice,
+  Ingredient,
   Flashcard,
   FooterText,
   Gap,
@@ -45,6 +46,7 @@ import {
   Select,
   SelectOption,
   Statement,
+  TechnicalTerm,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -64,6 +66,8 @@ import {
   MarkConfigJson,
   ImageSourceJson,
   ListItemJson,
+  IngredientJson,
+  TechnicalTermJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -299,6 +303,8 @@ class JsonParser {
       product,
       productVideo,
       productFolder,
+      technicalTerm,
+      portions,
       book,
       title,
       subtitle,
@@ -334,6 +340,7 @@ class JsonParser {
       matrix,
       choices,
       questions,
+      ingredients,
       listItems,
       sections,
       footer,
@@ -396,6 +403,12 @@ class JsonParser {
 
     // botResponses
     const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
+
+    // technicalTerm
+    const technicalTermNode = this.technicalTermToAst(technicalTerm);
+
+    // ingredients
+    const ingredientsNodes = this.ingredientsBitsToAst(ingredients);
 
     // listItems / sections (cardBits)
     const cardBitNodes = this.listItemsToAst(listItems ?? sections, textFormat, placeholders);
@@ -479,6 +492,8 @@ class JsonParser {
       productList: this.convertStringToBreakscapedString(product),
       productVideoList: this.convertStringToBreakscapedString(productVideo),
       productFolder: this.convertStringToBreakscapedString(productFolder),
+      technicalTerm: technicalTermNode,
+      portions,
       book: this.convertStringToBreakscapedString(book),
       title: this.convertJsonTextToBreakscapedString(title),
       subtitle: this.convertJsonTextToBreakscapedString(subtitle),
@@ -507,6 +522,7 @@ class JsonParser {
       choices: choiceNodes,
       questions: questionNodes,
       botResponses: botResponseNodes,
+      ingredients: ingredientsNodes,
       cardBits: cardBitNodes,
       footer: footerNode,
     });
@@ -874,6 +890,42 @@ class JsonParser {
           reaction: this.convertStringToBreakscapedString(reaction) ?? Breakscape.EMPTY_STRING,
           feedback: this.convertStringToBreakscapedString(feedback) ?? Breakscape.EMPTY_STRING,
           ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, Breakscape.EMPTY_STRING),
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private technicalTermToAst(technicalTerm?: TechnicalTermJson): TechnicalTerm | undefined {
+    let node: TechnicalTerm | undefined;
+
+    if (technicalTerm) {
+      const { term, lang } = technicalTerm;
+      node = builder.technicalTerm({
+        term: this.convertStringToBreakscapedString(term) ?? Breakscape.EMPTY_STRING,
+        lang: this.convertStringToBreakscapedString(lang) ?? Breakscape.EMPTY_STRING,
+      });
+    }
+
+    return node;
+  }
+
+  private ingredientsBitsToAst(ingredients?: IngredientJson[]): Ingredient[] | undefined {
+    const nodes: Ingredient[] = [];
+    if (Array.isArray(ingredients)) {
+      for (const i of ingredients) {
+        const { checked, item, quantity, unit, unitAbbr, disableCalculation } = i;
+        const node = builder.ingredient({
+          checked,
+          item: this.convertStringToBreakscapedString(item) ?? Breakscape.EMPTY_STRING,
+          quantity,
+          unit: this.convertStringToBreakscapedString(unit) ?? Breakscape.EMPTY_STRING,
+          unitAbbr: this.convertStringToBreakscapedString(unitAbbr),
+          disableCalculation,
         });
         nodes.push(node);
       }

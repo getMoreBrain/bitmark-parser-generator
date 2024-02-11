@@ -4,7 +4,7 @@ import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioEmbedResource, ImageSource } from '../../model/ast/Nodes';
+import { AudioEmbedResource, ImageSource, Ingredient } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
@@ -70,6 +70,7 @@ import {
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
+  IngredientJson,
   ListItemJson,
   MarkConfigJson,
   MatrixCellJson,
@@ -1191,6 +1192,40 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (responsesJson.length > 0) {
       this.bitJson.responses = responsesJson;
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
+  protected enter_ingredients(node: NodeInfo, route: NodeInfo[]): void {
+    const ingredients = node.value as Ingredient[];
+
+    // Ignore statements that are not at the card node level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.cardNode) return;
+
+    const ingredientsJson: IngredientJson[] = [];
+    if (ingredients) {
+      for (const i of ingredients) {
+        // Create the ingredient
+        const ingredientJson: Partial<IngredientJson> = {
+          checked: i.checked ?? false,
+          item: Breakscape.unbreakscape(i.item) ?? '',
+          quantity: i.quantity ?? 0,
+          unit: Breakscape.unbreakscape(i.unit) ?? '',
+          unitAbbr: Breakscape.unbreakscape(i.unitAbbr) ?? '',
+          disableCalculation: i.disableCalculation ?? false,
+        };
+
+        // Delete unwanted properties
+        if (i?.unitAbbr == null) delete ingredientJson.unitAbbr;
+        // if (i?.instruction == null) delete ingredientJson.instruction;
+
+        ingredientsJson.push(ingredientJson as IngredientJson);
+      }
+    }
+
+    if (ingredientsJson.length > 0) {
+      this.bitJson.ingredients = ingredientsJson;
     }
   }
 
@@ -2502,6 +2537,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       product: undefined,
       productVideo: undefined,
       productFolder: undefined,
+      technicalTerm: undefined,
+      portions: undefined,
 
       // Book data
       title: undefined,
@@ -2811,6 +2848,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.product == null) delete bitJson.product;
     if (bitJson.productVideo == null) delete bitJson.productVideo;
     if (bitJson.productFolder == null) delete bitJson.productFolder;
+    if (bitJson.technicalTerm == null) delete bitJson.technicalTerm;
+    if (bitJson.portions == null) delete bitJson.portions;
 
     // Book data
     if (bitJson.title == null) delete bitJson.title;

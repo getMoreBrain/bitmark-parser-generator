@@ -13,6 +13,7 @@ const CardSetConfigKey = superenum({
   _botActionResponses: '_botActionResponses',
   _exampleBitList: '_exampleBitList',
   _clozeList: '_clozeList',
+  _ingredients: '_ingredients',
 });
 
 export type CardSetConfigKeyType = EnumType<typeof CardSetConfigKey>;

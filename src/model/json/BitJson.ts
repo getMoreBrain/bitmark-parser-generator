@@ -76,6 +76,8 @@ export interface BitJson {
   product: string;
   productVideo: string;
   productFolder: string;
+  technicalTerm: TechnicalTermJson;
+  portions: number;
 
   book: string;
 
@@ -126,6 +128,7 @@ export interface BitJson {
   matrix: MatrixJson[];
   choices: ChoiceJson[];
   questions: QuestionJson[];
+  ingredients: IngredientJson[];
   listItems: ListItemJson[];
   sections: ListItemJson[]; // sections is just a pseudonym for listItems
 
@@ -289,6 +292,20 @@ export interface BotResponseJson {
   pageNumber: JsonText;
   marginNumber: JsonText;
   hint: JsonText;
+}
+
+export interface TechnicalTermJson {
+  term: string;
+  lang: string;
+}
+
+export interface IngredientJson {
+  checked: boolean;
+  item: string;
+  quantity: number;
+  unit: string;
+  unitAbbr: string;
+  disableCalculation: boolean;
 }
 
 export interface ListItemJson {

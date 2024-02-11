@@ -32,6 +32,8 @@ import {
   MarkConfig,
   BodyPart,
   ImageSource,
+  Ingredient,
+  TechnicalTerm,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -349,6 +351,23 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (size) this.writeProperty('size', size, true);
       if (format) this.writeProperty('format', format, true);
       if (BooleanUtils.isBoolean(trim)) this.writeProperty('trim', trim, true);
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> technicalTerm
+
+  protected enter_technicalTerm(node: NodeInfo, route: NodeInfo[]): void {
+    const technicalTerm = node.value as TechnicalTerm;
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const { term, lang } = technicalTerm;
+
+    this.writeProperty('technicalTerm', term, true);
+    if (lang) {
+      this.writeProperty('lang', lang);
     }
   }
 
@@ -865,6 +884,55 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL();
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients
+
+  protected enter_ingredients(_node: NodeInfo, _route: NodeInfo[]): void {
+    //
+  }
+
+  protected between_ingredients(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  protected exit_ingredients(_node: NodeInfo, _route: NodeInfo[]): void {
+    //
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
+
+  protected enter_ingredientsValue(node: NodeInfo, _route: NodeInfo[]): void {
+    const ingredient = node.value as Ingredient;
+
+    // [+] / [-]
+    if (ingredient.checked) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.writeCL();
+
+    // [!43]
+    if (ingredient.quantity != null) {
+      this.writeOPB();
+      this.writeString(`${ingredient.quantity}`);
+      this.writeCL();
+    }
+
+    // [@unit:kilograms]
+    if (ingredient.unit != null) this.writeProperty('unit', ingredient.unit, true);
+
+    // [@unitAbbr:kg]
+    if (ingredient.unitAbbr != null) this.writeProperty('unitAbbr', ingredient.unitAbbr, true);
+
+    // [@disableCalculation]
+    if (ingredient.disableCalculation) this.writeProperty('disableCalculation', true, true);
+
+    // item
+    if (ingredient.item != null) this.write(ingredient.item);
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
 
   protected enter_botResponses(_node: NodeInfo, _route: NodeInfo[]): void {
@@ -1371,6 +1439,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.labelFalse) continue;
       if (astKey === PropertyTag.posterImage) continue;
       if (astKey === PropertyTag.imageSource) continue;
+      if (astKey === PropertyTag.technicalTerm) continue;
       if (astKey === PropertyTag.partner) continue;
       if (astKey === PropertyAstKey.markConfig) continue;
 

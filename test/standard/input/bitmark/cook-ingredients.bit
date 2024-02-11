@@ -1,17 +1,27 @@
 [.cook-ingredients]
-[@id:92375]
+[%][%ZUTATEN]
 
+[!Kraftbrühe Murillo]
+[@technicalTerm: Consommé Murillo ][@lang:fr]
+[@portions:4.5]
 
-[.cook-ingredients]
-[#Summary of this Book]
-This is the cook-ingredients of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.
-
-
-[.cook-ingredients]
-[#Summary of Chapter One]
-This is a cook-ingredients of chapter 1.
-
-
-
-[.cook-ingredients]
-
+====
+[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe
+====
+[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...
+====
+[!5][@unitAbbr:Stk][@unit:Stück] Erbsen ...
+====
+[!1][@unit:Prise] Salz
+====
+[!2.5][@unit:kg] Mehl
+====
+[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time
+====
+[+]
+[!20]
+[@unit:minutes]
+[@unitAbbr:min]
+[@disableCalculation]
+Cooking time
+====
