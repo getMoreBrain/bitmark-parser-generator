@@ -286,7 +286,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
-
+  [PropertyConfigKey.technicalTerm]: {
+    tag: PropertyTag.technicalTerm,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.portions]: {
     tag: PropertyTag.portions,
     single: true,

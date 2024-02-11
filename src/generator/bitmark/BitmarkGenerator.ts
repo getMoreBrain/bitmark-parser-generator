@@ -33,6 +33,7 @@ import {
   BodyPart,
   ImageSource,
   Ingredient,
+  TechnicalTerm,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -350,6 +351,23 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (size) this.writeProperty('size', size, true);
       if (format) this.writeProperty('format', format, true);
       if (BooleanUtils.isBoolean(trim)) this.writeProperty('trim', trim, true);
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> technicalTerm
+
+  protected enter_technicalTerm(node: NodeInfo, route: NodeInfo[]): void {
+    const technicalTerm = node.value as TechnicalTerm;
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const { term, lang } = technicalTerm;
+
+    this.writeProperty('technicalTerm', term, true);
+    if (lang) {
+      this.writeProperty('lang', lang);
     }
   }
 
@@ -1421,6 +1439,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.labelFalse) continue;
       if (astKey === PropertyTag.posterImage) continue;
       if (astKey === PropertyTag.imageSource) continue;
+      if (astKey === PropertyTag.technicalTerm) continue;
       if (astKey === PropertyTag.partner) continue;
       if (astKey === PropertyAstKey.markConfig) continue;
 

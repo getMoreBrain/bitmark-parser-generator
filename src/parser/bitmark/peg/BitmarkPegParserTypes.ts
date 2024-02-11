@@ -42,6 +42,7 @@ import {
   ImageSource,
   CardBit,
   Ingredient,
+  TechnicalTerm,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -106,9 +107,11 @@ export interface BitContentProcessorResult {
   body?: Body;
   footer?: FooterText;
   imageSource?: ImageSource;
+  technicalTerm?: TechnicalTerm;
   partner?: Partner;
   trueFalse?: TrueFalseValue[];
   isDefaultExample?: boolean;
+  lang?: BreakscapedString;
   example?: BreakscapedString;
   isCorrect?: boolean;
   markConfig?: MarkConfig[];

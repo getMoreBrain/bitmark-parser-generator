@@ -453,12 +453,18 @@ const BITS: _BitsConfig = {
   [BitType.conversationRight1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Scream]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Thought]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
-  [BitType.cookingIngredients]: {
+  [BitType.cookPreparation]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookStep]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookIngredients]: {
     since: '1.5.15',
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_technicalTerm,
       },
       {
         type: BitTagType.property,
@@ -470,6 +476,17 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
     footerAllowed: true,
   },
+  [BitType.cookRemark]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookVariation]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookInsert]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookArrangement]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookPracticeAdvise]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookPlate]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookRecommendation]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookPersonalRecommendation]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookSideDrink]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookSideDish]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.cookTimer]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.document]: {
     since: '1.3.0',
     tags: [
@@ -592,20 +609,6 @@ const BITS: _BitsConfig = {
   [BitType.coachHomeRules]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.coachVideoTranscript]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.correction]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookPreparation]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookStep]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookIngredients]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookRemark]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookVariation]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookInsert]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookArrangement]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookPracticeAdvise]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookPlate]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookRecommendation]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookPersonalRecommendation]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookSideDrink]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookSideDish]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.cookTimer]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.danger]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.details1]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.details]: { since: '1.3.0', baseBitType: BitType.example },

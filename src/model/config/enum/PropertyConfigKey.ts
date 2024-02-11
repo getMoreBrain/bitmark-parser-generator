@@ -74,6 +74,7 @@ const propertyConfigKeys = {
   productList: 'productList',
   productVideo: 'productVideo',
   productVideoList: 'productVideoList',
+  technicalTerm: 'technicalTerm',
   progress: 'progress',
   property_mark: 'property_mark',
   property_reference: 'property_reference',

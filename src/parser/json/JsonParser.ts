@@ -46,6 +46,7 @@ import {
   Select,
   SelectOption,
   Statement,
+  TechnicalTerm,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -66,6 +67,7 @@ import {
   ImageSourceJson,
   ListItemJson,
   IngredientJson,
+  TechnicalTermJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -301,6 +303,7 @@ class JsonParser {
       product,
       productVideo,
       productFolder,
+      technicalTerm,
       portions,
       book,
       title,
@@ -401,6 +404,9 @@ class JsonParser {
     // botResponses
     const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
 
+    // technicalTerm
+    const technicalTermNode = this.technicalTermToAst(technicalTerm);
+
     // ingredients
     const ingredientsNodes = this.ingredientsBitsToAst(ingredients);
 
@@ -486,6 +492,7 @@ class JsonParser {
       productList: this.convertStringToBreakscapedString(product),
       productVideoList: this.convertStringToBreakscapedString(productVideo),
       productFolder: this.convertStringToBreakscapedString(productFolder),
+      technicalTerm: technicalTermNode,
       portions,
       book: this.convertStringToBreakscapedString(book),
       title: this.convertJsonTextToBreakscapedString(title),
@@ -891,6 +898,20 @@ class JsonParser {
     if (nodes.length === 0) return undefined;
 
     return nodes;
+  }
+
+  private technicalTermToAst(technicalTerm?: TechnicalTermJson): TechnicalTerm | undefined {
+    let node: TechnicalTerm | undefined;
+
+    if (technicalTerm) {
+      const { term, lang } = technicalTerm;
+      node = builder.technicalTerm({
+        term: this.convertStringToBreakscapedString(term) ?? Breakscape.EMPTY_STRING,
+        lang: this.convertStringToBreakscapedString(lang) ?? Breakscape.EMPTY_STRING,
+      });
+    }
+
+    return node;
   }
 
   private ingredientsBitsToAst(ingredients?: IngredientJson[]): Ingredient[] | undefined {

@@ -104,6 +104,7 @@ export interface Bit {
   productVideo?: Property;
   productVideoList?: Property;
   productFolder?: Property;
+  technicalTerm?: TechnicalTerm;
   portions?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
@@ -300,6 +301,12 @@ export interface Question {
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
+}
+
+// Professional Name
+export interface TechnicalTerm {
+  term: BreakscapedString;
+  lang?: BreakscapedString;
 }
 
 // Ingredient

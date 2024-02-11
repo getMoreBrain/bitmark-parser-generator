@@ -118,7 +118,6 @@ const BitType = superenum({
   conversationRight1Thought: 'conversation-right-1-thought',
   cookArrangement: 'cook-arrangement',
   cookIngredients: 'cook-ingredients',
-  cookingIngredients: 'cooking-ingredients',
   cookInsert: 'cook-insert',
   cookPersonalRecommendation: 'cook-personal-recommendation',
   cookPlate: 'cook-plate',

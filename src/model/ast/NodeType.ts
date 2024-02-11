@@ -207,6 +207,8 @@ const NodeType = superenum({
   productVideoListValue: 'productVideoListValue',
   productFolder: 'productFolder',
   productFolderValue: 'productFolderValue',
+  technicalTerm: 'technicalTerm',
+  technicalTermValue: 'technicalTermValue',
   portions: 'portions',
   portionsValue: 'portionsValue',
 

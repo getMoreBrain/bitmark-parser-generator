@@ -53,6 +53,7 @@ import {
   ImageSource,
   CardBit,
   Ingredient,
+  TechnicalTerm,
 } from '../model/ast/Nodes';
 
 /**
@@ -160,6 +161,7 @@ class Builder extends BaseBuilder {
     productVideo?: BreakscapedString | BreakscapedString[];
     productVideoList?: BreakscapedString | BreakscapedString[];
     productFolder?: BreakscapedString;
+    technicalTerm?: TechnicalTerm;
     portions?: number;
     partialAnswer?: BreakscapedString;
     book?: BreakscapedString;
@@ -286,6 +288,7 @@ class Builder extends BaseBuilder {
       productVideo,
       productVideoList,
       productFolder,
+      technicalTerm,
       portions,
       title,
       subtitle,
@@ -407,6 +410,7 @@ class Builder extends BaseBuilder {
       productVideo: this.toAstProperty(PropertyConfigKey.productVideo, productVideo),
       productVideoList: this.toAstProperty(PropertyConfigKey.productVideoList, productVideoList),
       productFolder: this.toAstProperty(PropertyConfigKey.productFolder, productFolder),
+      technicalTerm,
       portions: this.toAstProperty(PropertyConfigKey.portions, portions),
       title,
       subtitle,
@@ -1370,6 +1374,27 @@ class Builder extends BaseBuilder {
     const node: Partner = {
       name,
       avatarImage,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build (cook-ingredients) technicalTerm node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  technicalTerm(data: { term: BreakscapedString; lang?: BreakscapedString }): TechnicalTerm {
+    const { term, lang } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: TechnicalTerm = {
+      term,
+      lang,
     };
 
     // Remove Unset Optionals

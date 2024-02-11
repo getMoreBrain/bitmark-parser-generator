@@ -76,6 +76,7 @@ export interface BitJson {
   product: string;
   productVideo: string;
   productFolder: string;
+  technicalTerm: TechnicalTermJson;
   portions: number;
 
   book: string;
@@ -291,6 +292,11 @@ export interface BotResponseJson {
   pageNumber: JsonText;
   marginNumber: JsonText;
   hint: JsonText;
+}
+
+export interface TechnicalTermJson {
+  term: string;
+  lang: string;
 }
 
 export interface IngredientJson {
