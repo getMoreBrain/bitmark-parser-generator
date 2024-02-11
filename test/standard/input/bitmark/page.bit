@@ -1,4 +1,4 @@
-[.page:bitmark++]
+[.page&image:bitmark++]
 [@ageRange:18][@ageRange:120]
 
 **Some bold text,**
@@ -9,7 +9,7 @@ Some more text.
 
 
 
-[.page:bitmark++]
+[.page&image:bitmark++]
 **Erfolg um jeden Preis**
 
 Immer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.

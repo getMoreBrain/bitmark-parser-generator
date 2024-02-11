@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.15
+Version: 1.5.16
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -117,7 +117,7 @@ conversation-right-1 (since: 1.3.0)
 conversation-right-1-scream (since: 1.3.0)
 conversation-right-1-thought (since: 1.3.0)
 cook-arrangement (since: 1.3.0)
-cook-ingredients (since: 1.5.15)
+cook-ingredients (since: 1.5.16)
 cook-insert (since: 1.3.0)
 cook-personal-recommendation (since: 1.3.0)
 cook-plate (since: 1.3.0)

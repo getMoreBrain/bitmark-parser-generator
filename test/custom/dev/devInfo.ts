@@ -16,7 +16,7 @@ class DevConfig {
     const info = bitmarkParserGenerator.info({
       type: InfoType.all,
       // type: InfoType.bit,
-      // bit: RootBitType.cloze,
+      // bit: BitType.cloze,
       // outputFormat: InfoFormat.json,
       // prettify: true,
     });
