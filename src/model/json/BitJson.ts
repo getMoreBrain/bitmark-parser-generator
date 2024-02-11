@@ -64,6 +64,7 @@ export interface BitJson {
   labelTrue: string;
   labelFalse: string;
   content2Buy: string;
+  mailingList: string;
   buttonCaption: string;
   quotedPerson: string;
   reasonableNumOfChars: number;

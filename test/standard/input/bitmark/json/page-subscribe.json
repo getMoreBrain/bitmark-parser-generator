@@ -319,7 +319,8 @@
       "isExample": false,
       "example": null,
       "body": [],
-      "buttonCaption": "OK!"
+      "buttonCaption": "OK!",
+      "mailingList": "gmb@getmorebrain.com;bmg@getmorebrain.com"
     },
     "parser": {
       "version": "1.4.12",

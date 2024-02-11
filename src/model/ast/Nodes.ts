@@ -89,6 +89,7 @@ export interface Bit {
   labelTrue?: Property;
   labelFalse?: Property;
   content2Buy?: Property;
+  mailingList?: Property;
   buttonCaption?: Property;
   quotedPerson?: Property;
   partialAnswer?: Property;
