@@ -456,7 +456,7 @@ const BITS: _BitsConfig = {
   [BitType.cookPreparation]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.cookStep]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.cookIngredients]: {
-    since: '1.5.15',
+    since: '1.5.16',
     tags: [
       {
         type: BitTagType.group,
