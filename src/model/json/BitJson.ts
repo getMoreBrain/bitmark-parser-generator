@@ -101,7 +101,8 @@ export interface BitJson {
   example: ExampleJson;
 
   imageSource: ImageSourceJson;
-  partner: PartnerJson;
+  person: PersonJson;
+  partner: PersonJson; // Deprecated, replaced by person
 
   marks: MarkConfigJson[];
 
@@ -145,8 +146,9 @@ export interface ImageSourceJson {
   trim?: boolean;
 }
 
-export interface PartnerJson {
+export interface PersonJson {
   name: string;
+  title: string;
   avatarImage: ImageResourceJson;
 }
 

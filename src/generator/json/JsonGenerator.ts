@@ -40,7 +40,7 @@ import {
   Highlight,
   Matrix,
   Pair,
-  Partner,
+  Person,
   Question,
   Quiz,
 } from '../../model/ast/Nodes';
@@ -76,7 +76,7 @@ import {
   MatrixCellJson,
   MatrixJson,
   PairJson,
-  PartnerJson,
+  PersonJson,
   QuestionJson,
   QuizJson,
   ResponseJson,
@@ -441,28 +441,36 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.bitJson.imageSource = imageSourceJson;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> partner
+  // bitmarkAst -> bits -> bitsValue -> person
 
-  protected enter_partner(node: NodeInfo, route: NodeInfo[]): void {
-    const partner = node.value as Partner;
+  protected enter_person(node: NodeInfo, route: NodeInfo[]): void {
+    const person = node.value as Person;
     const bitType = this.getBitType(route);
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue || !bitType) return;
 
-    const { name, avatarImage } = partner;
+    const { name, title, avatarImage } = person;
 
-    const partnerJson = {} as PartnerJson;
-    this.addProperty(partnerJson, 'name', name ?? '', true);
+    const personJson = {} as PersonJson;
+    this.addProperty(personJson, 'name', name ?? '', true);
+    if (title) {
+      this.addProperty(personJson, 'title', title, true);
+    }
     if (avatarImage) {
       const res = this.parseResourceToJson(bitType, avatarImage);
       if (res && res.type === ResourceTag.image) {
-        partnerJson.avatarImage = res.image;
+        personJson.avatarImage = res.image;
       }
     }
 
-    this.bitJson.partner = partnerJson;
+    if (Config.isOfBitType(bitType, BitType.conversationLeft1)) {
+      // Use the legacy partner property in the JSON for conversation bits, so change to person is backwards compatible
+      this.bitJson.partner = personJson;
+    } else {
+      this.bitJson.person = personJson;
+    }
   }
 
   // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
@@ -1302,7 +1310,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> title
 
-  protected leaf_title(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_title(node: NodeInfo, route: NodeInfo[]): void {
+    // Ignore title that are not at the bit or card node level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
+
     this.bitJson.title = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
   }
 
@@ -1463,7 +1475,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.internalComment) continue;
       if (astKey === PropertyTag.example) continue;
       if (astKey === PropertyTag.imageSource) continue;
-      if (astKey === PropertyTag.partner) continue;
+      if (astKey === PropertyTag.person) continue;
       if (astKey === PropertyAstKey.markConfig) continue;
 
       const funcName = `enter_${astKey}`;
@@ -2562,8 +2574,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       isExample: undefined,
       example: undefined,
 
-      // Partner .conversion-xxx only
-      partner: undefined,
+      // Person .conversion-xxx, page-person, etc
+      person: undefined,
 
       // Marks (config)
       marks: undefined,

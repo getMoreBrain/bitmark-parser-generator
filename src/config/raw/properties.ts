@@ -361,6 +361,12 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.person]: {
+    tag: PropertyTag.person,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  // Deprecated (replaced by person)
   [PropertyConfigKey.partner]: {
     tag: PropertyTag.partner,
     single: true,
@@ -417,6 +423,11 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.format]: {
     tag: PropertyTag.format,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.property_title]: {
+    tag: PropertyTag.title,
     single: true,
     format: PropertyFormat.trimmedString,
   },

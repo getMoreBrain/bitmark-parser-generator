@@ -38,7 +38,7 @@ import {
   Matrix,
   MatrixCell,
   Pair,
-  Partner,
+  Person,
   Question,
   Quiz,
   Resource,
@@ -60,7 +60,7 @@ import {
   QuizJson,
   ResponseJson,
   StatementJson,
-  PartnerJson,
+  PersonJson,
   BotResponseJson,
   ExampleJson,
   MarkConfigJson,
@@ -322,6 +322,7 @@ class JsonParser {
       instruction,
       example,
       imageSource,
+      person,
       partner,
       marks,
       resource,
@@ -368,8 +369,8 @@ class JsonParser {
     // imageSource
     const imageSourceNode = this.imageSourceBitToAst(imageSource);
 
-    // Partner
-    const partnerNode = this.partnerBitToAst(partner);
+    // Person (partner, deprecated)
+    const personNode = this.personBitToAst(person ?? partner);
 
     // Mark Config
     const markConfigNode = this.markConfigBitToAst(marks);
@@ -506,7 +507,7 @@ class JsonParser {
       ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
       ...this.parseExample(example),
       imageSource: imageSourceNode,
-      partner: partnerNode,
+      person: personNode,
       markConfig: markConfigNode,
       resources: resourcesNode,
       body: bodyNode,
@@ -547,13 +548,14 @@ class JsonParser {
     return node;
   }
 
-  private partnerBitToAst(partner?: PartnerJson): Partner | undefined {
-    let node: Partner | undefined;
+  private personBitToAst(person?: PersonJson): Person | undefined {
+    let node: Person | undefined;
 
-    if (partner) {
-      const avatarImage = this.resourceDataToAst(ResourceTag.image, partner.avatarImage) as ImageResource | undefined;
-      node = builder.partner({
-        name: this.convertStringToBreakscapedString(partner.name) ?? Breakscape.EMPTY_STRING,
+    if (person) {
+      const avatarImage = this.resourceDataToAst(ResourceTag.image, person.avatarImage) as ImageResource | undefined;
+      node = builder.person({
+        name: this.convertStringToBreakscapedString(person.name) ?? Breakscape.EMPTY_STRING,
+        title: this.convertStringToBreakscapedString(person.title),
         avatarImage,
       });
     }

@@ -442,7 +442,7 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
-        configKey: GroupConfigKey.group_partner,
+        configKey: GroupConfigKey.group_person,
       },
     ],
     resourceAttachmentAllowed: true,
@@ -1114,6 +1114,25 @@ const BITS: _BitsConfig = {
     bodyAllowed: true,
   },
   [BitType.pageBuyButtonPromotion]: { since: '1.5.11', baseBitType: BitType.pageBuyButton },
+  [BitType.pagePerson]: {
+    since: '1.5.16',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_person,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+    resourceAttachmentAllowed: true,
+    bodyAllowed: true,
+  },
   [BitType.pageProduct]: {
     since: '1.4.17',
     tags: [

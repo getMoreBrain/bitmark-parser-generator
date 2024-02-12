@@ -42,7 +42,7 @@ import {
   ItemLead,
   ExtraProperties,
   BotResponse,
-  Partner,
+  Person,
   BodyText,
   BodyPart,
   CardNode,
@@ -184,7 +184,7 @@ class Builder extends BaseBuilder {
     isDefaultExample?: boolean;
     example?: Example;
     imageSource?: ImageSource;
-    partner?: Partner;
+    person?: Person;
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
@@ -307,7 +307,7 @@ class Builder extends BaseBuilder {
       isDefaultExample,
       example,
       imageSource,
-      partner,
+      person,
       markConfig,
       extraProperties,
       resources: _resources,
@@ -426,7 +426,7 @@ class Builder extends BaseBuilder {
       instruction,
       ...this.toExample(isDefaultExample, example),
       imageSource,
-      partner,
+      person,
       resources,
       body,
       sampleSolution: ArrayUtils.asSingle(sampleSolution),
@@ -1362,17 +1362,18 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Build (chat) partner node
+   * Build (chat) person node
    *
    * @param data - data for the node
    * @returns
    */
-  partner(data: { name: BreakscapedString; avatarImage?: ImageResource }): Partner {
-    const { name, avatarImage } = data;
+  person(data: { name: BreakscapedString; title?: BreakscapedString; avatarImage?: ImageResource }): Person {
+    const { name, title, avatarImage } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Partner = {
+    const node: Person = {
       name,
+      title,
       avatarImage,
     };
 

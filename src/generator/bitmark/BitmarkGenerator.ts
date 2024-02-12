@@ -27,7 +27,7 @@ import {
   ImageResource,
   Resource,
   ArticleResource,
-  Partner,
+  Person,
   Example,
   MarkConfig,
   BodyPart,
@@ -371,18 +371,21 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> partner
+  // bitmarkAst -> bits -> bitsValue -> person
 
-  protected enter_partner(node: NodeInfo, route: NodeInfo[]): void {
-    const partner = node.value as Partner;
+  protected enter_person(node: NodeInfo, route: NodeInfo[]): void {
+    const person = node.value as Person;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
-    const { name, avatarImage } = partner;
+    const { name, title, avatarImage } = person;
 
-    this.writeProperty('partner', name, true);
+    this.writeProperty('person', name, true);
+    if (title) {
+      this.writeProperty('title', title, true);
+    }
     if (avatarImage) {
       this.writeResource(avatarImage);
     }
@@ -1063,10 +1066,15 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_title(node: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
+
+    // Ensure this is at the bit level
+    if (parent?.key !== NodeType.bitsValue) return;
+
     const value = node.value as string;
     const title = value;
     const bit = parent?.value as Bit;
     const level = bit.level || 1;
+
     if (level && title) {
       this.writeOP();
       for (let i = 0; i < +level; i++) this.writeHash();
@@ -1440,7 +1448,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.posterImage) continue;
       if (astKey === PropertyTag.imageSource) continue;
       if (astKey === PropertyTag.technicalTerm) continue;
-      if (astKey === PropertyTag.partner) continue;
+      if (astKey === PropertyTag.person) continue;
       if (astKey === PropertyAstKey.markConfig) continue;
 
       const funcName = `enter_${astKey}`;

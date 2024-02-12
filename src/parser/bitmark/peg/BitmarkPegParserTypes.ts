@@ -34,7 +34,7 @@ import {
   Resource,
   FooterText,
   BotResponse,
-  Partner,
+  Person,
   ExtraProperties,
   ImageResource,
   MarkConfig,
@@ -108,7 +108,8 @@ export interface BitContentProcessorResult {
   footer?: FooterText;
   imageSource?: ImageSource;
   technicalTerm?: TechnicalTerm;
-  partner?: Partner;
+  person?: Person;
+  propertyTitle?: BreakscapedString;
   trueFalse?: TrueFalseValue[];
   isDefaultExample?: boolean;
   lang?: BreakscapedString;

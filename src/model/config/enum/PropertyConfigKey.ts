@@ -64,7 +64,8 @@ const propertyConfigKeys = {
   mute: 'mute',
   padletId: 'padletId',
   partialAnswer: 'partialAnswer',
-  partner: 'partner',
+  person: 'person',
+  partner: 'partner', // Deprecated, replaced by person
   pointerLeft: 'pointerLeft',
   pointerTop: 'pointerTop',
   portions: 'portions',
@@ -105,6 +106,7 @@ const propertyConfigKeys = {
   textReference: 'textReference',
   theme: 'theme',
   thumbImage: 'thumbImage',
+  property_title: 'property_title',
   toc: 'toc',
   trim: 'trim',
   unit: 'unit',
