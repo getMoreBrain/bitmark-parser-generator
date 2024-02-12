@@ -86,6 +86,8 @@ const propertyConfigKeys = {
   reaction: 'reaction',
   reasonableNumOfChars: 'reasonableNumOfChars',
   releaseVersion: 'releaseVersion',
+  releaseKind: 'releaseKind',
+  releaseDate: 'releaseDate',
   resolved: 'resolved',
   resolvedBy: 'resolvedBy',
   resolvedDate: 'resolvedDate',

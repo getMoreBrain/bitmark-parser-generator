@@ -4,6 +4,8 @@
       "type": "release-note",
       "format": "bitmark--",
       "releaseVersion": "1.0.2",
+      "releaseKind": "Jumanji",
+      "releaseDate": "20/02/1992",
       "item": [],
       "hint": [],
       "isExample": false,

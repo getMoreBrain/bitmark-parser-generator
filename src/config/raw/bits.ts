@@ -1251,6 +1251,14 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.releaseVersion,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.releaseKind,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.releaseDate,
+      },
     ],
     resourceAttachmentAllowed: true,
     bodyAllowed: true,

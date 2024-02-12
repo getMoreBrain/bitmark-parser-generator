@@ -100,6 +100,8 @@ class Builder extends BaseBuilder {
     jupyterExecutionCount?: number;
     aiGenerated?: boolean;
     releaseVersion?: BreakscapedString;
+    releaseKind?: BreakscapedString;
+    releaseDate?: BreakscapedString;
     ageRange?: number | number[];
     lang?: BreakscapedString;
     language?: BreakscapedString | BreakscapedString[];
@@ -225,6 +227,8 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount,
       aiGenerated,
       releaseVersion,
+      releaseKind,
+      releaseDate,
       ageRange,
       lang,
       language,
@@ -347,6 +351,8 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, jupyterExecutionCount),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, releaseVersion),
+      releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, releaseKind),
+      releaseDate: this.toAstProperty(PropertyConfigKey.releaseDate, releaseDate),
       book,
       ageRange: this.toAstProperty(PropertyConfigKey.ageRange, ageRange),
       lang: this.toAstProperty(PropertyConfigKey.lang, lang),

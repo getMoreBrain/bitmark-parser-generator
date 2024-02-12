@@ -79,6 +79,8 @@ const PropertyTag = superenum({
   reasonableNumOfChars: 'reasonableNumOfChars',
   reference: 'reference',
   releaseVersion: 'releaseVersion',
+  releaseKind: 'releaseKind',
+  releaseDate: 'releaseDate',
   resolved: 'resolved',
   resolvedBy: 'resolvedBy',
   resolvedDate: 'resolvedDate',

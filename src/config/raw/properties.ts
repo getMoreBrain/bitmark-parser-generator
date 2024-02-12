@@ -52,6 +52,16 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.releaseKind]: {
+    tag: PropertyTag.releaseKind,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.releaseDate]: {
+    tag: PropertyTag.releaseDate,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.resolved]: {
     tag: PropertyTag.resolved,
     single: true,
