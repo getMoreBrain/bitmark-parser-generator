@@ -124,7 +124,7 @@ export interface Bit {
   isDefaultExample: boolean;
   example?: Example;
   imageSource?: ImageSource;
-  partner?: Partner;
+  person?: Person;
   resources?: Resource[];
   body?: Body;
   sampleSolution?: BreakscapedString;
@@ -171,8 +171,9 @@ export interface ImageSource {
 }
 
 // (chat) Partner
-export interface Partner {
+export interface Person {
   name: BreakscapedString;
+  title?: BreakscapedString;
   avatarImage?: ImageResource;
 }
 

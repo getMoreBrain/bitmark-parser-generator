@@ -10,7 +10,7 @@ const groupConfigKeys = {
   group_standardTags: 'group_standardTags',
   group_imageSource: 'group_imageSource',
   group_technicalTerm: 'group_technicalTerm',
-  group_partner: 'group_partner',
+  group_person: 'group_person',
   group_gap: 'group_gap',
   group_trueFalse: 'group_trueFalse',
   group_markConfig: 'group_markConfig',

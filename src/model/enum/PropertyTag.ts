@@ -61,7 +61,8 @@ const PropertyTag = superenum({
   mute: 'mute',
   padletId: 'padletId',
   partialAnswer: 'partialAnswer',
-  partner: 'partner',
+  person: 'person',
+  partner: 'partner', // Deprecated, replaced by person
   pointerLeft: 'pointerLeft',
   pointerTop: 'pointerTop',
   portions: 'portions',
@@ -99,6 +100,7 @@ const PropertyTag = superenum({
   textReference: 'textReference',
   theme: 'theme',
   thumbImage: 'thumbImage',
+  title: 'title',
   toc: 'toc',
   trim: 'trim',
   unit: 'unit',

@@ -391,7 +391,7 @@ class BitmarkPegParserValidator {
         cardSetConfig,
       );
 
-      // HACK to handle 'chain-within-chain' for [@partner] tags (at least to stop the parser splitting the chain)
+      // HACK to handle 'chain-within-chain' for [@person] tags (at least to stop the parser splitting the chain)
       if (typeKey === TypeKey.Resource) chainHeadType = TypeKey.Resource;
 
       // Tag is not valid in this position. Either remove it or reprocess by breaking the current chain

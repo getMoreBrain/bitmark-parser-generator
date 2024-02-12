@@ -182,6 +182,7 @@ const NodeType = superenum({
   content2Buy: 'content2Buy',
   mailingList: 'mailingList',
   buttonCaption: 'buttonCaption',
+  buttonCaptionValue: 'buttonCaptionValue',
   quotedPerson: 'quotedPerson',
   partialAnswer: 'partialAnswer',
   partialAnswerValue: 'partialAnswerValue',
@@ -272,9 +273,10 @@ const NodeType = superenum({
   size: 'size',
   trim: 'trim',
 
-  // Partner
-  partner: 'partner',
+  // Person
+  person: 'person',
   name: 'name',
+  // title: 'title',
   avatarImage: 'avatarImage',
 
   // Mark
