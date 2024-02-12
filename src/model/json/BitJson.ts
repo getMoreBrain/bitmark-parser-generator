@@ -18,6 +18,8 @@ export interface BitJson {
   jupyterExecutionCount: number;
   AIGenerated: boolean;
   releaseVersion: string;
+  releaseKind: string;
+  releaseDate: string;
   ageRange: number | number[];
   lang: string;
   language: string | string[];
