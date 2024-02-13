@@ -124,8 +124,14 @@ class Builder extends BaseBuilder {
     location?: BreakscapedString;
     kind?: BreakscapedString;
     action?: BreakscapedString;
+    blockId?: BreakscapedString;
+    pageNo?: number;
+    x?: number;
+    y?: number;
     width?: string;
     height?: string;
+    index?: number;
+    classification?: BreakscapedString;
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -251,8 +257,14 @@ class Builder extends BaseBuilder {
       location,
       kind,
       action,
+      blockId,
+      pageNo,
+      x,
+      y,
       width,
       height,
+      index,
+      classification,
       thumbImage,
       scormSource,
       posterImage,
@@ -376,8 +388,14 @@ class Builder extends BaseBuilder {
       location: this.toAstProperty(PropertyConfigKey.location, location),
       kind: this.toAstProperty(PropertyConfigKey.kind, kind),
       action: this.toAstProperty(PropertyConfigKey.action, action),
+      blockId: this.toAstProperty(PropertyConfigKey.blockId, blockId),
+      pageNo: this.toAstProperty(PropertyConfigKey.pageNo, pageNo),
+      x: this.toAstProperty(PropertyConfigKey.x, x),
+      y: this.toAstProperty(PropertyConfigKey.y, y),
       width: this.toAstProperty(PropertyConfigKey.width, width),
       height: this.toAstProperty(PropertyConfigKey.height, height),
+      index: this.toAstProperty(PropertyConfigKey.index, index),
+      classification: this.toAstProperty(PropertyConfigKey.classification, classification),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),

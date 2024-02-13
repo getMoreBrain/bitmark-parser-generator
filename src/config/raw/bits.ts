@@ -662,6 +662,53 @@ const BITS: _BitsConfig = {
     footerAllowed: true,
     rootExampleType: ExampleType.string,
   },
+  [BitType.extractorBlock]: {
+    since: '1.5.16',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.blockId,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.pageNo,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.x,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.y,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.width,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.height,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.index,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.classification,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceImage,
+        minCount: 1,
+      },
+    ],
+    bodyAllowed: true,
+  },
   [BitType.pageOpenBook]: {
     since: '1.5.10',
     baseBitType: BitType.example,

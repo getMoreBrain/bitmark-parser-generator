@@ -42,8 +42,14 @@ export interface BitJson {
   theme: string | string[];
   kind: string;
   action: string;
+  blockId: string;
+  pageNo: number;
+  x: number;
+  y: number;
   width: string;
   height: string;
+  index: number;
+  classification: string;
   thumbImage: string;
   scormSource: string;
   posterImage: string;
