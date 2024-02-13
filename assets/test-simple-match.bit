@@ -25,8 +25,8 @@ Werte
   "instruction": ["Ordnen Sie die Begriffe den korrekten Beschreibungen zu."],
   "cards": [
     [
-      { "heading": ["Ethischer Begriff"] },
-      { "heading": ["Beschreibung"] }
+      { "title": ["Ethischer Begriff"] },
+      { "title": ["Beschreibung"] }
     ],
     [
       {
