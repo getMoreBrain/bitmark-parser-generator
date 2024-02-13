@@ -1,0 +1,35 @@
+[.cloze]
+This is a cloze [_quiz][_test][?quiz or test?] with [_gaps] to be [_filled][?like a hole] in
+
+
+{
+  "type": "cloze",
+  "body": {
+    "content": [
+      { "type": "text", "text": "This is a cloze " },
+      {
+        "type": "gap",
+        "gap" : [
+          "quiz"
+          "test"
+        ],
+        "hint": ["quiz or test"]
+      },
+      { "type": "text", "text": " with " },
+      {
+        "type": "gap",
+        "gap" : [
+          "gaps"
+        ],
+      },
+      { "type": "text", "text": " to be " },
+      {
+        "type": "gap",
+        "gap" : [
+          "filled"
+        ],
+        "hint": ["quiz or test"]
+      },
+    ]
+  },
+}

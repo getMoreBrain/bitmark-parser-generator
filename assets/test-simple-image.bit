@@ -1,0 +1,12 @@
+[.image]
+[@image:https://t.com/image.gif][#width:200][#height:200]
+
+
+{
+  "type": "image",
+  "image": {
+    "image": "https://t.com/image.gif",
+    "width": 200,
+    "height": 200
+  },
+}

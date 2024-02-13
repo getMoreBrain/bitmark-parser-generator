@@ -209,16 +209,16 @@ class BitmarkPegParserProcessor {
     const { bitType, textFormat, resourceType } = bitHeader;
 
     // Bit type was invalid, so ignore the bit, returning instead the parsing errors
-    if (!bitType || Config.isOfBitType(bitType, BitType._error)) return this.invalidBit();
+    // if (!bitType || Config.isOfBitType(bitType, BitType._error)) return this.invalidBit();
 
     // Bit type was comment, so ignore the bit, returning the comment info instead
     if (Config.isOfBitType(bitType, BitType._comment)) return this.commentBit();
 
     if (DEBUG_BIT_CONTENT_RAW) this.debugPrint('BIT CONTENT RAW', bitContent);
 
-    const isTrueFalseV1 = Config.isOfBitType(bitType, BitType.trueFalse1);
-    const isMultipleChoiceV1 = Config.isOfBitType(bitType, BitType.multipleChoice1);
-    const isMultipleResponseV1 = Config.isOfBitType(bitType, BitType.multipleResponse1);
+    // const isTrueFalseV1 = Config.isOfBitType(bitType, BitType.trueFalse1);
+    // const isMultipleChoiceV1 = Config.isOfBitType(bitType, BitType.multipleChoice1);
+    // const isMultipleResponseV1 = Config.isOfBitType(bitType, BitType.multipleResponse1);
 
     if (DEBUG_BIT_CONTENT) this.debugPrint('BIT CONTENT', bitContent);
 
@@ -229,49 +229,51 @@ class BitmarkPegParserProcessor {
     bitContent = this.squashUnwantedInlineBodyBits(bitType, textFormat, bitContent);
 
     // Validate the bit tags
-    bitContent = BitmarkPegParserValidator.validateBitTags(this.context, bitType, resourceType, bitContent);
+    // bitContent = BitmarkPegParserValidator.validateBitTags(this.context, bitType, resourceType, bitContent);
 
     // Parse the bit content into a an object with the appropriate keys
-    const bitConfig = Config.getBitConfig(bitType);
+    // const bitConfig = Config.getBitConfig(bitType);
     const {
-      body,
-      footer,
-      cardSet,
-      title,
-      statement,
-      statements,
-      choices,
-      responses,
-      resources,
-      posterImage,
-      internalComments,
-      ...tags
-    } = this.bitContentProcessor(bitType, textFormat, BitContentLevel.Bit, bitConfig.tags, bitContent);
+      // body,
+      // footer,
+      // cardSet,
+      // title,
+      // statement,
+      // statements,
+      // choices,
+      // responses,
+      // resources,
+      // posterImage,
+      // internalComments,
+      nodes,
+      // ...tags
+    } = this.bitContentProcessor(bitType, textFormat, BitContentLevel.Bit, /*bitConfig.tags,*/ undefined, bitContent);
 
-    if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
-    if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
-    if (DEBUG_FOOTER) this.debugPrint('BIT FOOTER', footer);
+    // if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
+    // if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
+    // if (DEBUG_FOOTER) this.debugPrint('BIT FOOTER', footer);
 
-    // Build the titles for the specific bit type
-    const titles = buildTitles(this.context, bitType, title);
+    // // Build the titles for the specific bit type
+    // const titles = buildTitles(this.context, bitType, title);
 
-    // Build the card data for the specific bit type
-    const bitSpecificCards = buildCards(
-      this.context,
-      bitType,
-      textFormat,
-      cardSet,
-      statement,
-      statements,
-      choices,
-      responses,
-    );
+    // // Build the card data for the specific bit type
+    // const bitSpecificCards = buildCards(
+    //   this.context,
+    //   bitType,
+    //   textFormat,
+    //   cardSet,
+    //   statement,
+    //   statements,
+    //   choices,
+    //   responses,
+    // );
 
-    // Build the resources
-    const filteredResources = buildResources(this.context, bitType, resourceType, resources);
+    // // Build the resources
+    // const filteredResources = buildResources(this.context, bitType, resourceType, resources);
 
     // Build the final internal comments
-    const internalComment = [...(internalComments ?? []), ...(bitSpecificCards.internalComments ?? [])];
+    // const internalComment = [...(internalComments ?? []), ...(bitSpecificCards.internalComments ?? [])];
+    // const internalComment = [...(internalComments ?? [])];
 
     // Build the warnings and errors for the parser object
     const warnings = this.buildBitLevelWarnings();
@@ -283,18 +285,19 @@ class BitmarkPegParserProcessor {
     const bit = builder.bit({
       bitType,
       textFormat,
-      resourceType,
-      ...titles,
-      posterImage: posterImage as BreakscapedString,
-      statement: isTrueFalseV1 ? statement : undefined,
-      choices: isMultipleChoiceV1 ? choices : undefined,
-      responses: isMultipleResponseV1 ? responses : undefined,
-      ...tags,
-      resources: filteredResources,
-      ...bitSpecificCards,
-      body,
-      footer,
-      internalComment,
+      // resourceType,
+      // ...titles,
+      // posterImage: posterImage as BreakscapedString,
+      // statement: isTrueFalseV1 ? statement : undefined,
+      // choices: isMultipleChoiceV1 ? choices : undefined,
+      // responses: isMultipleResponseV1 ? responses : undefined,
+      // ...tags,
+      // resources: filteredResources,
+      // ...bitSpecificCards,
+      // body,
+      // footer,
+      // internalComment,
+      nodes,
       parser: this.parser,
     });
 
@@ -467,25 +470,27 @@ class BitmarkPegParserProcessor {
     tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,
   ): BitContentProcessorResult {
-    const result: BitContentProcessorResult = {};
+    const result: BitContentProcessorResult = {
+      nodes: [],
+    };
     if (!data) return result;
 
-    result.title = [];
-    result.solutions = [];
-    result.statements = [];
-    result.choices = [];
-    result.responses = [];
-    result.resources = [];
-    result.trueFalse = [];
-    result.markConfig = [];
-    result.extraProperties = {};
-    result.internalComments = [];
+    // result.title = [];
+    // result.solutions = [];
+    // result.statements = [];
+    // result.choices = [];
+    // result.responses = [];
+    // result.resources = [];
+    // result.trueFalse = [];
+    // result.markConfig = [];
+    // result.extraProperties = {};
+    // result.internalComments = [];
 
-    let seenReference = false;
-    let inFooter = false;
+    const seenReference = false;
+    const inFooter = false;
     const bodyParts: BodyPart[] = [];
     let bodyPart: BreakscapedString = Breakscape.EMPTY_STRING;
-    let footer: BreakscapedString = Breakscape.EMPTY_STRING;
+    const footer: BreakscapedString = Breakscape.EMPTY_STRING;
     // let cardBody: BreakscapedString = Breakscape.EMPTY_STRING;
 
     const inBit = bitLevel === BitContentLevel.Bit;
@@ -504,99 +509,112 @@ class BitmarkPegParserProcessor {
       bodyPart = Breakscape.EMPTY_STRING;
     };
 
+    const addNode = (type: string, key: string, value?: string) => {
+      result.nodes.push({ type, key, value });
+    };
+
     // Reduce the Type/Key/Value data to a single object that can be used to build the bit
     data.forEach((content, _index) => {
-      const { type, value } = content as TypeKeyValue;
+      const { type, key, value } = content as TypeKeyValue;
 
       switch (type) {
         case TypeKey.ItemLead: {
-          itemLeadChainContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          addNode('@', inChain ? 'lead' : 'item', value as string);
+          break;
+          // itemLeadChainContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
         }
 
         case TypeKey.Instruction:
+          addNode('@', 'instruction', value as string);
+          break;
         case TypeKey.Hint:
+          addNode('@', 'hint', value as string);
+          break;
         case TypeKey.Anchor:
+          addNode('@', 'anchor', value as string);
+          break;
         case TypeKey.SampleSolution:
-          defaultTagContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          // defaultTagContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Reference:
-          referenceTagContentProcessor(
-            this.context,
-            bitType,
-            textFormat,
-            bitLevel,
-            tagsConfig,
-            content,
-            result,
-            seenReference,
-          );
-          seenReference = true;
+          // referenceTagContentProcessor(
+          //   this.context,
+          //   bitType,
+          //   textFormat,
+          //   bitLevel,
+          //   tagsConfig,
+          //   content,
+          //   result,
+          //   seenReference,
+          // );
+          // seenReference = true;
           break;
 
         case TypeKey.Title:
-          titleTagContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          // titleTagContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Property:
-          propertyContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          addNode('@', key, value as string);
+          // propertyContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Gap: {
-          if (!inChain) addBodyText(); // Body bit, so add the body text
-          gapChainContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result, bodyParts);
+          // if (!inChain) addBodyText(); // Body bit, so add the body text
+          // gapChainContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result, bodyParts);
           break;
         }
 
         case TypeKey.Mark: {
-          if (!inChain) addBodyText(); // Body bit, so add the body text
-          markChainContentProcessor(
-            this.context,
-            bitType,
-            textFormat,
-            bitLevel,
-            tagsConfig,
-            content,
-            result,
-            bodyParts,
-          );
+          // if (!inChain) addBodyText(); // Body bit, so add the body text
+          // markChainContentProcessor(
+          //   this.context,
+          //   bitType,
+          //   textFormat,
+          //   bitLevel,
+          //   tagsConfig,
+          //   content,
+          //   result,
+          //   bodyParts,
+          // );
           break;
         }
 
         case TypeKey.True:
         case TypeKey.False: {
-          if (!inChain) addBodyText(); // Body bit, so add the body text
-          trueFalseChainContentProcessor(
-            this.context,
-            bitType,
-            textFormat,
-            bitLevel,
-            tagsConfig,
-            content,
-            result,
-            bodyParts,
-          );
+          // if (!inChain) addBodyText(); // Body bit, so add the body text
+          // trueFalseChainContentProcessor(
+          //   this.context,
+          //   bitType,
+          //   textFormat,
+          //   bitLevel,
+          //   tagsConfig,
+          //   content,
+          //   result,
+          //   bodyParts,
+          // );
           break;
         }
 
         case TypeKey.Resource:
-          resourceContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          // resourceContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.CardSet: {
-          result.cardSet = value as ParsedCardSet;
-          inFooter = true; // After the card set, body lines should be written to the footer rather than the body
+          // result.cardSet = value as ParsedCardSet;
+          // inFooter = true; // After the card set, body lines should be written to the footer rather than the body
           break;
         }
 
         case TypeKey.BodyText:
         case TypeKey.CardText: {
-          if (inFooter) {
-            footer = Breakscape.concatenate(footer, value as BreakscapedString);
-          } else {
-            bodyPart = Breakscape.concatenate(bodyPart, value as BreakscapedString);
-          }
+          // if (inFooter) {
+          //   footer = Breakscape.concatenate(footer, value as BreakscapedString);
+          // } else {
+          //   bodyPart = Breakscape.concatenate(bodyPart, value as BreakscapedString);
+          // }
           break;
         }
 
@@ -615,31 +633,31 @@ class BitmarkPegParserProcessor {
 
     // Spread the chained item / lead / etc
     // Set the lead item from the chain
-    if (result.itemLead) {
-      const l = result.itemLead.length;
-      if (l > 0) result.item = result.itemLead[0];
-      if (l > 1) result.lead = result.itemLead[1];
-      if (l > 2) result.pageNumber = result.itemLead[2];
-      if (l > 3) result.marginNumber = result.itemLead[l - 1];
-    }
+    // if (result.itemLead) {
+    //   const l = result.itemLead.length;
+    //   if (l > 0) result.item = result.itemLead[0];
+    //   if (l > 1) result.lead = result.itemLead[1];
+    //   if (l > 2) result.pageNumber = result.itemLead[2];
+    //   if (l > 3) result.marginNumber = result.itemLead[l - 1];
+    // }
 
-    // Validate and build the body (trimmed)
-    if (inBit) {
-      result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
-      BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, textFormat, result.body);
-    } else if (inCard) {
-      result.cardBody = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
-      // Card body is validated in CardContentProcessor:processCardSet()
-    }
+    // // Validate and build the body (trimmed)
+    // if (inBit) {
+    //   result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
+    //   BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, textFormat, result.body);
+    // } else if (inCard) {
+    //   result.cardBody = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
+    //   // Card body is validated in CardContentProcessor:processCardSet()
+    // }
 
-    // Validate and build the footer (trimmed)
-    footer = footer.trim() as BreakscapedString;
-    if (footer) {
-      footer = BitmarkPegParserValidator.checkFooter(this.context, bitType, bitLevel, footer);
-      if (footer) {
-        result.footer = builder.footerText({ text: footer });
-      }
-    }
+    // // Validate and build the footer (trimmed)
+    // footer = footer.trim() as BreakscapedString;
+    // if (footer) {
+    //   footer = BitmarkPegParserValidator.checkFooter(this.context, bitType, bitLevel, footer);
+    //   if (footer) {
+    //     result.footer = builder.footerText({ text: footer });
+    //   }
+    // }
 
     // // Add card body (validated elsewhere)
     // cardBody = cardBody.trim() as BreakscapedString;
@@ -647,19 +665,19 @@ class BitmarkPegParserProcessor {
     //   result.cardBody = cardBody;
     // }
 
-    // Remove the extra properties if there are none
-    if (Object.keys(result.extraProperties).length === 0) delete result.extraProperties;
+    // // Remove the extra properties if there are none
+    // if (Object.keys(result.extraProperties).length === 0) delete result.extraProperties;
 
-    // Remove the unwanted empty arrays.
-    if (result.title.length === 0) delete result.title;
-    if (result.solutions.length === 0) delete result.solutions;
-    if (result.statements.length === 0) delete result.statements;
-    if (result.choices.length === 0) delete result.choices;
-    if (result.responses.length === 0) delete result.responses;
-    if (result.trueFalse.length === 0) delete result.trueFalse;
-    if (result.markConfig.length === 0) delete result.markConfig;
-    if (result.resources.length === 0) delete result.resources;
-    if (result.internalComments.length === 0) delete result.internalComments;
+    // // Remove the unwanted empty arrays.
+    // if (result.title.length === 0) delete result.title;
+    // if (result.solutions.length === 0) delete result.solutions;
+    // if (result.statements.length === 0) delete result.statements;
+    // if (result.choices.length === 0) delete result.choices;
+    // if (result.responses.length === 0) delete result.responses;
+    // if (result.trueFalse.length === 0) delete result.trueFalse;
+    // if (result.markConfig.length === 0) delete result.markConfig;
+    // if (result.resources.length === 0) delete result.resources;
+    // if (result.internalComments.length === 0) delete result.internalComments;
 
     return result;
   }

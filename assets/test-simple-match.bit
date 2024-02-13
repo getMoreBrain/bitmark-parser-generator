@@ -1,0 +1,68 @@
+
+
+[.match:bitmark--]
+[@id:213827]
+[%46]
+[!Ordnen Sie die Begriffe den korrekten Beschreibungen zu.]
+===
+[#Ethischer Begriff]
+==
+[#Beschreibung]
+===
+Beschreibt ein auf Dauerhaftigkeit ausgerichtetes Handeln.
+==
+Nachhaltigkeit
+===
+Leitvorstellungen über erwünschenswertes Verhalten.
+==
+Werte
+===
+
+{
+  "type": "match",
+  "id": ["213927"],
+  "itemLead": ["46"],
+  "instruction": ["Ordnen Sie die Begriffe den korrekten Beschreibungen zu."],
+  "cards": [
+    [
+      { "heading": ["Ethischer Begriff"] },
+      { "heading": ["Beschreibung"] }
+    ],
+    [
+      {
+        "body": {
+          "content" : {
+            "type": "text",
+            "text": "Beschreibt ein auf Dauerhaftigkeit ausgerichtetes Handeln."
+          }
+        }
+      },
+      {
+        "body": {
+          "content" : {
+            "type": "text",
+            "text": "Nachhaltigkeit"
+          }
+        }
+      }
+    ],
+    [
+      {
+        "body": {
+          "content" : {
+            "type": "text",
+            "text": "Leitvorstellungen über erwünschenswertes Verhalten."
+          }
+        }
+      },
+      {
+        "body": {
+          "content" : {
+            "type": "text",
+            "text": "Werte"
+          }
+        }
+      }
+    ]
+  ]
+}

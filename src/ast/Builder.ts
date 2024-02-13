@@ -55,6 +55,7 @@ import {
   Ingredient,
   TechnicalTerm,
 } from '../model/ast/Nodes';
+import { BitContentNode } from '../parser/bitmark/peg/BitmarkPegParserTypes';
 
 /**
  * Builder to build bitmark AST node programmatically
@@ -207,6 +208,7 @@ class Builder extends BaseBuilder {
     ingredients?: Ingredient[];
     cardBits?: CardBit[];
     footer?: FooterText;
+    nodes: BitContentNode[];
 
     markup?: string;
     parser?: ParserInfo;
@@ -314,6 +316,7 @@ class Builder extends BaseBuilder {
       body,
       sampleSolution,
       footer,
+      nodes,
 
       markup,
       parser,
@@ -432,6 +435,7 @@ class Builder extends BaseBuilder {
       sampleSolution: ArrayUtils.asSingle(sampleSolution),
       cardNode,
       footer,
+      nodes,
 
       markup,
       parser,

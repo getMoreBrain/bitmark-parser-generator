@@ -1,0 +1,121 @@
+[.article]
+[%item][%lead]
+[?hint]
+[!instruction]
+
+[@$stringProperty:stringValue]
+[@#numberProperty:99.1]
+
+[$stringPropertyObj:hello][#numberProperty:43][#numberProperty:45]
+
+[#array:43][#array:34]
+
+[&image:https://t.com/image.gif][#width:200][#height:200]
+
+
+[@property:Test]
+[@property:TestOverwrite]
+
+{
+  "type": "article",
+  "itemLead": ["item", "lead"],
+  "hint": ["hint"],
+  "instruction": ["instruction"],
+  "stringProperty": ["stringValue"],
+  "numberProperty": [99.1],
+  "stringPropertyObj": {
+    "stringPropertyObj": ["hello"],
+    "numberProperty": [43, 45]
+  },
+  "array": [43, 34],
+  "image": {
+    "image": ["https://t.com/image.gif"],
+    "width": [200],
+    "height": [200]
+  },
+  "propertyTest": ["TestOverwrite"]
+}
+
+
+
+
+{
+  "type": "article",
+  "content": [
+    {
+      "type": "itemLead",
+      "content": ["item", "lead"]
+    },
+    {
+      "type": "hint",
+      "content": ["hint"]
+    },
+    {
+      "type": "instruction",
+      "content": ["instruction"]
+    },
+    {
+      "type": "property",
+      "content": [
+        {
+          "type": "string",
+          "key": "stringProperty",
+          "value": "stringValue"
+        }
+      ]
+    },
+    {
+      "type": "property",
+      "content": [
+        {
+          "type": "number",
+          "key": "numberProperty",
+          "value": 99.1
+        }
+      ]
+    },
+    {
+      "type": "property",
+      "content": [
+        {
+          "type": "string",
+          "key": "stringPropertyObj",
+          "value": "hello"
+        },
+        {
+          "type": "number",
+          "key": "numberProperty",
+          "value": 43
+        }
+        {
+          "type": "number",
+          "key": "numberProperty",
+          "value": 45
+        }
+      ]
+    },
+    {
+      "type": "property",
+      "content": [
+        {
+          "type": "number",
+          "value": 43
+        },
+        {
+          "type": "number",
+          "value": 34
+        }
+      ]
+    },
+    {
+      "type": "property",
+      "content": [
+        {
+          "type": "string",
+          "key": "property",
+          "value": "TestOverwrite"
+        }
+      ]
+    }
+  ]
+}

@@ -361,6 +361,13 @@ const NodeType = superenum({
 
   // Markup
   markup: 'markup', // bitmark markup
+
+  // Node
+  nodes: 'nodes',
+  nodesValue: 'nodesValue',
+  // type: 'type',
+  // key: 'key',
+  // value: 'value',
 });
 
 export type NodeTypeType = EnumType<typeof NodeType>;

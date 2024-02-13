@@ -1,3 +1,4 @@
+import { BitContentNode } from '../../parser/bitmark/peg/BitmarkPegParserTypes';
 import { BitTypeType } from '../enum/BitType';
 import { BodyBitTypeType } from '../enum/BodyBitType';
 import { ResourceTagType } from '../enum/ResourceTag';
@@ -133,6 +134,7 @@ export interface Bit {
   responses?: Response[];
   cardNode?: CardNode;
   footer?: FooterText;
+  nodes: BitContentNode[];
 
   markup?: string; // Called 'bitmark' in the JSON
   parser?: ParserInfo;

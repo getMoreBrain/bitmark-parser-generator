@@ -26,6 +26,7 @@ import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
+import { BitContentNode } from '../../parser/bitmark/peg/BitmarkPegParserTypes';
 import { TextParser } from '../../parser/text/TextParser';
 import { ArrayUtils } from '../../utils/ArrayUtils';
 import { BooleanUtils } from '../../utils/BooleanUtils';
@@ -384,149 +385,167 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // required, and this is bit depenedent.
     // This is ugly, but it is even uglier if the defaults at set in the AST.
 
-    const bitConfig = Config.getBitConfig(bit.bitType);
-    const hasRootExample = !!bitConfig.rootExampleType;
-    const isBoolean = bitConfig.rootExampleType === ExampleType.boolean;
+    // const bitConfig = Config.getBitConfig(bit.bitType);
+    // const hasRootExample = !!bitConfig.rootExampleType;
+    // const isBoolean = bitConfig.rootExampleType === ExampleType.boolean;
 
-    if (hasRootExample) {
-      // Calculate the value of the default example
-      let defaultExample: string | boolean;
-      if (isBoolean) {
-        // Boolean example
-        defaultExample = true;
-        if (Config.isOfBitType(bit.bitType, BitType.trueFalse1)) {
-          if (bit.cardNode?.statement?.isCorrect !== undefined) {
-            defaultExample = bit.cardNode.statement.isCorrect;
-          }
-        }
-      } else {
-        // String example
-        defaultExample = bit.sampleSolution ?? '';
-      }
+    // if (hasRootExample) {
+    //   // Calculate the value of the default example
+    //   let defaultExample: string | boolean;
+    //   if (isBoolean) {
+    //     // Boolean example
+    //     defaultExample = true;
+    //     if (Config.isOfBitType(bit.bitType, BitType.trueFalse1)) {
+    //       if (bit.cardNode?.statement?.isCorrect !== undefined) {
+    //         defaultExample = bit.cardNode.statement.isCorrect;
+    //       }
+    //     }
+    //   } else {
+    //     // String example
+    //     defaultExample = bit.sampleSolution ?? '';
+    //   }
 
-      const exampleRes = this.toExample(bit as ExampleNode, {
-        defaultExample,
-        isBoolean,
-      });
-      this.bitJson.isExample = exampleRes.isExample;
-      this.bitJson.example = exampleRes.example;
-    } else if (bit.isExample) {
-      this.bitJson.isExample = true;
-    }
+    //   const exampleRes = this.toExample(bit as ExampleNode, {
+    //     defaultExample,
+    //     isBoolean,
+    //   });
+    //   this.bitJson.isExample = exampleRes.isExample;
+    //   this.bitJson.example = exampleRes.example;
+    // } else if (bit.isExample) {
+    //   this.bitJson.isExample = true;
+    // }
   }
 
   protected exit_bitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
     // Clean up the bit JSON, removing any unwanted values
-    this.cleanAndSetDefaultsForBitJson(this.bitJson);
+    // this.cleanAndSetDefaultsForBitJson(this.bitJson);
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> nodesValue
+
+  protected enter_nodesValue(node: NodeInfo, _route: NodeInfo[]): void {
+    const nodeData = node.value as BitContentNode;
+
+    this.bitJson[nodeData.key ?? 'nokey'] = nodeData?.value;
+
+    // if (!this.options.excludeUnknownProperties && extraProperties) {
+    //   for (const [key, values] of Object.entries(extraProperties)) {
+    //     let k = key;
+    //     if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {
+    //       k = `_${key}`;
+    //     }
+    //     this.addProperty(this.bitJson, k, values);
+    //   }
+    // }
   }
 
   // bitmarkAst -> bits -> bitsValue -> imageSource
 
-  protected enter_imageSource(node: NodeInfo, route: NodeInfo[]): void {
-    const imageSource = node.value as ImageSource;
+  // protected enter_imageSource(node: NodeInfo, route: NodeInfo[]): void {
+  //   const imageSource = node.value as ImageSource;
 
-    // Ignore values that are not at the bit level as they might be handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+  //   // Ignore values that are not at the bit level as they might be handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.bitsValue) return;
 
-    const { url, mockupId, size, format, trim } = imageSource;
+  //   const { url, mockupId, size, format, trim } = imageSource;
 
-    const imageSourceJson = {} as ImageSourceJson;
-    this.addProperty(imageSourceJson, 'url', url ?? '', true);
-    this.addProperty(imageSourceJson, 'mockupId', mockupId ?? '', true);
-    this.addProperty(imageSourceJson, 'size', size ?? null, true);
-    this.addProperty(imageSourceJson, 'format', format ?? null, true);
-    this.addProperty(imageSourceJson, 'trim', BooleanUtils.isBoolean(trim) ? trim : null, true);
+  //   const imageSourceJson = {} as ImageSourceJson;
+  //   this.addProperty(imageSourceJson, 'url', url ?? '', true);
+  //   this.addProperty(imageSourceJson, 'mockupId', mockupId ?? '', true);
+  //   this.addProperty(imageSourceJson, 'size', size ?? null, true);
+  //   this.addProperty(imageSourceJson, 'format', format ?? null, true);
+  //   this.addProperty(imageSourceJson, 'trim', BooleanUtils.isBoolean(trim) ? trim : null, true);
 
-    this.bitJson.imageSource = imageSourceJson;
-  }
+  //   this.bitJson.imageSource = imageSourceJson;
+  // }
 
-  // bitmarkAst -> bits -> bitsValue -> person
+  // // bitmarkAst -> bits -> bitsValue -> person
 
-  protected enter_person(node: NodeInfo, route: NodeInfo[]): void {
-    const person = node.value as Person;
-    const bitType = this.getBitType(route);
+  // protected enter_person(node: NodeInfo, route: NodeInfo[]): void {
+  //   const person = node.value as Person;
+  //   const bitType = this.getBitType(route);
 
-    // Ignore values that are not at the bit level as they might be handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue || !bitType) return;
+  //   // Ignore values that are not at the bit level as they might be handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.bitsValue || !bitType) return;
 
-    const { name, title, avatarImage } = person;
+  //   const { name, title, avatarImage } = person;
 
-    const personJson = {} as PersonJson;
-    this.addProperty(personJson, 'name', name ?? '', true);
-    if (title) {
-      this.addProperty(personJson, 'title', title, true);
-    }
-    if (avatarImage) {
-      const res = this.parseResourceToJson(bitType, avatarImage);
-      if (res && res.type === ResourceTag.image) {
-        personJson.avatarImage = res.image;
-      }
-    }
+  //   const personJson = {} as PersonJson;
+  //   this.addProperty(personJson, 'name', name ?? '', true);
+  //   if (title) {
+  //     this.addProperty(personJson, 'title', title, true);
+  //   }
+  //   if (avatarImage) {
+  //     const res = this.parseResourceToJson(bitType, avatarImage);
+  //     if (res && res.type === ResourceTag.image) {
+  //       personJson.avatarImage = res.image;
+  //     }
+  //   }
 
-    if (Config.isOfBitType(bitType, BitType.conversationLeft1)) {
-      // Use the legacy partner property in the JSON for conversation bits, so change to person is backwards compatible
-      this.bitJson.partner = personJson;
-    } else {
-      this.bitJson.person = personJson;
-    }
-  }
+  //   if (Config.isOfBitType(bitType, BitType.conversationLeft1)) {
+  //     // Use the legacy partner property in the JSON for conversation bits, so change to person is backwards compatible
+  //     this.bitJson.partner = personJson;
+  //   } else {
+  //     this.bitJson.person = personJson;
+  //   }
+  // }
 
-  // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
+  // // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
 
-  protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): void {
-    const markConfig = node.value as MarkConfig;
+  // protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): void {
+  //   const markConfig = node.value as MarkConfig;
 
-    // Ignore example that is not at the correct level
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.markConfig) return;
+  //   // Ignore example that is not at the correct level
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.markConfig) return;
 
-    const { mark, color, emphasis } = markConfig;
+  //   const { mark, color, emphasis } = markConfig;
 
-    const markJson = {} as Partial<MarkConfigJson>;
+  //   const markJson = {} as Partial<MarkConfigJson>;
 
-    this.addProperty(markJson, 'mark', mark ?? 'unknown', true);
-    if (color) this.addProperty(markJson, 'color', color ?? '', true);
-    if (emphasis) this.addProperty(markJson, 'emphasis', emphasis ?? '', true);
+  //   this.addProperty(markJson, 'mark', mark ?? 'unknown', true);
+  //   if (color) this.addProperty(markJson, 'color', color ?? '', true);
+  //   if (emphasis) this.addProperty(markJson, 'emphasis', emphasis ?? '', true);
 
-    if (!this.bitJson.marks) this.bitJson.marks = [];
-    this.bitJson.marks.push(markJson as MarkConfigJson);
-  }
+  //   if (!this.bitJson.marks) this.bitJson.marks = [];
+  //   this.bitJson.marks.push(markJson as MarkConfigJson);
+  // }
 
-  // bitmarkAst -> bits -> bitsValue -> sampleSolution
+  // // bitmarkAst -> bits -> bitsValue -> sampleSolution
 
-  protected leaf_sampleSolution(node: NodeInfo, route: NodeInfo[]): void {
-    // Ignore example that is not at the correct level
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+  // protected leaf_sampleSolution(node: NodeInfo, route: NodeInfo[]): void {
+  //   // Ignore example that is not at the correct level
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.bitsValue) return;
 
-    if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value, true);
-  }
+  //   if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value, true);
+  // }
 
-  // bitmarkAst -> bits -> bitsValue -> itemLead
+  // // bitmarkAst -> bits -> bitsValue -> itemLead
 
-  protected enter_itemLead(node: NodeInfo, route: NodeInfo[]): void {
-    const itemLead = node.value as ItemLead;
-    const { item, lead, pageNumber, marginNumber } = itemLead;
+  // protected enter_itemLead(node: NodeInfo, route: NodeInfo[]): void {
+  //   const itemLead = node.value as ItemLead;
+  //   const { item, lead, pageNumber, marginNumber } = itemLead;
 
-    // Ignore item / lead that are not at the bit level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+  //   // Ignore item / lead that are not at the bit level as they are handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.bitsValue) return;
 
-    if (item != null) {
-      this.bitJson.item = this.convertBreakscapedStringToJsonText(item, TextFormat.bitmarkMinusMinus);
-    }
-    if (lead != null) {
-      this.bitJson.lead = this.convertBreakscapedStringToJsonText(lead, TextFormat.bitmarkMinusMinus);
-    }
-    if (pageNumber != null) {
-      this.bitJson.pageNumber = this.convertBreakscapedStringToJsonText(pageNumber, TextFormat.bitmarkMinusMinus);
-    }
-    if (marginNumber != null) {
-      this.bitJson.marginNumber = this.convertBreakscapedStringToJsonText(marginNumber, TextFormat.bitmarkMinusMinus);
-    }
-  }
+  //   if (item != null) {
+  //     this.bitJson.item = this.convertBreakscapedStringToJsonText(item, TextFormat.bitmarkMinusMinus);
+  //   }
+  //   if (lead != null) {
+  //     this.bitJson.lead = this.convertBreakscapedStringToJsonText(lead, TextFormat.bitmarkMinusMinus);
+  //   }
+  //   if (pageNumber != null) {
+  //     this.bitJson.pageNumber = this.convertBreakscapedStringToJsonText(pageNumber, TextFormat.bitmarkMinusMinus);
+  //   }
+  //   if (marginNumber != null) {
+  //     this.bitJson.marginNumber = this.convertBreakscapedStringToJsonText(marginNumber, TextFormat.bitmarkMinusMinus);
+  //   }
+  // }
 
   // bitmarkAst -> bits -> bitsValue -> extraProperties
 
@@ -544,854 +563,854 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBits -> cardBitsValue
-
-  protected enter_cardBitsValue(node: NodeInfo, route: NodeInfo[]): void {
-    // How cardBits are handled depends on the bit type
-    const bitType = this.getBitType(route);
-    if (!bitType) return;
-
-    // Create the listItems / sections if not already created
-    let listItems: ListItemJson[] | undefined;
-    if (bitType === BitType.pageFooter) {
-      if (!this.bitJson.sections) this.bitJson.sections = [];
-      listItems = this.bitJson.sections;
-    } else {
-      if (!this.bitJson.listItems) this.bitJson.listItems = [];
-      listItems = this.bitJson.listItems;
-    }
-
-    // Create this list item
-    this.listItem = {
-      ...this.toItemLeadHintInstruction(node.value),
-      body: this.bodyDefault,
-    };
-
-    // Delete unwanted properties
-    const nv = node.value;
-    const li: Partial<ListItemJson> = this.listItem;
-    if (nv.pageNumber == null) delete li.pageNumber;
-    if (nv.marginNumber == null) delete li.marginNumber;
-
-    listItems.push(this.listItem);
-  }
-
-  protected exit_cardBitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
-    this.listItem = undefined;
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> body
-
-  protected enter_body(_node: NodeInfo, _route: NodeInfo[]): void {
-    this.bodyJson = this.bodyDefault;
-  }
-
-  protected exit_body(_node: NodeInfo, route: NodeInfo[]): void {
-    const parent = this.getParentNode(route);
-    if (!parent) return;
-
-    if (parent.key === NodeType.bitsValue) {
-      // Body is at the bit level
-      this.bitJson.body = this.bodyJson;
-    } else if (parent.key === NodeType.cardBitsValue) {
-      // Body is at the list item (card bit) level
-      if (this.listItem) this.listItem.body = this.bodyJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> * -> bodyParts (body, cardBody (e.g. cloze-list, page-footer))
-
-  protected enter_bodyParts(node: NodeInfo, route: NodeInfo[]): boolean {
-    const bodyParts = node.value as BodyPart[];
-    const plainText = this.options.textAsPlainText;
-    const textFormat = this.getTextFormat(route);
-    let fullBodyTextStr: BreakscapedString = '' as BreakscapedString;
-    let placeholderIndex = this.startPlaceholderIndex;
-
-    // Function for creating the placeholder keys
-    const createPlaceholderKeys = (
-      i: number,
-    ): { legacyPlaceholderKey: BreakscapedString; placeholderKey: BreakscapedString } => {
-      return {
-        // Old placeholder style (for backwards compatibility) = {0}
-        legacyPlaceholderKey: `{${i}}` as BreakscapedString,
-
-        // New placeholder style (cannot clash as bitmark parser would have removed it) = [!0]
-        placeholderKey: `[!${i}]` as BreakscapedString,
-      };
-    };
-
-    // Loop the text bodyParts creating full body text with the correct placeholders
-    //
-    // For text output 'fullBodyTextStr:
-    // - is created and written to the JSON
-    // - has placeholders inserted into 'fullBodyTextStr' in the format {0}
-    //
-    // For JSON output 'fullBodyTextStr:
-    // - is created and passed into the text parser to create the body text AST
-    // - has placeholders inserted into 'fullBodyTextStr' in the format [!0] to allow the text parser to identify
-    //   where the body bits should be inserted
-    //
-    for (let i = 0; i < bodyParts.length; i++) {
-      const bodyPart = bodyParts[i];
-
-      const isText = bodyPart.type === BodyBitType.text;
-
-      if (isText) {
-        const asText = bodyPart as BodyText;
-        const bodyTextPart = asText.data.bodyText;
-
-        // Append the text part to the full text body
-        fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, bodyTextPart);
-      } else {
-        const { legacyPlaceholderKey, placeholderKey } = createPlaceholderKeys(placeholderIndex);
-
-        // Append the placeholder to the full text body
-        fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, plainText ? legacyPlaceholderKey : placeholderKey);
-
-        placeholderIndex++;
-      }
-    }
-
-    // Add string or AST to the body
-    this.bodyJson = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
-    const bodyAst = this.bodyJson as TextAst;
-
-    // Loop the body parts again to create the body bits:
-    // - For text output the body bits are inserted into the 'placeholders' object
-    // - For JSON output the body bits are inserted into body AST, replacing the placeholders created by the text parser
-    placeholderIndex = this.startPlaceholderIndex;
-    for (let i = 0; i < bodyParts.length; i++) {
-      const bodyPart = bodyParts[i];
-
-      // Skip text body parts as they are handled above
-      const isText = bodyPart.type === BodyBitType.text;
-      if (isText) continue;
-
-      const bodyBit = bodyPart as BodyBit;
-      let bodyBitJson: BodyBitJson | undefined;
-
-      const { legacyPlaceholderKey } = createPlaceholderKeys(placeholderIndex);
-
-      switch (bodyPart.type) {
-        case BodyBitType.gap: {
-          const gap = bodyBit as Gap;
-          bodyBitJson = this.createGapJson(gap);
-          break;
-        }
-
-        case BodyBitType.mark: {
-          const mark = bodyBit as Mark;
-          bodyBitJson = this.createMarkJson(mark);
-          break;
-        }
-
-        case BodyBitType.select: {
-          const select = bodyBit as Select;
-          bodyBitJson = this.createSelectJson(select);
-          break;
-        }
-
-        case BodyBitType.highlight: {
-          const highlight = bodyBit as Highlight;
-          bodyBitJson = this.createHighlightJson(highlight);
-          break;
-        }
-      }
-
-      // Add the gap to the placeholders
-      if (bodyBitJson) {
-        if (plainText) {
-          // Ensure placeholders exists
-          if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
-
-          // Add the body bit to the placeholders
-          this.bitJson.placeholders[legacyPlaceholderKey] = bodyBitJson;
-        } else {
-          // Insert the body bit into the body AST
-          this.replacePlaceholderWithBodyBit(bodyAst, bodyBitJson, placeholderIndex);
-        }
-      }
-
-      placeholderIndex++;
-    }
-
-    // Save the current placeholder index for the next body (body, card bodies)
-    this.startPlaceholderIndex = placeholderIndex;
-
-    // Stop traversal of this branch for efficiency
-    return false;
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
-
-  protected enter_elements(node: NodeInfo, _route: NodeInfo[]): void {
-    const elements = node.value as BreakscapedString[];
-
-    // Ignore elements that are not at the bit level as they are handled elsewhere as quizzes
-    // if (parent?.key !== NodeType.bitsValue) return;
-
-    if (elements && elements.length > 0) {
-      this.bitJson.elements = Breakscape.unbreakscape(elements);
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
-
-  protected enter_flashcards(node: NodeInfo, route: NodeInfo[]): void {
-    const flashcards = node.value as Flashcard[];
-
-    // Ignore responses that are not at the correct level as they are potentially handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    const flashcardsJson: FlashcardJson[] = [];
-    if (flashcards) {
-      for (const c of flashcards) {
-        // Create the flashcard
-        const flashcardJson: Partial<FlashcardJson> = {
-          question: Breakscape.unbreakscape(c.question) ?? '',
-          answer: Breakscape.unbreakscape(c.answer) ?? '',
-          alternativeAnswers: Breakscape.unbreakscape(c.alternativeAnswers) ?? [],
-          ...this.toItemLeadHintInstruction(c),
-          ...this.toExample(c, {
-            defaultExample: c.isDefaultExample,
-            isBoolean: true,
-          }),
-        };
-
-        // Delete unwanted properties
-        if (c.itemLead?.lead == null) delete flashcardJson.lead;
-        if (c.itemLead?.pageNumber == null) delete flashcardJson.pageNumber;
-        if (c.itemLead?.marginNumber == null) delete flashcardJson.marginNumber;
-
-        flashcardsJson.push(flashcardJson as FlashcardJson);
-      }
-    }
-
-    if (flashcardsJson.length > 0) {
-      this.bitJson.cards = flashcardsJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> statement
-
-  protected enter_statement(node: NodeInfo, route: NodeInfo[]): void {
-    const statement = node.value as Statement;
-
-    // Ignore statement that is not at the cardNode level as it is handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    if (statement) {
-      this.bitJson.statement = Breakscape.unbreakscape(statement.text) ?? '';
-      this.bitJson.isCorrect = statement.isCorrect ?? false;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> statements -> statementsValue
-
-  protected enter_statements(node: NodeInfo, route: NodeInfo[]): void {
-    const statements = node.value as Statement[];
-
-    // Ignore statements that are not at the card node level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    const statementsJson: StatementJson[] = [];
-    if (statements) {
-      for (const s of statements) {
-        // Create the statement
-        const statementJson: Partial<StatementJson> = {
-          statement: Breakscape.unbreakscape(s.text) ?? '',
-          isCorrect: !!s.isCorrect,
-          ...this.toItemLeadHintInstruction(s),
-          ...this.toExample(s, {
-            defaultExample: !!s.isCorrect,
-            isBoolean: true,
-          }),
-        };
-
-        // Delete unwanted properties
-        if (s.itemLead?.item == null) delete statementJson.item;
-        if (s.itemLead?.lead == null) delete statementJson.lead;
-        if (s.itemLead?.pageNumber == null) delete statementJson.pageNumber;
-        if (s.itemLead?.marginNumber == null) delete statementJson.marginNumber;
-        if (s?.hint == null) delete statementJson.hint;
-        if (s?.instruction == null) delete statementJson.instruction;
-
-        statementsJson.push(statementJson as StatementJson);
-      }
-    }
-
-    if (statementsJson.length > 0) {
-      this.bitJson.statements = statementsJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> choices
-  // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices
-
-  protected enter_choices(node: NodeInfo, route: NodeInfo[]): void {
-    const choices = node.value as Choice[];
-
-    // Ignore choices that are not at the bit level as they are handled elsewhere as quizzes
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    const choicesJson: ChoiceJson[] = [];
-    if (choices) {
-      for (const c of choices) {
-        // Create the choice
-        const choiceJson: Partial<ChoiceJson> = {
-          choice: Breakscape.unbreakscape(c.text) ?? '',
-          isCorrect: c.isCorrect ?? false,
-          ...this.toItemLeadHintInstruction(c),
-          ...this.toExample(c, {
-            defaultExample: !!c.isCorrect,
-            isBoolean: true,
-          }),
-        };
-
-        // Delete unwanted properties
-        if (c.itemLead?.lead == null) delete choiceJson.lead;
-        if (c.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
-        if (c.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
-
-        choicesJson.push(choiceJson as ChoiceJson);
-      }
-    }
-
-    if (choicesJson.length > 0) {
-      this.bitJson.choices = choicesJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> responses
-  // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses
-
-  protected enter_responses(node: NodeInfo, route: NodeInfo[]): void {
-    const responses = node.value as Response[];
-
-    // Ignore responses that are not at the correct level as they are handled elsewhere as quizzes
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    const responsesJson: ResponseJson[] = [];
-    if (responses) {
-      for (const r of responses) {
-        // Create the response
-        const responseJson: Partial<ResponseJson> = {
-          response: Breakscape.unbreakscape(r.text) ?? '',
-          isCorrect: r.isCorrect ?? false,
-          ...this.toItemLeadHintInstruction(r),
-          ...this.toExample(r, {
-            defaultExample: !!r.isCorrect,
-            isBoolean: true,
-          }),
-        };
-
-        // Delete unwanted properties
-        if (r.itemLead?.lead == null) delete responseJson.lead;
-        if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
-        if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
-
-        responsesJson.push(responseJson as ResponseJson);
-      }
-    }
-
-    if (responsesJson.length > 0) {
-      this.bitJson.responses = responsesJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes
-
-  protected enter_quizzes(node: NodeInfo, _route: NodeInfo[]): void {
-    const quizzes = node.value as Quiz[];
-    const quizzesJson: QuizJson[] = [];
-
-    if (quizzes) {
-      for (const q of quizzes) {
-        // Choices
-        const choicesJson: ChoiceJson[] = [];
-        if (q.choices) {
-          for (const c of q.choices) {
-            // Create the choice
-            const choiceJson: Partial<ChoiceJson> = {
-              choice: Breakscape.unbreakscape(c.text) ?? '',
-              isCorrect: c.isCorrect ?? false,
-              ...this.toItemLeadHintInstruction(c),
-              ...this.toExample(c, {
-                defaultExample: !!c.isCorrect,
-                isBoolean: true,
-              }),
-            };
-
-            // Delete unwanted properties
-            if (q.itemLead?.lead == null) delete choiceJson.lead;
-            if (q.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
-            if (q.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
-
-            choicesJson.push(choiceJson as ChoiceJson);
-          }
-        }
-
-        // Responses
-        const responsesJson: ResponseJson[] = [];
-        if (q.responses) {
-          for (const r of q.responses) {
-            // Create the choice
-            const responseJson: Partial<ResponseJson> = {
-              response: Breakscape.unbreakscape(r.text) ?? '',
-              isCorrect: r.isCorrect ?? false,
-              ...this.toItemLeadHintInstruction(r),
-              ...this.toExample(r, {
-                defaultExample: !!r.isCorrect,
-                isBoolean: true,
-              }),
-            };
-
-            // Delete unwanted properties
-            if (q.itemLead?.lead == null) delete responseJson.lead;
-            if (q.itemLead?.pageNumber == null) delete responseJson.pageNumber;
-            if (q.itemLead?.marginNumber == null) delete responseJson.marginNumber;
-
-            responsesJson.push(responseJson as ResponseJson);
-          }
-        }
-
-        // Create the quiz
-        const quizJson: Partial<QuizJson> = {
-          ...this.toItemLeadHintInstruction(q),
-          isExample: q.isExample ?? false,
-          choices: q.choices ? choicesJson : undefined,
-          responses: q.responses ? responsesJson : undefined,
-        };
-
-        // Delete unwanted properties
-        if (q.itemLead?.lead == null) delete quizJson.lead;
-        if (q.itemLead?.pageNumber == null) delete quizJson.pageNumber;
-        if (q.itemLead?.marginNumber == null) delete quizJson.marginNumber;
-
-        quizzesJson.push(quizJson as QuizJson);
-      }
-    }
-
-    if (quizzesJson.length > 0) {
-      this.bitJson.quizzes = quizzesJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> heading
-
-  protected enter_heading(node: NodeInfo, _route: NodeInfo[]): boolean | void {
-    const heading = node.value as Heading;
-
-    // Check if the heading is for a match or a match matrix
-    const bitType = this.getBitType(_route);
-    const isMatrix = Config.isOfBitType(bitType, BitType.matchMatrix);
-
-    // Create the heading
-    const headingJson: Partial<HeadingJson> = {
-      forKeys: Breakscape.unbreakscape(heading.forKeys) ?? '',
-    };
-
-    if (isMatrix) {
-      // Matrix match, forValues is an array
-      headingJson.forValues = [];
-      if (Array.isArray(heading.forValues)) {
-        if (heading.forValues.length >= 1) {
-          headingJson.forValues = Breakscape.unbreakscape(heading.forValues);
-        }
-      }
-    } else {
-      // Standard match, forValues is a string
-      headingJson.forValues = '';
-      if (Array.isArray(heading.forValues)) {
-        if (heading.forValues.length >= 1) {
-          headingJson.forValues = Breakscape.unbreakscape(heading.forValues[heading.forValues.length - 1]);
-        }
-      }
-    }
-
-    this.bitJson.heading = headingJson as HeadingJson;
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs
-
-  protected enter_pairs(node: NodeInfo, route: NodeInfo[]): void {
-    const pairs = node.value as Pair[];
-    const pairsJson: PairJson[] = [];
-    const bitType = this.getBitType(route);
-
-    if (pairs && bitType) {
-      for (const p of pairs) {
-        // Get default example
-        const defaultExample = Array.isArray(p.values) && p.values.length > 0 && p.values[0];
-
-        // Create the question
-        const pairJson: Partial<PairJson> = {
-          key: Breakscape.unbreakscape(p.key) ?? '',
-          keyAudio: p.keyAudio ? this.addAudioResource(bitType, p.keyAudio) : undefined,
-          keyImage: p.keyImage ? this.addImageResource(bitType, p.keyImage) : undefined,
-          values: Breakscape.unbreakscape(p.values) ?? [],
-          ...this.toItemLeadHintInstruction(p),
-          isCaseSensitive: p.isCaseSensitive ?? true,
-          ...this.toExample(p, {
-            defaultExample,
-            isBoolean: false,
-          }),
-        };
-
-        // Delete unwanted properties
-        if (p.itemLead?.lead == null) delete pairJson.lead;
-        if (p.itemLead?.pageNumber == null) delete pairJson.pageNumber;
-        if (p.itemLead?.marginNumber == null) delete pairJson.marginNumber;
-        if (pairJson.key) {
-          delete pairJson.keyAudio;
-          delete pairJson.keyImage;
-        }
-        if (pairJson.keyAudio != null) {
-          delete pairJson.key;
-          delete pairJson.keyImage;
-        }
-        if (pairJson.keyImage != null) {
-          delete pairJson.key;
-          delete pairJson.keyAudio;
-        }
-
-        pairsJson.push(pairJson as PairJson);
-      }
-    }
-
-    if (pairsJson.length > 0) {
-      this.bitJson.pairs = pairsJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix
-
-  protected enter_matrix(node: NodeInfo, _route: NodeInfo[]): void {
-    const matrix = node.value as Matrix[];
-    const matrixJsonArray: MatrixJson[] = [];
-
-    if (matrix) {
-      for (const m of matrix) {
-        // Choices
-        const matrixCellsJson: MatrixCellJson[] = [];
-        if (m.cells) {
-          for (const c of m.cells) {
-            // Get default example
-            const defaultExample = Array.isArray(c.values) && c.values.length > 0 && c.values[0];
-
-            // Create the choice
-            const matrixCellJson: Partial<MatrixCellJson> = {
-              values: Breakscape.unbreakscape(c.values) ?? [],
-              ...this.toItemLeadHintInstruction(c),
-              isCaseSensitive: c.isCaseSensitive ?? true,
-              ...this.toExample(c, {
-                defaultExample,
-                isBoolean: false,
-              }),
-            };
-
-            // Delete unwanted properties
-            if (c.itemLead?.lead == null) delete matrixCellJson.lead;
-            if (c.itemLead?.pageNumber == null) delete matrixCellJson.pageNumber;
-            if (c.itemLead?.marginNumber == null) delete matrixCellJson.marginNumber;
-            if (c.hint == null) delete matrixCellJson.hint;
-
-            matrixCellsJson.push(matrixCellJson as MatrixCellJson);
-          }
-        }
-
-        // Create the matrix
-        const matrixJson: Partial<MatrixJson> = {
-          key: Breakscape.unbreakscape(m.key) ?? '',
-          cells: matrixCellsJson ?? [],
-          ...this.toItemLeadHintInstruction(m),
-          // ...this.toExample(m.example, m.isExample),
-          isExample: m.isExample ?? false,
-        };
-
-        // Delete unwanted properties
-        if (m.itemLead?.lead == null) delete matrixJson.lead;
-        if (m.itemLead?.pageNumber == null) delete matrixJson.pageNumber;
-        if (m.itemLead?.marginNumber == null) delete matrixJson.marginNumber;
-        if (m.instruction == null) delete matrixJson.instruction;
-
-        matrixJsonArray.push(matrixJson as MatrixJson);
-      }
-    }
-
-    if (matrixJsonArray.length > 0) {
-      this.bitJson.matrix = matrixJsonArray;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
-
-  protected enter_questions(node: NodeInfo, _route: NodeInfo[]): void {
-    const questions = node.value as Question[];
-    const questionsJson: QuestionJson[] = [];
-
-    if (questions) {
-      for (const q of questions) {
-        // Create the question
-        const questionJson: Partial<QuestionJson> = {
-          question: Breakscape.unbreakscape(q.question) ?? '',
-          partialAnswer: Breakscape.unbreakscape(ArrayUtils.asSingle(q.partialAnswer)) ?? '',
-          sampleSolution: Breakscape.unbreakscape(q.sampleSolution) ?? '',
-          ...this.toItemLeadHintInstruction(q),
-          reasonableNumOfChars: q.reasonableNumOfChars,
-          ...this.toExample(q, {
-            defaultExample: q.sampleSolution || '',
-            isBoolean: false,
-          }),
-        };
-
-        // Delete unwanted properties
-        if (q.itemLead?.lead == null) delete questionJson.lead;
-        if (q.itemLead?.pageNumber == null) delete questionJson.pageNumber;
-        if (q.itemLead?.marginNumber == null) delete questionJson.marginNumber;
-
-        questionsJson.push(questionJson as QuestionJson);
-      }
-    }
-
-    if (questionsJson.length > 0) {
-      this.bitJson.questions = questionsJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
-
-  protected enter_botResponses(node: NodeInfo, route: NodeInfo[]): void {
-    const botResponses = node.value as BotResponse[];
-
-    // Ignore responses that are not at the cardNode level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    const responsesJson: BotResponseJson[] = [];
-    if (botResponses) {
-      for (const r of botResponses) {
-        // Create the response
-        const responseJson: Partial<BotResponseJson> = {
-          response: Breakscape.unbreakscape(r.response) ?? '',
-          reaction: Breakscape.unbreakscape(r.reaction) ?? '',
-          feedback: Breakscape.unbreakscape(r.feedback) ?? '',
-          ...this.toItemLeadHintInstruction(r),
-          // ...this.toExampleAndIsExample(r.example),
-        };
-
-        // Delete unwanted properties
-        if (r.itemLead?.lead == null) delete responseJson.lead;
-        if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
-        if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
-        if (r.hint == null) delete responseJson.hint;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        delete (responseJson as any).instruction;
-
-        responsesJson.push(responseJson as BotResponseJson);
-      }
-    }
-
-    if (responsesJson.length > 0) {
-      this.bitJson.responses = responsesJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
-  protected enter_ingredients(node: NodeInfo, route: NodeInfo[]): void {
-    const ingredients = node.value as Ingredient[];
-
-    // Ignore statements that are not at the card node level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    const ingredientsJson: IngredientJson[] = [];
-    if (ingredients) {
-      for (const i of ingredients) {
-        // Create the ingredient
-        const ingredientJson: Partial<IngredientJson> = {
-          checked: i.checked ?? false,
-          item: Breakscape.unbreakscape(i.item) ?? '',
-          quantity: i.quantity ?? 0,
-          unit: Breakscape.unbreakscape(i.unit) ?? '',
-          unitAbbr: Breakscape.unbreakscape(i.unitAbbr) ?? '',
-          disableCalculation: i.disableCalculation ?? false,
-        };
-
-        // Delete unwanted properties
-        if (i?.unitAbbr == null) delete ingredientJson.unitAbbr;
-        // if (i?.instruction == null) delete ingredientJson.instruction;
-
-        ingredientsJson.push(ingredientJson as IngredientJson);
-      }
-    }
-
-    if (ingredientsJson.length > 0) {
-      this.bitJson.ingredients = ingredientsJson;
-    }
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> resources
-
-  protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean | void {
-    const resources = node.value as Resource[];
-    const bitType = this.getBitType(route);
-    const resourceType = this.getResourceType(route);
-
-    if (!resources || !bitType) return;
-
-    let resourceJson: ResourceJson | undefined;
-
-    const bitConfig = Config.getBitConfig(bitType);
-    const bitResourcesConfig = Config.getBitResourcesConfig(bitType, resourceType);
-    const comboMap = bitResourcesConfig.comboResourceTagTypesMap;
-
-    if (bitResourcesConfig.comboResourceTagTypesMap.size > 0) {
-      // The resource is a combo resource
-      // Extract the resource types from the combo resource
-      // NOTE: There should only ever be one combo resource per bit, but the code can handle multiple
-      // except for overwriting resourceJson
-      for (const [comboTagType, resourceTags] of comboMap.entries()) {
-        // Create the combo resource wrapper
-        const wrapper: ResourceWrapperJson = {
-          type: comboTagType,
-        };
-
-        // For each of the resources in this combo resource, find the actual resource and add it to the JSON
-        for (const rt of resourceTags) {
-          const r = resources.find((r) => r.typeAlias === rt);
-          // Extract everything except the type from the resource
-          if (r) {
-            const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.typeAlias);
-            const key = tagConfig?.jsonKey ?? r.typeAlias;
-            const json = this.parseResourceToJson(bitType, r);
-            if (json) {
-              for (const [k, v] of Object.entries(json)) {
-                if (k !== 'type') {
-                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                  (wrapper as any)[key] = v;
-                }
-              }
-            }
-          }
-        }
-        resourceJson = wrapper as ResourceJson;
-      }
-    } else if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
-      // The resource is a logo grave resource
-      const logos: ImageResourceWrapperJson[] = [];
-      for (const r of resources) {
-        const json = this.parseResourceToJson(bitType, r) as ImageResourceWrapperJson;
-        if (json) {
-          logos.push(json);
-        }
-      }
-      this.bitJson.logos = logos;
-    } else {
-      // This is a standard resource. If there is more than one resource, use the first one.
-      // There should not be more than one because of validation
-      if (resources.length >= 1) {
-        resourceJson = this.parseResourceToJson(bitType, resources[0]);
-      }
-    }
-
-    this.bitJson.resource = resourceJson;
-  }
-
-  //
-  // Terminal nodes (leaves)
-  //
-
-  // bitmarkAst -> bits -> bitsValue -> title
-
-  protected leaf_title(node: NodeInfo, route: NodeInfo[]): void {
-    // Ignore title that are not at the bit or card node level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
-
-    this.bitJson.title = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
-  }
-
-  //  bitmarkAst -> bits -> bitsValue -> subtitle
-
-  protected leaf_subtitle(node: NodeInfo, _route: NodeInfo[]): void {
-    this.bitJson.subtitle = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
-  }
-
-  // //  bitmarkAst -> bits -> bitsValue -> level
-
-  protected leaf_level(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'level', node.value ?? 1, true);
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> book
-
-  protected leaf_book(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'book', node.value, true);
-  }
-
-  //  bitmarkAst -> bits -> bitsValue -> anchor
-
-  protected leaf_anchor(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'anchor', node.value, true);
-  }
-
-  //  bitmarkAst -> bits -> bitsValue -> reference
-
-  protected leaf_reference(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'reference', node.value, true);
-  }
-
-  //  bitmarkAst -> bits -> bitsValue -> referenceEnd
-
-  protected leaf_referenceEnd(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'referenceEnd', node.value, true);
-  }
-
-  //  bitmarkAst -> bits -> bitsValue ->  * -> hint
-
-  protected leaf_hint(node: NodeInfo, route: NodeInfo[]): void {
-    const hint = node.value as BreakscapedString;
-
-    // Ignore hint that is not at the bit level as it are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    this.bitJson.hint = this.convertBreakscapedStringToJsonText(hint, TextFormat.bitmarkMinusMinus);
-  }
-
-  // bitmarkAst -> bits -> bitsValue ->  * -> instruction
-
-  protected leaf_instruction(node: NodeInfo, route: NodeInfo[]): void {
-    const instruction = node.value as BreakscapedString;
-
-    // Ignore instruction that is not at the bit level as it are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    this.bitJson.instruction = this.convertBreakscapedStringToJsonText(instruction, TextFormat.bitmarkMinusMinus);
-  }
-
-  // bitmarkAst -> bits -> footer -> footerText
-
-  protected leaf_footerText(node: NodeInfo, _route: NodeInfo[]): void {
-    const footer = node.value as BreakscapedString;
-
-    this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, TextFormat.bitmarkMinusMinus);
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> markup
-
-  protected leaf_markup(node: NodeInfo, _route: NodeInfo[]): void {
-    const bitmark = node.value as string | undefined;
-    if (bitmark) this.bitWrapperJson.bitmark = bitmark;
-  }
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBits -> cardBitsValue
+
+  // protected enter_cardBitsValue(node: NodeInfo, route: NodeInfo[]): void {
+  //   // How cardBits are handled depends on the bit type
+  //   const bitType = this.getBitType(route);
+  //   if (!bitType) return;
+
+  //   // Create the listItems / sections if not already created
+  //   let listItems: ListItemJson[] | undefined;
+  //   if (bitType === BitType.pageFooter) {
+  //     if (!this.bitJson.sections) this.bitJson.sections = [];
+  //     listItems = this.bitJson.sections;
+  //   } else {
+  //     if (!this.bitJson.listItems) this.bitJson.listItems = [];
+  //     listItems = this.bitJson.listItems;
+  //   }
+
+  //   // Create this list item
+  //   this.listItem = {
+  //     ...this.toItemLeadHintInstruction(node.value),
+  //     body: this.bodyDefault,
+  //   };
+
+  //   // Delete unwanted properties
+  //   const nv = node.value;
+  //   const li: Partial<ListItemJson> = this.listItem;
+  //   if (nv.pageNumber == null) delete li.pageNumber;
+  //   if (nv.marginNumber == null) delete li.marginNumber;
+
+  //   listItems.push(this.listItem);
+  // }
+
+  // protected exit_cardBitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
+  //   this.listItem = undefined;
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> body
+
+  // protected enter_body(_node: NodeInfo, _route: NodeInfo[]): void {
+  //   this.bodyJson = this.bodyDefault;
+  // }
+
+  // protected exit_body(_node: NodeInfo, route: NodeInfo[]): void {
+  //   const parent = this.getParentNode(route);
+  //   if (!parent) return;
+
+  //   if (parent.key === NodeType.bitsValue) {
+  //     // Body is at the bit level
+  //     this.bitJson.body = this.bodyJson;
+  //   } else if (parent.key === NodeType.cardBitsValue) {
+  //     // Body is at the list item (card bit) level
+  //     if (this.listItem) this.listItem.body = this.bodyJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> * -> bodyParts (body, cardBody (e.g. cloze-list, page-footer))
+
+  // protected enter_bodyParts(node: NodeInfo, route: NodeInfo[]): boolean {
+  //   const bodyParts = node.value as BodyPart[];
+  //   const plainText = this.options.textAsPlainText;
+  //   const textFormat = this.getTextFormat(route);
+  //   let fullBodyTextStr: BreakscapedString = '' as BreakscapedString;
+  //   let placeholderIndex = this.startPlaceholderIndex;
+
+  //   // Function for creating the placeholder keys
+  //   const createPlaceholderKeys = (
+  //     i: number,
+  //   ): { legacyPlaceholderKey: BreakscapedString; placeholderKey: BreakscapedString } => {
+  //     return {
+  //       // Old placeholder style (for backwards compatibility) = {0}
+  //       legacyPlaceholderKey: `{${i}}` as BreakscapedString,
+
+  //       // New placeholder style (cannot clash as bitmark parser would have removed it) = [!0]
+  //       placeholderKey: `[!${i}]` as BreakscapedString,
+  //     };
+  //   };
+
+  //   // Loop the text bodyParts creating full body text with the correct placeholders
+  //   //
+  //   // For text output 'fullBodyTextStr:
+  //   // - is created and written to the JSON
+  //   // - has placeholders inserted into 'fullBodyTextStr' in the format {0}
+  //   //
+  //   // For JSON output 'fullBodyTextStr:
+  //   // - is created and passed into the text parser to create the body text AST
+  //   // - has placeholders inserted into 'fullBodyTextStr' in the format [!0] to allow the text parser to identify
+  //   //   where the body bits should be inserted
+  //   //
+  //   for (let i = 0; i < bodyParts.length; i++) {
+  //     const bodyPart = bodyParts[i];
+
+  //     const isText = bodyPart.type === BodyBitType.text;
+
+  //     if (isText) {
+  //       const asText = bodyPart as BodyText;
+  //       const bodyTextPart = asText.data.bodyText;
+
+  //       // Append the text part to the full text body
+  //       fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, bodyTextPart);
+  //     } else {
+  //       const { legacyPlaceholderKey, placeholderKey } = createPlaceholderKeys(placeholderIndex);
+
+  //       // Append the placeholder to the full text body
+  //       fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, plainText ? legacyPlaceholderKey : placeholderKey);
+
+  //       placeholderIndex++;
+  //     }
+  //   }
+
+  //   // Add string or AST to the body
+  //   this.bodyJson = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
+  //   const bodyAst = this.bodyJson as TextAst;
+
+  //   // Loop the body parts again to create the body bits:
+  //   // - For text output the body bits are inserted into the 'placeholders' object
+  //   // - For JSON output the body bits are inserted into body AST, replacing the placeholders created by the text parser
+  //   placeholderIndex = this.startPlaceholderIndex;
+  //   for (let i = 0; i < bodyParts.length; i++) {
+  //     const bodyPart = bodyParts[i];
+
+  //     // Skip text body parts as they are handled above
+  //     const isText = bodyPart.type === BodyBitType.text;
+  //     if (isText) continue;
+
+  //     const bodyBit = bodyPart as BodyBit;
+  //     let bodyBitJson: BodyBitJson | undefined;
+
+  //     const { legacyPlaceholderKey } = createPlaceholderKeys(placeholderIndex);
+
+  //     switch (bodyPart.type) {
+  //       case BodyBitType.gap: {
+  //         const gap = bodyBit as Gap;
+  //         bodyBitJson = this.createGapJson(gap);
+  //         break;
+  //       }
+
+  //       case BodyBitType.mark: {
+  //         const mark = bodyBit as Mark;
+  //         bodyBitJson = this.createMarkJson(mark);
+  //         break;
+  //       }
+
+  //       case BodyBitType.select: {
+  //         const select = bodyBit as Select;
+  //         bodyBitJson = this.createSelectJson(select);
+  //         break;
+  //       }
+
+  //       case BodyBitType.highlight: {
+  //         const highlight = bodyBit as Highlight;
+  //         bodyBitJson = this.createHighlightJson(highlight);
+  //         break;
+  //       }
+  //     }
+
+  //     // Add the gap to the placeholders
+  //     if (bodyBitJson) {
+  //       if (plainText) {
+  //         // Ensure placeholders exists
+  //         if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
+
+  //         // Add the body bit to the placeholders
+  //         this.bitJson.placeholders[legacyPlaceholderKey] = bodyBitJson;
+  //       } else {
+  //         // Insert the body bit into the body AST
+  //         this.replacePlaceholderWithBodyBit(bodyAst, bodyBitJson, placeholderIndex);
+  //       }
+  //     }
+
+  //     placeholderIndex++;
+  //   }
+
+  //   // Save the current placeholder index for the next body (body, card bodies)
+  //   this.startPlaceholderIndex = placeholderIndex;
+
+  //   // Stop traversal of this branch for efficiency
+  //   return false;
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
+
+  // protected enter_elements(node: NodeInfo, _route: NodeInfo[]): void {
+  //   const elements = node.value as BreakscapedString[];
+
+  //   // Ignore elements that are not at the bit level as they are handled elsewhere as quizzes
+  //   // if (parent?.key !== NodeType.bitsValue) return;
+
+  //   if (elements && elements.length > 0) {
+  //     this.bitJson.elements = Breakscape.unbreakscape(elements);
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
+
+  // protected enter_flashcards(node: NodeInfo, route: NodeInfo[]): void {
+  //   const flashcards = node.value as Flashcard[];
+
+  //   // Ignore responses that are not at the correct level as they are potentially handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.cardNode) return;
+
+  //   const flashcardsJson: FlashcardJson[] = [];
+  //   if (flashcards) {
+  //     for (const c of flashcards) {
+  //       // Create the flashcard
+  //       const flashcardJson: Partial<FlashcardJson> = {
+  //         question: Breakscape.unbreakscape(c.question) ?? '',
+  //         answer: Breakscape.unbreakscape(c.answer) ?? '',
+  //         alternativeAnswers: Breakscape.unbreakscape(c.alternativeAnswers) ?? [],
+  //         ...this.toItemLeadHintInstruction(c),
+  //         ...this.toExample(c, {
+  //           defaultExample: c.isDefaultExample,
+  //           isBoolean: true,
+  //         }),
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (c.itemLead?.lead == null) delete flashcardJson.lead;
+  //       if (c.itemLead?.pageNumber == null) delete flashcardJson.pageNumber;
+  //       if (c.itemLead?.marginNumber == null) delete flashcardJson.marginNumber;
+
+  //       flashcardsJson.push(flashcardJson as FlashcardJson);
+  //     }
+  //   }
+
+  //   if (flashcardsJson.length > 0) {
+  //     this.bitJson.cards = flashcardsJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> statement
+
+  // protected enter_statement(node: NodeInfo, route: NodeInfo[]): void {
+  //   const statement = node.value as Statement;
+
+  //   // Ignore statement that is not at the cardNode level as it is handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.cardNode) return;
+
+  //   if (statement) {
+  //     this.bitJson.statement = Breakscape.unbreakscape(statement.text) ?? '';
+  //     this.bitJson.isCorrect = statement.isCorrect ?? false;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> statements -> statementsValue
+
+  // protected enter_statements(node: NodeInfo, route: NodeInfo[]): void {
+  //   const statements = node.value as Statement[];
+
+  //   // Ignore statements that are not at the card node level as they are handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.cardNode) return;
+
+  //   const statementsJson: StatementJson[] = [];
+  //   if (statements) {
+  //     for (const s of statements) {
+  //       // Create the statement
+  //       const statementJson: Partial<StatementJson> = {
+  //         statement: Breakscape.unbreakscape(s.text) ?? '',
+  //         isCorrect: !!s.isCorrect,
+  //         ...this.toItemLeadHintInstruction(s),
+  //         ...this.toExample(s, {
+  //           defaultExample: !!s.isCorrect,
+  //           isBoolean: true,
+  //         }),
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (s.itemLead?.item == null) delete statementJson.item;
+  //       if (s.itemLead?.lead == null) delete statementJson.lead;
+  //       if (s.itemLead?.pageNumber == null) delete statementJson.pageNumber;
+  //       if (s.itemLead?.marginNumber == null) delete statementJson.marginNumber;
+  //       if (s?.hint == null) delete statementJson.hint;
+  //       if (s?.instruction == null) delete statementJson.instruction;
+
+  //       statementsJson.push(statementJson as StatementJson);
+  //     }
+  //   }
+
+  //   if (statementsJson.length > 0) {
+  //     this.bitJson.statements = statementsJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> choices
+  // // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices
+
+  // protected enter_choices(node: NodeInfo, route: NodeInfo[]): void {
+  //   const choices = node.value as Choice[];
+
+  //   // Ignore choices that are not at the bit level as they are handled elsewhere as quizzes
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.cardNode) return;
+
+  //   const choicesJson: ChoiceJson[] = [];
+  //   if (choices) {
+  //     for (const c of choices) {
+  //       // Create the choice
+  //       const choiceJson: Partial<ChoiceJson> = {
+  //         choice: Breakscape.unbreakscape(c.text) ?? '',
+  //         isCorrect: c.isCorrect ?? false,
+  //         ...this.toItemLeadHintInstruction(c),
+  //         ...this.toExample(c, {
+  //           defaultExample: !!c.isCorrect,
+  //           isBoolean: true,
+  //         }),
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (c.itemLead?.lead == null) delete choiceJson.lead;
+  //       if (c.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
+  //       if (c.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
+
+  //       choicesJson.push(choiceJson as ChoiceJson);
+  //     }
+  //   }
+
+  //   if (choicesJson.length > 0) {
+  //     this.bitJson.choices = choicesJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> responses
+  // // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses
+
+  // protected enter_responses(node: NodeInfo, route: NodeInfo[]): void {
+  //   const responses = node.value as Response[];
+
+  //   // Ignore responses that are not at the correct level as they are handled elsewhere as quizzes
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.cardNode) return;
+
+  //   const responsesJson: ResponseJson[] = [];
+  //   if (responses) {
+  //     for (const r of responses) {
+  //       // Create the response
+  //       const responseJson: Partial<ResponseJson> = {
+  //         response: Breakscape.unbreakscape(r.text) ?? '',
+  //         isCorrect: r.isCorrect ?? false,
+  //         ...this.toItemLeadHintInstruction(r),
+  //         ...this.toExample(r, {
+  //           defaultExample: !!r.isCorrect,
+  //           isBoolean: true,
+  //         }),
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (r.itemLead?.lead == null) delete responseJson.lead;
+  //       if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
+  //       if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
+
+  //       responsesJson.push(responseJson as ResponseJson);
+  //     }
+  //   }
+
+  //   if (responsesJson.length > 0) {
+  //     this.bitJson.responses = responsesJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes
+
+  // protected enter_quizzes(node: NodeInfo, _route: NodeInfo[]): void {
+  //   const quizzes = node.value as Quiz[];
+  //   const quizzesJson: QuizJson[] = [];
+
+  //   if (quizzes) {
+  //     for (const q of quizzes) {
+  //       // Choices
+  //       const choicesJson: ChoiceJson[] = [];
+  //       if (q.choices) {
+  //         for (const c of q.choices) {
+  //           // Create the choice
+  //           const choiceJson: Partial<ChoiceJson> = {
+  //             choice: Breakscape.unbreakscape(c.text) ?? '',
+  //             isCorrect: c.isCorrect ?? false,
+  //             ...this.toItemLeadHintInstruction(c),
+  //             ...this.toExample(c, {
+  //               defaultExample: !!c.isCorrect,
+  //               isBoolean: true,
+  //             }),
+  //           };
+
+  //           // Delete unwanted properties
+  //           if (q.itemLead?.lead == null) delete choiceJson.lead;
+  //           if (q.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
+  //           if (q.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
+
+  //           choicesJson.push(choiceJson as ChoiceJson);
+  //         }
+  //       }
+
+  //       // Responses
+  //       const responsesJson: ResponseJson[] = [];
+  //       if (q.responses) {
+  //         for (const r of q.responses) {
+  //           // Create the choice
+  //           const responseJson: Partial<ResponseJson> = {
+  //             response: Breakscape.unbreakscape(r.text) ?? '',
+  //             isCorrect: r.isCorrect ?? false,
+  //             ...this.toItemLeadHintInstruction(r),
+  //             ...this.toExample(r, {
+  //               defaultExample: !!r.isCorrect,
+  //               isBoolean: true,
+  //             }),
+  //           };
+
+  //           // Delete unwanted properties
+  //           if (q.itemLead?.lead == null) delete responseJson.lead;
+  //           if (q.itemLead?.pageNumber == null) delete responseJson.pageNumber;
+  //           if (q.itemLead?.marginNumber == null) delete responseJson.marginNumber;
+
+  //           responsesJson.push(responseJson as ResponseJson);
+  //         }
+  //       }
+
+  //       // Create the quiz
+  //       const quizJson: Partial<QuizJson> = {
+  //         ...this.toItemLeadHintInstruction(q),
+  //         isExample: q.isExample ?? false,
+  //         choices: q.choices ? choicesJson : undefined,
+  //         responses: q.responses ? responsesJson : undefined,
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (q.itemLead?.lead == null) delete quizJson.lead;
+  //       if (q.itemLead?.pageNumber == null) delete quizJson.pageNumber;
+  //       if (q.itemLead?.marginNumber == null) delete quizJson.marginNumber;
+
+  //       quizzesJson.push(quizJson as QuizJson);
+  //     }
+  //   }
+
+  //   if (quizzesJson.length > 0) {
+  //     this.bitJson.quizzes = quizzesJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> heading
+
+  // protected enter_heading(node: NodeInfo, _route: NodeInfo[]): boolean | void {
+  //   const heading = node.value as Heading;
+
+  //   // Check if the heading is for a match or a match matrix
+  //   const bitType = this.getBitType(_route);
+  //   const isMatrix = Config.isOfBitType(bitType, BitType.matchMatrix);
+
+  //   // Create the heading
+  //   const headingJson: Partial<HeadingJson> = {
+  //     forKeys: Breakscape.unbreakscape(heading.forKeys) ?? '',
+  //   };
+
+  //   if (isMatrix) {
+  //     // Matrix match, forValues is an array
+  //     headingJson.forValues = [];
+  //     if (Array.isArray(heading.forValues)) {
+  //       if (heading.forValues.length >= 1) {
+  //         headingJson.forValues = Breakscape.unbreakscape(heading.forValues);
+  //       }
+  //     }
+  //   } else {
+  //     // Standard match, forValues is a string
+  //     headingJson.forValues = '';
+  //     if (Array.isArray(heading.forValues)) {
+  //       if (heading.forValues.length >= 1) {
+  //         headingJson.forValues = Breakscape.unbreakscape(heading.forValues[heading.forValues.length - 1]);
+  //       }
+  //     }
+  //   }
+
+  //   this.bitJson.heading = headingJson as HeadingJson;
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs
+
+  // protected enter_pairs(node: NodeInfo, route: NodeInfo[]): void {
+  //   const pairs = node.value as Pair[];
+  //   const pairsJson: PairJson[] = [];
+  //   const bitType = this.getBitType(route);
+
+  //   if (pairs && bitType) {
+  //     for (const p of pairs) {
+  //       // Get default example
+  //       const defaultExample = Array.isArray(p.values) && p.values.length > 0 && p.values[0];
+
+  //       // Create the question
+  //       const pairJson: Partial<PairJson> = {
+  //         key: Breakscape.unbreakscape(p.key) ?? '',
+  //         keyAudio: p.keyAudio ? this.addAudioResource(bitType, p.keyAudio) : undefined,
+  //         keyImage: p.keyImage ? this.addImageResource(bitType, p.keyImage) : undefined,
+  //         values: Breakscape.unbreakscape(p.values) ?? [],
+  //         ...this.toItemLeadHintInstruction(p),
+  //         isCaseSensitive: p.isCaseSensitive ?? true,
+  //         ...this.toExample(p, {
+  //           defaultExample,
+  //           isBoolean: false,
+  //         }),
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (p.itemLead?.lead == null) delete pairJson.lead;
+  //       if (p.itemLead?.pageNumber == null) delete pairJson.pageNumber;
+  //       if (p.itemLead?.marginNumber == null) delete pairJson.marginNumber;
+  //       if (pairJson.key) {
+  //         delete pairJson.keyAudio;
+  //         delete pairJson.keyImage;
+  //       }
+  //       if (pairJson.keyAudio != null) {
+  //         delete pairJson.key;
+  //         delete pairJson.keyImage;
+  //       }
+  //       if (pairJson.keyImage != null) {
+  //         delete pairJson.key;
+  //         delete pairJson.keyAudio;
+  //       }
+
+  //       pairsJson.push(pairJson as PairJson);
+  //     }
+  //   }
+
+  //   if (pairsJson.length > 0) {
+  //     this.bitJson.pairs = pairsJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix
+
+  // protected enter_matrix(node: NodeInfo, _route: NodeInfo[]): void {
+  //   const matrix = node.value as Matrix[];
+  //   const matrixJsonArray: MatrixJson[] = [];
+
+  //   if (matrix) {
+  //     for (const m of matrix) {
+  //       // Choices
+  //       const matrixCellsJson: MatrixCellJson[] = [];
+  //       if (m.cells) {
+  //         for (const c of m.cells) {
+  //           // Get default example
+  //           const defaultExample = Array.isArray(c.values) && c.values.length > 0 && c.values[0];
+
+  //           // Create the choice
+  //           const matrixCellJson: Partial<MatrixCellJson> = {
+  //             values: Breakscape.unbreakscape(c.values) ?? [],
+  //             ...this.toItemLeadHintInstruction(c),
+  //             isCaseSensitive: c.isCaseSensitive ?? true,
+  //             ...this.toExample(c, {
+  //               defaultExample,
+  //               isBoolean: false,
+  //             }),
+  //           };
+
+  //           // Delete unwanted properties
+  //           if (c.itemLead?.lead == null) delete matrixCellJson.lead;
+  //           if (c.itemLead?.pageNumber == null) delete matrixCellJson.pageNumber;
+  //           if (c.itemLead?.marginNumber == null) delete matrixCellJson.marginNumber;
+  //           if (c.hint == null) delete matrixCellJson.hint;
+
+  //           matrixCellsJson.push(matrixCellJson as MatrixCellJson);
+  //         }
+  //       }
+
+  //       // Create the matrix
+  //       const matrixJson: Partial<MatrixJson> = {
+  //         key: Breakscape.unbreakscape(m.key) ?? '',
+  //         cells: matrixCellsJson ?? [],
+  //         ...this.toItemLeadHintInstruction(m),
+  //         // ...this.toExample(m.example, m.isExample),
+  //         isExample: m.isExample ?? false,
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (m.itemLead?.lead == null) delete matrixJson.lead;
+  //       if (m.itemLead?.pageNumber == null) delete matrixJson.pageNumber;
+  //       if (m.itemLead?.marginNumber == null) delete matrixJson.marginNumber;
+  //       if (m.instruction == null) delete matrixJson.instruction;
+
+  //       matrixJsonArray.push(matrixJson as MatrixJson);
+  //     }
+  //   }
+
+  //   if (matrixJsonArray.length > 0) {
+  //     this.bitJson.matrix = matrixJsonArray;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
+
+  // protected enter_questions(node: NodeInfo, _route: NodeInfo[]): void {
+  //   const questions = node.value as Question[];
+  //   const questionsJson: QuestionJson[] = [];
+
+  //   if (questions) {
+  //     for (const q of questions) {
+  //       // Create the question
+  //       const questionJson: Partial<QuestionJson> = {
+  //         question: Breakscape.unbreakscape(q.question) ?? '',
+  //         partialAnswer: Breakscape.unbreakscape(ArrayUtils.asSingle(q.partialAnswer)) ?? '',
+  //         sampleSolution: Breakscape.unbreakscape(q.sampleSolution) ?? '',
+  //         ...this.toItemLeadHintInstruction(q),
+  //         reasonableNumOfChars: q.reasonableNumOfChars,
+  //         ...this.toExample(q, {
+  //           defaultExample: q.sampleSolution || '',
+  //           isBoolean: false,
+  //         }),
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (q.itemLead?.lead == null) delete questionJson.lead;
+  //       if (q.itemLead?.pageNumber == null) delete questionJson.pageNumber;
+  //       if (q.itemLead?.marginNumber == null) delete questionJson.marginNumber;
+
+  //       questionsJson.push(questionJson as QuestionJson);
+  //     }
+  //   }
+
+  //   if (questionsJson.length > 0) {
+  //     this.bitJson.questions = questionsJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
+
+  // protected enter_botResponses(node: NodeInfo, route: NodeInfo[]): void {
+  //   const botResponses = node.value as BotResponse[];
+
+  //   // Ignore responses that are not at the cardNode level as they are handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.cardNode) return;
+
+  //   const responsesJson: BotResponseJson[] = [];
+  //   if (botResponses) {
+  //     for (const r of botResponses) {
+  //       // Create the response
+  //       const responseJson: Partial<BotResponseJson> = {
+  //         response: Breakscape.unbreakscape(r.response) ?? '',
+  //         reaction: Breakscape.unbreakscape(r.reaction) ?? '',
+  //         feedback: Breakscape.unbreakscape(r.feedback) ?? '',
+  //         ...this.toItemLeadHintInstruction(r),
+  //         // ...this.toExampleAndIsExample(r.example),
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (r.itemLead?.lead == null) delete responseJson.lead;
+  //       if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
+  //       if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
+  //       if (r.hint == null) delete responseJson.hint;
+  //       // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //       delete (responseJson as any).instruction;
+
+  //       responsesJson.push(responseJson as BotResponseJson);
+  //     }
+  //   }
+
+  //   if (responsesJson.length > 0) {
+  //     this.bitJson.responses = responsesJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
+  // protected enter_ingredients(node: NodeInfo, route: NodeInfo[]): void {
+  //   const ingredients = node.value as Ingredient[];
+
+  //   // Ignore statements that are not at the card node level as they are handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.cardNode) return;
+
+  //   const ingredientsJson: IngredientJson[] = [];
+  //   if (ingredients) {
+  //     for (const i of ingredients) {
+  //       // Create the ingredient
+  //       const ingredientJson: Partial<IngredientJson> = {
+  //         checked: i.checked ?? false,
+  //         item: Breakscape.unbreakscape(i.item) ?? '',
+  //         quantity: i.quantity ?? 0,
+  //         unit: Breakscape.unbreakscape(i.unit) ?? '',
+  //         unitAbbr: Breakscape.unbreakscape(i.unitAbbr) ?? '',
+  //         disableCalculation: i.disableCalculation ?? false,
+  //       };
+
+  //       // Delete unwanted properties
+  //       if (i?.unitAbbr == null) delete ingredientJson.unitAbbr;
+  //       // if (i?.instruction == null) delete ingredientJson.instruction;
+
+  //       ingredientsJson.push(ingredientJson as IngredientJson);
+  //     }
+  //   }
+
+  //   if (ingredientsJson.length > 0) {
+  //     this.bitJson.ingredients = ingredientsJson;
+  //   }
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> resources
+
+  // protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean | void {
+  //   const resources = node.value as Resource[];
+  //   const bitType = this.getBitType(route);
+  //   const resourceType = this.getResourceType(route);
+
+  //   if (!resources || !bitType) return;
+
+  //   let resourceJson: ResourceJson | undefined;
+
+  //   const bitConfig = Config.getBitConfig(bitType);
+  //   const bitResourcesConfig = Config.getBitResourcesConfig(bitType, resourceType);
+  //   const comboMap = bitResourcesConfig.comboResourceTagTypesMap;
+
+  //   if (bitResourcesConfig.comboResourceTagTypesMap.size > 0) {
+  //     // The resource is a combo resource
+  //     // Extract the resource types from the combo resource
+  //     // NOTE: There should only ever be one combo resource per bit, but the code can handle multiple
+  //     // except for overwriting resourceJson
+  //     for (const [comboTagType, resourceTags] of comboMap.entries()) {
+  //       // Create the combo resource wrapper
+  //       const wrapper: ResourceWrapperJson = {
+  //         type: comboTagType,
+  //       };
+
+  //       // For each of the resources in this combo resource, find the actual resource and add it to the JSON
+  //       for (const rt of resourceTags) {
+  //         const r = resources.find((r) => r.typeAlias === rt);
+  //         // Extract everything except the type from the resource
+  //         if (r) {
+  //           const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.typeAlias);
+  //           const key = tagConfig?.jsonKey ?? r.typeAlias;
+  //           const json = this.parseResourceToJson(bitType, r);
+  //           if (json) {
+  //             for (const [k, v] of Object.entries(json)) {
+  //               if (k !== 'type') {
+  //                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //                 (wrapper as any)[key] = v;
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //       resourceJson = wrapper as ResourceJson;
+  //     }
+  //   } else if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
+  //     // The resource is a logo grave resource
+  //     const logos: ImageResourceWrapperJson[] = [];
+  //     for (const r of resources) {
+  //       const json = this.parseResourceToJson(bitType, r) as ImageResourceWrapperJson;
+  //       if (json) {
+  //         logos.push(json);
+  //       }
+  //     }
+  //     this.bitJson.logos = logos;
+  //   } else {
+  //     // This is a standard resource. If there is more than one resource, use the first one.
+  //     // There should not be more than one because of validation
+  //     if (resources.length >= 1) {
+  //       resourceJson = this.parseResourceToJson(bitType, resources[0]);
+  //     }
+  //   }
+
+  //   this.bitJson.resource = resourceJson;
+  // }
+
+  // //
+  // // Terminal nodes (leaves)
+  // //
+
+  // // bitmarkAst -> bits -> bitsValue -> title
+
+  // protected leaf_title(node: NodeInfo, route: NodeInfo[]): void {
+  //   // Ignore title that are not at the bit or card node level as they are handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
+
+  //   this.bitJson.title = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
+  // }
+
+  // //  bitmarkAst -> bits -> bitsValue -> subtitle
+
+  // protected leaf_subtitle(node: NodeInfo, _route: NodeInfo[]): void {
+  //   this.bitJson.subtitle = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
+  // }
+
+  // // //  bitmarkAst -> bits -> bitsValue -> level
+
+  // protected leaf_level(node: NodeInfo, _route: NodeInfo[]): void {
+  //   if (node.value != null) this.addProperty(this.bitJson, 'level', node.value ?? 1, true);
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> book
+
+  // protected leaf_book(node: NodeInfo, _route: NodeInfo[]): void {
+  //   if (node.value != null) this.addProperty(this.bitJson, 'book', node.value, true);
+  // }
+
+  // //  bitmarkAst -> bits -> bitsValue -> anchor
+
+  // protected leaf_anchor(node: NodeInfo, _route: NodeInfo[]): void {
+  //   if (node.value != null) this.addProperty(this.bitJson, 'anchor', node.value, true);
+  // }
+
+  // //  bitmarkAst -> bits -> bitsValue -> reference
+
+  // protected leaf_reference(node: NodeInfo, _route: NodeInfo[]): void {
+  //   if (node.value != null) this.addProperty(this.bitJson, 'reference', node.value, true);
+  // }
+
+  // //  bitmarkAst -> bits -> bitsValue -> referenceEnd
+
+  // protected leaf_referenceEnd(node: NodeInfo, _route: NodeInfo[]): void {
+  //   if (node.value != null) this.addProperty(this.bitJson, 'referenceEnd', node.value, true);
+  // }
+
+  // //  bitmarkAst -> bits -> bitsValue ->  * -> hint
+
+  // protected leaf_hint(node: NodeInfo, route: NodeInfo[]): void {
+  //   const hint = node.value as BreakscapedString;
+
+  //   // Ignore hint that is not at the bit level as it are handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.bitsValue) return;
+
+  //   this.bitJson.hint = this.convertBreakscapedStringToJsonText(hint, TextFormat.bitmarkMinusMinus);
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue ->  * -> instruction
+
+  // protected leaf_instruction(node: NodeInfo, route: NodeInfo[]): void {
+  //   const instruction = node.value as BreakscapedString;
+
+  //   // Ignore instruction that is not at the bit level as it are handled elsewhere
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.bitsValue) return;
+
+  //   this.bitJson.instruction = this.convertBreakscapedStringToJsonText(instruction, TextFormat.bitmarkMinusMinus);
+  // }
+
+  // // bitmarkAst -> bits -> footer -> footerText
+
+  // protected leaf_footerText(node: NodeInfo, _route: NodeInfo[]): void {
+  //   const footer = node.value as BreakscapedString;
+
+  //   this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, TextFormat.bitmarkMinusMinus);
+  // }
+
+  // // bitmarkAst -> bits -> bitsValue -> markup
+
+  // protected leaf_markup(node: NodeInfo, _route: NodeInfo[]): void {
+  //   const bitmark = node.value as string | undefined;
+  //   if (bitmark) this.bitWrapperJson.bitmark = bitmark;
+  // }
 
   // bitmarkAst -> bits -> bitsValue -> parser
   // bitmarkAst -> bits -> bitsValue -> * -> internalComment
@@ -2480,138 +2499,138 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       type: bit.bitType,
       format: bit.textFormat,
 
-      // Properties
-      id: undefined,
-      internalComment: undefined,
-      externalId: undefined,
-      bookId: undefined,
-      spaceId: undefined,
-      padletId: undefined,
-      jupyterId: undefined,
-      jupyterExecutionCount: undefined,
-      AIGenerated: undefined,
-      releaseVersion: undefined,
-      book: undefined,
-      ageRange: undefined,
-      lang: undefined,
-      language: undefined,
-      publisher: undefined,
-      theme: undefined,
-      computerLanguage: undefined,
-      target: undefined,
-      tag: undefined,
-      icon: undefined,
-      iconTag: undefined,
-      colorTag: undefined,
-      flashcardSet: undefined,
-      subtype: undefined,
-      bookAlias: undefined,
-      coverImage: undefined,
-      publications: undefined,
-      author: undefined,
-      subject: undefined,
-      date: undefined,
-      location: undefined,
-      kind: undefined,
-      action: undefined,
-      width: undefined,
-      height: undefined,
-      thumbImage: undefined,
-      scormSource: undefined,
-      posterImage: undefined,
-      focusX: undefined,
-      focusY: undefined,
-      pointerLeft: undefined,
-      pointerTop: undefined,
-      backgroundWallpaper: undefined,
-      deeplink: undefined,
-      externalLink: undefined,
-      externalLinkText: undefined,
-      videoCallLink: undefined,
-      vendorUrl: undefined,
-      duration: undefined,
-      list: undefined,
-      textReference: undefined,
-      isTracked: undefined,
-      isInfoOnly: undefined,
-      labelTrue: undefined,
-      labelFalse: undefined,
-      content2Buy: undefined,
-      mailingList: undefined,
-      buttonCaption: undefined,
-      quotedPerson: undefined,
-      reasonableNumOfChars: undefined,
-      resolved: undefined,
-      resolvedDate: undefined,
-      resolvedBy: undefined,
-      maxCreatedBits: undefined,
-      maxDisplayLevel: undefined,
-      product: undefined,
-      productVideo: undefined,
-      productFolder: undefined,
-      technicalTerm: undefined,
-      portions: undefined,
+      // // Properties
+      // id: undefined,
+      // internalComment: undefined,
+      // externalId: undefined,
+      // bookId: undefined,
+      // spaceId: undefined,
+      // padletId: undefined,
+      // jupyterId: undefined,
+      // jupyterExecutionCount: undefined,
+      // AIGenerated: undefined,
+      // releaseVersion: undefined,
+      // book: undefined,
+      // ageRange: undefined,
+      // lang: undefined,
+      // language: undefined,
+      // publisher: undefined,
+      // theme: undefined,
+      // computerLanguage: undefined,
+      // target: undefined,
+      // tag: undefined,
+      // icon: undefined,
+      // iconTag: undefined,
+      // colorTag: undefined,
+      // flashcardSet: undefined,
+      // subtype: undefined,
+      // bookAlias: undefined,
+      // coverImage: undefined,
+      // publications: undefined,
+      // author: undefined,
+      // subject: undefined,
+      // date: undefined,
+      // location: undefined,
+      // kind: undefined,
+      // action: undefined,
+      // width: undefined,
+      // height: undefined,
+      // thumbImage: undefined,
+      // scormSource: undefined,
+      // posterImage: undefined,
+      // focusX: undefined,
+      // focusY: undefined,
+      // pointerLeft: undefined,
+      // pointerTop: undefined,
+      // backgroundWallpaper: undefined,
+      // deeplink: undefined,
+      // externalLink: undefined,
+      // externalLinkText: undefined,
+      // videoCallLink: undefined,
+      // vendorUrl: undefined,
+      // duration: undefined,
+      // list: undefined,
+      // textReference: undefined,
+      // isTracked: undefined,
+      // isInfoOnly: undefined,
+      // labelTrue: undefined,
+      // labelFalse: undefined,
+      // content2Buy: undefined,
+      // mailingList: undefined,
+      // buttonCaption: undefined,
+      // quotedPerson: undefined,
+      // reasonableNumOfChars: undefined,
+      // resolved: undefined,
+      // resolvedDate: undefined,
+      // resolvedBy: undefined,
+      // maxCreatedBits: undefined,
+      // maxDisplayLevel: undefined,
+      // product: undefined,
+      // productVideo: undefined,
+      // productFolder: undefined,
+      // technicalTerm: undefined,
+      // portions: undefined,
 
-      // Book data
-      title: undefined,
-      subtitle: undefined,
-      level: undefined,
-      toc: undefined,
-      progress: undefined,
-      anchor: undefined,
-      reference: undefined,
-      referenceEnd: undefined,
+      // // Book data
+      // title: undefined,
+      // subtitle: undefined,
+      // level: undefined,
+      // toc: undefined,
+      // progress: undefined,
+      // anchor: undefined,
+      // reference: undefined,
+      // referenceEnd: undefined,
 
-      // Item, Lead, Hint, Instruction
-      item: undefined,
-      lead: undefined,
-      pageNumber: undefined,
-      marginNumber: undefined,
-      hint: undefined,
-      instruction: undefined,
+      // // Item, Lead, Hint, Instruction
+      // item: undefined,
+      // lead: undefined,
+      // pageNumber: undefined,
+      // marginNumber: undefined,
+      // hint: undefined,
+      // instruction: undefined,
 
-      // Example
-      isExample: undefined,
-      example: undefined,
+      // // Example
+      // isExample: undefined,
+      // example: undefined,
 
-      // Person .conversion-xxx, page-person, etc
-      person: undefined,
+      // // Person .conversion-xxx, page-person, etc
+      // person: undefined,
 
-      // Marks (config)
-      marks: undefined,
+      // // Marks (config)
+      // marks: undefined,
 
-      // Extra Properties
-      extraProperties: undefined,
+      // // Extra Properties
+      // extraProperties: undefined,
 
-      // Body
-      body: undefined,
+      // // Body
+      // body: undefined,
 
-      // Resource
-      resource: undefined,
-      logos: undefined,
+      // // Resource
+      // resource: undefined,
+      // logos: undefined,
 
-      // Children
-      statement: undefined,
-      isCorrect: undefined,
-      sampleSolution: undefined,
-      partialAnswer: undefined,
-      elements: undefined,
-      statements: undefined,
-      responses: undefined,
-      quizzes: undefined,
-      heading: undefined,
-      pairs: undefined,
-      matrix: undefined,
-      choices: undefined,
-      questions: undefined,
-      listItems: undefined,
-      sections: undefined,
+      // // Children
+      // statement: undefined,
+      // isCorrect: undefined,
+      // sampleSolution: undefined,
+      // partialAnswer: undefined,
+      // elements: undefined,
+      // statements: undefined,
+      // responses: undefined,
+      // quizzes: undefined,
+      // heading: undefined,
+      // pairs: undefined,
+      // matrix: undefined,
+      // choices: undefined,
+      // questions: undefined,
+      // listItems: undefined,
+      // sections: undefined,
 
-      // Placeholders
-      placeholders: undefined,
+      // // Placeholders
+      // placeholders: undefined,
 
-      // Footer
-      footer: undefined,
+      // // Footer
+      // footer: undefined,
     };
 
     // Add the resource template if there should be a resource (indicated by resourceType) but there is none defined.
@@ -2627,305 +2646,305 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return bitJson;
   }
 
-  /**
-   * Remove wanted properties from bit json object.
-   * - This function defines the defaults for properties in the json.
-   *
-   * @param bit
-   * @returns
-   */
-  protected cleanAndSetDefaultsForBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
-    const bitType = Config.getBitType(bitJson.type);
-    const plainText = this.options.textAsPlainText;
+  // /**
+  //  * Remove wanted properties from bit json object.
+  //  * - This function defines the defaults for properties in the json.
+  //  *
+  //  * @param bit
+  //  * @returns
+  //  */
+  // protected cleanAndSetDefaultsForBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
+  //   const bitType = Config.getBitType(bitJson.type);
+  //   const plainText = this.options.textAsPlainText;
 
-    // Clear 'item' which may be an empty string if 'lead' was set but item not
-    // Only necessary because '.article' does not include a default value for 'item'
-    // which is totally inconsistent, but maybe is wanted.
-    if (!bitJson.item) bitJson.item = undefined;
+  //   // Clear 'item' which may be an empty string if 'lead' was set but item not
+  //   // Only necessary because '.article' does not include a default value for 'item'
+  //   // which is totally inconsistent, but maybe is wanted.
+  //   if (!bitJson.item) bitJson.item = undefined;
 
-    // Add default properties to the bit.
-    // NOTE: Not all bits have the same default properties.
-    //       The properties used are a bit random sometimes?
-    //       It would be better if this functionality was generated from the bit config
-    if (Config.isOfBitType(bitType, [BitType._error, BitType._comment])) {
-      //
-      delete bitJson.format;
-      //
-    } else if (Config.isOfBitType(bitType, [BitType.article, BitType.sampleSolution, BitType.page])) {
-      //
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (
-      Config.isOfBitType(bitType, [
-        BitType.cloze,
-        BitType.multipleChoice1,
-        BitType.multipleResponse1,
-        BitType.multipleChoiceText,
-        BitType.highlightText,
-        BitType.clozeAndMultipleChoiceText,
-        BitType.sequence,
-        BitType.mark,
-        BitType.flashcard,
-      ])
-    ) {
-      // Default, but with no 'example' at the bit level.
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleResponse])) {
-      // Default with a card (and hence a footer possibility)
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      if (bitJson.footer == null) bitJson.footer = this.textDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.essay)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
-      // if (bitJson.sampleSolution == null) bitJson.sampleSolution = '';
-      //
-    } else if (Config.isOfBitType(bitType, BitType.trueFalse1)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.lead == null) bitJson.lead = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.isCorrect == null) bitJson.isCorrect = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.trueFalse)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.lead == null) bitJson.lead = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.labelFalse == null) bitJson.labelFalse = '';
-      if (bitJson.labelTrue == null) bitJson.labelTrue = '';
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.chapter)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
-      if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
-      if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.interview)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      if (bitJson.footer == null) bitJson.footer = this.textDefault;
-      if (bitJson.questions == null) bitJson.questions = [];
-      //
-    } else if (bitType === BitType.matchMatrix) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.match)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.learningPathBook)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.isTracked == null) bitJson.isTracked = true;
-      if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.pageBuyButton)) {
-      //
-      if (bitJson.content2Buy == null) bitJson.content2Buy = '';
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else {
-      // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //   // Add default properties to the bit.
+  //   // NOTE: Not all bits have the same default properties.
+  //   //       The properties used are a bit random sometimes?
+  //   //       It would be better if this functionality was generated from the bit config
+  //   if (Config.isOfBitType(bitType, [BitType._error, BitType._comment])) {
+  //     //
+  //     delete bitJson.format;
+  //     //
+  //   } else if (Config.isOfBitType(bitType, [BitType.article, BitType.sampleSolution, BitType.page])) {
+  //     //
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     //
+  //   } else if (
+  //     Config.isOfBitType(bitType, [
+  //       BitType.cloze,
+  //       BitType.multipleChoice1,
+  //       BitType.multipleResponse1,
+  //       BitType.multipleChoiceText,
+  //       BitType.highlightText,
+  //       BitType.clozeAndMultipleChoiceText,
+  //       BitType.sequence,
+  //       BitType.mark,
+  //       BitType.flashcard,
+  //     ])
+  //   ) {
+  //     // Default, but with no 'example' at the bit level.
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.hint == null) bitJson.hint = this.textDefault;
+  //     if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+  //     if (bitJson.isExample == null) bitJson.isExample = false;
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     //
+  //   } else if (Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleResponse])) {
+  //     // Default with a card (and hence a footer possibility)
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.hint == null) bitJson.hint = this.textDefault;
+  //     if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+  //     if (bitJson.isExample == null) bitJson.isExample = false;
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     if (bitJson.footer == null) bitJson.footer = this.textDefault;
+  //     //
+  //   } else if (Config.isOfBitType(bitType, BitType.essay)) {
+  //     //
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.hint == null) bitJson.hint = this.textDefault;
+  //     if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+  //     if (bitJson.isExample == null) bitJson.isExample = false;
+  //     if (bitJson.example == null) bitJson.example = null;
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
+  //     // if (bitJson.sampleSolution == null) bitJson.sampleSolution = '';
+  //     //
+  //   } else if (Config.isOfBitType(bitType, BitType.trueFalse1)) {
+  //     //
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.lead == null) bitJson.lead = this.textDefault;
+  //     if (bitJson.hint == null) bitJson.hint = this.textDefault;
+  //     if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+  //     if (bitJson.isExample == null) bitJson.isExample = false;
+  //     if (bitJson.example == null) bitJson.example = null;
+  //     if (bitJson.isCorrect == null) bitJson.isCorrect = false;
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     //
+  //   } else if (Config.isOfBitType(bitType, BitType.trueFalse)) {
+  //     //
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.lead == null) bitJson.lead = this.textDefault;
+  //     if (bitJson.hint == null) bitJson.hint = this.textDefault;
+  //     if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+  //     if (bitJson.isExample == null) bitJson.isExample = false;
+  //     if (bitJson.labelFalse == null) bitJson.labelFalse = '';
+  //     if (bitJson.labelTrue == null) bitJson.labelTrue = '';
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     //
+  //   } else if (Config.isOfBitType(bitType, BitType.chapter)) {
+  //     //
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.hint == null) bitJson.hint = this.textDefault;
+  //     if (bitJson.isExample == null) bitJson.isExample = false;
+  //     if (bitJson.example == null) bitJson.example = null;
+  //     if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
+  //     if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
+  //     if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     //
+  //   } else if (Config.isOfBitType(bitType, BitType.interview)) {
+  //     //
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.hint == null) bitJson.hint = this.textDefault;
+  //     if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+  //     if (bitJson.isExample == null) bitJson.isExample = false;
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     if (bitJson.footer == null) bitJson.footer = this.textDefault;
+  //     if (bitJson.questions == null) bitJson.questions = [];
+  //     //
+  //   } else if (bitType === BitType.matchMatrix) {
+  //     //
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     //
+  //   } else if (Config.isOfBitType(bitType, BitType.match)) {
+  //     //
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     //
+  //   } else if (Config.isOfBitType(bitType, BitType.learningPathBook)) {
+  //     //
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.hint == null) bitJson.hint = this.textDefault;
+  //     if (bitJson.isExample == null) bitJson.isExample = false;
+  //     if (bitJson.example == null) bitJson.example = null;
+  //     if (bitJson.isTracked == null) bitJson.isTracked = true;
+  //     if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     //
+  //   } else if (Config.isOfBitType(bitType, BitType.pageBuyButton)) {
+  //     //
+  //     if (bitJson.content2Buy == null) bitJson.content2Buy = '';
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
+  //     //
+  //   } else {
+  //     // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
+  //     if (bitJson.item == null) bitJson.item = this.textDefault;
+  //     if (bitJson.hint == null) bitJson.hint = this.textDefault;
+  //     if (bitJson.isExample == null) bitJson.isExample = false;
+  //     if (bitJson.example == null) bitJson.example = null;
+  //     if (bitJson.body == null) bitJson.body = this.bodyDefault;
 
-      // Special case for 'ai' bits
-      if (bitType === BitType.articleAi || bitType === BitType.noteAi || bitType === BitType.summaryAi) {
-        if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
-      }
+  //     // Special case for 'ai' bits
+  //     if (bitType === BitType.articleAi || bitType === BitType.noteAi || bitType === BitType.summaryAi) {
+  //       if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
+  //     }
 
-      // Special case for 'review-...' bits
-      if (Config.isOfBitType(bitType, BitType.reviewNote)) {
-        if (bitJson.resolved == null) bitJson.resolved = false;
-        if (bitJson.resolvedDate == null) bitJson.resolvedDate = '';
-        if (bitJson.resolvedBy == null) bitJson.resolvedBy = '';
-      }
+  //     // Special case for 'review-...' bits
+  //     if (Config.isOfBitType(bitType, BitType.reviewNote)) {
+  //       if (bitJson.resolved == null) bitJson.resolved = false;
+  //       if (bitJson.resolvedDate == null) bitJson.resolvedDate = '';
+  //       if (bitJson.resolvedBy == null) bitJson.resolvedBy = '';
+  //     }
 
-      // Special case for 'images-logos-grave' bit
-      if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
-        if (bitJson.logos == null) bitJson.logos = [];
-      }
-    }
+  //     // Special case for 'images-logos-grave' bit
+  //     if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
+  //       if (bitJson.logos == null) bitJson.logos = [];
+  //     }
+  //   }
 
-    // Remove unwanted properties
+  //   // Remove unwanted properties
 
-    // Properties
-    if (bitJson.id == null) delete bitJson.id;
-    if (bitJson.internalComment == null) delete bitJson.internalComment;
-    if (bitJson.externalId == null) delete bitJson.externalId;
-    if (bitJson.bookId == null) delete bitJson.bookId;
-    if (bitJson.spaceId == null) delete bitJson.spaceId;
-    if (bitJson.padletId == null) delete bitJson.padletId;
-    if (bitJson.jupyterId == null) delete bitJson.jupyterId;
-    if (bitJson.jupyterExecutionCount == null) delete bitJson.jupyterExecutionCount;
-    if (bitJson.AIGenerated == null) delete bitJson.AIGenerated;
-    if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
-    if (bitJson.book == null) delete bitJson.book;
-    if (bitJson.ageRange == null) delete bitJson.ageRange;
-    if (bitJson.lang == null) delete bitJson.lang;
-    if (bitJson.language == null) delete bitJson.language;
-    if (bitJson.publisher == null) delete bitJson.publisher;
-    if (bitJson.theme == null) delete bitJson.theme;
-    if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
-    if (bitJson.target == null) delete bitJson.target;
-    if (bitJson.tag == null) delete bitJson.tag;
-    if (bitJson.icon == null) delete bitJson.icon;
-    if (bitJson.iconTag == null) delete bitJson.iconTag;
-    if (bitJson.colorTag == null) delete bitJson.colorTag;
-    if (bitJson.flashcardSet == null) delete bitJson.flashcardSet;
-    if (bitJson.subtype == null) delete bitJson.subtype;
-    if (bitJson.bookAlias == null) delete bitJson.bookAlias;
-    if (bitJson.coverImage == null) delete bitJson.coverImage;
-    if (bitJson.publications == null) delete bitJson.publications;
-    if (bitJson.author == null) delete bitJson.author;
-    if (bitJson.subject == null) delete bitJson.subject;
-    if (bitJson.date == null) delete bitJson.date;
-    if (bitJson.location == null) delete bitJson.location;
-    if (bitJson.kind == null) delete bitJson.kind;
-    if (bitJson.action == null) delete bitJson.action;
-    if (bitJson.width == null) delete bitJson.width;
-    if (bitJson.height == null) delete bitJson.height;
-    if (bitJson.thumbImage == null) delete bitJson.thumbImage;
-    if (bitJson.scormSource == null) delete bitJson.scormSource;
-    if (bitJson.posterImage == null) delete bitJson.posterImage;
-    if (bitJson.focusX == null) delete bitJson.focusX;
-    if (bitJson.focusY == null) delete bitJson.focusY;
-    if (bitJson.pointerLeft == null) delete bitJson.pointerLeft;
-    if (bitJson.pointerTop == null) delete bitJson.pointerTop;
-    if (bitJson.backgroundWallpaper == null) delete bitJson.backgroundWallpaper;
-    if (bitJson.deeplink == null) delete bitJson.deeplink;
-    if (bitJson.externalLink == null) delete bitJson.externalLink;
-    if (bitJson.externalLinkText == null) delete bitJson.externalLinkText;
-    if (bitJson.videoCallLink == null) delete bitJson.videoCallLink;
-    if (bitJson.vendorUrl == null) delete bitJson.vendorUrl;
-    if (bitJson.duration == null) delete bitJson.duration;
-    if (bitJson.list == null) delete bitJson.list;
-    if (bitJson.textReference == null) delete bitJson.textReference;
-    if (bitJson.isTracked == null) delete bitJson.isTracked;
-    if (bitJson.isInfoOnly == null) delete bitJson.isInfoOnly;
-    if (bitJson.labelTrue == null) delete bitJson.labelTrue;
-    if (bitJson.labelFalse == null) delete bitJson.labelFalse;
-    if (bitJson.content2Buy == null) delete bitJson.content2Buy;
-    if (bitJson.mailingList == null) delete bitJson.mailingList;
-    if (bitJson.buttonCaption == null) delete bitJson.buttonCaption;
-    if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
-    if (bitJson.resolved == null) delete bitJson.resolved;
-    if (bitJson.resolvedDate == null) delete bitJson.resolvedDate;
-    if (bitJson.resolvedBy == null) delete bitJson.resolvedBy;
-    if (bitJson.maxCreatedBits == null) delete bitJson.maxCreatedBits;
-    if (bitJson.maxDisplayLevel == null) delete bitJson.maxDisplayLevel;
-    if (bitJson.product == null) delete bitJson.product;
-    if (bitJson.productVideo == null) delete bitJson.productVideo;
-    if (bitJson.productFolder == null) delete bitJson.productFolder;
-    if (bitJson.technicalTerm == null) delete bitJson.technicalTerm;
-    if (bitJson.portions == null) delete bitJson.portions;
+  //   // Properties
+  //   if (bitJson.id == null) delete bitJson.id;
+  //   if (bitJson.internalComment == null) delete bitJson.internalComment;
+  //   if (bitJson.externalId == null) delete bitJson.externalId;
+  //   if (bitJson.bookId == null) delete bitJson.bookId;
+  //   if (bitJson.spaceId == null) delete bitJson.spaceId;
+  //   if (bitJson.padletId == null) delete bitJson.padletId;
+  //   if (bitJson.jupyterId == null) delete bitJson.jupyterId;
+  //   if (bitJson.jupyterExecutionCount == null) delete bitJson.jupyterExecutionCount;
+  //   if (bitJson.AIGenerated == null) delete bitJson.AIGenerated;
+  //   if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
+  //   if (bitJson.book == null) delete bitJson.book;
+  //   if (bitJson.ageRange == null) delete bitJson.ageRange;
+  //   if (bitJson.lang == null) delete bitJson.lang;
+  //   if (bitJson.language == null) delete bitJson.language;
+  //   if (bitJson.publisher == null) delete bitJson.publisher;
+  //   if (bitJson.theme == null) delete bitJson.theme;
+  //   if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
+  //   if (bitJson.target == null) delete bitJson.target;
+  //   if (bitJson.tag == null) delete bitJson.tag;
+  //   if (bitJson.icon == null) delete bitJson.icon;
+  //   if (bitJson.iconTag == null) delete bitJson.iconTag;
+  //   if (bitJson.colorTag == null) delete bitJson.colorTag;
+  //   if (bitJson.flashcardSet == null) delete bitJson.flashcardSet;
+  //   if (bitJson.subtype == null) delete bitJson.subtype;
+  //   if (bitJson.bookAlias == null) delete bitJson.bookAlias;
+  //   if (bitJson.coverImage == null) delete bitJson.coverImage;
+  //   if (bitJson.publications == null) delete bitJson.publications;
+  //   if (bitJson.author == null) delete bitJson.author;
+  //   if (bitJson.subject == null) delete bitJson.subject;
+  //   if (bitJson.date == null) delete bitJson.date;
+  //   if (bitJson.location == null) delete bitJson.location;
+  //   if (bitJson.kind == null) delete bitJson.kind;
+  //   if (bitJson.action == null) delete bitJson.action;
+  //   if (bitJson.width == null) delete bitJson.width;
+  //   if (bitJson.height == null) delete bitJson.height;
+  //   if (bitJson.thumbImage == null) delete bitJson.thumbImage;
+  //   if (bitJson.scormSource == null) delete bitJson.scormSource;
+  //   if (bitJson.posterImage == null) delete bitJson.posterImage;
+  //   if (bitJson.focusX == null) delete bitJson.focusX;
+  //   if (bitJson.focusY == null) delete bitJson.focusY;
+  //   if (bitJson.pointerLeft == null) delete bitJson.pointerLeft;
+  //   if (bitJson.pointerTop == null) delete bitJson.pointerTop;
+  //   if (bitJson.backgroundWallpaper == null) delete bitJson.backgroundWallpaper;
+  //   if (bitJson.deeplink == null) delete bitJson.deeplink;
+  //   if (bitJson.externalLink == null) delete bitJson.externalLink;
+  //   if (bitJson.externalLinkText == null) delete bitJson.externalLinkText;
+  //   if (bitJson.videoCallLink == null) delete bitJson.videoCallLink;
+  //   if (bitJson.vendorUrl == null) delete bitJson.vendorUrl;
+  //   if (bitJson.duration == null) delete bitJson.duration;
+  //   if (bitJson.list == null) delete bitJson.list;
+  //   if (bitJson.textReference == null) delete bitJson.textReference;
+  //   if (bitJson.isTracked == null) delete bitJson.isTracked;
+  //   if (bitJson.isInfoOnly == null) delete bitJson.isInfoOnly;
+  //   if (bitJson.labelTrue == null) delete bitJson.labelTrue;
+  //   if (bitJson.labelFalse == null) delete bitJson.labelFalse;
+  //   if (bitJson.content2Buy == null) delete bitJson.content2Buy;
+  //   if (bitJson.mailingList == null) delete bitJson.mailingList;
+  //   if (bitJson.buttonCaption == null) delete bitJson.buttonCaption;
+  //   if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
+  //   if (bitJson.resolved == null) delete bitJson.resolved;
+  //   if (bitJson.resolvedDate == null) delete bitJson.resolvedDate;
+  //   if (bitJson.resolvedBy == null) delete bitJson.resolvedBy;
+  //   if (bitJson.maxCreatedBits == null) delete bitJson.maxCreatedBits;
+  //   if (bitJson.maxDisplayLevel == null) delete bitJson.maxDisplayLevel;
+  //   if (bitJson.product == null) delete bitJson.product;
+  //   if (bitJson.productVideo == null) delete bitJson.productVideo;
+  //   if (bitJson.productFolder == null) delete bitJson.productFolder;
+  //   if (bitJson.technicalTerm == null) delete bitJson.technicalTerm;
+  //   if (bitJson.portions == null) delete bitJson.portions;
 
-    // Book data
-    if (bitJson.title == null) delete bitJson.title;
-    if (bitJson.subtitle == null) delete bitJson.subtitle;
-    if (bitJson.level == null) delete bitJson.level;
-    if (bitJson.toc == null) delete bitJson.toc;
-    if (bitJson.progress == null) delete bitJson.progress;
-    if (bitJson.anchor == null) delete bitJson.anchor;
-    if (bitJson.reference == null) delete bitJson.reference;
-    if (bitJson.referenceEnd == null) delete bitJson.referenceEnd;
+  //   // Book data
+  //   if (bitJson.title == null) delete bitJson.title;
+  //   if (bitJson.subtitle == null) delete bitJson.subtitle;
+  //   if (bitJson.level == null) delete bitJson.level;
+  //   if (bitJson.toc == null) delete bitJson.toc;
+  //   if (bitJson.progress == null) delete bitJson.progress;
+  //   if (bitJson.anchor == null) delete bitJson.anchor;
+  //   if (bitJson.reference == null) delete bitJson.reference;
+  //   if (bitJson.referenceEnd == null) delete bitJson.referenceEnd;
 
-    // Item, Lead, Hint, Instruction
-    if (bitJson.item == null) delete bitJson.item;
-    if (bitJson.lead == null) delete bitJson.lead;
-    if (bitJson.pageNumber == null) delete bitJson.pageNumber;
-    if (bitJson.marginNumber == null) delete bitJson.marginNumber;
-    if (bitJson.hint == null) delete bitJson.hint;
-    if (bitJson.instruction == null) delete bitJson.instruction;
+  //   // Item, Lead, Hint, Instruction
+  //   if (bitJson.item == null) delete bitJson.item;
+  //   if (bitJson.lead == null) delete bitJson.lead;
+  //   if (bitJson.pageNumber == null) delete bitJson.pageNumber;
+  //   if (bitJson.marginNumber == null) delete bitJson.marginNumber;
+  //   if (bitJson.hint == null) delete bitJson.hint;
+  //   if (bitJson.instruction == null) delete bitJson.instruction;
 
-    // Example
-    if (bitJson.example === undefined) delete bitJson.example;
-    if (bitJson.isExample == null) delete bitJson.isExample;
+  //   // Example
+  //   if (bitJson.example === undefined) delete bitJson.example;
+  //   if (bitJson.isExample == null) delete bitJson.isExample;
 
-    // Mark
-    if (bitJson.marks == null) delete bitJson.marks;
+  //   // Mark
+  //   if (bitJson.marks == null) delete bitJson.marks;
 
-    // Extra Properties
-    if (bitJson.extraProperties == null) delete bitJson.extraProperties;
+  //   // Extra Properties
+  //   if (bitJson.extraProperties == null) delete bitJson.extraProperties;
 
-    // Body
-    if (bitJson.body == null) delete bitJson.body;
+  //   // Body
+  //   if (bitJson.body == null) delete bitJson.body;
 
-    // Placeholders
-    if (bitJson.placeholders == null || Object.keys(bitJson.placeholders).length === 0) delete bitJson.placeholders;
+  //   // Placeholders
+  //   if (bitJson.placeholders == null || Object.keys(bitJson.placeholders).length === 0) delete bitJson.placeholders;
 
-    // Resource
-    if (bitJson.resource == null) delete bitJson.resource;
-    if (bitJson.logos == null) delete bitJson.logos;
+  //   // Resource
+  //   if (bitJson.resource == null) delete bitJson.resource;
+  //   if (bitJson.logos == null) delete bitJson.logos;
 
-    // Children
-    if (bitJson.statement == null) delete bitJson.statement;
-    if (bitJson.isCorrect == null) delete bitJson.isCorrect;
-    if (bitJson.sampleSolution == null) delete bitJson.sampleSolution;
-    if (bitJson.partialAnswer == null) delete bitJson.partialAnswer;
-    if (bitJson.elements == null) delete bitJson.elements;
-    if (bitJson.statements == null) delete bitJson.statements;
-    if (bitJson.responses == null) delete bitJson.responses;
-    if (bitJson.quizzes == null) delete bitJson.quizzes;
-    if (bitJson.heading == null) delete bitJson.heading;
-    if (bitJson.pairs == null) delete bitJson.pairs;
-    if (bitJson.matrix == null) delete bitJson.matrix;
-    if (bitJson.choices == null) delete bitJson.choices;
-    if (bitJson.questions == null) delete bitJson.questions;
-    if (bitJson.listItems == null) delete bitJson.listItems;
-    if (bitJson.sections == null) delete bitJson.sections;
+  //   // Children
+  //   if (bitJson.statement == null) delete bitJson.statement;
+  //   if (bitJson.isCorrect == null) delete bitJson.isCorrect;
+  //   if (bitJson.sampleSolution == null) delete bitJson.sampleSolution;
+  //   if (bitJson.partialAnswer == null) delete bitJson.partialAnswer;
+  //   if (bitJson.elements == null) delete bitJson.elements;
+  //   if (bitJson.statements == null) delete bitJson.statements;
+  //   if (bitJson.responses == null) delete bitJson.responses;
+  //   if (bitJson.quizzes == null) delete bitJson.quizzes;
+  //   if (bitJson.heading == null) delete bitJson.heading;
+  //   if (bitJson.pairs == null) delete bitJson.pairs;
+  //   if (bitJson.matrix == null) delete bitJson.matrix;
+  //   if (bitJson.choices == null) delete bitJson.choices;
+  //   if (bitJson.questions == null) delete bitJson.questions;
+  //   if (bitJson.listItems == null) delete bitJson.listItems;
+  //   if (bitJson.sections == null) delete bitJson.sections;
 
-    // Placeholders
-    if (!plainText || bitJson.placeholders == null) delete bitJson.placeholders;
+  //   // Placeholders
+  //   if (!plainText || bitJson.placeholders == null) delete bitJson.placeholders;
 
-    // Footer
-    if (bitJson.footer == null) delete bitJson.footer;
+  //   // Footer
+  //   if (bitJson.footer == null) delete bitJson.footer;
 
-    return bitJson;
-  }
+  //   return bitJson;
+  // }
 
   //
   // Writer interface
