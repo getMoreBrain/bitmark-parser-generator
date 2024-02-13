@@ -556,6 +556,36 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.blockId]: {
+    tag: PropertyTag.blockId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.pageNo]: {
+    tag: PropertyTag.pageNo,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.x]: {
+    tag: PropertyTag.x,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.y]: {
+    tag: PropertyTag.y,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.index]: {
+    tag: PropertyTag.index,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.classification]: {
+    tag: PropertyTag.classification,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
 };
 
 export { PROPERTIES };

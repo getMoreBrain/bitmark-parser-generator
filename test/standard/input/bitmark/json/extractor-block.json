@@ -1,0 +1,42 @@
+[
+  {
+    "bit": {
+      "type": "extractor-block",
+      "format": "bitmark--",
+      "blockId": "uuid-uuid-uuid-uuid",
+      "pageNo": 1,
+      "x": 0,
+      "y": 0,
+      "width": 100,
+      "height": 100,
+      "index": 99,
+      "classification": "paragraph",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "img",
+          "provider": "url.to",
+          "src": "https://url.to/block.img",
+          "width": "100",
+          "height": "100",
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.5.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.extractor-block]\n[@blockId:uuid-uuid-uuid-uuid]\n[@pageNo:1]\n[@x:0]\n[@y:0]\n[@width:100]\n[@height:100]\n[@index:99]\n[@classification:paragraph]\n[&image:https://url.to/block.img][@width:100][@height:100]"
+  }
+]

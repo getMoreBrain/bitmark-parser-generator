@@ -66,8 +66,14 @@ export interface Bit {
   location?: Property;
   kind?: Property;
   action?: Property;
+  blockId?: Property;
+  pageNo?: Property;
+  x?: Property;
+  y?: Property;
   width?: Property;
   height?: Property;
+  index?: Property;
+  classification?: Property;
   thumbImage?: Property;
   scormSource?: Property;
   posterImage?: Property;
