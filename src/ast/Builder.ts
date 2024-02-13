@@ -42,7 +42,7 @@ import {
   ItemLead,
   ExtraProperties,
   BotResponse,
-  Partner,
+  Person,
   BodyText,
   BodyPart,
   CardNode,
@@ -52,6 +52,8 @@ import {
   Flashcard,
   ImageSource,
   CardBit,
+  Ingredient,
+  TechnicalTerm,
 } from '../model/ast/Nodes';
 
 /**
@@ -98,6 +100,8 @@ class Builder extends BaseBuilder {
     jupyterExecutionCount?: number;
     aiGenerated?: boolean;
     releaseVersion?: BreakscapedString;
+    releaseKind?: BreakscapedString;
+    releaseDate?: BreakscapedString;
     ageRange?: number | number[];
     lang?: BreakscapedString;
     language?: BreakscapedString | BreakscapedString[];
@@ -120,8 +124,14 @@ class Builder extends BaseBuilder {
     location?: BreakscapedString;
     kind?: BreakscapedString;
     action?: BreakscapedString;
+    blockId?: BreakscapedString;
+    pageNo?: number;
+    x?: number;
+    y?: number;
     width?: string;
     height?: string;
+    index?: number;
+    classification?: BreakscapedString;
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -159,6 +169,8 @@ class Builder extends BaseBuilder {
     productVideo?: BreakscapedString | BreakscapedString[];
     productVideoList?: BreakscapedString | BreakscapedString[];
     productFolder?: BreakscapedString;
+    technicalTerm?: TechnicalTerm;
+    portions?: number;
     partialAnswer?: BreakscapedString;
     book?: BreakscapedString;
     title?: BreakscapedString;
@@ -180,7 +192,7 @@ class Builder extends BaseBuilder {
     isDefaultExample?: boolean;
     example?: Example;
     imageSource?: ImageSource;
-    partner?: Partner;
+    person?: Person;
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
@@ -200,6 +212,7 @@ class Builder extends BaseBuilder {
     choices?: Choice[];
     questions?: Question[];
     botResponses?: BotResponse[];
+    ingredients?: Ingredient[];
     cardBits?: CardBit[];
     footer?: FooterText;
 
@@ -220,6 +233,8 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount,
       aiGenerated,
       releaseVersion,
+      releaseKind,
+      releaseDate,
       ageRange,
       lang,
       language,
@@ -242,8 +257,14 @@ class Builder extends BaseBuilder {
       location,
       kind,
       action,
+      blockId,
+      pageNo,
+      x,
+      y,
       width,
       height,
+      index,
+      classification,
       thumbImage,
       scormSource,
       posterImage,
@@ -283,6 +304,8 @@ class Builder extends BaseBuilder {
       productVideo,
       productVideoList,
       productFolder,
+      technicalTerm,
+      portions,
       title,
       subtitle,
       level,
@@ -300,7 +323,7 @@ class Builder extends BaseBuilder {
       isDefaultExample,
       example,
       imageSource,
-      partner,
+      person,
       markConfig,
       extraProperties,
       resources: _resources,
@@ -340,6 +363,8 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, jupyterExecutionCount),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, releaseVersion),
+      releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, releaseKind),
+      releaseDate: this.toAstProperty(PropertyConfigKey.releaseDate, releaseDate),
       book,
       ageRange: this.toAstProperty(PropertyConfigKey.ageRange, ageRange),
       lang: this.toAstProperty(PropertyConfigKey.lang, lang),
@@ -363,8 +388,14 @@ class Builder extends BaseBuilder {
       location: this.toAstProperty(PropertyConfigKey.location, location),
       kind: this.toAstProperty(PropertyConfigKey.kind, kind),
       action: this.toAstProperty(PropertyConfigKey.action, action),
+      blockId: this.toAstProperty(PropertyConfigKey.blockId, blockId),
+      pageNo: this.toAstProperty(PropertyConfigKey.pageNo, pageNo),
+      x: this.toAstProperty(PropertyConfigKey.x, x),
+      y: this.toAstProperty(PropertyConfigKey.y, y),
       width: this.toAstProperty(PropertyConfigKey.width, width),
       height: this.toAstProperty(PropertyConfigKey.height, height),
+      index: this.toAstProperty(PropertyConfigKey.index, index),
+      classification: this.toAstProperty(PropertyConfigKey.classification, classification),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),
@@ -403,6 +434,8 @@ class Builder extends BaseBuilder {
       productVideo: this.toAstProperty(PropertyConfigKey.productVideo, productVideo),
       productVideoList: this.toAstProperty(PropertyConfigKey.productVideoList, productVideoList),
       productFolder: this.toAstProperty(PropertyConfigKey.productFolder, productFolder),
+      technicalTerm,
+      portions: this.toAstProperty(PropertyConfigKey.portions, portions),
       title,
       subtitle,
       level: NumberUtils.asNumber(level),
@@ -417,7 +450,7 @@ class Builder extends BaseBuilder {
       instruction,
       ...this.toExample(isDefaultExample, example),
       imageSource,
-      partner,
+      person,
       resources,
       body,
       sampleSolution: ArrayUtils.asSingle(sampleSolution),
@@ -852,6 +885,40 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreEmptyString: ['question'],
+      ignoreAllFalse: true,
+    });
+
+    return node;
+  }
+
+  /**
+   * Build ingredient node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  ingredient(data: {
+    checked?: boolean;
+    item?: BreakscapedString;
+    quantity?: number;
+    unit?: BreakscapedString;
+    unitAbbr?: BreakscapedString;
+    disableCalculation?: boolean;
+  }): Ingredient {
+    const { checked, item, quantity, unit, unitAbbr, disableCalculation } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Ingredient = {
+      checked: checked ?? false,
+      item,
+      quantity,
+      unit,
+      unitAbbr,
+      disableCalculation,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
     });
 
@@ -1319,18 +1386,40 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Build (chat) partner node
+   * Build (chat) person node
    *
    * @param data - data for the node
    * @returns
    */
-  partner(data: { name: BreakscapedString; avatarImage?: ImageResource }): Partner {
-    const { name, avatarImage } = data;
+  person(data: { name: BreakscapedString; title?: BreakscapedString; avatarImage?: ImageResource }): Person {
+    const { name, title, avatarImage } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Partner = {
+    const node: Person = {
       name,
+      title,
       avatarImage,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build (cook-ingredients) technicalTerm node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  technicalTerm(data: { term: BreakscapedString; lang?: BreakscapedString }): TechnicalTerm {
+    const { term, lang } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: TechnicalTerm = {
+      term,
+      lang,
     };
 
     // Remove Unset Optionals
@@ -1432,6 +1521,7 @@ class Builder extends BaseBuilder {
     pairs?: Pair[];
     matrix?: Matrix[];
     botResponses?: BotResponse[];
+    ingredients?: Ingredient[];
     cardBits?: CardBit[];
   }): CardNode | undefined {
     let node: CardNode | undefined;
@@ -1448,6 +1538,7 @@ class Builder extends BaseBuilder {
       pairs,
       matrix,
       botResponses,
+      ingredients,
       cardBits,
     } = data;
 
@@ -1464,6 +1555,7 @@ class Builder extends BaseBuilder {
       pairs ||
       matrix ||
       botResponses ||
+      ingredients ||
       cardBits
     ) {
       node = {
@@ -1479,6 +1571,7 @@ class Builder extends BaseBuilder {
         pairs,
         matrix,
         botResponses,
+        ingredients,
         cardBits,
       };
 

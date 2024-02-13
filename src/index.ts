@@ -87,7 +87,7 @@ export type {
   Example,
   ExtraProperties,
   Property,
-  Partner,
+  Person,
   Statement,
   Choice,
   Response,

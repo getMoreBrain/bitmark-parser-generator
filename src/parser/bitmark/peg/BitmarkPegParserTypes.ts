@@ -34,13 +34,15 @@ import {
   Resource,
   FooterText,
   BotResponse,
-  Partner,
+  Person,
   ExtraProperties,
   ImageResource,
   MarkConfig,
   Flashcard,
   ImageSource,
   CardBit,
+  Ingredient,
+  TechnicalTerm,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -105,9 +107,12 @@ export interface BitContentProcessorResult {
   body?: Body;
   footer?: FooterText;
   imageSource?: ImageSource;
-  partner?: Partner;
+  technicalTerm?: TechnicalTerm;
+  person?: Person;
+  propertyTitle?: BreakscapedString;
   trueFalse?: TrueFalseValue[];
   isDefaultExample?: boolean;
+  lang?: BreakscapedString;
   example?: BreakscapedString;
   isCorrect?: boolean;
   markConfig?: MarkConfig[];
@@ -157,6 +162,9 @@ export interface BitContentProcessorResult {
   mockupId?: BreakscapedString;
   size?: number;
   format?: BreakscapedString;
+  unit?: BreakscapedString;
+  unitAbbr?: BreakscapedString;
+  disableCalculation?: boolean;
 
   extraProperties?: ExtraProperties;
   internalComments?: BreakscapedString[];
@@ -187,6 +195,7 @@ export interface BitSpecificCards {
   choices?: Choice[];
   questions?: Question[];
   botResponses?: BotResponse[];
+  ingredients?: Ingredient[];
   cardBits?: CardBit[];
   internalComments?: BreakscapedString[];
 }

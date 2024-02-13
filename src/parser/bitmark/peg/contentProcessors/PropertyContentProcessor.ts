@@ -15,7 +15,8 @@ import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
 import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor';
 import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
-import { partnerChainContentProcessor } from './PartnerChainContentProcessor';
+import { personChainContentProcessor } from './PersonChainContentProcessor';
+import { technicalTermChainContentProcessor } from './TechnicalTermChainContentProcessor';
 
 import {
   BitContent,
@@ -35,7 +36,8 @@ function propertyContentProcessor(
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
-  const { key: tag, value } = content as TypeKeyValue;
+  const { value } = content as TypeKeyValue;
+  let { key: tag } = content as TypeKeyValue;
   const isChain = bitLevel === BitContentLevel.Chain;
 
   // Get the property config for the tag (if it exists)
@@ -55,8 +57,11 @@ function propertyContentProcessor(
     if (configKey === PropertyConfigKey.example) {
       exampleTagContentProcessor(context, bitType, textFormat, bitLevel, content, target);
       return;
-    } else if (configKey === PropertyConfigKey.partner) {
-      partnerChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
+    } else if (configKey === PropertyConfigKey.technicalTerm) {
+      technicalTermChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
+      return;
+    } else if (configKey === PropertyConfigKey.person || configKey === PropertyConfigKey.partner) {
+      personChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.imageSource) {
       imageSourceChainContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
@@ -67,6 +72,9 @@ function propertyContentProcessor(
     } else if (configKey === PropertyConfigKey.markConfig && !isChain) {
       markConfigChainContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
       return;
+    } else if (configKey === PropertyConfigKey.property_title && isChain) {
+      // Hack the intermediate tag so as not to clash with [#title] tags which are not chained (yet)
+      tag = 'propertyTitle';
     }
   }
 

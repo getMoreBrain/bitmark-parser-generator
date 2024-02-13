@@ -117,10 +117,16 @@ class BaseBuilder {
     const processValue = (v: unknown) => {
       if (v == null) return undefined;
       switch (propertyConfig.format) {
-        case PropertyFormat.string:
-          return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
+        case PropertyFormat.string: {
+          // Convert number to string
+          if (NumberUtils.asNumber(v) != null) v = `${v}`;
 
+          return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
+        }
         case PropertyFormat.trimmedString:
+          // Convert number to string
+          if (NumberUtils.asNumber(v) != null) v = `${v}`;
+
           return StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
 
         case PropertyFormat.number:

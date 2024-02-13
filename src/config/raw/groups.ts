@@ -151,13 +151,47 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
-  [GroupConfigKey.group_partner]: {
+  [GroupConfigKey.group_technicalTerm]: {
     type: GroupConfigType.standard,
     tags: [
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.technicalTerm,
+        chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.lang,
+          },
+        ],
+      },
+    ],
+  },
+  [GroupConfigKey.group_person]: {
+    type: GroupConfigType.standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.person,
+        chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.property_title,
+          },
+          {
+            type: BitTagType.group,
+            configKey: GroupConfigKey.group_resourceImage,
+          },
+        ],
+      },
+      {
+        // Deprecated (parter renamed to person)
+        type: BitTagType.property,
         configKey: PropertyConfigKey.partner,
         chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.property_title,
+          },
           {
             type: BitTagType.group,
             configKey: GroupConfigKey.group_resourceImage,

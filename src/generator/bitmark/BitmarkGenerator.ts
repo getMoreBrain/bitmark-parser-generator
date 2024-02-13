@@ -27,11 +27,13 @@ import {
   ImageResource,
   Resource,
   ArticleResource,
-  Partner,
+  Person,
   Example,
   MarkConfig,
   BodyPart,
   ImageSource,
+  Ingredient,
+  TechnicalTerm,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -352,18 +354,38 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> partner
+  // bitmarkAst -> bits -> bitsValue -> technicalTerm
 
-  protected enter_partner(node: NodeInfo, route: NodeInfo[]): void {
-    const partner = node.value as Partner;
+  protected enter_technicalTerm(node: NodeInfo, route: NodeInfo[]): void {
+    const technicalTerm = node.value as TechnicalTerm;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
-    const { name, avatarImage } = partner;
+    const { term, lang } = technicalTerm;
 
-    this.writeProperty('partner', name, true);
+    this.writeProperty('technicalTerm', term, true);
+    if (lang) {
+      this.writeProperty('lang', lang);
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> person
+
+  protected enter_person(node: NodeInfo, route: NodeInfo[]): void {
+    const person = node.value as Person;
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const { name, title, avatarImage } = person;
+
+    this.writeProperty('person', name, true);
+    if (title) {
+      this.writeProperty('title', title, true);
+    }
     if (avatarImage) {
       this.writeResource(avatarImage);
     }
@@ -865,6 +887,55 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL();
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients
+
+  protected enter_ingredients(_node: NodeInfo, _route: NodeInfo[]): void {
+    //
+  }
+
+  protected between_ingredients(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  protected exit_ingredients(_node: NodeInfo, _route: NodeInfo[]): void {
+    //
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
+
+  protected enter_ingredientsValue(node: NodeInfo, _route: NodeInfo[]): void {
+    const ingredient = node.value as Ingredient;
+
+    // [+] / [-]
+    if (ingredient.checked) {
+      this.writeOPP();
+    } else {
+      this.writeOPM();
+    }
+    this.writeCL();
+
+    // [!43]
+    if (ingredient.quantity != null) {
+      this.writeOPB();
+      this.writeString(`${ingredient.quantity}`);
+      this.writeCL();
+    }
+
+    // [@unit:kilograms]
+    if (ingredient.unit != null) this.writeProperty('unit', ingredient.unit, true);
+
+    // [@unitAbbr:kg]
+    if (ingredient.unitAbbr != null) this.writeProperty('unitAbbr', ingredient.unitAbbr, true);
+
+    // [@disableCalculation]
+    if (ingredient.disableCalculation) this.writeProperty('disableCalculation', true, true);
+
+    // item
+    if (ingredient.item != null) this.write(ingredient.item);
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
 
   protected enter_botResponses(_node: NodeInfo, _route: NodeInfo[]): void {
@@ -995,10 +1066,15 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_title(node: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
+
+    // Ensure this is at the bit level
+    if (parent?.key !== NodeType.bitsValue) return;
+
     const value = node.value as string;
     const title = value;
     const bit = parent?.value as Bit;
     const level = bit.level || 1;
+
     if (level && title) {
       this.writeOP();
       for (let i = 0; i < +level; i++) this.writeHash();
@@ -1371,7 +1447,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.labelFalse) continue;
       if (astKey === PropertyTag.posterImage) continue;
       if (astKey === PropertyTag.imageSource) continue;
-      if (astKey === PropertyTag.partner) continue;
+      if (astKey === PropertyTag.technicalTerm) continue;
+      if (astKey === PropertyTag.person) continue;
       if (astKey === PropertyAstKey.markConfig) continue;
 
       const funcName = `enter_${astKey}`;

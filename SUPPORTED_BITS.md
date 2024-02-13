@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.15
+Version: 1.5.16
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -117,7 +117,7 @@ conversation-right-1 (since: 1.3.0)
 conversation-right-1-scream (since: 1.3.0)
 conversation-right-1-thought (since: 1.3.0)
 cook-arrangement (since: 1.3.0)
-cook-ingredients (since: 1.3.0)
+cook-ingredients (since: 1.5.16)
 cook-insert (since: 1.3.0)
 cook-personal-recommendation (since: 1.3.0)
 cook-plate (since: 1.3.0)
@@ -145,6 +145,7 @@ editor-note (since: 1.3.0)
 essay (since: 1.3.0)
 example (since: 1.3.0)
 example-list (since: 1.4.13)
+extractor-block (since: 1.5.16)
 featured (since: 1.3.0)
 figure (since: 1.3.0, deprecated: 1.4.0)
 flashcard (since: 1.3.0)
@@ -245,6 +246,7 @@ page-buy-button (since: 1.4.3)
 page-buy-button-promotion (since: 1.5.11)
 page-footer (since: 1.4.13)
 page-open-book (since: 1.5.10)
+page-person (since: 1.5.16)
 page-product (since: 1.4.17)
 page-product-list (since: 1.4.17)
 page-product-video (since: 1.4.17)

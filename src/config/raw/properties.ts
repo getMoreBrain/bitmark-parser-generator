@@ -52,6 +52,16 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.releaseKind]: {
+    tag: PropertyTag.releaseKind,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.releaseDate]: {
+    tag: PropertyTag.releaseDate,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.resolved]: {
     tag: PropertyTag.resolved,
     single: true,
@@ -286,6 +296,32 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
+  [PropertyConfigKey.technicalTerm]: {
+    tag: PropertyTag.technicalTerm,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.portions]: {
+    tag: PropertyTag.portions,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.unit]: {
+    tag: PropertyTag.unit,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.unitAbbr]: {
+    tag: PropertyTag.unitAbbr,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.disableCalculation]: {
+    tag: PropertyTag.disableCalculation,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+
   [PropertyConfigKey.example]: {
     tag: PropertyTag.example,
     single: true,
@@ -335,6 +371,12 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.person]: {
+    tag: PropertyTag.person,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  // Deprecated (replaced by person)
   [PropertyConfigKey.partner]: {
     tag: PropertyTag.partner,
     single: true,
@@ -391,6 +433,11 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.format]: {
     tag: PropertyTag.format,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.property_title]: {
+    tag: PropertyTag.title,
     single: true,
     format: PropertyFormat.trimmedString,
   },
@@ -506,6 +553,36 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.backgroundWallpaper]: {
     tag: PropertyTag.backgroundWallpaper,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.blockId]: {
+    tag: PropertyTag.blockId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.pageNo]: {
+    tag: PropertyTag.pageNo,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.x]: {
+    tag: PropertyTag.x,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.y]: {
+    tag: PropertyTag.y,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.index]: {
+    tag: PropertyTag.index,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.classification]: {
+    tag: PropertyTag.classification,
     single: true,
     format: PropertyFormat.trimmedString,
   },

@@ -4,7 +4,7 @@ import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioEmbedResource, ImageSource } from '../../model/ast/Nodes';
+import { AudioEmbedResource, ImageSource, Ingredient } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
@@ -29,6 +29,7 @@ import { ParserInfo } from '../../model/parser/ParserInfo';
 import { TextParser } from '../../parser/text/TextParser';
 import { ArrayUtils } from '../../utils/ArrayUtils';
 import { BooleanUtils } from '../../utils/BooleanUtils';
+import { NumberUtils } from '../../utils/NumberUtils';
 import { StringUtils } from '../../utils/StringUtils';
 import { UrlUtils } from '../../utils/UrlUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
@@ -40,7 +41,7 @@ import {
   Highlight,
   Matrix,
   Pair,
-  Partner,
+  Person,
   Question,
   Quiz,
 } from '../../model/ast/Nodes';
@@ -70,12 +71,13 @@ import {
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
+  IngredientJson,
   ListItemJson,
   MarkConfigJson,
   MatrixCellJson,
   MatrixJson,
   PairJson,
-  PartnerJson,
+  PersonJson,
   QuestionJson,
   QuizJson,
   ResponseJson,
@@ -440,28 +442,36 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.bitJson.imageSource = imageSourceJson;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> partner
+  // bitmarkAst -> bits -> bitsValue -> person
 
-  protected enter_partner(node: NodeInfo, route: NodeInfo[]): void {
-    const partner = node.value as Partner;
+  protected enter_person(node: NodeInfo, route: NodeInfo[]): void {
+    const person = node.value as Person;
     const bitType = this.getBitType(route);
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue || !bitType) return;
 
-    const { name, avatarImage } = partner;
+    const { name, title, avatarImage } = person;
 
-    const partnerJson = {} as PartnerJson;
-    this.addProperty(partnerJson, 'name', name ?? '', true);
+    const personJson = {} as PersonJson;
+    this.addProperty(personJson, 'name', name ?? '', true);
+    if (title) {
+      this.addProperty(personJson, 'title', title, true);
+    }
     if (avatarImage) {
       const res = this.parseResourceToJson(bitType, avatarImage);
       if (res && res.type === ResourceTag.image) {
-        partnerJson.avatarImage = res.image;
+        personJson.avatarImage = res.image;
       }
     }
 
-    this.bitJson.partner = partnerJson;
+    if (Config.isOfBitType(bitType, BitType.conversationLeft1)) {
+      // Use the legacy partner property in the JSON for conversation bits, so change to person is backwards compatible
+      this.bitJson.partner = personJson;
+    } else {
+      this.bitJson.person = personJson;
+    }
   }
 
   // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
@@ -517,6 +527,40 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (marginNumber != null) {
       this.bitJson.marginNumber = this.convertBreakscapedStringToJsonText(marginNumber, TextFormat.bitmarkMinusMinus);
     }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> width
+
+  protected enter_width(node: NodeInfo, route: NodeInfo[]): boolean {
+    let value = node.value as string | number;
+    const bitType = this.getBitType(route);
+
+    const parent = this.getParentNode(route);
+    if (parent?.key === NodeType.bitsValue && Config.isOfBitType(bitType, BitType.extractorBlock)) {
+      value = NumberUtils.asNumber(value, 0) ?? 0;
+    }
+
+    // Add the property
+    this.addProperty(this.bitJson, 'width', value, true);
+
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> height
+
+  protected enter_height(node: NodeInfo, route: NodeInfo[]): boolean {
+    let value = node.value as string | number;
+    const bitType = this.getBitType(route);
+
+    const parent = this.getParentNode(route);
+    if (parent?.key === NodeType.bitsValue && Config.isOfBitType(bitType, BitType.extractorBlock)) {
+      value = NumberUtils.asNumber(value, 0) ?? 0;
+    }
+
+    // Add the property
+    this.addProperty(this.bitJson, 'height', value, true);
+
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> extraProperties
@@ -1194,6 +1238,40 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
+  protected enter_ingredients(node: NodeInfo, route: NodeInfo[]): void {
+    const ingredients = node.value as Ingredient[];
+
+    // Ignore statements that are not at the card node level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.cardNode) return;
+
+    const ingredientsJson: IngredientJson[] = [];
+    if (ingredients) {
+      for (const i of ingredients) {
+        // Create the ingredient
+        const ingredientJson: Partial<IngredientJson> = {
+          checked: i.checked ?? false,
+          item: Breakscape.unbreakscape(i.item) ?? '',
+          quantity: i.quantity ?? 0,
+          unit: Breakscape.unbreakscape(i.unit) ?? '',
+          unitAbbr: Breakscape.unbreakscape(i.unitAbbr) ?? '',
+          disableCalculation: i.disableCalculation ?? false,
+        };
+
+        // Delete unwanted properties
+        if (i?.unitAbbr == null) delete ingredientJson.unitAbbr;
+        // if (i?.instruction == null) delete ingredientJson.instruction;
+
+        ingredientsJson.push(ingredientJson as IngredientJson);
+      }
+    }
+
+    if (ingredientsJson.length > 0) {
+      this.bitJson.ingredients = ingredientsJson;
+    }
+  }
+
   // bitmarkAst -> bits -> bitsValue -> resources
 
   protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean | void {
@@ -1267,7 +1345,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> title
 
-  protected leaf_title(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_title(node: NodeInfo, route: NodeInfo[]): void {
+    // Ignore title that are not at the bit or card node level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
+
     this.bitJson.title = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
   }
 
@@ -1428,7 +1510,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.internalComment) continue;
       if (astKey === PropertyTag.example) continue;
       if (astKey === PropertyTag.imageSource) continue;
-      if (astKey === PropertyTag.partner) continue;
+      if (astKey === PropertyTag.person) continue;
+      if (astKey === PropertyTag.width) continue;
+      if (astKey === PropertyTag.height) continue;
       if (astKey === PropertyAstKey.markConfig) continue;
 
       const funcName = `enter_${astKey}`;
@@ -2444,6 +2528,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       jupyterExecutionCount: undefined,
       AIGenerated: undefined,
       releaseVersion: undefined,
+      releaseKind: undefined,
+      releaseDate: undefined,
       book: undefined,
       ageRange: undefined,
       lang: undefined,
@@ -2467,8 +2553,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       location: undefined,
       kind: undefined,
       action: undefined,
+      blockId: undefined,
+      pageNo: undefined,
+      x: undefined,
+      y: undefined,
       width: undefined,
       height: undefined,
+      index: undefined,
+      classification: undefined,
       thumbImage: undefined,
       scormSource: undefined,
       posterImage: undefined,
@@ -2502,6 +2594,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       product: undefined,
       productVideo: undefined,
       productFolder: undefined,
+      technicalTerm: undefined,
+      portions: undefined,
 
       // Book data
       title: undefined,
@@ -2525,8 +2619,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       isExample: undefined,
       example: undefined,
 
-      // Partner .conversion-xxx only
-      partner: undefined,
+      // Person .conversion-xxx, page-person, etc
+      person: undefined,
 
       // Marks (config)
       marks: undefined,
@@ -2754,6 +2848,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.jupyterExecutionCount == null) delete bitJson.jupyterExecutionCount;
     if (bitJson.AIGenerated == null) delete bitJson.AIGenerated;
     if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
+    if (bitJson.releaseKind == null) delete bitJson.releaseKind;
+    if (bitJson.releaseDate == null) delete bitJson.releaseDate;
     if (bitJson.book == null) delete bitJson.book;
     if (bitJson.ageRange == null) delete bitJson.ageRange;
     if (bitJson.lang == null) delete bitJson.lang;
@@ -2777,8 +2873,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.location == null) delete bitJson.location;
     if (bitJson.kind == null) delete bitJson.kind;
     if (bitJson.action == null) delete bitJson.action;
+    if (bitJson.blockId == null) delete bitJson.blockId;
+    if (bitJson.pageNo == null) delete bitJson.pageNo;
+    if (bitJson.x == null) delete bitJson.x;
+    if (bitJson.y == null) delete bitJson.y;
     if (bitJson.width == null) delete bitJson.width;
     if (bitJson.height == null) delete bitJson.height;
+    if (bitJson.index == null) delete bitJson.index;
+    if (bitJson.classification == null) delete bitJson.classification;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;
     if (bitJson.scormSource == null) delete bitJson.scormSource;
     if (bitJson.posterImage == null) delete bitJson.posterImage;
@@ -2811,6 +2913,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.product == null) delete bitJson.product;
     if (bitJson.productVideo == null) delete bitJson.productVideo;
     if (bitJson.productFolder == null) delete bitJson.productFolder;
+    if (bitJson.technicalTerm == null) delete bitJson.technicalTerm;
+    if (bitJson.portions == null) delete bitJson.portions;
 
     // Book data
     if (bitJson.title == null) delete bitJson.title;

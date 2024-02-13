@@ -316,6 +316,38 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
+  [CardSetConfigKey._ingredients]: {
+    variants: [
+      [
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_trueFalse,
+            },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.unit,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.unitAbbr,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.disableCalculation,
+            },
+          ],
+          bodyAllowed: true,
+          repeatCount: Count.infinity,
+        },
+      ],
+    ],
+  },
 };
 
 export { CARDSETS as CARDS };

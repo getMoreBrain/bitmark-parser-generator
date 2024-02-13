@@ -17,7 +17,7 @@ import {
 
 const builder = new Builder();
 
-function partnerChainContentProcessor(
+function personChainContentProcessor(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
   textFormat: TextFormatType,
@@ -28,26 +28,30 @@ function partnerChainContentProcessor(
 ): void {
   // const { value } = content as TypeValue;
 
-  if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('partner content', content);
+  if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('person content', content);
 
   const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, content.chain);
 
-  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('partner TAGS', tags);
+  if (context.DEBUG_CHAIN_TAGS) context.debugPrint('person TAGS', tags);
 
-  const { resources } = tags;
+  const { propertyTitle, resources } = tags;
 
   // Extract the name from the content tag
   const name = StringUtils.trimmedString(content.value) as BreakscapedString;
 
+  // Extract the title from the propertyTitle tag
+  const title = StringUtils.trimmedString(propertyTitle) as BreakscapedString;
+
   // Extract avatarImage from the resources
   const avatarImage = extractAvatarImage(context, resources);
 
-  const partner = builder.partner({
+  const person = builder.person({
     name,
+    title,
     avatarImage,
   });
 
-  target.partner = partner;
+  target.person = person;
 }
 
 function extractAvatarImage(
@@ -74,10 +78,10 @@ function extractAvatarImage(
     context.parser.excessResources = excessResources;
 
     // Add an warning to warn about the excess resources
-    context.addWarning(`${excessResources.length} excess resource(s) present in the [@parter] chain.`);
+    context.addWarning(`${excessResources.length} excess resource(s) present in the [@person] chain.`);
   }
 
   return avatarImage;
 }
 
-export { partnerChainContentProcessor };
+export { personChainContentProcessor };

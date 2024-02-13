@@ -24,6 +24,7 @@ import {
   BotResponse,
   CardBit,
   Choice,
+  Ingredient,
   Flashcard,
   FooterText,
   Gap,
@@ -37,7 +38,7 @@ import {
   Matrix,
   MatrixCell,
   Pair,
-  Partner,
+  Person,
   Question,
   Quiz,
   Resource,
@@ -45,6 +46,7 @@ import {
   Select,
   SelectOption,
   Statement,
+  TechnicalTerm,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -58,12 +60,14 @@ import {
   QuizJson,
   ResponseJson,
   StatementJson,
-  PartnerJson,
+  PersonJson,
   BotResponseJson,
   ExampleJson,
   MarkConfigJson,
   ImageSourceJson,
   ListItemJson,
+  IngredientJson,
+  TechnicalTermJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -242,6 +246,8 @@ class JsonParser {
       jupyterExecutionCount,
       AIGenerated,
       releaseVersion,
+      releaseKind,
+      releaseDate,
       ageRange,
       lang,
       language,
@@ -262,8 +268,14 @@ class JsonParser {
       date,
       location,
       kind,
+      blockId,
+      pageNo,
+      x,
+      y,
       width,
       height,
+      index,
+      classification,
       action,
       thumbImage,
       scormSource,
@@ -299,6 +311,8 @@ class JsonParser {
       product,
       productVideo,
       productFolder,
+      technicalTerm,
+      portions,
       book,
       title,
       subtitle,
@@ -316,6 +330,7 @@ class JsonParser {
       instruction,
       example,
       imageSource,
+      person,
       partner,
       marks,
       resource,
@@ -334,6 +349,7 @@ class JsonParser {
       matrix,
       choices,
       questions,
+      ingredients,
       listItems,
       sections,
       footer,
@@ -361,8 +377,8 @@ class JsonParser {
     // imageSource
     const imageSourceNode = this.imageSourceBitToAst(imageSource);
 
-    // Partner
-    const partnerNode = this.partnerBitToAst(partner);
+    // Person (partner, deprecated)
+    const personNode = this.personBitToAst(person ?? partner);
 
     // Mark Config
     const markConfigNode = this.markConfigBitToAst(marks);
@@ -397,6 +413,12 @@ class JsonParser {
     // botResponses
     const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
 
+    // technicalTerm
+    const technicalTermNode = this.technicalTermToAst(technicalTerm);
+
+    // ingredients
+    const ingredientsNodes = this.ingredientsBitsToAst(ingredients);
+
     // listItems / sections (cardBits)
     const cardBitNodes = this.listItemsToAst(listItems ?? sections, textFormat, placeholders);
 
@@ -421,6 +443,8 @@ class JsonParser {
       jupyterExecutionCount,
       aiGenerated: AIGenerated,
       releaseVersion: this.convertStringToBreakscapedString(releaseVersion),
+      releaseKind: this.convertStringToBreakscapedString(releaseKind),
+      releaseDate: this.convertStringToBreakscapedString(releaseDate),
       ageRange,
       lang: this.convertStringToBreakscapedString(lang),
       language: this.convertStringToBreakscapedString(language),
@@ -442,10 +466,16 @@ class JsonParser {
       location: this.convertStringToBreakscapedString(location),
       kind: this.convertStringToBreakscapedString(kind),
       action: this.convertStringToBreakscapedString(action),
-      duration: this.convertStringToBreakscapedString(duration),
-      referenceProperty: this.convertStringToBreakscapedString(referenceProperty),
+      blockId: this.convertStringToBreakscapedString(blockId),
+      pageNo,
+      x,
+      y,
       width,
       height,
+      index,
+      classification: this.convertStringToBreakscapedString(classification),
+      duration: this.convertStringToBreakscapedString(duration),
+      referenceProperty: this.convertStringToBreakscapedString(referenceProperty),
       thumbImage: this.convertStringToBreakscapedString(thumbImage),
       scormSource: this.convertStringToBreakscapedString(scormSource),
       posterImage: this.convertStringToBreakscapedString(posterImage),
@@ -479,6 +509,8 @@ class JsonParser {
       productList: this.convertStringToBreakscapedString(product),
       productVideoList: this.convertStringToBreakscapedString(productVideo),
       productFolder: this.convertStringToBreakscapedString(productFolder),
+      technicalTerm: technicalTermNode,
+      portions,
       book: this.convertStringToBreakscapedString(book),
       title: this.convertJsonTextToBreakscapedString(title),
       subtitle: this.convertJsonTextToBreakscapedString(subtitle),
@@ -491,7 +523,7 @@ class JsonParser {
       ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
       ...this.parseExample(example),
       imageSource: imageSourceNode,
-      partner: partnerNode,
+      person: personNode,
       markConfig: markConfigNode,
       resources: resourcesNode,
       body: bodyNode,
@@ -507,6 +539,7 @@ class JsonParser {
       choices: choiceNodes,
       questions: questionNodes,
       botResponses: botResponseNodes,
+      ingredients: ingredientsNodes,
       cardBits: cardBitNodes,
       footer: footerNode,
     });
@@ -531,13 +564,14 @@ class JsonParser {
     return node;
   }
 
-  private partnerBitToAst(partner?: PartnerJson): Partner | undefined {
-    let node: Partner | undefined;
+  private personBitToAst(person?: PersonJson): Person | undefined {
+    let node: Person | undefined;
 
-    if (partner) {
-      const avatarImage = this.resourceDataToAst(ResourceTag.image, partner.avatarImage) as ImageResource | undefined;
-      node = builder.partner({
-        name: this.convertStringToBreakscapedString(partner.name) ?? Breakscape.EMPTY_STRING,
+    if (person) {
+      const avatarImage = this.resourceDataToAst(ResourceTag.image, person.avatarImage) as ImageResource | undefined;
+      node = builder.person({
+        name: this.convertStringToBreakscapedString(person.name) ?? Breakscape.EMPTY_STRING,
+        title: this.convertStringToBreakscapedString(person.title),
         avatarImage,
       });
     }
@@ -874,6 +908,42 @@ class JsonParser {
           reaction: this.convertStringToBreakscapedString(reaction) ?? Breakscape.EMPTY_STRING,
           feedback: this.convertStringToBreakscapedString(feedback) ?? Breakscape.EMPTY_STRING,
           ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, Breakscape.EMPTY_STRING),
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private technicalTermToAst(technicalTerm?: TechnicalTermJson): TechnicalTerm | undefined {
+    let node: TechnicalTerm | undefined;
+
+    if (technicalTerm) {
+      const { term, lang } = technicalTerm;
+      node = builder.technicalTerm({
+        term: this.convertStringToBreakscapedString(term) ?? Breakscape.EMPTY_STRING,
+        lang: this.convertStringToBreakscapedString(lang) ?? Breakscape.EMPTY_STRING,
+      });
+    }
+
+    return node;
+  }
+
+  private ingredientsBitsToAst(ingredients?: IngredientJson[]): Ingredient[] | undefined {
+    const nodes: Ingredient[] = [];
+    if (Array.isArray(ingredients)) {
+      for (const i of ingredients) {
+        const { checked, item, quantity, unit, unitAbbr, disableCalculation } = i;
+        const node = builder.ingredient({
+          checked,
+          item: this.convertStringToBreakscapedString(item) ?? Breakscape.EMPTY_STRING,
+          quantity,
+          unit: this.convertStringToBreakscapedString(unit) ?? Breakscape.EMPTY_STRING,
+          unitAbbr: this.convertStringToBreakscapedString(unitAbbr),
+          disableCalculation,
         });
         nodes.push(node);
       }

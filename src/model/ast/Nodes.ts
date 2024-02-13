@@ -42,6 +42,8 @@ export interface Bit {
   jupyterExecutionCount?: Property;
   aiGenerated?: Property;
   releaseVersion?: Property;
+  releaseKind?: Property;
+  releaseDate?: Property;
   ageRange?: Property;
   lang?: Property;
   language?: Property;
@@ -64,8 +66,14 @@ export interface Bit {
   location?: Property;
   kind?: Property;
   action?: Property;
+  blockId?: Property;
+  pageNo?: Property;
+  x?: Property;
+  y?: Property;
   width?: Property;
   height?: Property;
+  index?: Property;
+  classification?: Property;
   thumbImage?: Property;
   scormSource?: Property;
   posterImage?: Property;
@@ -104,6 +112,8 @@ export interface Bit {
   productVideo?: Property;
   productVideoList?: Property;
   productFolder?: Property;
+  technicalTerm?: TechnicalTerm;
+  portions?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: BreakscapedString;
@@ -122,7 +132,7 @@ export interface Bit {
   isDefaultExample: boolean;
   example?: Example;
   imageSource?: ImageSource;
-  partner?: Partner;
+  person?: Person;
   resources?: Resource[];
   body?: Body;
   sampleSolution?: BreakscapedString;
@@ -169,8 +179,9 @@ export interface ImageSource {
 }
 
 // (chat) Partner
-export interface Partner {
+export interface Person {
   name: BreakscapedString;
+  title?: BreakscapedString;
   avatarImage?: ImageResource;
 }
 
@@ -299,6 +310,23 @@ export interface Question {
   isExample: boolean;
   isDefaultExample: boolean;
   example?: Example;
+}
+
+// Professional Name
+export interface TechnicalTerm {
+  term: BreakscapedString;
+  lang?: BreakscapedString;
+}
+
+// Ingredient
+
+export interface Ingredient {
+  checked?: boolean;
+  item?: BreakscapedString; // TextAst;
+  quantity?: number;
+  unit?: BreakscapedString;
+  unitAbbr?: BreakscapedString;
+  disableCalculation?: boolean;
 }
 
 // Body
@@ -433,6 +461,7 @@ export interface CardNode {
   matrix?: Matrix[];
   botResponses?: BotResponse[];
   cardBits?: CardBit[];
+  ingredients?: Ingredient[];
 }
 
 // Footer
