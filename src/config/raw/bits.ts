@@ -662,6 +662,7 @@ const BITS: _BitsConfig = {
     footerAllowed: true,
     rootExampleType: ExampleType.string,
   },
+  [BitType.extractorPage]: { since: '1.5.17', baseBitType: BitType.page },
   [BitType.extractorBlock]: {
     since: '1.5.16',
     tags: [
@@ -700,6 +701,11 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.classification,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.availableClassifications,
+        maxCount: Count.infinity,
       },
       {
         type: BitTagType.group,

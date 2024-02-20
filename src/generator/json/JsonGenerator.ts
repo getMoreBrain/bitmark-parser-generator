@@ -2561,6 +2561,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       height: undefined,
       index: undefined,
       classification: undefined,
+      availableClassifications: undefined,
       thumbImage: undefined,
       scormSource: undefined,
       posterImage: undefined,
@@ -2574,6 +2575,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       externalLinkText: undefined,
       videoCallLink: undefined,
       vendorUrl: undefined,
+      search: undefined,
       duration: undefined,
       list: undefined,
       textReference: undefined,
@@ -2881,6 +2883,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.height == null) delete bitJson.height;
     if (bitJson.index == null) delete bitJson.index;
     if (bitJson.classification == null) delete bitJson.classification;
+    if (bitJson.availableClassifications == null) delete bitJson.availableClassifications;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;
     if (bitJson.scormSource == null) delete bitJson.scormSource;
     if (bitJson.posterImage == null) delete bitJson.posterImage;
@@ -2894,6 +2897,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.externalLinkText == null) delete bitJson.externalLinkText;
     if (bitJson.videoCallLink == null) delete bitJson.videoCallLink;
     if (bitJson.vendorUrl == null) delete bitJson.vendorUrl;
+    if (bitJson.search == null) delete bitJson.search;
     if (bitJson.duration == null) delete bitJson.duration;
     if (bitJson.list == null) delete bitJson.list;
     if (bitJson.textReference == null) delete bitJson.textReference;

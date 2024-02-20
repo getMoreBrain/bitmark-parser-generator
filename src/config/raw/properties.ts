@@ -223,6 +223,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.search]: {
+    tag: PropertyTag.search,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.bot]: {
     tag: PropertyTag.bot,
     format: PropertyFormat.trimmedString,
@@ -584,6 +589,11 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.classification]: {
     tag: PropertyTag.classification,
     single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.availableClassifications]: {
+    tag: PropertyTag.availableClassifications,
+    single: false,
     format: PropertyFormat.trimmedString,
   },
 };

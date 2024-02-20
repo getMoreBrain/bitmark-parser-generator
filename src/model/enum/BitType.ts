@@ -145,6 +145,7 @@ const BitType = superenum({
   essay: 'essay',
   example: 'example',
   exampleList: 'example-list',
+  extractorPage: 'extractor-page',
   extractorBlock: 'extractor-block',
   featured: 'featured',
   figure: 'figure',

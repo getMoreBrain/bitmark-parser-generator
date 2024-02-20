@@ -132,6 +132,7 @@ class Builder extends BaseBuilder {
     height?: string;
     index?: number;
     classification?: BreakscapedString;
+    availableClassifications?: BreakscapedString | BreakscapedString[];
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -147,6 +148,7 @@ class Builder extends BaseBuilder {
     externalLinkText?: BreakscapedString;
     videoCallLink?: BreakscapedString;
     vendorUrl?: BreakscapedString;
+    search?: BreakscapedString;
     bot?: BreakscapedString | BreakscapedString[];
     list?: BreakscapedString | BreakscapedString[];
     textReference?: BreakscapedString;
@@ -265,6 +267,7 @@ class Builder extends BaseBuilder {
       height,
       index,
       classification,
+      availableClassifications,
       thumbImage,
       scormSource,
       posterImage,
@@ -280,6 +283,7 @@ class Builder extends BaseBuilder {
       externalLinkText,
       videoCallLink,
       vendorUrl,
+      search,
       bot,
       list,
       textReference,
@@ -396,6 +400,10 @@ class Builder extends BaseBuilder {
       height: this.toAstProperty(PropertyConfigKey.height, height),
       index: this.toAstProperty(PropertyConfigKey.index, index),
       classification: this.toAstProperty(PropertyConfigKey.classification, classification),
+      availableClassifications: this.toAstProperty(
+        PropertyConfigKey.availableClassifications,
+        availableClassifications,
+      ),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),
@@ -409,6 +417,7 @@ class Builder extends BaseBuilder {
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, externalLinkText),
       videoCallLink: this.toAstProperty(PropertyConfigKey.videoCallLink, videoCallLink),
       vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, vendorUrl),
+      search: this.toAstProperty(PropertyConfigKey.search, search),
       bot: this.toAstProperty(PropertyConfigKey.bot, bot),
       duration: this.toAstProperty(PropertyConfigKey.duration, duration),
       referenceProperty: this.toAstProperty(PropertyConfigKey.property_reference, referenceProperty),
