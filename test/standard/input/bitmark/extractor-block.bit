@@ -7,4 +7,6 @@
 [@height:100]
 [@index:99]
 [@classification:paragraph]
+[@availableClassifications:test1]
+[@availableClassifications:test2]
 [&image:https://url.to/block.img][@width:100][@height:100]

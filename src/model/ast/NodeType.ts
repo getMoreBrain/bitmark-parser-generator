@@ -149,6 +149,8 @@ const NodeType = superenum({
   indexValue: 'indexValue',
   classification: 'classification',
   classificationValue: 'classificationValue',
+  availableClassifications: 'availableClassifications',
+  availableClassificationsValue: 'availableClassificationsValue',
   action: 'action',
   actionValue: 'actionValue',
   thumbImage: 'thumbImage',

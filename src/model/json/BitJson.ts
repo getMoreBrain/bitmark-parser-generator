@@ -50,6 +50,7 @@ export interface BitJson {
   height: string;
   index: number;
   classification: string;
+  availableClassifications: string | string[];
   thumbImage: string;
   scormSource: string;
   posterImage: string;

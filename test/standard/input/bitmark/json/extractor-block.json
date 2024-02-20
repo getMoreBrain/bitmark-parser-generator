@@ -11,6 +11,7 @@
       "height": 100,
       "index": 99,
       "classification": "paragraph",
+      "availableClassifications": ["test1", "test2"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -37,6 +38,6 @@
       "version": "1.5.16",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.extractor-block]\n[@blockId:uuid-uuid-uuid-uuid]\n[@pageNo:1]\n[@x:0]\n[@y:0]\n[@width:100]\n[@height:100]\n[@index:99]\n[@classification:paragraph]\n[&image:https://url.to/block.img][@width:100][@height:100]"
+    "bitmark": "[.extractor-block]\n[@blockId:uuid-uuid-uuid-uuid]\n[@pageNo:1]\n[@x:0]\n[@y:0]\n[@width:100]\n[@height:100]\n[@index:99]\n[@classification:paragraph]\n[@availableClassifications:test1]\n[@availableClassifications:test2]\n[&image:https://url.to/block.img][@width:100][@height:100]"
   }
 ]

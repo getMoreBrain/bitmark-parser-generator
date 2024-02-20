@@ -8,6 +8,7 @@ const PropertyTag = superenum({
   alt: 'alt',
   author: 'author',
   autoplay: 'autoplay',
+  availableClassifications: 'availableClassifications',
   backgroundWallpaper: 'backgroundWallpaper',
   blockId: 'blockId',
   book: 'book',

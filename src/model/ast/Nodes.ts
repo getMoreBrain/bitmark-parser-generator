@@ -74,6 +74,7 @@ export interface Bit {
   height?: Property;
   index?: Property;
   classification?: Property;
+  availableClassifications?: Property;
   thumbImage?: Property;
   scormSource?: Property;
   posterImage?: Property;

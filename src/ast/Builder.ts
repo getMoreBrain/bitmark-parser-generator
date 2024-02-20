@@ -132,6 +132,7 @@ class Builder extends BaseBuilder {
     height?: string;
     index?: number;
     classification?: BreakscapedString;
+    availableClassifications?: BreakscapedString | BreakscapedString[];
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -265,6 +266,7 @@ class Builder extends BaseBuilder {
       height,
       index,
       classification,
+      availableClassifications,
       thumbImage,
       scormSource,
       posterImage,
@@ -396,6 +398,10 @@ class Builder extends BaseBuilder {
       height: this.toAstProperty(PropertyConfigKey.height, height),
       index: this.toAstProperty(PropertyConfigKey.index, index),
       classification: this.toAstProperty(PropertyConfigKey.classification, classification),
+      availableClassifications: this.toAstProperty(
+        PropertyConfigKey.availableClassifications,
+        availableClassifications,
+      ),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),

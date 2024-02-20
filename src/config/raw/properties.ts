@@ -586,6 +586,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.availableClassifications]: {
+    tag: PropertyTag.availableClassifications,
+    single: false,
+    format: PropertyFormat.trimmedString,
+  },
 };
 
 export { PROPERTIES };

@@ -31,5 +31,5 @@
   },
   // "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
   // "jest.jestCommandLine": "yarn test"
-  "jest.autoRun": "off"
+  "jest.runMode": "on-demand"
 }
