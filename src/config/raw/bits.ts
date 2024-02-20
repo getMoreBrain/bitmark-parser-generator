@@ -37,8 +37,6 @@ const BITS: _BitsConfig = {
         maxCount: Count.infinity,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
     rootExampleType: ExampleType.string,
   },
   [BitType.appFlashcardsQuiz]: { since: '1.3.0', baseBitType: BitType.appFlashcards },
@@ -56,7 +54,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: false,
+    resourceAttachmentAllowed: false,
   },
   [BitType.article]: {
     since: '1.3.0',
@@ -70,8 +68,6 @@ const BITS: _BitsConfig = {
         configKey: TagConfigKey.title,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.statement]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.buttonCopyText]: {
@@ -97,8 +93,6 @@ const BITS: _BitsConfig = {
       },
     ],
     textFormatDefault: TextFormat.text,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.appBitmarkFromEditor]: { since: '1.4.5', baseBitType: BitType.appBitmarkFromJavascript },
   [BitType.articleEmbed]: {
@@ -114,7 +108,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.articleLink]: {
     since: '1.3.0',
@@ -129,7 +123,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.audio]: {
     since: '1.3.0',
@@ -144,8 +138,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.audioEmbed]: {
     since: '1.3.0',
@@ -160,7 +153,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.audioLink]: {
     since: '1.3.0',
@@ -175,7 +168,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.bitAlias]: {
     since: '1.3.0',
@@ -193,8 +186,6 @@ const BITS: _BitsConfig = {
         configKey: TagConfigKey.anchor,
       },
     ],
-
-    bodyAllowed: true,
   },
   [BitType.book]: {
     since: '1.3.0',
@@ -208,7 +199,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_bookCommon,
       },
     ],
-    bodyAllowed: true,
   },
   [BitType.bookAcknowledgments]: { since: '1.3.0', baseBitType: BitType.book },
   [BitType.bookAddendum]: { since: '1.3.0', baseBitType: BitType.book },
@@ -261,8 +251,6 @@ const BITS: _BitsConfig = {
       },
     ],
     cardSet: CardSetConfigKey._botActionResponses,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [BitType.botActionSend]: {
     since: '1.3.0',
@@ -276,8 +264,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.date,
       },
     ],
-
-    bodyAllowed: true,
   },
   [BitType.browserImage]: {
     since: '1.3.0',
@@ -301,8 +287,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.question1]: { since: '1.3.0', baseBitType: BitType.card1 },
   [BitType.survey1]: { since: '1.3.0', baseBitType: BitType.card1 },
@@ -331,8 +315,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.progress,
       },
     ],
-
-    bodyAllowed: true,
   },
   [BitType.clozeAndMultipleChoiceText]: {
     since: '1.3.0',
@@ -350,8 +332,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_trueFalse,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.coachCallToActionClozeAndMultipleChoiceText]: {
     since: '1.3.0',
@@ -369,8 +349,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_gap,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.clozeInstructionGrouped]: { since: '1.3.0', baseBitType: BitType.cloze },
   [BitType.clozeSolutionGrouped]: { since: '1.3.0', baseBitType: BitType.cloze },
@@ -387,9 +365,6 @@ const BITS: _BitsConfig = {
       },
     ],
     cardSet: CardSetConfigKey._clozeList,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [BitType.code]: {
     since: '1.3.0',
@@ -404,7 +379,6 @@ const BITS: _BitsConfig = {
       },
     ],
     textFormatDefault: TextFormat.text,
-    bodyAllowed: true,
   },
   [BitType.appCodeCell]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.appCodeEditor]: { since: '1.4.3', baseBitType: BitType.code },
@@ -445,8 +419,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_person,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.conversationLeft1Scream]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationLeft1Thought]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
@@ -472,9 +444,6 @@ const BITS: _BitsConfig = {
       },
     ],
     cardSet: CardSetConfigKey._ingredients,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [BitType.cookRemark]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.cookVariation]: { since: '1.3.0', baseBitType: BitType.example },
@@ -500,7 +469,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.documentDownload]: {
     since: '1.3.0',
@@ -515,7 +484,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.documentEmbed]: {
     since: '1.3.0',
@@ -530,7 +499,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.documentLink]: {
     since: '1.3.0',
@@ -545,7 +514,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.essay]: {
     since: '1.3.0',
@@ -572,8 +541,6 @@ const BITS: _BitsConfig = {
         maxCount: Count.infinity,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
     rootExampleType: ExampleType.string,
   },
   [BitType.coachSelfReflectionEssay]: { since: '1.3.0', baseBitType: BitType.essay },
@@ -590,8 +557,6 @@ const BITS: _BitsConfig = {
         configKey: TagConfigKey.title,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
     rootExampleType: ExampleType.string,
   },
   [BitType.appAiPrompt]: { since: '1.3.0', baseBitType: BitType.example },
@@ -657,9 +622,6 @@ const BITS: _BitsConfig = {
     since: '1.4.13',
     baseBitType: BitType.example,
     cardSet: CardSetConfigKey._exampleBitList,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
     rootExampleType: ExampleType.string,
   },
   [BitType.extractorPage]: { since: '1.5.17', baseBitType: BitType.page },
@@ -713,7 +675,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.pageOpenBook]: {
     since: '1.5.10',
@@ -754,9 +716,6 @@ const BITS: _BitsConfig = {
       },
     ],
     cardSet: CardSetConfigKey._flashcards,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [BitType.flashcard1]: { since: '1.3.0', baseBitType: BitType.flashcard },
   [BitType.focusImage]: {
@@ -785,8 +744,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_trueFalse,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.image]: {
     since: '1.3.0',
@@ -805,7 +762,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.appCreateBitsFromImage]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.appGetScreenshot]: { since: '1.3.0', baseBitType: BitType.image },
@@ -840,7 +797,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.imageOnDevice]: {
     since: '1.3.0',
@@ -858,7 +815,7 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_imageSource,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.imageResponsive]: {
     since: '1.3.0',
@@ -873,8 +830,7 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_resourceImageResponsive,
       },
     ],
-
-    bodyAllowed: true, // false??
+    resourceAttachmentAllowed: false,
   },
   [BitType.imagesLogoGrave]: {
     since: '1.5.11',
@@ -891,8 +847,7 @@ const BITS: _BitsConfig = {
         maxCount: Count.infinity,
       },
     ],
-
-    bodyAllowed: true, // false??
+    resourceAttachmentAllowed: false,
   },
   [BitType.internalLink]: {
     since: '1.3.0',
@@ -906,8 +861,6 @@ const BITS: _BitsConfig = {
         configKey: TagConfigKey.tag_reference,
       },
     ],
-
-    bodyAllowed: true,
   },
   [BitType.interview]: {
     since: '1.3.0',
@@ -922,9 +875,6 @@ const BITS: _BitsConfig = {
       },
     ],
     cardSet: CardSetConfigKey._questions,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [BitType.interviewInstructionGrouped]: { since: '1.3.0', baseBitType: BitType.interview },
   [BitType.botInterview]: { since: '1.3.0', baseBitType: BitType.interview },
@@ -940,8 +890,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_learningPathCommon,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.bookLink]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
   [BitType.bookLinkNext]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
@@ -1006,8 +954,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_mark,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.match]: {
     since: '1.3.0',
@@ -1018,9 +964,6 @@ const BITS: _BitsConfig = {
       },
     ],
     cardSet: CardSetConfigKey._matchPairs,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [BitType.matchAll]: { since: '1.3.0', baseBitType: BitType.match },
   [BitType.matchReverse]: { since: '1.3.0', baseBitType: BitType.match },
@@ -1055,8 +998,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_trueFalse,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.coachSelfReflectionMultipleChoice1]: { since: '1.3.0', baseBitType: BitType.multipleChoice1 },
   [BitType.multipleChoice]: {
@@ -1072,9 +1013,6 @@ const BITS: _BitsConfig = {
       }, // This is actually for multiple-choice-1, but we support it here as well (as many bits are wrong)
     ],
     cardSet: CardSetConfigKey._quiz,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [BitType.coachSelfReflectionMultipleChoice]: { since: '1.3.0', baseBitType: BitType.multipleChoice },
   [BitType.multipleChoiceText]: {
@@ -1089,8 +1027,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_trueFalse,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.coachCallToActionMultipleChoiceText]: { since: '1.3.0', baseBitType: BitType.multipleChoiceText },
   [BitType.coachSelfReflectionMultipleChoiceText]: { since: '1.3.0', baseBitType: BitType.multipleChoiceText },
@@ -1106,8 +1042,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_trueFalse,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.coachSelfReflectionMultipleResponse1]: { since: '1.3.0', baseBitType: BitType.multipleResponse1 },
   [BitType.multipleResponse]: {
@@ -1123,9 +1057,6 @@ const BITS: _BitsConfig = {
       }, // This is actually for multiple-response-1, but we support it here as well (as many bits are wrong)
     ],
     cardSet: CardSetConfigKey._quiz,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [BitType.coachSelfReflectionMultipleResponse]: { since: '1.3.0', baseBitType: BitType.multipleResponse },
   [BitType.page]: {
@@ -1144,8 +1075,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.thumbImage,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.pageBuyButton]: {
     since: '1.4.3',
@@ -1163,8 +1092,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.buttonCaption,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.pageBuyButtonPromotion]: { since: '1.5.11', baseBitType: BitType.pageBuyButton },
   [BitType.pagePerson]: {
@@ -1183,8 +1110,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.buttonCaption,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.pageProduct]: {
     since: '1.4.17',
@@ -1198,8 +1123,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.product,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.pageProductList]: {
     since: '1.4.17',
@@ -1214,8 +1137,6 @@ const BITS: _BitsConfig = {
         maxCount: Count.infinity,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.pageProductVideo]: {
     since: '1.4.17',
@@ -1229,8 +1150,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.productVideo,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.pageProductVideoList]: {
     since: '1.4.17',
@@ -1245,8 +1164,6 @@ const BITS: _BitsConfig = {
         maxCount: Count.infinity,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.pageSectionFolder]: {
     since: '1.4.17',
@@ -1260,8 +1177,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.productFolder,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.photo]: {
     since: '1.3.0',
@@ -1279,8 +1194,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.quotedPerson,
       },
     ],
-
-    bodyAllowed: true,
   },
   [BitType.rating]: {
     since: '1.3.0',
@@ -1290,7 +1203,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
     ],
-    bodyAllowed: true,
   },
   [BitType.coachSelfReflectionRating]: { since: '1.3.0', baseBitType: BitType.rating },
   [BitType.releaseNote]: {
@@ -1313,8 +1225,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.releaseDate,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.reviewNote]: {
     since: '1.3.0',
@@ -1340,8 +1250,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.resolvedBy,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
     rootExampleType: ExampleType.string,
   },
   [BitType.reviewAuthorNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
@@ -1365,8 +1273,6 @@ const BITS: _BitsConfig = {
         configKey: TagConfigKey.tag_reference,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
 
   [BitType.sequence]: {
@@ -1378,9 +1284,6 @@ const BITS: _BitsConfig = {
       },
     ],
     cardSet: CardSetConfigKey._elements,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
     rootExampleType: ExampleType.boolean,
   },
   [BitType.stillImageFilm]: {
@@ -1396,7 +1299,7 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_resourceStillImageFilm,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.stillImageFilmEmbed]: {
     since: '1.3.0',
@@ -1411,7 +1314,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.stillImageFilmLink]: {
     since: '1.3.0',
@@ -1426,7 +1329,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.surveyAnonymous]: {
     since: '1.3.0',
@@ -1436,8 +1339,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.survey]: {
     since: '1.3.0',
@@ -1447,8 +1348,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.scorm]: {
     since: '1.5.11',
@@ -1466,8 +1365,6 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.posterImage,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
   },
   [BitType.table]: {
     since: '1.5.15',
@@ -1478,7 +1375,6 @@ const BITS: _BitsConfig = {
       },
     ],
     textFormatDefault: TextFormat.json,
-    bodyAllowed: true,
   },
   [BitType.toc]: {
     since: '1.3.0',
@@ -1488,7 +1384,6 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
     ],
-    bodyAllowed: true,
   },
   [BitType.tocChapter]: {
     since: '1.5.5',
@@ -1550,8 +1445,6 @@ const BITS: _BitsConfig = {
         configKey: TagConfigKey.false,
       },
     ],
-    resourceAttachmentAllowed: true,
-    bodyAllowed: false,
     rootExampleType: ExampleType.boolean,
   },
 
@@ -1572,9 +1465,6 @@ const BITS: _BitsConfig = {
       },
     ],
     cardSet: CardSetConfigKey._statements,
-    resourceAttachmentAllowed: true,
-    bodyAllowed: true,
-    footerAllowed: true,
   },
   [BitType.vendorAmcharts5Chart]: {
     since: '1.5.8',
@@ -1586,7 +1476,6 @@ const BITS: _BitsConfig = {
       },
     ],
     textFormatDefault: TextFormat.json,
-    bodyAllowed: true,
   },
   [BitType.vendorIframelyEmbed]: {
     since: '1.5.10',
@@ -1610,7 +1499,6 @@ const BITS: _BitsConfig = {
       },
     ],
     textFormatDefault: TextFormat.text,
-    bodyAllowed: true,
   },
   [BitType.vendorIframelyCard]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
   [BitType.vendorIframelyPreview]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
@@ -1629,7 +1517,6 @@ const BITS: _BitsConfig = {
       },
     ],
     textFormatDefault: TextFormat.text,
-    bodyAllowed: true,
   },
   [BitType.vendorJupyterCellCode]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
   [BitType.vendorJupyterCellMarkdown]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
@@ -1649,7 +1536,6 @@ const BITS: _BitsConfig = {
       },
     ],
     textFormatDefault: TextFormat.text,
-    bodyAllowed: true,
   },
   [BitType.video]: {
     since: '1.3.0',
@@ -1664,7 +1550,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.videoLandscape]: { since: '1.3.0', baseBitType: BitType.video },
   [BitType.videoPortrait]: { since: '1.3.0', baseBitType: BitType.video },
@@ -1681,7 +1567,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.videoEmbedLandscape]: { since: '1.3.0', baseBitType: BitType.videoEmbed },
   [BitType.videoEmbedPortrait]: { since: '1.3.0', baseBitType: BitType.videoEmbed },
@@ -1698,7 +1584,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
   [BitType.videoLinkLandscape]: { since: '1.3.0', baseBitType: BitType.videoLink },
   [BitType.videoLinkPortrait]: { since: '1.3.0', baseBitType: BitType.videoLink },
@@ -1715,7 +1601,7 @@ const BITS: _BitsConfig = {
         minCount: 1,
       },
     ],
-    bodyAllowed: true,
+    resourceAttachmentAllowed: false,
   },
 };
 

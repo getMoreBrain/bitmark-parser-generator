@@ -9,13 +9,13 @@ interface ToStringOptions {
 
 class CardVariantConfig {
   tags: TagsConfig;
-  bodyAllowed?: boolean; // Default: false
+  bodyAllowed?: boolean; // Default: true
   bodyRequired?: boolean; // Default: false
   repeatCount?: CountType; // Default: 1
 
   public constructor(tags: TagsConfig, bodyAllowed?: boolean, bodyRequired?: boolean, repeatCount?: CountType) {
     this.tags = tags;
-    this.bodyAllowed = bodyAllowed;
+    this.bodyAllowed = bodyAllowed == null ? true : bodyAllowed;
     this.bodyRequired = bodyRequired;
     this.repeatCount = repeatCount;
   }

@@ -21,11 +21,11 @@ class BitConfig {
   readonly tags: TagsConfig = {};
   readonly cardSet?: CardSetConfig;
   readonly deprecated?: string; // Deprecated version
-  readonly bodyAllowed?: boolean; // Default: false
+  readonly bodyAllowed?: boolean; // Default: true
   readonly bodyRequired?: boolean; // Default: false
-  readonly footerAllowed?: boolean; // Default: false
+  readonly footerAllowed?: boolean; // Default: true
   readonly footerRequired?: boolean; // Default: false
-  readonly resourceAttachmentAllowed?: boolean; // Default: false
+  readonly resourceAttachmentAllowed?: boolean; // Default: true
   readonly rootExampleType?: ExampleTypeType;
   readonly comboResourceType?: ResourceTagType;
 
@@ -53,11 +53,11 @@ class BitConfig {
     this.tags = tags;
     this.cardSet = cardSet;
     this.deprecated = deprecated;
-    this.bodyAllowed = bodyAllowed;
+    this.bodyAllowed = bodyAllowed == null ? true : bodyAllowed;
     this.bodyRequired = bodyRequired;
-    this.footerAllowed = footerAllowed;
+    this.footerAllowed = footerAllowed == null ? true : footerAllowed;
     this.footerRequired = footerRequired;
-    this.resourceAttachmentAllowed = resourceAttachmentAllowed;
+    this.resourceAttachmentAllowed = resourceAttachmentAllowed == null ? true : resourceAttachmentAllowed;
     this.rootExampleType = rootExampleType;
     this.comboResourceType = comboResourceType;
   }
