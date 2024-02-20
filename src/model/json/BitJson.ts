@@ -65,6 +65,7 @@ export interface BitJson {
   externalLinkText: string;
   videoCallLink: string;
   vendorUrl: string;
+  search: string;
   bot: string | string[];
   list: string | string[];
   textReference: string;

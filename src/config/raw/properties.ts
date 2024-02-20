@@ -223,6 +223,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.search]: {
+    tag: PropertyTag.search,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.bot]: {
     tag: PropertyTag.bot,
     format: PropertyFormat.trimmedString,

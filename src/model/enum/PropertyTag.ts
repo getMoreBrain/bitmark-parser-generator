@@ -91,6 +91,7 @@ const PropertyTag = superenum({
   resolvedDate: 'resolvedDate',
   sampleSolution: 'sampleSolution',
   scormSource: 'scormSource',
+  search: 'search',
   showInIndex: 'showInIndex',
   showSubtitles: 'showSubtitles',
   siteName: 'siteName',

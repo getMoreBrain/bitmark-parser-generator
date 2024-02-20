@@ -38,7 +38,7 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.17",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.video]\n[@id:301454]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
@@ -82,7 +82,7 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.17",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.video]\n[@id:300497]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0280.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_ruesten1.png]"
@@ -92,6 +92,7 @@
       "type": "video",
       "format": "bitmark--",
       "id": ["301460"],
+      "search": "Errungenschaftsbeteiligung, Scheidung, Güterrechtliche Auseinandersetzung, Vorschlag",
       "item": [],
       "hint": [],
       "isExample": false,
@@ -126,9 +127,9 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.17",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.video]\n[@id:301460]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
+    "bitmark": "[.video]\n[@id:301460]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]\n[@search:Errungenschaftsbeteiligung, Scheidung, Güterrechtliche Auseinandersetzung, Vorschlag]"
   }
 ]

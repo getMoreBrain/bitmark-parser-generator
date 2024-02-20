@@ -179,6 +179,8 @@ const NodeType = superenum({
   videoCallLinkValue: 'videoCallLinkValue',
   vendorUrl: 'vendorUrl',
   vendorUrlValue: 'vendorUrlValue',
+  search: 'search',
+  searchValue: 'searchValue',
   bot: 'bot',
   botValue: 'botValue',
   referenceProperty: 'referenceProperty',

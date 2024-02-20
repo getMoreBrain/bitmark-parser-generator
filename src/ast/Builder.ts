@@ -148,6 +148,7 @@ class Builder extends BaseBuilder {
     externalLinkText?: BreakscapedString;
     videoCallLink?: BreakscapedString;
     vendorUrl?: BreakscapedString;
+    search?: BreakscapedString;
     bot?: BreakscapedString | BreakscapedString[];
     list?: BreakscapedString | BreakscapedString[];
     textReference?: BreakscapedString;
@@ -282,6 +283,7 @@ class Builder extends BaseBuilder {
       externalLinkText,
       videoCallLink,
       vendorUrl,
+      search,
       bot,
       list,
       textReference,
@@ -415,6 +417,7 @@ class Builder extends BaseBuilder {
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, externalLinkText),
       videoCallLink: this.toAstProperty(PropertyConfigKey.videoCallLink, videoCallLink),
       vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, vendorUrl),
+      search: this.toAstProperty(PropertyConfigKey.search, search),
       bot: this.toAstProperty(PropertyConfigKey.bot, bot),
       duration: this.toAstProperty(PropertyConfigKey.duration, duration),
       referenceProperty: this.toAstProperty(PropertyConfigKey.property_reference, referenceProperty),

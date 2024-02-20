@@ -72,6 +72,10 @@ const GROUPS: _GroupsConfig = {
         type: BitTagType.tag,
         configKey: TagConfigKey.anchor,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.search,
+      },
     ],
   },
   [GroupConfigKey.group_standardItemLeadInstructionHint]: {

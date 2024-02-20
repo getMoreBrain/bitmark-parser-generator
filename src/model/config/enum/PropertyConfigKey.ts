@@ -97,6 +97,7 @@ const propertyConfigKeys = {
   resolvedBy: 'resolvedBy',
   resolvedDate: 'resolvedDate',
   scormSource: 'scormSource',
+  search: 'search',
   showInIndex: 'showInIndex',
   showSubtitles: 'showSubtitles',
   siteName: 'siteName',
