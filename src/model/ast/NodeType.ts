@@ -365,6 +365,8 @@ const NodeType = superenum({
   // Node
   nodes: 'nodes',
   nodesValue: 'nodesValue',
+  chain: 'chain',
+  chainValue: 'chainValue',
   // type: 'type',
   // key: 'key',
   // value: 'value',

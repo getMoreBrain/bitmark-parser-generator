@@ -105,6 +105,7 @@ import {
   BitmarkPegParserContext,
   ParsedCardSet,
   RawTextAndResourceType,
+  BitContentNode,
 } from './BitmarkPegParserTypes';
 
 // Debugging flags for helping develop and debug the parser
@@ -509,36 +510,72 @@ class BitmarkPegParserProcessor {
       bodyPart = Breakscape.EMPTY_STRING;
     };
 
-    const addNode = (type: string, key: string, value?: string) => {
-      result.nodes.push({ type, key, value });
+    // Helper to add a node to the result
+    const addNode = (type: string, key: string, value: string | undefined, chain: BitContent[] | undefined) => {
+      const node: BitContentNode = { type, key, value };
+
+      if (chain) {
+        const processedChain = this.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, chain);
+        node.chain = processedChain.nodes;
+      }
+
+      result.nodes.push(node);
+    };
+
+    // Helper to add a cardSet to the result
+    const addCardSet = (cardSet: ParsedCardSet) => {
+      const cardChain: BitContentNode[] = [];
+      const cardIndex = 0;
+      for (const card of cardSet.cards) {
+        const sideChain: BitContentNode[] = [];
+        const sideIndex = 0;
+        for (const side of card.sides) {
+          const variantChain: BitContentNode[] = [];
+          const variantIndex = 0;
+          for (const variant of side.variants) {
+            const variantDataChain = this.bitContentProcessor(
+              bitType,
+              textFormat,
+              BitContentLevel.Card,
+              tagsConfig,
+              variant.content,
+            );
+            variantChain.push({ type: 'variant', key: `${variantIndex}`, chain: variantDataChain.nodes });
+          }
+          sideChain.push({ type: 'side', key: `${sideIndex}`, chain: variantChain });
+        }
+        cardChain.push({ type: 'card', key: `${cardIndex}`, chain: sideChain });
+      }
+      result.nodes.push({ type: 'cardSet', key: 'card', chain: cardChain });
     };
 
     // Reduce the Type/Key/Value data to a single object that can be used to build the bit
     data.forEach((content, _index) => {
-      const { type, key, value } = content as TypeKeyValue;
+      const { type, key, value, chain } = content as TypeKeyValue;
 
       switch (type) {
         case TypeKey.ItemLead: {
-          addNode('@', inChain ? 'lead' : 'item', value as string);
+          addNode('@', inChain ? 'lead' : 'item', value as string, chain);
           break;
           // itemLeadChainContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
         }
 
         case TypeKey.Instruction:
-          addNode('@', 'instruction', value as string);
+          addNode('@', 'instruction', value as string, chain);
           break;
         case TypeKey.Hint:
-          addNode('@', 'hint', value as string);
+          addNode('@', 'hint', value as string, chain);
           break;
         case TypeKey.Anchor:
-          addNode('@', 'anchor', value as string);
+          addNode('@', 'anchor', value as string, chain);
           break;
         case TypeKey.SampleSolution:
           // defaultTagContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.Reference:
+          addNode('@', 'reference', value as string, chain);
           // referenceTagContentProcessor(
           //   this.context,
           //   bitType,
@@ -557,7 +594,7 @@ class BitmarkPegParserProcessor {
           break;
 
         case TypeKey.Property:
-          addNode('@', key, value as string);
+          addNode('@', key, value as string, chain);
           // propertyContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
@@ -584,6 +621,7 @@ class BitmarkPegParserProcessor {
 
         case TypeKey.True:
         case TypeKey.False: {
+          addNode('@', type === TypeKey.True ? 'true' : 'false', value as string, chain);
           // if (!inChain) addBodyText(); // Body bit, so add the body text
           // trueFalseChainContentProcessor(
           //   this.context,
@@ -599,11 +637,13 @@ class BitmarkPegParserProcessor {
         }
 
         case TypeKey.Resource:
+          addNode('@', key, value as string, chain);
           // resourceContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
           break;
 
         case TypeKey.CardSet: {
-          // result.cardSet = value as ParsedCardSet;
+          const cardSet = value as ParsedCardSet;
+          addCardSet(cardSet);
           // inFooter = true; // After the card set, body lines should be written to the footer rather than the body
           break;
         }

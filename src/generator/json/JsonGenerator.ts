@@ -246,6 +246,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   private json: Partial<BitWrapperJson>[] = [];
   private bitWrapperJson: Partial<BitWrapperJson> = {};
   private bitJson: Partial<BitJson> = {};
+  private currentBitJson: Partial<BitJson> = {};
+
+  private cardJson: Partial<BitJson>[] = [];
+  private cardSideJson: Partial<BitJson>[] = [];
+  private cardVariantJson: Partial<BitJson>[] = [];
+  private cardLeafJson: Partial<BitJson> = {};
+  private inCard: boolean = false;
+
   private textDefault: JsonText = Breakscape.EMPTY_STRING;
   private bodyDefault: JsonText = Breakscape.EMPTY_STRING;
   private bodyJson: JsonText = this.bodyDefault;
@@ -287,8 +295,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.between = this.between.bind(this);
     this.exit = this.exit.bind(this);
     this.leaf = this.leaf.bind(this);
-
-    this.generatePropertyHandlers();
   }
 
   /**
@@ -336,6 +342,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.json = [];
     this.bitWrapperJson = {};
     this.bitJson = {};
+
+    this.cardJson = [];
+    this.cardSideJson = [];
+    this.cardVariantJson = [];
+    this.cardLeafJson = {};
+    this.currentBitJson = {};
+    this.inCard = false;
+
     this.textDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
     this.bodyDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
     this.bodyJson = this.bodyDefault;
@@ -421,996 +435,84 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // this.cleanAndSetDefaultsForBitJson(this.bitJson);
   }
 
-  // bitmarkAst -> bits -> bitsValue -> nodesValue
+  // bitmarkAst -> bits -> bitsValue -> node
 
-  protected enter_nodesValue(node: NodeInfo, _route: NodeInfo[]): void {
-    const nodeData = node.value as BitContentNode;
+  protected enter_nodes(_node: NodeInfo, _route: NodeInfo[]): void {
+    this.currentBitJson = this.bitJson;
 
-    this.bitJson[nodeData.key ?? 'nokey'] = nodeData?.value;
-
-    // if (!this.options.excludeUnknownProperties && extraProperties) {
-    //   for (const [key, values] of Object.entries(extraProperties)) {
-    //     let k = key;
-    //     if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {
-    //       k = `_${key}`;
-    //     }
-    //     this.addProperty(this.bitJson, k, values);
-    //   }
-    // }
+    this.cardJson = [];
+    this.cardSideJson = [];
+    this.cardVariantJson = [];
+    this.cardLeafJson = {};
+    this.inCard = false;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> imageSource
+  // bitmarkAst -> bits -> bitsValue -> nodesValue
 
-  // protected enter_imageSource(node: NodeInfo, route: NodeInfo[]): void {
-  //   const imageSource = node.value as ImageSource;
+  protected enter_nodesValue(node: NodeInfo, route: NodeInfo[]): void {
+    return this.enterNodeOrChainValue(node, route);
+  }
 
-  //   // Ignore values that are not at the bit level as they might be handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.bitsValue) return;
+  // bitmarkAst -> bits -> bitsValue -> chainValue
 
-  //   const { url, mockupId, size, format, trim } = imageSource;
+  protected enter_chainValue(node: NodeInfo, route: NodeInfo[]): void {
+    return this.enterNodeOrChainValue(node, route);
+  }
 
-  //   const imageSourceJson = {} as ImageSourceJson;
-  //   this.addProperty(imageSourceJson, 'url', url ?? '', true);
-  //   this.addProperty(imageSourceJson, 'mockupId', mockupId ?? '', true);
-  //   this.addProperty(imageSourceJson, 'size', size ?? null, true);
-  //   this.addProperty(imageSourceJson, 'format', format ?? null, true);
-  //   this.addProperty(imageSourceJson, 'trim', BooleanUtils.isBoolean(trim) ? trim : null, true);
+  protected enterNodeOrChainValue(node: NodeInfo, _route: NodeInfo[]): void {
+    const nodeData = node.value as BitContentNode;
+    const key = nodeData.key ?? 'nokey';
 
-  //   this.bitJson.imageSource = imageSourceJson;
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> person
-
-  // protected enter_person(node: NodeInfo, route: NodeInfo[]): void {
-  //   const person = node.value as Person;
-  //   const bitType = this.getBitType(route);
-
-  //   // Ignore values that are not at the bit level as they might be handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.bitsValue || !bitType) return;
-
-  //   const { name, title, avatarImage } = person;
-
-  //   const personJson = {} as PersonJson;
-  //   this.addProperty(personJson, 'name', name ?? '', true);
-  //   if (title) {
-  //     this.addProperty(personJson, 'title', title, true);
-  //   }
-  //   if (avatarImage) {
-  //     const res = this.parseResourceToJson(bitType, avatarImage);
-  //     if (res && res.type === ResourceTag.image) {
-  //       personJson.avatarImage = res.image;
-  //     }
-  //   }
-
-  //   if (Config.isOfBitType(bitType, BitType.conversationLeft1)) {
-  //     // Use the legacy partner property in the JSON for conversation bits, so change to person is backwards compatible
-  //     this.bitJson.partner = personJson;
-  //   } else {
-  //     this.bitJson.person = personJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
-
-  // protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): void {
-  //   const markConfig = node.value as MarkConfig;
-
-  //   // Ignore example that is not at the correct level
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.markConfig) return;
-
-  //   const { mark, color, emphasis } = markConfig;
-
-  //   const markJson = {} as Partial<MarkConfigJson>;
-
-  //   this.addProperty(markJson, 'mark', mark ?? 'unknown', true);
-  //   if (color) this.addProperty(markJson, 'color', color ?? '', true);
-  //   if (emphasis) this.addProperty(markJson, 'emphasis', emphasis ?? '', true);
-
-  //   if (!this.bitJson.marks) this.bitJson.marks = [];
-  //   this.bitJson.marks.push(markJson as MarkConfigJson);
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> sampleSolution
-
-  // protected leaf_sampleSolution(node: NodeInfo, route: NodeInfo[]): void {
-  //   // Ignore example that is not at the correct level
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.bitsValue) return;
-
-  //   if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value, true);
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> itemLead
-
-  // protected enter_itemLead(node: NodeInfo, route: NodeInfo[]): void {
-  //   const itemLead = node.value as ItemLead;
-  //   const { item, lead, pageNumber, marginNumber } = itemLead;
-
-  //   // Ignore item / lead that are not at the bit level as they are handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.bitsValue) return;
-
-  //   if (item != null) {
-  //     this.bitJson.item = this.convertBreakscapedStringToJsonText(item, TextFormat.bitmarkMinusMinus);
-  //   }
-  //   if (lead != null) {
-  //     this.bitJson.lead = this.convertBreakscapedStringToJsonText(lead, TextFormat.bitmarkMinusMinus);
-  //   }
-  //   if (pageNumber != null) {
-  //     this.bitJson.pageNumber = this.convertBreakscapedStringToJsonText(pageNumber, TextFormat.bitmarkMinusMinus);
-  //   }
-  //   if (marginNumber != null) {
-  //     this.bitJson.marginNumber = this.convertBreakscapedStringToJsonText(marginNumber, TextFormat.bitmarkMinusMinus);
-  //   }
-  // }
-
-  // bitmarkAst -> bits -> bitsValue -> extraProperties
-
-  protected enter_extraProperties(node: NodeInfo, _route: NodeInfo[]): void {
-    const extraProperties = node.value as ExtraProperties | undefined;
-
-    if (!this.options.excludeUnknownProperties && extraProperties) {
-      for (const [key, values] of Object.entries(extraProperties)) {
-        let k = key;
-        if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {
-          k = `_${key}`;
-        }
-        this.addProperty(this.bitJson, k, values);
+    if (nodeData.type === 'cardSet') {
+      this.inCard = true;
+      this.cardJson = [];
+      this.currentBitJson[key] = this.cardJson;
+    } else if (nodeData.type === 'card') {
+      this.cardSideJson = [];
+      this.cardJson.push(this.cardSideJson);
+    } else if (nodeData.type === 'side') {
+      this.cardVariantJson = [];
+      this.cardSideJson.push(this.cardVariantJson);
+    } else if (nodeData.type === 'variant') {
+      this.cardLeafJson = {};
+      this.cardVariantJson.push(this.cardLeafJson);
+      this.currentBitJson = this.cardLeafJson;
+    } else {
+      if (nodeData.chain) {
+        const chainJson = {
+          [key]: nodeData?.value,
+        };
+        this.currentBitJson[key] = chainJson;
+        this.currentBitJson = chainJson;
+      } else {
+        this.currentBitJson[key] = nodeData?.value;
       }
     }
   }
 
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBits -> cardBitsValue
-
-  // protected enter_cardBitsValue(node: NodeInfo, route: NodeInfo[]): void {
-  //   // How cardBits are handled depends on the bit type
-  //   const bitType = this.getBitType(route);
-  //   if (!bitType) return;
-
-  //   // Create the listItems / sections if not already created
-  //   let listItems: ListItemJson[] | undefined;
-  //   if (bitType === BitType.pageFooter) {
-  //     if (!this.bitJson.sections) this.bitJson.sections = [];
-  //     listItems = this.bitJson.sections;
-  //   } else {
-  //     if (!this.bitJson.listItems) this.bitJson.listItems = [];
-  //     listItems = this.bitJson.listItems;
-  //   }
-
-  //   // Create this list item
-  //   this.listItem = {
-  //     ...this.toItemLeadHintInstruction(node.value),
-  //     body: this.bodyDefault,
-  //   };
-
-  //   // Delete unwanted properties
-  //   const nv = node.value;
-  //   const li: Partial<ListItemJson> = this.listItem;
-  //   if (nv.pageNumber == null) delete li.pageNumber;
-  //   if (nv.marginNumber == null) delete li.marginNumber;
-
-  //   listItems.push(this.listItem);
-  // }
-
-  // protected exit_cardBitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
-  //   this.listItem = undefined;
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> body
-
-  // protected enter_body(_node: NodeInfo, _route: NodeInfo[]): void {
-  //   this.bodyJson = this.bodyDefault;
-  // }
-
-  // protected exit_body(_node: NodeInfo, route: NodeInfo[]): void {
-  //   const parent = this.getParentNode(route);
-  //   if (!parent) return;
-
-  //   if (parent.key === NodeType.bitsValue) {
-  //     // Body is at the bit level
-  //     this.bitJson.body = this.bodyJson;
-  //   } else if (parent.key === NodeType.cardBitsValue) {
-  //     // Body is at the list item (card bit) level
-  //     if (this.listItem) this.listItem.body = this.bodyJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> * -> bodyParts (body, cardBody (e.g. cloze-list, page-footer))
-
-  // protected enter_bodyParts(node: NodeInfo, route: NodeInfo[]): boolean {
-  //   const bodyParts = node.value as BodyPart[];
-  //   const plainText = this.options.textAsPlainText;
-  //   const textFormat = this.getTextFormat(route);
-  //   let fullBodyTextStr: BreakscapedString = '' as BreakscapedString;
-  //   let placeholderIndex = this.startPlaceholderIndex;
-
-  //   // Function for creating the placeholder keys
-  //   const createPlaceholderKeys = (
-  //     i: number,
-  //   ): { legacyPlaceholderKey: BreakscapedString; placeholderKey: BreakscapedString } => {
-  //     return {
-  //       // Old placeholder style (for backwards compatibility) = {0}
-  //       legacyPlaceholderKey: `{${i}}` as BreakscapedString,
-
-  //       // New placeholder style (cannot clash as bitmark parser would have removed it) = [!0]
-  //       placeholderKey: `[!${i}]` as BreakscapedString,
-  //     };
-  //   };
-
-  //   // Loop the text bodyParts creating full body text with the correct placeholders
-  //   //
-  //   // For text output 'fullBodyTextStr:
-  //   // - is created and written to the JSON
-  //   // - has placeholders inserted into 'fullBodyTextStr' in the format {0}
-  //   //
-  //   // For JSON output 'fullBodyTextStr:
-  //   // - is created and passed into the text parser to create the body text AST
-  //   // - has placeholders inserted into 'fullBodyTextStr' in the format [!0] to allow the text parser to identify
-  //   //   where the body bits should be inserted
-  //   //
-  //   for (let i = 0; i < bodyParts.length; i++) {
-  //     const bodyPart = bodyParts[i];
-
-  //     const isText = bodyPart.type === BodyBitType.text;
-
-  //     if (isText) {
-  //       const asText = bodyPart as BodyText;
-  //       const bodyTextPart = asText.data.bodyText;
-
-  //       // Append the text part to the full text body
-  //       fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, bodyTextPart);
-  //     } else {
-  //       const { legacyPlaceholderKey, placeholderKey } = createPlaceholderKeys(placeholderIndex);
-
-  //       // Append the placeholder to the full text body
-  //       fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, plainText ? legacyPlaceholderKey : placeholderKey);
-
-  //       placeholderIndex++;
-  //     }
-  //   }
-
-  //   // Add string or AST to the body
-  //   this.bodyJson = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
-  //   const bodyAst = this.bodyJson as TextAst;
-
-  //   // Loop the body parts again to create the body bits:
-  //   // - For text output the body bits are inserted into the 'placeholders' object
-  //   // - For JSON output the body bits are inserted into body AST, replacing the placeholders created by the text parser
-  //   placeholderIndex = this.startPlaceholderIndex;
-  //   for (let i = 0; i < bodyParts.length; i++) {
-  //     const bodyPart = bodyParts[i];
-
-  //     // Skip text body parts as they are handled above
-  //     const isText = bodyPart.type === BodyBitType.text;
-  //     if (isText) continue;
-
-  //     const bodyBit = bodyPart as BodyBit;
-  //     let bodyBitJson: BodyBitJson | undefined;
-
-  //     const { legacyPlaceholderKey } = createPlaceholderKeys(placeholderIndex);
-
-  //     switch (bodyPart.type) {
-  //       case BodyBitType.gap: {
-  //         const gap = bodyBit as Gap;
-  //         bodyBitJson = this.createGapJson(gap);
-  //         break;
-  //       }
-
-  //       case BodyBitType.mark: {
-  //         const mark = bodyBit as Mark;
-  //         bodyBitJson = this.createMarkJson(mark);
-  //         break;
-  //       }
-
-  //       case BodyBitType.select: {
-  //         const select = bodyBit as Select;
-  //         bodyBitJson = this.createSelectJson(select);
-  //         break;
-  //       }
-
-  //       case BodyBitType.highlight: {
-  //         const highlight = bodyBit as Highlight;
-  //         bodyBitJson = this.createHighlightJson(highlight);
-  //         break;
-  //       }
-  //     }
-
-  //     // Add the gap to the placeholders
-  //     if (bodyBitJson) {
-  //       if (plainText) {
-  //         // Ensure placeholders exists
-  //         if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
-
-  //         // Add the body bit to the placeholders
-  //         this.bitJson.placeholders[legacyPlaceholderKey] = bodyBitJson;
-  //       } else {
-  //         // Insert the body bit into the body AST
-  //         this.replacePlaceholderWithBodyBit(bodyAst, bodyBitJson, placeholderIndex);
-  //       }
-  //     }
-
-  //     placeholderIndex++;
-  //   }
-
-  //   // Save the current placeholder index for the next body (body, card bodies)
-  //   this.startPlaceholderIndex = placeholderIndex;
-
-  //   // Stop traversal of this branch for efficiency
-  //   return false;
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
-
-  // protected enter_elements(node: NodeInfo, _route: NodeInfo[]): void {
-  //   const elements = node.value as BreakscapedString[];
-
-  //   // Ignore elements that are not at the bit level as they are handled elsewhere as quizzes
-  //   // if (parent?.key !== NodeType.bitsValue) return;
-
-  //   if (elements && elements.length > 0) {
-  //     this.bitJson.elements = Breakscape.unbreakscape(elements);
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
-
-  // protected enter_flashcards(node: NodeInfo, route: NodeInfo[]): void {
-  //   const flashcards = node.value as Flashcard[];
-
-  //   // Ignore responses that are not at the correct level as they are potentially handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.cardNode) return;
-
-  //   const flashcardsJson: FlashcardJson[] = [];
-  //   if (flashcards) {
-  //     for (const c of flashcards) {
-  //       // Create the flashcard
-  //       const flashcardJson: Partial<FlashcardJson> = {
-  //         question: Breakscape.unbreakscape(c.question) ?? '',
-  //         answer: Breakscape.unbreakscape(c.answer) ?? '',
-  //         alternativeAnswers: Breakscape.unbreakscape(c.alternativeAnswers) ?? [],
-  //         ...this.toItemLeadHintInstruction(c),
-  //         ...this.toExample(c, {
-  //           defaultExample: c.isDefaultExample,
-  //           isBoolean: true,
-  //         }),
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (c.itemLead?.lead == null) delete flashcardJson.lead;
-  //       if (c.itemLead?.pageNumber == null) delete flashcardJson.pageNumber;
-  //       if (c.itemLead?.marginNumber == null) delete flashcardJson.marginNumber;
-
-  //       flashcardsJson.push(flashcardJson as FlashcardJson);
-  //     }
-  //   }
-
-  //   if (flashcardsJson.length > 0) {
-  //     this.bitJson.cards = flashcardsJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> statement
-
-  // protected enter_statement(node: NodeInfo, route: NodeInfo[]): void {
-  //   const statement = node.value as Statement;
-
-  //   // Ignore statement that is not at the cardNode level as it is handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.cardNode) return;
-
-  //   if (statement) {
-  //     this.bitJson.statement = Breakscape.unbreakscape(statement.text) ?? '';
-  //     this.bitJson.isCorrect = statement.isCorrect ?? false;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> statements -> statementsValue
-
-  // protected enter_statements(node: NodeInfo, route: NodeInfo[]): void {
-  //   const statements = node.value as Statement[];
-
-  //   // Ignore statements that are not at the card node level as they are handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.cardNode) return;
-
-  //   const statementsJson: StatementJson[] = [];
-  //   if (statements) {
-  //     for (const s of statements) {
-  //       // Create the statement
-  //       const statementJson: Partial<StatementJson> = {
-  //         statement: Breakscape.unbreakscape(s.text) ?? '',
-  //         isCorrect: !!s.isCorrect,
-  //         ...this.toItemLeadHintInstruction(s),
-  //         ...this.toExample(s, {
-  //           defaultExample: !!s.isCorrect,
-  //           isBoolean: true,
-  //         }),
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (s.itemLead?.item == null) delete statementJson.item;
-  //       if (s.itemLead?.lead == null) delete statementJson.lead;
-  //       if (s.itemLead?.pageNumber == null) delete statementJson.pageNumber;
-  //       if (s.itemLead?.marginNumber == null) delete statementJson.marginNumber;
-  //       if (s?.hint == null) delete statementJson.hint;
-  //       if (s?.instruction == null) delete statementJson.instruction;
-
-  //       statementsJson.push(statementJson as StatementJson);
-  //     }
-  //   }
-
-  //   if (statementsJson.length > 0) {
-  //     this.bitJson.statements = statementsJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> choices
-  // // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices
-
-  // protected enter_choices(node: NodeInfo, route: NodeInfo[]): void {
-  //   const choices = node.value as Choice[];
-
-  //   // Ignore choices that are not at the bit level as they are handled elsewhere as quizzes
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.cardNode) return;
-
-  //   const choicesJson: ChoiceJson[] = [];
-  //   if (choices) {
-  //     for (const c of choices) {
-  //       // Create the choice
-  //       const choiceJson: Partial<ChoiceJson> = {
-  //         choice: Breakscape.unbreakscape(c.text) ?? '',
-  //         isCorrect: c.isCorrect ?? false,
-  //         ...this.toItemLeadHintInstruction(c),
-  //         ...this.toExample(c, {
-  //           defaultExample: !!c.isCorrect,
-  //           isBoolean: true,
-  //         }),
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (c.itemLead?.lead == null) delete choiceJson.lead;
-  //       if (c.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
-  //       if (c.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
-
-  //       choicesJson.push(choiceJson as ChoiceJson);
-  //     }
-  //   }
-
-  //   if (choicesJson.length > 0) {
-  //     this.bitJson.choices = choicesJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> responses
-  // // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses
-
-  // protected enter_responses(node: NodeInfo, route: NodeInfo[]): void {
-  //   const responses = node.value as Response[];
-
-  //   // Ignore responses that are not at the correct level as they are handled elsewhere as quizzes
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.cardNode) return;
-
-  //   const responsesJson: ResponseJson[] = [];
-  //   if (responses) {
-  //     for (const r of responses) {
-  //       // Create the response
-  //       const responseJson: Partial<ResponseJson> = {
-  //         response: Breakscape.unbreakscape(r.text) ?? '',
-  //         isCorrect: r.isCorrect ?? false,
-  //         ...this.toItemLeadHintInstruction(r),
-  //         ...this.toExample(r, {
-  //           defaultExample: !!r.isCorrect,
-  //           isBoolean: true,
-  //         }),
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (r.itemLead?.lead == null) delete responseJson.lead;
-  //       if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
-  //       if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
-
-  //       responsesJson.push(responseJson as ResponseJson);
-  //     }
-  //   }
-
-  //   if (responsesJson.length > 0) {
-  //     this.bitJson.responses = responsesJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes
-
-  // protected enter_quizzes(node: NodeInfo, _route: NodeInfo[]): void {
-  //   const quizzes = node.value as Quiz[];
-  //   const quizzesJson: QuizJson[] = [];
-
-  //   if (quizzes) {
-  //     for (const q of quizzes) {
-  //       // Choices
-  //       const choicesJson: ChoiceJson[] = [];
-  //       if (q.choices) {
-  //         for (const c of q.choices) {
-  //           // Create the choice
-  //           const choiceJson: Partial<ChoiceJson> = {
-  //             choice: Breakscape.unbreakscape(c.text) ?? '',
-  //             isCorrect: c.isCorrect ?? false,
-  //             ...this.toItemLeadHintInstruction(c),
-  //             ...this.toExample(c, {
-  //               defaultExample: !!c.isCorrect,
-  //               isBoolean: true,
-  //             }),
-  //           };
-
-  //           // Delete unwanted properties
-  //           if (q.itemLead?.lead == null) delete choiceJson.lead;
-  //           if (q.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
-  //           if (q.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
-
-  //           choicesJson.push(choiceJson as ChoiceJson);
-  //         }
-  //       }
-
-  //       // Responses
-  //       const responsesJson: ResponseJson[] = [];
-  //       if (q.responses) {
-  //         for (const r of q.responses) {
-  //           // Create the choice
-  //           const responseJson: Partial<ResponseJson> = {
-  //             response: Breakscape.unbreakscape(r.text) ?? '',
-  //             isCorrect: r.isCorrect ?? false,
-  //             ...this.toItemLeadHintInstruction(r),
-  //             ...this.toExample(r, {
-  //               defaultExample: !!r.isCorrect,
-  //               isBoolean: true,
-  //             }),
-  //           };
-
-  //           // Delete unwanted properties
-  //           if (q.itemLead?.lead == null) delete responseJson.lead;
-  //           if (q.itemLead?.pageNumber == null) delete responseJson.pageNumber;
-  //           if (q.itemLead?.marginNumber == null) delete responseJson.marginNumber;
-
-  //           responsesJson.push(responseJson as ResponseJson);
-  //         }
-  //       }
-
-  //       // Create the quiz
-  //       const quizJson: Partial<QuizJson> = {
-  //         ...this.toItemLeadHintInstruction(q),
-  //         isExample: q.isExample ?? false,
-  //         choices: q.choices ? choicesJson : undefined,
-  //         responses: q.responses ? responsesJson : undefined,
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (q.itemLead?.lead == null) delete quizJson.lead;
-  //       if (q.itemLead?.pageNumber == null) delete quizJson.pageNumber;
-  //       if (q.itemLead?.marginNumber == null) delete quizJson.marginNumber;
-
-  //       quizzesJson.push(quizJson as QuizJson);
-  //     }
-  //   }
-
-  //   if (quizzesJson.length > 0) {
-  //     this.bitJson.quizzes = quizzesJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> heading
-
-  // protected enter_heading(node: NodeInfo, _route: NodeInfo[]): boolean | void {
-  //   const heading = node.value as Heading;
-
-  //   // Check if the heading is for a match or a match matrix
-  //   const bitType = this.getBitType(_route);
-  //   const isMatrix = Config.isOfBitType(bitType, BitType.matchMatrix);
-
-  //   // Create the heading
-  //   const headingJson: Partial<HeadingJson> = {
-  //     forKeys: Breakscape.unbreakscape(heading.forKeys) ?? '',
-  //   };
-
-  //   if (isMatrix) {
-  //     // Matrix match, forValues is an array
-  //     headingJson.forValues = [];
-  //     if (Array.isArray(heading.forValues)) {
-  //       if (heading.forValues.length >= 1) {
-  //         headingJson.forValues = Breakscape.unbreakscape(heading.forValues);
-  //       }
-  //     }
-  //   } else {
-  //     // Standard match, forValues is a string
-  //     headingJson.forValues = '';
-  //     if (Array.isArray(heading.forValues)) {
-  //       if (heading.forValues.length >= 1) {
-  //         headingJson.forValues = Breakscape.unbreakscape(heading.forValues[heading.forValues.length - 1]);
-  //       }
-  //     }
-  //   }
-
-  //   this.bitJson.heading = headingJson as HeadingJson;
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs
-
-  // protected enter_pairs(node: NodeInfo, route: NodeInfo[]): void {
-  //   const pairs = node.value as Pair[];
-  //   const pairsJson: PairJson[] = [];
-  //   const bitType = this.getBitType(route);
-
-  //   if (pairs && bitType) {
-  //     for (const p of pairs) {
-  //       // Get default example
-  //       const defaultExample = Array.isArray(p.values) && p.values.length > 0 && p.values[0];
-
-  //       // Create the question
-  //       const pairJson: Partial<PairJson> = {
-  //         key: Breakscape.unbreakscape(p.key) ?? '',
-  //         keyAudio: p.keyAudio ? this.addAudioResource(bitType, p.keyAudio) : undefined,
-  //         keyImage: p.keyImage ? this.addImageResource(bitType, p.keyImage) : undefined,
-  //         values: Breakscape.unbreakscape(p.values) ?? [],
-  //         ...this.toItemLeadHintInstruction(p),
-  //         isCaseSensitive: p.isCaseSensitive ?? true,
-  //         ...this.toExample(p, {
-  //           defaultExample,
-  //           isBoolean: false,
-  //         }),
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (p.itemLead?.lead == null) delete pairJson.lead;
-  //       if (p.itemLead?.pageNumber == null) delete pairJson.pageNumber;
-  //       if (p.itemLead?.marginNumber == null) delete pairJson.marginNumber;
-  //       if (pairJson.key) {
-  //         delete pairJson.keyAudio;
-  //         delete pairJson.keyImage;
-  //       }
-  //       if (pairJson.keyAudio != null) {
-  //         delete pairJson.key;
-  //         delete pairJson.keyImage;
-  //       }
-  //       if (pairJson.keyImage != null) {
-  //         delete pairJson.key;
-  //         delete pairJson.keyAudio;
-  //       }
-
-  //       pairsJson.push(pairJson as PairJson);
-  //     }
-  //   }
-
-  //   if (pairsJson.length > 0) {
-  //     this.bitJson.pairs = pairsJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix
-
-  // protected enter_matrix(node: NodeInfo, _route: NodeInfo[]): void {
-  //   const matrix = node.value as Matrix[];
-  //   const matrixJsonArray: MatrixJson[] = [];
-
-  //   if (matrix) {
-  //     for (const m of matrix) {
-  //       // Choices
-  //       const matrixCellsJson: MatrixCellJson[] = [];
-  //       if (m.cells) {
-  //         for (const c of m.cells) {
-  //           // Get default example
-  //           const defaultExample = Array.isArray(c.values) && c.values.length > 0 && c.values[0];
-
-  //           // Create the choice
-  //           const matrixCellJson: Partial<MatrixCellJson> = {
-  //             values: Breakscape.unbreakscape(c.values) ?? [],
-  //             ...this.toItemLeadHintInstruction(c),
-  //             isCaseSensitive: c.isCaseSensitive ?? true,
-  //             ...this.toExample(c, {
-  //               defaultExample,
-  //               isBoolean: false,
-  //             }),
-  //           };
-
-  //           // Delete unwanted properties
-  //           if (c.itemLead?.lead == null) delete matrixCellJson.lead;
-  //           if (c.itemLead?.pageNumber == null) delete matrixCellJson.pageNumber;
-  //           if (c.itemLead?.marginNumber == null) delete matrixCellJson.marginNumber;
-  //           if (c.hint == null) delete matrixCellJson.hint;
-
-  //           matrixCellsJson.push(matrixCellJson as MatrixCellJson);
-  //         }
-  //       }
-
-  //       // Create the matrix
-  //       const matrixJson: Partial<MatrixJson> = {
-  //         key: Breakscape.unbreakscape(m.key) ?? '',
-  //         cells: matrixCellsJson ?? [],
-  //         ...this.toItemLeadHintInstruction(m),
-  //         // ...this.toExample(m.example, m.isExample),
-  //         isExample: m.isExample ?? false,
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (m.itemLead?.lead == null) delete matrixJson.lead;
-  //       if (m.itemLead?.pageNumber == null) delete matrixJson.pageNumber;
-  //       if (m.itemLead?.marginNumber == null) delete matrixJson.marginNumber;
-  //       if (m.instruction == null) delete matrixJson.instruction;
-
-  //       matrixJsonArray.push(matrixJson as MatrixJson);
-  //     }
-  //   }
-
-  //   if (matrixJsonArray.length > 0) {
-  //     this.bitJson.matrix = matrixJsonArray;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
-
-  // protected enter_questions(node: NodeInfo, _route: NodeInfo[]): void {
-  //   const questions = node.value as Question[];
-  //   const questionsJson: QuestionJson[] = [];
-
-  //   if (questions) {
-  //     for (const q of questions) {
-  //       // Create the question
-  //       const questionJson: Partial<QuestionJson> = {
-  //         question: Breakscape.unbreakscape(q.question) ?? '',
-  //         partialAnswer: Breakscape.unbreakscape(ArrayUtils.asSingle(q.partialAnswer)) ?? '',
-  //         sampleSolution: Breakscape.unbreakscape(q.sampleSolution) ?? '',
-  //         ...this.toItemLeadHintInstruction(q),
-  //         reasonableNumOfChars: q.reasonableNumOfChars,
-  //         ...this.toExample(q, {
-  //           defaultExample: q.sampleSolution || '',
-  //           isBoolean: false,
-  //         }),
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (q.itemLead?.lead == null) delete questionJson.lead;
-  //       if (q.itemLead?.pageNumber == null) delete questionJson.pageNumber;
-  //       if (q.itemLead?.marginNumber == null) delete questionJson.marginNumber;
-
-  //       questionsJson.push(questionJson as QuestionJson);
-  //     }
-  //   }
-
-  //   if (questionsJson.length > 0) {
-  //     this.bitJson.questions = questionsJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
-
-  // protected enter_botResponses(node: NodeInfo, route: NodeInfo[]): void {
-  //   const botResponses = node.value as BotResponse[];
-
-  //   // Ignore responses that are not at the cardNode level as they are handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.cardNode) return;
-
-  //   const responsesJson: BotResponseJson[] = [];
-  //   if (botResponses) {
-  //     for (const r of botResponses) {
-  //       // Create the response
-  //       const responseJson: Partial<BotResponseJson> = {
-  //         response: Breakscape.unbreakscape(r.response) ?? '',
-  //         reaction: Breakscape.unbreakscape(r.reaction) ?? '',
-  //         feedback: Breakscape.unbreakscape(r.feedback) ?? '',
-  //         ...this.toItemLeadHintInstruction(r),
-  //         // ...this.toExampleAndIsExample(r.example),
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (r.itemLead?.lead == null) delete responseJson.lead;
-  //       if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
-  //       if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
-  //       if (r.hint == null) delete responseJson.hint;
-  //       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  //       delete (responseJson as any).instruction;
-
-  //       responsesJson.push(responseJson as BotResponseJson);
-  //     }
-  //   }
-
-  //   if (responsesJson.length > 0) {
-  //     this.bitJson.responses = responsesJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
-  // protected enter_ingredients(node: NodeInfo, route: NodeInfo[]): void {
-  //   const ingredients = node.value as Ingredient[];
-
-  //   // Ignore statements that are not at the card node level as they are handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.cardNode) return;
-
-  //   const ingredientsJson: IngredientJson[] = [];
-  //   if (ingredients) {
-  //     for (const i of ingredients) {
-  //       // Create the ingredient
-  //       const ingredientJson: Partial<IngredientJson> = {
-  //         checked: i.checked ?? false,
-  //         item: Breakscape.unbreakscape(i.item) ?? '',
-  //         quantity: i.quantity ?? 0,
-  //         unit: Breakscape.unbreakscape(i.unit) ?? '',
-  //         unitAbbr: Breakscape.unbreakscape(i.unitAbbr) ?? '',
-  //         disableCalculation: i.disableCalculation ?? false,
-  //       };
-
-  //       // Delete unwanted properties
-  //       if (i?.unitAbbr == null) delete ingredientJson.unitAbbr;
-  //       // if (i?.instruction == null) delete ingredientJson.instruction;
-
-  //       ingredientsJson.push(ingredientJson as IngredientJson);
-  //     }
-  //   }
-
-  //   if (ingredientsJson.length > 0) {
-  //     this.bitJson.ingredients = ingredientsJson;
-  //   }
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> resources
-
-  // protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean | void {
-  //   const resources = node.value as Resource[];
-  //   const bitType = this.getBitType(route);
-  //   const resourceType = this.getResourceType(route);
-
-  //   if (!resources || !bitType) return;
-
-  //   let resourceJson: ResourceJson | undefined;
-
-  //   const bitConfig = Config.getBitConfig(bitType);
-  //   const bitResourcesConfig = Config.getBitResourcesConfig(bitType, resourceType);
-  //   const comboMap = bitResourcesConfig.comboResourceTagTypesMap;
-
-  //   if (bitResourcesConfig.comboResourceTagTypesMap.size > 0) {
-  //     // The resource is a combo resource
-  //     // Extract the resource types from the combo resource
-  //     // NOTE: There should only ever be one combo resource per bit, but the code can handle multiple
-  //     // except for overwriting resourceJson
-  //     for (const [comboTagType, resourceTags] of comboMap.entries()) {
-  //       // Create the combo resource wrapper
-  //       const wrapper: ResourceWrapperJson = {
-  //         type: comboTagType,
-  //       };
-
-  //       // For each of the resources in this combo resource, find the actual resource and add it to the JSON
-  //       for (const rt of resourceTags) {
-  //         const r = resources.find((r) => r.typeAlias === rt);
-  //         // Extract everything except the type from the resource
-  //         if (r) {
-  //           const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.typeAlias);
-  //           const key = tagConfig?.jsonKey ?? r.typeAlias;
-  //           const json = this.parseResourceToJson(bitType, r);
-  //           if (json) {
-  //             for (const [k, v] of Object.entries(json)) {
-  //               if (k !== 'type') {
-  //                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  //                 (wrapper as any)[key] = v;
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //       resourceJson = wrapper as ResourceJson;
-  //     }
-  //   } else if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
-  //     // The resource is a logo grave resource
-  //     const logos: ImageResourceWrapperJson[] = [];
-  //     for (const r of resources) {
-  //       const json = this.parseResourceToJson(bitType, r) as ImageResourceWrapperJson;
-  //       if (json) {
-  //         logos.push(json);
-  //       }
-  //     }
-  //     this.bitJson.logos = logos;
-  //   } else {
-  //     // This is a standard resource. If there is more than one resource, use the first one.
-  //     // There should not be more than one because of validation
-  //     if (resources.length >= 1) {
-  //       resourceJson = this.parseResourceToJson(bitType, resources[0]);
-  //     }
-  //   }
-
-  //   this.bitJson.resource = resourceJson;
-  // }
-
-  // //
-  // // Terminal nodes (leaves)
-  // //
-
-  // // bitmarkAst -> bits -> bitsValue -> title
-
-  // protected leaf_title(node: NodeInfo, route: NodeInfo[]): void {
-  //   // Ignore title that are not at the bit or card node level as they are handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
-
-  //   this.bitJson.title = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
-  // }
-
-  // //  bitmarkAst -> bits -> bitsValue -> subtitle
-
-  // protected leaf_subtitle(node: NodeInfo, _route: NodeInfo[]): void {
-  //   this.bitJson.subtitle = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
-  // }
-
-  // // //  bitmarkAst -> bits -> bitsValue -> level
-
-  // protected leaf_level(node: NodeInfo, _route: NodeInfo[]): void {
-  //   if (node.value != null) this.addProperty(this.bitJson, 'level', node.value ?? 1, true);
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> book
-
-  // protected leaf_book(node: NodeInfo, _route: NodeInfo[]): void {
-  //   if (node.value != null) this.addProperty(this.bitJson, 'book', node.value, true);
-  // }
-
-  // //  bitmarkAst -> bits -> bitsValue -> anchor
-
-  // protected leaf_anchor(node: NodeInfo, _route: NodeInfo[]): void {
-  //   if (node.value != null) this.addProperty(this.bitJson, 'anchor', node.value, true);
-  // }
-
-  // //  bitmarkAst -> bits -> bitsValue -> reference
-
-  // protected leaf_reference(node: NodeInfo, _route: NodeInfo[]): void {
-  //   if (node.value != null) this.addProperty(this.bitJson, 'reference', node.value, true);
-  // }
-
-  // //  bitmarkAst -> bits -> bitsValue -> referenceEnd
-
-  // protected leaf_referenceEnd(node: NodeInfo, _route: NodeInfo[]): void {
-  //   if (node.value != null) this.addProperty(this.bitJson, 'referenceEnd', node.value, true);
-  // }
-
-  // //  bitmarkAst -> bits -> bitsValue ->  * -> hint
-
-  // protected leaf_hint(node: NodeInfo, route: NodeInfo[]): void {
-  //   const hint = node.value as BreakscapedString;
-
-  //   // Ignore hint that is not at the bit level as it are handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.bitsValue) return;
-
-  //   this.bitJson.hint = this.convertBreakscapedStringToJsonText(hint, TextFormat.bitmarkMinusMinus);
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue ->  * -> instruction
-
-  // protected leaf_instruction(node: NodeInfo, route: NodeInfo[]): void {
-  //   const instruction = node.value as BreakscapedString;
-
-  //   // Ignore instruction that is not at the bit level as it are handled elsewhere
-  //   const parent = this.getParentNode(route);
-  //   if (parent?.key !== NodeType.bitsValue) return;
-
-  //   this.bitJson.instruction = this.convertBreakscapedStringToJsonText(instruction, TextFormat.bitmarkMinusMinus);
-  // }
-
-  // // bitmarkAst -> bits -> footer -> footerText
-
-  // protected leaf_footerText(node: NodeInfo, _route: NodeInfo[]): void {
-  //   const footer = node.value as BreakscapedString;
-
-  //   this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, TextFormat.bitmarkMinusMinus);
-  // }
-
-  // // bitmarkAst -> bits -> bitsValue -> markup
-
-  // protected leaf_markup(node: NodeInfo, _route: NodeInfo[]): void {
-  //   const bitmark = node.value as string | undefined;
-  //   if (bitmark) this.bitWrapperJson.bitmark = bitmark;
-  // }
+  protected exit_chain(node: NodeInfo, _route: NodeInfo[]): void {
+    const nodeData = node.value as BitContentNode[];
+
+    if (nodeData.length > 0) {
+      const first = nodeData[0];
+
+      if (first.type === 'cardSet') {
+        this.inCard = false;
+      } else if (first.type === 'card') {
+        this.inCard = false;
+      } else if (first.type === 'side') {
+        return;
+      } else if (first.type === 'variant') {
+        return;
+      }
+    }
+
+    if (this.inCard) {
+      this.currentBitJson = this.cardLeafJson;
+    } else {
+      this.currentBitJson = this.bitJson;
+    }
+  }
 
   // bitmarkAst -> bits -> bitsValue -> parser
   // bitmarkAst -> bits -> bitsValue -> * -> internalComment
@@ -1477,193 +579,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   //   }
   // }
 
-  //
-  // Generated Node Handlers
-  //
-
-  /**
-   * Generate the handlers for properties, as they are mostly the same, but not quite
-   */
-  protected generatePropertyHandlers() {
-    const propertiesConfig = Config.getRawPropertiesConfig();
-
-    for (const propertyConfig of Object.values(propertiesConfig)) {
-      const astKey = propertyConfig.astKey ?? propertyConfig.tag;
-
-      // Special cases (handled outside of the automatically generated handlers)
-      if (astKey === PropertyTag.internalComment) continue;
-      if (astKey === PropertyTag.example) continue;
-      if (astKey === PropertyTag.imageSource) continue;
-      if (astKey === PropertyTag.person) continue;
-      if (astKey === PropertyAstKey.markConfig) continue;
-
-      const funcName = `enter_${astKey}`;
-
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[funcName] = (node: NodeInfo, route: NodeInfo[]) => {
-        const value = node.value as unknown[] | undefined;
-        if (value == null) return;
-
-        // if (key === 'progress') debugger;
-
-        // Ignore any property that is not at the bit level as that will be handled by a different handler
-        const parent = this.getParentNode(route);
-        if (parent?.key !== NodeType.bitsValue) return;
-
-        // Convert key as needed
-        const jsonKey = propertyConfig.jsonKey ?? propertyConfig.tag;
-
-        // Add the property
-        this.addProperty(this.bitJson, jsonKey, value, propertyConfig.single);
-      };
-
-      // Bind this
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[funcName] = (this as any)[funcName].bind(this);
-    }
-  }
-
-  // // END NODE HANDLERS
+  // END NODE HANDLERS
 
   //
   // HELPER FUNCTIONS
   //
-
-  protected createGapJson(gap: Gap): GapJson {
-    const data = gap.data;
-
-    const defaultExample = data.solutions && data.solutions.length > 0 ? data.solutions[0] : '';
-
-    // Create the gap
-    const gapJson: Partial<GapJson> = {
-      type: 'gap',
-      ...this.toItemLeadHintInstruction(data),
-      isCaseSensitive: data.isCaseSensitive ?? true,
-      ...this.toExample(data, {
-        defaultExample,
-        isBoolean: false,
-      }),
-      solutions: Breakscape.unbreakscape(data.solutions),
-    };
-
-    // Remove unwanted properties
-    // if (!data.itemLead?.lead) delete gapJson.lead;
-    // if (!data.itemLead?.pageNumber) delete gapJson.pageNumber;
-    // if (!data.itemLead?.marginNumber) delete gapJson.marginNumber;
-
-    return gapJson as GapJson;
-  }
-
-  protected createMarkJson(mark: Mark): MarkJson {
-    const data = mark.data;
-
-    // Create the mark
-    const markJson: Partial<MarkJson> = {
-      type: 'mark',
-      solution: Breakscape.unbreakscape(data.solution),
-      mark: Breakscape.unbreakscape(data.mark),
-      ...this.toItemLeadHintInstruction(data),
-      ...this.toExample(data, {
-        defaultExample: true,
-        isBoolean: true,
-      }),
-      //
-    };
-
-    // Remove unwanted properties
-    // if (!data.itemLead?.lead) delete markJson.lead;
-    // if (!data.itemLead?.pageNumber) delete markJson.pageNumber;
-    // if (!data.itemLead?.marginNumber) delete markJson.marginNumber;
-
-    return markJson as MarkJson;
-  }
-
-  protected createSelectJson(select: Select): SelectJson {
-    const data = select.data;
-
-    // Create the select options
-    const options: SelectOptionJson[] = [];
-    for (const option of data.options) {
-      const optionJson: Partial<SelectOptionJson> = {
-        text: Breakscape.unbreakscape(option.text),
-        isCorrect: option.isCorrect ?? false,
-        ...this.toItemLeadHintInstruction(option),
-        ...this.toExample(option, {
-          defaultExample: !!option.isCorrect,
-          isBoolean: true,
-        }),
-      };
-
-      // Remove unwanted properties
-      // if (!option.itemLead?.item) delete optionJson.item;
-      // if (!option.itemLead?.lead) delete optionJson.lead;
-      // if (!option.itemLead?.pageNumber) delete optionJson.pageNumber;
-      // if (!option.itemLead?.marginNumber) delete optionJson.marginNumber;
-      // if (!option.instruction) delete optionJson.instruction;
-
-      options.push(optionJson as SelectOptionJson);
-    }
-
-    // Create the select
-    const selectJson: Partial<SelectJson> = {
-      type: 'select',
-      prefix: Breakscape.unbreakscape(data.prefix) ?? '',
-      postfix: Breakscape.unbreakscape(data.postfix) ?? '',
-      ...this.toItemLeadHintInstruction(data),
-      isExample: data.isExample ?? false,
-      options,
-    };
-
-    // Remove unwanted properties
-    // if (!data.itemLead?.lead) delete selectJson.lead;
-    // if (!data.itemLead?.pageNumber) delete selectJson.pageNumber;
-    // if (!data.itemLead?.marginNumber) delete selectJson.marginNumber;
-
-    return selectJson as SelectJson;
-  }
-
-  protected createHighlightJson(highlight: Highlight): HighlightJson {
-    const data = highlight.data;
-
-    // Create the highlight options
-    const texts: HighlightTextJson[] = [];
-    for (const text of data.texts) {
-      const textJson: Partial<HighlightTextJson> = {
-        text: Breakscape.unbreakscape(text.text),
-        isCorrect: text.isCorrect ?? false,
-        isHighlighted: text.isHighlighted ?? false,
-        ...this.toItemLeadHintInstruction(text),
-        ...this.toExample(text, {
-          defaultExample: !!text.isCorrect,
-          isBoolean: true,
-        }),
-      };
-
-      // Remove unwanted properties
-      // if (!text.itemLead?.item) delete textJson.item;
-      // if (!text.itemLead?.lead) delete textJson.lead;
-      // if (!text.itemLead?.pageNumber) delete textJson.pageNumber;
-      // if (!text.itemLead?.marginNumber) delete textJson.marginNumber;
-      // if (!text.hint) delete textJson.hint;
-
-      texts.push(textJson as HighlightTextJson);
-    }
-
-    // Create the select
-    const highlightJson: Partial<HighlightJson> = {
-      type: 'highlight',
-      prefix: Breakscape.unbreakscape(data.prefix) ?? '',
-      postfix: Breakscape.unbreakscape(data.postfix) ?? '',
-      ...this.toItemLeadHintInstruction(data),
-      isExample: data.isExample ?? false,
-      texts,
-    };
-
-    // Remove unwanted properties
-    // if (!data.itemLead?.lead) delete highlightJson.lead;
-
-    return highlightJson as HighlightJson;
-  }
 
   protected parseResourceToJson(bitType: BitTypeType, resource: Resource | undefined): ResourceJson | undefined {
     if (!resource) return undefined;
