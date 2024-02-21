@@ -4,7 +4,8 @@
       "type": "page-open-book",
       "format": "bitmark--",
       "id": ["342341"],
-      "bookId": "the_book",
+      "book": "the_book",
+      "reference": "ch-5",
       "item": [
         {
           "type": "paragraph",
@@ -57,9 +58,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.10",
+      "version": "1.5.17",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.page-open-book]\n[@id:342341]\n[%Publisher, optional]\n[!Book title]\n[?Document Type, optional]\nOpen"
+    "bitmark": "[.page-open-book]\n[@id:342341]\n[@book:the_book][►ch-5]\n[%Publisher, optional]\n[!Book title]\n[?Document Type, optional]\nOpen"
   }
 ]

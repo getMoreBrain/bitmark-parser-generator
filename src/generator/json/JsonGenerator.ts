@@ -2521,7 +2521,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       id: undefined,
       internalComment: undefined,
       externalId: undefined,
-      bookId: undefined,
       spaceId: undefined,
       padletId: undefined,
       jupyterId: undefined,
@@ -2843,7 +2842,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.id == null) delete bitJson.id;
     if (bitJson.internalComment == null) delete bitJson.internalComment;
     if (bitJson.externalId == null) delete bitJson.externalId;
-    if (bitJson.bookId == null) delete bitJson.bookId;
     if (bitJson.spaceId == null) delete bitJson.spaceId;
     if (bitJson.padletId == null) delete bitJson.padletId;
     if (bitJson.jupyterId == null) delete bitJson.jupyterId;
