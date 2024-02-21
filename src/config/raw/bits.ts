@@ -721,7 +721,11 @@ const BITS: _BitsConfig = {
     tags: [
       {
         type: BitTagType.property,
-        configKey: PropertyConfigKey.bookId,
+        configKey: PropertyConfigKey.book,
+      },
+      {
+        type: BitTagType.tag,
+        configKey: TagConfigKey.tag_reference,
       },
       {
         type: BitTagType.property,

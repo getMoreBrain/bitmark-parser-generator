@@ -93,7 +93,6 @@ class Builder extends BaseBuilder {
     id?: BreakscapedString | BreakscapedString[];
     internalComment?: BreakscapedString | BreakscapedString[];
     externalId?: BreakscapedString | BreakscapedString[];
-    bookId?: BreakscapedString | BreakscapedString[];
     spaceId?: BreakscapedString | BreakscapedString[];
     padletId?: BreakscapedString;
     jupyterId?: BreakscapedString;
@@ -228,7 +227,6 @@ class Builder extends BaseBuilder {
       id,
       internalComment,
       externalId,
-      bookId,
       spaceId,
       padletId,
       jupyterId,
@@ -360,7 +358,6 @@ class Builder extends BaseBuilder {
       id: this.toAstProperty(PropertyConfigKey.id, id),
       internalComment: this.toAstProperty(PropertyConfigKey.internalComment, internalComment),
       externalId: this.toAstProperty(PropertyConfigKey.externalId, externalId),
-      bookId: this.toAstProperty(PropertyConfigKey.bookId, bookId),
       spaceId: this.toAstProperty(PropertyConfigKey.spaceId, spaceId),
       padletId: this.toAstProperty(PropertyConfigKey.padletId, padletId),
       jupyterId: this.toAstProperty(PropertyConfigKey.jupyterId, jupyterId),
