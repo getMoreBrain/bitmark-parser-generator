@@ -39,11 +39,11 @@ export interface _BitConfig {
   tags?: _TagInfoConfig[];
   cardSet?: CardSetConfigKeyType;
   deprecated?: string; // Deprecated version
-  bodyAllowed?: boolean; // Default: false
+  bodyAllowed?: boolean; // Default: true
   bodyRequired?: boolean; // Default: false
-  footerAllowed?: boolean; // Default: false
+  footerAllowed?: boolean; // Default: true
   footerRequired?: boolean; // Default: false
-  resourceAttachmentAllowed?: boolean; // Default: false
+  resourceAttachmentAllowed?: boolean; // Default: true
   rootExampleType?: ExampleTypeType;
 }
 

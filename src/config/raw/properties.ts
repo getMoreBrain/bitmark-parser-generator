@@ -17,11 +17,6 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.externalId,
     format: PropertyFormat.trimmedString,
   },
-  [PropertyConfigKey.bookId]: {
-    tag: PropertyTag.bookId,
-    single: true,
-    format: PropertyFormat.trimmedString,
-  },
   [PropertyConfigKey.spaceId]: {
     tag: PropertyTag.spaceId,
     format: PropertyFormat.trimmedString,

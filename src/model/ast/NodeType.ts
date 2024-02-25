@@ -73,8 +73,6 @@ const NodeType = superenum({
   internalCommentValue: 'internalCommentValue',
   externalId: 'externalId',
   externalIdValue: 'externalIdValue',
-  bookId: 'bookId',
-  bookIdValue: 'bookIdValue',
   spaceId: 'spaceId',
   spaceIdValue: 'spaceIdValue',
   releaseVersion: 'releaseVersion',
