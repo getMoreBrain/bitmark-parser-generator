@@ -339,3 +339,25 @@ B
 --
 C
 ===
+
+
+[.match-matrix]
+===
+[#Title1]
+==
+[#Title2]
+==
+[#Title3]
+===
+[%1][!hint][?instruction] Beherbergung
+==
+Unterbringung
+==
+Übernachtung
+===
+[%2] Herberge
+==
+Hotel
+==
+Unterbringungsmöglichkeit
+===
