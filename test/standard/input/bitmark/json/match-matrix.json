@@ -1284,5 +1284,117 @@
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#]\n==\n[#]\n==\n[#]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n==="
+  },
+  {
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "Title1",
+        "forValues": ["Title2", "Title3"]
+      },
+      "matrix": [
+        {
+          "key": "Beherbergung",
+          "cells": [
+            {
+              "values": ["Unterbringung"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            },
+            {
+              "values": ["Übernachtung"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            }
+          ],
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "instruction",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "hint",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "isExample": false
+        },
+        {
+          "key": "Herberge",
+          "cells": [
+            {
+              "values": ["Hotel"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            },
+            {
+              "values": ["Unterbringungsmöglichkeit"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            }
+          ],
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "2",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "isExample": false
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.19",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.match-matrix]\n===\n[#Title1]\n==\n[#Title2]\n==\n[#Title3]\n===\n[%1][!hint][?instruction] Beherbergung\n==\nUnterbringung\n==\nÜbernachtung\n===\n[%2] Herberge\n==\nHotel\n==\nUnterbringungsmöglichkeit\n==="
   }
 ]
