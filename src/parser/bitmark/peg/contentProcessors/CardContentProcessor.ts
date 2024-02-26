@@ -594,6 +594,7 @@ function parseMatchMatrix(
   let forKeys: BreakscapedString | undefined = undefined;
   let forValues: BreakscapedString[] = [];
   let matrixKey: BreakscapedString | undefined = undefined;
+  let matrixKeyTags: BitContentProcessorResult | undefined = undefined;
   const matrix: Matrix[] = [];
   let matrixCells: MatrixCell[] = [];
   let matrixCellValues: BreakscapedString[] = [];
@@ -615,6 +616,7 @@ function parseMatchMatrix(
     isHeading = false;
     forKeys = undefined;
     matrixKey = undefined;
+    matrixKeyTags = undefined;
     forValues = [];
     // keyAudio = undefined;
     // keyImage = undefined;
@@ -665,6 +667,7 @@ function parseMatchMatrix(
           } else {
             // If not a heading or resource, it is a matrix
             matrixKey = cardBodyStr;
+            matrixKeyTags = restTags;
             isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
             exampleCard = example ? example : exampleCard;
             isCaseSensitiveMatrix = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
@@ -715,9 +718,11 @@ function parseMatchMatrix(
       // if (matrixKey) {
       const m = builder.matrix({
         key: matrixKey ?? Breakscape.EMPTY_STRING,
+        // item: matrixItem ?? Breakscape.EMPTY_STRING,
         // keyAudio,
         // keyImage,
         cells: matrixCells,
+        ...matrixKeyTags,
       });
       matrix.push(m);
       // } else {
