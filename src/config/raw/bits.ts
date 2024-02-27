@@ -345,6 +345,14 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
       {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.quizCountItems,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.quizStrikethroughSolutions,
+      },
+      {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_gap,
       },

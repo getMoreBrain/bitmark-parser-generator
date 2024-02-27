@@ -54,6 +54,8 @@ export interface BitJson {
   tableSearch: boolean;
   tableSort: boolean;
   tablePagination: boolean;
+  quizCountItems: boolean;
+  quizStrikethroughSolutions: boolean;
   thumbImage: string;
   scormSource: string;
   posterImage: string;

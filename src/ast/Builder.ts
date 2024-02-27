@@ -137,6 +137,8 @@ class Builder extends BaseBuilder {
     tableSearch?: boolean;
     tableSort?: boolean;
     tablePagination?: boolean;
+    quizCountItems?: boolean;
+    quizStrikethroughSolutions?: boolean;
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -276,6 +278,8 @@ class Builder extends BaseBuilder {
       tableSearch,
       tableSort,
       tablePagination,
+      quizCountItems,
+      quizStrikethroughSolutions,
       thumbImage,
       scormSource,
       posterImage,
@@ -415,6 +419,11 @@ class Builder extends BaseBuilder {
       tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, tableSearch),
       tableSort: this.toAstProperty(PropertyConfigKey.tableSort, tableSort),
       tablePagination: this.toAstProperty(PropertyConfigKey.tablePagination, tablePagination),
+      quizCountItems: this.toAstProperty(PropertyConfigKey.quizCountItems, quizCountItems),
+      quizStrikethroughSolutions: this.toAstProperty(
+        PropertyConfigKey.quizStrikethroughSolutions,
+        quizStrikethroughSolutions,
+      ),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),
