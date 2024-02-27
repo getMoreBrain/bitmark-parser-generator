@@ -50,6 +50,14 @@ export interface BitJson {
   index: number;
   classification: string;
   availableClassifications: string | string[];
+  tableFixedHeader: boolean;
+  tableSearch: boolean;
+  tableSort: boolean;
+  tablePagination: boolean;
+  quizCountItems: boolean;
+  quizStrikethroughSolutions: boolean;
+  codeLineNumbers: boolean;
+  codeMinimap: boolean;
   thumbImage: string;
   scormSource: string;
   posterImage: string;
@@ -136,6 +144,7 @@ export interface BitJson {
   heading: HeadingJson;
   pairs: PairJson[];
   matrix: MatrixJson[];
+  table: TableJson;
   choices: ChoiceJson[];
   questions: QuestionJson[];
   ingredients: IngredientJson[];
@@ -277,6 +286,11 @@ export interface MatrixCellJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
+}
+
+export interface TableJson {
+  columns: string[];
+  data: string[][];
 }
 
 export interface QuestionJson {

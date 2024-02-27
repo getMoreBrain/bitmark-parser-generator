@@ -249,6 +249,27 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
+  [CardSetConfigKey._table]: {
+    variants: [
+      // Side 1
+      [
+        // Variant 1..N
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+            },
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
+          ],
+          repeatCount: Count.infinity,
+        },
+      ],
+    ],
+  },
   [CardSetConfigKey._botActionResponses]: {
     variants: [
       [

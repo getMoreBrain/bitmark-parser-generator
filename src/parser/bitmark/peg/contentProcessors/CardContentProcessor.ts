@@ -98,6 +98,11 @@ function buildCards(
       result = parseMatchMatrix(context, bitType, processedCardSet);
       break;
 
+    case CardSetConfigKey._table:
+      // ==> heading / table
+      result = parseTable(context, bitType, processedCardSet);
+      break;
+
     case CardSetConfigKey._botActionResponses:
       result = parseBotActionResponses(context, bitType, processedCardSet);
       break;
@@ -735,6 +740,57 @@ function parseMatchMatrix(
     heading,
     matrix: matrix.length > 0 ? matrix : undefined,
   };
+}
+
+function parseTable(
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
+  let cardIdx = 0;
+  let isHeading = false;
+  const columns: BreakscapedString[] = [];
+  const rows: BreakscapedString[][] = [];
+  let rowValues: BreakscapedString[] = [];
+
+  for (const card of cardSet.cards) {
+    isHeading = false;
+    rowValues = [];
+
+    for (const side of card.sides) {
+      for (const content of side.variants) {
+        // variant = content;
+        const tags = content.data;
+
+        const { title, cardBodyStr } = tags;
+
+        // Get the 'heading' which is the [#title] at level 1
+        const heading = title && title[1];
+        if (cardIdx === 0 && heading != null) isHeading = true;
+
+        if (isHeading) {
+          columns.push(heading ?? Breakscape.EMPTY_STRING);
+        } else {
+          // If not a heading, it is a row cell value
+          const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
+          rowValues.push(value);
+        }
+      }
+    }
+
+    if (!isHeading) {
+      rows.push(rowValues);
+    }
+
+    cardIdx++;
+  }
+
+  const table = builder.table({
+    columns,
+    rows,
+  });
+
+  return { table };
 }
 
 function parseBotActionResponses(

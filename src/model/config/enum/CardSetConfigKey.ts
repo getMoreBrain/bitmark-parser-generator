@@ -10,6 +10,7 @@ const CardSetConfigKey = superenum({
   _matchAudioPairs: '_matchAudioPairs',
   _matchImagePairs: '_matchImagePairs',
   _matchMatrix: '_matchMatrix',
+  _table: '_table',
   _botActionResponses: '_botActionResponses',
   _exampleBitList: '_exampleBitList',
   _clozeList: '_clozeList',
