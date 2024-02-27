@@ -5,6 +5,8 @@
       "format": "text",
       "id": ["51861"],
       "computerLanguage": "javascript",
+      "codeLineNumbers": true,
+      "codeMinimap": true,
       "item": [],
       "lead": [
         {

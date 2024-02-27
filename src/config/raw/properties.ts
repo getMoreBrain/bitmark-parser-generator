@@ -621,6 +621,16 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.codeLineNumbers]: {
+    tag: PropertyTag.codeLineNumbers,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.codeMinimap]: {
+    tag: PropertyTag.codeMinimap,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
 };
 
 export { PROPERTIES };
