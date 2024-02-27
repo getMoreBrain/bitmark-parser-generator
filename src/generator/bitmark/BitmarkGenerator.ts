@@ -854,6 +854,64 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL();
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table
+
+  protected between_table(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.cardNode) return;
+
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> rows
+
+  protected between_rows(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.table) return;
+
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> columns
+
+  protected between_columns(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.table) return;
+
+    this.writeNL();
+    this.writeCardSetSideDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> columns -> columnsValue
+
+  protected leaf_columnsValue(node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    this.writeOPHASH();
+    if (node.value) this.writeString(node.value);
+    this.writeCL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> rows -> rowsValue
+
+  protected between_rowsValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.rows) return;
+
+    this.writeNL();
+    this.writeCardSetSideDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> rows -> rowsValue -> rowsValueValue
+
+  protected leaf_rowsValueValue(node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    if (node.value) this.write(node.value);
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
 
   protected enter_questions(_node: NodeInfo, _route: NodeInfo[]): void {

@@ -54,6 +54,7 @@ import {
   CardBit,
   Ingredient,
   TechnicalTerm,
+  Table,
 } from '../model/ast/Nodes';
 
 /**
@@ -218,6 +219,7 @@ class Builder extends BaseBuilder {
     heading?: Heading;
     pairs?: Pair[];
     matrix?: Matrix[];
+    table?: Table;
     choices?: Choice[];
     questions?: Question[];
     botResponses?: BotResponse[];
@@ -282,7 +284,6 @@ class Builder extends BaseBuilder {
       quizStrikethroughSolutions,
       codeLineNumbers,
       codeMinimap,
-
       thumbImage,
       scormSource,
       posterImage,
@@ -865,6 +866,29 @@ class Builder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
     });
+
+    return node;
+  }
+
+  /**
+   * Build table node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  table(data: { columns: BreakscapedString[]; rows: BreakscapedString[][] }): Table {
+    const { columns, rows } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Table = {
+      columns,
+      rows,
+    };
+
+    // Remove Unset Optionals
+    // ObjectUtils.removeUnwantedProperties(node, {
+    //   ignoreAllFalse: true,
+    // });
 
     return node;
   }
@@ -1554,6 +1578,7 @@ class Builder extends BaseBuilder {
     heading?: Heading;
     pairs?: Pair[];
     matrix?: Matrix[];
+    table?: Table;
     botResponses?: BotResponse[];
     ingredients?: Ingredient[];
     cardBits?: CardBit[];
@@ -1571,6 +1596,7 @@ class Builder extends BaseBuilder {
       heading,
       pairs,
       matrix,
+      table,
       botResponses,
       ingredients,
       cardBits,
@@ -1588,6 +1614,7 @@ class Builder extends BaseBuilder {
       heading ||
       pairs ||
       matrix ||
+      table ||
       botResponses ||
       ingredients ||
       cardBits
@@ -1604,6 +1631,7 @@ class Builder extends BaseBuilder {
         heading,
         pairs,
         matrix,
+        table,
         botResponses,
         ingredients,
         cardBits,

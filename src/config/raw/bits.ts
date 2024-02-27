@@ -345,6 +345,14 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
       {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.quizCountItems,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.quizStrikethroughSolutions,
+      },
+      {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_gap,
       },
@@ -1379,14 +1387,30 @@ const BITS: _BitsConfig = {
     ],
   },
   [BitType.table]: {
-    since: '1.5.15',
+    since: '1.5.19',
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableFixedHeader,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableSearch,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableSort,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tablePagination,
+      },
     ],
-    textFormatDefault: TextFormat.json,
+    cardSet: CardSetConfigKey._table,
   },
   [BitType.toc]: {
     since: '1.3.0',

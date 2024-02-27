@@ -2,17 +2,47 @@
   {
     "bit": {
       "type": "table",
-      "format": "json",
-      "item": [],
-      "hint": [],
-      "isExample": false,
-      "example": null,
-      "body": "{\"Test\": 100, \"Test2\": \"Json\"}"
+      "format": "bitmark--",
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
     },
     "parser": {
-      "version": "1.5.13",
+      "version": "1.5.19",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.table]\n{\"Test\": 100, \"Test2\": \"Json\"}"
+    "bitmark": "[.table]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "table",
+      "format": "bitmark--",
+      "tableFixedHeader": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.5.19",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.table]\n[@tableSearch:false]\n[@tableSort:false]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   }
 ]

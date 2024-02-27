@@ -306,6 +306,12 @@ export interface MatrixCell {
   example?: Example;
 }
 
+// Table
+export interface Table {
+  columns: BreakscapedString[];
+  rows: BreakscapedString[][];
+}
+
 // Question
 
 export interface Question {
@@ -468,6 +474,7 @@ export interface CardNode {
   heading?: Heading;
   pairs?: Pair[];
   matrix?: Matrix[];
+  table?: Table;
   botResponses?: BotResponse[];
   cardBits?: CardBit[];
   ingredients?: Ingredient[];

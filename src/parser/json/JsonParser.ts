@@ -47,6 +47,7 @@ import {
   SelectOption,
   Statement,
   TechnicalTerm,
+  Table,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -68,6 +69,7 @@ import {
   ListItemJson,
   IngredientJson,
   TechnicalTermJson,
+  TableJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -356,6 +358,7 @@ class JsonParser {
       heading,
       pairs,
       matrix,
+      table,
       choices,
       questions,
       ingredients,
@@ -412,6 +415,9 @@ class JsonParser {
 
     // matrix
     const matrixNodes = this.matrixBitsToAst(matrix);
+
+    // table
+    const tableNode = this.tableToAst(table);
 
     //+-choice
     const choiceNodes = this.choiceBitsToAst(choices);
@@ -554,6 +560,7 @@ class JsonParser {
       heading: headingNode,
       pairs: pairsNodes,
       matrix: matrixNodes,
+      table: tableNode,
       choices: choiceNodes,
       questions: questionNodes,
       botResponses: botResponseNodes,
@@ -876,6 +883,20 @@ class JsonParser {
     if (nodes.length === 0) return undefined;
 
     return nodes;
+  }
+
+  private tableToAst(table?: TableJson): Table | undefined {
+    let node: Table | undefined;
+
+    if (table) {
+      const { columns, data } = table;
+      node = builder.table({
+        columns: this.convertStringToBreakscapedString(columns) ?? [],
+        rows: data ? data.map((row) => this.convertStringToBreakscapedString(row) ?? []) ?? [] : [],
+      });
+    }
+
+    return node;
   }
 
   private questionBitsToAst(questions?: QuestionJson[]): Question[] | undefined {

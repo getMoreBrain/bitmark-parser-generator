@@ -4,7 +4,7 @@ import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioEmbedResource, ImageSource, Ingredient } from '../../model/ast/Nodes';
+import { AudioEmbedResource, ImageSource, Ingredient, Table } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
@@ -82,6 +82,7 @@ import {
   QuizJson,
   ResponseJson,
   StatementJson,
+  TableJson,
 } from '../../model/json/BitJson';
 import {
   BodyBitJson,
@@ -1162,6 +1163,20 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (matrixJsonArray.length > 0) {
       this.bitJson.matrix = matrixJsonArray;
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table
+
+  protected enter_table(node: NodeInfo, _route: NodeInfo[]): void {
+    const table = node.value as Table;
+
+    if (table) {
+      const tableJson: Partial<TableJson> = {
+        columns: Breakscape.unbreakscape(table.columns),
+        data: table.rows.map((row) => Breakscape.unbreakscape(row)),
+      };
+      this.bitJson.table = tableJson as TableJson;
     }
   }
 
@@ -2818,6 +2833,15 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (bitJson.content2Buy == null) bitJson.content2Buy = '';
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
       //
+    } else if (Config.isOfBitType(bitType, BitType.table)) {
+      //
+      // if (bitJson.content2Buy == null) bitJson.content2Buy = '';
+      if (bitJson.tableFixedHeader == null) bitJson.tableFixedHeader = false;
+      if (bitJson.tableSearch == null) bitJson.tableSearch = false;
+      if (bitJson.tableSort == null) bitJson.tableSort = false;
+      if (bitJson.tablePagination == null) bitJson.tablePagination = false;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
     } else {
       // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
       if (bitJson.item == null) bitJson.item = this.textDefault;
@@ -2984,6 +3008,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.heading == null) delete bitJson.heading;
     if (bitJson.pairs == null) delete bitJson.pairs;
     if (bitJson.matrix == null) delete bitJson.matrix;
+    if (bitJson.table == null) delete bitJson.table;
     if (bitJson.choices == null) delete bitJson.choices;
     if (bitJson.questions == null) delete bitJson.questions;
     if (bitJson.listItems == null) delete bitJson.listItems;

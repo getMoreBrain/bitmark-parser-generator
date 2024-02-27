@@ -43,6 +43,7 @@ import {
   CardBit,
   Ingredient,
   TechnicalTerm,
+  Table,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -194,6 +195,7 @@ export interface BitSpecificCards {
   matrix?: Matrix[];
   choices?: Choice[];
   questions?: Question[];
+  table?: Table;
   botResponses?: BotResponse[];
   ingredients?: Ingredient[];
   cardBits?: CardBit[];
