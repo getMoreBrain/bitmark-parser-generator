@@ -611,6 +611,16 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.quizCountItems]: {
+    tag: PropertyTag.quizCountItems,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.quizStrikethroughSolutions]: {
+    tag: PropertyTag.quizStrikethroughSolutions,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
 };
 
 export { PROPERTIES };

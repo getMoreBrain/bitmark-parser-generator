@@ -2580,6 +2580,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       tableSearch: undefined,
       tableSort: undefined,
       tablePagination: undefined,
+      quizCountItems: undefined,
+      quizStrikethroughSolutions: undefined,
       thumbImage: undefined,
       scormSource: undefined,
       posterImage: undefined,
@@ -2914,6 +2916,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.tableSearch == null) delete bitJson.tableSearch;
     if (bitJson.tableSort == null) delete bitJson.tableSort;
     if (bitJson.tablePagination == null) delete bitJson.tablePagination;
+    if (bitJson.quizCountItems == null) delete bitJson.quizCountItems;
+    if (bitJson.quizStrikethroughSolutions == null) delete bitJson.quizStrikethroughSolutions;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;
     if (bitJson.scormSource == null) delete bitJson.scormSource;
     if (bitJson.posterImage == null) delete bitJson.posterImage;

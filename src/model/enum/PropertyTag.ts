@@ -78,6 +78,8 @@ const PropertyTag = superenum({
   progress: 'progress',
   publications: 'publications',
   publisher: 'publisher',
+  quizCountItems: 'quizCountItems',
+  quizStrikethroughSolutions: 'quizStrikethroughSolutions',
   quotedPerson: 'quotedPerson',
   reaction: 'reaction',
   reasonableNumOfChars: 'reasonableNumOfChars',
