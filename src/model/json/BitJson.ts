@@ -56,6 +56,8 @@ export interface BitJson {
   tablePagination: boolean;
   quizCountItems: boolean;
   quizStrikethroughSolutions: boolean;
+  codeLineNumbers: boolean;
+  codeMinimap: boolean;
   thumbImage: string;
   scormSource: string;
   posterImage: string;

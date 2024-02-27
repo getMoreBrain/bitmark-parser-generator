@@ -139,6 +139,8 @@ class Builder extends BaseBuilder {
     tablePagination?: boolean;
     quizCountItems?: boolean;
     quizStrikethroughSolutions?: boolean;
+    codeLineNumbers?: boolean;
+    codeMinimap?: boolean;
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -280,6 +282,8 @@ class Builder extends BaseBuilder {
       tablePagination,
       quizCountItems,
       quizStrikethroughSolutions,
+      codeLineNumbers,
+      codeMinimap,
       thumbImage,
       scormSource,
       posterImage,
@@ -424,6 +428,8 @@ class Builder extends BaseBuilder {
         PropertyConfigKey.quizStrikethroughSolutions,
         quizStrikethroughSolutions,
       ),
+      codeLineNumbers: this.toAstProperty(PropertyConfigKey.codeLineNumbers, codeLineNumbers),
+      codeMinimap: this.toAstProperty(PropertyConfigKey.codeMinimap, codeMinimap),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),

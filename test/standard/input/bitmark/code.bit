@@ -1,6 +1,8 @@
 [.code]
 [@id:51861]
 [@computerLanguage:javascript]
+[@codeLineNumbers:true]
+[@codeMinimap:true]
 [%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]
 
 int mess_up(int **doublePointer) {

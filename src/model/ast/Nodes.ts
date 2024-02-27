@@ -80,6 +80,8 @@ export interface Bit {
   tablePagination?: Property;
   quizCountItems?: Property;
   quizStrikethroughSolutions?: Property;
+  codeLineNumbers?: Property;
+  codeMinimap?: Property;
   thumbImage?: Property;
   scormSource?: Property;
   posterImage?: Property;
