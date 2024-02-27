@@ -74,6 +74,10 @@ export interface Bit {
   index?: Property;
   classification?: Property;
   availableClassifications?: Property;
+  tableFixedHeader?: Property;
+  tableSearch?: Property;
+  tableSort?: Property;
+  tablePagination?: Property;
   thumbImage?: Property;
   scormSource?: Property;
   posterImage?: Property;
@@ -298,6 +302,12 @@ export interface MatrixCell {
   example?: Example;
 }
 
+// Table
+export interface Table {
+  columns: BreakscapedString[];
+  rows: BreakscapedString[][];
+}
+
 // Question
 
 export interface Question {
@@ -460,6 +470,7 @@ export interface CardNode {
   heading?: Heading;
   pairs?: Pair[];
   matrix?: Matrix[];
+  table?: Table;
   botResponses?: BotResponse[];
   cardBits?: CardBit[];
   ingredients?: Ingredient[];

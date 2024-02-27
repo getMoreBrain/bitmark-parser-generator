@@ -591,6 +591,26 @@ const PROPERTIES: _PropertiesConfig = {
     single: false,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.tableFixedHeader]: {
+    tag: PropertyTag.tableFixedHeader,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.tableSearch]: {
+    tag: PropertyTag.tableSearch,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.tableSort]: {
+    tag: PropertyTag.tableSort,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.tablePagination]: {
+    tag: PropertyTag.tablePagination,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
 };
 
 export { PROPERTIES };

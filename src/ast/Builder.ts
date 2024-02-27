@@ -54,6 +54,7 @@ import {
   CardBit,
   Ingredient,
   TechnicalTerm,
+  Table,
 } from '../model/ast/Nodes';
 
 /**
@@ -132,6 +133,10 @@ class Builder extends BaseBuilder {
     index?: number;
     classification?: BreakscapedString;
     availableClassifications?: BreakscapedString | BreakscapedString[];
+    tableFixedHeader?: boolean;
+    tableSearch?: boolean;
+    tableSort?: boolean;
+    tablePagination?: boolean;
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -210,6 +215,7 @@ class Builder extends BaseBuilder {
     heading?: Heading;
     pairs?: Pair[];
     matrix?: Matrix[];
+    table?: Table;
     choices?: Choice[];
     questions?: Question[];
     botResponses?: BotResponse[];
@@ -266,6 +272,10 @@ class Builder extends BaseBuilder {
       index,
       classification,
       availableClassifications,
+      tableFixedHeader,
+      tableSearch,
+      tableSort,
+      tablePagination,
       thumbImage,
       scormSource,
       posterImage,
@@ -401,6 +411,10 @@ class Builder extends BaseBuilder {
         PropertyConfigKey.availableClassifications,
         availableClassifications,
       ),
+      tableFixedHeader: this.toAstProperty(PropertyConfigKey.tableFixedHeader, tableFixedHeader),
+      tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, tableSearch),
+      tableSort: this.toAstProperty(PropertyConfigKey.tableSort, tableSort),
+      tablePagination: this.toAstProperty(PropertyConfigKey.tablePagination, tablePagination),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),
@@ -837,6 +851,29 @@ class Builder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
     });
+
+    return node;
+  }
+
+  /**
+   * Build table node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  table(data: { columns: BreakscapedString[]; rows: BreakscapedString[][] }): Table {
+    const { columns, rows } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Table = {
+      columns,
+      rows,
+    };
+
+    // Remove Unset Optionals
+    // ObjectUtils.removeUnwantedProperties(node, {
+    //   ignoreAllFalse: true,
+    // });
 
     return node;
   }
@@ -1526,6 +1563,7 @@ class Builder extends BaseBuilder {
     heading?: Heading;
     pairs?: Pair[];
     matrix?: Matrix[];
+    table?: Table;
     botResponses?: BotResponse[];
     ingredients?: Ingredient[];
     cardBits?: CardBit[];
@@ -1543,6 +1581,7 @@ class Builder extends BaseBuilder {
       heading,
       pairs,
       matrix,
+      table,
       botResponses,
       ingredients,
       cardBits,
@@ -1560,6 +1599,7 @@ class Builder extends BaseBuilder {
       heading ||
       pairs ||
       matrix ||
+      table ||
       botResponses ||
       ingredients ||
       cardBits
@@ -1576,6 +1616,7 @@ class Builder extends BaseBuilder {
         heading,
         pairs,
         matrix,
+        table,
         botResponses,
         ingredients,
         cardBits,
