@@ -419,6 +419,10 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.book,
         chain: [
           {
