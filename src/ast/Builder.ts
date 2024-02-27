@@ -132,6 +132,14 @@ class Builder extends BaseBuilder {
     index?: number;
     classification?: BreakscapedString;
     availableClassifications?: BreakscapedString | BreakscapedString[];
+    tableFixedHeader?: boolean;
+    tableSearch?: boolean;
+    tableSort?: boolean;
+    tablePagination?: boolean;
+    quizCountItems?: boolean;
+    quizStrikethroughSolutions?: boolean;
+    codeLineNumbers?: boolean;
+    codeMinimap?: boolean;
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -266,6 +274,15 @@ class Builder extends BaseBuilder {
       index,
       classification,
       availableClassifications,
+      tableFixedHeader,
+      tableSearch,
+      tableSort,
+      tablePagination,
+      quizCountItems,
+      quizStrikethroughSolutions,
+      codeLineNumbers,
+      codeMinimap,
+
       thumbImage,
       scormSource,
       posterImage,
@@ -401,6 +418,17 @@ class Builder extends BaseBuilder {
         PropertyConfigKey.availableClassifications,
         availableClassifications,
       ),
+      tableFixedHeader: this.toAstProperty(PropertyConfigKey.tableFixedHeader, tableFixedHeader),
+      tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, tableSearch),
+      tableSort: this.toAstProperty(PropertyConfigKey.tableSort, tableSort),
+      tablePagination: this.toAstProperty(PropertyConfigKey.tablePagination, tablePagination),
+      quizCountItems: this.toAstProperty(PropertyConfigKey.quizCountItems, quizCountItems),
+      quizStrikethroughSolutions: this.toAstProperty(
+        PropertyConfigKey.quizStrikethroughSolutions,
+        quizStrikethroughSolutions,
+      ),
+      codeLineNumbers: this.toAstProperty(PropertyConfigKey.codeLineNumbers, codeLineNumbers),
+      codeMinimap: this.toAstProperty(PropertyConfigKey.codeMinimap, codeMinimap),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),

@@ -377,6 +377,14 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.computerLanguage,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.codeLineNumbers,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.codeMinimap,
+      },
     ],
     textFormatDefault: TextFormat.text,
   },

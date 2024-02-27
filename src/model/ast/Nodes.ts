@@ -74,6 +74,14 @@ export interface Bit {
   index?: Property;
   classification?: Property;
   availableClassifications?: Property;
+  tableFixedHeader?: Property;
+  tableSearch?: Property;
+  tableSort?: Property;
+  tablePagination?: Property;
+  quizCountItems?: Property;
+  quizStrikethroughSolutions?: Property;
+  codeLineNumbers?: Property;
+  codeMinimap?: Property;
   thumbImage?: Property;
   scormSource?: Property;
   posterImage?: Property;

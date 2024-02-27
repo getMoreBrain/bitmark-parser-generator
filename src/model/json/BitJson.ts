@@ -50,6 +50,14 @@ export interface BitJson {
   index: number;
   classification: string;
   availableClassifications: string | string[];
+  tableFixedHeader: boolean;
+  tableSearch: boolean;
+  tableSort: boolean;
+  tablePagination: boolean;
+  quizCountItems: boolean;
+  quizStrikethroughSolutions: boolean;
+  codeLineNumbers: boolean;
+  codeMinimap: boolean;
   thumbImage: string;
   scormSource: string;
   posterImage: string;

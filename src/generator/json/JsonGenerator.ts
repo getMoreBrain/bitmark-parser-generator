@@ -2561,6 +2561,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       index: undefined,
       classification: undefined,
       availableClassifications: undefined,
+      tableFixedHeader: undefined,
+      tableSearch: undefined,
+      tableSort: undefined,
+      tablePagination: undefined,
+      quizCountItems: undefined,
+      quizStrikethroughSolutions: undefined,
+      codeLineNumbers: undefined,
+      codeMinimap: undefined,
       thumbImage: undefined,
       scormSource: undefined,
       posterImage: undefined,
@@ -2882,6 +2890,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.index == null) delete bitJson.index;
     if (bitJson.classification == null) delete bitJson.classification;
     if (bitJson.availableClassifications == null) delete bitJson.availableClassifications;
+    if (bitJson.tableFixedHeader == null) delete bitJson.tableFixedHeader;
+    if (bitJson.tableSearch == null) delete bitJson.tableSearch;
+    if (bitJson.tableSort == null) delete bitJson.tableSort;
+    if (bitJson.tablePagination == null) delete bitJson.tablePagination;
+    if (bitJson.quizCountItems == null) delete bitJson.quizCountItems;
+    if (bitJson.quizStrikethroughSolutions == null) delete bitJson.quizStrikethroughSolutions;
+    if (bitJson.codeLineNumbers == null) delete bitJson.codeLineNumbers;
+    if (bitJson.codeMinimap == null) delete bitJson.codeMinimap;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;
     if (bitJson.scormSource == null) delete bitJson.scormSource;
     if (bitJson.posterImage == null) delete bitJson.posterImage;
