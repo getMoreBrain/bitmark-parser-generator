@@ -34,7 +34,7 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.example]\n[@id:210051]\n[%][%Beispiel]\nDie Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet."
@@ -74,7 +74,7 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.example:bitmark--]\n[@id:208411]\n[%][%Beispiel]\nClaudia und Stefan Walder haben für heute Abend Gäste eingeladen. Gemeinsam gehen sie auf den Wochenmarkt, um die verschiedenen Zutaten für das Essen einzukaufen. Sie brauchen dazu unter anderem Brot, Olivenöl, Zitronen, Spinat und Fische, die sich zum Braten eignen. Claudia und Stefan kommen an einem Blumenstand vorbei. «Sieh nur, diese wunderschönen Tulpen», ruft Stefan aus und kauft spontan einen grossen Strauss davon."
@@ -102,39 +102,18 @@
       "example": null,
       "body": [
         {
-          "type": "bulletList",
+          "type": "paragraph",
           "content": [
             {
-              "type": "listItem",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "attrs": {},
-                  "content": [
-                    {
-                      "text": "Trotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ],
-              "attrs": {}
+              "text": "Trotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.",
+              "type": "text"
             },
             {
-              "type": "listItem",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "attrs": {},
-                  "content": [
-                    {
-                      "text": "Älteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ],
-              "attrs": {}
+              "type": "hardBreak"
+            },
+            {
+              "text": "Älteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit.",
+              "type": "text"
             }
           ],
           "attrs": {}
@@ -142,9 +121,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.example:bitmark++]\n[@id:208422]\n[%][%Beispiel]\n• Trotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.\n• Älteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit."
+    "bitmark": "[.example:bitmark++]\n[@id:208422]\n[%][%Beispiel]\nTrotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.\nÄlteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit."
   }
 ]

@@ -33,7 +33,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt.",
+              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...",
               "type": "text"
             }
           ],
@@ -42,16 +42,19 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.review-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n\n• den Begriff «Marketing» definieren.\n• mehrere Bereiche im Unternehmen aufzählen, die Marketingaufgaben wahrnehmen.\n• in eigenen Worten erklären, warum dem Marketing im Unternehmen ein hoher Stellenwert zukommt."
+    "bitmark": "[.review-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   },
   {
     "bit": {
       "type": "review-note",
       "format": "bitmark++",
       "id": ["210040"],
+      "resolved": true,
+      "resolvedDate": "1992",
+      "resolvedBy": "Kayo",
       "item": [],
       "lead": [
         {
@@ -71,9 +74,6 @@
         }
       ],
       "hint": [],
-      "resolved": true,
-      "resolvedDate": "1992",
-      "resolvedBy": "Kayo",
       "isExample": false,
       "example": null,
       "body": [
@@ -86,67 +86,13 @@
             }
           ],
           "attrs": {}
-        },
-        {
-          "type": "bulletList",
-          "content": [
-            {
-              "type": "listItem",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "attrs": {},
-                  "content": [
-                    {
-                      "text": "die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ],
-              "attrs": {}
-            },
-            {
-              "type": "listItem",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "attrs": {},
-                  "content": [
-                    {
-                      "text": "erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ],
-              "attrs": {}
-            },
-            {
-              "type": "listItem",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "attrs": {},
-                  "content": [
-                    {
-                      "text": "verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird.",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "attrs": {}
         }
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.review-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n• die sechs Teile des Marketingkonzept aufzählen und stichwortartig beschreiben.\n• erklären, wie im Bereich Marketing die verschiedenen Konzepte hierarchisiert wird.\n• verschiedene Anlässe aufzähle, für die ein Marketingkonzept erstellt wird."
+    "bitmark": "[.review-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n[@resolved:true]\n[@resolvedDate:1992]\n[@resolvedBy:Kayo]\n\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   }
 ]

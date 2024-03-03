@@ -41,119 +41,16 @@
             {
               "text": ":",
               "type": "text"
-            }
-          ],
-          "attrs": {}
-        },
-        {
-          "type": "bulletList",
-          "content": [
-            {
-              "type": "listItem",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "attrs": {},
-                  "content": [
-                    {
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ],
-                      "text": "Markt",
-                      "type": "text"
-                    },
-                    {
-                      "text": ": Fragen zu Marktkennzahlen, Marktstrukturen und Markttendenzen",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ],
-              "attrs": {}
             },
             {
-              "type": "listItem",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "attrs": {},
-                  "content": [
-                    {
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ],
-                      "text": "Marktleistung",
-                      "type": "text"
-                    },
-                    {
-                      "text": ": Fragen zu Image und Konzepttest",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ],
-              "attrs": {}
+              "type": "hardBreak"
             },
             {
-              "type": "listItem",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "attrs": {},
-                  "content": [
-                    {
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ],
-                      "text": "Käufer",
-                      "type": "text"
-                    },
-                    {
-                      "text": ": Fragen zu Käuferverhalten, Nutzungsverhalten, Einstellungen und Kundenzufriedenheit",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ],
-              "attrs": {}
+              "type": "hardBreak"
             },
             {
-              "type": "listItem",
-              "content": [
-                {
-                  "type": "paragraph",
-                  "attrs": {},
-                  "content": [
-                    {
-                      "marks": [
-                        {
-                          "type": "bold"
-                        }
-                      ],
-                      "text": "Werbung",
-                      "type": "text"
-                    },
-                    {
-                      "text": ": Fragen zu Werbeerfolg und Werbeaussagen",
-                      "type": "text"
-                    }
-                  ]
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "attrs": {}
-        },
-        {
-          "type": "paragraph",
-          "content": [
+              "type": "hardBreak"
+            },
             {
               "text": "Der Marktforschung sind ",
               "type": "text"
@@ -200,13 +97,13 @@
         {
           "type": "image",
           "attrs": {
+            "alignment": "center",
             "textAlign": "left",
             "src": "https://docs.bitmark.cloud/bit-books/compendio/tk_marketing/web-resources/images/compendio_tk_marketing_22.png",
             "alt": null,
             "title": null,
             "class": "center",
-            "zoomDisabled": false,
-            "alignment": "center"
+            "zoomDisabled": false
           }
         },
         {
@@ -254,10 +151,10 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.side-note:bitmark++]\n[@id:210103]\nMithilfe der **Marktforschung** finden Sie im besten Fall heraus, was Ihre Kunden wollen, wie Ihr Unternehmen wahrgenommen wird, wie Ihre Produkte im Vergleich zur Konkurrenz abschneiden, und ähnliche Fragen. Die Marktforschung hat vier **Einsatzgebiete**:\n\n• **Markt**: Fragen zu Marktkennzahlen, Marktstrukturen und Markttendenzen\n• **Marktleistung**: Fragen zu Image und Konzepttest\n• **Käufer**: Fragen zu Käuferverhalten, Nutzungsverhalten, Einstellungen und Kundenzufriedenheit\n• **Werbung**: Fragen zu Werbeerfolg und Werbeaussagen\n\nDer Marktforschung sind **Grenzen** gesetzt. Beispielsweise kann es zu Ungenauigkeiten oder Verzerrungen kommen. Zudem sind Kosten und Aufwand zu berücksichtigen.\n\nDie **Methoden** der Marktforschung sind in der folgenden Tabelle dargestellt.\n\n|image:https://docs.bitmark.cloud/bit-books/compendio/tk_marketing/web-resources/images/compendio_tk_marketing_22.png|\n**Sekundärmarktforschung** hat den Vorteil, dass die Daten schnell zu beschaffen sind und in vielen Fällen kostenlos zur Verfügung stehen. Demgegenüber stehen die Nachteile, dass Daten zu wenig genau für die eigene Fragestellung sind oder die Aktualität der Daten nicht gegeben ist.\n\nBei der **Primärmarktforschung** ist der Vorteil, dass die gewonnenen Informationen genau auf die aktuelle Situation zugeschnitten sind. Dafür ist Primärmarktforschung oft aufwendig und damit teuer."
+    "bitmark": "[.side-note:bitmark++]\n[@id:210103]\nMithilfe der **Marktforschung** finden Sie im besten Fall heraus, was Ihre Kunden wollen, wie Ihr Unternehmen wahrgenommen wird, wie Ihre Produkte im Vergleich zur Konkurrenz abschneiden, und ähnliche Fragen. Die Marktforschung hat vier **Einsatzgebiete**:\n\n\nDer Marktforschung sind **Grenzen** gesetzt. Beispielsweise kann es zu Ungenauigkeiten oder Verzerrungen kommen. Zudem sind Kosten und Aufwand zu berücksichtigen.\n\nDie **Methoden** der Marktforschung sind in der folgenden Tabelle dargestellt.\n\n|image:https://docs.bitmark.cloud/bit-books/compendio/tk_marketing/web-resources/images/compendio_tk_marketing_22.png|\n**Sekundärmarktforschung** hat den Vorteil, dass die Daten schnell zu beschaffen sind und in vielen Fällen kostenlos zur Verfügung stehen. Demgegenüber stehen die Nachteile, dass Daten zu wenig genau für die eigene Fragestellung sind oder die Aktualität der Daten nicht gegeben ist.\n\nBei der **Primärmarktforschung** ist der Vorteil, dass die gewonnenen Informationen genau auf die aktuelle Situation zugeschnitten sind. Dafür ist Primärmarktforschung oft aufwendig und damit teuer."
   },
   {
     "bit": {
@@ -307,8 +204,26 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.5.20",
       "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[&image] is included more than 0 time(s).",
+          "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
+          "location": {
+            "start": {
+              "line": 20,
+              "column": 1,
+              "offset": 1275
+            },
+            "end": {
+              "line": 20,
+              "column": 47,
+              "offset": 1321
+            }
+          }
+        }
+      ],
       "excessResources": [
         {
           "type": "image",
@@ -319,6 +234,7 @@
             "width": null,
             "height": null,
             "alt": "",
+            "zoomDisabled": false,
             "license": "",
             "copyright": "",
             "showInIndex": false,

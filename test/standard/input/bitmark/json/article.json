@@ -82,8 +82,7 @@
                     }
                   ]
                 }
-              ],
-              "attrs": {}
+              ]
             },
             {
               "type": "listItem",
@@ -98,8 +97,7 @@
                     }
                   ]
                 }
-              ],
-              "attrs": {}
+              ]
             },
             {
               "type": "listItem",
@@ -114,8 +112,7 @@
                     }
                   ]
                 }
-              ],
-              "attrs": {}
+              ]
             },
             {
               "type": "listItem",
@@ -130,8 +127,7 @@
                     }
                   ]
                 }
-              ],
-              "attrs": {}
+              ]
             }
           ],
           "attrs": {}
@@ -139,7 +135,7 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
+      "version": "1.5.20",
       "bitmarkVersion": "3",
       "warnings": [
         {
@@ -211,7 +207,7 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nMan könnte davon ausgehen, dass es reicht, aus zahlreichen Möglichkeiten und Instrumenten diejenigen zu wählen, die am besten zur Unternehmung passen. Damit würde ein Unternehmen einen zu einfachen Weg wählen.\n\nBereits in der Strategieentwicklung war die Rede vom Kopieren verlockender Ideen und spannender Konzepte aus dem eigenen Netzwerk. Wenn diese ohne Abstimmung mit den strategischen Zielen erfolgt, kann dieses Vorgehen im Unternehmen bestenfalls keinen Nutzen generieren, schlimmstenfalls grossen Schaden anrichten. So verhält es sich auch mit Personalmarketingmassnahmen."
@@ -256,7 +252,7 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark++]\n[@id:151972]\n[%][%][%pageNumber]\n\n|example:Beispiel\nGoogle ist seit Jahren weltweit einer der attraktivsten Arbeitgeber. Man liest von Wäscheservice, Fitness-Centers oder Abenteuerrutschbahnen, welche die Mitarbeitenden gratis nutzen können. Es wäre nicht zielführend, im eigenen Unternehmen eine Abenteuerrutschbahn aufzustellen, ohne Nutzen und Auswirkungen zu hinterfragen."
@@ -328,7 +324,7 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark--]\n[@id:151973]\n[%item][%lead][%pageNumber][%marginNumber]\n\nWerfen wir einen Blick ins Marketing. Gängig ist die folgende Kurzdefinition Ein systematischer Ansatz, um unternehmerische Entscheidungen nach den Bedürfnissen des Marktes und der Kunden auszurichten. Diese Definition kann wie folgt erweitert werden … um Wettbewerbsvorteile zu schaffen, zu erhalten und weiter zu entwickeln.\n\nMarketingprofis mögen mit dieser rudimentären Definition Nachsicht üben.\n\nWenn wir diese Denkhaltung ins Personalmarketing übersetzen, könnte die Definition wie folgt lauten\n\nEin systematischer Ansatz, um unternehmerische Entscheidungen nach den Bedürfnissen des Arbeitsmarktes und der bestehenden und potentiellen Mitarbeitenden auszurichten, um Wettbewerbsvorteile zu schaffen, zu erhalten und weiter zu entwickeln.\n\nWichtig ist primär die Aussage systematisch. Sie zeigt, dass Einzelmassnahmen nicht der ideale Weg sind, die Attraktivität als Arbeitgeber zu stärken.\n\nIn den folgenden Unterkapiteln wählen wir einzelne Methoden des Marketings und transferieren einige Ansätze in die Überlegungen zu einem systematischen Personalmarketing."
@@ -381,7 +377,7 @@
       }
     },
     "parser": {
-      "version": "1.5.8",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark--&image]\n[@id:239893]\n[%][%Ablauf der Methode]\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_7.png][@width:150]\n• In einer (digitalen) Runde zusammenkommen, beim ersten Mal den Zweck der Runde und Ablauf kurz erklären.\n• Eine Einstiegsfrage formulieren und beim ersten Mal am besten selbst mit einem Beispiel anfangen.\n• Gute Einstiegsfragen können sein: „Wie geht es euch heute? Was habt ihr heute schon gemacht/gelernt? Was ist euch heute wichtig? Was beschäftigt euch gerade?“\n• Lieber wenige Fragen und kurze Antworten. Bei einer kurzen Check-In-Runde reichen schon zwei Sätze. Bei längeren Sequenzen lasst euch mehr Zeit."
@@ -410,7 +406,7 @@
       }
     },
     "parser": {
-      "version": "1.5.8",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark--&image]\n[@id:191143]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_dT_workshop/web-resources/images/bumbacher_dT_workshop_1.png]"
@@ -450,7 +446,7 @@
       }
     },
     "parser": {
-      "version": "1.5.8",
+      "version": "1.5.20",
       "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark--&image]\n[@id:245285]\n[&image:https://docs.bitmark.cloud/bit-books/careum/fachfrau_fachmann_gesundheit/web-resources/images/careum_fage_tabel_2_neu.png][@caption: Abb. 17: Sprosspilz. Abb. 18: Myzelpilz. Abb. 19: Myzelpilz mit Sporenträger]"
@@ -483,7 +479,7 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
+      "version": "1.5.20",
       "bitmarkVersion": "3",
       "warnings": [
         {
@@ -546,7 +542,7 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
+      "version": "1.5.20",
       "bitmarkVersion": "3",
       "warnings": [
         {

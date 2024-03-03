@@ -111,8 +111,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -144,8 +143,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       }
     ],
     "attrs": {}
@@ -173,9 +171,7 @@
           },
           {
             "type": "bulletList",
-            "attrs": {
-              "start": 1
-            },
+            "attrs": {},
             "content": [
               {
                 "type": "listItem",
@@ -207,13 +203,11 @@
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       }
     ],
     "attrs": {}

@@ -11,6 +11,9 @@
   },
   {
     "type": "orderedList",
+    "attrs": {
+      "start": 1
+    },
     "content": [
       {
         "type": "listItem",
@@ -25,8 +28,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -46,8 +48,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -64,9 +65,7 @@
           },
           {
             "type": "bulletList",
-            "attrs": {
-              "start": 1
-            },
+            "attrs": {},
             "content": [
               {
                 "type": "listItem",
@@ -81,8 +80,7 @@
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               },
               {
                 "type": "listItem",
@@ -97,13 +95,11 @@
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -118,8 +114,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -141,8 +136,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -159,9 +153,7 @@
           },
           {
             "type": "bulletList",
-            "attrs": {
-              "start": 1
-            },
+            "attrs": {},
             "content": [
               {
                 "type": "listItem",
@@ -178,9 +170,7 @@
                   },
                   {
                     "type": "bulletList",
-                    "attrs": {
-                      "start": 1
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "type": "listItem",
@@ -208,18 +198,15 @@
                               }
                             ]
                           }
-                        ],
-                        "attrs": {}
+                        ]
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -234,8 +221,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -252,9 +238,7 @@
           },
           {
             "type": "bulletList",
-            "attrs": {
-              "start": 1
-            },
+            "attrs": {},
             "content": [
               {
                 "type": "listItem",
@@ -269,13 +253,11 @@
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -299,8 +281,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -317,9 +298,7 @@
           },
           {
             "type": "bulletList",
-            "attrs": {
-              "start": 1
-            },
+            "attrs": {},
             "content": [
               {
                 "type": "listItem",
@@ -341,8 +320,7 @@
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               },
               {
                 "type": "listItem",
@@ -357,8 +335,7 @@
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               },
               {
                 "type": "listItem",
@@ -427,18 +404,15 @@
                                       }
                                     ]
                                   }
-                                ],
-                                "attrs": {}
+                                ]
                               }
                             ]
                           }
-                        ],
-                        "attrs": {}
+                        ]
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               },
               {
                 "type": "listItem",
@@ -453,8 +427,7 @@
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               },
               {
                 "type": "listItem",
@@ -471,9 +444,7 @@
                   },
                   {
                     "type": "letteredList",
-                    "attrs": {
-                      "start": 1
-                    },
+                    "attrs": {},
                     "content": [
                       {
                         "type": "listItem",
@@ -488,8 +459,7 @@
                               }
                             ]
                           }
-                        ],
-                        "attrs": {}
+                        ]
                       },
                       {
                         "type": "listItem",
@@ -504,18 +474,15 @@
                               }
                             ]
                           }
-                        ],
-                        "attrs": {}
+                        ]
                       }
                     ]
                   }
-                ],
-                "attrs": {}
+                ]
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -530,8 +497,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -546,8 +512,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -575,8 +540,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -591,8 +555,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -620,8 +583,7 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       },
       {
         "type": "listItem",
@@ -636,11 +598,9 @@
               }
             ]
           }
-        ],
-        "attrs": {}
+        ]
       }
-    ],
-    "attrs": {}
+    ]
   },
   {
     "type": "paragraph",
@@ -670,6 +630,9 @@
     "content": [
       {
         "type": "taskItem",
+        "attrs": {
+          "checked": true
+        },
         "content": [
           {
             "type": "paragraph",
@@ -683,12 +646,13 @@
           },
           {
             "type": "taskList",
-            "attrs": {
-              "start": 1
-            },
+            "attrs": {},
             "content": [
               {
                 "type": "taskItem",
+                "attrs": {
+                  "checked": true
+                },
                 "content": [
                   {
                     "type": "paragraph",
@@ -700,20 +664,17 @@
                       }
                     ]
                   }
-                ],
-                "attrs": {
-                  "checked": true
-                }
+                ]
               }
             ]
           }
-        ],
-        "attrs": {
-          "checked": true
-        }
+        ]
       },
       {
         "type": "taskItem",
+        "attrs": {
+          "checked": true
+        },
         "content": [
           {
             "type": "paragraph",
@@ -725,13 +686,13 @@
               }
             ]
           }
-        ],
-        "attrs": {
-          "checked": true
-        }
+        ]
       },
       {
         "type": "taskItem",
+        "attrs": {
+          "checked": false
+        },
         "content": [
           {
             "type": "paragraph",
@@ -750,13 +711,13 @@
               }
             ]
           }
-        ],
-        "attrs": {
-          "checked": false
-        }
+        ]
       },
       {
         "type": "taskItem",
+        "attrs": {
+          "checked": false
+        },
         "content": [
           {
             "type": "paragraph",
@@ -768,13 +729,13 @@
               }
             ]
           }
-        ],
-        "attrs": {
-          "checked": false
-        }
+        ]
       },
       {
         "type": "taskItem",
+        "attrs": {
+          "checked": true
+        },
         "content": [
           {
             "type": "paragraph",
@@ -793,10 +754,7 @@
               }
             ]
           }
-        ],
-        "attrs": {
-          "checked": true
-        }
+        ]
       }
     ],
     "attrs": {}

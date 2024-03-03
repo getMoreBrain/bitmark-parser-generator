@@ -380,6 +380,7 @@ const NodeType = superenum({
   alignment: 'alignment',
   textAlign: 'textAlign',
   class: 'class',
+  href: 'href',
 
   // Parser Info / Errors
   parser: 'parser',
