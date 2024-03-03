@@ -456,7 +456,21 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
-        configKey: PropertyConfigKey.portions,
+        configKey: PropertyConfigKey.servings,
+        chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.unit,
+          },
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.unitAbbr,
+          },
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.disableCalculation,
+          },
+        ],
       },
     ],
     cardSet: CardSetConfigKey._ingredients,

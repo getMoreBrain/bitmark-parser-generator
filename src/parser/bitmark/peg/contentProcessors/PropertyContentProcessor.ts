@@ -16,6 +16,7 @@ import { imageSourceChainContentProcessor } from './ImageSourceChainContentProce
 import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { personChainContentProcessor } from './PersonChainContentProcessor';
+import { servingsChainContentProcessor } from './ServingsChainContentProcessor';
 import { technicalTermChainContentProcessor } from './TechnicalTermChainContentProcessor';
 
 import {
@@ -59,6 +60,9 @@ function propertyContentProcessor(
       return;
     } else if (configKey === PropertyConfigKey.technicalTerm) {
       technicalTermChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
+      return;
+    } else if (configKey === PropertyConfigKey.servings) {
+      servingsChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.person || configKey === PropertyConfigKey.partner) {
       personChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);

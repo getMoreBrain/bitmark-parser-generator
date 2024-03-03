@@ -44,6 +44,7 @@ import {
   Ingredient,
   TechnicalTerm,
   Table,
+  Servings,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -109,6 +110,7 @@ export interface BitContentProcessorResult {
   footer?: FooterText;
   imageSource?: ImageSource;
   technicalTerm?: TechnicalTerm;
+  servings?: Servings;
   person?: Person;
   propertyTitle?: BreakscapedString;
   trueFalse?: TrueFalseValue[];

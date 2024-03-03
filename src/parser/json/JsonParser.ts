@@ -48,6 +48,7 @@ import {
   Statement,
   TechnicalTerm,
   Table,
+  Servings,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -70,6 +71,7 @@ import {
   IngredientJson,
   TechnicalTermJson,
   TableJson,
+  ServingsJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -323,7 +325,7 @@ class JsonParser {
       productVideo,
       productFolder,
       technicalTerm,
-      portions,
+      servings,
       book,
       title,
       subtitle,
@@ -431,6 +433,9 @@ class JsonParser {
     // technicalTerm
     const technicalTermNode = this.technicalTermToAst(technicalTerm);
 
+    // servings
+    const servingsNode = this.servingsToAst(servings);
+
     // ingredients
     const ingredientsNodes = this.ingredientsBitsToAst(ingredients);
 
@@ -534,7 +539,7 @@ class JsonParser {
       productVideoList: this.convertStringToBreakscapedString(productVideo),
       productFolder: this.convertStringToBreakscapedString(productFolder),
       technicalTerm: technicalTermNode,
-      portions,
+      servings: servingsNode,
       book: this.convertStringToBreakscapedString(book),
       title: this.convertJsonTextToBreakscapedString(title),
       subtitle: this.convertJsonTextToBreakscapedString(subtitle),
@@ -961,10 +966,26 @@ class JsonParser {
     let node: TechnicalTerm | undefined;
 
     if (technicalTerm) {
-      const { term, lang } = technicalTerm;
+      const { technicalTerm: t, lang } = technicalTerm;
       node = builder.technicalTerm({
-        term: this.convertStringToBreakscapedString(term) ?? Breakscape.EMPTY_STRING,
+        technicalTerm: this.convertStringToBreakscapedString(t) ?? Breakscape.EMPTY_STRING,
         lang: this.convertStringToBreakscapedString(lang) ?? Breakscape.EMPTY_STRING,
+      });
+    }
+
+    return node;
+  }
+
+  private servingsToAst(servings?: ServingsJson): Servings | undefined {
+    let node: Servings | undefined;
+
+    if (servings) {
+      const { servings: s, unit, unitAbbr, disableCalculation } = servings;
+      node = builder.servings({
+        servings: s,
+        unit: this.convertStringToBreakscapedString(unit) ?? Breakscape.EMPTY_STRING,
+        unitAbbr: this.convertStringToBreakscapedString(unitAbbr) ?? Breakscape.EMPTY_STRING,
+        disableCalculation: disableCalculation ?? false,
       });
     }
 

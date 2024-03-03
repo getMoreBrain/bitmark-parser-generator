@@ -55,6 +55,7 @@ import {
   Ingredient,
   TechnicalTerm,
   Table,
+  Servings,
 } from '../model/ast/Nodes';
 
 /**
@@ -180,7 +181,7 @@ class Builder extends BaseBuilder {
     productVideoList?: BreakscapedString | BreakscapedString[];
     productFolder?: BreakscapedString;
     technicalTerm?: TechnicalTerm;
-    portions?: number;
+    servings?: Servings;
     partialAnswer?: BreakscapedString;
     book?: BreakscapedString;
     title?: BreakscapedString;
@@ -325,7 +326,7 @@ class Builder extends BaseBuilder {
       productVideoList,
       productFolder,
       technicalTerm,
-      portions,
+      servings,
       title,
       subtitle,
       level,
@@ -470,7 +471,7 @@ class Builder extends BaseBuilder {
       productVideoList: this.toAstProperty(PropertyConfigKey.productVideoList, productVideoList),
       productFolder: this.toAstProperty(PropertyConfigKey.productFolder, productFolder),
       technicalTerm,
-      portions: this.toAstProperty(PropertyConfigKey.portions, portions),
+      servings,
       title,
       subtitle,
       level: NumberUtils.asNumber(level),
@@ -1471,13 +1472,41 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  technicalTerm(data: { term: BreakscapedString; lang?: BreakscapedString }): TechnicalTerm {
-    const { term, lang } = data;
+  technicalTerm(data: { technicalTerm: BreakscapedString; lang?: BreakscapedString }): TechnicalTerm {
+    const { technicalTerm, lang } = data;
 
     // NOTE: Node order is important and is defined here
     const node: TechnicalTerm = {
-      term,
+      technicalTerm,
       lang,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build (cook-ingredients) servings node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  servings(data: {
+    servings: number;
+    unit?: BreakscapedString;
+    unitAbbr?: BreakscapedString;
+    disableCalculation?: boolean;
+  }): Servings {
+    const { servings, unit, unitAbbr, disableCalculation } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: Servings = {
+      servings,
+      unit,
+      unitAbbr,
+      disableCalculation,
     };
 
     // Remove Unset Optionals

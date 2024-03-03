@@ -71,7 +71,7 @@ const PropertyTag = superenum({
   person: 'person',
   pointerLeft: 'pointerLeft',
   pointerTop: 'pointerTop',
-  portions: 'portions',
+  servings: 'servings',
   posterImage: 'posterImage',
   product: 'product',
   productFolder: 'productFolder',

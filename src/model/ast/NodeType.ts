@@ -250,8 +250,8 @@ const NodeType = superenum({
   productFolderValue: 'productFolderValue',
   technicalTerm: 'technicalTerm',
   technicalTermValue: 'technicalTermValue',
-  portions: 'portions',
-  portionsValue: 'portionsValue',
+  servings: 'servings',
+  servingsValue: 'servingsValue',
 
   book: 'book',
 

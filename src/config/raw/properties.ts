@@ -301,8 +301,8 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
-  [PropertyConfigKey.portions]: {
-    tag: PropertyTag.portions,
+  [PropertyConfigKey.servings]: {
+    tag: PropertyTag.servings,
     single: true,
     format: PropertyFormat.number,
   },
