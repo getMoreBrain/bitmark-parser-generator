@@ -7,10 +7,20 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Node Version",
+      "program": "",
+      "runtimeArgs": ["--version"],
+      "console": "internalConsole",
+      "outputCapture": "std"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Dev Info",
       "program": "${workspaceFolder}/test/custom/dev/devInfo.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },
@@ -20,7 +30,8 @@
       "name": "Dev Bitmark Parser",
       "program": "${workspaceFolder}/test/custom/dev/devParser.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },
@@ -30,7 +41,8 @@
       "name": "Dev Bitmark Generator",
       "program": "${workspaceFolder}/test/custom/dev/devGenerator.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },
@@ -40,7 +52,8 @@
       "name": "Dev Prettify",
       "program": "${workspaceFolder}/test/custom/dev/devPrettify.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },
@@ -50,7 +63,8 @@
       "name": "Dev Text (bitmark++) Parser",
       "program": "${workspaceFolder}/test/custom/dev/devTextPlusPlusParser.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },
@@ -60,7 +74,8 @@
       "name": "Dev Text (bitmark++) Generator",
       "program": "${workspaceFolder}/test/custom/dev/devTextPlusPlusGenerator.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },
@@ -70,7 +85,8 @@
       "name": "Dev Text (bitmark--) Parser",
       "program": "${workspaceFolder}/test/custom/dev/devTextMinusMinusParser.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },
@@ -80,7 +96,8 @@
       "name": "Dev Text (bitmark--) Generator",
       "program": "${workspaceFolder}/test/custom/dev/devTextMinusMinusGenerator.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },
@@ -90,7 +107,8 @@
       "name": "Dev Text Breakscape",
       "program": "${workspaceFolder}/test/custom/dev/devTextBreakscape.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },
@@ -100,7 +118,8 @@
       "name": "Dev Text Unbreakscape",
       "program": "${workspaceFolder}/test/custom/dev/devTextUnBreakscape.ts",
       "runtimeArgs": ["-r", "esbuild-register"],
-      "console": "integratedTerminal",
+      "console": "internalConsole",
+      "outputCapture": "std",
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
     },

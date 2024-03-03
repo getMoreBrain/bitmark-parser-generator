@@ -1,0 +1,31 @@
+//devcontainer.json
+{
+  "name": "Node.js",
+
+  // Build image. More info: https://containers.dev/guide/dockerfile
+  "build": { "dockerfile": "Dockerfile" },
+  // "image": "mcr.microsoft.com/devcontainers/typescript-node:0-20",
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint", "EditorConfig.EditorConfig"]
+    }
+  }
+
+  // "forwardPorts": [3000],
+
+  // "portsAttributes": {
+  //   "3000": {
+  //     "label": "Hello Remote World",
+  //     "onAutoForward": "notify"
+  //   }
+  // },
+
+  // "postCreateCommand": "yarn install"
+
+  // "remoteUser": "root"
+}
