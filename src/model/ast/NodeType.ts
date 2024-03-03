@@ -119,6 +119,8 @@ const NodeType = superenum({
   bookAliasValue: 'bookAliasValue',
   coverImage: 'coverImage',
   coverImageValue: 'coverImageValue',
+  coverColor: 'coverColor',
+  coverColorValue: 'coverColorValue',
   publications: 'publications',
   publicationsValue: 'publicationsValue',
   author: 'author',

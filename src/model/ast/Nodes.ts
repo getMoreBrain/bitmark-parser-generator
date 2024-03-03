@@ -58,6 +58,7 @@ export interface Bit {
   subtype?: Property;
   bookAlias?: Property;
   coverImage?: Property;
+  coverColor?: Property;
   publications?: Property;
   author?: Property;
   subject?: Property;

@@ -129,6 +129,10 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.coverImage,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.coverColor]: {
+    tag: PropertyTag.coverColor,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.publisher]: {
     tag: PropertyTag.publisher,
     format: PropertyFormat.trimmedString,
