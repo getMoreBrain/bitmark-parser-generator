@@ -28,6 +28,7 @@ const propertyConfigKeys = {
   content2Buy: 'content2Buy',
   copyright: 'copyright',
   coverImage: 'coverImage',
+  coverColor: 'coverColor',
   date: 'date',
   deeplink: 'deeplink',
   disableCalculation: 'disableCalculation',
