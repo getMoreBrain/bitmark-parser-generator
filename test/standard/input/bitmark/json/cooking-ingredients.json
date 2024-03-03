@@ -3,7 +3,7 @@
     "bit": {
       "type": "cook-ingredients",
       "format": "bitmark--",
-      "portions": 4.5,
+      "servings": 4.5,
       "item": [],
       "lead": [
         {
@@ -105,6 +105,6 @@
       "version": "1.5.15",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.cook-ingredients]\n[%][%ZUTATEN]\n\n[!Kraftbrühe Murillo]\n[^@specialistLanguage: Consommé Murillo ][lang:fr]\n[@portions:4.5]\n\n====\n[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe\n====\n[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...\n====\n[!5][@unitAbbr:Stk][@unit:Stück] Erbsen ...\n====\n[!1][@unit:Prise] Salz\n====\n[!2.5][@unit:kg] Mehl\n====\n[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time\n====\n[+]\n[!20]\n[@unit:minutes]\n[@unitAbbr:min]\n[@disableCalculation]\nCooking time\n===="
+    "bitmark": "[.cook-ingredients]\n[%][%ZUTATEN]\n\n[!Kraftbrühe Murillo]\n[^@specialistLanguage: Consommé Murillo ][lang:fr]\n[@servings:4.5]\n\n====\n[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe\n====\n[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...\n====\n[!5][@unitAbbr:Stk][@unit:Stück] Erbsen ...\n====\n[!1][@unit:Prise] Salz\n====\n[!2.5][@unit:kg] Mehl\n====\n[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time\n====\n[+]\n[!20]\n[@unit:minutes]\n[@unitAbbr:min]\n[@disableCalculation]\nCooking time\n===="
   }
 ]

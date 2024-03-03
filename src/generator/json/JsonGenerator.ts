@@ -2619,7 +2619,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       productVideo: undefined,
       productFolder: undefined,
       technicalTerm: undefined,
-      portions: undefined,
+      servings: undefined,
 
       // Book data
       title: undefined,
@@ -2956,7 +2956,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.productVideo == null) delete bitJson.productVideo;
     if (bitJson.productFolder == null) delete bitJson.productFolder;
     if (bitJson.technicalTerm == null) delete bitJson.technicalTerm;
-    if (bitJson.portions == null) delete bitJson.portions;
+    if (bitJson.servings == null) delete bitJson.servings;
 
     // Book data
     if (bitJson.title == null) delete bitJson.title;
