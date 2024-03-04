@@ -27,6 +27,7 @@ const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.text.p
 const commandLineOptions = process.argv.slice(2);
 const optTest = commandLineOptions.includes('--test');
 const allowedStartRules = [
+  'version',
   'bitmarkPlusPlus',
   'bitmarkPlus',
   'bitmarkMinusMinus',
