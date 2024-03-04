@@ -10,6 +10,15 @@ export interface BitmarkTextParserOptions {
 
 class TextParser {
   /**
+   * Get the version of the text parser
+   */
+  version(): string {
+    return bitmarkTextParse('', {
+      startRule: 'version',
+    }) as string;
+  }
+
+  /**
    * Preprocess bitmark text AST into a standard format (TextAst object) from bitmark text AST either as a string
    * or a plain JS object
    *
@@ -78,7 +87,7 @@ class TextParser {
 
     return bitmarkTextParse(str, {
       startRule,
-    });
+    }) as TextAst;
   }
 }
 

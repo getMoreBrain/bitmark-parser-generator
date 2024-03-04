@@ -236,6 +236,7 @@ interface ExampleJsonWrapper {
 class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected ast = new Ast();
   private bitmarkVersion: BitmarkVersionType;
+  private textParserVersion: string;
   private textParser = new TextParser();
 
   // TODO - move to context
@@ -263,6 +264,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     super();
 
     this.bitmarkVersion = BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
+    this.textParserVersion = this.textParser.version();
     this.options = {
       ...DEFAULT_OPTIONS,
       ...options?.jsonOptions,
@@ -1454,6 +1456,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parser && bitType) {
       const { version, excessResources: parserExcessResources, warnings, errors, ...parserRest } = parser;
       const bitmarkVersion = `${this.bitmarkVersion}`;
+      const textParserVersion = this.textParserVersion;
 
       // Parse resources to JSON from AST
       let excessResources: ResourceJson[] | undefined;
@@ -1473,6 +1476,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         this.bitWrapperJson.parser = {
           version,
           bitmarkVersion,
+          textParserVersion,
           internalComments,
           ...parserRest,
           warnings,

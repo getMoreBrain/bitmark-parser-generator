@@ -1,5 +1,8 @@
 // bitmark Text parser
-// v8.10.3+BPG
+
+{{
+
+const VERSION = "8.10.3"
 
 //Parser peggy.js
 
@@ -87,7 +90,6 @@ Das war's
 // global initializer
 // global utility functions
 
-{{
 
 function s(_string) {
   return _string ?? ""
@@ -187,6 +189,9 @@ function bitmarkMinusMinusString(_str) {
 //Start
 //	= bitmarkMinusMinus
 //	= bitmarkPlusPlus
+
+version
+  = .* { return VERSION }
 
 bitmarkPlusPlus "StyledText"
   = Block+
