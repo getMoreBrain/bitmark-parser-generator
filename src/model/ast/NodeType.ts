@@ -119,6 +119,8 @@ const NodeType = superenum({
   bookAliasValue: 'bookAliasValue',
   coverImage: 'coverImage',
   coverImageValue: 'coverImageValue',
+  coverColor: 'coverColor',
+  coverColorValue: 'coverColorValue',
   publications: 'publications',
   publicationsValue: 'publicationsValue',
   author: 'author',
@@ -250,8 +252,8 @@ const NodeType = superenum({
   productFolderValue: 'productFolderValue',
   technicalTerm: 'technicalTerm',
   technicalTermValue: 'technicalTermValue',
-  portions: 'portions',
-  portionsValue: 'portionsValue',
+  servings: 'servings',
+  servingsValue: 'servingsValue',
 
   book: 'book',
 
@@ -380,6 +382,7 @@ const NodeType = superenum({
   alignment: 'alignment',
   textAlign: 'textAlign',
   class: 'class',
+  href: 'href',
 
   // Parser Info / Errors
   parser: 'parser',

@@ -35,10 +35,10 @@ function technicalTermChainContentProcessor(
   const { lang } = tags;
 
   // Extract the technicalTerm from the content tag
-  const term = StringUtils.trimmedString(content.value) as BreakscapedString;
+  const technicalTerm = StringUtils.trimmedString(content.value) as BreakscapedString;
 
   const node = builder.technicalTerm({
-    term,
+    technicalTerm,
     lang,
   });
 

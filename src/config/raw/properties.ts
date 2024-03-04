@@ -129,6 +129,10 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.coverImage,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.coverColor]: {
+    tag: PropertyTag.coverColor,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.publisher]: {
     tag: PropertyTag.publisher,
     format: PropertyFormat.trimmedString,
@@ -301,8 +305,8 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
-  [PropertyConfigKey.portions]: {
-    tag: PropertyTag.portions,
+  [PropertyConfigKey.servings]: {
+    tag: PropertyTag.servings,
     single: true,
     format: PropertyFormat.number,
   },

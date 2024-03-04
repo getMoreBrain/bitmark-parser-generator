@@ -456,7 +456,21 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
-        configKey: PropertyConfigKey.portions,
+        configKey: PropertyConfigKey.servings,
+        chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.unit,
+          },
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.unitAbbr,
+          },
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.disableCalculation,
+          },
+        ],
       },
     ],
     cardSet: CardSetConfigKey._ingredients,
@@ -640,7 +654,8 @@ const BITS: _BitsConfig = {
     cardSet: CardSetConfigKey._exampleBitList,
     rootExampleType: ExampleType.string,
   },
-  [BitType.extractorPage]: { since: '1.5.17', baseBitType: BitType.page },
+  [BitType.extractorPage]: { since: '1.5.17', baseBitType: BitType.image },
+  [BitType.extractorPageWithBlocks]: { since: '1.5.21', baseBitType: BitType.image },
   [BitType.extractorBlock]: {
     since: '1.5.16',
     tags: [
@@ -693,6 +708,10 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: false,
   },
+  [BitType.extractorRepeatedText]: { since: '1.5.21', baseBitType: BitType.article },
+  [BitType.extractorPageNumber]: { since: '1.5.21', baseBitType: BitType.article },
+  [BitType.extractorPageHeader]: { since: '1.5.21', baseBitType: BitType.article },
+  [BitType.extractorPageFooter]: { since: '1.5.21', baseBitType: BitType.article },
   [BitType.pageOpenBook]: {
     since: '1.5.10',
     baseBitType: BitType.example,

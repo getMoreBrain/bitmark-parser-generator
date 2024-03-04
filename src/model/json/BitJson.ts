@@ -32,6 +32,7 @@ export interface BitJson {
   subtype: string;
   bookAlias: string | string[];
   coverImage: string | string[];
+  coverColor: string | string[];
   publisher: string | string[];
   publications: string | string[];
   author: string | string[];
@@ -94,7 +95,7 @@ export interface BitJson {
   productVideo: string;
   productFolder: string;
   technicalTerm: TechnicalTermJson;
-  portions: number;
+  servings: ServingsJson;
 
   book: string;
 
@@ -320,8 +321,15 @@ export interface BotResponseJson {
 }
 
 export interface TechnicalTermJson {
-  term: string;
+  technicalTerm: string;
   lang: string;
+}
+
+export interface ServingsJson {
+  servings: number;
+  unit: string;
+  unitAbbr: string;
+  disableCalculation: boolean;
 }
 
 export interface IngredientJson {

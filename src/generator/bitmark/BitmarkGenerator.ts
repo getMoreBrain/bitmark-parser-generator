@@ -34,6 +34,7 @@ import {
   ImageSource,
   Ingredient,
   TechnicalTerm,
+  Servings,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -357,18 +358,33 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> technicalTerm
 
   protected enter_technicalTerm(node: NodeInfo, route: NodeInfo[]): void {
-    const technicalTerm = node.value as TechnicalTerm;
+    const nodeValue = node.value as TechnicalTerm;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
-    const { term, lang } = technicalTerm;
+    const { technicalTerm, lang } = nodeValue;
 
-    this.writeProperty('technicalTerm', term, true);
-    if (lang) {
-      this.writeProperty('lang', lang);
-    }
+    this.writeProperty('technicalTerm', technicalTerm, true);
+    if (lang != null) this.writeProperty('lang', lang);
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> servings
+
+  protected enter_servings(node: NodeInfo, route: NodeInfo[]): void {
+    const nodeValue = node.value as Servings;
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const { servings, unit, unitAbbr, disableCalculation } = nodeValue;
+
+    this.writeProperty('servings', servings, true);
+    if (unit != null) this.writeProperty('unit', unit);
+    if (unitAbbr != null) this.writeProperty('unitAbbr', unitAbbr);
+    if (disableCalculation != null) this.writeProperty('disableCalculation', disableCalculation);
   }
 
   // bitmarkAst -> bits -> bitsValue -> person
@@ -1506,6 +1522,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.posterImage) continue;
       if (astKey === PropertyTag.imageSource) continue;
       if (astKey === PropertyTag.technicalTerm) continue;
+      if (astKey === PropertyTag.servings) continue;
       if (astKey === PropertyTag.person) continue;
       if (astKey === PropertyAstKey.markConfig) continue;
 

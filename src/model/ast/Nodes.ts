@@ -58,6 +58,7 @@ export interface Bit {
   subtype?: Property;
   bookAlias?: Property;
   coverImage?: Property;
+  coverColor?: Property;
   publications?: Property;
   author?: Property;
   subject?: Property;
@@ -122,7 +123,7 @@ export interface Bit {
   productVideoList?: Property;
   productFolder?: Property;
   technicalTerm?: TechnicalTerm;
-  portions?: Property;
+  servings?: Servings;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: BreakscapedString;
@@ -329,8 +330,16 @@ export interface Question {
 
 // Professional Name
 export interface TechnicalTerm {
-  term: BreakscapedString;
+  technicalTerm: BreakscapedString;
   lang?: BreakscapedString;
+}
+
+// Servings
+export interface Servings {
+  servings: number;
+  unit?: BreakscapedString;
+  unitAbbr?: BreakscapedString;
+  disableCalculation?: boolean;
 }
 
 // Ingredient
