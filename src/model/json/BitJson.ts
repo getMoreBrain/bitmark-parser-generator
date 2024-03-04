@@ -84,6 +84,7 @@ export interface BitJson {
   content2Buy: string;
   mailingList: string;
   buttonCaption: string;
+  caption: string;
   quotedPerson: string;
   reasonableNumOfChars: number;
   resolved: boolean;
