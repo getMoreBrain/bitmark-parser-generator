@@ -225,6 +225,8 @@ const NodeType = superenum({
   mailingList: 'mailingList',
   buttonCaption: 'buttonCaption',
   buttonCaptionValue: 'buttonCaptionValue',
+  caption: 'caption',
+  captionValue: 'captionValue',
   quotedPerson: 'quotedPerson',
   partialAnswer: 'partialAnswer',
   partialAnswerValue: 'partialAnswerValue',
@@ -362,7 +364,6 @@ const NodeType = superenum({
   copyright: 'copyright',
   provider: 'provider',
   showInIndex: 'showInIndex',
-  caption: 'caption',
   // duration: 'duration', - NOTE: clash with bit.duration / resource...duration (be careful when walking the tree)
   thumbnails: 'thumbnails',
   thumbnailsValue: 'thumbnailsValue',

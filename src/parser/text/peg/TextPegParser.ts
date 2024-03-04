@@ -4,7 +4,8 @@ import { TextAst } from '../../../model/ast/TextNodes.js';
 interface ParseOptions {
   startRule?: string;
 }
-type Parse = (str: string, options?: ParseOptions) => TextAst;
+
+type Parse = (str: string, options?: ParseOptions) => TextAst | string;
 
 const parse: Parse = _parse;
 

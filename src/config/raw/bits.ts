@@ -822,7 +822,16 @@ const BITS: _BitsConfig = {
   [BitType.lifeSkillSticker]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.pageBanner]: { since: '1.4.3', baseBitType: BitType.image },
   [BitType.screenshot]: { since: '1.3.0', deprecated: '1.4.0', baseBitType: BitType.image },
-  [BitType.tableImage]: { since: '1.5.15', baseBitType: BitType.image },
+  [BitType.tableImage]: {
+    since: '1.5.15',
+    baseBitType: BitType.image,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.caption,
+      },
+    ],
+  },
   [BitType.imageLink]: {
     since: '1.3.0',
     tags: [
@@ -1411,6 +1420,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.caption,
       },
       {
         type: BitTagType.property,
