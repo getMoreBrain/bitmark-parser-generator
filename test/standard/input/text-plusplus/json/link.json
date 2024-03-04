@@ -171,7 +171,9 @@
           },
           {
             "type": "bulletList",
-            "attrs": {},
+            "attrs": {
+              "start": 1
+            },
             "content": [
               {
                 "type": "listItem",

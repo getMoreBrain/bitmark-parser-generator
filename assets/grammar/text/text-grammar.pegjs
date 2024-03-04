@@ -1,5 +1,5 @@
 // bitmark Text parser
-// v8.10.1+BPG
+// v8.10.3+BPG
 
 //Parser peggy.js
 
@@ -276,7 +276,7 @@ CodeLine
 // Lists
 
 BulletListTag = '• '
-OrderedListTag = $('•' [0-9] ' ')
+OrderedListTag = $('•' [0-9]* ' ')
 LetteredListTag = '•A '
 TaskListTag = '•+ ' / "•- "
 
@@ -307,7 +307,7 @@ BulletListLine
       let _tempParsingParent = 'bulletList'
 
       const matchOrdered = lt.match(/•([0-9]+) /)
-      let start = 0
+      let start = 1
 
       if (matchOrdered) {
         _tempParsingParent = 'orderedList'
@@ -336,14 +336,14 @@ BulletListLine
 
         let sublist = {
           type: children[0]._tempParsingParent,
-          attrs: {},
+          attrs: { start },
           content: children
         }
 
         if ("orderedList" == sublist.type || "letteredList" == sublist.type) {
 	      	if (children[0]._tempListStart) {
             	const start = children[0]._tempListStart
-				if (start > 0) sublist.attrs.start = start
+				if (start > 1) sublist.attrs.start = start
             }
         }
 
