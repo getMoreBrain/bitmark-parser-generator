@@ -65,7 +65,9 @@
           },
           {
             "type": "bulletList",
-            "attrs": {},
+            "attrs": {
+              "start": 1
+            },
             "content": [
               {
                 "type": "listItem",
@@ -153,7 +155,9 @@
           },
           {
             "type": "bulletList",
-            "attrs": {},
+            "attrs": {
+              "start": 1
+            },
             "content": [
               {
                 "type": "listItem",
@@ -170,7 +174,9 @@
                   },
                   {
                     "type": "bulletList",
-                    "attrs": {},
+                    "attrs": {
+                      "start": 1
+                    },
                     "content": [
                       {
                         "type": "listItem",
@@ -238,7 +244,9 @@
           },
           {
             "type": "bulletList",
-            "attrs": {},
+            "attrs": {
+              "start": 1
+            },
             "content": [
               {
                 "type": "listItem",
@@ -298,7 +306,9 @@
           },
           {
             "type": "bulletList",
-            "attrs": {},
+            "attrs": {
+              "start": 1
+            },
             "content": [
               {
                 "type": "listItem",
@@ -444,7 +454,9 @@
                   },
                   {
                     "type": "letteredList",
-                    "attrs": {},
+                    "attrs": {
+                      "start": 1
+                    },
                     "content": [
                       {
                         "type": "listItem",
@@ -646,7 +658,9 @@
           },
           {
             "type": "taskList",
-            "attrs": {},
+            "attrs": {
+              "start": 1
+            },
             "content": [
               {
                 "type": "taskItem",
