@@ -30,6 +30,7 @@
       "tableSearch": false,
       "tableSort": false,
       "tablePagination": false,
+      "caption": "This is the table caption",
       "body": [],
       "table": {
         "columns": ["Name", "Email", "Phone Number"],

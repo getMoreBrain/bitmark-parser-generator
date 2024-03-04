@@ -27,6 +27,7 @@ mark@gmail.com
 [.table]
 [@tableSearch:false]
 [@tableSort:false]
+[@caption:This is the table caption]
 ====
 [#Name]
 --
