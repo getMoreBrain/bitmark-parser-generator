@@ -1,0 +1,25 @@
+[
+  {
+    "bit": {
+      "type": "extractor-page-footer",
+      "format": "bitmark--",
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the page footer",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.20",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.extractor-page-footer]\nThis is the page footer"
+  }
+]
