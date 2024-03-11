@@ -92,6 +92,7 @@ class Builder extends BaseBuilder {
     bitType: BitTypeType;
     textFormat?: TextFormatType;
     resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
+    isCommented?: boolean;
     id?: BreakscapedString | BreakscapedString[];
     internalComment?: BreakscapedString | BreakscapedString[];
     externalId?: BreakscapedString | BreakscapedString[];
@@ -237,6 +238,7 @@ class Builder extends BaseBuilder {
       bitType,
       textFormat,
       resourceType,
+      isCommented,
       id,
       internalComment,
       externalId,
@@ -378,6 +380,7 @@ class Builder extends BaseBuilder {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? bitConfig.textFormatDefault,
       resourceType: ResourceTag.fromValue(resourceType),
+      isCommented,
       id: this.toAstProperty(PropertyConfigKey.id, id),
       internalComment: this.toAstProperty(PropertyConfigKey.internalComment, internalComment),
       externalId: this.toAstProperty(PropertyConfigKey.externalId, externalId),

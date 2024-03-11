@@ -32,6 +32,7 @@ export interface Bit {
   bitType: BitTypeType;
   textFormat: TextFormatType;
   resourceType?: ResourceTagType;
+  isCommented?: boolean;
   id?: Property;
   internalComment?: Property;
   externalId?: Property;

@@ -2546,7 +2546,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
   protected createBitJson(bit: Bit): Partial<BitJson> {
     const bitJson: Partial<BitJson> = {
-      type: bit.bitType,
+      type: bit.isCommented ? BitType._comment : bit.bitType,
+      originalType: bit.isCommented ? bit.bitType : undefined,
       format: bit.textFormat,
 
       // Properties
@@ -2725,6 +2726,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected cleanAndSetDefaultsForBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
     const bitType = Config.getBitType(bitJson.type);
     const plainText = this.options.textAsPlainText;
+
+    // Clear 'originalType' if not set
+    if (bitJson.originalType == null) bitJson.originalType = undefined;
 
     // Clear 'item' which may be an empty string if 'lead' was set but item not
     // Only necessary because '.article' does not include a default value for 'item'

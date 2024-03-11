@@ -240,6 +240,7 @@ class JsonParser {
   private bitToAst(bit: BitJson, internalComments: string[] | undefined): Bit | undefined {
     const {
       type,
+      originalType,
       format,
       id,
       externalId,
@@ -372,8 +373,10 @@ class JsonParser {
       placeholders,
     } = bit;
 
+    const isCommented = type === BitType._comment && originalType !== undefined;
+
     // Bit type
-    const bitType = Config.getBitType(type);
+    const bitType = Config.getBitType(isCommented ? originalType : type);
 
     // Get the bit config for the bit type
     const bitConfig = Config.getBitConfig(bitType);
@@ -455,6 +458,7 @@ class JsonParser {
       bitType,
       textFormat: format as TextFormatType,
       resourceType: resourceAttachmentType,
+      isCommented,
       id: this.convertStringToBreakscapedString(id),
       internalComment: this.convertStringToBreakscapedString(internalComments),
       externalId: this.convertStringToBreakscapedString(externalId),

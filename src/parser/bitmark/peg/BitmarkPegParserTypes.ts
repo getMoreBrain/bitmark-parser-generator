@@ -86,6 +86,7 @@ export interface BitHeader {
   bitType: BitTypeType;
   textFormat: TextFormatType;
   resourceType?: ResourceTagType;
+  isCommented?: boolean;
 }
 
 export interface TrueFalseValue {
