@@ -108,6 +108,7 @@ class Builder extends BaseBuilder {
     lang?: BreakscapedString;
     language?: BreakscapedString | BreakscapedString[];
     publisher?: BreakscapedString | BreakscapedString[];
+    publisherName?: BreakscapedString;
     theme?: BreakscapedString | BreakscapedString[];
     computerLanguage?: BreakscapedString;
     target?: BreakscapedString | BreakscapedString[];
@@ -254,6 +255,7 @@ class Builder extends BaseBuilder {
       lang,
       language,
       publisher,
+      publisherName,
       theme,
       computerLanguage,
       target,
@@ -397,6 +399,7 @@ class Builder extends BaseBuilder {
       lang: this.toAstProperty(PropertyConfigKey.lang, lang),
       language: this.toAstProperty(PropertyConfigKey.language, language),
       publisher: this.toAstProperty(PropertyConfigKey.publisher, publisher),
+      publisherName: this.toAstProperty(PropertyConfigKey.publisherName, publisherName),
       theme: this.toAstProperty(PropertyConfigKey.theme, theme),
       computerLanguage: this.toAstProperty(PropertyConfigKey.computerLanguage, computerLanguage),
       target: this.toAstProperty(PropertyConfigKey.target, target),

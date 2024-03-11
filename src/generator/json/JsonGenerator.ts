@@ -2567,6 +2567,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       lang: undefined,
       language: undefined,
       publisher: undefined,
+      publisherName: undefined,
       theme: undefined,
       computerLanguage: undefined,
       target: undefined,
@@ -2910,6 +2911,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.lang == null) delete bitJson.lang;
     if (bitJson.language == null) delete bitJson.language;
     if (bitJson.publisher == null) delete bitJson.publisher;
+    if (bitJson.publisherName == null) delete bitJson.publisherName;
     if (bitJson.theme == null) delete bitJson.theme;
     if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
     if (bitJson.target == null) delete bitJson.target;

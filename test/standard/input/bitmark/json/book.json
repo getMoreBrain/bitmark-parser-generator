@@ -9,6 +9,7 @@
       "lang": "en-US",
       "language": ["de"],
       "publisher": ["kpmg"],
+      "publisherName": "KPMG",
       "theme": ["grundzuege"],
       "subtype": "draft-book",
       "coverImage": ["https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png"],

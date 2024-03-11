@@ -48,6 +48,7 @@ export interface Bit {
   lang?: Property;
   language?: Property;
   publisher?: Property;
+  publisherName?: Property;
   theme?: Property;
   computerLanguage?: Property;
   target?: Property;

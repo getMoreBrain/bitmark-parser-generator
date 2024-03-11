@@ -98,6 +98,8 @@ const NodeType = superenum({
   languageValue: 'languageValue',
   publisher: 'publisher',
   publisherValue: 'publisherValue',
+  publisherName: 'publisherName',
+  publisherNameValue: 'publisherNameValue',
   theme: 'theme',
   themeValue: 'themeValue',
   computerLanguage: 'computerLanguage',
