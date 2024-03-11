@@ -12,7 +12,7 @@
       "theme": ["grundzuege"],
       "subtype": "draft-book",
       "coverImage": ["https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png"],
-      "coverColor": ["#F2F2F2"],
+      "coverColor": "#F2F2F2",
       "author": ["Philippe Pointet"],
       "kind": "learning-path",
       "title": [

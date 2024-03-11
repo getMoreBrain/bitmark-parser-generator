@@ -32,7 +32,7 @@ export interface BitJson {
   subtype: string;
   bookAlias: string | string[];
   coverImage: string | string[];
-  coverColor: string | string[];
+  coverColor: string;
   publisher: string | string[];
   publications: string | string[];
   author: string | string[];
