@@ -39,13 +39,8 @@ class Config {
    * @returns valid bitType, or _error if the bit type is invalid
    */
   public getBitType(bitType: BitTypeType | string | undefined): BitTypeType {
-    let validBitType = BitType.fromValue(bitType) ?? BitType._error;
-
-    if (validBitType === BitType._error && bitType?.startsWith('|')) {
-      validBitType = BitType._comment;
-    }
-
-    return validBitType;
+    if (bitType?.startsWith('|')) bitType = bitType.substring(1);
+    return BitType.fromValue(bitType) ?? BitType._error;
   }
 
   /**
@@ -68,6 +63,16 @@ class Config {
     }
 
     return bitConfig.inheritedBitTypesSet.has(baseBitType);
+  }
+
+  /**
+   * Return true if the bit type is commented.
+   *
+   * @param bitType bit type in (may be invalid)
+   * @returns true if the bit type is commented
+   */
+  public isBitTypeCommented(bitType: string | undefined): boolean {
+    return !!bitType?.startsWith('|');
   }
 
   /**

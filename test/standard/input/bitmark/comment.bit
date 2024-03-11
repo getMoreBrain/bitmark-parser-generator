@@ -1,0 +1,24 @@
+[.|table]
+[@id:12353456]
+[@tableSearch:false]
+[@tableSort:false]
+[@caption:This is the table caption]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
