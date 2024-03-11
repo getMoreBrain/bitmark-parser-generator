@@ -109,7 +109,7 @@ export interface Bit {
   content2Buy?: Property;
   mailingList?: Property;
   buttonCaption?: Property;
-  caption?: Property;
+  caption?: BreakscapedString; // TextAst
   quotedPerson?: Property;
   partialAnswer?: Property;
   reasonableNumOfChars?: Property;
