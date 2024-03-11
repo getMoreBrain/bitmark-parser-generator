@@ -363,7 +363,6 @@ const GROUPS: _GroupsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.coverColor,
-        maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,

@@ -118,7 +118,7 @@ class Builder extends BaseBuilder {
     subtype?: BreakscapedString;
     bookAlias?: BreakscapedString | BreakscapedString[];
     coverImage?: BreakscapedString | BreakscapedString[];
-    coverColor?: BreakscapedString | BreakscapedString[];
+    coverColor?: BreakscapedString;
     publications?: BreakscapedString | BreakscapedString[];
     author?: BreakscapedString | BreakscapedString[];
     subject?: BreakscapedString | BreakscapedString[];
