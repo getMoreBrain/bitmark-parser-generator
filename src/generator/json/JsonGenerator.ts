@@ -1406,6 +1406,18 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (node.value != null) this.addProperty(this.bitJson, 'referenceEnd', node.value, true);
   }
 
+  //  bitmarkAst -> bits -> bitsValue -> caption
+
+  protected leaf_caption(node: NodeInfo, route: NodeInfo[]): void {
+    const caption = node.value as BreakscapedString;
+
+    // Ignore caption that is not at the bit level as it are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    this.bitJson.caption = this.convertBreakscapedStringToJsonText(caption, TextFormat.bitmarkMinusMinus);
+  }
+
   //  bitmarkAst -> bits -> bitsValue ->  * -> hint
 
   protected leaf_hint(node: NodeInfo, route: NodeInfo[]): void {
@@ -1527,6 +1539,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
       // Special cases (handled outside of the automatically generated handlers)
       if (astKey === PropertyTag.internalComment) continue;
+      if (astKey === PropertyTag.caption) continue;
       if (astKey === PropertyTag.example) continue;
       if (astKey === PropertyTag.imageSource) continue;
       if (astKey === PropertyTag.person) continue;

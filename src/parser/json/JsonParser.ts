@@ -531,7 +531,7 @@ class JsonParser {
       content2Buy: this.convertStringToBreakscapedString(content2Buy),
       mailingList: this.convertStringToBreakscapedString(mailingList),
       buttonCaption: this.convertStringToBreakscapedString(buttonCaption),
-      caption: this.convertStringToBreakscapedString(caption),
+      caption: this.convertJsonTextToBreakscapedString(caption),
       quotedPerson: this.convertStringToBreakscapedString(quotedPerson),
       reasonableNumOfChars,
       resolved,

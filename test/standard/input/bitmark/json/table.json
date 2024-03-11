@@ -30,7 +30,18 @@
       "tableSearch": false,
       "tableSort": false,
       "tablePagination": false,
-      "caption": "This is the table caption",
+      "caption": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the table caption",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "body": [],
       "table": {
         "columns": ["Name", "Email", "Phone Number"],
