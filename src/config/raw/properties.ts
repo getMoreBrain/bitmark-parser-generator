@@ -138,6 +138,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.publisher,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.publisherName]: {
+    tag: PropertyTag.publisherName,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.publications]: {
     tag: PropertyTag.publications,
     format: PropertyFormat.trimmedString,

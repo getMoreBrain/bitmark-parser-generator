@@ -35,6 +35,7 @@ export interface BitJson {
   coverImage: string | string[];
   coverColor: string;
   publisher: string | string[];
+  publisherName: string;
   publications: string | string[];
   author: string | string[];
   subject: string | string[];

@@ -89,6 +89,7 @@ const propertyConfigKeys = {
   property_title: 'property_title',
   publications: 'publications',
   publisher: 'publisher',
+  publisherName: 'publisherName',
   quizCountItems: 'quizCountItems',
   quizStrikethroughSolutions: 'quizStrikethroughSolutions',
   quotedPerson: 'quotedPerson',
