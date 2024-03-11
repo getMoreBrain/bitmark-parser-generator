@@ -42,6 +42,11 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.publisherName,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.theme,
         maxCount: Count.infinity,
       },
@@ -363,7 +368,6 @@ const GROUPS: _GroupsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.coverColor,
-        maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,

@@ -206,13 +206,10 @@ class BitmarkPegParserProcessor {
 
   // Build bit
   buildBit(bitHeader: BitHeader, bitContent: BitContent[]): SubParserResult<Bit> {
-    const { bitType, textFormat, resourceType } = bitHeader;
+    const { bitType, textFormat, resourceType, isCommented } = bitHeader;
 
     // Bit type was invalid, so ignore the bit, returning instead the parsing errors
     if (!bitType || Config.isOfBitType(bitType, BitType._error)) return this.invalidBit();
-
-    // Bit type was comment, so ignore the bit, returning the comment info instead
-    if (Config.isOfBitType(bitType, BitType._comment)) return this.commentBit();
 
     if (DEBUG_BIT_CONTENT_RAW) this.debugPrint('BIT CONTENT RAW', bitContent);
 
@@ -282,6 +279,7 @@ class BitmarkPegParserProcessor {
     // Build the final bit
     const bit = builder.bit({
       bitType,
+      isCommented,
       textFormat,
       resourceType,
       ...titles,
@@ -318,28 +316,14 @@ class BitmarkPegParserProcessor {
     return { value: bit };
   }
 
-  // Build bit for commented bit
-  commentBit(): SubParserResult<Bit> {
-    // Build the errors
-    this.parser.errors = this.buildBitLevelErrors();
-
-    // Build the error bit
-    const bit = builder.bit({
-      bitType: Config.getBitType(BitType._comment),
-      parser: this.parser,
-    });
-
-    return { value: bit };
-  }
-
   // Build bit header
   buildBitHeader(bitType: string, textFormatAndResourceType: RawTextAndResourceType): BitHeader {
     // Get / check bit type
     const validBitType = Config.getBitType(bitType);
+    const commented = Config.isBitTypeCommented(bitType);
+
     if (Config.isOfBitType(validBitType, BitType._error)) {
       this.addError(`Invalid bit type: '${bitType}'`);
-    } else if (Config.isOfBitType(validBitType, BitType._comment)) {
-      this.parser.commentedBitType = `[.${bitType.slice(1)}]`;
     }
 
     const bitConfig = Config.getBitConfig(validBitType);
@@ -363,6 +347,7 @@ class BitmarkPegParserProcessor {
       bitType: validBitType,
       textFormat: textFormat ?? bitConfig.textFormatDefault,
       resourceType,
+      isCommented: commented,
     };
   }
 

@@ -13,6 +13,7 @@ const NodeType = superenum({
   alias: 'alias', // bit type (alias)
   root: 'root', // bit type (root)
   textFormat: 'textFormat',
+  isCommented: 'isCommented',
 
   bitmarkAst: 'bitmarkAst', // bitmarkAst
   bits: 'bits', // bits
@@ -97,6 +98,8 @@ const NodeType = superenum({
   languageValue: 'languageValue',
   publisher: 'publisher',
   publisherValue: 'publisherValue',
+  publisherName: 'publisherName',
+  publisherNameValue: 'publisherNameValue',
   theme: 'theme',
   themeValue: 'themeValue',
   computerLanguage: 'computerLanguage',

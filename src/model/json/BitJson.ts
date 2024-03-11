@@ -5,6 +5,7 @@ import { AudioResourceJson, ImageResourceJson, ImageResourceWrapperJson, Resourc
 
 export interface BitJson {
   type: string; // bit type
+  originalType: string; // commented bit type
   format: string; // bit format
 
   // Properties
@@ -32,8 +33,9 @@ export interface BitJson {
   subtype: string;
   bookAlias: string | string[];
   coverImage: string | string[];
-  coverColor: string | string[];
+  coverColor: string;
   publisher: string | string[];
+  publisherName: string;
   publications: string | string[];
   author: string | string[];
   subject: string | string[];
@@ -84,7 +86,7 @@ export interface BitJson {
   content2Buy: string;
   mailingList: string;
   buttonCaption: string;
-  caption: string;
+  caption: JsonText;
   quotedPerson: string;
   reasonableNumOfChars: number;
   resolved: boolean;

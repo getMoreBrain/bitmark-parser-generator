@@ -32,6 +32,7 @@ export interface Bit {
   bitType: BitTypeType;
   textFormat: TextFormatType;
   resourceType?: ResourceTagType;
+  isCommented?: boolean;
   id?: Property;
   internalComment?: Property;
   externalId?: Property;
@@ -47,6 +48,7 @@ export interface Bit {
   lang?: Property;
   language?: Property;
   publisher?: Property;
+  publisherName?: Property;
   theme?: Property;
   computerLanguage?: Property;
   target?: Property;
@@ -109,7 +111,7 @@ export interface Bit {
   content2Buy?: Property;
   mailingList?: Property;
   buttonCaption?: Property;
-  caption?: Property;
+  caption?: BreakscapedString; // TextAst
   quotedPerson?: Property;
   partialAnswer?: Property;
   reasonableNumOfChars?: Property;

@@ -92,6 +92,7 @@ class Builder extends BaseBuilder {
     bitType: BitTypeType;
     textFormat?: TextFormatType;
     resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
+    isCommented?: boolean;
     id?: BreakscapedString | BreakscapedString[];
     internalComment?: BreakscapedString | BreakscapedString[];
     externalId?: BreakscapedString | BreakscapedString[];
@@ -107,6 +108,7 @@ class Builder extends BaseBuilder {
     lang?: BreakscapedString;
     language?: BreakscapedString | BreakscapedString[];
     publisher?: BreakscapedString | BreakscapedString[];
+    publisherName?: BreakscapedString;
     theme?: BreakscapedString | BreakscapedString[];
     computerLanguage?: BreakscapedString;
     target?: BreakscapedString | BreakscapedString[];
@@ -118,7 +120,7 @@ class Builder extends BaseBuilder {
     subtype?: BreakscapedString;
     bookAlias?: BreakscapedString | BreakscapedString[];
     coverImage?: BreakscapedString | BreakscapedString[];
-    coverColor?: BreakscapedString | BreakscapedString[];
+    coverColor?: BreakscapedString;
     publications?: BreakscapedString | BreakscapedString[];
     author?: BreakscapedString | BreakscapedString[];
     subject?: BreakscapedString | BreakscapedString[];
@@ -237,6 +239,7 @@ class Builder extends BaseBuilder {
       bitType,
       textFormat,
       resourceType,
+      isCommented,
       id,
       internalComment,
       externalId,
@@ -252,6 +255,7 @@ class Builder extends BaseBuilder {
       lang,
       language,
       publisher,
+      publisherName,
       theme,
       computerLanguage,
       target,
@@ -378,6 +382,7 @@ class Builder extends BaseBuilder {
       bitType,
       textFormat: TextFormat.fromValue(textFormat) ?? bitConfig.textFormatDefault,
       resourceType: ResourceTag.fromValue(resourceType),
+      isCommented,
       id: this.toAstProperty(PropertyConfigKey.id, id),
       internalComment: this.toAstProperty(PropertyConfigKey.internalComment, internalComment),
       externalId: this.toAstProperty(PropertyConfigKey.externalId, externalId),
@@ -394,6 +399,7 @@ class Builder extends BaseBuilder {
       lang: this.toAstProperty(PropertyConfigKey.lang, lang),
       language: this.toAstProperty(PropertyConfigKey.language, language),
       publisher: this.toAstProperty(PropertyConfigKey.publisher, publisher),
+      publisherName: this.toAstProperty(PropertyConfigKey.publisherName, publisherName),
       theme: this.toAstProperty(PropertyConfigKey.theme, theme),
       computerLanguage: this.toAstProperty(PropertyConfigKey.computerLanguage, computerLanguage),
       target: this.toAstProperty(PropertyConfigKey.target, target),
@@ -462,7 +468,7 @@ class Builder extends BaseBuilder {
       content2Buy: this.toAstProperty(PropertyConfigKey.content2Buy, content2Buy),
       mailingList: this.toAstProperty(PropertyConfigKey.mailingList, mailingList),
       buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, buttonCaption),
-      caption: this.toAstProperty(PropertyConfigKey.caption, caption),
+      caption,
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       reasonableNumOfChars: reasonableNumOfCharsProperty,

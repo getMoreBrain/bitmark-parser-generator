@@ -228,6 +228,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const bitResourcesConfig = Config.getBitResourcesConfig(bit.bitType, bit.resourceType);
 
     this.writeOPD();
+    if (bit.isCommented) this.writeString('|');
     this.writeString(bit.bitType);
 
     if (bit.textFormat) {
