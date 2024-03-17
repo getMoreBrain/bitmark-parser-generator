@@ -2603,6 +2603,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       tableSearch: undefined,
       tableSort: undefined,
       tablePagination: undefined,
+      tablePaginationLimit: undefined,
+      tableHeight: undefined,
+      tableWhitespaceNoWrap: undefined,
+      tableAutoWidth: undefined,
+      tableResizableColumns: undefined,
       quizCountItems: undefined,
       quizStrikethroughSolutions: undefined,
       codeLineNumbers: undefined,
@@ -2867,6 +2872,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (bitJson.tableSearch == null) bitJson.tableSearch = false;
       if (bitJson.tableSort == null) bitJson.tableSort = false;
       if (bitJson.tablePagination == null) bitJson.tablePagination = false;
+      if (bitJson.tablePaginationLimit == null) bitJson.tablePaginationLimit = 0;
+      if (bitJson.tableHeight == null) bitJson.tableHeight = 0;
+      if (bitJson.tableWhitespaceNoWrap == null) bitJson.tableWhitespaceNoWrap = true;
+      if (bitJson.tableAutoWidth == null) bitJson.tableAutoWidth = true;
+      if (bitJson.tableResizableColumns == null) bitJson.tableResizableColumns = false;
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
       //
     } else {
@@ -2947,6 +2957,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.tableSearch == null) delete bitJson.tableSearch;
     if (bitJson.tableSort == null) delete bitJson.tableSort;
     if (bitJson.tablePagination == null) delete bitJson.tablePagination;
+    if (bitJson.tablePaginationLimit == null) delete bitJson.tablePaginationLimit;
+    if (bitJson.tableHeight == null) delete bitJson.tableHeight;
+    if (bitJson.tableWhitespaceNoWrap == null) delete bitJson.tableWhitespaceNoWrap;
+    if (bitJson.tableAutoWidth == null) delete bitJson.tableAutoWidth;
+    if (bitJson.tableResizableColumns == null) delete bitJson.tableResizableColumns;
     if (bitJson.quizCountItems == null) delete bitJson.quizCountItems;
     if (bitJson.quizStrikethroughSolutions == null) delete bitJson.quizStrikethroughSolutions;
     if (bitJson.codeLineNumbers == null) delete bitJson.codeLineNumbers;

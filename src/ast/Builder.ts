@@ -141,6 +141,11 @@ class Builder extends BaseBuilder {
     tableSearch?: boolean;
     tableSort?: boolean;
     tablePagination?: boolean;
+    tablePaginationLimit?: number;
+    tableHeight?: number;
+    tableWhitespaceNoWrap?: boolean;
+    tableAutoWidth?: boolean;
+    tableResizableColumns?: boolean;
     quizCountItems?: boolean;
     quizStrikethroughSolutions?: boolean;
     codeLineNumbers?: boolean;
@@ -288,6 +293,11 @@ class Builder extends BaseBuilder {
       tableSearch,
       tableSort,
       tablePagination,
+      tablePaginationLimit,
+      tableHeight,
+      tableWhitespaceNoWrap,
+      tableAutoWidth,
+      tableResizableColumns,
       quizCountItems,
       quizStrikethroughSolutions,
       codeLineNumbers,
@@ -435,6 +445,11 @@ class Builder extends BaseBuilder {
       tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, tableSearch),
       tableSort: this.toAstProperty(PropertyConfigKey.tableSort, tableSort),
       tablePagination: this.toAstProperty(PropertyConfigKey.tablePagination, tablePagination),
+      tablePaginationLimit: this.toAstProperty(PropertyConfigKey.tablePaginationLimit, tablePaginationLimit),
+      tableHeight: this.toAstProperty(PropertyConfigKey.tableHeight, tableHeight),
+      tableWhitespaceNoWrap: this.toAstProperty(PropertyConfigKey.tableWhitespaceNoWrap, tableWhitespaceNoWrap),
+      tableAutoWidth: this.toAstProperty(PropertyConfigKey.tableAutoWidth, tableAutoWidth),
+      tableResizableColumns: this.toAstProperty(PropertyConfigKey.tableResizableColumns, tableResizableColumns),
       quizCountItems: this.toAstProperty(PropertyConfigKey.quizCountItems, quizCountItems),
       quizStrikethroughSolutions: this.toAstProperty(
         PropertyConfigKey.quizStrikethroughSolutions,
