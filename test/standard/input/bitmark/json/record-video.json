@@ -1,0 +1,60 @@
+[
+  {
+    "bit": {
+      "type": "record-video",
+      "format": "bitmark--",
+      "id": ["92374"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "it supports just the starndard tags",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "this is a record bit",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.5.23",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.record-video]\n[@id:92374]\n[!this is a record bit]\n[%it supports just the starndard tags]"
+  },
+  {
+    "bit": {
+      "type": "record-video",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.5.23",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.record-video]"
+  }
+]

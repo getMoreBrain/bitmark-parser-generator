@@ -1479,6 +1479,7 @@ const BITS: _BitsConfig = {
   [BitType.groupBorn]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.groupDied]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.recordAudio]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.recordVideo]: { since: '1.5.24', baseBitType: BitType.toc },
   [BitType.stickyNote]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.takePicture]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.handInAudio]: { since: '1.5.15', baseBitType: BitType.takePicture },
