@@ -1441,6 +1441,26 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.tablePagination,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tablePaginationLimit,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableHeight,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableWhitespaceNoWrap,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableAutoWidth,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableResizableColumns,
+      },
     ],
     cardSet: CardSetConfigKey._table,
   },

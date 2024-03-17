@@ -57,6 +57,11 @@ export interface BitJson {
   tableSearch: boolean;
   tableSort: boolean;
   tablePagination: boolean;
+  tablePaginationLimit: number;
+  tableHeight: number;
+  tableWhitespaceNoWrap: boolean;
+  tableAutoWidth: boolean;
+  tableResizableColumns: boolean;
   quizCountItems: boolean;
   quizStrikethroughSolutions: boolean;
   codeLineNumbers: boolean;
