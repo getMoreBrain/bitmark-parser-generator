@@ -348,6 +348,7 @@ export interface Servings {
 // Ingredient
 
 export interface Ingredient {
+  title?: BreakscapedString;
   checked?: boolean;
   item?: BreakscapedString; // TextAst;
   quantity?: number;

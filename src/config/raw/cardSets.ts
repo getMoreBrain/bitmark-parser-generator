@@ -335,6 +335,10 @@ const CARDSETS: _CardSetsConfig = {
         {
           tags: [
             {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
+            {
               type: BitTagType.group,
               configKey: GroupConfigKey.group_trueFalse,
             },

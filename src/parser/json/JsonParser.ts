@@ -1006,8 +1006,9 @@ class JsonParser {
     const nodes: Ingredient[] = [];
     if (Array.isArray(ingredients)) {
       for (const i of ingredients) {
-        const { checked, item, quantity, unit, unitAbbr, disableCalculation } = i;
+        const { title, checked, item, quantity, unit, unitAbbr, disableCalculation } = i;
         const node = builder.ingredient({
+          title: this.convertStringToBreakscapedString(title),
           checked,
           item: this.convertStringToBreakscapedString(item) ?? Breakscape.EMPTY_STRING,
           quantity,

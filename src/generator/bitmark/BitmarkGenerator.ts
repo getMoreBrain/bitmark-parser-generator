@@ -983,6 +983,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected enter_ingredientsValue(node: NodeInfo, _route: NodeInfo[]): void {
     const ingredient = node.value as Ingredient;
 
+    if (ingredient.title != null) {
+      this.writeOPHASH();
+      this.writeString(ingredient.title);
+      this.writeCL();
+      this.writeNL();
+    }
+
     // [+] / [-]
     if (ingredient.checked) {
       this.writeOPP();
