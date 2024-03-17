@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.23
+Version: 1.5.24
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -265,6 +265,7 @@ question-1 (since: 1.3.0)
 quote (since: 1.3.0)
 rating (since: 1.3.0)
 record-audio (since: 1.3.0)
+record-video (since: 1.5.24)
 release-note (since: 1.3.0)
 release-notes-summary (since: 1.3.0)
 remark (since: 1.3.0)
