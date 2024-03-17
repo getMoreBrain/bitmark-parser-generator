@@ -1268,6 +1268,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       for (const i of ingredients) {
         // Create the ingredient
         const ingredientJson: Partial<IngredientJson> = {
+          title: Breakscape.unbreakscape(i.title) ?? '',
           checked: i.checked ?? false,
           item: Breakscape.unbreakscape(i.item) ?? '',
           quantity: i.quantity ?? 0,
@@ -1277,6 +1278,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         };
 
         // Delete unwanted properties
+        if (i?.title == null) delete ingredientJson.title;
+        // if (i?.unit == null) delete ingredientJson.unit;
         if (i?.unitAbbr == null) delete ingredientJson.unitAbbr;
         // if (i?.instruction == null) delete ingredientJson.instruction;
 

@@ -969,6 +969,7 @@ class Builder extends BaseBuilder {
    * @returns
    */
   ingredient(data: {
+    title?: BreakscapedString;
     checked?: boolean;
     item?: BreakscapedString;
     quantity?: number;
@@ -976,10 +977,11 @@ class Builder extends BaseBuilder {
     unitAbbr?: BreakscapedString;
     disableCalculation?: boolean;
   }): Ingredient {
-    const { checked, item, quantity, unit, unitAbbr, disableCalculation } = data;
+    const { title, checked, item, quantity, unit, unitAbbr, disableCalculation } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Ingredient = {
+      title,
       checked: checked ?? false,
       item,
       quantity,

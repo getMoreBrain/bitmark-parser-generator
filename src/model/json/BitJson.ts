@@ -336,6 +336,7 @@ export interface ServingsJson {
 }
 
 export interface IngredientJson {
+  title: string;
   checked: boolean;
   item: string;
   quantity: number;

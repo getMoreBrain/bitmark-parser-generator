@@ -831,10 +831,22 @@ function parseIngredients(
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { instruction, unit, unitAbbr, cardBodyStr: item, cardBody, disableCalculation, ...tags } = content.data;
+        const {
+          title: titleArray,
+          instruction,
+          unit,
+          unitAbbr,
+          cardBodyStr: item,
+          cardBody,
+          disableCalculation,
+          ...tags
+        } = content.data;
 
+        // Extract 'title' from title array (if present)
         // Extract 'quantity' from either then unchained instruction, or from the select (otherwise use 0)
         // Extract checked from the select options (if present, otherwise checked is false))
+        const title =
+          Array.isArray(titleArray) && titleArray.length > 0 ? titleArray[titleArray.length - 1] : undefined;
         let checked = false;
         let quantity: number | undefined = NumberUtils.asNumber(instruction);
         if (cardBody) {
@@ -850,6 +862,7 @@ function parseIngredients(
         const trimmedItem: BreakscapedString = item ? (item.trim() as BreakscapedString) : Breakscape.EMPTY_STRING;
 
         const ingredient = builder.ingredient({
+          title,
           checked,
           item: trimmedItem,
           quantity,

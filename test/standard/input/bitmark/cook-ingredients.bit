@@ -6,12 +6,14 @@
 [@servings:4.5][@unit:Litre][@unitAbbr:l]
 
 ====
+[#Title for the ingredient]
 [+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe
 ====
 [-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...
 ====
 [!5][@unitAbbr:Stk][@unit:Stück] Erbsen ...
 ====
+[#Another title for an ingredient]
 [!1][@unit:Prise] Salz
 ====
 [!2.5][@unit:kg] Mehl
