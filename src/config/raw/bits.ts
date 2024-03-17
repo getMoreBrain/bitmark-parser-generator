@@ -475,6 +475,7 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey._ingredients,
   },
+  [BitType.recipe]: { since: '1.5.24', baseBitType: BitType.cookIngredients },
   [BitType.cookRemark]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.cookVariation]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.cookInsert]: { since: '1.3.0', baseBitType: BitType.example },
