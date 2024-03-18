@@ -411,8 +411,6 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
-      "quizCountItems": true,
-      "quizStrikethroughSolutions": false,
       "item": [],
       "hint": [],
       "instruction": [],
