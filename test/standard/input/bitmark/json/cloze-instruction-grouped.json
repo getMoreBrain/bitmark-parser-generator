@@ -113,6 +113,8 @@
       "type": "cloze-instruction-grouped",
       "format": "bitmark--",
       "id": ["107938"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [
         {
           "type": "paragraph",

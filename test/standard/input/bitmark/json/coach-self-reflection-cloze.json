@@ -4,6 +4,8 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark++",
       "id": ["152331"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -191,6 +193,8 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark++",
       "id": ["193275"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "anchor": "Ref_Roche",
       "item": [],
       "lead": [
@@ -248,6 +252,8 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark++",
       "id": ["193276"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "anchor": "Ref_Emmi",
       "item": [],
       "lead": [
@@ -305,6 +311,8 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "id": ["136524"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -439,6 +447,8 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "id": ["245337"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -510,6 +520,8 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "id": ["273397"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -713,6 +725,8 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "id": ["273304"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -899,6 +913,8 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "id": ["272904"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -1089,6 +1105,8 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -1140,6 +1158,8 @@
     "bit": {
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [],
       "hint": [],
       "instruction": [],

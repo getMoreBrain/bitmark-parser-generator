@@ -2758,7 +2758,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       //
     } else if (
       Config.isOfBitType(bitType, [
-        BitType.cloze,
         BitType.multipleChoice1,
         BitType.multipleResponse1,
         BitType.multipleChoiceText,
@@ -2775,6 +2774,23 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
       if (bitJson.isExample == null) bitJson.isExample = false;
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (Config.isOfBitType(bitType, BitType.cloze)) {
+      // Default, but with no 'example' at the bit level.
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      if (Config.isOfBitType(bitType, BitType.clozeSolutionGrouped)) {
+        // Solution grouped
+        if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
+        if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = true;
+      } else {
+        // Insturuction grouped
+        if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
+        if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = false;
+      }
       //
     } else if (Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleResponse])) {
       // Default with a card (and hence a footer possibility)

@@ -4,6 +4,8 @@
       "type": "gap-text-instruction-grouped",
       "format": "bitmark--",
       "id": ["287822"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [],
       "lead": [
         {
@@ -111,6 +113,8 @@
       "type": "gap-text-instruction-grouped",
       "format": "bitmark--",
       "id": ["107938"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
       "item": [
         {
           "type": "paragraph",
