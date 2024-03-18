@@ -241,9 +241,9 @@ export interface Decision {
 // Flashcard
 
 export interface Flashcard {
-  question: BreakscapedString;
-  answer?: BreakscapedString;
-  alternativeAnswers?: BreakscapedString[];
+  question: BreakscapedString; // TextAst;
+  answer?: BreakscapedString; // TextAst;
+  alternativeAnswers?: BreakscapedString[]; // TextAst[];
   itemLead?: ItemLead;
   hint?: BreakscapedString; // TextAst;
   instruction?: BreakscapedString; // TextAst;
