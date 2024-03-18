@@ -1186,5 +1186,230 @@
       "bitmarkVersion": "3"
     },
     "bitmark": "[.cloze]\nThis is a multiple gap [_solution][_problem][@example:wrong answer]"
+  },
+  {
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "instruction": [],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a multiple gap ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": false,
+              "isExample": false,
+              "example": null,
+              "solutions": ["solution", "problem"]
+            },
+            {
+              "text": " with a separate gap\nwith ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": ["different"]
+            },
+            {
+              "text": " case sensitivity. There is even a gap which inherits the default\ncase ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": ["sensitivity"]
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.24",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.cloze]\n[@isCaseSensitive:true]\nThis is a multiple gap [_solution][_problem][@isCaseSensitive:false] with a separate gap\nwith [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default\ncase [_sensitivity]"
+  },
+  {
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "instruction": [],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a multiple gap ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": false,
+              "isExample": false,
+              "example": null,
+              "solutions": ["solution", "problem"]
+            },
+            {
+              "text": " with a separate gap\nwith ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": ["different"]
+            },
+            {
+              "text": " case sensitivity. There is even a gap which inherits the default\ncase ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": false,
+              "isExample": false,
+              "example": null,
+              "solutions": ["sensitivity"]
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.24",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.cloze]\n[@isCaseSensitive:false]\nThis is a multiple gap [_solution][_problem][@isCaseSensitive:false] with a separate gap\nwith [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default\ncase [_sensitivity]"
+  },
+  {
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "item": [],
+      "hint": [],
+      "instruction": [],
+      "isExample": false,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a multiple gap ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": false,
+              "isExample": false,
+              "example": null,
+              "solutions": ["solution", "problem"]
+            },
+            {
+              "text": " with a separate gap\nwith ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": ["different"]
+            },
+            {
+              "text": " case sensitivity. There is even a gap which inherits the default\ncase ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "item": [],
+              "lead": [],
+              "pageNumber": [],
+              "marginNumber": [],
+              "hint": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null,
+              "solutions": ["sensitivity"]
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.24",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.cloze]\nThis is a multiple gap [_solution][_problem][@isCaseSensitive:false] with a separate gap\nwith [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default\ncase [_sensitivity]"
   }
 ]

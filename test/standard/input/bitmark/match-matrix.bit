@@ -361,3 +361,56 @@ Hotel
 ==
 Unterbringungsmöglichkeit
 ===
+
+
+[.match-matrix:bitmark--]
+[@isCaseSensitive:true]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A[@isCaseSensitive:false]
+==
+B
+--
+C[@isCaseSensitive:true]
+===
+should be the text not the value
+==
+D
+==
+E
+--
+F
+===
+
+[.match-matrix:bitmark--]
+[@isCaseSensitive:false]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.
+==
+A[@isCaseSensitive:false]
+==
+B
+--
+C[@isCaseSensitive:true]
+===
+should be the text not the value
+==
+D
+==
+E
+--
+F
+===

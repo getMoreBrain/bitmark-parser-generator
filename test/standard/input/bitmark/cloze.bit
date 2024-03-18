@@ -102,3 +102,20 @@ This is a multiple gap [_solution][@example][_problem]
 [.cloze]
 This is a multiple gap [_solution][_problem][@example:wrong answer]
 
+[.cloze]
+[@isCaseSensitive:true]
+This is a multiple gap [_solution][_problem][@isCaseSensitive:false] with a separate gap
+with [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default
+case [_sensitivity]
+
+[.cloze]
+[@isCaseSensitive:false]
+This is a multiple gap [_solution][_problem][@isCaseSensitive:false] with a separate gap
+with [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default
+case [_sensitivity]
+
+[.cloze]
+This is a multiple gap [_solution][_problem][@isCaseSensitive:false] with a separate gap
+with [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default
+case [_sensitivity]
+

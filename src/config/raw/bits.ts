@@ -346,6 +346,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.isCaseSensitive,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.quizCountItems,
       },
       {
@@ -1010,6 +1014,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.isCaseSensitive,
       },
     ],
     cardSet: CardSetConfigKey._matchPairs,

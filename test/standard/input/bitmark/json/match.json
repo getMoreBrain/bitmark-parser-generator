@@ -1209,5 +1209,125 @@
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match:bitmark--]\n===\n==\n==\n===\nK\n==\nA\n==\nB\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": "Heading3"
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": false,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "key": "A third pair is defined here",
+          "values": ["E", "F"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": false,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "key": "And a fourth pair is defined here",
+          "values": ["G", "H"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": false,
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.24",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.match:bitmark--]\n[@isCaseSensitive:false]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.[@isCaseSensitive:false]\n==\nA\n==\nB\n===\nshould be the text not the value[@isCaseSensitive:true]\n==\nC\n==\nD\n===\nA third pair is defined here\n==\nE\n==\nF\n===\nAnd a fourth pair is defined here\n==\nG\n==\nH\n==="
+  },
+  {
+    "bit": {
+      "type": "match",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": "Heading3"
+      },
+      "pairs": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "values": ["A", "B"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": false,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "key": "should be the text not the value",
+          "values": ["C", "D"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "key": "A third pair is defined here",
+          "values": ["E", "F"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "key": "And a fourth pair is defined here",
+          "values": ["G", "H"],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isCaseSensitive": true,
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.24",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.match:bitmark--]\n[@isCaseSensitive:true]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.[@isCaseSensitive:false]\n==\nA\n==\nB\n===\nshould be the text not the value[@isCaseSensitive:true]\n==\nC\n==\nD\n===\nA third pair is defined here\n==\nE\n==\nF\n===\nAnd a fourth pair is defined here\n==\nG\n==\nH\n==="
   }
 ]

@@ -1396,5 +1396,141 @@
       "bitmarkVersion": "3"
     },
     "bitmark": "[.match-matrix]\n===\n[#Title1]\n==\n[#Title2]\n==\n[#Title3]\n===\n[%1][!hint][?instruction] Beherbergung\n==\nUnterbringung\n==\nÜbernachtung\n===\n[%2] Herberge\n==\nHotel\n==\nUnterbringungsmöglichkeit\n==="
+  },
+  {
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "matrix": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "cells": [
+            {
+              "values": ["A"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": false,
+              "isExample": false,
+              "example": null
+            },
+            {
+              "values": ["B", "C"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "isExample": false
+        },
+        {
+          "key": "should be the text not the value",
+          "cells": [
+            {
+              "values": ["D"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            },
+            {
+              "values": ["E", "F"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "isExample": false
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.24",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.match-matrix:bitmark--]\n[@isCaseSensitive:true]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA[@isCaseSensitive:false]\n==\nB\n--\nC[@isCaseSensitive:true]\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
+  },
+  {
+    "bit": {
+      "type": "match-matrix",
+      "format": "bitmark--",
+      "item": [],
+      "body": [],
+      "heading": {
+        "forKeys": "Heading1",
+        "forValues": ["Heading2", "Heading3"]
+      },
+      "matrix": [
+        {
+          "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "cells": [
+            {
+              "values": ["A"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": false,
+              "isExample": false,
+              "example": null
+            },
+            {
+              "values": ["B", "C"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "isExample": false
+        },
+        {
+          "key": "should be the text not the value",
+          "cells": [
+            {
+              "values": ["D"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": false,
+              "isExample": false,
+              "example": null
+            },
+            {
+              "values": ["E", "F"],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": false,
+              "isExample": false,
+              "example": null
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "isExample": false
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.24",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.match-matrix:bitmark--]\n[@isCaseSensitive:false]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA[@isCaseSensitive:false]\n==\nB\n--\nC[@isCaseSensitive:true]\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
   }
 ]

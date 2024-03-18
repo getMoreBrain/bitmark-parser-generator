@@ -203,6 +203,7 @@ class Builder extends BaseBuilder {
     // If a BreakscapedText is passed to reference, it will be considered a "[►Reference]" tag
     reference?: BreakscapedString;
     referenceEnd?: BreakscapedString;
+    isCaseSensitive?: boolean;
     item?: BreakscapedString;
     lead?: BreakscapedString;
     pageNumber?: BreakscapedString;
@@ -353,6 +354,7 @@ class Builder extends BaseBuilder {
       anchor,
       reference,
       referenceEnd,
+      isCaseSensitive,
       item,
       lead,
       pageNumber,
@@ -538,6 +540,26 @@ class Builder extends BaseBuilder {
         reasonableNumOfChars,
       );
     }
+
+    // Push isCaseSensitive down the tree for the cloze, match and match-matrix bits
+    this.pushDownTree(
+      body,
+      [BodyBitType.gap],
+      undefined,
+      undefined,
+      PropertyConfigKey.isCaseSensitive,
+      isCaseSensitive,
+    );
+
+    this.pushDownTree(undefined, undefined, cardNode, 'pairs', PropertyConfigKey.isCaseSensitive, isCaseSensitive);
+    this.pushDownTree(
+      undefined,
+      undefined,
+      cardNode,
+      ['matrix', 'cells'],
+      PropertyConfigKey.isCaseSensitive,
+      isCaseSensitive,
+    );
 
     // If isDefaultExample is set at the bit level, push the default example down the tree to the relevant nodes
     this.pushExampleDownTree(body, cardNode, isDefaultExample, example);
@@ -789,7 +811,7 @@ class Builder extends BaseBuilder {
       hint,
       instruction,
       ...this.toExample(isDefaultExample, example),
-      isCaseSensitive: isCaseSensitive ?? true, // default to true
+      isCaseSensitive,
       values,
     };
 
@@ -886,7 +908,7 @@ class Builder extends BaseBuilder {
       itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
-      isCaseSensitive: isCaseSensitive ?? true, // default to true
+      isCaseSensitive,
       ...this.toExample(isDefaultExample, example),
     };
 
@@ -1105,7 +1127,7 @@ class Builder extends BaseBuilder {
         itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
         hint,
         instruction,
-        isCaseSensitive: isCaseSensitive ?? true, // default to true
+        isCaseSensitive,
         ...this.toExample(isDefaultExample, example),
       },
     };
@@ -1851,7 +1873,7 @@ class Builder extends BaseBuilder {
     body: Body | undefined,
     bodyBitTypes: BodyBitTypeType[] | undefined,
     cardNode: CardNode | undefined,
-    cardNodePath: string | undefined,
+    cardNodePath: string | string[] | undefined,
     path: string,
     value: unknown,
   ): void {
@@ -1859,14 +1881,14 @@ class Builder extends BaseBuilder {
 
     // Add value to card nodes if required (TODO - nested paths)
     if (cardNode && cardNodePath) {
+      if (!Array.isArray(cardNodePath)) cardNodePath = [cardNodePath];
+
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const cardNodeAny = cardNode as any;
-      const cards = cardNodeAny[cardNodePath];
-      if (Array.isArray(cards)) {
-        for (const card of cards) {
-          if (card[path] == null) {
-            card[path] = value;
-          }
+      const data = ObjectUtils.flatMapPath(cardNode, cardNodePath) as any[];
+
+      for (const d of data) {
+        if (d[path] == null) {
+          d[path] = value;
         }
       }
     }
@@ -1878,7 +1900,9 @@ class Builder extends BaseBuilder {
           if (bodyBitTypes.indexOf(part.type) !== -1) {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const data = part.data as any;
-            data[path] = value;
+            if (data[path] == null) {
+              data[path] = value;
+            }
           }
         }
       }

@@ -440,3 +440,73 @@ A
 ==
 B
 ===
+
+
+[.match:bitmark--]
+[@isCaseSensitive:false]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.[@isCaseSensitive:false]
+==
+A
+==
+B
+===
+should be the text not the value[@isCaseSensitive:true]
+==
+C
+==
+D
+===
+A third pair is defined here
+==
+E
+==
+F
+===
+And a fourth pair is defined here
+==
+G
+==
+H
+===
+
+
+[.match:bitmark--]
+[@isCaseSensitive:true]
+===
+[#Heading1]
+==
+[#Heading2]
+==
+[#Heading3]
+===
+Herr De Weck kauft Milch und Brot im Supermarkt.[@isCaseSensitive:false]
+==
+A
+==
+B
+===
+should be the text not the value[@isCaseSensitive:true]
+==
+C
+==
+D
+===
+A third pair is defined here
+==
+E
+==
+F
+===
+And a fourth pair is defined here
+==
+G
+==
+H
+===
