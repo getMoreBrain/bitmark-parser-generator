@@ -265,6 +265,8 @@ const BitType = superenum({
   quote: 'quote',
   rating: 'rating',
   recordAudio: 'record-audio',
+  recordVideo: 'record-video',
+  recipe: 'recipe',
   releaseNote: 'release-note',
   releaseNotesSummary: 'release-notes-summary',
   remark: 'remark',

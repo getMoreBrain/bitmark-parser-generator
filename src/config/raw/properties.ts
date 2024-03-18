@@ -621,6 +621,35 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.tablePaginationLimit]: {
+    tag: PropertyTag.tablePaginationLimit,
+    single: true,
+    format: PropertyFormat.number,
+    defaultValue: '0',
+  },
+  [PropertyConfigKey.tableHeight]: {
+    tag: PropertyTag.tableHeight,
+    single: true,
+    format: PropertyFormat.number,
+    defaultValue: '0',
+  },
+  [PropertyConfigKey.tableWhitespaceNoWrap]: {
+    tag: PropertyTag.tableWhitespaceNoWrap,
+    single: true,
+    format: PropertyFormat.boolean,
+    // defaultValue: 'true',
+  },
+  [PropertyConfigKey.tableAutoWidth]: {
+    tag: PropertyTag.tableAutoWidth,
+    single: true,
+    format: PropertyFormat.boolean,
+    // defaultValue: 'true',
+  },
+  [PropertyConfigKey.tableResizableColumns]: {
+    tag: PropertyTag.tableResizableColumns,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
   [PropertyConfigKey.quizCountItems]: {
     tag: PropertyTag.quizCountItems,
     single: true,

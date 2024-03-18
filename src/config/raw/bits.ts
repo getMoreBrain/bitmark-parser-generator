@@ -346,6 +346,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.isCaseSensitive,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.quizCountItems,
       },
       {
@@ -475,6 +479,7 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey._ingredients,
   },
+  [BitType.recipe]: { since: '1.5.24', baseBitType: BitType.cookIngredients },
   [BitType.cookRemark]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.cookVariation]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.cookInsert]: { since: '1.3.0', baseBitType: BitType.example },
@@ -1010,6 +1015,10 @@ const BITS: _BitsConfig = {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.isCaseSensitive,
+      },
     ],
     cardSet: CardSetConfigKey._matchPairs,
   },
@@ -1441,6 +1450,26 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.tablePagination,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tablePaginationLimit,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableHeight,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableWhitespaceNoWrap,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableAutoWidth,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableResizableColumns,
+      },
     ],
     cardSet: CardSetConfigKey._table,
   },
@@ -1479,6 +1508,7 @@ const BITS: _BitsConfig = {
   [BitType.groupBorn]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.groupDied]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.recordAudio]: { since: '1.3.0', baseBitType: BitType.toc },
+  [BitType.recordVideo]: { since: '1.5.24', baseBitType: BitType.toc },
   [BitType.stickyNote]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.takePicture]: { since: '1.3.0', baseBitType: BitType.toc },
   [BitType.handInAudio]: { since: '1.5.15', baseBitType: BitType.takePicture },

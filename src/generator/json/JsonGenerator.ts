@@ -1268,6 +1268,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       for (const i of ingredients) {
         // Create the ingredient
         const ingredientJson: Partial<IngredientJson> = {
+          title: Breakscape.unbreakscape(i.title) ?? '',
           checked: i.checked ?? false,
           item: Breakscape.unbreakscape(i.item) ?? '',
           quantity: i.quantity ?? 0,
@@ -1277,6 +1278,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         };
 
         // Delete unwanted properties
+        if (i?.title == null) delete ingredientJson.title;
+        // if (i?.unit == null) delete ingredientJson.unit;
         if (i?.unitAbbr == null) delete ingredientJson.unitAbbr;
         // if (i?.instruction == null) delete ingredientJson.instruction;
 
@@ -2600,6 +2603,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       tableSearch: undefined,
       tableSort: undefined,
       tablePagination: undefined,
+      tablePaginationLimit: undefined,
+      tableHeight: undefined,
+      tableWhitespaceNoWrap: undefined,
+      tableAutoWidth: undefined,
+      tableResizableColumns: undefined,
       quizCountItems: undefined,
       quizStrikethroughSolutions: undefined,
       codeLineNumbers: undefined,
@@ -2750,7 +2758,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       //
     } else if (
       Config.isOfBitType(bitType, [
-        BitType.cloze,
         BitType.multipleChoice1,
         BitType.multipleResponse1,
         BitType.multipleChoiceText,
@@ -2767,6 +2774,23 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
       if (bitJson.isExample == null) bitJson.isExample = false;
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      //
+    } else if (Config.isOfBitType(bitType, BitType.cloze)) {
+      // Default, but with no 'example' at the bit level.
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      if (Config.isOfBitType(bitType, BitType.clozeSolutionGrouped)) {
+        // Solution grouped
+        if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
+        if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = true;
+      } else {
+        // Insturuction grouped
+        if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
+        if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = false;
+      }
       //
     } else if (Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleResponse])) {
       // Default with a card (and hence a footer possibility)
@@ -2864,6 +2888,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (bitJson.tableSearch == null) bitJson.tableSearch = false;
       if (bitJson.tableSort == null) bitJson.tableSort = false;
       if (bitJson.tablePagination == null) bitJson.tablePagination = false;
+      if (bitJson.tablePaginationLimit == null) bitJson.tablePaginationLimit = 0;
+      if (bitJson.tableHeight == null) bitJson.tableHeight = 0;
+      if (bitJson.tableWhitespaceNoWrap == null) bitJson.tableWhitespaceNoWrap = true;
+      if (bitJson.tableAutoWidth == null) bitJson.tableAutoWidth = true;
+      if (bitJson.tableResizableColumns == null) bitJson.tableResizableColumns = false;
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
       //
     } else {
@@ -2944,6 +2973,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.tableSearch == null) delete bitJson.tableSearch;
     if (bitJson.tableSort == null) delete bitJson.tableSort;
     if (bitJson.tablePagination == null) delete bitJson.tablePagination;
+    if (bitJson.tablePaginationLimit == null) delete bitJson.tablePaginationLimit;
+    if (bitJson.tableHeight == null) delete bitJson.tableHeight;
+    if (bitJson.tableWhitespaceNoWrap == null) delete bitJson.tableWhitespaceNoWrap;
+    if (bitJson.tableAutoWidth == null) delete bitJson.tableAutoWidth;
+    if (bitJson.tableResizableColumns == null) delete bitJson.tableResizableColumns;
     if (bitJson.quizCountItems == null) delete bitJson.quizCountItems;
     if (bitJson.quizStrikethroughSolutions == null) delete bitJson.quizStrikethroughSolutions;
     if (bitJson.codeLineNumbers == null) delete bitJson.codeLineNumbers;

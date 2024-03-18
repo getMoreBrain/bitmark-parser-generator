@@ -81,6 +81,11 @@ export interface Bit {
   tableSearch?: Property;
   tableSort?: Property;
   tablePagination?: Property;
+  tablePaginationLimit?: Property;
+  tableHeight?: Property;
+  tableWhitespaceNoWrap?: Property;
+  tableAutoWidth?: Property;
+  tableResizableColumns?: Property;
   quizCountItems?: Property;
   quizStrikethroughSolutions?: Property;
   codeLineNumbers?: Property;
@@ -348,6 +353,7 @@ export interface Servings {
 // Ingredient
 
 export interface Ingredient {
+  title?: BreakscapedString;
   checked?: boolean;
   item?: BreakscapedString; // TextAst;
   quantity?: number;

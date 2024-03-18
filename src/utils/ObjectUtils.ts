@@ -71,6 +71,91 @@ class ObjectUtils {
   }
 
   /**
+   * Return an array of the objects at the end of the paths
+   * specified in the path array.
+   *
+   * e.g.
+   *
+   * const obj = obj = {
+   *   a: {
+   *     b: {
+   *       c: 1,
+   *     },
+   *   },
+   *   d: [{ e: 2 }, { f: 3 }],
+   *   g: [{ h: [{ i: 4 }] }, { h: [{ i: 5 }, { i: 6 }] }, { h: [{ i: 7 }] }],
+   * }
+   *
+   * objectUtils.flatMapPath(obj, ['a']);
+   * [{ b: { c: 1 }]
+   *
+   * objectUtils.flatMapPath(obj, ['a', 'b']);
+   * [{ c: 1 }]
+   *
+   * objectUtils.flatMapPath(obj, ['a', 'b', 'c']);
+   * [1]
+   *
+   * objectUtils.flatMapPath(obj, ['d']);
+   * [{ e: 2 }, { f: 3 }]
+   *
+   * objectUtils.flatMapPath(obj, ['d', 'e']);
+   * [2]
+   *
+   * objectUtils.flatMapPath(obj, ['g']);
+   * [{ h: [{ i: 4 }] }, { h: [{ i: 5 }, { i: 6 }] }, { h: [{ i: 7 }] }]
+   *
+   * objectUtils.flatMapPath(obj, ['g', 'h']);
+   * [{ i: 4 }, { i: 5 }, { i: 6 }, { i: 7 }]
+   *
+   * objectUtils.flatMapPath(obj, ['g', 'h', 'i']);
+   * [4, 5, 6, 7]
+   *
+   * @param obj
+   * @param path
+   * @returns
+   */
+  flatMapPath(obj: unknown, path: string | string[]): unknown[] {
+    if (!obj) return [];
+    if (!path) return [];
+    if (!Array.isArray(path)) path = [path]; // Ensure path is an array
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const node = obj as any;
+
+    const key = path.shift();
+    if (key == null) return node;
+    const data = node[key];
+
+    if (!data) return [];
+    if (Array.isArray(data)) {
+      return data.flatMap((d) => this.flatMapPath(d, path.slice()));
+    } else {
+      return [this.flatMapPath(data, path)].flat();
+    }
+  }
+
+  // testFlatMapPath() {
+  //   const obj = {
+  //     a: {
+  //       b: {
+  //         c: 1,
+  //       },
+  //     },
+  //     d: [{ e: 2 }, { f: 3 }],
+  //     g: [{ h: [{ i: 4 }] }, { h: [{ i: 5 }, { i: 6 }] }, { h: [{ i: 4 }] }],
+  //   };
+
+  //   console.log(this.flatMapPath(obj, 'a')); // [{ b: { c: 1 }]
+  //   console.log(this.flatMapPath(obj, ['a', 'b'])); // [{ c: 1 }]
+  //   console.log(this.flatMapPath(obj, ['a', 'b', 'c'])); // [1]
+  //   console.log(this.flatMapPath(obj, ['d'])); // [{ e: 2 }, { f: 3 }]
+  //   console.log(this.flatMapPath(obj, ['d', 'e'])); // [2]
+  //   console.log(this.flatMapPath(obj, ['g'])); // [{ h: [{ i: 4 }] }, { h: [{ i: 5 }, { i: 6 }] }, { h: [{ i: 4 }] }]
+  //   console.log(this.flatMapPath(obj, ['g', 'h'])); // [{ i: 4 }, { i: 5 }, { i: 6 }, { i: 4 }]
+  //   console.log(this.flatMapPath(obj, ['g', 'h', 'i'])); // [4, 5, 6, 4]
+  // }
+
+  /**
    * Order the properties of a plain JS object.
    * The original properties are removed, and re-added in the new order.
    * Any non-specified properties are dropped.
