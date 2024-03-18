@@ -96,7 +96,7 @@
     "jest-html-reporter": "^3.10.2",
     "jest-junit": "^16.0.0",
     "node-polyfill-webpack-plugin": "^3.0.0",
-    "peggy": "^3.0.2",
+    "peggy": "^4.0.2",
     "prettier": "^3.2.5",
     "shx": "^0.3.4",
     "terser-webpack-plugin": "^5.3.10",
