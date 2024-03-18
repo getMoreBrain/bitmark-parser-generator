@@ -33,8 +33,30 @@
       ],
       "cards": [
         {
-          "question": "Question 1?\nCard 1, Side 1",
-          "answer": "Answer 1\nCard 1, Side 2",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Question 1?\nCard 1, Side 1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer 1\nCard 1, Side 2",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "alternativeAnswers": [],
           "item": [],
           "hint": [],
@@ -43,10 +65,43 @@
           "example": null
         },
         {
-          "question": "Question 2?\nCard 2, Side 1",
-          "answer": "Answer 2\nCard 2, Side 2",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Question 2?\nCard 2, Side 1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer 2\nCard 2, Side 2",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "alternativeAnswers": [
-            "Alternative Answer 2\nCard 2, Side 2"
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Alternative Answer 2\nCard 2, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
           ],
           "item": [],
           "hint": [],
@@ -57,8 +112,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.5.25",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
   },
@@ -84,10 +140,43 @@
       ],
       "cards": [
         {
-          "question": "Question 1?\nCard 1, Side 1",
-          "answer": "Answer 1\nCard 1, Side 2",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Question 1?\nCard 1, Side 1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer 1\nCard 1, Side 2",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "alternativeAnswers": [
-            "Alternative Answer 2\nCard 1, Side 2"
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Alternative Answer 2\nCard 1, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
           ],
           "item": [],
           "hint": [],
@@ -96,8 +185,30 @@
           "example": null
         },
         {
-          "question": "Question 2?\nCard 2, Side 1",
-          "answer": "Answer 2\nCard 2, Side 2, No footer",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Question 2?\nCard 2, Side 1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer 2\nCard 2, Side 2, No footer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "alternativeAnswers": [],
           "item": [],
           "hint": [],
@@ -108,8 +219,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.5.25",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer"
   },
@@ -158,10 +270,55 @@
       ],
       "cards": [
         {
-          "question": "Question 1?\nCard 1, Side 1",
-          "answer": "Answer 1\nCard 1, Side 2",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Question 1?\nCard 1, Side 1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer 1\nCard 1, Side 2",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "alternativeAnswers": [
-            "Alternative Answer 2\nCard 1, Side 2"
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Alternative Answer 1\nCard 1, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Alternative Answer 2\nCard 1, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
           ],
           "item": [],
           "hint": [],
@@ -170,8 +327,30 @@
           "example": true
         },
         {
-          "question": "Question 2?\nCard 2, Side 1",
-          "answer": "Answer 2\nCard 2, Side 2, No footer",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Question 2?\nCard 2, Side 1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer 2\nCard 2, Side 2, No footer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "alternativeAnswers": [],
           "item": [
             {
@@ -205,10 +384,11 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.5.25",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
-    "bitmark": "[.flashcard]\n[@example]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]"
+    "bitmark": "[.flashcard]\n[@example]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]"
   },
   {
     "bit": {
@@ -267,10 +447,43 @@
       ],
       "cards": [
         {
-          "question": "Question 1?\nCard 1, Side 1",
-          "answer": "Answer 1\nCard 1, Side 2",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Question 1?\nCard 1, Side 1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer 1\nCard 1, Side 2",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "alternativeAnswers": [
-            "Alternative Answer 2\nCard 1, Side 2"
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Alternative Answer 2\nCard 1, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
           ],
           "item": [],
           "hint": [],
@@ -279,8 +492,30 @@
           "example": null
         },
         {
-          "question": "Question 2?\nCard 2, Side 1",
-          "answer": "Answer 2\nCard 2, Side 2, No footer",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Question 2?\nCard 2, Side 1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer 2\nCard 2, Side 2, No footer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "alternativeAnswers": [],
           "item": [
             {
@@ -314,8 +549,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.5.25",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.flashcard]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
   }

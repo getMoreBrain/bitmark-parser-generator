@@ -788,9 +788,17 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       for (const c of flashcards) {
         // Create the flashcard
         const flashcardJson: Partial<FlashcardJson> = {
-          question: Breakscape.unbreakscape(c.question) ?? '',
-          answer: Breakscape.unbreakscape(c.answer) ?? '',
-          alternativeAnswers: Breakscape.unbreakscape(c.alternativeAnswers) ?? [],
+          question: this.convertBreakscapedStringToJsonText(
+            c.question ?? Breakscape.EMPTY_STRING,
+            TextFormat.bitmarkMinusMinus,
+          ),
+          answer: this.convertBreakscapedStringToJsonText(
+            c.answer ?? Breakscape.EMPTY_STRING,
+            TextFormat.bitmarkMinusMinus,
+          ),
+          alternativeAnswers: (c.alternativeAnswers ?? []).map((a) =>
+            this.convertBreakscapedStringToJsonText(a ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
+          ),
           ...this.toItemLeadHintInstruction(c),
           ...this.toExample(c, {
             defaultExample: c.isDefaultExample,

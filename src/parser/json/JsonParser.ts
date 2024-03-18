@@ -665,9 +665,9 @@ class JsonParser {
           example,
         } = c;
         const node = builder.flashcard({
-          question: this.convertStringToBreakscapedString(question) ?? Breakscape.EMPTY_STRING,
-          answer: this.convertStringToBreakscapedString(answer),
-          alternativeAnswers: this.convertStringToBreakscapedString(alternativeAnswers),
+          question: this.convertJsonTextToBreakscapedString(question) ?? Breakscape.EMPTY_STRING,
+          answer: this.convertJsonTextToBreakscapedString(answer),
+          alternativeAnswers: this.convertJsonTextToBreakscapedString(alternativeAnswers),
           ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
           ...this.parseExample(example),
         });

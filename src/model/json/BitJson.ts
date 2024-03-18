@@ -186,9 +186,9 @@ export interface MarkConfigJson {
 }
 
 export interface FlashcardJson {
-  question: string;
-  answer: string;
-  alternativeAnswers: string[];
+  question: JsonText;
+  answer: JsonText;
+  alternativeAnswers: JsonText[];
   item: JsonText;
   lead: JsonText;
   pageNumber: JsonText;
