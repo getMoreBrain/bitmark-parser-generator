@@ -10,7 +10,8 @@
       "servings": {
         "servings": 4.5,
         "unit": "Litre",
-        "unitAbbr": "l"
+        "unitAbbr": "l",
+        "decimalPlaces": 2
       },
       "item": [],
       "lead": [
@@ -49,6 +50,7 @@
           "quantity": 2,
           "unit": "Liter",
           "unitAbbr": "Lt",
+          "decimalPlaces": 1,
           "disableCalculation": false
         },
         {
@@ -57,6 +59,7 @@
           "quantity": 30,
           "unit": "Stück",
           "unitAbbr": "Stk",
+          "decimalPlaces": 1,
           "disableCalculation": false
         },
         {
@@ -65,6 +68,7 @@
           "quantity": 5,
           "unit": "Stück",
           "unitAbbr": "Stk",
+          "decimalPlaces": 1,
           "disableCalculation": false
         },
         {
@@ -73,6 +77,7 @@
           "item": "Salz",
           "quantity": 1,
           "unit": "Prise",
+          "decimalPlaces": 1,
           "disableCalculation": false
         },
         {
@@ -80,6 +85,7 @@
           "item": "Mehl",
           "quantity": 2.5,
           "unit": "kg",
+          "decimalPlaces": 14,
           "disableCalculation": false
         },
         {
@@ -88,6 +94,7 @@
           "quantity": 10,
           "unit": "minutes",
           "unitAbbr": "min",
+          "decimalPlaces": 1,
           "disableCalculation": true
         },
         {
@@ -96,15 +103,16 @@
           "quantity": 20,
           "unit": "minutes",
           "unitAbbr": "min",
+          "decimalPlaces": 1,
           "disableCalculation": true
         }
       ]
     },
     "parser": {
-      "version": "1.5.23",
+      "version": "1.5.24",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
-    "bitmark": "[.cook-ingredients]\n[%][%ZUTATEN]\n\n[!Kraftbrühe Murillo]\n[@technicalTerm: Consommé Murillo ][@lang:fr]\n[@servings:4.5][@unit:Litre][@unitAbbr:l]\n\n====\n[#Title for the ingredient]\n[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe\n====\n[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...\n====\n[!5][@unitAbbr:Stk][@unit:Stück] Erbsen ...\n====\n[#Another title for an ingredient]\n[!1][@unit:Prise] Salz\n====\n[!2.5][@unit:kg] Mehl\n====\n[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time\n====\n[+]\n[!20]\n[@unit:minutes]\n[@unitAbbr:min]\n[@disableCalculation]\nCooking time\n===="
+    "bitmark": "[.cook-ingredients]\n[%][%ZUTATEN]\n\n[!Kraftbrühe Murillo]\n[@technicalTerm: Consommé Murillo ][@lang:fr]\n[@servings:4.5][@unit:Litre][@unitAbbr:l][@decimalPlaces:2]\n\n====\n[#Title for the ingredient]\n[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe\n====\n[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...\n====\n[!5][@unitAbbr:Stk][@unit:Stück] Erbsen ...\n====\n[#Another title for an ingredient]\n[!1][@unit:Prise] Salz\n====\n[!2.5][@unit:kg][@decimalPlaces:14] Mehl\n====\n[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time\n====\n[+]\n[!20]\n[@unit:minutes]\n[@unitAbbr:min]\n[@disableCalculation]\nCooking time\n===="
   }
 ]

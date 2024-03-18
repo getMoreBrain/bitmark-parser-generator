@@ -472,6 +472,10 @@ const BITS: _BitsConfig = {
           },
           {
             type: BitTagType.property,
+            configKey: PropertyConfigKey.decimalPlaces,
+          },
+          {
+            type: BitTagType.property,
             configKey: PropertyConfigKey.disableCalculation,
           },
         ],

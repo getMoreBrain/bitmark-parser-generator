@@ -337,6 +337,7 @@ export interface ServingsJson {
   servings: number;
   unit: string;
   unitAbbr: string;
+  decimalPlaces: number;
   disableCalculation: boolean;
 }
 
@@ -347,6 +348,7 @@ export interface IngredientJson {
   quantity: number;
   unit: string;
   unitAbbr: string;
+  decimalPlaces: number;
   disableCalculation: boolean;
 }
 

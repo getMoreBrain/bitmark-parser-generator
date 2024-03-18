@@ -347,6 +347,7 @@ export interface Servings {
   servings: number;
   unit?: BreakscapedString;
   unitAbbr?: BreakscapedString;
+  decimalPlaces?: number;
   disableCalculation?: boolean;
 }
 
@@ -359,6 +360,7 @@ export interface Ingredient {
   quantity?: number;
   unit?: BreakscapedString;
   unitAbbr?: BreakscapedString;
+  decimalPlaces?: number;
   disableCalculation?: boolean;
 }
 
