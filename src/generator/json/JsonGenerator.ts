@@ -788,9 +788,17 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       for (const c of flashcards) {
         // Create the flashcard
         const flashcardJson: Partial<FlashcardJson> = {
-          question: Breakscape.unbreakscape(c.question) ?? '',
-          answer: Breakscape.unbreakscape(c.answer) ?? '',
-          alternativeAnswers: Breakscape.unbreakscape(c.alternativeAnswers) ?? [],
+          question: this.convertBreakscapedStringToJsonText(
+            c.question ?? Breakscape.EMPTY_STRING,
+            TextFormat.bitmarkMinusMinus,
+          ),
+          answer: this.convertBreakscapedStringToJsonText(
+            c.answer ?? Breakscape.EMPTY_STRING,
+            TextFormat.bitmarkMinusMinus,
+          ),
+          alternativeAnswers: (c.alternativeAnswers ?? []).map((a) =>
+            this.convertBreakscapedStringToJsonText(a ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
+          ),
           ...this.toItemLeadHintInstruction(c),
           ...this.toExample(c, {
             defaultExample: c.isDefaultExample,
@@ -1274,6 +1282,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           quantity: i.quantity ?? 0,
           unit: Breakscape.unbreakscape(i.unit) ?? '',
           unitAbbr: Breakscape.unbreakscape(i.unitAbbr) ?? '',
+          decimalPlaces: i.decimalPlaces ?? 1,
           disableCalculation: i.disableCalculation ?? false,
         };
 
@@ -2786,8 +2795,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         // Solution grouped
         if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
         if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = true;
-      } else {
-        // Insturuction grouped
+      } else if (Config.isOfBitType(bitType, BitType.clozeInstructionGrouped)) {
+        // Instruction grouped
         if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
         if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = false;
       }

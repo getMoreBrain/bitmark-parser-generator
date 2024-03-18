@@ -326,6 +326,12 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.decimalPlaces]: {
+    tag: PropertyTag.decimalPlaces,
+    single: true,
+    format: PropertyFormat.number,
+    defaultValue: '1',
+  },
   [PropertyConfigKey.disableCalculation]: {
     tag: PropertyTag.disableCalculation,
     single: true,

@@ -186,9 +186,9 @@ export interface MarkConfigJson {
 }
 
 export interface FlashcardJson {
-  question: string;
-  answer: string;
-  alternativeAnswers: string[];
+  question: JsonText;
+  answer: JsonText;
+  alternativeAnswers: JsonText[];
   item: JsonText;
   lead: JsonText;
   pageNumber: JsonText;
@@ -337,6 +337,7 @@ export interface ServingsJson {
   servings: number;
   unit: string;
   unitAbbr: string;
+  decimalPlaces: number;
   disableCalculation: boolean;
 }
 
@@ -347,6 +348,7 @@ export interface IngredientJson {
   quantity: number;
   unit: string;
   unitAbbr: string;
+  decimalPlaces: number;
   disableCalculation: boolean;
 }
 

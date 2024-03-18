@@ -168,6 +168,7 @@ export interface BitContentProcessorResult {
   format?: BreakscapedString;
   unit?: BreakscapedString;
   unitAbbr?: BreakscapedString;
+  decimalPlaces?: number;
   disableCalculation?: boolean;
 
   extraProperties?: ExtraProperties;

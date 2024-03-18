@@ -241,9 +241,9 @@ export interface Decision {
 // Flashcard
 
 export interface Flashcard {
-  question: BreakscapedString;
-  answer?: BreakscapedString;
-  alternativeAnswers?: BreakscapedString[];
+  question: BreakscapedString; // TextAst;
+  answer?: BreakscapedString; // TextAst;
+  alternativeAnswers?: BreakscapedString[]; // TextAst[];
   itemLead?: ItemLead;
   hint?: BreakscapedString; // TextAst;
   instruction?: BreakscapedString; // TextAst;
@@ -347,6 +347,7 @@ export interface Servings {
   servings: number;
   unit?: BreakscapedString;
   unitAbbr?: BreakscapedString;
+  decimalPlaces?: number;
   disableCalculation?: boolean;
 }
 
@@ -359,6 +360,7 @@ export interface Ingredient {
   quantity?: number;
   unit?: BreakscapedString;
   unitAbbr?: BreakscapedString;
+  decimalPlaces?: number;
   disableCalculation?: boolean;
 }
 

@@ -836,9 +836,10 @@ function parseIngredients(
           instruction,
           unit,
           unitAbbr,
+          decimalPlaces,
+          disableCalculation,
           cardBodyStr: item,
           cardBody,
-          disableCalculation,
           ...tags
         } = content.data;
 
@@ -868,6 +869,7 @@ function parseIngredients(
           quantity,
           unit: unit ?? Breakscape.EMPTY_STRING,
           unitAbbr: unitAbbr ?? Breakscape.EMPTY_STRING,
+          decimalPlaces: decimalPlaces ?? 1,
           disableCalculation: disableCalculation,
           ...tags,
         });

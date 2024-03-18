@@ -356,6 +356,10 @@ const CARDSETS: _CardSetsConfig = {
             },
             {
               type: BitTagType.property,
+              configKey: PropertyConfigKey.decimalPlaces,
+            },
+            {
+              type: BitTagType.property,
               configKey: PropertyConfigKey.disableCalculation,
             },
           ],
