@@ -2787,8 +2787,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         // Solution grouped
         if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
         if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = true;
-      } else {
-        // Insturuction grouped
+      } else if (Config.isOfBitType(bitType, BitType.clozeInstructionGrouped)) {
+        // Instruction grouped
         if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
         if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = false;
       }

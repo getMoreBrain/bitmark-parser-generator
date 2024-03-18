@@ -41,8 +41,6 @@
       ],
       "externalId": ["[externalId with square bracked at end]"],
       "lang": "[lang] with square bracked in middle",
-      "quizCountItems": true,
-      "quizStrikethroughSolutions": false,
       "item": [
         {
           "type": "paragraph",
