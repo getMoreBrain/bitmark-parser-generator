@@ -27,6 +27,7 @@ const PropertyTag = superenum({
   coverImage: 'coverImage',
   coverColor: 'coverColor',
   date: 'date',
+  decimalPlaces: 'decimalPlaces',
   deeplink: 'deeplink',
   disableCalculation: 'disableCalculation',
   duration: 'duration',

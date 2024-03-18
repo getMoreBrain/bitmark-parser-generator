@@ -1000,11 +1000,12 @@ class JsonParser {
     let node: Servings | undefined;
 
     if (servings) {
-      const { servings: s, unit, unitAbbr, disableCalculation } = servings;
+      const { servings: s, unit, unitAbbr, decimalPlaces, disableCalculation } = servings;
       node = builder.servings({
         servings: s,
         unit: this.convertStringToBreakscapedString(unit) ?? Breakscape.EMPTY_STRING,
         unitAbbr: this.convertStringToBreakscapedString(unitAbbr) ?? Breakscape.EMPTY_STRING,
+        decimalPlaces: decimalPlaces ?? 1,
         disableCalculation: disableCalculation ?? false,
       });
     }
@@ -1016,7 +1017,7 @@ class JsonParser {
     const nodes: Ingredient[] = [];
     if (Array.isArray(ingredients)) {
       for (const i of ingredients) {
-        const { title, checked, item, quantity, unit, unitAbbr, disableCalculation } = i;
+        const { title, checked, item, quantity, unit, unitAbbr, decimalPlaces, disableCalculation } = i;
         const node = builder.ingredient({
           title: this.convertStringToBreakscapedString(title),
           checked,
@@ -1024,6 +1025,7 @@ class JsonParser {
           quantity,
           unit: this.convertStringToBreakscapedString(unit) ?? Breakscape.EMPTY_STRING,
           unitAbbr: this.convertStringToBreakscapedString(unitAbbr),
+          decimalPlaces: decimalPlaces ?? 1,
           disableCalculation,
         });
         nodes.push(node);

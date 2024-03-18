@@ -322,6 +322,7 @@ const NodeType = superenum({
   quantity: 'quantity',
   unit: 'unit',
   unitAbbr: 'unitAbbr',
+  decimalPlaces: 'decimalPlaces',
   disableCalculation: 'disableCalculation',
 
   // ImageSource

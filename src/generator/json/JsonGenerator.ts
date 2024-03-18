@@ -1274,6 +1274,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           quantity: i.quantity ?? 0,
           unit: Breakscape.unbreakscape(i.unit) ?? '',
           unitAbbr: Breakscape.unbreakscape(i.unitAbbr) ?? '',
+          decimalPlaces: i.decimalPlaces ?? 1,
           disableCalculation: i.disableCalculation ?? false,
         };
 

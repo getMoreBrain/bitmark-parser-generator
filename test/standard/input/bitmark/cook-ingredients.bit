@@ -3,7 +3,7 @@
 
 [!Kraftbrühe Murillo]
 [@technicalTerm: Consommé Murillo ][@lang:fr]
-[@servings:4.5][@unit:Litre][@unitAbbr:l]
+[@servings:4.5][@unit:Litre][@unitAbbr:l][@decimalPlaces:2]
 
 ====
 [#Title for the ingredient]
@@ -16,7 +16,7 @@
 [#Another title for an ingredient]
 [!1][@unit:Prise] Salz
 ====
-[!2.5][@unit:kg] Mehl
+[!2.5][@unit:kg][@decimalPlaces:14] Mehl
 ====
 [!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time
 ====

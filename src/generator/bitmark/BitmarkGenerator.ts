@@ -380,11 +380,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
-    const { servings, unit, unitAbbr, disableCalculation } = nodeValue;
+    const { servings, unit, unitAbbr, decimalPlaces, disableCalculation } = nodeValue;
 
     this.writeProperty('servings', servings, true);
     if (unit != null) this.writeProperty('unit', unit);
     if (unitAbbr != null) this.writeProperty('unitAbbr', unitAbbr);
+    if (decimalPlaces != null) this.writeProperty('decimalPlaces', decimalPlaces);
     if (disableCalculation != null) this.writeProperty('disableCalculation', disableCalculation);
   }
 
@@ -1010,6 +1011,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // [@unitAbbr:kg]
     if (ingredient.unitAbbr != null) this.writeProperty('unitAbbr', ingredient.unitAbbr, true);
+
+    // [@decimalPlaces:1]
+    if (ingredient.decimalPlaces != null) this.writeProperty('decimalPlaces', ingredient.decimalPlaces, true);
 
     // [@disableCalculation]
     if (ingredient.disableCalculation) this.writeProperty('disableCalculation', true, true);

@@ -1012,9 +1012,10 @@ class Builder extends BaseBuilder {
     quantity?: number;
     unit?: BreakscapedString;
     unitAbbr?: BreakscapedString;
+    decimalPlaces?: number;
     disableCalculation?: boolean;
   }): Ingredient {
-    const { title, checked, item, quantity, unit, unitAbbr, disableCalculation } = data;
+    const { title, checked, item, quantity, unit, unitAbbr, decimalPlaces, disableCalculation } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Ingredient = {
@@ -1024,6 +1025,7 @@ class Builder extends BaseBuilder {
       quantity,
       unit,
       unitAbbr,
+      decimalPlaces,
       disableCalculation,
     };
 
@@ -1548,15 +1550,17 @@ class Builder extends BaseBuilder {
     servings: number;
     unit?: BreakscapedString;
     unitAbbr?: BreakscapedString;
+    decimalPlaces?: number;
     disableCalculation?: boolean;
   }): Servings {
-    const { servings, unit, unitAbbr, disableCalculation } = data;
+    const { servings, unit, unitAbbr, decimalPlaces, disableCalculation } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Servings = {
       servings,
       unit,
       unitAbbr,
+      decimalPlaces,
       disableCalculation,
     };
 
