@@ -4,6 +4,8 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
       "id": ["249781"],
+      "quizCountItems": false,
+      "quizStrikethroughSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -147,6 +149,8 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
       "id": ["287825"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": true,
       "item": [],
       "lead": [
         {
@@ -232,6 +236,8 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
       "id": ["131518"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": true,
       "item": [
         {
           "type": "paragraph",
@@ -534,6 +540,8 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
       "id": ["131518"],
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": true,
       "item": [
         {
           "type": "paragraph",
