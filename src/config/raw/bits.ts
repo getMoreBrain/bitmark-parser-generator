@@ -478,6 +478,10 @@ const BITS: _BitsConfig = {
             type: BitTagType.property,
             configKey: PropertyConfigKey.disableCalculation,
           },
+          {
+            type: BitTagType.tag,
+            configKey: TagConfigKey.hint,
+          },
         ],
       },
     ],

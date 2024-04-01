@@ -1000,13 +1000,14 @@ class JsonParser {
     let node: Servings | undefined;
 
     if (servings) {
-      const { servings: s, unit, unitAbbr, decimalPlaces, disableCalculation } = servings;
+      const { servings: s, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = servings;
       node = builder.servings({
         servings: s,
         unit: this.convertStringToBreakscapedString(unit) ?? Breakscape.EMPTY_STRING,
         unitAbbr: this.convertStringToBreakscapedString(unitAbbr) ?? Breakscape.EMPTY_STRING,
         decimalPlaces: decimalPlaces ?? 1,
         disableCalculation: disableCalculation ?? false,
+        hint: this.convertStringToBreakscapedString(hint) ?? Breakscape.EMPTY_STRING,
       });
     }
 

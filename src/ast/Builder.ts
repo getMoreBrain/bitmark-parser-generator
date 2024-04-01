@@ -1552,8 +1552,9 @@ class Builder extends BaseBuilder {
     unitAbbr?: BreakscapedString;
     decimalPlaces?: number;
     disableCalculation?: boolean;
+    hint?: BreakscapedString;
   }): Servings {
-    const { servings, unit, unitAbbr, decimalPlaces, disableCalculation } = data;
+    const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = data;
 
     // NOTE: Node order is important and is defined here
     const node: Servings = {
@@ -1562,6 +1563,7 @@ class Builder extends BaseBuilder {
       unitAbbr,
       decimalPlaces,
       disableCalculation,
+      hint,
     };
 
     // Remove Unset Optionals

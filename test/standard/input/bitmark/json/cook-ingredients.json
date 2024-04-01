@@ -11,7 +11,8 @@
         "servings": 4.5,
         "unit": "Litre",
         "unitAbbr": "l",
-        "decimalPlaces": 2
+        "decimalPlaces": 2,
+        "hint": "hint"
       },
       "item": [],
       "lead": [

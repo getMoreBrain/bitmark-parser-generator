@@ -339,6 +339,7 @@ export interface ServingsJson {
   unitAbbr: string;
   decimalPlaces: number;
   disableCalculation: boolean;
+  hint: string;
 }
 
 export interface IngredientJson {
