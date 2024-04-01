@@ -328,6 +328,7 @@ const BitType = superenum({
   warning: 'warning',
   websiteLink: 'website-link',
   workbookArticle: 'workbook-article',
+  xModule: 'x-module',
 });
 
 export type BitTypeType = EnumType<typeof BitType>;

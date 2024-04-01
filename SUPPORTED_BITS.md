@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.25
+Version: 1.5.26
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -328,5 +328,6 @@ video-transcript (since: 1.3.0)
 warning (since: 1.3.0)
 website-link (since: 1.3.0)
 workbook-article (since: 1.3.0)
+x-module (since: 1.5.26)
 
 </pre>

@@ -31,7 +31,7 @@ function servingsChainContentProcessor(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('servings TAGS', tags);
 
-  const { unit, unitAbbr, decimalPlaces, disableCalculation } = tags;
+  const { unit, unitAbbr, decimalPlaces, disableCalculation, hint } = tags;
 
   // Extract the servings from the content tag
   const servings = NumberUtils.asNumber(content.value) ?? 1;
@@ -42,6 +42,7 @@ function servingsChainContentProcessor(
     unitAbbr,
     decimalPlaces: decimalPlaces ?? 1,
     disableCalculation,
+    hint,
   });
 
   target.servings = node;
