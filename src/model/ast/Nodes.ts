@@ -349,6 +349,7 @@ export interface Servings {
   unitAbbr?: BreakscapedString;
   decimalPlaces?: number;
   disableCalculation?: boolean;
+  hint?: BreakscapedString; // TextAst??;
 }
 
 // Ingredient
