@@ -657,6 +657,7 @@ const BITS: _BitsConfig = {
   [BitType.videoTranscript]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.warning]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.workbookArticle]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.xModule]: { since: '1.5.26', baseBitType: BitType.example },
   [BitType.exampleList]: {
     since: '1.4.13',
     baseBitType: BitType.example,
