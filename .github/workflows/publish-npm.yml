@@ -37,3 +37,8 @@ jobs:
             -H "Content-Type: application/json" \
             -H "Circle-Token: $CIRCLE_TOKEN" \
             https://circleci.com/api/v2/project/github/getMoreBrain/bitbook-api/pipeline
+      - name: Purge jsdelivr cache
+        run: |
+          curl -X GET \
+            https://purge.jsdelivr.net/npm/@gmb/bitmark-parser-generator@latest/dist/browser/bitmark-parser-generator.min.js
+
