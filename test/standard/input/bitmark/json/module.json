@@ -1,7 +1,7 @@
 [
   {
     "bit": {
-      "type": "x-module",
+      "type": "module",
       "format": "bitmark++",
       "ageRange": ["18", "120"],
       "item": [],
@@ -48,6 +48,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
-    "bitmark": "[.x-module:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+    "bitmark": "[.module:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   }
 ]
