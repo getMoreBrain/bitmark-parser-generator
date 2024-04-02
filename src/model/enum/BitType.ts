@@ -236,6 +236,7 @@ const BitType = superenum({
   matchReverse: 'match-reverse',
   matchSolutionGrouped: 'match-solution-grouped',
   message: 'message',
+  module: 'module',
   multipleChoice: 'multiple-choice',
   multipleChoice1: 'multiple-choice-1',
   multipleChoiceText: 'multiple-choice-text',
@@ -328,7 +329,6 @@ const BitType = superenum({
   warning: 'warning',
   websiteLink: 'website-link',
   workbookArticle: 'workbook-article',
-  xModule: 'x-module',
 });
 
 export type BitTypeType = EnumType<typeof BitType>;
