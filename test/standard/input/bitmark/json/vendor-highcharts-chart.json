@@ -1,0 +1,241 @@
+[
+  {
+    "bit": {
+      "type": "vendor-highcharts-chart",
+      "format": "json",
+      "id": ["298225"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item 1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is my first chart bit with a JSON body",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": "{\"Test\": 100, \"Test2\": \"Json\"}"
+    },
+    "parser": {
+      "version": "1.5.10",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.vendor-highcharts-chart:json]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"Json\"}"
+  },
+  {
+    "bit": {
+      "type": "vendor-highcharts-chart",
+      "format": "json",
+      "id": ["298225"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item 1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is my first chart bit with a JSON body",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": "{\"Testing\": 200,\n\n\"Checking\": [1,2,3,4,5,6]}"
+    },
+    "parser": {
+      "version": "1.5.10",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.vendor-highcharts-chart]\n[@id:298225]\n[%item 1]\n{\"Testing\": 200,\n[!This is my first chart bit with a JSON body]\n\"Checking\": [1,2,3,4,5,6]}"
+  },
+  {
+    "bit": {
+      "type": "vendor-highcharts-chart",
+      "format": "json",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item 2",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "this is a json bit",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": "{\n  \"name\": \"@bitmark-standard/bitmark-grammar\",\n  \"version\": \"1.0.23\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/bitmark-standard/bitmark-grammar.git\"\n  },\n  \"publishConfig\": {\n    \"registry\": \"https://npm.pkg.github.com\"\n  },\n  \"keywords\": [ \"bitmark\", \"grammar\", \"parser\" ],\n  \"keywords\": [ {\"bitmark\":0},{\"grammar\":1},{\"parser\":2}]\n}"
+    },
+    "parser": {
+      "version": "1.5.10",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.vendor-highcharts-chart:json]\n[!this is a json bit]\n[%item 2]\n{\n  \"name\": \"@bitmark-standard/bitmark-grammar\",\n  \"version\": \"1.0.23\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/bitmark-standard/bitmark-grammar.git\"\n  },\n  \"publishConfig\": {\n    \"registry\": \"https://npm.pkg.github.com\"\n  },\n  \"keywords\": [ \"bitmark\", \"grammar\", \"parser\" ],\n  \"keywords\": [ {\"bitmark\":0},{\"grammar\":1},{\"parser\":2}]\n}"
+  },
+  {
+    "bit": {
+      "type": "vendor-highcharts-chart",
+      "format": "json",
+      "id": ["298225"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item 1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is my first chart bit with a JSON body",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": "{\"Test\": 100, \"Test2\": \"[%item 1][%lead]\"}"
+    },
+    "parser": {
+      "version": "1.5.10",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.vendor-highcharts-chart]\n[@id:298225]\n  [%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"[%item 1][%lead]\"}\n[?hint]"
+  },
+  {
+    "bit": {
+      "type": "vendor-highcharts-chart",
+      "format": "json",
+      "id": ["298225"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item 1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is my first chart bit with a JSON body",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "example": null,
+      "body": "This is not valid JSON"
+    },
+    "parser": {
+      "version": "1.5.10",
+      "bitmarkVersion": "3",
+      "errors": [
+        {
+          "message": "Body JSON is invalid.",
+          "text": "[.vendor-highcharts-chart]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\nThis is not valid JSON\n[?hint]\n",
+          "location": {
+            "start": {
+              "line": 41,
+              "column": 1,
+              "offset": 863
+            },
+            "end": {
+              "line": 47,
+              "column": 1,
+              "offset": 991
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.vendor-highcharts-chart]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\nThis is not valid JSON\n[?hint]"
+  }
+]
