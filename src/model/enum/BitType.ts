@@ -288,6 +288,7 @@ const BitType = superenum({
   step: 'step',
   stepImageScreenshot: 'step-image-screenshot',
   stepImageScreenshotWithPointer: 'step-image-screenshot-with-pointer',
+  sticker: 'sticker',
   stickyNote: 'sticky-note',
   stillImageFilm: 'still-image-film',
   stillImageFilmEmbed: 'still-image-film-embed',

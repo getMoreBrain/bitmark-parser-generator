@@ -655,6 +655,7 @@ const BITS: _BitsConfig = {
   [BitType.remark]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.selfAssessment]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.separator]: { since: '1.4.15', baseBitType: BitType.example },
+  [BitType.sticker]: { since: '1.5.28', baseBitType: BitType.example },
   [BitType.sideNote]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.summary]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.summaryAi]: { since: '1.3.0', baseBitType: BitType.example },
