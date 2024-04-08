@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.26
+Version: 1.5.28
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -306,6 +306,7 @@ toc-chapter (since: 1.5.5)
 true-false (since: 1.3.0)
 true-false-1 (since: 1.3.0)
 vendor-amcharts-5-chart (since: 1.5.8)
+vendor-highcharts-chart (since: 1.5.28)
 vendor-iframely-card (since: 1.5.10)
 vendor-iframely-embed (since: 1.5.10)
 vendor-iframely-preview (since: 1.5.10)

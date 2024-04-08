@@ -1043,11 +1043,12 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  body(data: { bodyParts: BodyPart[] }): Body {
-    const { bodyParts } = data;
+  body(data: { bodyParts?: BodyPart[]; bodyJson?: unknown }): Body {
+    const { bodyParts, bodyJson } = data;
 
     const node: Body = {
       bodyParts,
+      bodyJson,
     };
 
     return node;

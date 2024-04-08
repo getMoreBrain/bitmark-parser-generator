@@ -1196,52 +1196,67 @@ class JsonParser {
       [keyof: string]: BodyBit;
     } = {};
 
-    if (Array.isArray(body)) {
-      // Body is an array (prosemirror like JSON)
+    if (textFormat === TextFormat.json) {
+      // If the text format is JSON, handle appropriately
+      let bodyObject: unknown = body;
 
-      // Parse the body to string in case it is in JSON format
-      bodyStr = this.convertJsonTextToBreakscapedString(body, textFormat);
-
-      // Get the placeholders from the text parser
-      placeholders = this.textGenerator.getPlaceholders();
-    } else {
-      // Body is a string (legacy)
-      // bodyStr = this.parseText(body, textFormat);
-      bodyStr = body as BreakscapedString;
-    }
-
-    // Placeholders
-    if (placeholders) {
-      for (const [key, val] of Object.entries(placeholders)) {
-        const bit = this.bodyBitToAst(val);
-        placeholderNodes[key] = bit as BodyBit;
+      // Attempt to parse a string body as JSON to support the legacy format
+      if (typeof bodyObject === 'string') {
+        try {
+          bodyObject = JSON.parse(bodyObject);
+        } catch (e) {
+          // Could not parse JSON - set body to null
+          bodyObject = null;
+        }
       }
-    }
+      node = builder.body({ bodyJson: bodyObject });
+    } else {
+      if (Array.isArray(body)) {
+        // Body is an array (prosemirror like JSON)
 
-    if (bodyStr) {
-      // Split the body string and insert the placeholders
-      const bodyPartNodes: BodyPart[] = [];
-      const bodyParts: BreakscapedString[] = StringUtils.splitPlaceholders(
-        bodyStr,
-        Object.keys(placeholderNodes),
-      ) as BreakscapedString[];
+        // Parse the body to string in case it is in JSON format
+        bodyStr = this.convertJsonTextToBreakscapedString(body, textFormat);
 
-      for (let i = 0, len = bodyParts.length; i < len; i++) {
-        const bodyPart = bodyParts[i];
+        // Get the placeholders from the text parser
+        placeholders = this.textGenerator.getPlaceholders();
+      } else {
+        // Body is a string (legacy)
+        // bodyStr = this.parseText(body, textFormat);
+        bodyStr = body as BreakscapedString;
+      }
 
-        if (placeholderNodes[bodyPart]) {
-          // Replace the placeholder
-          bodyPartNodes.push(placeholderNodes[bodyPart]);
-        } else {
-          // Treat as text
-          const bodyText = this.bodyTextToAst(bodyPart);
-          bodyPartNodes.push(bodyText);
+      // Placeholders
+      if (placeholders) {
+        for (const [key, val] of Object.entries(placeholders)) {
+          const bit = this.bodyBitToAst(val);
+          placeholderNodes[key] = bit as BodyBit;
         }
       }
 
-      node = builder.body({ bodyParts: bodyPartNodes });
-    }
+      if (bodyStr) {
+        // Split the body string and insert the placeholders
+        const bodyPartNodes: BodyPart[] = [];
+        const bodyParts: BreakscapedString[] = StringUtils.splitPlaceholders(
+          bodyStr,
+          Object.keys(placeholderNodes),
+        ) as BreakscapedString[];
 
+        for (let i = 0, len = bodyParts.length; i < len; i++) {
+          const bodyPart = bodyParts[i];
+
+          if (placeholderNodes[bodyPart]) {
+            // Replace the placeholder
+            bodyPartNodes.push(placeholderNodes[bodyPart]);
+          } else {
+            // Treat as text
+            const bodyText = this.bodyTextToAst(bodyPart);
+            bodyPartNodes.push(bodyText);
+          }
+        }
+
+        node = builder.body({ bodyParts: bodyPartNodes });
+      }
+    }
     return node;
   }
 

@@ -56,6 +56,7 @@ class DevGenerator {
       const generator = new BitmarkStringGenerator({
         bitmarkOptions: {
           explicitTextFormat: false,
+          prettifyJson: true,
         },
       });
 

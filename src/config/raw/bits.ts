@@ -1584,6 +1584,10 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.json,
   },
+  [BitType.vendorHighchartsChart]: {
+    since: '1.5.28',
+    baseBitType: BitType.vendorAmcharts5Chart,
+  },
   [BitType.vendorIframelyEmbed]: {
     since: '1.5.10',
     baseBitType: BitType.code,

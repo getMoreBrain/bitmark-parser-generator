@@ -1,7 +1,7 @@
 [
   {
     "bit": {
-      "type": "vendor-amcharts-5-chart",
+      "type": "vendor-highcharts-chart",
       "format": "json",
       "id": ["298225"],
       "item": [
@@ -41,11 +41,11 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
-    "bitmark": "[.vendor-amcharts-5-chart:json]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"Json\"}"
+    "bitmark": "[.vendor-highcharts-chart:json]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"Json\"}"
   },
   {
     "bit": {
-      "type": "vendor-amcharts-5-chart",
+      "type": "vendor-highcharts-chart",
       "format": "json",
       "id": ["298225"],
       "item": [
@@ -85,11 +85,11 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
-    "bitmark": "[.vendor-amcharts-5-chart]\n[@id:298225]\n[%item 1]\n{\"Testing\": 200,\n[!This is my first chart bit with a JSON body]\n\"Checking\": [1,2,3,4,5,6]}"
+    "bitmark": "[.vendor-highcharts-chart]\n[@id:298225]\n[%item 1]\n{\"Testing\": 200,\n[!This is my first chart bit with a JSON body]\n\"Checking\": [1,2,3,4,5,6]}"
   },
   {
     "bit": {
-      "type": "vendor-amcharts-5-chart",
+      "type": "vendor-highcharts-chart",
       "format": "json",
       "item": [
         {
@@ -146,11 +146,11 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
-    "bitmark": "[.vendor-amcharts-5-chart:json]\n[!this is a json bit]\n[%item 2]\n{\n  \"name\": \"@bitmark-standard/bitmark-grammar\",\n  \"version\": \"1.0.23\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/bitmark-standard/bitmark-grammar.git\"\n  },\n  \"publishConfig\": {\n    \"registry\": \"https://npm.pkg.github.com\"\n  },\n  \"keywords\": [ \"bitmark\", \"grammar\", \"parser\" ],\n  \"keywords\": [ {\"bitmark\":0},{\"grammar\":1},{\"parser\":2}]\n}"
+    "bitmark": "[.vendor-highcharts-chart:json]\n[!this is a json bit]\n[%item 2]\n{\n  \"name\": \"@bitmark-standard/bitmark-grammar\",\n  \"version\": \"1.0.23\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/bitmark-standard/bitmark-grammar.git\"\n  },\n  \"publishConfig\": {\n    \"registry\": \"https://npm.pkg.github.com\"\n  },\n  \"keywords\": [ \"bitmark\", \"grammar\", \"parser\" ],\n  \"keywords\": [ {\"bitmark\":0},{\"grammar\":1},{\"parser\":2}]\n}"
   },
   {
     "bit": {
-      "type": "vendor-amcharts-5-chart",
+      "type": "vendor-highcharts-chart",
       "format": "json",
       "id": ["298225"],
       "item": [
@@ -201,11 +201,11 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
-    "bitmark": "[.vendor-amcharts-5-chart]\n[@id:298225]\n  [%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"[%item 1][%lead]\"}\n[?hint]"
+    "bitmark": "[.vendor-highcharts-chart]\n[@id:298225]\n  [%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"[%item 1][%lead]\"}\n[?hint]"
   },
   {
     "bit": {
-      "type": "vendor-amcharts-5-chart",
+      "type": "vendor-highcharts-chart",
       "format": "json",
       "id": ["298225"],
       "item": [
@@ -255,7 +255,7 @@
       "errors": [
         {
           "message": "Body JSON is invalid.",
-          "text": "[.vendor-amcharts-5-chart]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\nThis is not valid JSON\n[?hint]\n",
+          "text": "[.vendor-highcharts-chart]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\nThis is not valid JSON\n[?hint]\n",
           "location": {
             "start": {
               "line": 41,
@@ -271,6 +271,6 @@
         }
       ]
     },
-    "bitmark": "[.vendor-amcharts-5-chart]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\nThis is not valid JSON\n[?hint]"
+    "bitmark": "[.vendor-highcharts-chart]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\nThis is not valid JSON\n[?hint]"
   }
 ]

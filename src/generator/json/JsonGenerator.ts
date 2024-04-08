@@ -621,6 +621,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> body
 
   protected enter_body(_node: NodeInfo, _route: NodeInfo[]): void {
+    // Override the bodyDefault if the textFormat is json
+    const textFormat = this.getTextFormat(_route);
+    if (textFormat === TextFormat.json) this.bodyDefault = null as unknown as JsonText;
+
     this.bodyJson = this.bodyDefault;
   }
 
@@ -758,6 +762,19 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.startPlaceholderIndex = placeholderIndex;
 
     // Stop traversal of this branch for efficiency
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> * -> bodyJson (body when textFormat === TextFormat.json)
+
+  protected enter_bodyJson(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const bodyJson = node.value as unknown;
+
+    // NOTE: type is not really JsonText, but unknown, but it is better for type checking to use JsonText for
+    // the bodyJson property in the BitJson interface
+    this.bodyJson = bodyJson as JsonText;
+
+    // Stop traversal of this branch to avoid processing the bodyJson
     return false;
   }
 
@@ -2743,6 +2760,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
   protected cleanAndSetDefaultsForBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
     const bitType = Config.getBitType(bitJson.type);
+    const textFormat = bitJson.format;
     const plainText = this.options.textAsPlainText;
 
     // Clear 'originalType' if not set
@@ -3057,7 +3075,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.extraProperties == null) delete bitJson.extraProperties;
 
     // Body
-    if (bitJson.body == null) delete bitJson.body;
+    if (bitJson.body == null && textFormat !== TextFormat.json) delete bitJson.body;
 
     // Placeholders
     if (bitJson.placeholders == null || Object.keys(bitJson.placeholders).length === 0) delete bitJson.placeholders;
