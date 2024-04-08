@@ -31,11 +31,15 @@
       ],
       "isExample": false,
       "example": null,
-      "body": "{\"Test\": 100, \"Test2\": \"Json\"}"
+      "body": {
+        "Test": 100,
+        "Test2": "Json"
+      }
     },
     "parser": {
-      "version": "1.5.10",
-      "bitmarkVersion": "3"
+      "version": "1.5.28",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.vendor-highcharts-chart:json]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"Json\"}"
   },
@@ -71,11 +75,15 @@
       ],
       "isExample": false,
       "example": null,
-      "body": "{\"Testing\": 200,\n\n\"Checking\": [1,2,3,4,5,6]}"
+      "body": {
+        "Testing": 200,
+        "Checking": [1, 2, 3, 4, 5, 6]
+      }
     },
     "parser": {
-      "version": "1.5.10",
-      "bitmarkVersion": "3"
+      "version": "1.5.28",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.vendor-highcharts-chart]\n[@id:298225]\n[%item 1]\n{\"Testing\": 200,\n[!This is my first chart bit with a JSON body]\n\"Checking\": [1,2,3,4,5,6]}"
   },
@@ -110,11 +118,33 @@
       ],
       "isExample": false,
       "example": null,
-      "body": "{\n  \"name\": \"@bitmark-standard/bitmark-grammar\",\n  \"version\": \"1.0.23\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/bitmark-standard/bitmark-grammar.git\"\n  },\n  \"publishConfig\": {\n    \"registry\": \"https://npm.pkg.github.com\"\n  },\n  \"keywords\": [ \"bitmark\", \"grammar\", \"parser\" ],\n  \"keywords\": [ {\"bitmark\":0},{\"grammar\":1},{\"parser\":2}]\n}"
+      "body": {
+        "name": "@bitmark-standard/bitmark-grammar",
+        "version": "1.0.23",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/bitmark-standard/bitmark-grammar.git"
+        },
+        "publishConfig": {
+          "registry": "https://npm.pkg.github.com"
+        },
+        "keywords": [
+          {
+            "bitmark": 0
+          },
+          {
+            "grammar": 1
+          },
+          {
+            "parser": 2
+          }
+        ]
+      }
     },
     "parser": {
-      "version": "1.5.10",
-      "bitmarkVersion": "3"
+      "version": "1.5.28",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.vendor-highcharts-chart:json]\n[!this is a json bit]\n[%item 2]\n{\n  \"name\": \"@bitmark-standard/bitmark-grammar\",\n  \"version\": \"1.0.23\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/bitmark-standard/bitmark-grammar.git\"\n  },\n  \"publishConfig\": {\n    \"registry\": \"https://npm.pkg.github.com\"\n  },\n  \"keywords\": [ \"bitmark\", \"grammar\", \"parser\" ],\n  \"keywords\": [ {\"bitmark\":0},{\"grammar\":1},{\"parser\":2}]\n}"
   },
@@ -161,11 +191,15 @@
       ],
       "isExample": false,
       "example": null,
-      "body": "{\"Test\": 100, \"Test2\": \"[%item 1][%lead]\"}"
+      "body": {
+        "Test": 100,
+        "Test2": "[%item 1][%lead]"
+      }
     },
     "parser": {
-      "version": "1.5.10",
-      "bitmarkVersion": "3"
+      "version": "1.5.28",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.vendor-highcharts-chart]\n[@id:298225]\n  [%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"[%item 1][%lead]\"}\n[?hint]"
   },
@@ -212,11 +246,12 @@
       ],
       "isExample": false,
       "example": null,
-      "body": "This is not valid JSON"
+      "body": null
     },
     "parser": {
-      "version": "1.5.10",
+      "version": "1.5.28",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
       "errors": [
         {
           "message": "Body JSON is invalid.",

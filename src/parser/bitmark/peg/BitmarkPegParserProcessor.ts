@@ -611,7 +611,7 @@ class BitmarkPegParserProcessor {
     // Validate and build the body (trimmed)
     if (inBit) {
       result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
-      BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, textFormat, result.body);
+      result.body = BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, textFormat, result.body);
     } else if (inCard) {
       result.cardBody = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
       // Card body is validated in CardContentProcessor:processCardSet()

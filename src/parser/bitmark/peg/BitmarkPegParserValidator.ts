@@ -144,6 +144,8 @@ class BitmarkPegParserValidator {
   /**
    * Check the body of the bit.
    *
+   * This function also converts the body to JSON if the text format is JSON.
+   *
    * @param context
    * @param bitType
    * @param _bitLevel
@@ -157,7 +159,7 @@ class BitmarkPegParserValidator {
     textFormat: TextFormatType,
     body: Body | undefined,
   ): Body | undefined {
-    if (!body) return body;
+    if (!body || !body.bodyParts) return body;
 
     // Get the bit config to check how to parse the bit
     const bitConfig = Config.getBitConfig(bitType);
@@ -172,7 +174,7 @@ class BitmarkPegParserValidator {
     // If the text format is JSON, check the body is valid JSON
     // In this case, the body will already have been 'squashed' so will not contain any parsed inline body tags
     if (textFormat === TextFormat.json) {
-      let bodyJson = body.bodyParts.reduce((acc, val) => {
+      let bodyJson: unknown = body.bodyParts.reduce((acc, val) => {
         if (val.type === BodyBitType.text && val.data) {
           const bodyTextVal = val as BodyText;
           return (acc + (bodyTextVal.data.bodyText ?? '')) as string;
@@ -180,15 +182,12 @@ class BitmarkPegParserValidator {
         return acc;
       }, '');
       try {
-        bodyJson = JSON.stringify(JSON.parse(bodyJson as string)) as BreakscapedString;
+        bodyJson = JSON.parse(bodyJson as string);
       } catch (e) {
-        bodyJson = JSON.stringify({
-          error: 'Invalid JSON',
-          json: bodyJson,
-        });
+        bodyJson = null;
         context.addError(`Body JSON is invalid.`);
       }
-      body = builder.body({ bodyParts: [builder.bodyText({ text: bodyJson as BreakscapedString })] });
+      body = builder.body({ bodyJson });
     }
 
     return body;
@@ -264,7 +263,7 @@ class BitmarkPegParserValidator {
     sideNo: number,
     variantNo: number,
   ): Body | undefined {
-    if (!cardBody) return cardBody;
+    if (!cardBody || !cardBody.bodyParts) return cardBody;
 
     // Get the bit config to check how to parse the bit
     const bitConfig = Config.getBitConfig(bitType);
