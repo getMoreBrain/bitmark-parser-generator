@@ -850,7 +850,7 @@ function parseIngredients(
           Array.isArray(titleArray) && titleArray.length > 0 ? titleArray[titleArray.length - 1] : undefined;
         let checked = false;
         let quantity: number | undefined = NumberUtils.asNumber(instruction);
-        if (cardBody) {
+        if (cardBody && cardBody.bodyParts) {
           const select = cardBody.bodyParts.find((part) => part.type === BodyBitType.select) as Select | undefined;
           if (select) {
             quantity = select.data.instruction ? NumberUtils.asNumber(select.data.instruction) : quantity;

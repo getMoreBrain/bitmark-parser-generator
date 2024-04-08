@@ -100,6 +100,7 @@ await bpg.convert("./input.json", {
   },
   bitmarkOptions: {
     explicitTextFormat: false,     // Include bitmark text format even when it is the default (bitmark--). Default: false
+    prettifyJson: 2,               // Prettify the body JSON output. Default: not prettified
     cardSetVersion: 1,             // Output markup using the specified cardSet format. Default: 1
     debugGenerationInline: false,  // [development only] Include debugging tags in the generated output. Default: false
   }

@@ -29,6 +29,7 @@ const NodeType = superenum({
   bodyPartText: 'bodyPartText',
   data: 'data',
   bodyText: 'bodyText',
+  bodyJson: 'bodyJson',
   footer: 'footer',
   footerText: 'footerText',
   gap: 'gap',

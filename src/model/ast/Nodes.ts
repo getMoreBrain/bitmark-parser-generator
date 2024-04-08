@@ -369,7 +369,8 @@ export interface Ingredient {
 
 // TODO - we cannot store the body like this. we have to store it as an already processed v3 body.
 export interface Body {
-  bodyParts: BodyPart[];
+  bodyParts?: BodyPart[];
+  bodyJson?: unknown;
 }
 
 export interface BodyText extends BodyPart {

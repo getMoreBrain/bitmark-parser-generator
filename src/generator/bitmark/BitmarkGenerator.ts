@@ -12,6 +12,7 @@ import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BooleanUtils } from '../../utils/BooleanUtils';
+import { ObjectUtils } from '../../utils/ObjectUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
 
 import {
@@ -51,6 +52,15 @@ export interface BitmarkOptions {
    */
 
   explicitTextFormat?: boolean;
+
+  /**
+   * Prettify the JSON in the bitmark body.
+   *
+   * If not set or false, JSON will not be prettified.
+   * If true, JSON will be prettified with an indent of 2.
+   * If a positive integer, JSON will be prettified with an indent of this number.
+   */
+  prettifyJson?: boolean | number;
 
   /**
    * Card set version to generate:
@@ -96,6 +106,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   private bitmarkVersion: BitmarkVersionType;
   private options: BitmarkOptions;
   private writer: Writer;
+  private prettifySpace: number | undefined;
 
   // State
   private skipNLBetweenBitsValue = false;
@@ -136,6 +147,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         this.options.cardSetVersion = CardSetVersion.v2;
       }
     }
+
+    // Calculate the prettify space
+    this.prettifySpace = this.options.prettifyJson === true ? 2 : this.options.prettifyJson || undefined;
 
     this.writer = writer;
 
@@ -477,7 +491,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected enter_body(node: NodeInfo, _route: NodeInfo[]): void {
     // always write a NL before the body content if there is any?
     const body = node.value as Body;
-    if (body.bodyParts.length > 0) {
+    if ((body.bodyParts && body.bodyParts.length > 0) || body.bodyJson) {
       this.writeNL();
     }
   }
@@ -1298,6 +1312,21 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (text) {
       this.writeString(text);
     }
+  }
+
+  // bitmarkAst -> bits -> body -> bodyValue -> bodyJson
+
+  protected enter_bodyJson(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const value = node.value as unknown;
+    if (Array.isArray(value) || ObjectUtils.isObject(value)) {
+      const text = JSON.stringify(value, null, this.prettifySpace);
+      if (text) {
+        this.writeString(text);
+      }
+    }
+
+    // Stop traversal of this branch to avoid processing the bodyJson
+    return false;
   }
 
   // bitmarkAst -> bits -> footer -> footerText
