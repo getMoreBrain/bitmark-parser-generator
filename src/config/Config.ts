@@ -7,8 +7,10 @@ import { _BitConfig, _PropertiesConfig } from '../model/config/_Config';
 import { GroupConfigType } from '../model/config/enum/GroupConfigType';
 import { BitTagType } from '../model/enum/BitTagType';
 import { BitType, BitTypeType } from '../model/enum/BitType';
+import { PropertyTagType } from '../model/enum/PropertyTag';
 import { ResourceJsonKeyType } from '../model/enum/ResourceJsonKey';
 import { ResourceTagType } from '../model/enum/ResourceTag';
+import { TagType } from '../model/enum/Tag';
 import { TextFormat } from '../model/enum/TextFormat';
 import { ObjectUtils } from '../utils/ObjectUtils';
 
@@ -172,11 +174,13 @@ class Config {
    * Look up the tag configuration by tag (rather than by config key).
    *
    * @param bitType
-   * @param tag
-   * @param parentTagConfig
+   * @param tag the tag to look up - if undefined, will return undefined
    * @returns
    */
-  public getTagConfigForTag(tagsConfig: TagsConfig | undefined, tag: string): TagConfig | undefined {
+  public getTagConfigForTag(
+    tagsConfig: TagsConfig | undefined,
+    tag: TagType | PropertyTagType | ResourceTagType | undefined,
+  ): TagConfig | undefined {
     if (!tagsConfig) return undefined;
 
     // Search the properties in the bit config for the matching tag.

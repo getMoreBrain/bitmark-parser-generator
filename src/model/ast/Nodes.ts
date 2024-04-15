@@ -132,6 +132,9 @@ export interface Bit {
   productFolder?: Property;
   technicalTerm?: TechnicalTerm;
   servings?: Servings;
+  ratingLevelStart?: RatingLevelStartEnd;
+  ratingLevelEnd?: RatingLevelStartEnd;
+  ratingLevelSelected?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: BreakscapedString;
@@ -363,6 +366,12 @@ export interface Ingredient {
   unitAbbr?: BreakscapedString;
   decimalPlaces?: number;
   disableCalculation?: boolean;
+}
+
+// RatingLevelStartEnd
+export interface RatingLevelStartEnd {
+  level: number;
+  label?: BreakscapedString; // TextAst
 }
 
 // Body

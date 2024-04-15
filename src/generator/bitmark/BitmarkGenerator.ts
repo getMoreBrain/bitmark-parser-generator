@@ -36,6 +36,7 @@ import {
   Ingredient,
   TechnicalTerm,
   Servings,
+  RatingLevelStartEnd,
 } from '../../model/ast/Nodes';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
@@ -420,6 +421,39 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
     if (avatarImage) {
       this.writeResource(avatarImage);
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> ratingLevelStart
+  protected enter_ratingLevelStart(node: NodeInfo, route: NodeInfo[]): boolean {
+    this.enterRatingLevelStartEndCommon(node, route);
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> ratingLevelEnd
+  protected enter_ratingLevelEnd(node: NodeInfo, route: NodeInfo[]): boolean {
+    this.enterRatingLevelStartEndCommon(node, route);
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // Common code for ratingLevelStart and ratingLevelEnd
+  protected enterRatingLevelStartEndCommon(node: NodeInfo, route: NodeInfo[]): void {
+    const n = node.value as RatingLevelStartEnd;
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const { level, label } = n;
+    const levelKey = node.key === NodeType.ratingLevelStart ? PropertyTag.ratingLevelStart : PropertyTag.ratingLevelEnd;
+
+    this.writeProperty(levelKey, level, true);
+    if (label) {
+      this.writeProperty('label', label, true);
     }
   }
 
@@ -1565,7 +1599,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.technicalTerm) continue;
       if (astKey === PropertyTag.servings) continue;
       if (astKey === PropertyTag.person) continue;
-      if (astKey === PropertyAstKey.markConfig) continue;
+      if (astKey === PropertyAstKey.ast_markConfig) continue;
+      if (astKey === PropertyTag.ratingLevelStart) continue;
+      if (astKey === PropertyTag.ratingLevelEnd) continue;
 
       const funcName = `enter_${astKey}`;
 

@@ -342,7 +342,7 @@ class BitmarkPegParserValidator {
         maxCount,
         minCount,
         _type: BitTagType.property,
-        _tag: Tag.property,
+        _tag: Tag.tag_property,
         _seenCount: 0,
       });
     };

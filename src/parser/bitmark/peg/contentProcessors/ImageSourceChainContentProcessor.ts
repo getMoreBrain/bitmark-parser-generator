@@ -4,6 +4,7 @@ import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -64,7 +65,7 @@ function buildImageSource(
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('imageSource content', content);
 
   const { key: tag } = content as TypeKeyValue;
-  const imageSourceConfig = Config.getTagConfigForTag(tagsConfig, tag);
+  const imageSourceConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
 
   const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, [content]);
   const chainTags = context.bitContentProcessor(

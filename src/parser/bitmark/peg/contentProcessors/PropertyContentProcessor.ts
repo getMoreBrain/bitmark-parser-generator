@@ -16,6 +16,7 @@ import { imageSourceChainContentProcessor } from './ImageSourceChainContentProce
 import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { personChainContentProcessor } from './PersonChainContentProcessor';
+import { ratingLevelChainContentProcessor } from './RatingLevelChainContentProcessor';
 import { servingsChainContentProcessor } from './ServingsChainContentProcessor';
 import { technicalTermChainContentProcessor } from './TechnicalTermChainContentProcessor';
 
@@ -42,7 +43,7 @@ function propertyContentProcessor(
   const isChain = bitLevel === BitContentLevel.Chain;
 
   // Get the property config for the tag (if it exists)
-  const propertyConfig = Config.getTagConfigForTag(tagsConfig, tag);
+  const propertyConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
   const configKey = propertyConfig ? propertyConfig.configKey : undefined;
 
   // Handle internal comments
@@ -57,6 +58,9 @@ function propertyContentProcessor(
   if (propertyConfig) {
     if (configKey === PropertyConfigKey.example) {
       exampleTagContentProcessor(context, bitType, textFormat, bitLevel, content, target);
+      return;
+    } else if (configKey === PropertyConfigKey.ratingLevelStart || configKey === PropertyConfigKey.ratingLevelEnd) {
+      ratingLevelChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.technicalTerm) {
       technicalTermChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);

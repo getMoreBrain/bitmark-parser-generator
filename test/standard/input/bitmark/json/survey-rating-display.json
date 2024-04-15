@@ -1,0 +1,62 @@
+[
+  {
+    "bit": {
+      "type": "survey-rating-display",
+      "format": "bitmark--",
+      "id": ["93061"],
+      "ratingLevelStart": {
+        "level": 0,
+        "label": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "NOT AT ALL LIKELY",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ]
+      },
+      "ratingLevelEnd": {
+        "level": 10,
+        "label": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "EXTREMLY LIKELY",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ]
+      },
+      "ratingLevelSelected": 3,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "D2",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.survey-rating-display]\n[@id:93061]\n[%D2]\n[@ratingLevelStart:0][@label:NOT AT ALL LIKELY]\n[@ratingLevelEnd:10][@label:EXTREMLY LIKELY]\n[@ratingLevelSelected:3]"
+  }
+]

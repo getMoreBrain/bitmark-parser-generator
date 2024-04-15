@@ -4,7 +4,6 @@ import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioEmbedResource, ImageSource, Ingredient, Table } from '../../model/ast/Nodes';
 import { AudioLinkResource } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
@@ -15,6 +14,7 @@ import { DocumentDownloadResource } from '../../model/ast/Nodes';
 import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
 import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
+import { AudioEmbedResource, ImageSource, Ingredient, RatingLevelStartEnd, Table } from '../../model/ast/Nodes';
 import { JsonText, TextAst } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
@@ -80,6 +80,7 @@ import {
   PersonJson,
   QuestionJson,
   QuizJson,
+  RatingLevelStartEndJson,
   ResponseJson,
   StatementJson,
   TableJson,
@@ -475,6 +476,47 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       this.bitJson.person = personJson;
     }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> ratingLevelStart
+
+  protected enter_ratingLevelStart(node: NodeInfo, route: NodeInfo[]): boolean {
+    const json = this.enterRatingLevelStartEndCommon(node, route);
+    if (json) this.bitJson.ratingLevelStart = json;
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> ratingLevelEnd
+
+  protected enter_ratingLevelEnd(node: NodeInfo, route: NodeInfo[]): boolean {
+    const json = this.enterRatingLevelStartEndCommon(node, route);
+    if (json) this.bitJson.ratingLevelEnd = json;
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // Common code for ratingLevelStart and ratingLevelEnd
+  protected enterRatingLevelStartEndCommon(node: NodeInfo, route: NodeInfo[]): RatingLevelStartEndJson | undefined {
+    const n = node.value as RatingLevelStartEnd;
+
+    // Ignore statements that are not at the bit level
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const json: Partial<RatingLevelStartEndJson> = {};
+    this.addProperty(json, 'level', n.level, true);
+
+    if (n.label) {
+      json.label = this.convertBreakscapedStringToJsonText(n.label, TextFormat.bitmarkMinusMinus);
+    }
+
+    // Delete unwanted properties
+    if (json?.label == null) delete json.label;
+
+    return json as RatingLevelStartEndJson;
   }
 
   // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
@@ -1574,7 +1616,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.person) continue;
       if (astKey === PropertyTag.width) continue;
       if (astKey === PropertyTag.height) continue;
-      if (astKey === PropertyAstKey.markConfig) continue;
+      if (astKey === PropertyAstKey.ast_markConfig) continue;
+      if (astKey === PropertyTag.ratingLevelStart) continue;
+      if (astKey === PropertyTag.ratingLevelEnd) continue;
 
       const funcName = `enter_${astKey}`;
 
@@ -2675,6 +2719,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       productFolder: undefined,
       technicalTerm: undefined,
       servings: undefined,
+      ratingLevelStart: undefined,
+      ratingLevelEnd: undefined,
+      ratingLevelSelected: undefined,
 
       // Book data
       title: undefined,
@@ -2946,6 +2993,21 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
         if (bitJson.logos == null) bitJson.logos = [];
       }
+
+      // Special case for 'survey-rating-*' bits
+      if (Config.isOfBitType(bitType, BitType.surveyRating)) {
+        //
+        if (bitJson.ratingLevelStart == null) {
+          bitJson.ratingLevelStart = {
+            level: 0,
+          };
+        }
+        if (bitJson.ratingLevelEnd == null) {
+          bitJson.ratingLevelEnd = {
+            level: 0,
+          };
+        }
+      }
     }
 
     // Remove unwanted properties
@@ -3045,6 +3107,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.productFolder == null) delete bitJson.productFolder;
     if (bitJson.technicalTerm == null) delete bitJson.technicalTerm;
     if (bitJson.servings == null) delete bitJson.servings;
+    if (bitJson.ratingLevelStart == null) delete bitJson.ratingLevelStart;
+    if (bitJson.ratingLevelEnd == null) delete bitJson.ratingLevelEnd;
+    if (bitJson.ratingLevelSelected == null) delete bitJson.ratingLevelSelected;
 
     // Book data
     if (bitJson.title == null) delete bitJson.title;
