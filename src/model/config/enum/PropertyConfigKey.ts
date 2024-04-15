@@ -80,6 +80,7 @@ const propertyConfigKeys = {
   posterImage: 'posterImage',
   product: 'product',
   productFolder: 'productFolder',
+  productId: 'productId',
   productList: 'productList',
   productVideo: 'productVideo',
   productVideoList: 'productVideoList',

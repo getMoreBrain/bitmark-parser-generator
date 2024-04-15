@@ -99,6 +99,7 @@ export interface BitJson {
   resolvedBy: string;
   maxCreatedBits: number;
   maxDisplayLevel: number;
+  productId: string | string[];
   product: string;
   productVideo: string;
   productFolder: string;

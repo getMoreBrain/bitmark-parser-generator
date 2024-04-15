@@ -228,6 +228,8 @@ const NodeType = superenum({
   posterImageValue: 'posterImageValue',
   postfix: 'postfix',
   prefix: 'prefix',
+  productId: 'productId',
+  productIdValue: 'productIdValue',
   product: 'product',
   productFolder: 'productFolder',
   productFolderValue: 'productFolderValue',

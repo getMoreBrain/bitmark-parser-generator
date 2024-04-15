@@ -185,6 +185,7 @@ class Builder extends BaseBuilder {
     resolvedBy?: BreakscapedString;
     maxCreatedBits?: number;
     maxDisplayLevel?: number;
+    productId?: BreakscapedString | BreakscapedString[];
     product?: BreakscapedString | BreakscapedString[];
     productList?: BreakscapedString | BreakscapedString[];
     productVideo?: BreakscapedString | BreakscapedString[];
@@ -343,6 +344,7 @@ class Builder extends BaseBuilder {
       resolvedBy,
       maxCreatedBits,
       maxDisplayLevel,
+      productId,
       product,
       productList,
       productVideo,
@@ -501,6 +503,7 @@ class Builder extends BaseBuilder {
       resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, resolvedBy),
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, maxCreatedBits),
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, maxDisplayLevel),
+      productId: this.toAstProperty(PropertyConfigKey.productId, productId),
       product: this.toAstProperty(PropertyConfigKey.product, product),
       productList: this.toAstProperty(PropertyConfigKey.productList, productList),
       productVideo: this.toAstProperty(PropertyConfigKey.productVideo, productVideo),

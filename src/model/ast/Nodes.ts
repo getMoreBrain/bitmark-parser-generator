@@ -125,6 +125,7 @@ export interface Bit {
   resolvedBy?: Property;
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
+  productId?: Property;
   product?: Property;
   productList?: Property;
   productVideo?: Property;
