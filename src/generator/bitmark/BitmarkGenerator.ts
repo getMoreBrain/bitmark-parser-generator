@@ -1508,7 +1508,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_zoomDisabled(node: NodeInfo, route: NodeInfo[]): void {
     const bitType = this.getBitType(route);
 
-    if (Config.isOfBitType(bitType, [BitType.imageSeparator, BitType.pageBanner])) {
+    if (
+      Config.isOfBitType(bitType, [
+        BitType.imageSeparator,
+        BitType.pageBanner,
+        BitType.imagesLogoGrave,
+        BitType.prototypeImages,
+      ])
+    ) {
       this.writeProperty('zoomDisabled', node.value, undefined, false, true);
     } else {
       this.writeProperty('zoomDisabled', node.value, undefined, true, false);
