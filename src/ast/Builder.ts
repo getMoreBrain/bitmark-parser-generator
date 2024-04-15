@@ -101,6 +101,7 @@ class Builder extends BaseBuilder {
     padletId?: BreakscapedString;
     jupyterId?: BreakscapedString;
     jupyterExecutionCount?: number;
+    isPublic?: boolean;
     aiGenerated?: boolean;
     releaseVersion?: BreakscapedString;
     releaseKind?: BreakscapedString;
@@ -128,6 +129,7 @@ class Builder extends BaseBuilder {
     date?: BreakscapedString;
     location?: BreakscapedString;
     kind?: BreakscapedString;
+    hasMarkAsDone?: boolean;
     action?: BreakscapedString;
     blockId?: BreakscapedString;
     pageNo?: number;
@@ -259,6 +261,7 @@ class Builder extends BaseBuilder {
       padletId,
       jupyterId,
       jupyterExecutionCount,
+      isPublic,
       aiGenerated,
       releaseVersion,
       releaseKind,
@@ -286,6 +289,7 @@ class Builder extends BaseBuilder {
       date,
       location,
       kind,
+      hasMarkAsDone,
       action,
       blockId,
       pageNo,
@@ -413,6 +417,7 @@ class Builder extends BaseBuilder {
       padletId: this.toAstProperty(PropertyConfigKey.padletId, padletId),
       jupyterId: this.toAstProperty(PropertyConfigKey.jupyterId, jupyterId),
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, jupyterExecutionCount),
+      isPublic: this.toAstProperty(PropertyConfigKey.isPublic, isPublic),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, releaseVersion),
       releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, releaseKind),
@@ -441,6 +446,7 @@ class Builder extends BaseBuilder {
       date: this.toAstProperty(PropertyConfigKey.date, date),
       location: this.toAstProperty(PropertyConfigKey.location, location),
       kind: this.toAstProperty(PropertyConfigKey.kind, kind),
+      hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, hasMarkAsDone),
       action: this.toAstProperty(PropertyConfigKey.action, action),
       blockId: this.toAstProperty(PropertyConfigKey.blockId, blockId),
       pageNo: this.toAstProperty(PropertyConfigKey.pageNo, pageNo),
