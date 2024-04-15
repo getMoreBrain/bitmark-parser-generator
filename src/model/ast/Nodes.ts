@@ -40,6 +40,7 @@ export interface Bit {
   padletId?: Property;
   jupyterId?: Property;
   jupyterExecutionCount?: Property;
+  isPublic?: Property;
   aiGenerated?: Property;
   releaseVersion?: Property;
   releaseKind?: Property;
@@ -67,6 +68,7 @@ export interface Bit {
   date?: Property;
   location?: Property;
   kind?: Property;
+  hasMarkAsDone?: Property;
   action?: Property;
   blockId?: Property;
   pageNo?: Property;
@@ -98,6 +100,7 @@ export interface Bit {
   pointerLeft?: Property;
   pointerTop?: Property;
   backgroundWallpaper?: Property;
+  hasBookNavigation?: Property;
   duration?: Property;
   deeplink?: Property;
   externalLink?: Property;
@@ -125,6 +128,7 @@ export interface Bit {
   resolvedBy?: Property;
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
+  productId?: Property;
   product?: Property;
   productList?: Property;
   productVideo?: Property;
@@ -132,6 +136,9 @@ export interface Bit {
   productFolder?: Property;
   technicalTerm?: TechnicalTerm;
   servings?: Servings;
+  ratingLevelStart?: RatingLevelStartEnd;
+  ratingLevelEnd?: RatingLevelStartEnd;
+  ratingLevelSelected?: Property;
   markConfig?: MarkConfig[];
   extraProperties?: ExtraProperties;
   book?: BreakscapedString;
@@ -363,6 +370,12 @@ export interface Ingredient {
   unitAbbr?: BreakscapedString;
   decimalPlaces?: number;
   disableCalculation?: boolean;
+}
+
+// RatingLevelStartEnd
+export interface RatingLevelStartEnd {
+  level: number;
+  label?: BreakscapedString; // TextAst
 }
 
 // Body

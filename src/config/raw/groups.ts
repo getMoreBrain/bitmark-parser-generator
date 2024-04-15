@@ -351,6 +351,14 @@ const GROUPS: _GroupsConfig = {
         configKey: PropertyConfigKey.kind,
       },
       {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.hasMarkAsDone,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.isPublic,
+      },
+      {
         type: BitTagType.tag,
         configKey: TagConfigKey.title,
         maxCount: 2,

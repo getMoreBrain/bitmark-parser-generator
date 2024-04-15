@@ -3,6 +3,7 @@ import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -34,7 +35,7 @@ function markConfigChainContentProcessor(
 
   if (!markConfig) return;
 
-  const markTagConfig = Config.getTagConfigForTag(tagsConfig, tag);
+  const markTagConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { mark: _ignoreMark, ...tags } = context.bitContentProcessor(

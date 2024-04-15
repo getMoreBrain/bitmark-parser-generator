@@ -106,7 +106,7 @@ function resourceContentProcessor(
   const type = ResourceTag.fromValue(key);
   if (type) {
     // Parse the resource chain
-    const resourceConfig = Config.getTagConfigForTag(tagsConfig, key);
+    const resourceConfig = Config.getTagConfigForTag(tagsConfig, type);
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { posterImage, ...tags } = context.bitContentProcessor(

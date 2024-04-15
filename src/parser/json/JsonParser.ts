@@ -49,6 +49,7 @@ import {
   TechnicalTerm,
   Table,
   Servings,
+  RatingLevelStartEnd,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -72,6 +73,7 @@ import {
   TechnicalTermJson,
   TableJson,
   ServingsJson,
+  RatingLevelStartEndJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -248,6 +250,7 @@ class JsonParser {
       padletId,
       jupyterId,
       jupyterExecutionCount,
+      isPublic,
       AIGenerated,
       releaseVersion,
       releaseKind,
@@ -274,6 +277,7 @@ class JsonParser {
       date,
       location,
       kind,
+      hasMarkAsDone,
       blockId,
       pageNo,
       x,
@@ -305,6 +309,7 @@ class JsonParser {
       pointerLeft,
       pointerTop,
       backgroundWallpaper,
+      hasBookNavigation,
       duration,
       deeplink,
       externalLink,
@@ -330,11 +335,15 @@ class JsonParser {
       resolvedBy,
       maxCreatedBits,
       maxDisplayLevel,
+      productId,
       product,
       productVideo,
       productFolder,
       technicalTerm,
       servings,
+      ratingLevelStart,
+      ratingLevelEnd,
+      ratingLevelSelected,
       book,
       title,
       subtitle,
@@ -450,6 +459,12 @@ class JsonParser {
     // ingredients
     const ingredientsNodes = this.ingredientsBitsToAst(ingredients);
 
+    // ratingLevelStart
+    const ratingLevelStartNodes = this.ratingLevelStartEndToAst(ratingLevelStart);
+
+    // ratingLevelEnd
+    const ratingLevelEndNodes = this.ratingLevelStartEndToAst(ratingLevelEnd);
+
     // listItems / sections (cardBits)
     const cardBitNodes = this.listItemsToAst(listItems ?? sections, textFormat, placeholders);
 
@@ -472,6 +487,7 @@ class JsonParser {
       padletId: this.convertStringToBreakscapedString(padletId),
       jupyterId: this.convertStringToBreakscapedString(jupyterId),
       jupyterExecutionCount,
+      isPublic,
       aiGenerated: AIGenerated,
       releaseVersion: this.convertStringToBreakscapedString(releaseVersion),
       releaseKind: this.convertStringToBreakscapedString(releaseKind),
@@ -498,6 +514,7 @@ class JsonParser {
       date: this.convertStringToBreakscapedString(date),
       location: this.convertStringToBreakscapedString(location),
       kind: this.convertStringToBreakscapedString(kind),
+      hasMarkAsDone,
       action: this.convertStringToBreakscapedString(action),
       blockId: this.convertStringToBreakscapedString(blockId),
       pageNo,
@@ -531,6 +548,7 @@ class JsonParser {
       pointerLeft: this.convertStringToBreakscapedString(pointerLeft),
       pointerTop: this.convertStringToBreakscapedString(pointerTop),
       backgroundWallpaper: this.convertStringToBreakscapedString(backgroundWallpaper),
+      hasBookNavigation,
       deeplink: this.convertStringToBreakscapedString(deeplink),
       externalLink: this.convertStringToBreakscapedString(externalLink),
       externalLinkText: this.convertStringToBreakscapedString(externalLinkText),
@@ -555,11 +573,15 @@ class JsonParser {
       resolvedBy: this.convertStringToBreakscapedString(resolvedBy),
       maxCreatedBits,
       maxDisplayLevel,
+      productId: this.convertStringToBreakscapedString(productId),
       productList: this.convertStringToBreakscapedString(product),
       productVideoList: this.convertStringToBreakscapedString(productVideo),
       productFolder: this.convertStringToBreakscapedString(productFolder),
       technicalTerm: technicalTermNode,
       servings: servingsNode,
+      ratingLevelStart: ratingLevelStartNodes,
+      ratingLevelEnd: ratingLevelEndNodes,
+      ratingLevelSelected,
       book: this.convertStringToBreakscapedString(book),
       title: this.convertJsonTextToBreakscapedString(title),
       subtitle: this.convertJsonTextToBreakscapedString(subtitle),
@@ -1036,6 +1058,21 @@ class JsonParser {
     if (nodes.length === 0) return undefined;
 
     return nodes;
+  }
+
+  private ratingLevelStartEndToAst(ratingLevelStartEnd: RatingLevelStartEndJson): RatingLevelStartEnd | undefined {
+    let node: RatingLevelStartEnd | undefined;
+
+    if (ratingLevelStartEnd) {
+      const { level, label } = ratingLevelStartEnd;
+
+      node = builder.ratingLevelStartEnd({
+        level,
+        label: this.convertJsonTextToBreakscapedString(label) ?? Breakscape.EMPTY_STRING,
+      });
+    }
+
+    return node;
   }
 
   private listItemsToAst(

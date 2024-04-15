@@ -1,7 +1,7 @@
 import { _BitsConfig } from '../../model/config/_Config';
 import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey';
 import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
-import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
+import { PropertyConfigKey, propertyConfigKeys } from '../../model/config/enum/PropertyConfigKey';
 import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
 import { BitType } from '../../model/enum/BitType';
@@ -662,7 +662,25 @@ const BITS: _BitsConfig = {
   [BitType.videoTranscript]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.warning]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.workbookArticle]: { since: '1.3.0', baseBitType: BitType.example },
-  [BitType.module]: { since: '1.5.26', baseBitType: BitType.example },
+  [BitType.module]: {
+    since: '1.5.26',
+    baseBitType: BitType.example,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: propertyConfigKeys.hasBookNavigation,
+      },
+      {
+        type: BitTagType.property,
+        configKey: propertyConfigKeys.productId,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.duration,
+      },
+    ],
+  },
   [BitType.exampleList]: {
     since: '1.4.13',
     baseBitType: BitType.example,
@@ -1415,6 +1433,47 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
     ],
+  },
+  [BitType.surveyRating]: {
+    since: '1.6.0',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.ratingLevelStart,
+        chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.label,
+          },
+        ],
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.ratingLevelEnd,
+        chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.label,
+          },
+        ],
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.ratingLevelSelected,
+      },
+    ],
+  },
+  [BitType.surveyRatingOnce]: {
+    since: '1.6.0',
+    baseBitType: BitType.surveyRating,
+  },
+  [BitType.surveyRatingDisplay]: {
+    since: '1.6.0',
+    baseBitType: BitType.surveyRating,
   },
   [BitType.scorm]: {
     since: '1.5.11',

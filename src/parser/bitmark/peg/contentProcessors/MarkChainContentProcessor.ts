@@ -4,6 +4,7 @@ import { Config } from '../../../../config/Config';
 import { BodyPart, Mark } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { Tag } from '../../../../model/enum/Tag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { ArrayUtils } from '../../../../utils/ArrayUtils';
 
@@ -47,7 +48,7 @@ function buildMark(
 ): Mark | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('mark content', content);
 
-  const markConfig = Config.getTagConfigForTag(tagsConfig, content.type);
+  const markConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
 
   const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, [content]);
   const chainTags = context.bitContentProcessor(

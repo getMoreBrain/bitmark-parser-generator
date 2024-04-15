@@ -56,6 +56,7 @@ import {
   TechnicalTerm,
   Table,
   Servings,
+  RatingLevelStartEnd,
 } from '../model/ast/Nodes';
 
 /**
@@ -100,6 +101,7 @@ class Builder extends BaseBuilder {
     padletId?: BreakscapedString;
     jupyterId?: BreakscapedString;
     jupyterExecutionCount?: number;
+    isPublic?: boolean;
     aiGenerated?: boolean;
     releaseVersion?: BreakscapedString;
     releaseKind?: BreakscapedString;
@@ -127,6 +129,7 @@ class Builder extends BaseBuilder {
     date?: BreakscapedString;
     location?: BreakscapedString;
     kind?: BreakscapedString;
+    hasMarkAsDone?: boolean;
     action?: BreakscapedString;
     blockId?: BreakscapedString;
     pageNo?: number;
@@ -158,6 +161,7 @@ class Builder extends BaseBuilder {
     pointerLeft?: BreakscapedString;
     pointerTop?: BreakscapedString;
     backgroundWallpaper?: BreakscapedString;
+    hasBookNavigation?: boolean;
     duration?: BreakscapedString;
     referenceProperty?: BreakscapedString | BreakscapedString[];
     deeplink?: BreakscapedString | BreakscapedString[];
@@ -184,6 +188,7 @@ class Builder extends BaseBuilder {
     resolvedBy?: BreakscapedString;
     maxCreatedBits?: number;
     maxDisplayLevel?: number;
+    productId?: BreakscapedString | BreakscapedString[];
     product?: BreakscapedString | BreakscapedString[];
     productList?: BreakscapedString | BreakscapedString[];
     productVideo?: BreakscapedString | BreakscapedString[];
@@ -191,6 +196,9 @@ class Builder extends BaseBuilder {
     productFolder?: BreakscapedString;
     technicalTerm?: TechnicalTerm;
     servings?: Servings;
+    ratingLevelStart?: RatingLevelStartEnd;
+    ratingLevelEnd?: RatingLevelStartEnd;
+    ratingLevelSelected?: number;
     partialAnswer?: BreakscapedString;
     book?: BreakscapedString;
     title?: BreakscapedString;
@@ -253,6 +261,7 @@ class Builder extends BaseBuilder {
       padletId,
       jupyterId,
       jupyterExecutionCount,
+      isPublic,
       aiGenerated,
       releaseVersion,
       releaseKind,
@@ -280,6 +289,7 @@ class Builder extends BaseBuilder {
       date,
       location,
       kind,
+      hasMarkAsDone,
       action,
       blockId,
       pageNo,
@@ -311,6 +321,7 @@ class Builder extends BaseBuilder {
       pointerLeft,
       pointerTop,
       backgroundWallpaper,
+      hasBookNavigation,
       duration,
       referenceProperty,
       deeplink,
@@ -339,6 +350,7 @@ class Builder extends BaseBuilder {
       resolvedBy,
       maxCreatedBits,
       maxDisplayLevel,
+      productId,
       product,
       productList,
       productVideo,
@@ -346,6 +358,9 @@ class Builder extends BaseBuilder {
       productFolder,
       technicalTerm,
       servings,
+      ratingLevelStart,
+      ratingLevelEnd,
+      ratingLevelSelected,
       title,
       subtitle,
       level,
@@ -402,6 +417,7 @@ class Builder extends BaseBuilder {
       padletId: this.toAstProperty(PropertyConfigKey.padletId, padletId),
       jupyterId: this.toAstProperty(PropertyConfigKey.jupyterId, jupyterId),
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, jupyterExecutionCount),
+      isPublic: this.toAstProperty(PropertyConfigKey.isPublic, isPublic),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, releaseVersion),
       releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, releaseKind),
@@ -430,6 +446,7 @@ class Builder extends BaseBuilder {
       date: this.toAstProperty(PropertyConfigKey.date, date),
       location: this.toAstProperty(PropertyConfigKey.location, location),
       kind: this.toAstProperty(PropertyConfigKey.kind, kind),
+      hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, hasMarkAsDone),
       action: this.toAstProperty(PropertyConfigKey.action, action),
       blockId: this.toAstProperty(PropertyConfigKey.blockId, blockId),
       pageNo: this.toAstProperty(PropertyConfigKey.pageNo, pageNo),
@@ -467,6 +484,7 @@ class Builder extends BaseBuilder {
       pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, pointerLeft),
       pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, pointerTop),
       backgroundWallpaper: this.toAstProperty(PropertyConfigKey.backgroundWallpaper, backgroundWallpaper),
+      hasBookNavigation: this.toAstProperty(PropertyConfigKey.hasBookNavigation, hasBookNavigation),
       deeplink: this.toAstProperty(PropertyConfigKey.deeplink, deeplink),
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, externalLink),
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, externalLinkText),
@@ -494,6 +512,7 @@ class Builder extends BaseBuilder {
       resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, resolvedBy),
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, maxCreatedBits),
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, maxDisplayLevel),
+      productId: this.toAstProperty(PropertyConfigKey.productId, productId),
       product: this.toAstProperty(PropertyConfigKey.product, product),
       productList: this.toAstProperty(PropertyConfigKey.productList, productList),
       productVideo: this.toAstProperty(PropertyConfigKey.productVideo, productVideo),
@@ -501,6 +520,9 @@ class Builder extends BaseBuilder {
       productFolder: this.toAstProperty(PropertyConfigKey.productFolder, productFolder),
       technicalTerm,
       servings,
+      ratingLevelStart,
+      ratingLevelEnd,
+      ratingLevelSelected: this.toAstProperty(PropertyConfigKey.ratingLevelSelected, ratingLevelSelected),
       title,
       subtitle,
       level: NumberUtils.asNumber(level),
@@ -1565,6 +1587,27 @@ class Builder extends BaseBuilder {
       decimalPlaces,
       disableCalculation,
       hint,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build (survey-rating) ratingLevelStart / ratingLevelEnd node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  ratingLevelStartEnd(data: { level: number; label?: BreakscapedString }): RatingLevelStartEnd {
+    const { level, label } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: RatingLevelStartEnd = {
+      level,
+      label,
     };
 
     // Remove Unset Optionals

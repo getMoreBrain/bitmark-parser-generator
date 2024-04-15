@@ -45,6 +45,7 @@ import {
   TechnicalTerm,
   Table,
   Servings,
+  RatingLevelStartEnd,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -112,6 +113,9 @@ export interface BitContentProcessorResult {
   imageSource?: ImageSource;
   technicalTerm?: TechnicalTerm;
   servings?: Servings;
+  ratingLevelStart?: RatingLevelStartEnd;
+  ratingLevelEnd?: RatingLevelStartEnd;
+  label?: BreakscapedString;
   person?: Person;
   propertyTitle?: BreakscapedString;
   trueFalse?: TrueFalseValue[];
@@ -227,17 +231,17 @@ const TypeKey = superenum({
   ResourceType: 'ResourceType',
 
   // Tags (NOTE: ALL TAGS MUST USE THEIR CORRECT BITMARK REPRESENTATION HERE so they work with the rest of the code)
-  Title: Tag.title,
-  Anchor: Tag.anchor,
-  Reference: Tag.reference,
-  ItemLead: Tag.itemLead,
-  Instruction: Tag.instruction,
-  Hint: Tag.hint,
-  True: Tag.true,
-  False: Tag.false,
-  Gap: Tag.gap,
-  Mark: Tag.mark,
-  SampleSolution: Tag.sampleSolution,
+  Title: Tag.tag_title,
+  Anchor: Tag.tag_anchor,
+  Reference: Tag.tag_reference,
+  ItemLead: Tag.tag_itemLead,
+  Instruction: Tag.tag_instruction,
+  Hint: Tag.tag_hint,
+  True: Tag.tag_true,
+  False: Tag.tag_false,
+  Gap: Tag.tag_gap,
+  Mark: Tag.tag_mark,
+  SampleSolution: Tag.tag_sampleSolution,
 
   // Generic Tags (converted to specific tags by the BitTagValidator)
   Property: 'Property',

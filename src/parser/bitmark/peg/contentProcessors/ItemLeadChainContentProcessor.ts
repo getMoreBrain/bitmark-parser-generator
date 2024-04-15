@@ -1,6 +1,7 @@
 import { Config } from '../../../../config/Config';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { Tag } from '../../../../model/enum/Tag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 
 import { itemLeadTagContentProcessor } from './ItemLeadTagContentProcessor';
@@ -41,7 +42,7 @@ function buildItemLead(
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('item lead content', content);
 
   // Process the chain (lead)
-  const itemLeadConfig = Config.getTagConfigForTag(tagsConfig, content.type);
+  const itemLeadConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
   const chainContent = [content, ...(content.chain ?? [])];
 
   const chainTags = context.bitContentProcessor(

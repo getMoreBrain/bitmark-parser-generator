@@ -16,6 +16,7 @@ export interface BitJson {
   padletId: string;
   jupyterId: string;
   jupyterExecutionCount: number;
+  isPublic: boolean;
   AIGenerated: boolean;
   releaseVersion: string;
   releaseKind: string;
@@ -43,6 +44,7 @@ export interface BitJson {
   location: string;
   theme: string | string[];
   kind: string;
+  hasMarkAsDone: boolean;
   action: string;
   blockId: string;
   pageNo: number;
@@ -74,6 +76,7 @@ export interface BitJson {
   pointerLeft: string;
   pointerTop: string;
   backgroundWallpaper: string;
+  hasBookNavigation: boolean;
   duration: string;
   deeplink: string | string[];
   externalLink: string;
@@ -99,11 +102,15 @@ export interface BitJson {
   resolvedBy: string;
   maxCreatedBits: number;
   maxDisplayLevel: number;
+  productId: string | string[];
   product: string;
   productVideo: string;
   productFolder: string;
   technicalTerm: TechnicalTermJson;
   servings: ServingsJson;
+  ratingLevelStart: RatingLevelStartEndJson;
+  ratingLevelEnd: RatingLevelStartEndJson;
+  ratingLevelSelected: number;
 
   book: string;
 
@@ -351,6 +358,11 @@ export interface IngredientJson {
   unitAbbr: string;
   decimalPlaces: number;
   disableCalculation: boolean;
+}
+
+export interface RatingLevelStartEndJson {
+  level: number;
+  label?: JsonText;
 }
 
 export interface ListItemJson {
