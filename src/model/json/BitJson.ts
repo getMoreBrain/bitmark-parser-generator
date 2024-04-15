@@ -104,6 +104,9 @@ export interface BitJson {
   productFolder: string;
   technicalTerm: TechnicalTermJson;
   servings: ServingsJson;
+  ratingLevelStart: RatingLevelStartEndJson;
+  ratingLevelEnd: RatingLevelStartEndJson;
+  ratingLevelSelected: number;
 
   book: string;
 
@@ -351,6 +354,11 @@ export interface IngredientJson {
   unitAbbr: string;
   decimalPlaces: number;
   disableCalculation: boolean;
+}
+
+export interface RatingLevelStartEndJson {
+  level: number;
+  label?: JsonText;
 }
 
 export interface ListItemJson {

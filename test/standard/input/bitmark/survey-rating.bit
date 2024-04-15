@@ -1,0 +1,26 @@
+
+[.survey-rating]
+[@id:93061]
+[%D2]
+[@ratingLevelStart:0][@label:NOT AT ALL LIKELY]
+[@ratingLevelEnd:10][@label:EXTREMLY LIKELY]
+[@ratingLevelSelected:3]
+
+
+[.survey-rating]
+[@id:93062]
+[%D2]
+[@ratingLevelStart:0]
+[@ratingLevelEnd:wrong]
+[@ratingLevelSelected:wrong]
+
+[.survey-rating]
+[@id:93063]
+
+
+[.survey-rating]
+[@id:93061]
+[%D2]
+[@ratingLevelStart:-10][@label:NOT **AT** ALL LIKELY]
+[@ratingLevelEnd:10][@label:EXTREMLY !!LIKELY!!]
+[@ratingLevelSelected:0]

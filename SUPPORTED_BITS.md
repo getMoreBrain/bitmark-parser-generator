@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.5.28
+Version: 1.6.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -299,6 +299,9 @@ survey (since: 1.3.0)
 survey-1 (since: 1.3.0)
 survey-anonymous (since: 1.3.0)
 survey-anonymous-1 (since: 1.3.0)
+survey-rating (since: 1.6.0)
+survey-rating-once (since: 1.6.0)
+survey-rating-display (since: 1.6.0)
 table (since: 1.5.19)
 table-image (since: 1.5.15)
 take-picture (since: 1.3.0)

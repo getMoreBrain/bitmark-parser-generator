@@ -49,6 +49,7 @@ import {
   TechnicalTerm,
   Table,
   Servings,
+  RatingLevelStartEnd,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -72,6 +73,7 @@ import {
   TechnicalTermJson,
   TableJson,
   ServingsJson,
+  RatingLevelStartEndJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -335,6 +337,9 @@ class JsonParser {
       productFolder,
       technicalTerm,
       servings,
+      ratingLevelStart,
+      ratingLevelEnd,
+      ratingLevelSelected,
       book,
       title,
       subtitle,
@@ -450,6 +455,12 @@ class JsonParser {
     // ingredients
     const ingredientsNodes = this.ingredientsBitsToAst(ingredients);
 
+    // ratingLevelStart
+    const ratingLevelStartNodes = this.ratingLevelStartEndToAst(ratingLevelStart);
+
+    // ratingLevelEnd
+    const ratingLevelEndNodes = this.ratingLevelStartEndToAst(ratingLevelEnd);
+
     // listItems / sections (cardBits)
     const cardBitNodes = this.listItemsToAst(listItems ?? sections, textFormat, placeholders);
 
@@ -560,6 +571,9 @@ class JsonParser {
       productFolder: this.convertStringToBreakscapedString(productFolder),
       technicalTerm: technicalTermNode,
       servings: servingsNode,
+      ratingLevelStart: ratingLevelStartNodes,
+      ratingLevelEnd: ratingLevelEndNodes,
+      ratingLevelSelected,
       book: this.convertStringToBreakscapedString(book),
       title: this.convertJsonTextToBreakscapedString(title),
       subtitle: this.convertJsonTextToBreakscapedString(subtitle),
@@ -1036,6 +1050,21 @@ class JsonParser {
     if (nodes.length === 0) return undefined;
 
     return nodes;
+  }
+
+  private ratingLevelStartEndToAst(ratingLevelStartEnd: RatingLevelStartEndJson): RatingLevelStartEnd | undefined {
+    let node: RatingLevelStartEnd | undefined;
+
+    if (ratingLevelStartEnd) {
+      const { level, label } = ratingLevelStartEnd;
+
+      node = builder.ratingLevelStartEnd({
+        level,
+        label: this.convertJsonTextToBreakscapedString(label) ?? Breakscape.EMPTY_STRING,
+      });
+    }
+
+    return node;
   }
 
   private listItemsToAst(

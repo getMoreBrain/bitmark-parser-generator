@@ -1416,6 +1416,47 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.surveyRating]: {
+    since: '1.6.0',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.ratingLevelStart,
+        chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.label,
+          },
+        ],
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.ratingLevelEnd,
+        chain: [
+          {
+            type: BitTagType.property,
+            configKey: PropertyConfigKey.label,
+          },
+        ],
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.ratingLevelSelected,
+      },
+    ],
+  },
+  [BitType.surveyRatingOnce]: {
+    since: '1.6.0',
+    baseBitType: BitType.surveyRating,
+  },
+  [BitType.surveyRatingDisplay]: {
+    since: '1.6.0',
+    baseBitType: BitType.surveyRating,
+  },
   [BitType.scorm]: {
     since: '1.5.11',
     tags: [

@@ -3,6 +3,7 @@ import { Config } from '../../../../config/Config';
 import { BodyPart, Gap } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { Tag } from '../../../../model/enum/Tag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 
 import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
@@ -45,7 +46,7 @@ function buildGap(
 ): Gap | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
-  const gapConfig = Config.getTagConfigForTag(tagsConfig, content.type);
+  const gapConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
 
   const chainContent = [content, ...(content.chain ?? [])];
 

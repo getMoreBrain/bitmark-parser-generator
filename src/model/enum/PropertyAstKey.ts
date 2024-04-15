@@ -6,12 +6,12 @@ import { EnumType, superenum } from '@ncoderz/superenum';
  * Only keys that vary from the markup default are included.
  */
 const PropertyAstKey = superenum({
-  aiGenerated: 'aiGenerated',
-  isCaseSensitive: 'isCaseSensitive',
-  referenceProperty: 'referenceProperty',
-  markConfig: 'markConfig',
-  productList: 'productList',
-  productVideoList: 'productVideoList',
+  ast_aiGenerated: 'aiGenerated',
+  ast_isCaseSensitive: 'isCaseSensitive',
+  ast_referenceProperty: 'referenceProperty',
+  ast_markConfig: 'markConfig',
+  ast_productList: 'productList',
+  ast_productVideoList: 'productVideoList',
 });
 
 export type PropertyAstKeyType = EnumType<typeof PropertyAstKey>;

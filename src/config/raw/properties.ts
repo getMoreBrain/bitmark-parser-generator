@@ -37,10 +37,10 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.number,
   },
   [PropertyConfigKey.aiGenerated]: {
-    tag: PropertyTag.aiGenerated,
+    tag: PropertyTag.tag_aiGenerated,
     single: true,
     format: PropertyFormat.boolean,
-    astKey: PropertyAstKey.aiGenerated,
+    astKey: PropertyAstKey.ast_aiGenerated,
   },
   [PropertyConfigKey.releaseVersion]: {
     tag: PropertyTag.releaseVersion,
@@ -243,9 +243,9 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.property_reference]: {
-    tag: PropertyTag.reference,
+    tag: PropertyTag.tag_reference,
     format: PropertyFormat.trimmedString,
-    astKey: PropertyAstKey.referenceProperty,
+    astKey: PropertyAstKey.ast_referenceProperty,
   },
   [PropertyConfigKey.list]: {
     tag: PropertyTag.list,
@@ -358,7 +358,7 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.product,
     single: false,
     format: PropertyFormat.trimmedString,
-    astKey: PropertyAstKey.productList,
+    astKey: PropertyAstKey.ast_productList,
   },
   [PropertyConfigKey.productVideo]: {
     tag: PropertyTag.productVideo,
@@ -369,7 +369,7 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.productVideo,
     single: false,
     format: PropertyFormat.trimmedString,
-    astKey: PropertyAstKey.productVideoList,
+    astKey: PropertyAstKey.ast_productVideoList,
   },
   [PropertyConfigKey.productFolder]: {
     tag: PropertyTag.productFolder,
@@ -399,17 +399,17 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.property_sampleSolution]: {
-    tag: PropertyTag.sampleSolution,
+    tag: PropertyTag.tag_sampleSolution,
     single: true,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.markConfig]: {
-    tag: PropertyTag.mark,
+    tag: PropertyTag.tag_mark,
     format: PropertyFormat.trimmedString,
-    astKey: PropertyAstKey.markConfig,
+    astKey: PropertyAstKey.ast_markConfig,
   },
   [PropertyConfigKey.property_mark]: {
-    tag: PropertyTag.mark,
+    tag: PropertyTag.tag_mark,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.color]: {
@@ -453,7 +453,7 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.property_title]: {
-    tag: PropertyTag.title,
+    tag: PropertyTag.tag_title,
     single: true,
     format: PropertyFormat.trimmedString,
   },
@@ -675,6 +675,26 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.codeMinimap,
     single: true,
     format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.ratingLevelStart]: {
+    tag: PropertyTag.ratingLevelStart,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.ratingLevelEnd]: {
+    tag: PropertyTag.ratingLevelEnd,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.ratingLevelSelected]: {
+    tag: PropertyTag.ratingLevelSelected,
+    single: true,
+    format: PropertyFormat.number,
+  },
+  [PropertyConfigKey.label]: {
+    tag: PropertyTag.label,
+    single: true,
+    format: PropertyFormat.trimmedString,
   },
 };
 

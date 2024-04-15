@@ -56,6 +56,7 @@ import {
   TechnicalTerm,
   Table,
   Servings,
+  RatingLevelStartEnd,
 } from '../model/ast/Nodes';
 
 /**
@@ -191,6 +192,9 @@ class Builder extends BaseBuilder {
     productFolder?: BreakscapedString;
     technicalTerm?: TechnicalTerm;
     servings?: Servings;
+    ratingLevelStart?: RatingLevelStartEnd;
+    ratingLevelEnd?: RatingLevelStartEnd;
+    ratingLevelSelected?: number;
     partialAnswer?: BreakscapedString;
     book?: BreakscapedString;
     title?: BreakscapedString;
@@ -346,6 +350,9 @@ class Builder extends BaseBuilder {
       productFolder,
       technicalTerm,
       servings,
+      ratingLevelStart,
+      ratingLevelEnd,
+      ratingLevelSelected,
       title,
       subtitle,
       level,
@@ -501,6 +508,9 @@ class Builder extends BaseBuilder {
       productFolder: this.toAstProperty(PropertyConfigKey.productFolder, productFolder),
       technicalTerm,
       servings,
+      ratingLevelStart,
+      ratingLevelEnd,
+      ratingLevelSelected: this.toAstProperty(PropertyConfigKey.ratingLevelSelected, ratingLevelSelected),
       title,
       subtitle,
       level: NumberUtils.asNumber(level),
@@ -1565,6 +1575,27 @@ class Builder extends BaseBuilder {
       decimalPlaces,
       disableCalculation,
       hint,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build (survey-rating) ratingLevelStart / ratingLevelEnd node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  ratingLevelStartEnd(data: { level: number; label?: BreakscapedString }): RatingLevelStartEnd {
+    const { level, label } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: RatingLevelStartEnd = {
+      level,
+      label,
     };
 
     // Remove Unset Optionals

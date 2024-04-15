@@ -4,43 +4,43 @@ import { Tag } from '../../model/enum/Tag';
 
 const TAGS: _TagsConfig = {
   [TagConfigKey.title]: {
-    tag: Tag.title,
+    tag: Tag.tag_title,
   },
   [TagConfigKey.anchor]: {
-    tag: Tag.anchor,
+    tag: Tag.tag_anchor,
   },
   [TagConfigKey.tag_reference]: {
-    tag: Tag.reference,
+    tag: Tag.tag_reference,
   },
   [TagConfigKey.property]: {
-    tag: Tag.property,
+    tag: Tag.tag_property,
   },
   [TagConfigKey.itemLead]: {
-    tag: Tag.itemLead,
+    tag: Tag.tag_itemLead,
   },
   [TagConfigKey.instruction]: {
-    tag: Tag.instruction,
+    tag: Tag.tag_instruction,
   },
   [TagConfigKey.hint]: {
-    tag: Tag.hint,
+    tag: Tag.tag_hint,
   },
   [TagConfigKey.true]: {
-    tag: Tag.true,
+    tag: Tag.tag_true,
   },
   [TagConfigKey.false]: {
-    tag: Tag.false,
+    tag: Tag.tag_false,
   },
   [TagConfigKey.sampleSolution]: {
-    tag: Tag.sampleSolution,
+    tag: Tag.tag_sampleSolution,
   },
   [TagConfigKey.gap]: {
-    tag: Tag.gap,
+    tag: Tag.tag_gap,
   },
   [TagConfigKey.tag_mark]: {
-    tag: Tag.mark,
+    tag: Tag.tag_mark,
   },
   [TagConfigKey.resource]: {
-    tag: Tag.resource,
+    tag: Tag.tag_resource,
   },
 };
 
