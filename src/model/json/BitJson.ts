@@ -145,6 +145,7 @@ export interface BitJson {
 
   resource: ResourceJson;
   logos: ImageResourceWrapperJson[];
+  images: ImageResourceWrapperJson[];
 
   body: JsonText;
 

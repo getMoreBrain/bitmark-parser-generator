@@ -392,6 +392,10 @@ const GROUPS: _GroupsConfig = {
         configKey: PropertyConfigKey.publications,
         maxCount: Count.infinity,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.duration,
+      },
     ],
   },
   [GroupConfigKey.group_learningPathCommon]: {

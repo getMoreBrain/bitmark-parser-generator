@@ -930,6 +930,10 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: false,
   },
+  [BitType.prototypeImages]: {
+    since: '1.6.1',
+    baseBitType: BitType.imagesLogoGrave,
+  },
   [BitType.internalLink]: {
     since: '1.3.0',
     tags: [
