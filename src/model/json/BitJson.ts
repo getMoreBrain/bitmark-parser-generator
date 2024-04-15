@@ -74,6 +74,7 @@ export interface BitJson {
   pointerLeft: string;
   pointerTop: string;
   backgroundWallpaper: string;
+  hasBookNavigation: boolean;
   duration: string;
   deeplink: string | string[];
   externalLink: string;

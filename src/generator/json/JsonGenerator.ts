@@ -2690,6 +2690,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       pointerLeft: undefined,
       pointerTop: undefined,
       backgroundWallpaper: undefined,
+      hasBookNavigation: undefined,
       deeplink: undefined,
       externalLink: undefined,
       externalLinkText: undefined,
@@ -3009,6 +3010,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           };
         }
       }
+
+      // Special case for 'module' bits
+      if (Config.isOfBitType(bitType, BitType.module)) {
+        if (bitJson.hasBookNavigation == null) bitJson.hasBookNavigation = true;
+      }
     }
 
     // Remove unwanted properties
@@ -3080,6 +3086,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.pointerLeft == null) delete bitJson.pointerLeft;
     if (bitJson.pointerTop == null) delete bitJson.pointerTop;
     if (bitJson.backgroundWallpaper == null) delete bitJson.backgroundWallpaper;
+    if (bitJson.hasBookNavigation == null) delete bitJson.hasBookNavigation;
     if (bitJson.deeplink == null) delete bitJson.deeplink;
     if (bitJson.externalLink == null) delete bitJson.externalLink;
     if (bitJson.externalLinkText == null) delete bitJson.externalLinkText;

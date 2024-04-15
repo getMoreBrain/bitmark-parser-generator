@@ -98,6 +98,7 @@ export interface Bit {
   pointerLeft?: Property;
   pointerTop?: Property;
   backgroundWallpaper?: Property;
+  hasBookNavigation?: Property;
   duration?: Property;
   deeplink?: Property;
   externalLink?: Property;

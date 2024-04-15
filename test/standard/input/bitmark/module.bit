@@ -2,6 +2,7 @@
 [@ageRange:18][@ageRange:120]
 [&image:https://image.com/large_cover_image.png]
 
+[@hasBookNavigation:false]
 [@duration:PT2H]
 [@productId:e-ef-b11_u1_l1]
 [@productId:e-ef-b11_u1_l12]
@@ -14,4 +15,6 @@
 followed by some plain text. cloze open close cloze1 book.
 
 Some more text.
+
+[.module:bitmark++]
 
