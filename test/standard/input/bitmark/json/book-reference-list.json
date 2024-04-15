@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-reference-list",
       "format": "bitmark--",
-      "id": [
-        "51880"
-      ],
+      "id": ["51880"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

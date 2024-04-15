@@ -51,20 +51,13 @@
     "bit": {
       "type": "book-link-next",
       "format": "bitmark--",
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "list": ["One", "Two", "Three", "Four"],
       "isTracked": true,
       "isInfoOnly": false,
       "reference": "Ref4.2.34",

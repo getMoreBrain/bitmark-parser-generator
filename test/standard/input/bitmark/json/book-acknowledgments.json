@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-acknowledgments",
       "format": "bitmark--",
-      "id": [
-        "51877"
-      ],
+      "id": ["51877"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

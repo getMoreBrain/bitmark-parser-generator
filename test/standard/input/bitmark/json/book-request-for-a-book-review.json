@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-request-for-a-book-review",
       "format": "bitmark--",
-      "id": [
-        "51886"
-      ],
+      "id": ["51886"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

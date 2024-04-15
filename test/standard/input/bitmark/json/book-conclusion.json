@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-conclusion",
       "format": "bitmark--",
-      "id": [
-        "51872"
-      ],
+      "id": ["51872"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

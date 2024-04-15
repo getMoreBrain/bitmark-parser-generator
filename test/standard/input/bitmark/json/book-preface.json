@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-preface",
       "format": "bitmark--",
-      "id": [
-        "5186"
-      ],
+      "id": ["5186"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

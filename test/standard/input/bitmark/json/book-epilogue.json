@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-epilogue",
       "format": "bitmark--",
-      "id": [
-        "51869"
-      ],
+      "id": ["51869"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

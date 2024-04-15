@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-author-bio",
       "format": "bitmark--",
-      "id": [
-        "51885"
-      ],
+      "id": ["51885"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

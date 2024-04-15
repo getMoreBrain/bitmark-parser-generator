@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-imprint",
       "format": "bitmark--",
-      "id": [
-        "51862"
-      ],
+      "id": ["51862"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

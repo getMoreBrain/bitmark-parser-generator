@@ -16,6 +16,7 @@
 [@coverColor:#F2F2F2]
 [@hasMarkAsDone]
 [@isPublic]
+[@duration:PT2H]
 
 
 [.article:bitmark++]

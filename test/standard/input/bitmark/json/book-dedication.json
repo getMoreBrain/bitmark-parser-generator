@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-dedication",
       "format": "bitmark--",
-      "id": [
-        "51865"
-      ],
+      "id": ["51865"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {
