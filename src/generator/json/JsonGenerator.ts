@@ -2631,6 +2631,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       padletId: undefined,
       jupyterId: undefined,
       jupyterExecutionCount: undefined,
+      isPublic: undefined,
       AIGenerated: undefined,
       releaseVersion: undefined,
       releaseKind: undefined,
@@ -2659,6 +2660,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       date: undefined,
       location: undefined,
       kind: undefined,
+      hasMarkAsDone: undefined,
       action: undefined,
       blockId: undefined,
       pageNo: undefined,
@@ -2979,6 +2981,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (bitJson.example == null) bitJson.example = null;
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
 
+      // Special case for 'book' bits
+      // if (Config.isOfBitType(bitType, BitType.book)) {
+      //   if (bitJson.isPublic == null) bitJson.isPublic = false;
+      //   if (bitJson.hasMarkAsDone == null) bitJson.hasMarkAsDone = false;
+      // }
+
       // Special case for 'ai' bits
       if (bitType === BitType.articleAi || bitType === BitType.noteAi || bitType === BitType.summaryAi) {
         if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
@@ -3027,6 +3035,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.padletId == null) delete bitJson.padletId;
     if (bitJson.jupyterId == null) delete bitJson.jupyterId;
     if (bitJson.jupyterExecutionCount == null) delete bitJson.jupyterExecutionCount;
+    if (bitJson.isPublic == null) delete bitJson.isPublic;
     if (bitJson.AIGenerated == null) delete bitJson.AIGenerated;
     if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
     if (bitJson.releaseKind == null) delete bitJson.releaseKind;
@@ -3055,6 +3064,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.date == null) delete bitJson.date;
     if (bitJson.location == null) delete bitJson.location;
     if (bitJson.kind == null) delete bitJson.kind;
+    if (bitJson.hasMarkAsDone == null) delete bitJson.hasMarkAsDone;
     if (bitJson.action == null) delete bitJson.action;
     if (bitJson.blockId == null) delete bitJson.blockId;
     if (bitJson.pageNo == null) delete bitJson.pageNo;

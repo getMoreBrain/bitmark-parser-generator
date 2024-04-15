@@ -40,6 +40,7 @@ export interface Bit {
   padletId?: Property;
   jupyterId?: Property;
   jupyterExecutionCount?: Property;
+  isPublic?: Property;
   aiGenerated?: Property;
   releaseVersion?: Property;
   releaseKind?: Property;
@@ -67,6 +68,7 @@ export interface Bit {
   date?: Property;
   location?: Property;
   kind?: Property;
+  hasMarkAsDone?: Property;
   action?: Property;
   blockId?: Property;
   pageNo?: Property;

@@ -174,6 +174,18 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.hasMarkAsDone]: {
+    tag: PropertyTag.hasMarkAsDone,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.isPublic]: {
+    tag: PropertyTag.isPublic,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
   [PropertyConfigKey.action]: {
     tag: PropertyTag.action,
     single: true,

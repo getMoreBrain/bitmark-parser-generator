@@ -16,6 +16,7 @@ export interface BitJson {
   padletId: string;
   jupyterId: string;
   jupyterExecutionCount: number;
+  isPublic: boolean;
   AIGenerated: boolean;
   releaseVersion: string;
   releaseKind: string;
@@ -43,6 +44,7 @@ export interface BitJson {
   location: string;
   theme: string | string[];
   kind: string;
+  hasMarkAsDone: boolean;
   action: string;
   blockId: string;
   pageNo: number;

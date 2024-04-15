@@ -40,6 +40,8 @@
           "attrs": {}
         }
       ],
+      "hasMarkAsDone": true,
+      "isPublic": true,
       "item": [],
       "hint": [],
       "isExample": false,
