@@ -2982,10 +2982,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
 
       // Special case for 'book' bits
-      // if (Config.isOfBitType(bitType, BitType.book)) {
-      //   if (bitJson.isPublic == null) bitJson.isPublic = false;
-      //   if (bitJson.hasMarkAsDone == null) bitJson.hasMarkAsDone = false;
-      // }
+      if (Config.isOfBitType(bitType, BitType.book)) {
+        if (bitJson.isPublic == null) bitJson.isPublic = false;
+        if (bitJson.hasMarkAsDone == null) bitJson.hasMarkAsDone = false;
+      }
 
       // Special case for 'ai' bits
       if (bitType === BitType.articleAi || bitType === BitType.noteAi || bitType === BitType.summaryAi) {

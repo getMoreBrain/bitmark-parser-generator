@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-copyright",
       "format": "bitmark--",
-      "id": [
-        "51861"
-      ],
+      "id": ["51861"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

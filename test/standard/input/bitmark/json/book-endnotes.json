@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-endnotes",
       "format": "bitmark--",
-      "id": [
-        "51881"
-      ],
+      "id": ["51881"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

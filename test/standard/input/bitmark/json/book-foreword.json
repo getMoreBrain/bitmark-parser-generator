@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-foreword",
       "format": "bitmark--",
-      "id": [
-        "51866"
-      ],
+      "id": ["51866"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

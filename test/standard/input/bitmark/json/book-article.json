@@ -3,15 +3,10 @@
     "bit": {
       "type": "book-article",
       "format": "bitmark--",
-      "ageRange": [
-        "18",
-        "120"
-      ],
-      "language": [
-        "en",
-        "jp",
-        "cn"
-      ],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "ageRange": ["18", "120"],
+      "language": ["en", "jp", "cn"],
       "item": [],
       "hint": [],
       "isExample": false,

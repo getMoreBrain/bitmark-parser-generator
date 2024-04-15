@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-inciting-incident",
       "format": "bitmark--",
-      "id": [
-        "51871"
-      ],
+      "id": ["51871"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-epigraph",
       "format": "bitmark--",
-      "id": [
-        "51890"
-      ],
+      "id": ["51890"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

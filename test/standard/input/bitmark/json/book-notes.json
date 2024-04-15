@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-notes",
       "format": "bitmark--",
-      "id": [
-        "51882"
-      ],
+      "id": ["51882"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

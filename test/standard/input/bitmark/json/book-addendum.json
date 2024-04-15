@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-addendum",
       "format": "bitmark--",
-      "id": [
-        "51876"
-      ],
+      "id": ["51876"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

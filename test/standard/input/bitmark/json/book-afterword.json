@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-afterword",
       "format": "bitmark--",
-      "id": [
-        "51873"
-      ],
+      "id": ["51873"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

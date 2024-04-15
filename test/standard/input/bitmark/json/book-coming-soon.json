@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-coming-soon",
       "format": "bitmark--",
-      "id": [
-        "51887"
-      ],
+      "id": ["51887"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

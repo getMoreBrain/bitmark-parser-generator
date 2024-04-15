@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-prologue",
       "format": "bitmark--",
-      "id": [
-        "51868"
-      ],
+      "id": ["51868"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

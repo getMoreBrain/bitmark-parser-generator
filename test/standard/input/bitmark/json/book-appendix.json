@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-appendix",
       "format": "bitmark--",
-      "id": [
-        "51875"
-      ],
+      "id": ["51875"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {

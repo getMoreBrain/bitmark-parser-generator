@@ -3,9 +3,9 @@
     "bit": {
       "type": "book-list-of-contributors",
       "format": "bitmark--",
-      "id": [
-        "51878"
-      ],
+      "id": ["51878"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
       "item": [],
       "lead": [
         {
