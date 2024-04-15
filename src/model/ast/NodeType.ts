@@ -31,6 +31,8 @@ const NodeType = superenum({
   avatarImage: 'avatarImage',
   backgroundWallpaper: 'backgroundWallpaper',
   backgroundWallpaperValue: 'backgroundWallpaperValue',
+  hasBookNavigation: 'hasBookNavigation',
+  hasBookNavigationValue: 'hasBookNavigationValue',
   bitmarkAst: 'bitmarkAst', // bitmarkAst
   bitmarkVersion: 'bitmarkVersion',
   bits: 'bits', // bits

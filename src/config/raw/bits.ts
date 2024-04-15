@@ -668,6 +668,10 @@ const BITS: _BitsConfig = {
     tags: [
       {
         type: BitTagType.property,
+        configKey: propertyConfigKeys.hasBookNavigation,
+      },
+      {
+        type: BitTagType.property,
         configKey: propertyConfigKeys.productId,
         maxCount: Count.infinity,
       },

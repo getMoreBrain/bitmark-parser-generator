@@ -577,6 +577,12 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.hasBookNavigation]: {
+    tag: PropertyTag.hasBookNavigation,
+    single: true,
+    defaultValue: 'true',
+    format: PropertyFormat.boolean,
+  },
   [PropertyConfigKey.blockId]: {
     tag: PropertyTag.blockId,
     single: true,

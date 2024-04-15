@@ -43,6 +43,7 @@ const propertyConfigKeys = {
   focusX: 'focusX',
   focusY: 'focusY',
   format: 'format',
+  hasBookNavigation: 'hasBookNavigation',
   height: 'height',
   icon: 'icon',
   iconTag: 'iconTag',

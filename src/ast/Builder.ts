@@ -159,6 +159,7 @@ class Builder extends BaseBuilder {
     pointerLeft?: BreakscapedString;
     pointerTop?: BreakscapedString;
     backgroundWallpaper?: BreakscapedString;
+    hasBookNavigation?: boolean;
     duration?: BreakscapedString;
     referenceProperty?: BreakscapedString | BreakscapedString[];
     deeplink?: BreakscapedString | BreakscapedString[];
@@ -316,6 +317,7 @@ class Builder extends BaseBuilder {
       pointerLeft,
       pointerTop,
       backgroundWallpaper,
+      hasBookNavigation,
       duration,
       referenceProperty,
       deeplink,
@@ -476,6 +478,7 @@ class Builder extends BaseBuilder {
       pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, pointerLeft),
       pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, pointerTop),
       backgroundWallpaper: this.toAstProperty(PropertyConfigKey.backgroundWallpaper, backgroundWallpaper),
+      hasBookNavigation: this.toAstProperty(PropertyConfigKey.hasBookNavigation, hasBookNavigation),
       deeplink: this.toAstProperty(PropertyConfigKey.deeplink, deeplink),
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, externalLink),
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, externalLinkText),
