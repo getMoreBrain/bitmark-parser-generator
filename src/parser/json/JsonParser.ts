@@ -366,6 +366,7 @@ class JsonParser {
       marks,
       resource,
       logos,
+      images,
       body,
       sampleSolution,
       elements,
@@ -403,7 +404,7 @@ class JsonParser {
     const resourceAttachmentType = this.getResourceType(resource);
 
     // resource(s)
-    const resourcesNode = this.resourceBitToAst(bitType, resource, logos);
+    const resourcesNode = this.resourceBitToAst(bitType, resource, images ?? logos);
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
@@ -1110,7 +1111,7 @@ class JsonParser {
   private resourceBitToAst(
     bitType: BitTypeType,
     resource: ResourceJson | undefined,
-    logos: ImageResourceWrapperJson[] | undefined,
+    images: ImageResourceWrapperJson[] | undefined,
   ): Resource[] | undefined {
     const nodes: Resource[] | undefined = [];
 
@@ -1149,11 +1150,11 @@ class JsonParser {
       }
     }
 
-    if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
+    if (Config.isOfBitType(bitType, [BitType.imagesLogoGrave, BitType.prototypeImages])) {
       // Add the logo images
-      if (Array.isArray(logos)) {
-        for (const logo of logos) {
-          const node = this.resourceDataToAst(ResourceTag.image, logo.image);
+      if (Array.isArray(images)) {
+        for (const image of images) {
+          const node = this.resourceDataToAst(ResourceTag.image, image.image);
           if (node) nodes.push(node);
         }
       }

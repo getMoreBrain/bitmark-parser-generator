@@ -1406,16 +1406,20 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
         resourceJson = wrapper as ResourceJson;
       }
-    } else if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
-      // The resource is a logo grave resource
-      const logos: ImageResourceWrapperJson[] = [];
+    } else if (Config.isOfBitType(bitType, [BitType.imagesLogoGrave, BitType.prototypeImages])) {
+      // The resource is a logo-grave  / prototpye-images resource
+      const images: ImageResourceWrapperJson[] = [];
       for (const r of resources) {
         const json = this.parseResourceToJson(bitType, r) as ImageResourceWrapperJson;
         if (json) {
-          logos.push(json);
+          images.push(json);
         }
       }
-      this.bitJson.logos = logos;
+      if (bitType === BitType.imagesLogoGrave) {
+        this.bitJson.logos = images;
+      } else {
+        this.bitJson.images = images;
+      }
     } else {
       // This is a standard resource. If there is more than one resource, use the first one.
       // There should not be more than one because of validation
@@ -2771,6 +2775,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Resource
       resource: undefined,
       logos: undefined,
+      images: undefined,
 
       // Children
       statement: undefined,
@@ -3007,8 +3012,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
 
       // Special case for 'images-logos-grave' / 'prototype-images' / etc bits
-      if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
-        if (bitJson.logos == null) bitJson.logos = [];
+      if (Config.isOfBitType(bitType, [BitType.imagesLogoGrave, BitType.prototypeImages])) {
+        if (bitType === BitType.imagesLogoGrave) {
+          if (bitJson.logos == null) {
+            bitJson.logos = [];
+          }
+        } else {
+          if (bitJson.images == null) bitJson.images = [];
+        }
       }
 
       // Special case for 'survey-rating-*' bits
@@ -3174,6 +3185,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Resource
     if (bitJson.resource == null) delete bitJson.resource;
     if (bitJson.logos == null) delete bitJson.logos;
+    if (bitJson.images == null) delete bitJson.images;
 
     // Children
     if (bitJson.statement == null) delete bitJson.statement;
