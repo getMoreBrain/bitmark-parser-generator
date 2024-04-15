@@ -4,6 +4,9 @@
       "type": "module",
       "format": "bitmark++",
       "ageRange": ["18", "120"],
+      "icon": "https://docs.getmorebrain.com/bit-books/ef/b1_1/student_book/unit_1/web-resources/images/icon_speaking_b1_v2.svg",
+      "duration": "PT2H",
+      "productId": ["e-ef-b11_u1_l1", "e-ef-b11_u1_l12", "e-ef-b11_u1_l12"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -41,13 +44,29 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "image.com",
+          "src": "https://image.com/large_cover_image.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
     },
     "parser": {
-      "version": "1.5.25",
+      "version": "1.6.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
-    "bitmark": "[.module:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+    "bitmark": "[.module&image:bitmark++]\n[@ageRange:18][@ageRange:120]\n[&image:https://image.com/large_cover_image.png]\n\n[@duration:PT2H]\n[@productId:e-ef-b11_u1_l1]\n[@productId:e-ef-b11_u1_l12]\n[@productId:e-ef-b11_u1_l12]\n\n[@icon:https://docs.getmorebrain.com/bit-books/ef/b1_1/student_book/unit_1/web-resources/images/icon_speaking_b1_v2.svg]\n\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   }
 ]

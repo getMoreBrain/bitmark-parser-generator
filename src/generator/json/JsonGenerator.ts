@@ -2714,6 +2714,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       resolvedBy: undefined,
       maxCreatedBits: undefined,
       maxDisplayLevel: undefined,
+      productId: undefined,
       product: undefined,
       productVideo: undefined,
       productFolder: undefined,
@@ -3102,6 +3103,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.resolvedBy == null) delete bitJson.resolvedBy;
     if (bitJson.maxCreatedBits == null) delete bitJson.maxCreatedBits;
     if (bitJson.maxDisplayLevel == null) delete bitJson.maxDisplayLevel;
+    if (bitJson.productId == null) delete bitJson.productId;
     if (bitJson.product == null) delete bitJson.product;
     if (bitJson.productVideo == null) delete bitJson.productVideo;
     if (bitJson.productFolder == null) delete bitJson.productFolder;
