@@ -262,6 +262,7 @@ const BitType = superenum({
   pageSubscribe: 'page-subscribe',
   photo: 'photo',
   preparationNote: 'preparation-note',
+  prototypeImages: 'prototype-images',
   question1: 'question-1',
   quote: 'quote',
   rating: 'rating',

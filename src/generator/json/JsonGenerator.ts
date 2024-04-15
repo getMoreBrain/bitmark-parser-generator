@@ -2435,7 +2435,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // The default value in the JSON is hardcoded, because there is currently no good way to set a different
     // default per bit in the BitConfig.
-    if (Config.isOfBitType(bitType, [BitType.imageSeparator, BitType.pageBanner])) {
+    if (
+      Config.isOfBitType(bitType, [
+        BitType.imageSeparator,
+        BitType.pageBanner,
+        BitType.imagesLogoGrave,
+        BitType.prototypeImages,
+      ])
+    ) {
       return true;
     }
 
@@ -2999,7 +3006,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.resolvedBy == null) bitJson.resolvedBy = '';
       }
 
-      // Special case for 'images-logos-grave' bit
+      // Special case for 'images-logos-grave' / 'prototype-images' / etc bits
       if (Config.isOfBitType(bitType, BitType.imagesLogoGrave)) {
         if (bitJson.logos == null) bitJson.logos = [];
       }
