@@ -427,6 +427,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+
   [BitType.conversationLeft1]: {
     since: '1.3.0',
     tags: [
@@ -1438,6 +1439,31 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.surveyMatrix]: {
+    since: '1.6.2',
+    baseBitType: BitType.image,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.pointerTop,
+        minCount: 1,
+        maxCount: 1,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.pointerLeft,
+        minCount: 1,
+        maxCount: 1,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+        minCount: 1,
+        maxCount: 1,
+      },
+    ],
+  },
+  [BitType.surveyMatrixMe]: { since: '1.6.2', baseBitType: BitType.surveyMatrix },
   [BitType.surveyRating]: {
     since: '1.6.0',
     tags: [
