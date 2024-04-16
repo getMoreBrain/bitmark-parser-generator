@@ -3022,6 +3022,15 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       }
 
+      // Special case for 'stepImageScreenshotWithPointer' / surveyMatrix / etc bits
+      if (Config.isOfBitType(bitType, [BitType.stepImageScreenshotWithPointer, BitType.surveyMatrix])) {
+        if (bitJson.pointerTop == null) bitJson.pointerTop = '0%';
+        if (bitJson.pointerLeft == null) bitJson.pointerLeft = '0%';
+        if (Config.isOfBitType(bitType, [BitType.surveyMatrix])) {
+          if (bitJson.buttonCaption == null) bitJson.buttonCaption = '';
+        }
+      }
+
       // Special case for 'survey-rating-*' bits
       if (Config.isOfBitType(bitType, BitType.surveyRating)) {
         //
