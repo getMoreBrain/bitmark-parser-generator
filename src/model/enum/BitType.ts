@@ -300,6 +300,8 @@ const BitType = superenum({
   survey1: 'survey-1',
   surveyAnonymous: 'survey-anonymous',
   surveyAnonymous1: 'survey-anonymous-1',
+  surveyMatrix: 'survey-matrix',
+  surveyMatrixMe: 'survey-matrix-me',
   surveyRating: 'survey-rating',
   surveyRatingOnce: 'survey-rating-once',
   surveyRatingDisplay: 'survey-rating-display',
