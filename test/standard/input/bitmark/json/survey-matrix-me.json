@@ -176,7 +176,7 @@
       "type": "survey-matrix-me",
       "format": "bitmark--",
       "pointerLeft": "50%",
-      "pointerTop": "0%",
+      "pointerTop": "",
       "buttonCaption": "This is a button caption",
       "item": [],
       "hint": [],

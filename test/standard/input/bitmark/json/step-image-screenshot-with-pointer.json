@@ -155,7 +155,7 @@
     "bit": {
       "type": "step-image-screenshot-with-pointer",
       "format": "bitmark--",
-      "pointerTop": "0%",
+      "pointerTop": "",
       "pointerLeft": "50%",
       "item": [],
       "hint": [],
