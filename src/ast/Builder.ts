@@ -103,6 +103,7 @@ class Builder extends BaseBuilder {
     jupyterExecutionCount?: number;
     isPublic?: boolean;
     aiGenerated?: boolean;
+    analyticsTag?: BreakscapedString | BreakscapedString[];
     releaseVersion?: BreakscapedString;
     releaseKind?: BreakscapedString;
     releaseDate?: BreakscapedString;
@@ -263,6 +264,7 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount,
       isPublic,
       aiGenerated,
+      analyticsTag,
       releaseVersion,
       releaseKind,
       releaseDate,
@@ -419,6 +421,7 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, jupyterExecutionCount),
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, isPublic),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
+      analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, analyticsTag),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, releaseVersion),
       releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, releaseKind),
       releaseDate: this.toAstProperty(PropertyConfigKey.releaseDate, releaseDate),
