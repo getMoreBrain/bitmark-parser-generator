@@ -43,6 +43,7 @@ export interface Bit {
   isPublic?: Property;
   aiGenerated?: Property;
   analyticsTag?: Property;
+  disableFeedback?: Property;
   releaseVersion?: Property;
   releaseKind?: Property;
   releaseDate?: Property;
