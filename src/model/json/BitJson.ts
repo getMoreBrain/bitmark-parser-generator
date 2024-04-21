@@ -18,6 +18,7 @@ export interface BitJson {
   jupyterExecutionCount: number;
   isPublic: boolean;
   AIGenerated: boolean;
+  analyticsTag: string | string[];
   releaseVersion: string;
   releaseKind: string;
   releaseDate: string;

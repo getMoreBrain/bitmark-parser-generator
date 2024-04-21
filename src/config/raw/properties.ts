@@ -42,6 +42,10 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.boolean,
     astKey: PropertyAstKey.ast_aiGenerated,
   },
+  [PropertyConfigKey.analyticsTag]: {
+    tag: PropertyTag.analyticsTag,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.releaseVersion]: {
     tag: PropertyTag.releaseVersion,
     single: true,

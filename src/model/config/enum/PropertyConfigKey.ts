@@ -7,6 +7,7 @@ const propertyConfigKeys = {
   action: 'action',
   ageRange: 'ageRange',
   aiGenerated: 'aiGenerated',
+  analyticsTag: 'analyticsTag',
   allowSubtitles: 'allowSubtitles',
   alt: 'alt',
   author: 'author',

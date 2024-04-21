@@ -42,6 +42,7 @@ export interface Bit {
   jupyterExecutionCount?: Property;
   isPublic?: Property;
   aiGenerated?: Property;
+  analyticsTag?: Property;
   releaseVersion?: Property;
   releaseKind?: Property;
   releaseDate?: Property;

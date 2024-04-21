@@ -15,6 +15,8 @@ const NodeType = superenum({
   ageRangeValue: 'ageRangeValue',
   aiGenerated: 'aiGenerated',
   aiGeneratedValue: 'aiGeneratedValue',
+  analyticsTag: 'analyticsTag',
+  analyticsTagValue: 'analyticsTagValue',
   alias: 'alias', // bit type (alias)
   alignment: 'alignment',
   alt: 'alt',
