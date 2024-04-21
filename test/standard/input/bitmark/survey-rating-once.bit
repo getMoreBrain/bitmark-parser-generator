@@ -5,3 +5,4 @@
 [@ratingLevelStart:0][@label:NOT AT ALL LIKELY]
 [@ratingLevelEnd:10][@label:EXTREMLY LIKELY]
 [@ratingLevelSelected:3]
+[@buttonCaption: Save My Stress Level ]
