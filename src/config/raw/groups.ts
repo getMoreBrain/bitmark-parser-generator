@@ -28,6 +28,15 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.analyticsTag,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.disableFeedback,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.ageRange,
         maxCount: Count.infinity,
       },

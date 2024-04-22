@@ -11,7 +11,7 @@ import { StringUtils } from '../utils/StringUtils';
  * being broken (split) by a special charater.
  *
  * The special character is ^
- * To include the special character in a text, use ^^ (once), ^^^ (twice), etc.
+ * To include the special character in a text where it breakscapes, use ^^ (once), ^^^ (twice), etc.
  *
  * The following sequences can be breakscaped:
  *  - inline:                                ==         ==>   =^=
@@ -45,7 +45,8 @@ import { StringUtils } from '../utils/StringUtils';
  *
  *
  * The following are breakscaped with ^ in between. Just add more ^s to increase the number of ^ string:
- *  - inline:                                =^=         ==>   =^^=
+ *  - inline / card set start:               =^=         ==>   =^^=
+ *  - footer:                                ~^~         ==>   ~^^~
  *  - title block:                   (SOL)[##]#^(space)  ==>   (SOL)[##]#^^(space)
  *  - new block:                     (SOL)|^(WS EOL)     ==>   (SOL)|^^(WS EOL)
  *  - code block:                    (SOL)|^code(:type)  ==>   (SOL)|^^code(:type)
@@ -79,7 +80,7 @@ import { StringUtils } from '../utils/StringUtils';
 // Breakscaping
 //
 
-const REGEX_MARKS = /([*`_!=])([\^]*)\1/;
+const REGEX_MARKS = /([*`_!=~])([\^]*)\1/;
 const REGEX_BLOCKS = /^(\|)([\^]*)(code[\s]*|code:|image:|[\s]*$)/;
 const REGEX_TITLE_BLOCKS = /^([#]{1,3})([\^]*)([^\S\r\n]+)/;
 const REGEX_LIST_BLOCKS = /^(•)([\^]*)(1|\+|-|)([^\S\r\n]+)/;

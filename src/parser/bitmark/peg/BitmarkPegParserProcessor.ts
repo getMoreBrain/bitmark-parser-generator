@@ -585,10 +585,14 @@ class BitmarkPegParserProcessor {
           break;
         }
 
-        // case TypeKey.CardText: {
-        //   cardBody = Breakscape.concatenate(cardBody, value as BreakscapedString);
-        //   break;
-        // }
+        case TypeKey.Footer: {
+          if (inFooter) {
+            // If already in footer, handle the content as if it is footer (body) text
+            footer = Breakscape.concatenate(footer, value as BreakscapedString);
+          }
+          inFooter = true; // After the footer divider, body lines should be written to the footer rather than the body
+          break;
+        }
 
         default:
         // Unknown tag

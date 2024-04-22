@@ -152,7 +152,7 @@ ResourceType
 
 // All bit content (tags, body, cards)
 BitContent
-  = value: (CardSet_V2 / CardSet_V1 / TagChain / BodyChar)* { return helper.handleBitContent(value) }
+  = value: (Divider / CardSet_V2 / CardSet_V1 / TagChain / BodyChar)* { return helper.handleBitContent(value) }
 
 // Bit tag chain
 TagChain
@@ -184,6 +184,13 @@ BitTag
 BodyChar
   = value: . { return { type: TypeKey.BodyChar, value: value } }
 
+// Dividers
+Divider
+ = value: (Footer)
+
+// Footer
+Footer
+ = value: (NL "~~~~" WNL) { return helper.handleFooterDivider(value); }
 
 // Modern CardSet
 CardSet_V2
