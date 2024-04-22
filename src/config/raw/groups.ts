@@ -71,6 +71,11 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.reductionTag,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.icon,
       },
       {

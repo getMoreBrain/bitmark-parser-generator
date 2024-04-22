@@ -56,6 +56,7 @@ export interface Bit {
   computerLanguage?: Property;
   target?: Property;
   tag?: Property;
+  reductionTag?: Property;
   icon?: Property;
   iconTag?: Property;
   colorTag?: Property;

@@ -282,6 +282,8 @@ const NodeType = superenum({
   reaction: 'reaction',
   reasonableNumOfChars: 'reasonableNumOfChars',
   reasonableNumOfCharsValue: 'reasonableNumOfCharsValue',
+  reductionTag: 'reductionTag',
+  reductionTagValue: 'reductionTagValue',
   reference: 'reference',
   referenceEnd: 'referenceEnd',
   referenceProperty: 'referenceProperty',

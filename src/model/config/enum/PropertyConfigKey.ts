@@ -105,6 +105,7 @@ const propertyConfigKeys = {
   ratingLevelStart: 'ratingLevelStart',
   reaction: 'reaction',
   reasonableNumOfChars: 'reasonableNumOfChars',
+  reductionTag: 'reductionTag',
   releaseDate: 'releaseDate',
   releaseKind: 'releaseKind',
   releaseVersion: 'releaseVersion',
