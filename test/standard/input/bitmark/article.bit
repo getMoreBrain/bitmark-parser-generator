@@ -69,10 +69,11 @@ In den folgenden Unterkapiteln wählen wir einzelne Methoden des Marketings und 
 [.article:bitmark--]
 [@id:5743563]
 
-This is an article example with the target, tag, colorTag, icon, iconTag tags
+This is an article example with the target, tag, reductionTag, colorTag, icon, iconTag tags
 
 [@target:target1]
 [@target:target2][@target:target3]
+[@reductionTag:green][@reductionTag:yellow]
 [@tag:green][@tag:yellow]
 [@tag:red][@colorTag:green]
 [@colorTag:white]

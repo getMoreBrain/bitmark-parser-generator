@@ -107,6 +107,10 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.tag,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.reductionTag]: {
+    tag: PropertyTag.reductionTag,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.icon]: {
     tag: PropertyTag.icon,
     single: true,

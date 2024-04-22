@@ -2659,6 +2659,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       computerLanguage: undefined,
       target: undefined,
       tag: undefined,
+      reductionTag: undefined,
       icon: undefined,
       iconTag: undefined,
       colorTag: undefined,
@@ -3081,6 +3082,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
     if (bitJson.target == null) delete bitJson.target;
     if (bitJson.tag == null) delete bitJson.tag;
+    if (bitJson.reductionTag == null) delete bitJson.reductionTag;
     if (bitJson.icon == null) delete bitJson.icon;
     if (bitJson.iconTag == null) delete bitJson.iconTag;
     if (bitJson.colorTag == null) delete bitJson.colorTag;
