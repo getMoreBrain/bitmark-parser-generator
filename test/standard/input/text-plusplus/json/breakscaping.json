@@ -155,6 +155,55 @@
         "type": "hardBreak"
       },
       {
+        "text": "~^",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "~^^",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "^~",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "^^~",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "~~",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "~^~",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "~^^~",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
         "text": "*^",
         "type": "text"
       },
@@ -481,6 +530,55 @@
       },
       {
         "text": "Start=^^=",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Start~^",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Start~^^",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Start^~",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Start^^~",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Start~~",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Start~^~",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Start~^^~",
         "type": "text"
       },
       {
@@ -819,6 +917,55 @@
         "type": "hardBreak"
       },
       {
+        "text": "~^End",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "~^^End",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "^~End",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "^^~End",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "~~End",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "~^~End",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "~^^~End",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
         "text": "*^End",
         "type": "text"
       },
@@ -1145,6 +1292,55 @@
       },
       {
         "text": "Middle=^^=Middle",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Middle~^Middle",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Middle~^^Middle",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Middle^~Middle",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Middle^^~Middle",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Middle~~Middle",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Middle~^~Middle",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Middle~^^~Middle",
         "type": "text"
       },
       {

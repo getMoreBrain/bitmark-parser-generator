@@ -126,6 +126,30 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Build Grammar (bitmark)",
+      "program": "${workspaceFolder}/scripts/grammar/bitmark/generate-bitmark-parser.ts",
+      "args": ["--bit", "--test"],
+      "runtimeArgs": ["-r", "esbuild-register"],
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Build Grammar (text)",
+      "program": "${workspaceFolder}/scripts/grammar/bitmark/generate-text-parser.ts",
+      "args": ["--test"],
+      "runtimeArgs": ["-r", "esbuild-register"],
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Jest: Current file",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",

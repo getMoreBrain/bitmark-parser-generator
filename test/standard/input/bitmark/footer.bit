@@ -1,0 +1,81 @@
+[.article]
+This is an article with a footer
+[?hint]
+
+~~~~
+[!instruction]
+This **is** the footer
+
+
+[.article]
+This is an article with an escaped footer, so no footer actually
+[?hint]
+
+~^~~~
+[!instruction]
+This is !!not!! a footer
+
+
+[.article]
+This article does not have a footer
+[?hint]
+
+~~~~~
+[!instruction]
+This is not a footer
+
+
+[.article]
+Neither does this article have a footer
+[?hint]
+[!instruction]
+~~~~This is **not** a footer
+!!Nor!! is this
+
+
+[.article]
+This article has 2 footers which is not really valid.
+All text after the first footer should be in the footer, and a warning should be given
+[?hint]
+
+~~~~
+This **is** a footer
+~~~~
+[!instruction]
+This is **also** part of the footer and not a second footer!
+
+[.flashcard-1]
+
+Somebody
+====
+Card 1, Side 1
+~~~~
+
+Footer anyone?
+
+~~~~
+
+Still in the footer
+
+
+
+[.article]
+This is an article with an escaped footer, so no footer actually
+[?hint]
+**
+~~~~
+**
+[!instruction]
+This is !!not!! a footer
+
+
+
+[.article]
+This is an article with an escaped footer, so no footer actually
+[?hint]
+**
+~^~~~
+**
+[!instruction]
+This is !!not!! a footer
+

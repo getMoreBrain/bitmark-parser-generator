@@ -1495,6 +1495,10 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.ratingLevelSelected,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
     ],
   },
   [BitType.surveyRatingOnce]: {

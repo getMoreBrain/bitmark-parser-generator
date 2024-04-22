@@ -4,6 +4,7 @@
       "type": "survey-rating-once",
       "format": "bitmark--",
       "id": ["93061"],
+      "buttonCaption": "Save My Stress Level",
       "ratingLevelStart": {
         "level": 0,
         "label": [

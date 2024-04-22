@@ -625,7 +625,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     this.writeNL();
     this.writeCardSetEnd();
-    this.writeNL();
+    if (this.options.cardSetVersion === CardSetVersion.v1) {
+      this.writeNL();
+    }
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
@@ -1363,6 +1365,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
+  // bitmarkAst -> bits -> footer
+
+  protected enter_footer(_node: NodeInfo, _route: NodeInfo[]): void {
+    this.write('~~~~');
+    this.writeNL();
+  }
+
   // bitmarkAst -> bits -> footer -> footerText
 
   protected leaf_footerText(node: NodeInfo, _route: NodeInfo[]): void {
@@ -1765,7 +1774,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
-      this.write('~~~~');
+      // this.write('~~~~'); // Written by the footer
     }
   }
 

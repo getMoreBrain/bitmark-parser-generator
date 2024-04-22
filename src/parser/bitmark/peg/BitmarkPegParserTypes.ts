@@ -261,6 +261,9 @@ const TypeKey = superenum({
   // Chains
   GapChain: 'GapChain',
   TrueFalseChain: 'TrueFalseChain',
+
+  // Dividers
+  Footer: 'Footer',
 });
 
 export type TypeKeyType = EnumType<typeof TypeKey>;

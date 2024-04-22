@@ -223,6 +223,24 @@ class BitmarkPegParserHelper {
   }
 
   //
+  // Divider parsing
+  //
+
+  // Footer divider
+  handleFooterDivider(value: unknown): BitContent {
+    value = this.reduceToString(value);
+
+    return {
+      type: TypeKey.Footer,
+      value,
+      parser: {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      },
+    };
+  }
+
+  //
   // Card parsing
   //
 
@@ -585,6 +603,34 @@ class BitmarkPegParserHelper {
         } else if (type) {
           acc.push(content);
         }
+      }
+
+      return acc;
+    }, [] as BitContent[]);
+
+    return res;
+  }
+
+  /**
+   * Reduce the data to a string.
+   *
+   * The input data can have any nested array structure. It will be reduced to a single string.
+   *
+   * @param data the data to reduce
+   * @returns a string concatenated from all the string values in the input data
+   */
+  private reduceToString(data: unknown): string {
+    if (!Array.isArray(data)) return '';
+
+    const res = data.reduce((acc, content, _index) => {
+      if (content == null) return acc;
+
+      if (Array.isArray(content)) {
+        // An array - recurse
+        const subValue = this.reduceToString(content);
+        acc += subValue;
+      } else {
+        acc += content;
       }
 
       return acc;
