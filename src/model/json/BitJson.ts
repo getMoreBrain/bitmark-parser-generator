@@ -19,6 +19,7 @@ export interface BitJson {
   isPublic: boolean;
   AIGenerated: boolean;
   analyticsTag: string | string[];
+  disableFeedback: boolean;
   releaseVersion: string;
   releaseKind: string;
   releaseDate: string;

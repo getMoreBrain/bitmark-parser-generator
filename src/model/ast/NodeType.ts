@@ -17,6 +17,8 @@ const NodeType = superenum({
   aiGeneratedValue: 'aiGeneratedValue',
   analyticsTag: 'analyticsTag',
   analyticsTagValue: 'analyticsTagValue',
+  disableFeedback: 'disableFeedback',
+  disableFeedbackValue: 'disableFeedbackValue',
   alias: 'alias', // bit type (alias)
   alignment: 'alignment',
   alt: 'alt',

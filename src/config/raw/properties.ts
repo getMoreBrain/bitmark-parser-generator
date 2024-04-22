@@ -46,6 +46,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.analyticsTag,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.disableFeedback]: {
+    tag: PropertyTag.disableFeedback,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
   [PropertyConfigKey.releaseVersion]: {
     tag: PropertyTag.releaseVersion,
     single: true,

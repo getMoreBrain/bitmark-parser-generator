@@ -34,6 +34,7 @@ const propertyConfigKeys = {
   decimalPlaces: 'decimalPlaces',
   deeplink: 'deeplink',
   disableCalculation: 'disableCalculation',
+  disableFeedback: 'disableFeedback',
   duration: 'duration',
   emphasis: 'emphasis',
   example: 'example',

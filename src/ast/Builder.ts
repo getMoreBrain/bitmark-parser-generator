@@ -104,6 +104,7 @@ class Builder extends BaseBuilder {
     isPublic?: boolean;
     aiGenerated?: boolean;
     analyticsTag?: BreakscapedString | BreakscapedString[];
+    disableFeedback?: boolean;
     releaseVersion?: BreakscapedString;
     releaseKind?: BreakscapedString;
     releaseDate?: BreakscapedString;
@@ -265,6 +266,7 @@ class Builder extends BaseBuilder {
       isPublic,
       aiGenerated,
       analyticsTag,
+      disableFeedback,
       releaseVersion,
       releaseKind,
       releaseDate,
@@ -422,6 +424,7 @@ class Builder extends BaseBuilder {
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, isPublic),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
       analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, analyticsTag),
+      disableFeedback: this.toAstProperty(PropertyConfigKey.disableFeedback, disableFeedback),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, releaseVersion),
       releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, releaseKind),
       releaseDate: this.toAstProperty(PropertyConfigKey.releaseDate, releaseDate),
