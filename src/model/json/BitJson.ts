@@ -29,6 +29,7 @@ export interface BitJson {
   computerLanguage: string;
   target: string | string[];
   tag: string | string[];
+  reductionTag: string | string[];
   icon: string;
   iconTag: string;
   colorTag: string | string[];
