@@ -84,6 +84,7 @@ const propertyConfigKeys = {
   pointerLeft: 'pointerLeft',
   pointerTop: 'pointerTop',
   posterImage: 'posterImage',
+  page: 'page',
   product: 'product',
   productFolder: 'productFolder',
   productId: 'productId',

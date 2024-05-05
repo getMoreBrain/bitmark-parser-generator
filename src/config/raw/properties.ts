@@ -384,6 +384,11 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.boolean,
     defaultValue: 'true',
   },
+  [PropertyConfigKey.page]: {
+    tag: PropertyTag.page,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.product]: {
     tag: PropertyTag.product,
     single: true,
