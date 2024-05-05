@@ -1,0 +1,73 @@
+[
+  {
+    "bit": {
+      "type": "page-promotion",
+      "format": "bitmark--",
+      "id": ["151970"],
+      "slug": "",
+      "page": "https://123.com",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.16",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.page-promotion]\n[@id:151970]\n[@page:https://123.com]"
+  },
+  {
+    "bit": {
+      "type": "page-promotion",
+      "format": "bitmark--",
+      "id": ["304379"],
+      "slug": "testing-1234",
+      "page": "https://1234.com",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.16",
+      "bitmarkVersion": "3",
+      "warnings": [
+        {
+          "message": "[@page] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@page:https://1234.com]",
+          "location": {
+            "start": {
+              "line": 8,
+              "column": 32,
+              "offset": 135
+            },
+            "end": {
+              "line": 8,
+              "column": 64,
+              "offset": 167
+            }
+          },
+          "original": {
+            "text": "[@page:https://123.com]",
+            "location": {
+              "start": {
+                "line": 8,
+                "column": 1,
+                "offset": 104
+              },
+              "end": {
+                "line": 8,
+                "column": 32,
+                "offset": 135
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.page-promotion]\n[@id:304379]\n[@page:https://123.com][@page:https://1234.com]"
+  }
+]

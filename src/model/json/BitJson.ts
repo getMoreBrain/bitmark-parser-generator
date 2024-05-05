@@ -107,6 +107,7 @@ export interface BitJson {
   resolvedBy: string;
   maxCreatedBits: number;
   maxDisplayLevel: number;
+  page: string;
   productId: string | string[];
   product: string;
   productVideo: string;

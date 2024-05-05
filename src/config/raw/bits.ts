@@ -1214,6 +1214,28 @@ const BITS: _BitsConfig = {
     ],
   },
   [BitType.pageBuyButtonPromotion]: { since: '1.5.11', baseBitType: BitType.pageBuyButton },
+  [BitType.pageSubpage]: {
+    since: '1.6.6',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.page,
+      },
+    ],
+  },
+  [BitType.pageShopInShop]: { since: '1.6.6', baseBitType: BitType.pageSubpage },
+  [BitType.pageCategory]: { since: '1.6.6', baseBitType: BitType.pageSubpage },
+  [BitType.pageAcademy]: { since: '1.6.6', baseBitType: BitType.pageSubpage },
+  [BitType.pagePromotion]: { since: '1.6.6', baseBitType: BitType.pageSubpage },
+  [BitType.pageSpecial]: { since: '1.6.6', baseBitType: BitType.pageSubpage },
   [BitType.pagePerson]: {
     since: '1.5.16',
     tags: [

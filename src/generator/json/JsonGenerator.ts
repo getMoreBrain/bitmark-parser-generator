@@ -2733,6 +2733,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       resolvedBy: undefined,
       maxCreatedBits: undefined,
       maxDisplayLevel: undefined,
+      page: undefined,
       productId: undefined,
       product: undefined,
       productVideo: undefined,
@@ -2997,7 +2998,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       Config.isOfBitType(bitType, BitType.pageProductVideo) ||
       Config.isOfBitType(bitType, BitType.pageProductVideoList) ||
       Config.isOfBitType(bitType, BitType.pageSectionFolder) ||
-      Config.isOfBitType(bitType, BitType.pageSubscribe)
+      Config.isOfBitType(bitType, BitType.pageSubscribe) ||
+      Config.isOfBitType(bitType, BitType.pageSubpage)
     ) {
       //
       if (bitJson.slug == null) bitJson.slug = '';
@@ -3177,6 +3179,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.resolvedBy == null) delete bitJson.resolvedBy;
     if (bitJson.maxCreatedBits == null) delete bitJson.maxCreatedBits;
     if (bitJson.maxDisplayLevel == null) delete bitJson.maxDisplayLevel;
+    if (bitJson.page == null) delete bitJson.page;
     if (bitJson.productId == null) delete bitJson.productId;
     if (bitJson.product == null) delete bitJson.product;
     if (bitJson.productVideo == null) delete bitJson.productVideo;
