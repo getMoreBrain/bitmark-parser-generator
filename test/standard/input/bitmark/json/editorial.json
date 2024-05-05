@@ -5,6 +5,7 @@
       "format": "bitmark--",
       "id": ["342338"],
       "analyticsTag": ["235", "geruyghoenhru"],
+      "feedbackEngine": "google",
       "disableFeedback": true,
       "item": [],
       "hint": [],

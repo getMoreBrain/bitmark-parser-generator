@@ -118,6 +118,8 @@ const NodeType = superenum({
   externalLinkText: 'externalLinkText',
   extraProperties: 'extraProperties',
   feedback: 'feedback',
+  feedbackEngine: 'feedbackEngine',
+  feedbackEngineValue: 'feedbackEngineValue',
   flashcards: 'flashcards',
   flashcardSet: 'flashcardSet',
   flashcardSetValue: 'flashcardSetValue',
