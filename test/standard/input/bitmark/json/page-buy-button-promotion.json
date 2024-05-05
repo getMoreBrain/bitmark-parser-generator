@@ -4,6 +4,7 @@
       "type": "page-buy-button-promotion",
       "format": "bitmark--",
       "id": ["342341"],
+      "slug": "testing-1234",
       "buttonCaption": "OK!",
       "content2Buy": "testing 123",
       "item": [],
@@ -40,6 +41,9 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "example": null,
+      "isExample": false,
       "body": [
         {
           "type": "paragraph",

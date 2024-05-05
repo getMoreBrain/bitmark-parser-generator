@@ -120,6 +120,7 @@ const propertyConfigKeys = {
   showSubtitles: 'showSubtitles',
   siteName: 'siteName',
   size: 'size',
+  slug: 'slug',
   spaceId: 'spaceId',
   src1x: 'src1x',
   src2x: 'src2x',

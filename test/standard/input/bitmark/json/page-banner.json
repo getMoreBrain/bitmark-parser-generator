@@ -3,6 +3,7 @@
     "bit": {
       "type": "page-banner",
       "format": "bitmark--",
+      "slug": "",
       "item": [],
       "hint": [],
       "isExample": false,
@@ -59,6 +60,7 @@
     "bit": {
       "type": "page-banner",
       "format": "bitmark--",
+      "slug": "",
       "item": [],
       "hint": [],
       "isExample": false,
@@ -115,6 +117,7 @@
     "bit": {
       "type": "page-banner",
       "format": "bitmark--",
+      "slug": "",
       "item": [],
       "hint": [],
       "isExample": false,
@@ -171,6 +174,7 @@
     "bit": {
       "type": "page-banner",
       "format": "bitmark--",
+      "slug": "testing-1234",
       "item": [],
       "hint": [],
       "isExample": false,
