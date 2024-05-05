@@ -752,6 +752,10 @@ const BITS: _BitsConfig = {
     tags: [
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.book,
       },
       {
@@ -770,6 +774,10 @@ const BITS: _BitsConfig = {
     tags: [
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.buttonCaption,
       },
       {
@@ -779,7 +787,16 @@ const BITS: _BitsConfig = {
     ],
   },
   [BitType.assignmentList]: { since: '1.4.13', baseBitType: BitType.exampleList },
-  [BitType.pageFooter]: { since: '1.4.13', baseBitType: BitType.exampleList },
+  [BitType.pageFooter]: {
+    since: '1.4.13',
+    baseBitType: BitType.exampleList,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
+      },
+    ],
+  },
   [BitType.flashcard]: {
     since: '1.3.0',
     tags: [
@@ -854,7 +871,16 @@ const BITS: _BitsConfig = {
   [BitType.imageZoom]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.langLifeSkillIcon]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.lifeSkillSticker]: { since: '1.3.0', baseBitType: BitType.image },
-  [BitType.pageBanner]: { since: '1.4.3', baseBitType: BitType.image },
+  [BitType.pageBanner]: {
+    since: '1.4.3',
+    baseBitType: BitType.image,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
+      },
+    ],
+  },
   [BitType.screenshot]: { since: '1.3.0', deprecated: '1.4.0', baseBitType: BitType.image },
   [BitType.tableImage]: {
     since: '1.5.15',
@@ -1175,6 +1201,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.content2Buy,
       },
       {
@@ -1190,6 +1220,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
       },
       {
         type: BitTagType.group,
@@ -1210,6 +1244,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.product,
       },
     ],
@@ -1220,6 +1258,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
       },
       {
         type: BitTagType.property,
@@ -1237,6 +1279,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.productVideo,
       },
     ],
@@ -1247,6 +1293,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
       },
       {
         type: BitTagType.property,
@@ -1261,6 +1311,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.slug,
       },
       {
         type: BitTagType.property,

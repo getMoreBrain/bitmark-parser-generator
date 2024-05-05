@@ -103,6 +103,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.target,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.slug]: {
+    tag: PropertyTag.slug,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.tag]: {
     tag: PropertyTag.tag,
     format: PropertyFormat.trimmedString,

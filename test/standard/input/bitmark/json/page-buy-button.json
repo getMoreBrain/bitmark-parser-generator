@@ -3,10 +3,10 @@
     "bit": {
       "type": "page-buy-button",
       "format": "bitmark--",
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
+      "slug": "testing-1234",
       "content2Buy": "testing 123",
+      "item": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -19,6 +19,9 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "example": null,
+      "isExample": false,
       "body": [
         {
           "type": "paragraph",
