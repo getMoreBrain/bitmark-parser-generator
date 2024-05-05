@@ -111,6 +111,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // State
   private skipNLBetweenBitsValue = false;
+  private wroteSomething = false;
 
   /**
    * Generate bitmark markup from a bitmark AST
@@ -205,6 +206,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   private resetState(): void {
     this.skipNLBetweenBitsValue = false;
+    this.wroteSomething = false;
     this.printed = false;
   }
 
@@ -303,8 +305,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Check if a no newline key is to the left in this 'between' callback
     const noNl = ((): boolean => {
-      if (this.skipNLBetweenBitsValue) {
-        this.skipNLBetweenBitsValue = false;
+      if (!this.wroteSomething || this.skipNLBetweenBitsValue) {
         return true;
       }
       for (const keyType of noNlKeys) {
@@ -316,6 +317,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (!noNl) {
       this.writeNL();
     }
+
+    this.skipNLBetweenBitsValue = false;
+    this.wroteSomething = false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> internalComment
@@ -1619,10 +1623,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.ratingLevelStart) continue;
       if (astKey === PropertyTag.ratingLevelEnd) continue;
 
-      const funcName = `enter_${astKey}`;
+      const enterFuncName = `enter_${astKey}`;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[funcName] = (node: NodeInfo, route: NodeInfo[]) => {
+      (this as any)[enterFuncName] = (node: NodeInfo, route: NodeInfo[]) => {
         const value = node.value as unknown[] | undefined;
         if (value == null) return;
 
@@ -1644,7 +1648,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
       // Bind this
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[funcName] = (this as any)[funcName].bind(this);
+      (this as any)[enterFuncName] = (this as any)[enterFuncName].bind(this);
     }
   }
 
@@ -1862,16 +1866,19 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (valuesArray.length > 0) {
         if (singleOnly) valuesArray = valuesArray.slice(valuesArray.length - 1);
 
+        let propertyIndex = 0;
         for (const val of valuesArray) {
           if (val !== undefined) {
             if (ignoreFalse && val === false) continue;
             if (ignoreTrue && val === true) continue;
+            if (propertyIndex > 0) this.writeNL();
             this.writeOPA();
             this.writeString(name);
             this.writeColon();
             this.writeString(`${val}`);
             this.writeCL();
             wroteSomething = true;
+            propertyIndex++;
           }
         }
       }
@@ -1934,6 +1941,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * @param value - The string value to be written.
    */
   write(value: string): this {
+    if (value) this.wroteSomething = true;
     this.writer.write(value);
     return this;
   }
@@ -1943,6 +1951,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * @param value - The line to write. When omitted, only the endOfLineString is written.
    */
   writeLine(value?: string): this {
+    if (value) this.wroteSomething = true;
     this.writer.writeLine(value);
     return this;
   }
@@ -1953,6 +1962,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * @param delimiter - An optional delimiter to be written at the end of each line, except for the last one.
    */
   writeLines(values: string[], delimiter?: string): this {
+    if (values.length > 0 && values.reduce((acc, v) => (v ? true : acc), false)) this.wroteSomething = true;
     this.writer.writeLines(values, delimiter);
     return this;
   }
