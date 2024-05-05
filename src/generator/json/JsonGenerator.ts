@@ -2658,6 +2658,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       theme: undefined,
       computerLanguage: undefined,
       target: undefined,
+      slug: undefined,
       tag: undefined,
       reductionTag: undefined,
       icon: undefined,
@@ -2969,11 +2970,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
       //
-    } else if (Config.isOfBitType(bitType, BitType.pageBuyButton)) {
-      //
-      if (bitJson.content2Buy == null) bitJson.content2Buy = '';
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
     } else if (Config.isOfBitType(bitType, BitType.table)) {
       //
       // if (bitJson.content2Buy == null) bitJson.content2Buy = '';
@@ -2988,6 +2984,31 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (bitJson.tableResizableColumns == null) bitJson.tableResizableColumns = false;
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
       //
+    } else if (
+      Config.isOfBitType(bitType, BitType.pageBanner) ||
+      Config.isOfBitType(bitType, BitType.pageBuyButton) ||
+      Config.isOfBitType(bitType, BitType.pageBuyButtonPromotion) ||
+      Config.isOfBitType(bitType, BitType.pageFooter) ||
+      Config.isOfBitType(bitType, BitType.pageOpenBook) ||
+      Config.isOfBitType(bitType, BitType.pagePerson) ||
+      Config.isOfBitType(bitType, BitType.pageProduct) ||
+      Config.isOfBitType(bitType, BitType.pageProductList) ||
+      Config.isOfBitType(bitType, BitType.pageProductVideo) ||
+      Config.isOfBitType(bitType, BitType.pageProductVideoList) ||
+      Config.isOfBitType(bitType, BitType.pageSectionFolder) ||
+      Config.isOfBitType(bitType, BitType.pageSubscribe)
+    ) {
+      //
+      if (bitJson.slug == null) bitJson.slug = '';
+      if (bitJson.item == null) bitJson.item = this.textDefault;
+      if (bitJson.hint == null) bitJson.hint = this.textDefault;
+      if (bitJson.isExample == null) bitJson.isExample = false;
+      if (bitJson.example == null) bitJson.example = null;
+      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+
+      if (Config.isOfBitType(bitType, BitType.pageBuyButton)) {
+        if (bitJson.content2Buy == null) bitJson.content2Buy = '';
+      }
     } else {
       // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
       if (bitJson.item == null) bitJson.item = this.textDefault;
@@ -3081,6 +3102,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.theme == null) delete bitJson.theme;
     if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
     if (bitJson.target == null) delete bitJson.target;
+    if (bitJson.slug == null) delete bitJson.slug;
     if (bitJson.tag == null) delete bitJson.tag;
     if (bitJson.reductionTag == null) delete bitJson.reductionTag;
     if (bitJson.icon == null) delete bitJson.icon;

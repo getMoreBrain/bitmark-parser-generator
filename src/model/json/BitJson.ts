@@ -28,6 +28,7 @@ export interface BitJson {
   language: string | string[];
   computerLanguage: string;
   target: string | string[];
+  slug: string;
   tag: string | string[];
   reductionTag: string | string[];
   icon: string;

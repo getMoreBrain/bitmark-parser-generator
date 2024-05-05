@@ -4,6 +4,7 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "id": ["190596"],
+      "slug": "",
       "item": [],
       "hint": [],
       "instruction": [
@@ -33,6 +34,7 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "id": ["190597"],
+      "slug": "",
       "item": [],
       "hint": [],
       "instruction": [
@@ -62,6 +64,7 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "id": ["190598"],
+      "slug": "",
       "item": [],
       "hint": [],
       "instruction": [
@@ -91,6 +94,7 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "id": ["191144"],
+      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -131,6 +135,7 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "id": ["191145"],
+      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -171,6 +176,7 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "id": ["191146"],
+      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -211,6 +217,7 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "id": ["191147"],
+      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -251,6 +258,7 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "id": ["191148"],
+      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -291,6 +299,7 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "id": ["191149"],
+      "slug": "testing-1234",
       "item": [
         {
           "type": "paragraph",

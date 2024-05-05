@@ -1,5 +1,6 @@
 [.page-buy-button]
 [@id:342341]
+[@slug:testing-1234]
 [!.page-buy-button]
 [@content2Buy:testing 123 ]
 Button Text

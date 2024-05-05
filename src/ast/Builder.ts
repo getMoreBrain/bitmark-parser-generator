@@ -116,6 +116,7 @@ class Builder extends BaseBuilder {
     theme?: BreakscapedString | BreakscapedString[];
     computerLanguage?: BreakscapedString;
     target?: BreakscapedString | BreakscapedString[];
+    slug?: BreakscapedString;
     tag?: BreakscapedString | BreakscapedString[];
     reductionTag?: BreakscapedString | BreakscapedString[];
     icon?: BreakscapedString;
@@ -279,6 +280,7 @@ class Builder extends BaseBuilder {
       theme,
       computerLanguage,
       target,
+      slug,
       tag,
       reductionTag,
       icon,
@@ -439,6 +441,7 @@ class Builder extends BaseBuilder {
       theme: this.toAstProperty(PropertyConfigKey.theme, theme),
       computerLanguage: this.toAstProperty(PropertyConfigKey.computerLanguage, computerLanguage),
       target: this.toAstProperty(PropertyConfigKey.target, target),
+      slug: this.toAstProperty(PropertyConfigKey.slug, slug),
       tag: this.toAstProperty(PropertyConfigKey.tag, tag),
       reductionTag: this.toAstProperty(PropertyConfigKey.reductionTag, reductionTag),
       icon: this.toAstProperty(PropertyConfigKey.icon, icon),
