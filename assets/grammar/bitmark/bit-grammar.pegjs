@@ -136,7 +136,7 @@ Bit
 
 // The bit header, e.g. [.interview&image:bitmark++], [.interview:bitmark--&image], [.cloze]
 BitHeader
-  = "[." bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return processor.buildBitHeader(bitType, formatAndResource) }
+  = "[" bitLevel: Bit_Level bitType: Bit_Value formatAndResource: TextFormatAndResourceType? "]" { return processor.buildBitHeader(bitType, bitLevel, formatAndResource) }
 
 // Text format and resource type
 TextFormatAndResourceType
@@ -324,6 +324,9 @@ Tag_Close
 
 Tag_CloseOrEOF
   = "]" / (WS* EOF)
+
+Bit_Level
+  = value: "."+ { return value.length }
 
 Bit_Value
   = value: $[^&:\]]* { return value ? value.trim() : null }

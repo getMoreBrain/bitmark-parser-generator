@@ -6,7 +6,7 @@ import { BooleanUtils } from '../../../../utils/BooleanUtils';
 
 import {
   BitContent,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
   TrueFalseValue,
@@ -17,9 +17,9 @@ import {
 
 function exampleTagContentProcessor(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   _textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {

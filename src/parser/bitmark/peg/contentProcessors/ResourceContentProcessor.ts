@@ -11,7 +11,7 @@ import { TextFormatType } from '../../../../model/enum/TextFormat';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
   TypeKeyValue,
@@ -89,9 +89,9 @@ function buildResource(
 
 function resourceContentProcessor(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -110,9 +110,9 @@ function resourceContentProcessor(
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { posterImage, ...tags } = context.bitContentProcessor(
+      BitContentLevel.Chain,
       bitType,
       textFormat,
-      BitContentLevel.Chain,
       resourceConfig?.chain,
       chain,
     );

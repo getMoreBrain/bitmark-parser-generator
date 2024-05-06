@@ -2633,6 +2633,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       type: bit.isCommented ? BitType._comment : bit.bitType,
       originalType: bit.isCommented ? bit.bitType : undefined,
       format: bit.textFormat,
+      bitLevel: bit.bitLevel,
 
       // Properties
       id: undefined,

@@ -243,6 +243,7 @@ class JsonParser {
     const {
       type,
       originalType,
+      bitLevel,
       format,
       id,
       externalId,
@@ -400,6 +401,9 @@ class JsonParser {
     // Bit type
     const bitType = Config.getBitType(isCommented ? originalType : type);
 
+    // Bit level
+    const bitLevelValidated = Math.max(Math.min(bitLevel, Config.bitLevelMax), Config.bitLevelMin);
+
     // Get the bit config for the bit type
     const bitConfig = Config.getBitConfig(bitType);
 
@@ -484,6 +488,7 @@ class JsonParser {
     // Build bit
     const bitNode = builder.bit({
       bitType,
+      bitLevel: bitLevelValidated,
       textFormat: format as TextFormatType,
       resourceType: resourceAttachmentType,
       isCommented,

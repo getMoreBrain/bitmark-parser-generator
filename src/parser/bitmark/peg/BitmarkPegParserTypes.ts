@@ -87,6 +87,7 @@ export interface BitHeader {
   bitType: BitTypeType;
   textFormat: TextFormatType;
   resourceType?: ResourceTagType;
+  bitLevel: number;
   isCommented?: boolean;
 }
 
@@ -268,13 +269,13 @@ const TypeKey = superenum({
 
 export type TypeKeyType = EnumType<typeof TypeKey>;
 
-const BitContentLevel = superenum({
+const ContentDepth = superenum({
   Bit: 'Bit',
   Card: 'Card',
   Chain: 'Chain',
 });
 
-export type BitContentLevelType = EnumType<typeof BitContentLevel>;
+export type ContentDepthType = EnumType<typeof ContentDepth>;
 
 // Card Set
 
@@ -349,9 +350,9 @@ export interface BitmarkPegParserContext {
 
   parse: ParseFunction;
   bitContentProcessor(
+    contentDepth: ContentDepthType,
     bitType: BitTypeType,
     textFormat: TextFormatType,
-    bitLevel: BitContentLevelType,
     tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,
   ): BitContentProcessorResult;
@@ -368,7 +369,7 @@ export interface BitmarkPegParserContext {
 
 export {
   TypeKey,
-  BitContentLevel,
+  ContentDepth as BitContentLevel,
   CARD_DIVIDER_V2,
   CARD_SIDE_DIVIDER_V2,
   CARD_VARIANT_DIVIDER_V2,

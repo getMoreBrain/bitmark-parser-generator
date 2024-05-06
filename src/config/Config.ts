@@ -24,6 +24,8 @@ export interface ComboResources {
 }
 
 class Config {
+  public bitLevelMin = 1;
+  public bitLevelMax = 7;
   private bitCache: Map<BitTypeType, BitConfig> = new Map();
   private allResourcesCache: TagsConfig | undefined;
   private comboResourcesCache: Map<ResourceTagType, TagsConfig | undefined> = new Map();

@@ -244,7 +244,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const bitConfig = Config.getBitConfig(bit.bitType);
     const bitResourcesConfig = Config.getBitResourcesConfig(bit.bitType, bit.resourceType);
 
-    this.writeOPD();
+    // Write the bit tag opening
+    this.writeOPD(bit.bitLevel);
+
     if (bit.isCommented) this.writeString('|');
     this.writeString(bit.bitType);
 
@@ -1678,8 +1680,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.write('[▼');
   }
 
-  protected writeOPD(): void {
-    this.write('[.');
+  protected writeOPD(level: number): void {
+    this.write(`[${'.'.repeat(level)}`);
   }
 
   protected writeOPU(): void {

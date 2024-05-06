@@ -70,7 +70,7 @@ const bpg = new BitmarkParserGenerator();
 // Convert bitmark markup to bitmark JSON
 const json = await bpg.convert("[.article] Hello World");
 
-// Convert bitmark JSON to bitmark markuo
+// Convert bitmark JSON to bitmark markup
 const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]');
 
 // Convert bitmark markup file to bitmark JSON

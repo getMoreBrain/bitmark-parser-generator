@@ -8,7 +8,7 @@ import { NumberUtils } from '../../../../utils/NumberUtils';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
   TypeKeyValue,
@@ -18,9 +18,9 @@ const builder = new Builder();
 
 function ratingLevelChainContentProcessor(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -29,7 +29,7 @@ function ratingLevelChainContentProcessor(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('ratingLevel content', content);
 
-  const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('ratingLevel TAGS', tags);
 
