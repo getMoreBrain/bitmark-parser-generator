@@ -3,6 +3,7 @@
     "bit": {
       "type": "document",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -42,6 +43,7 @@
     "bit": {
       "type": "document",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

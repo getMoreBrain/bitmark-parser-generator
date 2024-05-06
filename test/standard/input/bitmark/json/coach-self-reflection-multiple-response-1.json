@@ -3,9 +3,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "186300"
-      ],
+      "bitLevel": 1,
+      "id": ["186300"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -62,9 +61,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "186301"
-      ],
+      "bitLevel": 1,
+      "id": ["186301"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -130,9 +128,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "186302"
-      ],
+      "bitLevel": 1,
+      "id": ["186302"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -198,9 +195,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "187540"
-      ],
+      "bitLevel": 1,
+      "id": ["187540"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -266,9 +262,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "187541"
-      ],
+      "bitLevel": 1,
+      "id": ["187541"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -334,9 +329,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "187542"
-      ],
+      "bitLevel": 1,
+      "id": ["187542"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -402,9 +396,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "187543"
-      ],
+      "bitLevel": 1,
+      "id": ["187543"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -470,9 +463,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "187544"
-      ],
+      "bitLevel": 1,
+      "id": ["187544"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -538,9 +530,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "187233"
-      ],
+      "bitLevel": 1,
+      "id": ["187233"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -606,9 +597,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "187234"
-      ],
+      "bitLevel": 1,
+      "id": ["187234"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -665,9 +655,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
-      "id": [
-        "208470"
-      ],
+      "bitLevel": 1,
+      "id": ["208470"],
       "item": [
         {
           "type": "paragraph",
@@ -782,6 +771,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -827,6 +817,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -872,6 +863,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],

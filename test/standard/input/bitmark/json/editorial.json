@@ -3,6 +3,7 @@
     "bit": {
       "type": "editorial",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["342338"],
       "analyticsTag": ["235", "geruyghoenhru"],
       "feedbackEngine": "google",

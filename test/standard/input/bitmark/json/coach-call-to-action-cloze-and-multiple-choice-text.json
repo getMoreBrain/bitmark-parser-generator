@@ -3,6 +3,7 @@
     "bit": {
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["287842"],
       "item": [],
       "lead": [
@@ -246,6 +247,7 @@
     "bit": {
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["287843"],
       "item": [],
       "lead": [
@@ -500,6 +502,7 @@
     "bit": {
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["287844"],
       "item": [],
       "lead": [

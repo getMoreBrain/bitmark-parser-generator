@@ -3,6 +3,7 @@
     "bit": {
       "type": "release-note",
       "format": "bitmark--",
+      "bitLevel": 1,
       "releaseVersion": "1.0.2",
       "releaseKind": "Jumanji",
       "releaseDate": "20/02/1992",

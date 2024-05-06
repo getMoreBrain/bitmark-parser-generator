@@ -3,6 +3,7 @@
     "bit": {
       "type": "extractor-page-with-blocks",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

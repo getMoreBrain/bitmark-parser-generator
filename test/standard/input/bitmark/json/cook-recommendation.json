@@ -3,9 +3,8 @@
     "bit": {
       "type": "cook-recommendation",
       "format": "bitmark--",
-      "id": [
-        "92375"
-      ],
+      "bitLevel": 1,
+      "id": ["92375"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -22,6 +21,7 @@
     "bit": {
       "type": "cook-recommendation",
       "format": "bitmark--",
+      "bitLevel": 1,
       "title": [
         {
           "type": "paragraph",
@@ -61,6 +61,7 @@
     "bit": {
       "type": "cook-recommendation",
       "format": "bitmark--",
+      "bitLevel": 1,
       "title": [
         {
           "type": "paragraph",
@@ -100,6 +101,7 @@
     "bit": {
       "type": "cook-recommendation",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

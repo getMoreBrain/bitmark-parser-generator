@@ -3,6 +3,7 @@
     "bit": {
       "type": "image-on-device",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["342343"],
       "item": [],
       "hint": [],
@@ -27,6 +28,7 @@
     "bit": {
       "type": "image-on-device",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["342343"],
       "item": [],
       "hint": [],
@@ -60,6 +62,7 @@
     "bit": {
       "type": "image-on-device",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["342343"],
       "item": [],
       "hint": [],
@@ -84,6 +87,7 @@
     "bit": {
       "type": "image-on-device",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["342343"],
       "item": [],
       "hint": [],

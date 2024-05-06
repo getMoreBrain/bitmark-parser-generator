@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-acknowledgments",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51877"],
       "isPublic": false,
       "hasMarkAsDone": false,

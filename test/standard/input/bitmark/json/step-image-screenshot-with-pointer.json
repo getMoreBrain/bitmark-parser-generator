@@ -3,6 +3,7 @@
     "bit": {
       "type": "step-image-screenshot-with-pointer",
       "format": "bitmark--",
+      "bitLevel": 1,
       "pointerLeft": "60%",
       "pointerTop": "20%",
       "item": [],
@@ -70,6 +71,7 @@
     "bit": {
       "type": "step-image-screenshot-with-pointer",
       "format": "bitmark--",
+      "bitLevel": 1,
       "pointerLeft": "60%",
       "pointerTop": "20%",
       "item": [],
@@ -155,6 +157,7 @@
     "bit": {
       "type": "step-image-screenshot-with-pointer",
       "format": "bitmark--",
+      "bitLevel": 1,
       "pointerTop": "",
       "pointerLeft": "50%",
       "item": [],

@@ -3,6 +3,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
@@ -54,6 +55,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["287885"],
       "labelTrue": "",
       "labelFalse": "",
@@ -122,6 +124,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["287887"],
       "labelTrue": "",
       "labelFalse": "",
@@ -183,6 +186,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["249542"],
       "labelTrue": "Richtig",
       "labelFalse": "Falsch",
@@ -354,6 +358,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["165223"],
       "labelTrue": "richtig",
       "labelFalse": "falsch",
@@ -436,6 +441,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["213731"],
       "labelTrue": "p",
       "labelFalse": "s",
@@ -516,6 +522,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
+      "bitLevel": 1,
       "labelTrue": "",
       "labelFalse": "",
       "item": [],
@@ -549,6 +556,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
+      "bitLevel": 1,
       "labelTrue": "",
       "labelFalse": "",
       "item": [],
@@ -582,6 +590,7 @@
     "bit": {
       "type": "true-false",
       "format": "bitmark--",
+      "bitLevel": 1,
       "labelTrue": "",
       "labelFalse": "",
       "item": [],

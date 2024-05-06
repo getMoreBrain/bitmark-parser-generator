@@ -3,6 +3,7 @@
     "bit": {
       "type": "sample-solution",
       "format": "bitmark--",
+      "bitLevel": 1,
       "anchor": "I am an anchor",
       "reference": "Ref4.2.34",
       "instruction": [

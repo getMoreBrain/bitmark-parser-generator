@@ -3,6 +3,7 @@
     "bit": {
       "type": "remark",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["239803"],
       "item": [],
       "lead": [
@@ -43,6 +44,7 @@
     "bit": {
       "type": "remark",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["239896"],
       "item": [],
       "hint": [],
@@ -96,6 +98,7 @@
     "bit": {
       "type": "remark",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["234993"],
       "item": [],
       "lead": [

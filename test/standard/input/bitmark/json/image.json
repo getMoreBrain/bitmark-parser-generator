@@ -3,6 +3,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "backgroundWallpaper": "https://miro.medium.com/background.png",
       "item": [],
@@ -37,6 +38,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -70,6 +72,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -103,6 +106,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -136,6 +140,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -169,6 +174,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "publisher": ["kpmg"],
       "theme": ["grundzuege"],
@@ -204,6 +210,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -237,6 +244,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -270,6 +278,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -303,6 +312,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -336,6 +346,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -379,6 +390,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "item": [],
       "hint": [],
@@ -487,6 +499,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -543,6 +556,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark++",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

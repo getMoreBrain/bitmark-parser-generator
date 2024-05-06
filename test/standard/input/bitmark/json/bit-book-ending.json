@@ -3,6 +3,7 @@
     "bit": {
       "type": "bit-book-ending",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-link-prev",
       "format": "bitmark--",
+      "bitLevel": 1,
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
@@ -51,20 +52,14 @@
     "bit": {
       "type": "book-link-prev",
       "format": "bitmark--",
-      "id": [
-        "119760"
-      ],
+      "bitLevel": 1,
+      "id": ["119760"],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "list": ["One", "Two", "Three", "Four"],
       "isTracked": true,
       "isInfoOnly": false,
       "reference": "Ref4.2.34",

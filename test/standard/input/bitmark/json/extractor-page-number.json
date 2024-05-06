@@ -3,6 +3,7 @@
     "bit": {
       "type": "extractor-page-number",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": [
         {
           "type": "paragraph",

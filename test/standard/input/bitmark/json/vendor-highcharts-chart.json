@@ -3,6 +3,7 @@
     "bit": {
       "type": "vendor-highcharts-chart",
       "format": "json",
+      "bitLevel": 1,
       "id": ["298225"],
       "item": [
         {
@@ -47,6 +48,7 @@
     "bit": {
       "type": "vendor-highcharts-chart",
       "format": "json",
+      "bitLevel": 1,
       "id": ["298225"],
       "item": [
         {
@@ -91,6 +93,7 @@
     "bit": {
       "type": "vendor-highcharts-chart",
       "format": "json",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -152,6 +155,7 @@
     "bit": {
       "type": "vendor-highcharts-chart",
       "format": "json",
+      "bitLevel": 1,
       "id": ["298225"],
       "item": [
         {
@@ -207,6 +211,7 @@
     "bit": {
       "type": "vendor-highcharts-chart",
       "format": "json",
+      "bitLevel": 1,
       "id": ["298225"],
       "item": [
         {

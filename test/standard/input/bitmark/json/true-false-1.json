@@ -3,9 +3,8 @@
     "bit": {
       "type": "true-false-1",
       "format": "bitmark--",
-      "id": [
-        "285736"
-      ],
+      "bitLevel": 1,
+      "id": ["285736"],
       "item": [
         {
           "type": "paragraph",
@@ -48,9 +47,8 @@
     "bit": {
       "type": "true-false-1",
       "format": "bitmark--",
-      "id": [
-        "285736"
-      ],
+      "bitLevel": 1,
+      "id": ["285736"],
       "item": [
         {
           "type": "paragraph",
@@ -93,9 +91,8 @@
     "bit": {
       "type": "true-false-1",
       "format": "bitmark--",
-      "id": [
-        "285736"
-      ],
+      "bitLevel": 1,
+      "id": ["285736"],
       "item": [
         {
           "type": "paragraph",
@@ -138,9 +135,8 @@
     "bit": {
       "type": "true-false-1",
       "format": "bitmark--",
-      "id": [
-        "285736"
-      ],
+      "bitLevel": 1,
+      "id": ["285736"],
       "item": [
         {
           "type": "paragraph",

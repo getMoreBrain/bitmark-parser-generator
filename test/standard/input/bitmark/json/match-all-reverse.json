@@ -3,9 +3,8 @@
     "bit": {
       "type": "match-all-reverse",
       "format": "bitmark--",
-      "id": [
-        "324342"
-      ],
+      "bitLevel": 1,
+      "id": ["324342"],
       "item": [
         {
           "type": "paragraph",
@@ -47,10 +46,7 @@
       "pairs": [
         {
           "key": "He will fix your laptop for you.",
-          "values": [
-            "Your laptop will be fixed by him.",
-            "Your laptop will be fixed for you by him."
-          ],
+          "values": ["Your laptop will be fixed by him.", "Your laptop will be fixed for you by him."],
           "item": [],
           "hint": [],
           "instruction": [],

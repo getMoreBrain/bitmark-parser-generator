@@ -3,6 +3,7 @@
     "bit": {
       "type": "record-audio",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["92374"],
       "item": [
         {
@@ -44,6 +45,7 @@
     "bit": {
       "type": "record-audio",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

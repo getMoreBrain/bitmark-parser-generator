@@ -3,6 +3,7 @@
     "bit": {
       "type": "note",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["210022"],
       "item": [],
       "lead": [
@@ -48,6 +49,7 @@
     "bit": {
       "type": "note",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["210040"],
       "item": [],
       "lead": [

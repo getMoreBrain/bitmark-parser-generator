@@ -3,6 +3,7 @@
     "bit": {
       "type": "video",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["301454"],
       "item": [],
       "hint": [],
@@ -47,6 +48,7 @@
     "bit": {
       "type": "video",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["300497"],
       "item": [],
       "hint": [],
@@ -91,6 +93,7 @@
     "bit": {
       "type": "video",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["301460"],
       "search": "Errungenschaftsbeteiligung, Scheidung, Güterrechtliche Auseinandersetzung, Vorschlag",
       "item": [],

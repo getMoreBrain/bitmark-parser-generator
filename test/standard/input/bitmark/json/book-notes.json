@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-notes",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51882"],
       "isPublic": false,
       "hasMarkAsDone": false,

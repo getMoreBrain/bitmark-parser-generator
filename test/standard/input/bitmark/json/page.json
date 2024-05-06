@@ -3,6 +3,7 @@
     "bit": {
       "type": "page",
       "format": "bitmark++",
+      "bitLevel": 1,
       "ageRange": ["18", "120"],
       "body": [
         {
@@ -68,6 +69,7 @@
     "bit": {
       "type": "page",
       "format": "bitmark++",
+      "bitLevel": 1,
       "body": [
         {
           "type": "paragraph",

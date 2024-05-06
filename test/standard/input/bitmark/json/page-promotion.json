@@ -3,6 +3,7 @@
     "bit": {
       "type": "page-promotion",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["151970"],
       "slug": "",
       "page": "https://123.com",
@@ -22,6 +23,7 @@
     "bit": {
       "type": "page-promotion",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "slug": "testing-1234",
       "page": "https://1234.com",

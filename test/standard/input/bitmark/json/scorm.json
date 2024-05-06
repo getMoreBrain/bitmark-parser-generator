@@ -3,6 +3,7 @@
     "bit": {
       "type": "scorm",
       "format": "bitmark--",
+      "bitLevel": 1,
       "scormSource": "http://scorm.com/scorm",
       "posterImage": "http://scorm.com/scorm/poster.png",
       "item": [],

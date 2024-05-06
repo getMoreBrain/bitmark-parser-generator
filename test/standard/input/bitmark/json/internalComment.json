@@ -3,6 +3,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["186986"],
       "item": [],
       "hint": [],

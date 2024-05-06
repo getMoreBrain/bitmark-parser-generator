@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-afterword",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51873"],
       "isPublic": false,
       "hasMarkAsDone": false,

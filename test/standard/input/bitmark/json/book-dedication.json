@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-dedication",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51865"],
       "isPublic": false,
       "hasMarkAsDone": false,

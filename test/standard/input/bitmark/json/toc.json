@@ -3,9 +3,8 @@
     "bit": {
       "type": "toc",
       "format": "bitmark--",
-      "id": [
-        "92374"
-      ],
+      "bitLevel": 1,
+      "id": ["92374"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -22,6 +21,7 @@
     "bit": {
       "type": "toc",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

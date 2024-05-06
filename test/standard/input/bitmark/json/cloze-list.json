@@ -3,6 +3,7 @@
     "bit": {
       "type": "cloze-list",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [

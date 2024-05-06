@@ -3,6 +3,7 @@
     "bit": {
       "type": "app-code-editor",
       "format": "text",
+      "bitLevel": 1,
       "id": ["51861"],
       "computerLanguage": "javascript",
       "item": [],

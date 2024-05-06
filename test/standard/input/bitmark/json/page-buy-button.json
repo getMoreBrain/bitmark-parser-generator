@@ -3,6 +3,7 @@
     "bit": {
       "type": "page-buy-button",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["342341"],
       "slug": "testing-1234",
       "content2Buy": "testing 123",

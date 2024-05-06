@@ -3,6 +3,7 @@
     "bit": {
       "type": "bot-action-send",
       "format": "bitmark--",
+      "bitLevel": 1,
       "date": "2022-10-01T08:00:00CET",
       "item": [],
       "hint": [],

@@ -3,6 +3,7 @@
     "bit": {
       "type": "image-separator",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -59,6 +60,7 @@
     "bit": {
       "type": "image-separator",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -115,6 +117,7 @@
     "bit": {
       "type": "image-separator",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

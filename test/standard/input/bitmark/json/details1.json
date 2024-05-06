@@ -3,9 +3,8 @@
     "bit": {
       "type": "details-1",
       "format": "bitmark--",
-      "id": [
-        "245346"
-      ],
+      "bitLevel": 1,
+      "id": ["245346"],
       "item": [],
       "hint": [],
       "instruction": [

@@ -3,6 +3,7 @@
     "bit": {
       "type": "cloze-instruction-grouped",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["287822"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
@@ -112,6 +113,7 @@
     "bit": {
       "type": "cloze-instruction-grouped",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["107938"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": false,

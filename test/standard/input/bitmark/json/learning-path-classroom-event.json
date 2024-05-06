@@ -3,6 +3,7 @@
     "bit": {
       "type": "learning-path-classroom-event",
       "format": "bitmark--",
+      "bitLevel": 1,
       "date": "2022-10-01T08:00:00CET",
       "location": "東京",
       "action": "Päsenz-Seminar",
@@ -37,6 +38,7 @@
     "bit": {
       "type": "learning-path-classroom-event",
       "format": "bitmark--",
+      "bitLevel": 1,
       "location": "东京",
       "isTracked": true,
       "isInfoOnly": false,
@@ -90,6 +92,7 @@
     "bit": {
       "type": "learning-path-classroom-event",
       "format": "bitmark--",
+      "bitLevel": 1,
       "date": "2022-10-01T08:00:00CET",
       "location": "Zug",
       "action": "Päsenz-Seminar",
@@ -125,6 +128,7 @@
     "bit": {
       "type": "learning-path-classroom-event",
       "format": "bitmark--",
+      "bitLevel": 1,
       "date": "2022-10-01T08:00:00CET",
       "location": "Zug",
       "action": "Päsenz-Seminar",

@@ -3,6 +3,7 @@
     "bit": {
       "type": "still-image-film",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -44,6 +45,7 @@
     "bit": {
       "type": "still-image-film",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -84,6 +86,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": [],
       "resource": {
         "type": "still-image-film",

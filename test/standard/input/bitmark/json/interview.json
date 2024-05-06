@@ -3,6 +3,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["198779"],
       "item": [
         {
@@ -78,6 +79,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["136528"],
       "item": [
         {
@@ -157,6 +159,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["198779"],
       "item": [
         {
@@ -209,6 +212,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["198781"],
       "item": [
         {
@@ -403,6 +407,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["198782"],
       "item": [
         {
@@ -455,6 +460,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["187612"],
       "item": [
         {
@@ -547,6 +553,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["136484"],
       "item": [
         {
@@ -689,6 +696,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["136405"],
       "item": [
         {
@@ -760,6 +768,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["198264"],
       "item": [],
       "hint": [],
@@ -811,6 +820,7 @@
     "bit": {
       "type": "interview",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["198267"],
       "item": [
         {

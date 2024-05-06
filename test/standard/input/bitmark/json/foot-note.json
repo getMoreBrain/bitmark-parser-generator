@@ -3,9 +3,8 @@
     "bit": {
       "type": "foot-note",
       "format": "bitmark--",
-      "id": [
-        "210051"
-      ],
+      "bitLevel": 1,
+      "id": ["210051"],
       "item": [],
       "lead": [
         {

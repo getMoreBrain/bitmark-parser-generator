@@ -3,6 +3,7 @@
     "bit": {
       "type": "extractor-repeated-text",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": [
         {
           "type": "paragraph",

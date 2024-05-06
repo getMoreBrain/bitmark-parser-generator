@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-copyright-permissions",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51883"],
       "isPublic": false,
       "hasMarkAsDone": false,

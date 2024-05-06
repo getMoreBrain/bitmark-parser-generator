@@ -3,6 +3,7 @@
     "bit": {
       "type": "_comment",
       "originalType": "table",
+      "bitLevel": 1,
       "id": ["12353456"],
       "tableSearch": false,
       "tableSort": false,

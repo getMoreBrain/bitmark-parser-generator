@@ -3,6 +3,7 @@
     "bit": {
       "type": "survey-rating-once",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["93061"],
       "buttonCaption": "Save My Stress Level",
       "ratingLevelStart": {

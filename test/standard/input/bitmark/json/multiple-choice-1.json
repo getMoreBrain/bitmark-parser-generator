@@ -3,6 +3,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["186304"],
       "item": [],
       "hint": [],
@@ -51,6 +52,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["186305"],
       "item": [],
       "hint": [],
@@ -108,6 +110,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["186703"],
       "item": [],
       "hint": [],
@@ -174,6 +177,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["187235"],
       "item": [],
       "hint": [],
@@ -231,6 +235,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["187236"],
       "item": [],
       "hint": [],
@@ -288,6 +293,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["187237"],
       "item": [],
       "hint": [],
@@ -336,6 +342,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["107936"],
       "item": [
         {
@@ -425,6 +432,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["107937"],
       "item": [
         {
@@ -505,6 +513,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["107943"],
       "item": [
         {
@@ -576,6 +585,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["131345"],
       "item": [
         {
@@ -653,6 +663,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["131346"],
       "item": [
         {
@@ -730,6 +741,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["186303"],
       "item": [],
       "hint": [],
@@ -789,6 +801,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["232614"],
       "item": [],
       "hint": [],
@@ -864,6 +877,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["232875"],
       "item": [],
       "hint": [],
@@ -952,6 +966,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["232876"],
       "item": [],
       "hint": [],
@@ -1027,6 +1042,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["232876"],
       "item": [],
       "hint": [],
@@ -1102,6 +1118,7 @@
     "bit": {
       "type": "multiple-choice-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["232876"],
       "item": [],
       "hint": [],

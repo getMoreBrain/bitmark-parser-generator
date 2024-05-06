@@ -3,9 +3,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark--",
-      "id": [
-        "291969"
-      ],
+      "bitLevel": 1,
+      "id": ["291969"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -89,9 +88,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark--",
-      "id": [
-        "291969"
-      ],
+      "bitLevel": 1,
+      "id": ["291969"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -175,9 +173,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark--",
-      "id": [
-        "291969"
-      ],
+      "bitLevel": 1,
+      "id": ["291969"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -261,9 +258,8 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark--",
-      "id": [
-        "291969"
-      ],
+      "bitLevel": 1,
+      "id": ["291969"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -347,6 +343,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -418,6 +415,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -489,6 +487,7 @@
     "bit": {
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],

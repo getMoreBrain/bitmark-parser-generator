@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-prologue",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51868"],
       "isPublic": false,
       "hasMarkAsDone": false,

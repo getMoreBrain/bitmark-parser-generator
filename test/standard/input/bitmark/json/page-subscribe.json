@@ -3,6 +3,7 @@
     "bit": {
       "type": "page-subscribe",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["190596"],
       "slug": "",
       "item": [],
@@ -33,6 +34,7 @@
     "bit": {
       "type": "page-subscribe",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["190597"],
       "slug": "",
       "item": [],
@@ -63,6 +65,7 @@
     "bit": {
       "type": "page-subscribe",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["190598"],
       "slug": "",
       "item": [],
@@ -93,6 +96,7 @@
     "bit": {
       "type": "page-subscribe",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["191144"],
       "slug": "",
       "item": [
@@ -134,6 +138,7 @@
     "bit": {
       "type": "page-subscribe",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["191145"],
       "slug": "",
       "item": [
@@ -175,6 +180,7 @@
     "bit": {
       "type": "page-subscribe",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["191146"],
       "slug": "",
       "item": [
@@ -216,6 +222,7 @@
     "bit": {
       "type": "page-subscribe",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["191147"],
       "slug": "",
       "item": [
@@ -257,6 +264,7 @@
     "bit": {
       "type": "page-subscribe",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["191148"],
       "slug": "",
       "item": [
@@ -298,6 +306,7 @@
     "bit": {
       "type": "page-subscribe",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["191149"],
       "slug": "testing-1234",
       "item": [

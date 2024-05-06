@@ -3,6 +3,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["197919"],
       "item": [],
       "instruction": [
@@ -167,6 +168,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["213782"],
       "item": [
         {
@@ -313,6 +315,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["208467"],
       "item": [
         {
@@ -459,6 +462,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -510,6 +514,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -561,6 +566,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -612,6 +618,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -663,6 +670,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -725,6 +733,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -787,6 +796,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -849,6 +859,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -911,6 +922,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -973,6 +985,7 @@
     "bit": {
       "type": "match-solution-grouped",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],
@@ -1043,6 +1056,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "body": [],
       "heading": {
@@ -1072,6 +1086,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "body": [],
       "heading": {
@@ -1101,6 +1116,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "body": [],
       "heading": {
@@ -1130,6 +1146,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "body": [],
       "heading": {
@@ -1159,6 +1176,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "body": [],
       "heading": {
@@ -1188,6 +1206,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "body": [],
       "heading": {},
@@ -1214,6 +1233,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "body": [],
       "heading": {
@@ -1274,6 +1294,7 @@
     "bit": {
       "type": "match",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "body": [],
       "heading": {

@@ -3,6 +3,7 @@
     "bit": {
       "type": "image-landscape",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["342343"],
       "item": [],
       "hint": [],

@@ -3,6 +3,7 @@
     "bit": {
       "type": "side-note",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["210103"],
       "item": [],
       "hint": [],
@@ -160,6 +161,7 @@
     "bit": {
       "type": "side-note",
       "format": "bitmark++",
+      "bitLevel": 1,
       "ageRange": ["18", "120"],
       "item": [],
       "hint": [],

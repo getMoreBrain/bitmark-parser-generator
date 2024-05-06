@@ -3,6 +3,7 @@
     "bit": {
       "type": "code",
       "format": "text",
+      "bitLevel": 1,
       "id": ["51861"],
       "computerLanguage": "javascript",
       "codeLineNumbers": true,

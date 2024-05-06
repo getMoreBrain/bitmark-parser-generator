@@ -3,11 +3,9 @@
     "bit": {
       "type": "summary-ai",
       "format": "bitmark++",
+      "bitLevel": 1,
       "AIGenerated": true,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -57,11 +55,9 @@
     "bit": {
       "type": "summary-ai",
       "format": "bitmark++",
+      "bitLevel": 1,
       "AIGenerated": true,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -111,6 +107,7 @@
     "bit": {
       "type": "summary-ai",
       "format": "bitmark++",
+      "bitLevel": 1,
       "AIGenerated": true,
       "item": [],
       "hint": [],

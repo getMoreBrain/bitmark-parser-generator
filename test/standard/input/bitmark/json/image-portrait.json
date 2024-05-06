@@ -3,6 +3,7 @@
     "bit": {
       "type": "image-portrait",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["342343"],
       "item": [],
       "hint": [],

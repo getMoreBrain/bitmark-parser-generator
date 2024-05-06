@@ -3,9 +3,8 @@
     "bit": {
       "type": "coach-audio-transcript",
       "format": "bitmark--",
-      "id": [
-        "197915"
-      ],
+      "bitLevel": 1,
+      "id": ["197915"],
       "item": [
         {
           "type": "paragraph",
@@ -56,9 +55,8 @@
     "bit": {
       "type": "coach-audio-transcript",
       "format": "bitmark--",
-      "id": [
-        "210109"
-      ],
+      "bitLevel": 1,
+      "id": ["210109"],
       "item": [
         {
           "type": "paragraph",
@@ -109,9 +107,8 @@
     "bit": {
       "type": "coach-audio-transcript",
       "format": "bitmark--",
-      "id": [
-        "210110"
-      ],
+      "bitLevel": 1,
+      "id": ["210110"],
       "item": [],
       "hint": [],
       "instruction": [

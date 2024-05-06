@@ -3,6 +3,7 @@
     "bit": {
       "type": "coach-self-reflection-essay",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -44,6 +45,7 @@
     "bit": {
       "type": "coach-self-reflection-essay",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["245552"],
       "item": [],
       "lead": [
@@ -97,6 +99,7 @@
     "bit": {
       "type": "coach-self-reflection-essay",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["272740"],
       "item": [
         {
@@ -197,6 +200,7 @@
     "bit": {
       "type": "coach-self-reflection-essay",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["152151"],
       "item": [],
       "hint": [
@@ -512,6 +516,7 @@
     "bit": {
       "type": "coach-self-reflection-essay",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["136476"],
       "item": [
         {

@@ -3,9 +3,8 @@
     "bit": {
       "type": "help",
       "format": "bitmark--",
-      "id": [
-        "210023"
-      ],
+      "bitLevel": 1,
+      "id": ["210023"],
       "item": [],
       "lead": [
         {
@@ -50,9 +49,8 @@
     "bit": {
       "type": "help",
       "format": "bitmark--",
-      "id": [
-        "210041"
-      ],
+      "bitLevel": 1,
+      "id": ["210041"],
       "item": [],
       "lead": [
         {
@@ -97,9 +95,8 @@
     "bit": {
       "type": "help",
       "format": "bitmark--",
-      "id": [
-        "210064"
-      ],
+      "bitLevel": 1,
+      "id": ["210064"],
       "item": [],
       "lead": [
         {
@@ -144,9 +141,8 @@
     "bit": {
       "type": "help",
       "format": "bitmark--",
-      "id": [
-        "208484"
-      ],
+      "bitLevel": 1,
+      "id": ["208484"],
       "item": [],
       "lead": [
         {

@@ -3,6 +3,7 @@
     "bit": {
       "type": "release-notes-summary",
       "format": "bitmark--",
+      "bitLevel": 1,
       "ageRange": ["18", "120"],
       "item": [],
       "hint": [],

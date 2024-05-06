@@ -3,9 +3,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135649"
-      ],
+      "bitLevel": 1,
+      "id": ["135649"],
       "title": [
         {
           "type": "paragraph",
@@ -38,9 +37,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135651"
-      ],
+      "bitLevel": 1,
+      "id": ["135651"],
       "title": [
         {
           "type": "paragraph",
@@ -73,9 +71,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135653"
-      ],
+      "bitLevel": 1,
+      "id": ["135653"],
       "title": [
         {
           "type": "paragraph",
@@ -108,9 +105,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135655"
-      ],
+      "bitLevel": 1,
+      "id": ["135655"],
       "title": [
         {
           "type": "paragraph",
@@ -143,9 +139,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135657"
-      ],
+      "bitLevel": 1,
+      "id": ["135657"],
       "title": [
         {
           "type": "paragraph",
@@ -178,9 +173,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135659"
-      ],
+      "bitLevel": 1,
+      "id": ["135659"],
       "title": [
         {
           "type": "paragraph",
@@ -213,9 +207,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135661"
-      ],
+      "bitLevel": 1,
+      "id": ["135661"],
       "title": [
         {
           "type": "paragraph",
@@ -248,9 +241,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135663"
-      ],
+      "bitLevel": 1,
+      "id": ["135663"],
       "title": [
         {
           "type": "paragraph",
@@ -283,9 +275,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135665"
-      ],
+      "bitLevel": 1,
+      "id": ["135665"],
       "title": [
         {
           "type": "paragraph",
@@ -318,9 +309,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135667"
-      ],
+      "bitLevel": 1,
+      "id": ["135667"],
       "title": [
         {
           "type": "paragraph",
@@ -353,9 +343,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135669"
-      ],
+      "bitLevel": 1,
+      "id": ["135669"],
       "title": [
         {
           "type": "paragraph",
@@ -388,9 +377,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135671"
-      ],
+      "bitLevel": 1,
+      "id": ["135671"],
       "title": [
         {
           "type": "paragraph",
@@ -423,9 +411,8 @@
     "bit": {
       "type": "chapter",
       "format": "bitmark--",
-      "id": [
-        "135673"
-      ],
+      "bitLevel": 1,
+      "id": ["135673"],
       "title": [
         {
           "type": "paragraph",

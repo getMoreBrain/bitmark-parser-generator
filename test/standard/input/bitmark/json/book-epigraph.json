@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-epigraph",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51890"],
       "isPublic": false,
       "hasMarkAsDone": false,

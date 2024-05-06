@@ -3,6 +3,7 @@
     "bit": {
       "type": "stdout",
       "format": "text",
+      "bitLevel": 1,
       "id": ["51861"],
       "computerLanguage": "javascript",
       "item": [],

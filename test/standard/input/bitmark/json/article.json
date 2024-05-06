@@ -3,6 +3,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["151970"],
       "lang": "en-UK",
       "publisher": ["kpmg"],
@@ -178,6 +179,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["151971"],
       "item": [],
       "lead": [],
@@ -218,6 +220,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["151972"],
       "item": [],
       "lead": [],
@@ -264,6 +267,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["151973"],
       "item": [
         {
@@ -337,6 +341,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["239893"],
       "item": [],
       "lead": [
@@ -391,6 +396,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["191143"],
       "body": [],
       "resource": {
@@ -421,6 +427,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["245285"],
       "body": [],
       "resource": {
@@ -462,6 +469,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["162205"],
       "body": [
         {
@@ -530,6 +538,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["5743563"],
       "target": ["target1", "target2", "target3"],
       "tag": ["green", "yellow", "red"],

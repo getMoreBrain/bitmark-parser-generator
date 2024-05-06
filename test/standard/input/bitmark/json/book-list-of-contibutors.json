@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-list-of-contributors",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51878"],
       "isPublic": false,
       "hasMarkAsDone": false,

@@ -3,6 +3,7 @@
     "bit": {
       "type": "learning-path-learning-goal",
       "format": "bitmark--",
+      "bitLevel": 1,
       "action": "Päsenz-Seminar",
       "duration": "3600s",
       "isTracked": true,

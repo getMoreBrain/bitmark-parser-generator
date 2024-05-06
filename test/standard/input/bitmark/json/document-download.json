@@ -3,6 +3,7 @@
     "bit": {
       "type": "document-download",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

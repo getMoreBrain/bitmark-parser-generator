@@ -3,6 +3,7 @@
     "bit": {
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["249781"],
       "quizCountItems": false,
       "quizStrikethroughSolutions": false,
@@ -148,6 +149,7 @@
     "bit": {
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["287825"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
@@ -235,6 +237,7 @@
     "bit": {
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["131518"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
@@ -539,6 +542,7 @@
     "bit": {
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["131518"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,

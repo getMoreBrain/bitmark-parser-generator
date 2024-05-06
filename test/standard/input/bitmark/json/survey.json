@@ -4,6 +4,7 @@
     "bit": {
       "type": "survey",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "===\nIch kann mich über das Thema __Geräte und moderne Technik__ umfassend äußern und eine grafische Darstellung beschreiben.\n\n\n===\nIch kann Artikel über moderne Technik und Gerätebeschreibungen auch im Detail verstehen.\n\n\n===\nIch kann ein Gerät beschreiben und ein Produkt präsentieren.\n\n\n===\nIch kann Texte über Produkte, Obsoleszenz, Produktnamen oder Gefahren am Computer verstehen und den Inhalt wiedergeben.\n\n\n===\nIch kann meine Meinung zu den Themen __Obsoleszenz__ und __Computergefahren__ formulieren und Tipps geben.\n\n\n===\nIch kann mich mündlich und schriftlich zum Thema __Umgang mit Smartphones bei Kindern und Jugendlichen__ äußern und Vorschläge unterbreiten.\n\n\n===\nIch kann einen Text über Lernprozesse verstehen und mich zu eigenen Lernstrategien äußern.\n\n\n===\nIch kann eine Auswahl treffen und meine Meinung begründen.\n\n\n===\nIch kann einfache Beschreibungen einer Erfindung und Texte zum Thema __Erfindungen und Erfinder__ verstehen und mich zu diesem Thema äußern. __(fakultativ)__\n\n\n===",
       "item": "D2",
       "hint": "",
@@ -38,6 +39,7 @@
     "bit": {
       "type": "survey",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "===\nIch kann mich über das Thema __Geräte und moderne Technik__ umfassend äußern und eine grafische Darstellung beschreiben.\n\n\n===\nIch kann Artikel über moderne Technik und Gerätebeschreibungen auch im Detail verstehen.\n\n\n===\nIch kann ein Gerät beschreiben und ein Produkt präsentieren.\n\n\n===\nIch kann Texte über Produkte, Obsoleszenz, Produktnamen oder Gefahren am Computer verstehen und den Inhalt wiedergeben.\n\n\n===\nIch kann meine Meinung zu den Themen __Obsoleszenz__ und __Computergefahren__ formulieren und Tipps geben.\n\n\n===\nIch kann mich mündlich und schriftlich zum Thema __Umgang mit Smartphones bei Kindern und Jugendlichen__ äußern und Vorschläge unterbreiten.\n\n\n===\nIch kann einen Text über Lernprozesse verstehen und mich zu eigenen Lernstrategien äußern.\n\n\n===\nIch kann eine Auswahl treffen und meine Meinung begründen.\n\n\n===\nIch kann einfache Beschreibungen einer Erfindung und Texte zum Thema __Erfindungen und Erfinder__ verstehen und mich zu diesem Thema äußern. __(fakultativ)__\n\n\n===",
       "item": "D2",
       "hint": "",

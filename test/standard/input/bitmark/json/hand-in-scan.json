@@ -3,6 +3,7 @@
     "bit": {
       "type": "hand-in-scan",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["189522"],
       "item": [],
       "hint": [],
@@ -43,6 +44,7 @@
     "bit": {
       "type": "hand-in-scan",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["213729"],
       "item": [
         {
@@ -97,6 +99,7 @@
     "bit": {
       "type": "hand-in-scan",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["213734"],
       "item": [
         {
@@ -137,6 +140,7 @@
     "bit": {
       "type": "hand-in-scan",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["213737"],
       "item": [
         {
@@ -200,6 +204,7 @@
     "bit": {
       "type": "hand-in-scan",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["197943"],
       "item": [],
       "hint": [],

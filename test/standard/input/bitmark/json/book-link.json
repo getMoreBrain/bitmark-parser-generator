@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-link",
       "format": "bitmark--",
+      "bitLevel": 1,
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
@@ -52,6 +53,7 @@
     "bit": {
       "type": "book-link",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["119760"],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",

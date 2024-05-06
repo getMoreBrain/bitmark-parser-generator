@@ -3,9 +3,8 @@
     "bit": {
       "type": "sequence",
       "format": "bitmark--",
-      "id": [
-        "285747"
-      ],
+      "bitLevel": 1,
+      "id": ["285747"],
       "item": [
         {
           "type": "paragraph",
@@ -35,12 +34,7 @@
       "isExample": true,
       "example": true,
       "body": [],
-      "elements": [
-        "Ein Elefant",
-        "ist",
-        "grösser als",
-        "eine Maus."
-      ]
+      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."]
     },
     "parser": {
       "version": "1.4.12",
@@ -52,9 +46,8 @@
     "bit": {
       "type": "sequence",
       "format": "bitmark--",
-      "id": [
-        "285749"
-      ],
+      "bitLevel": 1,
+      "id": ["285749"],
       "item": [
         {
           "type": "paragraph",

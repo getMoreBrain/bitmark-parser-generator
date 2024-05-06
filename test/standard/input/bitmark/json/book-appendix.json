@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-appendix",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51875"],
       "isPublic": false,
       "hasMarkAsDone": false,
