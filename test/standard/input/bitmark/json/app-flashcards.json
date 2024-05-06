@@ -3,14 +3,9 @@
     "bit": {
       "type": "app-flashcards",
       "format": "bitmark++",
-      "ageRange": [
-        "18",
-        "120"
-      ],
-      "flashcardSet": [
-        "e-876z78z87og87g8zg",
-        "e-8768768768768767"
-      ],
+      "bitLevel": 1,
+      "ageRange": ["18", "120"],
+      "flashcardSet": ["e-876z78z87og87g8zg", "e-8768768768768767"],
       "item": [],
       "hint": [],
       "isExample": false,

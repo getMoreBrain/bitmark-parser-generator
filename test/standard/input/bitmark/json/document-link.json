@@ -3,6 +3,7 @@
     "bit": {
       "type": "document-link",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

@@ -3,6 +3,7 @@
     "bit": {
       "type": "focus-image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "focusX": 100,
       "focusY": 300,
       "item": [],

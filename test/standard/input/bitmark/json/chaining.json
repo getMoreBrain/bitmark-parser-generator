@@ -3,6 +3,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -63,6 +64,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -123,6 +125,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -183,6 +186,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -264,6 +268,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -345,6 +350,7 @@
     "bit": {
       "type": "article",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -426,6 +432,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -458,6 +465,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -508,6 +516,7 @@
     "bit": {
       "type": "image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -559,6 +568,7 @@
     "bit": {
       "type": "match-solution-grouped",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "isExample": true,
       "body": [],

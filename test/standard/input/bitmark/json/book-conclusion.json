@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-conclusion",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51872"],
       "isPublic": false,
       "hasMarkAsDone": false,

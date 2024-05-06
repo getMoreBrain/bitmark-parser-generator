@@ -3,6 +3,7 @@
     "bit": {
       "type": "review-reviewer-note",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["210022"],
       "resolved": false,
       "resolvedDate": "",
@@ -51,6 +52,7 @@
     "bit": {
       "type": "review-reviewer-note",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["210040"],
       "resolved": false,
       "resolvedDate": "",

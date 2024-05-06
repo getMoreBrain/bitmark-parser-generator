@@ -3,9 +3,8 @@
     "bit": {
       "type": "preparation-note",
       "format": "bitmark--",
-      "id": [
-        "190596"
-      ],
+      "bitLevel": 1,
+      "id": ["190596"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -34,9 +33,8 @@
     "bit": {
       "type": "preparation-note",
       "format": "bitmark--",
-      "id": [
-        "190597"
-      ],
+      "bitLevel": 1,
+      "id": ["190597"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -65,9 +63,8 @@
     "bit": {
       "type": "preparation-note",
       "format": "bitmark--",
-      "id": [
-        "190598"
-      ],
+      "bitLevel": 1,
+      "id": ["190598"],
       "item": [],
       "hint": [],
       "instruction": [
@@ -96,9 +93,8 @@
     "bit": {
       "type": "preparation-note",
       "format": "bitmark--",
-      "id": [
-        "191144"
-      ],
+      "bitLevel": 1,
+      "id": ["191144"],
       "item": [
         {
           "type": "paragraph",
@@ -138,9 +134,8 @@
     "bit": {
       "type": "preparation-note",
       "format": "bitmark--",
-      "id": [
-        "191145"
-      ],
+      "bitLevel": 1,
+      "id": ["191145"],
       "item": [
         {
           "type": "paragraph",
@@ -180,9 +175,8 @@
     "bit": {
       "type": "preparation-note",
       "format": "bitmark--",
-      "id": [
-        "191146"
-      ],
+      "bitLevel": 1,
+      "id": ["191146"],
       "item": [
         {
           "type": "paragraph",
@@ -222,9 +216,8 @@
     "bit": {
       "type": "preparation-note",
       "format": "bitmark--",
-      "id": [
-        "191147"
-      ],
+      "bitLevel": 1,
+      "id": ["191147"],
       "item": [
         {
           "type": "paragraph",
@@ -264,9 +257,8 @@
     "bit": {
       "type": "preparation-note",
       "format": "bitmark--",
-      "id": [
-        "191148"
-      ],
+      "bitLevel": 1,
+      "id": ["191148"],
       "item": [
         {
           "type": "paragraph",
@@ -306,9 +298,8 @@
     "bit": {
       "type": "preparation-note",
       "format": "bitmark--",
-      "id": [
-        "191149"
-      ],
+      "bitLevel": 1,
+      "id": ["191149"],
       "item": [
         {
           "type": "paragraph",

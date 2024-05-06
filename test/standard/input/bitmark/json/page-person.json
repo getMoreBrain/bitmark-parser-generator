@@ -3,6 +3,7 @@
     "bit": {
       "type": "page-person",
       "format": "bitmark--",
+      "bitLevel": 1,
       "slug": "testing-1234",
       "buttonCaption": "Follow",
       "item": [],

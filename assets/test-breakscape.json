@@ -3,6 +3,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["1234", "[1234]", "[1234]4321"],
       "externalId": ["[externalId with square bracked at end]"],
       "lang": "[lang] with square bracked in middle",

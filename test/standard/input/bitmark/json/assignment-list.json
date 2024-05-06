@@ -3,6 +3,7 @@
     "bit": {
       "type": "assignment-list",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [
@@ -114,6 +115,7 @@
     "bit": {
       "type": "assignment-list",
       "format": "bitmark++",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [

@@ -4,6 +4,7 @@
     "bit": {
       "type": "correction",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "[-**Reservierungsbestätigung**\n\nSehr geehrter Frau Klug,\n\nvielen Dank vor Ihre Reservierung. Gerne bestätigen wir das Folgende:\nAnreise: 30. Juli\nAbreise: 5. August\nPreis: 1 Doppelzimmer First Business Class 147,00 EUR pro Zimmer/Nacht\n\nDieser Preis beinhaltet ein reichhaltigem Frühstücksbuffet und die Nutzung unser Wellnessbereichs mit Außenpool, Whirlpool, Sauna und Solarium. Für kosmetische Behandlungen und Massagen empfehlen wir Sie, im Voraus einen Termin zu vereinbart.\n\nDie Zimmer stehen Ihnen im Anreisetag ab 15.00 Uhr zur Verfügung. Sollten Sie nach 18.00 Uhr anreisen, bitten wir Sie, uns das vorher kurz mitteilen.\n\nAm Abreisetag muss das Zimmer bis 12.00 Uhr geräumt worden. Wann Sie am Abreisetag Ihr Zimmer noch bis zum Abend nutzen möchten, berechnen wir 50 % des Preises.\nWir freuen euch, Sie in unserem Hause begrüßen zu dürfen und wünschen Ihnen schon jetzt eine angenehme Anreise.\n\nMit freundlichen Grüsse\nJohn Summer\nSunshine-Hotel]\n\n[+**Reservierungsbestätigung**\n\nSehr geehrte Frau Klug,\n\nvielen Dank für Ihre Reservierung. Gerne bestätigen wir das Folgende:\nAnreise: 30. Juli\nAbreise: 5. August\nPreis: 1 Doppelzimmer First Business Class 147,00 EUR pro Zimmer/Nacht\n\nDieser Preis beinhaltet ein reichhaltiges Frühstücksbuffet und die Nutzung unseres Wellnessbereichs mit Außenpool, Whirlpool, Sauna und Solarium. Für kosmetische Behandlungen und Massagen empfehlen wir Ihnen, im Voraus einen Termin zu vereinbaren.\n\nDie Zimmer stehen Ihnen am Anreisetag ab 15.00 Uhr zur Verfügung. Sollten Sie nach 18.00 Uhr anreisen, bitten wir Sie, uns das vorher kurz mitzuteilen.\n\nAm Abreisetag muss das Zimmer bis 12.00 Uhr geräumt werden. Wenn Sie am Abreisetag Ihr Zimmer noch bis zum Abend nutzen möchten, berechnen wir 50 % des Preises.\nWir freuen uns, Sie in unserem Hause begrüßen zu dürfen und wünschen Ihnen schon jetzt eine angenehme Anreise.\n\nMit freundlichen Grüßen\nJohn Summer\nSunshine-Hotel]\n\n[@example:**Reservierungsbestätigung**\n\nSehr geehrte Frau Klug,\n\nvielen Dank vor Ihre Reservierung. Gerne bestätigen wir das Folgende:\nAnreise: 30. Juli\nAbreise: 5. August\nPreis: 1 Doppelzimmer First Business Class 147,00 EUR pro Zimmer/Nacht\n\nDieser Preis beinhaltet ein reichhaltigem Frühstücksbuffet und die Nutzung unser Wellnessbereichs mit Außenpool, Whirlpool, Sauna und Solarium. Für kosmetische Behandlungen und Massagen empfehlen wir Sie, im Voraus einen Termin zu vereinbart.\n\nDie Zimmer stehen Ihnen im Anreisetag ab 15.00 Uhr zur Verfügung. Sollten Sie nach 18.00 Uhr anreisen, bitten wir Sie, uns das vorher kurz mitteilen.\n\nAm Abreisetag muss das Zimmer bis 12.00 Uhr geräumt worden. Wann Sie am Abreisetag Ihr Zimmer noch bis zum Abend nutzen möchten, berechnen wir 50 % des Preises.\nWir freuen euch, Sie in unserem Hause begrüßen zu dürfen und wünschen Ihnen schon jetzt eine angenehme Anreise.\n\nMit freundlichen Grüsse\nJohn Summer\nSunshine-Hotel]",
       "item": "B7 – Schriftlicher Ausdruck",
       "hint": "",
@@ -32,6 +33,7 @@
     "bit": {
       "type": "correction",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "Der Journalist Tobias Schade hat für einen Artikel im Werbeblatt einer Jobbörse mit vier Deutschen, die ins europäische Ausland gegangen sind, kurze Interviews geführt. Der Journalist hat schnell Stichpunkte für seinen Artikel notiert.\n\n**-- 1. --**\n**Name:** __Frank Wagner__\n**Jahr:** __[-_____________][+2001]__\n**Grund:** __Job in einer Gartenbaufirma__\n**Land:** __[-Dänemark][+Norwegen]__\n**Beruf:** __Baumaschinen-Fahrer__\n**Pluspunkte im neuen Land:** __eigenes Haus und traumhafte Winter__\n**Anfangsschwierigkeiten und Minuspunkte:** __musste sich an die Mentalität der Menschen gewöhnen__\n**Rückkehrabsicht:** __[-will sobald wie möglich zurück][+will nicht zurück]__\n\n**-- 2. -- **\n**Name:** Paula Fischer\n**Jahr:** __[-Januar][+August] 2005__\n**Grund:** __fand keine Stelle in Deutschland__\n**Land:** [-_____________][+Irland]\n**Beruf:** __Kundenberaterin bei Google__\n**Pluspunkte im neuen Land:** __Einheimische sind kontaktfreudig, man findet leicht Anschluss__\n**Anfangsschwierigkeiten und Minuspunkte:** __[-niedrige][+hohe] Lebenshaltungskosten__\n**Rückkehrabsicht:** __weiß es noch nicht__\n\n**-- 3. --**\n**Name:** __Ulrich Haas__\n**Jahr:** __[-_____________][+Anfang der 80er-Jahre]__\n**Grund:** __flüchtete vor Hektik und Alltagsproblemen__\n**Land:** __Griechenland__\n**Beruf:** __[-_____________][+Arzt]__\n**Pluspunkte im neuen Land:** __Sonne, Wärme, Ruhe, zufriedenes und einfaches Leben__\n**Anfangsschwierigkeiten und Minuspunkte:** __Bürokratie auf den Ämtern__\n**Rückkehrabsicht:** __[-erst im Alter][+keine]__\n\n**-- 4. --**\n**Name:** __Anke Seidel__\n**Jahr:** __[_2006][_Juli 2006]__\n**Grund:** __[-_____________][+Sie und ihr Mann haben eine Stelle gefunden]__\n**Land:** __Österreich (Tirol)__\n**Beruf:** __[-_____________][+Kellnerin]__\n**Pluspunkte im neuen Land:** __[-Sie liebt die bergige Landschaft und man findet in Österreich immer einen Job.][+Ihre Familie liebt die bergige Landschaft (sie mag die Berge nicht)]__\n**Anfangsschwierigkeiten und Minuspunkte:** __kann sich nicht mehr richtig um ihre Eltern kümmern, hat oft Heimweh__\n**Rückkehrabsicht:** __will später nach Deutschland zurück__\n\n[&audio:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/audio/06_erkundungen_b2_3a.mp3]",
       "item": "A13",
       "hint": "",
@@ -68,6 +70,7 @@
     "bit": {
       "type": "correction",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "[-Sehr geehrte Dame und Herren,\n\ngestern ich habe die bestellten Bücher aus Ihrem Verlag erhalten, es sich handelt um die Titel „Neue Redemittel“ und „Grammatik 3“. Leider sind die Bücher beschädigd, vermutlich sind sie unterwegs\nnass geworden. Viele Seiten war zusammengeklebt. So kann ich die Bücher leider nicht meer verwenden. Ich benötige die Bücher jedoch dringend vor mein Studium. Ich hoffe, dass Sie mir kurzfristig zwei\nneuen Exemplare der genannten Titel unentgeltlich zur Verfügung stellen können. Würden Sie mich bitte auch noch mitteilen, ob ich Ihnen die beschädigten Bücher soll zurücksenden?\nMir gefällt ihre neue Schulbuchreihe „Was denn nun?“ sehr gut.\nWeil ich als Pädagogikstudentin gerade ein Praktikum an eine Schule mache, wurde ich gern mit dem neuen Material arbeiten. Könnten Sie mir eine Probeexemplar zusenden?\nVielen Dank in Voraus.\n\nMit freundlichem Grüßen\nDanielle Montain]\n\n[+Sehr geehrte Damen und Herren,\n\ngestern habe die bestellten Bücher aus Ihrem Verlag erhalten, es handelt sich um die Titel „Neue Redemittel“ und „Grammatik 3“. Leider sind die Bücher beschädigt, vermutlich sind sie unterwegs\nnass geworden. Viele Seiten waren zusammengeklebt. So kann ich die Bücher leider nicht mehr verwenden. Ich benötige die Bücher jedoch dringend für mein Studium. Ich hoffe, dass Sie mir kurzfristig zwei neue Exemplare der genannten Titel unentgeltlich zur Verfügung stellen können. Würden Sie mir bitte auch noch mitteilen, ob ich Ihnen die beschädigten Bücher zurücksenden soll?\nMir gefällt Ihre neue Schulbuchreihe „Was denn nun?“ sehr gut.\nWeil ich als Pädagogikstudentin gerade ein Praktikum an einer Schule mache, würde ich gern mit dem neuen Material arbeiten. Könnten Sie mir ein Probeexemplar zusenden?\nVielen Dank im Voraus.\n\nMit freundlichen Grüßen\nDanielle Montain]",
       "item": "B5",
       "hint": "",
@@ -82,6 +85,7 @@
     "bit": {
       "type": "correction",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "[-Berlin, 4. März ...\n\nLiebe Ralf,\n\ngestern ich habe Deinen interessanten und ausführlichen Brief erhalten. Ich danke Dich sehr dafür. Du hast mich in Deinem Brief gefragt, ob ich auch ein besondere Hobby habe. Ja, ich beschäftige mich mit Wakeboarden. Seit zwei Jahren habe ich mit diesem Sport, der Snowboarden, Wellenreiten und Surfen zugleich ist, angefangen. Ist es eigentlich Wasserskifahren mit einem Board/Brett. Ich trainiere zweimal in die Woche an einem See mit einer Liftanlage. In Deutschland gibt es inzwischen 55 Liftanlagen und mehr wie 200 000 aktive Wakeboarder. Wakeboarden jeder sehr schnell lernen kann, man muss allerdings ein gutes Gleichgewichtsgefühl haben. In Unterschied zum klassischen Wasserski geht man beim Wakeboarden in der Lüfte. Man vollführt Sprünge, Saltos, Flips und Rotationen. Mich macht dieser kreative und anspruchsvolle Sport viel Spaß. Vielleicht Du solltest es auch einmal versuchen. In den meisten Wasserskischulen werden Kurse für Anfänger angeboten, man kann aber auch in einem Wakeboardamp teilnehmen. Wen Du noch Fragen hast, werde ich Dir diese gern beantworten.\n\nViele Grüße\nMarcel]\n\n[+Berlin, 4. März ...\n\nLieber Ralf,\n\ngestern habe ich Deinen interessanten und ausführlichen Brief erhalten. Ich danke Dir sehr dafür. Du hast mich in Deinem Brief gefragt, ob ich auch ein besonderes Hobby habe. Ja, ich beschäftige mich mit Wakeboarden. Vor zwei Jahren habe ich mit diesem Sport, der Snowboarden, Wellenreiten und Surfen zugleich ist, angefangen. Es ist eigentlich Wasserskifahren mit einem Board/Brett. Ich trainiere zweimal in der Woche an einem See mit einer Liftanlage. In Deutschland gibt es inzwischen 55 Liftanlagen und mehr als 200 000 aktive Wakeboarder. Wakeboarden kann jeder sehr schnell lernen, man muss allerdings ein gutes Gleichgewichtsgefühl haben. Im Unterschied zum klassischen Wasserski geht man beim Wakeboarden in die Lüfte. Man vollführt Sprünge, Saltos, Flips und Rotationen. Mir macht dieser kreative und anspruchsvolle Sport viel Spaß. Vielleicht solltest Du es auch einmal versuchen. In den meisten Wasserskischulen werden Kurse für Anfänger angeboten, man kann aber auch an einem Wakeboardamp teilnehmen. Wenn Du noch Fragen hast, werde ich Dir diese gern beantworten.\n\nViele Grüße\nMarcel]",
       "item": "B3",
       "hint": "",
@@ -96,6 +100,7 @@
     "bit": {
       "type": "correction",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "[-This Text meight has some speling and grammar mistakes.]\n[+This Text meight has some speling and grammar mistakes.]",
       "item": "",
       "hint": "",
@@ -109,6 +114,7 @@
     "bit": {
       "type": "correction",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "[-This Text meight has some speling and grammar mistakes.]\n[+This Text might have some spelling and grammar mistakes.]",
       "item": "",
       "hint": "",
@@ -122,6 +128,7 @@
     "bit": {
       "type": "correction",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "[-in der Deutschen sprache spielt die Gross- und kleinschreibung eine Grosse Rolle.]\n[+In der deutschen Sprache spielt die Gross- und Kleinschreibung eine grosse Rolle.]",
       "item": "",
       "hint": "",

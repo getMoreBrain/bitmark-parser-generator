@@ -3,6 +3,7 @@
     "bit": {
       "type": "extractor-block",
       "format": "bitmark--",
+      "bitLevel": 1,
       "blockId": "uuid-uuid-uuid-uuid",
       "pageNo": 1,
       "x": 0,

@@ -3,6 +3,7 @@
     "bit": {
       "type": "video-link-landscape",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -59,6 +60,7 @@
     "bit": {
       "type": "video-link-landscape",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["119760"],
       "item": [],
       "hint": [],
@@ -119,6 +121,7 @@
     "bit": {
       "type": "video-link-landscape",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

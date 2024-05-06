@@ -3,6 +3,7 @@
     "bit": {
       "type": "details-image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

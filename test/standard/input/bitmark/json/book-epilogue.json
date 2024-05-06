@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-epilogue",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51869"],
       "isPublic": false,
       "hasMarkAsDone": false,

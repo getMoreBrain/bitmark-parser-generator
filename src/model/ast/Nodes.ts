@@ -30,6 +30,7 @@ export interface BitmarkAst {
 
 export interface Bit {
   bitType: BitTypeType;
+  bitLevel: number;
   textFormat: TextFormatType;
   resourceType?: ResourceTagType;
   isCommented?: boolean;

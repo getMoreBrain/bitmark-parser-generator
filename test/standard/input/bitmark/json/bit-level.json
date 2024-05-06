@@ -1,0 +1,402 @@
+[
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.article]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 2,
+      "id": ["151971"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[..article:bitmark--]\n[@id:151971]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["151972"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.article:bitmark++]\n[@id:151972]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 3,
+      "id": ["151973"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[...article:bitmark--]\n[@id:151973]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 2,
+      "id": ["239893"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[..article:bitmark--&image]\n[@id:239893]\n\n",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 120
+            },
+            "end": {
+              "line": 15,
+              "column": 1,
+              "offset": 162
+            }
+          }
+        },
+        {
+          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "text": "[..article:bitmark--&image]\n[@id:239893]\n\n",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 120
+            },
+            "end": {
+              "line": 15,
+              "column": 1,
+              "offset": 162
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[..article:bitmark--&image]\n[@id:239893]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 2,
+      "id": ["191143"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[..article:bitmark--&image]\n[@id:191143]\n",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 163
+            },
+            "end": {
+              "line": 18,
+              "column": 1,
+              "offset": 204
+            }
+          }
+        },
+        {
+          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "text": "[..article:bitmark--&image]\n[@id:191143]\n",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 163
+            },
+            "end": {
+              "line": 18,
+              "column": 1,
+              "offset": 204
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[..article:bitmark--&image]\n[@id:191143]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["245285"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.article:bitmark--&image]\n[@id:245285]\n",
+          "location": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 205
+            },
+            "end": {
+              "line": 21,
+              "column": 1,
+              "offset": 245
+            }
+          }
+        },
+        {
+          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "text": "[.article:bitmark--&image]\n[@id:245285]\n",
+          "location": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 205
+            },
+            "end": {
+              "line": 21,
+              "column": 1,
+              "offset": 245
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.article:bitmark--&image]\n[@id:245285]"
+  },
+  {
+    "bit": {
+      "type": "_comment",
+      "originalType": "article",
+      "bitLevel": 2,
+      "id": ["239893"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[..|article:bitmark--&image]\n[@id:239893]\n\n",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 246
+            },
+            "end": {
+              "line": 25,
+              "column": 1,
+              "offset": 289
+            }
+          }
+        },
+        {
+          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "text": "[..|article:bitmark--&image]\n[@id:239893]\n\n",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 246
+            },
+            "end": {
+              "line": 25,
+              "column": 1,
+              "offset": 289
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[..|article:bitmark--&image]\n[@id:239893]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 7,
+      "id": ["5743563"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.......article:bitmark--]\n[@id:5743563]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 7,
+      "id": ["162205"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
+      "warnings": [
+        {
+          "message": "Bit level of 8 too high, setting to max value of 7",
+          "text": "[........article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 332
+            },
+            "end": {
+              "line": 29,
+              "column": 34,
+              "offset": 365
+            }
+          }
+        },
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[........article:bitmark--&image]\n[@id:162205]\n\n",
+          "location": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 332
+            },
+            "end": {
+              "line": 32,
+              "column": 1,
+              "offset": 380
+            }
+          }
+        },
+        {
+          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "text": "[........article:bitmark--&image]\n[@id:162205]\n\n",
+          "location": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 332
+            },
+            "end": {
+              "line": 32,
+              "column": 1,
+              "offset": 380
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[........article:bitmark--&image]\n[@id:162205]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 7,
+      "id": ["162205"],
+      "body": []
+    },
+    "parser": {
+      "version": "1.6.6",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
+      "warnings": [
+        {
+          "message": "Bit level of 11 too high, setting to max value of 7",
+          "text": "[...........article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 381
+            },
+            "end": {
+              "line": 33,
+              "column": 37,
+              "offset": 417
+            }
+          }
+        },
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[...........article:bitmark--&image]\n[@id:162205]\n",
+          "location": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 381
+            },
+            "end": {
+              "line": 35,
+              "column": 1,
+              "offset": 431
+            }
+          }
+        },
+        {
+          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "text": "[...........article:bitmark--&image]\n[@id:162205]\n",
+          "location": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 381
+            },
+            "end": {
+              "line": 35,
+              "column": 1,
+              "offset": 431
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[...........article:bitmark--&image]\n[@id:162205]"
+  }
+]

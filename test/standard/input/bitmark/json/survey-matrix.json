@@ -3,6 +3,7 @@
     "bit": {
       "type": "survey-matrix",
       "format": "bitmark--",
+      "bitLevel": 1,
       "pointerLeft": "60%",
       "pointerTop": "20%",
       "buttonCaption": "This is a button caption",
@@ -72,6 +73,7 @@
     "bit": {
       "type": "survey-matrix",
       "format": "bitmark--",
+      "bitLevel": 1,
       "pointerLeft": "60%",
       "pointerTop": "20%",
       "buttonCaption": "",
@@ -175,6 +177,7 @@
     "bit": {
       "type": "survey-matrix",
       "format": "bitmark--",
+      "bitLevel": 1,
       "pointerLeft": "50%",
       "pointerTop": "",
       "buttonCaption": "This is a button caption",

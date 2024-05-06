@@ -3,6 +3,7 @@
     "bit": {
       "type": "still-image-film-embed",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

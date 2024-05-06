@@ -3,6 +3,7 @@
     "bit": {
       "type": "conversation-left-1-thought",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [

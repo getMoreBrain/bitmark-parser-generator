@@ -3,6 +3,7 @@
     "bit": {
       "type": "separator",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["92375"],
       "item": [],
       "hint": [],
@@ -31,6 +32,7 @@
     "bit": {
       "type": "separator",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

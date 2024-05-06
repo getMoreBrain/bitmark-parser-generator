@@ -91,6 +91,7 @@ class Builder extends BaseBuilder {
    */
   bit(data: {
     bitType: BitTypeType;
+    bitLevel: number;
     textFormat?: TextFormatType;
     resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
     isCommented?: boolean;
@@ -257,6 +258,7 @@ class Builder extends BaseBuilder {
   }): Bit | undefined {
     const {
       bitType,
+      bitLevel,
       textFormat,
       resourceType,
       isCommented,
@@ -419,6 +421,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: Bit = {
       bitType,
+      bitLevel,
       textFormat: TextFormat.fromValue(textFormat) ?? bitConfig.textFormatDefault,
       resourceType: ResourceTag.fromValue(resourceType),
       isCommented,

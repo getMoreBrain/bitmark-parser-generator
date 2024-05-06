@@ -3,9 +3,8 @@
     "bit": {
       "type": "match-all",
       "format": "bitmark++",
-      "id": [
-        "92546"
-      ],
+      "bitLevel": 1,
+      "id": ["92546"],
       "item": [
         {
           "type": "paragraph",
@@ -53,10 +52,7 @@
       "pairs": [
         {
           "key": "Beherbergung",
-          "values": [
-            "Unterbringung",
-            "Übernachtung"
-          ],
+          "values": ["Unterbringung", "Übernachtung"],
           "item": [
             {
               "type": "paragraph",
@@ -77,10 +73,7 @@
         },
         {
           "key": "Herberge",
-          "values": [
-            "Hotel",
-            "Unterbringungsmöglichkeit"
-          ],
+          "values": ["Hotel", "Unterbringungsmöglichkeit"],
           "item": [
             {
               "type": "paragraph",
@@ -101,10 +94,7 @@
         },
         {
           "key": "übernachten",
-          "values": [
-            "logieren",
-            "residieren"
-          ],
+          "values": ["logieren", "residieren"],
           "item": [
             {
               "type": "paragraph",
@@ -125,10 +115,7 @@
         },
         {
           "key": "überwiegend",
-          "values": [
-            "hauptsächlich",
-            "weitgehend"
-          ],
+          "values": ["hauptsächlich", "weitgehend"],
           "item": [
             {
               "type": "paragraph",
@@ -149,10 +136,7 @@
         },
         {
           "key": "einen guten Ruf haben",
-          "values": [
-            "einen guten Namen haben",
-            "angesehen sein"
-          ],
+          "values": ["einen guten Namen haben", "angesehen sein"],
           "item": [
             {
               "type": "paragraph",
@@ -183,9 +167,8 @@
     "bit": {
       "type": "match-all",
       "format": "bitmark--",
-      "id": [
-        "324342"
-      ],
+      "bitLevel": 1,
+      "id": ["324342"],
       "item": [
         {
           "type": "paragraph",
@@ -227,10 +210,7 @@
       "pairs": [
         {
           "key": "He will fix your laptop for you.",
-          "values": [
-            "Your laptop will be fixed by him.",
-            "Your laptop will be fixed for you by him."
-          ],
+          "values": ["Your laptop will be fixed by him.", "Your laptop will be fixed for you by him."],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -250,6 +230,7 @@
     "bit": {
       "type": "match-all",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -317,10 +298,7 @@
         },
         {
           "key": "1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__",
-          "values": [
-            "",
-            ""
-          ],
+          "values": ["", ""],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -330,10 +308,7 @@
         },
         {
           "key": "2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__",
-          "values": [
-            "",
-            ""
-          ],
+          "values": ["", ""],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -343,10 +318,7 @@
         },
         {
           "key": "3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__",
-          "values": [
-            "",
-            ""
-          ],
+          "values": ["", ""],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -356,10 +328,7 @@
         },
         {
           "key": "4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__",
-          "values": [
-            "",
-            ""
-          ],
+          "values": ["", ""],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -369,10 +338,7 @@
         },
         {
           "key": "5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__",
-          "values": [
-            "",
-            ""
-          ],
+          "values": ["", ""],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -382,10 +348,7 @@
         },
         {
           "key": "6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__",
-          "values": [
-            "",
-            ""
-          ],
+          "values": ["", ""],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -405,6 +368,7 @@
     "bit": {
       "type": "match-all",
       "format": "bitmark++",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -445,10 +409,7 @@
       "pairs": [
         {
           "key": "Beherbergung",
-          "values": [
-            "Unterbringung",
-            "Übernachtung"
-          ],
+          "values": ["Unterbringung", "Übernachtung"],
           "item": [
             {
               "type": "paragraph",
@@ -469,10 +430,7 @@
         },
         {
           "key": "Herberge",
-          "values": [
-            "Hotel",
-            "Unterbringungsmöglichkeit"
-          ],
+          "values": ["Hotel", "Unterbringungsmöglichkeit"],
           "item": [
             {
               "type": "paragraph",
@@ -493,10 +451,7 @@
         },
         {
           "key": "übernachten",
-          "values": [
-            "logieren",
-            "residieren"
-          ],
+          "values": ["logieren", "residieren"],
           "item": [
             {
               "type": "paragraph",
@@ -517,10 +472,7 @@
         },
         {
           "key": "überwiegend",
-          "values": [
-            "hauptsächlich",
-            "weitgehend"
-          ],
+          "values": ["hauptsächlich", "weitgehend"],
           "item": [
             {
               "type": "paragraph",
@@ -541,10 +493,7 @@
         },
         {
           "key": "einen guten Ruf haben",
-          "values": [
-            "einen guten Namen haben",
-            "angesehen sein"
-          ],
+          "values": ["einen guten Namen haben", "angesehen sein"],
           "item": [
             {
               "type": "paragraph",
@@ -575,6 +524,7 @@
     "bit": {
       "type": "match-all",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -616,9 +566,7 @@
       "pairs": [
         {
           "key": "◇ ich – dein Bleistift – mal – leihen",
-          "values": [
-            "Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."
-          ],
+          "values": ["Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -663,10 +611,7 @@
         },
         {
           "key": "die Firma Krüger – das Angebot – faxen",
-          "values": [
-            "Kannst du der Firma Krüger das Angebot faxen?",
-            "Ja, ich faxe es ihr."
-          ],
+          "values": ["Kannst du der Firma Krüger das Angebot faxen?", "Ja, ich faxe es ihr."],
           "item": [
             {
               "type": "paragraph",
@@ -687,10 +632,7 @@
         },
         {
           "key": "ich – die Hausarbeit – am Wochenende – abnehmen",
-          "values": [
-            "Kannst du mir am Wochenende die Hausarbeit abnehmen?",
-            "Ja, ich nehme sie dir ab."
-          ],
+          "values": ["Kannst du mir am Wochenende die Hausarbeit abnehmen?", "Ja, ich nehme sie dir ab."],
           "item": [
             {
               "type": "paragraph",
@@ -711,10 +653,7 @@
         },
         {
           "key": "der Chef – das Protokoll der Sitzung – heute noch – geben",
-          "values": [
-            "Kannst du dem Chef heute noch das Protokoll der Sitzung geben?",
-            "Ja, ich gebe es ihm."
-          ],
+          "values": ["Kannst du dem Chef heute noch das Protokoll der Sitzung geben?", "Ja, ich gebe es ihm."],
           "item": [
             {
               "type": "paragraph",
@@ -735,10 +674,7 @@
         },
         {
           "key": "ich – dein Auto – schenken",
-          "values": [
-            "Kannst du mir dein Auto schenken?",
-            "Nein, ich schenke es dir nicht."
-          ],
+          "values": ["Kannst du mir dein Auto schenken?", "Nein, ich schenke es dir nicht."],
           "item": [
             {
               "type": "paragraph",
@@ -759,10 +695,7 @@
         },
         {
           "key": "wir – zwei Flaschen Mineralwasser – mitbringen",
-          "values": [
-            "Kannst du uns zwei Flaschen Mineralwasser mitbringen?",
-            "Ja, ich bringe sie euch mit."
-          ],
+          "values": ["Kannst du uns zwei Flaschen Mineralwasser mitbringen?", "Ja, ich bringe sie euch mit."],
           "item": [
             {
               "type": "paragraph",

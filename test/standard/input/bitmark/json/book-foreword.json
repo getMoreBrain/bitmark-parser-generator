@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-foreword",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51866"],
       "isPublic": false,
       "hasMarkAsDone": false,

@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-preface",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["5186"],
       "isPublic": false,
       "hasMarkAsDone": false,

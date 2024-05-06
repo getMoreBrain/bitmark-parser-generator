@@ -41,6 +41,7 @@ const NodeType = superenum({
   bitmarkVersion: 'bitmarkVersion',
   bits: 'bits', // bits
   bitsValue: 'bitsValue', // bit
+  bitLevel: 'bitLevel', // bit level
   bitType: 'bitType', // bit type
   blockId: 'blockId',
   blockIdValue: 'blockIdValue',

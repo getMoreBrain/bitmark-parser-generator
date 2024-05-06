@@ -3,6 +3,7 @@
     "bit": {
       "type": "app-get-screenshot",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

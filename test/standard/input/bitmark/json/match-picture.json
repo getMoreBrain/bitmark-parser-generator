@@ -4,6 +4,7 @@
     "bit": {
       "type": "match-picture",
       "format": "bitmark++",
+      "bitLevel": 1,
       "item": "25",
       "heading": {},
       "pairs": [],
@@ -74,6 +75,7 @@
     "bit": {
       "type": "match-picture",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": "Activity 12",
       "heading": {},
       "pairs": [

@@ -3,6 +3,7 @@
     "bit": {
       "type": "cook-ingredients",
       "format": "bitmark--",
+      "bitLevel": 1,
       "technicalTerm": {
         "technicalTerm": "Consommé Murillo",
         "lang": "fr"

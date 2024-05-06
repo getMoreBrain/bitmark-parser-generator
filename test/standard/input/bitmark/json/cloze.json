@@ -3,6 +3,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["152331"],
 
       "item": [],
@@ -191,6 +192,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["193275"],
 
       "anchor": "Ref_Roche",
@@ -249,6 +251,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark++",
+      "bitLevel": 1,
       "id": ["193276"],
 
       "anchor": "Ref_Emmi",
@@ -307,6 +310,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["136524"],
 
       "item": [
@@ -442,6 +446,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["245337"],
 
       "item": [
@@ -514,6 +519,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["273397"],
 
       "item": [
@@ -718,6 +724,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["273304"],
 
       "item": [
@@ -905,6 +912,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["272904"],
 
       "item": [
@@ -1097,6 +1105,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
 
       "item": [],
       "hint": [],
@@ -1149,6 +1158,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
 
       "item": [],
       "hint": [],
@@ -1201,6 +1211,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
 
       "item": [],
       "hint": [],
@@ -1277,6 +1288,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
 
       "item": [],
       "hint": [],
@@ -1353,6 +1365,7 @@
     "bit": {
       "type": "cloze",
       "format": "bitmark--",
+      "bitLevel": 1,
 
       "item": [],
       "hint": [],

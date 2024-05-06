@@ -3,9 +3,8 @@
     "bit": {
       "type": "app-link",
       "format": "bitmark--",
-      "id": [
-        "119760"
-      ],
+      "bitLevel": 1,
+      "id": ["119760"],
       "item": [],
       "hint": [],
       "isExample": false,

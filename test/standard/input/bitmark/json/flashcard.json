@@ -3,6 +3,7 @@
     "bit": {
       "type": "flashcard",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -122,6 +123,7 @@
     "bit": {
       "type": "flashcard",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -229,6 +231,7 @@
     "bit": {
       "type": "flashcard",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",
@@ -394,6 +397,7 @@
     "bit": {
       "type": "flashcard",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",

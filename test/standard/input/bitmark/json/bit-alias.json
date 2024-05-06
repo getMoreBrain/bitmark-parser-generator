@@ -3,6 +3,7 @@
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
+      "bitLevel": 1,
       "reference": "com.firstpub.09823409h44",
       "item": [],
       "hint": [],
@@ -20,6 +21,7 @@
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
+      "bitLevel": 1,
       "anchor": "b1_c03",
       "reference": "com.firstpub.09823409h50",
       "item": [],
@@ -38,6 +40,7 @@
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
+      "bitLevel": 1,
       "reference": "com.firstpub.09823409h54",
       "item": [],
       "hint": [],
@@ -55,6 +58,7 @@
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
+      "bitLevel": 1,
       "reference": "com.firstpub.09823409h56",
       "item": [],
       "hint": [],
@@ -72,6 +76,7 @@
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
+      "bitLevel": 1,
       "reference": "com.firstpub.09823409h42",
       "item": [],
       "hint": [],
@@ -89,6 +94,7 @@
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
+      "bitLevel": 1,
       "reference": "com.firstpub.09823409h43",
       "item": [],
       "hint": [],
@@ -106,6 +112,7 @@
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
+      "bitLevel": 1,
       "reference": "com.firstpub.09823409h44",
       "item": [],
       "hint": [],
@@ -123,6 +130,7 @@
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
+      "bitLevel": 1,
       "reference": "com.firstpub.09823409h45",
       "item": [],
       "hint": [],
@@ -140,6 +148,7 @@
     "bit": {
       "type": "bit-alias",
       "format": "bitmark--",
+      "bitLevel": 1,
       "reference": "com.firstpub.09823409h47",
       "item": [],
       "hint": [],

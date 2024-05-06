@@ -3,6 +3,7 @@
     "bit": {
       "type": "browser-image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "focusX": 100,
       "focusY": 300,
       "item": [],
@@ -135,6 +136,7 @@
     "bit": {
       "type": "browser-image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -209,6 +211,7 @@
     "bit": {
       "type": "browser-image",
       "format": "bitmark--",
+      "bitLevel": 1,
       "focusX": 100,
       "focusY": 300,
       "item": [],

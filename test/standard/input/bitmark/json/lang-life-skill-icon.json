@@ -3,6 +3,7 @@
     "bit": {
       "type": "lang-life-skill-icon",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

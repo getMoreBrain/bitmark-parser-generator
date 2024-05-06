@@ -4,6 +4,7 @@
     "bit": {
       "type": "message",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "What the Hell!",
       "resource": {
         "type": "article",
@@ -20,6 +21,7 @@
     "bit": {
       "type": "message",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "What the Hell!",
       "resource": {
         "type": "article-link",
@@ -34,6 +36,7 @@
     "bit": {
       "type": "message",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "Have a look at http://www.apple.com",
       "resource": {
         "type": "website",
@@ -46,6 +49,7 @@
     "bit": {
       "type": "message",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "Have a look at this cute cat! 😻",
       "resource": {
         "type": "image",
@@ -68,6 +72,7 @@
     "bit": {
       "type": "message",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "Have a look at this **cute** cat! 😻"
     }
   },
@@ -76,14 +81,12 @@
     "bit": {
       "type": "message",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "Have a look at http://www.apple.com",
       "resource": {
         "type": "website",
         "website": "https://stackoverflow.com/questions/881085/count-the-number-of-occurrences-of-a-character-in-a-string-in-javascript",
-        "siteName": [
-          "https://stackoverflow.com/",
-          "stackoverflow.com"
-        ],
+        "siteName": ["https://stackoverflow.com/", "stackoverflow.com"],
         "private": {}
       }
     },
@@ -111,6 +114,7 @@
     "bit": {
       "type": "message",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "",
       "resource": {
         "type": "image",
@@ -133,6 +137,7 @@
     "bit": {
       "type": "message",
       "format": "bitmark--",
+      "bitLevel": 1,
       "body": "Have a look at this cute cat! 😻",
       "resource": {
         "type": "image",

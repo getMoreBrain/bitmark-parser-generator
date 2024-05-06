@@ -4,6 +4,7 @@
     "bit": {
       "type": "match-audio",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": "26",
       "heading": {},
       "pairs": [

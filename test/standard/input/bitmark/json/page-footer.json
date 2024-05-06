@@ -3,6 +3,7 @@
     "bit": {
       "type": "page-footer",
       "format": "bitmark++",
+      "bitLevel": 1,
       "slug": "testing-1234",
       "item": [],
       "hint": [],

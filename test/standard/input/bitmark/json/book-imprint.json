@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-imprint",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51862"],
       "isPublic": false,
       "hasMarkAsDone": false,

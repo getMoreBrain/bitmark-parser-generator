@@ -3,9 +3,8 @@
     "bit": {
       "type": "interview-instruction-grouped",
       "format": "bitmark--",
-      "id": [
-        "92562"
-      ],
+      "bitLevel": 1,
+      "id": ["92562"],
       "item": [
         {
           "type": "paragraph",
@@ -247,9 +246,8 @@
     "bit": {
       "type": "interview-instruction-grouped",
       "format": "bitmark--",
-      "id": [
-        "92562"
-      ],
+      "bitLevel": 1,
+      "id": ["92562"],
       "item": [
         {
           "type": "paragraph",

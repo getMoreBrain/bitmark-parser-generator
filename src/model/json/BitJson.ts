@@ -6,6 +6,7 @@ import { AudioResourceJson, ImageResourceJson, ImageResourceWrapperJson, Resourc
 export interface BitJson {
   type: string; // bit type
   originalType: string; // commented bit type
+  bitLevel: number;
   format: string; // bit format
 
   // Properties

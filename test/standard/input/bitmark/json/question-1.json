@@ -3,6 +3,7 @@
     "bit": {
       "type": "question-1",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [
         {
           "type": "paragraph",

@@ -3,6 +3,7 @@
     "bit": {
       "type": "learning-path-lti",
       "format": "bitmark--",
+      "bitLevel": 1,
       "action": "Übungsprüfung",
       "deeplink": ["https://other.platform/path/to/quiz"],
       "duration": "3600s",

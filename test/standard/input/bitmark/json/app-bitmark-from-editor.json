@@ -3,6 +3,7 @@
     "bit": {
       "type": "app-bitmark-from-editor",
       "format": "text",
+      "bitLevel": 1,
       "id": ["342341"],
       "item": [],
       "hint": [],

@@ -11,7 +11,7 @@ import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
@@ -20,27 +20,27 @@ const builder = new Builder();
 
 function gapChainContentProcessor(
   context: BitmarkPegParserContext,
+  contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
 ): void {
-  if (bitLevel === BitContentLevel.Chain) {
-    clozeTagContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
+  if (contentDepth === BitContentLevel.Chain) {
+    clozeTagContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
   } else {
-    const gap = buildGap(context, bitType, textFormat, bitLevel, tagsConfig, content);
+    const gap = buildGap(context, contentDepth, bitType, textFormat, tagsConfig, content);
     if (gap) bodyParts.push(gap);
   }
 }
 
 function buildGap(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
 ): Gap | undefined {
@@ -51,9 +51,9 @@ function buildGap(
   const chainContent = [content, ...(content.chain ?? [])];
 
   const chainTags = context.bitContentProcessor(
+    BitContentLevel.Chain,
     bitType,
     textFormat,
-    BitContentLevel.Chain,
     gapConfig?.chain,
     chainContent,
   );

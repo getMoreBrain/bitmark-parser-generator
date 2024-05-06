@@ -3,6 +3,7 @@
     "bit": {
       "type": "module",
       "format": "bitmark++",
+      "bitLevel": 1,
       "ageRange": ["18", "120"],
       "icon": "https://docs.getmorebrain.com/bit-books/ef/b1_1/student_book/unit_1/web-resources/images/icon_speaking_b1_v2.svg",
       "hasBookNavigation": false,
@@ -74,6 +75,7 @@
     "bit": {
       "type": "module",
       "format": "bitmark++",
+      "bitLevel": 1,
       "hasBookNavigation": true,
       "item": [],
       "hint": [],

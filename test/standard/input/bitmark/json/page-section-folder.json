@@ -3,6 +3,7 @@
     "bit": {
       "type": "page-section-folder",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["151970"],
       "slug": "",
       "productFolder": "123",
@@ -22,6 +23,7 @@
     "bit": {
       "type": "page-section-folder",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["304379"],
       "slug": "testing-1234",
       "productFolder": "124",

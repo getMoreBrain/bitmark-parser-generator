@@ -3,6 +3,7 @@
     "bit": {
       "type": "book-author-bio",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["51885"],
       "isPublic": false,
       "hasMarkAsDone": false,

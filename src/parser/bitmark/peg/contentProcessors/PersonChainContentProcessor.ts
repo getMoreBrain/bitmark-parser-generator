@@ -10,7 +10,7 @@ import { StringUtils } from '../../../../utils/StringUtils';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
@@ -19,9 +19,9 @@ const builder = new Builder();
 
 function personChainContentProcessor(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -30,7 +30,7 @@ function personChainContentProcessor(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('person content', content);
 
-  const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('person TAGS', tags);
 

@@ -3,6 +3,7 @@
     "bit": {
       "type": "bot-action-response",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [
@@ -100,6 +101,7 @@
     "bit": {
       "type": "bot-action-response",
       "format": "bitmark++",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [
@@ -172,6 +174,7 @@
     "bit": {
       "type": "bot-action-response",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [
@@ -303,6 +306,7 @@
     "bit": {
       "type": "bot-action-response",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

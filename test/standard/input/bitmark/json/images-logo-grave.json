@@ -3,6 +3,7 @@
     "bit": {
       "type": "images-logo-grave",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [

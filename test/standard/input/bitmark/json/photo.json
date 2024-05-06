@@ -3,6 +3,7 @@
     "bit": {
       "type": "photo",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,
@@ -68,6 +69,7 @@
     "bit": {
       "type": "photo",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "isExample": false,

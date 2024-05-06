@@ -3,6 +3,7 @@
     "bit": {
       "type": "conversation-right-1-scream",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [

@@ -28,7 +28,7 @@ import { TagValidationData } from '../../../model/parser/TagValidationData';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitmarkPegParserContext,
   ParsedCardSet,
   TypeKey,
@@ -128,8 +128,8 @@ class BitmarkPegParserValidator {
     // Validate and convert the tag chains
     const res: BitContent[] = this.validateTagChainsRecursive(
       context,
-      bitType,
       BitContentLevel.Bit,
+      bitType,
       data,
       tags,
       cardSetConfig,
@@ -148,14 +148,14 @@ class BitmarkPegParserValidator {
    *
    * @param context
    * @param bitType
-   * @param _bitLevel
+   * @param _contentDepth
    * @param body
    * @returns
    */
   checkBody(
     context: BitmarkPegParserContext,
+    _contentDepth: ContentDepthType,
     bitType: BitTypeType,
-    _bitLevel: BitContentLevelType,
     textFormat: TextFormatType,
     body: Body | undefined,
   ): Body | undefined {
@@ -197,20 +197,20 @@ class BitmarkPegParserValidator {
    * Check the body part of the bit.
    *
    * @param context
-   * @param _bitLevel
+   * @param _contentDepth
    * @param bitType
    * @param body
    * @returns
    */
   checkBodyPart(
     context: BitmarkPegParserContext,
+    contentDepth: ContentDepthType,
     bitType: BitTypeType,
-    bitLevel: BitContentLevelType,
     bodyPart: BreakscapedString,
   ): BreakscapedString {
     if (!bodyPart) return bodyPart;
 
-    this.checkBodyForCommonPotentialMistakes(context, bitLevel, bitType, bodyPart);
+    this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, bodyPart);
 
     return bodyPart;
   }
@@ -219,15 +219,15 @@ class BitmarkPegParserValidator {
    * Check the footer of the bit.
    *
    * @param context
-   * @param _bitLevel
+   * @param _contentDepth
    * @param bitType
    * @param body
    * @returns
    */
   checkFooter(
     context: BitmarkPegParserContext,
+    contentDepth: ContentDepthType,
     bitType: BitTypeType,
-    bitLevel: BitContentLevelType,
     footer: BreakscapedString,
   ): BreakscapedString {
     if (!footer) return footer;
@@ -236,7 +236,7 @@ class BitmarkPegParserValidator {
     const bitConfig = Config.getBitConfig(bitType);
     const { footerAllowed } = bitConfig;
 
-    this.checkBodyForCommonPotentialMistakes(context, bitLevel, bitType, footer);
+    this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, footer);
 
     if (!footerAllowed) {
       context.addWarning(`Bit '${bitType}' should not have a footer.`);
@@ -249,15 +249,15 @@ class BitmarkPegParserValidator {
    * Check the footer of the bit.
    *
    * @param context
-   * @param _bitLevel
+   * @param _contentDepth
    * @param bitType
    * @param cardBody
    * @returns
    */
   checkCardBody(
     context: BitmarkPegParserContext,
+    _contentDepth: ContentDepthType,
     bitType: BitTypeType,
-    _bitLevel: BitContentLevelType,
     cardBody: Body | undefined,
     cardNo: number,
     sideNo: number,
@@ -276,7 +276,7 @@ class BitmarkPegParserValidator {
 
     const hasBody = cardBody.bodyParts.length > 0;
 
-    // this.checkBodyForCommonPotentialMistakes(context, bitLevel, bitType, cardBody);
+    // this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, cardBody);
 
     if (hasBody && !bodyAllowed) {
       context.addWarning(
@@ -298,7 +298,7 @@ class BitmarkPegParserValidator {
    * so they can be processed as individual tags.
    *
    * @param context
-   * @param bitLevel
+   * @param contentDepth
    * @param bitType
    * @param data
    * @param tags
@@ -306,8 +306,8 @@ class BitmarkPegParserValidator {
    */
   private validateTagChainsRecursive(
     context: BitmarkPegParserContext,
+    contentDepth: ContentDepthType,
     bitType: BitTypeType,
-    bitLevel: BitContentLevelType,
     data: BitContent[],
     tags: TagsConfig,
     cardSetConfig?: CardSetConfig,
@@ -323,7 +323,7 @@ class BitmarkPegParserValidator {
     const dataOrNull: (BitContent | null)[] = [...data];
 
     // Get valid type keys from the tags
-    const validTypeKeys = this.convertTagsToTypeKeyMap(context, bitLevel, bitType, tags);
+    const validTypeKeys = this.convertTagsToTypeKeyMap(context, contentDepth, bitType, tags);
 
     // Helper function for add extra valid type keys
     const addExtraValidTypeKeys = (key: TypeKeyType, maxCount: CountType, minCount: number) => {
@@ -350,7 +350,7 @@ class BitmarkPegParserValidator {
     // Comment property tags are allowed anywhere
     addExtraValidPropertyKeys(PropertyTag.internalComment, Count.infinity, 0);
 
-    if (bitLevel === BitContentLevel.Bit) {
+    if (contentDepth === BitContentLevel.Bit) {
       // Add the extra valid tags dependent on bit configuration
       if (cardSetConfig) addExtraValidTypeKeys(TypeKey.CardSet, 1, 0);
 
@@ -358,7 +358,7 @@ class BitmarkPegParserValidator {
       addExtraValidTypeKeys(TypeKey.TextFormat, 1, 0);
       addExtraValidTypeKeys(TypeKey.BodyText, Count.infinity, 0);
       addExtraValidTypeKeys(TypeKey.Footer, Count.infinity, 0); // No warning for multiple footers, just ignore
-    } else if (bitLevel === BitContentLevel.Card) {
+    } else if (contentDepth === BitContentLevel.Card) {
       // These tags are always allowed here, and validated later
       addExtraValidTypeKeys(TypeKey.CardText, Count.infinity, 0);
     }
@@ -383,8 +383,8 @@ class BitmarkPegParserValidator {
       // Validate the single tag
       const { validated: validatedTagContent, warning } = this.validateSingleTag(
         context,
+        contentDepth,
         bitType,
-        bitLevel,
         content,
         typeKey,
         tagData,
@@ -397,7 +397,7 @@ class BitmarkPegParserValidator {
       // Tag is not valid in this position. Either remove it or reprocess by breaking the current chain
       let addWarning = true;
       if (!validatedTagContent) {
-        if (bitLevel === BitContentLevel.Chain && chainHeadType !== TypeKey.Resource) {
+        if (contentDepth === BitContentLevel.Chain && chainHeadType !== TypeKey.Resource) {
           // If in a chain and the tag is invalid within the chain then break the chain and re-process the tag as a
           // single tag with the rest of the chain as a chain [excluding resource chains].
           remaining = content;
@@ -435,8 +435,8 @@ class BitmarkPegParserValidator {
           const { validated: validatedTagChainContent, remaining: remainingTagChainContent } =
             this.validateTagChainsRecursive(
               context,
-              bitType,
               BitContentLevel.Chain,
+              bitType,
               validatedTagContent.chain,
               tagData.chain,
               undefined,
@@ -492,8 +492,8 @@ class BitmarkPegParserValidator {
    * Validate a single bit tag
    *
    * @param context
+   * @param contentDepth
    * @param bitType
-   * @param bitLevel
    * @param content
    * @param typeKey
    * @param tagValidationData
@@ -503,8 +503,8 @@ class BitmarkPegParserValidator {
    */
   private validateSingleTag(
     context: BitmarkPegParserContext,
+    contentDepth: ContentDepthType,
     bitType: BitTypeType,
-    bitLevel: BitContentLevelType,
     content: BitContent,
     typeKey: TypeKeyType,
     tagValidationData: TagValidationData | undefined,
@@ -541,7 +541,7 @@ class BitmarkPegParserValidator {
         case TypeKey.Property: {
           const { content: c, warning: w } = this.validatePropertyTag(
             context,
-            bitLevel,
+            contentDepth,
             bitType,
             tagValidationData,
             content as TypeKeyValue,
@@ -554,7 +554,7 @@ class BitmarkPegParserValidator {
         case TypeKey.Resource: {
           const { content: c, warning: w } = this.validateResourceTag(
             context,
-            bitLevel,
+            contentDepth,
             bitType,
             tagValidationData,
             content as TypeKeyValue,
@@ -580,7 +580,7 @@ class BitmarkPegParserValidator {
         default: {
           const { content: c, warning: w } = this.validateStandardTag(
             context,
-            bitLevel,
+            contentDepth,
             bitType,
             tagValidationData,
             content as TypeKeyValue,
@@ -596,7 +596,7 @@ class BitmarkPegParserValidator {
           // The property is not valid for this bit type, but since we allow extra properties, we will return it as
           // ok but with a warning
           warning = { extraProperty: true };
-          if (bitLevel !== BitContentLevel.Chain) {
+          if (contentDepth !== BitContentLevel.Chain) {
             validatedContent = content; // Add tag anyway - we don't remove extra properties (unless in chain)
           }
           break;
@@ -663,7 +663,7 @@ class BitmarkPegParserValidator {
    */
   private validateStandardTag(
     _context: BitmarkPegParserContext,
-    _bitLevel: BitContentLevelType,
+    _contentDepth: ContentDepthType,
     _bitType: BitTypeType,
     tagValidationData: TagValidationData,
     content: TypeKeyValue,
@@ -702,7 +702,7 @@ class BitmarkPegParserValidator {
    */
   private validatePropertyTag(
     _context: BitmarkPegParserContext,
-    _bitLevel: BitContentLevelType,
+    _contentDepth: ContentDepthType,
     _bitType: BitTypeType,
     tagValidationData: TagValidationData,
     content: TypeKeyValue,
@@ -741,7 +741,7 @@ class BitmarkPegParserValidator {
    */
   private validateResourceTag(
     _context: BitmarkPegParserContext,
-    _bitLevel: BitContentLevelType,
+    _contentDepth: ContentDepthType,
     _bitType: BitTypeType,
     tagValidationData: TagValidationData,
     content: TypeKeyValue,
@@ -815,8 +815,8 @@ class BitmarkPegParserValidator {
             // Validate the variant against the config
             const res = this.validateTagChainsRecursive(
               context,
-              bitType,
               BitContentLevel.Card,
+              bitType,
               variantContent,
               variantConfig.tags,
             );
@@ -858,14 +858,14 @@ class BitmarkPegParserValidator {
    * Check the body of the bit for patterns which indicate common potential bitmark language mistakes.
    *
    * @param context
-   * @param _bitLevel
+   * @param _contentDepth
    * @param bitType
    * @param body
    * @returns
    */
   private checkBodyForCommonPotentialMistakes(
     context: BitmarkPegParserContext,
-    _bitLevel: BitContentLevelType,
+    _contentDepth: ContentDepthType,
     bitType: BitTypeType,
     body: string,
   ): void {
@@ -894,7 +894,7 @@ class BitmarkPegParserValidator {
    * Convert the tag data configuration to TypeKeys
    *
    * @param context
-   * @param _bitLevel
+   * @param _contentDepth
    * @param bitType
    * @param tags
    * @param depth recursion depth
@@ -902,7 +902,7 @@ class BitmarkPegParserValidator {
    */
   private convertTagsToTypeKeyMap(
     _context: BitmarkPegParserContext,
-    _bitLevel: BitContentLevelType,
+    _contentDepth: ContentDepthType,
     _bitType: BitTypeType,
     tags: TagsConfig,
   ): Map<TypeKeyType | string, TagValidationData> {

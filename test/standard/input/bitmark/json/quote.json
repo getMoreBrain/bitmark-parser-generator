@@ -3,9 +3,8 @@
     "bit": {
       "type": "quote",
       "format": "bitmark--",
-      "id": [
-        "191164"
-      ],
+      "bitLevel": 1,
+      "id": ["191164"],
       "quotedPerson": "Henry Ford",
       "item": [],
       "hint": [],

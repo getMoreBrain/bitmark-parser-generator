@@ -3,9 +3,8 @@
     "bit": {
       "type": "internal-link",
       "format": "bitmark--",
-      "id": [
-        "192356"
-      ],
+      "bitLevel": 1,
+      "id": ["192356"],
       "reference": "Ref_Starbucks",
       "item": [],
       "hint": [],
@@ -35,9 +34,8 @@
     "bit": {
       "type": "internal-link",
       "format": "bitmark--",
-      "id": [
-        "192374"
-      ],
+      "bitLevel": 1,
+      "id": ["192374"],
       "reference": "Ref_Emmi",
       "item": [],
       "hint": [],
@@ -67,9 +65,8 @@
     "bit": {
       "type": "internal-link",
       "format": "bitmark--",
-      "id": [
-        "192383"
-      ],
+      "bitLevel": 1,
+      "id": ["192383"],
       "reference": "Ref_Globus",
       "item": [],
       "hint": [],

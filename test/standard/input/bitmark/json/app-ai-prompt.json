@@ -3,10 +3,8 @@
     "bit": {
       "type": "app-ai-prompt",
       "format": "bitmark++",
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "bitLevel": 1,
+      "ageRange": ["18", "120"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -56,11 +54,9 @@
     "bit": {
       "type": "app-ai-prompt",
       "format": "bitmark++",
+      "bitLevel": 1,
       "AIGenerated": true,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "hint": [],
       "isExample": false,
@@ -110,6 +106,7 @@
     "bit": {
       "type": "app-ai-prompt",
       "format": "bitmark++",
+      "bitLevel": 1,
       "AIGenerated": false,
       "item": [],
       "hint": [],

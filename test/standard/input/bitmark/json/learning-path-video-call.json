@@ -3,6 +3,7 @@
     "bit": {
       "type": "learning-path-video-call",
       "format": "bitmark--",
+      "bitLevel": 1,
       "videoCallLink": "https://yasminboland.com/video/call.php",
       "isTracked": true,
       "isInfoOnly": false,

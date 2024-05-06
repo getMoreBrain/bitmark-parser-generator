@@ -3,6 +3,7 @@
     "bit": {
       "type": "survey-rating-display",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["93061"],
       "ratingLevelStart": {
         "level": 0,

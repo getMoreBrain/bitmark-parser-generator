@@ -3,6 +3,7 @@
     "bit": {
       "type": "toc-chapter",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["92374"],
       "maxDisplayLevel": 99,
       "item": [],

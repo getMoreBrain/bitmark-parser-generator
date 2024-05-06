@@ -3,6 +3,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["187003"],
       "item": [],
       "hint": [],
@@ -1123,6 +1124,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["186986"],
       "item": [],
       "hint": [],
@@ -1429,6 +1431,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["136408"],
       "item": [
         {
@@ -2363,6 +2366,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["107942"],
       "item": [
         {
@@ -2447,6 +2451,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["107955"],
       "item": [
         {
@@ -2540,6 +2545,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["107956"],
       "item": [
         {
@@ -2617,6 +2623,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "id": ["291806"],
       "item": [],
       "hint": [],
@@ -2964,6 +2971,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3029,6 +3037,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3094,6 +3103,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3159,6 +3169,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3224,6 +3235,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3289,6 +3301,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3354,6 +3367,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3419,6 +3433,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3473,6 +3488,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3527,6 +3543,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
@@ -3581,6 +3598,7 @@
     "bit": {
       "type": "multiple-choice",
       "format": "bitmark--",
+      "bitLevel": 1,
       "item": [],
       "hint": [],
       "instruction": [],
