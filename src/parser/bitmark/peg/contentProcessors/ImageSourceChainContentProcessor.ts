@@ -11,7 +11,7 @@ import { StringUtils } from '../../../../utils/StringUtils';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
   TypeKeyValue,
@@ -22,25 +22,25 @@ const builder = new Builder();
 
 function imageSourceChainContentProcessor(
   context: BitmarkPegParserContext,
+  contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
-  if (bitLevel === BitContentLevel.Chain) {
-    imageSourceTagContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
+  if (contentDepth === BitContentLevel.Chain) {
+    imageSourceTagContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
   } else {
-    buildImageSource(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
+    buildImageSource(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
   }
 }
 
 function imageSourceTagContentProcessor(
   _context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   _bitType: BitTypeType,
   _textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   _tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -55,9 +55,9 @@ function imageSourceTagContentProcessor(
 
 function buildImageSource(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -67,11 +67,11 @@ function buildImageSource(
   const { key: tag } = content as TypeKeyValue;
   const imageSourceConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
 
-  const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, [content]);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, [content]);
   const chainTags = context.bitContentProcessor(
+    BitContentLevel.Chain,
     bitType,
     textFormat,
-    BitContentLevel.Chain,
     imageSourceConfig?.chain,
     content.chain,
   );

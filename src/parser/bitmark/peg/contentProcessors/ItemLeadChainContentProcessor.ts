@@ -9,32 +9,32 @@ import { itemLeadTagContentProcessor } from './ItemLeadTagContentProcessor';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
 
 function itemLeadChainContentProcessor(
   context: BitmarkPegParserContext,
+  contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
-  if (bitLevel === BitContentLevel.Chain) {
-    itemLeadTagContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
+  if (contentDepth === BitContentLevel.Chain) {
+    itemLeadTagContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
   } else {
-    buildItemLead(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
+    buildItemLead(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
   }
 }
 
 function buildItemLead(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -46,9 +46,9 @@ function buildItemLead(
   const chainContent = [content, ...(content.chain ?? [])];
 
   const chainTags = context.bitContentProcessor(
+    BitContentLevel.Chain,
     bitType,
     textFormat,
-    BitContentLevel.Chain,
     itemLeadConfig?.chain,
     chainContent,
   );

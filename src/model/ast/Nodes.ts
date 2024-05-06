@@ -30,6 +30,7 @@ export interface BitmarkAst {
 
 export interface Bit {
   bitType: BitTypeType;
+  bitLevel: number;
   textFormat: TextFormatType;
   resourceType?: ResourceTagType;
   isCommented?: boolean;
@@ -43,6 +44,7 @@ export interface Bit {
   isPublic?: Property;
   aiGenerated?: Property;
   analyticsTag?: Property;
+  feedbackEngine?: Property;
   disableFeedback?: Property;
   releaseVersion?: Property;
   releaseKind?: Property;
@@ -55,6 +57,7 @@ export interface Bit {
   theme?: Property;
   computerLanguage?: Property;
   target?: Property;
+  slug?: Property;
   tag?: Property;
   reductionTag?: Property;
   icon?: Property;
@@ -131,6 +134,7 @@ export interface Bit {
   resolvedBy?: Property;
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
+  page?: Property;
   productId?: Property;
   product?: Property;
   productList?: Property;

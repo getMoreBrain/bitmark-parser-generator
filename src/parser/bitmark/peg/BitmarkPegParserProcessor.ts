@@ -92,7 +92,7 @@ import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseCha
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitHeader,
   ParseFunction,
   ParserHelperOptions,
@@ -206,7 +206,7 @@ class BitmarkPegParserProcessor {
 
   // Build bit
   buildBit(bitHeader: BitHeader, bitContent: BitContent[]): SubParserResult<Bit> {
-    const { bitType, textFormat, resourceType, isCommented } = bitHeader;
+    const { bitType, textFormat, resourceType, bitLevel, isCommented } = bitHeader;
 
     // Bit type was invalid, so ignore the bit, returning instead the parsing errors
     if (!bitType || Config.isOfBitType(bitType, BitType._error)) return this.invalidBit();
@@ -243,7 +243,7 @@ class BitmarkPegParserProcessor {
       posterImage,
       internalComments,
       ...tags
-    } = this.bitContentProcessor(bitType, textFormat, BitContentLevel.Bit, bitConfig.tags, bitContent);
+    } = this.bitContentProcessor(BitContentLevel.Bit, bitType, textFormat, bitConfig.tags, bitContent);
 
     if (DEBUG_BIT_TAGS) this.debugPrint('BIT TAGS', tags);
     if (DEBUG_BODY) this.debugPrint('BIT BODY', body);
@@ -279,6 +279,7 @@ class BitmarkPegParserProcessor {
     // Build the final bit
     const bit = builder.bit({
       bitType,
+      bitLevel,
       isCommented,
       textFormat,
       resourceType,
@@ -310,6 +311,7 @@ class BitmarkPegParserProcessor {
     // Build the error bit
     const bit = builder.bit({
       bitType: Config.getBitType(BitType._error),
+      bitLevel: 1,
       parser: this.parser,
     });
 
@@ -317,7 +319,7 @@ class BitmarkPegParserProcessor {
   }
 
   // Build bit header
-  buildBitHeader(bitType: string, textFormatAndResourceType: RawTextAndResourceType): BitHeader {
+  buildBitHeader(bitType: string, bitLevel: number, textFormatAndResourceType: RawTextAndResourceType): BitHeader {
     // Get / check bit type
     const validBitType = Config.getBitType(bitType);
     const commented = Config.isBitTypeCommented(bitType);
@@ -327,6 +329,15 @@ class BitmarkPegParserProcessor {
     }
 
     const bitConfig = Config.getBitConfig(validBitType);
+
+    // Bit level
+    if (bitLevel > Config.bitLevelMax) {
+      this.addWarning(`Bit level of ${bitLevel} too high, setting to max value of ${Config.bitLevelMax}`);
+      bitLevel = Config.bitLevelMax;
+    } else if (bitLevel < Config.bitLevelMin) {
+      this.addWarning(`Bit level of ${bitLevel} too low, setting to min value of ${Config.bitLevelMin}`);
+      bitLevel = Config.bitLevelMin;
+    }
 
     // Text format
     let textFormat = TextFormat.fromValue(textFormatAndResourceType.textFormat);
@@ -345,6 +356,7 @@ class BitmarkPegParserProcessor {
 
     return {
       bitType: validBitType,
+      bitLevel,
       textFormat: textFormat ?? bitConfig.textFormatDefault,
       resourceType,
       isCommented: commented,
@@ -440,15 +452,15 @@ class BitmarkPegParserProcessor {
    *
    * @param bitType bit type
    * @param textFormat bit text format type
-   * @param bitLevel bit level (in chain, in card etc)
+   * @param contentDepth bit level (in chain, in card etc)
    * @param tagsConfig tags configuration at this parser level (pass undef)
    * @param data the bit content (Type/Key/Value data)
    * @returns
    */
   private bitContentProcessor(
+    contentDepth: ContentDepthType,
     bitType: BitTypeType,
     textFormat: TextFormatType,
-    bitLevel: BitContentLevelType,
     tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,
   ): BitContentProcessorResult {
@@ -473,15 +485,15 @@ class BitmarkPegParserProcessor {
     let footer: BreakscapedString = Breakscape.EMPTY_STRING;
     // let cardBody: BreakscapedString = Breakscape.EMPTY_STRING;
 
-    const inBit = bitLevel === BitContentLevel.Bit;
-    const inCard = bitLevel === BitContentLevel.Card;
-    const inChain = bitLevel === BitContentLevel.Chain;
+    const inBit = contentDepth === BitContentLevel.Bit;
+    const inCard = contentDepth === BitContentLevel.Card;
+    const inChain = contentDepth === BitContentLevel.Chain;
 
     // Helper for building the body text
     const addBodyText = () => {
       if (bodyPart) {
         // Validate the body part
-        bodyPart = BitmarkPegParserValidator.checkBodyPart(this.context, bitType, bitLevel, bodyPart);
+        bodyPart = BitmarkPegParserValidator.checkBodyPart(this.context, contentDepth, bitType, bodyPart);
 
         const bodyText = builder.bodyText({ text: bodyPart });
         bodyParts.push(bodyText);
@@ -495,7 +507,7 @@ class BitmarkPegParserProcessor {
 
       switch (type) {
         case TypeKey.ItemLead: {
-          itemLeadChainContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          itemLeadChainContentProcessor(this.context, contentDepth, bitType, textFormat, tagsConfig, content, result);
           break;
         }
 
@@ -503,15 +515,16 @@ class BitmarkPegParserProcessor {
         case TypeKey.Hint:
         case TypeKey.Anchor:
         case TypeKey.SampleSolution:
-          defaultTagContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          defaultTagContentProcessor(this.context, contentDepth, bitType, textFormat, tagsConfig, content, result);
           break;
 
         case TypeKey.Reference:
           referenceTagContentProcessor(
             this.context,
+            contentDepth,
+
             bitType,
             textFormat,
-            bitLevel,
             tagsConfig,
             content,
             result,
@@ -521,16 +534,25 @@ class BitmarkPegParserProcessor {
           break;
 
         case TypeKey.Title:
-          titleTagContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          titleTagContentProcessor(this.context, contentDepth, bitType, textFormat, tagsConfig, content, result);
           break;
 
         case TypeKey.Property:
-          propertyContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          propertyContentProcessor(this.context, contentDepth, bitType, textFormat, tagsConfig, content, result);
           break;
 
         case TypeKey.Gap: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          gapChainContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result, bodyParts);
+          gapChainContentProcessor(
+            this.context,
+            contentDepth,
+            bitType,
+            textFormat,
+            tagsConfig,
+            content,
+            result,
+            bodyParts,
+          );
           break;
         }
 
@@ -538,9 +560,9 @@ class BitmarkPegParserProcessor {
           if (!inChain) addBodyText(); // Body bit, so add the body text
           markChainContentProcessor(
             this.context,
+            contentDepth,
             bitType,
             textFormat,
-            bitLevel,
             tagsConfig,
             content,
             result,
@@ -554,9 +576,9 @@ class BitmarkPegParserProcessor {
           if (!inChain) addBodyText(); // Body bit, so add the body text
           trueFalseChainContentProcessor(
             this.context,
+            contentDepth,
             bitType,
             textFormat,
-            bitLevel,
             tagsConfig,
             content,
             result,
@@ -566,7 +588,7 @@ class BitmarkPegParserProcessor {
         }
 
         case TypeKey.Resource:
-          resourceContentProcessor(this.context, bitType, textFormat, bitLevel, tagsConfig, content, result);
+          resourceContentProcessor(this.context, contentDepth, bitType, textFormat, tagsConfig, content, result);
           break;
 
         case TypeKey.CardSet: {
@@ -615,7 +637,7 @@ class BitmarkPegParserProcessor {
     // Validate and build the body (trimmed)
     if (inBit) {
       result.body = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
-      result.body = BitmarkPegParserValidator.checkBody(this.context, bitType, bitLevel, textFormat, result.body);
+      result.body = BitmarkPegParserValidator.checkBody(this.context, contentDepth, bitType, textFormat, result.body);
     } else if (inCard) {
       result.cardBody = bodyParts.length > 0 ? builder.body({ bodyParts: this.trimBodyParts(bodyParts) }) : undefined;
       // Card body is validated in CardContentProcessor:processCardSet()
@@ -624,7 +646,7 @@ class BitmarkPegParserProcessor {
     // Validate and build the footer (trimmed)
     footer = footer.trim() as BreakscapedString;
     if (footer) {
-      footer = BitmarkPegParserValidator.checkFooter(this.context, bitType, bitLevel, footer);
+      footer = BitmarkPegParserValidator.checkFooter(this.context, contentDepth, bitType, footer);
       if (footer) {
         result.footer = builder.footerText({ text: footer });
       }

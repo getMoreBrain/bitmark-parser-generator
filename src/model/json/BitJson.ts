@@ -6,6 +6,7 @@ import { AudioResourceJson, ImageResourceJson, ImageResourceWrapperJson, Resourc
 export interface BitJson {
   type: string; // bit type
   originalType: string; // commented bit type
+  bitLevel: number;
   format: string; // bit format
 
   // Properties
@@ -19,6 +20,7 @@ export interface BitJson {
   isPublic: boolean;
   AIGenerated: boolean;
   analyticsTag: string | string[];
+  feedbackEngine: string;
   disableFeedback: boolean;
   releaseVersion: string;
   releaseKind: string;
@@ -28,6 +30,7 @@ export interface BitJson {
   language: string | string[];
   computerLanguage: string;
   target: string | string[];
+  slug: string;
   tag: string | string[];
   reductionTag: string | string[];
   icon: string;
@@ -105,6 +108,7 @@ export interface BitJson {
   resolvedBy: string;
   maxCreatedBits: number;
   maxDisplayLevel: number;
+  page: string;
   productId: string | string[];
   product: string;
   productVideo: string;

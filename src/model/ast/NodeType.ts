@@ -41,6 +41,7 @@ const NodeType = superenum({
   bitmarkVersion: 'bitmarkVersion',
   bits: 'bits', // bits
   bitsValue: 'bitsValue', // bit
+  bitLevel: 'bitLevel', // bit level
   bitType: 'bitType', // bit type
   blockId: 'blockId',
   blockIdValue: 'blockIdValue',
@@ -118,6 +119,8 @@ const NodeType = superenum({
   externalLinkText: 'externalLinkText',
   extraProperties: 'extraProperties',
   feedback: 'feedback',
+  feedbackEngine: 'feedbackEngine',
+  feedbackEngineValue: 'feedbackEngineValue',
   flashcards: 'flashcards',
   flashcardSet: 'flashcardSet',
   flashcardSetValue: 'flashcardSetValue',
@@ -238,6 +241,8 @@ const NodeType = superenum({
   posterImageValue: 'posterImageValue',
   postfix: 'postfix',
   prefix: 'prefix',
+  page: 'page',
+  pageValue: 'pageValue',
   productId: 'productId',
   productIdValue: 'productIdValue',
   product: 'product',
@@ -322,6 +327,8 @@ const NodeType = superenum({
   servingsValue: 'servingsValue',
   showInIndex: 'showInIndex',
   size: 'size',
+  slug: 'slug',
+  slugValue: 'slugValue',
   solution: 'solution',
   solutions: 'solutions',
   solutionsValue: 'solutionsValue',

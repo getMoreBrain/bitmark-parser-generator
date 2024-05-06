@@ -46,6 +46,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.analyticsTag,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.feedbackEngine]: {
+    tag: PropertyTag.feedbackEngine,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.disableFeedback]: {
     tag: PropertyTag.disableFeedback,
     single: true,
@@ -101,6 +106,11 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.target]: {
     tag: PropertyTag.target,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.slug]: {
+    tag: PropertyTag.slug,
+    single: true,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.tag]: {
@@ -373,6 +383,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
     defaultValue: 'true',
+  },
+  [PropertyConfigKey.page]: {
+    tag: PropertyTag.page,
+    single: true,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.product]: {
     tag: PropertyTag.product,

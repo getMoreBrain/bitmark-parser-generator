@@ -19,7 +19,7 @@ import {
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
   StatementsOrChoicesOrResponses,
@@ -30,26 +30,26 @@ const builder = new Builder();
 
 function trueFalseChainContentProcessor(
   context: BitmarkPegParserContext,
+  contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
 ): void {
-  if (bitLevel === BitContentLevel.Chain) {
-    trueFalseTagContentProcessor(context, bitType, textFormat, BitContentLevel.Chain, content, target);
+  if (contentDepth === BitContentLevel.Chain) {
+    trueFalseTagContentProcessor(context, BitContentLevel.Chain, bitType, textFormat, content, target);
   } else {
-    buildTrueFalse(context, bitType, textFormat, bitLevel, tagsConfig, content, target, bodyParts);
+    buildTrueFalse(context, contentDepth, bitType, textFormat, tagsConfig, content, target, bodyParts);
   }
 }
 
 function buildTrueFalse(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -112,9 +112,9 @@ function buildStatement(
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
 
   const { trueFalse, ...tags } = context.bitContentProcessor(
+    BitContentLevel.Chain,
     bitType,
     textFormat,
-    BitContentLevel.Chain,
     tagsConfig,
     trueFalseContent,
   );
@@ -163,9 +163,9 @@ function buildStatementsChoicesResponses(
 
   for (const contents of trueFalseContents) {
     const { trueFalse, ...tags } = context.bitContentProcessor(
+      BitContentLevel.Chain,
       bitType,
       textFormat,
-      BitContentLevel.Chain,
       tagsConfig,
       contents,
     );
@@ -212,9 +212,9 @@ function buildHighlight(
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('highlight content', highlightContent);
 
   const { trueFalse, ...tags } = context.bitContentProcessor(
+    BitContentLevel.Chain,
     bitType,
     textFormat,
-    BitContentLevel.Chain,
     tagsConfig,
     highlightContent,
   );
@@ -246,9 +246,9 @@ function buildSelect(
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('select content', selectContent);
 
   const { trueFalse, ...tags } = context.bitContentProcessor(
+    BitContentLevel.Chain,
     bitType,
     textFormat,
-    BitContentLevel.Chain,
     tagsConfig,
     selectContent,
   );

@@ -6,7 +6,7 @@ import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
   BitContent,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
   TypeKey,
@@ -15,9 +15,9 @@ import {
 
 function defaultTagContentProcessor(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   _bitType: BitTypeType,
   _textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   _tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,

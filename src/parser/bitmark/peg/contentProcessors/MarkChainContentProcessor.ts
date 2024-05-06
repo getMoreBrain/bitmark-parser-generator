@@ -13,7 +13,7 @@ import { markTagContentProcessor } from './MarkTagContentProcessor';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
@@ -22,27 +22,27 @@ const builder = new Builder();
 
 function markChainContentProcessor(
   context: BitmarkPegParserContext,
+  contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
 ): void {
-  if (bitLevel === BitContentLevel.Chain) {
+  if (contentDepth === BitContentLevel.Chain) {
     markTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
   } else {
-    const mark = buildMark(context, bitType, textFormat, bitLevel, tagsConfig, content);
+    const mark = buildMark(context, contentDepth, bitType, textFormat, tagsConfig, content);
     if (mark) bodyParts.push(mark);
   }
 }
 
 function buildMark(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
 ): Mark | undefined {
@@ -50,11 +50,11 @@ function buildMark(
 
   const markConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
 
-  const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, [content]);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, [content]);
   const chainTags = context.bitContentProcessor(
+    BitContentLevel.Chain,
     bitType,
     textFormat,
-    BitContentLevel.Chain,
     markConfig?.chain,
     content.chain,
   );

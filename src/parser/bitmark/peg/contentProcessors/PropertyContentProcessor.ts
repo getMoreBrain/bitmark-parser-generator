@@ -23,7 +23,7 @@ import { technicalTermChainContentProcessor } from './TechnicalTermChainContentP
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
   TypeKeyValue,
@@ -31,16 +31,16 @@ import {
 
 function propertyContentProcessor(
   context: BitmarkPegParserContext,
+  contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
   const { value } = content as TypeKeyValue;
   let { key: tag } = content as TypeKeyValue;
-  const isChain = bitLevel === BitContentLevel.Chain;
+  const isChain = contentDepth === BitContentLevel.Chain;
 
   // Get the property config for the tag (if it exists)
   const propertyConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
@@ -48,7 +48,7 @@ function propertyContentProcessor(
 
   // Handle internal comments
   if (tag === PropertyTag.internalComment) {
-    internalCommentTagContentProcessor(context, bitType, bitLevel, content, target);
+    internalCommentTagContentProcessor(context, contentDepth, bitType, content, target);
     return;
   }
 
@@ -57,28 +57,44 @@ function propertyContentProcessor(
   // should also be checked here if the property may occur in another bit with a different meaning.
   if (propertyConfig) {
     if (configKey === PropertyConfigKey.example) {
-      exampleTagContentProcessor(context, bitType, textFormat, bitLevel, content, target);
+      exampleTagContentProcessor(context, contentDepth, bitType, textFormat, content, target);
       return;
     } else if (configKey === PropertyConfigKey.ratingLevelStart || configKey === PropertyConfigKey.ratingLevelEnd) {
-      ratingLevelChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
+      ratingLevelChainContentProcessor(
+        context,
+        contentDepth,
+        bitType,
+        textFormat,
+        propertyConfig.chain,
+        content,
+        target,
+      );
       return;
     } else if (configKey === PropertyConfigKey.technicalTerm) {
-      technicalTermChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
+      technicalTermChainContentProcessor(
+        context,
+        contentDepth,
+        bitType,
+        textFormat,
+        propertyConfig.chain,
+        content,
+        target,
+      );
       return;
     } else if (configKey === PropertyConfigKey.servings) {
-      servingsChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
+      servingsChainContentProcessor(context, contentDepth, bitType, textFormat, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.person || configKey === PropertyConfigKey.partner) {
-      personChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
+      personChainContentProcessor(context, contentDepth, bitType, textFormat, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.imageSource) {
-      imageSourceChainContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
+      imageSourceChainContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
       return;
     } else if (configKey === PropertyConfigKey.book) {
-      bookChainContentProcessor(context, bitType, textFormat, bitLevel, propertyConfig.chain, content, target);
+      bookChainContentProcessor(context, contentDepth, bitType, textFormat, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.markConfig && !isChain) {
-      markConfigChainContentProcessor(context, bitType, textFormat, bitLevel, tagsConfig, content, target);
+      markConfigChainContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
       return;
     } else if (configKey === PropertyConfigKey.property_title && isChain) {
       // Hack the intermediate tag so as not to clash with [#title] tags which are not chained (yet)

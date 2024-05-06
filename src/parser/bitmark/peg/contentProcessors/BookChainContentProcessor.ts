@@ -7,7 +7,7 @@ import { StringUtils } from '../../../../utils/StringUtils';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
@@ -16,17 +16,17 @@ import {
 
 function bookChainContentProcessor(
   context: BitmarkPegParserContext,
+  contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
-  if (bitLevel === BitContentLevel.Chain) {
+  if (contentDepth === BitContentLevel.Chain) {
     // Do nothing
   } else {
-    const book = buildBook(context, bitType, textFormat, bitLevel, tagsConfig, content);
+    const book = buildBook(context, contentDepth, bitType, textFormat, tagsConfig, content);
     target.book = book.book;
     target.reference = book.reference;
     target.referenceEnd = book.referenceEnd;
@@ -35,9 +35,9 @@ function bookChainContentProcessor(
 
 function buildBook(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
 ): {
@@ -47,7 +47,7 @@ function buildBook(
 } {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('book content', content);
 
-  const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Chain, tagsConfig, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('book TAGS', tags);
 

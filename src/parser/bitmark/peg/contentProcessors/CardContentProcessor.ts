@@ -167,15 +167,15 @@ function processCardSet(
 
         const tagsConfig = Config.getTagsConfigForCardSet(bitType, sideNo, variantNo);
 
-        const tags = context.bitContentProcessor(bitType, textFormat, BitContentLevel.Card, tagsConfig, content);
+        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, textFormat, tagsConfig, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags', tags);
 
         // Validate the cardBody
         tags.cardBody = BitmarkPegParserValidator.checkCardBody(
           context,
-          bitType,
           BitContentLevel.Card,
+          bitType,
           tags.cardBody,
           processedCard.no,
           processedSide.no,

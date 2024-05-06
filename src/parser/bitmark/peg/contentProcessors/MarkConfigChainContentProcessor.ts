@@ -10,7 +10,7 @@ import { StringUtils } from '../../../../utils/StringUtils';
 import {
   BitContent,
   BitContentLevel,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
   TypeKeyValue,
@@ -20,9 +20,9 @@ const builder = new Builder();
 
 function markConfigChainContentProcessor(
   context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   bitType: BitTypeType,
   textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -39,9 +39,9 @@ function markConfigChainContentProcessor(
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { mark: _ignoreMark, ...tags } = context.bitContentProcessor(
+    BitContentLevel.Chain,
     bitType,
     textFormat,
-    BitContentLevel.Chain,
     markTagConfig?.chain,
     content.chain,
   );

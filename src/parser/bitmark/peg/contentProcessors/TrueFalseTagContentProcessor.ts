@@ -5,7 +5,7 @@ import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
   BitContent,
-  BitContentLevelType,
+  ContentDepthType,
   BitContentProcessorResult,
   BitmarkPegParserContext,
   TypeKey,
@@ -14,9 +14,9 @@ import {
 
 function trueFalseTagContentProcessor(
   _context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
   _bitType: BitTypeType,
   _textFormat: TextFormatType,
-  _bitLevel: BitContentLevelType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {

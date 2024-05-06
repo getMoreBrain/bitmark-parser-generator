@@ -70,8 +70,8 @@ const bpg = new BitmarkParserGenerator();
 // Convert bitmark markup to bitmark JSON
 const json = await bpg.convert("[.article] Hello World");
 
-// Convert bitmark JSON to bitmark markuo
-const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]');
+// Convert bitmark JSON to bitmark markup
+const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "bitLevel": 1, "body": "Hello World" }}]');
 
 // Convert bitmark markup file to bitmark JSON
 await bpg.convert("./input.bit", { output: "./output.json" });
@@ -157,7 +157,8 @@ const bpg = new BitmarkParserGenerator();
 const json = await bpg.convert("[.article] Hello World [$I will be removed as I am invalid]");
 
 // Upgrade bitmark JSON
-const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World", unknownProperty: "Will be removed" }}]');
+const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--",
+"bitLevel": 1, "body": "Hello World", unknownProperty: "Will be removed" }}]');
 
 // Upgrade bitmark markup file to another file
 await bpg.convert("./input.bit", { output: "./output.bit" });

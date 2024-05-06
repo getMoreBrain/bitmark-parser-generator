@@ -91,6 +91,7 @@ class Builder extends BaseBuilder {
    */
   bit(data: {
     bitType: BitTypeType;
+    bitLevel: number;
     textFormat?: TextFormatType;
     resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
     isCommented?: boolean;
@@ -104,6 +105,7 @@ class Builder extends BaseBuilder {
     isPublic?: boolean;
     aiGenerated?: boolean;
     analyticsTag?: BreakscapedString | BreakscapedString[];
+    feedbackEngine?: BreakscapedString;
     disableFeedback?: boolean;
     releaseVersion?: BreakscapedString;
     releaseKind?: BreakscapedString;
@@ -116,6 +118,7 @@ class Builder extends BaseBuilder {
     theme?: BreakscapedString | BreakscapedString[];
     computerLanguage?: BreakscapedString;
     target?: BreakscapedString | BreakscapedString[];
+    slug?: BreakscapedString;
     tag?: BreakscapedString | BreakscapedString[];
     reductionTag?: BreakscapedString | BreakscapedString[];
     icon?: BreakscapedString;
@@ -191,6 +194,7 @@ class Builder extends BaseBuilder {
     resolvedBy?: BreakscapedString;
     maxCreatedBits?: number;
     maxDisplayLevel?: number;
+    page?: BreakscapedString | BreakscapedString[];
     productId?: BreakscapedString | BreakscapedString[];
     product?: BreakscapedString | BreakscapedString[];
     productList?: BreakscapedString | BreakscapedString[];
@@ -254,6 +258,7 @@ class Builder extends BaseBuilder {
   }): Bit | undefined {
     const {
       bitType,
+      bitLevel,
       textFormat,
       resourceType,
       isCommented,
@@ -267,6 +272,7 @@ class Builder extends BaseBuilder {
       isPublic,
       aiGenerated,
       analyticsTag,
+      feedbackEngine,
       disableFeedback,
       releaseVersion,
       releaseKind,
@@ -279,6 +285,7 @@ class Builder extends BaseBuilder {
       theme,
       computerLanguage,
       target,
+      slug,
       tag,
       reductionTag,
       icon,
@@ -356,6 +363,7 @@ class Builder extends BaseBuilder {
       resolvedBy,
       maxCreatedBits,
       maxDisplayLevel,
+      page,
       productId,
       product,
       productList,
@@ -413,6 +421,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: Bit = {
       bitType,
+      bitLevel,
       textFormat: TextFormat.fromValue(textFormat) ?? bitConfig.textFormatDefault,
       resourceType: ResourceTag.fromValue(resourceType),
       isCommented,
@@ -426,6 +435,7 @@ class Builder extends BaseBuilder {
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, isPublic),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
       analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, analyticsTag),
+      feedbackEngine: this.toAstProperty(PropertyConfigKey.feedbackEngine, feedbackEngine),
       disableFeedback: this.toAstProperty(PropertyConfigKey.disableFeedback, disableFeedback),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, releaseVersion),
       releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, releaseKind),
@@ -439,6 +449,7 @@ class Builder extends BaseBuilder {
       theme: this.toAstProperty(PropertyConfigKey.theme, theme),
       computerLanguage: this.toAstProperty(PropertyConfigKey.computerLanguage, computerLanguage),
       target: this.toAstProperty(PropertyConfigKey.target, target),
+      slug: this.toAstProperty(PropertyConfigKey.slug, slug),
       tag: this.toAstProperty(PropertyConfigKey.tag, tag),
       reductionTag: this.toAstProperty(PropertyConfigKey.reductionTag, reductionTag),
       icon: this.toAstProperty(PropertyConfigKey.icon, icon),
@@ -521,6 +532,7 @@ class Builder extends BaseBuilder {
       resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, resolvedBy),
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, maxCreatedBits),
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, maxDisplayLevel),
+      page: this.toAstProperty(PropertyConfigKey.page, page),
       productId: this.toAstProperty(PropertyConfigKey.productId, productId),
       product: this.toAstProperty(PropertyConfigKey.product, product),
       productList: this.toAstProperty(PropertyConfigKey.productList, productList),

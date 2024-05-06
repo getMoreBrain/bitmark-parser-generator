@@ -243,6 +243,7 @@ class JsonParser {
     const {
       type,
       originalType,
+      bitLevel,
       format,
       id,
       externalId,
@@ -253,6 +254,7 @@ class JsonParser {
       isPublic,
       AIGenerated,
       analyticsTag,
+      feedbackEngine,
       disableFeedback,
       releaseVersion,
       releaseKind,
@@ -265,6 +267,7 @@ class JsonParser {
       theme,
       computerLanguage,
       target,
+      slug,
       tag,
       reductionTag,
       icon,
@@ -338,6 +341,7 @@ class JsonParser {
       resolvedBy,
       maxCreatedBits,
       maxDisplayLevel,
+      page,
       productId,
       product,
       productVideo,
@@ -396,6 +400,9 @@ class JsonParser {
 
     // Bit type
     const bitType = Config.getBitType(isCommented ? originalType : type);
+
+    // Bit level
+    const bitLevelValidated = Math.max(Math.min(bitLevel, Config.bitLevelMax), Config.bitLevelMin);
 
     // Get the bit config for the bit type
     const bitConfig = Config.getBitConfig(bitType);
@@ -481,6 +488,7 @@ class JsonParser {
     // Build bit
     const bitNode = builder.bit({
       bitType,
+      bitLevel: bitLevelValidated,
       textFormat: format as TextFormatType,
       resourceType: resourceAttachmentType,
       isCommented,
@@ -494,6 +502,7 @@ class JsonParser {
       isPublic,
       aiGenerated: AIGenerated,
       analyticsTag: this.convertStringToBreakscapedString(analyticsTag),
+      feedbackEngine: this.convertStringToBreakscapedString(feedbackEngine),
       disableFeedback,
       releaseVersion: this.convertStringToBreakscapedString(releaseVersion),
       releaseKind: this.convertStringToBreakscapedString(releaseKind),
@@ -506,6 +515,7 @@ class JsonParser {
       theme: this.convertStringToBreakscapedString(theme),
       computerLanguage: this.convertStringToBreakscapedString(computerLanguage),
       target: this.convertStringToBreakscapedString(target),
+      slug: this.convertStringToBreakscapedString(slug),
       tag: this.convertStringToBreakscapedString(tag),
       reductionTag: this.convertStringToBreakscapedString(reductionTag),
       icon: this.convertStringToBreakscapedString(icon),
@@ -580,6 +590,7 @@ class JsonParser {
       resolvedBy: this.convertStringToBreakscapedString(resolvedBy),
       maxCreatedBits,
       maxDisplayLevel,
+      page: this.convertStringToBreakscapedString(page),
       productId: this.convertStringToBreakscapedString(productId),
       productList: this.convertStringToBreakscapedString(product),
       productVideoList: this.convertStringToBreakscapedString(productVideo),
