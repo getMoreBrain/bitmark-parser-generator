@@ -1276,8 +1276,8 @@ class JsonParser {
         placeholders = this.textGenerator.getPlaceholders();
       } else {
         // Body is a string (legacy)
-        // bodyStr = this.parseText(body, textFormat);
-        bodyStr = body as BreakscapedString;
+        bodyStr = Breakscape.breakscape(body as string);
+        // bodyStr = body as BreakscapedString;
       }
 
       // Placeholders
@@ -1497,15 +1497,15 @@ class JsonParser {
 
           strArray[i] = parsedText;
         } else {
-          // strArray[i] = Breakscape.breakscape(t as string);
-          strArray[i] = t as BreakscapedString;
+          strArray[i] = Breakscape.breakscape(t as string);
+          // strArray[i] = t as BreakscapedString;
         }
       }
       return strArray as R;
     }
 
-    // return Breakscape.breakscape(text as string) as R;
-    return text as BreakscapedString as R;
+    return Breakscape.breakscape(text as string) as R;
+    // return text as BreakscapedString as R;
   }
 
   /**
