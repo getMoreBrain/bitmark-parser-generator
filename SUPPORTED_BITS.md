@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.6.6
+Version: 1.7.1
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -146,6 +146,7 @@ essay (since: 1.3.0)
 example (since: 1.3.0)
 example-list (since: 1.4.13)
 extractor-block (since: 1.5.16)
+extractor-configuration (since: 1.7.1)
 extractor-page (since: 1.5.17)
 extractor-page-footer (since: 1.5.21)
 extractor-page-header (since: 1.5.21)

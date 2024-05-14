@@ -1,0 +1,379 @@
+[.extractor-configuration]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+[Plugins]
+
+# The enabled plugins and the order in which the plugins are run within each execution phase
+plugins = [
+  #
+  # Plugins with phases
+  #
+  "Init",
+  "PdfExtractPageImages_ForImages",
+  "PdfExtractPageImages_ForVisualization",
+  "PdfExtractEmbeddedImages",
+  "PdfBlockifier",
+  "Runs",
+  "Tables",
+  "Images",
+  "Chapters",
+  "Metadata",
+  "Paragraphs",
+  # "RegexExample",
+  "DocumentMerger",
+  "PageVisualizationGenerator",
+  "BitmarkGenerator",
+
+  #
+  # Helper plugins, not part of any phase
+  #
+  "ImageCompressor",
+  "PdfVisualizer",
+  "EdgeDetector",
+  "Dehyphenator",
+]
+
+
+[Plugins.Plugin.Init]
+path = "@getmorebrain/bitmark-extractor-plugin-init"
+Config.imageBaseUri = "https://gmb.image.server.com/replace-me/"
+
+[Plugins.Plugin.PdfExtractPageImages_ForImages]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-pdf-extract-page-images"
+Config.imageScale = 4
+
+[Plugins.Plugin.PdfExtractPageImages_ForVisualization]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-pdf-extract-page-images"
+Config.outputDir = "pdf-images/page-visualization"
+Config.imageScale = 2
+
+[Plugins.Plugin.PdfExtractEmbeddedImages]
+Config.useCachedData = true
+
+path = "@getmorebrain/bitmark-extractor-plugin-pdf-extract-embedded-images"
+[Plugins.Plugin.PdfBlockifier]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-pdf-blockifier"
+Config.Visualization.enabled = true
+Config.Visualization.ocrEnabled = true
+Config.Visualization.textEnabled = true
+
+[Plugins.Plugin.Runs]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-runs"
+Config.Visualization.enabled = true
+
+[Plugins.Plugin.Tables]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-tables"
+Config.Visualization.enabled = true
+
+[Plugins.Plugin.Images]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-images"
+Config.Visualization.enabled = true
+
+[Plugins.Plugin.Chapters]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-chapters"
+Config.Visualization.enabled = true
+Config.invalid = 1
+
+[Plugins.Plugin.Metadata]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-metadata"
+Config.Visualization.enabled = true
+
+[Plugins.Plugin.Paragraphs]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-paragraphs"
+Config.Visualization.enabled = true
+
+[Plugins.Plugin.RegexExample]
+Config.useCachedData = false
+path = "@getmorebrain/bitmark-extractor-plugin-regex"
+Config.Visualization.enabled = true
+Config.outputDir = "regex-example"
+Config.subBlockJoiner = " "
+Config.matches = ['''
+  /^([0-9]+[.]{1}[0-9]+)[.]{0,1}[\s]+(.+)$/u
+  ''']
+Config.blockRole = "chapterHeading"
+Config.generateBitmark = true
+Config.template = '''
+[^.chapter]
+[^%${1}][^%][^%${originalPageNo}][^%]
+[^#${2}]
+'''
+# Config.replacerRules = { 1 = { breakscape = true }, 2 = { breakscape = false } }
+
+[Plugins.Plugin.DocumentMerger]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-document-merger"
+Config.Visualization.enabled = true
+Config.Visualization.Unknown.enabled = true
+Config.documentsToMerge = [
+  "runs.document.json",
+  "tables.document.json",
+  "images.document.json",
+  "metadata-detector.document.json",
+  "chapters.document.json",
+  "paragraphs.document.json",
+  # "regex-example.document.json",
+]
+
+[Plugins.Plugin.PageVisualizationGenerator]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-page-visualization-generator"
+
+[Plugins.Plugin.BitmarkGenerator]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-bitmark-generator"
+Config.Visualization.enabled = true
+
+[Plugins.Plugin.ImageCompressor]
+path = "@getmorebrain/bitmark-extractor-plugin-image-compressor"
+
+[Plugins.Plugin.PdfVisualizer]
+path = "@getmorebrain/bitmark-extractor-plugin-pdf-visualizer"
+
+[Plugins.Plugin.EdgeDetector]
+path = "@getmorebrain/bitmark-extractor-plugin-edge-detector"
+
+[Plugins.Plugin.Dehyphenator]
+path = "@getmorebrain/bitmark-extractor-plugin-dehyphenator"
+
+[Plugins.Plugin.HelloWorld]
+path = "@getmorebrain/bitmark-extractor-plugin-hello-world"
+
+
+[General]
+
+# The pdfToImage provider is used to create images of the pages of the document
+# Options: mutool, pdftocairo
+pdfToImageProvider = "mutool"
+
+# The image data provider is used to extract image metadata from the document
+# Options: mutool, pdftohtml
+imageDataProvider = "mutool"
+
+# The image data provider is used to extract image metadata from the document
+# Options: mutool, pdfimages
+imageExtractorProvider = "mutool"
+
+
+#
+# FilterAndExclude configuration
+#
+[FilterAndExclude]
+
+# Ignore the page / page range
+ignorePage = false
+
+# Set the content borders. Areas outside of the border will be ignored
+contentBorder.top = 10
+contentBorder.left = 10
+contentBorder.bottom = 10
+contentBorder.right = 10
+
+# Set the excludeBoxes. Areas within these bounding boxes will be ignored
+excludeBoxes = []
+
+
+#
+# DetectMetadata configuration
+#
+[DetectMetadata]
+
+# Set true to enable generation of visualization PDFs.
+enableVisualization = false
+
+# Metadata title (if not set, the title will be extracted from the document)
+#title = ""
+
+# Metadata subtitle (if not set, the subtitle will be extracted from the document)
+#subtitle = ""
+
+# Metadata author (if not set, the author will be extracted from the document)
+#author = ""
+
+# Metadata publisher (if not set, the publisher will not be set)
+#publisher = ""
+
+# Metadata language (if not set, the language will be extracted from the document)
+#language = ""
+
+# Metadata coverImage (if not set, the first page of the document will be used as the cover image)
+#coverImage = ""
+
+
+#
+# DetectHeadings configuration
+#
+[DetectHeadings]
+
+# Set true to enable generation of visualization PDFs.
+enableVisualization = false
+
+# The heading exclude regexes to use to exclude headings
+headingExcludeRegexes = []
+
+
+# The levels of headings to detect
+[DetectHeadings.headingLevel.1]
+enabled = true
+heightMin = 0
+heightMax = 1000
+regex = '''
+/^([0-9]+)[.]{0,1}[\s]+(.+)$/u
+'''
+
+[DetectHeadings.headingLevel.2]
+enabled = true
+heightMin = 0
+heightMax = 1000
+regex = '''
+/^([0-9]+[.]{1}[0-9]+)[.]{0,1}[\s]+(.+)$/u
+'''
+
+[DetectHeadings.headingLevel.3]
+enabled = true
+heightMin = 0
+heightMax = 1000
+regex = '''
+/^([0-9]+[.]{1}[0-9]+[.]{1}[0-9]+)[.]{0,1}[\s]+(.+)$/u
+'''
+
+[DetectHeadings.headingLevel.4]
+enabled = true
+heightMin = 0
+heightMax = 1000
+regex = '''
+/^([0-9]+[.]{1}[0-9]+[.]{1}[0-9]+[.]{1}[0-9]+)[.]{0,1}[\s]+(.+)$/u
+'''
+
+
+#
+# DetectParagraphs configuration
+#
+[DetectParagraphs]
+
+# Set true to enable generation of visualization PDFs.
+enableVisualization = false
+
+# GMB specific settings
+[DetectParagraphs.GetMoreBrain]
+
+[DetectParagraphs.GetMoreBrain.DocumentParagraphs]
+
+maxShortLinePercentage = 0.5
+standardIndentPercentage = 0.01
+largeIndentPercentage = 0.3
+shortLineLengthPercentage = 0.8
+veryShortLineLengthPercentage = 0.65
+standardWordSpacingPercentage = 0.8
+lineHeightAnomonlyPercentage = 0.2
+
+#
+# DetectUnknown configuration
+#
+[DetectUnknown]
+
+# Set true to enable generation of visualization PDFs.
+enableVisualization = false
+
+
+#
+# MergeDocuments configuration
+#
+[MergeDocuments]
+
+# Set true to enable generation of visualization PDFs.
+enableVisualization = false
+
+#
+# RemoveNewlines configuration
+#
+[RemoveNewlines]
+
+# The dehyphenator provider is used to dehyphenate words that have been split across lines
+# Options: None, Basic, OpenAI
+dehyphenationProvider = "Basic"
+
+
+#
+# ExtractImages configuration
+#
+[ExtractImages]
+
+enableExtractorBlockImages = true
+
+#
+# GenerateBitmark configuration
+#
+[GenerateBitmark]
+
+# Header bit type to be generated.
+# Values: none, book (default)
+headerBitType = "book"
+
+# Set the base URI for images
+imageBaseUri = "https://gmb.image.server.com/replace-me/"
+
+# Scale factor for the sizes of all images
+imageScale = 2
+
+
+[Visualization]
+
+# The scale of the visualization PDFs: 1 = 72 DPI, 2 = 144 DPI, 3 = 216 DPI, 4 = 288 DPI, etc.
+scale = 2
+
+#
+# Page specific configuration
+#
+# Use this section to set specific configuration for individual pages, ranges of pages
+# NOTE: Pages are indexed from 1
+#
+# Examples:
+# [Pages.1] - Configuration for page 1
+# [Pages.5] - Configuration for page 5
+# [Pages.7-20] - Configuration for pages 7 to 20
+# [Pages.20-] - Configuration for pages 20 to end of document
+# [Pages.-200] - Configuration for pages 1-200, equivalent to [Pages.1-200]
+#
+[Pages]
+
+# Example: setting the content border for a specific page
+# [Pages.1.FilterAndExclude]
+# contentBorder.top = 20
+# contentBorder.left = 20
+# contentBorder.bottom = 20
+# contentBorder.right = 20
+
+# Example: setting the content border and exclude boxes for a specific page range
+# [Pages.4-7.FilterAndExclude]
+# contentBorder.top = 25
+# contentBorder.left = 10
+# contentBorder.bottom = 5
+# contentBorder.right = 11
+
+# excludeBoxes = [
+#   { x = 16, y = 30, width = 120, height = 220 },
+#   { x = 300, y = 400, width = 90, height = 200 },
+# ]
+
+# Example: overriding the page range content border for a specific page
+# [Pages.5.FilterAndExclude]
+# contentBorder.top = 50
+# contentBorder.left = 50
+# contentBorder.bottom = 50
+# contentBorder.right = 50
+
+# Example: ignoring a specific page completely
+# [Pages.8.FilterAndExclude]
+# ignorePage = true
