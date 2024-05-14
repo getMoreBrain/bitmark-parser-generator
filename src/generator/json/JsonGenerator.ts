@@ -2554,7 +2554,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const asPlainText = this.options.textAsPlainText || format === TextFormat.text || format === TextFormat.json;
 
     if (asPlainText) {
-      return text || Breakscape.EMPTY_STRING;
+      return Breakscape.unbreakscape(text) || Breakscape.EMPTY_STRING;
     }
 
     // Use the text parser to parse the text
