@@ -690,6 +690,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPage]: { since: '1.5.17', baseBitType: BitType.image },
   [BitType.extractorPageWithBlocks]: { since: '1.5.21', baseBitType: BitType.image },
+  [BitType.extractorConfiguration]: {
+    since: '1.7.1',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+    ],
+    textFormatDefault: TextFormat.text,
+  },
   [BitType.extractorBlock]: {
     since: '1.5.16',
     tags: [
