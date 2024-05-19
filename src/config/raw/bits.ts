@@ -1,7 +1,7 @@
 import { _BitsConfig } from '../../model/config/_Config';
 import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey';
 import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
-import { PropertyConfigKey, propertyConfigKeys } from '../../model/config/enum/PropertyConfigKey';
+import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
 import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
 import { BitType } from '../../model/enum/BitType';
@@ -663,22 +663,46 @@ const BITS: _BitsConfig = {
   [BitType.videoTranscript]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.warning]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.workbookArticle]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.container]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.containerWrap]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.containerNowrap]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.containerNowrapStretch]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.containerGroup]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.containerFolder]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.pageContainer]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.pageContainerWrap]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.pageContainerNowrap]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.pageContainerNowrapStretch]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.pageContainerFolder]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.pageContainerGroup]: { since: '1.9.0', baseBitType: BitType.example },
   [BitType.module]: {
     since: '1.5.26',
     baseBitType: BitType.example,
     tags: [
       {
         type: BitTagType.property,
-        configKey: propertyConfigKeys.hasBookNavigation,
+        configKey: PropertyConfigKey.hasBookNavigation,
       },
       {
         type: BitTagType.property,
-        configKey: propertyConfigKeys.productId,
+        configKey: PropertyConfigKey.productId,
+        minCount: 1,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.duration,
+      },
+    ],
+  },
+  [BitType.moduleProduct]: {
+    since: '1.9.0',
+    baseBitType: BitType.module,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.productId,
+        minCount: 1,
       },
     ],
   },
