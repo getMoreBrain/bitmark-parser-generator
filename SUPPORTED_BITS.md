@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.8.0
+Version: 1.9.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -110,6 +110,12 @@ code (since: 1.3.0)
 code-runtime (since: 1.4.3)
 conclusion (since: 1.3.0)
 console-log (since: 1.4.3)
+container (since: 1.9.0)
+container-wrap (since: 1.9.0)
+container-nowrap (since: 1.9.0)
+container-nowrap-stretch (since: 1.9.0)
+container-group (since: 1.9.0)
+container-folder (since: 1.9.0)
 conversation-left-1 (since: 1.3.0)
 conversation-left-1-scream (since: 1.3.0)
 conversation-left-1-thought (since: 1.3.0)
@@ -254,6 +260,12 @@ page-banner (since: 1.4.3)
 page-buy-button (since: 1.4.3)
 page-buy-button-promotion (since: 1.5.11)
 page-category (since: 1.6.6)
+page-container (since: 1.9.0)
+page-container-wrap (since: 1.9.0)
+page-container-nowrap (since: 1.9.0)
+page-container-nowrap-stretch (since: 1.9.0)
+page-container-folder (since: 1.9.0)
+page-container-group (since: 1.9.0)
 page-footer (since: 1.4.13)
 page-open-book (since: 1.5.10)
 page-person (since: 1.5.16)
