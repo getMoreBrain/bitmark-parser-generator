@@ -519,12 +519,29 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return json as RatingLevelStartEndJson;
   }
 
+  // bitmarkAst -> bits -> bitsValue -> productId
+
+  protected enter_productId(node: NodeInfo, route: NodeInfo[]): void {
+    const productIds = node.value as string[];
+
+    // Ignore item that is not at the correct level
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+    const bitType = this.getBitType(route);
+
+    if (bitType === BitType.module) {
+      this.addProperty(this.bitJson, 'productId', productIds);
+    } else if (productIds.length > 0) {
+      this.addProperty(this.bitJson, 'productId', productIds[productIds.length - 1], true);
+    }
+  }
+
   // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
 
   protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): void {
     const markConfig = node.value as MarkConfig;
 
-    // Ignore example that is not at the correct level
+    // Ignore item that is not at the correct level
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.markConfig) return;
 
@@ -1623,6 +1640,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyAstKey.ast_markConfig) continue;
       if (astKey === PropertyTag.ratingLevelStart) continue;
       if (astKey === PropertyTag.ratingLevelEnd) continue;
+      if (astKey === PropertyTag.productId) continue;
 
       const funcName = `enter_${astKey}`;
 

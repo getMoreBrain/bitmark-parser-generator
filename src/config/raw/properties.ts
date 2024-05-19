@@ -396,7 +396,7 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.productId]: {
     tag: PropertyTag.productId,
-    single: false,
+    single: false, // and true
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.productList]: {

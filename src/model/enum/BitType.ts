@@ -244,6 +244,7 @@ const BitType = superenum({
   matchSolutionGrouped: 'match-solution-grouped',
   message: 'message',
   module: 'module',
+  moduleProduct: 'module-product',
   multipleChoice: 'multiple-choice',
   multipleChoice1: 'multiple-choice-1',
   multipleChoiceText: 'multiple-choice-text',

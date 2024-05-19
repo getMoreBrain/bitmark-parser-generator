@@ -1,0 +1,164 @@
+[
+  {
+    "bit": {
+      "type": "module-product",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "ageRange": ["18", "120"],
+      "icon": "https://docs.getmorebrain.com/bit-books/ef/b1_1/student_book/unit_1/web-resources/images/icon_speaking_b1_v2.svg",
+      "hasBookNavigation": false,
+      "duration": "PT2H",
+      "productId": "e-ef-b11_u1_l1",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "image.com",
+          "src": "https://image.com/large_cover_image.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.9.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.module-product&image:bitmark++]\n[@ageRange:18][@ageRange:120]\n[&image:https://image.com/large_cover_image.png]\n\n[@hasBookNavigation:false]\n[@duration:PT2H]\n[@productId:e-ef-b11_u1_l1]\n\n[@icon:https://docs.getmorebrain.com/bit-books/ef/b1_1/student_book/unit_1/web-resources/images/icon_speaking_b1_v2.svg]\n\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+  },
+  {
+    "bit": {
+      "type": "module-product",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "hasBookNavigation": true,
+      "productId": "e-ef-b11_u1_l13",
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.9.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
+      "warnings": [
+        {
+          "message": "[@productId] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@productId:e-ef-b11_u1_l12]",
+          "location": {
+            "start": {
+              "line": 20,
+              "column": 1,
+              "offset": 465
+            },
+            "end": {
+              "line": 20,
+              "column": 29,
+              "offset": 493
+            }
+          },
+          "original": {
+            "text": "[@productId:e-ef-b11_u1_l12]",
+            "location": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 436
+              },
+              "end": {
+                "line": 19,
+                "column": 29,
+                "offset": 464
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.module-product:bitmark++]\n[@productId:e-ef-b11_u1_l12]\n[@productId:e-ef-b11_u1_l12]"
+  },
+  {
+    "bit": {
+      "type": "module-product",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "hasBookNavigation": true,
+      "item": [],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": []
+    },
+    "parser": {
+      "version": "1.9.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
+      "warnings": [
+        {
+          "message": "[@productId] is required at least 1 time(s)",
+          "text": "[.module-product:bitmark++]",
+          "location": {
+            "start": {
+              "line": 23,
+              "column": 1,
+              "offset": 496
+            },
+            "end": {
+              "line": 23,
+              "column": 28,
+              "offset": 523
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.module-product:bitmark++]"
+  }
+]

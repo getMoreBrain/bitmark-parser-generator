@@ -1,7 +1,7 @@
 import { _BitsConfig } from '../../model/config/_Config';
 import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey';
 import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
-import { PropertyConfigKey, propertyConfigKeys } from '../../model/config/enum/PropertyConfigKey';
+import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
 import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
 import { BitType } from '../../model/enum/BitType';
@@ -681,16 +681,28 @@ const BITS: _BitsConfig = {
     tags: [
       {
         type: BitTagType.property,
-        configKey: propertyConfigKeys.hasBookNavigation,
+        configKey: PropertyConfigKey.hasBookNavigation,
       },
       {
         type: BitTagType.property,
-        configKey: propertyConfigKeys.productId,
+        configKey: PropertyConfigKey.productId,
+        minCount: 1,
         maxCount: Count.infinity,
       },
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.duration,
+      },
+    ],
+  },
+  [BitType.moduleProduct]: {
+    since: '1.9.0',
+    baseBitType: BitType.module,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.productId,
+        minCount: 1,
       },
     ],
   },

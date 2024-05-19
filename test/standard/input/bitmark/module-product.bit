@@ -1,0 +1,23 @@
+[.module-product&image:bitmark++]
+[@ageRange:18][@ageRange:120]
+[&image:https://image.com/large_cover_image.png]
+
+[@hasBookNavigation:false]
+[@duration:PT2H]
+[@productId:e-ef-b11_u1_l1]
+
+[@icon:https://docs.getmorebrain.com/bit-books/ef/b1_1/student_book/unit_1/web-resources/images/icon_speaking_b1_v2.svg]
+
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+
+
+[.module-product:bitmark++]
+[@productId:e-ef-b11_u1_l12]
+[@productId:e-ef-b11_u1_l13]
+
+
+[.module-product:bitmark++]
