@@ -675,6 +675,7 @@ const BITS: _BitsConfig = {
   [BitType.pageContainerNowrapStretch]: { since: '1.9.0', baseBitType: BitType.example },
   [BitType.pageContainerFolder]: { since: '1.9.0', baseBitType: BitType.example },
   [BitType.pageContainerGroup]: { since: '1.9.0', baseBitType: BitType.example },
+  [BitType.metalevelExplanation]: { since: '1.10.0', baseBitType: BitType.example },
   [BitType.module]: {
     since: '1.5.26',
     baseBitType: BitType.example,
