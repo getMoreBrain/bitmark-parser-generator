@@ -243,6 +243,7 @@ const BitType = superenum({
   matchReverse: 'match-reverse',
   matchSolutionGrouped: 'match-solution-grouped',
   message: 'message',
+  metalevelExplanation: 'metalevel-explanation',
   module: 'module',
   moduleProduct: 'module-product',
   multipleChoice: 'multiple-choice',

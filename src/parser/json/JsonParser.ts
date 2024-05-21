@@ -402,7 +402,7 @@ class JsonParser {
     const bitType = Config.getBitType(isCommented ? originalType : type);
 
     // Bit level
-    const bitLevelValidated = Math.max(Math.min(bitLevel, Config.bitLevelMax), Config.bitLevelMin);
+    const bitLevelValidated = Math.max(Math.min(bitLevel ?? 1, Config.bitLevelMax), Config.bitLevelMin);
 
     // Get the bit config for the bit type
     const bitConfig = Config.getBitConfig(bitType);
