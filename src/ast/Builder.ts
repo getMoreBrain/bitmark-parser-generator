@@ -146,6 +146,7 @@ class Builder extends BaseBuilder {
     index?: number;
     classification?: BreakscapedString;
     availableClassifications?: BreakscapedString | BreakscapedString[];
+    allowedBit?: BreakscapedString | BreakscapedString[];
     tableFixedHeader?: boolean;
     tableSearch?: boolean;
     tableSort?: boolean;
@@ -313,6 +314,7 @@ class Builder extends BaseBuilder {
       index,
       classification,
       availableClassifications,
+      allowedBit,
       tableFixedHeader,
       tableSearch,
       tableSort,
@@ -480,6 +482,7 @@ class Builder extends BaseBuilder {
         PropertyConfigKey.availableClassifications,
         availableClassifications,
       ),
+      allowedBit: this.toAstProperty(PropertyConfigKey.allowedBit, allowedBit),
       tableFixedHeader: this.toAstProperty(PropertyConfigKey.tableFixedHeader, tableFixedHeader),
       tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, tableSearch),
       tableSort: this.toAstProperty(PropertyConfigKey.tableSort, tableSort),

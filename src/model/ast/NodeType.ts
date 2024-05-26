@@ -32,6 +32,8 @@ const NodeType = superenum({
   authorValue: 'authorValue',
   availableClassifications: 'availableClassifications',
   availableClassificationsValue: 'availableClassificationsValue',
+  allowedBit: 'allowedBit',
+  allowedBitValue: 'allowedBitValue',
   avatarImage: 'avatarImage',
   backgroundWallpaper: 'backgroundWallpaper',
   backgroundWallpaperValue: 'backgroundWallpaperValue',
