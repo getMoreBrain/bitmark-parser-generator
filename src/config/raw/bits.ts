@@ -940,6 +940,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.pageHero]: { since: '1.11.0', baseBitType: BitType.pageBanner },
   [BitType.screenshot]: { since: '1.3.0', deprecated: '1.4.0', baseBitType: BitType.image },
   [BitType.tableImage]: {
     since: '1.5.15',
