@@ -283,6 +283,7 @@ const BitType = superenum({
   pageContainerNowrapStretch: 'page-container-nowrap-stretch',
   pageContainerWrap: 'page-container-wrap',
   pageFooter: 'page-footer',
+  pageHero: 'page-hero',
   pageOpenBook: 'page-open-book',
   pagePerson: 'page-person',
   pageProduct: 'page-product',
