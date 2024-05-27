@@ -5,6 +5,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["197915"],
+      "allowedBit": [],
       "item": [
         {
           "type": "paragraph",

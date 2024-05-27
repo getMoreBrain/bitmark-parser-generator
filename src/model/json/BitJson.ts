@@ -61,6 +61,7 @@ export interface BitJson {
   index: number;
   classification: string;
   availableClassifications: string | string[];
+  allowedBit: string | string[];
   tableFixedHeader: boolean;
   tableSearch: boolean;
   tableSort: boolean;

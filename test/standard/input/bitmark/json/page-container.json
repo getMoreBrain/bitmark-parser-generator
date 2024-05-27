@@ -4,6 +4,7 @@
       "type": "page-container",
       "format": "bitmark--",
       "bitLevel": 1,
+      "allowedBit": [],
       "id": ["197915"],
       "item": [
         {
