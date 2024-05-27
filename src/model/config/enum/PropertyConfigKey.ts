@@ -8,6 +8,7 @@ const propertyConfigKeys = {
   ageRange: 'ageRange',
   aiGenerated: 'aiGenerated',
   analyticsTag: 'analyticsTag',
+  allowedBit: 'allowedBit',
   allowSubtitles: 'allowSubtitles',
   alt: 'alt',
   author: 'author',

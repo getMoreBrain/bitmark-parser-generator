@@ -85,6 +85,7 @@ export interface Bit {
   index?: Property;
   classification?: Property;
   availableClassifications?: Property;
+  allowedBit?: Property;
   tableFixedHeader?: Property;
   tableSearch?: Property;
   tableSort?: Property;

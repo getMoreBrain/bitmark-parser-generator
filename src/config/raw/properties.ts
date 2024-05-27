@@ -658,6 +658,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: false,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.allowedBit]: {
+    tag: PropertyTag.allowedBit,
+    single: false,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.tableFixedHeader]: {
     tag: PropertyTag.tableFixedHeader,
     single: true,

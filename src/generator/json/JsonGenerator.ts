@@ -2706,6 +2706,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       index: undefined,
       classification: undefined,
       availableClassifications: undefined,
+      allowedBit: undefined,
       tableFixedHeader: undefined,
       tableSearch: undefined,
       tableSort: undefined,
@@ -3096,6 +3097,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (Config.isOfBitType(bitType, BitType.module)) {
         if (bitJson.hasBookNavigation == null) bitJson.hasBookNavigation = true;
       }
+
+      // Special case for 'container' bits
+      if (Config.isOfBitType(bitType, BitType.container)) {
+        if (bitJson.allowedBit == null) bitJson.allowedBit = [];
+      }
     }
 
     // Remove unwanted properties
@@ -3153,6 +3159,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.index == null) delete bitJson.index;
     if (bitJson.classification == null) delete bitJson.classification;
     if (bitJson.availableClassifications == null) delete bitJson.availableClassifications;
+    if (bitJson.allowedBit == null) delete bitJson.allowedBit;
     if (bitJson.tableFixedHeader == null) delete bitJson.tableFixedHeader;
     if (bitJson.tableSearch == null) delete bitJson.tableSearch;
     if (bitJson.tableSort == null) delete bitJson.tableSort;
