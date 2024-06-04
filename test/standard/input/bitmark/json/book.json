@@ -43,6 +43,7 @@
       ],
       "hasMarkAsDone": true,
       "isPublic": true,
+      "processHandIn": false,
       "duration": "PT2H",
       "item": [],
       "hint": [],

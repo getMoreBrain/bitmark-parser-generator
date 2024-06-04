@@ -6,6 +6,7 @@
       "bitLevel": 1,
       "isPublic": false,
       "hasMarkAsDone": false,
+      "processHandIn": false,
       "ageRange": ["18", "120"],
       "language": ["en", "jp", "cn"],
       "item": [],
