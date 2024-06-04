@@ -203,6 +203,12 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.processHandIn]: {
+    tag: PropertyTag.processHandIn,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
   [PropertyConfigKey.isPublic]: {
     tag: PropertyTag.isPublic,
     defaultValue: 'false',

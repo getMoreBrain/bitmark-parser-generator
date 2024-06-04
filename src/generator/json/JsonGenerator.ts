@@ -2696,6 +2696,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       location: undefined,
       kind: undefined,
       hasMarkAsDone: undefined,
+      processHandIn: undefined,
       action: undefined,
       blockId: undefined,
       pageNo: undefined,
@@ -2729,13 +2730,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       pointerTop: undefined,
       backgroundWallpaper: undefined,
       hasBookNavigation: undefined,
+      duration: undefined,
       deeplink: undefined,
       externalLink: undefined,
       externalLinkText: undefined,
       videoCallLink: undefined,
       vendorUrl: undefined,
       search: undefined,
-      duration: undefined,
       list: undefined,
       textReference: undefined,
       isTracked: undefined,
@@ -3042,8 +3043,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
       // Special case for 'book' bits
       if (Config.isOfBitType(bitType, BitType.book)) {
-        if (bitJson.isPublic == null) bitJson.isPublic = false;
         if (bitJson.hasMarkAsDone == null) bitJson.hasMarkAsDone = false;
+        if (bitJson.processHandIn == null) bitJson.processHandIn = false;
+        if (bitJson.isPublic == null) bitJson.isPublic = false;
       }
 
       // Special case for 'ai' bits
@@ -3149,6 +3151,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.location == null) delete bitJson.location;
     if (bitJson.kind == null) delete bitJson.kind;
     if (bitJson.hasMarkAsDone == null) delete bitJson.hasMarkAsDone;
+    if (bitJson.processHandIn == null) delete bitJson.processHandIn;
     if (bitJson.action == null) delete bitJson.action;
     if (bitJson.blockId == null) delete bitJson.blockId;
     if (bitJson.pageNo == null) delete bitJson.pageNo;
@@ -3182,13 +3185,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.pointerTop == null) delete bitJson.pointerTop;
     if (bitJson.backgroundWallpaper == null) delete bitJson.backgroundWallpaper;
     if (bitJson.hasBookNavigation == null) delete bitJson.hasBookNavigation;
+    if (bitJson.duration == null) delete bitJson.duration;
     if (bitJson.deeplink == null) delete bitJson.deeplink;
     if (bitJson.externalLink == null) delete bitJson.externalLink;
     if (bitJson.externalLinkText == null) delete bitJson.externalLinkText;
     if (bitJson.videoCallLink == null) delete bitJson.videoCallLink;
     if (bitJson.vendorUrl == null) delete bitJson.vendorUrl;
     if (bitJson.search == null) delete bitJson.search;
-    if (bitJson.duration == null) delete bitJson.duration;
     if (bitJson.list == null) delete bitJson.list;
     if (bitJson.textReference == null) delete bitJson.textReference;
     if (bitJson.isTracked == null) delete bitJson.isTracked;

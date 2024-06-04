@@ -86,6 +86,7 @@ const propertyConfigKeys = {
   pointerTop: 'pointerTop',
   posterImage: 'posterImage',
   page: 'page',
+  processHandIn: 'processHandIn',
   product: 'product',
   productFolder: 'productFolder',
   productId: 'productId',

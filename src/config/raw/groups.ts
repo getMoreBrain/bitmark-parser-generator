@@ -374,6 +374,10 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.processHandIn,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.isPublic,
       },
       {

@@ -75,6 +75,7 @@ export interface Bit {
   location?: Property;
   kind?: Property;
   hasMarkAsDone?: Property;
+  processHandIn?: Property;
   action?: Property;
   blockId?: Property;
   pageNo?: Property;

@@ -245,6 +245,8 @@ const NodeType = superenum({
   prefix: 'prefix',
   page: 'page',
   pageValue: 'pageValue',
+  processHandIn: 'processHandIn',
+  processHandInValue: 'processHandInValue',
   productId: 'productId',
   productIdValue: 'productIdValue',
   product: 'product',

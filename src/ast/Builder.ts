@@ -136,6 +136,7 @@ class Builder extends BaseBuilder {
     location?: BreakscapedString;
     kind?: BreakscapedString;
     hasMarkAsDone?: boolean;
+    processHandIn?: boolean;
     action?: BreakscapedString;
     blockId?: BreakscapedString;
     pageNo?: number;
@@ -304,6 +305,7 @@ class Builder extends BaseBuilder {
       location,
       kind,
       hasMarkAsDone,
+      processHandIn,
       action,
       blockId,
       pageNo,
@@ -469,6 +471,7 @@ class Builder extends BaseBuilder {
       location: this.toAstProperty(PropertyConfigKey.location, location),
       kind: this.toAstProperty(PropertyConfigKey.kind, kind),
       hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, hasMarkAsDone),
+      processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, processHandIn),
       action: this.toAstProperty(PropertyConfigKey.action, action),
       blockId: this.toAstProperty(PropertyConfigKey.blockId, blockId),
       pageNo: this.toAstProperty(PropertyConfigKey.pageNo, pageNo),
