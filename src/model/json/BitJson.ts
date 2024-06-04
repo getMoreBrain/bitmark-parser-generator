@@ -51,6 +51,7 @@ export interface BitJson {
   theme: string | string[];
   kind: string;
   hasMarkAsDone: boolean;
+  processHandIn: boolean;
   action: string;
   blockId: string;
   pageNo: number;
