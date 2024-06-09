@@ -39,6 +39,15 @@ export { InfoType } from './model/info/enum/InfoType';
 export { InfoFormat } from './model/info/enum/InfoFormat';
 export { BreakscapedString } from './model/ast/BreakscapedString';
 
+//
+// Direct text parser export
+//
+export { parse as bitmarkTextParse } from './parser/text/peg/TextPegParser';
+
+//
+// Exports that are stripped out for the browser
+//
+
 const STRIP = 0;
 /* STRIP:START */
 STRIP;
