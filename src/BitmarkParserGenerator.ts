@@ -1027,4 +1027,4 @@ class BitmarkParserGenerator {
   }
 }
 
-export { BitmarkParserGenerator, Output };
+export { BitmarkParserGenerator, Input, Output };
