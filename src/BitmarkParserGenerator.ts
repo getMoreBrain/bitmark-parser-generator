@@ -107,6 +107,11 @@ export interface ConvertOptions {
   bitmarkParserType?: BitmarkParserTypeType;
 
   /**
+   * Set to force input to be interpreted as a particular format, overriding the auto-detection
+   * Auto-detection can fail or open unwanted files for strings that look like paths
+   */
+  inputFormat?: InputType;
+  /**
    * Specify the output format, overriding the default
    */
   outputFormat?: OutputType;
@@ -152,6 +157,11 @@ export interface UpgradeOptions {
    */
   bitmarkParserType?: BitmarkParserTypeType;
   /**
+   * Set to force input to be interpreted as a particular format, overriding the auto-detection
+   * Auto-detection can fail or open unwanted files for strings that look like paths
+   */
+  inputFormat?: InputType;
+  /**
    * Specify a file to write the output to
    */
   outputFile?: fs.PathLike;
@@ -178,6 +188,11 @@ export interface ConvertTextOptions {
    */
   textFormat?: TextFormatType;
   /**
+   * Set to force input to be interpreted as a particular format, overriding the auto-detection
+   * Auto-detection can fail or open unwanted files for strings that look like paths
+   */
+  inputFormat?: InputType;
+  /**
    * Specify a file to write the output to
    */
   outputFile?: fs.PathLike;
@@ -189,6 +204,17 @@ export interface ConvertTextOptions {
    * Options for JSON generation
    */
   jsonOptions?: TextJsonOptions;
+}
+
+/**
+ * Create AST options
+ */
+export interface CreateAstOptions {
+  /**
+   * Set to force input to be interpreted as a particular format, overriding the auto-detection
+   * Auto-detection can fail or open unwanted files for strings that look like paths
+   */
+  inputFormat?: InputType;
 }
 
 /**
@@ -205,6 +231,11 @@ export interface BreakscapeOptions {
   //  */
   // textFormat?: TextFormatType;
   /**
+   * Set to force input to be interpreted as a particular format, overriding the auto-detection
+   * Auto-detection can fail or open unwanted files for strings that look like paths
+   */
+  inputFormat?: InputType;
+  /**
    * Specify a file to write the output to
    */
   outputFile?: fs.PathLike;
@@ -219,6 +250,11 @@ export interface BreakscapeOptions {
  */
 export interface UnbreakscapeOptions {
   /**
+   * Set to force input to be interpreted as a particular format, overriding the auto-detection
+   * Auto-detection can fail or open unwanted files for strings that look like paths
+   */
+  inputFormat?: InputType;
+  /**
    * Specify a file to write the output to
    */
   outputFile?: fs.PathLike;
@@ -227,6 +263,23 @@ export interface UnbreakscapeOptions {
    */
   fileOptions?: FileOptions;
 }
+
+/**
+ * Input type enumeration
+ */
+const Input = superenum({
+  /**
+   * Input is as a string
+   */
+  string: 'string',
+
+  /**
+   * Input is as a file path
+   */
+  file: 'file',
+});
+
+export type InputType = EnumType<typeof Input>;
 
 /**
  * Output type enumeration
@@ -407,11 +460,13 @@ class BitmarkParserGenerator {
     }
 
     // If a file, read the file in
-    if (env.isNode) {
-      if (fs.existsSync(inStr)) {
-        inStr = fs.readFileSync(inStr, {
-          encoding: 'utf8',
-        });
+    if (!opts.inputFormat || opts.inputFormat === Input.file) {
+      if (env.isNode) {
+        if (fs.existsSync(inStr)) {
+          inStr = fs.readFileSync(inStr, {
+            encoding: 'utf8',
+          });
+        }
       }
     }
 
@@ -614,11 +669,13 @@ class BitmarkParserGenerator {
     }
 
     // If a file, read the file in
-    if (env.isNode) {
-      if (fs.existsSync(inStr)) {
-        inStr = fs.readFileSync(inStr, {
-          encoding: 'utf8',
-        });
+    if (!opts.inputFormat || opts.inputFormat === Input.file) {
+      if (env.isNode) {
+        if (fs.existsSync(inStr)) {
+          inStr = fs.readFileSync(inStr, {
+            encoding: 'utf8',
+          });
+        }
       }
     }
 
@@ -684,19 +741,23 @@ class BitmarkParserGenerator {
    * Input type is detected automatically and may be string, object (JSON or AST), or file
    *
    * @param input the JSON or bitmark to convert to a bitmark AST
+   * @param options - the create AST options
    * @returns bitmark AST
    * @throws Error if any error occurs
    */
-  public createAst(input: unknown): BitmarkAst {
+  public createAst(input: unknown, options?: CreateAstOptions): BitmarkAst {
     let res: BitmarkAst;
     let inStr: string = input as string;
+    const opts: CreateAstOptions = Object.assign({}, options);
 
     // If a file, read the file in
-    if (env.isNode) {
-      if (fs.existsSync(inStr)) {
-        inStr = fs.readFileSync(inStr, {
-          encoding: 'utf8',
-        });
+    if (!opts.inputFormat || opts.inputFormat === Input.file) {
+      if (env.isNode) {
+        if (fs.existsSync(inStr)) {
+          inStr = fs.readFileSync(inStr, {
+            encoding: 'utf8',
+          });
+        }
       }
     }
 
@@ -764,11 +825,13 @@ class BitmarkParserGenerator {
     }
 
     // If a file, read the file in
-    if (env.isNode) {
-      if (fs.existsSync(inStr)) {
-        inStr = fs.readFileSync(inStr, {
-          encoding: 'utf8',
-        });
+    if (!opts.inputFormat || opts.inputFormat === Input.file) {
+      if (env.isNode) {
+        if (fs.existsSync(inStr)) {
+          inStr = fs.readFileSync(inStr, {
+            encoding: 'utf8',
+          });
+        }
       }
     }
 
@@ -838,11 +901,13 @@ class BitmarkParserGenerator {
     }
 
     // If a file, read the file in
-    if (env.isNode) {
-      if (fs.existsSync(inStr)) {
-        inStr = fs.readFileSync(inStr, {
-          encoding: 'utf8',
-        });
+    if (!opts.inputFormat || opts.inputFormat === Input.file) {
+      if (env.isNode) {
+        if (fs.existsSync(inStr)) {
+          inStr = fs.readFileSync(inStr, {
+            encoding: 'utf8',
+          });
+        }
       }
     }
 
@@ -896,11 +961,13 @@ class BitmarkParserGenerator {
     }
 
     // If a file, read the file in
-    if (env.isNode) {
-      if (fs.existsSync(inStr)) {
-        inStr = fs.readFileSync(inStr, {
-          encoding: 'utf8',
-        }) as BreakscapedString;
+    if (!opts.inputFormat || opts.inputFormat === Input.file) {
+      if (env.isNode) {
+        if (fs.existsSync(inStr)) {
+          inStr = fs.readFileSync(inStr, {
+            encoding: 'utf8',
+          }) as BreakscapedString;
+        }
       }
     }
 
