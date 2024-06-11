@@ -10,7 +10,7 @@
 
 import { init } from './init/init';
 
-export { BitmarkParserGenerator, Output } from './BitmarkParserGenerator';
+export { BitmarkParserGenerator, Input, Output } from './BitmarkParserGenerator';
 
 export { Builder } from './ast/Builder';
 export { ResourceBuilder } from './ast/ResourceBuilder';
@@ -67,11 +67,15 @@ STRIP;
 export type {
   InfoOptions,
   ConvertOptions,
+  UpgradeOptions,
   UpgradeOptions as PrettifyOptions,
-  OutputType,
   ConvertTextOptions,
+  CreateAstOptions,
   BreakscapeOptions,
   UnbreakscapeOptions,
+  InputType,
+  OutputType,
+  TextJsonOptions,
 } from './BitmarkParserGenerator';
 export type { InfoTypeType } from './model/info/enum/InfoType';
 export type { InfoFormatType } from './model/info/enum/InfoFormat';
