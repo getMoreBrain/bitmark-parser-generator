@@ -1,0 +1,15 @@
+[.cloze:text]
+<?xml version="1.0" encoding="UTF-8"?>
+[?hint]
+
+[_gap]<note>
+  <to>[_gap]</to>
+  <from>Jani</from>
+[!instruction]
+  <heading>Reminder</heading>
+  <![CDATA[
+[_gap]
+[%item]
+  ]]>
+  <body>Don't [%item] forget me this weekend!</body>
+</note>
