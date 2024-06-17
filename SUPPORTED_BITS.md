@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.14.0
+Version: 1.15.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -19,6 +19,7 @@ app-get-screenshot (since: 1.3.0)
 app-link (since: 1.3.0)
 article (since: 1.3.0)
 article-ai (since: 1.3.0)
+article-alt (since: 1.15.0)
 article-attachment (since: 1.3.0)
 article-embed (since: 1.3.0)
 article-link (since: 1.3.0)
@@ -272,6 +273,8 @@ notebook-article (since: 1.3.0)
 output (since: 1.4.3)
 page (since: 1.3.0)
 page-academy (since: 1.6.6)
+page-article (since: 1.15.0)
+page-article-alt (since: 1.15.0)
 page-banner (since: 1.4.3)
 page-buy-button (since: 1.4.3)
 page-buy-button-promotion (since: 1.5.11)
