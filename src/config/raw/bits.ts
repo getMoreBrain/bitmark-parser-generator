@@ -70,6 +70,9 @@ const BITS: _BitsConfig = {
     ],
   },
   [BitType.statement]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.articleAlt]: { since: '1.15.0', baseBitType: BitType.article },
+  [BitType.pageArticle]: { since: '1.15.0', baseBitType: BitType.article },
+  [BitType.pageArticleAlt]: { since: '1.15.0', baseBitType: BitType.article },
   [BitType.buttonCopyText]: {
     since: '1.4.3',
     baseBitType: BitType.article,
