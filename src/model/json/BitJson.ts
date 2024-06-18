@@ -102,6 +102,7 @@ export interface BitJson {
   content2Buy: string;
   mailingList: string;
   buttonCaption: string;
+  callToActionUrl: string;
   caption: JsonText;
   quotedPerson: string;
   reasonableNumOfChars: number;

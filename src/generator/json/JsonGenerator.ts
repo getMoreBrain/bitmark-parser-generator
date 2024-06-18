@@ -2746,6 +2746,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       content2Buy: undefined,
       mailingList: undefined,
       buttonCaption: undefined,
+      callToActionUrl: undefined,
       caption: undefined,
       quotedPerson: undefined,
       reasonableNumOfChars: undefined,
@@ -3095,6 +3096,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       }
 
+      // Special case for 'call-to-action' bits
+      if (Config.isOfBitType(bitType, BitType.callToAction)) {
+        if (bitJson.buttonCaption == null) bitJson.buttonCaption = '';
+        if (bitJson.callToActionUrl == null) bitJson.callToActionUrl = '';
+      }
+
       // Special case for 'module' bits
       if (Config.isOfBitType(bitType, BitType.module)) {
         if (bitJson.hasBookNavigation == null) bitJson.hasBookNavigation = true;
@@ -3201,6 +3208,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.content2Buy == null) delete bitJson.content2Buy;
     if (bitJson.mailingList == null) delete bitJson.mailingList;
     if (bitJson.buttonCaption == null) delete bitJson.buttonCaption;
+    if (bitJson.callToActionUrl == null) delete bitJson.callToActionUrl;
     if (bitJson.caption == null) delete bitJson.caption;
     if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
     if (bitJson.resolved == null) delete bitJson.resolved;
