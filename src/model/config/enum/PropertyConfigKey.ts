@@ -20,6 +20,7 @@ const propertyConfigKeys = {
   bookAlias: 'bookAlias',
   bot: 'bot',
   buttonCaption: 'buttonCaption',
+  callToActionUrl: 'callToActionUrl',
   caption: 'caption',
   classification: 'classification',
   codeLineNumbers: 'codeLineNumbers',

@@ -543,6 +543,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.callToActionUrl]: {
+    tag: PropertyTag.callToActionUrl,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.caption]: {
     tag: PropertyTag.caption,
     single: true,

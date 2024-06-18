@@ -188,6 +188,7 @@ class Builder extends BaseBuilder {
     content2Buy?: BreakscapedString;
     mailingList?: BreakscapedString;
     buttonCaption?: BreakscapedString;
+    callToActionUrl?: BreakscapedString;
     caption?: BreakscapedString;
     quotedPerson?: BreakscapedString;
     reasonableNumOfChars?: number;
@@ -357,6 +358,7 @@ class Builder extends BaseBuilder {
       content2Buy,
       mailingList,
       buttonCaption,
+      callToActionUrl,
       caption,
       book,
       quotedPerson,
@@ -529,6 +531,7 @@ class Builder extends BaseBuilder {
       content2Buy: this.toAstProperty(PropertyConfigKey.content2Buy, content2Buy),
       mailingList: this.toAstProperty(PropertyConfigKey.mailingList, mailingList),
       buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, buttonCaption),
+      callToActionUrl: this.toAstProperty(PropertyConfigKey.callToActionUrl, callToActionUrl),
       caption,
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
