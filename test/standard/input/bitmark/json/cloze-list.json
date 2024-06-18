@@ -61,8 +61,6 @@
                   "type": "gap",
                   "item": [],
                   "lead": [],
-                  "marginNumber": [],
-                  "pageNumber": [],
                   "hint": [],
                   "instruction": [
                     {
@@ -89,8 +87,6 @@
                   "type": "gap",
                   "item": [],
                   "lead": [],
-                  "marginNumber": [],
-                  "pageNumber": [],
                   "hint": [
                     {
                       "type": "paragraph",
@@ -146,8 +142,6 @@
                   "type": "gap",
                   "item": [],
                   "lead": [],
-                  "marginNumber": [],
-                  "pageNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isCaseSensitive": true,
@@ -163,8 +157,6 @@
                   "type": "gap",
                   "item": [],
                   "lead": [],
-                  "marginNumber": [],
-                  "pageNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isCaseSensitive": true,

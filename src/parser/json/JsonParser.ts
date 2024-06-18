@@ -615,7 +615,14 @@ class JsonParser {
       anchor: this.convertStringToBreakscapedString(anchor),
       reference: this.convertStringToBreakscapedString(reference),
       referenceEnd: this.convertStringToBreakscapedString(referenceEnd),
-      ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+      ...this.parseItemLeadHintInstructionPageNumberMarginNumber(
+        item,
+        lead,
+        hint,
+        instruction,
+        pageNumber,
+        marginNumber,
+      ),
       ...this.parseExample(example),
       imageSource: imageSourceNode,
       person: personNode,
@@ -698,23 +705,12 @@ class JsonParser {
     const nodes: Flashcard[] = [];
     if (Array.isArray(flashcards)) {
       for (const c of flashcards) {
-        const {
-          question,
-          answer,
-          alternativeAnswers,
-          item,
-          lead,
-          pageNumber,
-          marginNumber,
-          hint,
-          instruction,
-          example,
-        } = c;
+        const { question, answer, alternativeAnswers, item, lead, hint, instruction, example } = c;
         const node = builder.flashcard({
           question: this.convertJsonTextToBreakscapedString(question) ?? Breakscape.EMPTY_STRING,
           answer: this.convertJsonTextToBreakscapedString(answer),
           alternativeAnswers: this.convertJsonTextToBreakscapedString(alternativeAnswers),
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
         nodes.push(node);
@@ -745,11 +741,11 @@ class JsonParser {
 
     if (Array.isArray(statements)) {
       for (const s of statements) {
-        const { statement, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, example } = s;
+        const { statement, isCorrect, item, lead, hint, instruction, example } = s;
         const node = builder.statement({
           text: this.convertStringToBreakscapedString(statement) ?? Breakscape.EMPTY_STRING,
           isCorrect,
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
         nodes.push(node);
@@ -765,11 +761,11 @@ class JsonParser {
     const nodes: Choice[] = [];
     if (Array.isArray(choices)) {
       for (const c of choices) {
-        const { choice, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, example } = c;
+        const { choice, isCorrect, item, lead, hint, instruction, example } = c;
         const node = builder.choice({
           text: this.convertStringToBreakscapedString(choice) ?? Breakscape.EMPTY_STRING,
           isCorrect,
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
         nodes.push(node);
@@ -789,11 +785,11 @@ class JsonParser {
 
     if (Array.isArray(responses)) {
       for (const r of responses) {
-        const { response, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, example } = r;
+        const { response, isCorrect, item, lead, hint, instruction, example } = r;
         const node = builder.response({
           text: this.convertStringToBreakscapedString(response) ?? Breakscape.EMPTY_STRING,
           isCorrect,
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
         nodes.push(node);
@@ -809,11 +805,11 @@ class JsonParser {
     const nodes: SelectOption[] = [];
     if (Array.isArray(options)) {
       for (const o of options) {
-        const { text, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, example } = o;
+        const { text, isCorrect, item, lead, hint, instruction, example } = o;
         const node = builder.selectOption({
           text: this.convertStringToBreakscapedString(text) ?? Breakscape.EMPTY_STRING,
           isCorrect,
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
         nodes.push(node);
@@ -827,12 +823,12 @@ class JsonParser {
     const nodes: HighlightText[] = [];
     if (Array.isArray(highlightTexts)) {
       for (const t of highlightTexts) {
-        const { text, isCorrect, isHighlighted, item, lead, pageNumber, marginNumber, hint, instruction, example } = t;
+        const { text, isCorrect, isHighlighted, item, lead, hint, instruction, example } = t;
         const node = builder.highlightText({
           text: this.convertStringToBreakscapedString(text) ?? Breakscape.EMPTY_STRING,
           isCorrect,
           isHighlighted,
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
         nodes.push(node);
@@ -846,11 +842,11 @@ class JsonParser {
     const nodes: Quiz[] = [];
     if (Array.isArray(quizzes)) {
       for (const q of quizzes) {
-        const { item, lead, pageNumber, marginNumber, hint, instruction, choices, responses } = q;
+        const { item, lead, hint, instruction, choices, responses } = q;
         const choiceNodes = this.choiceBitsToAst(choices);
         const responseNodes = this.responseBitsToAst(bitType, responses);
         const node = builder.quiz({
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           choices: choiceNodes,
           responses: responseNodes,
         });
@@ -879,20 +875,7 @@ class JsonParser {
     const nodes: Pair[] = [];
     if (Array.isArray(pairs)) {
       for (const p of pairs) {
-        const {
-          key,
-          keyAudio,
-          keyImage,
-          values,
-          item,
-          lead,
-          pageNumber,
-          marginNumber,
-          hint,
-          instruction,
-          example,
-          isCaseSensitive,
-        } = p;
+        const { key, keyAudio, keyImage, values, item, lead, hint, instruction, example, isCaseSensitive } = p;
 
         const audio = this.resourceDataToAst(ResourceTag.audio, keyAudio) as AudioResource;
         const image = this.resourceDataToAst(ResourceTag.image, keyImage) as ImageResource;
@@ -902,7 +885,7 @@ class JsonParser {
           keyAudio: audio,
           keyImage: image,
           values: this.convertStringToBreakscapedString(values) ?? [],
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
           isCaseSensitive,
         });
@@ -919,11 +902,11 @@ class JsonParser {
     const nodes: Matrix[] = [];
     if (Array.isArray(matrix)) {
       for (const m of matrix) {
-        const { key, cells, item, lead, pageNumber, marginNumber, hint, instruction, example } = m;
+        const { key, cells, item, lead, hint, instruction, example } = m;
         const node = builder.matrix({
           key: this.convertStringToBreakscapedString(key) ?? Breakscape.EMPTY_STRING,
           cells: this.matrixCellsToAst(cells) ?? [],
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
         nodes.push(node);
@@ -939,11 +922,11 @@ class JsonParser {
     const nodes: MatrixCell[] = [];
     if (Array.isArray(matrixCells)) {
       for (const mc of matrixCells) {
-        const { values, item, lead, pageNumber, marginNumber, hint, instruction, isCaseSensitive, example } = mc;
+        const { values, item, lead, hint, instruction, isCaseSensitive, example } = mc;
 
         const node = builder.matrixCell({
           values: this.convertStringToBreakscapedString(values) ?? [],
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           isCaseSensitive,
           ...this.parseExample(example),
         });
@@ -980,8 +963,6 @@ class JsonParser {
           sampleSolution,
           item,
           lead,
-          pageNumber,
-          marginNumber,
           hint,
           instruction,
           example,
@@ -991,7 +972,7 @@ class JsonParser {
           question: this.convertStringToBreakscapedString(question) ?? Breakscape.EMPTY_STRING,
           partialAnswer: this.convertStringToBreakscapedString(partialAnswer),
           sampleSolution: this.convertStringToBreakscapedString(sampleSolution),
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
           reasonableNumOfChars,
         });
@@ -1012,12 +993,12 @@ class JsonParser {
 
     if (Array.isArray(responses)) {
       for (const r of responses) {
-        const { response, reaction, feedback, item, lead, pageNumber, marginNumber, hint } = r;
+        const { response, reaction, feedback, item, lead, hint } = r;
         const node = builder.botResponse({
           response: this.convertStringToBreakscapedString(response) ?? Breakscape.EMPTY_STRING,
           reaction: this.convertStringToBreakscapedString(reaction) ?? Breakscape.EMPTY_STRING,
           feedback: this.convertStringToBreakscapedString(feedback) ?? Breakscape.EMPTY_STRING,
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, Breakscape.EMPTY_STRING),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, Breakscape.EMPTY_STRING),
         });
         nodes.push(node);
       }
@@ -1108,9 +1089,9 @@ class JsonParser {
 
     if (Array.isArray(listItems)) {
       for (const li of listItems) {
-        const { item, lead, pageNumber, marginNumber, hint, instruction, body } = li;
+        const { item, lead, hint, instruction, body } = li;
         const node = builder.cardBit({
-          ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           body: this.bodyToAst(body, textFormat, placeholders),
         });
         if (node) nodes.push(node);
@@ -1371,12 +1352,12 @@ class JsonParser {
   }
 
   private gapBitToAst(bit: GapJson): Gap {
-    const { item, lead, pageNumber, marginNumber, hint, instruction, example, isCaseSensitive, solutions } = bit;
+    const { item, lead, hint, instruction, example, isCaseSensitive, solutions } = bit;
 
     // Build bit
     const bitNode = builder.gap({
       solutions: this.convertStringToBreakscapedString(solutions) ?? [],
-      ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
       isCaseSensitive,
     });
@@ -1385,13 +1366,13 @@ class JsonParser {
   }
 
   private markBitToAst(bit: MarkJson): Mark {
-    const { solution, mark, item, lead, pageNumber, marginNumber, hint, instruction, example } = bit;
+    const { solution, mark, item, lead, hint, instruction, example } = bit;
 
     // Build bit
     const bitNode = builder.mark({
       solution: this.convertStringToBreakscapedString(solution) ?? Breakscape.EMPTY_STRING,
       mark: this.convertStringToBreakscapedString(mark),
-      ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
     });
 
@@ -1399,7 +1380,7 @@ class JsonParser {
   }
 
   private selectBitToAst(bit: SelectJson): Select {
-    const { options, prefix, postfix, item, lead, pageNumber, marginNumber, hint, instruction, example } = bit;
+    const { options, prefix, postfix, item, lead, hint, instruction, example } = bit;
 
     // Build options bits
     const selectOptionNodes = this.selectOptionBitsToAst(options);
@@ -1409,7 +1390,7 @@ class JsonParser {
       options: selectOptionNodes,
       prefix: this.convertStringToBreakscapedString(prefix),
       postfix: this.convertStringToBreakscapedString(postfix),
-      ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
     });
 
@@ -1417,7 +1398,7 @@ class JsonParser {
   }
 
   private highlightBitToAst(bit: HighlightJson): Highlight {
-    const { texts, prefix, postfix, item, lead, pageNumber, marginNumber, hint, instruction, example } = bit;
+    const { texts, prefix, postfix, item, lead, hint, instruction, example } = bit;
 
     // Build options bits
     const highlightTextNodes = this.highlightTextBitsToAst(texts);
@@ -1427,7 +1408,7 @@ class JsonParser {
       texts: highlightTextNodes,
       prefix: this.convertStringToBreakscapedString(prefix),
       postfix: this.convertStringToBreakscapedString(postfix),
-      ...this.parseItemLeadHintInstruction(item, lead, pageNumber, marginNumber, hint, instruction),
+      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
     });
 
@@ -1437,10 +1418,26 @@ class JsonParser {
   private parseItemLeadHintInstruction(
     item: JsonText,
     lead: JsonText,
-    pageNumber: JsonText,
-    marginNumber: JsonText,
     hint: JsonText,
     instruction: JsonText,
+  ): ItemLeadHintInstruction {
+    return {
+      item: this.convertJsonTextToBreakscapedString(item),
+      lead: this.convertJsonTextToBreakscapedString(lead),
+      pageNumber: '' as BreakscapedString,
+      marginNumber: '' as BreakscapedString,
+      hint: this.convertJsonTextToBreakscapedString(hint),
+      instruction: this.convertJsonTextToBreakscapedString(instruction),
+    };
+  }
+
+  private parseItemLeadHintInstructionPageNumberMarginNumber(
+    item: JsonText,
+    lead: JsonText,
+    hint: JsonText,
+    instruction: JsonText,
+    pageNumber: JsonText,
+    marginNumber: JsonText,
   ): ItemLeadHintInstruction {
     return {
       item: this.convertJsonTextToBreakscapedString(item),
