@@ -62,6 +62,8 @@ const NodeType = superenum({
   botValue: 'botValue',
   buttonCaption: 'buttonCaption',
   buttonCaptionValue: 'buttonCaptionValue',
+  callToActionUrl: 'callToActionUrl',
+  callToActionUrlValue: 'callToActionUrlValue',
   caption: 'caption',
   captionValue: 'captionValue',
   cardBits: 'cardBits',

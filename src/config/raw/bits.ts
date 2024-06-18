@@ -83,6 +83,38 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.callToAction]: {
+    since: '1.15.0',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.callToActionUrl,
+        minCount: 1,
+      },
+    ],
+  },
+  [BitType.callToActionSubscribe]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionContact]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionJoin]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionMail]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionLearnMore]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionSeeMore]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionWatch]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionStartNow]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionGetOffer]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionBookNow]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionShopNow]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionGetNow]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionDownload]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionCreateAccount]: { since: '1.15.0', baseBitType: BitType.callToAction },
   [BitType.appBitmarkFromJavascript]: {
     since: '1.4.5',
     tags: [
