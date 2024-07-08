@@ -85,3 +85,17 @@ This is an article example with the target, tag, reductionTag, colorTag, icon, i
 ...this is an extension of the body
 
 
+
+
+[.standard-article-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
+
+
+[.standard-article-non-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
