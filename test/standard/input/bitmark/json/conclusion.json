@@ -23,9 +23,54 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.conclusion]\n[@id:342337]\nConclusion\nIt's exactly the same as an .article."
+  },
+  {
+    "bit": {
+      "type": "conclusion-alt",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.conclusion-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   }
 ]

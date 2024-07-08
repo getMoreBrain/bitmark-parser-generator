@@ -48,8 +48,27 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3",
+      "warnings": [
+        {
+          "message": "[&image] is included more than 0 time(s).",
+          "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 127
+            },
+            "end": {
+              "line": 6,
+              "column": 47,
+              "offset": 173
+            }
+          }
+        }
+      ],
       "excessResources": [
         {
           "type": "image",
@@ -60,6 +79,7 @@
             "width": null,
             "height": null,
             "alt": "",
+            "zoomDisabled": false,
             "license": "",
             "copyright": "",
             "showInIndex": false,
@@ -69,5 +89,49 @@
       ]
     },
     "bitmark": "[.bug:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]\n\nSome more text."
+  },
+  {
+    "bit": {
+      "type": "bug-alt",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.bug-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   }
 ]

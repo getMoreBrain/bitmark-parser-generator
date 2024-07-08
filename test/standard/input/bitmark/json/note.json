@@ -40,8 +40,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   },
@@ -86,9 +87,142 @@
       ]
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
+  },
+  {
+    "bit": {
+      "type": "note-alt",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.note-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+  },
+  {
+    "bit": {
+      "type": "standard-note-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.standard-note-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "standard-note-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.standard-note-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   }
 ]

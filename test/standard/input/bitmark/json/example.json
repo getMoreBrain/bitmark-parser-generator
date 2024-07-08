@@ -35,8 +35,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.example]\n[@id:210051]\n[%][%Beispiel]\nDie Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet."
   },
@@ -76,8 +77,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.example:bitmark--]\n[@id:208411]\n[%][%Beispiel]\nClaudia und Stefan Walder haben für heute Abend Gäste eingeladen. Gemeinsam gehen sie auf den Wochenmarkt, um die verschiedenen Zutaten für das Essen einzukaufen. Sie brauchen dazu unter anderem Brot, Olivenöl, Zitronen, Spinat und Fische, die sich zum Braten eignen. Claudia und Stefan kommen an einem Blumenstand vorbei. «Sieh nur, diese wunderschönen Tulpen», ruft Stefan aus und kauft spontan einen grossen Strauss davon."
   },
@@ -124,9 +126,142 @@
       ]
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
     },
     "bitmark": "[.example:bitmark++]\n[@id:208422]\n[%][%Beispiel]\nTrotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.\nÄlteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit."
+  },
+  {
+    "bit": {
+      "type": "example-alt",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.example-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+  },
+  {
+    "bit": {
+      "type": "standard-example-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.standard-example-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "standard-example-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.standard-example-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   }
 ]

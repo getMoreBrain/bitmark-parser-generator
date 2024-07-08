@@ -23,7 +23,7 @@
       }
     },
     "parser": {
-      "version": "1.5.24",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
@@ -65,7 +65,7 @@
       }
     },
     "parser": {
-      "version": "1.5.24",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
@@ -107,7 +107,7 @@
       }
     },
     "parser": {
-      "version": "1.5.24",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
@@ -134,10 +134,100 @@
       }
     },
     "parser": {
-      "version": "1.5.24",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
     "bitmark": "[.table]"
+  },
+  {
+    "bit": {
+      "type": "table-alt",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.table-alt]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-table-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.standard-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-table-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.standard-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   }
 ]
