@@ -138,7 +138,7 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3",
       "warnings": [
@@ -214,7 +214,7 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
@@ -264,7 +264,7 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
@@ -340,7 +340,7 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
@@ -399,7 +399,7 @@
       }
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
@@ -436,7 +436,7 @@
       }
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
@@ -484,7 +484,7 @@
       }
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3"
     },
@@ -525,7 +525,7 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3",
       "warnings": [
@@ -597,7 +597,7 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.10.3",
       "warnings": [
@@ -666,5 +666,87 @@
       ]
     },
     "bitmark": "[.article:bitmark--]\n[@id:5743563]\n\nThis is an article example with the target, tag, reductionTag, colorTag, icon, iconTag tags\n\n[@target:target1]\n[@target:target2][@target:target3]\n[@reductionTag:green][@reductionTag:yellow]\n[@tag:green][@tag:yellow]\n[@tag:red][@colorTag:green]\n[@colorTag:white]\n[@colorTag:purple][@colorTag:orange]\n[@icon:http://willbe.overridden/image.png]\n[@icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII=]\n[@iconTag:will be overridden][@iconTag:this is the icon tag]\n\n...this is an extension of the body"
+  },
+  {
+    "bit": {
+      "type": "standard-article-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.standard-article-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "standard-article-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.standard-article-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   }
 ]
