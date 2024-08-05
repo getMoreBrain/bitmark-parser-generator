@@ -46,9 +46,11 @@
       "processHandIn": false,
       "duration": "PT2H",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -63,6 +65,12 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["135648"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -147,9 +155,11 @@
       "progress": true,
       "anchor": "ch-1",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -164,6 +174,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["135650"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -190,9 +206,11 @@
       "bitLevel": 1,
       "id": ["278204"],
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -218,6 +236,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["278205"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -260,9 +284,11 @@
       "progress": true,
       "anchor": "ch-2",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -277,6 +303,12 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["135652"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -368,9 +400,11 @@
       "progress": true,
       "anchor": "ch-3",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -385,6 +419,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["135654"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -427,9 +467,11 @@
       "progress": true,
       "anchor": "ch-4",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -444,6 +486,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["135656"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -486,9 +534,11 @@
       "progress": true,
       "anchor": "ch-5",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -503,6 +553,12 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["135658"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -691,9 +747,11 @@
       "progress": true,
       "anchor": "ch-6",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -708,6 +766,12 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["135660"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -892,9 +956,11 @@
       "progress": true,
       "anchor": "ch-7",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -909,6 +975,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["135662"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -951,9 +1023,11 @@
       "progress": true,
       "anchor": "ch-8",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -968,6 +1042,12 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["135664"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -1027,9 +1107,11 @@
       "progress": true,
       "anchor": "ch-9",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -1044,6 +1126,12 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["135666"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -1174,9 +1262,11 @@
       "progress": true,
       "anchor": "ch-10",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -1191,6 +1281,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["135668"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -1233,9 +1329,11 @@
       "progress": true,
       "anchor": "ch-11",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -1250,6 +1348,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["135670"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -1292,9 +1396,11 @@
       "progress": true,
       "anchor": "ch-12",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -1309,6 +1415,12 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["135672"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -1423,9 +1535,11 @@
       "progress": true,
       "anchor": "ch-13",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -1440,6 +1554,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["135674"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -1458,5 +1578,1390 @@
       "bitmarkVersion": "3"
     },
     "bitmark": "[.article:bitmark--]\n[@id:135674]\n• Documentation of the bitmark standard: https://docs.bitmark.cloud/\n• Homepage of the bitmark Association: https://docs.bitmark.cloud/bitmark-association/about_and_contact/\n• Linkedin page of the bitmark Association: linkedin.com/company/bitmark-association"
+  },
+  {
+    "bit": {
+      "type": "book-acknowledgments",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51877"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-acknowledgments]\n[@id:51877]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-addendum",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51876"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-addendum]\n[@id:51876]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-afterword",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51873"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-afterword]\n[@id:51873]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-appendix",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51875"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-appendix]\n[@id:51875]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "ageRange": ["18", "120"],
+      "language": ["en", "jp", "cn"],
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "〈私が何も反論を口にしないのは、第一に事件について、投資家との間でトラブルが生じ、横領の疑いをかけられている以上のことを本当に知らないからです。（中略）私自身、意見を言うことも何の判断もできない状態だったんです〉",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-article]\n[@ageRange:18][@ageRange:120]\n[@language:en]\n[@language:jp]\n[@language:cn]\n〈私が何も反論を口にしないのは、第一に事件について、投資家との間でトラブルが生じ、横領の疑いをかけられている以上のことを本当に知らないからです。（中略）私自身、意見を言うことも何の判断もできない状態だったんです〉"
+  },
+  {
+    "bit": {
+      "type": "book-author-bio",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51885"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-author-bio]\n[@id:51885]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-bibliography",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51879"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-bibliography]\n[@id:51879]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-coming-soon",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51887"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-coming-soon]\n[@id:51887]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-conclusion",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51872"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-conclusion]\n[@id:51872]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-copyright-permissions",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51883"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-copyright-permissions]\n[@id:51883]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-copyright",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51861"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-copyright]\n[@id:51861]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-dedication",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51865"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": true,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-dedication]\n[@id:51865]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-endnotes",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51881"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-endnotes]\n[@id:51881]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-epigraph",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51890"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-epigraph]\n[@id:51890]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-epilogue",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51869"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-epilogue]\n[@id:51869]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-foreword",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51866"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-foreword]\n[@id:51866]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-frontispiece",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51862"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-frontispiece]\n[@id:51862]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-imprint",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51862"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-imprint]\n[@id:51862]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-inciting-incident",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51871"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-inciting-incident]\n[@id:51871]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-introduction",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51870"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-introduction]\n[@id:51870]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-list-of-contributors",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51878"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-list-of-contributors]\n[@id:51878]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-notes",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51882"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-notes]\n[@id:51882]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-postscript",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51874"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-postscript]\n[@id:51874]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-preface",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["5186"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-preface]\n[@id:5186]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-prologue",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51868"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-prologue]\n[@id:51868]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-read-more",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51888"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-read-more]\n[@id:51888]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-reference-list",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51880"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-reference-list]\n[@id:51880]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-request-for-a-book-review",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51886"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-request-for-a-book-review]\n[@id:51886]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-summary",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51889"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": true,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-summary]\n[@id:51889]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-teaser",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51884"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-teaser]\n[@id:51884]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "book-title",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["51863"],
+      "isPublic": false,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.book-title]\n[@id:51863]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   }
 ]

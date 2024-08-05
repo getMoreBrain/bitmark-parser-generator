@@ -8,9 +8,11 @@
       "width": "100",
       "height": "120",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": "Here is some code"
     },
     "parser": {

@@ -20,6 +20,8 @@
       ],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -236,6 +238,8 @@
       ],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -463,6 +467,8 @@
       ],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {

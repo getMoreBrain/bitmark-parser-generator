@@ -17,6 +17,8 @@
           "attrs": {}
         }
       ],
+      "lead": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -29,6 +31,9 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Ethischer Begriff",
@@ -100,6 +105,11 @@
       "bitLevel": 1,
       "id": ["265794"],
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {},

@@ -19,8 +19,9 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

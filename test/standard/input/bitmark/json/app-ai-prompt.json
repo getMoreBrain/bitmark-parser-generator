@@ -6,9 +6,11 @@
       "bitLevel": 1,
       "ageRange": ["18", "120"],
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -58,9 +60,11 @@
       "AIGenerated": true,
       "ageRange": ["18", "120"],
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -109,9 +113,11 @@
       "bitLevel": 1,
       "AIGenerated": false,
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

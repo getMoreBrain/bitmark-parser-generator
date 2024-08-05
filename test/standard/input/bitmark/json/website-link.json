@@ -6,9 +6,11 @@
       "bitLevel": 1,
       "id": ["119761"],
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [],
       "resource": {
         "type": "website-link",

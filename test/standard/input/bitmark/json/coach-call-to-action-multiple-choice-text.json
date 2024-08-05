@@ -20,6 +20,8 @@
       ],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -150,6 +152,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -163,6 +166,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -421,6 +426,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -434,6 +440,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -652,6 +660,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -665,6 +674,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -879,6 +890,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -892,6 +904,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -1042,8 +1056,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -1116,8 +1133,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -1190,8 +1210,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {

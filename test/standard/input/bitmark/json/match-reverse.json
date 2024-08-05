@@ -18,6 +18,7 @@
           "attrs": {}
         }
       ],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -30,6 +31,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {},

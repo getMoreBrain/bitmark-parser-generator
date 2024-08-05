@@ -8,9 +8,11 @@
       "isTracked": true,
       "isInfoOnly": false,
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {

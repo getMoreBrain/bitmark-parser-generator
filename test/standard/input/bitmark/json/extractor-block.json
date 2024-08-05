@@ -14,9 +14,11 @@
       "classification": "paragraph",
       "availableClassifications": ["test1", "test2"],
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [],
       "resource": {
         "type": "image",

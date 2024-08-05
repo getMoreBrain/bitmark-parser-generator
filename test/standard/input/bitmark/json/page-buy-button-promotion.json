@@ -43,8 +43,8 @@
         }
       ],
       "hint": [],
-      "example": null,
-      "isExample": false,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

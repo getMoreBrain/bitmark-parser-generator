@@ -16,6 +16,7 @@
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -29,8 +30,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

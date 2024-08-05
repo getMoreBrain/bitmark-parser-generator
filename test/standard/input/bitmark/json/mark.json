@@ -5,6 +5,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -18,6 +19,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "marks": [
         {

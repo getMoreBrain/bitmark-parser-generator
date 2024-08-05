@@ -44,6 +44,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -158,6 +160,8 @@
       ],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -239,6 +243,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -252,6 +257,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -526,6 +533,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -539,6 +547,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {

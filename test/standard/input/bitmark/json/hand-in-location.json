@@ -6,6 +6,7 @@
       "bitLevel": 1,
       "id": ["189522"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -19,8 +20,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -58,6 +59,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -71,8 +73,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "image",
@@ -113,6 +115,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -126,8 +129,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -179,8 +182,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -207,9 +210,11 @@
       "bitLevel": 1,
       "id": ["197943"],
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {

@@ -17,6 +17,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -30,6 +31,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "questions": [
@@ -260,6 +263,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -273,6 +277,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "questions": [

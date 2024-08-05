@@ -6,6 +6,7 @@
       "bitLevel": 1,
       "id": ["190596"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -19,8 +20,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -36,6 +37,7 @@
       "bitLevel": 1,
       "id": ["190597"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -49,8 +51,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -66,6 +68,7 @@
       "bitLevel": 1,
       "id": ["190598"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -79,8 +82,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -120,8 +123,9 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -161,8 +165,9 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -202,8 +207,9 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -243,8 +249,9 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -284,8 +291,9 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -325,8 +333,9 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {

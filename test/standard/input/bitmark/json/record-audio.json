@@ -17,6 +17,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -30,8 +31,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -47,9 +48,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {

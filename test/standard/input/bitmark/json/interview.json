@@ -17,6 +17,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -30,6 +31,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "questions": [
@@ -93,6 +96,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -106,6 +110,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -173,6 +179,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -186,6 +193,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "questions": [
@@ -226,6 +235,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -239,6 +249,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -421,6 +433,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -434,6 +447,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "questions": [
@@ -474,6 +489,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -487,6 +503,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "questions": [
@@ -567,6 +585,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -580,6 +599,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "resource": {
@@ -710,8 +731,11 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "questions": [
@@ -771,6 +795,7 @@
       "bitLevel": 1,
       "id": ["198264"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -784,6 +809,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "questions": [
@@ -848,6 +875,8 @@
       ],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {

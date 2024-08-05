@@ -5,6 +5,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -18,8 +19,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "partner": {
         "name": "David",
         "avatarImage": {

@@ -16,6 +16,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -29,6 +30,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [],
@@ -73,6 +76,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -138,6 +143,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -203,6 +210,7 @@
       "bitLevel": 1,
       "id": ["152151"],
       "item": [],
+      "lead": [],
       "hint": [
         {
           "type": "paragraph",
@@ -314,6 +322,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -530,6 +540,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -543,6 +554,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [],

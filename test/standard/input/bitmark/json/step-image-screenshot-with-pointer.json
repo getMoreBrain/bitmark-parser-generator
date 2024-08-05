@@ -7,9 +7,11 @@
       "pointerLeft": "60%",
       "pointerTop": "20%",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -75,9 +77,11 @@
       "pointerLeft": "60%",
       "pointerTop": "20%",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -161,9 +165,11 @@
       "pointerTop": "",
       "pointerLeft": "50%",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

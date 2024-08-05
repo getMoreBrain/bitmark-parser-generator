@@ -20,6 +20,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [
         {
           "type": "paragraph",
@@ -44,8 +45,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

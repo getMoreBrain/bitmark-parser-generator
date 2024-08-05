@@ -17,6 +17,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -30,8 +31,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": {
         "Test": 100,
         "Test2": "Json"
@@ -62,6 +63,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -75,8 +77,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": {
         "Testing": 200,
         "Checking": [1, 2, 3, 4, 5, 6]
@@ -106,6 +108,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -119,8 +122,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": {
         "name": "@bitmark-standard/bitmark-grammar",
         "version": "1.0.23",
@@ -169,6 +172,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [
         {
           "type": "paragraph",
@@ -193,8 +197,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": {
         "Test": 100,
         "Test2": "[%item 1][%lead]"
@@ -225,6 +229,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [
         {
           "type": "paragraph",
@@ -249,8 +254,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": null
     },
     "parser": {

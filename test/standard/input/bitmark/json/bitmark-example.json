@@ -19,6 +19,9 @@
         }
       ],
       "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -60,6 +63,9 @@
         }
       ],
       "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -101,6 +107,9 @@
         }
       ],
       "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [

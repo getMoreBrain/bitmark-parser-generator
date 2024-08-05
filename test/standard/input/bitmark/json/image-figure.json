@@ -6,9 +6,11 @@
       "bitLevel": 1,
       "backgroundWallpaper": "https://miro.medium.com/background.png",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

@@ -7,9 +7,11 @@
       "slug": "testing-1234",
       "buttonCaption": "Follow",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "person": {
         "name": "Morgan Sweeny",
         "title": "Ant Collector",

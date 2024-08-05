@@ -6,6 +6,8 @@
       "bitLevel": 1,
       "id": ["197919"],
       "item": [],
+      "lead": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -18,6 +20,9 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Jahr",
@@ -194,6 +199,7 @@
           "attrs": {}
         }
       ],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -206,6 +212,9 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -341,6 +350,7 @@
           "attrs": {}
         }
       ],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -353,6 +363,9 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -464,6 +477,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -516,6 +534,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -568,6 +591,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -620,6 +648,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -672,6 +705,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -735,6 +773,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -798,6 +841,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -861,6 +909,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -924,6 +977,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -987,6 +1045,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {},
@@ -1058,6 +1121,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "",
@@ -1088,6 +1157,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "",
@@ -1118,6 +1193,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
@@ -1148,6 +1229,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
@@ -1178,6 +1265,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "",
@@ -1208,6 +1301,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {},
       "pairs": [
@@ -1235,6 +1334,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
@@ -1296,6 +1401,12 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Heading1",

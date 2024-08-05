@@ -2825,14 +2825,32 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       delete bitJson.format;
       //
     } else {
+      let isTopLevelExample = false;
+      let isTopLevelExampleValue = false;
+
       // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.lead == null) bitJson.lead = this.textDefault;
-      if (bitJson.pageNumber == null) bitJson.pageNumber = this.textDefault;
-      if (bitJson.marginNumber == null) bitJson.marginNumber = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+      if (Config.isOfBitType(bitType, [BitType.page])) {
+        // Bits without item, lead, etc
+      } else {
+        // Majority of bits
+        if (bitJson.item == null) bitJson.item = this.textDefault;
+        if (bitJson.lead == null) bitJson.lead = this.textDefault;
+        if (bitJson.hint == null) bitJson.hint = this.textDefault;
+        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+        if (bitJson.pageNumber == null) bitJson.pageNumber = this.textDefault;
+        if (bitJson.marginNumber == null) bitJson.marginNumber = this.textDefault;
+      }
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
+
+      if (Config.isOfBitType(bitType, [BitType.article])) {
+        //
+      }
+
+      if (Config.isOfBitType(bitType, [BitType.example])) {
+        // With 'example' value at the bit level.
+        isTopLevelExample = true;
+        isTopLevelExampleValue = true;
+      }
 
       if (
         Config.isOfBitType(bitType, [
@@ -2840,20 +2858,30 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           BitType.multipleResponse1,
           BitType.multipleChoiceText,
           BitType.highlightText,
+          BitType.gapText,
+          BitType.gapTextInstructionGrouped,
           BitType.clozeAndMultipleChoiceText,
           BitType.sequence,
           BitType.mark,
           BitType.flashcard,
         ])
       ) {
-        // Default, but with no 'example' at the bit level.
-        if (bitJson.isExample == null) bitJson.isExample = false;
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        //
+      }
+
+      if (Config.isOfBitType(bitType, [BitType.sequence])) {
+        // With 'example' value at the bit level.
+        isTopLevelExample = true;
+        isTopLevelExampleValue = true;
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
       }
 
       if (Config.isOfBitType(bitType, BitType.cloze)) {
-        // Default, but with no 'example' at the bit level.
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
+
         if (Config.isOfBitType(bitType, BitType.clozeSolutionGrouped)) {
           // Solution grouped
           if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
@@ -2863,50 +2891,42 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
           if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = false;
         }
-        //
       }
 
       if (Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleResponse])) {
         // Default with a card (and hence a footer possibility)
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
+        isTopLevelExample = true;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         if (bitJson.footer == null) bitJson.footer = this.textDefault;
-        //
       }
 
       if (Config.isOfBitType(bitType, BitType.essay)) {
-        //
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
+        // With 'example' value at the bit level.
+        isTopLevelExample = true;
+        isTopLevelExampleValue = true;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
         // if (bitJson.sampleSolution == null) bitJson.sampleSolution = '';
-        //
       }
 
       if (Config.isOfBitType(bitType, BitType.trueFalse1)) {
-        //
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
+        // With 'example' value at the bit level.
+        isTopLevelExample = true;
+        isTopLevelExampleValue = true;
         if (bitJson.isCorrect == null) bitJson.isCorrect = false;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        //
       }
 
       if (Config.isOfBitType(bitType, BitType.trueFalse)) {
-        //
-        if (bitJson.isExample == null) bitJson.isExample = false;
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
         if (bitJson.labelFalse == null) bitJson.labelFalse = '';
         if (bitJson.labelTrue == null) bitJson.labelTrue = '';
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
-        //
       }
 
       if (Config.isOfBitType(bitType, BitType.chapter)) {
         //
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
         if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
         if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
         if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
@@ -2915,28 +2935,26 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
 
       if (Config.isOfBitType(bitType, BitType.interview)) {
-        //
-        if (bitJson.isExample == null) bitJson.isExample = false;
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         if (bitJson.footer == null) bitJson.footer = this.textDefault;
         if (bitJson.questions == null) bitJson.questions = [];
-        //
       }
 
       if (bitType === BitType.matchMatrix) {
-        //
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
       }
 
       if (Config.isOfBitType(bitType, BitType.match)) {
-        //
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
         if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
-        //
       }
 
       if (Config.isOfBitType(bitType, BitType.learningPathBook)) {
         //
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
         if (bitJson.isTracked == null) bitJson.isTracked = true;
         if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
         //
@@ -2958,24 +2976,24 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
 
       if (
-        Config.isOfBitType(bitType, BitType.pageBanner) ||
-        Config.isOfBitType(bitType, BitType.pageBuyButton) ||
-        Config.isOfBitType(bitType, BitType.pageBuyButtonPromotion) ||
-        Config.isOfBitType(bitType, BitType.pageFooter) ||
-        Config.isOfBitType(bitType, BitType.pageOpenBook) ||
-        Config.isOfBitType(bitType, BitType.pagePerson) ||
-        Config.isOfBitType(bitType, BitType.pageProduct) ||
-        Config.isOfBitType(bitType, BitType.pageProductList) ||
-        Config.isOfBitType(bitType, BitType.pageProductVideo) ||
-        Config.isOfBitType(bitType, BitType.pageProductVideoList) ||
-        Config.isOfBitType(bitType, BitType.pageSectionFolder) ||
-        Config.isOfBitType(bitType, BitType.pageSubscribe) ||
-        Config.isOfBitType(bitType, BitType.pageSubpage)
+        Config.isOfBitType(bitType, [
+          BitType.pageBanner,
+          BitType.pageBuyButton,
+          BitType.pageBuyButtonPromotion,
+          BitType.pageFooter,
+          BitType.pageOpenBook,
+          BitType.pagePerson,
+          BitType.pageProduct,
+          BitType.pageProductList,
+          BitType.pageProductVideo,
+          BitType.pageProductVideoList,
+          BitType.pageSectionFolder,
+          BitType.pageSubscribe,
+          BitType.pageSubpage,
+        ])
       ) {
         //
         if (bitJson.slug == null) bitJson.slug = '';
-        if (bitJson.isExample == null) bitJson.isExample = false;
-        if (bitJson.example == null) bitJson.example = null;
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
 
         if (Config.isOfBitType(bitType, BitType.pageBuyButton)) {
@@ -3051,6 +3069,21 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Special case for 'container' bits
       if (Config.isOfBitType(bitType, BitType.container)) {
         if (bitJson.allowedBit == null) bitJson.allowedBit = [];
+      }
+
+      // Remove top level example if it is not required
+      if (isTopLevelExample) {
+        if (bitJson.isExample == null) bitJson.isExample = false;
+      } else {
+        // Remove example
+        delete bitJson.isExample;
+        delete bitJson.example;
+      }
+      if (isTopLevelExampleValue) {
+        if (bitJson.example == null) bitJson.example = null;
+      } else {
+        // Remove example value
+        delete bitJson.example;
       }
     }
 

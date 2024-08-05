@@ -5,6 +5,9 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["342341"],
+      "item": [],
+      "lead": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -17,6 +20,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
