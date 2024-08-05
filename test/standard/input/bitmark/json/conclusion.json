@@ -39,6 +39,8 @@
       "id": ["151971"],
       "item": [],
       "lead": [],
+      "hint": [],
+      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -52,9 +54,6 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "isExample": false,
-      "example": null,
       "body": [
         {
           "type": "paragraph",
