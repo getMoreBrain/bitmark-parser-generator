@@ -9,9 +9,11 @@
       "height": "120",
       "vendorUrl": "https://a.url.com/example",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": "Here is some code"
     },
     "parser": {

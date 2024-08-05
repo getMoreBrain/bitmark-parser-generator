@@ -6,9 +6,11 @@
       "bitLevel": 1,
       "ageRange": ["18", "120"],
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -98,6 +100,8 @@
       "id": ["151971"],
       "item": [],
       "lead": [],
+      "hint": [],
+      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -111,9 +115,6 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "isExample": false,
-      "example": null,
       "body": [
         {
           "type": "paragraph",

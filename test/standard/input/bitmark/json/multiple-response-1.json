@@ -6,6 +6,7 @@
       "bitLevel": 1,
       "id": ["186300"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -19,6 +20,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -64,6 +67,7 @@
       "bitLevel": 1,
       "id": ["186301"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -77,6 +81,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -131,6 +137,7 @@
       "bitLevel": 1,
       "id": ["186302"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -144,6 +151,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -198,6 +207,7 @@
       "bitLevel": 1,
       "id": ["187540"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -211,6 +221,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -265,6 +277,7 @@
       "bitLevel": 1,
       "id": ["187541"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -278,6 +291,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -332,6 +347,7 @@
       "bitLevel": 1,
       "id": ["187542"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -345,6 +361,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -399,6 +417,7 @@
       "bitLevel": 1,
       "id": ["187543"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -412,6 +431,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -466,6 +487,7 @@
       "bitLevel": 1,
       "id": ["187544"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -479,6 +501,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -533,6 +557,7 @@
       "bitLevel": 1,
       "id": ["187233"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -546,6 +571,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -600,6 +627,7 @@
       "bitLevel": 1,
       "id": ["187234"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -613,6 +641,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "responses": [
@@ -669,6 +699,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -682,6 +713,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -773,8 +806,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "responses": [
@@ -819,8 +855,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "responses": [
@@ -865,8 +904,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "responses": [

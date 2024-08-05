@@ -212,8 +212,6 @@ interface ItemLeadHintInstructionNode {
 interface ItemLeadHintInstuction {
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
 }
@@ -665,10 +663,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     };
 
     // Delete unwanted properties
-    const nv = node.value;
-    const li: Partial<ListItemJson> = this.listItem;
-    if (nv.pageNumber == null) delete li.pageNumber;
-    if (nv.marginNumber == null) delete li.marginNumber;
+    // const nv = node.value;
+    // const li: Partial<ListItemJson> = this.listItem;
 
     listItems.push(this.listItem);
   }
@@ -884,8 +880,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (c.itemLead?.lead == null) delete flashcardJson.lead;
-        if (c.itemLead?.pageNumber == null) delete flashcardJson.pageNumber;
-        if (c.itemLead?.marginNumber == null) delete flashcardJson.marginNumber;
 
         flashcardsJson.push(flashcardJson as FlashcardJson);
       }
@@ -937,8 +931,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         // Delete unwanted properties
         if (s.itemLead?.item == null) delete statementJson.item;
         if (s.itemLead?.lead == null) delete statementJson.lead;
-        if (s.itemLead?.pageNumber == null) delete statementJson.pageNumber;
-        if (s.itemLead?.marginNumber == null) delete statementJson.marginNumber;
         if (s?.hint == null) delete statementJson.hint;
         if (s?.instruction == null) delete statementJson.instruction;
 
@@ -977,8 +969,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (c.itemLead?.lead == null) delete choiceJson.lead;
-        if (c.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
-        if (c.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
 
         choicesJson.push(choiceJson as ChoiceJson);
       }
@@ -1015,8 +1005,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (r.itemLead?.lead == null) delete responseJson.lead;
-        if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
-        if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
 
         responsesJson.push(responseJson as ResponseJson);
       }
@@ -1052,8 +1040,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
             // Delete unwanted properties
             if (q.itemLead?.lead == null) delete choiceJson.lead;
-            if (q.itemLead?.pageNumber == null) delete choiceJson.pageNumber;
-            if (q.itemLead?.marginNumber == null) delete choiceJson.marginNumber;
 
             choicesJson.push(choiceJson as ChoiceJson);
           }
@@ -1076,8 +1062,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
             // Delete unwanted properties
             if (q.itemLead?.lead == null) delete responseJson.lead;
-            if (q.itemLead?.pageNumber == null) delete responseJson.pageNumber;
-            if (q.itemLead?.marginNumber == null) delete responseJson.marginNumber;
 
             responsesJson.push(responseJson as ResponseJson);
           }
@@ -1093,8 +1077,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (q.itemLead?.lead == null) delete quizJson.lead;
-        if (q.itemLead?.pageNumber == null) delete quizJson.pageNumber;
-        if (q.itemLead?.marginNumber == null) delete quizJson.marginNumber;
 
         quizzesJson.push(quizJson as QuizJson);
       }
@@ -1168,8 +1150,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (p.itemLead?.lead == null) delete pairJson.lead;
-        if (p.itemLead?.pageNumber == null) delete pairJson.pageNumber;
-        if (p.itemLead?.marginNumber == null) delete pairJson.marginNumber;
         if (pairJson.key) {
           delete pairJson.keyAudio;
           delete pairJson.keyImage;
@@ -1220,8 +1200,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
             // Delete unwanted properties
             if (c.itemLead?.lead == null) delete matrixCellJson.lead;
-            if (c.itemLead?.pageNumber == null) delete matrixCellJson.pageNumber;
-            if (c.itemLead?.marginNumber == null) delete matrixCellJson.marginNumber;
             if (c.hint == null) delete matrixCellJson.hint;
 
             matrixCellsJson.push(matrixCellJson as MatrixCellJson);
@@ -1239,8 +1217,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (m.itemLead?.lead == null) delete matrixJson.lead;
-        if (m.itemLead?.pageNumber == null) delete matrixJson.pageNumber;
-        if (m.itemLead?.marginNumber == null) delete matrixJson.marginNumber;
         if (m.instruction == null) delete matrixJson.instruction;
 
         matrixJsonArray.push(matrixJson as MatrixJson);
@@ -1289,8 +1265,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (q.itemLead?.lead == null) delete questionJson.lead;
-        if (q.itemLead?.pageNumber == null) delete questionJson.pageNumber;
-        if (q.itemLead?.marginNumber == null) delete questionJson.marginNumber;
 
         questionsJson.push(questionJson as QuestionJson);
       }
@@ -1324,8 +1298,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (r.itemLead?.lead == null) delete responseJson.lead;
-        if (r.itemLead?.pageNumber == null) delete responseJson.pageNumber;
-        if (r.itemLead?.marginNumber == null) delete responseJson.marginNumber;
         if (r.hint == null) delete responseJson.hint;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         delete (responseJson as any).instruction;
@@ -1693,8 +1665,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Remove unwanted properties
     // if (!data.itemLead?.lead) delete gapJson.lead;
-    // if (!data.itemLead?.pageNumber) delete gapJson.pageNumber;
-    // if (!data.itemLead?.marginNumber) delete gapJson.marginNumber;
 
     return gapJson as GapJson;
   }
@@ -1717,8 +1687,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Remove unwanted properties
     // if (!data.itemLead?.lead) delete markJson.lead;
-    // if (!data.itemLead?.pageNumber) delete markJson.pageNumber;
-    // if (!data.itemLead?.marginNumber) delete markJson.marginNumber;
 
     return markJson as MarkJson;
   }
@@ -1742,8 +1710,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Remove unwanted properties
       // if (!option.itemLead?.item) delete optionJson.item;
       // if (!option.itemLead?.lead) delete optionJson.lead;
-      // if (!option.itemLead?.pageNumber) delete optionJson.pageNumber;
-      // if (!option.itemLead?.marginNumber) delete optionJson.marginNumber;
       // if (!option.instruction) delete optionJson.instruction;
 
       options.push(optionJson as SelectOptionJson);
@@ -1761,8 +1727,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Remove unwanted properties
     // if (!data.itemLead?.lead) delete selectJson.lead;
-    // if (!data.itemLead?.pageNumber) delete selectJson.pageNumber;
-    // if (!data.itemLead?.marginNumber) delete selectJson.marginNumber;
 
     return selectJson as SelectJson;
   }
@@ -1787,8 +1751,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Remove unwanted properties
       // if (!text.itemLead?.item) delete textJson.item;
       // if (!text.itemLead?.lead) delete textJson.lead;
-      // if (!text.itemLead?.pageNumber) delete textJson.pageNumber;
-      // if (!text.itemLead?.marginNumber) delete textJson.marginNumber;
       // if (!text.hint) delete textJson.hint;
 
       texts.push(textJson as HighlightTextJson);
@@ -2363,14 +2325,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         item.itemLead?.lead ?? Breakscape.EMPTY_STRING,
         TextFormat.bitmarkMinusMinus,
       ),
-      pageNumber: this.convertBreakscapedStringToJsonText(
-        item.itemLead?.pageNumber ?? Breakscape.EMPTY_STRING,
-        TextFormat.bitmarkMinusMinus,
-      ),
-      marginNumber: this.convertBreakscapedStringToJsonText(
-        item.itemLead?.marginNumber ?? Breakscape.EMPTY_STRING,
-        TextFormat.bitmarkMinusMinus,
-      ),
       hint: this.convertBreakscapedStringToJsonText(item.hint ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
       instruction: this.convertBreakscapedStringToJsonText(
         item.instruction ?? Breakscape.EMPTY_STRING,
@@ -2867,180 +2821,185 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //       The properties used are a bit random sometimes?
     //       It would be better if this functionality was generated from the bit config
     if (Config.isOfBitType(bitType, [BitType._error, BitType._comment])) {
-      //
+      // Special caes for _error and _comment bits
       delete bitJson.format;
       //
-    } else if (Config.isOfBitType(bitType, [BitType.article, BitType.sampleSolution, BitType.page])) {
-      //
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (
-      Config.isOfBitType(bitType, [
-        BitType.multipleChoice1,
-        BitType.multipleResponse1,
-        BitType.multipleChoiceText,
-        BitType.highlightText,
-        BitType.clozeAndMultipleChoiceText,
-        BitType.sequence,
-        BitType.mark,
-        BitType.flashcard,
-      ])
-    ) {
-      // Default, but with no 'example' at the bit level.
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.cloze)) {
-      // Default, but with no 'example' at the bit level.
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      if (Config.isOfBitType(bitType, BitType.clozeSolutionGrouped)) {
-        // Solution grouped
-        if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
-        if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = true;
-      } else if (Config.isOfBitType(bitType, BitType.clozeInstructionGrouped)) {
-        // Instruction grouped
-        if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
-        if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = false;
+    } else {
+      let isTopLevelExample = false;
+      let isTopLevelExampleValue = false;
+
+      // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
+      if (Config.isOfBitType(bitType, [BitType.page])) {
+        // Bits without item, lead, etc
+      } else {
+        // Majority of bits
+        if (bitJson.item == null) bitJson.item = this.textDefault;
+        if (bitJson.lead == null) bitJson.lead = this.textDefault;
+        if (bitJson.hint == null) bitJson.hint = this.textDefault;
+        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+        if (bitJson.pageNumber == null) bitJson.pageNumber = this.textDefault;
+        if (bitJson.marginNumber == null) bitJson.marginNumber = this.textDefault;
       }
-      //
-    } else if (Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleResponse])) {
-      // Default with a card (and hence a footer possibility)
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      if (bitJson.footer == null) bitJson.footer = this.textDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.essay)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
-      // if (bitJson.sampleSolution == null) bitJson.sampleSolution = '';
-      //
-    } else if (Config.isOfBitType(bitType, BitType.trueFalse1)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.lead == null) bitJson.lead = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.isCorrect == null) bitJson.isCorrect = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.trueFalse)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.lead == null) bitJson.lead = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.labelFalse == null) bitJson.labelFalse = '';
-      if (bitJson.labelTrue == null) bitJson.labelTrue = '';
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.chapter)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
-      if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
-      if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.interview)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      if (bitJson.footer == null) bitJson.footer = this.textDefault;
-      if (bitJson.questions == null) bitJson.questions = [];
-      //
-    } else if (bitType === BitType.matchMatrix) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.match)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.learningPathBook)) {
-      //
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.isTracked == null) bitJson.isTracked = true;
-      if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (Config.isOfBitType(bitType, BitType.table)) {
-      //
-      // if (bitJson.content2Buy == null) bitJson.content2Buy = '';
-      if (bitJson.tableFixedHeader == null) bitJson.tableFixedHeader = false;
-      if (bitJson.tableSearch == null) bitJson.tableSearch = false;
-      if (bitJson.tableSort == null) bitJson.tableSort = false;
-      if (bitJson.tablePagination == null) bitJson.tablePagination = false;
-      if (bitJson.tablePaginationLimit == null) bitJson.tablePaginationLimit = 0;
-      if (bitJson.tableHeight == null) bitJson.tableHeight = 0;
-      if (bitJson.tableWhitespaceNoWrap == null) bitJson.tableWhitespaceNoWrap = true;
-      if (bitJson.tableAutoWidth == null) bitJson.tableAutoWidth = true;
-      if (bitJson.tableResizableColumns == null) bitJson.tableResizableColumns = false;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
-      //
-    } else if (
-      Config.isOfBitType(bitType, BitType.pageBanner) ||
-      Config.isOfBitType(bitType, BitType.pageBuyButton) ||
-      Config.isOfBitType(bitType, BitType.pageBuyButtonPromotion) ||
-      Config.isOfBitType(bitType, BitType.pageFooter) ||
-      Config.isOfBitType(bitType, BitType.pageOpenBook) ||
-      Config.isOfBitType(bitType, BitType.pagePerson) ||
-      Config.isOfBitType(bitType, BitType.pageProduct) ||
-      Config.isOfBitType(bitType, BitType.pageProductList) ||
-      Config.isOfBitType(bitType, BitType.pageProductVideo) ||
-      Config.isOfBitType(bitType, BitType.pageProductVideoList) ||
-      Config.isOfBitType(bitType, BitType.pageSectionFolder) ||
-      Config.isOfBitType(bitType, BitType.pageSubscribe) ||
-      Config.isOfBitType(bitType, BitType.pageSubpage)
-    ) {
-      //
-      if (bitJson.slug == null) bitJson.slug = '';
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
 
-      if (Config.isOfBitType(bitType, BitType.pageBuyButton)) {
-        if (bitJson.content2Buy == null) bitJson.content2Buy = '';
+      if (Config.isOfBitType(bitType, [BitType.article])) {
+        //
       }
-    } else {
-      // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
-      if (bitJson.item == null) bitJson.item = this.textDefault;
-      if (bitJson.hint == null) bitJson.hint = this.textDefault;
-      if (bitJson.isExample == null) bitJson.isExample = false;
-      if (bitJson.example == null) bitJson.example = null;
-      if (bitJson.body == null) bitJson.body = this.bodyDefault;
+
+      if (Config.isOfBitType(bitType, [BitType.example])) {
+        // With 'example' value at the bit level.
+        isTopLevelExample = true;
+        isTopLevelExampleValue = true;
+      }
+
+      if (
+        Config.isOfBitType(bitType, [
+          BitType.multipleChoice1,
+          BitType.multipleResponse1,
+          BitType.multipleChoiceText,
+          BitType.highlightText,
+          BitType.gapText,
+          BitType.gapTextInstructionGrouped,
+          BitType.clozeAndMultipleChoiceText,
+          BitType.sequence,
+          BitType.mark,
+          BitType.flashcard,
+        ])
+      ) {
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      }
+
+      if (Config.isOfBitType(bitType, [BitType.sequence])) {
+        // With 'example' value at the bit level.
+        isTopLevelExample = true;
+        isTopLevelExampleValue = true;
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      }
+
+      if (Config.isOfBitType(bitType, BitType.cloze)) {
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
+
+        if (Config.isOfBitType(bitType, BitType.clozeSolutionGrouped)) {
+          // Solution grouped
+          if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
+          if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = true;
+        } else if (Config.isOfBitType(bitType, BitType.clozeInstructionGrouped)) {
+          // Instruction grouped
+          if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
+          if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = false;
+        }
+      }
+
+      if (Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleResponse])) {
+        // Default with a card (and hence a footer possibility)
+        isTopLevelExample = true;
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+        if (bitJson.footer == null) bitJson.footer = this.textDefault;
+      }
+
+      if (Config.isOfBitType(bitType, BitType.essay)) {
+        // With 'example' value at the bit level.
+        isTopLevelExample = true;
+        isTopLevelExampleValue = true;
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+        if (bitJson.partialAnswer == null) bitJson.partialAnswer = '';
+        // if (bitJson.sampleSolution == null) bitJson.sampleSolution = '';
+      }
+
+      if (Config.isOfBitType(bitType, BitType.trueFalse1)) {
+        // With 'example' value at the bit level.
+        isTopLevelExample = true;
+        isTopLevelExampleValue = true;
+        if (bitJson.isCorrect == null) bitJson.isCorrect = false;
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      }
+
+      if (Config.isOfBitType(bitType, BitType.trueFalse)) {
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
+        if (bitJson.labelFalse == null) bitJson.labelFalse = '';
+        if (bitJson.labelTrue == null) bitJson.labelTrue = '';
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+      }
+
+      if (Config.isOfBitType(bitType, BitType.chapter)) {
+        //
+        if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
+        if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
+        if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+        //
+      }
+
+      if (Config.isOfBitType(bitType, BitType.interview)) {
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+        if (bitJson.footer == null) bitJson.footer = this.textDefault;
+        if (bitJson.questions == null) bitJson.questions = [];
+      }
+
+      if (bitType === BitType.matchMatrix) {
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
+      }
+
+      if (Config.isOfBitType(bitType, BitType.match)) {
+        // With no 'example' value at the bit level.
+        isTopLevelExample = true;
+        if (bitJson.heading == null) bitJson.heading = {} as HeadingJson;
+      }
+
+      if (Config.isOfBitType(bitType, BitType.learningPathBook)) {
+        //
+        if (bitJson.isTracked == null) bitJson.isTracked = true;
+        if (bitJson.isInfoOnly == null) bitJson.isInfoOnly = false;
+        //
+      }
+
+      if (Config.isOfBitType(bitType, BitType.table)) {
+        //
+        // if (bitJson.content2Buy == null) bitJson.content2Buy = '';
+        if (bitJson.tableFixedHeader == null) bitJson.tableFixedHeader = false;
+        if (bitJson.tableSearch == null) bitJson.tableSearch = false;
+        if (bitJson.tableSort == null) bitJson.tableSort = false;
+        if (bitJson.tablePagination == null) bitJson.tablePagination = false;
+        if (bitJson.tablePaginationLimit == null) bitJson.tablePaginationLimit = 0;
+        if (bitJson.tableHeight == null) bitJson.tableHeight = 0;
+        if (bitJson.tableWhitespaceNoWrap == null) bitJson.tableWhitespaceNoWrap = true;
+        if (bitJson.tableAutoWidth == null) bitJson.tableAutoWidth = true;
+        if (bitJson.tableResizableColumns == null) bitJson.tableResizableColumns = false;
+        //
+      }
+
+      if (
+        Config.isOfBitType(bitType, [
+          BitType.pageBanner,
+          BitType.pageBuyButton,
+          BitType.pageBuyButtonPromotion,
+          BitType.pageFooter,
+          BitType.pageOpenBook,
+          BitType.pagePerson,
+          BitType.pageProduct,
+          BitType.pageProductList,
+          BitType.pageProductVideo,
+          BitType.pageProductVideoList,
+          BitType.pageSectionFolder,
+          BitType.pageSubscribe,
+          BitType.pageSubpage,
+        ])
+      ) {
+        //
+        if (bitJson.slug == null) bitJson.slug = '';
+        if (bitJson.body == null) bitJson.body = this.bodyDefault;
+
+        if (Config.isOfBitType(bitType, BitType.pageBuyButton)) {
+          if (bitJson.content2Buy == null) bitJson.content2Buy = '';
+        }
+      }
 
       // Special case for 'book' bits
       if (Config.isOfBitType(bitType, BitType.book)) {
@@ -3110,6 +3069,21 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Special case for 'container' bits
       if (Config.isOfBitType(bitType, BitType.container)) {
         if (bitJson.allowedBit == null) bitJson.allowedBit = [];
+      }
+
+      // Remove top level example if it is not required
+      if (isTopLevelExample) {
+        if (bitJson.isExample == null) bitJson.isExample = false;
+      } else {
+        // Remove example
+        delete bitJson.isExample;
+        delete bitJson.example;
+      }
+      if (isTopLevelExampleValue) {
+        if (bitJson.example == null) bitJson.example = null;
+      } else {
+        // Remove example value
+        delete bitJson.example;
       }
     }
 

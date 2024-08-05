@@ -10,9 +10,11 @@
       "duration": "PT2H",
       "productId": ["e-ef-b11_u1_l1", "e-ef-b11_u1_l12", "e-ef-b11_u1_l12"],
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -78,9 +80,11 @@
       "bitLevel": 1,
       "hasBookNavigation": true,
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {

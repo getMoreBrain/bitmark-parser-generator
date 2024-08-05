@@ -8,6 +8,7 @@
       "slug": "testing-1234",
       "content2Buy": "testing 123",
       "item": [],
+      "lead": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -21,8 +22,8 @@
         }
       ],
       "hint": [],
-      "example": null,
-      "isExample": false,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

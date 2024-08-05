@@ -6,6 +6,7 @@
       "bitLevel": 1,
       "id": ["245346"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -19,8 +20,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

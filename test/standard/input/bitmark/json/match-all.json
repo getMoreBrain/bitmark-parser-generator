@@ -17,6 +17,8 @@
           "attrs": {}
         }
       ],
+      "lead": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -29,6 +31,9 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -193,6 +198,7 @@
           "attrs": {}
         }
       ],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -205,6 +211,9 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {},
       "pairs": [
@@ -243,6 +252,8 @@
           "attrs": {}
         }
       ],
+      "lead": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -255,6 +266,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {},
@@ -381,6 +394,8 @@
           "attrs": {}
         }
       ],
+      "lead": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -393,6 +408,9 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -537,6 +555,8 @@
           "attrs": {}
         }
       ],
+      "lead": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -549,6 +569,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {

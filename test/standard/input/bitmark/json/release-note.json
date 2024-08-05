@@ -8,9 +8,11 @@
       "releaseKind": "Jumanji",
       "releaseDate": "20/02/1992",
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",

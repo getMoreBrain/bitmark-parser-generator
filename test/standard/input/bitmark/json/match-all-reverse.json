@@ -29,6 +29,7 @@
           "attrs": {}
         }
       ],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -41,6 +42,9 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "isExample": false,
       "body": [],
       "heading": {},
       "pairs": [

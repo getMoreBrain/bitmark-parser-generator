@@ -44,6 +44,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -57,8 +59,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -74,8 +74,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -91,8 +89,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -108,8 +104,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -125,8 +119,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -168,6 +160,8 @@
       ],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -181,8 +175,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -209,8 +201,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -253,6 +243,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -266,6 +257,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -290,8 +283,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -318,8 +309,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -346,8 +335,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -374,8 +361,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -402,8 +387,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -430,8 +413,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -458,8 +439,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -486,8 +465,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -514,8 +491,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -558,6 +533,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -571,6 +547,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -595,8 +573,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -634,8 +610,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -673,8 +647,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -712,8 +684,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -751,8 +721,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -790,8 +758,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -829,8 +795,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -868,8 +832,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -907,8 +869,6 @@
                 }
               ],
               "lead": [],
-              "pageNumber": [],
-              "marginNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,

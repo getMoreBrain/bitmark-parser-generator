@@ -7,9 +7,11 @@
       "id": ["342341"],
       "maxCreatedBits": 100,
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": "bitmark.print(\"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")\nbitmark.console.log(\"This is a [_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")"
     },
     "parser": {

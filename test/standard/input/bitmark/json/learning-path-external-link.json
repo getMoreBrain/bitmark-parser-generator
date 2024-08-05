@@ -11,6 +11,7 @@
       "isTracked": true,
       "isInfoOnly": false,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -24,8 +25,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [],
       "resource": {
         "type": "image",

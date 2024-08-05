@@ -22,6 +22,8 @@
       ],
       "hint": [],
       "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -35,8 +37,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "marginNumber": [],
-              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -74,8 +74,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "marginNumber": [],
-              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -129,6 +127,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -142,6 +141,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -151,8 +152,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "marginNumber": [],
-              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -179,8 +178,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "marginNumber": [],
-              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -207,8 +204,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "marginNumber": [],
-              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {
@@ -235,8 +230,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "marginNumber": [],
-              "pageNumber": [],
               "hint": [],
               "instruction": [
                 {

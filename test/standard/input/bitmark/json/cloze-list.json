@@ -5,6 +5,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -18,8 +19,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -61,8 +62,6 @@
                   "type": "gap",
                   "item": [],
                   "lead": [],
-                  "marginNumber": [],
-                  "pageNumber": [],
                   "hint": [],
                   "instruction": [
                     {
@@ -89,8 +88,6 @@
                   "type": "gap",
                   "item": [],
                   "lead": [],
-                  "marginNumber": [],
-                  "pageNumber": [],
                   "hint": [
                     {
                       "type": "paragraph",
@@ -146,8 +143,6 @@
                   "type": "gap",
                   "item": [],
                   "lead": [],
-                  "marginNumber": [],
-                  "pageNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isCaseSensitive": true,
@@ -163,8 +158,6 @@
                   "type": "gap",
                   "item": [],
                   "lead": [],
-                  "marginNumber": [],
-                  "pageNumber": [],
                   "hint": [],
                   "instruction": [],
                   "isCaseSensitive": true,

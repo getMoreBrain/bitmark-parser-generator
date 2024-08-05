@@ -6,9 +6,11 @@
       "bitLevel": 1,
       "id": ["342337"],
       "item": [],
+      "lead": [],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -37,6 +39,8 @@
       "id": ["151971"],
       "item": [],
       "lead": [],
+      "hint": [],
+      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -50,9 +54,6 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "isExample": false,
-      "example": null,
       "body": [
         {
           "type": "paragraph",

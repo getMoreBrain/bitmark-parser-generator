@@ -7,6 +7,7 @@
       "id": ["190596"],
       "slug": "",
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -20,8 +21,9 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
+
       "body": []
     },
     "parser": {
@@ -38,6 +40,7 @@
       "id": ["190597"],
       "slug": "",
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -51,8 +54,9 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
+
       "body": []
     },
     "parser": {
@@ -69,6 +73,7 @@
       "id": ["190598"],
       "slug": "",
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -82,8 +87,9 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
+
       "body": []
     },
     "parser": {
@@ -124,8 +130,10 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+
       "body": []
     },
     "parser": {
@@ -166,8 +174,10 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+
       "body": []
     },
     "parser": {
@@ -208,8 +218,10 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+
       "body": []
     },
     "parser": {
@@ -250,8 +262,10 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+
       "body": []
     },
     "parser": {
@@ -292,8 +306,10 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+
       "body": []
     },
     "parser": {
@@ -334,8 +350,9 @@
         }
       ],
       "hint": [],
-      "isExample": false,
-      "example": null,
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [],
       "buttonCaption": "OK!",
       "mailingList": "gmb@getmorebrain.com;bmg@getmorebrain.com"

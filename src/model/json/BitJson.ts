@@ -209,8 +209,6 @@ export interface FlashcardJson {
   alternativeAnswers: JsonText[];
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
@@ -222,8 +220,6 @@ export interface StatementJson {
   isCorrect: boolean;
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
@@ -235,8 +231,6 @@ export interface ChoiceJson {
   isCorrect: boolean;
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
@@ -248,8 +242,6 @@ export interface ResponseJson {
   isCorrect: boolean;
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
@@ -260,8 +252,6 @@ export interface QuizJson {
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   instruction: JsonText;
   isExample: boolean;
   choices: ChoiceJson[];
@@ -280,8 +270,6 @@ export interface PairJson {
   values: string[];
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isCaseSensitive: boolean;
@@ -294,8 +282,6 @@ export interface MatrixJson {
   cells: MatrixCellJson[];
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
@@ -306,8 +292,6 @@ export interface MatrixCellJson {
   values: string[];
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isCaseSensitive: boolean;
@@ -326,8 +310,6 @@ export interface QuestionJson {
   sampleSolution: string;
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   reasonableNumOfChars: number;
@@ -341,8 +323,6 @@ export interface BotResponseJson {
   feedback: string;
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
 }
 
@@ -379,8 +359,6 @@ export interface RatingLevelStartEndJson {
 export interface ListItemJson {
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   body: JsonText;

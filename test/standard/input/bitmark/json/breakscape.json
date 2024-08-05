@@ -79,6 +79,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -121,8 +123,6 @@
               "type": "gap",
               "item": [],
               "lead": [],
-              "marginNumber": [],
-              "pageNumber": [],
               "hint": [],
               "instruction": [],
               "isCaseSensitive": true,

@@ -6,6 +6,9 @@
       "bitLevel": 1,
       "anchor": "I am an anchor",
       "reference": "Ref4.2.34",
+      "item": [],
+      "lead": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -18,6 +21,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {

@@ -6,6 +6,7 @@
       "bitLevel": 1,
       "id": ["186304"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -19,6 +20,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "choices": [
@@ -55,6 +58,7 @@
       "bitLevel": 1,
       "id": ["186305"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -68,6 +72,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "choices": [
@@ -113,6 +119,7 @@
       "bitLevel": 1,
       "id": ["186703"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -126,6 +133,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "choices": [
@@ -180,6 +189,7 @@
       "bitLevel": 1,
       "id": ["187235"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -193,6 +203,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "choices": [
@@ -238,6 +250,7 @@
       "bitLevel": 1,
       "id": ["187236"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -251,6 +264,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "choices": [
@@ -296,6 +311,7 @@
       "bitLevel": 1,
       "id": ["187237"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -309,6 +325,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "choices": [
@@ -356,6 +374,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -369,6 +388,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "resource": {
@@ -446,6 +467,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -459,6 +481,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "resource": {
@@ -527,6 +551,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -540,6 +565,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "resource": {
@@ -599,6 +626,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -612,6 +640,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "choices": [
@@ -677,6 +707,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -690,6 +721,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "choices": [
@@ -744,6 +777,7 @@
       "bitLevel": 1,
       "id": ["186303"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -757,6 +791,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -804,6 +840,7 @@
       "bitLevel": 1,
       "id": ["232614"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -817,6 +854,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [],
       "choices": [
@@ -880,6 +919,7 @@
       "bitLevel": 1,
       "id": ["232875"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -893,6 +933,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -969,6 +1011,7 @@
       "bitLevel": 1,
       "id": ["232876"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -982,6 +1025,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "choices": [
@@ -1045,6 +1090,7 @@
       "bitLevel": 1,
       "id": ["232876"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -1058,6 +1104,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "choices": [
@@ -1121,6 +1169,7 @@
       "bitLevel": 1,
       "id": ["232876"],
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -1134,6 +1183,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "isExample": true,
       "body": [],
       "choices": [

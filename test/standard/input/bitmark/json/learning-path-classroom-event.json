@@ -11,6 +11,7 @@
       "isTracked": true,
       "isInfoOnly": false,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -24,8 +25,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -54,6 +55,7 @@
           "attrs": {}
         }
       ],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -67,8 +69,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -101,6 +103,7 @@
       "isTracked": true,
       "isInfoOnly": false,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -114,8 +117,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
@@ -136,6 +139,7 @@
       "isTracked": true,
       "isInfoOnly": true,
       "item": [],
+      "lead": [],
       "hint": [],
       "instruction": [
         {
@@ -149,8 +153,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "pageNumber": [],
+      "marginNumber": [],
       "body": []
     },
     "parser": {
