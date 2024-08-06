@@ -237,7 +237,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-  [BitType.bookAcknowledgments]: { since: '1.3.0', baseBitType: BitType.book },
+  [BitType.bookAcknowledgements]: { since: '1.17.0', baseBitType: BitType.book },
   [BitType.bookAddendum]: { since: '1.3.0', baseBitType: BitType.book },
   [BitType.bookAfterword]: { since: '1.3.0', baseBitType: BitType.book },
   [BitType.bookAppendix]: { since: '1.3.0', baseBitType: BitType.book },

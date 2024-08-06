@@ -35,7 +35,7 @@ const BitType = superenum({
   bitmarkExample: 'bitmark-example',
   blogArticle: 'blog-article',
   book: 'book',
-  bookAcknowledgments: 'book-acknowledgments',
+  bookAcknowledgements: 'book-acknowledgements',
   bookAddendum: 'book-addendum',
   bookAfterword: 'book-afterword',
   bookAlias: 'book-alias',

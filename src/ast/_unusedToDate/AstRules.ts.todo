@@ -332,8 +332,8 @@ const BIT_DEFINITIONS: BitDefinitions = {
     ...EXTRA_BOOK_BIT_PROPERTIES,
     //
   ],
-  bookAcknowledgments: [
-    bitBitTypePropertyCreator(BitBitType.bookAcknowledgments),
+  bookAcknowledgements: [
+    bitBitTypePropertyCreator(BitBitType.bookAcknowledgements),
     ...DEFAULT_BIT_PROPERTIES,
     ...EXTRA_BOOK_BIT_PROPERTIES,
     //
