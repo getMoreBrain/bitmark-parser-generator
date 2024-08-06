@@ -2622,6 +2622,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       aiGenerated: undefined,
       analyticsTag: undefined,
       feedbackEngine: undefined,
+      feedbackType: undefined,
       disableFeedback: undefined,
       releaseVersion: undefined,
       releaseKind: undefined,
@@ -3104,6 +3105,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.aiGenerated == null) delete bitJson.aiGenerated;
     if (bitJson.analyticsTag == null) delete bitJson.analyticsTag;
     if (bitJson.feedbackEngine == null) delete bitJson.feedbackEngine;
+    if (bitJson.feedbackType == null) delete bitJson.feedbackType;
     if (bitJson.disableFeedback == null) delete bitJson.disableFeedback;
     if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
     if (bitJson.releaseKind == null) delete bitJson.releaseKind;

@@ -45,6 +45,7 @@ export interface Bit {
   aiGenerated?: Property;
   analyticsTag?: Property;
   feedbackEngine?: Property;
+  feedbackType?: Property;
   disableFeedback?: Property;
   releaseVersion?: Property;
   releaseKind?: Property;

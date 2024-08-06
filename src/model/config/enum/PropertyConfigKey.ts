@@ -44,6 +44,7 @@ const propertyConfigKeys = {
   externalLink: 'externalLink',
   externalLinkText: 'externalLinkText',
   feedbackEngine: 'feedbackEngine',
+  feedbackType: 'feedbackType',
   flashcardSet: 'flashcardSet',
   focusX: 'focusX',
   focusY: 'focusY',

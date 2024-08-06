@@ -37,6 +37,10 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.feedbackType,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.disableFeedback,
       },
       {
