@@ -396,6 +396,35 @@
       {
         "text": ", nice huh?",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          },
+          {
+            "type": "italic"
+          },
+          {
+            "type": "subscript"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
       }
     ],
     "attrs": {}

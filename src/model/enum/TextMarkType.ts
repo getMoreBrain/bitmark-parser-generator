@@ -23,13 +23,16 @@ const TextMarkType = superenum({
   userCircle: 'userCircle',
   userHighlight: 'userHighlight',
 
+  // Attribute chain
   link: 'link',
+  ref: 'ref',
+  xref: 'xref',
+  footnote: 'footnote',
   var: 'var',
   code: 'code',
   timer: 'timer',
   duration: 'duration',
   color: 'color',
-  hash: '#',
   comment: 'comment',
 });
 

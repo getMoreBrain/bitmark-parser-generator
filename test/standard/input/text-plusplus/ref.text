@@ -1,0 +1,7 @@
+==Some text==|►this is a reference| on the previous text
+
+• Test link in a list 2
+	• Entgelt ==Some
+	text==|►this is **a** reference| on the previous text
+
+==Some text==|►| with empty reference
