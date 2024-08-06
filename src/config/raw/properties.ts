@@ -547,6 +547,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.feedbackType]: {
+    tag: PropertyTag.feedbackType,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.caption]: {
     tag: PropertyTag.caption,
     single: true,

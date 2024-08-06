@@ -125,6 +125,7 @@ const NodeType = superenum({
   feedback: 'feedback',
   feedbackEngine: 'feedbackEngine',
   feedbackEngineValue: 'feedbackEngineValue',
+  feedbackType: 'feedbackType',
   flashcards: 'flashcards',
   flashcardSet: 'flashcardSet',
   flashcardSetValue: 'flashcardSetValue',

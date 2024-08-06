@@ -7,6 +7,7 @@
       "id": ["342338"],
       "analyticsTag": ["235", "geruyghoenhru"],
       "feedbackEngine": "google",
+      "feedbackType": "unknown",
       "disableFeedback": true,
       "item": [],
       "lead": [],

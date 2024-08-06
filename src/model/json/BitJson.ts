@@ -21,6 +21,7 @@ export interface BitJson {
   aiGenerated: boolean;
   analyticsTag: string | string[];
   feedbackEngine: string;
+  feedbackType: string;
   disableFeedback: boolean;
   releaseVersion: string;
   releaseKind: string;
