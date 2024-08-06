@@ -48,3 +48,39 @@ A task list
 checked
 
 Some text after the tasklist
+
+Simple list
+•_ item 1
+•_ __
+item 2__
+•_ item 3
+	•_ item 3.1
+	•_ item 3.2
+•_ item 4
+
+Ordered list, roman tag
+•0I item 1
+•1I __
+item 2__
+•2I item 3
+	•3I item 3.1
+	•4I item 3.2
+•5I item 4
+
+Ordered list, roman lower tag
+•0i item 1
+•1i __
+item 2__
+•2i item 3
+	•3i item 3.1
+	•4i item 3.2
+•5i item 4
+
+Lettered list, lower tag
+•a item 1
+•a __
+item 2__
+•a item 3
+	•a item 3.1
+	•a item 3.2
+•a item 4

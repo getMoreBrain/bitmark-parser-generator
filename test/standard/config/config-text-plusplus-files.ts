@@ -51,6 +51,9 @@ if (TEST_ALL) {
     'duration.text',
     'color.text',
     'inline.text',
+    'ref.text',
+    'xref.text',
+    'footnote.text',
     'bad-unterminated-image.text',
     // 'latex.text',
   ];

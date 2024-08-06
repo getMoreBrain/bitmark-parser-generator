@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.10.3"
+const VERSION = "8.13.2"
 
 //Parser peggy.js
 
@@ -15,12 +15,11 @@ const VERSION = "8.10.3"
 // Todos
 
 // - JSON for color
-// - JSON for pure marked text ==aaa== (no attributes)
-// - Are empty attrs
 
-// not sure
-
-// - LaTeX embed ?
+// - LaTeX and MathML embed
+// The formula == x = {-b \pm \sqrt{b^2-4ac} \over 2a} ==|math:LaTeX| is inline.
+// The formula == $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$ ==|math:LaTeX| is inline.
+// The formula == x = {-b \pm \sqrt{b^2-4ac} \over 2a} ==|math:MathML| is inline.
 
 /*
 
@@ -79,7 +78,7 @@ let c = a + b
 
 |
 
-Das war's
+Das war's ==1==|footnote:Thanks for all the fish **and so long!**|
 
  */
 
@@ -281,26 +280,43 @@ CodeLine
 // Lists
 
 BulletListTag = '• '
-OrderedListTag = $('•' [0-9]* ' ')
+SimpleListTag = '•_ '
+OrderedListTag = $('•' [0-9]+ ' ')
+OrderedListRomanTag = $('•' [0-9]+ 'I ')
+OrderedListRomanLowerTag = $('•' [0-9]+ 'i ')
 LetteredListTag = '•A '
+LetteredListLowerTag = '•a '
 TaskListTag = '•+ ' / "•- "
 
+//simple (unordered), alpha-lower, roman-lower, roman-upper
 
 ListTags
   = BulletListTag
+  / SimpleListTag
   / OrderedListTag
+  / OrderedListRomanTag
+  / OrderedListRomanLowerTag
   / LetteredListTag
+  / LetteredListLowerTag
   / TaskListTag
 
 ListBlock
   = c: BulletListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
+  / c: SimpleListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
   / c: OrderedListContainer bl: BulletListLine+ NL? { let start = bl[0]._tempListStart; return { ...c, attrs: { start }, content: bl } }
+  / c: OrderedListRomanContainer bl: BulletListLine+ NL? { let start = bl[0]._tempListStart; return { ...c, attrs: { start }, content: bl } }
+  / c: OrderedListRomanLowerContainer bl: BulletListLine+ NL? { let start = bl[0]._tempListStart; return { ...c, attrs: { start }, content: bl } }
   / c: LetteredListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
+  / c: LetteredListLowerContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
   / c: TaskListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
 
 BulletListContainer = &BulletListTag { return { type: "bulletList" } }
+SimpleListContainer = &SimpleListTag { return { type: "simpleList" } }
 OrderedListContainer = &OrderedListTag { return { type: "orderedList" } }
+OrderedListRomanContainer = &OrderedListRomanTag { return { type: "orderedListRoman" } }
+OrderedListRomanLowerContainer = &OrderedListRomanLowerTag { return { type: "orderedListRomanLower" } }
 LetteredListContainer = &LetteredListTag { return { type: "letteredList" } }
+LetteredListLowerContainer = &LetteredListLowerTag { return { type: "letteredListLower" } }
 TaskListContainer = &TaskListTag { return { type: "taskList" } }
 
 BulletListLine
@@ -311,7 +327,8 @@ BulletListLine
 
       let _tempParsingParent = 'bulletList'
 
-      const matchOrdered = lt.match(/•([0-9]+) /)
+      const matchOrdered = lt.match(/•([0-9]+)([Ii]?) /)
+
       let start = 1
 
       if (matchOrdered) {
@@ -319,9 +336,26 @@ BulletListLine
         if (matchOrdered.length > 1) {
             start = Number(matchOrdered[1])
         }
+
+        if (matchOrdered.length > 2) {
+            let roman = matchOrdered[2]
+			if ('I' == roman) {
+				_tempParsingParent = 'orderedListRoman'
+			}
+			if ('i' == roman) {
+				_tempParsingParent = 'orderedListRomanLower'
+			}
+        }
+      }
+
+      if ('•_ ' == lt) {
+        _tempParsingParent = 'simpleList'
       }
       if ('•A ' == lt) {
         _tempParsingParent = 'letteredList'
+      }
+	  if ('•a ' == lt) {
+        _tempParsingParent = 'letteredListLower'
       }
       if ('•+ ' == lt || '•- ' == lt ) {
         _tempParsingParent = 'taskList'
@@ -345,7 +379,7 @@ BulletListLine
           content: children
         }
 
-        if ("orderedList" == sublist.type || "letteredList" == sublist.type) {
+        if (sublist.type.startsWith("orderedList") || sublist.type.startsWith("letteredList")) {
 	      	if (children[0]._tempListStart) {
             	const start = children[0]._tempListStart
 				if (start > 1) sublist.attrs.start = start
@@ -527,6 +561,9 @@ AttrChain
 
 AttrChainItem
   = 'link:' str: $((!BlockTag char)*) BlockTag {return { type: 'link', attrs: { href: str.trim(), target: '_blank' } }}
+  / '►' str: $((!BlockTag char)*) BlockTag {return { type: 'ref', attrs: { reference: str.trim() } }}
+  / 'xref:' str: $((!BlockTag char)*) BlockTag {return { type: 'xref', attrs: { reference: str.trim() } }}
+  / 'footnote:' str: $((!BlockTag char)*) BlockTag {return { type: 'footnote', attrs: { content: bitmarkPlusString(str.trim()) } }}
   / 'var:' str: $((!BlockTag char)*) BlockTag {return { type: 'var', attrs: { name: str.trim() } }}
   / 'code' BlockTag {return { type: 'code', attrs: { language: "plain text" } }}
   / 'code:' lang: $((!BlockTag char)*) BlockTag {return { type: 'code', attrs: { language: lang.trim().toLowerCase() } }}

@@ -1,0 +1,106 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "ref",
+            "attrs": {
+              "reference": "this is a reference"
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " on the previous text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "bulletList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "Test link in a list 2",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "text": "Entgelt ",
+                        "type": "text"
+                      },
+                      {
+                        "marks": [
+                          {
+                            "type": "ref",
+                            "attrs": {
+                              "reference": "this is **a** reference"
+                            }
+                          }
+                        ],
+                        "text": "Some\ntext",
+                        "type": "text"
+                      },
+                      {
+                        "text": " on the previous text",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "ref",
+            "attrs": {
+              "reference": ""
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " with empty reference",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

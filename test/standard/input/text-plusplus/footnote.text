@@ -1,0 +1,7 @@
+==Some text==|footnote:this is a footnote| on the previous text
+
+• Test link in a list 2
+	• Entgelt ==Some
+	text==|footnote:this is **a** footnote with a http://link.com/link included| on the previous text
+
+==Some text==|footnote:| with empty footnote
