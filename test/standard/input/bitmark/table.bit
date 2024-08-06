@@ -163,3 +163,55 @@ mark@gmail.com
 (01) 22 888 4444
 ====
 
+
+[.standard-remark-table-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+
+[.standard-remark-table-non-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
