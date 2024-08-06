@@ -499,6 +499,10 @@ const GROUPS: _GroupsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.showInIndex,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.search,
+      },
     ],
   },
   [GroupConfigKey.group_resourceImageCommon]: {

@@ -26,7 +26,8 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": []
+          "caption": [],
+          "search": "testing **123**"
         }
       }
     },

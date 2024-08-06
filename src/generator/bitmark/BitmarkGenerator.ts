@@ -1559,6 +1559,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeProperty('caption', value);
   }
 
+  protected leaf_search(node: NodeInfo, _route: NodeInfo[]): void {
+    const value = node.value as string;
+    this.writeProperty('search', value);
+  }
+
   // bitmarkAst -> bits -> bitsValue -> resource -> ...
   // bitmarkAst -> bits -> bitsValue -> resource -> posterImage -> ...
   // bitmarkAst -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...

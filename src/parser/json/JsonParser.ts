@@ -1173,7 +1173,7 @@ class JsonParser {
     if (data) {
       if (!data) return undefined;
 
-      const dataAsString: string | undefined = StringUtils.isString(data) ? (data as string) : undefined;
+      const dataAsString: string | undefined = StringUtils.isString(data) ? (data as unknown as string) : undefined;
 
       // url / src / href / app
       const url = data.url || data.src || data.href || data.app || data.body || dataAsString;
@@ -1225,6 +1225,7 @@ class JsonParser {
         license: this.convertStringToBreakscapedString(data.license),
         copyright: this.convertStringToBreakscapedString(data.copyright),
         showInIndex: data.showInIndex,
+        search: this.convertStringToBreakscapedString(data.search),
       });
     }
 
