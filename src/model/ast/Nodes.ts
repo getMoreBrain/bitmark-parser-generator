@@ -545,6 +545,7 @@ export interface Resource {
   provider?: BreakscapedString;
   showInIndex?: boolean;
   caption?: BreakscapedString; // TextAst;
+  search?: BreakscapedString;
 }
 
 export interface ImageResource extends Resource {

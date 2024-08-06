@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.16.0
+Version: 1.17.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -35,7 +35,7 @@ bit-book-summary (since: 1.3.0)
 bitmark-example (since: 1.3.0)
 blog-article (since: 1.3.0)
 book (since: 1.3.0)
-book-acknowledgments (since: 1.3.0)
+book-acknowledgements (since: 1.17.0)
 book-addendum (since: 1.3.0)
 book-afterword (since: 1.3.0)
 book-alias (since: 1.4.3)
@@ -360,6 +360,10 @@ standard-note-non-normative (since: 1.16.0)
 standard-note-normative (since: 1.16.0)
 standard-remark-non-normative (since: 1.16.0)
 standard-remark-normative (since: 1.16.0)
+standard-remark-table-image-non-normative (since: 1.17.0)
+standard-remark-table-image-normative (since: 1.17.0)
+standard-remark-table-non-normative (since: 1.17.0)
+standard-remark-table-normative (since: 1.17.0)
 standard-table-image-non-normative (since: 1.16.0)
 standard-table-image-normative (since: 1.16.0)
 standard-table-non-normative (since: 1.16.0)

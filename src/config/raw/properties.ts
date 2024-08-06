@@ -37,10 +37,9 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.number,
   },
   [PropertyConfigKey.aiGenerated]: {
-    tag: PropertyTag.tag_aiGenerated,
+    tag: PropertyTag.aiGenerated,
     single: true,
     format: PropertyFormat.boolean,
-    astKey: PropertyAstKey.ast_aiGenerated,
   },
   [PropertyConfigKey.analyticsTag]: {
     tag: PropertyTag.analyticsTag,

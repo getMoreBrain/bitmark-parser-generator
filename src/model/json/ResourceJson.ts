@@ -150,6 +150,7 @@ export interface BaseResourceJson {
   provider: string;
   showInIndex: boolean;
   caption: JsonText;
+  search: string;
 }
 
 export interface ImageResourceJson extends BaseResourceJson {

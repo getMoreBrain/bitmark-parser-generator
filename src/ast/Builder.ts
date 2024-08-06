@@ -2142,7 +2142,7 @@ class Builder extends BaseBuilder {
   }
 
   private setDefaultBitValues(bit: Bit) {
-    // Set AIGenerated == true for all AI generated bits
+    // Set aiGenerated == true for all AI generated bits
     switch (bit.bitType) {
       case BitType.articleAi:
       case BitType.noteAi:

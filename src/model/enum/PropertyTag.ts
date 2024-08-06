@@ -4,7 +4,6 @@ import { propertyConfigKeys } from '../config/enum/PropertyConfigKey';
 
 const PropertyTag = superenum({
   ...propertyConfigKeys,
-  tag_aiGenerated: 'AIGenerated',
   tag_mark: 'mark',
   tag_reference: 'reference',
   tag_sampleSolution: 'sampleSolution',

@@ -29,6 +29,16 @@ export interface CommentMark {
   comment: string;
 }
 
+export interface RefMark {
+  type: 'ref';
+  attrs?: RefMarkAttibutes;
+}
+
+export interface FootnoteMark {
+  type: 'footnote';
+  attrs?: FootnoteAttibutes;
+}
+
 export interface HeadingTextNode extends TextNode {
   type: 'heading';
   attrs?: HeadingTextNodeAttributes;
@@ -52,6 +62,18 @@ export interface ImageTextNode extends TextNode {
 export interface CodeBlockTextNode extends TextNode {
   type: 'codeBlock';
   attrs?: CodeBlockTextNodeAttributes;
+}
+
+export interface ListTextNode extends TextNode {
+  type:
+    | 'bulletList'
+    | 'simpleList'
+    | 'orderedList'
+    | 'orderedListRoman'
+    | 'orderedListRomanLower'
+    | 'letteredList'
+    | 'letteredListLower';
+  attrs?: ListTextNodeAttributes;
 }
 
 export interface TextNodeAttibutes {
@@ -81,6 +103,10 @@ export interface CodeBlockTextNodeAttributes extends TextNodeAttibutes {
   language: string;
 }
 
+export interface ListTextNodeAttributes extends TextNodeAttibutes {
+  start: number;
+}
+
 export interface TextMarkAttibutes {
   //
 }
@@ -88,4 +114,12 @@ export interface TextMarkAttibutes {
 export interface LinkMarkAttibutes extends TextMarkAttibutes {
   href: string;
   target: string;
+}
+
+export interface RefMarkAttibutes extends TextMarkAttibutes {
+  reference: string;
+}
+
+export interface FootnoteAttibutes extends TextMarkAttibutes {
+  content: TextNode[];
 }

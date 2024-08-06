@@ -1,3 +1,5 @@
+import { EnumType } from '@ncoderz/superenum';
+
 import { Ast, NodeInfo } from '../../ast/Ast';
 import { Breakscape } from '../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
@@ -14,9 +16,12 @@ import { AstWalkerGenerator } from '../AstWalkerGenerator';
 import {
   CodeBlockTextNode,
   CommentMark,
+  FootnoteMark,
   HeadingTextNode,
   ImageTextNode,
   LinkMark,
+  ListTextNode,
+  RefMark,
   SectionTextNode,
   TaskItemTextNode,
   TextAst,
@@ -73,6 +78,9 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.userCircle,
   TextMarkType.userHighlight,
   //
+  TextMarkType.ref,
+  TextMarkType.xref,
+  TextMarkType.footnote,
   TextMarkType.var,
   TextMarkType.code,
   TextMarkType.timer,
@@ -97,6 +105,14 @@ export interface TextOptions {
    */
   debugGenerationInline?: boolean;
 }
+
+const Stage = {
+  enter: 'enter',
+  between: 'between',
+  exit: 'exit',
+};
+
+export type StageType = EnumType<typeof Stage>;
 
 /**
  * Generate text from a bitmark text AST
@@ -247,8 +263,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         break;
 
       case TextNodeType.text:
-        this.writeMarks(node, true);
+        this.writeMarks(node, Stage.enter);
         this.writeText(node);
+        this.writeMarks(node, Stage.between);
         break;
 
       case TextNodeType.heading:
@@ -298,7 +315,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   protected handleExitNode(node: TextNode, _route: NodeInfo[]): void | false {
     switch (node.type) {
       case TextNodeType.text:
-        this.writeMarks(node, false);
+        this.writeMarks(node, Stage.exit);
         break;
 
       case TextNodeType.paragraph:
@@ -327,8 +344,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         break;
 
       case TextNodeType.bulletList:
+      case TextNodeType.simpleList:
       case TextNodeType.orderedList:
+      case TextNodeType.orderedListRoman:
+      case TextNodeType.orderedListRomanLower:
       case TextNodeType.letteredList:
+      case TextNodeType.letteredListLower:
       case TextNodeType.taskList:
         // List Block type nodes, write a newline only if there is no indent
         if (this.currentIndent <= 1) this.writeNL();
@@ -344,8 +365,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   protected handleIndent(node: TextNode) {
     switch (node.type) {
       case TextNodeType.bulletList:
+      case TextNodeType.simpleList:
       case TextNodeType.orderedList:
+      case TextNodeType.orderedListRoman:
+      case TextNodeType.orderedListRomanLower:
       case TextNodeType.letteredList:
+      case TextNodeType.letteredListLower:
       case TextNodeType.taskList:
         this.currentIndent++;
         break;
@@ -358,8 +383,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   protected handleDedent(node: TextNode) {
     switch (node.type) {
       case TextNodeType.bulletList:
+      case TextNodeType.simpleList:
       case TextNodeType.orderedList:
+      case TextNodeType.orderedListRoman:
+      case TextNodeType.orderedListRomanLower:
       case TextNodeType.letteredList:
+      case TextNodeType.letteredListLower:
       case TextNodeType.taskList:
         this.currentIndent--;
         break;
@@ -499,9 +528,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    * **__the text**__
    *
    * @param node the text node
-   * @param enter true if entering (before) the text, false if exiting (after) the text
+   * @param start true if starting (before) the text, false if ending (after) the text
    */
-  protected writeMarks(node: TextNode, enter: boolean): void {
+  protected writeMarks(node: TextNode, stage: StageType): void {
     if (node.marks) {
       // Empty marks occur when the inline mark has no attributes - write an inline mark with no attributes
       const emptyMarks = node.marks.length === 0;
@@ -534,26 +563,55 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       const haveMark = markStartEnd != null;
 
       if (haveMark) {
-        // Write the mark start / end around the text
-        this.writeMarkTextWrapper(markStartEnd);
+        // Write the mark start / end around the text (==)
+        if (stage == Stage.enter || stage == Stage.between) {
+          this.writeMarkTextWrapper(markStartEnd);
+        }
 
-        // Write the inline/comment mark if not entering
-        if (!enter) {
-          let inlineMarkWritten = false;
+        // Write the inline/comment mark if not entering (|<mark content>)
+        if (stage == Stage.between) {
           for (const mark of node.marks) {
             if (STANDARD_MARK_TYPES.indexOf(mark.type) !== -1) {
               if (!singleMark) {
                 this.writeInlineMarkStartEnd();
                 this.writeInlineMark(mark);
-                inlineMarkWritten = true;
               }
             } else if (TextMarkType.comment === mark.type) {
               this.writeInlineMarkStartEnd();
               this.writeCommentMark(mark as CommentMark);
-              inlineMarkWritten = true;
+            } else if (TextMarkType.ref === mark.type) {
+              this.writeInlineMarkStartEnd();
+              this.writeRefMark(mark as RefMark, false);
+            } else if (TextMarkType.xref === mark.type) {
+              this.writeInlineMarkStartEnd();
+              this.writeRefMark(mark as RefMark, true);
+            } else if (TextMarkType.footnote === mark.type) {
+              this.writeInlineMarkStartEnd();
+              this.writeFootnoteMark(mark as FootnoteMark);
             } else if (INLINE_MARK_TYPES.indexOf(mark.type) !== -1) {
               this.writeInlineMarkStartEnd();
               this.writeInlineMark(mark);
+            } else {
+              // Do nothing (NOTE: link is handled in writeText)
+            }
+          }
+        }
+
+        // Write the inline/comment mark end when exiting (|)
+        if (stage == Stage.exit) {
+          let inlineMarkWritten = false;
+          for (const mark of node.marks) {
+            if (STANDARD_MARK_TYPES.indexOf(mark.type) !== -1) {
+              if (!singleMark) {
+                inlineMarkWritten = true;
+              }
+            } else if (
+              TextMarkType.comment === mark.type ||
+              TextMarkType.ref === mark.type ||
+              TextMarkType.xref === mark.type ||
+              TextMarkType.footnote === mark.type ||
+              INLINE_MARK_TYPES.indexOf(mark.type) !== -1
+            ) {
               inlineMarkWritten = true;
             } else {
               // Do nothing (NOTE: link is handled in writeText)
@@ -608,18 +666,33 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   protected writeBullet(node: TextNode, route: NodeInfo[]) {
+    // if (node.attrs == null || !node.attrs.start) return;
+    // const attrs = node.attrs;
+
+    // const s = `|code:${attrs.language}\n`;
+
     // Add indentation
     let bullet = this.getIndentationString();
     const listParent = this.getParentNode(route, 2);
-    const listType = listParent?.value.type;
+    const listParentNode: ListTextNode | undefined = listParent?.value;
+    const listType = listParentNode?.type;
+    const start = listParentNode?.attrs?.start ?? 1;
 
     // Add bullet
     if (listType === TextNodeType.bulletList) {
       bullet += '• ';
+    } else if (listType === TextNodeType.simpleList) {
+      bullet += '•_ ';
     } else if (listType === TextNodeType.orderedList) {
-      bullet += '•1 ';
+      bullet += `•${start} `;
+    } else if (listType === TextNodeType.orderedListRoman) {
+      bullet += `•${start}I `;
+    } else if (listType === TextNodeType.orderedListRomanLower) {
+      bullet += `•${start}i `;
     } else if (listType === TextNodeType.letteredList) {
       bullet += '•A ';
+    } else if (listType === TextNodeType.letteredListLower) {
+      bullet += '•a ';
     } else if (listType === TextNodeType.taskList) {
       const taskList = node as TaskItemTextNode;
       const checked = taskList.attrs?.checked ?? false;
@@ -695,10 +768,22 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   protected writeCommentMark(mark: CommentMark) {
-    if (mark.comment) {
-      const s = `#${mark.comment}`;
-      this.write(s);
-    }
+    const comment = mark.comment || '';
+
+    const s = `#${comment}`;
+    this.write(s);
+  }
+
+  protected writeRefMark(mark: RefMark, isXRef: boolean) {
+    const ref = mark.attrs?.reference ?? '';
+
+    const s = `${isXRef ? 'xref:' : '►'}${ref}`;
+    this.write(s);
+  }
+
+  protected writeFootnoteMark(_mark: FootnoteMark) {
+    const s = `footnote:`;
+    this.write(s);
   }
 
   protected writeInlineMarkStartEnd() {
@@ -755,6 +840,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    */
   write(value: string): this {
     this.writerText += value;
+    // for debugging console.log(this.writerText);
 
     return this;
   }
