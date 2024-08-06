@@ -2296,11 +2296,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (resource.copyright != null) resourceJson.copyright = Breakscape.unbreakscape(resource.copyright) ?? '';
       if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
       if (resource.showInIndex != null) resourceJson.showInIndex = resource.showInIndex ?? false;
-      if (resource.caption != null)
+      if (resource.caption != null) {
         resourceJson.caption = this.convertBreakscapedStringToJsonText(
           resource.caption ?? '',
           TextFormat.bitmarkMinusMinus,
         );
+      }
+      if (resource.search != null) resourceJson.search = Breakscape.unbreakscape(resource.search) ?? '';
     } else {
       resourceJson.license = Breakscape.unbreakscape(resource.license) ?? '';
       resourceJson.copyright = Breakscape.unbreakscape(resource.copyright) ?? '';
@@ -2310,6 +2312,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         resource.caption ?? Breakscape.EMPTY_STRING,
         TextFormat.bitmarkMinusMinus,
       );
+      if (resource.search != null) resourceJson.search = Breakscape.unbreakscape(resource.search) ?? '';
     }
 
     return resourceJson as ArticleResourceJson | DocumentResourceJson;

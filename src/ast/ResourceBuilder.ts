@@ -77,6 +77,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright?: BreakscapedString;
       showInIndex?: boolean;
       caption?: BreakscapedString;
+      search?: BreakscapedString;
     },
     //
   ): Resource | undefined {
@@ -251,6 +252,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright?: BreakscapedString;
       showInIndex?: boolean;
       caption?: BreakscapedString;
+      search?: BreakscapedString;
     },
     typeAlias?: ResourceTagType,
   ): ImageResource {
@@ -268,6 +270,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -289,6 +292,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -321,6 +325,7 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): ImageLinkResource {
     const {
       value,
@@ -336,6 +341,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -357,6 +363,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -384,8 +391,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): AudioResource {
-    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResource = {
@@ -401,6 +409,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -426,8 +435,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): AudioEmbedResource {
-    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResource = {
@@ -443,6 +453,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -468,8 +479,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): AudioLinkResource {
-    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResource = {
@@ -485,6 +497,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -517,6 +530,7 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): VideoResource {
     const {
       value,
@@ -534,6 +548,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -557,6 +572,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -589,6 +605,7 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): VideoEmbedResource {
     const {
       value,
@@ -606,6 +623,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -629,6 +647,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -661,6 +680,7 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): VideoLinkResource {
     const {
       value,
@@ -678,6 +698,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -701,6 +722,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -757,6 +779,7 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): StillImageFilmEmbedResource {
     const {
       value,
@@ -774,6 +797,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -797,6 +821,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -829,6 +854,7 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): StillImageFilmLinkResource {
     const {
       value,
@@ -846,6 +872,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -869,6 +896,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -891,8 +919,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): ArticleResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ArticleResource = {
@@ -905,6 +934,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -927,8 +957,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): DocumentResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentResource = {
@@ -941,6 +972,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -963,8 +995,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): DocumentEmbedResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentEmbedResource = {
@@ -977,6 +1010,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -999,8 +1033,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): DocumentLinkResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentLinkResource = {
@@ -1013,6 +1048,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -1035,8 +1071,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): DocumentDownloadResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentDownloadResource = {
@@ -1049,6 +1086,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -1070,8 +1108,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): AppLinkResource {
-    const { value, license, copyright, showInIndex, caption } = data;
+    const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AppLinkResource = {
@@ -1082,6 +1121,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
@@ -1104,8 +1144,9 @@ class ResourceBuilder extends BaseBuilder {
     copyright?: BreakscapedString;
     showInIndex?: boolean;
     caption?: BreakscapedString;
+    search?: BreakscapedString;
   }): WebsiteLinkResource | undefined {
-    const { value, siteName, license, copyright, showInIndex, caption } = data;
+    const { value, siteName, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResource = {
@@ -1117,6 +1158,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright,
       showInIndex,
       caption,
+      search,
     };
 
     // Remove Unset Optionals
