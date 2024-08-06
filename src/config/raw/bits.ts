@@ -703,8 +703,8 @@ const BITS: _BitsConfig = {
   [BitType.releaseNotesSummary]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.remark]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.remarkAlt]: { since: '1.16.0', baseBitType: BitType.remark },
-  [BitType.standardRemarkNormative]: { since: '1.16.0', baseBitType: BitType.remark },
-  [BitType.standardRemarkNonNormative]: { since: '1.16.0', baseBitType: BitType.remark },
+  [BitType.standardRemarkNormative]: { since: '1.16.0', baseBitType: BitType.article },
+  [BitType.standardRemarkNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.selfAssessment]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.separator]: { since: '1.4.15', baseBitType: BitType.article },
   [BitType.separatorAlt]: { since: '1.16.0', baseBitType: BitType.separator },
@@ -1013,6 +1013,8 @@ const BITS: _BitsConfig = {
   [BitType.tableImageAlt]: { since: '1.16.0', baseBitType: BitType.tableImage },
   [BitType.standardTableImageNormative]: { since: '1.16.0', baseBitType: BitType.tableImage },
   [BitType.standardTableImageNonNormative]: { since: '1.16.0', baseBitType: BitType.tableImage },
+  [BitType.standardRemarkTableImageNormative]: { since: '1.17.0', baseBitType: BitType.tableImage },
+  [BitType.standardRemarkTableImageNonNormative]: { since: '1.17.0', baseBitType: BitType.tableImage },
   [BitType.imageLink]: {
     since: '1.3.0',
     tags: [
@@ -1776,6 +1778,8 @@ const BITS: _BitsConfig = {
   [BitType.tableAlt]: { since: '1.16.0', baseBitType: BitType.table },
   [BitType.standardTableNormative]: { since: '1.16.0', baseBitType: BitType.table },
   [BitType.standardTableNonNormative]: { since: '1.16.0', baseBitType: BitType.table },
+  [BitType.standardRemarkTableNormative]: { since: '1.17.0', baseBitType: BitType.table },
+  [BitType.standardRemarkTableNonNormative]: { since: '1.17.0', baseBitType: BitType.table },
   [BitType.toc]: {
     since: '1.3.0',
     tags: [
