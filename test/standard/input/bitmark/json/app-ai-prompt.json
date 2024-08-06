@@ -57,7 +57,7 @@
       "type": "app-ai-prompt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "AIGenerated": true,
+      "aiGenerated": true,
       "ageRange": ["18", "120"],
       "item": [],
       "lead": [],
@@ -104,14 +104,14 @@
       "version": "1.4.12",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.app-ai-prompt:bitmark++]\n[@AIGenerated:true]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+    "bitmark": "[.app-ai-prompt:bitmark++]\n[@aiGenerated:true]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   },
   {
     "bit": {
       "type": "app-ai-prompt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "AIGenerated": false,
+      "aiGenerated": false,
       "item": [],
       "lead": [],
       "hint": [],
@@ -147,6 +147,6 @@
       "version": "1.4.12",
       "bitmarkVersion": "3"
     },
-    "bitmark": "[.app-ai-prompt:bitmark++]\n[@AIGenerated:false]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book."
+    "bitmark": "[.app-ai-prompt:bitmark++]\n[@aiGenerated:false]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book."
   }
 ]

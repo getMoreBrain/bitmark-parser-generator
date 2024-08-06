@@ -6,7 +6,6 @@ import { EnumType, superenum } from '@ncoderz/superenum';
  * Only keys that vary from the markup default are included.
  */
 const PropertyAstKey = superenum({
-  ast_aiGenerated: 'aiGenerated',
   ast_isCaseSensitive: 'isCaseSensitive',
   ast_referenceProperty: 'referenceProperty',
   ast_markConfig: 'markConfig',

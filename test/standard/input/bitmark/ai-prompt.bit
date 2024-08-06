@@ -10,7 +10,7 @@ Some more text.
 
 
 [.ai-prompt:bitmark++]
-[@AIGenerated:true]
+[@aiGenerated:true]
 [@ageRange:18][@ageRange:120]
 
 **Some bold text,**
@@ -20,7 +20,7 @@ Some more text.
 
 
 [.ai-prompt:bitmark++]
-[@AIGenerated:false]
+[@aiGenerated:false]
 
 **Some bold text,**
 followed by some plain text. cloze open close cloze1 book.

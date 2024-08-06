@@ -2616,7 +2616,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       jupyterId: undefined,
       jupyterExecutionCount: undefined,
       isPublic: undefined,
-      AIGenerated: undefined,
+      aiGenerated: undefined,
       analyticsTag: undefined,
       feedbackEngine: undefined,
       disableFeedback: undefined,
@@ -3010,7 +3010,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
       // Special case for 'ai' bits
       if (bitType === BitType.articleAi || bitType === BitType.noteAi || bitType === BitType.summaryAi) {
-        if (bitJson.AIGenerated == null) bitJson.AIGenerated = true;
+        if (bitJson.aiGenerated == null) bitJson.aiGenerated = true;
       }
 
       // Special case for 'review-...' bits
@@ -3098,7 +3098,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.jupyterId == null) delete bitJson.jupyterId;
     if (bitJson.jupyterExecutionCount == null) delete bitJson.jupyterExecutionCount;
     if (bitJson.isPublic == null) delete bitJson.isPublic;
-    if (bitJson.AIGenerated == null) delete bitJson.AIGenerated;
+    if (bitJson.aiGenerated == null) delete bitJson.aiGenerated;
     if (bitJson.analyticsTag == null) delete bitJson.analyticsTag;
     if (bitJson.feedbackEngine == null) delete bitJson.feedbackEngine;
     if (bitJson.disableFeedback == null) delete bitJson.disableFeedback;
