@@ -794,7 +794,7 @@
     "attrs": {}
   },
   {
-    "type": "simpleList",
+    "type": "noBulletList",
     "content": [
       {
         "type": "listItem",
@@ -845,7 +845,7 @@
             ]
           },
           {
-            "type": "simpleList",
+            "type": "noBulletList",
             "attrs": {
               "start": 1
             },
