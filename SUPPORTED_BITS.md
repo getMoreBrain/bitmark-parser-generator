@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.17.0
+Version: 1.18.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -43,6 +43,7 @@ book-appendix (since: 1.3.0)
 book-article (since: 1.3.0)
 book-author-bio (since: 1.3.0)
 book-bibliography (since: 1.3.0)
+book-close (since: 1.18.0)
 book-coming-soon (since: 1.3.0)
 book-conclusion (since: 1.3.0)
 book-copyright (since: 1.3.0)
@@ -324,6 +325,7 @@ page-shop-in-shop (since: 1.6.6)
 page-special (since: 1.6.6)
 page-subpage (since: 1.6.6)
 page-subscribe (since: 1.5.10)
+parameters (since: 1.18.0)
 photo (since: 1.3.0)
 preparation-note (since: 1.3.0)
 prototype-images (since: 1.6.1)

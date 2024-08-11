@@ -573,7 +573,7 @@ class Builder extends BaseBuilder {
       person,
       resources,
       body,
-      sampleSolution: ArrayUtils.asSingle(sampleSolution),
+      sampleSolution: this.toAstProperty(PropertyConfigKey.property_sampleSolution, sampleSolution),
       cardNode,
       footer,
 

@@ -287,7 +287,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL();
   }
 
-  protected between_bitsValue(node: NodeInfo, left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_bitsValue(node: NodeInfo, left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
     // The following keys are combined with other keys so don't need newlines
     const noNlKeys: NodeTypeType[] = [
       NodeType.bitType,
@@ -299,29 +299,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       NodeType.labelFalse,
     ];
 
-    const bit = node.value as Bit;
-    if (bit.book) {
-      // If the book node exists, remove the newline caused by reference as it will be bound to book
-      noNlKeys.push(NodeType.reference);
-    }
-
-    // Check if a no newline key is to the left in this 'between' callback
-    const noNl = ((): boolean => {
-      if (!this.wroteSomething || this.skipNLBetweenBitsValue) {
-        return true;
-      }
-      for (const keyType of noNlKeys) {
-        if (left.key === keyType /*|| right.key === keyType*/) return true;
-      }
-      return false;
-    })();
-
-    if (!noNl) {
-      this.writeNL();
-    }
-
-    this.skipNLBetweenBitsValue = false;
-    this.wroteSomething = false;
+    this.writeNlBetween(node, left, right, route, noNlKeys);
   }
 
   // bitmarkAst -> bits -> bitsValue -> internalComment
@@ -480,6 +458,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (emphasis) this.writeProperty('emphasis', emphasis, true);
       this.writeNL();
     }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> partialAnswer
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> partialAnswer
+
+  protected leaf_partialAnswer(node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeProperty('partialAnswer', node.value);
   }
 
   // bitmarkAst -> bits -> bitsValue -> sampleSolution
@@ -1004,15 +989,18 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> questions -> questionsValue
 
   protected between_questionsValue(
-    _node: NodeInfo,
-    _left: NodeInfo,
+    node: NodeInfo,
+    left: NodeInfo,
     right: NodeInfo,
 
-    _route: NodeInfo[],
+    route: NodeInfo[],
   ): void {
-    if (right.key === NodeType.sampleSolution) {
-      this.writeNL();
-    }
+    // The following keys are combined with other keys so don't need newlines
+    const noNlKeys: NodeTypeType[] = [
+      //
+    ];
+
+    this.writeNlBetween(node, left, right, route, noNlKeys);
   }
 
   protected exit_questionsValue(_node: NodeInfo, _route: NodeInfo[]): void {
@@ -1657,6 +1645,39 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[enterFuncName] = (this as any)[enterFuncName].bind(this);
     }
+  }
+
+  protected writeNlBetween(
+    node: NodeInfo,
+    left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+    // The following keys are combined with other keys so don't need newlines
+    noNlKeys: NodeTypeType[],
+  ): void {
+    const bit = node.value as Bit;
+    if (bit.book) {
+      // If the book node exists, remove the newline caused by reference as it will be bound to book
+      noNlKeys.push(NodeType.reference);
+    }
+
+    // Check if a no newline key is to the left in this 'between' callback
+    const noNl = ((): boolean => {
+      if (!this.wroteSomething || this.skipNLBetweenBitsValue) {
+        return true;
+      }
+      for (const keyType of noNlKeys) {
+        if (left.key === keyType /*|| right.key === keyType*/) return true;
+      }
+      return false;
+    })();
+
+    if (!noNl) {
+      this.writeNL();
+    }
+
+    this.skipNLBetweenBitsValue = false;
+    this.wroteSomething = false;
   }
 
   // END NODE HANDLERS

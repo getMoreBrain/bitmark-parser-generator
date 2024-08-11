@@ -279,6 +279,16 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.bookClose]: {
+    since: '1.18.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+  },
   [BitType.botActionResponse]: {
     since: '1.3.0',
     tags: [
@@ -1780,6 +1790,7 @@ const BITS: _BitsConfig = {
   [BitType.standardTableNonNormative]: { since: '1.16.0', baseBitType: BitType.table },
   [BitType.standardRemarkTableNormative]: { since: '1.17.0', baseBitType: BitType.table },
   [BitType.standardRemarkTableNonNormative]: { since: '1.17.0', baseBitType: BitType.table },
+  [BitType.parameters]: { since: '1.18.0', baseBitType: BitType.table },
   [BitType.toc]: {
     since: '1.3.0',
     tags: [

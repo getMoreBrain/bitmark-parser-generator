@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.13.2"
+const VERSION = "8.14.1"
 
 //Parser peggy.js
 
@@ -78,7 +78,7 @@ let c = a + b
 
 |
 
-Das war's ==1==|footnote:Thanks for all the fish **and so long!**|
+Das war's ==1==|footnote:So long and **thanks for all the fish**|
 
  */
 
@@ -280,7 +280,7 @@ CodeLine
 // Lists
 
 BulletListTag = '• '
-SimpleListTag = '•_ '
+NoBulletListTag = '•_ '
 OrderedListTag = $('•' [0-9]+ ' ')
 OrderedListRomanTag = $('•' [0-9]+ 'I ')
 OrderedListRomanLowerTag = $('•' [0-9]+ 'i ')
@@ -288,11 +288,11 @@ LetteredListTag = '•A '
 LetteredListLowerTag = '•a '
 TaskListTag = '•+ ' / "•- "
 
-//simple (unordered), alpha-lower, roman-lower, roman-upper
+// no bullet, alpha-lower, roman-lower, roman-upper
 
 ListTags
   = BulletListTag
-  / SimpleListTag
+  / NoBulletListTag
   / OrderedListTag
   / OrderedListRomanTag
   / OrderedListRomanLowerTag
@@ -302,7 +302,7 @@ ListTags
 
 ListBlock
   = c: BulletListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
-  / c: SimpleListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
+  / c: NoBulletListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
   / c: OrderedListContainer bl: BulletListLine+ NL? { let start = bl[0]._tempListStart; return { ...c, attrs: { start }, content: bl } }
   / c: OrderedListRomanContainer bl: BulletListLine+ NL? { let start = bl[0]._tempListStart; return { ...c, attrs: { start }, content: bl } }
   / c: OrderedListRomanLowerContainer bl: BulletListLine+ NL? { let start = bl[0]._tempListStart; return { ...c, attrs: { start }, content: bl } }
@@ -311,7 +311,7 @@ ListBlock
   / c: TaskListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
 
 BulletListContainer = &BulletListTag { return { type: "bulletList" } }
-SimpleListContainer = &SimpleListTag { return { type: "simpleList" } }
+NoBulletListContainer = &NoBulletListTag { return { type: "noBulletList" } }
 OrderedListContainer = &OrderedListTag { return { type: "orderedList" } }
 OrderedListRomanContainer = &OrderedListRomanTag { return { type: "orderedListRoman" } }
 OrderedListRomanLowerContainer = &OrderedListRomanLowerTag { return { type: "orderedListRomanLower" } }
@@ -349,7 +349,7 @@ BulletListLine
       }
 
       if ('•_ ' == lt) {
-        _tempParsingParent = 'simpleList'
+        _tempParsingParent = 'noBulletList'
       }
       if ('•A ' == lt) {
         _tempParsingParent = 'letteredList'
