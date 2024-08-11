@@ -171,7 +171,7 @@ export interface Bit {
   person?: Person;
   resources?: Resource[];
   body?: Body;
-  sampleSolution?: BreakscapedString;
+  sampleSolution?: Property;
   statement?: Statement;
   choices?: Choice[];
   responses?: Response[];

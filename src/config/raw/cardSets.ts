@@ -116,6 +116,10 @@ const CARDSETS: _CardSetsConfig = {
               configKey: PropertyConfigKey.property_sampleSolution,
             },
             {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.partialAnswer,
+            },
+            {
               type: BitTagType.group,
               configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
             },
