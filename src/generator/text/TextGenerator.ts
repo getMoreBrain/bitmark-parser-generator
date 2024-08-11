@@ -343,8 +343,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         this.exitedCodeBlock = true;
         break;
 
+      case TextNodeType.noBulletList:
       case TextNodeType.bulletList:
-      case TextNodeType.simpleList:
       case TextNodeType.orderedList:
       case TextNodeType.orderedListRoman:
       case TextNodeType.orderedListRomanLower:
@@ -364,8 +364,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
   protected handleIndent(node: TextNode) {
     switch (node.type) {
+      case TextNodeType.noBulletList:
       case TextNodeType.bulletList:
-      case TextNodeType.simpleList:
       case TextNodeType.orderedList:
       case TextNodeType.orderedListRoman:
       case TextNodeType.orderedListRomanLower:
@@ -382,8 +382,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
   protected handleDedent(node: TextNode) {
     switch (node.type) {
+      case TextNodeType.noBulletList:
       case TextNodeType.bulletList:
-      case TextNodeType.simpleList:
       case TextNodeType.orderedList:
       case TextNodeType.orderedListRoman:
       case TextNodeType.orderedListRomanLower:
@@ -681,7 +681,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     // Add bullet
     if (listType === TextNodeType.bulletList) {
       bullet += '• ';
-    } else if (listType === TextNodeType.simpleList) {
+    } else if (listType === TextNodeType.noBulletList) {
       bullet += '•_ ';
     } else if (listType === TextNodeType.orderedList) {
       bullet += `•${start} `;

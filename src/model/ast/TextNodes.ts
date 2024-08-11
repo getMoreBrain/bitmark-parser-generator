@@ -66,8 +66,8 @@ export interface CodeBlockTextNode extends TextNode {
 
 export interface ListTextNode extends TextNode {
   type:
+    | 'noBulletList'
     | 'bulletList'
-    | 'simpleList'
     | 'orderedList'
     | 'orderedListRoman'
     | 'orderedListRomanLower'
