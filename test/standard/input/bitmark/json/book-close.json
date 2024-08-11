@@ -1,0 +1,55 @@
+[
+  {
+    "bit": {
+      "type": "book-close",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["342341"],
+      "buttonCaption": "Button **Caption**",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".book-close",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Button ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.17.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.13.2"
+    },
+    "bitmark": "[.book-close]\n[@id:342341]\n[!.book-close]\n[@buttonCaption:Button **Caption**]\nButton **Text**"
+  }
+]
