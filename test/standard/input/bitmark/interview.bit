@@ -9,8 +9,13 @@
 ===
 [@reasonableNumOfChars:20]
 [@sampleSolution:Some other text.]
+[@sampleSolution:Some other text **2**.]
 ===
 [@sampleSolution:Some other text again.]
+===
+[@sampleSolution:Some other text again.]
+[@partialAnswer:This is a **partialAnswer**]
+[@partialAnswer:This is a **partialAnswer** 2]
 ===
 
 

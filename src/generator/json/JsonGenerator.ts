@@ -404,7 +404,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       } else {
         // String example
-        defaultExample = bit.sampleSolution ?? '';
+        defaultExample = Breakscape.unbreakscape(ArrayUtils.asSingle(bit.sampleSolution) as BreakscapedString) ?? '';
       }
 
       const exampleRes = this.toExample(bit as ExampleNode, {
@@ -553,16 +553,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (!this.bitJson.marks) this.bitJson.marks = [];
     this.bitJson.marks.push(markJson as MarkConfigJson);
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> sampleSolution
-
-  protected leaf_sampleSolution(node: NodeInfo, route: NodeInfo[]): void {
-    // Ignore example that is not at the correct level
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    if (node.value != null) this.addProperty(this.bitJson, 'sampleSolution', node.value, true);
   }
 
   // bitmarkAst -> bits -> bitsValue -> itemLead
@@ -1254,7 +1244,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         const questionJson: Partial<QuestionJson> = {
           question: Breakscape.unbreakscape(q.question) ?? '',
           partialAnswer: Breakscape.unbreakscape(ArrayUtils.asSingle(q.partialAnswer)) ?? '',
-          sampleSolution: Breakscape.unbreakscape(q.sampleSolution) ?? '',
+          sampleSolution: Breakscape.unbreakscape(ArrayUtils.asSingle(q.sampleSolution)) ?? '',
           ...this.toItemLeadHintInstruction(q),
           reasonableNumOfChars: q.reasonableNumOfChars,
           ...this.toExample(q, {

@@ -18,6 +18,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -31,19 +33,51 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [],
-      "sampleSolution": "The train now approaching Platform 2 is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.",
+      "sampleSolution": "The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.",
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.17.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.13.2",
+      "warnings": [
+        {
+          "message": "[@sampleSolution] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@sampleSolution:The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 149
+            },
+            "end": {
+              "line": 6,
+              "column": 159,
+              "offset": 307
+            }
+          },
+          "original": {
+            "text": "[@sampleSolution: Will be overridden]",
+            "location": {
+              "start": {
+                "line": 5,
+                "column": 1,
+                "offset": 111
+              },
+              "end": {
+                "line": 5,
+                "column": 38,
+                "offset": 148
+              }
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.essay]\n[%1]\n[!Listen to the train announcement. Write down every word you hear.]\n[@reasonableNumOfChars:100]\n[@sampleSolution:The train now approaching Platform 2 is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]"
+    "bitmark": "[.essay]\n[%1]\n[!Listen to the train announcement. Write down every word you hear.]\n[@reasonableNumOfChars:100]\n[@sampleSolution: Will be overridden]\n[@sampleSolution:The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]"
   },
   {
     "bit": {
@@ -64,6 +98,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -77,8 +113,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -93,13 +127,47 @@
           "attrs": {}
         }
       ],
-      "partialAnswer": ""
+      "partialAnswer": "This is a **partialAnswer** 2"
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.17.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.13.2",
+      "warnings": [
+        {
+          "message": "[@partialAnswer] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@partialAnswer:This is a **partialAnswer** 2]",
+          "location": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 841
+            },
+            "end": {
+              "line": 13,
+              "column": 47,
+              "offset": 887
+            }
+          },
+          "original": {
+            "text": "[@partialAnswer:This is a **partialAnswer**]",
+            "location": {
+              "start": {
+                "line": 12,
+                "column": 1,
+                "offset": 796
+              },
+              "end": {
+                "line": 12,
+                "column": 45,
+                "offset": 840
+              }
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.essay:bitmark--]\n[@id:245552]\n[%][%Lernaufgabe E – 22]\nFachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen. [!Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.]"
+    "bitmark": "[.essay:bitmark--]\n[@id:245552]\n[%][%Lernaufgabe E – 22]\nFachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen. [!Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.]\n[@partialAnswer:This is a **partialAnswer**]\n[@partialAnswer:This is a **partialAnswer** 2]"
   },
   {
     "bit": {

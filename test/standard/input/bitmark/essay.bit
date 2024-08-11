@@ -2,12 +2,15 @@
 [%1]
 [!Listen to the train announcement. Write down every word you hear.]
 [@reasonableNumOfChars:100]
-[@sampleSolution:The train now approaching Platform 2 is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]
+[@sampleSolution: Will be overridden]
+[@sampleSolution:The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]
 
 [.essay:bitmark--]
 [@id:245552]
 [%][%Lernaufgabe E – 22]
 Fachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen. [!Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.]
+[@partialAnswer:This is a **partialAnswer**]
+[@partialAnswer:This is a **partialAnswer** 2]
 
 [.essay::bitmark++]
 [@id:272740]
