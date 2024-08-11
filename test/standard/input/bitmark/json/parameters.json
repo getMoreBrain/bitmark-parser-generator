@@ -1,0 +1,167 @@
+[
+  {
+    "bit": {
+      "type": "parameters",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.table]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "parameters",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "tableFixedHeader": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "caption": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the table caption",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.table]\n[@tableSearch:false]\n[@tableSort:false]\n[@caption:This is the table caption]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "parameters",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "tablePaginationLimit": 42,
+      "tableHeight": 99,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": false,
+      "tableResizableColumns": true,
+      "caption": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the caption",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.parameters]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n[@tablePaginationLimit:42]\n[@tableHeight:99]\n[@tableWhitespaceNoWrap:false]\n[@tableAutoWidth:false]\n[@tableResizableColumns:true]\n[@caption: This is the caption ]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "parameters",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "tableFixedHeader": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "body": [],
+      "table": {
+        "columns": [],
+        "data": []
+      }
+    },
+    "parser": {
+      "version": "1.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.10.3"
+    },
+    "bitmark": "[.parameters]"
+  }
+]
