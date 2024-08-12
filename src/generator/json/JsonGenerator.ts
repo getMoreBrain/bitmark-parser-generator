@@ -2610,6 +2610,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       jupyterExecutionCount: undefined,
       isPublic: undefined,
       aiGenerated: undefined,
+      machineTranslated: undefined,
       analyticsTag: undefined,
       feedbackEngine: undefined,
       feedbackType: undefined,
@@ -3093,6 +3094,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.jupyterExecutionCount == null) delete bitJson.jupyterExecutionCount;
     if (bitJson.isPublic == null) delete bitJson.isPublic;
     if (bitJson.aiGenerated == null) delete bitJson.aiGenerated;
+    if (bitJson.machineTranslated == null) delete bitJson.machineTranslated;
     if (bitJson.analyticsTag == null) delete bitJson.analyticsTag;
     if (bitJson.feedbackEngine == null) delete bitJson.feedbackEngine;
     if (bitJson.feedbackType == null) delete bitJson.feedbackType;

@@ -73,6 +73,7 @@ const propertyConfigKeys = {
   license: 'license',
   list: 'list',
   location: 'location',
+  machineTranslated: 'machineTranslated',
   mailingList: 'mailingList',
   markConfig: 'markConfig',
   maxCreatedBits: 'maxCreatedBits',

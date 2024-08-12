@@ -28,6 +28,10 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.machineTranslated,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.analyticsTag,
         maxCount: Count.infinity,
       },
