@@ -123,6 +123,10 @@ class Builder extends BaseBuilder {
     slug?: BreakscapedString;
     tag?: BreakscapedString | BreakscapedString[];
     reductionTag?: BreakscapedString | BreakscapedString[];
+    levelCEFRp?: BreakscapedString | BreakscapedString[];
+    levelCEFR?: BreakscapedString | BreakscapedString[];
+    levelILR?: BreakscapedString | BreakscapedString[];
+    levelACTFL?: BreakscapedString | BreakscapedString[];
     icon?: BreakscapedString;
     iconTag?: BreakscapedString;
     colorTag?: BreakscapedString | BreakscapedString[];
@@ -295,6 +299,10 @@ class Builder extends BaseBuilder {
       slug,
       tag,
       reductionTag,
+      levelCEFRp,
+      levelCEFR,
+      levelILR,
+      levelACTFL,
       icon,
       iconTag,
       colorTag,
@@ -464,6 +472,10 @@ class Builder extends BaseBuilder {
       slug: this.toAstProperty(PropertyConfigKey.slug, slug),
       tag: this.toAstProperty(PropertyConfigKey.tag, tag),
       reductionTag: this.toAstProperty(PropertyConfigKey.reductionTag, reductionTag),
+      levelCEFRp: this.toAstProperty(PropertyConfigKey.levelCEFRp, levelCEFRp),
+      levelCEFR: this.toAstProperty(PropertyConfigKey.levelCEFR, levelCEFR),
+      levelILR: this.toAstProperty(PropertyConfigKey.levelILR, levelILR),
+      levelACTFL: this.toAstProperty(PropertyConfigKey.levelACTFL, levelACTFL),
       icon: this.toAstProperty(PropertyConfigKey.icon, icon),
       iconTag: this.toAstProperty(PropertyConfigKey.iconTag, iconTag),
       colorTag: this.toAstProperty(PropertyConfigKey.colorTag, colorTag),

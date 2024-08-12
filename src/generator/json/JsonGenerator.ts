@@ -2630,6 +2630,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       slug: undefined,
       tag: undefined,
       reductionTag: undefined,
+      levelCEFRp: undefined,
+      levelCEFR: undefined,
+      levelILR: undefined,
+      levelACTFL: undefined,
       icon: undefined,
       iconTag: undefined,
       colorTag: undefined,
@@ -3114,6 +3118,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.slug == null) delete bitJson.slug;
     if (bitJson.tag == null) delete bitJson.tag;
     if (bitJson.reductionTag == null) delete bitJson.reductionTag;
+    if (bitJson.levelCEFRp == null) delete bitJson.levelCEFRp;
+    if (bitJson.levelCEFR == null) delete bitJson.levelCEFR;
+    if (bitJson.levelILR == null) delete bitJson.levelILR;
+    if (bitJson.levelACTFL == null) delete bitJson.levelACTFL;
     if (bitJson.icon == null) delete bitJson.icon;
     if (bitJson.iconTag == null) delete bitJson.iconTag;
     if (bitJson.colorTag == null) delete bitJson.colorTag;
