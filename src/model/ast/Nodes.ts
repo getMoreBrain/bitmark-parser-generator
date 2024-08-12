@@ -62,6 +62,10 @@ export interface Bit {
   slug?: Property;
   tag?: Property;
   reductionTag?: Property;
+  levelCEFRp?: Property;
+  levelCEFR?: Property;
+  levelILR?: Property;
+  levelACTFL?: Property;
   icon?: Property;
   iconTag?: Property;
   colorTag?: Property;

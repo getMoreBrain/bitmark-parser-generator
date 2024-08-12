@@ -7,16 +7,24 @@
       "id": ["135647"],
       "externalId": ["e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"],
       "spaceId": ["sl"],
+      "isPublic": true,
       "lang": "en-US",
       "language": ["de"],
       "publisher": ["kpmg"],
       "publisherName": "KPMG",
       "theme": ["grundzuege"],
+      "levelCEFRp": "levelCEFRp",
+      "levelCEFR": "levelCEFR",
+      "levelILR": "levelILR",
+      "levelACTFL": "levelACTFL",
       "subtype": "draft-book",
       "coverImage": ["https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png"],
       "coverColor": "#F2F2F2",
       "author": ["Philippe Pointet"],
       "kind": "learning-path",
+      "hasMarkAsDone": true,
+      "processHandIn": false,
+      "duration": "PT2H",
       "title": [
         {
           "type": "paragraph",
@@ -41,23 +49,20 @@
           "attrs": {}
         }
       ],
-      "hasMarkAsDone": true,
-      "isPublic": true,
-      "processHandIn": false,
-      "duration": "PT2H",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.19.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
     },
-    "bitmark": "[.book]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]"
+    "bitmark": "[.book]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@publisher:kpmg]\n[@publisherName:KPMG]\n[@theme:grundzuege]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@coverImage:https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png]\n[@coverColor:#F2F2F2]\n[@hasMarkAsDone]\n[@isPublic]\n[@duration:PT2H]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]"
   },
   {
     "bit": {

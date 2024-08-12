@@ -43,12 +43,16 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["304379"],
+      "levelCEFRp": "levelCEFRp",
+      "levelCEFR": "levelCEFR",
+      "levelILR": "levelILR",
+      "levelACTFL": "levelACTFL",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "resource": {
         "type": "image",
@@ -68,10 +72,11 @@
       }
     },
     "parser": {
-      "version": "1.4.15",
-      "bitmarkVersion": "3"
+      "version": "1.19.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
     },
-    "bitmark": "[.image]\n[@id:304379]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif][@zoomDisabled]"
+    "bitmark": "[.image]\n[@id:304379]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif][@zoomDisabled]"
   },
   {
     "bit": {

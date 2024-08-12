@@ -125,6 +125,26 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.reductionTag,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.levelCEFRp]: {
+    tag: PropertyTag.levelCEFRp,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.levelCEFR]: {
+    tag: PropertyTag.levelCEFR,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.levelILR]: {
+    tag: PropertyTag.levelILR,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.levelACTFL]: {
+    tag: PropertyTag.levelACTFL,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.icon]: {
     tag: PropertyTag.icon,
     single: true,

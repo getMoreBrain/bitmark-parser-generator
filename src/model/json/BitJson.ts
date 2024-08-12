@@ -35,6 +35,10 @@ export interface BitJson {
   slug: string;
   tag: string | string[];
   reductionTag: string | string[];
+  levelCEFRp: string;
+  levelCEFR: string;
+  levelILR: string;
+  levelACTFL: string;
   icon: string;
   iconTag: string;
   colorTag: string | string[];

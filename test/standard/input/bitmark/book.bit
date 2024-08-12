@@ -17,6 +17,11 @@
 [@hasMarkAsDone]
 [@isPublic]
 [@duration:PT2H]
+[@levelCEFRp:levelCEFRp]
+[@levelCEFR:levelCEFR]
+[@levelILR:levelILR]
+[@levelACTFL:levelACTFL]
+
 
 
 [.article:bitmark++]
