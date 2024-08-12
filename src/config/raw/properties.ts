@@ -41,6 +41,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.machineTranslated]: {
+    tag: PropertyTag.machineTranslated,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.analyticsTag]: {
     tag: PropertyTag.analyticsTag,
     format: PropertyFormat.trimmedString,

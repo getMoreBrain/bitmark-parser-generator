@@ -104,6 +104,7 @@ class Builder extends BaseBuilder {
     jupyterExecutionCount?: number;
     isPublic?: boolean;
     aiGenerated?: boolean;
+    machineTranslated?: BreakscapedString;
     analyticsTag?: BreakscapedString | BreakscapedString[];
     feedbackEngine?: BreakscapedString;
     feedbackType?: BreakscapedString;
@@ -275,6 +276,7 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount,
       isPublic,
       aiGenerated,
+      machineTranslated,
       analyticsTag,
       feedbackEngine,
       feedbackType,
@@ -442,6 +444,7 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, jupyterExecutionCount),
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, isPublic),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
+      machineTranslated: this.toAstProperty(PropertyConfigKey.machineTranslated, machineTranslated),
       analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, analyticsTag),
       feedbackEngine: this.toAstProperty(PropertyConfigKey.feedbackEngine, feedbackEngine),
       feedbackType: this.toAstProperty(PropertyConfigKey.feedbackType, feedbackType),

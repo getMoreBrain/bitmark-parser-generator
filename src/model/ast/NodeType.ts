@@ -205,6 +205,8 @@ const NodeType = superenum({
   listValue: 'listValue',
   location: 'location',
   locationValue: 'locationValue',
+  machineTranslated: 'machineTranslated',
+  machineTranslatedValue: 'machineTranslatedValue',
   mailingList: 'mailingList',
   marginNumber: 'marginNumber',
   mark: 'mark',
