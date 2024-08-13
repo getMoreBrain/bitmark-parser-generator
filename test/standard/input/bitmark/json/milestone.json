@@ -1,0 +1,96 @@
+[
+  {
+    "bit": {
+      "type": "milestone",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["210022"],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Lernziele",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.20",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.milestone]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
+  },
+  {
+    "bit": {
+      "type": "milestone",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["210040"],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Lernziele",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.5.20",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.milestone:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
+  }
+]
