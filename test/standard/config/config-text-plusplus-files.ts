@@ -11,6 +11,7 @@ if (process.env.CI) {
 
 let TEST_FILES: string[] = [
   // 'plain.text',
+  // 'paragraphs.text',
   // 'breakscaping.text',
   // 'list.text',
   // 'bold.text',
@@ -35,6 +36,7 @@ let TEST_FILES: string[] = [
 if (TEST_ALL) {
   TEST_FILES = [
     'plain.text',
+    'paragraphs.text',
     'breakscaping.text',
     'list.text',
     'bold.text',
