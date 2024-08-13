@@ -106,6 +106,8 @@ export interface Bit {
   quizStrikethroughSolutions?: Property;
   codeLineNumbers?: Property;
   codeMinimap?: Property;
+  stripePricingTableId?: Property;
+  stripePublishableKey?: Property;
   thumbImage?: Property;
   scormSource?: Property;
   posterImage?: Property;

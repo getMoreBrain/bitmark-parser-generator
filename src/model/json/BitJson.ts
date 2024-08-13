@@ -82,6 +82,8 @@ export interface BitJson {
   quizStrikethroughSolutions: boolean;
   codeLineNumbers: boolean;
   codeMinimap: boolean;
+  stripePricingTableId: string;
+  stripePublishableKey: string;
   thumbImage: string;
   scormSource: string;
   posterImage: string;

@@ -136,6 +136,8 @@ const propertyConfigKeys = {
   src2x: 'src2x',
   src3x: 'src3x',
   src4x: 'src4x',
+  stripePricingTableId: 'stripePricingTableId',
+  stripePublishableKey: 'stripePublishableKey',
   subject: 'subject',
   subtype: 'subtype',
   tableAutoWidth: 'tableAutoWidth',

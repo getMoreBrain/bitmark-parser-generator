@@ -2706,6 +2706,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       quizStrikethroughSolutions: undefined,
       codeLineNumbers: undefined,
       codeMinimap: undefined,
+      stripePricingTableId: undefined,
+      stripePublishableKey: undefined,
       thumbImage: undefined,
       scormSource: undefined,
       posterImage: undefined,
@@ -3087,6 +3089,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       }
 
+      // Special case for 'vendor-stripe-pricing-table' bits
+      if (Config.isOfBitType(bitType, BitType.vendorStripePricingTable)) {
+        if (bitJson.stripePricingTableId == null) bitJson.stripePricingTableId = '';
+        if (bitJson.stripePublishableKey == null) bitJson.stripePublishableKey = '';
+      }
+
       // Special case for 'call-to-action' bits
       if (Config.isOfBitType(bitType, BitType.callToAction)) {
         if (bitJson.buttonCaption == null) bitJson.buttonCaption = '';
@@ -3195,6 +3203,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.quizStrikethroughSolutions == null) delete bitJson.quizStrikethroughSolutions;
     if (bitJson.codeLineNumbers == null) delete bitJson.codeLineNumbers;
     if (bitJson.codeMinimap == null) delete bitJson.codeMinimap;
+    if (bitJson.stripePricingTableId == null) delete bitJson.stripePricingTableId;
+    if (bitJson.stripePublishableKey == null) delete bitJson.stripePublishableKey;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;
     if (bitJson.scormSource == null) delete bitJson.scormSource;
     if (bitJson.posterImage == null) delete bitJson.posterImage;
