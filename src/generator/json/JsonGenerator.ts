@@ -1530,10 +1530,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> footer -> footerText
 
-  protected leaf_footerText(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_footerText(node: NodeInfo, route: NodeInfo[]): void {
     const footer = node.value as BreakscapedString;
+    const textFormat = this.getTextFormat(route);
 
-    this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, TextFormat.bitmarkMinusMinus);
+    this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, textFormat);
   }
 
   // bitmarkAst -> bits -> bitsValue -> markup
