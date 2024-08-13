@@ -130,6 +130,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private indentationStringCache = '';
   private inCodeBlock = false;
   private exitedCodeBlock = false;
+  private inBulletList = false;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
 
@@ -207,6 +208,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.indentationStringCache = '';
     this.inCodeBlock = false;
     this.exitedCodeBlock = false;
+    this.inBulletList = false;
     this.placeholderIndex = 0;
     this.placeholders = {};
   }
@@ -290,6 +292,17 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         this.writeCodeBlock(node as CodeBlockTextNode);
         break;
 
+      case TextNodeType.noBulletList:
+      case TextNodeType.bulletList:
+      case TextNodeType.orderedList:
+      case TextNodeType.orderedListRoman:
+      case TextNodeType.orderedListRomanLower:
+      case TextNodeType.letteredList:
+      case TextNodeType.letteredListLower:
+      case TextNodeType.taskList:
+        this.inBulletList = true;
+        break;
+
       case TextNodeType.gap:
       case TextNodeType.select:
       case TextNodeType.highlight:
@@ -352,7 +365,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       case TextNodeType.letteredListLower:
       case TextNodeType.taskList:
         // List Block type nodes, write a newline only if there is no indent
-        if (this.currentIndent <= 1) this.writeNL();
+        if (this.currentIndent <= 1) {
+          this.writeNL();
+          // Exit 'inBulletList' state only if not in a nested list
+          this.inBulletList = false;
+        }
         break;
 
       default:
@@ -625,10 +642,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   protected writeParagraph(_node: TextNode): void {
-    if (this.exitedCodeBlock) {
+    if (!this.inBulletList) {
       this.write('|');
       this.writeNL();
-      this.writeNL();
+      if (this.exitedCodeBlock) {
+        this.writeNL();
+      }
     }
   }
 
