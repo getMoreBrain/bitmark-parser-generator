@@ -125,6 +125,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   // State
   private textFormat: string = TextFormat.bitmarkMinusMinus;
   private writerText = '';
+  private nodeIndex = 0;
   private currentIndent = 0;
   private prevIndent = 0;
   private indentationStringCache = '';
@@ -203,6 +204,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
     this.textFormat = textFormat;
     this.writerText = '';
+    this.nodeIndex = 0;
     this.currentIndent = 0;
     this.prevIndent = 0;
     this.indentationStringCache = '';
@@ -377,6 +379,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
 
     this.handleDedent(node);
+
+    // Increment the node index for the next node
+    this.nodeIndex++;
   }
 
   protected handleIndent(node: TextNode) {
@@ -641,11 +646,30 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
   }
 
-  protected writeParagraph(_node: TextNode): void {
-    if (!this.inBulletList) {
+  protected writeParagraph(node: TextNode): void {
+    // Write paragraph marker for bitmark++
+    if (this.textFormat === TextFormat.bitmarkPlusPlus) {
+      // Do not write a paragraph marker when in a bullet list
+      if (this.inBulletList) return;
+
+      // Do not write a paragraph marker for the first node if it is a paragraph - it is implicit
+      // (unless it is empty, or an empty string)
+      // This is a nasty look-ahead but otherwise the entire paragraph block would need to be written before
+      // determining if it is the first node and if it is empty
+      const nodeContentLength = node.content?.length ?? 0;
+      if (this.nodeIndex === 0) {
+        if (nodeContentLength === 1) {
+          const isTextNode = node.content?.[0].type === TextNodeType.text;
+          const text = node.content?.[0].text ?? '';
+          if (!isTextNode || text !== '') return;
+        }
+        if (nodeContentLength > 1) return;
+      }
+
       this.write('|');
       this.writeNL();
       if (this.exitedCodeBlock) {
+        // Write an extra newline after a code block
         this.writeNL();
       }
     }
