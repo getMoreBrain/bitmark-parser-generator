@@ -642,11 +642,13 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   protected writeParagraph(_node: TextNode): void {
-    if (!this.inBulletList) {
-      this.write('|');
-      this.writeNL();
-      if (this.exitedCodeBlock) {
+    if (this.textFormat === TextFormat.bitmarkPlusPlus) {
+      if (!this.inBulletList) {
+        this.write('|');
         this.writeNL();
+        if (this.exitedCodeBlock) {
+          this.writeNL();
+        }
       }
     }
   }
