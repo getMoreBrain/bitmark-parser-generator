@@ -1353,9 +1353,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // const bitType = this.getBitType(route);
 
     if (list) {
+      const columns = list.columns ?? [];
+      const definitions = list.definitions ?? [];
       const captionDefinitionListJson: Partial<CaptionDefinitionListJson> = {
-        columns: Breakscape.unbreakscape(list.columns),
-        definitions: list.definitions.map((d) => {
+        columns: Breakscape.unbreakscape(columns),
+        definitions: definitions.map((d) => {
           return {
             term: Breakscape.unbreakscape(d.term) ?? '',
             description: Breakscape.unbreakscape(d.description) ?? '',
