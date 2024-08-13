@@ -50,6 +50,7 @@ import {
   Table,
   Servings,
   RatingLevelStartEnd,
+  CaptionDefinitionList,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -74,6 +75,7 @@ import {
   TableJson,
   ServingsJson,
   RatingLevelStartEndJson,
+  CaptionDefinitionListJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -253,6 +255,7 @@ class JsonParser {
       jupyterExecutionCount,
       isPublic,
       aiGenerated,
+      machineTranslated,
       analyticsTag,
       feedbackEngine,
       feedbackType,
@@ -271,6 +274,10 @@ class JsonParser {
       slug,
       tag,
       reductionTag,
+      levelCEFRp,
+      levelCEFR,
+      levelILR,
+      levelACTFL,
       icon,
       iconTag,
       colorTag,
@@ -309,6 +316,8 @@ class JsonParser {
       quizStrikethroughSolutions,
       codeLineNumbers,
       codeMinimap,
+      stripePricingTableId,
+      stripePublishableKey,
       action,
       thumbImage,
       scormSource,
@@ -392,6 +401,7 @@ class JsonParser {
       pairs,
       matrix,
       table,
+      captionDefinitionList,
       choices,
       questions,
       ingredients,
@@ -454,7 +464,7 @@ class JsonParser {
     // matrix
     const matrixNodes = this.matrixBitsToAst(matrix);
 
-    // table
+    // table / captionDefinitionList
     const tableNode = this.tableToAst(table);
 
     //+-choice
@@ -481,6 +491,9 @@ class JsonParser {
     // ratingLevelEnd
     const ratingLevelEndNodes = this.ratingLevelStartEndToAst(ratingLevelEnd);
 
+    // captionDefinitionList
+    const captionDefinitionListNode = this.captionDefinitionListToAst(captionDefinitionList);
+
     // listItems / sections (cardBits)
     const cardBitNodes = this.listItemsToAst(listItems ?? sections, textFormat, placeholders);
 
@@ -506,6 +519,7 @@ class JsonParser {
       jupyterExecutionCount,
       isPublic,
       aiGenerated,
+      machineTranslated: this.convertStringToBreakscapedString(machineTranslated),
       analyticsTag: this.convertStringToBreakscapedString(analyticsTag),
       feedbackEngine: this.convertStringToBreakscapedString(feedbackEngine),
       feedbackType: this.convertStringToBreakscapedString(feedbackType),
@@ -524,6 +538,10 @@ class JsonParser {
       slug: this.convertStringToBreakscapedString(slug),
       tag: this.convertStringToBreakscapedString(tag),
       reductionTag: this.convertStringToBreakscapedString(reductionTag),
+      levelCEFRp: this.convertStringToBreakscapedString(levelCEFRp),
+      levelCEFR: this.convertStringToBreakscapedString(levelCEFR),
+      levelILR: this.convertStringToBreakscapedString(levelILR),
+      levelACTFL: this.convertStringToBreakscapedString(levelACTFL),
       icon: this.convertStringToBreakscapedString(icon),
       iconTag: this.convertStringToBreakscapedString(iconTag),
       colorTag: this.convertStringToBreakscapedString(colorTag),
@@ -563,6 +581,8 @@ class JsonParser {
       quizStrikethroughSolutions,
       codeLineNumbers,
       codeMinimap,
+      stripePricingTableId: this.convertStringToBreakscapedString(stripePricingTableId),
+      stripePublishableKey: this.convertStringToBreakscapedString(stripePublishableKey),
       duration: this.convertStringToBreakscapedString(duration),
       referenceProperty: this.convertStringToBreakscapedString(referenceProperty),
       thumbImage: this.convertStringToBreakscapedString(thumbImage),
@@ -647,6 +667,7 @@ class JsonParser {
       questions: questionNodes,
       botResponses: botResponseNodes,
       ingredients: ingredientsNodes,
+      captionDefinitionList: captionDefinitionListNode,
       cardBits: cardBitNodes,
       footer: footerNode,
     });
@@ -1078,6 +1099,28 @@ class JsonParser {
       node = builder.ratingLevelStartEnd({
         level,
         label: this.convertJsonTextToBreakscapedString(label) ?? Breakscape.EMPTY_STRING,
+      });
+    }
+
+    return node;
+  }
+
+  private captionDefinitionListToAst(
+    captionDefinitionList: CaptionDefinitionListJson,
+  ): CaptionDefinitionList | undefined {
+    let node: CaptionDefinitionList | undefined;
+
+    if (captionDefinitionList) {
+      const { columns, definitions } = captionDefinitionList;
+
+      node = builder.captionDefinitionList({
+        columns: this.convertStringToBreakscapedString(columns) ?? [],
+        definitions: (definitions ?? []).map((d) => {
+          return builder.captionDefinition({
+            term: this.convertStringToBreakscapedString(d.term) ?? Breakscape.EMPTY_STRING,
+            description: this.convertStringToBreakscapedString(d.description) ?? Breakscape.EMPTY_STRING,
+          });
+        }),
       });
     }
 

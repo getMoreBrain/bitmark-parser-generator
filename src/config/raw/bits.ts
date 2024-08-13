@@ -474,7 +474,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-
+  [BitType.milestone]: { since: '1.20.0', baseBitType: BitType.step },
   [BitType.conversationLeft1]: {
     since: '1.3.0',
     tags: [
@@ -980,9 +980,17 @@ const BITS: _BitsConfig = {
   [BitType.appCreateBitsFromImage]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.appGetScreenshot]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.detailsImage]: { since: '1.3.0', baseBitType: BitType.image },
-  [BitType.figure]: { since: '1.3.0', deprecated: '1.4.0', baseBitType: BitType.image },
+  [BitType.figure]: {
+    since: '1.3.0',
+    baseBitType: BitType.image,
+    cardSet: CardSetConfigKey._captionDefinitionsList,
+  },
   [BitType.imageBanner]: { since: '1.3.0', baseBitType: BitType.image },
-  [BitType.imageFigure]: { since: '1.3.0', baseBitType: BitType.image },
+  [BitType.imageFigure]: {
+    since: '1.3.0',
+    baseBitType: BitType.image,
+    cardSet: CardSetConfigKey._captionDefinitionsList,
+  },
   [BitType.imageFigureAlt]: { since: '1.16.0', baseBitType: BitType.imageFigure },
   [BitType.standardImageFigureNormative]: { since: '1.16.0', baseBitType: BitType.imageFigure },
   [BitType.standardImageFigureNonNormative]: { since: '1.16.0', baseBitType: BitType.imageFigure },
@@ -1957,6 +1965,22 @@ const BITS: _BitsConfig = {
       },
     ],
     textFormatDefault: TextFormat.text,
+  },
+  [BitType.vendorStripePricingTable]: {
+    since: '1.20.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.stripePricingTableId,
+        minCount: 1,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.stripePublishableKey,
+        minCount: 1,
+      },
+    ],
   },
   [BitType.video]: {
     since: '1.3.0',

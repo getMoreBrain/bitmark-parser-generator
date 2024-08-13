@@ -57,6 +57,8 @@ import {
   Table,
   Servings,
   RatingLevelStartEnd,
+  CaptionDefinition,
+  CaptionDefinitionList,
 } from '../model/ast/Nodes';
 
 /**
@@ -104,6 +106,7 @@ class Builder extends BaseBuilder {
     jupyterExecutionCount?: number;
     isPublic?: boolean;
     aiGenerated?: boolean;
+    machineTranslated?: BreakscapedString;
     analyticsTag?: BreakscapedString | BreakscapedString[];
     feedbackEngine?: BreakscapedString;
     feedbackType?: BreakscapedString;
@@ -122,6 +125,10 @@ class Builder extends BaseBuilder {
     slug?: BreakscapedString;
     tag?: BreakscapedString | BreakscapedString[];
     reductionTag?: BreakscapedString | BreakscapedString[];
+    levelCEFRp?: BreakscapedString | BreakscapedString[];
+    levelCEFR?: BreakscapedString | BreakscapedString[];
+    levelILR?: BreakscapedString | BreakscapedString[];
+    levelACTFL?: BreakscapedString | BreakscapedString[];
     icon?: BreakscapedString;
     iconTag?: BreakscapedString;
     colorTag?: BreakscapedString | BreakscapedString[];
@@ -162,6 +169,8 @@ class Builder extends BaseBuilder {
     quizStrikethroughSolutions?: boolean;
     codeLineNumbers?: boolean;
     codeMinimap?: boolean;
+    stripePricingTableId?: BreakscapedString;
+    stripePublishableKey?: BreakscapedString;
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -254,6 +263,7 @@ class Builder extends BaseBuilder {
     questions?: Question[];
     botResponses?: BotResponse[];
     ingredients?: Ingredient[];
+    captionDefinitionList?: CaptionDefinitionList;
     cardBits?: CardBit[];
     footer?: FooterText;
 
@@ -275,6 +285,7 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount,
       isPublic,
       aiGenerated,
+      machineTranslated,
       analyticsTag,
       feedbackEngine,
       feedbackType,
@@ -293,6 +304,10 @@ class Builder extends BaseBuilder {
       slug,
       tag,
       reductionTag,
+      levelCEFRp,
+      levelCEFR,
+      levelILR,
+      levelACTFL,
       icon,
       iconTag,
       colorTag,
@@ -333,6 +348,8 @@ class Builder extends BaseBuilder {
       quizStrikethroughSolutions,
       codeLineNumbers,
       codeMinimap,
+      stripePricingTableId,
+      stripePublishableKey,
       thumbImage,
       scormSource,
       posterImage,
@@ -442,6 +459,7 @@ class Builder extends BaseBuilder {
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, jupyterExecutionCount),
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, isPublic),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, aiGenerated),
+      machineTranslated: this.toAstProperty(PropertyConfigKey.machineTranslated, machineTranslated),
       analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, analyticsTag),
       feedbackEngine: this.toAstProperty(PropertyConfigKey.feedbackEngine, feedbackEngine),
       feedbackType: this.toAstProperty(PropertyConfigKey.feedbackType, feedbackType),
@@ -461,6 +479,10 @@ class Builder extends BaseBuilder {
       slug: this.toAstProperty(PropertyConfigKey.slug, slug),
       tag: this.toAstProperty(PropertyConfigKey.tag, tag),
       reductionTag: this.toAstProperty(PropertyConfigKey.reductionTag, reductionTag),
+      levelCEFRp: this.toAstProperty(PropertyConfigKey.levelCEFRp, levelCEFRp),
+      levelCEFR: this.toAstProperty(PropertyConfigKey.levelCEFR, levelCEFR),
+      levelILR: this.toAstProperty(PropertyConfigKey.levelILR, levelILR),
+      levelACTFL: this.toAstProperty(PropertyConfigKey.levelACTFL, levelACTFL),
       icon: this.toAstProperty(PropertyConfigKey.icon, icon),
       iconTag: this.toAstProperty(PropertyConfigKey.iconTag, iconTag),
       colorTag: this.toAstProperty(PropertyConfigKey.colorTag, colorTag),
@@ -507,6 +529,8 @@ class Builder extends BaseBuilder {
       ),
       codeLineNumbers: this.toAstProperty(PropertyConfigKey.codeLineNumbers, codeLineNumbers),
       codeMinimap: this.toAstProperty(PropertyConfigKey.codeMinimap, codeMinimap),
+      stripePricingTableId: this.toAstProperty(PropertyConfigKey.stripePricingTableId, stripePricingTableId),
+      stripePublishableKey: this.toAstProperty(PropertyConfigKey.stripePublishableKey, stripePublishableKey),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),
@@ -1649,6 +1673,51 @@ class Builder extends BaseBuilder {
     return node;
   }
 
+  /**
+   * Build captionDefinition node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  captionDefinition(data: { term: BreakscapedString; description: BreakscapedString }): CaptionDefinition {
+    const { term, description } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: CaptionDefinition = {
+      term,
+      description,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build captionDefinitionList node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  captionDefinitionList(data: {
+    columns: BreakscapedString[];
+    definitions: CaptionDefinition[];
+  }): CaptionDefinitionList {
+    const { columns, definitions } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: CaptionDefinitionList = {
+      columns,
+      definitions,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
   //
   // Private
   //
@@ -1744,6 +1813,7 @@ class Builder extends BaseBuilder {
     table?: Table;
     botResponses?: BotResponse[];
     ingredients?: Ingredient[];
+    captionDefinitionList?: CaptionDefinitionList;
     cardBits?: CardBit[];
   }): CardNode | undefined {
     let node: CardNode | undefined;
@@ -1762,6 +1832,7 @@ class Builder extends BaseBuilder {
       table,
       botResponses,
       ingredients,
+      captionDefinitionList,
       cardBits,
     } = data;
 
@@ -1780,6 +1851,7 @@ class Builder extends BaseBuilder {
       table ||
       botResponses ||
       ingredients ||
+      captionDefinitionList ||
       cardBits
     ) {
       node = {
@@ -1797,6 +1869,7 @@ class Builder extends BaseBuilder {
         table,
         botResponses,
         ingredients,
+        captionDefinitionList,
         cardBits,
       };
 

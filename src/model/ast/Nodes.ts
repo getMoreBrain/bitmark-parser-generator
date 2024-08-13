@@ -43,6 +43,7 @@ export interface Bit {
   jupyterExecutionCount?: Property;
   isPublic?: Property;
   aiGenerated?: Property;
+  machineTranslated?: Property;
   analyticsTag?: Property;
   feedbackEngine?: Property;
   feedbackType?: Property;
@@ -61,6 +62,10 @@ export interface Bit {
   slug?: Property;
   tag?: Property;
   reductionTag?: Property;
+  levelCEFRp?: Property;
+  levelCEFR?: Property;
+  levelILR?: Property;
+  levelACTFL?: Property;
   icon?: Property;
   iconTag?: Property;
   colorTag?: Property;
@@ -101,6 +106,8 @@ export interface Bit {
   quizStrikethroughSolutions?: Property;
   codeLineNumbers?: Property;
   codeMinimap?: Property;
+  stripePricingTableId?: Property;
+  stripePublishableKey?: Property;
   thumbImage?: Property;
   scormSource?: Property;
   posterImage?: Property;
@@ -389,6 +396,20 @@ export interface RatingLevelStartEnd {
   label?: BreakscapedString; // TextAst
 }
 
+// CaptionDefinition
+
+export interface CaptionDefinition {
+  term: BreakscapedString;
+  description: BreakscapedString;
+}
+
+// CaptionDefinitionList
+
+export interface CaptionDefinitionList {
+  columns: BreakscapedString[];
+  definitions: CaptionDefinition[];
+}
+
 // Body
 
 // TODO - we cannot store the body like this. we have to store it as an already processed v3 body.
@@ -524,6 +545,7 @@ export interface CardNode {
   botResponses?: BotResponse[];
   cardBits?: CardBit[];
   ingredients?: Ingredient[];
+  captionDefinitionList?: CaptionDefinitionList;
 }
 
 // Footer

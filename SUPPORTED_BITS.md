@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.18.0
+Version: 1.20.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -195,7 +195,7 @@ extractor-page-number (since: 1.5.21)
 extractor-page-with-blocks (since: 1.5.21)
 extractor-repeated-text (since: 1.5.21)
 featured (since: 1.3.0)
-figure (since: 1.3.0, deprecated: 1.4.0)
+figure (since: 1.3.0)
 image-figure-alt (since: 1.16.0)
 flashcard (since: 1.3.0)
 flashcard-1 (since: 1.3.0)
@@ -284,6 +284,7 @@ match-reverse (since: 1.3.0)
 match-solution-grouped (since: 1.3.0)
 message (since: 1.3.0)
 metalevel-explanation (since: 1.10.0)
+milestone (since: 1.20.0)
 module (since: 1.5.26)
 module-product (since: 1.9.0)
 multiple-choice (since: 1.3.0)
@@ -412,6 +413,7 @@ vendor-jupyter-cell-raw (since: 1.4.3)
 vendor-jupyter-ipynb (since: 1.4.3)
 vendor-jupyter-output (since: 1.4.3)
 vendor-padlet-embed (since: 1.3.0)
+vendor-stripe-pricing-table (since: 1.20.0)
 video (since: 1.3.0)
 video-embed (since: 1.3.0)
 video-embed-landscape (since: 1.3.0)

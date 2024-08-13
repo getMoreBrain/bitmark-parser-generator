@@ -125,11 +125,13 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   // State
   private textFormat: string = TextFormat.bitmarkMinusMinus;
   private writerText = '';
+  private nodeIndex = 0;
   private currentIndent = 0;
   private prevIndent = 0;
   private indentationStringCache = '';
   private inCodeBlock = false;
   private exitedCodeBlock = false;
+  private inBulletList = false;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
 
@@ -202,11 +204,13 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
     this.textFormat = textFormat;
     this.writerText = '';
+    this.nodeIndex = 0;
     this.currentIndent = 0;
     this.prevIndent = 0;
     this.indentationStringCache = '';
     this.inCodeBlock = false;
     this.exitedCodeBlock = false;
+    this.inBulletList = false;
     this.placeholderIndex = 0;
     this.placeholders = {};
   }
@@ -290,6 +294,17 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         this.writeCodeBlock(node as CodeBlockTextNode);
         break;
 
+      case TextNodeType.noBulletList:
+      case TextNodeType.bulletList:
+      case TextNodeType.orderedList:
+      case TextNodeType.orderedListRoman:
+      case TextNodeType.orderedListRomanLower:
+      case TextNodeType.letteredList:
+      case TextNodeType.letteredListLower:
+      case TextNodeType.taskList:
+        this.inBulletList = true;
+        break;
+
       case TextNodeType.gap:
       case TextNodeType.select:
       case TextNodeType.highlight:
@@ -352,7 +367,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       case TextNodeType.letteredListLower:
       case TextNodeType.taskList:
         // List Block type nodes, write a newline only if there is no indent
-        if (this.currentIndent <= 1) this.writeNL();
+        if (this.currentIndent <= 1) {
+          this.writeNL();
+          // Exit 'inBulletList' state only if not in a nested list
+          this.inBulletList = false;
+        }
         break;
 
       default:
@@ -360,6 +379,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
 
     this.handleDedent(node);
+
+    // Increment the node index for the next node
+    this.nodeIndex++;
   }
 
   protected handleIndent(node: TextNode) {
@@ -624,11 +646,32 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
   }
 
-  protected writeParagraph(_node: TextNode): void {
-    if (this.exitedCodeBlock) {
+  protected writeParagraph(node: TextNode): void {
+    // Write paragraph marker for bitmark++
+    if (this.textFormat === TextFormat.bitmarkPlusPlus) {
+      // Do not write a paragraph marker when in a bullet list
+      if (this.inBulletList) return;
+
+      // Do not write a paragraph marker for the first node if it is a paragraph - it is implicit
+      // (unless it is empty, or an empty string)
+      // This is a nasty look-ahead but otherwise the entire paragraph block would need to be written before
+      // determining if it is the first node and if it is empty
+      const nodeContentLength = node.content?.length ?? 0;
+      if (this.nodeIndex === 0) {
+        if (nodeContentLength === 1) {
+          const isTextNode = node.content?.[0].type === TextNodeType.text;
+          const text = node.content?.[0].text ?? '';
+          if (!isTextNode || text !== '') return;
+        }
+        if (nodeContentLength > 1) return;
+      }
+
       this.write('|');
       this.writeNL();
-      this.writeNL();
+      if (this.exitedCodeBlock) {
+        // Write an extra newline after a code block
+        this.writeNL();
+      }
     }
   }
 

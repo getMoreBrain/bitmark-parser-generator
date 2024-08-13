@@ -372,6 +372,23 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
+  [CardSetConfigKey._captionDefinitionsList]: {
+    variants: [
+      // Side 1
+      [
+        // Variant 1..N
+        {
+          tags: [
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
+          ],
+          repeatCount: Count.infinity,
+        },
+      ],
+    ],
+  },
 };
 
 export { CARDSETS as CARDS };

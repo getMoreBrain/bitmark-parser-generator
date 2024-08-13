@@ -15,6 +15,7 @@ const CardSetConfigKey = superenum({
   _exampleBitList: '_exampleBitList',
   _clozeList: '_clozeList',
   _ingredients: '_ingredients',
+  _captionDefinitionsList: '_captionDefinitionsList',
 });
 
 export type CardSetConfigKeyType = EnumType<typeof CardSetConfigKey>;

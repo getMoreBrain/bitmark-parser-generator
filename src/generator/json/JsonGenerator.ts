@@ -4,7 +4,7 @@ import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioLinkResource } from '../../model/ast/Nodes';
+import { AudioLinkResource, CaptionDefinitionList } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
 import { DocumentResource } from '../../model/ast/Nodes';
@@ -66,6 +66,7 @@ import {
 import {
   BitJson,
   BotResponseJson,
+  CaptionDefinitionListJson,
   ChoiceJson,
   ExampleJson,
   FlashcardJson,
@@ -1220,16 +1221,22 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table
 
-  protected enter_table(node: NodeInfo, _route: NodeInfo[]): void {
+  protected enter_table(node: NodeInfo, _route: NodeInfo[]): boolean {
     const table = node.value as Table;
+    // const bitType = this.getBitType(route);
 
     if (table) {
       const tableJson: Partial<TableJson> = {
         columns: Breakscape.unbreakscape(table.columns),
         data: table.rows.map((row) => Breakscape.unbreakscape(row)),
       };
+      // const isEmpty = !table.columns || table.columns.length === 0 || !table.rows || table.rows.length === 0;
+
       this.bitJson.table = tableJson as TableJson;
     }
+
+    // Stop traversal of this branch to avoid unnecessary processing
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
@@ -1337,6 +1344,31 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (ingredientsJson.length > 0) {
       this.bitJson.ingredients = ingredientsJson;
     }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList
+
+  protected enter_captionDefinitionList(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const list = node.value as CaptionDefinitionList;
+    // const bitType = this.getBitType(route);
+
+    if (list) {
+      const captionDefinitionListJson: Partial<CaptionDefinitionListJson> = {
+        columns: Breakscape.unbreakscape(list.columns),
+        definitions: list.definitions.map((d) => {
+          return {
+            term: Breakscape.unbreakscape(d.term) ?? '',
+            description: Breakscape.unbreakscape(d.description) ?? '',
+          };
+        }),
+      };
+      // const isEmpty = !table.columns || table.columns.length === 0 || !table.rows || table.rows.length === 0;
+
+      this.bitJson.captionDefinitionList = captionDefinitionListJson as CaptionDefinitionListJson;
+    }
+
+    // Stop traversal of this branch to avoid unnecessary processing
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> resources
@@ -1498,10 +1530,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> footer -> footerText
 
-  protected leaf_footerText(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_footerText(node: NodeInfo, route: NodeInfo[]): void {
     const footer = node.value as BreakscapedString;
+    const textFormat = this.getTextFormat(route);
 
-    this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, TextFormat.bitmarkMinusMinus);
+    this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, textFormat);
   }
 
   // bitmarkAst -> bits -> bitsValue -> markup
@@ -2610,6 +2643,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       jupyterExecutionCount: undefined,
       isPublic: undefined,
       aiGenerated: undefined,
+      machineTranslated: undefined,
       analyticsTag: undefined,
       feedbackEngine: undefined,
       feedbackType: undefined,
@@ -2629,6 +2663,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       slug: undefined,
       tag: undefined,
       reductionTag: undefined,
+      levelCEFRp: undefined,
+      levelCEFR: undefined,
+      levelILR: undefined,
+      levelACTFL: undefined,
       icon: undefined,
       iconTag: undefined,
       colorTag: undefined,
@@ -2669,6 +2707,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       quizStrikethroughSolutions: undefined,
       codeLineNumbers: undefined,
       codeMinimap: undefined,
+      stripePricingTableId: undefined,
+      stripePublishableKey: undefined,
       thumbImage: undefined,
       scormSource: undefined,
       posterImage: undefined,
@@ -2767,6 +2807,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       matrix: undefined,
       choices: undefined,
       questions: undefined,
+      captionDefinitionList: undefined,
       listItems: undefined,
       sections: undefined,
 
@@ -3049,6 +3090,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       }
 
+      // Special case for 'vendor-stripe-pricing-table' bits
+      if (Config.isOfBitType(bitType, BitType.vendorStripePricingTable)) {
+        if (bitJson.stripePricingTableId == null) bitJson.stripePricingTableId = '';
+        if (bitJson.stripePublishableKey == null) bitJson.stripePublishableKey = '';
+      }
+
       // Special case for 'call-to-action' bits
       if (Config.isOfBitType(bitType, BitType.callToAction)) {
         if (bitJson.buttonCaption == null) bitJson.buttonCaption = '';
@@ -3093,6 +3140,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.jupyterExecutionCount == null) delete bitJson.jupyterExecutionCount;
     if (bitJson.isPublic == null) delete bitJson.isPublic;
     if (bitJson.aiGenerated == null) delete bitJson.aiGenerated;
+    if (bitJson.machineTranslated == null) delete bitJson.machineTranslated;
     if (bitJson.analyticsTag == null) delete bitJson.analyticsTag;
     if (bitJson.feedbackEngine == null) delete bitJson.feedbackEngine;
     if (bitJson.feedbackType == null) delete bitJson.feedbackType;
@@ -3112,6 +3160,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.slug == null) delete bitJson.slug;
     if (bitJson.tag == null) delete bitJson.tag;
     if (bitJson.reductionTag == null) delete bitJson.reductionTag;
+    if (bitJson.levelCEFRp == null) delete bitJson.levelCEFRp;
+    if (bitJson.levelCEFR == null) delete bitJson.levelCEFR;
+    if (bitJson.levelILR == null) delete bitJson.levelILR;
+    if (bitJson.levelACTFL == null) delete bitJson.levelACTFL;
     if (bitJson.icon == null) delete bitJson.icon;
     if (bitJson.iconTag == null) delete bitJson.iconTag;
     if (bitJson.colorTag == null) delete bitJson.colorTag;
@@ -3152,6 +3204,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.quizStrikethroughSolutions == null) delete bitJson.quizStrikethroughSolutions;
     if (bitJson.codeLineNumbers == null) delete bitJson.codeLineNumbers;
     if (bitJson.codeMinimap == null) delete bitJson.codeMinimap;
+    if (bitJson.stripePricingTableId == null) delete bitJson.stripePricingTableId;
+    if (bitJson.stripePublishableKey == null) delete bitJson.stripePublishableKey;
     if (bitJson.thumbImage == null) delete bitJson.thumbImage;
     if (bitJson.scormSource == null) delete bitJson.scormSource;
     if (bitJson.posterImage == null) delete bitJson.posterImage;
@@ -3250,6 +3304,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.table == null) delete bitJson.table;
     if (bitJson.choices == null) delete bitJson.choices;
     if (bitJson.questions == null) delete bitJson.questions;
+    if (bitJson.captionDefinitionList == null) delete bitJson.captionDefinitionList;
     if (bitJson.listItems == null) delete bitJson.listItems;
     if (bitJson.sections == null) delete bitJson.sections;
 

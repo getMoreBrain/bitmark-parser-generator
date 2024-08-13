@@ -19,6 +19,7 @@ export interface BitJson {
   jupyterExecutionCount: number;
   isPublic: boolean;
   aiGenerated: boolean;
+  machineTranslated: string;
   analyticsTag: string | string[];
   feedbackEngine: string;
   feedbackType: string;
@@ -34,6 +35,10 @@ export interface BitJson {
   slug: string;
   tag: string | string[];
   reductionTag: string | string[];
+  levelCEFRp: string;
+  levelCEFR: string;
+  levelILR: string;
+  levelACTFL: string;
   icon: string;
   iconTag: string;
   colorTag: string | string[];
@@ -77,6 +82,8 @@ export interface BitJson {
   quizStrikethroughSolutions: boolean;
   codeLineNumbers: boolean;
   codeMinimap: boolean;
+  stripePricingTableId: string;
+  stripePublishableKey: string;
   thumbImage: string;
   scormSource: string;
   posterImage: string;
@@ -173,6 +180,7 @@ export interface BitJson {
   pairs: PairJson[];
   matrix: MatrixJson[];
   table: TableJson;
+  captionDefinitionList: CaptionDefinitionListJson;
   choices: ChoiceJson[];
   questions: QuestionJson[];
   ingredients: IngredientJson[];
@@ -355,6 +363,20 @@ export interface IngredientJson {
 export interface RatingLevelStartEndJson {
   level: number;
   label?: JsonText;
+}
+
+// CaptionDefinition
+
+export interface CaptionDefinitionJson {
+  term: string;
+  description: string;
+}
+
+// CaptionDefinitionList
+
+export interface CaptionDefinitionListJson {
+  columns: string[];
+  definitions: CaptionDefinitionJson[];
 }
 
 export interface ListItemJson {

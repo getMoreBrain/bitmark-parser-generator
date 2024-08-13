@@ -41,6 +41,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.machineTranslated]: {
+    tag: PropertyTag.machineTranslated,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.analyticsTag]: {
     tag: PropertyTag.analyticsTag,
     format: PropertyFormat.trimmedString,
@@ -118,6 +123,26 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.reductionTag]: {
     tag: PropertyTag.reductionTag,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.levelCEFRp]: {
+    tag: PropertyTag.levelCEFRp,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.levelCEFR]: {
+    tag: PropertyTag.levelCEFR,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.levelILR]: {
+    tag: PropertyTag.levelILR,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.levelACTFL]: {
+    tag: PropertyTag.levelACTFL,
+    single: true,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.icon]: {
@@ -746,6 +771,16 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.codeMinimap,
     single: true,
     format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.stripePricingTableId]: {
+    tag: PropertyTag.stripePricingTableId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.stripePublishableKey]: {
+    tag: PropertyTag.stripePublishableKey,
+    single: true,
+    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.ratingLevelStart]: {
     tag: PropertyTag.ratingLevelStart,

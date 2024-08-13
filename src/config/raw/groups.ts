@@ -28,6 +28,10 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.machineTranslated,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.analyticsTag,
         maxCount: Count.infinity,
       },
@@ -81,6 +85,22 @@ const GROUPS: _GroupsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.reductionTag,
         maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.levelCEFRp,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.levelCEFR,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.levelILR,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.levelACTFL,
       },
       {
         type: BitTagType.property,
