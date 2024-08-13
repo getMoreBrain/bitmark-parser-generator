@@ -474,7 +474,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-  [BitType.milestone]: { since: '1.5.1', baseBitType: BitType.step },
+  [BitType.milestone]: { since: '1.20.0', baseBitType: BitType.step },
   [BitType.conversationLeft1]: {
     since: '1.3.0',
     tags: [
@@ -1965,6 +1965,22 @@ const BITS: _BitsConfig = {
       },
     ],
     textFormatDefault: TextFormat.text,
+  },
+  [BitType.vendorStripePricingTable]: {
+    since: '1.20.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.stripePricingTableId,
+        minCount: 1,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.stripePublishableKey,
+        minCount: 1,
+      },
+    ],
   },
   [BitType.video]: {
     since: '1.3.0',

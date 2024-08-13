@@ -772,6 +772,16 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.stripePricingTableId]: {
+    tag: PropertyTag.stripePricingTableId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.stripePublishableKey]: {
+    tag: PropertyTag.stripePublishableKey,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.ratingLevelStart]: {
     tag: PropertyTag.ratingLevelStart,
     single: true,

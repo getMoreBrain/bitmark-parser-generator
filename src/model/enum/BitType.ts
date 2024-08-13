@@ -413,6 +413,7 @@ const BitType = superenum({
   vendorJupyterIpynb: 'vendor-jupyter-ipynb',
   vendorJupyterOutput: 'vendor-jupyter-output',
   vendorPadletEmbed: 'vendor-padlet-embed',
+  vendorStripePricingTable: 'vendor-stripe-pricing-table',
   video: 'video',
   videoEmbed: 'video-embed',
   videoEmbedLandscape: 'video-embed-landscape',

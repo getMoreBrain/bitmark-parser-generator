@@ -169,6 +169,8 @@ class Builder extends BaseBuilder {
     quizStrikethroughSolutions?: boolean;
     codeLineNumbers?: boolean;
     codeMinimap?: boolean;
+    stripePricingTableId?: BreakscapedString;
+    stripePublishableKey?: BreakscapedString;
     thumbImage?: BreakscapedString;
     scormSource?: BreakscapedString;
     posterImage?: BreakscapedString;
@@ -346,6 +348,8 @@ class Builder extends BaseBuilder {
       quizStrikethroughSolutions,
       codeLineNumbers,
       codeMinimap,
+      stripePricingTableId,
+      stripePublishableKey,
       thumbImage,
       scormSource,
       posterImage,
@@ -525,6 +529,8 @@ class Builder extends BaseBuilder {
       ),
       codeLineNumbers: this.toAstProperty(PropertyConfigKey.codeLineNumbers, codeLineNumbers),
       codeMinimap: this.toAstProperty(PropertyConfigKey.codeMinimap, codeMinimap),
+      stripePricingTableId: this.toAstProperty(PropertyConfigKey.stripePricingTableId, stripePricingTableId),
+      stripePublishableKey: this.toAstProperty(PropertyConfigKey.stripePublishableKey, stripePublishableKey),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, posterImage),
