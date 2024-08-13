@@ -394,6 +394,20 @@ export interface RatingLevelStartEnd {
   label?: BreakscapedString; // TextAst
 }
 
+// CaptionDefinition
+
+export interface CaptionDefinition {
+  term: BreakscapedString;
+  description: BreakscapedString;
+}
+
+// CaptionDefinitionList
+
+export interface CaptionDefinitionList {
+  columns: BreakscapedString[];
+  definitions: CaptionDefinition[];
+}
+
 // Body
 
 // TODO - we cannot store the body like this. we have to store it as an already processed v3 body.
@@ -529,6 +543,7 @@ export interface CardNode {
   botResponses?: BotResponse[];
   cardBits?: CardBit[];
   ingredients?: Ingredient[];
+  captionDefinitionList?: CaptionDefinitionList;
 }
 
 // Footer

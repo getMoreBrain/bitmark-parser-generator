@@ -936,10 +936,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> columns
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> columns
 
   protected between_columns(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.table) return;
+    const parentKey = parent?.key;
+    if (parentKey !== NodeType.table && parentKey !== NodeType.captionDefinitionList) return;
 
     this.writeNL();
     this.writeCardSetSideDivider();
@@ -947,8 +949,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> columns -> columnsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> columns -> columnsValue
 
-  protected leaf_columnsValue(node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_columnsValue(node: NodeInfo, _route: NodeInfo[]): void {
     this.writeOPHASH();
     if (node.value) this.writeString(node.value);
     this.writeCL();
@@ -967,7 +970,58 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> rows -> rowsValue -> rowsValueValue
 
-  protected leaf_rowsValueValue(node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_rowsValueValue(node: NodeInfo, _route: NodeInfo[]): void {
+    if (node.value) this.write(node.value);
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList
+
+  protected between_captionDefinitionList(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.cardNode) return;
+
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions
+
+  protected between_definitions(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.captionDefinitionList) return;
+
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue
+
+  protected between_definitionsValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.definitions) return;
+
+    this.writeNL();
+    this.writeCardSetSideDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue -> term
+
+  protected leaf_term(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.definitionsValue) return;
+
+    if (node.value) this.write(node.value);
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue -> description
+
+  protected leaf_description(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.definitionsValue) return;
+
     if (node.value) this.write(node.value);
   }
 
