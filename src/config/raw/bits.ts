@@ -474,7 +474,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-
+  [BitType.milestone]: { since: '1.5.1', baseBitType: BitType.step },
   [BitType.conversationLeft1]: {
     since: '1.3.0',
     tags: [
