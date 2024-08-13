@@ -57,6 +57,8 @@ import {
   Table,
   Servings,
   RatingLevelStartEnd,
+  CaptionDefinition,
+  CaptionDefinitionList,
 } from '../model/ast/Nodes';
 
 /**
@@ -259,6 +261,7 @@ class Builder extends BaseBuilder {
     questions?: Question[];
     botResponses?: BotResponse[];
     ingredients?: Ingredient[];
+    captionDefinitionList?: CaptionDefinitionList;
     cardBits?: CardBit[];
     footer?: FooterText;
 
@@ -1664,6 +1667,51 @@ class Builder extends BaseBuilder {
     return node;
   }
 
+  /**
+   * Build captionDefinition node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  captionDefinition(data: { term: BreakscapedString; description: BreakscapedString }): CaptionDefinition {
+    const { term, description } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: CaptionDefinition = {
+      term,
+      description,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
+  /**
+   * Build captionDefinitionList node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  captionDefinitionList(data: {
+    columns: BreakscapedString[];
+    definitions: CaptionDefinition[];
+  }): CaptionDefinitionList {
+    const { columns, definitions } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: CaptionDefinitionList = {
+      columns,
+      definitions,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
+
+    return node;
+  }
+
   //
   // Private
   //
@@ -1759,6 +1807,7 @@ class Builder extends BaseBuilder {
     table?: Table;
     botResponses?: BotResponse[];
     ingredients?: Ingredient[];
+    captionDefinitionList?: CaptionDefinitionList;
     cardBits?: CardBit[];
   }): CardNode | undefined {
     let node: CardNode | undefined;
@@ -1777,6 +1826,7 @@ class Builder extends BaseBuilder {
       table,
       botResponses,
       ingredients,
+      captionDefinitionList,
       cardBits,
     } = data;
 
@@ -1795,6 +1845,7 @@ class Builder extends BaseBuilder {
       table ||
       botResponses ||
       ingredients ||
+      captionDefinitionList ||
       cardBits
     ) {
       node = {
@@ -1812,6 +1863,7 @@ class Builder extends BaseBuilder {
         table,
         botResponses,
         ingredients,
+        captionDefinitionList,
         cardBits,
       };
 

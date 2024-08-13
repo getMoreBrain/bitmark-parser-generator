@@ -50,6 +50,7 @@ import {
   Table,
   Servings,
   RatingLevelStartEnd,
+  CaptionDefinitionList,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -74,6 +75,7 @@ import {
   TableJson,
   ServingsJson,
   RatingLevelStartEndJson,
+  CaptionDefinitionListJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -397,6 +399,7 @@ class JsonParser {
       pairs,
       matrix,
       table,
+      captionDefinitionList,
       choices,
       questions,
       ingredients,
@@ -459,7 +462,7 @@ class JsonParser {
     // matrix
     const matrixNodes = this.matrixBitsToAst(matrix);
 
-    // table
+    // table / captionDefinitionList
     const tableNode = this.tableToAst(table);
 
     //+-choice
@@ -485,6 +488,9 @@ class JsonParser {
 
     // ratingLevelEnd
     const ratingLevelEndNodes = this.ratingLevelStartEndToAst(ratingLevelEnd);
+
+    // captionDefinitionList
+    const captionDefinitionListNode = this.captionDefinitionListToAst(captionDefinitionList);
 
     // listItems / sections (cardBits)
     const cardBitNodes = this.listItemsToAst(listItems ?? sections, textFormat, placeholders);
@@ -657,6 +663,7 @@ class JsonParser {
       questions: questionNodes,
       botResponses: botResponseNodes,
       ingredients: ingredientsNodes,
+      captionDefinitionList: captionDefinitionListNode,
       cardBits: cardBitNodes,
       footer: footerNode,
     });
@@ -1088,6 +1095,28 @@ class JsonParser {
       node = builder.ratingLevelStartEnd({
         level,
         label: this.convertJsonTextToBreakscapedString(label) ?? Breakscape.EMPTY_STRING,
+      });
+    }
+
+    return node;
+  }
+
+  private captionDefinitionListToAst(
+    captionDefinitionList: CaptionDefinitionListJson,
+  ): CaptionDefinitionList | undefined {
+    let node: CaptionDefinitionList | undefined;
+
+    if (captionDefinitionList) {
+      const { columns, definitions } = captionDefinitionList;
+
+      node = builder.captionDefinitionList({
+        columns: this.convertStringToBreakscapedString(columns) ?? [],
+        definitions: (definitions ?? []).map((d) => {
+          return builder.captionDefinition({
+            term: this.convertStringToBreakscapedString(d.term) ?? Breakscape.EMPTY_STRING,
+            description: this.convertStringToBreakscapedString(d.description) ?? Breakscape.EMPTY_STRING,
+          });
+        }),
       });
     }
 

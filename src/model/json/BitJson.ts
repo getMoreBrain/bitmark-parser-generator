@@ -178,6 +178,7 @@ export interface BitJson {
   pairs: PairJson[];
   matrix: MatrixJson[];
   table: TableJson;
+  captionDefinitionList: CaptionDefinitionListJson;
   choices: ChoiceJson[];
   questions: QuestionJson[];
   ingredients: IngredientJson[];
@@ -360,6 +361,20 @@ export interface IngredientJson {
 export interface RatingLevelStartEndJson {
   level: number;
   label?: JsonText;
+}
+
+// CaptionDefinition
+
+export interface CaptionDefinitionJson {
+  term: string;
+  description: string;
+}
+
+// CaptionDefinitionList
+
+export interface CaptionDefinitionListJson {
+  columns: string[];
+  definitions: CaptionDefinitionJson[];
 }
 
 export interface ListItemJson {

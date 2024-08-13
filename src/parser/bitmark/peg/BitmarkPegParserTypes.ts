@@ -46,6 +46,7 @@ import {
   Table,
   Servings,
   RatingLevelStartEnd,
+  CaptionDefinitionList,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';
@@ -207,6 +208,7 @@ export interface BitSpecificCards {
   table?: Table;
   botResponses?: BotResponse[];
   ingredients?: Ingredient[];
+  captionDefinitionList?: CaptionDefinitionList;
   cardBits?: CardBit[];
   internalComments?: BreakscapedString[];
 }
