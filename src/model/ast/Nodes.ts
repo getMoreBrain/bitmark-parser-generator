@@ -130,6 +130,7 @@ export interface Bit {
   textReference?: Property;
   isTracked?: Property;
   isInfoOnly?: Property;
+  imageFirst?: Property;
   labelTrue?: Property;
   labelFalse?: Property;
   content2Buy?: Property;

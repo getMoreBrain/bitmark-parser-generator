@@ -105,6 +105,7 @@ export interface BitJson {
   textReference: string;
   isTracked: boolean; // only .learningPathExternalLink?
   isInfoOnly: boolean; // only .learningPathExternalLink?
+  imageFirst: boolean;
   labelTrue: string;
   labelFalse: string;
   content2Buy: string;
