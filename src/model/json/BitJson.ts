@@ -105,6 +105,7 @@ export interface BitJson {
   textReference: string;
   isTracked: boolean; // only .learningPathExternalLink?
   isInfoOnly: boolean; // only .learningPathExternalLink?
+  imageFirst: boolean;
   labelTrue: string;
   labelFalse: string;
   content2Buy: string;
@@ -168,6 +169,7 @@ export interface BitJson {
   body: JsonText;
 
   sampleSolution: string;
+  additionalSolutions: string[];
   partialAnswer: string;
   elements: string[];
   statement: string;
@@ -317,6 +319,7 @@ export interface QuestionJson {
   question: string;
   partialAnswer: string;
   sampleSolution: string;
+  additionalSolutions: string[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;

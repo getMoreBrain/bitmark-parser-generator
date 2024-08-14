@@ -70,11 +70,31 @@ const BITS: _BitsConfig = {
     ],
   },
   [BitType.articleAlt]: { since: '1.15.0', baseBitType: BitType.article },
+  [BitType.articleResponsive]: {
+    since: '1.21.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.imageFirst,
+      },
+    ],
+  },
   [BitType.standardArticleNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.standardArticleNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.statement]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.pageArticle]: { since: '1.15.0', baseBitType: BitType.article },
   [BitType.pageArticleAlt]: { since: '1.15.0', baseBitType: BitType.article },
+  [BitType.pageArticleResponsive]: {
+    since: '1.21.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.imageFirst,
+      },
+    ],
+  },
   [BitType.buttonCopyText]: {
     since: '1.4.3',
     baseBitType: BitType.article,
@@ -624,6 +644,11 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.additionalSolutions,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.partialAnswer,
       },
       {
@@ -726,6 +751,16 @@ const BITS: _BitsConfig = {
   [BitType.warning]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.warningAlt]: { since: '1.16.0', baseBitType: BitType.warning },
   [BitType.workbookArticle]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.collapsible]: { since: '1.21.0', baseBitType: BitType.article },
+  [BitType.sideNoteCollapsible]: { since: '1.21.0', baseBitType: BitType.collapsible },
+  [BitType.infoCollapsible]: { since: '1.21.0', baseBitType: BitType.collapsible },
+  [BitType.remarkCollapsible]: { since: '1.21.0', baseBitType: BitType.collapsible },
+  [BitType.warningCollapsible]: { since: '1.21.0', baseBitType: BitType.collapsible },
+  [BitType.dangerCollapsible]: { since: '1.21.0', baseBitType: BitType.collapsible },
+  [BitType.noteCollapsible]: { since: '1.21.0', baseBitType: BitType.collapsible },
+  [BitType.exampleCollapsible]: { since: '1.21.0', baseBitType: BitType.collapsible },
+  [BitType.hintCollapsible]: { since: '1.21.0', baseBitType: BitType.collapsible },
+  [BitType.bugCollapsible]: { since: '1.21.0', baseBitType: BitType.collapsible },
   [BitType.container]: {
     since: '1.9.0',
     baseBitType: BitType.article,

@@ -130,6 +130,7 @@ export interface Bit {
   textReference?: Property;
   isTracked?: Property;
   isInfoOnly?: Property;
+  imageFirst?: Property;
   labelTrue?: Property;
   labelFalse?: Property;
   content2Buy?: Property;
@@ -179,6 +180,7 @@ export interface Bit {
   resources?: Resource[];
   body?: Body;
   sampleSolution?: Property;
+  additionalSolutions?: Property;
   statement?: Statement;
   choices?: Choice[];
   responses?: Response[];
@@ -352,6 +354,7 @@ export interface Question {
   question: BreakscapedString;
   partialAnswer?: BreakscapedString;
   sampleSolution?: BreakscapedString;
+  additionalSolutions?: BreakscapedString[];
   itemLead?: ItemLead;
   hint?: BreakscapedString; // TextAst;
   instruction?: BreakscapedString; // TextAst;

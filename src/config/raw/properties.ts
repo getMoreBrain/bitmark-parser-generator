@@ -478,6 +478,10 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.additionalSolutions]: {
+    tag: PropertyTag.additionalSolutions,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.markConfig]: {
     tag: PropertyTag.tag_mark,
     format: PropertyFormat.trimmedString,
@@ -801,6 +805,12 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.label,
     single: true,
     format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.imageFirst]: {
+    tag: PropertyTag.imageFirst,
+    single: true,
+    format: PropertyFormat.boolean,
+    defaultValue: 'true',
   },
 };
 

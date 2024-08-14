@@ -1252,6 +1252,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           question: Breakscape.unbreakscape(q.question) ?? '',
           partialAnswer: Breakscape.unbreakscape(ArrayUtils.asSingle(q.partialAnswer)) ?? '',
           sampleSolution: Breakscape.unbreakscape(ArrayUtils.asSingle(q.sampleSolution)) ?? '',
+          additionalSolutions: Breakscape.unbreakscape(q.additionalSolutions) ?? [],
           ...this.toItemLeadHintInstruction(q),
           reasonableNumOfChars: q.reasonableNumOfChars,
           ...this.toExample(q, {
@@ -1262,6 +1263,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (q.itemLead?.lead == null) delete questionJson.lead;
+        if (q.additionalSolutions == null || q.additionalSolutions.length === 0) {
+          delete questionJson.additionalSolutions;
+        }
 
         questionsJson.push(questionJson as QuestionJson);
       }
@@ -2731,6 +2735,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       textReference: undefined,
       isTracked: undefined,
       isInfoOnly: undefined,
+      imageFirst: undefined,
       labelTrue: undefined,
       labelFalse: undefined,
       content2Buy: undefined,
@@ -2799,6 +2804,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       statement: undefined,
       isCorrect: undefined,
       sampleSolution: undefined,
+      additionalSolutions: undefined,
       partialAnswer: undefined,
       elements: undefined,
       statements: undefined,
@@ -3050,6 +3056,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.aiGenerated == null) bitJson.aiGenerated = true;
       }
 
+      // Special case for '-responsive...' bits
+      if (Config.isOfBitType(bitType, [BitType.articleResponsive, BitType.pageArticleResponsive])) {
+        if (bitJson.imageFirst == null) bitJson.imageFirst = true;
+      }
+
       // Special case for 'review-...' bits
       if (Config.isOfBitType(bitType, BitType.reviewNote)) {
         if (bitJson.resolved == null) bitJson.resolved = false;
@@ -3228,6 +3239,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.textReference == null) delete bitJson.textReference;
     if (bitJson.isTracked == null) delete bitJson.isTracked;
     if (bitJson.isInfoOnly == null) delete bitJson.isInfoOnly;
+    if (bitJson.imageFirst == null) delete bitJson.imageFirst;
     if (bitJson.labelTrue == null) delete bitJson.labelTrue;
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
     if (bitJson.content2Buy == null) delete bitJson.content2Buy;
@@ -3295,6 +3307,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.statement == null) delete bitJson.statement;
     if (bitJson.isCorrect == null) delete bitJson.isCorrect;
     if (bitJson.sampleSolution == null) delete bitJson.sampleSolution;
+    if (bitJson.additionalSolutions == null) delete bitJson.additionalSolutions;
     if (bitJson.partialAnswer == null) delete bitJson.partialAnswer;
     if (bitJson.elements == null) delete bitJson.elements;
     if (bitJson.statements == null) delete bitJson.statements;
