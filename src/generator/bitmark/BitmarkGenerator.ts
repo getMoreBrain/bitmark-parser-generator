@@ -481,6 +481,26 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeProperty('reasonableNumOfChars', node.value);
   }
 
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> additionalSolutions
+
+  protected between_additionalSolutions(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.questionsValue) return;
+
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> additionalSolutions -> additionalSolutionsValue
+
+  protected leaf_additionalSolutionsValue(node: NodeInfo, route: NodeInfo[]): void {
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route, 2);
+    if (parent?.key !== NodeType.questionsValue) return;
+
+    this.writeProperty('additionalSolutions', node.value);
+  }
+
   // bitmarkAst -> bits -> bitsValue -> itemLead
 
   protected enter_itemLead(node: NodeInfo, _route: NodeInfo[]): void {

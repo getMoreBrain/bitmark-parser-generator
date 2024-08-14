@@ -250,6 +250,7 @@ class Builder extends BaseBuilder {
     resources?: Resource | Resource[];
     body?: Body;
     sampleSolution?: BreakscapedString;
+    additionalSolutions?: BreakscapedString | BreakscapedString[];
     elements?: BreakscapedString[];
     flashcards?: Flashcard[];
     statement?: Statement;
@@ -385,6 +386,8 @@ class Builder extends BaseBuilder {
       quotedPerson,
       partialAnswer,
       reasonableNumOfChars,
+      sampleSolution,
+      additionalSolutions,
       resolved,
       resolvedDate,
       resolvedBy,
@@ -425,7 +428,6 @@ class Builder extends BaseBuilder {
       extraProperties,
       resources: _resources,
       body,
-      sampleSolution,
       footer,
 
       markup,
@@ -566,6 +568,8 @@ class Builder extends BaseBuilder {
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
+      sampleSolution: this.toAstProperty(PropertyConfigKey.property_sampleSolution, sampleSolution),
+      additionalSolutions: this.toAstProperty(PropertyConfigKey.additionalSolutions, additionalSolutions),
       resolved: this.toAstProperty(PropertyConfigKey.resolved, resolved),
       resolvedDate: this.toAstProperty(PropertyConfigKey.resolvedDate, resolvedDate),
       resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, resolvedBy),
@@ -600,7 +604,6 @@ class Builder extends BaseBuilder {
       person,
       resources,
       body,
-      sampleSolution: this.toAstProperty(PropertyConfigKey.property_sampleSolution, sampleSolution),
       cardNode,
       footer,
 
@@ -1035,6 +1038,7 @@ class Builder extends BaseBuilder {
     question: BreakscapedString;
     partialAnswer?: BreakscapedString;
     sampleSolution?: BreakscapedString;
+    additionalSolutions?: BreakscapedString[];
     item?: BreakscapedString;
     lead?: BreakscapedString;
     pageNumber?: BreakscapedString;
@@ -1056,6 +1060,7 @@ class Builder extends BaseBuilder {
       instruction,
       reasonableNumOfChars,
       sampleSolution,
+      additionalSolutions,
       isDefaultExample,
       example,
     } = data;
@@ -1070,6 +1075,7 @@ class Builder extends BaseBuilder {
       ...this.toExample(isDefaultExample, example),
       reasonableNumOfChars,
       sampleSolution,
+      additionalSolutions,
     };
 
     // Remove Unset Optionals

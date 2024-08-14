@@ -478,6 +478,10 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.additionalSolutions]: {
+    tag: PropertyTag.additionalSolutions,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.markConfig]: {
     tag: PropertyTag.tag_mark,
     format: PropertyFormat.trimmedString,

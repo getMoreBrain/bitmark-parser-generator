@@ -117,6 +117,11 @@ const CARDSETS: _CardSetsConfig = {
             },
             {
               type: BitTagType.property,
+              configKey: PropertyConfigKey.additionalSolutions,
+              maxCount: Count.infinity,
+            },
+            {
+              type: BitTagType.property,
               configKey: PropertyConfigKey.partialAnswer,
             },
             {

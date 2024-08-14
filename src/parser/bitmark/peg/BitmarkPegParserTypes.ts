@@ -148,6 +148,7 @@ export interface BitContentProcessorResult {
   reference?: BreakscapedString;
   referenceEnd?: BreakscapedString;
   sampleSolution?: BreakscapedString;
+  additionalSolutions?: BreakscapedString[];
   isCaseSensitive?: boolean;
   reaction?: BreakscapedString;
   license?: BreakscapedString;
