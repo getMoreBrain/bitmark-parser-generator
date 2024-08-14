@@ -70,11 +70,31 @@ const BITS: _BitsConfig = {
     ],
   },
   [BitType.articleAlt]: { since: '1.15.0', baseBitType: BitType.article },
+  [BitType.articleResponsive]: {
+    since: '1.21.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.imageFirst,
+      },
+    ],
+  },
   [BitType.standardArticleNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.standardArticleNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.statement]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.pageArticle]: { since: '1.15.0', baseBitType: BitType.article },
   [BitType.pageArticleAlt]: { since: '1.15.0', baseBitType: BitType.article },
+  [BitType.pageArticleResponsive]: {
+    since: '1.21.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.imageFirst,
+      },
+    ],
+  },
   [BitType.buttonCopyText]: {
     since: '1.4.3',
     baseBitType: BitType.article,

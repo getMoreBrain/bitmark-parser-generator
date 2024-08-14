@@ -802,6 +802,12 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.imageFirst]: {
+    tag: PropertyTag.imageFirst,
+    single: true,
+    format: PropertyFormat.boolean,
+    defaultValue: 'true',
+  },
 };
 
 export { PROPERTIES };

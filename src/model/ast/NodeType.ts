@@ -181,6 +181,8 @@ const NodeType = superenum({
   isExample: 'isExample',
   isInfoOnly: 'isInfoOnly',
   isInfoOnlyValue: 'isInfoOnlyValue',
+  imageFirst: 'imageFirst',
+  imageFirstValue: 'imageFirstValue',
   isPublic: 'isPublic',
   isPublicValue: 'isPublicValue',
   isTracked: 'isTracked',
