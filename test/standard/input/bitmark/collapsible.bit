@@ -1,0 +1,67 @@
+[.collapsible:bitmark++]
+[@id:151970]
+[@machineTranslated: © Google 2024]
+[@lang:en-UK]
+[@publisher:kpmg]
+[@theme:grundzuege]
+[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]
+
+intern und extern
+• Leitbild
+• transparente Kommunikation
+• marktübliche Vergütung
+• etc.
+
+[.side-note-collapsible]
+[@id:151970]
+[!instruction]
+[?hint]
+Example text
+
+[.info-collapsible]
+[@id:151970]
+[!instruction]
+[?hint]
+Example text
+
+[.remark-collapsible]
+[@id:151970]
+[!instruction]
+[?hint]
+Example text
+
+[.warning-collapsible]
+[@id:151970]
+[!instruction]
+[?hint]
+Example text
+
+[.danger-collapsible]
+[@id:151970]
+[!instruction]
+[?hint]
+Example text
+
+[.note-collapsible]
+[@id:151970]
+[!instruction]
+[?hint]
+Example text
+
+[.example-collapsible]
+[@id:151970]
+[!instruction]
+[?hint]
+Example text
+
+[.hint-collapsible]
+[@id:151970]
+[!instruction]
+[?hint]
+Example text
+
+[.bug-collapsible]
+[@id:151970]
+[!instruction]
+[?hint]
+Example text

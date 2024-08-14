@@ -1,0 +1,667 @@
+[
+  {
+    "bit": {
+      "type": "collapsible",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "machineTranslated": "© Google 2024",
+      "lang": "en-UK",
+      "publisher": ["kpmg"],
+      "theme": ["grundzuege"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "pageNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "oneTooMany",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "intern und extern",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Leitbild",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "transparente Kommunikation",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "marktübliche Vergütung",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "etc.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1",
+      "warnings": [
+        {
+          "message": "[%] is included more than 3 time(s). The earlier ones will be ignored",
+          "text": "[%oneTooMany]",
+          "location": {
+            "start": {
+              "line": 7,
+              "column": 43,
+              "offset": 168
+            },
+            "end": {
+              "line": 7,
+              "column": 56,
+              "offset": 181
+            }
+          },
+          "original": {
+            "text": "[%marginNumber]",
+            "location": {
+              "start": {
+                "line": 7,
+                "column": 28,
+                "offset": 153
+              },
+              "end": {
+                "line": 7,
+                "column": 43,
+                "offset": 168
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.collapsible:bitmark++]\n[@id:151970]\n[@machineTranslated: © Google 2024]\n[@lang:en-UK]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
+  },
+  {
+    "bit": {
+      "type": "side-note-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Example text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
+    },
+    "bitmark": "[.side-note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
+  },
+  {
+    "bit": {
+      "type": "info-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Example text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
+    },
+    "bitmark": "[.info-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
+  },
+  {
+    "bit": {
+      "type": "remark-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Example text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
+    },
+    "bitmark": "[.remark-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
+  },
+  {
+    "bit": {
+      "type": "warning-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Example text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
+    },
+    "bitmark": "[.warning-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
+  },
+  {
+    "bit": {
+      "type": "danger-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Example text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
+    },
+    "bitmark": "[.danger-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
+  },
+  {
+    "bit": {
+      "type": "note-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Example text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
+    },
+    "bitmark": "[.note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
+  },
+  {
+    "bit": {
+      "type": "example-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Example text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
+    },
+    "bitmark": "[.example-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
+  },
+  {
+    "bit": {
+      "type": "hint-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Example text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
+    },
+    "bitmark": "[.hint-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
+  },
+  {
+    "bit": {
+      "type": "bug-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151970"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "hint",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Example text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.14.1"
+    },
+    "bitmark": "[.bug-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
+  }
+]
