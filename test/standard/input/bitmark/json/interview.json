@@ -40,6 +40,7 @@
           "question": "",
           "partialAnswer": "",
           "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
+          "additionalSolutions": ["Additional solution 1", "Additional solution 2", "Additional solution 3"],
           "item": [],
           "hint": [],
           "instruction": [],

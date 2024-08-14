@@ -37,6 +37,7 @@
       "example": null,
       "body": [],
       "sampleSolution": "The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.",
+      "additionalSolutions": ["Additional solution 1", "Additional solution 2", "Additional solution 3"],
       "partialAnswer": ""
     },
     "parser": {
@@ -127,7 +128,8 @@
           "attrs": {}
         }
       ],
-      "partialAnswer": "This is a **partialAnswer** 2"
+      "partialAnswer": "This is a **partialAnswer** 2",
+      "additionalSolutions": ["Additional solution 1", "Additional solution 2", "Additional solution 3"]
     },
     "parser": {
       "version": "1.17.0",

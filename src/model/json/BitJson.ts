@@ -169,6 +169,7 @@ export interface BitJson {
   body: JsonText;
 
   sampleSolution: string;
+  additionalSolutions: string[];
   partialAnswer: string;
   elements: string[];
   statement: string;
@@ -318,6 +319,7 @@ export interface QuestionJson {
   question: string;
   partialAnswer: string;
   sampleSolution: string;
+  additionalSolutions: string[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;

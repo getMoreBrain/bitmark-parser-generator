@@ -5,6 +5,7 @@ import { EnumType, superenum } from '@ncoderz/superenum';
  */
 const propertyConfigKeys = {
   action: 'action',
+  additionalSolutions: 'additionalSolutions',
   ageRange: 'ageRange',
   aiGenerated: 'aiGenerated',
   analyticsTag: 'analyticsTag',

@@ -344,6 +344,8 @@ const NodeType = superenum({
   rowsValueValue: 'rowsValueValue',
   sampleSolution: 'sampleSolution',
   sampleSolutionValue: 'sampleSolutionValue',
+  additionalSolutions: 'additionalSolutions',
+  additionalSolutionsValue: 'additionalSolutionsValue',
   scormSource: 'scormSource',
   scormSourceValue: 'scormSourceValue',
   search: 'search',

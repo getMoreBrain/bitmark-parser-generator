@@ -1252,6 +1252,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           question: Breakscape.unbreakscape(q.question) ?? '',
           partialAnswer: Breakscape.unbreakscape(ArrayUtils.asSingle(q.partialAnswer)) ?? '',
           sampleSolution: Breakscape.unbreakscape(ArrayUtils.asSingle(q.sampleSolution)) ?? '',
+          additionalSolutions: Breakscape.unbreakscape(q.additionalSolutions) ?? [],
           ...this.toItemLeadHintInstruction(q),
           reasonableNumOfChars: q.reasonableNumOfChars,
           ...this.toExample(q, {
@@ -1262,6 +1263,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Delete unwanted properties
         if (q.itemLead?.lead == null) delete questionJson.lead;
+        if (q.additionalSolutions == null || q.additionalSolutions.length === 0) {
+          delete questionJson.additionalSolutions;
+        }
 
         questionsJson.push(questionJson as QuestionJson);
       }
@@ -2800,6 +2804,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       statement: undefined,
       isCorrect: undefined,
       sampleSolution: undefined,
+      additionalSolutions: undefined,
       partialAnswer: undefined,
       elements: undefined,
       statements: undefined,
@@ -3302,6 +3307,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.statement == null) delete bitJson.statement;
     if (bitJson.isCorrect == null) delete bitJson.isCorrect;
     if (bitJson.sampleSolution == null) delete bitJson.sampleSolution;
+    if (bitJson.additionalSolutions == null) delete bitJson.additionalSolutions;
     if (bitJson.partialAnswer == null) delete bitJson.partialAnswer;
     if (bitJson.elements == null) delete bitJson.elements;
     if (bitJson.statements == null) delete bitJson.statements;
