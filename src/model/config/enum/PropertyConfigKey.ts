@@ -20,6 +20,7 @@ const propertyConfigKeys = {
   book: 'book',
   bookAlias: 'bookAlias',
   bot: 'bot',
+  bubbleTag: 'bubbleTag',
   buttonCaption: 'buttonCaption',
   callToActionUrl: 'callToActionUrl',
   caption: 'caption',

@@ -310,6 +310,8 @@ const NodeType = superenum({
   reasonableNumOfCharsValue: 'reasonableNumOfCharsValue',
   reductionTag: 'reductionTag',
   reductionTagValue: 'reductionTagValue',
+  bubbleTag: 'bubbleTag',
+  bubbleTagValue: 'bubbleTagValue',
   levelCEFRp: 'levelCEFRp',
   levelCEFRpValue: 'levelCEFRpValue',
   levelCEFR: 'levelCEFR',
