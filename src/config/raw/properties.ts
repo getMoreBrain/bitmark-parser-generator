@@ -125,6 +125,10 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.reductionTag,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.bubbleTag]: {
+    tag: PropertyTag.bubbleTag,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.levelCEFRp]: {
     tag: PropertyTag.levelCEFRp,
     single: true,

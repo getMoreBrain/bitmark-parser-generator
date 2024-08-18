@@ -125,6 +125,7 @@ class Builder extends BaseBuilder {
     slug?: BreakscapedString;
     tag?: BreakscapedString | BreakscapedString[];
     reductionTag?: BreakscapedString | BreakscapedString[];
+    bubbleTag?: BreakscapedString | BreakscapedString[];
     levelCEFRp?: BreakscapedString | BreakscapedString[];
     levelCEFR?: BreakscapedString | BreakscapedString[];
     levelILR?: BreakscapedString | BreakscapedString[];
@@ -306,6 +307,7 @@ class Builder extends BaseBuilder {
       slug,
       tag,
       reductionTag,
+      bubbleTag,
       levelCEFRp,
       levelCEFR,
       levelILR,
@@ -483,6 +485,7 @@ class Builder extends BaseBuilder {
       slug: this.toAstProperty(PropertyConfigKey.slug, slug),
       tag: this.toAstProperty(PropertyConfigKey.tag, tag),
       reductionTag: this.toAstProperty(PropertyConfigKey.reductionTag, reductionTag),
+      bubbleTag: this.toAstProperty(PropertyConfigKey.bubbleTag, bubbleTag),
       levelCEFRp: this.toAstProperty(PropertyConfigKey.levelCEFRp, levelCEFRp),
       levelCEFR: this.toAstProperty(PropertyConfigKey.levelCEFR, levelCEFR),
       levelILR: this.toAstProperty(PropertyConfigKey.levelILR, levelILR),

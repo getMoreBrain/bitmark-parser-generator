@@ -26,6 +26,10 @@
 [@id:136528]
 [&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]
 [%3a]
+[@bubbleTag:Tag 1]
+[@bubbleTag:]
+[@bubbleTag:Tag 2]
+[@bubbleTag:**Tag 3**]
 [!Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.]
 Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?
 ===

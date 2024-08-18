@@ -62,6 +62,7 @@ export interface Bit {
   slug?: Property;
   tag?: Property;
   reductionTag?: Property;
+  bubbleTag?: Property;
   levelCEFRp?: Property;
   levelCEFR?: Property;
   levelILR?: Property;
