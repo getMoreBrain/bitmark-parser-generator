@@ -91,6 +91,7 @@ export interface BitJson {
   focusY: number;
   pointerLeft: string;
   pointerTop: string;
+  listItemIndent: number;
   backgroundWallpaper: string;
   hasBookNavigation: boolean;
   duration: string;

@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.21.0
+Version: 1.22.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -280,6 +280,8 @@ learning-path-sign (since: 1.3.0)
 learning-path-step (since: 1.3.0)
 learning-path-video-call (since: 1.3.0)
 life-skill-sticker (since: 1.3.0)
+list (since: 1.22.0)
+list-item (since: 1.22.0)
 mark (since: 1.3.0)
 match (since: 1.3.0)
 match-all (since: 1.3.0)
@@ -370,6 +372,8 @@ standard-example-non-normative (since: 1.16.0)
 standard-example-normative (since: 1.16.0)
 standard-image-figure-non-normative (since: 1.16.0)
 standard-image-figure-normative (since: 1.16.0)
+standard-list (since: 1.22.0)
+standard-list-item (since: 1.22.0)
 standard-note-non-normative (since: 1.16.0)
 standard-note-normative (since: 1.16.0)
 standard-remark-non-normative (since: 1.16.0)

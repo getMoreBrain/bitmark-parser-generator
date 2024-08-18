@@ -213,6 +213,8 @@ const NodeType = superenum({
   line: 'line',
   list: 'list',
   listValue: 'listValue',
+  listItemIndent: 'listItemIndent',
+  listItemIndentValue: 'listItemIndentValue',
   location: 'location',
   locationValue: 'locationValue',
   machineTranslated: 'machineTranslated',

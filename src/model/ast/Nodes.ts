@@ -115,6 +115,7 @@ export interface Bit {
   focusY?: Property;
   pointerLeft?: Property;
   pointerTop?: Property;
+  listItemIndent?: Property;
   backgroundWallpaper?: Property;
   hasBookNavigation?: Property;
   duration?: Property;
