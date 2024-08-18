@@ -62,6 +62,7 @@ export interface Bit {
   slug?: Property;
   tag?: Property;
   reductionTag?: Property;
+  bubbleTag?: Property;
   levelCEFRp?: Property;
   levelCEFR?: Property;
   levelILR?: Property;
@@ -115,6 +116,7 @@ export interface Bit {
   focusY?: Property;
   pointerLeft?: Property;
   pointerTop?: Property;
+  listItemIndent?: Property;
   backgroundWallpaper?: Property;
   hasBookNavigation?: Property;
   duration?: Property;

@@ -35,6 +35,7 @@ export interface BitJson {
   slug: string;
   tag: string | string[];
   reductionTag: string | string[];
+  bubbleTag: string | string[];
   levelCEFRp: string;
   levelCEFR: string;
   levelILR: string;
@@ -91,6 +92,7 @@ export interface BitJson {
   focusY: number;
   pointerLeft: string;
   pointerTop: string;
+  listItemIndent: number;
   backgroundWallpaper: string;
   hasBookNavigation: boolean;
   duration: string;
