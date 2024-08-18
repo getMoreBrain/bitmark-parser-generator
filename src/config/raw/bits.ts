@@ -1379,6 +1379,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.pageCoverImage]: { since: '1.22.0', baseBitType: BitType.page },
   [BitType.pageBuyButton]: {
     since: '1.4.3',
     tags: [
