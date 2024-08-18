@@ -178,6 +178,7 @@ class Builder extends BaseBuilder {
     focusY?: number;
     pointerLeft?: BreakscapedString;
     pointerTop?: BreakscapedString;
+    listItemIndent?: number;
     backgroundWallpaper?: BreakscapedString;
     hasBookNavigation?: boolean;
     duration?: BreakscapedString;
@@ -359,6 +360,7 @@ class Builder extends BaseBuilder {
       focusY,
       pointerLeft,
       pointerTop,
+      listItemIndent,
       backgroundWallpaper,
       hasBookNavigation,
       duration,
@@ -542,6 +544,7 @@ class Builder extends BaseBuilder {
       focusY: this.toAstProperty(PropertyConfigKey.focusY, focusY),
       pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, pointerLeft),
       pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, pointerTop),
+      listItemIndent: this.toAstProperty(PropertyConfigKey.listItemIndent, listItemIndent),
       backgroundWallpaper: this.toAstProperty(PropertyConfigKey.backgroundWallpaper, backgroundWallpaper),
       hasBookNavigation: this.toAstProperty(PropertyConfigKey.hasBookNavigation, hasBookNavigation),
       deeplink: this.toAstProperty(PropertyConfigKey.deeplink, deeplink),

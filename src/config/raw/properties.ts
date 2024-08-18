@@ -656,6 +656,12 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.listItemIndent]: {
+    tag: PropertyTag.listItemIndent,
+    single: true,
+    defaultValue: '0',
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.backgroundWallpaper]: {
     tag: PropertyTag.backgroundWallpaper,
     single: true,

@@ -726,6 +726,8 @@ const BITS: _BitsConfig = {
   [BitType.langHomework]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.langTeacherNote]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.langTeacherPronunciation]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.list]: { since: '1.22.0', baseBitType: BitType.article },
+  [BitType.standardList]: { since: '1.22.0', baseBitType: BitType.article },
   [BitType.message]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.newspaperArticle]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.note]: { since: '1.3.0', baseBitType: BitType.article },
@@ -1214,7 +1216,6 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-
   [BitType.learningPathVideoCall]: {
     since: '1.3.0',
     baseBitType: BitType.learningPathBook,
@@ -1225,7 +1226,17 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-
+  [BitType.listItem]: {
+    since: '1.22.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.listItemIndent,
+      },
+    ],
+  },
+  [BitType.standardListItem]: { since: '1.22.0', baseBitType: BitType.listItem },
   [BitType.mark]: {
     since: '1.3.0',
     tags: [

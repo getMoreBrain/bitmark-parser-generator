@@ -2722,6 +2722,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       focusY: undefined,
       pointerLeft: undefined,
       pointerTop: undefined,
+      listItemIndent: undefined,
       backgroundWallpaper: undefined,
       hasBookNavigation: undefined,
       duration: undefined,
@@ -3088,6 +3089,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       }
 
+      if (Config.isOfBitType(bitType, [BitType.listItem])) {
+        if (bitJson.listItemIndent == null) bitJson.listItemIndent = 0;
+      }
+
       // Special case for 'survey-rating-*' bits
       if (Config.isOfBitType(bitType, BitType.surveyRating)) {
         //
@@ -3226,6 +3231,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.focusY == null) delete bitJson.focusY;
     if (bitJson.pointerLeft == null) delete bitJson.pointerLeft;
     if (bitJson.pointerTop == null) delete bitJson.pointerTop;
+    if (bitJson.listItemIndent == null) delete bitJson.listItemIndent;
     if (bitJson.backgroundWallpaper == null) delete bitJson.backgroundWallpaper;
     if (bitJson.hasBookNavigation == null) delete bitJson.hasBookNavigation;
     if (bitJson.duration == null) delete bitJson.duration;

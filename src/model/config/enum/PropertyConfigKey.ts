@@ -78,6 +78,7 @@ const propertyConfigKeys = {
   levelACTFL: 'levelACTFL',
   license: 'license',
   list: 'list',
+  listItemIndent: 'listItemIndent',
   location: 'location',
   machineTranslated: 'machineTranslated',
   mailingList: 'mailingList',

@@ -1,0 +1,21 @@
+[.list-item:bitmark++]
+[@ageRange:18][@ageRange:120]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+[&image:https://cdn.bitbook.education/cat.jpg]
+
+Some more text.
+
+[@listItemIndent:3]
+
+[.list-item:bitmark++]
+
+[.standard-list-item:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+The bit content
+
+[.standard-list-item:bitmark++]
+[@listItemIndent:5]
