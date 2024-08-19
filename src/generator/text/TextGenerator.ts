@@ -27,6 +27,7 @@ import {
   TextAst,
   TextMark,
   TextNode,
+  XRefMark,
 } from '../../model/ast/TextNodes';
 
 const DEFAULT_OPTIONS: TextOptions = {
@@ -603,10 +604,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
               this.writeCommentMark(mark as CommentMark);
             } else if (TextMarkType.ref === mark.type) {
               this.writeInlineMarkStartEnd();
-              this.writeRefMark(mark as RefMark, false);
+              this.writeRefMark(mark as RefMark);
             } else if (TextMarkType.xref === mark.type) {
               this.writeInlineMarkStartEnd();
-              this.writeRefMark(mark as RefMark, true);
+              this.writeXRefMark(mark as XRefMark);
             } else if (TextMarkType.footnote === mark.type) {
               this.writeInlineMarkStartEnd();
               this.writeFootnoteMark(mark as FootnoteMark);
@@ -817,10 +818,17 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.write(s);
   }
 
-  protected writeRefMark(mark: RefMark, isXRef: boolean) {
+  protected writeRefMark(mark: RefMark) {
     const ref = mark.attrs?.reference ?? '';
 
-    const s = `${isXRef ? 'xref:' : '►'}${ref}`;
+    const s = `►${ref}`;
+    this.write(s);
+  }
+
+  protected writeXRefMark(mark: XRefMark) {
+    const ref = mark.attrs?.xref ?? '';
+
+    const s = `xref:${ref}`;
     this.write(s);
   }
 

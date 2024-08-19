@@ -34,6 +34,11 @@ export interface RefMark {
   attrs?: RefMarkAttibutes;
 }
 
+export interface XRefMark {
+  type: 'xref';
+  attrs?: XRefMarkAttibutes;
+}
+
 export interface FootnoteMark {
   type: 'footnote';
   attrs?: FootnoteAttibutes;
@@ -117,6 +122,11 @@ export interface LinkMarkAttibutes extends TextMarkAttibutes {
 }
 
 export interface RefMarkAttibutes extends TextMarkAttibutes {
+  reference: string;
+}
+
+export interface XRefMarkAttibutes extends TextMarkAttibutes {
+  xref: string;
   reference: string;
 }
 
