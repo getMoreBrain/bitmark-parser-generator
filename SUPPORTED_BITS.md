@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.22.0
+Version: 1.23.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)

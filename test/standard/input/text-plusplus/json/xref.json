@@ -7,7 +7,8 @@
           {
             "type": "xref",
             "attrs": {
-              "reference": "this is an xreference"
+              "xref": "this is an xreference",
+              "reference": ""
             }
           }
         ],
@@ -59,7 +60,8 @@
                           {
                             "type": "xref",
                             "attrs": {
-                              "reference": "this is **an** xreference"
+                              "xref": "this is **an** xreference",
+                              "reference": ""
                             }
                           }
                         ],
@@ -89,6 +91,7 @@
           {
             "type": "xref",
             "attrs": {
+              "xref": "",
               "reference": ""
             }
           }
