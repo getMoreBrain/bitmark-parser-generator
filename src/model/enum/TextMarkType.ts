@@ -28,6 +28,7 @@ const TextMarkType = superenum({
   ref: 'ref',
   xref: 'xref',
   footnote: 'footnote',
+  footnoteStar: 'footnote*',
   var: 'var',
   code: 'code',
   timer: 'timer',
