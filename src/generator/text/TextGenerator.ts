@@ -82,6 +82,7 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.ref,
   TextMarkType.xref,
   TextMarkType.footnote,
+  TextMarkType.footnoteStar,
   TextMarkType.var,
   TextMarkType.code,
   TextMarkType.timer,
@@ -611,6 +612,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
             } else if (TextMarkType.footnote === mark.type) {
               this.writeInlineMarkStartEnd();
               this.writeFootnoteMark(mark as FootnoteMark);
+            } else if (TextMarkType.footnoteStar === mark.type) {
+              this.writeInlineMarkStartEnd();
+              this.writeFootnoteStarMark(mark as FootnoteMark);
             } else if (INLINE_MARK_TYPES.indexOf(mark.type) !== -1) {
               this.writeInlineMarkStartEnd();
               this.writeInlineMark(mark);
@@ -633,6 +637,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
               TextMarkType.ref === mark.type ||
               TextMarkType.xref === mark.type ||
               TextMarkType.footnote === mark.type ||
+              TextMarkType.footnoteStar === mark.type ||
               INLINE_MARK_TYPES.indexOf(mark.type) !== -1
             ) {
               inlineMarkWritten = true;
@@ -834,6 +839,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
   protected writeFootnoteMark(_mark: FootnoteMark) {
     const s = `footnote:`;
+    this.write(s);
+  }
+
+  protected writeFootnoteStarMark(_mark: FootnoteMark) {
+    const s = `footnote*:`;
     this.write(s);
   }
 
