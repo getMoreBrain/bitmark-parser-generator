@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.15.0"
+const VERSION = "8.16.0"
 
 //Parser peggy.js
 
@@ -565,6 +565,7 @@ AttrChainItem
   / 'xref:' str: $((!BlockTag char)*) BlockTag {return { type: 'xref', attrs: { xref: str.trim(), reference: '' } }}
   / '►' str: $((!BlockTag char)*) BlockTag {return { type: 'ref', attrs: { reference: str.trim() } }}
   / 'footnote:' str: $((!BlockTag char)*) BlockTag {return { type: 'footnote', attrs: { content: bitmarkPlusString(str.trim()) } }}
+  / 'footnote*:' str: $((!BlockTag char)*) BlockTag {return { type: 'footnote*', attrs: { content: bitmarkPlusString(str.trim()) } }}
   / 'var:' str: $((!BlockTag char)*) BlockTag {return { type: 'var', attrs: { name: str.trim() } }}
   / 'code' BlockTag {return { type: 'code', attrs: { language: "plain text" } }}
   / 'code:' lang: $((!BlockTag char)*) BlockTag {return { type: 'code', attrs: { language: lang.trim().toLowerCase() } }}
