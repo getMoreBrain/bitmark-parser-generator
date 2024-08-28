@@ -365,9 +365,7 @@ export interface BitmarkPegParserContext {
   debugPrint(header: string, data: unknown): void;
 
   // Parser global parse state
-  state: {
-    //
-  };
+  state: object;
 }
 
 export {
