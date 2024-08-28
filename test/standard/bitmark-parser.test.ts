@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { describe, test } from '@jest/globals';
 // import deepEqual from 'deep-equal';
 import * as fs from 'fs-extra';
