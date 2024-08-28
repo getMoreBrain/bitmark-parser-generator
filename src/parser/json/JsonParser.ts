@@ -979,7 +979,7 @@ class JsonParser {
       const { columns, data } = table;
       node = builder.table({
         columns: this.convertStringToBreakscapedString(columns) ?? [],
-        rows: data ? data.map((row) => this.convertStringToBreakscapedString(row) ?? []) ?? [] : [],
+        rows: data ? (data.map((row) => this.convertStringToBreakscapedString(row) ?? []) ?? []) : [],
       });
     }
 

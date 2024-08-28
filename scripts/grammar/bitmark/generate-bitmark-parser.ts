@@ -57,7 +57,7 @@ fs.writeFileSync(outputPath, parserSource);
 // Test parser
 if (optTest) {
   const testText = fs.readFileSync(testFilePath, 'utf8');
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const parser = require(outputPath);
   // const result = parser.parse('            \n\r\n\r\r\n       \t', {
   const result = parser.parse(testText, {
