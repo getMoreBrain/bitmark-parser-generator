@@ -822,6 +822,11 @@ const PROPERTIES: _PropertiesConfig = {
     format: PropertyFormat.boolean,
     defaultValue: 'true',
   },
+  [PropertyConfigKey.activityType]: {
+    tag: PropertyTag.activityType,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
 };
 
 export { PROPERTIES };

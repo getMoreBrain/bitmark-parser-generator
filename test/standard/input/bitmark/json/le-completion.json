@@ -1,0 +1,48 @@
+[
+  {
+    "bit": {
+      "type": "le-completion",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "action": "Päsenz-Seminar",
+      "duration": "3600s",
+      "isTracked": true,
+      "isInfoOnly": false,
+      "activityType": "Nullserie",
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nullserie",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Can also contain resources like all bits",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.le-completion]\n[!Nullserie]\n[@action:Päsenz-Seminar]\n[@duration:3600s]\nCan also contain resources like all bits"
+  }
+]

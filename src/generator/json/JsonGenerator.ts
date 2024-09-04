@@ -2738,6 +2738,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       isTracked: undefined,
       isInfoOnly: undefined,
       imageFirst: undefined,
+      activityType: undefined,
       labelTrue: undefined,
       labelFalse: undefined,
       content2Buy: undefined,
@@ -3248,6 +3249,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.isTracked == null) delete bitJson.isTracked;
     if (bitJson.isInfoOnly == null) delete bitJson.isInfoOnly;
     if (bitJson.imageFirst == null) delete bitJson.imageFirst;
+    if (bitJson.activityType == null) delete bitJson.activityType;
     if (bitJson.labelTrue == null) delete bitJson.labelTrue;
     if (bitJson.labelFalse == null) delete bitJson.labelFalse;
     if (bitJson.content2Buy == null) delete bitJson.content2Buy;
