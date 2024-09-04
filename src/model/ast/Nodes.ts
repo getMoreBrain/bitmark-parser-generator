@@ -133,6 +133,7 @@ export interface Bit {
   isTracked?: Property;
   isInfoOnly?: Property;
   imageFirst?: Property;
+  activityType?: Property;
   labelTrue?: Property;
   labelFalse?: Property;
   content2Buy?: Property;

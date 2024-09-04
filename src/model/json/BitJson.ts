@@ -108,6 +108,7 @@ export interface BitJson {
   isTracked: boolean; // only .learningPathExternalLink?
   isInfoOnly: boolean; // only .learningPathExternalLink?
   imageFirst: boolean;
+  activityType: string;
   labelTrue: string;
   labelFalse: string;
   content2Buy: string;

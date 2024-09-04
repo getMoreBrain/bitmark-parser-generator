@@ -1,0 +1,25 @@
+[
+  {
+    "bit": {
+      "type": "le-video-call",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "videoCallLink": "https://yasminboland.com/video/call.php",
+      "isTracked": true,
+      "isInfoOnly": false,
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "activityType": "Nullserie",
+      "body": []
+    },
+    "parser": {
+      "version": "1.4.12",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.le-video-call]\n[@videoCallLink:https://yasminboland.com/video/call.php]"
+  }
+]
