@@ -38,6 +38,6 @@ Version: ${version}
 
 const instance = new GeneratedSupportedBitsInfo();
 
-instance.run().then(() => {
+void instance.run().then(() => {
   // Done
 });

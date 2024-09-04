@@ -55,6 +55,6 @@ class DevTextParser {
 
 const parser = new DevTextParser();
 
-parser.test(true).then(() => {
+void parser.test(true).then(() => {
   // Done
 });

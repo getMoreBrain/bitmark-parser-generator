@@ -25,7 +25,7 @@ class StringWriter implements Writer {
 
   public async open(): Promise<void> {
     this.openSync();
-    Promise.resolve();
+    return Promise.resolve();
   }
 
   public async close(): Promise<void> {
@@ -34,7 +34,7 @@ class StringWriter implements Writer {
     } catch (e) {
       return Promise.reject(e);
     }
-    Promise.resolve();
+    return Promise.resolve();
   }
 
   public openSync(): void {

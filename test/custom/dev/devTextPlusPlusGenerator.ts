@@ -46,6 +46,6 @@ class DevTextGenerator {
 
 const generator = new DevTextGenerator();
 
-generator.test(true).then(() => {
+void generator.test(true).then(() => {
   // Done
 });

@@ -26,6 +26,6 @@ class DevConfig {
 
 const instance = new DevConfig();
 
-instance.run().then(() => {
+void instance.run().then(() => {
   // Done
 });

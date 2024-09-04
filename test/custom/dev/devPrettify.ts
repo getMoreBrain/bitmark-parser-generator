@@ -67,6 +67,6 @@ class DevPrettify {
 
 const parser = new DevPrettify();
 
-parser.test(false).then(() => {
+void parser.test(false).then(() => {
   // Done
 });

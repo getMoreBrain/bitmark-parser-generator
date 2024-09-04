@@ -91,9 +91,7 @@ export default [
       sourceType: 'script',
 
       parserOptions: {
-        ecmaFeatures: {
-          project: ['./tsconfig.json'],
-        },
+        project: ['tsconfig.eslint.json'],
       },
     },
 
@@ -127,6 +125,8 @@ export default [
       ],
 
       '@typescript-eslint/no-namespace': 0,
+
+      '@typescript-eslint/no-floating-promises': ['error'],
     },
   },
 ];

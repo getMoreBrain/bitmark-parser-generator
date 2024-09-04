@@ -76,6 +76,6 @@ class DevGenerator {
 
 const generator = new DevGenerator();
 
-generator.test(true).then(() => {
+void generator.test(true).then(() => {
   // Done
 });

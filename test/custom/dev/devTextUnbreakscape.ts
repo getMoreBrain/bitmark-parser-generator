@@ -29,6 +29,6 @@ class DevTextUnbreakscape {
 
 const parser = new DevTextUnbreakscape();
 
-parser.test().then(() => {
+void parser.test().then(() => {
   // Done
 });

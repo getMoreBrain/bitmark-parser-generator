@@ -10,7 +10,6 @@ import * as fs from 'fs-extra';
 import path from 'path';
 
 import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
-import { TextFormat } from '../../../src/model/enum/TextFormat';
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
@@ -23,16 +22,13 @@ class DevTextbreakscape {
       encoding: 'utf8',
     });
 
-    const res = bitmarkParserGenerator.breakscapeText(str, {
-      inTag: false,
-      textFormat: TextFormat.bitmarkPlusPlus,
-    });
+    const res = bitmarkParserGenerator.breakscapeText(str);
     console.log(res);
   }
 }
 
 const parser = new DevTextbreakscape();
 
-parser.test().then(() => {
+void parser.test().then(() => {
   // Done
 });
