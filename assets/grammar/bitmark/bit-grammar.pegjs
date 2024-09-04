@@ -2,7 +2,7 @@
  * Bitmark parser grammar
  * RA Sewell
  *
- * (c) 2023 Get More Brain AG
+ * (c) 2023-24 Get More Brain AG
  * All rights reserved.
  *
  * For details of opertation, see the comments in BitmarkPegParserProcessor.ts
@@ -128,6 +128,9 @@ BM_BodyLine
 // - parses a single bit
 bit
  = BlankLine* bit: Bit BlankLine* { return bit }
+
+// TODO - if we need different parsing per text format, then we'd have to split here at the bit level
+// and have BitmarkTextBit, TextBit, JsonBit, XmlBit. Each one would explicitly match the text format.
 
 // A single bit
 Bit
