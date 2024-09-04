@@ -183,6 +183,8 @@ const NodeType = superenum({
   isInfoOnlyValue: 'isInfoOnlyValue',
   imageFirst: 'imageFirst',
   imageFirstValue: 'imageFirstValue',
+  activityType: 'activityType',
+  activityTypeValue: 'activityTypeValue',
   isPublic: 'isPublic',
   isPublicValue: 'isPublicValue',
   isTracked: 'isTracked',

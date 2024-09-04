@@ -196,6 +196,7 @@ class Builder extends BaseBuilder {
     isTracked?: boolean;
     isInfoOnly?: boolean;
     imageFirst?: boolean;
+    activityType?: BreakscapedString;
     labelTrue?: BreakscapedString;
     labelFalse?: BreakscapedString;
     content2Buy?: BreakscapedString;
@@ -379,6 +380,7 @@ class Builder extends BaseBuilder {
       isTracked,
       isInfoOnly,
       imageFirst,
+      activityType,
       labelTrue,
       labelFalse,
       content2Buy,
@@ -564,6 +566,7 @@ class Builder extends BaseBuilder {
       isTracked: this.toAstProperty(PropertyConfigKey.isTracked, isTracked),
       isInfoOnly: this.toAstProperty(PropertyConfigKey.isInfoOnly, isInfoOnly),
       imageFirst: this.toAstProperty(PropertyConfigKey.imageFirst, imageFirst),
+      activityType: this.toAstProperty(PropertyConfigKey.activityType, activityType),
       labelTrue: this.toAstProperty(PropertyConfigKey.labelTrue, labelTrue),
       labelFalse: this.toAstProperty(PropertyConfigKey.labelFalse, labelFalse),
       content2Buy: this.toAstProperty(PropertyConfigKey.content2Buy, content2Buy),

@@ -1226,6 +1226,76 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.leLearningObjectives]: {
+    since: '1.25.0',
+    baseBitType: BitType.learningPathLearningGoal,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+    ],
+  },
+  [BitType.leVideoCall]: {
+    since: '1.25.0',
+    baseBitType: BitType.learningPathVideoCall,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+    ],
+  },
+  [BitType.leClassroomEvent]: {
+    since: '1.25.0',
+    baseBitType: BitType.learningPathClassroomEvent,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+    ],
+  },
+  [BitType.leCompletion]: {
+    since: '1.25.0',
+    baseBitType: BitType.learningPathClosing,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+    ],
+  },
+  [BitType.leExternalLink]: {
+    since: '1.25.0',
+    baseBitType: BitType.learningPathExternalLink,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+    ],
+  },
+  [BitType.leReadBook]: {
+    since: '1.25.0',
+    baseBitType: BitType.learningPathBook,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+    ],
+  },
+  [BitType.leLearningStep]: {
+    since: '1.25.0',
+    baseBitType: BitType.learningPathStep,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+    ],
+  },
   [BitType.listItem]: {
     since: '1.22.0',
     baseBitType: BitType.article,
