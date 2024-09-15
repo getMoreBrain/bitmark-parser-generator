@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.25.0
+Version: 1.26.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -286,6 +286,7 @@ le-completion (since: 1.25.0)
 le-external-link (since: 1.25.0)
 le-read-book (since: 1.25.0)
 le-learning-step (since: 1.25.0)
+le-preparation-task (since: 1.26.0)
 life-skill-sticker (since: 1.3.0)
 list (since: 1.22.0)
 list-item (since: 1.22.0)
