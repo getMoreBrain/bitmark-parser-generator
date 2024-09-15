@@ -286,6 +286,7 @@ const BitType = superenum({
   leExternalLink: 'le-external-link',
   leReadBook: 'le-read-book',
   leLearningStep: 'le-learning-step',
+  lePreparationTask: 'le-preparation-task',
   lifeSkillSticker: 'life-skill-sticker',
   list: 'list',
   listItem: 'list-item',
