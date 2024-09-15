@@ -523,6 +523,7 @@ if (TEST_ALL) {
     'le-external-link.bit',
     'le-read-book.bit',
     'le-learning-step.bit',
+    'le-preparation-task.bit',
     'life-skill-sticker.bit',
     'list.bit',
     'list-item.bit',

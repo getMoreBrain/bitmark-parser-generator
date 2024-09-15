@@ -1296,6 +1296,16 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.lePreparationTask]: {
+    since: '1.26.0',
+    baseBitType: BitType.learningPathBook,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+    ],
+  },
   [BitType.listItem]: {
     since: '1.22.0',
     baseBitType: BitType.article,
