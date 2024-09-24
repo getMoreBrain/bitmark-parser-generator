@@ -84,6 +84,14 @@ const BITS: _BitsConfig = {
   [BitType.standardArticleNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.smartStandardArticleNormative]: { since: '1.28.0', baseBitType: BitType.standardArticleNormative },
   [BitType.smartStandardArticleNonNormative]: { since: '1.28.0', baseBitType: BitType.standardArticleNonNormative },
+  [BitType.smartStandardArticleNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardArticleNormative,
+  },
+  [BitType.smartStandardArticleNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardArticleNonNormative,
+  },
   [BitType.statement]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.pageArticle]: { since: '1.15.0', baseBitType: BitType.article },
   [BitType.pageArticleAlt]: { since: '1.15.0', baseBitType: BitType.article },
@@ -682,6 +690,14 @@ const BITS: _BitsConfig = {
   [BitType.standardExampleNonNormative]: { since: '1.16.0', baseBitType: BitType.example },
   [BitType.smartStandardExampleNormative]: { since: '1.28.0', baseBitType: BitType.standardExampleNormative },
   [BitType.smartStandardExampleNonNormative]: { since: '1.28.0', baseBitType: BitType.standardExampleNonNormative },
+  [BitType.smartStandardExampleNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardExampleNormative,
+  },
+  [BitType.smartStandardExampleNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardExampleNonNormative,
+  },
   [BitType.appAiPrompt]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.aiPrompt]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.articleAi]: { since: '1.3.0', baseBitType: BitType.article },
@@ -733,6 +749,7 @@ const BITS: _BitsConfig = {
   [BitType.list]: { since: '1.22.0', baseBitType: BitType.article },
   [BitType.standardList]: { since: '1.22.0', baseBitType: BitType.article },
   [BitType.smartStandardList]: { since: '1.28.0', baseBitType: BitType.standardList },
+  [BitType.smartStandardListCollapsible]: { since: '1.28.0', baseBitType: BitType.smartStandardList },
   [BitType.message]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.newspaperArticle]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.note]: { since: '1.3.0', baseBitType: BitType.article },
@@ -741,6 +758,11 @@ const BITS: _BitsConfig = {
   [BitType.standardNoteNonNormative]: { since: '1.16.0', baseBitType: BitType.note },
   [BitType.smartStandardNoteNormative]: { since: '1.28.0', baseBitType: BitType.standardNoteNormative },
   [BitType.smartStandardNoteNonNormative]: { since: '1.28.0', baseBitType: BitType.standardNoteNonNormative },
+  [BitType.smartStandardNoteNormativeCollapsible]: { since: '1.28.0', baseBitType: BitType.smartStandardNoteNormative },
+  [BitType.smartStandardNoteNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardNoteNonNormative,
+  },
   [BitType.noteAi]: { since: '1.3.0', baseBitType: BitType.note },
   [BitType.notebookArticle]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.preparationNote]: { since: '1.3.0', baseBitType: BitType.article },
@@ -751,6 +773,14 @@ const BITS: _BitsConfig = {
   [BitType.standardRemarkNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.smartStandardRemarkNormative]: { since: '1.28.0', baseBitType: BitType.standardRemarkNormative },
   [BitType.smartStandardRemarkNonNormative]: { since: '1.28.0', baseBitType: BitType.standardRemarkNonNormative },
+  [BitType.smartStandardRemarkNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkNormative,
+  },
+  [BitType.smartStandardRemarkNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkNonNormative,
+  },
   [BitType.selfAssessment]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.separator]: { since: '1.4.15', baseBitType: BitType.article },
   [BitType.separatorAlt]: { since: '1.16.0', baseBitType: BitType.separator },
@@ -1045,6 +1075,14 @@ const BITS: _BitsConfig = {
     since: '1.28.0',
     baseBitType: BitType.standardImageFigureNonNormative,
   },
+  [BitType.smartStandardImageFigureNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardImageFigureNormative,
+  },
+  [BitType.smartStandardImageFigureNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardImageFigureNonNormative,
+  },
   [BitType.imageLandscape]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.imageMood]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.imagePortrait]: { since: '1.3.0', baseBitType: BitType.image },
@@ -1096,6 +1134,22 @@ const BITS: _BitsConfig = {
   [BitType.smartStandardRemarkTableImageNonNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardRemarkTableImageNonNormative,
+  },
+  [BitType.smartStandardTableImageNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardTableImageNormative,
+  },
+  [BitType.smartStandardTableImageNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardTableImageNonNormative,
+  },
+  [BitType.smartStandardRemarkTableImageNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkTableImageNormative,
+  },
+  [BitType.smartStandardRemarkTableImageNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkTableImageNonNormative,
   },
   [BitType.imageLink]: {
     since: '1.3.0',
@@ -1385,6 +1439,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.standardListItem]: { since: '1.22.0', baseBitType: BitType.listItem },
   [BitType.smartStandardListItem]: { since: '1.28.0', baseBitType: BitType.standardListItem },
+  [BitType.smartStandardListItemCollapsible]: { since: '1.28.0', baseBitType: BitType.smartStandardListItem },
   [BitType.mark]: {
     since: '1.3.0',
     tags: [
@@ -1999,6 +2054,22 @@ const BITS: _BitsConfig = {
   [BitType.smartStandardRemarkTableNonNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardRemarkTableNonNormative,
+  },
+  [BitType.smartStandardTableNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardTableNormative,
+  },
+  [BitType.smartStandardTableNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardTableNonNormative,
+  },
+  [BitType.smartStandardRemarkTableNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkTableNormative,
+  },
+  [BitType.smartStandardRemarkTableNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkTableNonNormative,
   },
   [BitType.parameters]: { since: '1.18.0', baseBitType: BitType.table },
   [BitType.toc]: {
