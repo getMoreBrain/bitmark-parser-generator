@@ -17,6 +17,7 @@ const groupConfigKeys = {
   group_mark: 'group_mark',
   group_bookCommon: 'group_bookCommon',
   group_learningPathCommon: 'group_learningPathCommon',
+  group_resourceBitTags: 'group_resourceBitTags',
   group_resourceCommon: 'group_resourceCommon',
   group_resourceImageCommon: 'group_resourceImageCommon',
   group_resourceAudioCommon: 'group_resourceAudioCommon',

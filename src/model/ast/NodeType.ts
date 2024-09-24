@@ -165,6 +165,8 @@ const NodeType = superenum({
   idValue: 'idValue',
   image: 'image',
   imageLandscape: 'imageLandscape',
+  imagePlaceholder: 'imagePlaceholder',
+  imagePlaceholderValue: 'imagePlaceholderValue',
   imagePortrait: 'imagePortrait',
   imageSource: 'imageSource',
   index: 'index',

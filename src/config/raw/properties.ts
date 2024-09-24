@@ -185,6 +185,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.imagePlaceholder]: {
+    tag: PropertyTag.imagePlaceholder,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.publisher]: {
     tag: PropertyTag.publisher,
     format: PropertyFormat.trimmedString,

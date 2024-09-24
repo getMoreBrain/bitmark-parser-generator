@@ -59,6 +59,7 @@ const propertyConfigKeys = {
   iconTag: 'iconTag',
   id: 'id',
   imageFirst: 'imageFirst',
+  imagePlaceholder: 'imagePlaceholder',
   imageSource: 'imageSource',
   index: 'index',
   internalComment: 'internalComment',
