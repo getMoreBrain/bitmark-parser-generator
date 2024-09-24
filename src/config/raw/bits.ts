@@ -1306,6 +1306,46 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+
+  [BitType.leRead]: { since: '1.27.0', baseBitType: BitType.lePreparationTask },
+  [BitType.leTask]: { since: '1.27.0', baseBitType: BitType.lePreparationTask },
+  [BitType.leTodo]: { since: '1.27.0', baseBitType: BitType.lePreparationTask },
+  [BitType.leFollowUpTask]: { since: '1.27.0', baseBitType: BitType.lePreparationTask },
+  [BitType.leFinishingTask]: { since: '1.27.0', baseBitType: BitType.lePreparationTask },
+  [BitType.leAssignment]: { since: '1.27.0', baseBitType: BitType.lePreparationTask },
+  [BitType.leWatchVideoEmbed]: {
+    since: '1.27.0',
+    baseBitType: BitType.learningPathBook,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceVideoEmbed,
+        minCount: 1,
+      },
+    ],
+    resourceAttachmentAllowed: false,
+  },
+  [BitType.leListenAudioEmbed]: {
+    since: '1.27.0',
+    baseBitType: BitType.learningPathBook,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.activityType,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceAudioEmbed,
+        minCount: 1,
+      },
+    ],
+    resourceAttachmentAllowed: false,
+  },
+
   [BitType.listItem]: {
     since: '1.22.0',
     baseBitType: BitType.article,

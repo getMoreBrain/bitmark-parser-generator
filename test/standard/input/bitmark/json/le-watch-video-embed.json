@@ -1,0 +1,207 @@
+[
+  {
+    "bit": {
+      "type": "le-watch-video-embed",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "book": "e-876z78z87og87g8zg",
+      "date": "2015-03-25T12:00:00Z",
+      "location": "Zug",
+      "action": "Selbststudium",
+      "duration": "3600s",
+      "isTracked": true,
+      "isInfoOnly": false,
+      "activityType": "le-watch-video-embed",
+      "reference": "Ref4.2.34",
+      "referenceEnd": "Ref4.3.1",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Skript «Grundausbildung Altersvorsorge»",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "First one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "video-embed",
+        "videoEmbed": {
+          "format": "mp4",
+          "provider": "docs.bitbook.education",
+          "url": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4",
+          "width": null,
+          "height": null,
+          "posterImage": {
+            "format": "png",
+            "provider": "docs.bitbook.education",
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          },
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.le-watch-video-embed]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-watch-video-embed]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[&video-embed:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
+  },
+  {
+    "bit": {
+      "type": "le-watch-video-embed",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["119760"],
+      "book": "e-876z78z87og87g8zg",
+      "date": "2015-03-25T12:00:00Z",
+      "location": "Zug",
+      "action": "Selbststudium",
+      "duration": "3600s",
+      "list": ["One", "Two", "Three", "Four"],
+      "isTracked": true,
+      "isInfoOnly": false,
+      "reference": "Ref4.2.34",
+      "referenceEnd": "Ref4.3.1",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Skript «Grundausbildung Altersvorsorge»",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "First one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "video-embed",
+        "videoEmbed": {
+          "format": "mp4",
+          "provider": "docs.bitbook.education",
+          "url": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4",
+          "width": null,
+          "height": null,
+          "posterImage": {
+            "format": "png",
+            "provider": "docs.bitbook.education",
+            "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          },
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0",
+      "warnings": [
+        {
+          "message": "[&website-link] is included more than 0 time(s).",
+          "text": "[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]",
+          "location": {
+            "start": {
+              "line": 37,
+              "column": 1,
+              "offset": 1242
+            },
+            "end": {
+              "line": 37,
+              "column": 91,
+              "offset": 1332
+            }
+          }
+        },
+        {
+          "message": "Resource type [&website-link] is specified in the bit header, but no extra resource is allowed for this bit.",
+          "text": "[.le-watch-video-embed&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[@list:One]\n[@list:Two]\n[@list:Three]\n[@list:Four]\n[@id:119760]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]\n[&video-embed:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]\n",
+          "location": {
+            "start": {
+              "line": 20,
+              "column": 1,
+              "offset": 719
+            },
+            "end": {
+              "line": 39,
+              "column": 1,
+              "offset": 1564
+            }
+          }
+        }
+      ],
+      "excessResources": [
+        {
+          "type": "website-link",
+          "websiteLink": {
+            "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ]
+    },
+    "bitmark": "[.le-watch-video-embed&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[@list:One]\n[@list:Two]\n[@list:Three]\n[@list:Four]\n[@id:119760]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]\n[&video-embed:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
+  }
+]
