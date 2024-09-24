@@ -337,6 +337,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
+      "imagePlaceholder": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
       "id": ["304379"],
       "item": [],
       "lead": [],
