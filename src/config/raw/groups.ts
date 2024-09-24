@@ -507,6 +507,19 @@ const GROUPS: _GroupsConfig = {
     ],
   },
   //
+  // Resource groups
+  //
+  [GroupConfigKey.group_resourceBitTags]: {
+    type: GroupConfigType.standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.imagePlaceholder,
+        maxCount: 1,
+      },
+    ],
+  },
+  //
   // Common resource properties
   //
   [GroupConfigKey.group_resourceCommon]: {

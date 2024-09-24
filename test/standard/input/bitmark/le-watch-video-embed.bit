@@ -22,6 +22,7 @@ All of these bits (starting with .learning-path support the following optional p
 [@action:Selbststudium]
 [@duration:3600s]
 [@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]
+[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]
 
 First one is the normal reference.
 Second is the optional property called “referenceEnd”

@@ -50,6 +50,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceAppLink,
         minCount: 1,
       },
@@ -171,6 +175,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceArticleEmbed,
         minCount: 1,
       },
@@ -183,6 +191,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         type: BitTagType.group,
@@ -201,6 +213,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceAudio,
         minCount: 1,
       },
@@ -216,6 +232,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceAudioEmbed,
         minCount: 1,
       },
@@ -228,6 +248,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         type: BitTagType.group,
@@ -586,6 +610,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceDocument,
         minCount: 1,
       },
@@ -598,6 +626,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         type: BitTagType.group,
@@ -616,6 +648,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceDocumentEmbed,
         minCount: 1,
       },
@@ -628,6 +664,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         type: BitTagType.group,
@@ -1047,6 +1087,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceImage,
         minCount: 1,
       },
@@ -1160,6 +1204,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceImageLink,
         minCount: 1,
       },
@@ -1172,6 +1220,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         type: BitTagType.group,
@@ -1192,6 +1244,10 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
       {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
         // Combo resource
         type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceImageResponsive,
@@ -1205,6 +1261,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         // Image resource
@@ -1404,6 +1464,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceVideoEmbed,
         minCount: 1,
       },
@@ -1417,6 +1481,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.activityType,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         type: BitTagType.group,
@@ -1851,6 +1919,10 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_standardTags,
       },
       {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
         // Combo resource
         type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceStillImageFilm,
@@ -1867,6 +1939,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceStillImageFilmEmbed,
         minCount: 1,
       },
@@ -1879,6 +1955,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         type: BitTagType.group,
@@ -2264,6 +2344,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceVideo,
         minCount: 1,
       },
@@ -2278,6 +2362,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         type: BitTagType.group,
@@ -2298,6 +2386,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
+      },
+      {
+        type: BitTagType.group,
         configKey: GroupConfigKey.group_resourceVideoLink,
         minCount: 1,
       },
@@ -2312,6 +2404,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_resourceBitTags,
       },
       {
         type: BitTagType.group,

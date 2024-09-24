@@ -138,6 +138,7 @@ class Builder extends BaseBuilder {
     bookAlias?: BreakscapedString | BreakscapedString[];
     coverImage?: BreakscapedString | BreakscapedString[];
     coverColor?: BreakscapedString;
+    imagePlaceholder?: BreakscapedString;
     publications?: BreakscapedString | BreakscapedString[];
     author?: BreakscapedString | BreakscapedString[];
     subject?: BreakscapedString | BreakscapedString[];
@@ -322,6 +323,7 @@ class Builder extends BaseBuilder {
       bookAlias,
       coverImage,
       coverColor,
+      imagePlaceholder,
       publications,
       author,
       subject,
@@ -502,6 +504,7 @@ class Builder extends BaseBuilder {
       bookAlias: this.toAstProperty(PropertyConfigKey.bookAlias, bookAlias),
       coverImage: this.toAstProperty(PropertyConfigKey.coverImage, coverImage),
       coverColor: this.toAstProperty(PropertyConfigKey.coverColor, coverColor),
+      imagePlaceholder: this.toAstProperty(PropertyConfigKey.imagePlaceholder, imagePlaceholder),
       publications: this.toAstProperty(PropertyConfigKey.publications, publications),
       author: this.toAstProperty(PropertyConfigKey.author, author),
       subject: this.toAstProperty(PropertyConfigKey.subject, subject),
