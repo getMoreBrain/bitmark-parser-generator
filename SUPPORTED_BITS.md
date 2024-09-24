@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.26.0
+Version: 1.27.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -279,14 +279,22 @@ learning-path-lti (since: 1.3.0)
 learning-path-sign (since: 1.3.0)
 learning-path-step (since: 1.3.0)
 learning-path-video-call (since: 1.3.0)
-le-learning-objectives (since: 1.25.0)
-le-video-call (since: 1.25.0)
+le-assignment (since: 1.27.0)
 le-classroom-event (since: 1.25.0)
 le-completion (since: 1.25.0)
 le-external-link (since: 1.25.0)
-le-read-book (since: 1.25.0)
+le-finishing-task (since: 1.27.0)
+le-follow-up-task (since: 1.27.0)
+le-learning-objectives (since: 1.25.0)
 le-learning-step (since: 1.25.0)
+le-listen-audio-embed (since: 1.27.0)
 le-preparation-task (since: 1.26.0)
+le-read (since: 1.27.0)
+le-read-book (since: 1.25.0)
+le-task (since: 1.27.0)
+le-todo (since: 1.27.0)
+le-video-call (since: 1.25.0)
+le-watch-video-embed (since: 1.27.0)
 life-skill-sticker (since: 1.3.0)
 list (since: 1.22.0)
 list-item (since: 1.22.0)
