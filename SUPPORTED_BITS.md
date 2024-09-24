@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.27.0
+Version: 1.28.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -383,6 +383,26 @@ separator-alt (since: 1.16.0)
 sequence (since: 1.3.0)
 side-note (since: 1.3.0)
 side-note-collapsible (since: 1.21.0)
+smart-standard-article-non-normative (since: 1.28.0)
+smart-standard-article-normative (since: 1.28.0)
+smart-standard-example-non-normative (since: 1.28.0)
+smart-standard-example-normative (since: 1.28.0)
+smart-standard-image-figure-non-normative (since: 1.28.0)
+smart-standard-image-figure-normative (since: 1.28.0)
+smart-standard-list (since: 1.28.0)
+smart-standard-list-item (since: 1.28.0)
+smart-standard-note-non-normative (since: 1.28.0)
+smart-standard-note-normative (since: 1.28.0)
+smart-standard-remark-non-normative (since: 1.28.0)
+smart-standard-remark-normative (since: 1.28.0)
+smart-standard-remark-table-image-non-normative (since: 1.28.0)
+smart-standard-remark-table-image-normative (since: 1.28.0)
+smart-standard-remark-table-non-normative (since: 1.28.0)
+smart-standard-remark-table-normative (since: 1.28.0)
+smart-standard-table-image-non-normative (since: 1.28.0)
+smart-standard-table-image-normative (since: 1.28.0)
+smart-standard-table-non-normative (since: 1.28.0)
+smart-standard-table-normative (since: 1.28.0)
 standard-article-non-normative (since: 1.16.0)
 standard-article-normative (since: 1.16.0)
 standard-example-non-normative (since: 1.16.0)

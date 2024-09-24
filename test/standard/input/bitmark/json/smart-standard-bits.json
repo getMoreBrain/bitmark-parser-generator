@@ -1,0 +1,897 @@
+[
+  {
+    "bit": {
+      "type": "smart-standard-article-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-article-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-article-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-article-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-example-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-example-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-example-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "isExample": false,
+      "example": null,
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-example-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-image-figure-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "backgroundWallpaper": "https://miro.medium.com/background.png",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Texte und Aufgaben in diesem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "fakultativen Teil B",
+              "type": "text"
+            },
+            {
+              "text": " stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-image-figure-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-image-figure-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "backgroundWallpaper": "https://miro.medium.com/background.png",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Texte und Aufgaben in diesem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "fakultativen Teil B",
+              "type": "text"
+            },
+            {
+              "text": " stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
+      "captionDefinitionList": {
+        "columns": ["Legende", ""],
+        "definitions": [
+          {
+            "term": "A",
+            "description": "Körper"
+          },
+          {
+            "term": "B",
+            "description": "Stromquelle"
+          }
+        ]
+      },
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Optional Footer",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-image-figure-non-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n====\n[#Legende]\n--\n[#]\n====\nA\n--\nKörper\n====\nB\n--\nStromquelle\n====\n\n~~~~\nOptional Footer"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-list",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-list:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-list-item",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "listItemIndent": 0,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-list-item:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-list-item",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "listItemIndent": 5,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-list-item:bitmark++]\n[@listItemIndent:5]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-note-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-note-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-note-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-note-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-remark-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-remark-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-image-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-image-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151972"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-image-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-remark-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-image-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["151972"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-remark-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-remark-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "tableFixedHeader": true,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "columns": ["Name", "Email", "Phone Number"],
+        "data": [
+          ["John", "john@example.com", "(353) 01 222 3333"],
+          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+        ]
+      }
+    },
+    "parser": {
+      "version": "1.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.16.0"
+    },
+    "bitmark": "[.smart-standard-remark-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  }
+]
