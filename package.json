@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-parser-generator",
-  "version": "1.28.0",
+  "version": "1.29.0",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Get More Brain Ltd",
   "license": "ISC",
@@ -74,7 +74,7 @@
   "jsdelivr": "dist/browser/bitmark-parser-generator.min.js",
   "unpkg": "dist/browser/bitmark-parser-generator.min.js",
   "contributors": [
-    "Richard Sewell (https://github.com/zx-ncoderz)"
+    "Richard Sewell (https://github.com/six5536)"
   ],
   "devDependencies": {
     "@types/eslint-plugin-prettier": "^3.1.3",
@@ -110,7 +110,7 @@
     "webpack-strip-block": "^0.3.0"
   },
   "dependencies": {
-    "@ncoderz/superenum": "^0.2.3",
+    "@ncoderz/superenum": "^0.2.4",
     "@types/fs-extra": "^11.0.4",
     "@ungap/structured-clone": "^1.2.0",
     "fs-extra": "^11.2.0"
