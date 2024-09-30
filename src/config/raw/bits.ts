@@ -742,7 +742,7 @@ const BITS: _BitsConfig = {
   [BitType.aiPrompt]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.articleAi]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.articleAttachment]: { since: '1.3.0', baseBitType: BitType.article },
-  [BitType.assignment]: { since: '1.3.0', baseBitType: BitType.example },
+  [BitType.assignment]: { since: '1.3.0', baseBitType: BitType.essay },
   [BitType.audioTranscript]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bitmarkExample]: { since: '1.3.0', baseBitType: BitType.example },
   [BitType.blogArticle]: { since: '1.3.0', baseBitType: BitType.article },
