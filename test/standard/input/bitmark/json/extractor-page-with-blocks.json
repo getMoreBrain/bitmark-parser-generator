@@ -44,5 +44,51 @@
       "bitmarkVersion": "3"
     },
     "bitmark": "[.extractor-page-with-blocks]\n[&image:https://page.com/1.png][@width:400]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
+  },
+  {
+    "bit": {
+      "type": "extractor-page-with-blocks-collapsible",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "hint": [],
+      "instruction": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "page.com",
+          "src": "https://page.com/1.png",
+          "width": "400",
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      }
+    },
+    "parser": {
+      "version": "1.5.20",
+      "bitmarkVersion": "3"
+    },
+    "bitmark": "[.extractor-page-with-blocks-collapsible]\n[&image:https://page.com/1.png][@width:400]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   }
 ]

@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.28.0
+Version: 1.30.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -194,10 +194,15 @@ example-list (since: 1.4.13)
 extractor-block (since: 1.5.16)
 extractor-configuration (since: 1.7.1)
 extractor-page (since: 1.5.17)
+extractor-page-collapsible (since: 1.30.0)
 extractor-page-footer (since: 1.5.21)
+extractor-page-footer-collapsible (since: 1.30.0)
 extractor-page-header (since: 1.5.21)
+extractor-page-header-collapsible (since: 1.30.0)
 extractor-page-number (since: 1.5.21)
+extractor-page-number-collapsible (since: 1.30.0)
 extractor-page-with-blocks (since: 1.5.21)
+extractor-page-with-blocks-collapsible (since: 1.30.0)
 extractor-repeated-text (since: 1.5.21)
 featured (since: 1.3.0)
 figure (since: 1.3.0)
@@ -333,6 +338,7 @@ page-banner (since: 1.4.3)
 page-buy-button (since: 1.4.3)
 page-buy-button-promotion (since: 1.5.11)
 page-category (since: 1.6.6)
+page-collapsible (since: 1.30.0)
 page-container (since: 1.9.0)
 page-container-folder (since: 1.9.0)
 page-container-group (since: 1.9.0)
