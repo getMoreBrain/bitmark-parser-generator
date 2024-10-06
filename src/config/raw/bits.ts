@@ -917,7 +917,9 @@ const BITS: _BitsConfig = {
     rootExampleType: ExampleType.string,
   },
   [BitType.extractorPage]: { since: '1.5.17', baseBitType: BitType.image },
+  [BitType.extractorPageCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPage },
   [BitType.extractorPageWithBlocks]: { since: '1.5.21', baseBitType: BitType.image },
+  [BitType.extractorPageWithBlocksCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPageWithBlocks },
   [BitType.extractorConfiguration]: {
     since: '1.7.1',
     tags: [
@@ -982,8 +984,11 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorRepeatedText]: { since: '1.5.21', baseBitType: BitType.article },
   [BitType.extractorPageNumber]: { since: '1.5.21', baseBitType: BitType.article },
+  [BitType.extractorPageNumberCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPageNumber },
   [BitType.extractorPageHeader]: { since: '1.5.21', baseBitType: BitType.article },
+  [BitType.extractorPageHeaderCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPageHeader },
   [BitType.extractorPageFooter]: { since: '1.5.21', baseBitType: BitType.article },
+  [BitType.extractorPageFooterCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPageFooter },
   [BitType.pageOpenBook]: {
     since: '1.5.10',
     baseBitType: BitType.article,
@@ -1650,6 +1655,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.pageCollapsible]: { since: '1.30.0', baseBitType: BitType.page },
   [BitType.pageCoverImage]: { since: '1.22.0', baseBitType: BitType.page },
   [BitType.pageBuyButton]: {
     since: '1.4.3',
