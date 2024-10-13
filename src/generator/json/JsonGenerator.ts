@@ -3026,6 +3026,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         Config.isOfBitType(bitType, [
           BitType.pageBanner,
           BitType.pageBuyButton,
+          BitType.pageBuyButtonAlt,
           BitType.pageBuyButtonPromotion,
           BitType.pageFooter,
           BitType.pageOpenBook,

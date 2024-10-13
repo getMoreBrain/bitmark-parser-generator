@@ -4,9 +4,7 @@
       "type": "page-buy-button",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "slug": "testing-1234",
       "content2Buy": "testing 123",
       "item": [],
@@ -42,8 +40,53 @@
     "parser": {
       "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.17.1"
     },
     "bitmark": "[.page-buy-button]\n[@id:342341]\n[@slug:testing-1234]\n[!.page-buy-button]\n[@content2Buy:testing 123 ]\nButton Text"
+  },
+  {
+    "bit": {
+      "type": "page-buy-button-alt",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["342341"],
+      "slug": "testing-1234",
+      "content2Buy": "testing 123",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".page-buy-button",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Button Text Alt",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.1"
+    },
+    "bitmark": "[.page-buy-button-alt]\n[@id:342341]\n[@slug:testing-1234]\n[!.page-buy-button]\n[@content2Buy:testing 123 ]\nButton Text Alt"
   }
 ]

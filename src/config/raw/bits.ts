@@ -1678,6 +1678,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.pageBuyButtonAlt]: { since: '1.31.0', baseBitType: BitType.pageBuyButton },
   [BitType.pageBuyButtonPromotion]: { since: '1.5.11', baseBitType: BitType.pageBuyButton },
   [BitType.pageSubpage]: {
     since: '1.6.6',
