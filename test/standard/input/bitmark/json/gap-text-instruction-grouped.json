@@ -4,7 +4,9 @@
       "type": "gap-text-instruction-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["287822"],
+      "id": [
+        "287822"
+      ],
       "quizCountItems": true,
       "quizStrikethroughSolutions": false,
       "item": [],
@@ -20,10 +22,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -64,7 +66,9 @@
                   "attrs": {}
                 }
               ],
-              "solutions": ["erfreut"]
+              "solutions": [
+                "erfreut"
+              ]
             },
             {
               "text": " sich nicht nur in Deutschland besonderer Beliebtheit, er ",
@@ -90,7 +94,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["steht"]
+              "solutions": [
+                "steht"
+              ]
             },
             {
               "text": " auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...",
@@ -102,8 +108,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text-instruction-grouped]\n[@id:287822]\n[%][%gap-text-instruction-grouped]\nDer Fußball [_erfreut][!erfreuen][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht][!stehen] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ..."
   },
@@ -112,7 +119,9 @@
       "type": "gap-text-instruction-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["107938"],
+      "id": [
+        "107938"
+      ],
       "quizCountItems": true,
       "quizStrikethroughSolutions": false,
       "item": [
@@ -128,21 +137,35 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.",
+              "text": "In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Welches Fragewort passt? Wähl aus.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Wähl die Wörter in der richtigen Reihenfolge aus.",
               "type": "text"
             }
           ],
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -168,11 +191,16 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [""]
+              "solutions": [
+                ""
+              ]
             },
             {
-              "text": " kommen Sie?\n",
+              "text": " kommen Sie?",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -194,11 +222,16 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [""]
+              "solutions": [
+                ""
+              ]
             },
             {
-              "text": " wohnen Sie?\n",
+              "text": " wohnen Sie?",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -220,11 +253,16 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Was"]
+              "solutions": [
+                "Was"
+              ]
             },
             {
-              "text": " studieren Sie?\n",
+              "text": " studieren Sie?",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -246,7 +284,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Welche"]
+              "solutions": [
+                "Welche"
+              ]
             },
             {
               "text": " Sprachen sprechen Sie?",
@@ -258,9 +298,10 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.gap-text-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[_Woher][!woher] kommen Sie?\n[_Wo][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?"
+    "bitmark": "[.gap-text-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[_][!woher] kommen Sie?\n[_][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?"
   }
 ]

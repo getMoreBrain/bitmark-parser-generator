@@ -4,13 +4,15 @@
       "type": "separator",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["92375"],
+      "id": [
+        "92375"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -25,9 +27,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.separator]\n[@id:92375]\nThis is a separator"
   },
@@ -38,16 +40,16 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.separator]"
   },
@@ -56,11 +58,11 @@
       "type": "separator-alt",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -74,6 +76,8 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -88,9 +92,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.separator-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   }

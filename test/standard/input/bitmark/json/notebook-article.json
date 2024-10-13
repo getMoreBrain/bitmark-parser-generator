@@ -4,13 +4,16 @@
       "type": "notebook-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -25,7 +28,10 @@
               "type": "text"
             },
             {
-              "text": "\nfollowed by some plain text. cloze open close cloze1 book.",
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
               "type": "text"
             }
           ],
@@ -34,8 +40,27 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "[&image] is included more than 0 time(s).",
+          "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 130
+            },
+            "end": {
+              "line": 6,
+              "column": 47,
+              "offset": 176
+            }
+          }
+        }
+      ],
       "excessResources": [
         {
           "type": "image",
@@ -46,6 +71,7 @@
             "width": null,
             "height": null,
             "alt": "",
+            "zoomDisabled": false,
             "license": "",
             "copyright": "",
             "showInIndex": false,

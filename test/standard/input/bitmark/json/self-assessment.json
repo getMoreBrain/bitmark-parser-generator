@@ -1,0 +1,174 @@
+[
+  {
+    "bit": {
+      "type": "_error",
+      "bitLevel": 1
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "errors": [
+        {
+          "message": "Invalid bit",
+          "text": "|| Not sure if .self-assesment is still supported. Parses to 'bullets' and strange body ||\n",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "column": 1,
+              "offset": 91
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "|| Not sure if .self-assesment is still supported. Parses to 'bullets' and strange body ||"
+  },
+  {
+    "bit": {
+      "type": "self-assessment",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "'CardSet' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.self-assessment]\n===\nI can discuss technical issues.\n[• well]\n[• not so well]\n===\nI can discuss sports.\n[• well]\n[• not so well]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 92
+            },
+            "end": {
+              "line": 14,
+              "column": 1,
+              "offset": 228
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.self-assessment]\n===\nI can discuss technical issues.\n[• well]\n[• not so well]\n===\nI can discuss sports.\n[• well]\n[• not so well]\n==="
+  },
+  {
+    "bit": {
+      "type": "self-assessment",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": [
+        "92484"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "D2 – Evaluation",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Überprüfen Sie sich selbst.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "'CardSet' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.self-assessment][@id:92484]\n[%D2 – Evaluation]\n[!Überprüfen Sie sich selbst.]\n===\nIch kann Auskunft über mich selbst geben und andere Leute nach persönlichen Angaben befragen.\n[•gut]\n[•nicht so gut]\n===\nIch kann kurz über meine Schulzeit, meine Ausbildung und das deutsche Schulsystem berichten.\n[•gut]\n[•nicht so gut]\n===\nIch kann einen tabellarischen Lebenslauf schreiben und über Ausbildungsabschlüsse und Arbeitserfahrungen Auskunft geben.\n[•gut]\n[•nicht so gut]\n===\nIch kann Texte über Partnersuche und Singlehaushalte verstehen und die wichtigsten Aussagen wiedergeben.\n[•gut]\n[•nicht so gut]\n===\nIch kann eine Infografik zum Thema Hochzeit in Deutschland beschreiben und über Hochzeitsrituale mündlich und schriftlich berichten.\n[•gut]\n[•nicht so gut]\n===\nIch kann über das Thema Privatleben von Prominenten diskutieren.\n[•gut]\n[•nicht so gut]\n===\nIch kann ausführlichere Biografien und Berichte über berühmte Persönlichkeiten verstehen. (fakultativ)\n[•gut]\n[•nicht so gut]\n===\n",
+          "location": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 229
+            },
+            "end": {
+              "line": 47,
+              "column": 1,
+              "offset": 1216
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.self-assessment][@id:92484]\n[%D2 – Evaluation]\n[!Überprüfen Sie sich selbst.]\n===\nIch kann Auskunft über mich selbst geben und andere Leute nach persönlichen Angaben befragen.\n[•gut]\n[•nicht so gut]\n===\nIch kann kurz über meine Schulzeit, meine Ausbildung und das deutsche Schulsystem berichten.\n[•gut]\n[•nicht so gut]\n===\nIch kann einen tabellarischen Lebenslauf schreiben und über Ausbildungsabschlüsse und Arbeitserfahrungen Auskunft geben.\n[•gut]\n[•nicht so gut]\n===\nIch kann Texte über Partnersuche und Singlehaushalte verstehen und die wichtigsten Aussagen wiedergeben.\n[•gut]\n[•nicht so gut]\n===\nIch kann eine Infografik zum Thema Hochzeit in Deutschland beschreiben und über Hochzeitsrituale mündlich und schriftlich berichten.\n[•gut]\n[•nicht so gut]\n===\nIch kann über das Thema Privatleben von Prominenten diskutieren.\n[•gut]\n[•nicht so gut]\n===\nIch kann ausführlichere Biografien und Berichte über berühmte Persönlichkeiten verstehen. (fakultativ)\n[•gut]\n[•nicht so gut]\n==="
+  },
+  {
+    "bit": {
+      "type": "self-assessment",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": [
+        "191222"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "'CardSet' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.self-assessment]\n[@id:191222]\n===\n4. Ich bin davon überzeugt, dass ich in der Lage bin, die Anforderungen meiner Arbeit zu erfüllen\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===\n5. Ich vertraue auf meine Fähigkeit, meine Arbeit bewältigen zu können\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===\n6. Ich beherrsche die Fertigkeit, meine Arbeit bewältigen zu können\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 48,
+              "column": 1,
+              "offset": 1217
+            },
+            "end": {
+              "line": 67,
+              "column": 1,
+              "offset": 1668
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.self-assessment]\n[@id:191222]\n===\n4. Ich bin davon überzeugt, dass ich in der Lage bin, die Anforderungen meiner Arbeit zu erfüllen\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===\n5. Ich vertraue auf meine Fähigkeit, meine Arbeit bewältigen zu können\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n===\n6. Ich beherrsche die Fertigkeit, meine Arbeit bewältigen zu können\n[• stimme ganz zu]\n[• stimme nicht zu]\n[• teils/teils]\n==="
+  }
+]

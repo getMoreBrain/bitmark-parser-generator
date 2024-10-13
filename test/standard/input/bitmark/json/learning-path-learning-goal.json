@@ -10,6 +10,8 @@
       "isInfoOnly": false,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -23,8 +25,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -39,8 +39,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.learning-path-learning-goal]\n[!Nullserie]\n[@action:Päsenz-Seminar]\n[@duration:3600s]\nCan also contain resources like all bits"
   }

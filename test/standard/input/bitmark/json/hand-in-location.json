@@ -4,9 +4,13 @@
       "type": "hand-in-location",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["189522"],
+      "id": [
+        "189522"
+      ],
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -20,14 +24,22 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Wichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.\n\nZeit: 60 Minuten",
+              "text": "Wichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Zeit: 60 Minuten",
               "type": "text"
             }
           ],
@@ -36,8 +48,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.hand-in-location]\n[@id:189522]\n[!Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können.]\n\nWichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.\n\nZeit: 60 Minuten"
   },
@@ -46,7 +59,9 @@
       "type": "hand-in-location",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213729"],
+      "id": [
+        "213729"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -60,40 +75,48 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.\nBegriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit",
+              "text": "Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Begriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit",
               "type": "text"
             }
           ],
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "image",
           "attrs": {
+            "alignment": "center",
             "textAlign": "left",
             "src": "https://docs.bitmark.cloud/bit-books/compendio/marketing_quiz/web-resources/images/compendio_marketing_7_v2.png",
             "alt": null,
             "title": null,
             "class": "center",
-            "width": 650,
             "zoomDisabled": false,
-            "alignment": "center"
+            "width": 650
           }
         }
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.hand-in-location:bitmark++]\n[@id:213729]\n[%7]\n[!Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.\nBegriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit]\n|image:https://docs.bitmark.cloud/bit-books/compendio/marketing_quiz/web-resources/images/compendio_marketing_7_v2.png|@width:650|"
   },
@@ -102,7 +125,9 @@
       "type": "hand-in-location",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["213734"],
+      "id": [
+        "213734"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -116,26 +141,34 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:\nKunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel",
+              "text": "Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Kunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel",
               "type": "text"
             }
           ],
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.hand-in-location:bitmark--]\n[@id:213734]\n[%12]\n[!Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:\nKunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel]"
   },
@@ -144,7 +177,9 @@
       "type": "hand-in-location",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["213737"],
+      "id": [
+        "213737"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -169,6 +204,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -182,8 +219,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -198,28 +233,32 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.hand-in-location:bitmark--]\n[@id:213737]\n[%15 A]\n[%][%Ausgangslage]\nSie sind Marketingverantwortliche/-r beim Bauberatungsunternehmen Easy Building AG. Ihre Kunden sind Bauherren (Privatpersonen), die ein Eigenheim bauen und eine unabhängige Expertenmeinung wünschen, z. B. bei der Vergabe von Aufträgen, der Beurteilung verschiedener Lieferanten und Dienstleister oder bei der Bauabnahme.\n[!Erläutern Sie das Marktsystem, in dem sich die Easy Building bewegt.]"
+    "bitmark": "[.hand-in-location:bitmark--]\n[@id:213737]\n[%15 A][%Ausgangslage]\nSie sind Marketingverantwortliche/-r beim Bauberatungsunternehmen Easy Building AG. Ihre Kunden sind Bauherren (Privatpersonen), die ein Eigenheim bauen und eine unabhängige Expertenmeinung wünschen, z. B. bei der Vergabe von Aufträgen, der Beurteilung verschiedener Lieferanten und Dienstleister oder bei der Bauabnahme.\n[!Erläutern Sie das Marktsystem, in dem sich die Easy Building bewegt.]"
   },
   {
     "bit": {
       "type": "hand-in-location",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["197943"],
+      "id": [
+        "197943"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.hand-in-location]\n[@id:197943]"
   }

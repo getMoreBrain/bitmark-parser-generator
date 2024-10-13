@@ -4,7 +4,9 @@
       "type": "foot-note",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["210051"],
+      "id": [
+        "210051"
+      ],
       "item": [],
       "lead": [
         {
@@ -18,10 +20,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -36,8 +38,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.foot-note]\n[@id:210051]\n[%][%Beispiel]\nDie Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet."
   }

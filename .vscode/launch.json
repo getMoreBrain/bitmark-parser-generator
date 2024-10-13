@@ -126,6 +126,17 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Dev Regenerate Bitmark Tests",
+      "program": "${workspaceFolder}/test/custom/dev/devRegenerateBitmarkTests.ts",
+      "runtimeArgs": ["-r", "esbuild-register"],
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Build Grammar (bitmark)",
       "program": "${workspaceFolder}/scripts/grammar/bitmark/generate-bitmark-parser.ts",
       "args": ["--bit", "--test"],

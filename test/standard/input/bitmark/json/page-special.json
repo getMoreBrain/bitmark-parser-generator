@@ -4,20 +4,23 @@
       "type": "page-special",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "slug": "",
       "page": "https://123.com",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.16",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-special]\n[@id:151970]\n[@page:https://123.com]"
   },
@@ -26,54 +29,57 @@
       "type": "page-special",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["304379"],
+      "id": [
+        "304379"
+      ],
       "slug": "testing-1234",
       "page": "https://1234.com",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.16",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[@page] is included more than 1 time(s). The earlier ones will be ignored",
           "text": "[@page:https://1234.com]",
           "location": {
             "start": {
-              "line": 8,
-              "column": 32,
-              "offset": 135
+              "line": 9,
+              "column": 24,
+              "offset": 128
             },
             "end": {
-              "line": 8,
-              "column": 64,
-              "offset": 167
+              "line": 9,
+              "column": 48,
+              "offset": 152
             }
           },
           "original": {
             "text": "[@page:https://123.com]",
             "location": {
               "start": {
-                "line": 8,
+                "line": 9,
                 "column": 1,
-                "offset": 104
+                "offset": 105
               },
               "end": {
-                "line": 8,
-                "column": 32,
-                "offset": 135
+                "line": 9,
+                "column": 24,
+                "offset": 128
               }
             }
           }
         }
       ]
     },
-    "bitmark": "[.page-special]\n[@id:304379]\n[@page:https://123.com][@page:https://1234.com]"
+    "bitmark": "[.page-special]\n[@id:304379]\n[@slug:testing-1234]\n[@page:https://123.com][@page:https://1234.com]"
   }
 ]

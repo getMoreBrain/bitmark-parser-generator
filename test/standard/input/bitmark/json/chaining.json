@@ -28,6 +28,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -52,13 +54,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.5.2",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\n[%item][%lead]\n[!instruction][?hint]"
   },
@@ -91,6 +92,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -115,13 +118,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.5.2",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\n[%item][%lead][!instruction][?hint]"
   },
@@ -154,6 +156,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -178,13 +182,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.5.2",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\n[!instruction][%item][%lead][?hint]"
   },
@@ -206,6 +209,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -230,13 +235,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.5.2",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[%] is included more than 1 time(s). The earlier ones will be ignored",
@@ -291,6 +295,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -315,13 +321,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.5.2",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[%] is included more than 1 time(s). The earlier ones will be ignored",
@@ -376,6 +381,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -400,13 +407,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.5.2",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[%] is included more than 1 time(s). The earlier ones will be ignored",
@@ -450,10 +456,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "resource": {
         "type": "image",
@@ -473,8 +479,9 @@
       }
     },
     "parser": {
-      "version": "1.5.2",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.image]\n[&image:https://domain.com/image.png][@alt:alt text][@width:100][@height:100]"
   },
@@ -485,10 +492,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "resource": {
         "type": "image",
@@ -508,22 +515,23 @@
       }
     },
     "parser": {
-      "version": "1.5.2",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[@wrong] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
-          "text": "[@wrong]",
+          "text": "[.image]\n[&image:https://domain.com/image.png][@wrong][@alt:alt text][@width:100][@height:100]\n\n",
           "location": {
             "start": {
-              "line": 33,
-              "column": 38,
-              "offset": 517
+              "line": 28,
+              "column": 1,
+              "offset": 382
             },
             "end": {
-              "line": 33,
-              "column": 46,
-              "offset": 525
+              "line": 31,
+              "column": 1,
+              "offset": 478
             }
           }
         }
@@ -538,10 +546,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "resource": {
         "type": "image",
@@ -561,22 +569,23 @@
       }
     },
     "parser": {
-      "version": "1.5.2",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[@wrong] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
-          "text": "[@wrong:again]",
+          "text": "[.image]\n[&image:https://domain.com/image.png][@alt:alt text][@wrong:again][@width:100][@height:100]\n\n",
           "location": {
             "start": {
-              "line": 37,
-              "column": 53,
-              "offset": 629
+              "line": 32,
+              "column": 1,
+              "offset": 479
             },
             "end": {
-              "line": 37,
-              "column": 67,
-              "offset": 643
+              "line": 35,
+              "column": 1,
+              "offset": 581
             }
           }
         }
@@ -584,7 +593,6 @@
     },
     "bitmark": "[.image]\n[&image:https://domain.com/image.png][@alt:alt text][@wrong:again][@width:100][@height:100]"
   },
-
   {
     "bit": {
       "type": "match-solution-grouped",
@@ -592,17 +600,19 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {},
       "pairs": [
         {
           "key": "die Koffer",
-          "values": ["packen"],
+          "values": [
+            "packen"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -635,8 +645,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.2",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match-solution-grouped]\n====\ndie Koffer[%1][@example:packen]\n--\npacken\n===="
   }

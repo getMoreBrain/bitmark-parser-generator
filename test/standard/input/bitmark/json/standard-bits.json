@@ -4,7 +4,9 @@
       "type": "standard-article-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -36,9 +38,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-article-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -47,7 +49,9 @@
       "type": "standard-article-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -79,9 +83,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-article-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -90,7 +94,9 @@
       "type": "standard-example-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -124,9 +130,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-example-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -135,7 +141,9 @@
       "type": "standard-example-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -169,9 +177,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-example-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -230,9 +238,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-image-figure-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
@@ -290,7 +298,10 @@
         }
       },
       "captionDefinitionList": {
-        "columns": ["Legende", ""],
+        "columns": [
+          "Legende",
+          ""
+        ],
         "definitions": [
           {
             "term": "A",
@@ -316,9 +327,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-image-figure-non-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n====\n[#Legende]\n--\n[#]\n====\nA\n--\nKörper\n====\nB\n--\nStromquelle\n====\n\n~~~~\nOptional Footer"
   },
@@ -327,7 +338,9 @@
       "type": "standard-list",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -359,9 +372,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-list:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -370,7 +383,9 @@
       "type": "standard-list-item",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "listItemIndent": 0,
       "item": [],
       "lead": [],
@@ -403,9 +418,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-list-item:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -424,9 +439,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-list-item:bitmark++]\n[@listItemIndent:5]"
   },
@@ -435,7 +450,9 @@
       "type": "standard-note-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -467,9 +484,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-note-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -478,7 +495,9 @@
       "type": "standard-note-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -510,9 +529,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-note-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -521,7 +540,9 @@
       "type": "standard-remark-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -553,9 +574,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-remark-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -564,7 +585,9 @@
       "type": "standard-remark-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -596,9 +619,9 @@
       ]
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-remark-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -607,7 +630,9 @@
       "type": "standard-table-image-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -633,9 +658,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -644,7 +669,9 @@
       "type": "standard-table-image-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -670,9 +697,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -681,7 +708,9 @@
       "type": "standard-remark-table-image-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -707,9 +736,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-remark-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -718,7 +747,9 @@
       "type": "standard-remark-table-image-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -744,9 +775,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-remark-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -772,17 +803,29 @@
       "instruction": [],
       "body": [],
       "table": {
-        "columns": ["Name", "Email", "Phone Number"],
+        "columns": [
+          "Name",
+          "Email",
+          "Phone Number"
+        ],
         "data": [
-          ["John", "john@example.com", "(353) 01 222 3333"],
-          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+          [
+            "John",
+            "john@example.com",
+            "(353) 01 222 3333"
+          ],
+          [
+            "Mark",
+            "mark@gmail.com",
+            "(01) 22 888 4444"
+          ]
         ]
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -808,17 +851,29 @@
       "instruction": [],
       "body": [],
       "table": {
-        "columns": ["Name", "Email", "Phone Number"],
+        "columns": [
+          "Name",
+          "Email",
+          "Phone Number"
+        ],
         "data": [
-          ["John", "john@example.com", "(353) 01 222 3333"],
-          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+          [
+            "John",
+            "john@example.com",
+            "(353) 01 222 3333"
+          ],
+          [
+            "Mark",
+            "mark@gmail.com",
+            "(01) 22 888 4444"
+          ]
         ]
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -844,17 +899,29 @@
       "instruction": [],
       "body": [],
       "table": {
-        "columns": ["Name", "Email", "Phone Number"],
+        "columns": [
+          "Name",
+          "Email",
+          "Phone Number"
+        ],
         "data": [
-          ["John", "john@example.com", "(353) 01 222 3333"],
-          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+          [
+            "John",
+            "john@example.com",
+            "(353) 01 222 3333"
+          ],
+          [
+            "Mark",
+            "mark@gmail.com",
+            "(01) 22 888 4444"
+          ]
         ]
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-remark-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -880,17 +947,29 @@
       "instruction": [],
       "body": [],
       "table": {
-        "columns": ["Name", "Email", "Phone Number"],
+        "columns": [
+          "Name",
+          "Email",
+          "Phone Number"
+        ],
         "data": [
-          ["John", "john@example.com", "(353) 01 222 3333"],
-          ["Mark", "mark@gmail.com", "(01) 22 888 4444"]
+          [
+            "John",
+            "john@example.com",
+            "(353) 01 222 3333"
+          ],
+          [
+            "Mark",
+            "mark@gmail.com",
+            "(01) 22 888 4444"
+          ]
         ]
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-remark-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   }

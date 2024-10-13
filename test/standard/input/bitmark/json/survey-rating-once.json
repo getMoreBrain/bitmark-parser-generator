@@ -4,7 +4,9 @@
       "type": "survey-rating-once",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["93061"],
+      "id": [
+        "93061"
+      ],
       "buttonCaption": "Save My Stress Level",
       "ratingLevelStart": {
         "level": 0,
@@ -50,17 +52,17 @@
         }
       ],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.survey-rating-once]\n[@id:93061]\n[%D2]\n[@ratingLevelStart:0][@label:NOT AT ALL LIKELY]\n[@ratingLevelEnd:10][@label:EXTREMLY LIKELY]\n[@ratingLevelSelected:3]"
+    "bitmark": "[.survey-rating-once]\n[@id:93061]\n[%D2]\n[@ratingLevelStart:0][@label:NOT AT ALL LIKELY]\n[@ratingLevelEnd:10][@label:EXTREMLY LIKELY]\n[@ratingLevelSelected:3]\n[@buttonCaption: Save My Stress Level ]"
   }
 ]

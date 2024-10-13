@@ -9,10 +9,10 @@
       "buttonCaption": "This is a button caption",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -27,8 +27,7 @@
               "type": "text"
             },
             {
-              "text": "\n",
-              "type": "text"
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -40,7 +39,10 @@
               "type": "text"
             },
             {
-              "text": "\n* gestrig, ehemalig, vorherig, damalig",
+              "type": "hardBreak"
+            },
+            {
+              "text": "* gestrig, ehemalig, vorherig, damalig",
               "type": "text"
             }
           ],
@@ -65,9 +67,9 @@
       }
     },
     "parser": {
-      "version": "1.6.2",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.survey-matrix-me]\n[@pointerTop:20%]\n[@pointerLeft:60%]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n[@buttonCaption:This is a button caption]"
   },
@@ -81,10 +83,10 @@
       "buttonCaption": "",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -99,8 +101,7 @@
               "type": "text"
             },
             {
-              "text": "\n",
-              "type": "text"
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -112,7 +113,10 @@
               "type": "text"
             },
             {
-              "text": "\n* gestrig, ehemalig, vorherig, damalig",
+              "type": "hardBreak"
+            },
+            {
+              "text": "* gestrig, ehemalig, vorherig, damalig",
               "type": "text"
             }
           ],
@@ -137,9 +141,9 @@
       }
     },
     "parser": {
-      "version": "1.6.2",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[@buttonCaption] is required at least 1 time(s)",
@@ -187,10 +191,10 @@
       "buttonCaption": "This is a button caption",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -205,8 +209,7 @@
               "type": "text"
             },
             {
-              "text": "\n",
-              "type": "text"
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -218,7 +221,10 @@
               "type": "text"
             },
             {
-              "text": "\n* gestrig, ehemalig, vorherig, damalig",
+              "type": "hardBreak"
+            },
+            {
+              "text": "* gestrig, ehemalig, vorherig, damalig",
               "type": "text"
             }
           ],
@@ -243,9 +249,9 @@
       }
     },
     "parser": {
-      "version": "1.6.2",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[@pointerTop] is required at least 1 time(s)",

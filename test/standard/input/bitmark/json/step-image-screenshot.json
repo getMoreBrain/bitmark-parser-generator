@@ -6,10 +6,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -24,8 +24,7 @@
               "type": "text"
             },
             {
-              "text": "\n",
-              "type": "text"
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -37,7 +36,10 @@
               "type": "text"
             },
             {
-              "text": "\n* gestrig, ehemalig, vorherig, damalig",
+              "type": "hardBreak"
+            },
+            {
+              "text": "* gestrig, ehemalig, vorherig, damalig",
               "type": "text"
             }
           ],
@@ -62,8 +64,9 @@
       }
     },
     "parser": {
-      "version": "1.4.18",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.step-image-screenshot]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
@@ -75,10 +78,10 @@
       "imagePlaceholder": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -93,8 +96,7 @@
               "type": "text"
             },
             {
-              "text": "\n",
-              "type": "text"
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -106,7 +108,10 @@
               "type": "text"
             },
             {
-              "text": "\n* gestrig, ehemalig, vorherig, damalig",
+              "type": "hardBreak"
+            },
+            {
+              "text": "* gestrig, ehemalig, vorherig, damalig",
               "type": "text"
             }
           ],
@@ -131,12 +136,13 @@
       }
     },
     "parser": {
-      "version": "1.4.18",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "Resource type [&image] is specified in the bit header, but no extra resource is allowed for this bit.",
-          "text": "[.step-image-screenshot&image]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n",
+          "text": "[.step-image-screenshot&image]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]\n",
           "location": {
             "start": {
               "line": 7,
@@ -146,12 +152,12 @@
             "end": {
               "line": 13,
               "column": 1,
-              "offset": 532
+              "offset": 608
             }
           }
         }
       ]
     },
-    "bitmark": "[.step-image-screenshot&image]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
+    "bitmark": "[.step-image-screenshot&image]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]"
   }
 ]

@@ -8,10 +8,10 @@
       "posterImage": "http://scorm.com/scorm/poster.png",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -26,8 +26,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.10",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.scorm]\n\n[@scormSource:http://scorm.com/scorm]\n\n[@posterImage:http://scorm.com/scorm/poster.png]\n\nThis is SCORM"
   }

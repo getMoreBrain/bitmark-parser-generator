@@ -4,7 +4,9 @@
       "type": "match-all",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92546"],
+      "id": [
+        "92546"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -18,21 +20,31 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.",
+              "text": "Textarbeit",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Wortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.",
               "type": "text"
             }
           ],
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -57,7 +69,10 @@
       "pairs": [
         {
           "key": "Beherbergung",
-          "values": ["Unterbringung", "Übernachtung"],
+          "values": [
+            "Unterbringung",
+            "Übernachtung"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -78,7 +93,10 @@
         },
         {
           "key": "Herberge",
-          "values": ["Hotel", "Unterbringungsmöglichkeit"],
+          "values": [
+            "Hotel",
+            "Unterbringungsmöglichkeit"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -99,7 +117,10 @@
         },
         {
           "key": "übernachten",
-          "values": ["logieren", "residieren"],
+          "values": [
+            "logieren",
+            "residieren"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -120,7 +141,10 @@
         },
         {
           "key": "überwiegend",
-          "values": ["hauptsächlich", "weitgehend"],
+          "values": [
+            "hauptsächlich",
+            "weitgehend"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -141,7 +165,10 @@
         },
         {
           "key": "einen guten Ruf haben",
-          "values": ["einen guten Namen haben", "angesehen sein"],
+          "values": [
+            "einen guten Namen haben",
+            "angesehen sein"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -163,8 +190,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match-all:bitmark++]\n[@id:92546]\n[%B2b]\n[!Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]\n\n|remark\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n\n\n===\n[%1]Beherbergung\n==\nUnterbringung\n--\nÜbernachtung\n===\n[%2]Herberge\n==\nHotel\n--\nUnterbringungsmöglichkeit\n===\n[%3]übernachten\n==\nlogieren\n--\nresidieren\n===\n[%4]überwiegend\n==\nhauptsächlich\n--\nweitgehend\n===\n[%5]einen guten Ruf haben\n==\neinen guten Namen haben\n--\nangesehen sein\n==="
   },
@@ -173,7 +201,9 @@
       "type": "match-all",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["324342"],
+      "id": [
+        "324342"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -198,6 +228,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -211,15 +243,16 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [],
       "heading": {},
       "pairs": [
         {
           "key": "He will fix your laptop for you.",
-          "values": ["Your laptop will be fixed by him.", "Your laptop will be fixed for you by him."],
+          "values": [
+            "Your laptop will be fixed by him.",
+            "Your laptop will be fixed for you by him."
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -230,8 +263,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match-all]\n[@id:324342]\n[%item][%Lead]\n[!Instruction]\n===\nHe will fix your laptop for you.\n==\nYour laptop will be fixed by him.\n--\nYour laptop will be fixed for you by him.\n==="
   },
@@ -253,21 +287,31 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.",
+              "text": "Wie? – Modalangaben",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Antworten Sie. Bilden Sie Sätze wie im Beispiel.",
               "type": "text"
             }
           ],
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {},
@@ -311,7 +355,10 @@
         },
         {
           "key": "1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__",
-          "values": ["", ""],
+          "values": [
+            "",
+            ""
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -321,7 +368,10 @@
         },
         {
           "key": "2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__",
-          "values": ["", ""],
+          "values": [
+            "",
+            ""
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -331,7 +381,10 @@
         },
         {
           "key": "3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__",
-          "values": ["", ""],
+          "values": [
+            "",
+            ""
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -341,7 +394,10 @@
         },
         {
           "key": "4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__",
-          "values": ["", ""],
+          "values": [
+            "",
+            ""
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -351,7 +407,10 @@
         },
         {
           "key": "5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__",
-          "values": ["", ""],
+          "values": [
+            "",
+            ""
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -361,7 +420,10 @@
         },
         {
           "key": "6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__",
-          "values": ["", ""],
+          "values": [
+            "",
+            ""
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -372,8 +434,203 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        },
+        {
+          "message": "'$' tag is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n===\n\n",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 900
+            },
+            "end": {
+              "line": 108,
+              "column": 1,
+              "offset": 3303
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-all:bitmark--]\n[%A18b]\n[!Wie? – Modalangaben\n\nAntworten Sie. Bilden Sie Sätze wie im Beispiel.]\n===\n◇ Wie kann man diese Tür öffnen?__(grünen Knopf drücken)__[@example]\n==\na) Man kann diese Tür öffnen, __indem__ man auf den grünen Knopf drückt.\n--\nb) Man kann diese Tür __dadurch__ öffnen, __dass__ man auf den grünen Knopf drückt.\n===\n1. Wie kann man seinen Wortschatz erweitern?__(viel lesen)__\n==\n[$a) Man kann seinen Wortschatz erweitern, indem man viel liest.]\n--\n[$b) Man kann seinen Wortschatz dadurch erweitern, dass man viel liest.]\n===\n2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__\n==\n[$a) Man kann einen DVD-Spieler problemlos programmieren, indem man die Anweisungen genau beachtet.]\n--\n[$b) Man kann einen DVD-Spieler dadurch problemlos programmieren, dass man die Anweisungen genau beachtet.]\n===\n3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__\n==\n[$a) Man kann Opfer eines Internetangriffs werden, indem man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n--\n[$b) Man kann dadurch Opfer eines Internetangriffs werden, dass man auf Anhänge oder Links in E-Mails unbekannter Herkunft klickt.]\n===\n4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__\n==\n[$a) Kriminelle Hacker können Geld von Banken erbeuten, indem sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n--\n[$b) Kriminelle Hacker können dadurch Geld von Banken erbeuten, dass sie Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen.]\n===\n5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__\n==\n[$a) Man kann sich vor Computerviren schützen, indem man ein Antivirenprogramm benutzt.]\n--\n[$b) Man kann sich vor Computerviren dadurch schützen/ dadurch vor Computerviren schützen, dass man ein Antivirenprogramm benutzt.]\n===\n6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__\n==\n[$a) Wir können bessere Produkte anbieten, indem wir kreativer sind als die Konkurrenz.]\n--\n[$b) Wir können bessere Produkte dadurch anbieten/dadurch bessere Produkte anbieten, dass wir kreativer sind als die Konkurrenz.]\n==="
   },
@@ -395,21 +652,31 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.",
+              "text": "Textarbeit",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Wortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.",
               "type": "text"
             }
           ],
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -427,7 +694,10 @@
       "pairs": [
         {
           "key": "Beherbergung",
-          "values": ["Unterbringung", "Übernachtung"],
+          "values": [
+            "Unterbringung",
+            "Übernachtung"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -448,7 +718,10 @@
         },
         {
           "key": "Herberge",
-          "values": ["Hotel", "Unterbringungsmöglichkeit"],
+          "values": [
+            "Hotel",
+            "Unterbringungsmöglichkeit"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -469,7 +742,10 @@
         },
         {
           "key": "übernachten",
-          "values": ["logieren", "residieren"],
+          "values": [
+            "logieren",
+            "residieren"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -490,7 +766,10 @@
         },
         {
           "key": "überwiegend",
-          "values": ["hauptsächlich", "weitgehend"],
+          "values": [
+            "hauptsächlich",
+            "weitgehend"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -511,7 +790,10 @@
         },
         {
           "key": "einen guten Ruf haben",
-          "values": ["einen guten Namen haben", "angesehen sein"],
+          "values": [
+            "einen guten Namen haben",
+            "angesehen sein"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -533,8 +815,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match-all:bitmark++]\n[%B2b ]\n[!Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]\n\n\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n\n\n===\n[%1]Beherbergung\n==\nUnterbringung\n--\nÜbernachtung\n===\n[%2]Herberge\n==\nHotel\n--\nUnterbringungsmöglichkeit\n===\n[%3]übernachten\n==\nlogieren\n--\nresidieren\n===\n[%4]überwiegend\n==\nhauptsächlich\n--\nweitgehend\n===\n[%5]einen guten Ruf haben\n==\neinen guten Namen haben\n--\nangesehen sein\n==="
   },
@@ -556,6 +839,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -569,8 +854,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": true,
       "body": [
         {
@@ -588,7 +871,9 @@
       "pairs": [
         {
           "key": "◇ ich – dein Bleistift – mal – leihen",
-          "values": ["Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."],
+          "values": [
+            "Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -633,7 +918,10 @@
         },
         {
           "key": "die Firma Krüger – das Angebot – faxen",
-          "values": ["Kannst du der Firma Krüger das Angebot faxen?", "Ja, ich faxe es ihr."],
+          "values": [
+            "Kannst du der Firma Krüger das Angebot faxen?",
+            "Ja, ich faxe es ihr."
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -654,7 +942,10 @@
         },
         {
           "key": "ich – die Hausarbeit – am Wochenende – abnehmen",
-          "values": ["Kannst du mir am Wochenende die Hausarbeit abnehmen?", "Ja, ich nehme sie dir ab."],
+          "values": [
+            "Kannst du mir am Wochenende die Hausarbeit abnehmen?",
+            "Ja, ich nehme sie dir ab."
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -675,7 +966,10 @@
         },
         {
           "key": "der Chef – das Protokoll der Sitzung – heute noch – geben",
-          "values": ["Kannst du dem Chef heute noch das Protokoll der Sitzung geben?", "Ja, ich gebe es ihm."],
+          "values": [
+            "Kannst du dem Chef heute noch das Protokoll der Sitzung geben?",
+            "Ja, ich gebe es ihm."
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -696,7 +990,10 @@
         },
         {
           "key": "ich – dein Auto – schenken",
-          "values": ["Kannst du mir dein Auto schenken?", "Nein, ich schenke es dir nicht."],
+          "values": [
+            "Kannst du mir dein Auto schenken?",
+            "Nein, ich schenke es dir nicht."
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -717,7 +1014,10 @@
         },
         {
           "key": "wir – zwei Flaschen Mineralwasser – mitbringen",
-          "values": ["Kannst du uns zwei Flaschen Mineralwasser mitbringen?", "Ja, ich bringe sie euch mit."],
+          "values": [
+            "Kannst du uns zwei Flaschen Mineralwasser mitbringen?",
+            "Ja, ich bringe sie euch mit."
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -739,8 +1039,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match-all]\n[%C11]\n[!Bilden Sie Fragen und antworten Sie wie im Beispiel.]\n\nKannst Du ...?\n\n===\n◇ ich – dein Bleistift – mal – leihen[@example]\n==\nKannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir.\n===\n[%1]die Gäste – das Restaurant Milano – auf dem Stadtplan – zeigen\n==\nKannst du den Gästen auf dem Stadtplan das Restaurant „Milano“ zeigen?\n--\nJa, ich zeige es ihnen.\n===\n[%2]die Firma Krüger – das Angebot – faxen\n==\nKannst du der Firma Krüger das Angebot faxen?\n--\nJa, ich faxe es ihr.\n===\n[%3]ich – die Hausarbeit – am Wochenende – abnehmen\n==\nKannst du mir am Wochenende die Hausarbeit abnehmen?\n--\nJa, ich nehme sie dir ab.\n===\n[%4]der Chef – das Protokoll der Sitzung – heute noch – geben\n==\nKannst du dem Chef heute noch das Protokoll der Sitzung geben?\n--\nJa, ich gebe es ihm.\n===\n[%5]ich – dein Auto – schenken\n==\nKannst du mir dein Auto schenken?\n--\nNein, ich schenke es dir nicht.\n===\n[%6]wir – zwei Flaschen Mineralwasser – mitbringen\n==\nKannst du uns zwei Flaschen Mineralwasser mitbringen?\n--\nJa, ich bringe sie euch mit.\n==="
   }

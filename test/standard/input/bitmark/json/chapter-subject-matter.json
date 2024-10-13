@@ -4,19 +4,28 @@
       "type": "chapter-subject-matter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342336"],
+      "id": [
+        "342336"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Chapter subject matter\nIt's exactly the same as an .article.",
+              "text": "Chapter subject matter",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "It's exactly the same as an .article.",
               "type": "text"
             }
           ],
@@ -25,8 +34,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.chapter-subject-matter]\n[@id:342336]\nChapter subject matter\nIt's exactly the same as an .article."
   }

@@ -4,9 +4,11 @@
       "type": "page-open-book",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
-      "slug": "testing-1234",
+      "id": [
+        "342341"
+      ],
       "book": "the_book",
+      "slug": "testing-1234",
       "reference": "ch-5",
       "item": [
         {
@@ -21,6 +23,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -45,8 +49,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -61,9 +63,10 @@
       ]
     },
     "parser": {
-      "version": "1.5.17",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.page-open-book]\n[@id:342341]\n[@book:the_book][►ch-5]\n[%Publisher, optional]\n[!Book title]\n[?Document Type, optional]\nOpen"
+    "bitmark": "[.page-open-book]\n[@id:342341]\n[@slug:testing-1234]\n[@book:the_book][►ch-5]\n[%Publisher, optional]\n[!Book title]\n[?Document Type, optional]\nOpen"
   }
 ]

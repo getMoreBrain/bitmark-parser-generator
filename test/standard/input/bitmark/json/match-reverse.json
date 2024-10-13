@@ -4,7 +4,9 @@
       "type": "match-reverse",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["287869"],
+      "id": [
+        "287869"
+      ],
       "item": [],
       "lead": [
         {
@@ -18,6 +20,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -31,15 +35,15 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": true,
       "body": [],
       "heading": {},
       "pairs": [
         {
           "key": "Tier",
-          "values": ["das"],
+          "values": [
+            "das"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -60,7 +64,9 @@
         },
         {
           "key": "Kuh",
-          "values": ["die"],
+          "values": [
+            "die"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -70,7 +76,9 @@
         },
         {
           "key": "Löwe",
-          "values": ["die"],
+          "values": [
+            "die"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -80,7 +88,9 @@
         },
         {
           "key": "Schmetterling",
-          "values": ["der"],
+          "values": [
+            "der"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -91,8 +101,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match-reverse]\n[@id:287869]\n[%][%match-reverse]\n[!Wie heißen die passenden Nomen?]\n===\nTier\n==\ndas[@example]\n===\nKuh\n==\ndie\n===\nLöwe\n==\ndie\n===\nSchmetterling\n==\nder\n==="
   }

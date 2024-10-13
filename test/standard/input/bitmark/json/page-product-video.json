@@ -4,20 +4,23 @@
       "type": "page-product-video",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "slug": "",
       "productVideo": "https://123.com",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.16",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-product-video]\n[@id:151970]\n[@productVideo:https://123.com]"
   },
@@ -26,54 +29,57 @@
       "type": "page-product-video",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["304379"],
+      "id": [
+        "304379"
+      ],
       "slug": "testing-1234",
       "productVideo": "https://1234.com",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.16",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[@productVideo] is included more than 1 time(s). The earlier ones will be ignored",
           "text": "[@productVideo:https://1234.com]",
           "location": {
             "start": {
-              "line": 8,
+              "line": 9,
               "column": 32,
-              "offset": 135
+              "offset": 156
             },
             "end": {
-              "line": 8,
+              "line": 9,
               "column": 64,
-              "offset": 167
+              "offset": 188
             }
           },
           "original": {
             "text": "[@productVideo:https://123.com]",
             "location": {
               "start": {
-                "line": 8,
+                "line": 9,
                 "column": 1,
-                "offset": 104
+                "offset": 125
               },
               "end": {
-                "line": 8,
+                "line": 9,
                 "column": 32,
-                "offset": 135
+                "offset": 156
               }
             }
           }
         }
       ]
     },
-    "bitmark": "[.page-product-video]\n[@id:304379]\n[@productVideo:https://123.com][@productVideo:https://1234.com]"
+    "bitmark": "[.page-product-video]\n[@id:304379]\n[@slug:testing-1234]\n[@productVideo:https://123.com][@productVideo:https://1234.com]"
   }
 ]

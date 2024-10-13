@@ -6,6 +6,8 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -19,8 +21,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -78,7 +78,9 @@
                   "isCaseSensitive": true,
                   "isExample": false,
                   "example": null,
-                  "solutions": ["gap"]
+                  "solutions": [
+                    "gap"
+                  ]
                 },
                 {
                   "text": " text with another ",
@@ -104,7 +106,9 @@
                   "isCaseSensitive": true,
                   "isExample": false,
                   "example": null,
-                  "solutions": ["cloze"]
+                  "solutions": [
+                    "cloze"
+                  ]
                 },
                 {
                   "text": ".",
@@ -148,10 +152,19 @@
                   "isCaseSensitive": true,
                   "isExample": false,
                   "example": null,
-                  "solutions": ["gap"]
+                  "solutions": [
+                    "gap"
+                  ]
                 },
                 {
-                  "text": " text.\nWith ",
+                  "text": " text.",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "With ",
                   "type": "text"
                 },
                 {
@@ -163,7 +176,9 @@
                   "isCaseSensitive": true,
                   "isExample": false,
                   "example": null,
-                  "solutions": ["two"]
+                  "solutions": [
+                    "two"
+                  ]
                 },
                 {
                   "text": " lines.",
@@ -189,8 +204,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.13",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.cloze-list:bitmark--]\n[!Instruction]\n\nSome body\n\n====\n[%1.] This is a [_gap][!instruction] text with another [_cloze][?hint].\n====\n[%2.] This is another [_gap] text.\nWith [_two] lines.\n\n~~~~\nOptional Footer"
   }

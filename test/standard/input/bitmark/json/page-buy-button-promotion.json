@@ -4,10 +4,12 @@
       "type": "page-buy-button-promotion",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "slug": "testing-1234",
-      "buttonCaption": "OK!",
       "content2Buy": "testing 123",
+      "buttonCaption": "OK!",
       "item": [],
       "lead": [
         {
@@ -30,6 +32,9 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -42,9 +47,6 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -59,9 +61,10 @@
       ]
     },
     "parser": {
-      "version": "1.5.11",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.page-buy-button-promotion]\n[@id:342341]\n[%][%Be your best in 2024. **GET 40% OFF**]\n[!Sign Up]\n[@content2Buy:testing 123 ]\nNew Year Offer End Soon"
+    "bitmark": "[.page-buy-button-promotion]\n[@id:342341]\n[@slug:testing-1234]\n[%][%Be your best in 2024. **GET 40% OFF**]\n[!Sign Up]\n[@content2Buy:testing 123 ]\n[@buttonCaption:OK!]\nNew Year Offer End Soon"
   }
 ]

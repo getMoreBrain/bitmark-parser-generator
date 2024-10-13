@@ -4,13 +4,15 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["186986"],
+      "id": [
+        "186986"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [
         {
@@ -304,8 +306,9 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.14",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
       "internalComments": [
         "This is a simple comment",
         "This is a comment with a breakscaped ] in it",

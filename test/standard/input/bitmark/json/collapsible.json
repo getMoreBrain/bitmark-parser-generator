@@ -4,11 +4,17 @@
       "type": "collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "machineTranslated": "© Google 2024",
       "lang": "en-UK",
-      "publisher": ["kpmg"],
-      "theme": ["grundzuege"],
+      "publisher": [
+        "kpmg"
+      ],
+      "theme": [
+        "grundzuege"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -139,9 +145,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[%] is included more than 3 time(s). The earlier ones will be ignored",
@@ -183,7 +189,9 @@
       "type": "side-note-collapsible",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -226,9 +234,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.side-note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -237,7 +245,9 @@
       "type": "info-collapsible",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -280,9 +290,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.info-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -291,7 +301,9 @@
       "type": "remark-collapsible",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -334,9 +346,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.remark-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -345,7 +357,9 @@
       "type": "warning-collapsible",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -388,9 +402,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.warning-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -399,7 +413,9 @@
       "type": "danger-collapsible",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -442,9 +458,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.danger-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -453,7 +469,9 @@
       "type": "note-collapsible",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -496,9 +514,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -507,7 +525,9 @@
       "type": "example-collapsible",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -550,9 +570,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.example-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -561,7 +581,9 @@
       "type": "hint-collapsible",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -604,9 +626,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.hint-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -615,7 +637,9 @@
       "type": "bug-collapsible",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -658,9 +682,9 @@
       ]
     },
     "parser": {
-      "version": "1.20.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.bug-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   }

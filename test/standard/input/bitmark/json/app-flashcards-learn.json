@@ -4,14 +4,20 @@
       "type": "app-flashcards-learn",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
-      "flashcardSet": ["e-876z78z87og87g8zg", "e-8768768768768767"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
+      "flashcardSet": [
+        "e-876z78z87og87g8zg",
+        "e-8768768768768767"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -48,8 +54,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.app-flashcards-learn:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@flashcardSet:e-876z78z87og87g8zg]\n[@flashcardSet:e-8768768768768767]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   }

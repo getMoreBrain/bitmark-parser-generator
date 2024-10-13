@@ -17,6 +17,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -30,8 +32,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [],
@@ -39,8 +39,9 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.coach-call-to-action-essay]\n[%1]\n[!Listen to the train announcement. Write down every word you hear.]\n[@sampleSolution:The train now approaching Platform 2 is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]"
   },
@@ -49,7 +50,9 @@
       "type": "coach-call-to-action-essay",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["245552"],
+      "id": [
+        "245552"
+      ],
       "item": [],
       "lead": [
         {
@@ -63,6 +66,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -76,8 +81,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -95,8 +98,9 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.coach-call-to-action-essay:bitmark--]\n[@id:245552]\n[%][%Lernaufgabe E – 22]\nFachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen. [!Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.]"
   },
@@ -105,7 +109,9 @@
       "type": "coach-call-to-action-essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["272740"],
+      "id": [
+        "272740"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -130,6 +136,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -143,8 +151,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -198,8 +204,9 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.coach-call-to-action-essay::bitmark++]\n[@id:272740]\n[%2][%Situationen und Aufgaben gemäss Lehrplan]\nEin Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.\n\n[!Machen Sie sich Gedanken zu folgenden Fragen:]\n\nHaben Sie selbst dieses Problem auch schon erlebt, dass es Sie juckt? Was haben Sie dagegen unternommen?\nWarum hat die Haut gejuckt? Welche Ursachen könnten eine Rolle spielen?"
   },
@@ -208,15 +215,26 @@
       "type": "coach-call-to-action-essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["152151"],
+      "id": [
+        "152151"
+      ],
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|\n1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t",
+              "text": "|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t",
               "type": "text"
             },
             {
@@ -229,7 +247,17 @@
               "type": "text"
             },
             {
-              "text": "\n2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|\n3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360\t    ",
+              "type": "hardBreak"
+            },
+            {
+              "text": "2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360\t    ",
               "type": "text"
             },
             {
@@ -242,7 +270,27 @@
               "type": "text"
             },
             {
-              "text": "\n\n4)direkte VOST auf Ausland-Umsätzen, da für diese\noptiert werden könnte (Art. 29 Ibis MWSTG).\nBerechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%\t       ",
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "4)direkte VOST auf Ausland-Umsätzen, da für diese",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "optiert werden könnte (Art. 29 Ibis MWSTG).",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Berechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%\t       ",
               "type": "text"
             },
             {
@@ -255,8 +303,10 @@
               "type": "text"
             },
             {
-              "text": "\n\n",
-              "type": "text"
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -268,8 +318,34 @@
               "type": "text"
             },
             {
-              "text": "\n\nUmsatz (3.200.000+820.000+390.000)\t4.410.000\n./. ausg. Umsätze\t-390.000\nsteuerbare Umsätze\t4.020.000\n\n",
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Umsatz (3.200.000+820.000+390.000)\t4.410.000",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "./. ausg. Umsätze\t-390.000",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "steuerbare Umsätze\t4.020.000",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -281,8 +357,7 @@
               "type": "text"
             },
             {
-              "text": "\n",
-              "type": "text"
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -294,8 +369,7 @@
               "type": "text"
             },
             {
-              "text": "\n",
-              "type": "text"
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -322,8 +396,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -517,8 +589,9 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.coach-call-to-action-essay:bitmark++]\n[@id:152151]\n[!Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:]\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png|\n\nErstellen Sie die Mehrwertsteuerabrechnung 20.1 aufgrund der nachfolgenden Angaben:\n\n**01.01. bis 31.12.20.1 - Beträge In CHF (exkl. MWST)**\nAutohandels AG\n3.200.000 - Verkäufe an inländische Kunden\n80.000 - Verkäufe an Fahrschule\n100.000 - Dividendenerträge von Gruppengesellschaften\nInvestitionen 7,7% = 50% des Umsatzes\nÜbriger Aufwand 7,7% = 10% des Umsatzes\n\nImmobilien AG\n120.000 - Mieterträge von Autohandels AG\n80.000 - Mieterträge von Reparatur und Carrossierie AG\n100.000 - Mietersträge von Fahrschule AG\n-65.000 - Aufwendungen (7,7%)\n\nReparatur und Carrosserie AG\n820.000 - Umsätze mit Dritten\n150.000 - Umsätze mit Fahrschule AG\n-360.000 - Aufwendungen (7,7%)\n\nFahrschule AG\n270.000 - Kurse und Schulungen im Inland\n80.000 - Kurse und Schulungen im Ausland\n40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte\n140.000 - Aufwendungen (7,7%)\n\n\n[?|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|\n1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t**147.840**\n2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|\n3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360\t    **23.423**\n\n4)direkte VOST auf Ausland-Umsätzen, da für diese\noptiert werden könnte (Art. 29 Ibis MWSTG).\nBerechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%\t       **2.211**\n\n**Abrechnung:**\n\nUmsatz (3.200.000+820.000+390.000)\t4.410.000\n./. ausg. Umsätze\t-390.000\nsteuerbare Umsätze\t4.020.000\n\n**Steuer 7,70%\t309.540**\n**VOST\t-176.557**\n**Nettozahllast\t132.983**\n]"
   },
@@ -527,7 +600,9 @@
       "type": "coach-call-to-action-essay",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["136476"],
+      "id": [
+        "136476"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -541,29 +616,37 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Gib das Ergebnis an:\n(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)",
+              "text": "Gib das Ergebnis an:",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)",
               "type": "text"
             }
           ],
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "example": null,
       "body": [],
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.coach-call-to-action-essay]\n[@id:136476]\n[%1]\n[!Gib das Ergebnis an:\n(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]"
   }

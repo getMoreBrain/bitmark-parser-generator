@@ -4,7 +4,9 @@
       "type": "book-close",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Button **Caption**",
       "item": [],
       "lead": [],
@@ -46,9 +48,9 @@
       ]
     },
     "parser": {
-      "version": "1.17.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.13.2"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.book-close]\n[@id:342341]\n[!.book-close]\n[@buttonCaption:Button **Caption**]\nButton **Text**"
   }

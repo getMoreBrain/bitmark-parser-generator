@@ -4,13 +4,15 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["193275"],
+      "id": [
+        "193275"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [
         {
@@ -29,7 +31,11 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["", "", ""]
+              "solutions": [
+                "",
+                "",
+                ""
+              ]
             },
             {
               "text": " ",
@@ -44,7 +50,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["test"]
+              "solutions": [
+                "test"
+              ]
             },
             {
               "text": " ",
@@ -59,7 +67,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [""]
+              "solutions": [
+                ""
+              ]
             },
             {
               "text": " in a sentence",
@@ -71,8 +81,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.15",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text:bitmark++]\n[@id:193275]\nThis is a [_][_][_] [_test] [_] in a sentence"
   },
@@ -81,13 +92,15 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["152331"],
+      "id": [
+        "152331"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [
         {
@@ -103,13 +116,13 @@
         {
           "type": "image",
           "attrs": {
+            "alignment": "center",
             "textAlign": "left",
             "src": "https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png",
             "alt": null,
             "title": null,
             "class": "center",
-            "zoomDisabled": false,
-            "alignment": "center"
+            "zoomDisabled": false
           }
         },
         {
@@ -206,7 +219,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [""]
+              "solutions": [
+                ""
+              ]
             },
             {
               "type": "hardBreak"
@@ -227,7 +242,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [""]
+              "solutions": [
+                ""
+              ]
             },
             {
               "type": "hardBreak"
@@ -248,7 +265,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [""]
+              "solutions": [
+                ""
+              ]
             }
           ],
           "attrs": {}
@@ -256,18 +275,20 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.gap-text:bitmark++]\n[@id:152331]\nUmsatzsteuern\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png|\n\nVOST-Berechnungen\n\nSchulungs AG\nDirekt:\t 27,5 % auf CHF 20.000\tCHF\t5.500\nIndirekt:\t\tCHF\t0\n\nVerlag AG\nDirekt:\t85,7 % auf CHF 80.000\tCHF\t68.560\nIndirekt:\t14,3 % auf 27,5 % auf CHF 80.000\tCHF\t3.146\n\nTotal Vorsteuern Gruppe\tCHF\t77.206\n\nMWST-Abrechnung\n\nUmsatzsteuer\t\tCHF\t[_151.640]\n\n./. Vorsteuern\t\tCHF\t[_-77.206]\n\nNettosteuer\t\tCHF\t[_74.434]"
+    "bitmark": "[.gap-text:bitmark++]\n[@id:152331]\nUmsatzsteuern\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png|\n\nVOST-Berechnungen\n\nSchulungs AG\nDirekt:\t 27,5 % auf CHF 20.000\tCHF\t5.500\nIndirekt:\t\tCHF\t0\n\nVerlag AG\nDirekt:\t85,7 % auf CHF 80.000\tCHF\t68.560\nIndirekt:\t14,3 % auf 27,5 % auf CHF 80.000\tCHF\t3.146\n\nTotal Vorsteuern Gruppe\tCHF\t77.206\n\nMWST-Abrechnung\n\nUmsatzsteuer\t\tCHF\t[_]\n\n./. Vorsteuern\t\tCHF\t[_]\n\nNettosteuer\t\tCHF\t[_]"
   },
   {
     "bit": {
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["193275"],
-
+      "id": [
+        "193275"
+      ],
       "anchor": "Ref_Roche",
       "item": [],
       "lead": [
@@ -282,10 +303,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [
         {
@@ -307,7 +328,9 @@
               "isCaseSensitive": false,
               "isExample": false,
               "example": null,
-              "solutions": ["Roche"]
+              "solutions": [
+                "Roche"
+              ]
             }
           ],
           "attrs": {}
@@ -315,8 +338,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text:bitmark++]\n[@id:193275]\n[▼Ref_Roche]\n[%][%Leitbild 6]\nOur people make our business. Our people discover, develop and manufacture our products and ensure that they reach the patients who need them. Therefore, we’ve created a supportive work environment where people can be truly invested in their work. We encourage big thinking and give our people the support and flexibility they need to make their mark. This is more than just a job. It’s an international family dedicated to making a real impact on the world around us. We believe that employees who are engaged are key to delivering the highest standards and the greatest levels of innovation. That’s why we care about what makes working here a rewarding experience for our employees.\n[_Roche][@isCaseSensitive:false]"
   },
@@ -325,8 +349,9 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["193276"],
-
+      "id": [
+        "193276"
+      ],
       "anchor": "Ref_Emmi",
       "item": [],
       "lead": [
@@ -341,10 +366,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [
         {
@@ -366,7 +391,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Emmi"]
+              "solutions": [
+                "Emmi"
+              ]
             }
           ],
           "attrs": {}
@@ -374,8 +401,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text:bitmark++]\n[@id:193276]\n[▼Ref_Emmi]\n[%][%Leitbild 7]\nDie Mitarbeitenden sind unser wichtigstes Kapital. Respekt, Menschlichkeit und Vertrauen prägen unsere Zusammenarbeit. Die Personalpolitik stellt die Attraktivität von uns als Arbeitgeberin sicher und erschliesst für die Umsetzung der Unternehmenspolitik die notwendigen personellen Ressourcen. Träger der Personalpolitik sind die Vorgesetzten. Grundsätze: Mit geeigneten Personalgewinnungs- und Auswahlverfahren werden die richtigen Mitarbeitenden am richtigen Arbeitsplatz eingesetzt. Bei der Personalauswahl wird neben der fachlichen Qualifikationen auf soziale Kompetenzen geachtet. Aus- und Weiterbildungsmassnahmen werden gezielt auf die Bedürfnisse der Mitarbeitenden und Firma abgestimmt. Die Personalentwicklungsmassnahmen sichern die Qualifikation der Mitarbeitenden für die momentanen und zukünftigen Anforderungen Die Mitarbeitenden werden offen und transparent informiert. Auf der Basis gegenseitiger Offenheit und gegenseitigen Vertrauens pflegen wir eine intensive Zusammenarbeit mit den Personalkommissionen Führung wahrnehmen und vorleben heisst: regelmässig Ziele verständlich und offen zu kommunizieren und die Aufgaben darauf auszurichten, Mitarbeitende und Teams befähigen, lösungs- und eigenverantwortlich zu handeln, Kompetenzen und Verantwortungen so weit wie möglich delegieren\n[_Emmi]"
   },
@@ -384,7 +412,9 @@
       "type": "gap-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["136524"],
+      "id": [
+        "136524"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -398,6 +428,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -411,16 +443,17 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Wo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!\n",
+              "text": "Wo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -431,11 +464,19 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["c"]
+              "solutions": [
+                "c"
+              ]
             },
             {
-              "text": " ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!\n\n",
+              "text": " ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -446,11 +487,19 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["x"]
+              "solutions": [
+                "x"
+              ]
             },
             {
-              "text": " Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.\n\n",
+              "text": " Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -461,11 +510,19 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["a"]
+              "solutions": [
+                "a"
+              ]
             },
             {
-              "text": " RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.\n\n",
+              "text": " RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -476,7 +533,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["b"]
+              "solutions": [
+                "b"
+              ]
             },
             {
               "text": " JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner.",
@@ -504,8 +563,9 @@
       }
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text:bitmark--&image]\n[@id:136524]\n[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]\n[%2a]\n[!Forum „Fußball-WM 2018“. Welcher Beitrag passt zu welchem Foto? Lesen Sie und ordnen Sie zu. (Zu einem Text gibt es kein Foto. Schreiben Sie dann X.)]\n\nWo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!\n[_c] ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!\n\n[_x] Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.\n\n[_a] RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.\n\n[_b] JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner."
   },
@@ -514,7 +574,9 @@
       "type": "gap-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["245337"],
+      "id": [
+        "245337"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -539,6 +601,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -552,8 +616,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -568,7 +630,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Insekten"]
+              "solutions": [
+                "Insekten"
+              ]
             }
           ],
           "attrs": {}
@@ -576,8 +640,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text:bitmark--]\n[@id:245337]\n[%4][%HK E.1 Infektionslehre]\n[!Wie heißt der Oberbegriff für die Tiere, die die vektorielle Übertragung verursachen?]\n[_Insekten]"
   },
@@ -586,7 +651,9 @@
       "type": "gap-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["273397"],
+      "id": [
+        "273397"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -600,6 +667,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -613,8 +682,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -633,7 +700,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["qualitativen"]
+              "solutions": [
+                "qualitativen"
+              ]
             },
             {
               "text": " Marktforschung versucht man, mehr Klarheit zu einer ",
@@ -648,7 +717,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["offenen"]
+              "solutions": [
+                "offenen"
+              ]
             },
             {
               "text": " Fragestellung zu erhalten. Bei der quantitativen Marktforschung hingegen geht es um geschlossene Fragestellungen. Bei der ",
@@ -663,7 +734,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Sekundärmarktforschung"]
+              "solutions": [
+                "Sekundärmarktforschung"
+              ]
             },
             {
               "text": " arbeitet man mit bereits vorhandenen Daten. Diese liegen aus internen oder externen Quellen vor. Ein Vorteil ist, dass die Daten schnell zu beschaffen sind. Ein Nachteil ist, dass die Daten nicht mehr ",
@@ -678,10 +751,19 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["aktuell"]
+              "solutions": [
+                "aktuell"
+              ]
             },
             {
-              "text": " sein können.\nIn der Regel sichtet man bei Marktforschungsprojekten zuerst Sekundärdaten, bevor eine ",
+              "text": " sein können.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "In der Regel sichtet man bei Marktforschungsprojekten zuerst Sekundärdaten, bevor eine ",
               "type": "text"
             },
             {
@@ -693,7 +775,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Primärmarktforschung"]
+              "solutions": [
+                "Primärmarktforschung"
+              ]
             },
             {
               "text": " durchgeführt wird. Hierbei erhebt man ",
@@ -708,7 +792,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["eigene Daten"]
+              "solutions": [
+                "eigene Daten"
+              ]
             },
             {
               "text": " zur Erforschung einer bestimmten Fragestellung, meistens mit einem professionellen Marktforschungsinstitut zusammen. Die folgenden Methoden gibt es: ",
@@ -723,7 +809,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Befragung"]
+              "solutions": [
+                "Befragung"
+              ]
             },
             {
               "text": ", Beobachtung / Test, Mystery Shopping, Panel oder ",
@@ -738,7 +826,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Fokusgruppen"]
+              "solutions": [
+                "Fokusgruppen"
+              ]
             },
             {
               "text": ". Die Nachteile sind der zeitliche Aufwand und die ",
@@ -753,7 +843,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Kosten"]
+              "solutions": [
+                "Kosten"
+              ]
             },
             {
               "text": ". Dafür passen die gewonnenen Daten genau auf die Fragestellung des Unternehmens.",
@@ -765,8 +857,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text:bitmark--]\n[@id:273397]\n[%10]\n[!Ergänzen Sie den folgenden Lückentext.]\nMit der [_qualitativen] Marktforschung versucht man, mehr Klarheit zu einer [_offenen] Fragestellung zu erhalten. Bei der quantitativen Marktforschung hingegen geht es um geschlossene Fragestellungen. Bei der [_Sekundärmarktforschung] arbeitet man mit bereits vorhandenen Daten. Diese liegen aus internen oder externen Quellen vor. Ein Vorteil ist, dass die Daten schnell zu beschaffen sind. Ein Nachteil ist, dass die Daten nicht mehr [_aktuell] sein können.\nIn der Regel sichtet man bei Marktforschungsprojekten zuerst Sekundärdaten, bevor eine [_Primärmarktforschung] durchgeführt wird. Hierbei erhebt man [_eigene Daten] zur Erforschung einer bestimmten Fragestellung, meistens mit einem professionellen Marktforschungsinstitut zusammen. Die folgenden Methoden gibt es: [_Befragung], Beobachtung / Test, Mystery Shopping, Panel oder [_Fokusgruppen]. Die Nachteile sind der zeitliche Aufwand und die [_Kosten]. Dafür passen die gewonnenen Daten genau auf die Fragestellung des Unternehmens."
   },
@@ -775,7 +868,9 @@
       "type": "gap-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["273304"],
+      "id": [
+        "273304"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -789,6 +884,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -802,16 +899,72 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Tragen Sie den richtigen Buchstaben in die Tabelle ein. Zuordnungen sind mehrfach möglich. Je Beispiel können mehrere Buchstaben zutreffen.\n\nA - Materielle Güter\nB - Rechte\nC - Investitionsgüter\nD - Verbrauchsgüter\nE - Gebrauchsgüter\nF - immaterielle Güter\nG - Dienstleistungen\n\n",
+              "text": "Tragen Sie den richtigen Buchstaben in die Tabelle ein. Zuordnungen sind mehrfach möglich. Je Beispiel können mehrere Buchstaben zutreffen.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "A - Materielle Güter",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "B - Rechte",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "C - Investitionsgüter",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "D - Verbrauchsgüter",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "E - Gebrauchsgüter",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "F - immaterielle Güter",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "G - Dienstleistungen",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -822,11 +975,17 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["A", "C"]
+              "solutions": [
+                "A",
+                "C"
+              ]
             },
             {
-              "text": " Neue Kaffeerostanlage in einer Rosterei\n",
+              "text": " Neue Kaffeerostanlage in einer Rosterei",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -837,11 +996,17 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["F", "G"]
+              "solutions": [
+                "F",
+                "G"
+              ]
             },
             {
-              "text": " Beratungen durch Steuerberater\n",
+              "text": " Beratungen durch Steuerberater",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -852,11 +1017,17 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["F", "B"]
+              "solutions": [
+                "F",
+                "B"
+              ]
             },
             {
-              "text": " Patente für die Herstellung von Energie aus Kompost\n",
+              "text": " Patente für die Herstellung von Energie aus Kompost",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -867,11 +1038,17 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["A", "D"]
+              "solutions": [
+                "A",
+                "D"
+              ]
             },
             {
-              "text": " Putzmittel im Haushalt\n",
+              "text": " Putzmittel im Haushalt",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -882,11 +1059,17 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["A", "E"]
+              "solutions": [
+                "A",
+                "E"
+              ]
             },
             {
-              "text": " Autos von Privatpersonen\n",
+              "text": " Autos von Privatpersonen",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -897,11 +1080,17 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["F", "G"]
+              "solutions": [
+                "F",
+                "G"
+              ]
             },
             {
-              "text": " Haarschnitte beim Coiffeur\n",
+              "text": " Haarschnitte beim Coiffeur",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -912,11 +1101,17 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["A", "C"]
+              "solutions": [
+                "A",
+                "C"
+              ]
             },
             {
-              "text": " Zwei moderne Autowaschanlagen\n",
+              "text": " Zwei moderne Autowaschanlagen",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "gap",
@@ -927,7 +1122,10 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["A", "D"]
+              "solutions": [
+                "A",
+                "D"
+              ]
             },
             {
               "text": " Medikamente gegen Migräne",
@@ -939,8 +1137,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text:bitmark--]\n[@id:273304]\n[%3]\n[!Um welche Güter handelt es sich bei den in der Tabelle aufgeführten Beispielen?]\nTragen Sie den richtigen Buchstaben in die Tabelle ein. Zuordnungen sind mehrfach möglich. Je Beispiel können mehrere Buchstaben zutreffen.\n\nA - Materielle Güter\nB - Rechte\nC - Investitionsgüter\nD - Verbrauchsgüter\nE - Gebrauchsgüter\nF - immaterielle Güter\nG - Dienstleistungen\n\n[_A][_C] Neue Kaffeerostanlage in einer Rosterei\n[_F][_G] Beratungen durch Steuerberater\n[_F][_B] Patente für die Herstellung von Energie aus Kompost\n[_A][_D] Putzmittel im Haushalt\n[_A][_E] Autos von Privatpersonen\n[_F][_G] Haarschnitte beim Coiffeur\n[_A][_C] Zwei moderne Autowaschanlagen\n[_A][_D] Medikamente gegen Migräne"
   },
@@ -949,7 +1148,9 @@
       "type": "gap-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["272904"],
+      "id": [
+        "272904"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -963,6 +1164,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -976,8 +1179,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -1007,7 +1208,10 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["direkten Vertrieb", "direkten Vertrieb2"]
+              "solutions": [
+                "direkten Vertrieb",
+                "direkten Vertrieb2"
+              ]
             },
             {
               "text": " verkauft eigene ",
@@ -1022,7 +1226,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Verkaufsstellen"]
+              "solutions": [
+                "Verkaufsstellen"
+              ]
             },
             {
               "text": " einrichten, ",
@@ -1037,7 +1243,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Verkaufsmitarbeitende"]
+              "solutions": [
+                "Verkaufsmitarbeitende"
+              ]
             },
             {
               "text": " einstellen. Beim ",
@@ -1063,7 +1271,10 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["indirekten Vertrieb", "indirekten Vertrieb2"]
+              "solutions": [
+                "indirekten Vertrieb",
+                "indirekten Vertrieb2"
+              ]
             },
             {
               "text": " läuft den ",
@@ -1078,7 +1289,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Grosshandel"]
+              "solutions": [
+                "Grosshandel"
+              ]
             },
             {
               "text": " ",
@@ -1093,7 +1306,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["NOT Grosshandel2"]
+              "solutions": [
+                "NOT Grosshandel2"
+              ]
             },
             {
               "text": " und / oder den ",
@@ -1108,7 +1323,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["Einzelhandel"]
+              "solutions": [
+                "Einzelhandel"
+              ]
             },
             {
               "text": ".",
@@ -1120,8 +1337,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text:bitmark--]\n[@id:272904]\n[%34]\n[!Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.]\nBeim [_direkten Vertrieb][_direkten Vertrieb2][?Hint] verkauft eigene [_Verkaufsstellen] einrichten, [_Verkaufsmitarbeitende] einstellen. Beim [_indirekten Vertrieb][_indirekten Vertrieb2][?HINT?] läuft den [_Grosshandel] [_NOT Grosshandel2] und / oder den [_Einzelhandel]."
   },
@@ -1132,10 +1350,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -1165,7 +1383,10 @@
                   "attrs": {}
                 }
               ],
-              "solutions": ["solution", "problem"]
+              "solutions": [
+                "solution",
+                "problem"
+              ]
             }
           ],
           "attrs": {}
@@ -1173,8 +1394,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text]\nThis is a multiple gap [_solution][@example][_problem]"
   },
@@ -1185,10 +1407,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -1218,7 +1440,10 @@
                   "attrs": {}
                 }
               ],
-              "solutions": ["solution", "problem"]
+              "solutions": [
+                "solution",
+                "problem"
+              ]
             }
           ],
           "attrs": {}
@@ -1226,8 +1451,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.gap-text]\nThis is a multiple gap [_solution][_problem][@example:wrong answer]"
   }

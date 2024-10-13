@@ -4,7 +4,9 @@
       "type": "note",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["210022"],
+      "id": [
+        "210022"
+      ],
       "item": [],
       "lead": [
         {
@@ -23,10 +25,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -41,9 +43,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   },
@@ -52,7 +54,9 @@
       "type": "note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210040"],
+      "id": [
+        "210040"
+      ],
       "item": [],
       "lead": [
         {
@@ -71,10 +75,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -89,9 +93,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   },
@@ -100,11 +104,11 @@
       "type": "note-alt",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -118,6 +122,8 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -132,9 +138,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.note-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -143,11 +149,11 @@
       "type": "standard-note-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -161,6 +167,8 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -175,9 +183,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-note-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -186,11 +194,11 @@
       "type": "standard-note-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -204,6 +212,8 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -218,9 +228,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-note-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   }

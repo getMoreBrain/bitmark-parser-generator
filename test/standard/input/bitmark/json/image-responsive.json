@@ -6,10 +6,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "resource": {
         "type": "image-responsive",
@@ -42,8 +42,9 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.image-responsive]\n[&image-portrait:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]\n[&image-landscape:https://docs.bitmark.cloud/bit-books/ef/unit_1/web-resources/audio/b1_1_1_6_j.jpg]"
   },
@@ -54,10 +55,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -85,8 +86,59 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "[&image-responsive] is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
+          "location": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 461
+            },
+            "end": {
+              "line": 8,
+              "column": 151,
+              "offset": 611
+            }
+          }
+        },
+        {
+          "message": "[&image-portrait] is required at least 1 time(s)",
+          "text": "[.image-responsive]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 268
+            },
+            "end": {
+              "line": 10,
+              "column": 1,
+              "offset": 613
+            }
+          }
+        },
+        {
+          "message": "[&image-landscape] is required at least 1 time(s)",
+          "text": "[.image-responsive]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 268
+            },
+            "end": {
+              "line": 10,
+              "column": 1,
+              "offset": 613
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.image-responsive]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
@@ -97,10 +149,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "resource": {
         "type": "image-responsive",
@@ -133,8 +185,9 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article:bitmark--&image-responsive]\n[&image-portrait:https://docs.bitmark.cloud/bit-books/alemania/book_1/web-resources/images/alemania_book1_01_v2.png]\n[&image-landscape:https://docs.bitmark.cloud/bit-books/alemania/book_1/web-resources/images/alemania_book1_01_v2.jpg]"
   }

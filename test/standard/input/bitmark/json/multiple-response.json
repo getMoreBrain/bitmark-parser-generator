@@ -4,9 +4,13 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -20,8 +24,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [],
       "quizzes": [
@@ -82,8 +84,9 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-response:bitmark--]\n[@id:291969]\n[%]\n[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]\n===\n[+Unselbständige]\n[+IV-Rentner]\n[-18 jähriger Schüler]\n[+22 jähriger Student]\n[-16 jähriger Lehrling]\n==="
   },
@@ -92,9 +95,13 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -108,8 +115,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": true,
       "body": [],
       "quizzes": [
@@ -170,8 +175,43 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "Only 'true' / 'false' / default are allowed here, using default",
+          "text": "[@example:Test]",
+          "location": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 353
+            },
+            "end": {
+              "line": 18,
+              "column": 16,
+              "offset": 368
+            }
+          }
+        },
+        {
+          "message": "Only 'true' / 'false' / default are allowed here, using default",
+          "text": "[@example:Correct response]",
+          "location": {
+            "start": {
+              "line": 20,
+              "column": 14,
+              "offset": 400
+            },
+            "end": {
+              "line": 20,
+              "column": 41,
+              "offset": 427
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response:bitmark--]\n[@id:291969]\n[%]\n[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]\n===\n[@example:Test]\n[+Unselbständige]\n[+IV-Rentner][@example:Correct response]\n[-18 jähriger Schüler]\n[+22 jähriger Student]\n[-16 jähriger Lehrling]\n==="
   },
@@ -180,9 +220,13 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -196,8 +240,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": true,
       "body": [],
       "quizzes": [
@@ -258,8 +300,9 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-response:bitmark--]\n[@id:291969]\n[%]\n[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]\n===\n[+Unselbständige]\n[+IV-Rentner]\n[-18 jähriger Schüler][@example]\n[+22 jähriger Student]\n[-16 jähriger Lehrling]\n==="
   },
@@ -268,9 +311,13 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -284,8 +331,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": true,
       "body": [],
       "quizzes": [
@@ -346,8 +391,27 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "Only 'true' / 'false' / default are allowed here, using default",
+          "text": "[@example:Another text here]",
+          "location": {
+            "start": {
+              "line": 46,
+              "column": 23,
+              "offset": 963
+            },
+            "end": {
+              "line": 46,
+              "column": 51,
+              "offset": 991
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response:bitmark--]\n[@id:291969]\n[%]\n[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]\n===\n[+Unselbständige]\n[+IV-Rentner][@example]\n[-18 jähriger Schüler][@example]\n[+22 jähriger Student][@example:Another text here]\n[-16 jähriger Lehrling]\n==="
   },
@@ -358,10 +422,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "quizzes": [
@@ -421,8 +485,9 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-response:bitmark--]\n[@example]\n===\n[+CorrectAnswer1]\n[+CorrectAnswer2]\n[-FalseAnswer3]\n===\n[-FalseAnswer4]\n==="
   },
@@ -433,10 +498,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "quizzes": [
@@ -496,8 +561,9 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-response:bitmark--]\n===\n[+CorrectAnswer1][@example]\n[+CorrectAnswer2][@example]\n[-FalseAnswer3][@example]\n===\n[-FalseAnswer4]\n==="
   },
@@ -508,10 +574,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "quizzes": [
@@ -571,8 +637,9 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-response:bitmark--]\n===\n[+CorrectAnswer1][@example:false]\n[+CorrectAnswer2]\n[-FalseAnswer3][@example:true]\n===\n[-FalseAnswer4]\n==="
   }

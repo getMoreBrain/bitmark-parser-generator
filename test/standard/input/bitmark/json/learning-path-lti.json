@@ -5,12 +5,16 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "action": "Übungsprüfung",
-      "deeplink": ["https://other.platform/path/to/quiz"],
       "duration": "3600s",
+      "deeplink": [
+        "https://other.platform/path/to/quiz"
+      ],
       "isTracked": true,
       "isInfoOnly": false,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -24,14 +28,33 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Of course, it exists without the image resource like any other bit.\nIt works like a .article (instruction, body, resources, …)\nIt just adds action, duration and deepLink\nThree strings",
+              "text": "Of course, it exists without the image resource like any other bit.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "It works like a .article (instruction, body, resources, …)",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "It just adds action, duration and deepLink",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Three strings",
               "type": "text"
             }
           ],
@@ -56,8 +79,9 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.learning-path-lti&image]\n[&image:https://our.s3/book_cover.jpg]\n[!Nullserie]\n[@action:Übungsprüfung]\n[@deeplink:https://other.platform/path/to/quiz]\n[@duration:3600s]\nOf course, it exists without the image resource like any other bit.\nIt works like a .article (instruction, body, resources, …)\nIt just adds action, duration and deepLink\nThree strings"
   }

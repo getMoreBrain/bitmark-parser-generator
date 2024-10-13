@@ -4,7 +4,9 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["287839"],
+      "id": [
+        "287839"
+      ],
       "item": [],
       "lead": [
         {
@@ -18,10 +20,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -129,8 +131,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:287839]\n[%][%multiple-choice-text]\nThe students complete[+d][-t][-s][@example] the [+cloze][-cloth][-close] with the correct verb forms."
   },
@@ -139,7 +142,9 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["213773"],
+      "id": [
+        "213773"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -153,6 +158,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -166,8 +173,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -226,8 +231,14 @@
               ]
             },
             {
-              "text": " Wir sollten günstiger sein als Polyconsult, sonst kriegen sie diesen Auftrag auch noch und können weiter Mitarbeitende einstellen, die uns dann fehlen.\n\n",
+              "text": " Wir sollten günstiger sein als Polyconsult, sonst kriegen sie diesen Auftrag auch noch und können weiter Mitarbeitende einstellen, die uns dann fehlen.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "select",
@@ -282,8 +293,14 @@
               ]
             },
             {
-              "text": " Wenn wir das Projekt im Januar machen können, können wir 10% Rabatt geben. Im Januar ist wenig los. Sonst offerieren wir den normalen Preis.\n\n",
+              "text": " Wenn wir das Projekt im Januar machen können, können wir 10% Rabatt geben. Im Januar ist wenig los. Sonst offerieren wir den normalen Preis.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "select",
@@ -338,8 +355,14 @@
               ]
             },
             {
-              "text": " Ich glaube, wir sollten dieses Projekt wirklich tief offerieren, weil sie kaum Budget haben. Wenn wir dieses Projekt sauber durchführen, können wir bet Folgeprojekten, wenn der Kredit gesprochen ist, die verlorene Marge wieder gutmachen.\n\n",
+              "text": " Ich glaube, wir sollten dieses Projekt wirklich tief offerieren, weil sie kaum Budget haben. Wenn wir dieses Projekt sauber durchführen, können wir bet Folgeprojekten, wenn der Kredit gesprochen ist, die verlorene Marge wieder gutmachen.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "select",
@@ -403,8 +426,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:213773]\n[%46]\n[!ln einem Beratungsunternehmen für Evaluationen von Bundesprojekten diskutiert die Geschäftsleiterin mit drei Partnern, welchen Preis sie für ein ausgeschriebenes Mandat offerieren wollen. Dabei sind sie nicht einig, well sie sich an verschiedenen «K»onentieren. Welche Faktoren sind bei den folgenden Argumenten relevant?]\n[-Zahlungsbereitschaft Kunde][+Konkurrenz][-Kapazität][-Kosten] Wir sollten günstiger sein als Polyconsult, sonst kriegen sie diesen Auftrag auch noch und können weiter Mitarbeitende einstellen, die uns dann fehlen.\n\n[-Zahlungsbereitschaft Kunde][-Konkurrenz][+Kapazität][-Kosten] Wenn wir das Projekt im Januar machen können, können wir 10% Rabatt geben. Im Januar ist wenig los. Sonst offerieren wir den normalen Preis.\n\n[+Zahlungsbereitschaft Kunde][-Konkurrenz][-Kapazität][-Kosten] Ich glaube, wir sollten dieses Projekt wirklich tief offerieren, weil sie kaum Budget haben. Wenn wir dieses Projekt sauber durchführen, können wir bet Folgeprojekten, wenn der Kredit gesprochen ist, die verlorene Marge wieder gutmachen.\n\n[-Zahlungsbereitschaft Kunde][-Konkurrenz][-Kapazität][+Kosten] Für den Marktforschungsteil müssen wir höhere Ansätze verlangen, weil wir den extern einkaufen müssen."
   },
@@ -413,7 +437,9 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["213840"],
+      "id": [
+        "213840"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -427,6 +453,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -440,8 +468,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -490,8 +516,11 @@
               ]
             },
             {
-              "text": " Bis 20xx zählen wir im Produktbereich XY mindestens 120 000 Kunden bei einem Umsatz von mindestens CHF 4 Mio\n",
+              "text": " Bis 20xx zählen wir im Produktbereich XY mindestens 120 000 Kunden bei einem Umsatz von mindestens CHF 4 Mio",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "select",
@@ -536,8 +565,11 @@
               ]
             },
             {
-              "text": " Aus unserem erzielten Reingewinn (vor Steuern) fliessen jährlich maximal 3% In die regionale und die überregionale Jugendsportförderung.\n",
+              "text": " Aus unserem erzielten Reingewinn (vor Steuern) fliessen jährlich maximal 3% In die regionale und die überregionale Jugendsportförderung.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "select",
@@ -582,8 +614,11 @@
               ]
             },
             {
-              "text": " Mittels des Führungsmodells MbO (Management by Objectives) beteiligen wir unsere Mitarbeitenden finanziell am persönlichen Leistungserfolg.\n",
+              "text": " Mittels des Führungsmodells MbO (Management by Objectives) beteiligen wir unsere Mitarbeitenden finanziell am persönlichen Leistungserfolg.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "select",
@@ -637,8 +672,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:213840]\n[%59]\n[!Es ist eine Aufgabe der Unternehmensführung, die strategischen Unternehmensziele festzulegen. Ordnen Sie die folgenden Aussagen dem richtigen Zielbereich zu.]\n[+Leistungsziel][-Finanzziel][-Soziales Ziel] Bis 20xx zählen wir im Produktbereich XY mindestens 120 000 Kunden bei einem Umsatz von mindestens CHF 4 Mio\n[-Leistungsziel][-Finanzziel][+Soziales Ziel] Aus unserem erzielten Reingewinn (vor Steuern) fliessen jährlich maximal 3% In die regionale und die überregionale Jugendsportförderung.\n[-Leistungsziel][-Finanzziel][+Soziales Ziel] Mittels des Führungsmodells MbO (Management by Objectives) beteiligen wir unsere Mitarbeitenden finanziell am persönlichen Leistungserfolg.\n[-Leistungsziel][+Finanzziel][-Soziales Ziel] Sämtliche Investitionsvorhaben, die die Erweiterung unserer Fertigungskapazitäten betreffen, müssen zu mindestens 75% eigenfinanziert sein."
   },
@@ -647,7 +683,9 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["208481"],
+      "id": [
+        "208481"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -661,6 +699,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -674,8 +714,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
@@ -718,7 +756,10 @@
               ]
             },
             {
-              "text": "\nKunden ",
+              "type": "hardBreak"
+            },
+            {
+              "text": "Kunden ",
               "type": "text"
             },
             {
@@ -754,7 +795,10 @@
               ]
             },
             {
-              "text": "\nKonkurrenz  ",
+              "type": "hardBreak"
+            },
+            {
+              "text": "Konkurrenz  ",
               "type": "text"
             },
             {
@@ -790,7 +834,10 @@
               ]
             },
             {
-              "text": "\nMitarbeitende",
+              "type": "hardBreak"
+            },
+            {
+              "text": "Mitarbeitende",
               "type": "text"
             },
             {
@@ -826,7 +873,10 @@
               ]
             },
             {
-              "text": "\nKapitalgeber",
+              "type": "hardBreak"
+            },
+            {
+              "text": "Kapitalgeber",
               "type": "text"
             },
             {
@@ -867,8 +917,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:208481]\n[%15]\n[!Gehören die Personengruppen zum Beschaffungs- oder zum Absatzmarkt? Markieren Sie die zutreffende Antwort.]\n\nLieferanten [+Beschaffungsmarkt][-Absatzmarkt]\nKunden [-Beschaffungsmarkt][+Absatzmarkt]\nKonkurrenz  [-Beschaffungsmarkt][+Absatzmarkt]\nMitarbeitende[+Beschaffungsmarkt][-Absatzmarkt]\nKapitalgeber[+Beschaffungsmarkt][-Absatzmarkt]"
   },
@@ -877,7 +928,9 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["107949"],
+      "id": [
+        "107949"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -891,28 +944,42 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung.",
+              "text": "Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "richtige Modalverb zur Erklärung.",
               "type": "text"
             }
           ],
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Wähl das richtige Wort.\nA) Hier ",
+              "text": "Wähl das richtige Wort.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "A) Hier ",
               "type": "text"
             },
             {
@@ -948,7 +1015,14 @@
               ]
             },
             {
-              "text": " Sie nicht parken.\nB) Hier ",
+              "text": " Sie nicht parken.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "B) Hier ",
               "type": "text"
             },
             {
@@ -984,7 +1058,14 @@
               ]
             },
             {
-              "text": " Sie über die Straße gehen.\nC) Hier ",
+              "text": " Sie über die Straße gehen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "C) Hier ",
               "type": "text"
             },
             {
@@ -1045,8 +1126,9 @@
       }
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-choice-text&image]\n[@id:107949]\n[%16]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png]\n[!Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung.]\n\nWähl das richtige Wort.\nA) Hier [+dürfen][-müssen] Sie nicht parken.\nB) Hier [+können][-müssen] Sie über die Straße gehen.\nC) Hier [-dürfen][+müssen] Sie warten."
   },
@@ -1057,10 +1139,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -1122,8 +1204,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-choice-text]\nThe students completed the [+cloze][@example][-cloth][-close] with the correct verb forms."
   },
@@ -1134,10 +1217,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -1199,8 +1282,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-choice-text]\n[@example]\nThe students completed the [+cloze][-cloth][-close] with the correct verb forms."
   },
@@ -1211,10 +1295,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -1276,8 +1360,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.multiple-choice-text]\nThe students completed the [+cloze][-cloth][@example][-close] with the correct verb forms."
   }

@@ -4,9 +4,13 @@
       "type": "details-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["245346"],
+      "id": [
+        "245346"
+      ],
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -20,14 +24,33 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Bedeutung für den Klienten:\nEinsamkeit, Langeweile, darf das Zimmer nur in Ausnahmefällen verlassen, mit der emotional belastenden Situation umgehen können, Pflege geht weniger ins Zimmer, weniger Besuche, da Angst vor einer Übertragung, Personen betreten das isolierte Zimmer mit Schutzkleidung, Körperkontakt wird reduziert. Bedeutung für die Angehörigen:\nDie Isolationsmassnahmen zu verstehen versuchen, das Zimmer mit Schutzkleidung betreten, Angst vor einer Übertragung, Angst vor Körperkontakt. Bedeutung für das Personal:\nStrikte Einhaltung der Hygienerichtlinien, mehr Zeit einrechnen für das An- und Ausziehen der Schutzkleidung, Konzentration, dass alles Material, das benötigt wird, auch mitgenommen wird (ansonsten klingeln, damit eine Person ausserhalb des Zimmers das benötigte Material besorgen kann), gute Personalplanung – evtl. umplanen, wenn die zuständige Person erkältet ist, Ideen bezüglich Aktivierungsmöglichkeiten gegen die Langeweile ausfindig machen und Angehörige bitten, diese mitzubringen (Laptop, Bücher, Zeitschriften).",
+              "text": "Bedeutung für den Klienten:",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Einsamkeit, Langeweile, darf das Zimmer nur in Ausnahmefällen verlassen, mit der emotional belastenden Situation umgehen können, Pflege geht weniger ins Zimmer, weniger Besuche, da Angst vor einer Übertragung, Personen betreten das isolierte Zimmer mit Schutzkleidung, Körperkontakt wird reduziert. Bedeutung für die Angehörigen:",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Die Isolationsmassnahmen zu verstehen versuchen, das Zimmer mit Schutzkleidung betreten, Angst vor einer Übertragung, Angst vor Körperkontakt. Bedeutung für das Personal:",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Strikte Einhaltung der Hygienerichtlinien, mehr Zeit einrechnen für das An- und Ausziehen der Schutzkleidung, Konzentration, dass alles Material, das benötigt wird, auch mitgenommen wird (ansonsten klingeln, damit eine Person ausserhalb des Zimmers das benötigte Material besorgen kann), gute Personalplanung – evtl. umplanen, wenn die zuständige Person erkältet ist, Ideen bezüglich Aktivierungsmöglichkeiten gegen die Langeweile ausfindig machen und Angehörige bitten, diese mitzubringen (Laptop, Bücher, Zeitschriften).",
               "type": "text"
             }
           ],
@@ -36,8 +59,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.details-1:bitmark--]\n[@id:245346]\n[!Lösungsweg Lernaufgabe E - 9]\nBedeutung für den Klienten:\nEinsamkeit, Langeweile, darf das Zimmer nur in Ausnahmefällen verlassen, mit der emotional belastenden Situation umgehen können, Pflege geht weniger ins Zimmer, weniger Besuche, da Angst vor einer Übertragung, Personen betreten das isolierte Zimmer mit Schutzkleidung, Körperkontakt wird reduziert. Bedeutung für die Angehörigen:\nDie Isolationsmassnahmen zu verstehen versuchen, das Zimmer mit Schutzkleidung betreten, Angst vor einer Übertragung, Angst vor Körperkontakt. Bedeutung für das Personal:\nStrikte Einhaltung der Hygienerichtlinien, mehr Zeit einrechnen für das An- und Ausziehen der Schutzkleidung, Konzentration, dass alles Material, das benötigt wird, auch mitgenommen wird (ansonsten klingeln, damit eine Person ausserhalb des Zimmers das benötigte Material besorgen kann), gute Personalplanung – evtl. umplanen, wenn die zuständige Person erkältet ist, Ideen bezüglich Aktivierungsmöglichkeiten gegen die Langeweile ausfindig machen und Angehörige bitten, diese mitzubringen (Laptop, Bücher, Zeitschriften)."
   }

@@ -4,13 +4,16 @@
       "type": "danger",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -50,9 +53,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[&image] is included more than 0 time(s).",
@@ -97,11 +100,11 @@
       "type": "danger-alt",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -115,6 +118,8 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -129,9 +134,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.danger-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   }

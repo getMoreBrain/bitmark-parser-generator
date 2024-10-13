@@ -4,9 +4,13 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["197919"],
+      "id": [
+        "197919"
+      ],
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -20,8 +24,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [],
       "heading": {
@@ -31,7 +33,9 @@
       "pairs": [
         {
           "key": "2008",
-          "values": ["- 150'000.00"],
+          "values": [
+            "- 150'000.00"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -52,7 +56,9 @@
         },
         {
           "key": "2009",
-          "values": ["- 70'000.00"],
+          "values": [
+            "- 70'000.00"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -73,7 +79,9 @@
         },
         {
           "key": "2010",
-          "values": ["0"],
+          "values": [
+            "0"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -83,7 +91,9 @@
         },
         {
           "key": "2011",
-          "values": ["0"],
+          "values": [
+            "0"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -93,7 +103,9 @@
         },
         {
           "key": "2012",
-          "values": ["0"],
+          "values": [
+            "0"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -103,7 +115,9 @@
         },
         {
           "key": "2013",
-          "values": ["0"],
+          "values": [
+            "0"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -113,7 +127,9 @@
         },
         {
           "key": "2014",
-          "values": ["0"],
+          "values": [
+            "0"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -123,7 +139,9 @@
         },
         {
           "key": "2015",
-          "values": ["0"],
+          "values": [
+            "0"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -133,7 +151,9 @@
         },
         {
           "key": "2016",
-          "values": ["0"],
+          "values": [
+            "0"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -143,7 +163,9 @@
         },
         {
           "key": "2017",
-          "values": ["0"],
+          "values": [
+            "0"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -153,7 +175,9 @@
         },
         {
           "key": "Total",
-          "values": ["- 220'000.00"],
+          "values": [
+            "- 220'000.00"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -164,8 +188,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n[@id:197919]\n[!Verfallene Verluste per 01.01.2018]\n===\n[#Jahr]\n==\n[#CHF]\n===\n[%1.]\n2008\n==\n- 150'000.00\n===\n[%2.]\n2009\n==\n- 70'000.00\n===\n2010\n==\n0\n===\n2011\n==\n0\n===\n2012\n==\n0\n===\n2013\n==\n0\n===\n2014\n==\n0\n===\n2015\n==\n0[@isCaseSensitive:false]\n===\n2016\n==\n0\n===\n2017[@isCaseSensitive:false]\n==\n0\n===\nTotal\n==\n- 220'000.00\n==="
   },
@@ -174,7 +199,9 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["213782"],
+      "id": [
+        "213782"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -199,6 +226,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -212,15 +241,41 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "A. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung",
+              "text": "A. Grundbedürfnisse",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "B. Sicherheitsbedürfnisse",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "C. Kontakt- oder soziale Bedürfnisse",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "D. Bedürfnisse nach Achtung und Anerkennung",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "E. Bedürfnis nach Selbstverwirklichung",
               "type": "text"
             }
           ],
@@ -234,7 +289,9 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A"],
+          "values": [
+            "A"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -244,7 +301,9 @@
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
-          "values": ["E"],
+          "values": [
+            "E"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -254,7 +313,9 @@
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
-          "values": ["C"],
+          "values": [
+            "C"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -264,7 +325,9 @@
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
-          "values": ["E"],
+          "values": [
+            "E"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -274,7 +337,9 @@
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
-          "values": ["C"],
+          "values": [
+            "C"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -284,7 +349,9 @@
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
-          "values": ["D"],
+          "values": [
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -294,7 +361,9 @@
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
-          "values": ["C"],
+          "values": [
+            "C"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -304,7 +373,9 @@
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
-          "values": ["B"],
+          "values": [
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -315,8 +386,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n[@id:213782]\n[%1][%Geschlossene Fragen]\n[!Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich.]\n\nA. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung\n===\n[#Aussage]\n==\n[#Bedürfnis]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n===\nAls Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.\n==\nE\n===\nMarcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.\n==\nC\n===\nCorinne bildet sich mit Abendkursen weiter.\n==\nE\n===\nZwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.\n==\nC\n===\nStefan freut sich über ein Lob seiner Vorgesetzten.\n==\nD\n===\nDaniel Gerber verbringt den Abend vor dem Computer, um zu chatten.\n==\nC\n===\nEin Ehepaar installiert eine Alarmanlage im Haus.\n==\nB\n==="
   },
@@ -325,7 +397,9 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["208467"],
+      "id": [
+        "208467"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -350,6 +424,8 @@
           "attrs": {}
         }
       ],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -363,15 +439,41 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "A. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung",
+              "text": "A. Grundbedürfnisse",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "B. Sicherheitsbedürfnisse",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "C. Kontakt- oder soziale Bedürfnisse",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "D. Bedürfnisse nach Achtung und Anerkennung",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "E. Bedürfnis nach Selbstverwirklichung",
               "type": "text"
             }
           ],
@@ -385,7 +487,9 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A"],
+          "values": [
+            "A"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -395,7 +499,9 @@
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
-          "values": ["E"],
+          "values": [
+            "E"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -405,7 +511,9 @@
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
-          "values": ["C"],
+          "values": [
+            "C"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -415,7 +523,9 @@
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
-          "values": ["E"],
+          "values": [
+            "E"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -425,7 +535,9 @@
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
-          "values": ["C"],
+          "values": [
+            "C"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -435,7 +547,9 @@
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
-          "values": ["D"],
+          "values": [
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -445,7 +559,9 @@
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
-          "values": ["C"],
+          "values": [
+            "C"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -455,7 +571,9 @@
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
-          "values": ["B"],
+          "values": [
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -466,8 +584,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n[@id:208467]\n[%1][%Geschlossene Fragen]\n[!Ordnen Sie die Bedürfnisse gemäss den fünf Arten nach Maslow den Aussagen zu. Mehrfachzuweisungen sind möglich.]\n\nA. Grundbedürfnisse\nB. Sicherheitsbedürfnisse\nC. Kontakt- oder soziale Bedürfnisse\nD. Bedürfnisse nach Achtung und Anerkennung\nE. Bedürfnis nach Selbstverwirklichung\n===\n[#Aussage]\n==\n[#Bedürfnis]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n===\nAls Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.\n==\nE\n===\nMarcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.\n==\nC\n===\nCorinne bildet sich mit Abendkursen weiter.\n==\nE\n===\nZwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.\n==\nC\n===\nStefan freut sich über ein Lob seiner Vorgesetzten.\n==\nD\n===\nDaniel Gerber verbringt den Abend vor dem Computer, um zu chatten.\n==\nC\n===\nEin Ehepaar installiert eine Alarmanlage im Haus.\n==\nB\n==="
   },
@@ -478,10 +597,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -491,7 +610,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -501,7 +623,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -523,8 +648,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\n[@example]\nshould be the text not the value\n==\nC\n==\nD\n==="
   },
@@ -535,10 +661,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -548,7 +674,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -558,7 +687,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -580,8 +712,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\n[@example:X]\nshould be the text not the value\n==\nC\n==\nD\n==="
   },
@@ -592,10 +725,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -605,7 +738,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -626,7 +762,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -637,8 +776,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example:X]\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
   },
@@ -649,10 +789,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -662,7 +802,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -683,7 +826,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -694,8 +840,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA[@example:X]\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
   },
@@ -706,10 +853,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -719,7 +866,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -740,7 +890,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -762,8 +915,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[@example:X]\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
   },
@@ -774,10 +928,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -787,7 +941,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -808,7 +965,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -830,8 +990,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[@example]\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
   },
@@ -842,10 +1003,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -855,7 +1016,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -876,7 +1040,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -898,8 +1065,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n[@example]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
   },
@@ -910,10 +1078,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -923,7 +1091,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -944,7 +1115,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -966,8 +1140,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n[@example:X]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD\n==="
   },
@@ -978,10 +1153,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {
@@ -991,7 +1166,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1012,7 +1190,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1034,8 +1215,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n[@example:X]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example]Herr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n===\nshould be the text not the value\n==\nC\n==\nD[@example]\n==="
   },
@@ -1046,17 +1228,20 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [],
       "heading": {},
       "pairs": [
         {
           "key": "auf eine Schule",
-          "values": ["gehen", "denken"],
+          "values": [
+            "gehen",
+            "denken"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -1088,7 +1273,9 @@
         },
         {
           "key": "an einer Hochschule",
-          "values": ["studieren"],
+          "values": [
+            "studieren"
+          ],
           "item": [
             {
               "type": "paragraph",
@@ -1110,8 +1297,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.2",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match-solution-grouped]\n===\n[%1]auf eine Schule\n==\n[%b]gehen[@example]\n==\n[%c]denken[@example]\n===\n[%2]an einer Hochschule\n==\n[%f]studieren\n==="
   },
@@ -1122,10 +1310,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [],
       "heading": {
@@ -1135,7 +1323,10 @@
       "pairs": [
         {
           "key": "K",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1146,8 +1337,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.11",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#]\n==\n[#Heading2]\n===\nK\n==\nA\n--\nB\n==="
   },
@@ -1158,10 +1350,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [],
       "heading": {
@@ -1171,7 +1363,10 @@
       "pairs": [
         {
           "key": "K",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1182,8 +1377,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.11",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n==\n[#Heading2]\n===\nK\n==\nA\n--\nB\n==="
   },
@@ -1194,10 +1390,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [],
       "heading": {
@@ -1207,7 +1403,10 @@
       "pairs": [
         {
           "key": "K",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1218,8 +1417,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.11",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n[#]\n===\nK\n==\nA\n--\nB\n==="
   },
@@ -1230,10 +1430,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [],
       "heading": {
@@ -1243,7 +1443,10 @@
       "pairs": [
         {
           "key": "K",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1254,8 +1457,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.11",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#Heading1]\n==\n===\nK\n==\nA\n--\nB\n==="
   },
@@ -1266,10 +1470,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [],
       "heading": {
@@ -1279,7 +1483,10 @@
       "pairs": [
         {
           "key": "K",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1290,8 +1497,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.11",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n[#]\n==\n[#]\n===\nK\n==\nA\n--\nB\n==="
   },
@@ -1302,17 +1510,20 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [],
       "heading": {},
       "pairs": [
         {
           "key": "K",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1323,8 +1534,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.11",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n===\n==\n==\n===\nK\n==\nA\n==\nB\n==="
   },
@@ -1335,10 +1547,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [],
       "heading": {
@@ -1348,7 +1560,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1358,7 +1573,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1368,7 +1586,10 @@
         },
         {
           "key": "A third pair is defined here",
-          "values": ["E", "F"],
+          "values": [
+            "E",
+            "F"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1378,7 +1599,10 @@
         },
         {
           "key": "And a fourth pair is defined here",
-          "values": ["G", "H"],
+          "values": [
+            "G",
+            "H"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1389,9 +1613,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.24",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n[@isCaseSensitive:false]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.[@isCaseSensitive:false]\n==\nA\n==\nB\n===\nshould be the text not the value[@isCaseSensitive:true]\n==\nC\n==\nD\n===\nA third pair is defined here\n==\nE\n==\nF\n===\nAnd a fourth pair is defined here\n==\nG\n==\nH\n==="
   },
@@ -1402,10 +1626,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [],
       "heading": {
@@ -1415,7 +1639,10 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": ["A", "B"],
+          "values": [
+            "A",
+            "B"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1425,7 +1652,10 @@
         },
         {
           "key": "should be the text not the value",
-          "values": ["C", "D"],
+          "values": [
+            "C",
+            "D"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1435,7 +1665,10 @@
         },
         {
           "key": "A third pair is defined here",
-          "values": ["E", "F"],
+          "values": [
+            "E",
+            "F"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1445,7 +1678,10 @@
         },
         {
           "key": "And a fourth pair is defined here",
-          "values": ["G", "H"],
+          "values": [
+            "G",
+            "H"
+          ],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1456,9 +1692,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.24",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.match:bitmark--]\n[@isCaseSensitive:true]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.[@isCaseSensitive:false]\n==\nA\n==\nB\n===\nshould be the text not the value[@isCaseSensitive:true]\n==\nC\n==\nD\n===\nA third pair is defined here\n==\nE\n==\nF\n===\nAnd a fourth pair is defined here\n==\nG\n==\nH\n==="
   }

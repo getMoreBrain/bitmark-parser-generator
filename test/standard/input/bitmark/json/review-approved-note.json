@@ -4,7 +4,9 @@
       "type": "review-approved-note",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["210022"],
+      "id": [
+        "210022"
+      ],
       "resolved": false,
       "resolvedDate": "",
       "resolvedBy": "",
@@ -26,10 +28,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -44,8 +46,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.review-approved-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   },
@@ -54,7 +57,9 @@
       "type": "review-approved-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210040"],
+      "id": [
+        "210040"
+      ],
       "resolved": false,
       "resolvedDate": "",
       "resolvedBy": "",
@@ -76,10 +81,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -94,8 +99,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.20",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.review-approved-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   }

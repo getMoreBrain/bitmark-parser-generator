@@ -6,17 +6,20 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "::info::\n",
+              "text": "::info::",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -28,7 +31,24 @@
               "type": "text"
             },
             {
-              "text": "\nDas Präteritum verwendet man vor allem für schriftliche Äußerungen.\nIn der mündlichen Kommunikation gebrauchen wir in der Regel das Perfekt.\nDie Hilfsverben ",
+              "type": "hardBreak"
+            },
+            {
+              "text": "Das Präteritum verwendet man vor allem für schriftliche Äußerungen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "In der mündlichen Kommunikation gebrauchen wir in der Regel das Perfekt.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Die Hilfsverben ",
               "type": "text"
             },
             {
@@ -54,8 +74,28 @@
               "type": "text"
             },
             {
-              "text": " und die Modalverben bilden eine Ausnahme und werden meistens im Präteritum verwendet.\n::\n\n::info::\n",
+              "text": " und die Modalverben bilden eine Ausnahme und werden meistens im Präteritum verwendet.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "::",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "::info::",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -67,7 +107,10 @@
               "type": "text"
             },
             {
-              "text": "\nAlle Verben, die einen Akkusativ verlangen, und alle reflexiven Verben bilden das Perfekt mit ",
+              "type": "hardBreak"
+            },
+            {
+              "text": "Alle Verben, die einen Akkusativ verlangen, und alle reflexiven Verben bilden das Perfekt mit ",
               "type": "text"
             },
             {
@@ -80,8 +123,11 @@
               "type": "text"
             },
             {
-              "text": ".\n",
+              "text": ".",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -93,7 +139,10 @@
               "type": "text"
             },
             {
-              "text": "\nVerben der Orts- und Zustandsänderung sowie sein und bleiben bilden das Perfekt mit ",
+              "type": "hardBreak"
+            },
+            {
+              "text": "Verben der Orts- und Zustandsänderung sowie sein und bleiben bilden das Perfekt mit ",
               "type": "text"
             },
             {
@@ -106,8 +155,11 @@
               "type": "text"
             },
             {
-              "text": ".\n",
+              "text": ".",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -119,7 +171,10 @@
               "type": "text"
             },
             {
-              "text": "\n::",
+              "type": "hardBreak"
+            },
+            {
+              "text": "::",
               "type": "text"
             }
           ],
@@ -128,8 +183,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.card-1]\n::info::\n**Gebrauch der Zeitformen:**\nDas Präteritum verwendet man vor allem für schriftliche Äußerungen.\nIn der mündlichen Kommunikation gebrauchen wir in der Regel das Perfekt.\nDie Hilfsverben __haben__ und __sein__ und die Modalverben bilden eine Ausnahme und werden meistens im Präteritum verwendet.\n::\n\n::info::\n**Bildung des Perfekts:**\nAlle Verben, die einen Akkusativ verlangen, und alle reflexiven Verben bilden das Perfekt mit __haben__.\n__Wir haben ein Haus gebaut. Ich habe mich geärgert.__\nVerben der Orts- und Zustandsänderung sowie sein und bleiben bilden das Perfekt mit __sein__.\n__Wir sind nach Italien gefahren. Die Blumen sind verblüht.__\n::"
   }

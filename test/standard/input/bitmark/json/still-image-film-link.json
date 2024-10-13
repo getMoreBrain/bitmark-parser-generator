@@ -4,13 +4,15 @@
       "type": "still-image-film-link",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["119760"],
+      "id": [
+        "119760"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "resource": {
         "type": "still-image-film-link",
@@ -29,9 +31,10 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.still-image-film-link]\n[@id:119760]\n[&still-image-film-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]"
+    "bitmark": "[.still-image-film-link]\n[@id:119760]\n[&still-image-film-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@search:Search\nfor this film]"
   }
 ]

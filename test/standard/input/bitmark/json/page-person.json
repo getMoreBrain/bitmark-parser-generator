@@ -8,10 +8,10 @@
       "buttonCaption": "Follow",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "person": {
         "name": "Morgan Sweeny",
         "title": "Ant Collector",
@@ -43,9 +43,10 @@
       ]
     },
     "parser": {
-      "version": "1.5.16",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.page-person]\n[@person:Morgan Sweeny][@title:Ant Collector][&image:https://cdn.bitbook.education/avatars/ds.jpg]\n[@buttonCaption:Follow]\nMorgan has collected ants since they were six years old and now has many dozen ants but none in their pants."
+    "bitmark": "[.page-person]\n[@slug:testing-1234]\n[@person:Morgan Sweeny][@title:Ant Collector][&image:https://cdn.bitbook.education/avatars/ds.jpg]\n[@buttonCaption:Follow]\nMorgan has collected ants since they were six years old and now has many dozen ants but none in their pants."
   }
 ]

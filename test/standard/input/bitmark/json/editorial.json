@@ -4,23 +4,35 @@
       "type": "editorial",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342338"],
-      "analyticsTag": ["235", "geruyghoenhru"],
+      "id": [
+        "342338"
+      ],
+      "analyticsTag": [
+        "235",
+        "geruyghoenhru"
+      ],
       "feedbackEngine": "google",
       "feedbackType": "unknown",
       "disableFeedback": true,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Editorial\nIt's exactly the same as an .article.",
+              "text": "Editorial",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "It's exactly the same as an .article.",
               "type": "text"
             }
           ],
@@ -29,9 +41,43 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "[@disableFeedback] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@disableFeedback:true]",
+          "location": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 149
+            },
+            "end": {
+              "line": 8,
+              "column": 24,
+              "offset": 172
+            }
+          },
+          "original": {
+            "text": "[@disableFeedback:true]",
+            "location": {
+              "start": {
+                "line": 7,
+                "column": 1,
+                "offset": 125
+              },
+              "end": {
+                "line": 7,
+                "column": 24,
+                "offset": 148
+              }
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.editorial]\n[@id:342338]\nEditorial\nIt's exactly the same as an .article."
+    "bitmark": "[.editorial]\n[@id:342338]\n[@analyticsTag:235]\n[@analyticsTag:geruyghoenhru]\n[@feedbackEngine:google]\n[@feedbackType:unknown]\n[@disableFeedback:true]\n[@disableFeedback:true]\nEditorial\nIt's exactly the same as an .article."
   }
 ]

@@ -4,7 +4,9 @@
       "type": "table-image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["78954"],
+      "id": [
+        "78954"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -30,9 +32,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.table-image]\n[@id:78954]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -41,7 +43,9 @@
       "type": "table-image-alt",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["78954"],
+      "id": [
+        "78954"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -67,9 +71,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.table-image-alt]\n[@id:78954]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -78,7 +82,9 @@
       "type": "standard-table-image-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -104,9 +110,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -115,7 +121,9 @@
       "type": "standard-table-image-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -141,9 +149,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -152,7 +160,9 @@
       "type": "standard-remark-table-image-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -178,9 +188,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-remark-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -189,7 +199,9 @@
       "type": "standard-remark-table-image-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -215,9 +227,9 @@
       }
     },
     "parser": {
-      "version": "1.27.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-remark-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   }

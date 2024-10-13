@@ -4,7 +4,9 @@
       "type": "example",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["210051"],
+      "id": [
+        "210051"
+      ],
       "item": [],
       "lead": [
         {
@@ -18,10 +20,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -38,9 +40,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.example]\n[@id:210051]\n[%][%Beispiel]\nDie Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet."
   },
@@ -49,7 +51,9 @@
       "type": "example",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["208411"],
+      "id": [
+        "208411"
+      ],
       "item": [],
       "lead": [
         {
@@ -63,10 +67,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -83,9 +87,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.example:bitmark--]\n[@id:208411]\n[%][%Beispiel]\nClaudia und Stefan Walder haben für heute Abend Gäste eingeladen. Gemeinsam gehen sie auf den Wochenmarkt, um die verschiedenen Zutaten für das Essen einzukaufen. Sie brauchen dazu unter anderem Brot, Olivenöl, Zitronen, Spinat und Fische, die sich zum Braten eignen. Claudia und Stefan kommen an einem Blumenstand vorbei. «Sieh nur, diese wunderschönen Tulpen», ruft Stefan aus und kauft spontan einen grossen Strauss davon."
   },
@@ -94,7 +98,9 @@
       "type": "example",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["208422"],
+      "id": [
+        "208422"
+      ],
       "item": [],
       "lead": [
         {
@@ -108,10 +114,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -135,9 +141,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.example:bitmark++]\n[@id:208422]\n[%][%Beispiel]\nTrotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.\nÄlteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit."
   },
@@ -146,11 +152,11 @@
       "type": "example-alt",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -164,6 +170,8 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -180,9 +188,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.example-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -191,11 +199,11 @@
       "type": "standard-example-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -209,6 +217,8 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -225,9 +235,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-example-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -236,11 +246,11 @@
       "type": "standard-example-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -254,6 +264,8 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "example": null,
       "body": [
@@ -270,9 +282,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-example-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   }

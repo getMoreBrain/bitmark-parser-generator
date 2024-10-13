@@ -4,19 +4,22 @@
       "type": "toc-chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["92374"],
+      "id": [
+        "92374"
+      ],
       "maxDisplayLevel": 99,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.5.2",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.toc-chapter]\n[@id:92374]\n[@maxDisplayLevel:99]"
   }

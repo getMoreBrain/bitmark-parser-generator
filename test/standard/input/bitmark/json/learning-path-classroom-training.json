@@ -4,19 +4,28 @@
       "type": "learning-path-classroom-training",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["119760"],
+      "id": [
+        "119760"
+      ],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": ["One", "Two", "Three", "Four"],
+      "list": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
       "isTracked": true,
       "isInfoOnly": false,
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -30,14 +39,33 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "First one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:",
+              "text": "First one is the normal reference.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Second is the optional property called “referenceEnd”",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "All these bits support all resources (like &website-link, …",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "All of these bits (starting with .learning-path support the following optional properties:",
               "type": "text"
             }
           ],
@@ -46,8 +74,27 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "[&website-link] is included more than 0 time(s).",
+          "text": "[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]",
+          "location": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 522
+            },
+            "end": {
+              "line": 18,
+              "column": 91,
+              "offset": 612
+            }
+          }
+        }
+      ],
       "excessResources": [
         {
           "type": "website-link",

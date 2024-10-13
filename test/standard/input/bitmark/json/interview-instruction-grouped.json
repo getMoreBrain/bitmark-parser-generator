@@ -4,7 +4,9 @@
       "type": "interview-instruction-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["92562"],
+      "id": [
+        "92562"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -18,6 +20,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -31,8 +35,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": true,
       "body": [],
       "questions": [
@@ -240,8 +242,139 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Hast du das Geschirr schon aus der Spülmaschine genommen?]",
+          "location": {
+            "start": {
+              "line": 10,
+              "column": 1,
+              "offset": 284
+            },
+            "end": {
+              "line": 10,
+              "column": 61,
+              "offset": 344
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Die Polizei befindet sich gegenüber dem Theater]",
+          "location": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 413
+            },
+            "end": {
+              "line": 13,
+              "column": 51,
+              "offset": 463
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Jan ist beim Einparken gegen das Verkehrsschild gefahren.]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 541
+            },
+            "end": {
+              "line": 16,
+              "column": 61,
+              "offset": 601
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Der Zug fährt um 12.56 Uhr ab Hamburg-Hauptbahnhof.]",
+          "location": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 680
+            },
+            "end": {
+              "line": 19,
+              "column": 55,
+              "offset": 734
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Das neue Einkaufszentrum liegt 3 km außerhalb der Stadt.]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 815
+            },
+            "end": {
+              "line": 22,
+              "column": 60,
+              "offset": 874
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Rauchen ist innerhalb des Gebäudes verboten.]",
+          "location": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 943
+            },
+            "end": {
+              "line": 25,
+              "column": 48,
+              "offset": 990
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Das Kraftwerk wird unweit des Flusses gebaut.]",
+          "location": {
+            "start": {
+              "line": 28,
+              "column": 1,
+              "offset": 1056
+            },
+            "end": {
+              "line": 28,
+              "column": 49,
+              "offset": 1104
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Wir liefen zweimal um den Häuserblock.]",
+          "location": {
+            "start": {
+              "line": 31,
+              "column": 1,
+              "offset": 1172
+            },
+            "end": {
+              "line": 31,
+              "column": 42,
+              "offset": 1213
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.interview-instruction-grouped:bitmark--]\n[@id:92562]\n[%C5]\n[!Bilden Sie Sätze in der angegebenen Zeitform.]\n===\n[%◇]Kerstin – Friseur – kommen – von__(Präsens)__\n[@example:Kerstin kommt vom Friseur.]\n===\n[%1] du – das Geschirr – Spülmaschine – nehmen – schon – aus – ?__(Perfekt)__\n[$Hast du das Geschirr schon aus der Spülmaschine genommen?]\n===\n[%2] Polizei – Theater – sich befinden – gegenüber__(Präsens)__\n[$Die Polizei befindet sich gegenüber dem Theater]\n===\n[%3] Jan – beim Einparken – Verkehrsschild – fahren – gegen__(Perfekt)__\n[$Jan ist beim Einparken gegen das Verkehrsschild gefahren.]\n===\n[%4] Zug – um 12.56 Uhr – Hamburg-Hauptbahnhof – fahren – ab__(Präsens)__\n[$Der Zug fährt um 12.56 Uhr ab Hamburg-Hauptbahnhof.]\n===\n[%5] neues Einkaufszentrum – Stadt – liegen – 3 km – außerhalb__(Präsens)__\n[$Das neue Einkaufszentrum liegt 3 km außerhalb der Stadt.]\n===\n[%6] Rauchen – Gebäude – verboten sein – innerhalb__(Präsens)__\n[$Rauchen ist innerhalb des Gebäudes verboten.]\n===\n[%7] Kraftwerk – Fluss – gebaut werden – unweit__(Präsens)__\n[$Das Kraftwerk wird unweit des Flusses gebaut.]\n===\n[%8] wir – Häuserblock – zweimal – laufen – um__(Präteritum)__\n[$Wir liefen zweimal um den Häuserblock.]\n==="
   },
@@ -250,7 +383,9 @@
       "type": "interview-instruction-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["92562"],
+      "id": [
+        "92562"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -264,6 +399,8 @@
         }
       ],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -277,8 +414,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "isExample": false,
       "body": [],
       "questions": [
@@ -307,8 +442,9 @@
       "footer": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.interview-instruction-grouped:bitmark--]\n[@id:92562]\n[%C5]\n[!Bilden Sie Sätze in der angegebenen Zeitform.]\n===\n[%◇]Kerstin – Friseur – kommen – von__(Präsens)__\n==="
   }

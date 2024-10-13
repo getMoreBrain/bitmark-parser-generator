@@ -4,11 +4,16 @@
       "type": "page-buy-button",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "slug": "testing-1234",
       "content2Buy": "testing 123",
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -21,9 +26,6 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -38,9 +40,10 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.page-buy-button]\n[@id:342341]\n[!.page-buy-button]\n[@content2Buy:testing 123 ]\nButton Text"
+    "bitmark": "[.page-buy-button]\n[@id:342341]\n[@slug:testing-1234]\n[!.page-buy-button]\n[@content2Buy:testing 123 ]\nButton Text"
   }
 ]

@@ -4,7 +4,9 @@
       "type": "highlight-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["285686"],
+      "id": [
+        "285686"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -29,10 +31,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [
         {
@@ -135,8 +137,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.highlight-text]\n[@id:285686]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][-trees]."
   },
@@ -145,7 +148,9 @@
       "type": "highlight-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["285687"],
+      "id": [
+        "285687"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -170,10 +175,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -276,8 +281,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.highlight-text]\n[@id:285687]\n[%10][%highlight-text]\n[@example]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][-trees]."
   },
@@ -286,7 +292,9 @@
       "type": "highlight-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["285688"],
+      "id": [
+        "285688"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -311,10 +319,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -417,8 +425,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.highlight-text]\n[@id:285688]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][-fish][@example][-trees]."
   },
@@ -427,7 +436,9 @@
       "type": "highlight-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["285689"],
+      "id": [
+        "285689"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -452,10 +463,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -558,8 +569,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.highlight-text]\n[@id:285689]\n[%10][%highlight-text]\nShe went to the [+mall][-sea] and ate [+breakfast][@example][-fish][-trees]."
   }

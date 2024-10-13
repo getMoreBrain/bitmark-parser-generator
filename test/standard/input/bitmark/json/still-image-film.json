@@ -6,10 +6,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "resource": {
         "type": "still-image-film",
@@ -38,8 +38,9 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.still-image-film]\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]\n[&audio:https://docs.bitmark.cloud/bit-books/ef/unit_1/web-resources/audio/b1_1_1_6_j.mp3]"
   },
@@ -50,10 +51,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -81,8 +82,59 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "[&still-image-film] is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]",
+          "location": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 442
+            },
+            "end": {
+              "line": 8,
+              "column": 151,
+              "offset": 592
+            }
+          }
+        },
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.still-image-film]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv][@duration:PT12M31S]\n\n",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 249
+            },
+            "end": {
+              "line": 10,
+              "column": 1,
+              "offset": 614
+            }
+          }
+        },
+        {
+          "message": "[&audio] is required at least 1 time(s)",
+          "text": "[.still-image-film]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv][@duration:PT12M31S]\n\n",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 249
+            },
+            "end": {
+              "line": 10,
+              "column": 1,
+              "offset": 614
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.still-image-film]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&still-image-film:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv][@duration:PT12M31S]"
   },
@@ -93,10 +145,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "resource": {
         "type": "still-image-film",
@@ -125,8 +177,9 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article:bitmark--&still-image-film]\n[&image:https://docs.bitmark.cloud/bit-books/alemania/book_1/web-resources/images/alemania_book1_01_v2.png]\n[&audio:https://docs.bitmark.cloud/bit-books/alemania/book_1/web-resources/images/alemania_book1_01_v2.mp3]"
   }

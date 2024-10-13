@@ -4,20 +4,25 @@
       "type": "page-product-list",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "slug": "",
-      "product": ["https://123.com"],
+      "product": [
+        "https://123.com"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.16",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-product-list]\n[@id:151970]\n[@product:https://123.com]"
   },
@@ -26,21 +31,27 @@
       "type": "page-product-list",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["304379"],
+      "id": [
+        "304379"
+      ],
       "slug": "testing-1234",
-      "product": ["https://123.com", "https://1234.com"],
+      "product": [
+        "https://123.com",
+        "https://1234.com"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.16",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.page-product-list]\n[@id:304379]\n[@product:https://123.com][@product:https://1234.com]"
+    "bitmark": "[.page-product-list]\n[@id:304379]\n[@slug:testing-1234]\n[@product:https://123.com][@product:https://1234.com]"
   }
 ]

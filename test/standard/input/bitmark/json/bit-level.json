@@ -6,16 +6,16 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]"
   },
@@ -24,19 +24,21 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 2,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[..article:bitmark--]\n[@id:151971]"
   },
@@ -45,19 +47,21 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article:bitmark++]\n[@id:151972]"
   },
@@ -66,19 +70,21 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 3,
-      "id": ["151973"],
+      "id": [
+        "151973"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[...article:bitmark--]\n[@id:151973]"
   },
@@ -87,19 +93,21 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 2,
-      "id": ["239893"],
+      "id": [
+        "239893"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[&image] is required at least 1 time(s)",
@@ -142,19 +150,21 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 2,
-      "id": ["191143"],
+      "id": [
+        "191143"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[&image] is required at least 1 time(s)",
@@ -197,19 +207,21 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["245285"],
+      "id": [
+        "245285"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[&image] is required at least 1 time(s)",
@@ -252,13 +264,15 @@
       "type": "_comment",
       "originalType": "article",
       "bitLevel": 2,
-      "id": ["239893"],
+      "id": [
+        "239893"
+      ],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[&image] is required at least 1 time(s)",
@@ -301,19 +315,21 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 7,
-      "id": ["5743563"],
+      "id": [
+        "5743563"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.......article:bitmark--]\n[@id:5743563]"
   },
@@ -322,19 +338,21 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 7,
-      "id": ["162205"],
+      "id": [
+        "162205"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "Bit level of 8 too high, setting to max value of 7",
@@ -393,19 +411,21 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 7,
-      "id": ["162205"],
+      "id": [
+        "162205"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.6.6",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "Bit level of 11 too high, setting to max value of 7",

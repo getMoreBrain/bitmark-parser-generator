@@ -4,15 +4,17 @@
       "type": "call-to-action",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -27,9 +29,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -38,15 +40,17 @@
       "type": "call-to-action-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -61,9 +65,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-subscribe]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -72,15 +76,17 @@
       "type": "call-to-action-contact",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -95,9 +101,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-contact]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -106,15 +112,17 @@
       "type": "call-to-action-join",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -129,9 +137,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-join]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -140,15 +148,17 @@
       "type": "call-to-action-mail",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -163,9 +173,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-mail]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -174,15 +184,17 @@
       "type": "call-to-action-learn-more",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -197,9 +209,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-learn-more]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -208,15 +220,17 @@
       "type": "call-to-action-see-more",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -231,9 +245,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-see-more]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -242,15 +256,17 @@
       "type": "call-to-action-watch",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -265,9 +281,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-watch]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -276,15 +292,17 @@
       "type": "call-to-action-start-now",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -299,9 +317,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-start-now]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -310,15 +328,17 @@
       "type": "call-to-action-get-offer",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -333,9 +353,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-get-offer]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -344,15 +364,17 @@
       "type": "call-to-action-book-now",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -367,9 +389,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-book-now]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -378,15 +400,17 @@
       "type": "call-to-action-shop-now",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -401,9 +425,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-shop-now]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -412,15 +436,17 @@
       "type": "call-to-action-get-now",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -435,9 +461,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-get-now]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -446,15 +472,17 @@
       "type": "call-to-action-download",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -469,9 +497,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-download]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -480,15 +508,17 @@
       "type": "call-to-action-create-account",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -503,9 +533,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.call-to-action-create-account]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   }

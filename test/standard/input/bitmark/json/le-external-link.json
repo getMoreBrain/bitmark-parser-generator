@@ -4,7 +4,9 @@
       "type": "le-external-link",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["255679"],
+      "id": [
+        "255679"
+      ],
       "action": "HK E.1 Infektionslehre",
       "externalLink": "https://www.classtime.com/code/MPYJ4R/27657c8e-e368-452b-881c-d3b0a6a53fba",
       "externalLinkText": "Link zum Online Test",
@@ -13,6 +15,8 @@
       "activityType": "Classtime",
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -26,8 +30,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [],
       "resource": {
         "type": "image",
@@ -47,9 +49,10 @@
       }
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.le-external-link&image]\n[@id:255679]\n[&image:https://docs.bitmark.cloud/bit-books/careum/fachfrau_fachmann_gesundheit/web-resources/images/classtime_logo.png]\n[!Classtime]\n[@action:HK E.1 Infektionslehre]\n[@externalLink:https://www.classtime.com/code/MPYJ4R/27657c8e-e368-452b-881c-d3b0a6a53fba]\n[@externalLinkText:Link zum Online Test]"
+    "bitmark": "[.le-external-link&image]\n[@id:255679]\n[&image:https://docs.bitmark.cloud/bit-books/careum/fachfrau_fachmann_gesundheit/web-resources/images/classtime_logo.png]\n[!Classtime]\n[@action:HK E.1 Infektionslehre]\n[@externalLink:https://www.classtime.com/code/MPYJ4R/27657c8e-e368-452b-881c-d3b0a6a53fba]\n[@externalLinkText:Link zum Online Test]\n[@activityType:Classtime]"
   }
 ]

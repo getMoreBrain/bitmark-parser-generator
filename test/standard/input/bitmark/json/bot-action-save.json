@@ -1,0 +1,43 @@
+[
+  {
+    "bit": {
+      "type": "bot-action-save",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "_date": [
+        "2022-10-01T08:00:00CET"
+      ]
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "[@date] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@date:2022-10-01T08:00:00CET]",
+          "location": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 19
+            },
+            "end": {
+              "line": 2,
+              "column": 31,
+              "offset": 49
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.bot-action-save]\n[@date:2022-10-01T08:00:00CET]"
+  }
+]

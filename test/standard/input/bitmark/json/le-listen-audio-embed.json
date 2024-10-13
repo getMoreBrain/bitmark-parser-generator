@@ -4,8 +4,8 @@
       "type": "le-listen-audio-embed",
       "format": "bitmark--",
       "bitLevel": 1,
-      "imagePlaceholder": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
       "book": "e-876z78z87og87g8zg",
+      "imagePlaceholder": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
@@ -37,7 +37,28 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "First one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:",
+              "text": "First one is the normal reference.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Second is the optional property called “referenceEnd”",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "All these bits support all resources (like &website-link, …",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "All of these bits (starting with .learning-path support the following optional properties:",
               "type": "text"
             }
           ],
@@ -58,24 +79,49 @@
       }
     },
     "parser": {
-      "version": "1.26.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0"
+      "textParserVersion": "8.17.0",
+      "warnings": [
+        {
+          "message": "Resource type [&website-link] is specified in the bit header, but no extra resource is allowed for this bit.",
+          "text": "[.le-listen-audio-embed&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-listen-audio-embed]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[&audio-embed:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]\n[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]\n\n",
+          "location": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 18,
+              "column": 1,
+              "offset": 723
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.le-listen-audio-embed]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-listen-audio-embed]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[&audio-embed:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]"
+    "bitmark": "[.le-listen-audio-embed&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-listen-audio-embed]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[&audio-embed:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]\n[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]"
   },
   {
     "bit": {
       "type": "le-listen-audio-embed",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["119760"],
+      "id": [
+        "119760"
+      ],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": ["One", "Two", "Three", "Four"],
+      "list": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
       "isTracked": true,
       "isInfoOnly": false,
       "reference": "Ref4.2.34",
@@ -102,7 +148,28 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "First one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:",
+              "text": "First one is the normal reference.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Second is the optional property called “referenceEnd”",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "All these bits support all resources (like &website-link, …",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "All of these bits (starting with .learning-path support the following optional properties:",
               "type": "text"
             }
           ],
@@ -123,9 +190,9 @@
       }
     },
     "parser": {
-      "version": "1.26.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.16.0",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[&website-link] is included more than 0 time(s).",
@@ -134,12 +201,12 @@
             "start": {
               "line": 36,
               "column": 1,
-              "offset": 1159
+              "offset": 1248
             },
             "end": {
               "line": 36,
               "column": 91,
-              "offset": 1249
+              "offset": 1338
             }
           }
         },
@@ -150,12 +217,12 @@
             "start": {
               "line": 19,
               "column": 1,
-              "offset": 635
+              "offset": 724
             },
             "end": {
               "line": 38,
               "column": 1,
-              "offset": 1396
+              "offset": 1485
             }
           }
         }

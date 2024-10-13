@@ -4,9 +4,13 @@
       "type": "prototype-images",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["890929"],
+      "id": [
+        "890929"
+      ],
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -20,8 +24,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [],
       "images": [
         {
@@ -155,10 +157,10 @@
       ]
     },
     "parser": {
-      "version": "1.6.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.prototype-images]\n[@id:890929]\n[!Trusted by leading brands]\n\n[&image:https://www.additiv.com/wp-content/uploads/2023/10/logo_zurich-1.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_postfinance.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_atram.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/07/CommonWealth.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_nspartners.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_swissfex.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_bevestor.png]\n[&image:https://www.additiv.com/wp-content/uploads/2021/09/logo_coop.png]"
+    "bitmark": "[.prototype-images]\n[@id:890929]\n[!Trusted by leading brands]\n\n[&image:https://www.additiv.com/wp-content/uploads/2023/10/logo_zurich-1.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_postfinance.png][@zoomDisabled]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_atram.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/07/CommonWealth.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_nspartners.png][@zoomDisabled:false]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_swissfex.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_bevestor.png][@zoomDisabled:true]\n[&image:https://www.additiv.com/wp-content/uploads/2021/09/logo_coop.png]"
   }
 ]

@@ -12,7 +12,13 @@
         "type": "text"
       },
       {
-        "text": "\n\nThere are ",
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "There are ",
         "type": "text"
       },
       {
@@ -38,8 +44,10 @@
         "type": "text"
       },
       {
-        "text": "\n\n",
-        "type": "text"
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
       },
       {
         "marks": [
@@ -51,8 +59,14 @@
         "type": "text"
       },
       {
-        "text": " on your point of view ;)\n\n",
+        "text": " on your point of view ;)",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
       },
       {
         "marks": [
@@ -64,8 +78,7 @@
         "type": "text"
       },
       {
-        "text": "\n",
-        "type": "text"
+        "type": "hardBreak"
       },
       {
         "marks": [

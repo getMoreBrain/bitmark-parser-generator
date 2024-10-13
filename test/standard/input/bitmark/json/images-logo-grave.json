@@ -6,6 +6,8 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -19,8 +21,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
       "body": [],
       "logos": [
         {
@@ -101,9 +101,10 @@
       ]
     },
     "parser": {
-      "version": "1.5.10",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.images-logo-grave]\n[!Trusted by leading brands]\n\n[&image:https://1.png]\n[&image:https://2.png]\n[&image:https://3.png]\n[&image:https://4.png]\n[&image:https://5.png]"
+    "bitmark": "[.images-logo-grave]\n[!Trusted by leading brands]\n\n[&image:https://1.png][@zoomDisabled:true]\n[&image:https://2.png]\n[&image:https://3.png][@zoomDisabled]\n[&image:https://4.png]\n[&image:https://5.png][@zoomDisabled:false]"
   }
 ]

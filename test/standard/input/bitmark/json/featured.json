@@ -4,19 +4,28 @@
       "type": "featured",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["342339"],
+      "id": [
+        "342339"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Featured\nIt's exactly the same as an .article.",
+              "text": "Featured",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "It's exactly the same as an .article.",
               "type": "text"
             }
           ],
@@ -25,8 +34,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.featured]\n[@id:342339]\nFeatured\nIt's exactly the same as an .article."
   }

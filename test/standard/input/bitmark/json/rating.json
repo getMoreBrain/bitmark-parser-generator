@@ -4,7 +4,9 @@
       "type": "rating",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["239803"],
+      "id": [
+        "239803"
+      ],
       "item": [],
       "lead": [
         {
@@ -18,10 +20,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -36,8 +38,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.17",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.rating]\n[@id:239803]\n[%][%Reflexion]\nHalte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest, du kannst diese auch auf diese Seite im Buch heften und später zurückkommen, um für dich zu sehen, was sich über die Zeit an deiner Perspektive verändert."
   },
@@ -46,13 +49,15 @@
       "type": "rating",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["239896"],
+      "id": [
+        "239896"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -92,8 +97,9 @@
       }
     },
     "parser": {
-      "version": "1.5.17",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.rating:bitmark--&image]\n[@id:239896]\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png][@width:150]\n**Avatar – Ein Avatar ist ein*e grafische*r Stellvertreter*in für eine echte Person**, dies können auch echte Bilder der Schüler*innen sein oder eigene gewählte Symbole, Zeichnungen oder künstlich erstelle Personen."
   },
@@ -102,7 +108,9 @@
       "type": "rating",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["234993"],
+      "id": [
+        "234993"
+      ],
       "item": [],
       "lead": [
         {
@@ -116,10 +124,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -134,8 +142,11 @@
               "type": "text"
             },
             {
-              "text": " – Ankommen (bei Onlinesession Videokonferenzraum öffnen)\n",
+              "text": " – Ankommen (bei Onlinesession Videokonferenzraum öffnen)",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -147,7 +158,14 @@
               "type": "text"
             },
             {
-              "text": " – Gemeinsamer Start\n• Check-In/Warm-Up – z.B. mit ",
+              "text": " – Gemeinsamer Start",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• Check-In/Warm-Up – z.B. mit ",
               "type": "text"
             },
             {
@@ -160,8 +178,11 @@
               "type": "text"
             },
             {
-              "text": ": Welche nationalen/internationalen Gedenktage kennst du?\n",
+              "text": ": Welche nationalen/internationalen Gedenktage kennst du?",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -173,7 +194,14 @@
               "type": "text"
             },
             {
-              "text": " – Einstieg ins Thema\n• Austausch in ",
+              "text": " – Einstieg ins Thema",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• Austausch in ",
               "type": "text"
             },
             {
@@ -186,8 +214,46 @@
               "type": "text"
             },
             {
-              "text": " (3er bis 4er Gruppen). Leitenden Fragen z.B.:\n• Welche Formen gibt es, um an historische Ereignisse zu erinnern?\n• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?\n• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?\n• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.\n• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.\n",
+              "text": " (3er bis 4er Gruppen). Leitenden Fragen z.B.:",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• Welche Formen gibt es, um an historische Ereignisse zu erinnern?",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -199,7 +265,14 @@
               "type": "text"
             },
             {
-              "text": " – Thema vertiefen & Inhalte erarbeiten\n• ",
+              "text": " – Thema vertiefen & Inhalte erarbeiten",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• ",
               "type": "text"
             },
             {
@@ -212,8 +285,11 @@
               "type": "text"
             },
             {
-              "text": ": Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.\n",
+              "text": ": Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -225,8 +301,11 @@
               "type": "text"
             },
             {
-              "text": " – Kurze Pause oder Energizer\n",
+              "text": " – Kurze Pause oder Energizer",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -238,7 +317,14 @@
               "type": "text"
             },
             {
-              "text": " – Kritische Auseinandersetzung\n• Mit einer ",
+              "text": " – Kritische Auseinandersetzung",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• Mit einer ",
               "type": "text"
             },
             {
@@ -251,8 +337,11 @@
               "type": "text"
             },
             {
-              "text": " erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.\n",
+              "text": " erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -264,8 +353,11 @@
               "type": "text"
             },
             {
-              "text": " – Zusammenfassung (durch dich oder Schüler*innen)\n",
+              "text": " – Zusammenfassung (durch dich oder Schüler*innen)",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -277,7 +369,14 @@
               "type": "text"
             },
             {
-              "text": " – Reflexion & Check-Out\n• ",
+              "text": " – Reflexion & Check-Out",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "• ",
               "type": "text"
             },
             {
@@ -290,8 +389,11 @@
               "type": "text"
             },
             {
-              "text": ": Was möchte ich für mich mitnehmen?\n",
+              "text": ": Was möchte ich für mich mitnehmen?",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -312,8 +414,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.17",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.rating]\n[@id:234993]\n[%][%Agendabeispiel 1: Inhaltlicher Einstieg – Beispielthema: Einnerungskultur & Deutsche Geschichte]\n**09:50 Uhr** – Ankommen (bei Onlinesession Videokonferenzraum öffnen)\n**10:00 Uhr** – Gemeinsamer Start\n• Check-In/Warm-Up – z.B. mit __Drei Hashtags__: Welche nationalen/internationalen Gedenktage kennst du?\n**10:05 Uhr** – Einstieg ins Thema\n• Austausch in __Breakout-Räumen__ (3er bis 4er Gruppen). Leitenden Fragen z.B.:\n• Welche Formen gibt es, um an historische Ereignisse zu erinnern?\n• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?\n• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?\n• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.\n• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.\n**10:30 Uhr** – Thema vertiefen & Inhalte erarbeiten\n• __Breakout-Räume__: Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.\n**11:00 Uhr** – Kurze Pause oder Energizer\n**11:05 Uhr** – Kritische Auseinandersetzung\n• Mit einer __stillen Diskussion__ erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.\n**11:20 Uhr** – Zusammenfassung (durch dich oder Schüler*innen)\n**11:25 Uhr** – Reflexion & Check-Out\n• __Klebezettel-Methode__: Was möchte ich für mich mitnehmen?\n**11:30 Uhr** – ENDE"
   }

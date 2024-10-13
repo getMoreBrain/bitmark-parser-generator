@@ -4,10 +4,14 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["190596"],
+      "id": [
+        "190596"
+      ],
       "slug": "",
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -21,14 +25,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
-
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-subscribe]\n[@id:190596]\n[!Welche Bedeutung hat Arbeit für Sie?]"
   },
@@ -37,10 +39,14 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["190597"],
+      "id": [
+        "190597"
+      ],
       "slug": "",
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -54,14 +60,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
-
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-subscribe]\n[@id:190597]\n[!Wo sehen Sie die Chancen und Gefahren „moderner“ Arbeit?]"
   },
@@ -70,10 +74,14 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["190598"],
+      "id": [
+        "190598"
+      ],
       "slug": "",
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -87,14 +95,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
-
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-subscribe]\n[@id:190598]\n[!Ist Feelgood Management ein „Luxusproblem“?]"
   },
@@ -103,7 +109,9 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["191144"],
+      "id": [
+        "191144"
+      ],
       "slug": "",
       "item": [
         {
@@ -129,16 +137,16 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
-
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-subscribe]\n[@id:191144]\n[%1][%Verstehen „Design Challenge“]"
   },
@@ -147,7 +155,9 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["191145"],
+      "id": [
+        "191145"
+      ],
       "slug": "",
       "item": [
         {
@@ -173,16 +183,16 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
-
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-subscribe]\n[@id:191145]\n[%2][%Beobachten / befragen]"
   },
@@ -191,7 +201,9 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["191146"],
+      "id": [
+        "191146"
+      ],
       "slug": "",
       "item": [
         {
@@ -217,16 +229,16 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
-
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-subscribe]\n[@id:191146]\n[%3][%Sichtweisen definieren / zusammen tragen „How might we“]"
   },
@@ -235,7 +247,9 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["191147"],
+      "id": [
+        "191147"
+      ],
       "slug": "",
       "item": [
         {
@@ -261,16 +275,16 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
-
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-subscribe]\n[@id:191147]\n[%4][%Ideen finden]"
   },
@@ -279,7 +293,9 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["191148"],
+      "id": [
+        "191148"
+      ],
       "slug": "",
       "item": [
         {
@@ -305,16 +321,16 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
-
+      "hint": [],
+      "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.page-subscribe]\n[@id:191148]\n[%5][%Prototypen entwickeln]"
   },
@@ -323,8 +339,12 @@
       "type": "page-subscribe",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["191149"],
+      "id": [
+        "191149"
+      ],
       "slug": "testing-1234",
+      "mailingList": "gmb@getmorebrain.com;bmg@getmorebrain.com",
+      "buttonCaption": "OK!",
       "item": [
         {
           "type": "paragraph",
@@ -349,18 +369,17 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
-      "body": [],
-      "buttonCaption": "OK!",
-      "mailingList": "gmb@getmorebrain.com;bmg@getmorebrain.com"
+      "hint": [],
+      "instruction": [],
+      "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.page-subscribe]\n[@id:191149]\n[%6][%Testen]"
+    "bitmark": "[.page-subscribe]\n[@id:191149]\n[@slug:testing-1234]\n[%6][%Testen]\n[@buttonCaption:OK!]\n[@mailingList:gmb@getmorebrain.com;bmg@getmorebrain.com]"
   }
 ]

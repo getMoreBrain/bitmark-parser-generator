@@ -4,7 +4,9 @@
       "type": "article-responsive",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["210051"],
+      "id": [
+        "210051"
+      ],
       "imageFirst": true,
       "item": [],
       "lead": [
@@ -37,9 +39,9 @@
       ]
     },
     "parser": {
-      "version": "1.21.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article-responsive]\n[@id:210051]\n[%][%Beispiel]\n[@imageFirst]\nDie Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet."
   },
@@ -48,7 +50,9 @@
       "type": "article-responsive",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "imageFirst": true,
       "item": [],
       "lead": [],
@@ -81,9 +85,9 @@
       ]
     },
     "parser": {
-      "version": "1.21.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article-responsive:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -92,7 +96,9 @@
       "type": "article-responsive",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "imageFirst": false,
       "item": [],
       "lead": [],
@@ -125,9 +131,9 @@
       ]
     },
     "parser": {
-      "version": "1.21.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article-responsive:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n[@imageFirst:false]\n\nThe bit content"
   }

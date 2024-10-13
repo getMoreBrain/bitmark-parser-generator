@@ -6,6 +6,8 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -30,8 +32,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
@@ -71,9 +71,9 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\nThis is an article with a footer\n[?hint]\n\n~~~~\n[!instruction]\nThis **is** the footer"
   },
@@ -84,6 +84,8 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -108,14 +110,35 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "This is an article with an escaped footer, so no footer actually\n\n\n~~~~\n\nThis is ",
+              "text": "This is an article with an escaped footer, so no footer actually",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "~~~~",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is ",
               "type": "text"
             },
             {
@@ -137,9 +160,9 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n\n~^~~~\n[!instruction]\nThis is !!not!! a footer"
   },
@@ -150,6 +173,8 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -174,14 +199,35 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "This article does not have a footer\n\n\n~~~~~\n\nThis is not a footer",
+              "text": "This article does not have a footer",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "~~~~~",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is not a footer",
               "type": "text"
             }
           ],
@@ -190,9 +236,9 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\nThis article does not have a footer\n[?hint]\n\n~~~~~\n[!instruction]\nThis is not a footer"
   },
@@ -203,6 +249,8 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -227,14 +275,25 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "Neither does this article have a footer\n\n\n~~~~This is ",
+              "text": "Neither does this article have a footer",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "~~~~This is ",
               "type": "text"
             },
             {
@@ -247,8 +306,11 @@
               "type": "text"
             },
             {
-              "text": " a footer\n",
+              "text": " a footer",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -269,9 +331,9 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\nNeither does this article have a footer\n[?hint]\n[!instruction]\n~~~~This is **not** a footer\n!!Nor!! is this"
   },
@@ -282,6 +344,8 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -306,14 +370,19 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "This article has 2 footers which is not really valid.\nAll text after the first footer should be in the footer, and a warning should be given",
+              "text": "This article has 2 footers which is not really valid.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "All text after the first footer should be in the footer, and a warning should be given",
               "type": "text"
             }
           ],
@@ -338,7 +407,24 @@
               "type": "text"
             },
             {
-              "text": " a footer\n~~~~\n\nThis is ",
+              "text": " a footer",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "~~~~",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is ",
               "type": "text"
             },
             {
@@ -360,9 +446,9 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\nThis article has 2 footers which is not really valid.\nAll text after the first footer should be in the footer, and a warning should be given\n[?hint]\n\n~~~~\nThis **is** a footer\n~~~~\n[!instruction]\nThis is **also** part of the footer and not a second footer!"
   },
@@ -373,10 +459,10 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [
         {
@@ -395,7 +481,27 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Footer anyone?\n\n~~~~\n\nStill in the footer",
+              "text": "Footer anyone?",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "~~~~",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Still in the footer",
               "type": "text"
             }
           ],
@@ -427,9 +533,9 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nCard 1, Side 1\n~~~~\n\nFooter anyone?\n\n~~~~\n\nStill in the footer"
   },
@@ -440,6 +546,8 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -464,14 +572,22 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "This is an article with an escaped footer, so no footer actually\n\n**",
+              "text": "This is an article with an escaped footer, so no footer actually",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "**",
               "type": "text"
             }
           ],
@@ -483,7 +599,17 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "**\n\nThis is ",
+              "text": "**",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is ",
               "type": "text"
             },
             {
@@ -505,9 +631,9 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n~~~~\n**\n[!instruction]\nThis is !!not!! a footer"
   },
@@ -518,6 +644,8 @@
       "bitLevel": 1,
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -542,15 +670,19 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": [
         {
           "type": "paragraph",
           "content": [
             {
-              "text": "This is an article with an escaped footer, so no footer actually\n\n",
+              "text": "This is an article with an escaped footer, so no footer actually",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -562,7 +694,13 @@
               "type": "text"
             },
             {
-              "text": "\n\nThis is ",
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is ",
               "type": "text"
             },
             {
@@ -584,9 +722,9 @@
       ]
     },
     "parser": {
-      "version": "1.6.4",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n~^~~~\n**\n[!instruction]\nThis is !!not!! a footer"
   }

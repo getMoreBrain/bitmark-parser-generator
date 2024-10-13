@@ -4,10 +4,14 @@
       "type": "internal-link",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["192356"],
+      "id": [
+        "192356"
+      ],
       "reference": "Ref_Starbucks",
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -21,13 +25,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.internal-link]\n[@id:192356]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Starbucks]"
   },
@@ -36,10 +39,14 @@
       "type": "internal-link",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["192374"],
+      "id": [
+        "192374"
+      ],
       "reference": "Ref_Emmi",
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -53,13 +60,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.internal-link]\n[@id:192374]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Emmi]"
   },
@@ -68,10 +74,14 @@
       "type": "internal-link",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["192383"],
+      "id": [
+        "192383"
+      ],
       "reference": "Ref_Globus",
       "item": [],
       "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [
         {
@@ -85,13 +95,12 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
       "body": []
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.internal-link]\n[@id:192383]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Globus]"
   }

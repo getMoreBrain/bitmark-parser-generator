@@ -4,7 +4,9 @@
       "type": "sequence",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["285747"],
+      "id": [
+        "285747"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -29,18 +31,24 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "example": true,
       "body": [],
-      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."]
+      "elements": [
+        "Ein Elefant",
+        "ist",
+        "grösser als",
+        "eine Maus."
+      ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.sequence]\n[%32][%sequence]\n[@id:285747]\n[@example]\n===\nEin Elefant\n--\nist\n--\ngrösser als\n--\neine Maus.\n==="
   },
@@ -49,7 +57,9 @@
       "type": "sequence",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["285749"],
+      "id": [
+        "285749"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -74,10 +84,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "example": null,
       "body": [],
@@ -91,8 +101,9 @@
       ]
     },
     "parser": {
-      "version": "1.4.12",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.sequence:bitmark--]\n[@id:285749]\n[%33][%sequence]\n===\n**zu oberst**\nDach\n--\n**oben**\n3. Stock\n--\n**in der Mitte**\n2. Stock\n--\n**in der Mitte**\n1. Stock\n--\n**unten**\nErdgeschoss\n--\n**zu unterst**\nKeller\n==="
   }

@@ -4,7 +4,9 @@
       "type": "help",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["210023"],
+      "id": [
+        "210023"
+      ],
       "item": [],
       "lead": [
         {
@@ -23,10 +25,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -41,9 +43,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.help]\n[@id:210023]\n[%][%**Schlüsselbegriffe**]\nBedürfnis, Kundenorientierung, Marketing"
   },
@@ -52,7 +54,9 @@
       "type": "help",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["210041"],
+      "id": [
+        "210041"
+      ],
       "item": [],
       "lead": [
         {
@@ -71,10 +75,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -89,9 +93,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.help]\n[@id:210041]\n[%][%**Schlüsselbegriffe**]\nAnalyse, Budget, Instrumente, Kontrolle, Marketingkonzept, Strategien, Ziele"
   },
@@ -100,7 +104,9 @@
       "type": "help",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["210064"],
+      "id": [
+        "210064"
+      ],
       "item": [],
       "lead": [
         {
@@ -119,10 +125,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -137,9 +143,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.help]\n[@id:210064]\n[%][%**Schlüsselbegriffe**]\nBefragung, Beobachtung, externe Quellen, Fokusgruppen, interne Quellen, Markttest, Methoden, Mystery Shopping, Online-Befragung, Panel, persönliche Befragung, Primärmarktforschung, Produkttest, qualitative Marktforschung, quantitative Marktforschung, Secundärmarktforschung, Stichprobe, telefonische Befragung, Test, Werbetest"
   },
@@ -148,7 +154,9 @@
       "type": "help",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["208484"],
+      "id": [
+        "208484"
+      ],
       "item": [],
       "lead": [
         {
@@ -167,10 +175,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -185,9 +193,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.help:bitmark--]\n[@id:208484]\n[%][%**Schlüsselbegriffe**]\nAufwand, Effektivität, Effizienz, Erfolg, Ertrag, Gewinn, Mehrwert, primäre Aktivitäten, Produktivität, sekundäre Aktivitäten, Verlust, Wertkette, Wertschöpfung, Wirtschaftlichkeit"
   },
@@ -196,11 +204,11 @@
       "type": "help-alt",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [
         {
@@ -214,6 +222,8 @@
           "attrs": {}
         }
       ],
+      "hint": [],
+      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -228,9 +238,9 @@
       ]
     },
     "parser": {
-      "version": "1.15.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.10.3"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.help-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   }

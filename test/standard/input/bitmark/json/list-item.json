@@ -4,7 +4,10 @@
       "type": "list-item",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "listItemIndent": 3,
       "item": [],
       "lead": [],
@@ -51,9 +54,9 @@
       ]
     },
     "parser": {
-      "version": "1.21.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1",
+      "textParserVersion": "8.17.0",
       "warnings": [
         {
           "message": "[&image] is included more than 0 time(s).",
@@ -108,9 +111,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.21.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.list-item:bitmark++]"
   },
@@ -119,7 +122,9 @@
       "type": "standard-list-item",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "listItemIndent": 0,
       "item": [],
       "lead": [],
@@ -152,9 +157,9 @@
       ]
     },
     "parser": {
-      "version": "1.21.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-list-item:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -173,9 +178,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.21.0",
+      "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.14.1"
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.standard-list-item:bitmark++]\n[@listItemIndent:5]"
   }

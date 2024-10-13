@@ -4,7 +4,9 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["287842"],
+      "id": [
+        "287842"
+      ],
       "item": [],
       "lead": [
         {
@@ -18,10 +20,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": false,
       "body": [
         {
@@ -40,7 +42,9 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": ["cloze"]
+              "solutions": [
+                "cloze"
+              ]
             },
             {
               "text": " with the correct verb ",
@@ -79,7 +83,55 @@
               ]
             },
             {
-              "text": "\n\n",
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "select",
+              "prefix": "",
+              "postfix": "",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "options": [
+                {
+                  "text": "other",
+                  "isCorrect": true,
+                  "item": [],
+                  "lead": [],
+                  "hint": [],
+                  "instruction": [],
+                  "isExample": false,
+                  "example": null
+                },
+                {
+                  "text": "options",
+                  "isCorrect": false,
+                  "item": [],
+                  "lead": [],
+                  "hint": [],
+                  "instruction": [],
+                  "isExample": false,
+                  "example": null
+                }
+              ]
+            },
+            {
+              "text": " is on another line and may cause issues with bit chaining.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Here we chain ",
               "type": "text"
             },
             {
@@ -115,43 +167,17 @@
               ]
             },
             {
-              "text": " is on another line and may cause issues with bit chaining.\n\nHere we chain ",
+              "text": " correctly",
               "type": "text"
             },
             {
-              "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "type": "hardBreak"
             },
             {
-              "text": " correctly\n\nHere we chain ",
+              "type": "hardBreak"
+            },
+            {
+              "text": "Here we chain ",
               "type": "text"
             },
             {
@@ -212,8 +238,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.coach-call-to-action-cloze-and-multiple-choice-text]\n[@id:287842]\n[%][%coach-call-to-action-cloze-and-multiple-choice-text]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
   },
@@ -222,7 +249,9 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["287843"],
+      "id": [
+        "287843"
+      ],
       "item": [],
       "lead": [
         {
@@ -236,10 +265,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -269,7 +298,9 @@
                   "attrs": {}
                 }
               ],
-              "solutions": ["cloze"]
+              "solutions": [
+                "cloze"
+              ]
             },
             {
               "text": " with the correct verb ",
@@ -308,7 +339,55 @@
               ]
             },
             {
-              "text": "\n\n",
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "select",
+              "prefix": "",
+              "postfix": "",
+              "item": [],
+              "lead": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": true,
+              "options": [
+                {
+                  "text": "other",
+                  "isCorrect": true,
+                  "item": [],
+                  "lead": [],
+                  "hint": [],
+                  "instruction": [],
+                  "isExample": true,
+                  "example": true
+                },
+                {
+                  "text": "options",
+                  "isCorrect": false,
+                  "item": [],
+                  "lead": [],
+                  "hint": [],
+                  "instruction": [],
+                  "isExample": false,
+                  "example": null
+                }
+              ]
+            },
+            {
+              "text": " is on another line and may cause issues with bit chaining.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Here we chain ",
               "type": "text"
             },
             {
@@ -344,43 +423,17 @@
               ]
             },
             {
-              "text": " is on another line and may cause issues with bit chaining.\n\nHere we chain ",
+              "text": " correctly",
               "type": "text"
             },
             {
-              "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "type": "hardBreak"
             },
             {
-              "text": " correctly\n\nHere we chain ",
+              "type": "hardBreak"
+            },
+            {
+              "text": "Here we chain ",
               "type": "text"
             },
             {
@@ -441,8 +494,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.coach-call-to-action-cloze-and-multiple-choice-text]\n[@id:287843]\n[%][%coach-call-to-action-cloze-and-multiple-choice-text]\n[@example]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
   },
@@ -451,7 +505,9 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": ["287844"],
+      "id": [
+        "287844"
+      ],
       "item": [],
       "lead": [
         {
@@ -465,10 +521,10 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "pageNumber": [],
       "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "isExample": true,
       "body": [
         {
@@ -498,7 +554,10 @@
                   "attrs": {}
                 }
               ],
-              "solutions": ["cloze", "gap"]
+              "solutions": [
+                "cloze",
+                "gap"
+              ]
             },
             {
               "text": " with the correct verb ",
@@ -537,8 +596,10 @@
               ]
             },
             {
-              "text": "\n\n",
-              "type": "text"
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "type": "select",
@@ -573,7 +634,17 @@
               ]
             },
             {
-              "text": " is on another line and may cause issues with bit chaining.\n\nHere we chain ",
+              "text": " is on another line and may cause issues with bit chaining.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Here we chain ",
               "type": "text"
             },
             {
@@ -609,7 +680,17 @@
               ]
             },
             {
-              "text": " correctly\n\nHere we chain ",
+              "text": " correctly",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Here we chain ",
               "type": "text"
             },
             {
@@ -670,8 +751,9 @@
       ]
     },
     "parser": {
-      "version": "1.5.8",
-      "bitmarkVersion": "3"
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
     },
     "bitmark": "[.coach-call-to-action-cloze-and-multiple-choice-text]\n[@id:287844]\n[%][%coach-call-to-action-cloze-and-multiple-choice-text]\nThe students completed the [_cloze][_gap][@example] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][@example][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
   }
