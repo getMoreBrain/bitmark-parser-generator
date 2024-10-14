@@ -239,6 +239,7 @@ class BitmarkPegParserProcessor {
       statements,
       choices,
       responses,
+      propertyStyleResources,
       resources,
       posterImage,
       internalComments,
@@ -289,6 +290,7 @@ class BitmarkPegParserProcessor {
       choices: isMultipleChoiceV1 ? choices : undefined,
       responses: isMultipleResponseV1 ? responses : undefined,
       ...tags,
+      ...propertyStyleResources,
       resources: filteredResources,
       ...bitSpecificCards,
       body,
@@ -472,6 +474,7 @@ class BitmarkPegParserProcessor {
     result.statements = [];
     result.choices = [];
     result.responses = [];
+    result.propertyStyleResources = {};
     result.resources = [];
     result.trueFalse = [];
     result.markConfig = [];
@@ -669,6 +672,7 @@ class BitmarkPegParserProcessor {
     if (result.responses.length === 0) delete result.responses;
     if (result.trueFalse.length === 0) delete result.trueFalse;
     if (result.markConfig.length === 0) delete result.markConfig;
+    if (Object.keys(result.propertyStyleResources).length === 0) delete result.propertyStyleResources;
     if (result.resources.length === 0) delete result.resources;
     if (result.internalComments.length === 0) delete result.internalComments;
 

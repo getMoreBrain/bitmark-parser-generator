@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.16.0"
+const VERSION = "8.17.1"
 
 //Parser peggy.js
 
@@ -16,10 +16,8 @@ const VERSION = "8.16.0"
 
 // - JSON for color
 
-// - LaTeX and MathML embed
-// The formula == x = {-b \pm \sqrt{b^2-4ac} \over 2a} ==|math:LaTeX| is inline.
-// The formula == $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$ ==|math:LaTeX| is inline.
-// The formula == x = {-b \pm \sqrt{b^2-4ac} \over 2a} ==|math:MathML| is inline.
+// - LaTeX embed
+// The formula == $$ p \\left( x | y \\right) $$ ==|math:LaTeX| is inline.
 
 /*
 
@@ -637,8 +635,8 @@ bitmarkMinusMinusString "MinimalStyledString"
   = first: PlainText? more: (StyledText / PlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
 
 PlainText
-  = t: $((TagTags? !StyledText .)+) { return { text: unbreakscape(t), type: "text" } } // remove breakscaping tags in body
-  / NL
+  = t: NL { return { "type": "hardBreak" } }
+  / t: $(((TagTags? !StyledText char) / (TagTags !StyledText))+) { return { text: unbreakscape(t), type: "text" } } // remove breakscaping tags in body
 
 BoldHalfTag = '*'
 ItalicHalfTag = '_'
@@ -663,9 +661,7 @@ StyledText
   / HighlightTag ' '? t: $((!(' '? HighlightTag) .)* ) ' '? HighlightTag { return { marks: [{type: "highlight"}], text: unbreakscape(t), type: "text" } }
 
 TagTags
-  = $(BoldTag BoldHalfTag+)
-  / $(ItalicTag ItalicHalfTag+)
-  / $(LightTag LightHalfTag+)
+  = $(LightTag LightHalfTag+)
   / $(HighlightTag HighlightHalfTag+)
 
 

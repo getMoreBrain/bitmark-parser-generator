@@ -75,7 +75,6 @@ export interface Bit {
   bookAlias?: Property;
   coverImage?: Property;
   coverColor?: Property;
-  imagePlaceholder?: Property;
   publications?: Property;
   author?: Property;
   subject?: Property;
@@ -181,6 +180,7 @@ export interface Bit {
   example?: Example;
   imageSource?: ImageSource;
   person?: Person;
+  imagePlaceholder?: ImageResource;
   resources?: Resource[];
   body?: Body;
   sampleSolution?: Property;

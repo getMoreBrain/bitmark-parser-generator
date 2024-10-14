@@ -5,6 +5,7 @@ import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigK
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
+import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
@@ -17,6 +18,7 @@ import { commentTagContentProcessor as internalCommentTagContentProcessor } from
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { personChainContentProcessor } from './PersonChainContentProcessor';
 import { ratingLevelChainContentProcessor } from './RatingLevelChainContentProcessor';
+import { propertyStyleResourceContentProcessor } from './ResourceContentProcessor';
 import { servingsChainContentProcessor } from './ServingsChainContentProcessor';
 import { technicalTermChainContentProcessor } from './TechnicalTermChainContentProcessor';
 
@@ -99,6 +101,18 @@ function propertyContentProcessor(
     } else if (configKey === PropertyConfigKey.property_title && isChain) {
       // Hack the intermediate tag so as not to clash with [#title] tags which are not chained (yet)
       tag = 'propertyTitle';
+    } else if (configKey === PropertyConfigKey.imagePlaceholder) {
+      propertyStyleResourceContentProcessor(
+        context,
+        contentDepth,
+        bitType,
+        textFormat,
+        tagsConfig,
+        content,
+        target,
+        ResourceTag.image,
+      );
+      return;
     }
   }
 
