@@ -1377,6 +1377,24 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
+  // bitmarkAst -> bits -> bitsValue -> imagePlaceholder
+
+  protected enter_imagePlaceholder(node: NodeInfo, route: NodeInfo[]): boolean | void {
+    // Ignore imagePlaceholder that is not at the bit level as it are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const resource = node.value as Resource;
+    const bitType = this.getBitType(route);
+
+    if (!resource || !bitType) return;
+
+    const res = this.parseResourceToJson(bitType, resource);
+    if (res && res.type === ResourceTag.image) {
+      this.bitJson.imagePlaceholder = res;
+    }
+  }
+
   // bitmarkAst -> bits -> bitsValue -> resources
 
   protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean | void {
@@ -1636,6 +1654,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.example) continue;
       if (astKey === PropertyTag.imageSource) continue;
       if (astKey === PropertyTag.person) continue;
+      if (astKey === PropertyTag.imagePlaceholder) continue;
       if (astKey === PropertyTag.width) continue;
       if (astKey === PropertyTag.height) continue;
       if (astKey === PropertyAstKey.ast_markConfig) continue;
@@ -2682,7 +2701,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       bookAlias: undefined,
       coverImage: undefined,
       coverColor: undefined,
-      imagePlaceholder: undefined,
       publications: undefined,
       author: undefined,
       subject: undefined,
@@ -2800,6 +2818,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       body: undefined,
 
       // Resource
+      imagePlaceholder: undefined,
       resource: undefined,
       logos: undefined,
       images: undefined,
@@ -3195,7 +3214,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.bookAlias == null) delete bitJson.bookAlias;
     if (bitJson.coverImage == null) delete bitJson.coverImage;
     if (bitJson.coverColor == null) delete bitJson.coverColor;
-    if (bitJson.imagePlaceholder == null) delete bitJson.imagePlaceholder;
     if (bitJson.publications == null) delete bitJson.publications;
     if (bitJson.author == null) delete bitJson.author;
     if (bitJson.subject == null) delete bitJson.subject;
@@ -3312,6 +3330,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.placeholders == null || Object.keys(bitJson.placeholders).length === 0) delete bitJson.placeholders;
 
     // Resource
+    if (bitJson.imagePlaceholder == null) delete bitJson.imagePlaceholder;
     if (bitJson.resource == null) delete bitJson.resource;
     if (bitJson.logos == null) delete bitJson.logos;
     if (bitJson.images == null) delete bitJson.images;

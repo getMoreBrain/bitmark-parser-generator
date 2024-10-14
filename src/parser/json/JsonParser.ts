@@ -287,7 +287,6 @@ class JsonParser {
       bookAlias,
       coverImage,
       coverColor,
-      imagePlaceholder,
       publications,
       author,
       date,
@@ -392,6 +391,7 @@ class JsonParser {
       person,
       partner,
       marks,
+      imagePlaceholder,
       resource,
       logos,
       images,
@@ -439,6 +439,9 @@ class JsonParser {
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
+
+    // imagePlaceholder
+    const imagePlaceholderNode = this.imagePlaceholderBitToAst(imagePlaceholder);
 
     // imageSource
     const imageSourceNode = this.imageSourceBitToAst(imageSource);
@@ -557,7 +560,6 @@ class JsonParser {
       bookAlias: this.convertStringToBreakscapedString(bookAlias),
       coverImage: this.convertStringToBreakscapedString(coverImage),
       coverColor: this.convertStringToBreakscapedString(coverColor),
-      imagePlaceholder: this.convertStringToBreakscapedString(imagePlaceholder),
       publications: this.convertStringToBreakscapedString(publications),
       author: this.convertStringToBreakscapedString(author),
       date: this.convertStringToBreakscapedString(date),
@@ -664,6 +666,7 @@ class JsonParser {
       imageSource: imageSourceNode,
       person: personNode,
       markConfig: markConfigNode,
+      imagePlaceholder: imagePlaceholderNode,
       resources: resourcesNode,
       body: bodyNode,
       elements: this.convertStringToBreakscapedString(elements),
@@ -699,6 +702,17 @@ class JsonParser {
         size,
         trim,
       });
+    }
+
+    return node;
+  }
+
+  private imagePlaceholderBitToAst(imagePlaceholder?: ImageResourceWrapperJson): ImageResource | undefined {
+    let node: ImageResource | undefined;
+
+    if (imagePlaceholder) {
+      const { image } = imagePlaceholder;
+      node = this.resourceDataToAst(ResourceTag.image, image) as ImageResource | undefined;
     }
 
     return node;

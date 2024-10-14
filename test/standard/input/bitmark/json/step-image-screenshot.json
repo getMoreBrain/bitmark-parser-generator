@@ -66,7 +66,7 @@
     "parser": {
       "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.17.1"
     },
     "bitmark": "[.step-image-screenshot]\n**◼︎ Ausgewählte temporale Adjektive**\n**Vergangenheit:**\n* gestrig, ehemalig, vorherig, damalig\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
@@ -75,7 +75,6 @@
       "type": "step-image-screenshot",
       "format": "bitmark--",
       "bitLevel": 1,
-      "imagePlaceholder": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -118,6 +117,22 @@
           "attrs": {}
         }
       ],
+      "imagePlaceholder": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "resource": {
         "type": "image",
         "image": {
@@ -138,7 +153,7 @@
     "parser": {
       "version": "1.31.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.17.1",
       "warnings": [
         {
           "message": "Resource type [&image] is specified in the bit header, but no extra resource is allowed for this bit.",
