@@ -5,7 +5,7 @@ import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { Count } from '../../../../model/enum/Count';
-import { ResourceTag } from '../../../../model/enum/ResourceTag';
+import { ResourceTag, ResourceTagType } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 
 import {
@@ -27,7 +27,7 @@ const resourceBuilder = new ResourceBuilder();
  * @param resourceTypeAttachment the resource type specified in the bit header
  * @param resources the resources on the bit
  */
-function buildResource(
+function buildResources(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
   resourceTypeAttachment: string | undefined,
@@ -126,4 +126,41 @@ function resourceContentProcessor(
   }
 }
 
-export { buildResource as buildResources, resourceContentProcessor };
+function propertyStyleResourceContentProcessor(
+  context: BitmarkPegParserContext,
+  _contentDepth: ContentDepthType,
+  bitType: BitTypeType,
+  textFormat: TextFormatType,
+  tagsConfig: TagsConfig | undefined,
+  content: BitContent,
+  target: BitContentProcessorResult,
+  type: ResourceTagType,
+): void {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { type: _ignoreType, key, value, chain } = content as TypeKeyValue<BreakscapedString>;
+
+  target.propertyStyleResources = target.propertyStyleResources ?? {};
+
+  if (type) {
+    // Parse the resource chain
+    const resourceConfig = Config.getTagConfigForTag(tagsConfig, type);
+
+    const { posterImage, ...tags } = context.bitContentProcessor(
+      BitContentLevel.Chain,
+      bitType,
+      textFormat,
+      resourceConfig?.chain,
+      chain,
+    );
+
+    const resource = resourceBuilder.resource({
+      type,
+      value,
+      posterImage: posterImage as ImageResource,
+      ...tags,
+    });
+    if (resource) target.propertyStyleResources[key] = resource;
+  }
+}
+
+export { buildResources, resourceContentProcessor, propertyStyleResourceContentProcessor };

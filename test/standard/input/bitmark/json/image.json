@@ -4,9 +4,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "backgroundWallpaper": "https://miro.medium.com/background.png",
       "item": [],
       "lead": [],
@@ -45,9 +43,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "levelCEFRp": "levelCEFRp",
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
@@ -88,9 +84,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -127,9 +121,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -166,9 +158,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -205,15 +195,9 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
-      "publisher": [
-        "kpmg"
-      ],
-      "theme": [
-        "grundzuege"
-      ],
+      "id": ["304379"],
+      "publisher": ["kpmg"],
+      "theme": ["grundzuege"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -250,9 +234,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -289,9 +271,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -328,9 +308,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -338,6 +316,22 @@
       "hint": [],
       "instruction": [],
       "body": [],
+      "imagePlaceholder": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": true,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "resource": {
         "type": "image",
         "image": {
@@ -367,10 +361,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
-      "imagePlaceholder": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -378,6 +369,22 @@
       "hint": [],
       "instruction": [],
       "body": [],
+      "imagePlaceholder": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
+          "width": "300",
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "resource": {
         "type": "image",
         "image": {
@@ -407,9 +414,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -456,9 +461,7 @@
       "type": "image",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],

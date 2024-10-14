@@ -48,7 +48,6 @@ export interface BitJson {
   bookAlias: string | string[];
   coverImage: string | string[];
   coverColor: string;
-  imagePlaceholder: string;
   publisher: string | string[];
   publisherName: string;
   publications: string | string[];
@@ -166,6 +165,7 @@ export interface BitJson {
     [key: string]: unknown | unknown[];
   };
 
+  imagePlaceholder: ImageResourceWrapperJson;
   resource: ResourceJson;
   logos: ImageResourceWrapperJson[];
   images: ImageResourceWrapperJson[];

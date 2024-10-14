@@ -515,6 +515,12 @@ const GROUPS: _GroupsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.imagePlaceholder,
+        chain: [
+          {
+            type: BitTagType.group,
+            configKey: GroupConfigKey.group_resourceImageCommon,
+          },
+        ],
         maxCount: 1,
       },
     ],

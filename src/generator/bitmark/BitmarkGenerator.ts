@@ -1219,6 +1219,18 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeResource(resource);
   }
 
+  // bitmarkAst -> bits -> bitsValue -> imagePlaceholder
+  protected enter_imagePlaceholder(node: NodeInfo, _route: NodeInfo[]): boolean | void {
+    const resource = node.value as Resource;
+
+    // This is a resource, so handle it with the common code
+    this.writePropertyStyleResource(node.key, resource);
+  }
+
+  protected exit_imagePlaceholder(_node: NodeInfo, _route: NodeInfo[]): boolean | void {
+    this.writeNL();
+  }
+
   // bitmarkAst -> bits -> bitsValue -> posterImage
   // bitmarkAst -> bits -> bitsValue -> resource -> posterImage
 
@@ -1685,6 +1697,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.labelFalse) continue;
       if (astKey === PropertyTag.posterImage) continue;
       if (astKey === PropertyTag.imageSource) continue;
+      if (astKey === PropertyTag.imagePlaceholder) continue;
       if (astKey === PropertyTag.technicalTerm) continue;
       if (astKey === PropertyTag.servings) continue;
       if (astKey === PropertyTag.person) continue;
@@ -1914,6 +1927,25 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       return;
     }
     this.write('\n');
+  }
+
+  protected writePropertyStyleResource(key: string, resource: Resource): boolean | void {
+    const resourceAsArticle = resource as ArticleResource;
+
+    if (key && resource) {
+      this.writeOPA();
+      this.writeString(key);
+      if (resource.type === ResourceTag.article && resourceAsArticle.value) {
+        this.writeColon();
+        // this.writeNL();
+        this.writeString(resourceAsArticle.value);
+        this.writeNL();
+      } else if (resource.value) {
+        this.writeColon();
+        this.writeString(resource.value);
+      }
+      this.writeCL();
+    }
   }
 
   protected writeResource(resource: Resource): boolean | void {

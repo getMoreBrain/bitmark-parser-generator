@@ -135,6 +135,7 @@ export interface BitContentProcessorResult {
   mark?: BreakscapedString[];
   title?: BreakscapedString[];
   subtitle?: BreakscapedString;
+  propertyStyleResources?: { [key: string]: Resource };
   resources?: Resource[];
   itemLead?: BreakscapedString[];
   item?: BreakscapedString;

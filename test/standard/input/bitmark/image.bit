@@ -40,10 +40,11 @@
 [.image]
 [@id:304379]
 [&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ=.gif][@zoomDisabled:false]
+[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif][@zoomDisabled]
 
 [.image]
 [@id:304379]
-[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]
+[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif][@width:300]
 [&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGz(zOzBQ)'.gif]
 
 [.image]
