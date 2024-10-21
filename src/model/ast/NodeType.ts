@@ -108,6 +108,8 @@ const NodeType = superenum({
   data: 'data',
   date: 'date',
   dateValue: 'dateValue',
+  dateEnd: 'dateEnd',
+  dateEndValue: 'dateEndValue',
   decimalPlaces: 'decimalPlaces',
   deeplink: 'deeplink',
   deeplinkValue: 'deeplinkValue',
