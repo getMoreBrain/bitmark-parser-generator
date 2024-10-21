@@ -79,6 +79,7 @@ export interface Bit {
   author?: Property;
   subject?: Property;
   date?: Property;
+  dateEnd?: Property;
   location?: Property;
   kind?: Property;
   hasMarkAsDone?: Property;

@@ -54,6 +54,7 @@ export interface BitJson {
   author: string | string[];
   subject: string | string[];
   date: string;
+  dateEnd: string;
   location: string;
   theme: string | string[];
   kind: string;

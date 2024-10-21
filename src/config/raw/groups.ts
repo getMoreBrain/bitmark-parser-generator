@@ -466,6 +466,10 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.dateEnd,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.location,
       },
       {

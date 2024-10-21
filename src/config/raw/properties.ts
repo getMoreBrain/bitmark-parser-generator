@@ -216,6 +216,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.dateEnd]: {
+    tag: PropertyTag.dateEnd,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.location]: {
     tag: PropertyTag.location,
     single: true,

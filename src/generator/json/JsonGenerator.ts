@@ -2705,6 +2705,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       author: undefined,
       subject: undefined,
       date: undefined,
+      dateEnd: undefined,
       location: undefined,
       kind: undefined,
       hasMarkAsDone: undefined,
@@ -3218,6 +3219,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.author == null) delete bitJson.author;
     if (bitJson.subject == null) delete bitJson.subject;
     if (bitJson.date == null) delete bitJson.date;
+    if (bitJson.dateEnd == null) delete bitJson.dateEnd;
     if (bitJson.location == null) delete bitJson.location;
     if (bitJson.kind == null) delete bitJson.kind;
     if (bitJson.hasMarkAsDone == null) delete bitJson.hasMarkAsDone;
