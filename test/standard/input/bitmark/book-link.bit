@@ -92,6 +92,7 @@ Second is the optional property called “referenceEnd”
 All these bits support all resources (like &website-link, …
 All of these bits (starting with .learning-path support the following optional properties:
 [@date:2015-03-25T12:00:00Z]
+[@dateEnd:2016-05-25T00:12:34Z]
 [@location:Zug]
 [@list:One]
 [@list:Two]

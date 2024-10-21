@@ -119,6 +119,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "date": "2022-10-01T08:00:00CET",
+      "dateEnd": "2016-05-25T00:12:34Z",
       "location": "Zug",
       "action": "Päsenz-Seminar",
       "duration": "28800s",

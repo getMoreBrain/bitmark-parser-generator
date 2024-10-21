@@ -142,6 +142,7 @@ class Builder extends BaseBuilder {
     author?: BreakscapedString | BreakscapedString[];
     subject?: BreakscapedString | BreakscapedString[];
     date?: BreakscapedString;
+    dateEnd?: BreakscapedString;
     location?: BreakscapedString;
     kind?: BreakscapedString;
     hasMarkAsDone?: boolean;
@@ -327,6 +328,7 @@ class Builder extends BaseBuilder {
       author,
       subject,
       date,
+      dateEnd,
       location,
       kind,
       hasMarkAsDone,
@@ -508,6 +510,7 @@ class Builder extends BaseBuilder {
       author: this.toAstProperty(PropertyConfigKey.author, author),
       subject: this.toAstProperty(PropertyConfigKey.subject, subject),
       date: this.toAstProperty(PropertyConfigKey.date, date),
+      dateEnd: this.toAstProperty(PropertyConfigKey.dateEnd, dateEnd),
       location: this.toAstProperty(PropertyConfigKey.location, location),
       kind: this.toAstProperty(PropertyConfigKey.kind, kind),
       hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, hasMarkAsDone),

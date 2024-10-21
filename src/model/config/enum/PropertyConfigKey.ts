@@ -36,6 +36,7 @@ const propertyConfigKeys = {
   coverColor: 'coverColor',
   coverImage: 'coverImage',
   date: 'date',
+  dateEnd: 'dateEnd',
   decimalPlaces: 'decimalPlaces',
   deeplink: 'deeplink',
   disableCalculation: 'disableCalculation',

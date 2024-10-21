@@ -6,6 +6,7 @@
       "bitLevel": 1,
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
+      "dateEnd": "2016-05-25T00:12:34Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
@@ -111,20 +112,13 @@
       "type": "le-task",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "list": ["One", "Two", "Three", "Four"],
       "isTracked": true,
       "isInfoOnly": false,
       "reference": "Ref4.2.34",
