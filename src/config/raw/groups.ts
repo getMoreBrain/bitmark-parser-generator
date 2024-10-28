@@ -128,6 +128,10 @@ const GROUPS: _GroupsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.search,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.showInIndex,
+      },
     ],
   },
   [GroupConfigKey.group_standardItemLeadInstructionHint]: {

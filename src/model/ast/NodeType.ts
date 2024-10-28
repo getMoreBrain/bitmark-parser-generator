@@ -369,6 +369,7 @@ const NodeType = superenum({
   servings: 'servings',
   servingsValue: 'servingsValue',
   showInIndex: 'showInIndex',
+  showInIndexValue: 'showInIndexValue',
   size: 'size',
   slug: 'slug',
   slugValue: 'slugValue',

@@ -149,6 +149,7 @@ class Builder extends BaseBuilder {
     hasMarkAsDone?: boolean;
     processHandIn?: boolean;
     action?: BreakscapedString;
+    showInIndex?: boolean;
     blockId?: BreakscapedString;
     pageNo?: number;
     x?: number;
@@ -336,6 +337,7 @@ class Builder extends BaseBuilder {
       hasMarkAsDone,
       processHandIn,
       action,
+      showInIndex,
       blockId,
       pageNo,
       x,
@@ -518,6 +520,7 @@ class Builder extends BaseBuilder {
       hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, hasMarkAsDone),
       processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, processHandIn),
       action: this.toAstProperty(PropertyConfigKey.action, action),
+      showInIndex: this.toAstProperty(PropertyConfigKey.showInIndex, showInIndex),
       blockId: this.toAstProperty(PropertyConfigKey.blockId, blockId),
       pageNo: this.toAstProperty(PropertyConfigKey.pageNo, pageNo),
       x: this.toAstProperty(PropertyConfigKey.x, x),
