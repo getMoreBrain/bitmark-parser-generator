@@ -604,6 +604,7 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.showInIndex,
     single: true,
     format: PropertyFormat.boolean,
+    defaultValue: 'false',
   },
   [PropertyConfigKey.alt]: {
     tag: PropertyTag.alt,

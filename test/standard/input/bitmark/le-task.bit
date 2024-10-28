@@ -15,6 +15,7 @@ All of these bits (starting with .learning-path support the following optional p
 
 
 [.le-task&website-link]
+[@showInIndex]
 [!Skript «Grundausbildung Altersvorsorge»]
 [@action:Selbststudium]
 [@duration:3600s]

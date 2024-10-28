@@ -121,6 +121,7 @@
       "list": ["One", "Two", "Three", "Four"],
       "isTracked": true,
       "isInfoOnly": false,
+      "showInIndex": true,
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
       "item": [],

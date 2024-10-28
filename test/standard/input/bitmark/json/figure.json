@@ -4,6 +4,7 @@
       "type": "figure",
       "format": "bitmark--",
       "bitLevel": 1,
+      "showInIndex": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -52,10 +53,7 @@
         }
       },
       "captionDefinitionList": {
-        "columns": [
-          "Legende",
-          ""
-        ],
+        "columns": ["Legende", ""],
         "definitions": [
           {
             "term": "A",

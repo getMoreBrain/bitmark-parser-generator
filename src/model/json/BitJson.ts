@@ -61,6 +61,7 @@ export interface BitJson {
   hasMarkAsDone: boolean;
   processHandIn: boolean;
   action: string;
+  showInIndex: boolean;
   blockId: string;
   pageNo: number;
   x: number;
