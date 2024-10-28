@@ -4,7 +4,7 @@ import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioLinkResource, CaptionDefinitionList } from '../../model/ast/Nodes';
+import { AudioLinkResource, CaptionDefinitionList, DescriptionListItem } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
 import { DocumentResource } from '../../model/ast/Nodes';
@@ -68,6 +68,7 @@ import {
   BotResponseJson,
   CaptionDefinitionListJson,
   ChoiceJson,
+  DescriptionListItemJson as DescriptionListItemJson,
   ExampleJson,
   FlashcardJson,
   HeadingJson,
@@ -837,7 +838,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards
 
   protected enter_flashcards(node: NodeInfo, route: NodeInfo[]): void {
     const flashcards = node.value as Flashcard[];
@@ -878,6 +879,50 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (flashcardsJson.length > 0) {
       this.bitJson.cards = flashcardsJson;
+    }
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions
+
+  protected enter_descriptions(node: NodeInfo, route: NodeInfo[]): void {
+    const descriptionListItem = node.value as DescriptionListItem[];
+
+    // Ignore responses that are not at the correct level as they are potentially handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.cardNode) return;
+
+    const descriptionsJson: DescriptionListItemJson[] = [];
+    if (descriptionListItem) {
+      for (const c of descriptionListItem) {
+        // Create the flashcard
+        const descriptionListItemJson: Partial<DescriptionListItemJson> = {
+          term: this.convertBreakscapedStringToJsonText(
+            c.term ?? Breakscape.EMPTY_STRING,
+            TextFormat.bitmarkMinusMinus,
+          ),
+          description: this.convertBreakscapedStringToJsonText(
+            c.description ?? Breakscape.EMPTY_STRING,
+            TextFormat.bitmarkMinusMinus,
+          ),
+          alternativeDescriptions: (c.alternativeDescriptions ?? []).map((a) =>
+            this.convertBreakscapedStringToJsonText(a ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
+          ),
+          ...this.toItemLeadHintInstruction(c),
+          ...this.toExample(c, {
+            defaultExample: c.isDefaultExample,
+            isBoolean: true,
+          }),
+        };
+
+        // Delete unwanted properties
+        if (c.itemLead?.lead == null) delete descriptionListItemJson.lead;
+
+        descriptionsJson.push(descriptionListItemJson as DescriptionListItemJson);
+      }
+    }
+
+    if (descriptionsJson.length > 0) {
+      this.bitJson.descriptions = descriptionsJson;
     }
   }
 
@@ -2831,6 +2876,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       additionalSolutions: undefined,
       partialAnswer: undefined,
       elements: undefined,
+      cards: undefined,
+      descriptions: undefined,
       statements: undefined,
       responses: undefined,
       quizzes: undefined,
@@ -2931,6 +2978,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           BitType.sequence,
           BitType.mark,
           BitType.flashcard,
+          BitType.descriptionList,
         ])
       ) {
         // With no 'example' value at the bit level.
@@ -3344,6 +3392,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.additionalSolutions == null) delete bitJson.additionalSolutions;
     if (bitJson.partialAnswer == null) delete bitJson.partialAnswer;
     if (bitJson.elements == null) delete bitJson.elements;
+    if (bitJson.cards == null) delete bitJson.cards;
+    if (bitJson.descriptions == null) delete bitJson.descriptions;
     if (bitJson.statements == null) delete bitJson.statements;
     if (bitJson.responses == null) delete bitJson.responses;
     if (bitJson.quizzes == null) delete bitJson.quizzes;

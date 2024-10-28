@@ -711,6 +711,26 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> alternativeDescriptions
+
+  protected between_alternativeDescriptions(_node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeNL();
+    this.writeCardSetVariantDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> alternativeDescriptions -> alternativeDescriptionsValue
+
+  protected leaf_alternativeDescriptionsValue(node: NodeInfo, route: NodeInfo[]): void {
+    // Ignore responses that are not at the alternativeAnswers level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.alternativeDescriptions) return;
+
+    if (node.value) {
+      this.writeString(node.value);
+    }
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> statements
 
   protected enter_statements(_node: NodeInfo, _route: NodeInfo[]): void {
@@ -1028,21 +1048,52 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue -> term
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> term
 
   protected leaf_term(node: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.definitionsValue) return;
+    if (parent?.key !== NodeType.definitionsValue && parent?.key !== NodeType.descriptionsValue) return;
 
     if (node.value) this.write(node.value);
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue -> description
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> description
 
   protected leaf_description(node: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.definitionsValue) return;
+    if (parent?.key !== NodeType.definitionsValue && parent?.key !== NodeType.descriptionsValue) return;
 
     if (node.value) this.write(node.value);
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions
+
+  protected between_descriptions(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.cardNode) return;
+
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue
+
+  protected between_descriptionsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.descriptions) return;
+
+    if (right.key === NodeType.description) {
+      this.writeNL();
+      this.writeCardSetSideDivider();
+      this.writeNL();
+    } else if (right.key === NodeType.alternativeDescriptions) {
+      this.writeNL();
+      this.writeCardSetVariantDivider();
+      this.writeNL();
+    }
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
