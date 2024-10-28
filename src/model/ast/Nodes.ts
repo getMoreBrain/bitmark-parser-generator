@@ -284,6 +284,20 @@ export interface Flashcard {
   example?: Example;
 }
 
+// DescriptionListItem
+
+export interface DescriptionListItem {
+  term: BreakscapedString; // TextAst;
+  description?: BreakscapedString; // TextAst;
+  alternativeDescriptions?: BreakscapedString[]; // TextAst[];
+  itemLead?: ItemLead;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
+}
+
 // Bot Response
 export interface BotResponse {
   response: BreakscapedString;
@@ -541,6 +555,7 @@ export interface CardNode {
   questions?: Question[];
   elements?: BreakscapedString[];
   flashcards?: Flashcard[];
+  descriptions?: DescriptionListItem[];
   statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];

@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.32.0
+Version: 1.33.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -176,6 +176,8 @@ correction (since: 1.3.0)
 danger (since: 1.3.0)
 danger-alt (since: 1.16.0)
 danger-collapsible (since: 1.21.0)
+description-list (since: 1.3.0)
+description-term (since: 1.33.0)
 details (since: 1.3.0)
 details-1 (since: 1.3.0)
 details-image (since: 1.3.0)
@@ -212,6 +214,7 @@ focus-image (since: 1.3.0)
 foot-note (since: 1.3.0)
 gap-text (since: 1.5.15)
 gap-text-instruction-grouped (since: 1.5.15)
+glossary-term (since: 1.33.0)
 group-born (since: 1.3.0)
 group-died (since: 1.3.0)
 hand-in-audio (since: 1.5.15)
@@ -246,6 +249,7 @@ images-logo-grave (since: 1.5.11)
 image-styled (since: 1.3.0)
 image-super-wide (since: 1.3.0)
 image-zoom (since: 1.3.0)
+index-term (since: 1.33.0)
 info (since: 1.3.0)
 info-alt (since: 1.16.0)
 info-collapsible (since: 1.21.0)

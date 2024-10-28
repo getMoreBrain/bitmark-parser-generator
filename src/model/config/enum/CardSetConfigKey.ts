@@ -1,7 +1,7 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 const CardSetConfigKey = superenum({
-  _flashcards: '_flashcards',
+  _flashcardLike: '_flashcardLike',
   _elements: '_elements',
   _statements: '_statements',
   _quiz: '_quiz',

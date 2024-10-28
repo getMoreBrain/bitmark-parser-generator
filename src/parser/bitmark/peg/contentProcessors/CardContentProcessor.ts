@@ -29,6 +29,7 @@ import {
   Response,
   Statement,
   Select,
+  DescriptionListItem,
 } from '../../../../model/ast/Nodes';
 import {
   BitContentLevel,
@@ -68,8 +69,8 @@ function buildCards(
   const cardSetType = bitConfig.cardSet?.configKey;
 
   switch (cardSetType) {
-    case CardSetConfigKey._flashcards:
-      result = parseFlashcards(context, bitType, processedCardSet);
+    case CardSetConfigKey._flashcardLike:
+      result = parseFlashcardLike(context, bitType, processedCardSet);
       break;
 
     case CardSetConfigKey._elements:
@@ -202,12 +203,13 @@ function processCardSet(
   return processedCardSet;
 }
 
-function parseFlashcards(
+function parseFlashcardLike(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const flashcards: Flashcard[] = [];
+  const descriptions: DescriptionListItem[] = [];
   let question = Breakscape.EMPTY_STRING;
   let answer: BreakscapedString | undefined;
   let alternativeAnswers: BreakscapedString[] = [];
@@ -247,18 +249,31 @@ function parseFlashcards(
 
     // Add the flashcard
     if (cardIndex === 0 || !onlyOneCardAllowed) {
-      // if (question) {
-      flashcards.push(
-        builder.flashcard({
-          question,
-          answer,
-          alternativeAnswers: alternativeAnswers.length > 0 ? alternativeAnswers : undefined,
-          ...extraTags,
-        }),
-      );
-      // } else {
-      //   context.addWarning('Ignoring card with empty question', questionVariant);
-      // }
+      if (Config.isOfBitType(bitType, BitType.descriptionList)) {
+        // .description-list
+        descriptions.push(
+          builder.descriptionListItem({
+            term: question,
+            description: answer,
+            alternativeDescriptions: alternativeAnswers.length > 0 ? alternativeAnswers : undefined,
+            ...extraTags,
+          }),
+        );
+      } else {
+        // .flashcard
+        // if (question) {
+        flashcards.push(
+          builder.flashcard({
+            question,
+            answer,
+            alternativeAnswers: alternativeAnswers.length > 0 ? alternativeAnswers : undefined,
+            ...extraTags,
+          }),
+        );
+        // } else {
+        //   context.addWarning('Ignoring card with empty question', questionVariant);
+        // }
+      }
     } else {
       // Only one card allowed, add a warning and ignore the card
       context.addWarning(
@@ -273,6 +288,7 @@ function parseFlashcards(
 
   return {
     flashcards: flashcards.length > 0 ? flashcards : undefined,
+    descriptions: descriptions.length > 0 ? descriptions : undefined,
   };
 }
 
