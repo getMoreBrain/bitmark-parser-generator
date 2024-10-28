@@ -51,6 +51,7 @@ import {
   Servings,
   RatingLevelStartEnd,
   CaptionDefinitionList,
+  DescriptionListItem,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -76,6 +77,7 @@ import {
   ServingsJson,
   RatingLevelStartEndJson,
   CaptionDefinitionListJson,
+  DescriptionListItemJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -295,6 +297,7 @@ class JsonParser {
       kind,
       hasMarkAsDone,
       processHandIn,
+      showInIndex,
       blockId,
       pageNo,
       x,
@@ -401,6 +404,7 @@ class JsonParser {
       statement,
       isCorrect,
       cards,
+      descriptions,
       statements,
       responses,
       quizzes,
@@ -455,6 +459,9 @@ class JsonParser {
 
     // flashcards
     const flashcardNodes = this.flashcardBitsToAst(cards);
+
+    // descriptions
+    const descriptionNodes = this.descriptionsBitsToAst(descriptions);
 
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements, example);
@@ -570,6 +577,7 @@ class JsonParser {
       hasMarkAsDone,
       processHandIn,
       action: this.convertStringToBreakscapedString(action),
+      showInIndex,
       blockId: this.convertStringToBreakscapedString(blockId),
       pageNo,
       x,
@@ -673,6 +681,7 @@ class JsonParser {
       body: bodyNode,
       elements: this.convertStringToBreakscapedString(elements),
       flashcards: flashcardNodes,
+      descriptions: descriptionNodes,
       statements: statementNodes,
       responses: responseNodes,
       quizzes: quizNodes,
@@ -763,6 +772,27 @@ class JsonParser {
           question: this.convertJsonTextToBreakscapedString(question) ?? Breakscape.EMPTY_STRING,
           answer: this.convertJsonTextToBreakscapedString(answer),
           alternativeAnswers: this.convertJsonTextToBreakscapedString(alternativeAnswers),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example),
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private descriptionsBitsToAst(descriptionList?: DescriptionListItemJson[]): DescriptionListItem[] | undefined {
+    const nodes: DescriptionListItem[] = [];
+    if (Array.isArray(descriptionList)) {
+      for (const c of descriptionList) {
+        const { term, description, alternativeDescriptions, item, lead, hint, instruction, example } = c;
+        const node = builder.descriptionListItem({
+          term: this.convertJsonTextToBreakscapedString(term) ?? Breakscape.EMPTY_STRING,
+          description: this.convertJsonTextToBreakscapedString(description),
+          alternativeDescriptions: this.convertJsonTextToBreakscapedString(alternativeDescriptions),
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });

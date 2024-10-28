@@ -85,6 +85,7 @@ export interface Bit {
   hasMarkAsDone?: Property;
   processHandIn?: Property;
   action?: Property;
+  showInIndex?: Property;
   blockId?: Property;
   pageNo?: Property;
   x?: Property;
@@ -276,6 +277,20 @@ export interface Flashcard {
   question: BreakscapedString; // TextAst;
   answer?: BreakscapedString; // TextAst;
   alternativeAnswers?: BreakscapedString[]; // TextAst[];
+  itemLead?: ItemLead;
+  hint?: BreakscapedString; // TextAst;
+  instruction?: BreakscapedString; // TextAst;
+  isExample: boolean;
+  isDefaultExample: boolean;
+  example?: Example;
+}
+
+// DescriptionListItem
+
+export interface DescriptionListItem {
+  term: BreakscapedString; // TextAst;
+  description?: BreakscapedString; // TextAst;
+  alternativeDescriptions?: BreakscapedString[]; // TextAst[];
   itemLead?: ItemLead;
   hint?: BreakscapedString; // TextAst;
   instruction?: BreakscapedString; // TextAst;
@@ -541,6 +556,7 @@ export interface CardNode {
   questions?: Question[];
   elements?: BreakscapedString[];
   flashcards?: Flashcard[];
+  descriptions?: DescriptionListItem[];
   statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];

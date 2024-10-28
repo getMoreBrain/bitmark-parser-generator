@@ -59,6 +59,7 @@ import {
   RatingLevelStartEnd,
   CaptionDefinition,
   CaptionDefinitionList,
+  DescriptionListItem,
 } from '../model/ast/Nodes';
 
 /**
@@ -148,6 +149,7 @@ class Builder extends BaseBuilder {
     hasMarkAsDone?: boolean;
     processHandIn?: boolean;
     action?: BreakscapedString;
+    showInIndex?: boolean;
     blockId?: BreakscapedString;
     pageNo?: number;
     x?: number;
@@ -258,6 +260,7 @@ class Builder extends BaseBuilder {
     additionalSolutions?: BreakscapedString | BreakscapedString[];
     elements?: BreakscapedString[];
     flashcards?: Flashcard[];
+    descriptions?: DescriptionListItem[];
     statement?: Statement;
     statements?: Statement[];
     responses?: Response[];
@@ -334,6 +337,7 @@ class Builder extends BaseBuilder {
       hasMarkAsDone,
       processHandIn,
       action,
+      showInIndex,
       blockId,
       pageNo,
       x,
@@ -516,6 +520,7 @@ class Builder extends BaseBuilder {
       hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, hasMarkAsDone),
       processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, processHandIn),
       action: this.toAstProperty(PropertyConfigKey.action, action),
+      showInIndex: this.toAstProperty(PropertyConfigKey.showInIndex, showInIndex),
       blockId: this.toAstProperty(PropertyConfigKey.blockId, blockId),
       pageNo: this.toAstProperty(PropertyConfigKey.pageNo, pageNo),
       x: this.toAstProperty(PropertyConfigKey.x, x),
@@ -1531,6 +1536,58 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build descriptionListItem node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  descriptionListItem(data: {
+    term: BreakscapedString;
+    description?: BreakscapedString;
+    alternativeDescriptions?: BreakscapedString[];
+    item?: BreakscapedString;
+    lead?: BreakscapedString;
+    pageNumber?: BreakscapedString;
+    marginNumber?: BreakscapedString;
+    hint?: BreakscapedString;
+    instruction?: BreakscapedString;
+    isDefaultExample?: boolean;
+    example?: Example;
+  }): DescriptionListItem {
+    const {
+      term,
+      description,
+      alternativeDescriptions,
+      item,
+      lead,
+      pageNumber,
+      marginNumber,
+      hint,
+      instruction,
+      isDefaultExample,
+      example,
+    } = data;
+
+    // NOTE: Node order is important and is defined here
+    const node: DescriptionListItem = {
+      term,
+      description,
+      alternativeDescriptions,
+      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
+      hint,
+      instruction,
+      ...this.toExampleBoolean(isDefaultExample, example),
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+    });
+
+    return node;
+  }
+
+  /**
    * Build statement node
    *
    * @param data - data for the node
@@ -1824,6 +1881,7 @@ class Builder extends BaseBuilder {
 
   private cardNode(data: {
     flashcards?: Flashcard[];
+    descriptions?: DescriptionListItem[];
     questions?: Question[];
     elements?: BreakscapedString[];
     statement?: Statement;
@@ -1845,6 +1903,7 @@ class Builder extends BaseBuilder {
       questions,
       elements,
       flashcards,
+      descriptions,
       statement,
       statements,
       choices,
@@ -1864,6 +1923,7 @@ class Builder extends BaseBuilder {
       questions ||
       elements ||
       flashcards ||
+      descriptions ||
       statement ||
       statements ||
       choices ||
@@ -1882,6 +1942,7 @@ class Builder extends BaseBuilder {
         questions,
         elements,
         flashcards,
+        descriptions,
         statement,
         statements,
         choices,
@@ -1923,6 +1984,7 @@ class Builder extends BaseBuilder {
       if (cardNode) {
         this.pushExampleDownTreeString(isDefaultExample, example, cardNode.pairs as WithExample[]);
         this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.flashcards as WithExample[]);
+        this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.descriptions as WithExample[]);
         this.pushExampleDownTreeBoolean(isDefaultExample, example, true, cardNode.choices as WithExample[]);
         this.pushExampleDownTreeBoolean(
           isDefaultExample,
@@ -2172,6 +2234,11 @@ class Builder extends BaseBuilder {
     if (cardNode) {
       // flashcards
       for (const v of cardNode.flashcards ?? []) {
+        checkIsExample(v as WithExample);
+      }
+
+      // descriptions
+      for (const v of cardNode.descriptions ?? []) {
         checkIsExample(v as WithExample);
       }
 

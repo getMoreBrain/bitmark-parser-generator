@@ -8,7 +8,7 @@ import { BitTagType } from '../../model/enum/BitTagType';
 import { Count } from '../../model/enum/Count';
 
 const CARDSETS: _CardSetsConfig = {
-  [CardSetConfigKey._flashcards]: {
+  [CardSetConfigKey._flashcardLike]: {
     variants: [
       [
         {

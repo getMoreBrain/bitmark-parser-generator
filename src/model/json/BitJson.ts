@@ -61,6 +61,7 @@ export interface BitJson {
   hasMarkAsDone: boolean;
   processHandIn: boolean;
   action: string;
+  showInIndex: boolean;
   blockId: string;
   pageNo: number;
   x: number;
@@ -180,6 +181,7 @@ export interface BitJson {
   statement: string;
   isCorrect: boolean;
   cards: FlashcardJson[];
+  descriptions: DescriptionListItemJson[];
   statements: StatementJson[];
   responses: ResponseJson[] | BotResponseJson[];
   quizzes: QuizJson[];
@@ -223,6 +225,18 @@ export interface FlashcardJson {
   question: JsonText;
   answer: JsonText;
   alternativeAnswers: JsonText[];
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
+  isExample: boolean;
+  example: ExampleJson;
+}
+
+export interface DescriptionListItemJson {
+  term: JsonText;
+  description: JsonText;
+  alternativeDescriptions: JsonText[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
