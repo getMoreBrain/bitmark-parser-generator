@@ -66,7 +66,7 @@ import { Builder } from '../../../ast/Builder';
 import { Breakscape } from '../../../breakscaping/Breakscape';
 import { Config } from '../../../config/Config';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { Bit, BitmarkAst, BodyPart, BodyText } from '../../../model/ast/Nodes';
+import { Bit, BitmarkAst, BodyPart, BodyText, FooterText } from '../../../model/ast/Nodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../model/enum/BitType';
 import { BodyBitType } from '../../../model/enum/BodyBitType';
@@ -395,7 +395,7 @@ class BitmarkPegParserProcessor {
 
   /**
    * Process Type/Key/Value data, squashing inline body bits back into text for bits / body text formats that
-   * do not support them.
+   * do not support them, and for after the plain text tag '$$$$'.
    *
    * @param bitType bit type
    * @param textFormat bit text format type
@@ -410,10 +410,11 @@ class BitmarkPegParserProcessor {
     const result: BitContent[] = [];
     if (!data) return result;
 
-    if (textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus) {
-      // Body bits are supported. Return the data as is.
-      return data;
-    }
+    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+
+    // Format: text / latex
+    // Body bits are only supported up to the first BodyText tag.
+    // Squash the subsequent body bits back into text.
 
     const convertTagToTextRecursive = (tag: BitContent, str = ''): string => {
       const { chain, parser } = tag as TypeKeyValue;
@@ -426,23 +427,37 @@ class BitmarkPegParserProcessor {
       return str;
     };
 
-    let convertNextTagToText = false;
+    // New code: Only tags before the $$$$ tag (or first text if not bitmark--/++) are interpreted as tags
+    // all other tags are squashed back to text
+    let inPlainText = false;
     for (const content of data) {
       const { type, value } = content as TypeKeyValue;
       const valueStr = (value ?? '') as string;
+      let atPlainTextDivider = false;
 
-      if (type === TypeKey.BodyText) {
-        const strWithoutSpaces = valueStr.replace(/[ \t]/gm, '');
-        convertNextTagToText = !strWithoutSpaces.endsWith('\n');
-        result.push(content);
-      } else {
-        if (convertNextTagToText) {
-          const s = convertTagToTextRecursive(content);
-          result.push({ type: TypeKey.BodyText, value: s } as TypeValue);
+      if (!inPlainText) {
+        if (type === TypeKey.BodyText && !isBitmarkText && valueStr && valueStr.trim()) {
+          inPlainText = true;
+        }
+        if (type === TypeKey.PlainTextDivider) {
+          inPlainText = true;
+          atPlainTextDivider = true;
+        }
+      }
+
+      if (!atPlainTextDivider) {
+        if (inPlainText) {
+          if (type === TypeKey.BodyText) {
+            result.push({ type: TypeKey.BodyTextPlain, value } as TypeValue);
+          } else {
+            const s = convertTagToTextRecursive(content);
+            result.push({ type: TypeKey.BodyTextPlain, value: s } as TypeValue);
+          }
         } else {
           result.push(content);
         }
-        convertNextTagToText = false;
+      } else {
+        result.push({ type: TypeKey.BodyText, value: '\n' } as TypeValue);
       }
     }
 
@@ -486,6 +501,8 @@ class BitmarkPegParserProcessor {
     const bodyParts: BodyPart[] = [];
     let bodyPart: BreakscapedString = Breakscape.EMPTY_STRING;
     let footer: BreakscapedString = Breakscape.EMPTY_STRING;
+    let bodyPlainText: BreakscapedString = Breakscape.EMPTY_STRING;
+    let footerPlainText: BreakscapedString = Breakscape.EMPTY_STRING;
     // let cardBody: BreakscapedString = Breakscape.EMPTY_STRING;
 
     const inBit = contentDepth === BitContentLevel.Bit;
@@ -498,7 +515,7 @@ class BitmarkPegParserProcessor {
         // Validate the body part
         bodyPart = BitmarkPegParserValidator.checkBodyPart(this.context, contentDepth, bitType, bodyPart);
 
-        const bodyText = builder.bodyText({ text: bodyPart });
+        const bodyText = builder.bodyText({ text: bodyPart }, false);
         bodyParts.push(bodyText);
       }
       bodyPart = Breakscape.EMPTY_STRING;
@@ -610,7 +627,16 @@ class BitmarkPegParserProcessor {
           break;
         }
 
-        case TypeKey.Footer: {
+        case TypeKey.BodyTextPlain: {
+          if (inFooter) {
+            footerPlainText = Breakscape.concatenate(footerPlainText, value as BreakscapedString);
+          } else {
+            bodyPlainText = Breakscape.concatenate(bodyPlainText, value as BreakscapedString);
+          }
+          break;
+        }
+
+        case TypeKey.FooterDivider: {
           if (inFooter) {
             // If already in footer, handle the content as if it is footer (body) text
             footer = Breakscape.concatenate(footer, value as BreakscapedString);
@@ -626,6 +652,10 @@ class BitmarkPegParserProcessor {
 
     // Add the last body text part, and trim the body text parts
     addBodyText();
+
+    // Add the plain texts if they exist
+    const bodyPlainTextNode = bodyPlainText ? builder.bodyText({ text: bodyPlainText }, true) : undefined;
+    if (bodyPlainTextNode) bodyParts.push(bodyPlainTextNode);
 
     // Spread the chained item / lead / etc
     // Set the lead item from the chain
@@ -648,10 +678,19 @@ class BitmarkPegParserProcessor {
 
     // Validate and build the footer (trimmed)
     footer = footer.trim() as BreakscapedString;
-    if (footer) {
-      footer = BitmarkPegParserValidator.checkFooter(this.context, contentDepth, bitType, footer);
+    footerPlainText = footerPlainText.trim() as BreakscapedString;
+    if (footer || footerPlainText) {
       if (footer) {
-        result.footer = builder.footerText({ text: footer });
+        footer = BitmarkPegParserValidator.checkFooter(this.context, contentDepth, bitType, footer);
+      }
+      const footerTexts: FooterText[] = [];
+      const footerNode = footer ? builder.footerText({ text: footer }, false) : undefined;
+      const footerPlainTextNode = footerPlainText ? builder.footerText({ text: footerPlainText }, true) : undefined;
+      if (footerNode) footerTexts.push(footerNode);
+      if (footerPlainTextNode) footerTexts.push(footerPlainTextNode);
+      if (footer) {
+        result.footer =
+          footerTexts.length > 0 ? builder.footer({ footerParts: this.trimFooterTexts(footerTexts) }) : undefined;
       }
     }
 
@@ -727,49 +766,97 @@ class BitmarkPegParserProcessor {
   /**
    * Trim the body parts, removing any whitespace only parts at start and end of body
    *
-   * @param bodyParts the body parts to trim
+   * @param parts the body parts to trim
    * @returns the trimmed body parts
    */
-  private trimBodyParts(bodyParts: BodyPart[]): BodyPart[] {
+  private trimBodyParts(parts: BodyPart[]): BodyPart[] {
     // Trim start
-    let foundBodyText = false;
-    let trimmedBodyParts: BodyPart[] = bodyParts.reduce((acc, bodyPart) => {
-      const bodyText = bodyPart as BodyText;
-      if (!foundBodyText && bodyText.type === BodyBitType.text) {
-        const t = bodyText.data.bodyText.trimStart() as BreakscapedString;
+    let foundText = false;
+    let trimmedParts: BodyPart[] = parts.reduce((acc, part) => {
+      const text = part as BodyText;
+      if (!foundText && text.type === BodyBitType.text) {
+        const t = text.data.bodyText.trimStart() as BreakscapedString;
         if (t) {
-          foundBodyText = true;
-          bodyText.data.bodyText = t;
-          acc.push(bodyText);
+          foundText = true;
+          text.data.bodyText = t;
+          acc.push(text);
         }
       } else {
         // Not body text, so add it
-        foundBodyText = true;
-        acc.push(bodyPart);
+        foundText = true;
+        acc.push(part);
       }
       return acc;
     }, [] as BodyPart[]);
 
     // Trim end
-    foundBodyText = false;
-    trimmedBodyParts = trimmedBodyParts.reduceRight((acc, bodyPart) => {
-      const bodyText = bodyPart as BodyText;
-      if (!foundBodyText && bodyText.type === BodyBitType.text) {
-        const t = bodyText.data.bodyText.trimEnd() as BreakscapedString;
+    foundText = false;
+    trimmedParts = trimmedParts.reduceRight((acc, part) => {
+      const text = part as BodyText;
+      if (!foundText && text.type === BodyBitType.text) {
+        const t = text.data.bodyText.trimEnd() as BreakscapedString;
         if (t) {
-          foundBodyText = true;
-          bodyText.data.bodyText = t;
-          acc.unshift(bodyText);
+          foundText = true;
+          text.data.bodyText = t;
+          acc.unshift(text);
         }
       } else {
         // Not body text, so add it
-        foundBodyText = true;
-        acc.unshift(bodyPart);
+        foundText = true;
+        acc.unshift(part);
       }
       return acc;
     }, [] as BodyPart[]);
 
-    return trimmedBodyParts;
+    return trimmedParts;
+  }
+
+  /**
+   * Trim the footer texts, removing any whitespace only parts at start and end of footer
+   *
+   * @param parts the footer texts to trim
+   * @returns the trimmed footer texts
+   */
+  private trimFooterTexts(parts: FooterText[]): FooterText[] {
+    // Trim start
+    let foundText = false;
+    let trimmedParts: FooterText[] = parts.reduce((acc, part) => {
+      const text = part as FooterText;
+      if (!foundText) {
+        const t = text.footerText.trimStart() as BreakscapedString;
+        if (t) {
+          foundText = true;
+          text.footerText = t;
+          acc.push(text);
+        }
+      } else {
+        // Not body text, so add it
+        foundText = true;
+        acc.push(part);
+      }
+      return acc;
+    }, [] as FooterText[]);
+
+    // Trim end
+    foundText = false;
+    trimmedParts = trimmedParts.reduceRight((acc, part) => {
+      const text = part as FooterText;
+      if (!foundText) {
+        const t = text.footerText.trimEnd() as BreakscapedString;
+        if (t) {
+          foundText = true;
+          text.footerText = t;
+          acc.unshift(text);
+        }
+      } else {
+        // Not body text, so add it
+        foundText = true;
+        acc.unshift(part);
+      }
+      return acc;
+    }, [] as FooterText[]);
+
+    return trimmedParts;
   }
 
   /**

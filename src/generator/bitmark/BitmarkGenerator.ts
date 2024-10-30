@@ -533,11 +533,19 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> body
 
-  protected enter_body(node: NodeInfo, _route: NodeInfo[]): void {
+  protected enter_body(node: NodeInfo, route: NodeInfo[]): void {
     // always write a NL before the body content if there is any?
     const body = node.value as Body;
     if ((body.bodyParts && body.bodyParts.length > 0) || body.bodyJson) {
       this.writeNL();
+
+      // Write the plain text divider if not bitmark++/-- format
+      const textFormat = this.getTextFormat(route);
+      const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
+      if (!isBitmarkText) {
+        this.writePlainTextDivider();
+        this.writeNL();
+      }
     }
   }
 
@@ -1932,6 +1940,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.write('#');
   }
 
+  protected writePlainTextDivider(): void {
+    this.write('$$$$');
+  }
+
   protected writeCardSetStart(): void {
     if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('\n===');
@@ -2095,6 +2107,17 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const isDefault = TextFormat.fromValue(bitsValue) === textFormatDefault;
     const writeFormat = !isDefault || this.options.explicitTextFormat;
     return !!writeFormat;
+  }
+
+  protected getTextFormat(route: NodeInfo[]): TextFormatType | undefined {
+    for (const node of route) {
+      if (node.key === NodeType.bitsValue) {
+        const n = node.value as Bit;
+        return n?.textFormat;
+      }
+    }
+
+    return undefined;
   }
 
   protected isOfBitType1(route: NodeInfo[]): boolean {

@@ -30,7 +30,6 @@ import {
   Matrix,
   Choice,
   Question,
-  FooterText,
   AudioResource,
   ImageResource,
   MatrixCell,
@@ -60,6 +59,8 @@ import {
   CaptionDefinition,
   CaptionDefinitionList,
   DescriptionListItem,
+  Footer,
+  FooterPart,
 } from '../model/ast/Nodes';
 
 /**
@@ -1166,9 +1167,10 @@ class Builder extends BaseBuilder {
    * Build bodyPartText node
    *
    * @param data - data for the node
+   * @param isPlain - true if plain text, otherwise false
    * @returns
    */
-  bodyText(data: { text: BreakscapedString }): BodyText {
+  bodyText(data: { text: BreakscapedString }, isPlain: boolean): BodyText {
     const { text } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1176,6 +1178,7 @@ class Builder extends BaseBuilder {
       type: BodyBitType.text,
       data: {
         bodyText: text,
+        isPlain,
       },
     };
     return node;
@@ -1187,12 +1190,29 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  footerText(data: { text: BreakscapedString }): FooterText {
+  footer(data: { footerParts?: FooterPart[] }): Footer {
+    const { footerParts } = data;
+
+    const node: Footer = {
+      footerParts,
+    };
+
+    return node;
+  }
+
+  /**
+   * Build footer node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  footerText(data: { text: BreakscapedString }, isPlain: boolean): FooterPart {
     const { text } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: FooterText = {
+    const node: FooterPart = {
       footerText: text,
+      isPlain,
     };
     return node;
   }

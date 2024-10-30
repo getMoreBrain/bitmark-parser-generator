@@ -15,7 +15,7 @@ import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
 import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { AudioEmbedResource, ImageSource, Ingredient, RatingLevelStartEnd, Table } from '../../model/ast/Nodes';
-import { JsonText, TextAst } from '../../model/ast/TextNodes';
+import { JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
@@ -24,6 +24,7 @@ import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
 import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
 import { TextParser } from '../../parser/text/TextParser';
@@ -695,6 +696,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const plainText = this.options.textAsPlainText;
     const textFormat = this.getTextFormat(route);
     let fullBodyTextStr: BreakscapedString = '' as BreakscapedString;
+    let plainBodyTextStr: BreakscapedString = '' as BreakscapedString;
     let placeholderIndex = this.startPlaceholderIndex;
 
     // Function for creating the placeholder keys
@@ -731,7 +733,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         const bodyTextPart = asText.data.bodyText;
 
         // Append the text part to the full text body
-        fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, bodyTextPart);
+        if (asText.data.isPlain) {
+          plainBodyTextStr = Breakscape.concatenate(plainBodyTextStr, bodyTextPart);
+        } else {
+          fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, bodyTextPart);
+        }
       } else {
         const { legacyPlaceholderKey, placeholderKey } = createPlaceholderKeys(placeholderIndex);
 
@@ -743,8 +749,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     // Add string or AST to the body
-    this.bodyJson = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
-    const bodyAst = this.bodyJson as TextAst;
+    const bodyJson = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
+    const plainTextBodyJson = this.convertBreakscapedStringToJsonText(plainBodyTextStr, TextFormat.text);
+    const bodyAst = bodyJson as TextAst;
+    this.bodyJson = this.concatenatePlainTextWithJsonTexts(bodyJson, plainTextBodyJson as string);
 
     // Loop the body parts again to create the body bits:
     // - For text output the body bits are inserted into the 'placeholders' object
@@ -2619,8 +2627,18 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   ): JsonText {
     if (!text) undefined;
 
-    const asPlainText = this.options.textAsPlainText || format === TextFormat.text || format === TextFormat.json;
+    const isBitmarkText = format === TextFormat.bitmarkMinusMinus || format === TextFormat.bitmarkPlusPlus;
 
+    if (!isBitmarkText) {
+      // Not bitmark text, so plain text, so  unbreakscape only the start of bit tags
+      return (
+        Breakscape.unbreakscape(text, {
+          bitTagOnly: true,
+        }) || Breakscape.EMPTY_STRING
+      );
+    }
+
+    const asPlainText = this.options.textAsPlainText;
     if (asPlainText) {
       return Breakscape.unbreakscape(text) || Breakscape.EMPTY_STRING;
     }
@@ -2631,6 +2649,52 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     });
 
     return textAst;
+  }
+
+  /**
+   * Concatenates a plain JSON text with a JsonText that may be plain (v2) or BitmarkText (v3)
+   * Returns the combined text.
+   *
+   * @param text the text to concatenate
+   * @param textPlain the plain text to concatenate
+   */
+  protected concatenatePlainTextWithJsonTexts(text: JsonText, textPlain: string): JsonText {
+    if (Array.isArray(text)) {
+      if (textPlain) {
+        const splitText = textPlain.split('\n');
+        const content: TextNode[] = [];
+        for (let i = 0; i < splitText.length; i++) {
+          const t = splitText[i];
+          if (t) {
+            content.push({
+              text: t,
+              type: TextNodeType.text,
+            });
+          }
+          // Add a hard break after each paragraph, except the last one
+          if (i < splitText.length - 1) {
+            content.push({
+              type: TextNodeType.hardBreak,
+            });
+          }
+        }
+
+        // Add the content to the final paragraph, or create a new one if there none
+        const lastNode = text[text.length - 1];
+        if (lastNode && lastNode.type === TextNodeType.paragraph) {
+          lastNode.content = [...(lastNode.content ?? []), ...content];
+        } else {
+          text.push({
+            type: TextNodeType.paragraph,
+            content,
+            attrs: {} as TextNodeAttibutes,
+          });
+        }
+      }
+      return text;
+    }
+
+    return `${text ?? ''}${textPlain ?? ''}`;
   }
 
   /**
