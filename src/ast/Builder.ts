@@ -59,7 +59,7 @@ import {
   RatingLevelStartEnd,
   CaptionDefinition,
   CaptionDefinitionList,
-  DescriptionListItem,
+  DefinitionListItem,
 } from '../model/ast/Nodes';
 
 /**
@@ -259,7 +259,7 @@ class Builder extends BaseBuilder {
     additionalSolutions?: BreakscapedString | BreakscapedString[];
     elements?: BreakscapedString[];
     flashcards?: Flashcard[];
-    descriptions?: DescriptionListItem[];
+    definitions?: DefinitionListItem[];
     statement?: Statement;
     statements?: Statement[];
     responses?: Response[];
@@ -1533,15 +1533,15 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Build descriptionListItem node
+   * Build definitionListItem node
    *
    * @param data - data for the node
    * @returns
    */
-  descriptionListItem(data: {
+  definitionListItem(data: {
     term: BreakscapedString;
     description?: BreakscapedString;
-    alternativeDescriptions?: BreakscapedString[];
+    alternativeDefinitions?: BreakscapedString[];
     item?: BreakscapedString;
     lead?: BreakscapedString;
     pageNumber?: BreakscapedString;
@@ -1550,11 +1550,11 @@ class Builder extends BaseBuilder {
     instruction?: BreakscapedString;
     isDefaultExample?: boolean;
     example?: Example;
-  }): DescriptionListItem {
+  }): DefinitionListItem {
     const {
       term,
       description,
-      alternativeDescriptions,
+      alternativeDefinitions,
       item,
       lead,
       pageNumber,
@@ -1566,10 +1566,10 @@ class Builder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: DescriptionListItem = {
+    const node: DefinitionListItem = {
       term,
       description,
-      alternativeDescriptions,
+      alternativeDefinitions,
       itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
       hint,
       instruction,
@@ -1878,7 +1878,7 @@ class Builder extends BaseBuilder {
 
   private cardNode(data: {
     flashcards?: Flashcard[];
-    descriptions?: DescriptionListItem[];
+    definitions?: DefinitionListItem[];
     questions?: Question[];
     elements?: BreakscapedString[];
     statement?: Statement;
@@ -1900,7 +1900,7 @@ class Builder extends BaseBuilder {
       questions,
       elements,
       flashcards,
-      descriptions,
+      definitions,
       statement,
       statements,
       choices,
@@ -1920,7 +1920,7 @@ class Builder extends BaseBuilder {
       questions ||
       elements ||
       flashcards ||
-      descriptions ||
+      definitions ||
       statement ||
       statements ||
       choices ||
@@ -1939,7 +1939,7 @@ class Builder extends BaseBuilder {
         questions,
         elements,
         flashcards,
-        descriptions,
+        definitions,
         statement,
         statements,
         choices,
@@ -1981,7 +1981,7 @@ class Builder extends BaseBuilder {
       if (cardNode) {
         this.pushExampleDownTreeString(isDefaultExample, example, cardNode.pairs as WithExample[]);
         this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.flashcards as WithExample[]);
-        this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.descriptions as WithExample[]);
+        this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.definitions as WithExample[]);
         this.pushExampleDownTreeBoolean(isDefaultExample, example, true, cardNode.choices as WithExample[]);
         this.pushExampleDownTreeBoolean(
           isDefaultExample,
@@ -2234,8 +2234,8 @@ class Builder extends BaseBuilder {
         checkIsExample(v as WithExample);
       }
 
-      // descriptions
-      for (const v of cardNode.descriptions ?? []) {
+      // definitions
+      for (const v of cardNode.definitions ?? []) {
         checkIsExample(v as WithExample);
       }
 

@@ -29,7 +29,7 @@ import {
   Response,
   Statement,
   Select,
-  DescriptionListItem,
+  DefinitionListItem,
 } from '../../../../model/ast/Nodes';
 import {
   BitContentLevel,
@@ -209,7 +209,7 @@ function parseFlashcardLike(
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const flashcards: Flashcard[] = [];
-  const descriptions: DescriptionListItem[] = [];
+  const definitions: DefinitionListItem[] = [];
   let question = Breakscape.EMPTY_STRING;
   let answer: BreakscapedString | undefined;
   let alternativeAnswers: BreakscapedString[] = [];
@@ -249,13 +249,13 @@ function parseFlashcardLike(
 
     // Add the flashcard
     if (cardIndex === 0 || !onlyOneCardAllowed) {
-      if (Config.isOfBitType(bitType, BitType.descriptionList)) {
-        // .description-list
-        descriptions.push(
-          builder.descriptionListItem({
+      if (Config.isOfBitType(bitType, BitType.definitionList)) {
+        // .definitions-list
+        definitions.push(
+          builder.definitionListItem({
             term: question,
             description: answer,
-            alternativeDescriptions: alternativeAnswers.length > 0 ? alternativeAnswers : undefined,
+            alternativeDefinitions: alternativeAnswers.length > 0 ? alternativeAnswers : undefined,
             ...extraTags,
           }),
         );
@@ -288,7 +288,7 @@ function parseFlashcardLike(
 
   return {
     flashcards: flashcards.length > 0 ? flashcards : undefined,
-    descriptions: descriptions.length > 0 ? descriptions : undefined,
+    definitions: definitions.length > 0 ? definitions : undefined,
   };
 }
 
