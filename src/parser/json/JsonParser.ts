@@ -51,7 +51,7 @@ import {
   Servings,
   RatingLevelStartEnd,
   CaptionDefinitionList,
-  DescriptionListItem,
+  DefinitionListItem,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -77,6 +77,7 @@ import {
   ServingsJson,
   RatingLevelStartEndJson,
   CaptionDefinitionListJson,
+  DefinitionListItemJson,
   DescriptionListItemJson,
 } from '../../model/json/BitJson';
 import {
@@ -404,6 +405,7 @@ class JsonParser {
       statement,
       isCorrect,
       cards,
+      definitions,
       descriptions,
       statements,
       responses,
@@ -460,8 +462,11 @@ class JsonParser {
     // flashcards
     const flashcardNodes = this.flashcardBitsToAst(cards);
 
-    // descriptions
-    const descriptionNodes = this.descriptionsBitsToAst(descriptions);
+    // definitions
+    // descriptions are treated as alias for definitions
+    const definitionNodes = Config.isOfBitType(bitType, BitType.descriptionList)
+      ? this.descriptionsBitsToAst(descriptions)
+      : this.definitionsBitsToAst(definitions);
 
     //+-statement
     const statementNodes = this.statementBitsToAst(statement, isCorrect, statements, example);
@@ -681,7 +686,7 @@ class JsonParser {
       body: bodyNode,
       elements: this.convertStringToBreakscapedString(elements),
       flashcards: flashcardNodes,
-      descriptions: descriptionNodes,
+      definitions: definitionNodes,
       statements: statementNodes,
       responses: responseNodes,
       quizzes: quizNodes,
@@ -784,15 +789,36 @@ class JsonParser {
     return nodes;
   }
 
-  private descriptionsBitsToAst(descriptionList?: DescriptionListItemJson[]): DescriptionListItem[] | undefined {
-    const nodes: DescriptionListItem[] = [];
-    if (Array.isArray(descriptionList)) {
-      for (const c of descriptionList) {
-        const { term, description, alternativeDescriptions, item, lead, hint, instruction, example } = c;
-        const node = builder.descriptionListItem({
+  private definitionsBitsToAst(definitionList?: DefinitionListItemJson[]): DefinitionListItem[] | undefined {
+    const nodes: DefinitionListItem[] = [];
+    if (Array.isArray(definitionList)) {
+      for (const c of definitionList) {
+        const { term, description, alternativeDefinitions, item, lead, hint, instruction, example } = c;
+        const node = builder.definitionListItem({
           term: this.convertJsonTextToBreakscapedString(term) ?? Breakscape.EMPTY_STRING,
           description: this.convertJsonTextToBreakscapedString(description),
-          alternativeDescriptions: this.convertJsonTextToBreakscapedString(alternativeDescriptions),
+          alternativeDefinitions: this.convertJsonTextToBreakscapedString(alternativeDefinitions),
+          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
+          ...this.parseExample(example),
+        });
+        nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+
+    return nodes;
+  }
+
+  private descriptionsBitsToAst(definitionList?: DescriptionListItemJson[]): DefinitionListItem[] | undefined {
+    const nodes: DefinitionListItem[] = [];
+    if (Array.isArray(definitionList)) {
+      for (const c of definitionList) {
+        const { term, description, alternativeDescriptions, item, lead, hint, instruction, example } = c;
+        const node = builder.definitionListItem({
+          term: this.convertJsonTextToBreakscapedString(term) ?? Breakscape.EMPTY_STRING,
+          description: this.convertJsonTextToBreakscapedString(description),
+          alternativeDefinitions: this.convertJsonTextToBreakscapedString(alternativeDescriptions),
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
