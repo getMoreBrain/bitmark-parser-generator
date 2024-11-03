@@ -4,7 +4,7 @@ import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioLinkResource, CaptionDefinitionList, DescriptionListItem } from '../../model/ast/Nodes';
+import { AudioLinkResource, CaptionDefinitionList, DefinitionListItem } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
 import { DocumentResource } from '../../model/ast/Nodes';
@@ -68,7 +68,8 @@ import {
   BotResponseJson,
   CaptionDefinitionListJson,
   ChoiceJson,
-  DescriptionListItemJson as DescriptionListItemJson,
+  DefinitionListItemJson,
+  DescriptionListItemJson,
   ExampleJson,
   FlashcardJson,
   HeadingJson,
@@ -882,20 +883,20 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions
 
-  protected enter_descriptions(node: NodeInfo, route: NodeInfo[]): void {
-    const descriptionListItem = node.value as DescriptionListItem[];
+  protected enter_definitions(node: NodeInfo, route: NodeInfo[]): void {
+    const definitionListItem = node.value as DefinitionListItem[];
 
     // Ignore responses that are not at the correct level as they are potentially handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
-    const descriptionsJson: DescriptionListItemJson[] = [];
-    if (descriptionListItem) {
-      for (const c of descriptionListItem) {
+    const definitionsJson: (DefinitionListItemJson & DescriptionListItemJson)[] = [];
+    if (definitionListItem) {
+      for (const c of definitionListItem) {
         // Create the flashcard
-        const descriptionListItemJson: Partial<DescriptionListItemJson> = {
+        const definitionListItemJson: Partial<DefinitionListItemJson & DescriptionListItemJson> = {
           term: this.convertBreakscapedStringToJsonText(
             c.term ?? Breakscape.EMPTY_STRING,
             TextFormat.bitmarkMinusMinus,
@@ -904,7 +905,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
             c.description ?? Breakscape.EMPTY_STRING,
             TextFormat.bitmarkMinusMinus,
           ),
-          alternativeDescriptions: (c.alternativeDescriptions ?? []).map((a) =>
+          alternativeDefinitions: (c.alternativeDefinitions ?? []).map((a) =>
             this.convertBreakscapedStringToJsonText(a ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
           ),
           ...this.toItemLeadHintInstruction(c),
@@ -915,14 +916,24 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         };
 
         // Delete unwanted properties
-        if (c.itemLead?.lead == null) delete descriptionListItemJson.lead;
+        if (c.itemLead?.lead == null) delete definitionListItemJson.lead;
 
-        descriptionsJson.push(descriptionListItemJson as DescriptionListItemJson);
+        // description-list is an alias of definition-list. Just rename the properties
+        if (Config.isOfBitType(this.getBitType(route), BitType.descriptionList)) {
+          definitionListItemJson.alternativeDescriptions = definitionListItemJson.alternativeDefinitions;
+          delete definitionListItemJson.alternativeDefinitions;
+        }
+
+        definitionsJson.push(definitionListItemJson as DefinitionListItemJson & DescriptionListItemJson);
       }
     }
 
-    if (descriptionsJson.length > 0) {
-      this.bitJson.descriptions = descriptionsJson;
+    if (definitionsJson.length > 0) {
+      if (Config.isOfBitType(this.getBitType(route), BitType.descriptionList)) {
+        this.bitJson.descriptions = definitionsJson;
+      } else {
+        this.bitJson.definitions = definitionsJson;
+      }
     }
   }
 
@@ -2878,7 +2889,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       partialAnswer: undefined,
       elements: undefined,
       cards: undefined,
-      descriptions: undefined,
+      definitions: undefined,
       statements: undefined,
       responses: undefined,
       quizzes: undefined,
@@ -2979,7 +2990,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           BitType.sequence,
           BitType.mark,
           BitType.flashcard,
-          BitType.descriptionList,
+          BitType.definitionList,
         ])
       ) {
         // With no 'example' value at the bit level.
@@ -3395,7 +3406,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitJson.partialAnswer == null) delete bitJson.partialAnswer;
     if (bitJson.elements == null) delete bitJson.elements;
     if (bitJson.cards == null) delete bitJson.cards;
-    if (bitJson.descriptions == null) delete bitJson.descriptions;
+    if (bitJson.definitions == null) delete bitJson.definitions;
     if (bitJson.statements == null) delete bitJson.statements;
     if (bitJson.responses == null) delete bitJson.responses;
     if (bitJson.quizzes == null) delete bitJson.quizzes;
