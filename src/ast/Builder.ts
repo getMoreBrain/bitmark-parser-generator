@@ -60,7 +60,7 @@ import {
   CaptionDefinitionList,
   DescriptionListItem,
   Footer,
-  FooterPart,
+  FooterText,
 } from '../model/ast/Nodes';
 
 /**
@@ -276,7 +276,7 @@ class Builder extends BaseBuilder {
     ingredients?: Ingredient[];
     captionDefinitionList?: CaptionDefinitionList;
     cardBits?: CardBit[];
-    footer?: FooterText;
+    footer?: Footer;
 
     markup?: string;
     parser?: ParserInfo;
@@ -1190,7 +1190,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  footer(data: { footerParts?: FooterPart[] }): Footer {
+  footer(data: { footerParts?: FooterText[] }): Footer {
     const { footerParts } = data;
 
     const node: Footer = {
@@ -1206,11 +1206,11 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  footerText(data: { text: BreakscapedString }, isPlain: boolean): FooterPart {
+  footerText(data: { text: BreakscapedString }, isPlain: boolean): FooterText {
     const { text } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: FooterPart = {
+    const node: FooterText = {
       footerText: text,
       isPlain,
     };

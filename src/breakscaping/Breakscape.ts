@@ -38,9 +38,18 @@ import { StringUtils } from '../utils/StringUtils';
  *  - tag list +:                    (SOL)•+(space)             ==>   (SOL)•^+(space)
  *  - tag list -:                    (SOL)•-(space)             ==>   (SOL)•^-(space)
  *  - bold:                                  **                 ==>   *^*
+ *  - half-bold (at end):                    *<end>             ==>   *^<end>
+ *  - half-bold (at start):                  <start>*           ==>   <start>^*
  *  - light:                                 ``                 ==>   `^`
+ *  - half-light (at end):                   `<end>             ==>   `^<end>
+ *  - half-light (at start):                 <start>`           ==>   <start>^`
  *  - italic:                                __                 ==>   _^_
+ *  - half-italic (at end):                  _<end>             ==>   _^<end>
+ *  - half-italic (at start):                <start>_           ==>   <start>^_
  *  - highlight:                             !!                 ==>   !^!
+ *  - half-highlight (at end):               !<end>             ==>   !^<end>
+ *  - half-highlight (at start):             <start>!           ==>   <start>^!
+ *  - start of bit (at end):                 [<end>             ==>   [^<end>
  *  - start of bit:                          [.                 ==>   [^.
  *  - start of property:                     [@                 ==>   [^@
  *  - start of title:                        [#                 ==>   [^#
@@ -60,15 +69,15 @@ import { StringUtils } from '../utils/StringUtils';
  * In non- bitmark++ / bitmark-- text, breakscaping is only applied to bit tags.
  * This is true for both breakscaping and unbreakscaping.
  *
- * The following unbreakscaping rules are applied when unbreakscaping text:
+ * The following unbreakscaping rules are applied when unbreakscaping plain text:
  *  - start of bit:              <line start>[^.                ==>   <line start>[.
- *  - start of bit:              <line start>[^^.                ==>   <line start>[^.
- *  - start of bit:              <line start>[^..N.                ==>   <line start>[^..N-1.
+ *  - start of bit:              <line start>[^^.               ==>   <line start>[^.
+ *  - start of bit:              <line start>[^..N.             ==>   <line start>[^..N-1.
  *
- * The following breakscaping rules are applied when breakscaping text:
+ * The following breakscaping rules are applied when breakscaping plain text:
  *  - start of bit:              <line start>[.                 ==>   <line start>[^.
  *  - start of bit:              <line start>[^.                ==>   <line start>[^^.
- *  - start of bit:              <line start>[^..N.                ==>   <line start>[^..N+1.
+ *  - start of bit:              <line start>[^..N.             ==>   <line start>[^..N+1.
  */
 
 //
@@ -86,20 +95,22 @@ import { StringUtils } from '../utils/StringUtils';
 // const BREAKSCAPE_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_END_OF_TAG.source}`;
 // const UNBREAKSCAPE_REGEX_SOURCE = BREAKSCAPE_REGEX_SOURCE.replace(/(\(\[\\\^\]\*\))/g, '\\^$1'); // Add ^ into the regex
 
-const REGEX_MARKS = /([*`_!=~])\1/; // $1^$1
-const REGEX_BLOCKS = /^(\|)(code[\s]*|code:|image:|[\s]*$)/; // $2^$3
-const REGEX_TITLE_BLOCKS = /^([#]{1,3})([^\S\r\n]+)/; // $4^$7
-const REGEX_LIST_BLOCKS = /^(•)([0-9]+[iI]*|[a-zA-Z]{1}|_|\+|-|)([^\S\r\n]+)/; // $6^$7$8
-const REGEX_START_OF_TAG = /(\[)([.@#▼►%!?+\-$_=&])/; // $9^$10
-const REGEX_PLAIN_TEXT_DIVIDER = /^(\$)(\$\$\$)/; // $11^$12
-const REGEX_END_OF_TAG = /(\^*])/; // ^$13
-const REGEX_HATS = /(\^+)/; // $14^  // Must be last
+const REGEX_MARKS = /([*`_!=])\1/; // $1^$1
+const REGEX_START = /^([*`_!=])/; // ^$2
+const REGEX_END = /([*`_!=\\[])$/; // $3^
+const REGEX_BLOCKS = /^(\|)(code[\s]*|code:|image:|[\s]*$)/; // $4^$5
+const REGEX_TITLE_BLOCKS = /^([#]{1,3})([^\S\r\n]+)/; // $6^$7
+const REGEX_LIST_BLOCKS = /^(•)([0-9]+[iI]*|[a-zA-Z]{1}|_|\+|-|)([^\S\r\n]+)/; // $8^$9$10
+const REGEX_START_OF_TAG = /(\[)([.@#▼►%!?+\-$_=&])/; // $11^$12
+const REGEX_PLAIN_TEXT_DIVIDER = /^(\$)(\$\$\$)/; // $13^$14
+const REGEX_END_OF_TAG = /(\^*])/; // ^$15
+const REGEX_HATS = /(\^+)/; // $16^  // Must be last
 
-const BREAKSCAPE_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
+const BREAKSCAPE_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_START.source}|${REGEX_END.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
 
 const BREAKSCAPE_REGEX = new RegExp(BREAKSCAPE_REGEX_SOURCE, 'gm');
 // const BREAKSCAPE_REGEX_REPLACER = '$1$3$6$9$13^$2$1$4$5$7$8$10$11$12$14$15$16$17';
-const BREAKSCAPE_REGEX_REPLACER = '$1$2$4$6$9$11$14^$1$3$5$7$8$10$12$13';
+const BREAKSCAPE_REGEX_REPLACER = '$1$3$4$6$8$11$13$16^$1$2$5$7$9$10$12$14$15';
 const BREAKSCAPE_BIT_TAG_ONLY_REGEX = new RegExp('^(\\[)(\\^*)(\\.)', 'gm');
 const BREAKSCAPE_BIT_TAG_ONLY_REGEX_REPLACER = '$1^$2$3';
 

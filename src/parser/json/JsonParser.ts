@@ -26,7 +26,6 @@ import {
   Choice,
   Ingredient,
   Flashcard,
-  FooterText,
   Gap,
   Heading,
   Highlight,
@@ -52,6 +51,7 @@ import {
   RatingLevelStartEnd,
   CaptionDefinitionList,
   DescriptionListItem,
+  Footer,
 } from '../../model/ast/Nodes';
 import {
   BitJson,
@@ -1435,11 +1435,12 @@ class JsonParser {
     return this.bodyTextToAst(Breakscape.EMPTY_STRING);
   }
 
-  private footerToAst(footerText: JsonText, textFormat: TextFormatType): FooterText | undefined {
+  private footerToAst(footerText: JsonText, textFormat: TextFormatType): Footer | undefined {
     const text = this.convertJsonTextToBreakscapedString(footerText, textFormat);
 
     if (text) {
-      return builder.footerText({ text }, false);
+      const footerText = builder.footerText({ text }, false);
+      return builder.footer({ footerParts: [footerText] });
     }
     return undefined;
   }
