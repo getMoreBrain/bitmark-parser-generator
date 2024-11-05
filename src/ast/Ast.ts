@@ -142,10 +142,15 @@ class Ast {
       ast,
       [{ index: 0, key: rootKey, value: ast }],
       {
-        enter: (_node: NodeInfo, route: NodeInfo[]) => {
+        enter: (_node: NodeInfo, route: NodeInfo[]): boolean => {
           console.log('Enter:   ' + this.getRouteKey(route));
+
           // Stop traversing the tree if the last node is bodyJson
           if (route[route.length - 1].key === NodeType.bodyJson) return false;
+          // Stop traversing the tree if the last node is __text__
+          if (route[route.length - 1].key === NodeType.__text__) return false;
+
+          return true;
         },
         between: (_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]) => {
           console.log('Between: ' + this.getRouteKey(route));
@@ -155,6 +160,9 @@ class Ast {
         },
         leaf: (_node: NodeInfo, route: NodeInfo[]) => {
           console.log('Leaf:    ' + this.getRouteKey(route));
+
+          // Stop traversing the tree if the last node is __text__
+          if (route[route.length - 1].key === NodeType.__text__) return false;
         },
       },
       undefined,

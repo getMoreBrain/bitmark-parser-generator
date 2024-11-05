@@ -1,9 +1,9 @@
-import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
-import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { Example, Property } from '../model/ast/Nodes';
+import { BitmarkTextNode, JsonText, TextAst } from '../model/ast/TextNodes';
 import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
+import { ExampleJson } from '../model/json/BitJson';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
@@ -13,6 +13,13 @@ export interface WithExample {
   isDefaultExample: boolean;
   isExample: boolean;
   example?: Example;
+}
+
+export interface WithExampleJson {
+  // isDefaultExample?: boolean;
+  isExample: boolean;
+  example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 class BaseBuilder {
@@ -28,33 +35,41 @@ class BaseBuilder {
    */
   protected toExample(
     isDefaultExample: boolean | undefined,
-    example: BreakscapedString | boolean | undefined,
-  ): WithExample {
+    example: TextAst | string | boolean | undefined | null,
+    defaultExample?: TextAst | string | boolean | undefined | null,
+  ): WithExampleJson {
     // Example
     if (example != undefined) {
-      // Convert to boolean to BreakscapedText
-      if (example === true) example = Breakscape.breakscape('true');
-      if (example === false) example = Breakscape.breakscape('false');
+      let exampleValue: JsonText | boolean | null;
+
+      // If the default example is a boolean, then the example should be a boolean
+      if (BooleanUtils.isBoolean(defaultExample)) {
+        exampleValue = BooleanUtils.toBoolean(example);
+      } else {
+        exampleValue = example;
+      }
 
       return {
-        isDefaultExample: false,
         isExample: true,
-        example,
+        example: exampleValue,
+        _defaultExample: defaultExample ?? null,
       };
     }
 
     // Default example
     if (isDefaultExample) {
       return {
-        isDefaultExample: true,
         isExample: true,
+        example: defaultExample ?? null,
+        _defaultExample: defaultExample ?? null,
       };
     }
 
     // Not an example
     return {
-      isDefaultExample: false,
       isExample: false,
+      example: null,
+      _defaultExample: defaultExample ?? null,
     };
   }
 
@@ -70,7 +85,7 @@ class BaseBuilder {
    */
   protected toExampleBoolean(
     isDefaultExample: boolean | undefined,
-    example: string | boolean | undefined,
+    example: TextAst | string | boolean | undefined,
   ): WithExample {
     const isExampleButNotBoolean = example != undefined && !BooleanUtils.isBooleanString(example);
 
@@ -99,6 +114,30 @@ class BaseBuilder {
   }
 
   /**
+   * Convert a TextAst to a BitmarkTextNode.
+   */
+  protected toBitmarkTextNode(textAst: TextAst | undefined): BitmarkTextNode | undefined {
+    if (textAst == null) return undefined;
+    return {
+      __text__: textAst ?? [],
+    };
+  }
+
+  /**
+   * Convert a BitmarkTextNode to TextAst.
+   */
+  protected getBitmarkTextAst(textNode: BitmarkTextNode | string | undefined): TextAst {
+    if (textNode != null) {
+      const nodeAsBitmarkTextNode = textNode as BitmarkTextNode;
+      if (Array.isArray(nodeAsBitmarkTextNode.__text__)) {
+        return nodeAsBitmarkTextNode.__text__;
+      }
+    }
+
+    return [];
+  }
+
+  /**
    * Convert a raw bitmark property to an AST property.
    *
    * @param key
@@ -117,12 +156,12 @@ class BaseBuilder {
     const processValue = (v: unknown) => {
       if (v == null) return undefined;
       switch (propertyConfig.format) {
-        case PropertyFormat.string: {
-          // Convert number to string
-          if (NumberUtils.asNumber(v) != null) v = `${v}`;
+        // case PropertyFormat.string: {
+        //   // Convert number to string
+        //   if (NumberUtils.asNumber(v) != null) v = `${v}`;
 
-          return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
-        }
+        //   return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
+        // }
         case PropertyFormat.trimmedString:
           // Convert number to string
           if (NumberUtils.asNumber(v) != null) v = `${v}`;

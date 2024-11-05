@@ -1,9 +1,11 @@
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
+import { TextAst } from '../../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
+import { TextParser } from '../../../text/TextParser';
 
 import {
   BitContent,
@@ -40,22 +42,24 @@ function titleTagContentProcessor(
 function buildTitles(
   _context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  title: BreakscapedString[] | undefined,
+  title: string[] | undefined,
 ): BitSpecificTitles {
+  const textParser = new TextParser();
+
   title = title ?? [];
 
   if (Config.isOfBitType(bitType, BitType.chapter)) {
-    let t: BreakscapedString | undefined;
+    let t: string | undefined;
     if (title.length > 0) t = title[title.length - 1];
 
     return {
-      title: t,
+      title: textParser.toAst(t ?? ''),
       level: title.length > 0 ? title.length - 1 : undefined,
     };
   } else {
     return {
-      title: title[1] ?? undefined,
-      subtitle: title[2] ?? undefined,
+      title: title[1] ? textParser.toAst(title[1]) : undefined,
+      subtitle: title[2] ? textParser.toAst(title[2]) : undefined,
     };
   }
 }

@@ -598,7 +598,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.caption]: {
     tag: PropertyTag.caption,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.bitmarkMinusMinus,
   },
   [PropertyConfigKey.showInIndex]: {
     tag: PropertyTag.showInIndex,

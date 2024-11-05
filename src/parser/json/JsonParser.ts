@@ -103,16 +103,16 @@ interface ReferenceAndReferenceProperty {
 }
 
 interface ItemLeadHintInstruction {
-  item?: BreakscapedString;
-  lead?: BreakscapedString;
-  pageNumber?: BreakscapedString;
-  marginNumber?: BreakscapedString;
-  hint?: BreakscapedString;
-  instruction?: BreakscapedString;
+  item?: TextAst;
+  lead?: TextAst;
+  pageNumber?: TextAst;
+  marginNumber?: TextAst;
+  hint?: TextAst;
+  instruction?: TextAst;
 }
 
 interface Example {
-  example: BreakscapedString | boolean;
+  example: TextAst | boolean;
 }
 
 const builder = new Builder();
@@ -527,67 +527,67 @@ class JsonParser {
       textFormat: format as TextFormatType,
       resourceType: resourceAttachmentType,
       isCommented,
-      id: this.convertStringToBreakscapedString(id),
-      internalComment: this.convertStringToBreakscapedString(internalComments),
-      externalId: this.convertStringToBreakscapedString(externalId),
-      spaceId: this.convertStringToBreakscapedString(spaceId),
-      padletId: this.convertStringToBreakscapedString(padletId),
-      jupyterId: this.convertStringToBreakscapedString(jupyterId),
+      id,
+      internalComment: internalComments,
+      externalId,
+      spaceId,
+      padletId,
+      jupyterId,
       jupyterExecutionCount,
       isPublic,
       aiGenerated,
-      machineTranslated: this.convertStringToBreakscapedString(machineTranslated),
-      analyticsTag: this.convertStringToBreakscapedString(analyticsTag),
-      feedbackEngine: this.convertStringToBreakscapedString(feedbackEngine),
-      feedbackType: this.convertStringToBreakscapedString(feedbackType),
+      machineTranslated,
+      analyticsTag,
+      feedbackEngine,
+      feedbackType,
       disableFeedback,
-      releaseVersion: this.convertStringToBreakscapedString(releaseVersion),
-      releaseKind: this.convertStringToBreakscapedString(releaseKind),
-      releaseDate: this.convertStringToBreakscapedString(releaseDate),
+      releaseVersion,
+      releaseKind,
+      releaseDate,
       ageRange,
-      lang: this.convertStringToBreakscapedString(lang),
-      language: this.convertStringToBreakscapedString(language),
-      publisher: this.convertStringToBreakscapedString(publisher),
-      publisherName: this.convertStringToBreakscapedString(publisherName),
-      theme: this.convertStringToBreakscapedString(theme),
-      computerLanguage: this.convertStringToBreakscapedString(computerLanguage),
-      target: this.convertStringToBreakscapedString(target),
-      slug: this.convertStringToBreakscapedString(slug),
-      tag: this.convertStringToBreakscapedString(tag),
-      reductionTag: this.convertStringToBreakscapedString(reductionTag),
-      bubbleTag: this.convertStringToBreakscapedString(bubbleTag),
-      levelCEFRp: this.convertStringToBreakscapedString(levelCEFRp),
-      levelCEFR: this.convertStringToBreakscapedString(levelCEFR),
-      levelILR: this.convertStringToBreakscapedString(levelILR),
-      levelACTFL: this.convertStringToBreakscapedString(levelACTFL),
-      icon: this.convertStringToBreakscapedString(icon),
-      iconTag: this.convertStringToBreakscapedString(iconTag),
-      colorTag: this.convertStringToBreakscapedString(colorTag),
-      flashcardSet: this.convertStringToBreakscapedString(flashcardSet),
-      subtype: this.convertStringToBreakscapedString(subtype),
-      bookAlias: this.convertStringToBreakscapedString(bookAlias),
-      coverImage: this.convertStringToBreakscapedString(coverImage),
-      coverColor: this.convertStringToBreakscapedString(coverColor),
-      publications: this.convertStringToBreakscapedString(publications),
-      author: this.convertStringToBreakscapedString(author),
-      date: this.convertStringToBreakscapedString(date),
-      dateEnd: this.convertStringToBreakscapedString(dateEnd),
-      location: this.convertStringToBreakscapedString(location),
-      kind: this.convertStringToBreakscapedString(kind),
+      lang,
+      language,
+      publisher,
+      publisherName,
+      theme,
+      computerLanguage,
+      target,
+      slug,
+      tag,
+      reductionTag,
+      bubbleTag,
+      levelCEFRp,
+      levelCEFR,
+      levelILR,
+      levelACTFL,
+      icon,
+      iconTag,
+      colorTag,
+      flashcardSet,
+      subtype,
+      bookAlias,
+      coverImage,
+      coverColor,
+      publications,
+      author,
+      date,
+      dateEnd,
+      location,
+      kind,
       hasMarkAsDone,
       processHandIn,
-      action: this.convertStringToBreakscapedString(action),
+      action,
       showInIndex,
-      blockId: this.convertStringToBreakscapedString(blockId),
+      blockId,
       pageNo,
       x,
       y,
       width,
       height,
       index,
-      classification: this.convertStringToBreakscapedString(classification),
-      availableClassifications: this.convertStringToBreakscapedString(availableClassifications),
-      allowedBit: this.convertStringToBreakscapedString(allowedBit),
+      classification,
+      availableClassifications,
+      allowedBit,
       tableFixedHeader,
       tableSearch,
       tableSort,
@@ -601,69 +601,69 @@ class JsonParser {
       quizStrikethroughSolutions,
       codeLineNumbers,
       codeMinimap,
-      stripePricingTableId: this.convertStringToBreakscapedString(stripePricingTableId),
-      stripePublishableKey: this.convertStringToBreakscapedString(stripePublishableKey),
-      duration: this.convertStringToBreakscapedString(duration),
-      referenceProperty: this.convertStringToBreakscapedString(referenceProperty),
-      thumbImage: this.convertStringToBreakscapedString(thumbImage),
-      scormSource: this.convertStringToBreakscapedString(scormSource),
-      posterImage: this.convertStringToBreakscapedString(posterImage),
+      stripePricingTableId,
+      stripePublishableKey,
+      duration,
+      referenceProperty,
+      thumbImage,
+      scormSource,
+      posterImage,
       focusX,
       focusY,
-      pointerLeft: this.convertStringToBreakscapedString(pointerLeft),
-      pointerTop: this.convertStringToBreakscapedString(pointerTop),
+      pointerLeft,
+      pointerTop,
       listItemIndent,
-      backgroundWallpaper: this.convertStringToBreakscapedString(backgroundWallpaper),
+      backgroundWallpaper,
       hasBookNavigation,
-      deeplink: this.convertStringToBreakscapedString(deeplink),
-      externalLink: this.convertStringToBreakscapedString(externalLink),
-      externalLinkText: this.convertStringToBreakscapedString(externalLinkText),
-      videoCallLink: this.convertStringToBreakscapedString(videoCallLink),
-      vendorUrl: this.convertStringToBreakscapedString(vendorUrl),
-      search: this.convertStringToBreakscapedString(search),
-      bot: this.convertStringToBreakscapedString(bot),
-      list: this.convertStringToBreakscapedString(list),
-      textReference: this.convertStringToBreakscapedString(textReference),
+      deeplink,
+      externalLink,
+      externalLinkText,
+      videoCallLink,
+      vendorUrl,
+      search,
+      bot,
+      list,
+      textReference,
       isTracked,
       isInfoOnly,
       imageFirst,
-      activityType: this.convertStringToBreakscapedString(activityType),
-      labelTrue: this.convertStringToBreakscapedString(labelTrue),
-      labelFalse: this.convertStringToBreakscapedString(labelFalse),
-      content2Buy: this.convertStringToBreakscapedString(content2Buy),
-      mailingList: this.convertStringToBreakscapedString(mailingList),
-      buttonCaption: this.convertStringToBreakscapedString(buttonCaption),
-      callToActionUrl: this.convertStringToBreakscapedString(callToActionUrl),
-      caption: this.convertJsonTextToBreakscapedString(caption),
-      quotedPerson: this.convertStringToBreakscapedString(quotedPerson),
-      partialAnswer: this.convertStringToBreakscapedString(partialAnswer),
+      activityType,
+      labelTrue,
+      labelFalse,
+      content2Buy,
+      mailingList,
+      buttonCaption,
+      callToActionUrl,
+      caption: this.convertJsonTextToAstText(caption),
+      quotedPerson,
+      partialAnswer,
       reasonableNumOfChars,
-      sampleSolution: this.convertStringToBreakscapedString(sampleSolution),
-      additionalSolutions: this.convertStringToBreakscapedString(additionalSolutions),
+      sampleSolution: this.convertJsonTextToAstText(sampleSolution),
+      additionalSolutions: this.convertJsonTextToAstText(additionalSolutions),
       resolved,
-      resolvedDate: this.convertStringToBreakscapedString(resolvedDate),
-      resolvedBy: this.convertStringToBreakscapedString(resolvedBy),
+      resolvedDate,
+      resolvedBy,
       maxCreatedBits,
       maxDisplayLevel,
-      page: this.convertStringToBreakscapedString(page),
-      productId: this.convertStringToBreakscapedString(productId),
-      productList: this.convertStringToBreakscapedString(product),
-      productVideoList: this.convertStringToBreakscapedString(productVideo),
-      productFolder: this.convertStringToBreakscapedString(productFolder),
+      page,
+      productId,
+      productList: product,
+      productVideoList: productVideo,
+      productFolder,
       technicalTerm: technicalTermNode,
       servings: servingsNode,
       ratingLevelStart: ratingLevelStartNodes,
       ratingLevelEnd: ratingLevelEndNodes,
       ratingLevelSelected,
-      book: this.convertStringToBreakscapedString(book),
-      title: this.convertJsonTextToBreakscapedString(title),
-      subtitle: this.convertJsonTextToBreakscapedString(subtitle),
+      book,
+      title: this.convertJsonTextToAstText(title),
+      subtitle: this.convertJsonTextToAstText(subtitle),
       level,
       toc,
       progress,
-      anchor: this.convertStringToBreakscapedString(anchor),
-      reference: this.convertStringToBreakscapedString(reference),
-      referenceEnd: this.convertStringToBreakscapedString(referenceEnd),
+      anchor,
+      reference,
+      referenceEnd,
       ...this.parseItemLeadHintInstructionPageNumberMarginNumber(
         item,
         lead,
@@ -679,7 +679,7 @@ class JsonParser {
       imagePlaceholder: imagePlaceholderNode,
       resources: resourcesNode,
       body: bodyNode,
-      elements: this.convertStringToBreakscapedString(elements),
+      elements,
       flashcards: flashcardNodes,
       descriptions: descriptionNodes,
       statements: statementNodes,
@@ -707,9 +707,9 @@ class JsonParser {
     if (imageSource) {
       const { url, mockupId, format, size, trim } = imageSource;
       node = builder.imageSource({
-        url: this.convertStringToBreakscapedString(url) ?? Breakscape.EMPTY_STRING,
-        mockupId: this.convertStringToBreakscapedString(mockupId) ?? Breakscape.EMPTY_STRING,
-        format: this.convertStringToBreakscapedString(format),
+        url: url ?? '',
+        mockupId: mockupId ?? '',
+        format,
         size,
         trim,
       });
@@ -735,8 +735,8 @@ class JsonParser {
     if (person) {
       const avatarImage = this.resourceDataToAst(ResourceTag.image, person.avatarImage) as ImageResource | undefined;
       node = builder.person({
-        name: this.convertStringToBreakscapedString(person.name) ?? Breakscape.EMPTY_STRING,
-        title: this.convertStringToBreakscapedString(person.title),
+        name: person.name ?? '',
+        title: person.title,
         avatarImage,
       });
     }
@@ -750,9 +750,9 @@ class JsonParser {
       for (const m of marks) {
         const { mark, color, emphasis } = m;
         const node = builder.markConfig({
-          mark: this.convertStringToBreakscapedString(mark) ?? Breakscape.EMPTY_STRING,
-          color: this.convertStringToBreakscapedString(color),
-          emphasis: this.convertStringToBreakscapedString(emphasis),
+          mark: mark ?? '',
+          color,
+          emphasis,
         });
         nodes.push(node);
       }
@@ -769,9 +769,9 @@ class JsonParser {
       for (const c of flashcards) {
         const { question, answer, alternativeAnswers, item, lead, hint, instruction, example } = c;
         const node = builder.flashcard({
-          question: this.convertJsonTextToBreakscapedString(question) ?? Breakscape.EMPTY_STRING,
-          answer: this.convertJsonTextToBreakscapedString(answer),
-          alternativeAnswers: this.convertJsonTextToBreakscapedString(alternativeAnswers),
+          question: this.convertJsonTextToAstText(question),
+          answer: this.convertJsonTextToAstText(answer),
+          alternativeAnswers: this.convertJsonTextToAstText(alternativeAnswers),
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
@@ -790,9 +790,9 @@ class JsonParser {
       for (const c of descriptionList) {
         const { term, description, alternativeDescriptions, item, lead, hint, instruction, example } = c;
         const node = builder.descriptionListItem({
-          term: this.convertJsonTextToBreakscapedString(term) ?? Breakscape.EMPTY_STRING,
-          description: this.convertJsonTextToBreakscapedString(description),
-          alternativeDescriptions: this.convertJsonTextToBreakscapedString(alternativeDescriptions),
+          term: this.convertJsonTextToAstText(term),
+          description: this.convertJsonTextToAstText(description),
+          alternativeDescriptions: this.convertJsonTextToAstText(alternativeDescriptions),
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
         });
@@ -815,7 +815,7 @@ class JsonParser {
 
     if (statement) {
       const node = builder.statement({
-        text: this.convertStringToBreakscapedString(statement) ?? Breakscape.EMPTY_STRING,
+        text: statement ?? '',
         isCorrect: isCorrect ?? false,
         ...this.parseExample(example),
       });
@@ -826,7 +826,7 @@ class JsonParser {
       for (const s of statements) {
         const { statement, isCorrect, item, lead, hint, instruction, example } = s;
         const node = builder.statement({
-          text: this.convertStringToBreakscapedString(statement) ?? Breakscape.EMPTY_STRING,
+          text: statement ?? '',
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -846,7 +846,7 @@ class JsonParser {
       for (const c of choices) {
         const { choice, isCorrect, item, lead, hint, instruction, example } = c;
         const node = builder.choice({
-          text: this.convertStringToBreakscapedString(choice) ?? Breakscape.EMPTY_STRING,
+          text: choice ?? '',
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -870,7 +870,7 @@ class JsonParser {
       for (const r of responses) {
         const { response, isCorrect, item, lead, hint, instruction, example } = r;
         const node = builder.response({
-          text: this.convertStringToBreakscapedString(response) ?? Breakscape.EMPTY_STRING,
+          text: response ?? '',
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -890,7 +890,7 @@ class JsonParser {
       for (const o of options) {
         const { text, isCorrect, item, lead, hint, instruction, example } = o;
         const node = builder.selectOption({
-          text: this.convertStringToBreakscapedString(text) ?? Breakscape.EMPTY_STRING,
+          text: text ?? '',
           isCorrect,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -908,7 +908,7 @@ class JsonParser {
       for (const t of highlightTexts) {
         const { text, isCorrect, isHighlighted, item, lead, hint, instruction, example } = t;
         const node = builder.highlightText({
-          text: this.convertStringToBreakscapedString(text) ?? Breakscape.EMPTY_STRING,
+          text: text ?? '',
           isCorrect,
           isHighlighted,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
@@ -946,8 +946,8 @@ class JsonParser {
     let node: Heading | undefined;
     if (heading && Object.keys(heading).length > 0) {
       node = builder.heading({
-        forKeys: this.convertStringToBreakscapedString(heading.forKeys) ?? Breakscape.EMPTY_STRING,
-        forValues: this.convertStringToBreakscapedString(heading.forValues) ?? [],
+        forKeys: heading.forKeys ?? '',
+        forValues: heading.forValues ?? [],
       });
     }
 
@@ -964,10 +964,10 @@ class JsonParser {
         const image = this.resourceDataToAst(ResourceTag.image, keyImage) as ImageResource;
 
         const node = builder.pair({
-          key: this.convertStringToBreakscapedString(key),
+          key,
           keyAudio: audio,
           keyImage: image,
-          values: this.convertStringToBreakscapedString(values) ?? [],
+          values: values ?? [],
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
           isCaseSensitive,
@@ -987,7 +987,7 @@ class JsonParser {
       for (const m of matrix) {
         const { key, cells, item, lead, hint, instruction, example } = m;
         const node = builder.matrix({
-          key: this.convertStringToBreakscapedString(key) ?? Breakscape.EMPTY_STRING,
+          key: key ?? '',
           cells: this.matrixCellsToAst(cells) ?? [],
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
@@ -1008,7 +1008,7 @@ class JsonParser {
         const { values, item, lead, hint, instruction, isCaseSensitive, example } = mc;
 
         const node = builder.matrixCell({
-          values: this.convertStringToBreakscapedString(values) ?? [],
+          values: values ?? [],
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           isCaseSensitive,
           ...this.parseExample(example),
@@ -1028,8 +1028,8 @@ class JsonParser {
     if (table) {
       const { columns, data } = table;
       node = builder.table({
-        columns: this.convertStringToBreakscapedString(columns) ?? [],
-        rows: data ? (data.map((row) => this.convertStringToBreakscapedString(row) ?? []) ?? []) : [],
+        columns: columns ?? [],
+        rows: data ? (data.map((row) => row ?? []) ?? []) : [],
       });
     }
 
@@ -1053,10 +1053,10 @@ class JsonParser {
           reasonableNumOfChars,
         } = q;
         const node = builder.question({
-          question: this.convertStringToBreakscapedString(question) ?? Breakscape.EMPTY_STRING,
-          partialAnswer: this.convertStringToBreakscapedString(partialAnswer),
-          sampleSolution: this.convertStringToBreakscapedString(sampleSolution),
-          additionalSolutions: this.convertStringToBreakscapedString(additionalSolutions),
+          question: question ?? '',
+          partialAnswer,
+          sampleSolution,
+          additionalSolutions,
           ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
           ...this.parseExample(example),
           reasonableNumOfChars,
@@ -1080,10 +1080,10 @@ class JsonParser {
       for (const r of responses) {
         const { response, reaction, feedback, item, lead, hint } = r;
         const node = builder.botResponse({
-          response: this.convertStringToBreakscapedString(response) ?? Breakscape.EMPTY_STRING,
-          reaction: this.convertStringToBreakscapedString(reaction) ?? Breakscape.EMPTY_STRING,
-          feedback: this.convertStringToBreakscapedString(feedback) ?? Breakscape.EMPTY_STRING,
-          ...this.parseItemLeadHintInstruction(item, lead, hint, Breakscape.EMPTY_STRING),
+          response: response ?? '',
+          reaction: reaction ?? '',
+          feedback: feedback ?? '',
+          ...this.parseItemLeadHintInstruction(item, lead, hint, ''),
         });
         nodes.push(node);
       }
@@ -1100,8 +1100,8 @@ class JsonParser {
     if (technicalTerm) {
       const { technicalTerm: t, lang } = technicalTerm;
       node = builder.technicalTerm({
-        technicalTerm: this.convertStringToBreakscapedString(t) ?? Breakscape.EMPTY_STRING,
-        lang: this.convertStringToBreakscapedString(lang) ?? Breakscape.EMPTY_STRING,
+        technicalTerm: t ?? '',
+        lang: lang ?? '',
       });
     }
 
@@ -1115,11 +1115,11 @@ class JsonParser {
       const { servings: s, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = servings;
       node = builder.servings({
         servings: s,
-        unit: this.convertStringToBreakscapedString(unit) ?? Breakscape.EMPTY_STRING,
-        unitAbbr: this.convertStringToBreakscapedString(unitAbbr) ?? Breakscape.EMPTY_STRING,
+        unit: unit ?? '',
+        unitAbbr: unitAbbr ?? '',
         decimalPlaces: decimalPlaces ?? 1,
         disableCalculation: disableCalculation ?? false,
-        hint: this.convertStringToBreakscapedString(hint) ?? Breakscape.EMPTY_STRING,
+        hint: this.convertJsonTextToAstText(hint),
       });
     }
 
@@ -1132,12 +1132,12 @@ class JsonParser {
       for (const i of ingredients) {
         const { title, checked, item, quantity, unit, unitAbbr, decimalPlaces, disableCalculation } = i;
         const node = builder.ingredient({
-          title: this.convertStringToBreakscapedString(title),
+          title,
           checked,
-          item: this.convertStringToBreakscapedString(item) ?? Breakscape.EMPTY_STRING,
+          item: this.convertJsonTextToAstText(item),
           quantity,
-          unit: this.convertStringToBreakscapedString(unit) ?? Breakscape.EMPTY_STRING,
-          unitAbbr: this.convertStringToBreakscapedString(unitAbbr),
+          unit: unit ?? '',
+          unitAbbr,
           decimalPlaces: decimalPlaces ?? 1,
           disableCalculation,
         });
@@ -1158,7 +1158,7 @@ class JsonParser {
 
       node = builder.ratingLevelStartEnd({
         level,
-        label: this.convertJsonTextToBreakscapedString(label) ?? Breakscape.EMPTY_STRING,
+        label: this.convertJsonTextToAstText(label),
       });
     }
 
@@ -1174,11 +1174,11 @@ class JsonParser {
       const { columns, definitions } = captionDefinitionList;
 
       node = builder.captionDefinitionList({
-        columns: this.convertStringToBreakscapedString(columns) ?? [],
+        columns: columns ?? [],
         definitions: (definitions ?? []).map((d) => {
           return builder.captionDefinition({
-            term: this.convertStringToBreakscapedString(d.term) ?? Breakscape.EMPTY_STRING,
-            description: this.convertStringToBreakscapedString(d.description) ?? Breakscape.EMPTY_STRING,
+            term: this.convertJsonTextToAstText(d.term) ?? '',
+            description: this.convertJsonTextToAstText(d.description) ?? '',
           });
         }),
       });
@@ -1298,22 +1298,22 @@ class JsonParser {
         type,
 
         // Generic (except Article / Document)
-        value: this.convertStringToBreakscapedString(url),
+        value: url,
 
         // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
-        format: this.convertStringToBreakscapedString(data.format),
+        format: data.format,
 
         // ImageLikeResource
-        src1x: this.convertStringToBreakscapedString(data.src1x),
-        src2x: this.convertStringToBreakscapedString(data.src2x),
-        src3x: this.convertStringToBreakscapedString(data.src3x),
-        src4x: this.convertStringToBreakscapedString(data.src4x),
-        caption: this.convertJsonTextToBreakscapedString(data.caption),
+        src1x: data.src1x,
+        src2x: data.src2x,
+        src3x: data.src3x,
+        src4x: data.src4x,
+        caption: this.convertJsonTextToAstText(data.caption),
 
         // ImageLikeResource / VideoLikeResource
         width: data.width ?? undefined,
         height: data.height ?? undefined,
-        alt: this.convertStringToBreakscapedString(data.alt),
+        alt: data.alt,
         zoomDisabled: data.zoomDisabled,
 
         // VideoLikeResource
@@ -1326,13 +1326,13 @@ class JsonParser {
         thumbnails,
 
         // WebsiteLinkResource
-        siteName: this.convertStringToBreakscapedString(data.siteName),
+        siteName: data.siteName,
 
         // Generic Resource
-        license: this.convertStringToBreakscapedString(data.license),
-        copyright: this.convertStringToBreakscapedString(data.copyright),
+        license: data.license,
+        copyright: data.copyright,
         showInIndex: data.showInIndex,
-        search: this.convertStringToBreakscapedString(data.search),
+        search: data.search,
       });
     }
 
@@ -1410,7 +1410,7 @@ class JsonParser {
   }
 
   private bodyTextToAst(bodyText: BreakscapedString): BodyText {
-    return builder.bodyText({ text: bodyText ?? Breakscape.EMPTY_STRING }, false);
+    return builder.bodyText({ text: bodyText ?? '' }, false);
   }
 
   private bodyBitToAst(bit: BodyBitJson): BodyPart {
@@ -1432,11 +1432,11 @@ class JsonParser {
         return hightlight;
       }
     }
-    return this.bodyTextToAst(Breakscape.EMPTY_STRING);
+    return this.bodyTextToAst('');
   }
 
   private footerToAst(footerText: JsonText, textFormat: TextFormatType): Footer | undefined {
-    const text = this.convertJsonTextToBreakscapedString(footerText, textFormat);
+    const text = this.convertJsonTextToAstText(footerText, textFormat);
 
     if (text) {
       const footerText = builder.footerText({ text }, false);
@@ -1464,7 +1464,7 @@ class JsonParser {
 
     // Build bit
     const bitNode = builder.gap({
-      solutions: this.convertStringToBreakscapedString(solutions) ?? [],
+      solutions: solutions ?? [],
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
       isCaseSensitive,
@@ -1478,8 +1478,8 @@ class JsonParser {
 
     // Build bit
     const bitNode = builder.mark({
-      solution: this.convertStringToBreakscapedString(solution) ?? Breakscape.EMPTY_STRING,
-      mark: this.convertStringToBreakscapedString(mark),
+      solution: solution ?? '',
+      mark,
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
     });
@@ -1496,8 +1496,8 @@ class JsonParser {
     // Build bit
     const node = builder.select({
       options: selectOptionNodes,
-      prefix: this.convertStringToBreakscapedString(prefix),
-      postfix: this.convertStringToBreakscapedString(postfix),
+      prefix,
+      postfix,
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
     });
@@ -1514,8 +1514,8 @@ class JsonParser {
     // Build bit
     const node = builder.highlight({
       texts: highlightTextNodes,
-      prefix: this.convertStringToBreakscapedString(prefix),
-      postfix: this.convertStringToBreakscapedString(postfix),
+      prefix,
+      postfix,
       ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
       ...this.parseExample(example),
     });
@@ -1530,12 +1530,12 @@ class JsonParser {
     instruction: JsonText,
   ): ItemLeadHintInstruction {
     return {
-      item: this.convertJsonTextToBreakscapedString(item),
-      lead: this.convertJsonTextToBreakscapedString(lead),
-      pageNumber: '' as BreakscapedString,
-      marginNumber: '' as BreakscapedString,
-      hint: this.convertJsonTextToBreakscapedString(hint),
-      instruction: this.convertJsonTextToBreakscapedString(instruction),
+      item: this.convertJsonTextToAstText(item),
+      lead: this.convertJsonTextToAstText(lead),
+      pageNumber: [] as TextAst,
+      marginNumber: [] as TextAst,
+      hint: this.convertJsonTextToAstText(hint),
+      instruction: this.convertJsonTextToAstText(instruction),
     };
   }
 
@@ -1548,18 +1548,18 @@ class JsonParser {
     marginNumber: JsonText,
   ): ItemLeadHintInstruction {
     return {
-      item: this.convertJsonTextToBreakscapedString(item),
-      lead: this.convertJsonTextToBreakscapedString(lead),
-      pageNumber: this.convertJsonTextToBreakscapedString(pageNumber),
-      marginNumber: this.convertJsonTextToBreakscapedString(marginNumber),
-      hint: this.convertJsonTextToBreakscapedString(hint),
-      instruction: this.convertJsonTextToBreakscapedString(instruction),
+      item: this.convertJsonTextToAstText(item),
+      lead: this.convertJsonTextToAstText(lead),
+      pageNumber: this.convertJsonTextToAstText(pageNumber),
+      marginNumber: this.convertJsonTextToAstText(marginNumber),
+      hint: this.convertJsonTextToAstText(hint),
+      instruction: this.convertJsonTextToAstText(instruction),
     };
   }
 
   private parseExample(example: ExampleJson | undefined): Example | undefined {
     if (example == null) return undefined;
-    const exampleStr = this.convertJsonTextToBreakscapedString(example as JsonText);
+    const exampleStr = this.convertJsonTextToAstText(example as JsonText);
     if (exampleStr) {
       return { example: exampleStr };
     }
@@ -1580,11 +1580,56 @@ class JsonParser {
    * @param textFormat format of TextAst
    * @returns Breakscaped string or breakscaped string[]
    */
-  private convertJsonTextToBreakscapedString<T extends JsonText | JsonText[] | undefined>(
-    text: T,
-    textFormat?: TextFormatType,
-  ): (T extends JsonText[] ? BreakscapedString[] : BreakscapedString) | undefined {
-    type R = T extends JsonText[] ? BreakscapedString[] : BreakscapedString;
+  // private convertJsonTextToBreakscapedString<T extends JsonText | JsonText[] | undefined>(
+  //   text: T,
+  //   textFormat?: TextFormatType,
+  // ): (T extends JsonText[] ? BreakscapedString[] : BreakscapedString) | undefined {
+  //   type R = T extends JsonText[] ? BreakscapedString[] : BreakscapedString;
+  //   // NOTE: it is ok to default to bitmarkMinusMinus here as if the text is text then it will not be an array or
+  //   // return true from isAst() and so will be treated as a string
+  //   textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
+
+  //   const bitTagOnly = (textFormat !== TextFormat.bitmarkPlusPlus &&
+  //     textFormat !== TextFormat.bitmarkMinusMinus) as boolean;
+
+  //   if (text == null) return undefined;
+  //   if (this.textParser.isAst(text)) {
+  //     // Use the text generator to convert the TextAst to breakscaped string
+  //     // this.ast.printTree(text, NodeType.textAst);
+  //     const parsedText = this.textGenerator.generateSync(text as TextAst, textFormat);
+
+  //     return parsedText as R;
+  //   } else if (Array.isArray(text)) {
+  //     const strArray: string[] = [];
+  //     for (let i = 0, len = text.length; i < len; i++) {
+  //       const t = text[i];
+
+  //       if (this.textParser.isAst(t)) {
+  //         // Use the text generator to convert the TextAst to breakscaped string
+  //         // this.ast.printTree(text, NodeType.textAst);
+  //         const parsedText = this.textGenerator.generateSync(t as TextAst, textFormat);
+
+  //         strArray[i] = parsedText;
+  //       } else {
+  //         strArray[i] = Breakscape.breakscape(t as string, {
+  //           bitTagOnly,
+  //         });
+  //         // strArray[i] = t as BreakscapedString;
+  //       }
+  //     }
+  //     return strArray as R;
+  //   }
+
+  //   return Breakscape.breakscape(text as string, {
+  //     bitTagOnly,
+  //   }) as R;
+  //   // return text as BreakscapedString as R;
+  // }
+
+  private convertJsonTextToAstText<
+    T extends JsonText | JsonText[] | undefined,
+    R = T extends JsonText[] ? TextAst[] : TextAst,
+  >(text: T, textFormat?: TextFormatType): R {
     // NOTE: it is ok to default to bitmarkMinusMinus here as if the text is text then it will not be an array or
     // return true from isAst() and so will be treated as a string
     textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
@@ -1592,38 +1637,38 @@ class JsonParser {
     const bitTagOnly = (textFormat !== TextFormat.bitmarkPlusPlus &&
       textFormat !== TextFormat.bitmarkMinusMinus) as boolean;
 
-    if (text == null) return undefined;
+    if (text == null) return [] as R;
     if (this.textParser.isAst(text)) {
       // Use the text generator to convert the TextAst to breakscaped string
       // this.ast.printTree(text, NodeType.textAst);
-      const parsedText = this.textGenerator.generateSync(text as TextAst, textFormat);
 
-      return parsedText as R;
+      return text as R;
     } else if (Array.isArray(text)) {
-      const strArray: string[] = [];
+      const strArray: TextAst[] = [];
       for (let i = 0, len = text.length; i < len; i++) {
         const t = text[i];
 
         if (this.textParser.isAst(t)) {
           // Use the text generator to convert the TextAst to breakscaped string
           // this.ast.printTree(text, NodeType.textAst);
-          const parsedText = this.textGenerator.generateSync(t as TextAst, textFormat);
-
-          strArray[i] = parsedText;
+          strArray[i] = t as TextAst;
         } else {
-          strArray[i] = Breakscape.breakscape(t as string, {
-            bitTagOnly,
-          });
+          strArray[i] = this.textParser.toAst(
+            Breakscape.breakscape(t as string, {
+              bitTagOnly,
+            }),
+          );
           // strArray[i] = t as BreakscapedString;
         }
       }
       return strArray as R;
     }
 
-    return Breakscape.breakscape(text as string, {
-      bitTagOnly,
-    }) as R;
-    // return text as BreakscapedString as R;
+    return this.textParser.toAst(
+      Breakscape.breakscape(text as string, {
+        bitTagOnly,
+      }),
+    ) as R;
   }
 
   /**
@@ -1639,24 +1684,28 @@ class JsonParser {
    * @param textFormat format of TextAst
    * @returns Breakscaped string or breakscaped string[]
    */
-  private convertStringToBreakscapedString<T extends string | string[] | undefined>(
-    text: T,
-  ): (T extends string[] ? BreakscapedString[] : BreakscapedString) | undefined {
-    type R = T extends string[] ? BreakscapedString[] : BreakscapedString;
+  // private convertStringToBreakscapedString<T extends string | string[] | undefined>(
+  //   text: T,
+  // ): (T extends string[] ? BreakscapedString[] : BreakscapedString) | undefined {
+  //   type R = T extends string[] ? BreakscapedString[] : BreakscapedString;
 
-    if (text == null) return undefined;
-    if (Array.isArray(text)) {
-      const strArray: string[] = [];
-      for (let i = 0, len = text.length; i < len; i++) {
-        const t = text[i];
+  //   if (text == null) return undefined;
+  //   if (Array.isArray(text)) {
+  //     const strArray: string[] = [];
+  //     for (let i = 0, len = text.length; i < len; i++) {
+  //       const t = text[i];
 
-        strArray[i] = Breakscape.breakscape(t as string);
-      }
-      return strArray as R;
-    }
+  //       strArray[i] = Breakscape.breakscape(t as string);
+  //     }
+  //     return strArray as R;
+  //   }
 
-    return Breakscape.breakscape(text as string) as R;
-  }
+  //   return Breakscape.breakscape(text as string) as R;
+  // }
+  // private convertStringToBreakscapedString<T extends string | string[] | undefined>(text: T): T | undefined {
+  //   if (text == null) return undefined;
+  //   return text;
+  // }
 }
 
 export { JsonParser };

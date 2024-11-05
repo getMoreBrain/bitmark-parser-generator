@@ -3,6 +3,7 @@ import { Config } from '../../../../config/Config';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { ChoiceJson, ResponseJson, StatementJson } from '../../../../model/json/BitJson';
 
 import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor';
 
@@ -106,7 +107,7 @@ function buildStatement(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   trueFalseContent: BitContent[],
-): Statement | undefined {
+): StatementJson | undefined {
   if (!Config.isOfBitType(bitType, BitType.trueFalse1)) return undefined;
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
@@ -121,7 +122,7 @@ function buildStatement(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (statement)', tags);
 
-  let statement: Statement | undefined;
+  let statement: StatementJson | undefined;
 
   if (trueFalse && trueFalse.length > 0) {
     statement = builder.statement({ ...trueFalse[0], ...tags });
@@ -151,9 +152,9 @@ function buildStatementsChoicesResponses(
   const insertResponses = Config.isOfBitType(bitType, [BitType.multipleResponse, BitType.multipleResponse1]);
   if (!insertStatements && !insertChoices && !insertResponses) return {};
 
-  const statements: Statement[] = [];
-  const choices: Choice[] = [];
-  const responses: Response[] = [];
+  const statements: StatementJson[] = [];
+  const choices: ChoiceJson[] = [];
+  const responses: ResponseJson[] = [];
 
   const trueFalseContents = context.splitBitContent(trueFalseContent, [TypeKey.True, TypeKey.False]);
 

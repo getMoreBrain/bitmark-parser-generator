@@ -3,6 +3,7 @@ import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
+import { TextParser } from '../../../text/TextParser';
 
 import {
   BitContent,
@@ -14,6 +15,7 @@ import {
 } from '../BitmarkPegParserTypes';
 
 // const builder = new Builder();
+const textParser = new TextParser();
 
 function exampleTagContentProcessor(
   context: BitmarkPegParserContext,
@@ -72,10 +74,10 @@ function handleGapOrSelectOrTrueFalseExample(
     // Example is set on the true/false tag [+...] / [-...]
     if (example === true) {
       trueFalse.isDefaultExample = true;
-      trueFalse.example = undefined;
+      trueFalse.example = !!trueFalse.isCorrect;
     } else {
       if (BooleanUtils.isBooleanString(example)) {
-        trueFalse.example = example as BreakscapedString;
+        trueFalse.example = BooleanUtils.toBoolean(example);
       } else {
         // Example is set to a value other than true / false which is not valid in the case of select
         trueFalse.isDefaultExample = true;
@@ -85,12 +87,14 @@ function handleGapOrSelectOrTrueFalseExample(
     }
   } else if (Array.isArray(target.solutions) && target.solutions.length > 0) {
     // Example is set on the gap solution tag [_...]
+    let exampleString: BreakscapedString | undefined;
     if (example === true) {
       // Extract the solution nearest [@example] tag as the example value
-      target.example = target.solutions[target.solutions.length - 1] ?? undefined;
+      exampleString = target.solutions[target.solutions.length - 1] ?? undefined;
     } else {
-      target.example = example as BreakscapedString;
+      exampleString = example as BreakscapedString;
     }
+    target.example = exampleString ? textParser.toAst(exampleString) : undefined;
   } else {
     // Example is higher up the chain, so how it is handled depends on the bit type
     if (
@@ -157,7 +161,7 @@ function handleStandardBooleanExample(
     target.example = undefined;
   } else {
     if (BooleanUtils.isBooleanString(example)) {
-      target.example = example as BreakscapedString;
+      target.example = BooleanUtils.toBoolean(example);
     } else {
       // Example is set to a value other than true / false which is not valid in the case of select
       target.isDefaultExample = true;
@@ -178,7 +182,7 @@ function handleStandardStringExample(
     target.isDefaultExample = true;
     target.example = undefined;
   } else {
-    target.example = example as BreakscapedString;
+    target.example = example ? textParser.toAst(example) : undefined;
   }
 }
 

@@ -172,7 +172,7 @@ export interface BitJson {
   logos: ImageResourceWrapperJson[];
   images: ImageResourceWrapperJson[];
 
-  body: JsonText;
+  body: JsonText | unknown; // unknown is for JSON body
 
   sampleSolution: string;
   additionalSolutions: string[];
@@ -231,6 +231,7 @@ export interface FlashcardJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface DescriptionListItemJson {
@@ -243,6 +244,7 @@ export interface DescriptionListItemJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface StatementJson {
@@ -254,6 +256,7 @@ export interface StatementJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface ChoiceJson {
@@ -265,6 +268,7 @@ export interface ChoiceJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface ResponseJson {
@@ -276,6 +280,7 @@ export interface ResponseJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface QuizJson {

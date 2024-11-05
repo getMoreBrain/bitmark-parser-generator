@@ -5,6 +5,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { Tag } from '../../../../model/enum/Tag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { GapJson } from '../../../../model/json/BodyBitJson';
 
 import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
 
@@ -43,7 +44,7 @@ function buildGap(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
-): Gap | undefined {
+): GapJson | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
   const gapConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
@@ -60,10 +61,11 @@ function buildGap(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', chainTags);
 
-  const { solutions, ...rest } = chainTags;
+  const { solutions, _solutionsAst, ...rest } = chainTags;
 
   const gap = builder.gap({
     solutions: solutions ?? [],
+    _solutionsAst: _solutionsAst ?? [],
     ...rest,
   });
 

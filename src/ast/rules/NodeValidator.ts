@@ -1,4 +1,5 @@
 import { Bit, CardBit, Resource } from '../../model/ast/Nodes';
+import { ResourceJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
 
 /**
@@ -32,7 +33,7 @@ class NodeValidator {
     return ret;
   }
 
-  validateResource<T extends Resource>(resource: T | undefined): T | undefined {
+  validateResource<T extends ResourceJson>(resource: T | undefined): T | undefined {
     if (!resource) return undefined;
 
     let ret: T | undefined = resource;

@@ -9,6 +9,7 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 const NodeType = superenum({
   unknown: 'unknown', // unknown
 
+  __text__: '__text__', // bitmark text
   action: 'action',
   actionValue: 'actionValue',
   activityType: 'activityType',

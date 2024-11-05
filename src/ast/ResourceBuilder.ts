@@ -1,5 +1,5 @@
 import { Breakscape } from '../breakscaping/Breakscape';
-import { BreakscapedString } from '../model/ast/BreakscapedString';
+import { TextAst } from '../model/ast/TextNodes';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { UrlUtils } from '../utils/UrlUtils';
@@ -8,25 +8,26 @@ import { BaseBuilder } from './BaseBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
 import {
-  Resource,
-  AudioResource,
-  ImageResource,
-  ImageLinkResource,
-  AudioLinkResource,
-  VideoResource,
-  VideoLinkResource,
-  StillImageFilmLinkResource,
-  ArticleResource,
-  DocumentResource,
-  DocumentLinkResource,
-  AppLinkResource,
-  WebsiteLinkResource,
-  DocumentDownloadResource,
-  DocumentEmbedResource,
-  AudioEmbedResource,
-  VideoEmbedResource,
-  StillImageFilmEmbedResource,
-} from '../model/ast/Nodes';
+  AppLinkResourceWrapperJson,
+  ArticleResourceWrapperJson,
+  AudioEmbedResourceWrapperJson,
+  AudioLinkResourceWrapperJson,
+  AudioResourceWrapperJson,
+  DocumentDownloadResourceWrapperJson,
+  DocumentEmbedResourceWrapperJson,
+  DocumentLinkResourceWrapperJson,
+  DocumentResourceWrapperJson,
+  ImageLinkResourceWrapperJson,
+  ImageResourceJson,
+  ImageResourceWrapperJson,
+  ResourceJson,
+  StillImageFilmEmbedResourceWrapperJson,
+  StillImageFilmLinkResourceWrapperJson,
+  VideoEmbedResourceWrapperJson,
+  VideoLinkResourceWrapperJson,
+  VideoResourceWrapperJson,
+  WebsiteLinkResourceWrapperJson,
+} from '../model/json/ResourceJson';
 
 /**
  * Builder to build bitmark Resource AST nodes programmatically
@@ -43,45 +44,45 @@ class ResourceBuilder extends BaseBuilder {
       type: ResourceTagType;
 
       // Generic part (value of bit tag)
-      value?: BreakscapedString; // url / src / href / app / body
+      value?: string; // url / src / href / app / body
 
       // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
-      format?: BreakscapedString;
+      format?: string;
 
       // ImageLikeResource
-      src1x?: BreakscapedString;
-      src2x?: BreakscapedString;
-      src3x?: BreakscapedString;
-      src4x?: BreakscapedString;
+      src1x?: string;
+      src2x?: string;
+      src3x?: string;
+      src4x?: string;
 
       // ImageLikeResource / VideoLikeResource
       width?: string;
       height?: string;
-      alt?: BreakscapedString;
+      alt?: string;
       zoomDisabled?: boolean;
 
       // VideoLikeResource
-      duration?: number; // BreakscapedString?
+      duration?: number; // string?
       mute?: boolean;
       autoplay?: boolean;
       allowSubtitles?: boolean;
       showSubtitles?: boolean;
-      posterImage?: ImageResource;
-      thumbnails?: ImageResource[];
+      posterImage?: ImageResourceJson;
+      thumbnails?: ImageResourceJson[];
 
       // WebsiteLinkResource
-      siteName?: BreakscapedString;
+      siteName?: string;
 
       // Generic Resource
-      license?: BreakscapedString;
-      copyright?: BreakscapedString;
+      license?: string;
+      copyright?: string;
       showInIndex?: boolean;
-      caption?: BreakscapedString;
-      search?: BreakscapedString;
+      caption?: TextAst;
+      search?: string;
     },
     //
-  ): Resource | undefined {
-    let node: Resource | undefined;
+  ): ResourceJson | undefined {
+    let node: ResourceJson | undefined;
 
     const { type, value: valueIn, format: formatIn, ...rest } = data;
     const finalData = {
@@ -99,17 +100,17 @@ class ResourceBuilder extends BaseBuilder {
       case ResourceTag.stillImageFilmEmbed:
       case ResourceTag.stillImageFilmLink: {
         const thumbnailKeys = ['src1x', 'src2x', 'src3x', 'src4x'];
-        const thumbnails: ImageResource[] = [];
+        const thumbnails: ImageResourceJson[] = [];
         for (const k of thumbnailKeys) {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const dataAsAny = data as any;
           const value = dataAsAny[k];
           if (value) {
-            const image = this.resource({
+            const image: ImageResourceWrapperJson = this.resource({
               type: ResourceTag.image,
               value,
-            });
-            if (image) thumbnails.push(image as ImageResource);
+            }) as ImageResourceWrapperJson;
+            if (image) thumbnails.push(image.image as ImageResourceJson);
           }
         }
         // Merge with existing thumbnails
@@ -238,24 +239,24 @@ class ResourceBuilder extends BaseBuilder {
    */
   imageResource(
     data: {
-      format: BreakscapedString;
-      value: BreakscapedString; //src
-      src1x?: BreakscapedString;
-      src2x?: BreakscapedString;
-      src3x?: BreakscapedString;
-      src4x?: BreakscapedString;
+      format: string;
+      value: string; //src
+      src1x?: string;
+      src2x?: string;
+      src3x?: string;
+      src4x?: string;
       width?: string;
       height?: string;
-      alt?: BreakscapedString;
+      alt?: string;
       zoomDisabled?: boolean;
-      license?: BreakscapedString;
-      copyright?: BreakscapedString;
+      license?: string;
+      copyright?: string;
       showInIndex?: boolean;
-      caption?: BreakscapedString;
-      search?: BreakscapedString;
+      caption?: TextAst;
+      search?: string;
     },
     typeAlias?: ResourceTagType,
-  ): ImageResource {
+  ): ImageResourceWrapperJson | undefined {
     const {
       value,
       src1x,
@@ -274,34 +275,38 @@ class ResourceBuilder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: ImageResource = {
-      type: ResourceTag.image,
-      typeAlias: typeAlias ?? ResourceTag.image,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      src1x,
-      src2x,
-      src3x,
-      src4x,
-      width,
-      height,
-      alt,
-      zoomDisabled,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+    const node: ImageResourceWrapperJson = {
+      type: (typeAlias ?? ResourceTag.image) as typeof ResourceTag.image,
+      image: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        src1x: (src1x ?? undefined) as string,
+        src2x: (src2x ?? undefined) as string,
+        src3x: (src3x ?? undefined) as string,
+        src4x: (src4x ?? undefined) as string,
+        width: (width ?? null) as string,
+        height: (height ?? null) as string,
+        alt: alt ?? '',
+        zoomDisabled: zoomDisabled ?? false, // TODO: Default depends on the bit(!)
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreFalse: ['zoomDisabled'],
+      ignoreEmptyArrays: ['caption'],
+      ignoreUndefined: ['width', 'height'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
     });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as ImageResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -311,22 +316,22 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   imageLinkResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString;
-    src1x?: BreakscapedString;
-    src2x?: BreakscapedString;
-    src3x?: BreakscapedString;
-    src4x?: BreakscapedString;
+    format: string;
+    value: string;
+    src1x?: string;
+    src2x?: string;
+    src3x?: string;
+    src4x?: string;
     width?: string;
     height?: string;
-    alt?: BreakscapedString;
+    alt?: string;
     zoomDisabled?: boolean;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): ImageLinkResource {
+    caption?: TextAst;
+    search?: string;
+  }): ImageLinkResourceWrapperJson | undefined {
     const {
       value,
       src1x,
@@ -345,34 +350,39 @@ class ResourceBuilder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: ImageLinkResource = {
+    const node: ImageLinkResourceWrapperJson = {
       type: ResourceTag.imageLink,
-      typeAlias: ResourceTag.imageLink,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      src1x,
-      src2x,
-      src3x,
-      src4x,
-      zoomDisabled,
-      width,
-      height,
-      alt,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      //typeAlias: ResourceTag.imageLink,
+      imageLink: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        src1x: (src1x ?? undefined) as string,
+        src2x: (src2x ?? undefined) as string,
+        src3x: (src3x ?? undefined) as string,
+        src4x: (src4x ?? undefined) as string,
+        width: (width ?? null) as string,
+        height: (height ?? null) as string,
+        alt: alt ?? '',
+        zoomDisabled: zoomDisabled ?? false, // TODO: Default depends on the bit(!)
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreFalse: ['zoomDisabled'],
+      ignoreEmptyArrays: ['caption'],
+      ignoreUndefined: ['width', 'height'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
     });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as ImageLinkResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -382,41 +392,46 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   audioResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString; // src
+    format: string;
+    value: string; // src
     duration?: number; // string?
     mute?: boolean;
     autoplay?: boolean;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): AudioResource {
+    caption?: TextAst;
+    search?: string;
+  }): AudioResourceWrapperJson | undefined {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: AudioResource = {
+    const node: AudioResourceWrapperJson = {
       type: ResourceTag.audio,
-      typeAlias: ResourceTag.audio,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      duration,
-      mute,
-      autoplay,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.audio,
+      audio: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        duration: (duration ?? undefined) as number,
+        mute: (mute ?? undefined) as boolean,
+        autoplay: (autoplay ?? undefined) as boolean,
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as AudioResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -426,41 +441,46 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   audioEmbedResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString; // src
-    duration?: number; // BreakscapedString?
+    format: string;
+    value: string; // src
+    duration?: number; // string?
     mute?: boolean;
     autoplay?: boolean;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): AudioEmbedResource {
+    caption?: TextAst;
+    search?: string;
+  }): AudioEmbedResourceWrapperJson | undefined {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: AudioEmbedResource = {
+    const node: AudioEmbedResourceWrapperJson = {
       type: ResourceTag.audioEmbed,
-      typeAlias: ResourceTag.audioEmbed,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      duration,
-      mute,
-      autoplay,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.audioEmbed,
+      audioEmbed: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        duration: (duration ?? undefined) as number,
+        mute: (mute ?? undefined) as boolean,
+        autoplay: (autoplay ?? undefined) as boolean,
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as AudioEmbedResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -470,41 +490,46 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   audioLinkResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString;
-    duration?: number; // BreakscapedString?
+    format: string;
+    value: string;
+    duration?: number; // string?
     mute?: boolean;
     autoplay?: boolean;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): AudioLinkResource {
+    caption?: TextAst;
+    search?: string;
+  }): AudioLinkResourceWrapperJson | undefined {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: AudioLinkResource = {
+    const node: AudioLinkResourceWrapperJson = {
       type: ResourceTag.audioLink,
-      typeAlias: ResourceTag.audioLink,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      duration,
-      mute,
-      autoplay,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.audioLink,
+      audioLink: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        duration: (duration ?? undefined) as number,
+        mute: (mute ?? undefined) as boolean,
+        autoplay: (autoplay ?? undefined) as boolean,
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as AudioLinkResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -514,24 +539,24 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   videoResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString; // src
+    format: string;
+    value: string; // src
     width?: string;
     height?: string;
-    duration?: number; // BreakscapedString?
+    duration?: number; // string?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: BreakscapedString;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    alt?: string;
+    posterImage?: ImageResourceJson;
+    thumbnails?: ImageResourceJson[];
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): VideoResource {
+    caption?: TextAst;
+    search?: string;
+  }): VideoResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -552,34 +577,40 @@ class ResourceBuilder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: VideoResource = {
+    const node: VideoResourceWrapperJson = {
       type: ResourceTag.video,
-      typeAlias: ResourceTag.video,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      width,
-      height,
-      duration,
-      mute,
-      autoplay,
-      allowSubtitles,
-      showSubtitles,
-      alt,
-      posterImage,
-      thumbnails,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.video,
+      video: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        width: (width ?? null) as string,
+        height: (height ?? null) as string,
+        duration: (duration ?? undefined) as number,
+        mute: (mute ?? undefined) as boolean,
+        autoplay: (autoplay ?? undefined) as boolean,
+        allowSubtitles: (allowSubtitles ?? undefined) as boolean,
+        showSubtitles: (showSubtitles ?? undefined) as boolean,
+        alt: alt ?? '',
+        posterImage: (posterImage ?? undefined) as ImageResourceJson,
+        thumbnails: (thumbnails ?? undefined) as ImageResourceJson[],
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreUndefined: ['width', 'height'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as VideoResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -589,24 +620,24 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   videoEmbedResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString; // src
+    format: string;
+    value: string; // src
     width?: string;
     height?: string;
-    duration?: number; // BreakscapedString?
+    duration?: number; // string?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: BreakscapedString;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    alt?: string;
+    posterImage?: ImageResourceJson;
+    thumbnails?: ImageResourceJson[];
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): VideoEmbedResource {
+    caption?: TextAst;
+    search?: string;
+  }): VideoEmbedResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -627,34 +658,40 @@ class ResourceBuilder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: VideoEmbedResource = {
+    const node: VideoEmbedResourceWrapperJson = {
       type: ResourceTag.videoEmbed,
-      typeAlias: ResourceTag.videoEmbed,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      width,
-      height,
-      duration,
-      mute,
-      autoplay,
-      allowSubtitles,
-      showSubtitles,
-      alt,
-      posterImage,
-      thumbnails,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.videoEmbed,
+      videoEmbed: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        width: (width ?? null) as string,
+        height: (height ?? null) as string,
+        duration: (duration ?? undefined) as number,
+        mute: (mute ?? undefined) as boolean,
+        autoplay: (autoplay ?? undefined) as boolean,
+        allowSubtitles: (allowSubtitles ?? undefined) as boolean,
+        showSubtitles: (showSubtitles ?? undefined) as boolean,
+        alt: alt ?? '',
+        posterImage: (posterImage ?? undefined) as ImageResourceJson,
+        thumbnails: (thumbnails ?? undefined) as ImageResourceJson[],
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreUndefined: ['width', 'height'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as VideoEmbedResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -664,24 +701,24 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   videoLinkResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString;
+    format: string;
+    value: string;
     width?: string;
     height?: string;
-    duration?: number; // BreakscapedString?
+    duration?: number; // string?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: BreakscapedString;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    alt?: string;
+    posterImage?: ImageResourceJson;
+    thumbnails?: ImageResourceJson[];
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): VideoLinkResource {
+    caption?: TextAst;
+    search?: string;
+  }): VideoLinkResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -702,34 +739,40 @@ class ResourceBuilder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: VideoLinkResource = {
+    const node: VideoLinkResourceWrapperJson = {
       type: ResourceTag.videoLink,
-      typeAlias: ResourceTag.videoLink,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      width,
-      height,
-      duration,
-      mute,
-      autoplay,
-      allowSubtitles,
-      showSubtitles,
-      alt,
-      posterImage,
-      thumbnails,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.videoLink,
+      videoLink: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        width: (width ?? null) as string,
+        height: (height ?? null) as string,
+        duration: (duration ?? undefined) as number,
+        mute: (mute ?? undefined) as boolean,
+        autoplay: (autoplay ?? undefined) as boolean,
+        allowSubtitles: (allowSubtitles ?? undefined) as boolean,
+        showSubtitles: (showSubtitles ?? undefined) as boolean,
+        alt: alt ?? '',
+        posterImage: (posterImage ?? undefined) as ImageResourceJson,
+        thumbnails: (thumbnails ?? undefined) as ImageResourceJson[],
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreUndefined: ['width', 'height'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as VideoLinkResource;
+    return NodeValidator.validateResource(node);
   }
 
   // /**
@@ -753,7 +796,7 @@ class ResourceBuilder extends BaseBuilder {
   //   ObjectUtils.removeUnwantedProperties(node);
 
   //   // Validate and correct invalid bits as much as possible
-  //   return NodeValidator.validateResource(node) as StillImageFilmResource;
+  //   return NodeValidator.validateResource(node) ;
   // }
 
   /**
@@ -763,24 +806,24 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   stillImageFilmEmbedResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString; // src
+    format: string;
+    value: string; // src
     width?: string;
     height?: string;
-    duration?: number; // BreakscapedString?
+    duration?: number; // string?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: BreakscapedString;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    alt?: string;
+    posterImage?: ImageResourceJson;
+    thumbnails?: ImageResourceJson[];
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): StillImageFilmEmbedResource {
+    caption?: TextAst;
+    search?: string;
+  }): StillImageFilmEmbedResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -801,34 +844,40 @@ class ResourceBuilder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: StillImageFilmEmbedResource = {
+    const node: StillImageFilmEmbedResourceWrapperJson = {
       type: ResourceTag.stillImageFilmEmbed,
-      typeAlias: ResourceTag.stillImageFilmEmbed,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      width,
-      height,
-      duration,
-      mute,
-      autoplay,
-      allowSubtitles,
-      showSubtitles,
-      alt,
-      posterImage,
-      thumbnails,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.stillImageFilmEmbed,
+      stillImageFilmEmbed: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        width: (width ?? null) as string,
+        height: (height ?? null) as string,
+        duration: (duration ?? undefined) as number,
+        mute: (mute ?? undefined) as boolean,
+        autoplay: (autoplay ?? undefined) as boolean,
+        allowSubtitles: (allowSubtitles ?? undefined) as boolean,
+        showSubtitles: (showSubtitles ?? undefined) as boolean,
+        alt: alt ?? '',
+        posterImage: (posterImage ?? undefined) as ImageResourceJson,
+        thumbnails: (thumbnails ?? undefined) as ImageResourceJson[],
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreUndefined: ['width', 'height'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as StillImageFilmEmbedResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -838,24 +887,24 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   stillImageFilmLinkResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString;
+    format: string;
+    value: string;
     width?: string;
     height?: string;
-    duration?: number; // BreakscapedString?
+    duration?: number; // string?
     mute?: boolean;
     autoplay?: boolean;
     allowSubtitles?: boolean;
     showSubtitles?: boolean;
-    alt?: BreakscapedString;
-    posterImage?: ImageResource;
-    thumbnails?: ImageResource[];
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    alt?: string;
+    posterImage?: ImageResourceJson;
+    thumbnails?: ImageResourceJson[];
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): StillImageFilmLinkResource {
+    caption?: TextAst;
+    search?: string;
+  }): StillImageFilmLinkResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -876,34 +925,40 @@ class ResourceBuilder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: StillImageFilmLinkResource = {
+    const node: StillImageFilmLinkResourceWrapperJson = {
       type: ResourceTag.stillImageFilmLink,
-      typeAlias: ResourceTag.stillImageFilmLink,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      width,
-      height,
-      duration,
-      mute,
-      autoplay,
-      allowSubtitles,
-      showSubtitles,
-      alt,
-      posterImage,
-      thumbnails,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.stillImageFilmLink,
+      stillImageFilmLink: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        src: value ?? '',
+        width: (width ?? null) as string,
+        height: (height ?? null) as string,
+        duration: (duration ?? undefined) as number,
+        mute: (mute ?? undefined) as boolean,
+        autoplay: (autoplay ?? undefined) as boolean,
+        allowSubtitles: (allowSubtitles ?? undefined) as boolean,
+        showSubtitles: (showSubtitles ?? undefined) as boolean,
+        alt: alt ?? '',
+        posterImage: (posterImage ?? undefined) as ImageResourceJson,
+        thumbnails: (thumbnails ?? undefined) as ImageResourceJson[],
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreUndefined: ['width', 'height'],
+      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as StillImageFilmLinkResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -913,35 +968,40 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   articleResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    format: string;
+    value: string;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): ArticleResource {
+    caption?: TextAst;
+    search?: string;
+  }): ArticleResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: ArticleResource = {
+    const node: ArticleResourceWrapperJson = {
       type: ResourceTag.article,
-      typeAlias: ResourceTag.article,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.article,
+      article: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        body: value ?? '',
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['body', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as ArticleResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -951,35 +1011,40 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   documentResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    format: string;
+    value: string;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): DocumentResource {
+    caption?: TextAst;
+    search?: string;
+  }): DocumentResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: DocumentResource = {
+    const node: DocumentResourceWrapperJson = {
       type: ResourceTag.document,
-      typeAlias: ResourceTag.document,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.document,
+      document: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        url: value ?? '',
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as DocumentResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -989,35 +1054,40 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   documentEmbedResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    format: string;
+    value: string;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): DocumentEmbedResource {
+    caption?: TextAst;
+    search?: string;
+  }): DocumentEmbedResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: DocumentEmbedResource = {
+    const node: DocumentEmbedResourceWrapperJson = {
       type: ResourceTag.documentEmbed,
-      typeAlias: ResourceTag.documentEmbed,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.documentEmbed,
+      documentEmbed: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        url: value ?? '',
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as DocumentEmbedResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -1027,35 +1097,40 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   documentLinkResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    format: string;
+    value: string;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): DocumentLinkResource {
+    caption?: TextAst;
+    search?: string;
+  }): DocumentLinkResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: DocumentLinkResource = {
+    const node: DocumentLinkResourceWrapperJson = {
       type: ResourceTag.documentLink,
-      typeAlias: ResourceTag.documentLink,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.documentLink,
+      documentLink: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        url: value ?? '',
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as DocumentLinkResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -1065,35 +1140,40 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   documentDownloadResource(data: {
-    format: BreakscapedString;
-    value: BreakscapedString;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    format: string;
+    value: string;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): DocumentDownloadResource {
+    caption?: TextAst;
+    search?: string;
+  }): DocumentDownloadResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: DocumentDownloadResource = {
+    const node: DocumentDownloadResourceWrapperJson = {
       type: ResourceTag.documentDownload,
-      typeAlias: ResourceTag.documentDownload,
-      format: UrlUtils.fileExtensionFromUrl(value) as BreakscapedString,
-      provider: UrlUtils.domainFromUrl(value) as BreakscapedString,
-      value,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.documentDownload,
+      documentDownload: {
+        format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        url: value ?? '',
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as DocumentDownloadResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -1103,32 +1183,39 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   appLinkResource(data: {
-    value: BreakscapedString;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    value: string;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): AppLinkResource {
+    caption?: TextAst;
+    search?: string;
+  }): AppLinkResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: AppLinkResource = {
+    const node: AppLinkResourceWrapperJson = {
       type: ResourceTag.appLink,
-      typeAlias: ResourceTag.appLink,
-      value,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.appLink,
+      appLink: {
+        // format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        url: value ?? '',
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
-    return NodeValidator.validateResource(node) as AppLinkResource;
+    return NodeValidator.validateResource(node);
   }
 
   /**
@@ -1138,31 +1225,37 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   websiteLinkResource(data: {
-    value: BreakscapedString;
-    siteName?: BreakscapedString;
-    license?: BreakscapedString;
-    copyright?: BreakscapedString;
+    value: string;
+    siteName?: string;
+    license?: string;
+    copyright?: string;
     showInIndex?: boolean;
-    caption?: BreakscapedString;
-    search?: BreakscapedString;
-  }): WebsiteLinkResource | undefined {
-    const { value, siteName, license, copyright, showInIndex, caption, search } = data;
+    caption?: TextAst;
+    search?: string;
+  }): WebsiteLinkResourceWrapperJson | undefined {
+    const { value, /*siteName,*/ license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: WebsiteLinkResource = {
+    const node: WebsiteLinkResourceWrapperJson = {
       type: ResourceTag.websiteLink,
-      typeAlias: ResourceTag.websiteLink,
-      value,
-      siteName,
-      license,
-      copyright,
-      showInIndex,
-      caption,
-      search,
+      // typeAlias: ResourceTag.websiteLink,
+      websiteLink: {
+        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        url: value ?? '',
+        // siteName,
+        license: license ?? '',
+        copyright: copyright ?? '',
+        showInIndex: showInIndex ?? false,
+        caption: (caption ?? []) as TextAst,
+        search: (search ?? undefined) as string,
+      },
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+    });
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node);

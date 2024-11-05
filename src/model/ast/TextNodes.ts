@@ -5,6 +5,10 @@ export type JsonText = string | TextAst;
 
 export type TextAst = TextNode[];
 
+export interface BitmarkTextNode {
+  __text__: TextAst;
+}
+
 export interface TextNode {
   type: TextNodeTypeType;
   marks?: TextMark[];

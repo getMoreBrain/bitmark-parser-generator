@@ -4,7 +4,7 @@ import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioLinkResource, CaptionDefinitionList, DescriptionListItem } from '../../model/ast/Nodes';
+import { AudioLinkResource, Body, CaptionDefinitionList, DescriptionListItem, Footer } from '../../model/ast/Nodes';
 import { VideoEmbedResource } from '../../model/ast/Nodes';
 import { VideoLinkResource } from '../../model/ast/Nodes';
 import { DocumentResource } from '../../model/ast/Nodes';
@@ -13,12 +13,11 @@ import { DocumentLinkResource } from '../../model/ast/Nodes';
 import { DocumentDownloadResource } from '../../model/ast/Nodes';
 import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
 import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
-import { BodyBit, BodyPart, BodyText, Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
+import { Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { AudioEmbedResource, ImageSource, Ingredient, RatingLevelStartEnd, Table } from '../../model/ast/Nodes';
-import { JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
+import { BitmarkTextNode, JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
-import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ExampleType } from '../../model/enum/ExampleType';
 import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
 import { PropertyTag } from '../../model/enum/PropertyTag';
@@ -89,7 +88,6 @@ import {
   TableJson,
 } from '../../model/json/BitJson';
 import {
-  BodyBitJson,
   GapJson,
   HighlightJson,
   HighlightTextJson,
@@ -208,8 +206,8 @@ export interface JsonGeneratorOptions {
 
 interface ItemLeadHintInstructionNode {
   itemLead?: ItemLead;
-  hint?: BreakscapedString;
-  instruction?: BreakscapedString;
+  hint?: BitmarkTextNode;
+  instruction?: BitmarkTextNode;
 }
 
 interface ItemLeadHintInstuction {
@@ -254,7 +252,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   private bodyDefault: JsonText = Breakscape.EMPTY_STRING;
   private bodyJson: JsonText = this.bodyDefault;
   private listItem: ListItemJson | undefined;
-  private startPlaceholderIndex = 0;
 
   /**
    * Generate bitmark JSON from a bitmark AST
@@ -344,7 +341,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.textDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
     this.bodyDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
     this.bodyJson = this.bodyDefault;
-    this.startPlaceholderIndex = 0;
 
     this.printed = false;
   }
@@ -407,7 +403,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       } else {
         // String example
-        defaultExample = Breakscape.unbreakscape(ArrayUtils.asSingle(bit.sampleSolution) as BreakscapedString) ?? '';
+        defaultExample = (ArrayUtils.asSingle(bit.sampleSolution) as string) ?? '';
       }
 
       const exampleRes = this.toExample(bit as ExampleNode, {
@@ -511,7 +507,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.addProperty(json, 'level', n.level, true);
 
     if (n.label) {
-      json.label = this.convertBreakscapedStringToJsonText(n.label, TextFormat.bitmarkMinusMinus);
+      json.label = this.getBitmarkTextAst(n.label);
     }
 
     // Delete unwanted properties
@@ -569,16 +565,16 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.bitsValue) return;
 
     if (item != null) {
-      this.bitJson.item = this.convertBreakscapedStringToJsonText(item, TextFormat.bitmarkMinusMinus);
+      this.bitJson.item = this.getBitmarkTextAst(item);
     }
     if (lead != null) {
-      this.bitJson.lead = this.convertBreakscapedStringToJsonText(lead, TextFormat.bitmarkMinusMinus);
+      this.bitJson.lead = this.getBitmarkTextAst(lead);
     }
     if (pageNumber != null) {
-      this.bitJson.pageNumber = this.convertBreakscapedStringToJsonText(pageNumber, TextFormat.bitmarkMinusMinus);
+      this.bitJson.pageNumber = this.getBitmarkTextAst(pageNumber);
     }
     if (marginNumber != null) {
-      this.bitJson.marginNumber = this.convertBreakscapedStringToJsonText(marginNumber, TextFormat.bitmarkMinusMinus);
+      this.bitJson.marginNumber = this.getBitmarkTextAst(marginNumber);
     }
   }
 
@@ -668,18 +664,23 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> body
 
-  protected enter_body(_node: NodeInfo, _route: NodeInfo[]): void {
-    // Override the bodyDefault if the textFormat is json
-    const textFormat = this.getTextFormat(_route);
-    if (textFormat === TextFormat.json) this.bodyDefault = null as unknown as JsonText;
+  protected enter_body(node: NodeInfo, route: NodeInfo[]): boolean {
+    const value = node.value as Body;
 
-    this.bodyJson = this.bodyDefault;
-  }
-
-  protected exit_body(_node: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
-    if (!parent) return;
+    if (!parent) return false;
 
+    if (value.bodyJson) {
+      // Body is JSON
+      this.bodyJson = value.bodyJson as JsonText;
+    } else {
+      const isString = StringUtils.isString(value.body);
+      const bodyString: string | undefined = isString ? (value.body as string) : undefined;
+
+      this.bodyJson = (isString ? bodyString : this.getBitmarkTextAst(value.body as BitmarkTextNode)) as JsonText;
+    }
+
+    // Set the correct body property
     if (parent.key === NodeType.bitsValue) {
       // Body is at the bit level
       this.bitJson.body = this.bodyJson;
@@ -687,149 +688,166 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Body is at the list item (card bit) level
       if (this.listItem) this.listItem.body = this.bodyJson;
     }
-  }
 
-  // bitmarkAst -> bits -> bitsValue -> * -> bodyParts (body, cardBody (e.g. cloze-list, page-footer))
-
-  protected enter_bodyParts(node: NodeInfo, route: NodeInfo[]): boolean {
-    const bodyParts = node.value as BodyPart[];
-    const plainText = this.options.textAsPlainText;
-    const textFormat = this.getTextFormat(route);
-    let fullBodyTextStr: BreakscapedString = '' as BreakscapedString;
-    let plainBodyTextStr: BreakscapedString = '' as BreakscapedString;
-    let placeholderIndex = this.startPlaceholderIndex;
-
-    // Function for creating the placeholder keys
-    const createPlaceholderKeys = (
-      i: number,
-    ): { legacyPlaceholderKey: BreakscapedString; placeholderKey: BreakscapedString } => {
-      return {
-        // Old placeholder style (for backwards compatibility) = {0}
-        legacyPlaceholderKey: `{${i}}` as BreakscapedString,
-
-        // New placeholder style (cannot clash as bitmark parser would have removed it) = [!0]
-        placeholderKey: `[!${i}]` as BreakscapedString,
-      };
-    };
-
-    // Loop the text bodyParts creating full body text with the correct placeholders
-    //
-    // For text output 'fullBodyTextStr:
-    // - is created and written to the JSON
-    // - has placeholders inserted into 'fullBodyTextStr' in the format {0}
-    //
-    // For JSON output 'fullBodyTextStr:
-    // - is created and passed into the text parser to create the body text AST
-    // - has placeholders inserted into 'fullBodyTextStr' in the format [!0] to allow the text parser to identify
-    //   where the body bits should be inserted
-    //
-    for (let i = 0; i < bodyParts.length; i++) {
-      const bodyPart = bodyParts[i];
-
-      const isText = bodyPart.type === BodyBitType.text;
-
-      if (isText) {
-        const asText = bodyPart as BodyText;
-        const bodyTextPart = asText.data.bodyText;
-
-        // Append the text part to the full text body
-        if (asText.data.isPlain) {
-          plainBodyTextStr = Breakscape.concatenate(plainBodyTextStr, bodyTextPart);
-        } else {
-          fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, bodyTextPart);
-        }
-      } else {
-        const { legacyPlaceholderKey, placeholderKey } = createPlaceholderKeys(placeholderIndex);
-
-        // Append the placeholder to the full text body
-        fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, plainText ? legacyPlaceholderKey : placeholderKey);
-
-        placeholderIndex++;
-      }
-    }
-
-    // Add string or AST to the body
-    const bodyJson = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
-    const plainTextBodyJson = this.convertBreakscapedStringToJsonText(plainBodyTextStr, TextFormat.text);
-    const bodyAst = bodyJson as TextAst;
-    this.bodyJson = this.concatenatePlainTextWithJsonTexts(bodyJson, plainTextBodyJson as string);
-
-    // Loop the body parts again to create the body bits:
-    // - For text output the body bits are inserted into the 'placeholders' object
-    // - For JSON output the body bits are inserted into body AST, replacing the placeholders created by the text parser
-    placeholderIndex = this.startPlaceholderIndex;
-    for (let i = 0; i < bodyParts.length; i++) {
-      const bodyPart = bodyParts[i];
-
-      // Skip text body parts as they are handled above
-      const isText = bodyPart.type === BodyBitType.text;
-      if (isText) continue;
-
-      const bodyBit = bodyPart as BodyBit;
-      let bodyBitJson: BodyBitJson | undefined;
-
-      const { legacyPlaceholderKey } = createPlaceholderKeys(placeholderIndex);
-
-      switch (bodyPart.type) {
-        case BodyBitType.gap: {
-          const gap = bodyBit as Gap;
-          bodyBitJson = this.createGapJson(gap);
-          break;
-        }
-
-        case BodyBitType.mark: {
-          const mark = bodyBit as Mark;
-          bodyBitJson = this.createMarkJson(mark);
-          break;
-        }
-
-        case BodyBitType.select: {
-          const select = bodyBit as Select;
-          bodyBitJson = this.createSelectJson(select);
-          break;
-        }
-
-        case BodyBitType.highlight: {
-          const highlight = bodyBit as Highlight;
-          bodyBitJson = this.createHighlightJson(highlight);
-          break;
-        }
-      }
-
-      // Add the gap to the placeholders
-      if (bodyBitJson) {
-        if (plainText) {
-          // Ensure placeholders exists
-          if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
-
-          // Add the body bit to the placeholders
-          this.bitJson.placeholders[legacyPlaceholderKey] = bodyBitJson;
-        } else {
-          // Insert the body bit into the body AST
-          this.replacePlaceholderWithBodyBit(bodyAst, bodyBitJson, placeholderIndex);
-        }
-      }
-
-      placeholderIndex++;
-    }
-
-    // Save the current placeholder index for the next body (body, card bodies)
-    this.startPlaceholderIndex = placeholderIndex;
-
-    // Stop traversal of this branch for efficiency
+    // Stop traversal of this branch
     return false;
   }
 
+  // protected exit_body(_node: NodeInfo, route: NodeInfo[]): void {
+  //   const parent = this.getParentNode(route);
+  //   if (!parent) return;
+
+  //   if (parent.key === NodeType.bitsValue) {
+  //     // Body is at the bit level
+  //     this.bitJson.body = this.bodyJson;
+  //   } else if (parent.key === NodeType.cardBitsValue) {
+  //     // Body is at the list item (card bit) level
+  //     if (this.listItem) this.listItem.body = this.bodyJson;
+  //   }
+  // }
+
+  // bitmarkAst -> bits -> bitsValue -> * -> bodyParts (body, cardBody (e.g. cloze-list, page-footer))
+
+  // protected enter_bodyParts(node: NodeInfo, route: NodeInfo[]): boolean {
+  //   const bodyParts = node.value as BodyPart[];
+  //   const plainText = this.options.textAsPlainText;
+  //   const textFormat = this.getTextFormat(route);
+  //   let fullBodyTextStr: BreakscapedString = '' as BreakscapedString;
+  //   let plainBodyTextStr: BreakscapedString = '' as BreakscapedString;
+  //   let placeholderIndex = this.startPlaceholderIndex;
+
+  //   // Loop the text bodyParts creating full body text with the correct placeholders
+  //   //
+  //   // For text output 'fullBodyTextStr:
+  //   // - is created and written to the JSON
+  //   // - has placeholders inserted into 'fullBodyTextStr' in the format {0}
+  //   //
+  //   // For JSON output 'fullBodyTextStr:
+  //   // - is created and passed into the text parser to create the body text AST
+  //   // - has placeholders inserted into 'fullBodyTextStr' in the format [!0] to allow the text parser to identify
+  //   //   where the body bits should be inserted
+  //   //
+  //   for (let i = 0; i < bodyParts.length; i++) {
+  //     const bodyPart = bodyParts[i];
+
+  //     const isText = bodyPart.type === BodyBitType.text;
+
+  //     if (isText) {
+  //       const asText = bodyPart as BodyText;
+  //       const bodyTextPart = asText.data.bodyText;
+
+  //       // Append the text part to the full text body
+  //       if (asText.data.isPlain) {
+  //         plainBodyTextStr = Breakscape.concatenate(plainBodyTextStr, bodyTextPart);
+  //       } else {
+  //         fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, bodyTextPart);
+  //       }
+  //     } else {
+  //       const { legacyPlaceholderKey, placeholderKey } = createPlaceholderKeys(placeholderIndex);
+
+  //       // Append the placeholder to the full text body
+  //       fullBodyTextStr = Breakscape.concatenate(fullBodyTextStr, plainText ? legacyPlaceholderKey : placeholderKey);
+
+  //       placeholderIndex++;
+  //     }
+  //   }
+
+  //   // Add string or AST to the body
+  //   const bodyJson = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
+  //   const plainTextBodyJson = this.convertBreakscapedStringToJsonText(plainBodyTextStr, TextFormat.text);
+  //   const bodyAst = bodyJson as TextAst;
+  //   this.bodyJson = this.concatenatePlainTextWithJsonTexts(bodyJson, plainTextBodyJson as string);
+
+  //   // Loop the body parts again to create the body bits:
+  //   // - For text output the body bits are inserted into the 'placeholders' object
+  //   // - For JSON output the body bits are inserted into body AST, replacing the placeholders created by the text parser
+  //   placeholderIndex = this.startPlaceholderIndex;
+  //   for (let i = 0; i < bodyParts.length; i++) {
+  //     const bodyPart = bodyParts[i];
+
+  //     // Skip text body parts as they are handled above
+  //     const isText = bodyPart.type === BodyBitType.text;
+  //     if (isText) continue;
+
+  //     const bodyBit = bodyPart as BodyBit;
+  //     let bodyBitJson: BodyBitJson | undefined;
+
+  //     const { legacyPlaceholderKey } = createPlaceholderKeys(placeholderIndex);
+
+  //     switch (bodyPart.type) {
+  //       case BodyBitType.gap: {
+  //         const gap = bodyBit as Gap;
+  //         bodyBitJson = this.createGapJson(gap);
+  //         break;
+  //       }
+
+  //       case BodyBitType.mark: {
+  //         const mark = bodyBit as Mark;
+  //         bodyBitJson = this.createMarkJson(mark);
+  //         break;
+  //       }
+
+  //       case BodyBitType.select: {
+  //         const select = bodyBit as Select;
+  //         bodyBitJson = this.createSelectJson(select);
+  //         break;
+  //       }
+
+  //       case BodyBitType.highlight: {
+  //         const highlight = bodyBit as Highlight;
+  //         bodyBitJson = this.createHighlightJson(highlight);
+  //         break;
+  //       }
+  //     }
+
+  //     // Add the gap to the placeholders
+  //     if (bodyBitJson) {
+  //       if (plainText) {
+  //         // Ensure placeholders exists
+  //         if (!this.bitJson.placeholders) this.bitJson.placeholders = {};
+
+  //         // Add the body bit to the placeholders
+  //         this.bitJson.placeholders[legacyPlaceholderKey] = bodyBitJson;
+  //       } else {
+  //         // Insert the body bit into the body AST
+  //         this.replacePlaceholderWithBodyBit(bodyAst, bodyBitJson, placeholderIndex);
+  //       }
+  //     }
+
+  //     placeholderIndex++;
+  //   }
+
+  //   // Save the current placeholder index for the next body (body, card bodies)
+  //   this.startPlaceholderIndex = placeholderIndex;
+
+  //   // Stop traversal of this branch for efficiency
+  //   return false;
+  // }
+
   // bitmarkAst -> bits -> bitsValue -> * -> bodyJson (body when textFormat === TextFormat.json)
 
-  protected enter_bodyJson(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const bodyJson = node.value as unknown;
+  // protected enter_bodyJson(node: NodeInfo, _route: NodeInfo[]): boolean {
+  //   const bodyJson = node.value as unknown;
 
-    // NOTE: type is not really JsonText, but unknown, but it is better for type checking to use JsonText for
-    // the bodyJson property in the BitJson interface
-    this.bodyJson = bodyJson as JsonText;
+  //   // NOTE: type is not really JsonText, but unknown, but it is better for type checking to use JsonText for
+  //   // the bodyJson property in the BitJson interface
+  //   this.bodyJson = bodyJson as JsonText;
 
-    // Stop traversal of this branch to avoid processing the bodyJson
+  //   // Stop traversal of this branch to avoid processing the bodyJson
+  //   return false;
+  // }
+
+  // bitmarkAst -> bits -> bitsValue -> footer
+
+  protected enter_footer(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const value = node.value as Footer;
+
+    const isString = StringUtils.isString(value.footer);
+    const footerString: string | undefined = isString ? (value.footer as string) : undefined;
+
+    this.bitJson.footer = isString ? footerString : this.getBitmarkTextAst(value.footer as BitmarkTextNode);
+
+    // Stop traversal of this branch
     return false;
   }
 
@@ -842,48 +860,41 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // if (parent?.key !== NodeType.bitsValue) return;
 
     if (elements && elements.length > 0) {
-      this.bitJson.elements = Breakscape.unbreakscape(elements);
+      this.bitJson.elements = elements;
     }
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards
 
   protected enter_flashcards(node: NodeInfo, route: NodeInfo[]): void {
-    const flashcards = node.value as Flashcard[];
+    // const flashcards = node.value as Flashcard[];
+    const flashcardsJson = node.value as FlashcardJson[];
 
     // Ignore responses that are not at the correct level as they are potentially handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
-    const flashcardsJson: FlashcardJson[] = [];
-    if (flashcards) {
-      for (const c of flashcards) {
-        // Create the flashcard
-        const flashcardJson: Partial<FlashcardJson> = {
-          question: this.convertBreakscapedStringToJsonText(
-            c.question ?? Breakscape.EMPTY_STRING,
-            TextFormat.bitmarkMinusMinus,
-          ),
-          answer: this.convertBreakscapedStringToJsonText(
-            c.answer ?? Breakscape.EMPTY_STRING,
-            TextFormat.bitmarkMinusMinus,
-          ),
-          alternativeAnswers: (c.alternativeAnswers ?? []).map((a) =>
-            this.convertBreakscapedStringToJsonText(a ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
-          ),
-          ...this.toItemLeadHintInstruction(c),
-          ...this.toExample(c, {
-            defaultExample: c.isDefaultExample,
-            isBoolean: true,
-          }),
-        };
+    // const flashcardsJson: FlashcardJson[] = [];
+    // if (flashcards) {
+    //   for (const c of flashcards) {
+    //     // Create the flashcard
+    //     const flashcardJson: Partial<FlashcardJson> = {
+    //       question: this.getBitmarkTextAst(c.question),
+    //       answer: this.getBitmarkTextAst(c.answer),
+    //       alternativeAnswers: (c.alternativeAnswers ?? []).map((a) => this.getBitmarkTextAst(a)),
+    //       ...this.toItemLeadHintInstruction(c),
+    //       ...this.toExample(c, {
+    //         defaultExample: c.isDefaultExample,
+    //         isBoolean: true,
+    //       }),
+    //     };
 
-        // Delete unwanted properties
-        if (c.itemLead?.lead == null) delete flashcardJson.lead;
+    //     // Delete unwanted properties
+    //     if (c.itemLead?.lead == null) delete flashcardJson.lead;
 
-        flashcardsJson.push(flashcardJson as FlashcardJson);
-      }
-    }
+    //     flashcardsJson.push(flashcardJson as FlashcardJson);
+    //   }
+    // }
 
     if (flashcardsJson.length > 0) {
       this.bitJson.cards = flashcardsJson;
@@ -893,41 +904,34 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions
 
   protected enter_descriptions(node: NodeInfo, route: NodeInfo[]): void {
-    const descriptionListItem = node.value as DescriptionListItem[];
+    // const descriptionListItem = node.value as DescriptionListItem[];
+    const descriptionsJson = node.value as DescriptionListItemJson[];
 
     // Ignore responses that are not at the correct level as they are potentially handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
-    const descriptionsJson: DescriptionListItemJson[] = [];
-    if (descriptionListItem) {
-      for (const c of descriptionListItem) {
-        // Create the flashcard
-        const descriptionListItemJson: Partial<DescriptionListItemJson> = {
-          term: this.convertBreakscapedStringToJsonText(
-            c.term ?? Breakscape.EMPTY_STRING,
-            TextFormat.bitmarkMinusMinus,
-          ),
-          description: this.convertBreakscapedStringToJsonText(
-            c.description ?? Breakscape.EMPTY_STRING,
-            TextFormat.bitmarkMinusMinus,
-          ),
-          alternativeDescriptions: (c.alternativeDescriptions ?? []).map((a) =>
-            this.convertBreakscapedStringToJsonText(a ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
-          ),
-          ...this.toItemLeadHintInstruction(c),
-          ...this.toExample(c, {
-            defaultExample: c.isDefaultExample,
-            isBoolean: true,
-          }),
-        };
+    // const descriptionsJson: DescriptionListItemJson[] = [];
+    // if (descriptionListItem) {
+    //   for (const c of descriptionListItem) {
+    //     // Create the flashcard
+    //     const descriptionListItemJson: Partial<DescriptionListItemJson> = {
+    //       term: this.getBitmarkTextAst(c.term),
+    //       description: this.getBitmarkTextAst(c.description),
+    //       alternativeDescriptions: (c.alternativeDescriptions ?? []).map((a) => this.getBitmarkTextAst(a)),
+    //       ...this.toItemLeadHintInstruction(c),
+    //       ...this.toExample(c, {
+    //         defaultExample: c.isDefaultExample,
+    //         isBoolean: true,
+    //       }),
+    //     };
 
-        // Delete unwanted properties
-        if (c.itemLead?.lead == null) delete descriptionListItemJson.lead;
+    //     // Delete unwanted properties
+    //     if (c.itemLead?.lead == null) delete descriptionListItemJson.lead;
 
-        descriptionsJson.push(descriptionListItemJson as DescriptionListItemJson);
-      }
-    }
+    //     descriptionsJson.push(descriptionListItemJson as DescriptionListItemJson);
+    //   }
+    // }
 
     if (descriptionsJson.length > 0) {
       this.bitJson.descriptions = descriptionsJson;
@@ -937,50 +941,53 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> statement
 
   protected enter_statement(node: NodeInfo, route: NodeInfo[]): void {
-    const statement = node.value as Statement;
+    const statement = node.value as StatementJson;
 
     // Ignore statement that is not at the cardNode level as it is handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
     if (statement) {
-      this.bitJson.statement = Breakscape.unbreakscape(statement.text) ?? '';
+      this.bitJson.statement = statement.statement ?? '';
       this.bitJson.isCorrect = statement.isCorrect ?? false;
+      this.bitJson.example = statement.example;
+      this.bitJson.isExample = statement.isExample;
     }
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> statements -> statementsValue
 
   protected enter_statements(node: NodeInfo, route: NodeInfo[]): void {
-    const statements = node.value as Statement[];
+    // const statements = node.value as Statement[];
+    const statementsJson = node.value as StatementJson[];
 
     // Ignore statements that are not at the card node level as they are handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
-    const statementsJson: StatementJson[] = [];
-    if (statements) {
-      for (const s of statements) {
-        // Create the statement
-        const statementJson: Partial<StatementJson> = {
-          statement: Breakscape.unbreakscape(s.text) ?? '',
-          isCorrect: !!s.isCorrect,
-          ...this.toItemLeadHintInstruction(s),
-          ...this.toExample(s, {
-            defaultExample: !!s.isCorrect,
-            isBoolean: true,
-          }),
-        };
+    // const statementsJson: StatementJson[] = [];
+    // if (statements) {
+    //   for (const s of statements) {
+    //     // Create the statement
+    //     const statementJson: Partial<StatementJson> = {
+    //       statement: s.text ?? '',
+    //       isCorrect: !!s.isCorrect,
+    //       ...this.toItemLeadHintInstruction(s),
+    //       ...this.toExample(s, {
+    //         defaultExample: !!s.isCorrect,
+    //         isBoolean: true,
+    //       }),
+    //     };
 
-        // Delete unwanted properties
-        if (s.itemLead?.item == null) delete statementJson.item;
-        if (s.itemLead?.lead == null) delete statementJson.lead;
-        if (s?.hint == null) delete statementJson.hint;
-        if (s?.instruction == null) delete statementJson.instruction;
+    //     // Delete unwanted properties
+    //     if (s.itemLead?.item == null) delete statementJson.item;
+    //     if (s.itemLead?.lead == null) delete statementJson.lead;
+    //     if (s?.hint == null) delete statementJson.hint;
+    //     if (s?.instruction == null) delete statementJson.instruction;
 
-        statementsJson.push(statementJson as StatementJson);
-      }
-    }
+    //     statementsJson.push(statementJson as StatementJson);
+    //   }
+    // }
 
     if (statementsJson.length > 0) {
       this.bitJson.statements = statementsJson;
@@ -991,32 +998,33 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices
 
   protected enter_choices(node: NodeInfo, route: NodeInfo[]): void {
-    const choices = node.value as Choice[];
+    // const choices = node.value as Choice[];
+    const choicesJson = node.value as ChoiceJson[];
 
     // Ignore choices that are not at the bit level as they are handled elsewhere as quizzes
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
-    const choicesJson: ChoiceJson[] = [];
-    if (choices) {
-      for (const c of choices) {
-        // Create the choice
-        const choiceJson: Partial<ChoiceJson> = {
-          choice: Breakscape.unbreakscape(c.text) ?? '',
-          isCorrect: c.isCorrect ?? false,
-          ...this.toItemLeadHintInstruction(c),
-          ...this.toExample(c, {
-            defaultExample: !!c.isCorrect,
-            isBoolean: true,
-          }),
-        };
+    // const choicesJson: ChoiceJson[] = [];
+    // if (choices) {
+    //   for (const c of choices) {
+    //     // Create the choice
+    //     const choiceJson: Partial<ChoiceJson> = {
+    //       choice: c.text ?? '',
+    //       isCorrect: c.isCorrect ?? false,
+    //       ...this.toItemLeadHintInstruction(c),
+    //       ...this.toExample(c, {
+    //         defaultExample: !!c.isCorrect,
+    //         isBoolean: true,
+    //       }),
+    //     };
 
-        // Delete unwanted properties
-        if (c.itemLead?.lead == null) delete choiceJson.lead;
+    //     // Delete unwanted properties
+    //     if (c.itemLead?.lead == null) delete choiceJson.lead;
 
-        choicesJson.push(choiceJson as ChoiceJson);
-      }
-    }
+    //     choicesJson.push(choiceJson as ChoiceJson);
+    //   }
+    // }
 
     if (choicesJson.length > 0) {
       this.bitJson.choices = choicesJson;
@@ -1027,32 +1035,33 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses
 
   protected enter_responses(node: NodeInfo, route: NodeInfo[]): void {
-    const responses = node.value as Response[];
+    // const responses = node.value as Response[];
+    const responsesJson = node.value as ResponseJson[];
 
     // Ignore responses that are not at the correct level as they are handled elsewhere as quizzes
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
-    const responsesJson: ResponseJson[] = [];
-    if (responses) {
-      for (const r of responses) {
-        // Create the response
-        const responseJson: Partial<ResponseJson> = {
-          response: Breakscape.unbreakscape(r.text) ?? '',
-          isCorrect: r.isCorrect ?? false,
-          ...this.toItemLeadHintInstruction(r),
-          ...this.toExample(r, {
-            defaultExample: !!r.isCorrect,
-            isBoolean: true,
-          }),
-        };
+    // const responsesJson: ResponseJson[] = [];
+    // if (responses) {
+    //   for (const r of responses) {
+    //     // Create the response
+    //     const responseJson: Partial<ResponseJson> = {
+    //       response: r.text ?? '',
+    //       isCorrect: r.isCorrect ?? false,
+    //       ...this.toItemLeadHintInstruction(r),
+    //       ...this.toExample(r, {
+    //         defaultExample: !!r.isCorrect,
+    //         isBoolean: true,
+    //       }),
+    //     };
 
-        // Delete unwanted properties
-        if (r.itemLead?.lead == null) delete responseJson.lead;
+    //     // Delete unwanted properties
+    //     if (r.itemLead?.lead == null) delete responseJson.lead;
 
-        responsesJson.push(responseJson as ResponseJson);
-      }
-    }
+    //     responsesJson.push(responseJson as ResponseJson);
+    //   }
+    // }
 
     if (responsesJson.length > 0) {
       this.bitJson.responses = responsesJson;
@@ -1062,69 +1071,70 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes
 
   protected enter_quizzes(node: NodeInfo, _route: NodeInfo[]): void {
-    const quizzes = node.value as Quiz[];
-    const quizzesJson: QuizJson[] = [];
+    // const quizzes = node.value as Quiz[];
+    // const quizzesJson: QuizJson[] = [];
+    const quizzesJson: QuizJson[] = node.value as QuizJson[];
 
-    if (quizzes) {
-      for (const q of quizzes) {
-        // Choices
-        const choicesJson: ChoiceJson[] = [];
-        if (q.choices) {
-          for (const c of q.choices) {
-            // Create the choice
-            const choiceJson: Partial<ChoiceJson> = {
-              choice: Breakscape.unbreakscape(c.text) ?? '',
-              isCorrect: c.isCorrect ?? false,
-              ...this.toItemLeadHintInstruction(c),
-              ...this.toExample(c, {
-                defaultExample: !!c.isCorrect,
-                isBoolean: true,
-              }),
-            };
+    // if (quizzes) {
+    //   for (const q of quizzes) {
+    //     // Choices
+    //     const choicesJson: ChoiceJson[] = [];
+    //     if (q.choices) {
+    //       for (const c of q.choices) {
+    //         // Create the choice
+    //         const choiceJson: Partial<ChoiceJson> = {
+    //           choice: c.text ?? '',
+    //           isCorrect: c.isCorrect ?? false,
+    //           ...this.toItemLeadHintInstruction(c),
+    //           ...this.toExample(c, {
+    //             defaultExample: !!c.isCorrect,
+    //             isBoolean: true,
+    //           }),
+    //         };
 
-            // Delete unwanted properties
-            if (q.itemLead?.lead == null) delete choiceJson.lead;
+    //         // Delete unwanted properties
+    //         if (q.itemLead?.lead == null) delete choiceJson.lead;
 
-            choicesJson.push(choiceJson as ChoiceJson);
-          }
-        }
+    //         choicesJson.push(choiceJson as ChoiceJson);
+    //       }
+    //     }
 
-        // Responses
-        const responsesJson: ResponseJson[] = [];
-        if (q.responses) {
-          for (const r of q.responses) {
-            // Create the choice
-            const responseJson: Partial<ResponseJson> = {
-              response: Breakscape.unbreakscape(r.text) ?? '',
-              isCorrect: r.isCorrect ?? false,
-              ...this.toItemLeadHintInstruction(r),
-              ...this.toExample(r, {
-                defaultExample: !!r.isCorrect,
-                isBoolean: true,
-              }),
-            };
+    //     // Responses
+    //     const responsesJson: ResponseJson[] = [];
+    //     if (q.responses) {
+    //       for (const r of q.responses) {
+    //         // Create the choice
+    //         const responseJson: Partial<ResponseJson> = {
+    //           response: r.text ?? '',
+    //           isCorrect: r.isCorrect ?? false,
+    //           ...this.toItemLeadHintInstruction(r),
+    //           ...this.toExample(r, {
+    //             defaultExample: !!r.isCorrect,
+    //             isBoolean: true,
+    //           }),
+    //         };
 
-            // Delete unwanted properties
-            if (q.itemLead?.lead == null) delete responseJson.lead;
+    //         // Delete unwanted properties
+    //         if (q.itemLead?.lead == null) delete responseJson.lead;
 
-            responsesJson.push(responseJson as ResponseJson);
-          }
-        }
+    //         responsesJson.push(responseJson as ResponseJson);
+    //       }
+    //     }
 
-        // Create the quiz
-        const quizJson: Partial<QuizJson> = {
-          ...this.toItemLeadHintInstruction(q),
-          isExample: q.isExample ?? false,
-          choices: q.choices ? choicesJson : undefined,
-          responses: q.responses ? responsesJson : undefined,
-        };
+    //     // Create the quiz
+    //     const quizJson: Partial<QuizJson> = {
+    //       ...this.toItemLeadHintInstruction(q),
+    //       isExample: q.isExample ?? false,
+    //       choices: q.choices ? choicesJson : undefined,
+    //       responses: q.responses ? responsesJson : undefined,
+    //     };
 
-        // Delete unwanted properties
-        if (q.itemLead?.lead == null) delete quizJson.lead;
+    //     // Delete unwanted properties
+    //     if (q.itemLead?.lead == null) delete quizJson.lead;
 
-        quizzesJson.push(quizJson as QuizJson);
-      }
-    }
+    //     quizzesJson.push(quizJson as QuizJson);
+    //   }
+    // }
 
     if (quizzesJson.length > 0) {
       this.bitJson.quizzes = quizzesJson;
@@ -1134,34 +1144,35 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> heading
 
   protected enter_heading(node: NodeInfo, _route: NodeInfo[]): boolean | void {
-    const heading = node.value as Heading;
+    const headingJson = node.value as HeadingJson;
+    // const heading = node.value as Heading;
 
-    // Check if the heading is for a match or a match matrix
-    const bitType = this.getBitType(_route);
-    const isMatrix = Config.isOfBitType(bitType, BitType.matchMatrix);
+    // // Check if the heading is for a match or a match matrix
+    // const bitType = this.getBitType(_route);
+    // const isMatrix = Config.isOfBitType(bitType, BitType.matchMatrix);
 
-    // Create the heading
-    const headingJson: Partial<HeadingJson> = {
-      forKeys: Breakscape.unbreakscape(heading.forKeys) ?? '',
-    };
+    // // Create the heading
+    // const headingJson: Partial<HeadingJson> = {
+    //   forKeys: heading.forKeys ?? '',
+    // };
 
-    if (isMatrix) {
-      // Matrix match, forValues is an array
-      headingJson.forValues = [];
-      if (Array.isArray(heading.forValues)) {
-        if (heading.forValues.length >= 1) {
-          headingJson.forValues = Breakscape.unbreakscape(heading.forValues);
-        }
-      }
-    } else {
-      // Standard match, forValues is a string
-      headingJson.forValues = '';
-      if (Array.isArray(heading.forValues)) {
-        if (heading.forValues.length >= 1) {
-          headingJson.forValues = Breakscape.unbreakscape(heading.forValues[heading.forValues.length - 1]);
-        }
-      }
-    }
+    // if (isMatrix) {
+    //   // Matrix match, forValues is an array
+    //   headingJson.forValues = [];
+    //   if (Array.isArray(heading.forValues)) {
+    //     if (heading.forValues.length >= 1) {
+    //       headingJson.forValues = heading.forValues;
+    //     }
+    //   }
+    // } else {
+    //   // Standard match, forValues is a string
+    //   headingJson.forValues = '';
+    //   if (Array.isArray(heading.forValues)) {
+    //     if (heading.forValues.length >= 1) {
+    //       headingJson.forValues = heading.forValues[heading.forValues.length - 1];
+    //     }
+    //   }
+    // }
 
     this.bitJson.heading = headingJson as HeadingJson;
   }
@@ -1169,47 +1180,48 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs
 
   protected enter_pairs(node: NodeInfo, route: NodeInfo[]): void {
-    const pairs = node.value as Pair[];
-    const pairsJson: PairJson[] = [];
-    const bitType = this.getBitType(route);
+    const pairsJson = node.value as PairJson[];
+    // const pairs = node.value as Pair[];
+    // const pairsJson: PairJson[] = [];
+    // const bitType = this.getBitType(route);
 
-    if (pairs && bitType) {
-      for (const p of pairs) {
-        // Get default example
-        const defaultExample = Array.isArray(p.values) && p.values.length > 0 && p.values[0];
+    // if (pairs && bitType) {
+    //   for (const p of pairs) {
+    //     // Get default example
+    //     const defaultExample = Array.isArray(p.values) && p.values.length > 0 && p.values[0];
 
-        // Create the question
-        const pairJson: Partial<PairJson> = {
-          key: Breakscape.unbreakscape(p.key) ?? '',
-          keyAudio: p.keyAudio ? this.addAudioResource(bitType, p.keyAudio) : undefined,
-          keyImage: p.keyImage ? this.addImageResource(bitType, p.keyImage) : undefined,
-          values: Breakscape.unbreakscape(p.values) ?? [],
-          ...this.toItemLeadHintInstruction(p),
-          isCaseSensitive: p.isCaseSensitive ?? true,
-          ...this.toExample(p, {
-            defaultExample,
-            isBoolean: false,
-          }),
-        };
+    //     // Create the question
+    //     const pairJson: Partial<PairJson> = {
+    //       key: p.key ?? '',
+    //       keyAudio: p.keyAudio ? this.addAudioResource(bitType, p.keyAudio) : undefined,
+    //       keyImage: p.keyImage ? this.addImageResource(bitType, p.keyImage) : undefined,
+    //       values: p.values ?? [],
+    //       ...this.toItemLeadHintInstruction(p),
+    //       isCaseSensitive: p.isCaseSensitive ?? true,
+    //       ...this.toExample(p, {
+    //         defaultExample,
+    //         isBoolean: false,
+    //       }),
+    //     };
 
-        // Delete unwanted properties
-        if (p.itemLead?.lead == null) delete pairJson.lead;
-        if (pairJson.key) {
-          delete pairJson.keyAudio;
-          delete pairJson.keyImage;
-        }
-        if (pairJson.keyAudio != null) {
-          delete pairJson.key;
-          delete pairJson.keyImage;
-        }
-        if (pairJson.keyImage != null) {
-          delete pairJson.key;
-          delete pairJson.keyAudio;
-        }
+    //     // Delete unwanted properties
+    //     if (p.itemLead?.lead == null) delete pairJson.lead;
+    //     if (pairJson.key) {
+    //       delete pairJson.keyAudio;
+    //       delete pairJson.keyImage;
+    //     }
+    //     if (pairJson.keyAudio != null) {
+    //       delete pairJson.key;
+    //       delete pairJson.keyImage;
+    //     }
+    //     if (pairJson.keyImage != null) {
+    //       delete pairJson.key;
+    //       delete pairJson.keyAudio;
+    //     }
 
-        pairsJson.push(pairJson as PairJson);
-      }
-    }
+    //     pairsJson.push(pairJson as PairJson);
+    //   }
+    // }
 
     if (pairsJson.length > 0) {
       this.bitJson.pairs = pairsJson;
@@ -1233,7 +1245,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
             // Create the choice
             const matrixCellJson: Partial<MatrixCellJson> = {
-              values: Breakscape.unbreakscape(c.values) ?? [],
+              values: c.values ?? [],
               ...this.toItemLeadHintInstruction(c),
               isCaseSensitive: c.isCaseSensitive ?? true,
               ...this.toExample(c, {
@@ -1252,7 +1264,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
         // Create the matrix
         const matrixJson: Partial<MatrixJson> = {
-          key: Breakscape.unbreakscape(m.key) ?? '',
+          key: m.key ?? '',
           cells: matrixCellsJson ?? [],
           ...this.toItemLeadHintInstruction(m),
           // ...this.toExample(m.example, m.isExample),
@@ -1280,8 +1292,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (table) {
       const tableJson: Partial<TableJson> = {
-        columns: Breakscape.unbreakscape(table.columns),
-        data: table.rows.map((row) => Breakscape.unbreakscape(row)),
+        columns: table.columns,
+        data: table.rows.map((row) => row),
       };
       // const isEmpty = !table.columns || table.columns.length === 0 || !table.rows || table.rows.length === 0;
 
@@ -1295,34 +1307,36 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
 
   protected enter_questions(node: NodeInfo, _route: NodeInfo[]): void {
-    const questions = node.value as Question[];
-    const questionsJson: QuestionJson[] = [];
+    const questionsJson = node.value as QuestionJson[];
 
-    if (questions) {
-      for (const q of questions) {
-        // Create the question
-        const questionJson: Partial<QuestionJson> = {
-          question: Breakscape.unbreakscape(q.question) ?? '',
-          partialAnswer: Breakscape.unbreakscape(ArrayUtils.asSingle(q.partialAnswer)) ?? '',
-          sampleSolution: Breakscape.unbreakscape(ArrayUtils.asSingle(q.sampleSolution)) ?? '',
-          additionalSolutions: Breakscape.unbreakscape(q.additionalSolutions) ?? [],
-          ...this.toItemLeadHintInstruction(q),
-          reasonableNumOfChars: q.reasonableNumOfChars,
-          ...this.toExample(q, {
-            defaultExample: q.sampleSolution || '',
-            isBoolean: false,
-          }),
-        };
+    // const questions = node.value as Question[];
+    // const questionsJson: QuestionJson[] = [];
 
-        // Delete unwanted properties
-        if (q.itemLead?.lead == null) delete questionJson.lead;
-        if (q.additionalSolutions == null || q.additionalSolutions.length === 0) {
-          delete questionJson.additionalSolutions;
-        }
+    // if (questions) {
+    //   for (const q of questions) {
+    //     // Create the question
+    //     const questionJson: Partial<QuestionJson> = {
+    //       question: q.question ?? '',
+    //       partialAnswer: ArrayUtils.asSingle(q.partialAnswer) ?? '',
+    //       sampleSolution: ArrayUtils.asSingle(q.sampleSolution) ?? '',
+    //       additionalSolutions: q.additionalSolutions ?? [],
+    //       ...this.toItemLeadHintInstruction(q),
+    //       reasonableNumOfChars: q.reasonableNumOfChars,
+    //       ...this.toExample(q, {
+    //         defaultExample: q.sampleSolution || '',
+    //         isBoolean: false,
+    //       }),
+    //     };
 
-        questionsJson.push(questionJson as QuestionJson);
-      }
-    }
+    //     // Delete unwanted properties
+    //     if (q.itemLead?.lead == null) delete questionJson.lead;
+    //     if (q.additionalSolutions == null || q.additionalSolutions.length === 0) {
+    //       delete questionJson.additionalSolutions;
+    //     }
+
+    //     questionsJson.push(questionJson as QuestionJson);
+    //   }
+    // }
 
     if (questionsJson.length > 0) {
       this.bitJson.questions = questionsJson;
@@ -1343,9 +1357,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       for (const r of botResponses) {
         // Create the response
         const responseJson: Partial<BotResponseJson> = {
-          response: Breakscape.unbreakscape(r.response) ?? '',
-          reaction: Breakscape.unbreakscape(r.reaction) ?? '',
-          feedback: Breakscape.unbreakscape(r.feedback) ?? '',
+          response: r.response ?? '',
+          reaction: r.reaction ?? '',
+          feedback: r.feedback ?? '',
           ...this.toItemLeadHintInstruction(r),
           // ...this.toExampleAndIsExample(r.example),
         };
@@ -1378,12 +1392,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       for (const i of ingredients) {
         // Create the ingredient
         const ingredientJson: Partial<IngredientJson> = {
-          title: Breakscape.unbreakscape(i.title) ?? '',
+          title: i.title ?? '',
           checked: i.checked ?? false,
-          item: Breakscape.unbreakscape(i.item) ?? '',
+          item: i.item ?? '',
           quantity: i.quantity ?? 0,
-          unit: Breakscape.unbreakscape(i.unit) ?? '',
-          unitAbbr: Breakscape.unbreakscape(i.unitAbbr) ?? '',
+          unit: i.unit ?? '',
+          unitAbbr: i.unitAbbr ?? '',
           decimalPlaces: i.decimalPlaces ?? 1,
           disableCalculation: i.disableCalculation ?? false,
         };
@@ -1413,11 +1427,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       const columns = list.columns ?? [];
       const definitions = list.definitions ?? [];
       const captionDefinitionListJson: Partial<CaptionDefinitionListJson> = {
-        columns: Breakscape.unbreakscape(columns),
+        columns: columns,
         definitions: definitions.map((d) => {
           return {
-            term: Breakscape.unbreakscape(d.term) ?? '',
-            description: Breakscape.unbreakscape(d.description) ?? '',
+            term: d.term ?? '',
+            description: d.description ?? '',
           };
         }),
       };
@@ -1525,18 +1539,18 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> title
 
-  protected leaf_title(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_title(node: NodeInfo, route: NodeInfo[]): void {
     // Ignore title that are not at the bit or card node level as they are handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
 
-    this.bitJson.title = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
+    this.bitJson.title = this.getBitmarkTextAst(node.value);
   }
 
   //  bitmarkAst -> bits -> bitsValue -> subtitle
 
-  protected leaf_subtitle(node: NodeInfo, _route: NodeInfo[]): void {
-    this.bitJson.subtitle = this.convertBreakscapedStringToJsonText(node.value, TextFormat.bitmarkMinusMinus);
+  protected enter_subtitle(node: NodeInfo, _route: NodeInfo[]): void {
+    this.bitJson.subtitle = this.getBitmarkTextAst(node.value);
   }
 
   // //  bitmarkAst -> bits -> bitsValue -> level
@@ -1571,47 +1585,42 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   //  bitmarkAst -> bits -> bitsValue -> caption
 
-  protected leaf_caption(node: NodeInfo, route: NodeInfo[]): void {
-    const caption = node.value as BreakscapedString;
+  protected enter_caption(node: NodeInfo, route: NodeInfo[]): void {
+    const caption = node.value as BitmarkTextNode;
 
     // Ignore caption that is not at the bit level as it are handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
-    this.bitJson.caption = this.convertBreakscapedStringToJsonText(caption, TextFormat.bitmarkMinusMinus);
+    this.bitJson.caption = this.getBitmarkTextAst(caption);
   }
 
-  //  bitmarkAst -> bits -> bitsValue ->  * -> hint
+  //  bitmarkAst -> bits -> bitsValue -> hint
 
-  protected leaf_hint(node: NodeInfo, route: NodeInfo[]): void {
-    const hint = node.value as BreakscapedString;
+  protected enter_hint(node: NodeInfo, route: NodeInfo[]): boolean {
+    const hint = node.value as BitmarkTextNode;
 
     // Ignore hint that is not at the bit level as it are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return false;
 
-    this.bitJson.hint = this.convertBreakscapedStringToJsonText(hint, TextFormat.bitmarkMinusMinus);
+    this.bitJson.hint = this.getBitmarkTextAst(hint);
+
+    return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue ->  * -> instruction
+  // bitmarkAst -> bits -> bitsValue -> instruction
 
-  protected leaf_instruction(node: NodeInfo, route: NodeInfo[]): void {
-    const instruction = node.value as BreakscapedString;
+  protected enter_instruction(node: NodeInfo, route: NodeInfo[]): boolean {
+    const instruction = node.value as BitmarkTextNode;
 
     // Ignore instruction that is not at the bit level as it are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return false;
 
-    this.bitJson.instruction = this.convertBreakscapedStringToJsonText(instruction, TextFormat.bitmarkMinusMinus);
-  }
+    this.bitJson.instruction = this.getBitmarkTextAst(instruction);
 
-  // bitmarkAst -> bits -> footer -> footerText
-
-  protected leaf_footerText(node: NodeInfo, route: NodeInfo[]): void {
-    const footer = node.value as BreakscapedString;
-    const textFormat = this.getTextFormat(route);
-
-    this.bitJson.footer = this.convertBreakscapedStringToJsonText(footer, textFormat);
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> markup
@@ -1645,7 +1654,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
 
       // Extract internal comments from the AST and add to the parser
-      const internalComments = Breakscape.unbreakscape(this.getInternalComments(route));
+      const internalComments = this.getInternalComments(route);
 
       if (parent?.key === NodeType.bitsValue) {
         // Bit level parser information
@@ -1687,6 +1696,15 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   //     // };
   //   }
   // }
+
+  // bitmarkAst -> bits -> bitsValue -> * -> __text__
+
+  protected enter____text__(_node: NodeInfo, _route: NodeInfo[]): boolean {
+    // Ignore text that is not at the bit level as it are handled elsewhere
+
+    // Do not traverse further
+    return false;
+  }
 
   //
   // Generated Node Handlers
@@ -1747,131 +1765,131 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // HELPER FUNCTIONS
   //
 
-  protected createGapJson(gap: Gap): GapJson {
-    const data = gap.data;
+  // protected createGapJson(gap: Gap): GapJson {
+  //   const data = gap.data;
 
-    const defaultExample = data.solutions && data.solutions.length > 0 ? data.solutions[0] : '';
+  //   const defaultExample = data.solutions && data.solutions.length > 0 ? data.solutions[0] : '';
 
-    // Create the gap
-    const gapJson: Partial<GapJson> = {
-      type: 'gap',
-      ...this.toItemLeadHintInstruction(data),
-      isCaseSensitive: data.isCaseSensitive ?? true,
-      ...this.toExample(data, {
-        defaultExample,
-        isBoolean: false,
-      }),
-      solutions: Breakscape.unbreakscape(data.solutions),
-    };
+  //   // Create the gap
+  //   const gapJson: Partial<GapJson> = {
+  //     type: 'gap',
+  //     ...this.toItemLeadHintInstruction(data),
+  //     isCaseSensitive: data.isCaseSensitive ?? true,
+  //     ...this.toExample(data, {
+  //       defaultExample,
+  //       isBoolean: false,
+  //     }),
+  //     solutions: data.solutions,
+  //   };
 
-    // Remove unwanted properties
-    // if (!data.itemLead?.lead) delete gapJson.lead;
+  //   // Remove unwanted properties
+  //   // if (!data.itemLead?.lead) delete gapJson.lead;
 
-    return gapJson as GapJson;
-  }
+  //   return gapJson as GapJson;
+  // }
 
-  protected createMarkJson(mark: Mark): MarkJson {
-    const data = mark.data;
+  // protected createMarkJson(mark: Mark): MarkJson {
+  //   const data = mark.data;
 
-    // Create the mark
-    const markJson: Partial<MarkJson> = {
-      type: 'mark',
-      solution: Breakscape.unbreakscape(data.solution),
-      mark: Breakscape.unbreakscape(data.mark),
-      ...this.toItemLeadHintInstruction(data),
-      ...this.toExample(data, {
-        defaultExample: true,
-        isBoolean: true,
-      }),
-      //
-    };
+  //   // Create the mark
+  //   const markJson: Partial<MarkJson> = {
+  //     type: 'mark',
+  //     solution: data.solution,
+  //     mark: data.mark,
+  //     ...this.toItemLeadHintInstruction(data),
+  //     ...this.toExample(data, {
+  //       defaultExample: true,
+  //       isBoolean: true,
+  //     }),
+  //     //
+  //   };
 
-    // Remove unwanted properties
-    // if (!data.itemLead?.lead) delete markJson.lead;
+  //   // Remove unwanted properties
+  //   // if (!data.itemLead?.lead) delete markJson.lead;
 
-    return markJson as MarkJson;
-  }
+  //   return markJson as MarkJson;
+  // }
 
-  protected createSelectJson(select: Select): SelectJson {
-    const data = select.data;
+  // protected createSelectJson(select: Select): SelectJson {
+  //   const data = select.data;
 
-    // Create the select options
-    const options: SelectOptionJson[] = [];
-    for (const option of data.options) {
-      const optionJson: Partial<SelectOptionJson> = {
-        text: Breakscape.unbreakscape(option.text),
-        isCorrect: option.isCorrect ?? false,
-        ...this.toItemLeadHintInstruction(option),
-        ...this.toExample(option, {
-          defaultExample: !!option.isCorrect,
-          isBoolean: true,
-        }),
-      };
+  //   // Create the select options
+  //   const options: SelectOptionJson[] = [];
+  //   for (const option of data.options) {
+  //     const optionJson: Partial<SelectOptionJson> = {
+  //       text: option.text,
+  //       isCorrect: option.isCorrect ?? false,
+  //       ...this.toItemLeadHintInstruction(option),
+  //       ...this.toExample(option, {
+  //         defaultExample: !!option.isCorrect,
+  //         isBoolean: true,
+  //       }),
+  //     };
 
-      // Remove unwanted properties
-      // if (!option.itemLead?.item) delete optionJson.item;
-      // if (!option.itemLead?.lead) delete optionJson.lead;
-      // if (!option.instruction) delete optionJson.instruction;
+  //     // Remove unwanted properties
+  //     // if (!option.itemLead?.item) delete optionJson.item;
+  //     // if (!option.itemLead?.lead) delete optionJson.lead;
+  //     // if (!option.instruction) delete optionJson.instruction;
 
-      options.push(optionJson as SelectOptionJson);
-    }
+  //     options.push(optionJson as SelectOptionJson);
+  //   }
 
-    // Create the select
-    const selectJson: Partial<SelectJson> = {
-      type: 'select',
-      prefix: Breakscape.unbreakscape(data.prefix) ?? '',
-      postfix: Breakscape.unbreakscape(data.postfix) ?? '',
-      ...this.toItemLeadHintInstruction(data),
-      isExample: data.isExample ?? false,
-      options,
-    };
+  //   // Create the select
+  //   const selectJson: Partial<SelectJson> = {
+  //     type: 'select',
+  //     prefix: data.prefix ?? '',
+  //     postfix: data.postfix ?? '',
+  //     ...this.toItemLeadHintInstruction(data),
+  //     isExample: data.isExample ?? false,
+  //     options,
+  //   };
 
-    // Remove unwanted properties
-    // if (!data.itemLead?.lead) delete selectJson.lead;
+  //   // Remove unwanted properties
+  //   // if (!data.itemLead?.lead) delete selectJson.lead;
 
-    return selectJson as SelectJson;
-  }
+  //   return selectJson as SelectJson;
+  // }
 
-  protected createHighlightJson(highlight: Highlight): HighlightJson {
-    const data = highlight.data;
+  // protected createHighlightJson(highlight: Highlight): HighlightJson {
+  //   const data = highlight.data;
 
-    // Create the highlight options
-    const texts: HighlightTextJson[] = [];
-    for (const text of data.texts) {
-      const textJson: Partial<HighlightTextJson> = {
-        text: Breakscape.unbreakscape(text.text),
-        isCorrect: text.isCorrect ?? false,
-        isHighlighted: text.isHighlighted ?? false,
-        ...this.toItemLeadHintInstruction(text),
-        ...this.toExample(text, {
-          defaultExample: !!text.isCorrect,
-          isBoolean: true,
-        }),
-      };
+  //   // Create the highlight options
+  //   const texts: HighlightTextJson[] = [];
+  //   for (const text of data.texts) {
+  //     const textJson: Partial<HighlightTextJson> = {
+  //       text: text.text,
+  //       isCorrect: text.isCorrect ?? false,
+  //       isHighlighted: text.isHighlighted ?? false,
+  //       ...this.toItemLeadHintInstruction(text),
+  //       ...this.toExample(text, {
+  //         defaultExample: !!text.isCorrect,
+  //         isBoolean: true,
+  //       }),
+  //     };
 
-      // Remove unwanted properties
-      // if (!text.itemLead?.item) delete textJson.item;
-      // if (!text.itemLead?.lead) delete textJson.lead;
-      // if (!text.hint) delete textJson.hint;
+  //     // Remove unwanted properties
+  //     // if (!text.itemLead?.item) delete textJson.item;
+  //     // if (!text.itemLead?.lead) delete textJson.lead;
+  //     // if (!text.hint) delete textJson.hint;
 
-      texts.push(textJson as HighlightTextJson);
-    }
+  //     texts.push(textJson as HighlightTextJson);
+  //   }
 
-    // Create the select
-    const highlightJson: Partial<HighlightJson> = {
-      type: 'highlight',
-      prefix: Breakscape.unbreakscape(data.prefix) ?? '',
-      postfix: Breakscape.unbreakscape(data.postfix) ?? '',
-      ...this.toItemLeadHintInstruction(data),
-      isExample: data.isExample ?? false,
-      texts,
-    };
+  //   // Create the select
+  //   const highlightJson: Partial<HighlightJson> = {
+  //     type: 'highlight',
+  //     prefix: data.prefix ?? '',
+  //     postfix: data.postfix ?? '',
+  //     ...this.toItemLeadHintInstruction(data),
+  //     isExample: data.isExample ?? false,
+  //     texts,
+  //   };
 
-    // Remove unwanted properties
-    // if (!data.itemLead?.lead) delete highlightJson.lead;
+  //   // Remove unwanted properties
+  //   // if (!data.itemLead?.lead) delete highlightJson.lead;
 
-    return highlightJson as HighlightJson;
-  }
+  //   return highlightJson as HighlightJson;
+  // }
 
   protected parseResourceToJson(bitType: BitTypeType, resource: Resource | undefined): ResourceJson | undefined {
     if (!resource) return undefined;
@@ -2038,16 +2056,16 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     resource = resource as ImageResource; // Keep TS compiler happy
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.src = Breakscape.unbreakscape(resource.value);
-    if (resource.src1x != null) resourceJson.src1x = Breakscape.unbreakscape(resource.src1x);
-    if (resource.src2x != null) resourceJson.src2x = Breakscape.unbreakscape(resource.src2x);
-    if (resource.src3x != null) resourceJson.src3x = Breakscape.unbreakscape(resource.src3x);
-    if (resource.src4x != null) resourceJson.src4x = Breakscape.unbreakscape(resource.src4x);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.src = resource.value;
+    if (resource.src1x != null) resourceJson.src1x = resource.src1x;
+    if (resource.src2x != null) resourceJson.src2x = resource.src2x;
+    if (resource.src3x != null) resourceJson.src3x = resource.src3x;
+    if (resource.src4x != null) resourceJson.src4x = resource.src4x;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
-    resourceJson.alt = Breakscape.unbreakscape(resource.alt) ?? '';
+    resourceJson.alt = resource.alt ?? '';
     resourceJson.zoomDisabled = this.getZoomDisabled(bitType, resource.zoomDisabled);
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
@@ -2074,16 +2092,16 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     resource = resource as ImageLinkResource; // Keep TS compiler happy
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
-    if (resource.src1x != null) resourceJson.src1x = Breakscape.unbreakscape(resource.src1x);
-    if (resource.src2x != null) resourceJson.src2x = Breakscape.unbreakscape(resource.src2x);
-    if (resource.src3x != null) resourceJson.src3x = Breakscape.unbreakscape(resource.src3x);
-    if (resource.src4x != null) resourceJson.src4x = Breakscape.unbreakscape(resource.src4x);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
+    if (resource.src1x != null) resourceJson.src1x = resource.src1x;
+    if (resource.src2x != null) resourceJson.src2x = resource.src2x;
+    if (resource.src3x != null) resourceJson.src3x = resource.src3x;
+    if (resource.src4x != null) resourceJson.src4x = resource.src4x;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
-    resourceJson.alt = Breakscape.unbreakscape(resource.alt) ?? '';
+    resourceJson.alt = resource.alt ?? '';
     resourceJson.zoomDisabled = this.getZoomDisabled(bitType, resource.zoomDisabled);
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
@@ -2094,9 +2112,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addAudioResource(bitType: BitTypeType, resource: AudioResource): AudioResourceJson {
     const resourceJson: Partial<AudioResourceJson | AudioLinkResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.src = Breakscape.unbreakscape(resource.value);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.src = resource.value;
 
     if (resource.duration != null) resourceJson.duration = resource.duration;
     if (resource.mute != null) resourceJson.mute = resource.mute;
@@ -2110,9 +2128,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addAudioEmbedResource(bitType: BitTypeType, resource: AudioEmbedResource): AudioEmbedResourceJson {
     const resourceJson: Partial<AudioEmbedResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.src = Breakscape.unbreakscape(resource.value);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.src = resource.value;
 
     if (resource.duration != null) resourceJson.duration = resource.duration;
     if (resource.mute != null) resourceJson.mute = resource.mute;
@@ -2126,9 +2144,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addAudioLinkResource(bitType: BitTypeType, resource: AudioLinkResource): AudioLinkResourceJson {
     const resourceJson: Partial<AudioLinkResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
 
     if (resource.duration != null) resourceJson.duration = resource.duration;
     if (resource.mute != null) resourceJson.mute = resource.mute;
@@ -2142,9 +2160,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addVideoResource(bitType: BitTypeType, resource: VideoResource): VideoResourceJson {
     const resourceJson: Partial<VideoResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.src = Breakscape.unbreakscape(resource.value);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.src = resource.value;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
 
@@ -2154,7 +2172,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
     if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
 
-    if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
+    if (resource.alt != null) resourceJson.alt = resource.alt;
 
     if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
@@ -2172,9 +2190,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addVideoEmbedResource(bitType: BitTypeType, resource: VideoEmbedResource): VideoEmbedResourceJson {
     const resourceJson: Partial<VideoEmbedResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.src = Breakscape.unbreakscape(resource.value);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.src = resource.value;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
 
@@ -2184,7 +2202,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
     if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
 
-    if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
+    if (resource.alt != null) resourceJson.alt = resource.alt;
 
     if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
@@ -2202,9 +2220,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addVideoLinkResource(bitType: BitTypeType, resource: VideoLinkResource): VideoLinkResourceJson {
     const resourceJson: Partial<VideoLinkResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
 
@@ -2214,7 +2232,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
     if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
 
-    if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
+    if (resource.alt != null) resourceJson.alt = resource.alt;
 
     if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
@@ -2235,9 +2253,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   ): StillImageFilmEmbedResourceJson {
     const resourceJson: Partial<StillImageFilmEmbedResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
 
@@ -2247,7 +2265,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
     if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
 
-    if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
+    if (resource.alt != null) resourceJson.alt = resource.alt;
 
     if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
@@ -2268,9 +2286,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   ): StillImageFilmLinkResourceJson {
     const resourceJson: Partial<StillImageFilmLinkResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
     resourceJson.width = resource.width ?? null;
     resourceJson.height = resource.height ?? null;
 
@@ -2280,7 +2298,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (resource.allowSubtitles != null) resourceJson.allowSubtitles = resource.allowSubtitles;
     if (resource.showSubtitles != null) resourceJson.showSubtitles = resource.showSubtitles;
 
-    if (resource.alt != null) resourceJson.alt = Breakscape.unbreakscape(resource.alt);
+    if (resource.alt != null) resourceJson.alt = resource.alt;
 
     if (resource.posterImage != null) resourceJson.posterImage = this.addImageResource(bitType, resource.posterImage);
     if (resource.thumbnails != null && resource.thumbnails.length > 0) {
@@ -2298,10 +2316,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addArticleResource(bitType: BitTypeType, resource: ArticleResource): ArticleResourceJson {
     const resourceJson: Partial<ArticleResourceJson | DocumentResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.body = Breakscape.unbreakscape(resource.value);
-    // if (resource.href != null) resourceJson.href = BreakscapeUtils.unbreakscape(resource.href); // It is never used (and doesn't exist in the AST model)
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.body = resource.value;
+    // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -2311,10 +2329,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addDocumentResource(bitType: BitTypeType, resource: DocumentResource): DocumentResourceJson {
     const resourceJson: Partial<DocumentResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
-    // if (resource.href != null) resourceJson.href = BreakscapeUtils.unbreakscape(resource.href); // It is never used (and doesn't exist in the AST model)
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
+    // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -2324,10 +2342,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addDocumentEmbedResource(bitType: BitTypeType, resource: DocumentEmbedResource): DocumentEmbedResourceJson {
     const resourceJson: Partial<DocumentEmbedResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
-    // if (resource.href != null) resourceJson.href = BreakscapeUtils.unbreakscape(resource.href); // It is never used (and doesn't exist in the AST model)
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
+    // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -2337,10 +2355,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addDocumentLinkResource(bitType: BitTypeType, resource: DocumentLinkResource): DocumentLinkResourceJson {
     const resourceJson: Partial<DocumentLinkResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
-    // if (resource.href != null) resourceJson.href = BreakscapeUtils.unbreakscape(resource.href); // It is never used (and doesn't exist in the AST model)
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
+    // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -2353,9 +2371,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   ): DocumentDownloadResourceJson {
     const resourceJson: Partial<DocumentDownloadResourceJson> = {};
 
-    if (resource.format != null) resourceJson.format = Breakscape.unbreakscape(resource.format);
-    if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
+    if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.provider != null) resourceJson.provider = resource.provider;
+    if (resource.value != null) resourceJson.url = resource.value;
     // if (resource.href != null) resourceJson.href = resource.href; // It is never used (and doesn't exist in the AST model)
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
@@ -2366,8 +2384,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addAppLinkResource(bitType: BitTypeType, resource: AppLinkResource): AppLinkResourceJson {
     const resourceJson: Partial<AppLinkResourceJson> = {};
 
-    // if (resource.format != null) resourceJson.format = BreakscapeUtils.unbreakscape(resource.format);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
+    // if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.value != null) resourceJson.url = resource.value;
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -2377,9 +2395,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected addWebsiteLinkResource(bitType: BitTypeType, resource: WebsiteLinkResource): WebsiteLinkResourceJson {
     const resourceJson: Partial<WebsiteLinkResourceJson> = {};
 
-    // if (resource.format != null) resourceJson.format = BreakscapeUtils.unbreakscape(resource.format);
-    if (resource.value != null) resourceJson.url = Breakscape.unbreakscape(resource.value);
-    if (resource.siteName != null) resourceJson.siteName = Breakscape.unbreakscape(resource.siteName);
+    // if (resource.format != null) resourceJson.format = resource.format;
+    if (resource.value != null) resourceJson.url = resource.value;
+    if (resource.siteName != null) resourceJson.siteName = resource.siteName;
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -2393,27 +2411,21 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     noDefaults?: boolean,
   ) {
     if (noDefaults) {
-      if (resource.license != null) resourceJson.license = Breakscape.unbreakscape(resource.license) ?? '';
-      if (resource.copyright != null) resourceJson.copyright = Breakscape.unbreakscape(resource.copyright) ?? '';
-      if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
+      if (resource.license != null) resourceJson.license = resource.license ?? '';
+      if (resource.copyright != null) resourceJson.copyright = resource.copyright ?? '';
+      if (resource.provider != null) resourceJson.provider = resource.provider;
       if (resource.showInIndex != null) resourceJson.showInIndex = resource.showInIndex ?? false;
       if (resource.caption != null) {
-        resourceJson.caption = this.convertBreakscapedStringToJsonText(
-          resource.caption ?? '',
-          TextFormat.bitmarkMinusMinus,
-        );
+        resourceJson.caption = this.getBitmarkTextAst(resource.caption);
       }
-      if (resource.search != null) resourceJson.search = Breakscape.unbreakscape(resource.search) ?? '';
+      if (resource.search != null) resourceJson.search = resource.search ?? '';
     } else {
-      resourceJson.license = Breakscape.unbreakscape(resource.license) ?? '';
-      resourceJson.copyright = Breakscape.unbreakscape(resource.copyright) ?? '';
-      if (resource.provider != null) resourceJson.provider = Breakscape.unbreakscape(resource.provider);
+      resourceJson.license = resource.license ?? '';
+      resourceJson.copyright = resource.copyright ?? '';
+      if (resource.provider != null) resourceJson.provider = resource.provider;
       resourceJson.showInIndex = resource.showInIndex ?? false;
-      resourceJson.caption = this.convertBreakscapedStringToJsonText(
-        resource.caption ?? Breakscape.EMPTY_STRING,
-        TextFormat.bitmarkMinusMinus,
-      );
-      if (resource.search != null) resourceJson.search = Breakscape.unbreakscape(resource.search) ?? '';
+      resourceJson.caption = this.getBitmarkTextAst(resource.caption);
+      if (resource.search != null) resourceJson.search = resource.search ?? '';
     }
 
     return resourceJson as ArticleResourceJson | DocumentResourceJson;
@@ -2421,19 +2433,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected toItemLeadHintInstruction(item: ItemLeadHintInstructionNode): ItemLeadHintInstuction {
     return {
-      item: this.convertBreakscapedStringToJsonText(
-        item.itemLead?.item ?? Breakscape.EMPTY_STRING,
-        TextFormat.bitmarkMinusMinus,
-      ),
-      lead: this.convertBreakscapedStringToJsonText(
-        item.itemLead?.lead ?? Breakscape.EMPTY_STRING,
-        TextFormat.bitmarkMinusMinus,
-      ),
-      hint: this.convertBreakscapedStringToJsonText(item.hint ?? Breakscape.EMPTY_STRING, TextFormat.bitmarkMinusMinus),
-      instruction: this.convertBreakscapedStringToJsonText(
-        item.instruction ?? Breakscape.EMPTY_STRING,
-        TextFormat.bitmarkMinusMinus,
-      ),
+      item: this.getBitmarkTextAst(item.itemLead?.item),
+      lead: this.getBitmarkTextAst(item.itemLead?.lead),
+      hint: this.getBitmarkTextAst(item.hint),
+      instruction: this.getBitmarkTextAst(item.instruction),
     };
   }
 
@@ -2483,13 +2486,18 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (!Array.isArray(values)) values = [values];
 
       if (Array.isArray(values) && values.length > 0) {
-        // Unbreakscape values that are strings
-        values = Breakscape.unbreakscape(values);
-
         if (Array.isArray(values) && singleWithoutArray && values.length >= 1) {
           finalValue = values[values.length - 1];
         } else {
           finalValue = values;
+        }
+      }
+
+      // Handle texts
+      if (finalValue != null) {
+        const finalValueAsBitmarkTextNode = finalValue as BitmarkTextNode;
+        if (finalValueAsBitmarkTextNode.__text__) {
+          finalValue = this.getBitmarkTextAst(finalValueAsBitmarkTextNode);
         }
       }
 
@@ -2606,6 +2614,16 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return undefined;
   }
 
+  protected getBitmarkTextAst(textNode: BitmarkTextNode | undefined): TextAst {
+    if (textNode != null) {
+      if (Array.isArray(textNode.__text__)) {
+        return textNode.__text__;
+      }
+    }
+
+    return [];
+  }
+
   /**
    * Convert the text from the AST to the JSON format:
    * Input:
@@ -2631,16 +2649,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (!isBitmarkText) {
       // Not bitmark text, so plain text, so  unbreakscape only the start of bit tags
-      return (
-        Breakscape.unbreakscape(text, {
-          bitTagOnly: true,
-        }) || Breakscape.EMPTY_STRING
-      );
+      return text || '';
     }
 
     const asPlainText = this.options.textAsPlainText;
     if (asPlainText) {
-      return Breakscape.unbreakscape(text) || Breakscape.EMPTY_STRING;
+      return text || '';
     }
 
     // Use the text parser to parse the text
@@ -2697,40 +2711,40 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return `${text ?? ''}${textPlain ?? ''}`;
   }
 
-  /**
-   * Walk the body AST to find the placeholder and replace it with the body bit.
-   *
-   * @param bodyAst the body AST
-   * @param bodyBitJson the body bit json to insert at the placeholder position
-   * @param index the index of the placeholder to replace
-   */
-  protected replacePlaceholderWithBodyBit(bodyAst: TextAst, bodyBitJson: BodyBitJson, index: number) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const walkRecursive = (node: any, parent: any, parentKey: any): boolean => {
-      if (Array.isArray(node)) {
-        // Walk the array of nodes
-        for (let i = 0; i < node.length; i++) {
-          const child = node[i];
-          const done = walkRecursive(child, node, i);
-          if (done) return true;
-        }
-      } else {
-        if (node.type === 'bit' && node.index === index) {
-          // Found the placeholder, replace it with the body bit
-          parent[parentKey] = bodyBitJson;
-          return true;
-        }
-        if (node.content) {
-          // Walk the child content
-          const done = walkRecursive(node.content, node, 'content');
-          if (done) return true;
-        }
-      }
-      return false;
-    };
+  // /**
+  //  * Walk the body AST to find the placeholder and replace it with the body bit.
+  //  *
+  //  * @param bodyAst the body AST
+  //  * @param bodyBitJson the body bit json to insert at the placeholder position
+  //  * @param index the index of the placeholder to replace
+  //  */
+  // protected replacePlaceholderWithBodyBit(bodyAst: TextAst, bodyBitJson: BodyBitJson, index: number) {
+  //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //   const walkRecursive = (node: any, parent: any, parentKey: any): boolean => {
+  //     if (Array.isArray(node)) {
+  //       // Walk the array of nodes
+  //       for (let i = 0; i < node.length; i++) {
+  //         const child = node[i];
+  //         const done = walkRecursive(child, node, i);
+  //         if (done) return true;
+  //       }
+  //     } else {
+  //       if (node.type === 'bit' && node.index === index) {
+  //         // Found the placeholder, replace it with the body bit
+  //         parent[parentKey] = bodyBitJson;
+  //         return true;
+  //       }
+  //       if (node.content) {
+  //         // Walk the child content
+  //         const done = walkRecursive(node.content, node, 'content');
+  //         if (done) return true;
+  //       }
+  //     }
+  //     return false;
+  //   };
 
-    walkRecursive(bodyAst, null, null);
-  }
+  //   walkRecursive(bodyAst, null, null);
+  // }
 
   //
   // WRITE FUNCTIONS
@@ -3479,7 +3493,26 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Footer
     if (bitJson.footer == null) delete bitJson.footer;
 
+    // Walk the entire json object and remove all' '_xxx' properties
+    // (which are used to store temporary data during the generation process)
+    this.removeTemporaryProperties(bitJson);
+
     return bitJson;
+  }
+
+  /**
+   * Remove any property with a key starting with an underscore.
+   *
+   * @param json
+   */
+  protected removeTemporaryProperties(json: Record<string, unknown>): void {
+    for (const key in json) {
+      if (key.startsWith('_')) {
+        delete json[key];
+      } else if (typeof json[key] === 'object') {
+        this.removeTemporaryProperties(json[key] as Record<string, unknown>);
+      }
+    }
   }
 
   //

@@ -1,15 +1,17 @@
 import { Config } from '../../../../config/Config';
 import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
+import { ConfigKey } from '../../../../model/config/enum/ConfigKey';
 import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
-import { BitTypeType } from '../../../../model/enum/BitType';
+import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { TextFormat, TextFormatType } from '../../../../model/enum/TextFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
+import { TextParser } from '../../../text/TextParser';
 
 import { bookChainContentProcessor } from './BookChainContentProcessor';
 import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
@@ -30,6 +32,8 @@ import {
   BitmarkPegParserContext,
   TypeKeyValue,
 } from '../BitmarkPegParserTypes';
+
+const textParser = new TextParser();
 
 function propertyContentProcessor(
   context: BitmarkPegParserContext,
@@ -124,10 +128,11 @@ function propertyContentProcessor(
     // Convert property as needed
     const processValue = (v: unknown) => {
       if (v == null) return undefined;
+
       if (c) {
         switch (c.format) {
-          case PropertyFormat.string:
-            return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
+          // case PropertyFormat.string:
+          //   return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
 
           case PropertyFormat.trimmedString:
             return StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
@@ -140,6 +145,12 @@ function propertyContentProcessor(
 
           case PropertyFormat.invertedBoolean:
             return !BooleanUtils.toBoolean(v, true);
+
+          case PropertyFormat.bitmarkMinusMinus:
+            return textParser.toAst(v as string, { textFormat: TextFormat.bitmarkMinusMinus });
+
+          case PropertyFormat.bitmarkPlusPlus:
+            return textParser.toAst(v as string, { textFormat: TextFormat.bitmarkMinusMinus });
         }
       }
       return v;
@@ -167,6 +178,30 @@ function propertyContentProcessor(
   } else {
     // Unknown (extra) property
     addProperty(target.extraProperties, tag, value, propertyConfig);
+  }
+
+  // HACKS: Need to allow properties for different bits and in chains to have different/multiple formats!
+  // This is not currently supported by the config system; it would need to be extended to support this.
+  // That is a bit job, so instead there are just some hacks here for the few cases where it is currently needed :(
+  if (tag === PropertyTag.tag_sampleSolution) {
+    addProperty(
+      target,
+      '_sampleSolutionAst',
+      value,
+      new PropertyTagConfig(
+        ConfigKey.sampleSolution,
+        PropertyTag.tag_sampleSolution,
+        1,
+        1,
+        undefined,
+        undefined,
+        undefined,
+        true,
+        PropertyFormat.bitmarkMinusMinus,
+        undefined,
+        undefined,
+      ),
+    );
   }
 }
 

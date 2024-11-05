@@ -10,6 +10,7 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
+import { JsonText, TextAst } from '../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
@@ -49,6 +50,18 @@ import {
   DescriptionListItem,
   Footer,
 } from '../../../model/ast/Nodes';
+import {
+  ChoiceJson,
+  DescriptionListItemJson,
+  ExampleJson,
+  FlashcardJson,
+  HeadingJson,
+  PairJson,
+  QuestionJson,
+  QuizJson,
+  ResponseJson,
+  StatementJson,
+} from '../../../model/json/BitJson';
 
 const CARD_DIVIDER_V2 = '====';
 const CARD_SIDE_DIVIDER_V2 = '--';
@@ -97,7 +110,7 @@ export interface TrueFalseValue {
   text: BreakscapedString;
   isCorrect: boolean;
   isDefaultExample: boolean;
-  example?: BreakscapedString;
+  example?: ExampleJson;
 }
 
 export interface CardData {
@@ -110,7 +123,7 @@ export interface CardData {
 export interface BitContentProcessorResult {
   cardSet?: ParsedCardSet;
   cardBody?: Body;
-  cardBodyStr?: BreakscapedString;
+  cardBodyStr?: string;
   body?: Body;
   footer?: Footer;
   imageSource?: ImageSource;
@@ -118,39 +131,44 @@ export interface BitContentProcessorResult {
   servings?: Servings;
   ratingLevelStart?: RatingLevelStartEnd;
   ratingLevelEnd?: RatingLevelStartEnd;
-  label?: BreakscapedString;
+  label?: TextAst;
   person?: Person;
   propertyTitle?: BreakscapedString;
   trueFalse?: TrueFalseValue[];
   isDefaultExample?: boolean;
   lang?: BreakscapedString;
-  example?: BreakscapedString;
+  example?: ExampleJson;
   isCorrect?: boolean;
   markConfig?: MarkConfig[];
-  solutions?: BreakscapedString[];
-  statement?: Statement;
-  statements?: Statement[];
-  choices?: Choice[];
-  responses?: Response[];
+  solutions?: string[];
+  _solutionsAst?: TextAst[];
+  statement?: StatementJson;
+  statements?: StatementJson[];
+  choices?: ChoiceJson[];
+  responses?: ResponseJson[];
   solution?: BreakscapedString;
   mark?: BreakscapedString[];
   title?: BreakscapedString[];
   subtitle?: BreakscapedString;
   propertyStyleResources?: { [key: string]: Resource };
   resources?: Resource[];
-  itemLead?: BreakscapedString[];
-  item?: BreakscapedString;
-  lead?: BreakscapedString;
-  pageNumber?: BreakscapedString;
-  marginNumber?: BreakscapedString;
-  instruction?: BreakscapedString;
-  hint?: BreakscapedString;
-  anchor?: BreakscapedString;
+  itemLead?: TextAst[];
+  item?: TextAst;
+  itemString?: string;
+  lead?: TextAst;
+  pageNumber?: TextAst;
+  marginNumber?: TextAst;
+  instruction?: TextAst;
+  _instructionString?: string;
+  hint?: TextAst;
+  _hintString?: string;
+  anchor?: string;
   book?: BreakscapedString;
-  reference?: BreakscapedString;
-  referenceEnd?: BreakscapedString;
-  sampleSolution?: BreakscapedString;
-  additionalSolutions?: BreakscapedString[];
+  reference?: string;
+  referenceEnd?: string;
+  sampleSolution?: string;
+  _sampleSolutionAst?: TextAst;
+  additionalSolutions?: string[];
   isCaseSensitive?: boolean;
   reaction?: BreakscapedString;
   license?: BreakscapedString;
@@ -185,36 +203,36 @@ export interface BitContentProcessorResult {
 }
 
 export interface BitSpecificTitles {
-  title?: BreakscapedString;
-  subtitle?: BreakscapedString;
+  title?: TextAst;
+  subtitle?: TextAst;
   level?: number;
 }
 
 export interface StatementsOrChoicesOrResponses {
-  statements?: Statement[];
-  choices?: Choice[];
-  responses?: Response[];
+  statements?: StatementJson[];
+  choices?: ChoiceJson[];
+  responses?: ResponseJson[];
 }
 
 export interface BitSpecificCards {
-  sampleSolution?: BreakscapedString;
-  elements?: BreakscapedString[];
-  flashcards?: Flashcard[];
-  descriptions?: DescriptionListItem[];
-  statements?: Statement[];
-  responses?: Response[];
-  quizzes?: Quiz[];
-  heading?: Heading;
-  pairs?: Pair[];
+  sampleSolution?: string; // ??
+  elements?: string[];
+  flashcards?: FlashcardJson[];
+  descriptions?: DescriptionListItemJson[];
+  statements?: StatementJson[];
+  responses?: ResponseJson[];
+  quizzes?: QuizJson[];
+  heading?: HeadingJson;
+  pairs?: PairJson[];
   matrix?: Matrix[];
-  choices?: Choice[];
-  questions?: Question[];
+  choices?: ChoiceJson[];
+  questions?: QuestionJson[];
   table?: Table;
   botResponses?: BotResponse[];
   ingredients?: Ingredient[];
   captionDefinitionList?: CaptionDefinitionList;
   cardBits?: CardBit[];
-  internalComments?: BreakscapedString[];
+  internalComments?: string[]; // ??
 }
 
 export type BitContent = TypeValue | TypeKeyValue;

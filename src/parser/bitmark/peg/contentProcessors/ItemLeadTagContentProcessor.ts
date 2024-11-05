@@ -3,6 +3,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
+import { TextParser } from '../../../text/TextParser';
 
 import {
   BitContent,
@@ -22,10 +23,12 @@ function itemLeadTagContentProcessor(
   target: BitContentProcessorResult,
 ): void {
   const { value } = content as TypeValue;
+  const textParser = new TextParser();
 
   const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
   if (!target.itemLead) target.itemLead = [];
-  target.itemLead.push(trimmedStringValue);
+  const text = textParser.toAst(trimmedStringValue);
+  target.itemLead.push(text);
 }
 export { itemLeadTagContentProcessor };

@@ -1,5 +1,9 @@
-import { TextAst } from '../../model/ast/TextNodes';
+import { Breakscape } from '../../breakscaping/Breakscape';
+import { BreakscapedString } from '../../model/ast/BreakscapedString';
+import { JsonText, TextAst, TextNode } from '../../model/ast/TextNodes';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { TextNodeType } from '../../model/enum/TextNodeType';
+import { BodyBitJson } from '../../model/json/BodyBitJson';
 import { StringUtils } from '../../utils/StringUtils';
 
 import { parse as bitmarkTextParse } from './peg/TextPegParser';
@@ -105,6 +109,79 @@ class TextParser {
     return bitmarkTextParse(str, {
       startRule,
     }) as TextAst;
+  }
+
+  /**
+   * Convert breakscaped text to the JSON format using the text parser:
+   * Input:
+   *  - breakscaped string
+   * Output:
+   *  - text: plain text
+   *  - json: bitmark text JSON (TextAst)
+   *
+   * @param text
+   * @returns
+   */
+  public breakscapedStringToJsonText(
+    text: BreakscapedString | undefined,
+    format: TextFormatType, // = TextFormat.bitmarkMinusMinus,
+  ): JsonText {
+    if (!text) undefined;
+
+    const isBitmarkText = format === TextFormat.bitmarkMinusMinus || format === TextFormat.bitmarkPlusPlus;
+
+    if (!isBitmarkText) {
+      // Not bitmark text, so plain text, so  unbreakscape only the start of bit tags
+      return (
+        Breakscape.unbreakscape(text, {
+          bitTagOnly: true,
+        }) || Breakscape.EMPTY_STRING
+      );
+    }
+
+    // const asPlainText = this.options.textAsPlainText;
+    // if (asPlainText) {
+    //   return Breakscape.unbreakscape(text) || Breakscape.EMPTY_STRING;
+    // }
+
+    // Use the text parser to parse the text
+    const textAst = this.toAst(text, {
+      textFormat: format,
+    });
+
+    return textAst;
+  }
+
+  /**
+   * Extract all the body bits from the text AST
+   *
+   * @param text
+   * @returns
+   */
+  public extractBodyBits(text: JsonText): BodyBitJson[] {
+    if (!Array.isArray(text)) return [];
+
+    const bodyBits: BodyBitJson[] = [];
+    const textAst = text as TextAst;
+    for (const node of textAst) {
+      switch (node.type) {
+        case TextNodeType.gap:
+        case TextNodeType.select:
+        case TextNodeType.highlight:
+        case TextNodeType.mark:
+          bodyBits.push(node as BodyBitJson);
+          break;
+        default: {
+          // Recurse into children
+          const bits = this.extractBodyBits(node.content as TextAst);
+          for (const bit of bits) {
+            bodyBits.push(bit);
+          }
+        }
+      }
+    }
+
+    return bodyBits;
   }
 }
 

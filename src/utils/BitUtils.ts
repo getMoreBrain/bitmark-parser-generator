@@ -1,7 +1,10 @@
-import { WithExample } from '../ast/BaseBuilder';
-import { Example } from '../model/ast/Nodes';
+import { WithExampleJson } from '../ast/BaseBuilder';
+import { ExampleJson } from '../model/json/BitJson';
+import { TextParser } from '../parser/text/TextParser';
 
 import { BooleanUtils } from './BooleanUtils';
+
+const textParser = new TextParser();
 
 class BitUtils {
   /**
@@ -15,9 +18,9 @@ class BitUtils {
    * @returns
    */
   fillStringExample(
-    nodes: WithExample | WithExample[],
+    nodes: WithExampleJson | WithExampleJson[],
     isDefaultExample: boolean | undefined,
-    example: Example | undefined,
+    example: ExampleJson | undefined,
     firstOnly: boolean,
   ) {
     if (!nodes) return;
@@ -26,11 +29,11 @@ class BitUtils {
     for (const node of nodes) {
       if (!node.isExample) {
         if (isDefaultExample) {
-          node.isDefaultExample = true;
+          node.example = node._defaultExample;
           node.isExample = true;
         } else {
-          node.isDefaultExample = false;
-          node.example = example;
+          // node.isDefaultExample = false;
+          node.example = example ? textParser.toAst(example) : undefined;
         }
         if (firstOnly) break;
       }
@@ -48,9 +51,9 @@ class BitUtils {
    * @returns
    */
   fillBooleanExample(
-    nodes: WithExample | WithExample[],
+    nodes: WithExampleJson | WithExampleJson[],
     isDefaultExample: boolean | undefined,
-    example: Example | undefined,
+    example: ExampleJson | undefined,
     firstCorrectOnly: boolean,
   ) {
     if (!nodes) return;
@@ -60,10 +63,10 @@ class BitUtils {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       if (!node.isExample && (!firstCorrectOnly || (node as any).isCorrect)) {
         if (isDefaultExample) {
-          node.isDefaultExample = true;
+          node.example = node._defaultExample;
           node.isExample = true;
         } else {
-          node.isDefaultExample = false;
+          // node.isDefaultExample = false;
           node.example = BooleanUtils.toBoolean(example);
         }
         if (firstCorrectOnly) break;

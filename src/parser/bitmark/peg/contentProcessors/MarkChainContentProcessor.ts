@@ -17,6 +17,7 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
+import { MarkJson } from '../../../../model/json/BodyBitJson';
 
 const builder = new Builder();
 
@@ -45,7 +46,7 @@ function buildMark(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
-): Mark | undefined {
+): MarkJson | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('mark content', content);
 
   const markConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));

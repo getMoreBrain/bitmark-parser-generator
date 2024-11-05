@@ -1,20 +1,24 @@
 import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
-import { BreakscapedString } from '../model/ast/BreakscapedString';
+import { JsonText, TextAst } from '../model/ast/TextNodes';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
+import { AudioResourceJson, ImageResourceJson } from '../model/json/ResourceJson';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
+import { ContentProcessorUtils } from '../parser/bitmark/peg/contentProcessors/ContentProcessorUtils';
+import { TextParser } from '../parser/text/TextParser';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BitUtils } from '../utils/BitUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
+import { StringUtils } from '../utils/StringUtils';
 import { env } from '../utils/env/Env';
 
-import { BaseBuilder, WithExample } from './BaseBuilder';
+import { BaseBuilder, WithExample, WithExampleJson, WithIsExample } from './BaseBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
 import {
@@ -42,8 +46,6 @@ import {
   ExtraProperties,
   BotResponse,
   Person,
-  BodyText,
-  BodyPart,
   CardNode,
   Mark,
   MarkConfig,
@@ -60,13 +62,38 @@ import {
   CaptionDefinitionList,
   DescriptionListItem,
   Footer,
-  FooterText,
+  BodyBit,
+  Decision,
 } from '../model/ast/Nodes';
+import {
+  ChoiceJson,
+  DescriptionListItemJson,
+  ExampleJson,
+  FlashcardJson,
+  HeadingJson,
+  PairJson,
+  QuestionJson,
+  QuizJson,
+  ResponseJson,
+  StatementJson,
+} from '../model/json/BitJson';
+import {
+  GapJson,
+  HighlightJson,
+  HighlightTextJson,
+  MarkJson,
+  SelectJson,
+  SelectOptionJson,
+} from '../model/json/BodyBitJson';
+
+export type ExampleIn = TextAst | string | boolean;
 
 /**
  * Builder to build bitmark AST node programmatically
  */
 class Builder extends BaseBuilder {
+  private textParser: TextParser = new TextParser();
+
   /**
    * Build bitmark node
    *
@@ -99,68 +126,68 @@ class Builder extends BaseBuilder {
     textFormat?: TextFormatType;
     resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
     isCommented?: boolean;
-    id?: BreakscapedString | BreakscapedString[];
-    internalComment?: BreakscapedString | BreakscapedString[];
-    externalId?: BreakscapedString | BreakscapedString[];
-    spaceId?: BreakscapedString | BreakscapedString[];
-    padletId?: BreakscapedString;
-    jupyterId?: BreakscapedString;
+    id?: string | string[];
+    internalComment?: string | string[];
+    externalId?: string | string[];
+    spaceId?: string | string[];
+    padletId?: string;
+    jupyterId?: string;
     jupyterExecutionCount?: number;
     isPublic?: boolean;
     aiGenerated?: boolean;
-    machineTranslated?: BreakscapedString;
-    analyticsTag?: BreakscapedString | BreakscapedString[];
-    feedbackEngine?: BreakscapedString;
-    feedbackType?: BreakscapedString;
+    machineTranslated?: string;
+    analyticsTag?: string | string[];
+    feedbackEngine?: string;
+    feedbackType?: string;
     disableFeedback?: boolean;
-    releaseVersion?: BreakscapedString;
-    releaseKind?: BreakscapedString;
-    releaseDate?: BreakscapedString;
+    releaseVersion?: string;
+    releaseKind?: string;
+    releaseDate?: string;
     ageRange?: number | number[];
-    lang?: BreakscapedString;
-    language?: BreakscapedString | BreakscapedString[];
-    publisher?: BreakscapedString | BreakscapedString[];
-    publisherName?: BreakscapedString;
-    theme?: BreakscapedString | BreakscapedString[];
-    computerLanguage?: BreakscapedString;
-    target?: BreakscapedString | BreakscapedString[];
-    slug?: BreakscapedString;
-    tag?: BreakscapedString | BreakscapedString[];
-    reductionTag?: BreakscapedString | BreakscapedString[];
-    bubbleTag?: BreakscapedString | BreakscapedString[];
-    levelCEFRp?: BreakscapedString | BreakscapedString[];
-    levelCEFR?: BreakscapedString | BreakscapedString[];
-    levelILR?: BreakscapedString | BreakscapedString[];
-    levelACTFL?: BreakscapedString | BreakscapedString[];
-    icon?: BreakscapedString;
-    iconTag?: BreakscapedString;
-    colorTag?: BreakscapedString | BreakscapedString[];
-    flashcardSet?: BreakscapedString | BreakscapedString[];
-    subtype?: BreakscapedString;
-    bookAlias?: BreakscapedString | BreakscapedString[];
-    coverImage?: BreakscapedString | BreakscapedString[];
-    coverColor?: BreakscapedString;
-    publications?: BreakscapedString | BreakscapedString[];
-    author?: BreakscapedString | BreakscapedString[];
-    subject?: BreakscapedString | BreakscapedString[];
-    date?: BreakscapedString;
-    dateEnd?: BreakscapedString;
-    location?: BreakscapedString;
-    kind?: BreakscapedString;
+    lang?: string;
+    language?: string | string[];
+    publisher?: string | string[];
+    publisherName?: string;
+    theme?: string | string[];
+    computerLanguage?: string;
+    target?: string | string[];
+    slug?: string;
+    tag?: string | string[];
+    reductionTag?: string | string[];
+    bubbleTag?: string | string[];
+    levelCEFRp?: string | string[];
+    levelCEFR?: string | string[];
+    levelILR?: string | string[];
+    levelACTFL?: string | string[];
+    icon?: string;
+    iconTag?: string;
+    colorTag?: string | string[];
+    flashcardSet?: string | string[];
+    subtype?: string;
+    bookAlias?: string | string[];
+    coverImage?: string | string[];
+    coverColor?: string;
+    publications?: string | string[];
+    author?: string | string[];
+    subject?: string | string[];
+    date?: string;
+    dateEnd?: string;
+    location?: string;
+    kind?: string;
     hasMarkAsDone?: boolean;
     processHandIn?: boolean;
-    action?: BreakscapedString;
+    action?: string;
     showInIndex?: boolean;
-    blockId?: BreakscapedString;
+    blockId?: string;
     pageNo?: number;
     x?: number;
     y?: number;
     width?: string;
     height?: string;
     index?: number;
-    classification?: BreakscapedString;
-    availableClassifications?: BreakscapedString | BreakscapedString[];
-    allowedBit?: BreakscapedString | BreakscapedString[];
+    classification?: string;
+    availableClassifications?: string | string[];
+    allowedBit?: string | string[];
     tableFixedHeader?: boolean;
     tableSearch?: boolean;
     tableSort?: boolean;
@@ -174,80 +201,80 @@ class Builder extends BaseBuilder {
     quizStrikethroughSolutions?: boolean;
     codeLineNumbers?: boolean;
     codeMinimap?: boolean;
-    stripePricingTableId?: BreakscapedString;
-    stripePublishableKey?: BreakscapedString;
-    thumbImage?: BreakscapedString;
-    scormSource?: BreakscapedString;
-    posterImage?: BreakscapedString;
+    stripePricingTableId?: string;
+    stripePublishableKey?: string;
+    thumbImage?: string;
+    scormSource?: string;
+    posterImage?: string;
     focusX?: number;
     focusY?: number;
-    pointerLeft?: BreakscapedString;
-    pointerTop?: BreakscapedString;
+    pointerLeft?: string;
+    pointerTop?: string;
     listItemIndent?: number;
-    backgroundWallpaper?: BreakscapedString;
+    backgroundWallpaper?: string;
     hasBookNavigation?: boolean;
-    duration?: BreakscapedString;
-    referenceProperty?: BreakscapedString | BreakscapedString[];
-    deeplink?: BreakscapedString | BreakscapedString[];
-    externalLink?: BreakscapedString;
-    externalLinkText?: BreakscapedString;
-    videoCallLink?: BreakscapedString;
-    vendorUrl?: BreakscapedString;
-    search?: BreakscapedString;
-    bot?: BreakscapedString | BreakscapedString[];
-    list?: BreakscapedString | BreakscapedString[];
-    textReference?: BreakscapedString;
+    duration?: string;
+    referenceProperty?: string | string[];
+    deeplink?: string | string[];
+    externalLink?: string;
+    externalLinkText?: string;
+    videoCallLink?: string;
+    vendorUrl?: string;
+    search?: string;
+    bot?: string | string[];
+    list?: string | string[];
+    textReference?: string;
     isTracked?: boolean;
     isInfoOnly?: boolean;
     imageFirst?: boolean;
-    activityType?: BreakscapedString;
-    labelTrue?: BreakscapedString;
-    labelFalse?: BreakscapedString;
-    content2Buy?: BreakscapedString;
-    mailingList?: BreakscapedString;
-    buttonCaption?: BreakscapedString;
-    callToActionUrl?: BreakscapedString;
-    caption?: BreakscapedString;
-    quotedPerson?: BreakscapedString;
+    activityType?: string;
+    labelTrue?: string;
+    labelFalse?: string;
+    content2Buy?: string;
+    mailingList?: string;
+    buttonCaption?: string;
+    callToActionUrl?: string;
+    caption?: TextAst;
+    quotedPerson?: string;
     reasonableNumOfChars?: number;
     resolved?: boolean;
-    resolvedDate?: BreakscapedString;
-    resolvedBy?: BreakscapedString;
+    resolvedDate?: string;
+    resolvedBy?: string;
     maxCreatedBits?: number;
     maxDisplayLevel?: number;
-    page?: BreakscapedString | BreakscapedString[];
-    productId?: BreakscapedString | BreakscapedString[];
-    product?: BreakscapedString | BreakscapedString[];
-    productList?: BreakscapedString | BreakscapedString[];
-    productVideo?: BreakscapedString | BreakscapedString[];
-    productVideoList?: BreakscapedString | BreakscapedString[];
-    productFolder?: BreakscapedString;
+    page?: string | string[];
+    productId?: string | string[];
+    product?: string | string[];
+    productList?: string | string[];
+    productVideo?: string | string[];
+    productVideoList?: string | string[];
+    productFolder?: string;
     technicalTerm?: TechnicalTerm;
     servings?: Servings;
     ratingLevelStart?: RatingLevelStartEnd;
     ratingLevelEnd?: RatingLevelStartEnd;
     ratingLevelSelected?: number;
-    partialAnswer?: BreakscapedString;
-    book?: BreakscapedString;
-    title?: BreakscapedString;
-    subtitle?: BreakscapedString;
-    level?: number | BreakscapedString;
+    partialAnswer?: string;
+    book?: string;
+    title?: TextAst;
+    subtitle?: TextAst;
+    level?: number | string;
     toc?: boolean;
     progress?: boolean;
-    anchor?: BreakscapedString;
+    anchor?: string;
     // If an array is passed to reference, it will be considered an "[@reference:Some text]" property
     // If a BreakscapedText is passed to reference, it will be considered a "[►Reference]" tag
-    reference?: BreakscapedString;
-    referenceEnd?: BreakscapedString;
+    reference?: string;
+    referenceEnd?: string;
     isCaseSensitive?: boolean;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
+    example?: ExampleIn;
     imageSource?: ImageSource;
     person?: Person;
     extraProperties?: {
@@ -257,9 +284,9 @@ class Builder extends BaseBuilder {
     imagePlaceholder?: ImageResource;
     resources?: Resource | Resource[];
     body?: Body;
-    sampleSolution?: BreakscapedString;
-    additionalSolutions?: BreakscapedString | BreakscapedString[];
-    elements?: BreakscapedString[];
+    sampleSolution?: string;
+    additionalSolutions?: string | string[];
+    elements?: string[];
     flashcards?: Flashcard[];
     descriptions?: DescriptionListItem[];
     statement?: Statement;
@@ -462,6 +489,10 @@ class Builder extends BaseBuilder {
       ? this.toAstProperty(PropertyConfigKey.reasonableNumOfChars, reasonableNumOfChars)
       : undefined;
 
+    const convertedExample = {
+      ...this.toExample(isDefaultExample, example),
+    };
+
     // NOTE: Node order is important and is defined here
     const node: Bit = {
       bitType,
@@ -584,7 +615,7 @@ class Builder extends BaseBuilder {
       mailingList: this.toAstProperty(PropertyConfigKey.mailingList, mailingList),
       buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, buttonCaption),
       callToActionUrl: this.toAstProperty(PropertyConfigKey.callToActionUrl, callToActionUrl),
-      caption,
+      caption: this.toBitmarkTextNode(caption),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
@@ -607,8 +638,8 @@ class Builder extends BaseBuilder {
       ratingLevelStart,
       ratingLevelEnd,
       ratingLevelSelected: this.toAstProperty(PropertyConfigKey.ratingLevelSelected, ratingLevelSelected),
-      title,
-      subtitle,
+      title: this.toBitmarkTextNode(title),
+      subtitle: this.toBitmarkTextNode(subtitle),
       level: NumberUtils.asNumber(level),
       toc: this.toAstProperty(PropertyConfigKey.toc, toc),
       progress: this.toAstProperty(PropertyConfigKey.progress, progress),
@@ -617,9 +648,10 @@ class Builder extends BaseBuilder {
       referenceEnd,
       markConfig,
       itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
+      hint: this.toBitmarkTextNode(hint),
+      instruction: this.toBitmarkTextNode(instruction),
       ...this.toExample(isDefaultExample, example),
+      isDefaultExample: isDefaultExample ?? false,
       imageSource,
       person,
       imagePlaceholder,
@@ -649,26 +681,33 @@ class Builder extends BaseBuilder {
 
     // Push isCaseSensitive down the tree for the cloze, match and match-matrix bits
     this.pushDownTree(
-      body,
+      [body, ...(cardNode?.cardBits?.map((cardBit) => cardBit.body) ?? [])],
       [BodyBitType.gap],
       undefined,
-      undefined,
+      'isCaseSensitive',
       PropertyConfigKey.isCaseSensitive,
-      isCaseSensitive,
+      isCaseSensitive ?? true,
     );
 
-    this.pushDownTree(undefined, undefined, cardNode, 'pairs', PropertyConfigKey.isCaseSensitive, isCaseSensitive);
+    this.pushDownTree(
+      undefined,
+      undefined,
+      cardNode,
+      'pairs',
+      PropertyConfigKey.isCaseSensitive,
+      isCaseSensitive ?? true,
+    );
     this.pushDownTree(
       undefined,
       undefined,
       cardNode,
       ['matrix', 'cells'],
       PropertyConfigKey.isCaseSensitive,
-      isCaseSensitive,
+      isCaseSensitive ?? true,
     );
 
     // If isDefaultExample is set at the bit level, push the default example down the tree to the relevant nodes
-    this.pushExampleDownTree(body, cardNode, isDefaultExample, example);
+    this.pushExampleDownTree(body, cardNode, isDefaultExample, convertedExample.example);
 
     // Set default values
     this.setDefaultBitValues(node);
@@ -696,33 +735,36 @@ class Builder extends BaseBuilder {
    * @returns
    */
   choice(data: {
-    text: BreakscapedString;
+    text: string;
     isCorrect: boolean;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): Choice {
-    const { text, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
+    example?: ExampleIn;
+  }): ChoiceJson {
+    const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
       data;
 
     // NOTE: Node order is important and is defined here
-    const node: Choice = {
-      text,
+    const node: ChoiceJson = {
+      choice: text ?? '',
       isCorrect: !!isCorrect,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
-      ...this.toExampleBoolean(isDefaultExample, example),
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(isDefaultExample, example, !!isCorrect),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example'],
     });
 
     return node;
@@ -735,33 +777,36 @@ class Builder extends BaseBuilder {
    * @returns
    */
   response(data: {
-    text: BreakscapedString;
+    text: string;
     isCorrect: boolean;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): Response {
-    const { text, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
+    example?: ExampleIn;
+  }): ResponseJson {
+    const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
       data;
 
     // NOTE: Node order is important and is defined here
-    const node: Response = {
-      text,
+    const node: ResponseJson = {
+      response: text ?? '',
       isCorrect: !!isCorrect,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
-      ...this.toExampleBoolean(isDefaultExample, example),
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(isDefaultExample, example, !!isCorrect),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example'],
     });
 
     return node;
@@ -774,14 +819,14 @@ class Builder extends BaseBuilder {
    * @returns
    */
   botResponse(data: {
-    response: BreakscapedString;
-    reaction: BreakscapedString;
-    feedback: BreakscapedString;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
+    response: string;
+    reaction: string;
+    feedback: string;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
   }): BotResponse {
     const { response, reaction, feedback, item, lead, pageNumber, marginNumber, hint } = data;
 
@@ -791,7 +836,7 @@ class Builder extends BaseBuilder {
       reaction,
       feedback,
       itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
+      hint: this.toBitmarkTextNode(hint),
     };
 
     // Remove Unset Optionals
@@ -809,37 +854,65 @@ class Builder extends BaseBuilder {
    * @returns
    */
   quiz(data: {
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
-    choices?: Choice[];
-    responses?: Response[];
-  }): Quiz {
-    const { choices, responses, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
-      data;
-
-    // Push isDefaultExample down the tree
-    this.pushExampleDownTreeBoolean(isDefaultExample, example, true, choices);
-    this.pushExampleDownTreeBoolean(isDefaultExample, example, false, responses);
-
-    // NOTE: Node order is important and is defined here
-    const node: Quiz = {
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
-      isExample: isDefaultExample || example != null,
+    example?: ExampleIn;
+    choices?: ChoiceJson[];
+    responses?: ResponseJson[];
+  }): QuizJson {
+    const {
       choices,
       responses,
+      item,
+      lead,
+      /*pageNumber, marginNumber,*/ hint,
+      instruction,
+      isDefaultExample,
+      example,
+    } = data;
+
+    const convertedExample = {
+      ...this.toExample(isDefaultExample, example),
     };
+
+    // Push isDefaultExample down the tree
+    this.pushExampleDownTreeBoolean(isDefaultExample, convertedExample.example, true, choices);
+    this.pushExampleDownTreeBoolean(isDefaultExample, convertedExample.example, false, responses);
+
+    // NOTE: Node order is important and is defined here
+    const node: QuizJson = {
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      isExample: !!example,
+      // example: example ?? null,
+      // itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
+      // hint: this.toBitmarkTextNode(hint),
+      // instruction: this.toBitmarkTextNode(instruction),
+      // isExample: isDefaultExample || example != null,
+      choices: choices ?? [],
+      responses: responses ?? [],
+    };
+
+    // Remove either choices or responses - only one should be present
+    if (!choices) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      delete (node as any).choices;
+    } else {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      delete (node as any).responses;
+    }
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
     });
 
     return node;
@@ -851,22 +924,29 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  heading(data: {
-    forKeys: BreakscapedString;
-    forValues: BreakscapedString | BreakscapedString[];
-  }): Heading | undefined {
+  heading(
+    data: {
+      forKeys: string;
+      forValues: string | string[];
+    },
+    forValuesDefault: string | string[] = '',
+  ): HeadingJson | undefined {
     const { forKeys, forValues } = data;
 
     if (forKeys == null) return undefined;
 
     // NOTE: Node order is important and is defined here
-    const node: Heading = {
-      forKeys: forKeys || Breakscape.EMPTY_STRING,
-      forValues: ArrayUtils.asArray(forValues) ?? [],
+    const node: HeadingJson = {
+      forKeys: forKeys ?? '',
+      forValues: forValues ?? forValuesDefault,
     };
 
     // Remove Unset Optionals
-    // ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyString: ['forKeys', 'forValues'],
+      ignoreEmptyArrays: ['forValues'],
+    });
 
     return node;
   }
@@ -878,20 +958,21 @@ class Builder extends BaseBuilder {
    * @returns
    */
   pair(data: {
-    key?: BreakscapedString;
-    keyAudio?: AudioResource;
-    keyImage?: ImageResource;
-    values: BreakscapedString[];
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    key?: string;
+    keyAudio?: AudioResourceJson;
+    keyImage?: ImageResourceJson;
+    values: string[];
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): Pair {
+    example?: ExampleJson;
+    _valuesAst?: TextAst[];
+  }): PairJson {
     const {
       key,
       keyAudio,
@@ -899,31 +980,37 @@ class Builder extends BaseBuilder {
       values,
       item,
       lead,
-      pageNumber,
-      marginNumber,
+      /*pageNumber,
+      marginNumber,*/
       hint,
       instruction,
       isCaseSensitive,
       isDefaultExample,
       example,
+      _valuesAst,
     } = data;
 
+    const defaultExample = Array.isArray(_valuesAst) && _valuesAst.length > 0 && _valuesAst[0];
+
     // NOTE: Node order is important and is defined here
-    const node: Pair = {
-      key,
-      keyAudio,
-      keyImage,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
-      ...this.toExample(isDefaultExample, example),
-      isCaseSensitive,
+    const node: PairJson = {
+      key: key ?? '',
+      keyAudio: (keyAudio ?? undefined) as AudioResourceJson,
+      keyImage: (keyImage ?? undefined) as ImageResourceJson,
       values,
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      isCaseSensitive: isCaseSensitive as boolean,
+      ...this.toExample(isDefaultExample, example, defaultExample),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example', 'isCaseSensitive'],
     });
 
     return node;
@@ -936,14 +1023,14 @@ class Builder extends BaseBuilder {
    * @returns
    */
   matrix(data: {
-    key: BreakscapedString;
+    key: string;
     cells: MatrixCell[];
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
   }): Matrix {
     const { key, cells, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample } = data;
@@ -963,8 +1050,8 @@ class Builder extends BaseBuilder {
     const node: Matrix = {
       key,
       itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
+      hint: this.toBitmarkTextNode(hint),
+      instruction: this.toBitmarkTextNode(instruction),
       isExample,
       cells,
     };
@@ -984,16 +1071,16 @@ class Builder extends BaseBuilder {
    * @returns
    */
   matrixCell(data: {
-    values: BreakscapedString[];
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    hint?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    instruction?: BreakscapedString;
+    values: string[];
+    item?: TextAst;
+    lead?: TextAst;
+    hint?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    instruction?: TextAst;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
-    example?: Example;
+    example?: ExampleIn;
   }): MatrixCell {
     const {
       values,
@@ -1012,8 +1099,8 @@ class Builder extends BaseBuilder {
     const node: MatrixCell = {
       values,
       itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
+      hint: this.toBitmarkTextNode(hint),
+      instruction: this.toBitmarkTextNode(instruction),
       isCaseSensitive,
       ...this.toExample(isDefaultExample, example),
     };
@@ -1032,7 +1119,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  table(data: { columns: BreakscapedString[]; rows: BreakscapedString[][] }): Table {
+  table(data: { columns: string[]; rows: string[][] }): Table {
     const { columns, rows } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1056,27 +1143,28 @@ class Builder extends BaseBuilder {
    * @returns
    */
   question(data: {
-    question: BreakscapedString;
-    partialAnswer?: BreakscapedString;
-    sampleSolution?: BreakscapedString;
-    additionalSolutions?: BreakscapedString[];
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    question: string;
+    partialAnswer?: string;
+    sampleSolution?: string;
+    additionalSolutions?: string[];
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     reasonableNumOfChars?: number;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): Question {
+    example?: ExampleJson;
+    _sampleSolutionAst?: TextAst;
+  }): QuestionJson {
     const {
       question,
       partialAnswer,
       item,
       lead,
-      pageNumber,
-      marginNumber,
+      /*pageNumber,
+      marginNumber,*/
       hint,
       instruction,
       reasonableNumOfChars,
@@ -1084,25 +1172,31 @@ class Builder extends BaseBuilder {
       additionalSolutions,
       isDefaultExample,
       example,
+      _sampleSolutionAst,
     } = data;
 
+    const defaultExample = _sampleSolutionAst;
+
     // NOTE: Node order is important and is defined here
-    const node: Question = {
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      question,
-      partialAnswer,
-      hint,
-      instruction,
-      ...this.toExample(isDefaultExample, example),
-      reasonableNumOfChars,
-      sampleSolution,
-      additionalSolutions,
+    const node: QuestionJson = {
+      question: question ?? '',
+      partialAnswer: partialAnswer ?? '',
+      sampleSolution: sampleSolution ?? '',
+      additionalSolutions: (additionalSolutions ?? undefined) as string[],
+      reasonableNumOfChars: (reasonableNumOfChars ?? undefined) as number,
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(isDefaultExample, example, defaultExample),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreEmptyString: ['question'],
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example'],
+      ignoreEmptyString: ['question', 'partialAnswer', 'sampleSolution'],
     });
 
     return node;
@@ -1115,12 +1209,12 @@ class Builder extends BaseBuilder {
    * @returns
    */
   ingredient(data: {
-    title?: BreakscapedString;
+    title?: string;
     checked?: boolean;
-    item?: BreakscapedString;
+    item?: string;
     quantity?: number;
-    unit?: BreakscapedString;
-    unitAbbr?: BreakscapedString;
+    unit?: string;
+    unitAbbr?: string;
     decimalPlaces?: number;
     disableCalculation?: boolean;
   }): Ingredient {
@@ -1152,37 +1246,41 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  body(data: { bodyParts?: BodyPart[]; bodyJson?: unknown }): Body {
-    const { bodyParts, bodyJson } = data;
+  body(data: { body?: JsonText; bodyBits?: BodyBit[]; bodyString?: string; bodyJson?: unknown }): Body {
+    const { body, bodyBits, bodyString, bodyJson } = data;
+
+    const bodyIsString = StringUtils.isString(body);
 
     const node: Body = {
-      bodyParts,
+      body: bodyIsString ? (body as string) : this.toBitmarkTextNode(body as TextAst),
+      bodyBits,
+      bodyString,
       bodyJson,
     };
 
     return node;
   }
 
-  /**
-   * Build bodyPartText node
-   *
-   * @param data - data for the node
-   * @param isPlain - true if plain text, otherwise false
-   * @returns
-   */
-  bodyText(data: { text: BreakscapedString }, isPlain: boolean): BodyText {
-    const { text } = data;
+  // /**
+  //  * Build bodyPartText node
+  //  *
+  //  * @param data - data for the node
+  //  * @param isPlain - true if plain text, otherwise false
+  //  * @returns
+  //  */
+  // bodyText(data: { text: TextAst }, isPlain: boolean): BodyText {
+  //   const { text } = data;
 
-    // NOTE: Node order is important and is defined here
-    const node: BodyText = {
-      type: BodyBitType.text,
-      data: {
-        bodyText: text,
-        isPlain,
-      },
-    };
-    return node;
-  }
+  //   // NOTE: Node order is important and is defined here
+  //   const node: BodyText = {
+  //     type: BodyBitType.text,
+  //     data: {
+  //       bodyText: this.toBitmarkTextNode(text),
+  //       isPlain,
+  //     },
+  //   };
+  //   return node;
+  // }
 
   /**
    * Build footer node
@@ -1190,28 +1288,30 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  footer(data: { footerParts?: FooterText[] }): Footer {
-    const { footerParts } = data;
+  footer(data: { footer?: JsonText }): Footer {
+    const { footer } = data;
+
+    const footerIsString = StringUtils.isString(footer);
 
     const node: Footer = {
-      footerParts,
+      footer: footerIsString ? (footer as string) : this.toBitmarkTextNode(footer as TextAst),
     };
 
     return node;
   }
 
   /**
-   * Build footer node
+   * Build footer text node
    *
    * @param data - data for the node
    * @returns
    */
-  footerText(data: { text: BreakscapedString }, isPlain: boolean): FooterText {
+  footerText(data: { text: TextAst }, isPlain: boolean): FooterText {
     const { text } = data;
 
     // NOTE: Node order is important and is defined here
     const node: FooterText = {
-      footerText: text,
+      footerText: this.toBitmarkTextNode(text),
       isPlain,
     };
     return node;
@@ -1224,48 +1324,65 @@ class Builder extends BaseBuilder {
    * @returns
    */
   gap(data: {
-    solutions: BreakscapedString[];
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    solutions: string[];
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): Gap {
+    example?: ExampleJson;
+    _solutionsAst: TextAst[];
+  }): GapJson {
     const {
       solutions,
       item,
       lead,
-      pageNumber,
-      marginNumber,
+      /*pageNumber,
+      marginNumber,*/
       hint,
       instruction,
       isCaseSensitive,
       isDefaultExample,
       example,
+      _solutionsAst,
     } = data;
 
-    // const defaultExample = Array.isArray(solutions) && solutions.length === 1 ? solutions[0] : null;
+    // type: 'gap'; // body bit type
+    // item: JsonText;
+    // lead: JsonText;
+    // // pageNumber: JsonText;
+    // // marginNumber: JsonText;
+    // hint: JsonText;
+    // instruction: JsonText;
+    // isCaseSensitive: boolean;
+    // isExample: boolean;
+    // example: ExampleJson;
+    // _defaultExample: ExampleJson;
+    // solutions: string[];
+
+    const defaultExample = Array.isArray(_solutionsAst) && _solutionsAst.length === 1 ? _solutionsAst[0] : null;
 
     // NOTE: Node order is important and is defined here
-    const node: Gap = {
+    const node: GapJson = {
       type: BodyBitType.gap,
-      data: {
-        solutions,
-        itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-        hint,
-        instruction,
-        isCaseSensitive,
-        ...this.toExample(isDefaultExample, example),
-      },
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? []) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      isCaseSensitive: isCaseSensitive as boolean,
+      // ...this.toExample(isDefaultExample, example),
+      ...this.toExample(isDefaultExample, example, defaultExample),
+      solutions: solutions ?? [],
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example', 'isCaseSensitive'],
     });
 
     return node;
@@ -1277,7 +1394,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  markConfig(data: { mark: BreakscapedString; color?: BreakscapedString; emphasis?: BreakscapedString }): MarkConfig {
+  markConfig(data: { mark: string; color?: string; emphasis?: string }): MarkConfig {
     const { mark, color, emphasis } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1300,34 +1417,39 @@ class Builder extends BaseBuilder {
    * @returns
    */
   mark(data: {
-    solution: BreakscapedString;
-    mark?: BreakscapedString;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    solution: string;
+    mark?: string;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: BreakscapedString | boolean;
-  }): Mark {
-    const { solution, mark, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } = data;
+    example?: ExampleJson;
+  }): MarkJson {
+    const { solution, mark, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
+      data;
 
     // NOTE: Node order is important and is defined here
-    const node: Mark = {
+    const node: MarkJson = {
       type: BodyBitType.mark,
-      data: {
-        solution,
-        mark,
-        itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-        hint,
-        instruction,
-        ...this.toExample(isDefaultExample, example),
-      },
+      solution: solution ?? '',
+      mark: mark ?? '',
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? []) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(isDefaultExample, example, true),
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example'],
+      ignoreEmptyString: ['solution', 'mark'],
+    });
 
     return node;
   }
@@ -1339,34 +1461,63 @@ class Builder extends BaseBuilder {
    * @returns
    */
   select(data: {
-    options: SelectOption[];
-    prefix?: BreakscapedString;
-    postfix?: BreakscapedString;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
-  }): Select {
-    const { options, prefix, postfix, item, lead, pageNumber, marginNumber, hint, instruction } = data;
+    options: SelectOptionJson[];
+    prefix?: string;
+    postfix?: string;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
+    _hintString?: string;
+    _instructionString?: string;
+  }): SelectJson {
+    const {
+      options,
+      prefix,
+      postfix,
+      item,
+      lead,
+      /*pageNumber,
+      marginNumber,*/
+      hint,
+      instruction,
+      _hintString,
+      _instructionString,
+    } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Select = {
+    const node: SelectJson = {
       type: BodyBitType.select,
-      data: {
-        prefix,
-        options,
-        postfix,
-        itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-        hint,
-        instruction,
-      },
+      prefix: prefix ?? '',
+      postfix: postfix ?? '',
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? []) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(false, undefined, undefined), // Will be set in later
+      options,
+      _hintString: _hintString ?? '',
+      _instructionString: _instructionString ?? '',
+
+      // data: {
+      //   prefix,
+      //   options,
+      //   postfix,
+      //   itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
+      //   hint: this.toBitmarkTextNode(hint),
+      //   _hintString,
+      //   instruction: this.toBitmarkTextNode(instruction),
+      //   _instructionString,
+      // },
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreEmptyString: ['prefix', 'postfix'],
     });
 
     return node;
@@ -1379,33 +1530,48 @@ class Builder extends BaseBuilder {
    * @returns
    */
   selectOption(data: {
-    text: BreakscapedString;
+    text: string;
     isCorrect: boolean;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): SelectOption {
-    const { text, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
+    example?: ExampleIn;
+  }): SelectOptionJson {
+    const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
       data;
 
+    //     text: string;
+    // isCorrect: boolean;
+    // item: JsonText;
+    // lead: JsonText;
+    // pageNumber: JsonText;
+    // marginNumber: JsonText;
+    // hint: JsonText;
+    // instruction: JsonText;
+    // isExample: boolean;
+    // example: ExampleJson;
+    // _defaultExample: ExampleJson;
+
     // NOTE: Node order is important and is defined here
-    const node: SelectOption = {
-      text,
+    const node: SelectOptionJson = {
+      text: text ?? '',
       isCorrect: !!isCorrect,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
-      ...this.toExample(isDefaultExample, example),
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? []) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(isDefaultExample, example, !!isCorrect),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example'],
     });
 
     return node;
@@ -1418,34 +1584,36 @@ class Builder extends BaseBuilder {
    * @returns
    */
   highlight(data: {
-    texts: HighlightText[];
-    prefix?: BreakscapedString;
-    postfix?: BreakscapedString;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
-  }): Highlight {
-    const { texts, prefix, postfix, item, lead, pageNumber, marginNumber, hint, instruction } = data;
+    texts: HighlightTextJson[];
+    prefix?: string;
+    postfix?: string;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
+  }): HighlightJson {
+    const { texts, prefix, postfix, item, lead, /*pageNumber, marginNumber,*/ hint, instruction } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Highlight = {
+    const node: HighlightJson = {
       type: BodyBitType.highlight,
-      data: {
-        prefix,
-        texts,
-        postfix,
-        itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-        hint,
-        instruction,
-      },
+      prefix: prefix ?? '',
+      postfix: postfix ?? '',
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? []) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(false, undefined, undefined), // Will be set in later
+      texts,
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreEmptyString: ['prefix', 'postfix'],
     });
 
     return node;
@@ -1458,26 +1626,26 @@ class Builder extends BaseBuilder {
    * @returns
    */
   highlightText(data: {
-    text: BreakscapedString;
+    text: string;
     isCorrect: boolean;
     isHighlighted: boolean;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): HighlightText {
+    example?: ExampleIn;
+  }): HighlightTextJson {
     const {
       text,
       isCorrect,
       isHighlighted,
       item,
       lead,
-      pageNumber,
-      marginNumber,
+      /*pageNumber,
+      marginNumber,*/
       hint,
       instruction,
       isDefaultExample,
@@ -1485,19 +1653,22 @@ class Builder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: HighlightText = {
-      text,
+    const node: HighlightTextJson = {
+      text: text ?? '',
       isCorrect: !!isCorrect,
       isHighlighted: !!isHighlighted,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
-      ...this.toExample(isDefaultExample, example),
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? []) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(isDefaultExample, example, !!isCorrect),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example'],
     });
 
     return node;
@@ -1510,26 +1681,26 @@ class Builder extends BaseBuilder {
    * @returns
    */
   flashcard(data: {
-    question: BreakscapedString;
-    answer?: BreakscapedString;
-    alternativeAnswers?: BreakscapedString[];
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    question: TextAst;
+    answer?: TextAst;
+    alternativeAnswers?: TextAst[];
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): Flashcard {
+    example?: ExampleIn;
+  }): FlashcardJson {
     const {
       question,
       answer,
       alternativeAnswers,
       item,
       lead,
-      pageNumber,
-      marginNumber,
+      /*pageNumber,
+      marginNumber,*/
       hint,
       instruction,
       isDefaultExample,
@@ -1537,19 +1708,22 @@ class Builder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Flashcard = {
-      question,
-      answer,
-      alternativeAnswers,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
-      ...this.toExampleBoolean(isDefaultExample, example),
+    const node: FlashcardJson = {
+      question: (question ?? []) as TextAst,
+      answer: (answer ?? []) as TextAst,
+      alternativeAnswers: (alternativeAnswers ?? []) as TextAst[],
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(isDefaultExample, example, true),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example'],
     });
 
     return node;
@@ -1562,18 +1736,18 @@ class Builder extends BaseBuilder {
    * @returns
    */
   descriptionListItem(data: {
-    term: BreakscapedString;
-    description?: BreakscapedString;
-    alternativeDescriptions?: BreakscapedString[];
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    term: TextAst;
+    description?: TextAst;
+    alternativeDescriptions?: TextAst[];
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): DescriptionListItem {
+    example?: ExampleIn;
+  }): DescriptionListItemJson {
     const {
       term,
       description,
@@ -1589,19 +1763,22 @@ class Builder extends BaseBuilder {
     } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: DescriptionListItem = {
-      term,
-      description,
-      alternativeDescriptions,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
-      ...this.toExampleBoolean(isDefaultExample, example),
+    const node: DescriptionListItemJson = {
+      term: (term ?? []) as TextAst,
+      description: (description ?? []) as TextAst,
+      alternativeDescriptions: (alternativeDescriptions ?? []) as TextAst[],
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      ...this.toExample(isDefaultExample, example, true),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example'],
     });
 
     return node;
@@ -1614,33 +1791,36 @@ class Builder extends BaseBuilder {
    * @returns
    */
   statement(data: {
-    text: BreakscapedString;
+    text: string;
     isCorrect: boolean;
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
-  }): Statement {
-    const { text, isCorrect, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample, example } =
+    example?: ExampleIn;
+  }): StatementJson {
+    const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
       data;
 
     // NOTE: Node order is important and is defined here
-    const node: Statement = {
-      text,
+    const node: StatementJson = {
+      statement: text ?? '',
       isCorrect: !!isCorrect,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
-      ...this.toExampleBoolean(isDefaultExample, example),
+      item: item as TextAst,
+      lead: lead as TextAst,
+      hint: hint as TextAst,
+      instruction: instruction as TextAst,
+      ...this.toExample(isDefaultExample, example, !!isCorrect),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      // ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example'],
     });
 
     return node;
@@ -1652,13 +1832,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  imageSource(data: {
-    url: BreakscapedString;
-    mockupId: BreakscapedString;
-    size?: number;
-    format?: BreakscapedString;
-    trim?: boolean;
-  }): ImageSource {
+  imageSource(data: { url: string; mockupId: string; size?: number; format?: string; trim?: boolean }): ImageSource {
     const { url, mockupId, size, format, trim } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1684,7 +1858,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  person(data: { name: BreakscapedString; title?: BreakscapedString; avatarImage?: ImageResource }): Person {
+  person(data: { name: string; title?: string; avatarImage?: ImageResource }): Person {
     const { name, title, avatarImage } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1706,7 +1880,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  technicalTerm(data: { technicalTerm: BreakscapedString; lang?: BreakscapedString }): TechnicalTerm {
+  technicalTerm(data: { technicalTerm: string; lang?: string }): TechnicalTerm {
     const { technicalTerm, lang } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1729,11 +1903,11 @@ class Builder extends BaseBuilder {
    */
   servings(data: {
     servings: number;
-    unit?: BreakscapedString;
-    unitAbbr?: BreakscapedString;
+    unit?: string;
+    unitAbbr?: string;
     decimalPlaces?: number;
     disableCalculation?: boolean;
-    hint?: BreakscapedString;
+    hint?: string;
   }): Servings {
     const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = data;
 
@@ -1759,13 +1933,13 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  ratingLevelStartEnd(data: { level: number; label?: BreakscapedString }): RatingLevelStartEnd {
+  ratingLevelStartEnd(data: { level: number; label?: TextAst }): RatingLevelStartEnd {
     const { level, label } = data;
 
     // NOTE: Node order is important and is defined here
     const node: RatingLevelStartEnd = {
       level,
-      label,
+      label: this.toBitmarkTextNode(label),
     };
 
     // Remove Unset Optionals
@@ -1780,7 +1954,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  captionDefinition(data: { term: BreakscapedString; description: BreakscapedString }): CaptionDefinition {
+  captionDefinition(data: { term: string; description: string }): CaptionDefinition {
     const { term, description } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1801,10 +1975,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  captionDefinitionList(data: {
-    columns: BreakscapedString[];
-    definitions: CaptionDefinition[];
-  }): CaptionDefinitionList {
+  captionDefinitionList(data: { columns: string[]; definitions: CaptionDefinition[] }): CaptionDefinitionList {
     const { columns, definitions } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1824,20 +1995,20 @@ class Builder extends BaseBuilder {
   //
 
   private itemLead(
-    item: BreakscapedString | undefined,
-    lead: BreakscapedString | undefined,
-    pageNumber: BreakscapedString | undefined,
-    marginNumber: BreakscapedString | undefined,
+    item: TextAst | undefined,
+    lead: TextAst | undefined,
+    pageNumber: TextAst | undefined,
+    marginNumber: TextAst | undefined,
   ): ItemLead | undefined {
     let node: ItemLead | undefined;
 
     // NOTE: Node order is important and is defined here
     if (item || lead || pageNumber || marginNumber) {
       node = {
-        item,
-        lead,
-        pageNumber,
-        marginNumber,
+        item: this.toBitmarkTextNode(item),
+        lead: this.toBitmarkTextNode(lead),
+        pageNumber: this.toBitmarkTextNode(pageNumber),
+        marginNumber: this.toBitmarkTextNode(marginNumber),
       };
     }
 
@@ -1851,14 +2022,14 @@ class Builder extends BaseBuilder {
    * @returns
    */
   cardBit(data: {
-    item?: BreakscapedString;
-    lead?: BreakscapedString;
-    pageNumber?: BreakscapedString;
-    marginNumber?: BreakscapedString;
-    hint?: BreakscapedString;
-    instruction?: BreakscapedString;
+    item?: TextAst;
+    lead?: TextAst;
+    pageNumber?: TextAst;
+    marginNumber?: TextAst;
+    hint?: TextAst;
+    instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: Example;
+    example?: ExampleIn;
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
@@ -1880,8 +2051,8 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: CardBit = {
       itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint,
-      instruction,
+      hint: this.toBitmarkTextNode(hint),
+      instruction: this.toBitmarkTextNode(instruction),
       ...this.toExample(isDefaultExample, example),
       body,
 
@@ -1903,7 +2074,7 @@ class Builder extends BaseBuilder {
     flashcards?: Flashcard[];
     descriptions?: DescriptionListItem[];
     questions?: Question[];
-    elements?: BreakscapedString[];
+    elements?: string[];
     statement?: Statement;
     statements?: Statement[];
     choices?: Choice[];
@@ -1998,26 +2169,36 @@ class Builder extends BaseBuilder {
     body: Body | undefined,
     cardNode: CardNode | undefined,
     isDefaultExample: boolean | undefined,
-    example: Example | undefined,
+    example: ExampleJson | undefined,
   ): void {
     if (isDefaultExample || example) {
       if (cardNode) {
-        this.pushExampleDownTreeString(isDefaultExample, example, cardNode.pairs as WithExample[]);
-        this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.flashcards as WithExample[]);
-        this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.descriptions as WithExample[]);
-        this.pushExampleDownTreeBoolean(isDefaultExample, example, true, cardNode.choices as WithExample[]);
+        this.pushExampleDownTreeString(isDefaultExample, example, cardNode.pairs as WithExampleJson[]);
+        this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.flashcards as WithExampleJson[]);
+        this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.descriptions as WithExampleJson[]);
+        this.pushExampleDownTreeBoolean(isDefaultExample, example, true, cardNode.choices as WithExampleJson[]);
         this.pushExampleDownTreeBoolean(
           isDefaultExample,
           example,
           false,
-          cardNode.responses as WithExample[],
-          cardNode.statements as WithExample[],
-          cardNode.statement as WithExample,
+          cardNode.responses,
+          cardNode.statements,
+          cardNode.statement,
         );
         if (cardNode.quizzes) {
           for (const quiz of cardNode.quizzes) {
-            this.pushExampleDownTreeBoolean(isDefaultExample, example, true, quiz.choices);
-            this.pushExampleDownTreeBoolean(isDefaultExample, example, false, quiz.responses);
+            this.pushExampleDownTreeBoolean(
+              isDefaultExample,
+              example,
+              true,
+              quiz.choices as WithExampleJson[] | undefined,
+            );
+            this.pushExampleDownTreeBoolean(
+              isDefaultExample,
+              example,
+              false,
+              quiz.responses as WithExampleJson[] | undefined,
+            );
           }
         }
         if (cardNode.matrix) {
@@ -2043,9 +2224,9 @@ class Builder extends BaseBuilder {
    */
   private pushExampleDownTreeBoolean(
     isDefaultExample: boolean | undefined,
-    example: Example | undefined,
+    example: ExampleJson | undefined,
     onlyCorrect: boolean,
-    ...nodes: (WithExample | WithExample[] | undefined)[]
+    ...nodes: (WithExampleJson | WithExampleJson[] | undefined)[]
   ): void {
     if (!isDefaultExample && !example) return;
 
@@ -2069,8 +2250,8 @@ class Builder extends BaseBuilder {
    */
   private pushExampleDownTreeString(
     isDefaultExample: boolean | undefined,
-    example: Example | undefined,
-    ...nodes: (WithExample | WithExample[] | undefined)[]
+    example: ExampleJson | undefined,
+    ...nodes: (WithExampleJson | WithExampleJson[] | undefined)[]
   ): void {
     if (!isDefaultExample && !example) return;
 
@@ -2086,33 +2267,33 @@ class Builder extends BaseBuilder {
 
   private pushExampleDownTreeBodyBits(
     isDefaultExample: boolean | undefined,
-    example: Example | undefined,
+    example: ExampleJson | undefined,
     body: Body | undefined,
   ): void {
     if (!isDefaultExample && !example) return;
-    if (!body || !body.bodyParts || body.bodyParts.length === 0) return;
+    const bodyBitsJson = this.textParser.extractBodyBits(this.getBitmarkTextAst(body?.body));
 
-    for (const part of body.bodyParts) {
+    for (const part of bodyBitsJson) {
       if (part) {
         switch (part.type) {
           case BodyBitType.gap: {
-            const gap = part as Gap;
-            BitUtils.fillStringExample([gap.data], isDefaultExample, example, false);
+            const gap = part as GapJson;
+            BitUtils.fillStringExample([gap], isDefaultExample, example, false);
             break;
           }
           case BodyBitType.mark: {
-            const mark = part as Mark;
-            BitUtils.fillBooleanExample([mark.data], isDefaultExample, example, false);
+            const mark = part as MarkJson;
+            BitUtils.fillBooleanExample([mark], isDefaultExample, example, false);
             break;
           }
           case BodyBitType.select: {
-            const select = part as Select;
-            BitUtils.fillBooleanExample(select.data.options, isDefaultExample, example, true);
+            const select = part as SelectJson;
+            BitUtils.fillBooleanExample(select.options, isDefaultExample, example, true);
             break;
           }
           case BodyBitType.highlight: {
-            const highlight = part as Highlight;
-            BitUtils.fillBooleanExample(highlight.data.texts, isDefaultExample, example, true);
+            const highlight = part as HighlightJson;
+            BitUtils.fillBooleanExample(highlight.texts, isDefaultExample, example, true);
             break;
           }
         }
@@ -2125,14 +2306,14 @@ class Builder extends BaseBuilder {
    *
    * This function is not type safe and should be used with care
    *
-   * @param body set if the value should be passed down the body to the body bits
+   * @param body/body[] set if the value should be passed down the body to the body bits / card body bits
    * @param bodyBitTypes body bit types to push the value down to
    * @param cardNode set if the value should be passed down the card node
    * @param path path for the value
    * @param value the value to push down
    */
   private pushDownTree(
-    body: Body | undefined,
+    body: Body | CardBit | undefined | (Body | CardBit | undefined)[],
     bodyBitTypes: BodyBitTypeType[] | undefined,
     cardNode: CardNode | undefined,
     cardNodePath: string | string[] | undefined,
@@ -2156,14 +2337,23 @@ class Builder extends BaseBuilder {
     }
 
     // Add value to body bit types if required
-    if (bodyBitTypes && body && body.bodyParts && body.bodyParts.length > 0) {
-      for (const part of body.bodyParts) {
-        if (part) {
-          if (bodyBitTypes.indexOf(part.type) !== -1) {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const data = part.data as any;
-            if (data[path] == null) {
-              data[path] = value;
+    if (body) {
+      const bodyArray: Body[] = (Array.isArray(body) ? body : [body]) as Body[];
+      for (const b of bodyArray) {
+        if (b && b.body && bodyBitTypes) {
+          const bodyBitsJson = this.textParser.extractBodyBits(this.getBitmarkTextAst(b.body));
+
+          if (bodyBitTypes && bodyBitsJson && bodyBitsJson.length > 0) {
+            for (const part of bodyBitsJson) {
+              if (part) {
+                if (bodyBitTypes.indexOf(part.type) !== -1) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  const data = part as any;
+                  if (data[path] == null) {
+                    data[path] = value;
+                  }
+                }
+              }
             }
           }
         }
@@ -2195,12 +2385,12 @@ class Builder extends BaseBuilder {
    * @param bit
    */
   private setIsExampleFlags(bit: Bit) {
-    bit.isExample = false;
+    // bit.isExample = false;
 
-    const checkIsExample = (example: WithExample): boolean => {
+    const checkIsExample = (example: WithExampleJson): boolean => {
       if (!example) return false;
 
-      if (example.isDefaultExample || example.example != undefined) {
+      if (/*example.isDefaultExample ||*/ example.isExample || example.example != undefined) {
         example.isExample = true;
         bit.isExample = true;
       } else {
@@ -2216,35 +2406,34 @@ class Builder extends BaseBuilder {
     const { body, cardNode } = bit;
 
     // Body bit level
+    const bodyBitsJson = this.textParser.extractBodyBits(this.getBitmarkTextAst(body?.body));
 
-    if (body && body.bodyParts) {
-      for (const bodyPart of body.bodyParts) {
-        switch (bodyPart.type) {
-          case BodyBitType.gap:
-          case BodyBitType.mark: {
-            checkIsExample(bodyPart.data as WithExample);
-            break;
-          }
+    for (const bodyPart of bodyBitsJson) {
+      switch (bodyPart.type) {
+        case BodyBitType.gap:
+        case BodyBitType.mark: {
+          checkIsExample(bodyPart as WithExampleJson);
+          break;
+        }
 
-          case BodyBitType.select: {
-            const select = bodyPart as Select;
-            let hasExample = false;
-            for (const option of select.data.options) {
-              hasExample = checkIsExample(option as WithExample) ? true : hasExample;
-            }
-            select.data.isExample = hasExample;
-            break;
+        case BodyBitType.select: {
+          const select = bodyPart as SelectJson;
+          let hasExample = false;
+          for (const option of select.options) {
+            hasExample = checkIsExample(option as WithExampleJson) ? true : hasExample;
           }
+          select.isExample = hasExample;
+          break;
+        }
 
-          case BodyBitType.highlight: {
-            const highlight = bodyPart as Highlight;
-            let hasExample = false;
-            for (const text of highlight.data.texts) {
-              hasExample = checkIsExample(text as WithExample) ? true : hasExample;
-            }
-            highlight.data.isExample = hasExample;
-            break;
+        case BodyBitType.highlight: {
+          const highlight = bodyPart as HighlightJson;
+          let hasExample = false;
+          for (const text of highlight.texts) {
+            hasExample = checkIsExample(text as WithExampleJson) ? true : hasExample;
           }
+          highlight.isExample = hasExample;
+          break;
         }
       }
     }
@@ -2254,17 +2443,17 @@ class Builder extends BaseBuilder {
     if (cardNode) {
       // flashcards
       for (const v of cardNode.flashcards ?? []) {
-        checkIsExample(v as WithExample);
+        checkIsExample(v as WithExampleJson);
       }
 
       // descriptions
       for (const v of cardNode.descriptions ?? []) {
-        checkIsExample(v as WithExample);
+        checkIsExample(v as WithExampleJson);
       }
 
       // pairs
       for (const v of cardNode.pairs ?? []) {
-        checkIsExample(v as WithExample);
+        checkIsExample(v as WithExampleJson);
       }
       // matrix
       for (const mx of cardNode.matrix ?? []) {
@@ -2272,7 +2461,7 @@ class Builder extends BaseBuilder {
 
         // matrix cell
         for (const v of mx.cells ?? []) {
-          hasExample = checkIsExample(v as WithExample) ? true : hasExample;
+          hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
         mx.isExample = hasExample;
       }
@@ -2282,51 +2471,53 @@ class Builder extends BaseBuilder {
 
         // responses
         for (const v of quiz.responses ?? []) {
-          hasExample = checkIsExample(v as WithExample) ? true : hasExample;
+          hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
         // choices
         for (const v of quiz.choices ?? []) {
-          hasExample = checkIsExample(v as WithExample) ? true : hasExample;
+          hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
         quiz.isExample = hasExample;
       }
       // responses
       for (const v of cardNode.responses ?? []) {
-        checkIsExample(v as WithExample);
+        checkIsExample(v as WithExampleJson);
       }
       // choices
       for (const v of cardNode.choices ?? []) {
-        checkIsExample(v as WithExample);
+        checkIsExample(v as WithExampleJson);
       }
       // statements
       for (const v of cardNode.statements ?? []) {
-        checkIsExample(v as WithExample);
+        checkIsExample(v as WithExampleJson);
       }
       // statement
-      checkIsExample(cardNode.statement as WithExample);
+      checkIsExample(cardNode.statement as WithExampleJson);
       // NO: elements
       // questions
       for (const v of cardNode.questions ?? []) {
-        checkIsExample(v as WithExample);
+        checkIsExample(v as WithExampleJson);
       }
     }
 
     // Bit level
 
     // statement
-    checkIsExample(bit.statement as WithExample);
+    checkIsExample(bit.statement as WithExampleJson);
     // responses
     for (const v of bit.responses ?? []) {
-      checkIsExample(v as WithExample);
+      checkIsExample(v as WithExampleJson);
     }
     // choices
     for (const v of bit.choices ?? []) {
-      checkIsExample(v as WithExample);
+      checkIsExample(v as WithExampleJson);
     }
 
     // Bit itself
-    checkIsExample(bit as WithExample);
+    checkIsExample(bit as WithExampleJson);
   }
+
+  private decisionToWithExampleJson(decision: Decision): WithExampleJson {}
 
   private setDefaultBitValues(bit: Bit) {
     // Set aiGenerated == true for all AI generated bits

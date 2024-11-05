@@ -2,13 +2,19 @@ import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
+import { BitmarkTextNode, TextAst } from '../../../../model/ast/TextNodes';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { SelectJson } from '../../../../model/json/BodyBitJson';
+import { AudioResourceJson, ImageResourceJson } from '../../../../model/json/ResourceJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
+import { TextParser } from '../../../text/TextParser';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
+
+import { ContentProcessorUtils } from './ContentProcessorUtils';
 
 import {
   AudioResource,
@@ -32,6 +38,17 @@ import {
   DescriptionListItem,
 } from '../../../../model/ast/Nodes';
 import {
+  ChoiceJson,
+  DescriptionListItemJson,
+  FlashcardJson,
+  HeadingJson,
+  PairJson,
+  QuestionJson,
+  QuizJson,
+  ResponseJson,
+  StatementJson,
+} from '../../../../model/json/BitJson';
+import {
   BitContentLevel,
   BitContentProcessorResult,
   BitSpecificCards,
@@ -44,16 +61,17 @@ import {
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
+const textParser = new TextParser();
 
 function buildCards(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
   textFormat: TextFormatType,
   parsedCardSet: ParsedCardSet | undefined,
-  statementV1: Statement | undefined,
-  statementsV1: Statement[] | undefined,
-  choicesV1: Choice[] | undefined,
-  responsesV1: Response[] | undefined,
+  statementV1: StatementJson | undefined,
+  statementsV1: StatementJson[] | undefined,
+  choicesV1: ChoiceJson[] | undefined,
+  responsesV1: ResponseJson[] | undefined,
 ): BitSpecificCards {
   if (context.DEBUG_CARD_SET) context.debugPrint('card set', parsedCardSet);
 
@@ -188,7 +206,7 @@ function processCardSet(
           processedVariant.no,
         );
         // Reduce the card body parts to a breakscaped string
-        tags.cardBodyStr = cardBodyToBreakscapedString(tags.cardBody);
+        tags.cardBodyStr = tags.cardBody?.bodyString;
 
         processedVariant.data = tags;
 
@@ -208,11 +226,12 @@ function parseFlashcardLike(
   bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const flashcards: Flashcard[] = [];
-  const descriptions: DescriptionListItem[] = [];
-  let question = Breakscape.EMPTY_STRING;
-  let answer: BreakscapedString | undefined;
-  let alternativeAnswers: BreakscapedString[] = [];
+  const flashcards: FlashcardJson[] = [];
+  const descriptions: DescriptionListItemJson[] = [];
+  let question: TextAst = [];
+  let questionString = '';
+  let answer: TextAst = [];
+  let alternativeAnswers: TextAst[] = [];
   let cardIndex = 0;
   let variantIndex = 0;
   let extraTags = {};
@@ -221,15 +240,15 @@ function parseFlashcardLike(
 
   for (const card of cardSet.cards) {
     // Reset the question and answers
-    question = Breakscape.EMPTY_STRING;
-    answer = undefined;
+    question = [];
+    answer = [];
     alternativeAnswers = [];
     variantIndex = 0;
     extraTags = {};
 
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { cardBodyStr, ...tags } = content.data;
+        const { cardBody, ...tags } = content.data;
         extraTags = {
           ...extraTags,
           ...tags,
@@ -237,11 +256,12 @@ function parseFlashcardLike(
 
         if (variantIndex === 0) {
           questionVariant = content;
-          question = cardBodyStr ?? Breakscape.EMPTY_STRING;
+          question = ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode);
+          questionString = (cardBody?.bodyString ?? '') as string;
         } else if (variantIndex === 1) {
-          answer = cardBodyStr ?? Breakscape.EMPTY_STRING;
+          answer = ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode);
         } else {
-          alternativeAnswers.push(cardBodyStr ?? Breakscape.EMPTY_STRING);
+          alternativeAnswers.push(ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode));
         }
         variantIndex++;
       }
@@ -277,7 +297,7 @@ function parseFlashcardLike(
     } else {
       // Only one card allowed, add a warning and ignore the card
       context.addWarning(
-        `Bit '${bitType}' should only contain one card. Ignore subsequent card: '${question}'`,
+        `Bit '${bitType}' should only contain one card. Ignore subsequent card: '${questionString}'`,
         questionVariant,
       );
       break;
@@ -297,7 +317,7 @@ function parseElements(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const elements: BreakscapedString[] = [];
+  const elements: string[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
@@ -322,10 +342,10 @@ function parseStatements(
   _context: BitmarkPegParserContext,
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
-  statementV1: Statement | undefined,
-  statementsV1: Statement[] | undefined,
+  statementV1: StatementJson | undefined,
+  statementsV1: StatementJson[] | undefined,
 ): BitSpecificCards {
-  const statements: Statement[] = [];
+  const statements: StatementJson[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
@@ -339,8 +359,16 @@ function parseStatements(
           for (const s of chainedStatements) {
             // if (s.text) {
             const statement = builder.statement({
-              ...s,
-              ...s.itemLead,
+              text: s.statement,
+              isCorrect: s.isCorrect,
+              item: s.item as TextAst,
+              lead: s.lead as TextAst,
+              pageNumber: undefined,
+              marginNumber: undefined,
+              hint: s.hint as TextAst,
+              instruction: s.instruction as TextAst,
+              isDefaultExample: false, // ???
+              example: s.example as TextAst,
               ...tags,
             });
             statements.push(statement);
@@ -372,10 +400,10 @@ function parseQuiz(
   _context: BitmarkPegParserContext,
   bitType: BitTypeType,
   cardSet: ProcessedCardSet,
-  choicesV1: Choice[] | undefined,
-  responsesV1: Response[] | undefined,
+  choicesV1: ChoiceJson[] | undefined,
+  responsesV1: ResponseJson[] | undefined,
 ): BitSpecificCards {
-  const quizzes: Quiz[] = [];
+  const quizzes: QuizJson[] = [];
   const insertChoices = Config.isOfBitType(bitType, BitType.multipleChoice);
   const insertResponses = Config.isOfBitType(bitType, BitType.multipleResponse);
   if (!insertChoices && !insertResponses) return {};
@@ -397,7 +425,7 @@ function parseQuiz(
 
         // Insert choices / responses
         if (tags.trueFalse && tags.trueFalse.length > 0) {
-          const responsesOrChoices: Choice[] | Response[] = [];
+          const responsesOrChoices: (ChoiceJson | ResponseJson)[] = [];
           const builderFunc = insertResponses ? builder.response : builder.choice;
 
           for (const tf of tags.trueFalse) {
@@ -406,15 +434,24 @@ function parseQuiz(
             const example = exampleTf || exampleCard;
 
             const response = builderFunc({
-              ...tfTags,
+              text: tfTags.text,
+              isCorrect: tfTags.isCorrect,
+              // item: tfTags.item as TextAst,
+              // lead: tfTags.lead as TextAst,
+              // pageNumber: undefined,
+              // marginNumber: undefined,
+              // hint: tfTags.hint as TextAst,
+              // instruction: tfTags.instruction as TextAst,
               isDefaultExample,
               example,
+              // isDefaultExample,
+              // example,
             });
             responsesOrChoices.push(response);
           }
 
-          if (insertResponses) tags.responses = responsesOrChoices;
-          else tags.choices = responsesOrChoices;
+          if (insertResponses) tags.responses = responsesOrChoices as ResponseJson[];
+          else tags.choices = responsesOrChoices as ChoiceJson[];
         }
 
         // if (tags.choices || tags.responses) {
@@ -455,7 +492,7 @@ function parseQuestions(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const questions: Question[] = [];
+  const questions: QuestionJson[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
@@ -483,24 +520,25 @@ function parseQuestions(
 
 function parseMatchPairs(
   _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   let sideIdx = 0;
   let isHeading = false;
-  let heading: Heading | undefined;
-  const pairs: Pair[] = [];
-  let forKeys: BreakscapedString | undefined = undefined;
-  let forValues: BreakscapedString[] = [];
-  let pairKey: BreakscapedString | undefined = undefined;
-  let pairValues: BreakscapedString[] = [];
-  let keyAudio: AudioResource | undefined = undefined;
-  let keyImage: ImageResource | undefined = undefined;
+  let heading: HeadingJson | undefined;
+  const pairs: PairJson[] = [];
+  let forKeys: string | undefined = undefined;
+  let forValues: string[] = [];
+  let pairKey: string | undefined = undefined;
+  let pairValues: string[] = [];
+  let _pairValuesAst: TextAst[] = [];
+  let keyAudio: AudioResourceJson | undefined = undefined;
+  let keyImage: ImageResourceJson | undefined = undefined;
   let extraTags: BitContentProcessorResult = {};
   let isDefaultExampleCardSet = false;
-  let exampleCardSet: BreakscapedString | undefined;
+  let exampleCardSet: TextAst | undefined;
   let isDefaultExampleCard = false;
-  let exampleCard: BreakscapedString | undefined;
+  let exampleCard: TextAst | undefined;
   // let variant: ProcessedCardVariant | undefined;
 
   for (const card of cardSet.cards) {
@@ -509,21 +547,22 @@ function parseMatchPairs(
     forValues = [];
     pairKey = undefined;
     pairValues = [];
+    _pairValuesAst = [];
     keyAudio = undefined;
     keyImage = undefined;
     sideIdx = 0;
     extraTags = {};
     isDefaultExampleCard = false;
-    exampleCard = Breakscape.EMPTY_STRING;
+    exampleCard = undefined;
 
     for (const side of card.sides) {
       for (const content of side.variants) {
         // variant = content;
-        const { cardBodyStr, title, resources, isDefaultExample, example, ...tags } = content.data;
+        const { cardBody, cardBodyStr, title, resources, isDefaultExample, example, ...tags } = content.data;
 
         // Example
         isDefaultExampleCard = isDefaultExample === true ? true : isDefaultExampleCard;
-        exampleCard = example ? example : exampleCard;
+        exampleCard = example ? (example as TextAst) : exampleCard;
 
         // Get the 'heading' which is the [#title] at level 1
         const heading = title && title[1];
@@ -531,18 +570,18 @@ function parseMatchPairs(
 
         if (sideIdx === 0) {
           // First side
-          forKeys = heading;
+          forKeys = Breakscape.unbreakscape(heading);
           if (heading != null) {
             isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
-            exampleCardSet = example ? example : exampleCardSet;
+            exampleCardSet = example ? (example as TextAst) : exampleCardSet;
           } else if (Array.isArray(resources) && resources.length > 0) {
             // TODO - should search the correct resource type based on the bit type
             const resource = resources[0];
             // console.log('WARNING: Match card has resource on first side', tags.resource);
             if (resource.type === ResourceTag.audio) {
-              keyAudio = resource as AudioResource;
+              keyAudio = resource as AudioResourceJson;
             } else if (resource.type === ResourceTag.image) {
-              keyImage = resource as ImageResource;
+              keyImage = resource as ImageResourceJson;
             }
           } else {
             // If not a heading or resource, it is a pair
@@ -550,15 +589,17 @@ function parseMatchPairs(
           }
         } else {
           // Subsequent sides
-          forValues.push(heading ?? Breakscape.EMPTY_STRING);
+          forValues.push(Breakscape.unbreakscape(heading) ?? '');
           if (heading != null) {
             isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
-            exampleCardSet = example ? example : exampleCardSet;
+            exampleCardSet = example ? (example as TextAst) : exampleCardSet;
           } else if (title == null) {
             // If not a heading, it is a pair
             const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
+            const valueAst = ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode);
             pairValues.push(value);
-            if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = value;
+            _pairValuesAst.push(valueAst);
+            if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = valueAst;
           }
 
           // Fix: https://github.com/getMoreBrain/cosmic/issues/5454
@@ -576,9 +617,21 @@ function parseMatchPairs(
     }
 
     if (isHeading) {
+      let forValuesFinal: string | string[] = forValues;
+      if (Config.isOfBitType(bitType, BitType.matchMatrix)) {
+        // forValues is an array of values
+        forValuesFinal = forValues;
+      } else {
+        // Standard match, forValues is a single value
+        if (forValues.length >= 1) {
+          forValuesFinal = forValues[forValues.length - 1];
+        } else {
+          forValuesFinal = '';
+        }
+      }
       heading = builder.heading({
-        forKeys: forKeys ?? Breakscape.EMPTY_STRING,
-        forValues,
+        forKeys: forKeys ?? '',
+        forValues: forValuesFinal,
       });
     } else {
       // if (pairKey || keyAudio || keyImage) {
@@ -592,6 +645,7 @@ function parseMatchPairs(
         keyAudio,
         keyImage,
         values: pairValues,
+        _valuesAst: _pairValuesAst,
         ...extraTags,
         isDefaultExample,
         example,
@@ -824,10 +878,10 @@ function parseBotActionResponses(
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { instruction, reaction, cardBodyStr: feedback, ...tags } = content.data;
+        const { _instructionString, reaction, cardBodyStr: feedback, ...tags } = content.data;
 
         const botResponse = builder.botResponse({
-          response: instruction ?? Breakscape.EMPTY_STRING,
+          response: _instructionString ?? Breakscape.EMPTY_STRING,
           reaction: reaction ?? Breakscape.EMPTY_STRING,
           feedback: feedback ?? Breakscape.EMPTY_STRING,
           ...tags,
@@ -854,12 +908,12 @@ function parseIngredients(
       for (const content of side.variants) {
         const {
           title: titleArray,
-          instruction,
+          _instructionString,
           unit,
           unitAbbr,
           decimalPlaces,
           disableCalculation,
-          cardBodyStr: item,
+          cardBodyStr,
           cardBody,
           ...tags
         } = content.data;
@@ -870,23 +924,23 @@ function parseIngredients(
         const title =
           Array.isArray(titleArray) && titleArray.length > 0 ? titleArray[titleArray.length - 1] : undefined;
         let checked = false;
-        let quantity: number | undefined = NumberUtils.asNumber(instruction);
-        if (cardBody && cardBody.bodyParts) {
-          const select = cardBody.bodyParts.find((part) => part.type === BodyBitType.select) as Select | undefined;
+        let quantity: number | undefined = NumberUtils.asNumber(_instructionString);
+        if (cardBody && cardBody.bodyBits) {
+          const select: SelectJson | undefined = cardBody.bodyBits.find((c) => c.type === BodyBitType.select) as
+            | Select
+            | undefined;
           if (select) {
-            quantity = select.data.instruction ? NumberUtils.asNumber(select.data.instruction) : quantity;
-            if (select.data.options && select.data.options.length > 0) {
-              checked = select.data.options[0].isCorrect;
+            quantity = select._instructionString ? NumberUtils.asNumber(select._instructionString) : quantity;
+            if (select.options && select.options.length > 0) {
+              checked = select.options[0].isCorrect;
             }
           }
         }
 
-        const trimmedItem: BreakscapedString = item ? (item.trim() as BreakscapedString) : Breakscape.EMPTY_STRING;
-
         const ingredient = builder.ingredient({
           title,
           checked,
-          item: trimmedItem,
+          item: cardBodyStr,
           quantity,
           unit: unit ?? Breakscape.EMPTY_STRING,
           unitAbbr: unitAbbr ?? Breakscape.EMPTY_STRING,
@@ -986,21 +1040,28 @@ function parseCardBits(
   };
 }
 
-function cardBodyToBreakscapedString(cardBody: Body | undefined): BreakscapedString {
-  let bodyStr = '';
+// function cardBodyToString(cardBody: Body | undefined): string {
+//   let bodyStr = '';
 
-  if (cardBody && cardBody.bodyParts) {
-    for (const bodyPart of cardBody.bodyParts) {
-      if (bodyPart.type === BodyBitType.text) {
-        const asText = bodyPart as BodyText;
-        const bodyTextPart = asText.data.bodyText;
+//   if (cardBody && cardBody.body) {
+//     if (StringUtils.isString(cardBody.body)) {
+//       return cardBody.body as string;
+//     }
+//     const cb = ContentProcessorUtils.getBitmarkTextAst(cardBody.body as BitmarkTextNode);
 
-        bodyStr += bodyTextPart;
-      }
-    }
-  }
+//     // TODO - should really use text generator here, then unbreakscape the string
+//     // The current code will mean
+//     for (const bodyPart of cb) {
+//       if (bodyPart.type === BodyBitType.text) {
+//         const asText = bodyPart as BodyText;
+//         const bodyTextPart = asText.data.bodyText;
 
-  return bodyStr as BreakscapedString;
-}
+//         bodyStr += bodyTextPart;
+//       }
+//     }
+//   }
+
+//   return bodyStr as BreakscapedString;
+// }
 
 export { buildCards };

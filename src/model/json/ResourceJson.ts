@@ -155,7 +155,7 @@ export interface BaseResourceJson {
 
 export interface ImageResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   src1x: string;
   src2x: string;
@@ -169,7 +169,7 @@ export interface ImageResourceJson extends BaseResourceJson {
 
 export interface ImageLinkResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   src1x: string;
   src2x: string;
@@ -188,7 +188,7 @@ export interface ImageResponsiveResourceJson extends BaseResourceJson {
 
 export interface AudioResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   duration: number; // string?
   mute: boolean;
@@ -197,7 +197,7 @@ export interface AudioResourceJson extends BaseResourceJson {
 
 export interface AudioEmbedResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   duration: number; // string?
   mute: boolean;
@@ -206,7 +206,7 @@ export interface AudioEmbedResourceJson extends BaseResourceJson {
 
 export interface AudioLinkResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   duration: number; // string?
   mute: boolean;
@@ -215,7 +215,7 @@ export interface AudioLinkResourceJson extends BaseResourceJson {
 
 export interface VideoResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   width: string | null;
   height: string | null;
@@ -231,7 +231,7 @@ export interface VideoResourceJson extends BaseResourceJson {
 
 export interface VideoEmbedResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   width: string | null;
   height: string | null;
@@ -247,7 +247,7 @@ export interface VideoEmbedResourceJson extends BaseResourceJson {
 
 export interface VideoLinkResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   width: string | null;
   height: string | null;
@@ -268,7 +268,7 @@ export interface StillImageFilmResourceJson extends BaseResourceJson {
 
 export interface StillImageFilmEmbedResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   width: string | null;
   height: string | null;
@@ -284,7 +284,7 @@ export interface StillImageFilmEmbedResourceJson extends BaseResourceJson {
 
 export interface StillImageFilmLinkResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
+  // url: string;
   src: string;
   width: string | null;
   height: string | null;
@@ -300,45 +300,45 @@ export interface StillImageFilmLinkResourceJson extends BaseResourceJson {
 
 export interface ArticleResourceJson extends BaseResourceJson {
   format: string;
-  url: string;
-  href: string;
+  // url: string;
+  // href: string;
   body: string;
 }
 
 export interface DocumentResourceJson extends BaseResourceJson {
   format: string;
   url: string;
-  href: string;
-  body: string;
+  // href: string;
+  // body: string;
 }
 
 export interface DocumentEmbedResourceJson extends BaseResourceJson {
   format: string;
   url: string;
-  href: string;
-  body: string;
+  // href: string;
+  // body: string;
 }
 
 export interface DocumentLinkResourceJson extends BaseResourceJson {
   format: string;
   url: string;
-  href: string;
-  body: string;
+  // href: string;
+  // body: string;
 }
 
 export interface DocumentDownloadResourceJson extends BaseResourceJson {
   format: string;
   url: string;
-  href: string;
-  body: string;
+  // href: string;
+  // body: string;
 }
 
 export interface AppLinkResourceJson extends BaseResourceJson {
-  app: string;
+  // app: string;
   url: string;
 }
 
 export interface WebsiteLinkResourceJson extends BaseResourceJson {
   url: string;
-  siteName: string;
+  // siteName: string;
 }

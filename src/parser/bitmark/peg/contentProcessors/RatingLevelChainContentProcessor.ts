@@ -4,6 +4,7 @@ import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { NumberUtils } from '../../../../utils/NumberUtils';
+import { TextParser } from '../../../text/TextParser';
 
 import {
   BitContent,
@@ -15,6 +16,7 @@ import {
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
+const textParser = new TextParser();
 
 function ratingLevelChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -40,7 +42,7 @@ function ratingLevelChainContentProcessor(
 
   const node = builder.ratingLevelStartEnd({
     level,
-    label,
+    label: label ? textParser.toAst(label) : undefined,
   });
 
   switch (key) {

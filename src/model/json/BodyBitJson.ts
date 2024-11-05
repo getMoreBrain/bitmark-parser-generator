@@ -12,25 +12,27 @@ export interface BaseBodyBitJson {
   type: string; // body bit type
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
+  // pageNumber: JsonText;
+  // marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface GapJson extends BaseBodyBitJson {
   type: 'gap'; // body bit type
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
+  // pageNumber: JsonText;
+  // marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
   solutions: string[];
 }
 
@@ -44,6 +46,7 @@ export interface MarkJson extends BaseBodyBitJson {
   // instruction: Text;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface SelectJson extends BaseBodyBitJson {
@@ -52,6 +55,8 @@ export interface SelectJson extends BaseBodyBitJson {
   postfix: string;
   isExample: boolean;
   options: SelectOptionJson[];
+  _hintString: string;
+  _instructionString: string;
 }
 
 export interface SelectOptionJson {
@@ -59,12 +64,13 @@ export interface SelectOptionJson {
   isCorrect: boolean;
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
+  // pageNumber: JsonText;
+  // marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface HighlightJson extends BaseBodyBitJson {
@@ -80,10 +86,11 @@ export interface HighlightTextJson {
   isCorrect: boolean;
   item: JsonText;
   lead: JsonText;
-  pageNumber: JsonText;
-  marginNumber: JsonText;
+  // pageNumber: JsonText;
+  // marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
