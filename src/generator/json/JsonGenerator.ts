@@ -752,7 +752,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const bodyJson = this.convertBreakscapedStringToJsonText(fullBodyTextStr, textFormat);
     const plainTextBodyJson = this.convertBreakscapedStringToJsonText(plainBodyTextStr, TextFormat.text);
     const bodyAst = bodyJson as TextAst;
-    this.bodyJson = this.concatenatePlainTextWithJsonTexts(bodyJson, plainTextBodyJson as string);
+
+    // Newlines will have been lost from the end of fullBodyTextStr, and start of plainBodyTextStr
+    // Count then and add them back when merging
+    const newlines =
+      StringUtils.countOccurrencesAtEnd(fullBodyTextStr, '\n') +
+      StringUtils.countOccurrencesAtStart(plainBodyTextStr, '\n');
+    this.bodyJson = this.concatenatePlainTextWithJsonTexts(bodyJson, newlines, plainTextBodyJson as string);
 
     // Loop the body parts again to create the body bits:
     // - For text output the body bits are inserted into the 'placeholders' object
@@ -2658,11 +2664,19 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * @param text the text to concatenate
    * @param textPlain the plain text to concatenate
    */
-  protected concatenatePlainTextWithJsonTexts(text: JsonText, textPlain: string): JsonText {
+  protected concatenatePlainTextWithJsonTexts(text: JsonText, extraBreaks: number, textPlain: string): JsonText {
     if (Array.isArray(text)) {
+      textPlain = textPlain.trim();
       if (textPlain) {
         const splitText = textPlain.split('\n');
         const content: TextNode[] = [];
+
+        for (let i = 0; i < extraBreaks; i++) {
+          content.push({
+            type: TextNodeType.hardBreak,
+          });
+        }
+
         for (let i = 0; i < splitText.length; i++) {
           const t = splitText[i];
           if (t) {
@@ -2694,7 +2708,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       return text;
     }
 
-    return `${text ?? ''}${textPlain ?? ''}`;
+    return `${text ?? ''}${'\n'.repeat(extraBreaks)}${textPlain ?? ''}`;
   }
 
   /**

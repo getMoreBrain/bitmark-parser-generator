@@ -30,6 +30,51 @@ class StringUtils {
   }
 
   /**
+   * Count the occurrences of a substring in a string.
+   *
+   * @param str the string to search
+   * @param subStr the substring to search for
+   * @returns the number of occurrences of the substring in the string
+   */
+  countOccurrences(str: string, subStr: string): number {
+    return str.split(subStr).length - 1;
+  }
+
+  /**
+   * Count the occurrences of a substring at the start of a string.
+   *
+   * @param str the string to search
+   * @param subStr the substring to search for
+   * @returns the number of occurrences of the substring at the start of the string
+   */
+  countOccurrencesAtStart(str: string, subStr: string): number {
+    let count = 0;
+    while (str.startsWith(subStr)) {
+      count++;
+      str = str.substring(subStr.length);
+    }
+
+    return count;
+  }
+
+  /**
+   * Count the occurrences of a substring at the end of a string.
+   *
+   * @param str the string to search
+   * @param subStr the substring to search for
+   * @returns the number of occurrences of the substring at the end of the string
+   */
+  countOccurrencesAtEnd(str: string, subStr: string): number {
+    let count = 0;
+    while (str.endsWith(subStr)) {
+      count++;
+      str = str.substring(0, str.length - subStr.length);
+    }
+
+    return count;
+  }
+
+  /**
    * Split a string using a set of placeholders, returning an array of strings and placeholders.
    *
    * e.g.

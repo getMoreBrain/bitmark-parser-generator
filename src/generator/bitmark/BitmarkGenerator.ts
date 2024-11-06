@@ -1921,7 +1921,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected writeCL(): void {
-    this.write(']');
+    // HACK to fix breakscaping when string ends with a ^ (must add a space)
+    this.writer.getLastWrite().endsWith('^') ? this.write(' ]') : this.write(']');
   }
 
   protected writeAmpersand(): void {
