@@ -285,12 +285,12 @@ export interface Flashcard {
   example?: Example;
 }
 
-// DescriptionListItem
+// DefinitionListItem
 
-export interface DescriptionListItem {
+export interface DefinitionListItem {
   term: BreakscapedString; // TextAst;
   description?: BreakscapedString; // TextAst;
-  alternativeDescriptions?: BreakscapedString[]; // TextAst[];
+  alternativeDefinitions?: BreakscapedString[]; // TextAst[];
   itemLead?: ItemLead;
   hint?: BreakscapedString; // TextAst;
   instruction?: BreakscapedString; // TextAst;
@@ -557,7 +557,7 @@ export interface CardNode {
   questions?: Question[];
   elements?: BreakscapedString[];
   flashcards?: Flashcard[];
-  descriptions?: DescriptionListItem[];
+  definitions?: DefinitionListItem[];
   statement?: Statement;
   statements?: Statement[];
   choices?: Choice[];

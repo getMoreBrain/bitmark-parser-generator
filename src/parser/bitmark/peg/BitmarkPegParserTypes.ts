@@ -200,7 +200,7 @@ export interface BitSpecificCards {
   sampleSolution?: BreakscapedString;
   elements?: BreakscapedString[];
   flashcards?: Flashcard[];
-  descriptions?: DescriptionListItem[];
+  definitions?: DefinitionListItem[];
   statements?: Statement[];
   responses?: Response[];
   quizzes?: Quiz[];
