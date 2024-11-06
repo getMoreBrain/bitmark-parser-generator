@@ -186,10 +186,16 @@ BodyChar
 
 // Dividers
 Divider
- = value: (Footer)
+ = value: (
+  FooterDivider
+  / PlainTextDivider)
 
-// Footer
-Footer
+// Plain text divider
+PlainTextDivider
+ = value: (NL "$$$$" WNL) { return helper.handlePlainTextDivider(value); }
+
+// Footer divider
+FooterDivider
  = value: (NL "~~~~" WNL) { return helper.handleFooterDivider(value); }
 
 // Modern CardSet

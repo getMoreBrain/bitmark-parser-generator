@@ -191,7 +191,7 @@ export interface Bit {
   choices?: Choice[];
   responses?: Response[];
   cardNode?: CardNode;
-  footer?: FooterText;
+  footer?: Footer;
 
   markup?: string; // Called 'bitmark' in the JSON
   parser?: ParserInfo;
@@ -445,6 +445,7 @@ export interface BodyText extends BodyPart {
   type: 'text';
   data: {
     bodyText: BreakscapedString;
+    isPlain: boolean;
   };
 }
 
@@ -574,8 +575,14 @@ export interface CardNode {
 
 // Footer
 
+export interface Footer {
+  footerParts?: FooterText[];
+  bodyJson?: unknown;
+}
+
 export interface FooterText {
   footerText: BreakscapedString;
+  isPlain: boolean;
 }
 
 //

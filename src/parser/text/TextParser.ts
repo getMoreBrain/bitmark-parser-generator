@@ -8,6 +8,10 @@ export interface BitmarkTextParserOptions {
   textFormat?: TextFormatType;
 }
 
+const START_HAT_REGEX = new RegExp('^\\^\\n', 'gm');
+const MIDDLE_HAT_REGEX = new RegExp('\\n\\^\\n', 'gm');
+const END_HAT_REGEX = new RegExp('\\n\\^$', 'gm');
+
 class TextParser {
   /**
    * Get the version of the text parser
@@ -71,7 +75,7 @@ class TextParser {
   toAst(text: string | TextAst | undefined, options?: BitmarkTextParserOptions): TextAst {
     // If input is not a string, return it as is
     if (Array.isArray(text)) return text;
-    const str = (text as string) ?? '';
+    let str = (text as string) ?? '';
 
     // If the str is empty, return an empty array (as otherwise the parser will
     // return an empty paragraph which is unnecessary)
@@ -84,6 +88,19 @@ class TextParser {
     if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
 
     const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
+
+    // There is a special case for pre-processing the string passed to the text parser
+    // If the string contains starts with ^/n, contains /n^/n or ends with /n^, the parser will generated
+    // an empty text block:
+    // {
+    //   "text": "",
+    //   "type": "text"
+    // },
+    //
+    // This happens because the single ^ is removed by the breakscaping algorithm.
+    // This in itself is not wrong, but it is undesired because it will be lost when converting back to text.
+    // Therefore the string is pre-processed to remove these empty text blocks.
+    str = str.replace(START_HAT_REGEX, '\n').replace(END_HAT_REGEX, '\n').replace(MIDDLE_HAT_REGEX, '\n\n').trim();
 
     return bitmarkTextParse(str, {
       startRule,
