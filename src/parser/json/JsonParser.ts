@@ -26,7 +26,6 @@ import {
   Choice,
   Ingredient,
   Flashcard,
-  FooterText,
   Gap,
   Heading,
   Highlight,
@@ -51,6 +50,7 @@ import {
   Servings,
   RatingLevelStartEnd,
   CaptionDefinitionList,
+  Footer,
   DefinitionListItem,
 } from '../../model/ast/Nodes';
 import {
@@ -1396,9 +1396,8 @@ class JsonParser {
         // Get the placeholders from the text parser
         placeholders = this.textGenerator.getPlaceholders();
       } else {
-        // Body is a string (legacy)
-        bodyStr = Breakscape.breakscape(body as string);
-        // bodyStr = body as BreakscapedString;
+        // Body is a string (legacy bitmark v2, or not bitmark--/++)
+        bodyStr = this.convertJsonTextToBreakscapedString(body, textFormat);
       }
 
       // Placeholders
@@ -1437,7 +1436,7 @@ class JsonParser {
   }
 
   private bodyTextToAst(bodyText: BreakscapedString): BodyText {
-    return builder.bodyText({ text: bodyText ?? Breakscape.EMPTY_STRING });
+    return builder.bodyText({ text: bodyText ?? Breakscape.EMPTY_STRING }, false);
   }
 
   private bodyBitToAst(bit: BodyBitJson): BodyPart {
@@ -1462,11 +1461,12 @@ class JsonParser {
     return this.bodyTextToAst(Breakscape.EMPTY_STRING);
   }
 
-  private footerToAst(footerText: JsonText, textFormat: TextFormatType): FooterText | undefined {
+  private footerToAst(footerText: JsonText, textFormat: TextFormatType): Footer | undefined {
     const text = this.convertJsonTextToBreakscapedString(footerText, textFormat);
 
     if (text) {
-      return builder.footerText({ text });
+      const footerText = builder.footerText({ text }, false);
+      return builder.footer({ footerParts: [footerText] });
     }
     return undefined;
   }
@@ -1615,6 +1615,9 @@ class JsonParser {
     // return true from isAst() and so will be treated as a string
     textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
 
+    const bitTagOnly = (textFormat !== TextFormat.bitmarkPlusPlus &&
+      textFormat !== TextFormat.bitmarkMinusMinus) as boolean;
+
     if (text == null) return undefined;
     if (this.textParser.isAst(text)) {
       // Use the text generator to convert the TextAst to breakscaped string
@@ -1634,14 +1637,18 @@ class JsonParser {
 
           strArray[i] = parsedText;
         } else {
-          strArray[i] = Breakscape.breakscape(t as string);
+          strArray[i] = Breakscape.breakscape(t as string, {
+            bitTagOnly,
+          });
           // strArray[i] = t as BreakscapedString;
         }
       }
       return strArray as R;
     }
 
-    return Breakscape.breakscape(text as string) as R;
+    return Breakscape.breakscape(text as string, {
+      bitTagOnly,
+    }) as R;
     // return text as BreakscapedString as R;
   }
 

@@ -357,7 +357,9 @@ class BitmarkPegParserValidator {
       // These tags are always allowed here, and validated later
       addExtraValidTypeKeys(TypeKey.TextFormat, 1, 0);
       addExtraValidTypeKeys(TypeKey.BodyText, Count.infinity, 0);
-      addExtraValidTypeKeys(TypeKey.Footer, Count.infinity, 0); // No warning for multiple footers, just ignore
+      addExtraValidTypeKeys(TypeKey.BodyTextPlain, Count.infinity, 0);
+      addExtraValidTypeKeys(TypeKey.PlainTextDivider, Count.infinity, 0);
+      addExtraValidTypeKeys(TypeKey.FooterDivider, Count.infinity, 0); // No warning for multiple footers, just ignore
     } else if (contentDepth === BitContentLevel.Card) {
       // These tags are always allowed here, and validated later
       addExtraValidTypeKeys(TypeKey.CardText, Count.infinity, 0);

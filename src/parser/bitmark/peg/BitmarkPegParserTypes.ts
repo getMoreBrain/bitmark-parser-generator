@@ -32,7 +32,6 @@ import {
   Choice,
   Question,
   Resource,
-  FooterText,
   BotResponse,
   Person,
   ExtraProperties,
@@ -47,6 +46,7 @@ import {
   Servings,
   RatingLevelStartEnd,
   CaptionDefinitionList,
+  Footer,
   DefinitionListItem,
 } from '../../../model/ast/Nodes';
 
@@ -112,7 +112,7 @@ export interface BitContentProcessorResult {
   cardBody?: Body;
   cardBodyStr?: BreakscapedString;
   body?: Body;
-  footer?: FooterText;
+  footer?: Footer;
   imageSource?: ImageSource;
   technicalTerm?: TechnicalTerm;
   servings?: Servings;
@@ -258,6 +258,7 @@ const TypeKey = superenum({
   // Text
   BodyChar: 'BodyChar',
   BodyText: 'BodyText',
+  BodyTextPlain: 'BodyTextPlain',
 
   // Card Set
   CardSet: 'CardSet',
@@ -270,7 +271,8 @@ const TypeKey = superenum({
   TrueFalseChain: 'TrueFalseChain',
 
   // Dividers
-  Footer: 'Footer',
+  PlainTextDivider: 'PlainTextDivider',
+  FooterDivider: 'FooterDivider',
 });
 
 export type TypeKeyType = EnumType<typeof TypeKey>;

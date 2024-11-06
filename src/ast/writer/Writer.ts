@@ -70,4 +70,11 @@ export interface Writer {
    * Writes a single whitespace character to the output.
    */
   writeWhiteSpace(): this;
+
+  /**
+   * Get the last string non-empty that was written.
+   *
+   * @returns The last non-empty string that was written, or an empty string if nothing has been written.
+   */
+  getLastWrite(): string;
 }

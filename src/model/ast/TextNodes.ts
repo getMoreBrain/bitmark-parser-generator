@@ -7,7 +7,7 @@ export type TextAst = TextNode[];
 
 export interface TextNode {
   type: TextNodeTypeType;
-  marks: TextMark[];
+  marks?: TextMark[];
   text?: string;
   content?: TextNode[];
   parent?: TextNodeTypeType;

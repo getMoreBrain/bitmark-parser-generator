@@ -250,4 +250,14 @@ This is some *^** BOLD **^* text^
 ^^No end tag, so NOT bold *
 
 
+[^__nasty][^__
+[^!!nasty][^!!
+[^==nasty][^==
+nasty^]
+nasty^^]
+nasty^^^]
+[^^]
+^^]
+
+
 The end!

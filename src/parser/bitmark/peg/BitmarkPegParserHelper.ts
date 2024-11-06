@@ -226,12 +226,26 @@ class BitmarkPegParserHelper {
   // Divider parsing
   //
 
+  // Plain text divider
+  handlePlainTextDivider(value: unknown): BitContent {
+    value = this.reduceToString(value);
+
+    return {
+      type: TypeKey.PlainTextDivider,
+      value,
+      parser: {
+        text: this.parserText(),
+        location: this.parserLocation(),
+      },
+    };
+  }
+
   // Footer divider
   handleFooterDivider(value: unknown): BitContent {
     value = this.reduceToString(value);
 
     return {
-      type: TypeKey.Footer,
+      type: TypeKey.FooterDivider,
       value,
       parser: {
         text: this.parserText(),

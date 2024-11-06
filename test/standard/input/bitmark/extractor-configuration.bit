@@ -3,6 +3,7 @@
 [%1]
 [!My first config in TOML]
 
+$$$$
 [Plugins]
 
 # The enabled plugins and the order in which the plugins are run within each execution phase
@@ -106,8 +107,8 @@ Config.blockRole = "chapterHeading"
 Config.generateBitmark = true
 Config.template = '''
 [^.chapter]
-[^%${1}][^%][^%${originalPageNo}][^%]
-[^#${2}]
+[%${1}][%][%${originalPageNo}][%]
+[#${2}]
 '''
 # Config.replacerRules = { 1 = { breakscape = true }, 2 = { breakscape = false } }
 

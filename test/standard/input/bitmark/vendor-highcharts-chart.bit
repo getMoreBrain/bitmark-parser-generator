@@ -35,7 +35,6 @@
   [%item 1]
 [!This is my first chart bit with a JSON body]
 {"Test": 100, "Test2": "[%item 1][%lead]"}
-[?hint]
 
 
 [.vendor-highcharts-chart]

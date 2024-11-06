@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.34.0
+Version: 1.35.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -214,6 +214,7 @@ flashcard (since: 1.3.0)
 flashcard-1 (since: 1.3.0)
 focus-image (since: 1.3.0)
 foot-note (since: 1.3.0)
+formula (since: 1.35.0)
 gap-text (since: 1.5.15)
 gap-text-instruction-grouped (since: 1.5.15)
 glossary-term (since: 1.33.0)
