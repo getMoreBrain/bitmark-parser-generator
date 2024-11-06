@@ -46,8 +46,8 @@ import {
   Servings,
   RatingLevelStartEnd,
   CaptionDefinitionList,
-  DescriptionListItem,
   Footer,
+  DefinitionListItem,
 } from '../../../model/ast/Nodes';
 
 const CARD_DIVIDER_V2 = '====';

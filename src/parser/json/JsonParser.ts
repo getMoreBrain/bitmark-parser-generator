@@ -50,8 +50,8 @@ import {
   Servings,
   RatingLevelStartEnd,
   CaptionDefinitionList,
-  DescriptionListItem,
   Footer,
+  DefinitionListItem,
 } from '../../model/ast/Nodes';
 import {
   BitJson,

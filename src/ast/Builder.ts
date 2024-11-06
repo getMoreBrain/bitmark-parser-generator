@@ -58,9 +58,9 @@ import {
   RatingLevelStartEnd,
   CaptionDefinition,
   CaptionDefinitionList,
-  DescriptionListItem,
   Footer,
   FooterText,
+  DefinitionListItem,
 } from '../model/ast/Nodes';
 
 /**
