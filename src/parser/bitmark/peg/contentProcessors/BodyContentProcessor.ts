@@ -8,6 +8,7 @@ import { BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { TextFormat, TextFormatType } from '../../../../model/enum/TextFormat';
 import { BodyBitJson, GapJson, HighlightJson, MarkJson, SelectJson } from '../../../../model/json/BodyBitJson';
+import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 import { BitContentProcessorResult, BitmarkPegParserContext, ContentDepthType } from '../BitmarkPegParserTypes';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
@@ -123,7 +124,13 @@ class BodyContentProcessor {
 
       const parserPlainText: JsonText = plainBodyTextStr;
 
-      finalBodyText = ContentProcessorUtils.concatenatePlainTextWithAstTexts(parsedBodyText, parserPlainText);
+      // Newlines will have been lost from the end of bodyTextStr, and start of plainBodyTextStr
+      // Count then and add them back when merging
+      const newlines =
+        StringUtils.countOccurrencesAtEnd(bodyTextStr, '\n') +
+        StringUtils.countOccurrencesAtStart(plainBodyTextStr, '\n');
+
+      finalBodyText = ContentProcessorUtils.concatenatePlainTextWithAstTexts(parsedBodyText, newlines, parserPlainText);
       finalBodyString = Breakscape.unbreakscape(bodyStr).trim() as BreakscapedString;
       const finalBodyIsAst = Array.isArray(finalBodyText);
       const bodyAst = finalBodyIsAst ? (finalBodyText as TextAst) : undefined;

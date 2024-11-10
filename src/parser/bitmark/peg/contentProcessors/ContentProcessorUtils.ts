@@ -40,13 +40,22 @@ class ContentProcessorUtils {
    * Returns the combined text.
    *
    * @param text the text to concatenate
+   * @param extraBreaks extra breaks to add between concatenated texts
    * @param textPlain the plain text to concatenate
    */
-  public concatenatePlainTextWithAstTexts(text: JsonText, textPlain: string): JsonText {
+  public concatenatePlainTextWithAstTexts(text: JsonText, extraBreaks: number, textPlain: string): JsonText {
     if (Array.isArray(text)) {
+      textPlain = textPlain.trim();
       if (textPlain) {
         const splitText = textPlain.split('\n');
         const content: TextNode[] = [];
+
+        for (let i = 0; i < extraBreaks; i++) {
+          content.push({
+            type: TextNodeType.hardBreak,
+          });
+        }
+
         for (let i = 0; i < splitText.length; i++) {
           const t = splitText[i];
           if (t) {
@@ -78,7 +87,7 @@ class ContentProcessorUtils {
       return text;
     }
 
-    return `${text ?? ''}${textPlain ?? ''}`;
+    return `${text ?? ''}${'\n'.repeat(extraBreaks)}${textPlain ?? ''}`;
   }
 
   public toItemLeadHintInstruction(item: ItemLeadHintInstructionNode): ItemLeadHintInstuction {
