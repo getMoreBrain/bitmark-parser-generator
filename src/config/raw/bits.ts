@@ -501,6 +501,17 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.text,
   },
+  [BitType.formula]: {
+    since: '1.35.0',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+    ],
+    textFormatDefault: TextFormat.latex,
+  },
+
   [BitType.appCodeCell]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.appCodeEditor]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.appCodeIde]: { since: '1.4.3', baseBitType: BitType.code },
