@@ -52,17 +52,22 @@ import {
   Footer,
 } from '../../../model/ast/Nodes';
 import {
+  BotResponseJson,
+  CaptionDefinitionListJson,
   ChoiceJson,
   DescriptionListItemJson,
   ExampleJson,
   FlashcardJson,
   HeadingJson,
+  IngredientJson,
   MatrixJson,
   PairJson,
+  PersonJson,
   QuestionJson,
   QuizJson,
   ResponseJson,
   StatementJson,
+  TableJson,
 } from '../../../model/json/BitJson';
 
 const CARD_DIVIDER_V2 = '====';
@@ -134,7 +139,7 @@ export interface BitContentProcessorResult {
   ratingLevelStart?: RatingLevelStartEnd;
   ratingLevelEnd?: RatingLevelStartEnd;
   label?: TextAst;
-  person?: Person;
+  person?: PersonJson;
   propertyTitle?: BreakscapedString;
   trueFalse?: TrueFalseValue[];
   isDefaultExample?: boolean;
@@ -150,7 +155,7 @@ export interface BitContentProcessorResult {
   responses?: ResponseJson[];
   solution?: BreakscapedString;
   mark?: BreakscapedString[];
-  title?: string[];
+  title?: { titleAst: TextAst; titleString: string }[];
   subtitle?: BreakscapedString;
   propertyStyleResources?: { [key: string]: Resource };
   resources?: ResourceJson[];
@@ -206,7 +211,9 @@ export interface BitContentProcessorResult {
 
 export interface BitSpecificTitles {
   title?: TextAst;
+  titleString?: string;
   subtitle?: TextAst;
+  subtitleString?: string;
   level?: number;
 }
 
@@ -229,10 +236,10 @@ export interface BitSpecificCards {
   matrix?: MatrixJson[];
   choices?: ChoiceJson[];
   questions?: QuestionJson[];
-  table?: Table;
-  botResponses?: BotResponse[];
-  ingredients?: Ingredient[];
-  captionDefinitionList?: CaptionDefinitionList;
+  table?: TableJson;
+  botResponses?: BotResponseJson[];
+  ingredients?: IngredientJson[];
+  captionDefinitionList?: CaptionDefinitionListJson;
   cardBits?: CardBit[];
   internalComments?: string[]; // ??
 }

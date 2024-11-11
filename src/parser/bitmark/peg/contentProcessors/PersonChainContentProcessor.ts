@@ -6,6 +6,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { ImageResourceJson, ResourceJson } from '../../../../model/json/ResourceJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -57,17 +58,17 @@ function personChainContentProcessor(
 
 function extractAvatarImage(
   context: BitmarkPegParserContext,
-  resources: Resource[] | undefined,
-): ImageResource | undefined {
+  resources: ResourceJson[] | undefined,
+): ImageResourceJson | undefined {
   // Extract avatarImage from the resources
   // Return the actual resource, and add all other resources to excess resources
-  let avatarImage: ImageResource | undefined;
+  let avatarImage: ImageResourceJson | undefined;
   const excessResources: Resource[] = [];
 
   if (resources) {
     for (const r of resources.reverse()) {
       if (!avatarImage && ResourceTag.image === r.type) {
-        avatarImage = r as ImageResource;
+        avatarImage = r.image;
       } else {
         excessResources.push(r);
       }

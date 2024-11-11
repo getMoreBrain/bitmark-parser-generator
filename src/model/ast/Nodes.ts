@@ -2,13 +2,35 @@ import { BitTypeType } from '../enum/BitType';
 import { BodyBitTypeType } from '../enum/BodyBitType';
 import { ResourceTagType } from '../enum/ResourceTag';
 import { TextFormatType } from '../enum/TextFormat';
-import { ChoiceJson, FlashcardJson, ResponseJson, StatementJson } from '../json/BitJson';
-import { ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from '../json/ResourceJson';
+import { ImageResourceWrapperJson, ResourceJson } from '../json/ResourceJson';
 import { ParserError } from '../parser/ParserError';
 import { ParserInfo } from '../parser/ParserInfo';
 
-import { BreakscapedString } from './BreakscapedString';
-import { BitmarkTextNode } from './TextNodes';
+import { BitmarkTextNode, TextAst } from './TextNodes';
+
+import {
+  BotResponseJson,
+  CaptionDefinitionListJson,
+  ChoiceJson,
+  DescriptionListItemJson,
+  ExampleJson,
+  FlashcardJson,
+  HeadingJson,
+  ImageSourceJson,
+  IngredientJson,
+  MarkConfigJson,
+  MatrixJson,
+  PairJson,
+  PersonJson,
+  QuestionJson,
+  QuizJson,
+  RatingLevelStartEndJson,
+  ResponseJson,
+  ServingsJson,
+  StatementJson,
+  TableJson,
+  TechnicalTermJson,
+} from '../json/BitJson';
 
 // Node
 
@@ -154,30 +176,34 @@ export interface Bit {
   productVideo?: Property;
   productVideoList?: Property;
   productFolder?: Property;
-  technicalTerm?: TechnicalTerm;
-  servings?: Servings;
-  ratingLevelStart?: RatingLevelStartEnd;
-  ratingLevelEnd?: RatingLevelStartEnd;
+  technicalTerm?: TechnicalTermJson;
+  servings?: ServingsJson;
+  ratingLevelStart?: RatingLevelStartEndJson;
+  ratingLevelEnd?: RatingLevelStartEndJson;
   ratingLevelSelected?: Property;
-  markConfig?: MarkConfig[];
+  markConfig?: MarkConfigJson[];
   extraProperties?: ExtraProperties;
   book?: string;
-  title?: BitmarkTextNode; // BitmarkTextNode;
-  subtitle?: BitmarkTextNode; // BitmarkTextNode;
+  title?: TextAst;
+  subtitle?: TextAst;
   level?: number; // 'level' can either the subtitle level [##subtitle]
   toc?: Property;
   progress?: Property;
   anchor?: string;
   reference?: string;
   referenceEnd?: string;
-  itemLead?: ItemLead;
-  hint?: BitmarkTextNode; // BitmarkTextNode;
-  instruction?: BitmarkTextNode; // BitmarkTextNode;
+  item?: TextAst;
+  lead?: TextAst;
+  pageNumber?: TextAst;
+  marginNumber?: TextAst;
+  hint?: TextAst;
+  instruction?: TextAst;
   isExample?: boolean;
   isDefaultExample: boolean;
-  example?: Example;
-  imageSource?: ImageSource;
-  person?: Person;
+  example?: ExampleJson;
+  _defaultExample?: ExampleJson;
+  imageSource?: ImageSourceJson;
+  person?: PersonJson;
   imagePlaceholder?: ImageResourceWrapperJson;
   resources?: ResourceJson[];
   body?: Body;
@@ -413,7 +439,7 @@ export interface Ingredient {
 // RatingLevelStartEnd
 export interface RatingLevelStartEnd {
   level: number;
-  label?: BitmarkTextNode; // BitmarkTextNode
+  label?: TextAst; // BitmarkTextNode
 }
 
 // CaptionDefinition
@@ -534,35 +560,36 @@ export interface HighlightText {
 }
 
 export interface CardBit {
-  itemLead?: ItemLead;
-  hint?: BitmarkTextNode; // BitmarkTextNode;
-  instruction?: BitmarkTextNode; // BitmarkTextNode;
+  item: TextAst;
+  lead: TextAst;
+  hint?: TextAst; // BitmarkTextNode;
+  instruction?: TextAst; // BitmarkTextNode;
   isExample?: boolean;
   isDefaultExample: boolean;
-  example?: Example;
+  example?: ExampleJson;
   extraProperties?: ExtraProperties;
   body?: Body;
 }
 
 // Card Node
 export interface CardNode {
-  questions?: Question[];
+  questions?: QuestionJson[];
   elements?: string[];
   flashcards?: FlashcardJson[];
-  descriptions?: DescriptionListItem[];
+  descriptions?: DescriptionListItemJson[];
   statement?: StatementJson;
   statements?: StatementJson[];
   choices?: ChoiceJson[];
   responses?: ResponseJson[];
-  quizzes?: Quiz[];
-  heading?: Heading;
-  pairs?: Pair[];
-  matrix?: Matrix[];
-  table?: Table;
-  botResponses?: BotResponse[];
+  quizzes?: QuizJson[];
+  heading?: HeadingJson;
+  pairs?: PairJson[];
+  matrix?: MatrixJson[];
+  table?: TableJson;
+  botResponses?: BotResponseJson[];
   cardBits?: CardBit[];
-  ingredients?: Ingredient[];
-  captionDefinitionList?: CaptionDefinitionList;
+  ingredients?: IngredientJson[];
+  captionDefinitionList?: CaptionDefinitionListJson;
 }
 
 // Footer

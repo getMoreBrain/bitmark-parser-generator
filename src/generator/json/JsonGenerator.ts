@@ -4,17 +4,10 @@ import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
-import { AudioLinkResource, Body, CaptionDefinitionList, DescriptionListItem, Footer } from '../../model/ast/Nodes';
-import { VideoEmbedResource } from '../../model/ast/Nodes';
-import { VideoLinkResource } from '../../model/ast/Nodes';
-import { DocumentResource } from '../../model/ast/Nodes';
-import { DocumentEmbedResource } from '../../model/ast/Nodes';
-import { DocumentLinkResource } from '../../model/ast/Nodes';
-import { DocumentDownloadResource } from '../../model/ast/Nodes';
-import { StillImageFilmEmbedResource } from '../../model/ast/Nodes';
-import { StillImageFilmLinkResource } from '../../model/ast/Nodes';
-import { Flashcard, ImageLinkResource, Mark, MarkConfig } from '../../model/ast/Nodes';
 import { AudioEmbedResource, ImageSource, Ingredient, RatingLevelStartEnd, Table } from '../../model/ast/Nodes';
+import { BitmarkAst, Bit, ItemLead } from '../../model/ast/Nodes';
+import { Example, ExtraProperties } from '../../model/ast/Nodes';
+import { Body, CardBit, Footer } from '../../model/ast/Nodes';
 import { BitmarkTextNode, JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
@@ -35,35 +28,6 @@ import { UrlUtils } from '../../utils/UrlUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
 
 import {
-  BotResponse,
-  Example,
-  ExtraProperties,
-  Highlight,
-  Matrix,
-  Pair,
-  Person,
-  Question,
-  Quiz,
-} from '../../model/ast/Nodes';
-import {
-  BitmarkAst,
-  Bit,
-  ItemLead,
-  Response,
-  Statement,
-  Choice,
-  Heading,
-  ImageResource,
-  Resource,
-  ArticleResource,
-  Gap,
-  AudioResource,
-  VideoResource,
-  AppLinkResource,
-  WebsiteLinkResource,
-  Select,
-} from '../../model/ast/Nodes';
-import {
   BitJson,
   BotResponseJson,
   CaptionDefinitionListJson,
@@ -76,7 +40,6 @@ import {
   IngredientJson,
   ListItemJson,
   MarkConfigJson,
-  MatrixCellJson,
   MatrixJson,
   PairJson,
   PersonJson,
@@ -87,14 +50,6 @@ import {
   StatementJson,
   TableJson,
 } from '../../model/json/BitJson';
-import {
-  GapJson,
-  HighlightJson,
-  HighlightTextJson,
-  MarkJson,
-  SelectJson,
-  SelectOptionJson,
-} from '../../model/json/BodyBitJson';
 import {
   AppLinkResourceJson,
   ArticleResourceJson,
@@ -425,44 +380,46 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> imageSource
 
   protected enter_imageSource(node: NodeInfo, route: NodeInfo[]): void {
-    const imageSource = node.value as ImageSource;
+    const imageSourceJson = node.value as ImageSourceJson;
+    // const imageSource = node.value as ImageSource;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
-    const { url, mockupId, size, format, trim } = imageSource;
+    // const { url, mockupId, size, format, trim } = imageSource;
 
-    const imageSourceJson = {} as ImageSourceJson;
-    this.addProperty(imageSourceJson, 'url', url ?? '', true);
-    this.addProperty(imageSourceJson, 'mockupId', mockupId ?? '', true);
-    this.addProperty(imageSourceJson, 'size', size ?? null, true);
-    this.addProperty(imageSourceJson, 'format', format ?? null, true);
-    this.addProperty(imageSourceJson, 'trim', BooleanUtils.isBoolean(trim) ? trim : null, true);
+    // const imageSourceJson = {} as ImageSourceJson;
+    // this.addProperty(imageSourceJson, 'url', url ?? '', true);
+    // this.addProperty(imageSourceJson, 'mockupId', mockupId ?? '', true);
+    // this.addProperty(imageSourceJson, 'size', size ?? null, true);
+    // this.addProperty(imageSourceJson, 'format', format ?? null, true);
+    // this.addProperty(imageSourceJson, 'trim', BooleanUtils.isBoolean(trim) ? trim : null, true);
 
     this.bitJson.imageSource = imageSourceJson;
   }
 
   // bitmarkAst -> bits -> bitsValue -> person
 
-  protected enter_person(node: NodeInfo, route: NodeInfo[]): void {
-    const person = node.value as Person;
+  protected enter_person(node: NodeInfo, route: NodeInfo[]): boolean {
+    const personJson = node.value as PersonJson;
+    // const person = node.value as Person;
     const bitType = this.getBitType(route);
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue || !bitType) return;
+    if (parent?.key !== NodeType.bitsValue || !bitType) return true;
 
-    const { name, title, avatarImage } = person;
+    // const { name, title, avatarImage } = person;
 
-    const personJson = {} as PersonJson;
-    this.addProperty(personJson, 'name', name ?? '', true);
-    if (title) {
-      this.addProperty(personJson, 'title', title, true);
-    }
-    if (avatarImage) {
-      personJson.avatarImage = avatarImage.image;
-    }
+    // const personJson = {} as PersonJson;
+    // this.addProperty(personJson, 'name', name ?? '', true);
+    // if (title) {
+    //   this.addProperty(personJson, 'title', title, true);
+    // }
+    // if (avatarImage) {
+    //   personJson.avatarImage = avatarImage.image;
+    // }
 
     if (Config.isOfBitType(bitType, BitType.conversationLeft1)) {
       // Use the legacy partner property in the JSON for conversation bits, so change to person is backwards compatible
@@ -470,6 +427,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       this.bitJson.person = personJson;
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> ratingLevelStart
@@ -494,33 +454,35 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // Common code for ratingLevelStart and ratingLevelEnd
   protected enterRatingLevelStartEndCommon(node: NodeInfo, route: NodeInfo[]): RatingLevelStartEndJson | undefined {
-    const n = node.value as RatingLevelStartEnd;
+    const json = node.value as RatingLevelStartEndJson;
+    // const n = node.value as RatingLevelStartEnd;
 
     // Ignore statements that are not at the bit level
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
-    const json: Partial<RatingLevelStartEndJson> = {};
-    this.addProperty(json, 'level', n.level, true);
+    // const json: Partial<RatingLevelStartEndJson> = {};
+    // this.addProperty(json, 'level', n.level, true);
 
-    if (n.label) {
-      json.label = this.getBitmarkTextAst(n.label);
-    }
+    // if (n.label) {
+    //   json.label = this.getBitmarkTextAst(n.label);
+    // }
 
-    // Delete unwanted properties
-    if (json?.label == null) delete json.label;
+    // // Delete unwanted properties
+    // if (json?.label == null) delete json.label;
 
     return json as RatingLevelStartEndJson;
   }
 
   // bitmarkAst -> bits -> bitsValue -> productId
 
-  protected enter_productId(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_productId(node: NodeInfo, route: NodeInfo[]): boolean {
     const productIds = node.value as string[];
 
     // Ignore item that is not at the correct level
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return true;
+
     const bitType = this.getBitType(route);
 
     if (bitType === BitType.module) {
@@ -528,51 +490,136 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else if (productIds.length > 0) {
       this.addProperty(this.bitJson, 'productId', productIds[productIds.length - 1], true);
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
 
-  protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): void {
-    const markConfig = node.value as MarkConfig;
+  protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): boolean {
+    const markJson = node.value as MarkConfigJson;
+    // const markConfig = node.value as MarkConfig;
 
     // Ignore item that is not at the correct level
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.markConfig) return;
+    if (parent?.key !== NodeType.markConfig) return true;
 
-    const { mark, color, emphasis } = markConfig;
+    // const { mark, color, emphasis } = markConfig;
 
-    const markJson = {} as Partial<MarkConfigJson>;
+    // const markJson = {} as Partial<MarkConfigJson>;
 
-    this.addProperty(markJson, 'mark', mark ?? 'unknown', true);
-    if (color) this.addProperty(markJson, 'color', color ?? '', true);
-    if (emphasis) this.addProperty(markJson, 'emphasis', emphasis ?? '', true);
+    // this.addProperty(markJson, 'mark', mark ?? 'unknown', true);
+    // if (color) this.addProperty(markJson, 'color', color ?? '', true);
+    // if (emphasis) this.addProperty(markJson, 'emphasis', emphasis ?? '', true);
 
     if (!this.bitJson.marks) this.bitJson.marks = [];
-    this.bitJson.marks.push(markJson as MarkConfigJson);
+    this.bitJson.marks.push(markJson);
+
+    // Stop traversal of this branch
+    return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> itemLead
+  // bitmarkAst -> bits -> bitsValue -> item
 
-  protected enter_itemLead(node: NodeInfo, route: NodeInfo[]): void {
-    const itemLead = node.value as ItemLead;
-    const { item, lead, pageNumber, marginNumber } = itemLead;
+  protected enter_item(node: NodeInfo, route: NodeInfo[]): boolean {
+    const item = node.value as TextAst;
 
     // Ignore item / lead that are not at the bit level as they are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return true;
 
     if (item != null) {
-      this.bitJson.item = this.getBitmarkTextAst(item);
+      this.bitJson.item = item;
     }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> lead
+
+  protected enter_lead(node: NodeInfo, route: NodeInfo[]): boolean {
+    const lead = node.value as TextAst;
+
+    // Ignore item / lead that are not at the bit level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
     if (lead != null) {
-      this.bitJson.lead = this.getBitmarkTextAst(lead);
+      this.bitJson.lead = lead;
     }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> pageNumber
+
+  protected enter_pageNumber(node: NodeInfo, route: NodeInfo[]): boolean {
+    const pageNumber = node.value as TextAst;
+
+    // Ignore item / lead that are not at the bit level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
     if (pageNumber != null) {
-      this.bitJson.pageNumber = this.getBitmarkTextAst(pageNumber);
+      this.bitJson.pageNumber = pageNumber;
     }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> marginNumber
+
+  protected enter_marginNumber(node: NodeInfo, route: NodeInfo[]): boolean {
+    const marginNumber = node.value as TextAst;
+
+    // Ignore item / lead that are not at the bit level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
     if (marginNumber != null) {
-      this.bitJson.marginNumber = this.getBitmarkTextAst(marginNumber);
+      this.bitJson.marginNumber = marginNumber;
     }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> hint
+
+  protected enter_hint(node: NodeInfo, route: NodeInfo[]): boolean {
+    const hint = node.value as TextAst;
+
+    // Ignore item / lead that are not at the bit level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
+    if (hint != null) {
+      this.bitJson.hint = hint;
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> instruction
+
+  protected enter_instruction(node: NodeInfo, route: NodeInfo[]): boolean {
+    const instruction = node.value as TextAst;
+
+    // Ignore item / lead that are not at the bit level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
+    if (instruction != null) {
+      this.bitJson.instruction = instruction;
+    }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> width
@@ -589,6 +636,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Add the property
     this.addProperty(this.bitJson, 'width', value, true);
 
+    // Stop traversal of this branch
     return false;
   }
 
@@ -606,6 +654,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Add the property
     this.addProperty(this.bitJson, 'height', value, true);
 
+    // Stop traversal of this branch
     return false;
   }
 
@@ -628,6 +677,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBits -> cardBitsValue
 
   protected enter_cardBitsValue(node: NodeInfo, route: NodeInfo[]): void {
+    const cardBit = node.value as CardBit;
+
     // How cardBits are handled depends on the bit type
     const bitType = this.getBitType(route);
     if (!bitType) return;
@@ -644,7 +695,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Create this list item
     this.listItem = {
-      ...this.toItemLeadHintInstruction(node.value),
+      item: (cardBit.item ?? []) as JsonText,
+      lead: (cardBit.lead ?? []) as JsonText,
+      hint: (cardBit.hint ?? []) as JsonText,
+      instruction: (cardBit.instruction ?? []) as JsonText,
+      // ...this.toItemLeadHintInstruction(node.value),
       body: this.bodyDefault,
     };
 
@@ -1286,18 +1341,20 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table
 
   protected enter_table(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const table = node.value as Table;
-    // const bitType = this.getBitType(route);
+    const tableJson = node.value as TableJson;
+    this.bitJson.table = tableJson;
+    // const table = node.value as Table;
+    // // const bitType = this.getBitType(route);
 
-    if (table) {
-      const tableJson: Partial<TableJson> = {
-        columns: table.columns,
-        data: table.rows.map((row) => row),
-      };
-      // const isEmpty = !table.columns || table.columns.length === 0 || !table.rows || table.rows.length === 0;
+    // if (table) {
+    //   const tableJson: Partial<TableJson> = {
+    //     columns: table.columns,
+    //     data: table.rows.map((row) => row),
+    //   };
+    //   // const isEmpty = !table.columns || table.columns.length === 0 || !table.rows || table.rows.length === 0;
 
-      this.bitJson.table = tableJson as TableJson;
-    }
+    //   this.bitJson.table = tableJson as TableJson;
+    // }
 
     // Stop traversal of this branch to avoid unnecessary processing
     return false;
@@ -1345,33 +1402,34 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
 
   protected enter_botResponses(node: NodeInfo, route: NodeInfo[]): void {
-    const botResponses = node.value as BotResponse[];
+    const responsesJson = node.value as BotResponseJson[];
+    // const botResponses = node.value as BotResponse[];
 
-    // Ignore responses that are not at the cardNode level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
+    // // Ignore responses that are not at the cardNode level as they are handled elsewhere
+    // const parent = this.getParentNode(route);
+    // if (parent?.key !== NodeType.cardNode) return;
 
-    const responsesJson: BotResponseJson[] = [];
-    if (botResponses) {
-      for (const r of botResponses) {
-        // Create the response
-        const responseJson: Partial<BotResponseJson> = {
-          response: r.response ?? '',
-          reaction: r.reaction ?? '',
-          feedback: r.feedback ?? '',
-          ...this.toItemLeadHintInstruction(r),
-          // ...this.toExampleAndIsExample(r.example),
-        };
+    // const responsesJson: BotResponseJson[] = [];
+    // if (botResponses) {
+    //   for (const r of botResponses) {
+    //     // Create the response
+    //     const responseJson: Partial<BotResponseJson> = {
+    //       response: r.response ?? '',
+    //       reaction: r.reaction ?? '',
+    //       feedback: r.feedback ?? '',
+    //       ...this.toItemLeadHintInstruction(r),
+    //       // ...this.toExampleAndIsExample(r.example),
+    //     };
 
-        // Delete unwanted properties
-        if (r.itemLead?.lead == null) delete responseJson.lead;
-        if (r.hint == null) delete responseJson.hint;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        delete (responseJson as any).instruction;
+    //     // Delete unwanted properties
+    //     if (r.itemLead?.lead == null) delete responseJson.lead;
+    //     if (r.hint == null) delete responseJson.hint;
+    //     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    //     delete (responseJson as any).instruction;
 
-        responsesJson.push(responseJson as BotResponseJson);
-      }
-    }
+    //     responsesJson.push(responseJson as BotResponseJson);
+    //   }
+    // }
 
     if (responsesJson.length > 0) {
       this.bitJson.responses = responsesJson;
@@ -1380,36 +1438,37 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
   protected enter_ingredients(node: NodeInfo, route: NodeInfo[]): void {
-    const ingredients = node.value as Ingredient[];
+    const ingredientsJson = node.value as IngredientJson[];
+    // const ingredients = node.value as Ingredient[];
 
-    // Ignore statements that are not at the card node level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
+    // // Ignore statements that are not at the card node level as they are handled elsewhere
+    // const parent = this.getParentNode(route);
+    // if (parent?.key !== NodeType.cardNode) return;
 
-    const ingredientsJson: IngredientJson[] = [];
-    if (ingredients) {
-      for (const i of ingredients) {
-        // Create the ingredient
-        const ingredientJson: Partial<IngredientJson> = {
-          title: i.title ?? '',
-          checked: i.checked ?? false,
-          item: i.item ?? '',
-          quantity: i.quantity ?? 0,
-          unit: i.unit ?? '',
-          unitAbbr: i.unitAbbr ?? '',
-          decimalPlaces: i.decimalPlaces ?? 1,
-          disableCalculation: i.disableCalculation ?? false,
-        };
+    // const ingredientsJson: IngredientJson[] = [];
+    // if (ingredients) {
+    //   for (const i of ingredients) {
+    //     // Create the ingredient
+    //     const ingredientJson: Partial<IngredientJson> = {
+    //       title: i.title ?? '',
+    //       checked: i.checked ?? false,
+    //       item: i.item ?? '',
+    //       quantity: i.quantity ?? 0,
+    //       unit: i.unit ?? '',
+    //       unitAbbr: i.unitAbbr ?? '',
+    //       decimalPlaces: i.decimalPlaces ?? 1,
+    //       disableCalculation: i.disableCalculation ?? false,
+    //     };
 
-        // Delete unwanted properties
-        if (i?.title == null) delete ingredientJson.title;
-        // if (i?.unit == null) delete ingredientJson.unit;
-        if (i?.unitAbbr == null) delete ingredientJson.unitAbbr;
-        // if (i?.instruction == null) delete ingredientJson.instruction;
+    //     // Delete unwanted properties
+    //     if (i?.title == null) delete ingredientJson.title;
+    //     // if (i?.unit == null) delete ingredientJson.unit;
+    //     if (i?.unitAbbr == null) delete ingredientJson.unitAbbr;
+    //     // if (i?.instruction == null) delete ingredientJson.instruction;
 
-        ingredientsJson.push(ingredientJson as IngredientJson);
-      }
-    }
+    //     ingredientsJson.push(ingredientJson as IngredientJson);
+    //   }
+    // }
 
     if (ingredientsJson.length > 0) {
       this.bitJson.ingredients = ingredientsJson;
@@ -1419,25 +1478,29 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList
 
   protected enter_captionDefinitionList(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const list = node.value as CaptionDefinitionList;
-    // const bitType = this.getBitType(route);
+    const listJson = node.value as CaptionDefinitionListJson;
 
-    if (list) {
-      const columns = list.columns ?? [];
-      const definitions = list.definitions ?? [];
-      const captionDefinitionListJson: Partial<CaptionDefinitionListJson> = {
-        columns: columns,
-        definitions: definitions.map((d) => {
-          return {
-            term: d.term ?? '',
-            description: d.description ?? '',
-          };
-        }),
-      };
-      // const isEmpty = !table.columns || table.columns.length === 0 || !table.rows || table.rows.length === 0;
+    this.bitJson.captionDefinitionList = listJson;
 
-      this.bitJson.captionDefinitionList = captionDefinitionListJson as CaptionDefinitionListJson;
-    }
+    // const list = node.value as CaptionDefinitionList;
+    // // const bitType = this.getBitType(route);
+
+    // if (list) {
+    //   const columns = list.columns ?? [];
+    //   const definitions = list.definitions ?? [];
+    //   const captionDefinitionListJson: Partial<CaptionDefinitionListJson> = {
+    //     columns: columns,
+    //     definitions: definitions.map((d) => {
+    //       return {
+    //         term: d.term ?? '',
+    //         description: d.description ?? '',
+    //       };
+    //     }),
+    //   };
+    //   // const isEmpty = !table.columns || table.columns.length === 0 || !table.rows || table.rows.length === 0;
+
+    //   this.bitJson.captionDefinitionList = captionDefinitionListJson as CaptionDefinitionListJson;
+    // }
 
     // Stop traversal of this branch to avoid unnecessary processing
     return false;
@@ -1546,13 +1609,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
 
-    this.bitJson.title = this.getBitmarkTextAst(node.value);
+    this.bitJson.title = node.value;
   }
 
   //  bitmarkAst -> bits -> bitsValue -> subtitle
 
   protected enter_subtitle(node: NodeInfo, _route: NodeInfo[]): void {
-    this.bitJson.subtitle = this.getBitmarkTextAst(node.value);
+    this.bitJson.subtitle = node.value;
   }
 
   // //  bitmarkAst -> bits -> bitsValue -> level
@@ -1595,34 +1658,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.bitsValue) return;
 
     this.bitJson.caption = this.getBitmarkTextAst(caption);
-  }
-
-  //  bitmarkAst -> bits -> bitsValue -> hint
-
-  protected enter_hint(node: NodeInfo, route: NodeInfo[]): boolean {
-    const hint = node.value as BitmarkTextNode;
-
-    // Ignore hint that is not at the bit level as it are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return false;
-
-    this.bitJson.hint = this.getBitmarkTextAst(hint);
-
-    return false;
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> instruction
-
-  protected enter_instruction(node: NodeInfo, route: NodeInfo[]): boolean {
-    const instruction = node.value as BitmarkTextNode;
-
-    // Ignore instruction that is not at the bit level as it are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return false;
-
-    this.bitJson.instruction = this.getBitmarkTextAst(instruction);
-
-    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> markup
@@ -1734,6 +1769,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyTag.ratingLevelStart) continue;
       if (astKey === PropertyTag.ratingLevelEnd) continue;
       if (astKey === PropertyTag.productId) continue;
+      if (astKey === PropertyTag.tag_title) continue;
 
       const funcName = `enter_${astKey}`;
 
@@ -2399,7 +2435,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // if (resource.format != null) resourceJson.format = resource.format;
     if (resource.value != null) resourceJson.url = resource.value;
-    if (resource.siteName != null) resourceJson.siteName = resource.siteName;
+    // if (resource.siteName != null) resourceJson.siteName = resource.siteName;
 
     this.addGenericResourceProperties(bitType, resource, resourceJson as BaseResourceJson);
 
@@ -2433,14 +2469,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return resourceJson as ArticleResourceJson | DocumentResourceJson;
   }
 
-  protected toItemLeadHintInstruction(item: ItemLeadHintInstructionNode): ItemLeadHintInstuction {
-    return {
-      item: this.getBitmarkTextAst(item.itemLead?.item),
-      lead: this.getBitmarkTextAst(item.itemLead?.lead),
-      hint: this.getBitmarkTextAst(item.hint),
-      instruction: this.getBitmarkTextAst(item.instruction),
-    };
-  }
+  // protected toItemLeadHintInstruction(item: ItemLeadHintInstructionNode): ItemLeadHintInstuction {
+  //   return {
+  //     item: this.getBitmarkTextAst(item.itemLead?.item),
+  //     lead: this.getBitmarkTextAst(item.itemLead?.lead),
+  //     hint: this.getBitmarkTextAst(item.hint),
+  //     instruction: this.getBitmarkTextAst(item.instruction),
+  //   };
+  // }
 
   protected toExample(
     node: ExampleNode,

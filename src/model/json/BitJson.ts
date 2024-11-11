@@ -310,6 +310,7 @@ export interface PairJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface MatrixJson {
@@ -332,6 +333,7 @@ export interface MatrixCellJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface TableJson {
@@ -351,6 +353,7 @@ export interface QuestionJson {
   reasonableNumOfChars: number;
   isExample: boolean;
   example: ExampleJson;
+  _defaultExample: ExampleJson;
 }
 
 export interface BotResponseJson {

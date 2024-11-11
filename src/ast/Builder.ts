@@ -1,4 +1,3 @@
-import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
 import { JsonText, TextAst } from '../model/ast/TextNodes';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
@@ -6,78 +5,56 @@ import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
-import { AudioResourceJson, ImageResourceJson } from '../model/json/ResourceJson';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
-import { ContentProcessorUtils } from '../parser/bitmark/peg/contentProcessors/ContentProcessorUtils';
 import { TextParser } from '../parser/text/TextParser';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BitUtils } from '../utils/BitUtils';
+import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { StringUtils } from '../utils/StringUtils';
 import { env } from '../utils/env/Env';
 
-import { BaseBuilder, WithExample, WithExampleJson, WithIsExample } from './BaseBuilder';
+import { BaseBuilder, WithExampleJson } from './BaseBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
 import {
   Bit,
   BitmarkAst,
-  Resource,
   Body,
-  Statement,
-  Response,
-  Quiz,
-  Heading,
-  Pair,
-  Matrix,
-  Choice,
-  Question,
-  AudioResource,
-  ImageResource,
-  MatrixCell,
-  Gap,
-  SelectOption,
-  Select,
-  HighlightText,
-  Highlight,
   ItemLead,
   ExtraProperties,
-  BotResponse,
-  Person,
   CardNode,
-  Mark,
-  MarkConfig,
-  Example,
-  Flashcard,
-  ImageSource,
   CardBit,
-  Ingredient,
-  TechnicalTerm,
   Table,
-  Servings,
-  RatingLevelStartEnd,
-  CaptionDefinition,
-  CaptionDefinitionList,
-  DescriptionListItem,
   Footer,
   BodyBit,
-  Decision,
 } from '../model/ast/Nodes';
 import {
+  BotResponseJson,
+  CaptionDefinitionJson,
+  CaptionDefinitionListJson,
   ChoiceJson,
   DescriptionListItemJson,
   ExampleJson,
   FlashcardJson,
   HeadingJson,
+  ImageSourceJson,
+  IngredientJson,
+  MarkConfigJson,
   MatrixCellJson,
   MatrixJson,
   PairJson,
+  PersonJson,
   QuestionJson,
   QuizJson,
+  RatingLevelStartEndJson,
   ResponseJson,
+  ServingsJson,
   StatementJson,
+  TableJson,
+  TechnicalTermJson,
 } from '../model/json/BitJson';
 import {
   GapJson,
@@ -87,8 +64,12 @@ import {
   SelectJson,
   SelectOptionJson,
 } from '../model/json/BodyBitJson';
-
-export type ExampleIn = TextAst | string | boolean;
+import {
+  AudioResourceJson,
+  ImageResourceJson,
+  ImageResourceWrapperJson,
+  ResourceJson,
+} from '../model/json/ResourceJson';
 
 /**
  * Builder to build bitmark AST node programmatically
@@ -251,10 +232,10 @@ class Builder extends BaseBuilder {
     productVideo?: string | string[];
     productVideoList?: string | string[];
     productFolder?: string;
-    technicalTerm?: TechnicalTerm;
-    servings?: Servings;
-    ratingLevelStart?: RatingLevelStartEnd;
-    ratingLevelEnd?: RatingLevelStartEnd;
+    technicalTerm?: TechnicalTermJson;
+    servings?: ServingsJson;
+    ratingLevelStart?: RatingLevelStartEndJson;
+    ratingLevelEnd?: RatingLevelStartEndJson;
     ratingLevelSelected?: number;
     partialAnswer?: string;
     book?: string;
@@ -276,34 +257,34 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
-    imageSource?: ImageSource;
-    person?: Person;
+    example?: ExampleJson;
+    imageSource?: ImageSourceJson;
+    person?: PersonJson;
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
-    markConfig?: MarkConfig[];
-    imagePlaceholder?: ImageResource;
-    resources?: Resource | Resource[];
+    markConfig?: MarkConfigJson[];
+    imagePlaceholder?: ImageResourceWrapperJson;
+    resources?: ResourceJson | ResourceJson[];
     body?: Body;
     sampleSolution?: string;
     additionalSolutions?: string | string[];
     elements?: string[];
-    flashcards?: Flashcard[];
-    descriptions?: DescriptionListItem[];
-    statement?: Statement;
-    statements?: Statement[];
-    responses?: Response[];
-    quizzes?: Quiz[];
-    heading?: Heading;
-    pairs?: Pair[];
-    matrix?: Matrix[];
-    table?: Table;
-    choices?: Choice[];
-    questions?: Question[];
-    botResponses?: BotResponse[];
-    ingredients?: Ingredient[];
-    captionDefinitionList?: CaptionDefinitionList;
+    flashcards?: FlashcardJson[];
+    descriptions?: DescriptionListItemJson[];
+    statement?: StatementJson;
+    statements?: StatementJson[];
+    responses?: ResponseJson[];
+    quizzes?: QuizJson[];
+    heading?: HeadingJson;
+    pairs?: PairJson[];
+    matrix?: MatrixJson[];
+    table?: TableJson;
+    choices?: ChoiceJson[];
+    questions?: QuestionJson[];
+    botResponses?: BotResponseJson[];
+    ingredients?: IngredientJson[];
+    captionDefinitionList?: CaptionDefinitionListJson;
     cardBits?: CardBit[];
     footer?: Footer;
 
@@ -640,8 +621,8 @@ class Builder extends BaseBuilder {
       ratingLevelStart,
       ratingLevelEnd,
       ratingLevelSelected: this.toAstProperty(PropertyConfigKey.ratingLevelSelected, ratingLevelSelected),
-      title: this.toBitmarkTextNode(title),
-      subtitle: this.toBitmarkTextNode(subtitle),
+      title,
+      subtitle,
       level: NumberUtils.asNumber(level),
       toc: this.toAstProperty(PropertyConfigKey.toc, toc),
       progress: this.toAstProperty(PropertyConfigKey.progress, progress),
@@ -649,9 +630,12 @@ class Builder extends BaseBuilder {
       reference,
       referenceEnd,
       markConfig,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint: this.toBitmarkTextNode(hint),
-      instruction: this.toBitmarkTextNode(instruction),
+      item,
+      lead,
+      pageNumber,
+      marginNumber,
+      hint,
+      instruction,
       ...this.toExample(isDefaultExample, example),
       isDefaultExample: isDefaultExample ?? false,
       imageSource,
@@ -829,21 +813,25 @@ class Builder extends BaseBuilder {
     pageNumber?: TextAst;
     marginNumber?: TextAst;
     hint?: TextAst;
-  }): BotResponse {
-    const { response, reaction, feedback, item, lead, pageNumber, marginNumber, hint } = data;
+  }): BotResponseJson {
+    const { response, reaction, feedback, item, lead, /*pageNumber, marginNumber,*/ hint } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: BotResponse = {
-      response,
-      reaction,
-      feedback,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint: this.toBitmarkTextNode(hint),
+    const node: BotResponseJson = {
+      response: response ?? '',
+      reaction: reaction ?? '',
+      feedback: feedback ?? '',
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? undefined) as TextAst,
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreEmptyString: ['response', 'reaction', 'feedback'],
+      ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example', 'lead', 'hint'],
     });
 
     return node;
@@ -863,7 +851,7 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
+    example?: ExampleJson;
     choices?: ChoiceJson[];
     responses?: ResponseJson[];
   }): QuizJson {
@@ -1138,13 +1126,13 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  table(data: { columns: string[]; rows: string[][] }): Table {
+  table(data: { columns: string[]; rows: string[][] }): TableJson {
     const { columns, rows } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Table = {
+    const node: TableJson = {
       columns,
-      rows,
+      data: rows,
     };
 
     // Remove Unset Optionals
@@ -1236,24 +1224,27 @@ class Builder extends BaseBuilder {
     unitAbbr?: string;
     decimalPlaces?: number;
     disableCalculation?: boolean;
-  }): Ingredient {
+  }): IngredientJson {
     const { title, checked, item, quantity, unit, unitAbbr, decimalPlaces, disableCalculation } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Ingredient = {
-      title,
+    const node: IngredientJson = {
+      title: title ?? '',
       checked: checked ?? false,
-      item,
-      quantity,
-      unit,
-      unitAbbr,
-      decimalPlaces,
-      disableCalculation,
+      item: item ?? '',
+      quantity: quantity ?? 0,
+      unit: unit ?? '',
+      unitAbbr: unitAbbr ?? '',
+      decimalPlaces: decimalPlaces ?? 1,
+      disableCalculation: disableCalculation ?? false,
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      // ignoreAllEmptyArrays: true,
+      // ignoreUndefined: ['example'],
+      ignoreEmptyString: ['item', 'unit'],
     });
 
     return node;
@@ -1316,23 +1307,6 @@ class Builder extends BaseBuilder {
       footer: footerIsString ? (footer as string) : this.toBitmarkTextNode(footer as TextAst),
     };
 
-    return node;
-  }
-
-  /**
-   * Build footer text node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  footerText(data: { text: TextAst }, isPlain: boolean): FooterText {
-    const { text } = data;
-
-    // NOTE: Node order is important and is defined here
-    const node: FooterText = {
-      footerText: this.toBitmarkTextNode(text),
-      isPlain,
-    };
     return node;
   }
 
@@ -1413,18 +1387,20 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  markConfig(data: { mark: string; color?: string; emphasis?: string }): MarkConfig {
+  markConfig(data: { mark: string; color?: string; emphasis?: string }): MarkConfigJson {
     const { mark, color, emphasis } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: MarkConfig = {
-      mark,
-      color,
-      emphasis,
+    const node: MarkConfigJson = {
+      mark: mark ?? 'unknown',
+      color: color ?? '',
+      emphasis: emphasis ?? '',
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllEmptyString: true,
+    });
 
     return node;
   }
@@ -1558,7 +1534,7 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
+    example?: ExampleJson;
   }): SelectOptionJson {
     const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
       data;
@@ -1655,7 +1631,7 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
+    example?: ExampleJson;
   }): HighlightTextJson {
     const {
       text,
@@ -1710,7 +1686,7 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
+    example?: ExampleJson;
   }): FlashcardJson {
     const {
       question,
@@ -1765,7 +1741,7 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
+    example?: ExampleJson;
   }): DescriptionListItemJson {
     const {
       term,
@@ -1773,8 +1749,8 @@ class Builder extends BaseBuilder {
       alternativeDescriptions,
       item,
       lead,
-      pageNumber,
-      marginNumber,
+      /*pageNumber,
+      marginNumber,*/
       hint,
       instruction,
       isDefaultExample,
@@ -1851,21 +1827,29 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  imageSource(data: { url: string; mockupId: string; size?: number; format?: string; trim?: boolean }): ImageSource {
+  imageSource(data: {
+    url: string;
+    mockupId: string;
+    size?: number;
+    format?: string;
+    trim?: boolean;
+  }): ImageSourceJson {
     const { url, mockupId, size, format, trim } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: ImageSource = {
-      url,
-      mockupId,
-      size,
-      format,
-      trim,
+    const node: ImageSourceJson = {
+      url: url ?? '',
+      mockupId: mockupId ?? '',
+      size: (size ?? null) as number,
+      format: (format ?? null) as string,
+      trim: (BooleanUtils.isBoolean(trim) ? trim : null) as boolean,
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreFalse: ['trim'],
+      ignoreEmptyString: ['url', 'mockupId'],
+      ignoreAllUndefined: true,
     });
 
     return node;
@@ -1877,18 +1861,21 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  person(data: { name: string; title?: string; avatarImage?: ImageResource }): Person {
+  person(data: { name: string; title?: string; avatarImage?: ImageResourceJson }): PersonJson {
     const { name, title, avatarImage } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Person = {
-      name,
-      title,
-      avatarImage,
+    const node: PersonJson = {
+      name: name ?? '',
+      title: (title ?? undefined) as string,
+      avatarImage: (avatarImage ?? undefined) as ImageResourceJson,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyString: ['name'],
+      ignoreAllUndefined: true,
+    });
 
     return node;
   }
@@ -1899,17 +1886,20 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  technicalTerm(data: { technicalTerm: string; lang?: string }): TechnicalTerm {
+  technicalTerm(data: { technicalTerm: string; lang?: string }): TechnicalTermJson {
     const { technicalTerm, lang } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: TechnicalTerm = {
-      technicalTerm,
-      lang,
+    const node: TechnicalTermJson = {
+      technicalTerm: technicalTerm ?? '',
+      lang: lang ?? '',
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyString: ['technicalTerm'],
+      // ignoreAllUndefined: true,
+    });
 
     return node;
   }
@@ -1927,21 +1917,24 @@ class Builder extends BaseBuilder {
     decimalPlaces?: number;
     disableCalculation?: boolean;
     hint?: string;
-  }): Servings {
+  }): ServingsJson {
     const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: Servings = {
-      servings,
-      unit,
-      unitAbbr,
-      decimalPlaces,
-      disableCalculation,
-      hint,
+    const node: ServingsJson = {
+      servings: servings ?? '',
+      unit: unit ?? '',
+      unitAbbr: unitAbbr ?? '',
+      decimalPlaces: decimalPlaces ?? 1,
+      disableCalculation: disableCalculation ?? false,
+      hint: hint ?? '',
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyString: ['servings', 'unit'],
+      // ignoreAllUndefined: true,
+    });
 
     return node;
   }
@@ -1952,17 +1945,20 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  ratingLevelStartEnd(data: { level: number; label?: TextAst }): RatingLevelStartEnd {
+  ratingLevelStartEnd(data: { level: number; label?: TextAst }): RatingLevelStartEndJson {
     const { level, label } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: RatingLevelStartEnd = {
-      level,
-      label: this.toBitmarkTextNode(label),
+    const node: RatingLevelStartEndJson = {
+      level: level ?? 0,
+      label: (label ?? undefined) as TextAst,
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      // ignoreEmptyArrays: ['servings', 'unit'],
+      // ignoreAllUndefined: true,
+    });
 
     return node;
   }
@@ -1973,17 +1969,20 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  captionDefinition(data: { term: string; description: string }): CaptionDefinition {
+  captionDefinition(data: { term: string; description: string }): CaptionDefinitionJson {
     const { term, description } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: CaptionDefinition = {
-      term,
-      description,
+    const node: CaptionDefinitionJson = {
+      term: term ?? '',
+      description: description ?? '',
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyString: ['term', 'description'],
+      // ignoreAllUndefined: true,
+    });
 
     return node;
   }
@@ -1994,17 +1993,19 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  captionDefinitionList(data: { columns: string[]; definitions: CaptionDefinition[] }): CaptionDefinitionList {
+  captionDefinitionList(data: { columns: string[]; definitions: CaptionDefinitionJson[] }): CaptionDefinitionListJson {
     const { columns, definitions } = data;
 
     // NOTE: Node order is important and is defined here
-    const node: CaptionDefinitionList = {
-      columns,
-      definitions,
+    const node: CaptionDefinitionListJson = {
+      columns: columns ?? [],
+      definitions: definitions ?? [],
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllEmptyArrays: true,
+    });
 
     return node;
   }
@@ -2048,7 +2049,7 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
+    example?: ExampleJson;
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
@@ -2057,8 +2058,8 @@ class Builder extends BaseBuilder {
     const {
       item,
       lead,
-      pageNumber,
-      marginNumber,
+      /*pageNumber,
+      marginNumber,*/
       hint,
       instruction,
       isDefaultExample,
@@ -2069,10 +2070,12 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: CardBit = {
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint: this.toBitmarkTextNode(hint),
-      instruction: this.toBitmarkTextNode(instruction),
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? []) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
       ...this.toExample(isDefaultExample, example),
+      isDefaultExample: isDefaultExample ?? false,
       body,
 
       // Must always be last in the AST so key clashes are avoided correctly with other properties
@@ -2082,6 +2085,7 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['example'],
       ignoreUndefined: ['example'],
     });
 
@@ -2090,22 +2094,22 @@ class Builder extends BaseBuilder {
   }
 
   private cardNode(data: {
-    flashcards?: Flashcard[];
-    descriptions?: DescriptionListItem[];
-    questions?: Question[];
+    flashcards?: FlashcardJson[];
+    descriptions?: DescriptionListItemJson[];
+    questions?: QuestionJson[];
     elements?: string[];
-    statement?: Statement;
-    statements?: Statement[];
-    choices?: Choice[];
-    responses?: Response[];
-    quizzes?: Quiz[];
-    heading?: Heading;
-    pairs?: Pair[];
-    matrix?: Matrix[];
-    table?: Table;
-    botResponses?: BotResponse[];
-    ingredients?: Ingredient[];
-    captionDefinitionList?: CaptionDefinitionList;
+    statement?: StatementJson;
+    statements?: StatementJson[];
+    choices?: ChoiceJson[];
+    responses?: ResponseJson[];
+    quizzes?: QuizJson[];
+    heading?: HeadingJson;
+    pairs?: PairJson[];
+    matrix?: MatrixJson[];
+    table?: TableJson;
+    botResponses?: BotResponseJson[];
+    ingredients?: IngredientJson[];
+    captionDefinitionList?: CaptionDefinitionListJson;
     cardBits?: CardBit[];
   }): CardNode | undefined {
     let node: CardNode | undefined;
@@ -2535,8 +2539,6 @@ class Builder extends BaseBuilder {
     // Bit itself
     checkIsExample(bit as WithExampleJson);
   }
-
-  private decisionToWithExampleJson(decision: Decision): WithExampleJson {}
 
   private setDefaultBitValues(bit: Bit) {
     // Set aiGenerated == true for all AI generated bits

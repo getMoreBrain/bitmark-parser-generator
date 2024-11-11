@@ -1,5 +1,5 @@
 import { Config } from '../config/Config';
-import { Example, Property } from '../model/ast/Nodes';
+import { Property } from '../model/ast/Nodes';
 import { BitmarkTextNode, JsonText, TextAst } from '../model/ast/TextNodes';
 import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
@@ -9,11 +9,11 @@ import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { StringUtils } from '../utils/StringUtils';
 
-export interface WithExample {
-  isDefaultExample: boolean;
-  isExample: boolean;
-  example?: Example;
-}
+// export interface WithExample {
+//   isDefaultExample: boolean;
+//   isExample: boolean;
+//   example?: Example;
+// }
 
 export interface WithExampleJson {
   // isDefaultExample?: boolean;
@@ -73,45 +73,45 @@ class BaseBuilder {
     };
   }
 
-  /**
-   * Convert example to an Example, only allowing boolean values.
-   * - If example is set, then the isExample will be true and example with be example as a boolean.
-   * - Else if isDefaultExample is true, then isDefaultExample / isExample will both be true.
-   * - Else isDefaultExample / isExample will both be false.
-   *
-   * @param isDefaultExample - true if the example is the default value
-   * @param example - the example to convert (string, boolean) or undefined if none / default
-   * @returns example/isDefaultExample resolved to an Example object
-   */
-  protected toExampleBoolean(
-    isDefaultExample: boolean | undefined,
-    example: TextAst | string | boolean | undefined,
-  ): WithExample {
-    const isExampleButNotBoolean = example != undefined && !BooleanUtils.isBooleanString(example);
+  // /**
+  //  * Convert example to an Example, only allowing boolean values.
+  //  * - If example is set, then the isExample will be true and example with be example as a boolean.
+  //  * - Else if isDefaultExample is true, then isDefaultExample / isExample will both be true.
+  //  * - Else isDefaultExample / isExample will both be false.
+  //  *
+  //  * @param isDefaultExample - true if the example is the default value
+  //  * @param example - the example to convert (string, boolean) or undefined if none / default
+  //  * @returns example/isDefaultExample resolved to an Example object
+  //  */
+  // protected toExampleBoolean(
+  //   isDefaultExample: boolean | undefined,
+  //   example: TextAst | string | boolean | undefined,
+  // ): WithExampleJson {
+  //   const isExampleButNotBoolean = example != undefined && !BooleanUtils.isBooleanString(example);
 
-    // Example
-    if (example != undefined && !isExampleButNotBoolean) {
-      return {
-        isDefaultExample: false,
-        isExample: true,
-        example: BooleanUtils.toBoolean(example),
-      };
-    }
+  //   // Example
+  //   if (example != undefined && !isExampleButNotBoolean) {
+  //     return {
+  //       isDefaultExample: false,
+  //       isExample: true,
+  //       example: BooleanUtils.toBoolean(example),
+  //     };
+  //   }
 
-    // Default example
-    if (isDefaultExample || isExampleButNotBoolean) {
-      return {
-        isDefaultExample: true,
-        isExample: true,
-      };
-    }
+  //   // Default example
+  //   if (isDefaultExample || isExampleButNotBoolean) {
+  //     return {
+  //       isDefaultExample: true,
+  //       isExample: true,
+  //     };
+  //   }
 
-    // Not an example
-    return {
-      isDefaultExample: false,
-      isExample: false,
-    };
-  }
+  //   // Not an example
+  //   return {
+  //     isDefaultExample: false,
+  //     isExample: false,
+  //   };
+  // }
 
   /**
    * Convert a TextAst to a BitmarkTextNode.

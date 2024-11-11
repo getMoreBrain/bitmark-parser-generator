@@ -17,6 +17,8 @@ import {
   TypeValue,
 } from '../BitmarkPegParserTypes';
 
+const textParser = new TextParser();
+
 function titleTagContentProcessor(
   _context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
@@ -37,30 +39,35 @@ function titleTagContentProcessor(
   const titleValue: { title: string; level: string[] } = value as any;
   const titleText = StringUtils.trimmedString(titleValue.title) as BreakscapedString;
   const level = titleValue.level.length;
-  title[level] = Breakscape.unbreakscape(titleText);
+  title[level] = {
+    //
+    titleAst: textParser.toAst(titleText ?? ''),
+    titleString: titleText ?? '',
+  };
 }
 
 function buildTitles(
   _context: BitmarkPegParserContext,
   bitType: BitTypeType,
-  title: string[] | undefined,
+  title: { titleAst: TextAst; titleString: string }[] | undefined,
 ): BitSpecificTitles {
-  const textParser = new TextParser();
-
   title = title ?? [];
 
   if (Config.isOfBitType(bitType, BitType.chapter)) {
-    let t: string | undefined;
+    let t: { titleAst: TextAst; titleString: string } | undefined;
     if (title.length > 0) t = title[title.length - 1];
 
     return {
-      title: textParser.toAst(t ?? ''),
+      title: t?.titleAst ?? [],
+      titleString: t?.titleString ?? '',
       level: title.length > 0 ? title.length - 1 : undefined,
     };
   } else {
     return {
-      title: title[1] ? textParser.toAst(title[1]) : undefined,
-      subtitle: title[2] ? textParser.toAst(title[2]) : undefined,
+      title: title[1]?.titleAst ?? undefined,
+      titleString: title[1]?.titleString ?? undefined,
+      subtitle: title[2]?.titleAst ?? undefined,
+      subtitleString: title[2]?.titleString ?? undefined,
     };
   }
 }

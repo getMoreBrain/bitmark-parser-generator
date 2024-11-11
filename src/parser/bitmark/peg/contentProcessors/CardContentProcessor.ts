@@ -1,7 +1,6 @@
 import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { Body, BotResponse, CardBit, Ingredient } from '../../../../model/ast/Nodes';
 import { BitmarkTextNode, TextAst } from '../../../../model/ast/TextNodes';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
@@ -17,11 +16,13 @@ import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 import { ContentProcessorUtils } from './ContentProcessorUtils';
 
 import {
+  BotResponseJson,
   ChoiceJson,
   DescriptionListItemJson,
   ExampleJson,
   FlashcardJson,
   HeadingJson,
+  IngredientJson,
   MatrixCellJson,
   MatrixJson,
   PairJson,
@@ -546,7 +547,7 @@ function parseMatchPairs(
         exampleCard = example ? (example as TextAst) : exampleCard;
 
         // Get the 'heading' which is the [#title] at level 1
-        const heading = title && title[1];
+        const heading = title && title[1].titleString;
         if (heading != null) isHeading = true;
 
         if (sideIdx === 0) {
@@ -651,7 +652,7 @@ function parseMatchMatrix(
 ): BitSpecificCards {
   let sideIdx = 0;
   let isHeading = false;
-  let heading: Heading | undefined;
+  let heading: HeadingJson | undefined;
   let forKeys: string | undefined = undefined;
   let forValues: string[] = [];
   let matrixKey: string | undefined = undefined;
@@ -712,7 +713,7 @@ function parseMatchMatrix(
         Object.assign(matrixCellTags, restTags);
 
         // Get the 'heading' which is the [#title] at level 1
-        const heading = title && title[1];
+        const heading = title && title[1].titleString;
         if (heading != null) isHeading = true;
 
         if (sideIdx === 0) {
@@ -811,9 +812,9 @@ function parseTable(
 ): BitSpecificCards {
   let cardIdx = 0;
   let isHeading = false;
-  const columns: BreakscapedString[] = [];
-  const rows: BreakscapedString[][] = [];
-  let rowValues: BreakscapedString[] = [];
+  const columns: string[] = [];
+  const rows: string[][] = [];
+  let rowValues: string[] = [];
 
   for (const card of cardSet.cards) {
     isHeading = false;
@@ -827,14 +828,14 @@ function parseTable(
         const { title, cardBodyStr } = tags;
 
         // Get the 'heading' which is the [#title] at level 1
-        const heading = title && title[1];
+        const heading = title && title[1].titleString;
         if (cardIdx === 0 && heading != null) isHeading = true;
 
         if (isHeading) {
-          columns.push(heading ?? Breakscape.EMPTY_STRING);
+          columns.push(heading ?? '');
         } else {
           // If not a heading, it is a row cell value
-          const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
+          const value = cardBodyStr ?? '';
           rowValues.push(value);
         }
       }
@@ -860,7 +861,7 @@ function parseBotActionResponses(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const botResponses: BotResponse[] = [];
+  const botResponses: BotResponseJson[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
@@ -888,7 +889,7 @@ function parseIngredients(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const ingredients: Ingredient[] = [];
+  const ingredients: IngredientJson[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
@@ -909,12 +910,14 @@ function parseIngredients(
         // Extract 'quantity' from either then unchained instruction, or from the select (otherwise use 0)
         // Extract checked from the select options (if present, otherwise checked is false))
         const title =
-          Array.isArray(titleArray) && titleArray.length > 0 ? titleArray[titleArray.length - 1] : undefined;
+          Array.isArray(titleArray) && titleArray.length > 0
+            ? titleArray[titleArray.length - 1].titleString
+            : undefined;
         let checked = false;
         let quantity: number | undefined = NumberUtils.asNumber(_instructionString);
         if (cardBody && cardBody.bodyBits) {
           const select: SelectJson | undefined = cardBody.bodyBits.find((c) => c.type === BodyBitType.select) as
-            | Select
+            | SelectJson
             | undefined;
           if (select) {
             quantity = select._instructionString ? NumberUtils.asNumber(select._instructionString) : quantity;
@@ -952,9 +955,9 @@ function parseCaptionDefinitionsList(
 ): BitSpecificCards {
   let cardIdx = 0;
   let isHeading = false;
-  const columns: BreakscapedString[] = [];
-  const rows: BreakscapedString[][] = [];
-  let rowValues: BreakscapedString[] = [];
+  const columns: string[] = [];
+  const rows: string[][] = [];
+  let rowValues: string[] = [];
 
   for (const card of cardSet.cards) {
     isHeading = false;
@@ -968,14 +971,14 @@ function parseCaptionDefinitionsList(
         const { title, cardBodyStr } = tags;
 
         // Get the 'heading' which is the [#title] at level 1
-        const heading = title && title[1];
+        const heading = title && title[1].titleString;
         if (cardIdx === 0 && heading != null) isHeading = true;
 
         if (isHeading) {
-          columns.push(heading ?? Breakscape.EMPTY_STRING);
+          columns.push(heading ?? '');
         } else {
           // If not a heading, it is a row cell value
-          const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
+          const value = cardBodyStr ?? '';
           rowValues.push(value);
         }
       }
@@ -988,15 +991,18 @@ function parseCaptionDefinitionsList(
     cardIdx++;
   }
 
-  const captionDefinitionList = builder.captionDefinitionList({
-    columns,
-    definitions: rows.map((row) => {
-      return builder.captionDefinition({
-        term: row[0],
-        description: row[1],
-      });
-    }),
-  });
+  const captionDefinitionList =
+    columns.length > 0
+      ? builder.captionDefinitionList({
+          columns,
+          definitions: rows.map((row) => {
+            return builder.captionDefinition({
+              term: row[0],
+              description: row[1],
+            });
+          }),
+        })
+      : undefined;
 
   return { captionDefinitionList };
 }
