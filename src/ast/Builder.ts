@@ -71,6 +71,8 @@ import {
   ExampleJson,
   FlashcardJson,
   HeadingJson,
+  MatrixCellJson,
+  MatrixJson,
   PairJson,
   QuestionJson,
   QuizJson,
@@ -721,7 +723,7 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreEmptyString: ['example'],
+      ignoreUndefined: ['example'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -744,7 +746,7 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
+    example?: ExampleJson;
   }): ChoiceJson {
     const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
       data;
@@ -786,7 +788,7 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
+    example?: ExampleJson;
   }): ResponseJson {
     const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
       data;
@@ -1024,7 +1026,7 @@ class Builder extends BaseBuilder {
    */
   matrix(data: {
     key: string;
-    cells: MatrixCell[];
+    cells: MatrixCellJson[];
     item?: TextAst;
     lead?: TextAst;
     pageNumber?: TextAst;
@@ -1032,33 +1034,43 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-  }): Matrix {
-    const { key, cells, item, lead, pageNumber, marginNumber, hint, instruction, isDefaultExample } = data;
+  }): MatrixJson {
+    const { key, cells, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample } = data;
+
+    // const convertedExample = {
+    //   ...this.toExample(isDefaultExample, example),
+    // };
+
+    // // Push isDefaultExample down the tree
+    // this.pushExampleDownTreeBoolean(isDefaultExample, convertedExample.example, true, choices);
+    // this.pushExampleDownTreeBoolean(isDefaultExample, convertedExample.example, false, responses);
 
     let isExample = false;
 
     // Set isExample for matrix based on isExample for cells
     for (const c of cells ?? []) {
       if (isDefaultExample && !c.isExample) {
-        c.isDefaultExample = true;
         c.isExample = true;
       }
       isExample = c.isExample ? true : isExample;
     }
 
     // NOTE: Node order is important and is defined here
-    const node: Matrix = {
-      key,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint: this.toBitmarkTextNode(hint),
-      instruction: this.toBitmarkTextNode(instruction),
-      isExample,
+    const node: MatrixJson = {
+      key: key ?? '',
       cells,
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? []) as TextAst,
+      instruction: (instruction ?? undefined) as TextAst,
+      isExample,
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['lead', 'hint', 'isCaseSensitive'],
     });
 
     return node;
@@ -1080,34 +1092,41 @@ class Builder extends BaseBuilder {
     instruction?: TextAst;
     isCaseSensitive?: boolean;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
-  }): MatrixCell {
+    example?: ExampleJson;
+    _valuesAst?: TextAst[];
+  }): MatrixCellJson {
     const {
       values,
       item,
       lead,
-      pageNumber,
-      marginNumber,
+      /*pageNumber,
+      marginNumber,*/
       hint,
       instruction,
       isCaseSensitive,
       isDefaultExample,
       example,
+      _valuesAst,
     } = data;
 
+    const defaultExample = Array.isArray(_valuesAst) && _valuesAst.length > 0 ? _valuesAst[0] : null;
+
     // NOTE: Node order is important and is defined here
-    const node: MatrixCell = {
-      values,
-      itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      hint: this.toBitmarkTextNode(hint),
-      instruction: this.toBitmarkTextNode(instruction),
-      isCaseSensitive,
-      ...this.toExample(isDefaultExample, example),
+    const node: MatrixCellJson = {
+      values: values ?? [],
+      item: (item ?? []) as TextAst,
+      lead: (lead ?? undefined) as TextAst,
+      hint: (hint ?? undefined) as TextAst,
+      instruction: (instruction ?? []) as TextAst,
+      isCaseSensitive: isCaseSensitive as boolean,
+      ...this.toExample(isDefaultExample, example, defaultExample),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
+      ignoreAllEmptyArrays: true,
+      ignoreUndefined: ['example', 'lead', 'hint', 'isCaseSensitive'],
     });
 
     return node;
@@ -1363,7 +1382,7 @@ class Builder extends BaseBuilder {
     // _defaultExample: ExampleJson;
     // solutions: string[];
 
-    const defaultExample = Array.isArray(_solutionsAst) && _solutionsAst.length === 1 ? _solutionsAst[0] : null;
+    const defaultExample = Array.isArray(_solutionsAst) && _solutionsAst.length > 0 ? _solutionsAst[0] : null;
 
     // NOTE: Node order is important and is defined here
     const node: GapJson = {
@@ -1800,7 +1819,7 @@ class Builder extends BaseBuilder {
     hint?: TextAst;
     instruction?: TextAst;
     isDefaultExample?: boolean;
-    example?: ExampleIn;
+    example?: ExampleJson;
   }): StatementJson {
     const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
       data;
@@ -2063,7 +2082,7 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreEmptyString: ['example'],
+      ignoreUndefined: ['example'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -2171,7 +2190,7 @@ class Builder extends BaseBuilder {
     isDefaultExample: boolean | undefined,
     example: ExampleJson | undefined,
   ): void {
-    if (isDefaultExample || example) {
+    if (isDefaultExample || example != null) {
       if (cardNode) {
         this.pushExampleDownTreeString(isDefaultExample, example, cardNode.pairs as WithExampleJson[]);
         this.pushExampleDownTreeBoolean(isDefaultExample, example, false, cardNode.flashcards as WithExampleJson[]);
@@ -2228,7 +2247,7 @@ class Builder extends BaseBuilder {
     onlyCorrect: boolean,
     ...nodes: (WithExampleJson | WithExampleJson[] | undefined)[]
   ): void {
-    if (!isDefaultExample && !example) return;
+    if (!isDefaultExample && example == null) return;
 
     if (Array.isArray(nodes)) {
       for (const ds of nodes) {

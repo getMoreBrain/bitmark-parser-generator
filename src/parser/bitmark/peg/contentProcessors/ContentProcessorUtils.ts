@@ -45,7 +45,7 @@ class ContentProcessorUtils {
    */
   public concatenatePlainTextWithAstTexts(text: JsonText, extraBreaks: number, textPlain: string): JsonText {
     if (Array.isArray(text)) {
-      textPlain = textPlain.trim();
+      textPlain = textPlain && textPlain.trim();
       if (textPlain) {
         const splitText = textPlain.split('\n');
         const content: TextNode[] = [];

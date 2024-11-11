@@ -120,9 +120,13 @@ class BodyContentProcessor {
             //
             textFormat,
           })
-        : bodyTextStr;
+        : Breakscape.unbreakscape(bodyTextStr, {
+            bitTagOnly: !isBitmarkText,
+          });
 
-      const parserPlainText: JsonText = plainBodyTextStr;
+      const parserPlainText: JsonText = Breakscape.unbreakscape(plainBodyTextStr, {
+        bitTagOnly: true,
+      });
 
       // Newlines will have been lost from the end of bodyTextStr, and start of plainBodyTextStr
       // Count then and add them back when merging

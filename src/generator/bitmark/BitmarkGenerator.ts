@@ -11,6 +11,7 @@ import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
 import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { ResourceJson } from '../../model/json/ResourceJson';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { ObjectUtils } from '../../utils/ObjectUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
@@ -1301,13 +1302,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (posterImage) {
         this.writeProperty('posterImage', posterImage);
       }
-    } else {
-      // Resource poster image
-      const posterImage = node.value as ImageResource;
-      if (posterImage && posterImage.value) {
-        this.writeProperty('posterImage', posterImage.value);
-      }
     }
+    // else {
+    //   // Resource poster image
+    //   const posterImage = node.value as ImageResource;
+    //   if (posterImage && posterImage.value) {
+    //     this.writeProperty('posterImage', posterImage.value);
+    //   }
+    // }
   }
 
   // bitmarkAst -> bits -> bitsValue -> resource -> thumbnails

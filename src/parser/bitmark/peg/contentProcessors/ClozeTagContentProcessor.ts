@@ -1,3 +1,4 @@
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
@@ -27,17 +28,17 @@ function clozeTagContentProcessor(
   const { value } = content as TypeValue;
 
   const solutions = target.solutions;
-  const solutionStrings = target._solutionStrings;
+  const solutionsAst = target._solutionsAst;
 
-  if (!solutions || !solutionStrings) return;
+  if (!solutions || !solutionsAst) return;
 
   if (StringUtils.isString(value)) {
     const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
-    solutionStrings.push(trimmedStringValue);
+    solutions.push(Breakscape.unbreakscape(trimmedStringValue));
 
-    const solution = textParser.toAst(trimmedStringValue);
-    solutions.push(solution);
+    const solutionAst = textParser.toAst(trimmedStringValue);
+    solutionsAst.push(solutionAst);
   }
 }
 export { clozeTagContentProcessor };

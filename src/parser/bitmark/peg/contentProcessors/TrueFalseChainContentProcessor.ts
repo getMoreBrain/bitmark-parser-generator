@@ -1,5 +1,6 @@
 import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
+import { BodyPart, Highlight, HighlightText } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
@@ -7,16 +8,6 @@ import { ChoiceJson, ResponseJson, StatementJson } from '../../../../model/json/
 
 import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor';
 
-import {
-  BodyPart,
-  Choice,
-  Highlight,
-  HighlightText,
-  Response,
-  Select,
-  SelectOption,
-  Statement,
-} from '../../../../model/ast/Nodes';
 import {
   BitContent,
   BitContentLevel,

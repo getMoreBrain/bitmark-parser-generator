@@ -291,7 +291,7 @@ class BitmarkPegParserProcessor {
       textFormat,
       resourceType,
       ...titles,
-      posterImage: posterImage as BreakscapedString,
+      posterImage: posterImage as string,
       statement: isTrueFalseV1 ? statement : undefined,
       choices: isMultipleChoiceV1 ? choices : undefined,
       responses: isMultipleResponseV1 ? responses : undefined,
@@ -327,7 +327,14 @@ class BitmarkPegParserProcessor {
   }
 
   // Build bit header
-  buildBitHeader(bitType: string, bitLevel: number, textFormatAndResourceType: RawTextAndResourceType): BitHeader {
+  buildBitHeader(
+    bitTypeBreakscaped: BreakscapedString,
+    bitLevel: number,
+    textFormatAndResourceType: RawTextAndResourceType,
+  ): BitHeader {
+    // Unbreakscape the bit type
+    const bitType = Breakscape.unbreakscape(bitTypeBreakscaped);
+
     // Get / check bit type
     const validBitType = Config.getBitType(bitType);
     const commented = Config.isBitTypeCommented(bitType);
@@ -374,14 +381,16 @@ class BitmarkPegParserProcessor {
   // Build text and resource type
   buildTextAndResourceType(value1: TypeValue | undefined, value2: TypeValue | undefined): RawTextAndResourceType {
     const res: RawTextAndResourceType = {};
+
     const processValue = (value: TypeValue | undefined) => {
       if (value) {
+        const val = Breakscape.unbreakscape(StringUtils.string(value.value) as BreakscapedString);
         if (value.type === TypeKey.TextFormat) {
           // Set text format
-          res.textFormat = StringUtils.string(value.value);
+          res.textFormat = val;
         } else {
           // Set resource type
-          res.resourceType = StringUtils.string(value.value);
+          res.resourceType = val;
         }
       }
     };
@@ -492,6 +501,7 @@ class BitmarkPegParserProcessor {
 
     result.title = [];
     result.solutions = [];
+    result._solutionsAst = [];
     result.statements = [];
     result.choices = [];
     result.responses = [];

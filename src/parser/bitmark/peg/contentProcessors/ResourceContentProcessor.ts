@@ -1,12 +1,13 @@
 import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { Count } from '../../../../model/enum/Count';
 import { ResourceTag, ResourceTagType } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
 
 import {
   BitContent,
@@ -31,10 +32,10 @@ function buildResources(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
   resourceTypeAttachment: string | undefined,
-  resources: Resource[] | undefined,
-): Resource[] | undefined {
-  const filteredResources: Resource[] = [];
-  const excessResources: Resource[] = [];
+  resources: ResourceJson[] | undefined,
+): ResourceJson[] | undefined {
+  const filteredResources: ResourceJson[] = [];
+  const excessResources: ResourceJson[] = [];
 
   const validatedResourceTypeAttachemnt = ResourceTag.fromValue(resourceTypeAttachment);
 
@@ -47,8 +48,8 @@ function buildResources(
   // Find the excess resources and ensure we have the minimum resources
   if (resources) {
     for (const r of resources.reverse()) {
-      let countMin = countsMin.get(r.typeAlias) ?? 0;
-      let countMax = countsMax.get(r.typeAlias) ?? 0;
+      let countMin = countsMin.get(r._typeAlias) ?? 0;
+      let countMax = countsMax.get(r._typeAlias) ?? 0;
 
       // Decrement the minimum count and later ensure it is 0
       countMin = Math.max(0, countMin - 1);
@@ -64,8 +65,8 @@ function buildResources(
       }
 
       // Set the new counts
-      countsMin.set(r.typeAlias, countMin);
-      countsMax.set(r.typeAlias, countMax);
+      countsMin.set(r._typeAlias, countMin);
+      countsMax.set(r._typeAlias, countMax);
     }
   }
 
@@ -116,10 +117,19 @@ function resourceContentProcessor(
       chain,
     );
 
-    const resource = resourceBuilder.resource({
+    const posterImageResource = posterImage
+      ? (
+          resourceBuilder.resource(bitType, {
+            type: ResourceTag.image,
+            value: posterImage,
+          }) as ImageResourceWrapperJson
+        ).image
+      : undefined;
+
+    const resource = resourceBuilder.resource(bitType, {
       type,
-      value,
-      posterImage: posterImage as ImageResource,
+      value: Breakscape.unbreakscape(value),
+      posterImage: posterImageResource,
       ...tags,
     });
     if (resource) resources.push(resource);
@@ -153,10 +163,19 @@ function propertyStyleResourceContentProcessor(
       chain,
     );
 
-    const resource = resourceBuilder.resource({
+    const posterImageResource = posterImage
+      ? (
+          resourceBuilder.resource(bitType, {
+            type: ResourceTag.image,
+            value: posterImage,
+          }) as ImageResourceWrapperJson
+        ).image
+      : undefined;
+
+    const resource = resourceBuilder.resource(bitType, {
       type,
-      value,
-      posterImage: posterImage as ImageResource,
+      value: Breakscape.unbreakscape(value),
+      posterImage: posterImageResource,
       ...tags,
     });
     if (resource) target.propertyStyleResources[key] = resource;

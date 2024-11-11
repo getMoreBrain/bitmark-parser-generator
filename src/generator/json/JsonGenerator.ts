@@ -461,10 +461,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.addProperty(personJson, 'title', title, true);
     }
     if (avatarImage) {
-      const res = this.parseResourceToJson(bitType, avatarImage);
-      if (res && res.type === ResourceTag.image) {
-        personJson.avatarImage = res.image;
-      }
+      personJson.avatarImage = avatarImage.image;
     }
 
     if (Config.isOfBitType(bitType, BitType.conversationLeft1)) {
@@ -1231,53 +1228,55 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix
 
   protected enter_matrix(node: NodeInfo, _route: NodeInfo[]): void {
-    const matrix = node.value as Matrix[];
-    const matrixJsonArray: MatrixJson[] = [];
+    const matrixJsonArray = node.value as MatrixJson[];
 
-    if (matrix) {
-      for (const m of matrix) {
-        // Choices
-        const matrixCellsJson: MatrixCellJson[] = [];
-        if (m.cells) {
-          for (const c of m.cells) {
-            // Get default example
-            const defaultExample = Array.isArray(c.values) && c.values.length > 0 && c.values[0];
+    // const matrix = node.value as Matrix[];
+    // const matrixJsonArray: MatrixJson[] = [];
 
-            // Create the choice
-            const matrixCellJson: Partial<MatrixCellJson> = {
-              values: c.values ?? [],
-              ...this.toItemLeadHintInstruction(c),
-              isCaseSensitive: c.isCaseSensitive ?? true,
-              ...this.toExample(c, {
-                defaultExample,
-                isBoolean: false,
-              }),
-            };
+    // if (matrix) {
+    //   for (const m of matrix) {
+    //     // Choices
+    //     const matrixCellsJson: MatrixCellJson[] = [];
+    //     if (m.cells) {
+    //       for (const c of m.cells) {
+    //         // Get default example
+    //         const defaultExample = Array.isArray(c.values) && c.values.length > 0 && c.values[0];
 
-            // Delete unwanted properties
-            if (c.itemLead?.lead == null) delete matrixCellJson.lead;
-            if (c.hint == null) delete matrixCellJson.hint;
+    //         // Create the choice
+    //         const matrixCellJson: Partial<MatrixCellJson> = {
+    //           values: c.values ?? [],
+    //           ...this.toItemLeadHintInstruction(c),
+    //           isCaseSensitive: c.isCaseSensitive ?? true,
+    //           ...this.toExample(c, {
+    //             defaultExample,
+    //             isBoolean: false,
+    //           }),
+    //         };
 
-            matrixCellsJson.push(matrixCellJson as MatrixCellJson);
-          }
-        }
+    //         // Delete unwanted properties
+    //         if (c.itemLead?.lead == null) delete matrixCellJson.lead;
+    //         if (c.hint == null) delete matrixCellJson.hint;
 
-        // Create the matrix
-        const matrixJson: Partial<MatrixJson> = {
-          key: m.key ?? '',
-          cells: matrixCellsJson ?? [],
-          ...this.toItemLeadHintInstruction(m),
-          // ...this.toExample(m.example, m.isExample),
-          isExample: m.isExample ?? false,
-        };
+    //         matrixCellsJson.push(matrixCellJson as MatrixCellJson);
+    //       }
+    //     }
 
-        // Delete unwanted properties
-        if (m.itemLead?.lead == null) delete matrixJson.lead;
-        if (m.instruction == null) delete matrixJson.instruction;
+    //     // Create the matrix
+    //     const matrixJson: Partial<MatrixJson> = {
+    //       key: m.key ?? '',
+    //       cells: matrixCellsJson ?? [],
+    //       ...this.toItemLeadHintInstruction(m),
+    //       // ...this.toExample(m.example, m.isExample),
+    //       isExample: m.isExample ?? false,
+    //     };
 
-        matrixJsonArray.push(matrixJson as MatrixJson);
-      }
-    }
+    //     // Delete unwanted properties
+    //     if (m.itemLead?.lead == null) delete matrixJson.lead;
+    //     if (m.instruction == null) delete matrixJson.instruction;
+
+    //     matrixJsonArray.push(matrixJson as MatrixJson);
+    //   }
+    // }
 
     if (matrixJsonArray.length > 0) {
       this.bitJson.matrix = matrixJsonArray;
@@ -1451,21 +1450,23 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return;
 
-    const resource = node.value as Resource;
-    const bitType = this.getBitType(route);
+    // const resource = node.value as Resource;
+    // const bitType = this.getBitType(route);
 
-    if (!resource || !bitType) return;
+    // if (!resource || !bitType) return;
 
-    const res = this.parseResourceToJson(bitType, resource);
-    if (res && res.type === ResourceTag.image) {
-      this.bitJson.imagePlaceholder = res;
-    }
+    // const res = this.parseResourceToJson(bitType, resource);
+    // if (res && res.type === ResourceTag.image) {
+    //   this.bitJson.imagePlaceholder = res;
+    // }
+
+    this.bitJson.imagePlaceholder = node.value as ImageResourceWrapperJson;
   }
 
   // bitmarkAst -> bits -> bitsValue -> resources
 
   protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean | void {
-    const resources = node.value as Resource[];
+    const resources = node.value as ResourceJson[];
     const bitType = this.getBitType(route);
     const resourceType = this.getResourceType(route);
 
@@ -1486,16 +1487,18 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         // Create the combo resource wrapper
         const wrapper: ResourceWrapperJson = {
           type: comboTagType,
+          _typeAlias: comboTagType,
         };
 
         // For each of the resources in this combo resource, find the actual resource and add it to the JSON
         for (const rt of resourceTags) {
-          const r = resources.find((r) => r.typeAlias === rt);
+          const r = resources.find((r) => r._typeAlias === rt);
           // Extract everything except the type from the resource
           if (r) {
-            const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.typeAlias);
-            const key = tagConfig?.jsonKey ?? r.typeAlias;
-            const json = this.parseResourceToJson(bitType, r);
+            const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r._typeAlias);
+            const key = tagConfig?.jsonKey ?? r._typeAlias;
+            const tag = tagConfig?.tag ?? r._typeAlias;
+            const json = r._typeAlias === tag ? r : undefined;
             if (json) {
               for (const [k, v] of Object.entries(json)) {
                 if (k !== 'type') {
@@ -1512,9 +1515,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // The resource is a logo-grave  / prototpye-images resource
       const images: ImageResourceWrapperJson[] = [];
       for (const r of resources) {
-        const json = this.parseResourceToJson(bitType, r) as ImageResourceWrapperJson;
-        if (json) {
-          images.push(json);
+        if (r.type === ResourceTag.image) {
+          images.push(r);
         }
       }
       if (bitType === BitType.imagesLogoGrave) {
@@ -1526,7 +1528,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // This is a standard resource. If there is more than one resource, use the first one.
       // There should not be more than one because of validation
       if (resources.length >= 1) {
-        resourceJson = this.parseResourceToJson(bitType, resources[0]);
+        resourceJson = resources[0]; // this.parseResourceToJson(bitType, resources[0]);
       }
     }
 

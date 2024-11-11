@@ -3,7 +3,7 @@ import { BodyBitTypeType } from '../enum/BodyBitType';
 import { ResourceTagType } from '../enum/ResourceTag';
 import { TextFormatType } from '../enum/TextFormat';
 import { ChoiceJson, FlashcardJson, ResponseJson, StatementJson } from '../json/BitJson';
-import { ImageResourceWrapperJson, ResourceJson } from '../json/ResourceJson';
+import { ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from '../json/ResourceJson';
 import { ParserError } from '../parser/ParserError';
 import { ParserInfo } from '../parser/ParserInfo';
 
@@ -229,7 +229,7 @@ export interface ImageSource {
 export interface Person {
   name: string;
   title?: string;
-  avatarImage?: ImageResource;
+  avatarImage?: ImageResourceWrapperJson;
 }
 
 export interface MarkConfig {

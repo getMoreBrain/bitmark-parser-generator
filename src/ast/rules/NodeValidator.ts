@@ -1,6 +1,28 @@
-import { Bit, CardBit, Resource } from '../../model/ast/Nodes';
-import { ResourceJson } from '../../model/json/ResourceJson';
+import { Bit, CardBit } from '../../model/ast/Nodes';
+import { ResourceTag } from '../../model/enum/ResourceTag';
 import { StringUtils } from '../../utils/StringUtils';
+
+import {
+  AppLinkResourceWrapperJson,
+  ArticleResourceWrapperJson,
+  AudioEmbedResourceWrapperJson,
+  AudioLinkResourceWrapperJson,
+  AudioResourceWrapperJson,
+  DocumentDownloadResourceWrapperJson,
+  DocumentEmbedResourceWrapperJson,
+  DocumentLinkResourceWrapperJson,
+  DocumentResourceWrapperJson,
+  ImageLinkResourceWrapperJson,
+  ImageResourceWrapperJson,
+  ResourceJson,
+  StillImageFilmEmbedResourceWrapperJson,
+  StillImageFilmLinkResourceWrapperJson,
+  StillImageFilmResourceWrapperJson,
+  VideoEmbedResourceWrapperJson,
+  VideoLinkResourceWrapperJson,
+  VideoResourceWrapperJson,
+  WebsiteLinkResourceWrapperJson,
+} from '../../model/json/ResourceJson';
 
 /**
  * Validates a node as the builder level (i.e. when creating AST).
@@ -40,30 +62,67 @@ class NodeValidator {
     let valid = false;
 
     switch (resource.type) {
-      // case ResourceType.imageResponsive: {
-      //   const r = resource as unknown as ImageResponsiveResource;
-      //   r.imagePortrait = this.validateResource(r.imagePortrait) ?? {
-      //     type: ResourceType.image,
-      //     typeAlias: ResourceType.imagePortrait,
-      //   };
-      //   r.imageLandscape = this.validateResource(r.imageLandscape) ?? {
-      //     type: ResourceType.image,
-      //     typeAlias: ResourceType.imageLandscape,
-      //   };
-      //   valid = true;
-      //   break;
-      // }
-
-      // case ResourceType.stillImageFilm: {
-      //   const r = resource as unknown as StillImageFilmResource;
-      //   r.image = this.validateResource(r.image) ?? { type: ResourceType.image, typeAlias: ResourceType.image };
-      //   r.audio = this.validateResource(r.audio) ?? { type: ResourceType.audio, typeAlias: ResourceType.image };
-      //   valid = true;
-      //   break;
-      // }
+      case ResourceTag.image:
+        // case ResourceTag.imagePortrait:
+        // case ResourceTag.imageLandscape:
+        valid = !!(resource as ImageResourceWrapperJson).image.src;
+        break;
+      case ResourceTag.imageLink:
+        valid = !!(resource as ImageLinkResourceWrapperJson).imageLink.url;
+        break;
+      case ResourceTag.audio:
+        valid = !!(resource as AudioResourceWrapperJson).audio.src;
+        break;
+      case ResourceTag.audioEmbed:
+        valid = !!(resource as AudioEmbedResourceWrapperJson).audioEmbed.src;
+        break;
+      case ResourceTag.audioLink:
+        valid = !!(resource as AudioLinkResourceWrapperJson).audioLink.url;
+        break;
+      case ResourceTag.video:
+        valid = !!(resource as VideoResourceWrapperJson).video.src;
+        break;
+      case ResourceTag.videoEmbed:
+        valid = !!(resource as VideoEmbedResourceWrapperJson).videoEmbed.url;
+        break;
+      case ResourceTag.videoLink:
+        valid = !!(resource as VideoLinkResourceWrapperJson).videoLink.url;
+        break;
+      case ResourceTag.stillImageFilm:
+        valid =
+          !!(resource as StillImageFilmResourceWrapperJson).image.src &&
+          !!(resource as StillImageFilmResourceWrapperJson).audio.src;
+        break;
+      case ResourceTag.stillImageFilmEmbed:
+        valid = !!(resource as StillImageFilmEmbedResourceWrapperJson).stillImageFilmEmbed.url;
+        break;
+      case ResourceTag.stillImageFilmLink:
+        valid = !!(resource as StillImageFilmLinkResourceWrapperJson).stillImageFilmLink.url;
+        break;
+      case ResourceTag.article:
+        valid = !!(resource as ArticleResourceWrapperJson).article.body;
+        break;
+      case ResourceTag.document:
+        valid = !!(resource as DocumentResourceWrapperJson).document.url;
+        break;
+      case ResourceTag.documentEmbed:
+        valid = !!(resource as DocumentEmbedResourceWrapperJson).documentEmbed.url;
+        break;
+      case ResourceTag.documentLink:
+        valid = !!(resource as DocumentLinkResourceWrapperJson).documentLink.url;
+        break;
+      case ResourceTag.documentDownload:
+        valid = !!(resource as DocumentDownloadResourceWrapperJson).documentDownload.url;
+        break;
+      case ResourceTag.appLink:
+        valid = !!(resource as AppLinkResourceWrapperJson).appLink.url;
+        break;
+      case ResourceTag.websiteLink:
+        valid = !!(resource as WebsiteLinkResourceWrapperJson).websiteLink.url;
+        break;
 
       default:
-        valid = !!resource.value;
+        valid = false;
     }
 
     // Note: even if resource is invalid, we still return it as it is used to set the resource attachment type
@@ -72,7 +131,7 @@ class NodeValidator {
       if (resource.type) {
         ret = {
           type: resource.type,
-          typeAlias: resource.type,
+          // typeAlias: resource.type,
         } as T;
       }
     }

@@ -2,6 +2,7 @@ import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
+import { Body, BotResponse, CardBit, Ingredient } from '../../../../model/ast/Nodes';
 import { BitmarkTextNode, TextAst } from '../../../../model/ast/TextNodes';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
@@ -11,37 +12,18 @@ import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { SelectJson } from '../../../../model/json/BodyBitJson';
 import { AudioResourceJson, ImageResourceJson } from '../../../../model/json/ResourceJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
-import { TextParser } from '../../../text/TextParser';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import { ContentProcessorUtils } from './ContentProcessorUtils';
 
 import {
-  AudioResource,
-  Body,
-  BodyText,
-  BotResponse,
-  CardBit,
-  Choice,
-  Ingredient,
-  Flashcard,
-  Heading,
-  ImageResource,
-  Matrix,
-  MatrixCell,
-  Pair,
-  Question,
-  Quiz,
-  Response,
-  Statement,
-  Select,
-  DescriptionListItem,
-} from '../../../../model/ast/Nodes';
-import {
   ChoiceJson,
   DescriptionListItemJson,
+  ExampleJson,
   FlashcardJson,
   HeadingJson,
+  MatrixCellJson,
+  MatrixJson,
   PairJson,
   QuestionJson,
   QuizJson,
@@ -61,7 +43,6 @@ import {
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
-const textParser = new TextParser();
 
 function buildCards(
   context: BitmarkPegParserContext,
@@ -409,11 +390,11 @@ function parseQuiz(
   if (!insertChoices && !insertResponses) return {};
 
   let isDefaultExampleCard = false;
-  let exampleCard: BreakscapedString | undefined;
+  let exampleCard: ExampleJson | undefined;
 
   for (const card of cardSet.cards) {
     isDefaultExampleCard = false;
-    exampleCard = Breakscape.EMPTY_STRING;
+    exampleCard = undefined;
 
     for (const side of card.sides) {
       for (const content of side.variants) {
@@ -536,9 +517,9 @@ function parseMatchPairs(
   let keyImage: ImageResourceJson | undefined = undefined;
   let extraTags: BitContentProcessorResult = {};
   let isDefaultExampleCardSet = false;
-  let exampleCardSet: TextAst | undefined;
+  let exampleCardSet: ExampleJson | undefined;
   let isDefaultExampleCard = false;
-  let exampleCard: TextAst | undefined;
+  let exampleCard: ExampleJson | undefined;
   // let variant: ProcessedCardVariant | undefined;
 
   for (const card of cardSet.cards) {
@@ -570,7 +551,7 @@ function parseMatchPairs(
 
         if (sideIdx === 0) {
           // First side
-          forKeys = Breakscape.unbreakscape(heading);
+          forKeys = heading;
           if (heading != null) {
             isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
             exampleCardSet = example ? (example as TextAst) : exampleCardSet;
@@ -589,7 +570,7 @@ function parseMatchPairs(
           }
         } else {
           // Subsequent sides
-          forValues.push(Breakscape.unbreakscape(heading) ?? '');
+          forValues.push(heading ?? '');
           if (heading != null) {
             isDefaultExampleCardSet = isDefaultExample === true ? true : isDefaultExampleCardSet;
             exampleCardSet = example ? (example as TextAst) : exampleCardSet;
@@ -671,20 +652,21 @@ function parseMatchMatrix(
   let sideIdx = 0;
   let isHeading = false;
   let heading: Heading | undefined;
-  let forKeys: BreakscapedString | undefined = undefined;
-  let forValues: BreakscapedString[] = [];
-  let matrixKey: BreakscapedString | undefined = undefined;
+  let forKeys: string | undefined = undefined;
+  let forValues: string[] = [];
+  let matrixKey: string | undefined = undefined;
   let matrixKeyTags: BitContentProcessorResult | undefined = undefined;
-  const matrix: Matrix[] = [];
-  let matrixCells: MatrixCell[] = [];
-  let matrixCellValues: BreakscapedString[] = [];
+  const matrix: MatrixJson[] = [];
+  let matrixCells: MatrixCellJson[] = [];
+  let matrixCellValues: string[] = [];
+  let _matrixCellValuesAst: TextAst[] = [];
   let matrixCellTags: BitContentProcessorResult = {};
   let isDefaultExampleCardSet = false;
-  let exampleCardSet: BreakscapedString | undefined;
+  let exampleCardSet: ExampleJson | undefined;
   let isDefaultExampleCard = false;
-  let exampleCard: BreakscapedString | undefined;
+  let exampleCard: ExampleJson | undefined;
   let isDefaultExampleSide = false;
-  let exampleSide: BreakscapedString | undefined;
+  let exampleSide: ExampleJson | undefined;
   let isCaseSensitiveMatrix: boolean | undefined;
   let isCaseSensitiveCell: boolean | undefined;
 
@@ -702,23 +684,25 @@ function parseMatchMatrix(
     // keyImage = undefined;
     matrixCells = [];
     matrixCellValues = [];
+    _matrixCellValuesAst = [];
     sideIdx = 0;
     isDefaultExampleCard = false;
-    exampleCard = Breakscape.EMPTY_STRING;
+    exampleCard = undefined;
     isCaseSensitiveMatrix = undefined;
 
     for (const side of card.sides) {
       matrixCellValues = [];
+      _matrixCellValuesAst = [];
       matrixCellTags = {};
       isDefaultExampleSide = false;
-      exampleSide = Breakscape.EMPTY_STRING;
+      exampleSide = undefined;
       isCaseSensitiveCell = undefined;
 
       for (const content of side.variants) {
         // variant = content;
         const tags = content.data;
 
-        const { title, cardBodyStr, isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
+        const { title, cardBody, cardBodyStr, isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
 
         // Example
         isDefaultExampleSide = isDefaultExample === true ? true : isDefaultExampleSide;
@@ -761,8 +745,10 @@ function parseMatchMatrix(
           } else if (tags.title == null) {
             // If not a heading, it is a matrix cell value
             const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
+            const valueAst = ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode);
             matrixCellValues.push(value);
-            if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = value;
+            _matrixCellValuesAst.push(valueAst);
+            if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = valueAst;
             isCaseSensitiveCell = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
           }
         }
@@ -778,6 +764,7 @@ function parseMatchMatrix(
 
         const matrixCell = builder.matrixCell({
           values: matrixCellValues,
+          _valuesAst: _matrixCellValuesAst,
           ...matrixCellTags,
           isDefaultExample,
           example,

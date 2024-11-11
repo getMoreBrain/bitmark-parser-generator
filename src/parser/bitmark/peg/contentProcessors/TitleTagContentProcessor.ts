@@ -1,3 +1,4 @@
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TextAst } from '../../../../model/ast/TextNodes';
@@ -36,7 +37,7 @@ function titleTagContentProcessor(
   const titleValue: { title: string; level: string[] } = value as any;
   const titleText = StringUtils.trimmedString(titleValue.title) as BreakscapedString;
   const level = titleValue.level.length;
-  title[level] = titleText;
+  title[level] = Breakscape.unbreakscape(titleText);
 }
 
 function buildTitles(

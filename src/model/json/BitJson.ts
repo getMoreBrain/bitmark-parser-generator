@@ -320,7 +320,7 @@ export interface MatrixJson {
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
-  example: ExampleJson;
+  // example: ExampleJson;
 }
 
 export interface MatrixCellJson {

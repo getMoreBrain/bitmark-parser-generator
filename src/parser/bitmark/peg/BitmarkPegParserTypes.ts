@@ -16,6 +16,7 @@ import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag } from '../../../model/enum/Tag';
 import { TextFormatType } from '../../../model/enum/TextFormat';
+import { ImageResourceJson, ResourceJson } from '../../../model/json/ResourceJson';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
@@ -56,6 +57,7 @@ import {
   ExampleJson,
   FlashcardJson,
   HeadingJson,
+  MatrixJson,
   PairJson,
   QuestionJson,
   QuizJson,
@@ -107,7 +109,7 @@ export interface BitHeader {
 }
 
 export interface TrueFalseValue {
-  text: BreakscapedString;
+  text: string;
   isCorrect: boolean;
   isDefaultExample: boolean;
   example?: ExampleJson;
@@ -148,10 +150,10 @@ export interface BitContentProcessorResult {
   responses?: ResponseJson[];
   solution?: BreakscapedString;
   mark?: BreakscapedString[];
-  title?: BreakscapedString[];
+  title?: string[];
   subtitle?: BreakscapedString;
   propertyStyleResources?: { [key: string]: Resource };
-  resources?: Resource[];
+  resources?: ResourceJson[];
   itemLead?: TextAst[];
   item?: TextAst;
   itemString?: string;
@@ -163,7 +165,7 @@ export interface BitContentProcessorResult {
   hint?: TextAst;
   _hintString?: string;
   anchor?: string;
-  book?: BreakscapedString;
+  book?: string;
   reference?: string;
   referenceEnd?: string;
   sampleSolution?: string;
@@ -171,25 +173,25 @@ export interface BitContentProcessorResult {
   additionalSolutions?: string[];
   isCaseSensitive?: boolean;
   reaction?: BreakscapedString;
-  license?: BreakscapedString;
-  copyright?: BreakscapedString;
+  license?: string;
+  copyright?: string;
   showInIndex?: boolean;
-  caption?: BreakscapedString;
-  src1x?: BreakscapedString;
-  src2x?: BreakscapedString;
-  src3x?: BreakscapedString;
-  src4x?: BreakscapedString;
+  caption?: TextAst;
+  src1x?: string;
+  src2x?: string;
+  src3x?: string;
+  src4x?: string;
   width?: string;
   height?: string;
-  alt?: BreakscapedString;
+  alt?: string;
   // duration?: BreakscapedString | BreakscapedString[]; // number? - there is a collision between duration at bit level, and duration in resource.
   mute?: boolean;
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  posterImage?: ImageResource | BreakscapedString;
-  siteName?: BreakscapedString;
-  imageSourceUrl?: BreakscapedString;
+  posterImage?: /*ImageResourceJson |*/ string;
+  siteName?: string;
+  imageSourceUrl?: string;
   mockupId?: BreakscapedString;
   size?: number;
   format?: BreakscapedString;
@@ -224,7 +226,7 @@ export interface BitSpecificCards {
   quizzes?: QuizJson[];
   heading?: HeadingJson;
   pairs?: PairJson[];
-  matrix?: Matrix[];
+  matrix?: MatrixJson[];
   choices?: ChoiceJson[];
   questions?: QuestionJson[];
   table?: Table;

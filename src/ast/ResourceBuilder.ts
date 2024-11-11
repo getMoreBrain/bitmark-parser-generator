@@ -1,5 +1,7 @@
 import { Breakscape } from '../breakscaping/Breakscape';
+import { Config } from '../config/Config';
 import { TextAst } from '../model/ast/TextNodes';
+import { BitType, BitTypeType } from '../model/enum/BitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { UrlUtils } from '../utils/UrlUtils';
@@ -40,6 +42,7 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   resource(
+    bitType: BitTypeType,
     data: {
       type: ResourceTagType;
 
@@ -106,7 +109,7 @@ class ResourceBuilder extends BaseBuilder {
           const dataAsAny = data as any;
           const value = dataAsAny[k];
           if (value) {
-            const image: ImageResourceWrapperJson = this.resource({
+            const image: ImageResourceWrapperJson = this.resource(bitType, {
               type: ResourceTag.image,
               value,
             }) as ImageResourceWrapperJson;
@@ -122,7 +125,7 @@ class ResourceBuilder extends BaseBuilder {
       case ResourceTag.image:
       case ResourceTag.imagePortrait:
       case ResourceTag.imageLandscape:
-        node = this.imageResource(finalData, type);
+        node = this.imageResource(bitType, finalData, type);
         break;
 
       // case ResourceTag.imageResponsive: {
@@ -238,6 +241,7 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   imageResource(
+    bitType: BitTypeType,
     data: {
       format: string;
       value: string; //src
@@ -274,9 +278,23 @@ class ResourceBuilder extends BaseBuilder {
       search,
     } = data;
 
+    let zoomDisabledDefault = false;
+
+    if (
+      Config.isOfBitType(bitType, [
+        BitType.imageSeparator,
+        BitType.pageBanner,
+        BitType.imagesLogoGrave,
+        BitType.prototypeImages,
+      ])
+    ) {
+      zoomDisabledDefault = true;
+    }
+
     // NOTE: Node order is important and is defined here
     const node: ImageResourceWrapperJson = {
-      type: (typeAlias ?? ResourceTag.image) as typeof ResourceTag.image,
+      type: ResourceTag.image,
+      _typeAlias: typeAlias ?? ResourceTag.image,
       image: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -288,7 +306,7 @@ class ResourceBuilder extends BaseBuilder {
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         alt: alt ?? '',
-        zoomDisabled: zoomDisabled ?? false, // TODO: Default depends on the bit(!)
+        zoomDisabled: zoomDisabled ?? zoomDisabledDefault,
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
@@ -298,8 +316,8 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
-      ignoreFalse: ['zoomDisabled'],
+    ObjectUtils.removeUnwantedProperties(node.image, {
+      ignoreFalse: ['zoomDisabled', 'showInIndex'],
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
       ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
@@ -352,11 +370,12 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: ImageLinkResourceWrapperJson = {
       type: ResourceTag.imageLink,
-      //typeAlias: ResourceTag.imageLink,
+      _typeAlias: ResourceTag.imageLink,
       imageLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
-        src: value ?? '',
+        // src: value ?? '',
+        url: value ?? '',
         src1x: (src1x ?? undefined) as string,
         src2x: (src2x ?? undefined) as string,
         src3x: (src3x ?? undefined) as string,
@@ -374,11 +393,11 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
-      ignoreFalse: ['zoomDisabled'],
+    ObjectUtils.removeUnwantedProperties(node.imageLink, {
+      ignoreFalse: ['zoomDisabled', 'showInIndex'],
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -408,7 +427,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AudioResourceWrapperJson = {
       type: ResourceTag.audio,
-      // typeAlias: ResourceTag.audio,
+      _typeAlias: ResourceTag.audio,
       audio: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -425,9 +444,10 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.audio, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -457,7 +477,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResourceWrapperJson = {
       type: ResourceTag.audioEmbed,
-      // typeAlias: ResourceTag.audioEmbed,
+      _typeAlias: ResourceTag.audioEmbed,
       audioEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -474,9 +494,10 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.audioEmbed, {
       ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['src', /*'alt',*/ 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -506,11 +527,12 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResourceWrapperJson = {
       type: ResourceTag.audioLink,
-      // typeAlias: ResourceTag.audioLink,
+      _typeAlias: ResourceTag.audioLink,
       audioLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
-        src: value ?? '',
+        // src: value ?? '',
+        url: value ?? '',
         duration: (duration ?? undefined) as number,
         mute: (mute ?? undefined) as boolean,
         autoplay: (autoplay ?? undefined) as boolean,
@@ -523,9 +545,9 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+    ObjectUtils.removeUnwantedProperties(node.audioLink, {
+      // ignoreEmptyArrays: ['caption'],
+      ignoreEmptyString: ['url' /*'alt', 'license', 'copyright'*/],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -579,7 +601,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: VideoResourceWrapperJson = {
       type: ResourceTag.video,
-      // typeAlias: ResourceTag.video,
+      _typeAlias: ResourceTag.video,
       video: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -603,10 +625,11 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.video, {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['src', /*'alt',*/ 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -660,11 +683,12 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: VideoEmbedResourceWrapperJson = {
       type: ResourceTag.videoEmbed,
-      // typeAlias: ResourceTag.videoEmbed,
+      _typeAlias: ResourceTag.videoEmbed,
       videoEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
-        src: value ?? '',
+        // src: value ?? '',
+        url: value ?? '',
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         duration: (duration ?? undefined) as number,
@@ -684,10 +708,11 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.videoEmbed, {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -741,11 +766,12 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: VideoLinkResourceWrapperJson = {
       type: ResourceTag.videoLink,
-      // typeAlias: ResourceTag.videoLink,
+      _typeAlias: ResourceTag.videoLink,
       videoLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
-        src: value ?? '',
+        // src: value ?? '',
+        url: value ?? '',
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         duration: (duration ?? undefined) as number,
@@ -765,10 +791,11 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.videoLink, {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -846,11 +873,12 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmEmbedResourceWrapperJson = {
       type: ResourceTag.stillImageFilmEmbed,
-      // typeAlias: ResourceTag.stillImageFilmEmbed,
+      _typeAlias: ResourceTag.stillImageFilmEmbed,
       stillImageFilmEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
-        src: value ?? '',
+        // src: value ?? '',
+        url: value ?? '',
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         duration: (duration ?? undefined) as number,
@@ -870,10 +898,11 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.stillImageFilmEmbed, {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -927,11 +956,12 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmLinkResourceWrapperJson = {
       type: ResourceTag.stillImageFilmLink,
-      // typeAlias: ResourceTag.stillImageFilmLink,
+      _typeAlias: ResourceTag.stillImageFilmLink,
       stillImageFilmLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
-        src: value ?? '',
+        // src: value ?? '',
+        url: value ?? '',
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         duration: (duration ?? undefined) as number,
@@ -951,10 +981,11 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.stillImageFilmLink, {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -981,7 +1012,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: ArticleResourceWrapperJson = {
       type: ResourceTag.article,
-      // typeAlias: ResourceTag.article,
+      _typeAlias: ResourceTag.article,
       article: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -995,7 +1026,7 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.article, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['body', 'alt', 'license', 'copyright'],
     });
@@ -1024,7 +1055,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentResourceWrapperJson = {
       type: ResourceTag.document,
-      // typeAlias: ResourceTag.document,
+      _typeAlias: ResourceTag.document,
       document: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1038,9 +1069,10 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.document, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1067,7 +1099,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentEmbedResourceWrapperJson = {
       type: ResourceTag.documentEmbed,
-      // typeAlias: ResourceTag.documentEmbed,
+      _typeAlias: ResourceTag.documentEmbed,
       documentEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1081,9 +1113,10 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.documentEmbed, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1110,7 +1143,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentLinkResourceWrapperJson = {
       type: ResourceTag.documentLink,
-      // typeAlias: ResourceTag.documentLink,
+      _typeAlias: ResourceTag.documentLink,
       documentLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1124,9 +1157,10 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.documentLink, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1153,7 +1187,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentDownloadResourceWrapperJson = {
       type: ResourceTag.documentDownload,
-      // typeAlias: ResourceTag.documentDownload,
+      _typeAlias: ResourceTag.documentDownload,
       documentDownload: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1167,9 +1201,10 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.documentDownload, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1195,10 +1230,11 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AppLinkResourceWrapperJson = {
       type: ResourceTag.appLink,
-      // typeAlias: ResourceTag.appLink,
+      _typeAlias: ResourceTag.appLink,
       appLink: {
         // format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
-        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        // provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        provider: undefined as unknown as string,
         url: value ?? '',
         license: license ?? '',
         copyright: copyright ?? '',
@@ -1209,9 +1245,10 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.appLink, {
       ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1238,9 +1275,10 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResourceWrapperJson = {
       type: ResourceTag.websiteLink,
-      // typeAlias: ResourceTag.websiteLink,
+      _typeAlias: ResourceTag.websiteLink,
       websiteLink: {
-        provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        // provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
+        provider: undefined as unknown as string,
         url: value ?? '',
         // siteName,
         license: license ?? '',
@@ -1252,9 +1290,10 @@ class ResourceBuilder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
+    ObjectUtils.removeUnwantedProperties(node.websiteLink, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      ignoreFalse: ['showInIndex'],
     });
 
     // Validate and correct invalid bits as much as possible

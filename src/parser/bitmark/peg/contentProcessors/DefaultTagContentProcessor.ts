@@ -18,7 +18,7 @@ import {
 function defaultTagContentProcessor(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
+  _bitType: BitTypeType,
   _textFormat: TextFormatType,
   _tagsConfig: TagsConfig | undefined,
   content: BitContent,

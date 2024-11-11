@@ -48,7 +48,7 @@ function imageSourceTagContentProcessor(
   const { value } = content as TypeValue;
 
   // Extract the url from the content tag
-  const url = StringUtils.trimmedString(value) as BreakscapedString;
+  const url = Breakscape.unbreakscape(StringUtils.trimmedString(value) as BreakscapedString);
 
   target.imageSourceUrl = url;
 }
@@ -89,8 +89,8 @@ function buildImageSource(
   }
 
   const imageSource = builder.imageSource({
-    url: url ?? Breakscape.EMPTY_STRING,
-    mockupId: mockupId ?? Breakscape.EMPTY_STRING,
+    url: url ?? '',
+    mockupId: mockupId ?? '',
     ...rest,
   });
 

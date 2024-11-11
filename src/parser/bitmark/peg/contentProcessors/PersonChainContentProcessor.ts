@@ -1,4 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
@@ -37,10 +38,10 @@ function personChainContentProcessor(
   const { propertyTitle, resources } = tags;
 
   // Extract the name from the content tag
-  const name = StringUtils.trimmedString(content.value) as BreakscapedString;
+  const name = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString);
 
   // Extract the title from the propertyTitle tag
-  const title = StringUtils.trimmedString(propertyTitle) as BreakscapedString;
+  const title = StringUtils.trimmedString(propertyTitle);
 
   // Extract avatarImage from the resources
   const avatarImage = extractAvatarImage(context, resources);

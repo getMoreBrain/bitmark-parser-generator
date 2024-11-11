@@ -1,4 +1,6 @@
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
+import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { ConfigKey } from '../../../../model/config/enum/ConfigKey';
@@ -135,25 +137,27 @@ function propertyContentProcessor(
           //   return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
 
           case PropertyFormat.trimmedString:
-            return StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
+            return Breakscape.unbreakscape(
+              StringUtils.isString(v) ? (StringUtils.trimmedString(v) as BreakscapedString) : undefined,
+            );
 
           case PropertyFormat.number:
-            return NumberUtils.asNumber(v);
+            return NumberUtils.asNumber(Breakscape.unbreakscape(v as BreakscapedString));
 
           case PropertyFormat.boolean:
-            return BooleanUtils.toBoolean(v, true);
+            return BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
 
           case PropertyFormat.invertedBoolean:
-            return !BooleanUtils.toBoolean(v, true);
+            return !BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
 
           case PropertyFormat.bitmarkMinusMinus:
-            return textParser.toAst(v as string, { textFormat: TextFormat.bitmarkMinusMinus });
+            return textParser.toAst(v as BreakscapedString, { textFormat: TextFormat.bitmarkMinusMinus });
 
           case PropertyFormat.bitmarkPlusPlus:
-            return textParser.toAst(v as string, { textFormat: TextFormat.bitmarkMinusMinus });
+            return textParser.toAst(v as BreakscapedString, { textFormat: TextFormat.bitmarkMinusMinus });
         }
       }
-      return v;
+      return Breakscape.unbreakscape(v as BreakscapedString);
     };
 
     // Convert property and key as needed

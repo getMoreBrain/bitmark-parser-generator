@@ -1,4 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
@@ -35,7 +36,7 @@ function technicalTermChainContentProcessor(
   const { lang } = tags;
 
   // Extract the technicalTerm from the content tag
-  const technicalTerm = StringUtils.trimmedString(content.value) as BreakscapedString;
+  const technicalTerm = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString);
 
   const node = builder.technicalTerm({
     technicalTerm,

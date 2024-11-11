@@ -1,4 +1,5 @@
 import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
@@ -49,11 +50,13 @@ function markConfigChainContentProcessor(
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('mark TAGS', tags);
 
   // Extract the name from the content tag
-  const mark: BreakscapedString = (StringUtils.trimmedString(content.value) ?? 'unknown') as BreakscapedString;
+  const mark: string = Breakscape.unbreakscape(
+    (StringUtils.trimmedString(content.value) ?? 'unknown') as BreakscapedString,
+  );
 
   const config = builder.markConfig({
     mark,
-    emphasis: 'underline' as BreakscapedString,
+    emphasis: 'underline' as string,
     ...tags,
   });
 
