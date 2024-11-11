@@ -1,4 +1,3 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TextAst } from '../../../../model/ast/TextNodes';

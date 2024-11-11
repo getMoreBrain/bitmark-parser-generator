@@ -7,21 +7,19 @@
  *
  */
 
-import { Builder } from '../../../ast/Builder';
 import { Config } from '../../../config/Config';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { Body, BodyPart, BodyText } from '../../../model/ast/Nodes';
+import { Body, BodyPart } from '../../../model/ast/Nodes';
 import { CardSetConfig } from '../../../model/config/CardSetConfig';
 import { CardVariantConfig } from '../../../model/config/CardVariantConfig';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTagType, BitTagTypeType } from '../../../model/enum/BitTagType';
 import { BitTypeType } from '../../../model/enum/BitType';
-import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { Count, CountType } from '../../../model/enum/Count';
 import { PropertyTag, PropertyTagType } from '../../../model/enum/PropertyTag';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag, TagType } from '../../../model/enum/Tag';
-import { TextFormat, TextFormatType } from '../../../model/enum/TextFormat';
+import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { TagValidationData } from '../../../model/parser/TagValidationData';
 
@@ -92,8 +90,6 @@ interface ValidateChainRecursiveReturn {
   validated: BitContent[];
   remaining?: BitContent; // Tag split off from the chain
 }
-
-const builder = new Builder();
 
 class BitmarkPegParserValidator {
   /**
@@ -244,7 +240,7 @@ class BitmarkPegParserValidator {
     sideNo: number,
     variantNo: number,
   ): Body | undefined {
-    if (!cardBody || !cardBody.bodyParts) return cardBody;
+    if (!cardBody || !cardBody.body) return cardBody;
 
     // Get the bit config to check how to parse the bit
     const bitConfig = Config.getBitConfig(bitType);
@@ -255,7 +251,7 @@ class BitmarkPegParserValidator {
 
     const { bodyAllowed } = variantConfig;
 
-    const hasBody = cardBody.bodyParts.length > 0;
+    const hasBody = cardBody.body.length > 0;
 
     // this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, cardBody);
 

@@ -10,47 +10,20 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { JsonText, TextAst } from '../../../model/ast/TextNodes';
+import { Body, ExtraProperties, CardBit, Footer } from '../../../model/ast/Nodes';
+import { TextAst } from '../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag } from '../../../model/enum/Tag';
 import { TextFormatType } from '../../../model/enum/TextFormat';
-import { ImageResourceJson, ResourceJson } from '../../../model/json/ResourceJson';
+import { ResourceJson } from '../../../model/json/ResourceJson';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
 
 import { PeggyGrammarLocation } from './PeggyGrammarLocation';
 
-import {
-  Body,
-  Statement,
-  Response,
-  Quiz,
-  Heading,
-  Pair,
-  Matrix,
-  Choice,
-  Question,
-  Resource,
-  BotResponse,
-  Person,
-  ExtraProperties,
-  ImageResource,
-  MarkConfig,
-  Flashcard,
-  ImageSource,
-  CardBit,
-  Ingredient,
-  TechnicalTerm,
-  Table,
-  Servings,
-  RatingLevelStartEnd,
-  CaptionDefinitionList,
-  DescriptionListItem,
-  Footer,
-} from '../../../model/ast/Nodes';
 import {
   BotResponseJson,
   CaptionDefinitionListJson,
@@ -59,15 +32,20 @@ import {
   ExampleJson,
   FlashcardJson,
   HeadingJson,
+  ImageSourceJson,
   IngredientJson,
+  MarkConfigJson,
   MatrixJson,
   PairJson,
   PersonJson,
   QuestionJson,
   QuizJson,
+  RatingLevelStartEndJson,
   ResponseJson,
+  ServingsJson,
   StatementJson,
   TableJson,
+  TechnicalTermJson,
 } from '../../../model/json/BitJson';
 
 const CARD_DIVIDER_V2 = '====';
@@ -133,11 +111,11 @@ export interface BitContentProcessorResult {
   cardBodyStr?: string;
   body?: Body;
   footer?: Footer;
-  imageSource?: ImageSource;
-  technicalTerm?: TechnicalTerm;
-  servings?: Servings;
-  ratingLevelStart?: RatingLevelStartEnd;
-  ratingLevelEnd?: RatingLevelStartEnd;
+  imageSource?: ImageSourceJson;
+  technicalTerm?: TechnicalTermJson;
+  servings?: ServingsJson;
+  ratingLevelStart?: RatingLevelStartEndJson;
+  ratingLevelEnd?: RatingLevelStartEndJson;
   label?: TextAst;
   person?: PersonJson;
   propertyTitle?: BreakscapedString;
@@ -146,7 +124,7 @@ export interface BitContentProcessorResult {
   lang?: BreakscapedString;
   example?: ExampleJson;
   isCorrect?: boolean;
-  markConfig?: MarkConfig[];
+  markConfig?: MarkConfigJson[];
   solutions?: string[];
   _solutionsAst?: TextAst[];
   statement?: StatementJson;
@@ -156,8 +134,9 @@ export interface BitContentProcessorResult {
   solution?: BreakscapedString;
   mark?: BreakscapedString[];
   title?: { titleAst: TextAst; titleString: string }[];
-  subtitle?: BreakscapedString;
-  propertyStyleResources?: { [key: string]: Resource };
+  // title?: TextAst[];
+  // subtitle?: BreakscapedString;
+  propertyStyleResources?: { [key: string]: ResourceJson };
   resources?: ResourceJson[];
   itemLead?: TextAst[];
   item?: TextAst;

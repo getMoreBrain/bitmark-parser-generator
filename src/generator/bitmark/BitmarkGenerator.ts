@@ -11,7 +11,6 @@ import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
 import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { ResourceJson } from '../../model/json/ResourceJson';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { ObjectUtils } from '../../utils/ObjectUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';

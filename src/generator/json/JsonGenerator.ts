@@ -3,11 +3,11 @@ import { Writer } from '../../ast/writer/Writer';
 import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
-import { NodeType } from '../../model/ast/NodeType';
+import { NodeType, NodeTypeType } from '../../model/ast/NodeType';
 import { BitmarkAst, Bit } from '../../model/ast/Nodes';
 import { Example, ExtraProperties } from '../../model/ast/Nodes';
-import { Body, CardBit, Footer } from '../../model/ast/Nodes';
-import { JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
+import { Body, CardBit } from '../../model/ast/Nodes';
+import { JsonText, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { ExampleType } from '../../model/enum/ExampleType';
@@ -27,26 +27,11 @@ import { AstWalkerGenerator } from '../AstWalkerGenerator';
 
 import {
   BitJson,
-  BotResponseJson,
-  CaptionDefinitionListJson,
-  ChoiceJson,
-  DescriptionListItemJson as DescriptionListItemJson,
   ExampleJson,
-  FlashcardJson,
   HeadingJson,
-  ImageSourceJson,
-  IngredientJson,
   ListItemJson,
   MarkConfigJson,
-  MatrixJson,
-  PairJson,
-  PersonJson,
-  QuestionJson,
-  QuizJson,
-  RatingLevelStartEndJson,
-  ResponseJson,
   StatementJson,
-  TableJson,
 } from '../../model/json/BitJson';
 
 const DEFAULT_OPTIONS: JsonOptions = {
@@ -340,99 +325,34 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> imageSource
 
-  protected enter_imageSource(node: NodeInfo, route: NodeInfo[]): void {
-    const imageSourceJson = node.value as ImageSourceJson;
-    // const imageSource = node.value as ImageSource;
-
-    // Ignore values that are not at the bit level as they might be handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    // const { url, mockupId, size, format, trim } = imageSource;
-
-    // const imageSourceJson = {} as ImageSourceJson;
-    // this.addProperty(imageSourceJson, 'url', url ?? '', true);
-    // this.addProperty(imageSourceJson, 'mockupId', mockupId ?? '', true);
-    // this.addProperty(imageSourceJson, 'size', size ?? null, true);
-    // this.addProperty(imageSourceJson, 'format', format ?? null, true);
-    // this.addProperty(imageSourceJson, 'trim', BooleanUtils.isBoolean(trim) ? trim : null, true);
-
-    this.bitJson.imageSource = imageSourceJson;
+  protected enter_imageSource(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
   // bitmarkAst -> bits -> bitsValue -> person
 
   protected enter_person(node: NodeInfo, route: NodeInfo[]): boolean {
-    const personJson = node.value as PersonJson;
-    // const person = node.value as Person;
     const bitType = this.getBitType(route);
 
-    // Ignore values that are not at the bit level as they might be handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue || !bitType) return true;
-
-    // const { name, title, avatarImage } = person;
-
-    // const personJson = {} as PersonJson;
-    // this.addProperty(personJson, 'name', name ?? '', true);
-    // if (title) {
-    //   this.addProperty(personJson, 'title', title, true);
-    // }
-    // if (avatarImage) {
-    //   personJson.avatarImage = avatarImage.image;
-    // }
-
+    let keyOverride = 'person';
     if (Config.isOfBitType(bitType, BitType.conversationLeft1)) {
       // Use the legacy partner property in the JSON for conversation bits, so change to person is backwards compatible
-      this.bitJson.partner = personJson;
-    } else {
-      this.bitJson.person = personJson;
+      keyOverride = 'partner';
     }
 
-    // Stop traversal of this branch
-    return false;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false, keyOverride });
   }
 
   // bitmarkAst -> bits -> bitsValue -> ratingLevelStart
 
   protected enter_ratingLevelStart(node: NodeInfo, route: NodeInfo[]): boolean {
-    const json = this.enterRatingLevelStartEndCommon(node, route);
-    if (json) this.bitJson.ratingLevelStart = json;
-
-    // Stop traversal of this branch
-    return false;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
   // bitmarkAst -> bits -> bitsValue -> ratingLevelEnd
 
   protected enter_ratingLevelEnd(node: NodeInfo, route: NodeInfo[]): boolean {
-    const json = this.enterRatingLevelStartEndCommon(node, route);
-    if (json) this.bitJson.ratingLevelEnd = json;
-
-    // Stop traversal of this branch
-    return false;
-  }
-
-  // Common code for ratingLevelStart and ratingLevelEnd
-  protected enterRatingLevelStartEndCommon(node: NodeInfo, route: NodeInfo[]): RatingLevelStartEndJson | undefined {
-    const json = node.value as RatingLevelStartEndJson;
-    // const n = node.value as RatingLevelStartEnd;
-
-    // Ignore statements that are not at the bit level
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    // const json: Partial<RatingLevelStartEndJson> = {};
-    // this.addProperty(json, 'level', n.level, true);
-
-    // if (n.label) {
-    //   json.label = this.getBitmarkTextAst(n.label);
-    // }
-
-    // // Delete unwanted properties
-    // if (json?.label == null) delete json.label;
-
-    return json as RatingLevelStartEndJson;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
   // bitmarkAst -> bits -> bitsValue -> productId
@@ -447,9 +367,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const bitType = this.getBitType(route);
 
     if (bitType === BitType.module) {
-      this.addProperty(this.bitJson, 'productId', productIds);
+      this.addProperty(this.bitJson, 'productId', productIds, { array: true });
     } else if (productIds.length > 0) {
-      this.addProperty(this.bitJson, 'productId', productIds[productIds.length - 1], true);
+      this.addProperty(this.bitJson, 'productId', productIds[productIds.length - 1], { array: false });
     }
 
     // Stop traversal of this branch
@@ -460,19 +380,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): boolean {
     const markJson = node.value as MarkConfigJson;
-    // const markConfig = node.value as MarkConfig;
 
     // Ignore item that is not at the correct level
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.markConfig) return true;
-
-    // const { mark, color, emphasis } = markConfig;
-
-    // const markJson = {} as Partial<MarkConfigJson>;
-
-    // this.addProperty(markJson, 'mark', mark ?? 'unknown', true);
-    // if (color) this.addProperty(markJson, 'color', color ?? '', true);
-    // if (emphasis) this.addProperty(markJson, 'emphasis', emphasis ?? '', true);
 
     if (!this.bitJson.marks) this.bitJson.marks = [];
     this.bitJson.marks.push(markJson);
@@ -484,103 +395,61 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> item
 
   protected enter_item(node: NodeInfo, route: NodeInfo[]): boolean {
-    const item = node.value as TextAst;
-
-    // Ignore item / lead that are not at the bit level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return true;
-
-    if (item != null) {
-      this.bitJson.item = item;
-    }
-
-    // Stop traversal of this branch
-    return false;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> lead
 
   protected enter_lead(node: NodeInfo, route: NodeInfo[]): boolean {
-    const lead = node.value as TextAst;
-
-    // Ignore item / lead that are not at the bit level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return true;
-
-    if (lead != null) {
-      this.bitJson.lead = lead;
-    }
-
-    // Stop traversal of this branch
-    return false;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> pageNumber
 
   protected enter_pageNumber(node: NodeInfo, route: NodeInfo[]): boolean {
-    const pageNumber = node.value as TextAst;
-
-    // Ignore item / lead that are not at the bit level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return true;
-
-    if (pageNumber != null) {
-      this.bitJson.pageNumber = pageNumber;
-    }
-
-    // Stop traversal of this branch
-    return false;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> marginNumber
 
   protected enter_marginNumber(node: NodeInfo, route: NodeInfo[]): boolean {
-    const marginNumber = node.value as TextAst;
-
-    // Ignore item / lead that are not at the bit level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return true;
-
-    if (marginNumber != null) {
-      this.bitJson.marginNumber = marginNumber;
-    }
-
-    // Stop traversal of this branch
-    return false;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> hint
 
   protected enter_hint(node: NodeInfo, route: NodeInfo[]): boolean {
-    const hint = node.value as TextAst;
-
-    // Ignore item / lead that are not at the bit level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return true;
-
-    if (hint != null) {
-      this.bitJson.hint = hint;
-    }
-
-    // Stop traversal of this branch
-    return false;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> instruction
 
   protected enter_instruction(node: NodeInfo, route: NodeInfo[]): boolean {
-    const instruction = node.value as TextAst;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
+  }
 
-    // Ignore item / lead that are not at the bit level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return true;
+  // bitmarkAst -> bits -> bitsValue -> title
 
-    if (instruction != null) {
-      this.bitJson.instruction = instruction;
-    }
+  protected enter_title(node: NodeInfo, route: NodeInfo[]): boolean {
+    // // Ignore title that are not at the bit or card node level as they are handled elsewhere
+    // const parent = this.getParentNode(route);
+    // if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
 
-    // Stop traversal of this branch
-    return false;
+    // this.bitJson.title = node.value;
+    return this.standardHandler(node, route, [NodeType.bitsValue, NodeType.cardNode], { array: true });
+  }
+
+  //  bitmarkAst -> bits -> bitsValue -> subtitle
+
+  protected enter_subtitle(node: NodeInfo, route: NodeInfo[]): boolean {
+    // this.bitJson.subtitle = node.value;
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
+  }
+
+  //  bitmarkAst -> bits -> bitsValue -> caption
+
+  protected enter_caption(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> width
@@ -595,10 +464,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     // Add the property
-    this.addProperty(this.bitJson, 'width', value, true);
-
-    // Stop traversal of this branch
-    return false;
+    return this.standardHandler(node, route, undefined, { array: false, valueOverride: value });
   }
 
   // bitmarkAst -> bits -> bitsValue -> height
@@ -613,10 +479,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     // Add the property
-    this.addProperty(this.bitJson, 'height', value, true);
-
-    // Stop traversal of this branch
-    return false;
+    return this.standardHandler(node, route, undefined, { array: false, valueOverride: value });
   }
 
   // bitmarkAst -> bits -> bitsValue -> extraProperties
@@ -630,7 +493,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (Object.prototype.hasOwnProperty.call(this.bitJson, key)) {
           k = `_${key}`;
         }
-        this.addProperty(this.bitJson, k, values);
+        this.addProperty(this.bitJson, k, values, { array: true });
       }
     }
   }
@@ -705,56 +568,26 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> footer
 
-  protected enter_footer(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const value = node.value as Footer;
-
-    this.bitJson.footer = value.footer as JsonText;
-
-    // Stop traversal of this branch
-    return false;
+  protected enter_footer(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, undefined, { array: true, valueOverride: node.value.footer });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
 
-  protected enter_elements(node: NodeInfo, _route: NodeInfo[]): void {
-    const elements = node.value as BreakscapedString[];
-
-    // Ignore elements that are not at the bit level as they are handled elsewhere as quizzes
-    // if (parent?.key !== NodeType.bitsValue) return;
-
-    if (elements && elements.length > 0) {
-      this.bitJson.elements = elements;
-    }
+  protected enter_elements(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, undefined, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards
 
-  protected enter_flashcards(node: NodeInfo, route: NodeInfo[]): void {
-    // const flashcards = node.value as Flashcard[];
-    const flashcardsJson = node.value as FlashcardJson[];
-
-    // Ignore responses that are not at the correct level as they are potentially handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    if (flashcardsJson.length > 0) {
-      this.bitJson.cards = flashcardsJson;
-    }
+  protected enter_flashcards(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true, keyOverride: 'cards' });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions
 
-  protected enter_descriptions(node: NodeInfo, route: NodeInfo[]): void {
-    // const descriptionListItem = node.value as DescriptionListItem[];
-    const descriptionsJson = node.value as DescriptionListItemJson[];
-
-    // Ignore responses that are not at the correct level as they are potentially handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    if (descriptionsJson.length > 0) {
-      this.bitJson.descriptions = descriptionsJson;
-    }
+  protected enter_descriptions(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> statement
@@ -776,169 +609,91 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> statements -> statementsValue
 
-  protected enter_statements(node: NodeInfo, route: NodeInfo[]): void {
-    // const statements = node.value as Statement[];
-    const statementsJson = node.value as StatementJson[];
-
-    // Ignore statements that are not at the card node level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    if (statementsJson.length > 0) {
-      this.bitJson.statements = statementsJson;
-    }
+  protected enter_statements(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> choices
   // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices
 
-  protected enter_choices(node: NodeInfo, route: NodeInfo[]): void {
-    // const choices = node.value as Choice[];
-    const choicesJson = node.value as ChoiceJson[];
-
-    // Ignore choices that are not at the bit level as they are handled elsewhere as quizzes
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    if (choicesJson.length > 0) {
-      this.bitJson.choices = choicesJson;
-    }
+  protected enter_choices(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> responses
   // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses
 
-  protected enter_responses(node: NodeInfo, route: NodeInfo[]): void {
-    // const responses = node.value as Response[];
-    const responsesJson = node.value as ResponseJson[];
-
-    // Ignore responses that are not at the correct level as they are handled elsewhere as quizzes
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    if (responsesJson.length > 0) {
-      this.bitJson.responses = responsesJson;
-    }
+  protected enter_responses(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes
 
-  protected enter_quizzes(node: NodeInfo, _route: NodeInfo[]): void {
-    // const quizzes = node.value as Quiz[];
-    // const quizzesJson: QuizJson[] = [];
-    const quizzesJson: QuizJson[] = node.value as QuizJson[];
-
-    if (quizzesJson.length > 0) {
-      this.bitJson.quizzes = quizzesJson;
-    }
+  protected enter_quizzes(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> heading
 
-  protected enter_heading(node: NodeInfo, _route: NodeInfo[]): boolean | void {
-    const headingJson = node.value as HeadingJson;
-
-    this.bitJson.heading = headingJson as HeadingJson;
+  protected enter_heading(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, undefined, { array: false });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs
 
-  protected enter_pairs(node: NodeInfo, _route: NodeInfo[]): void {
-    const pairsJson = node.value as PairJson[];
-
-    if (pairsJson.length > 0) {
-      this.bitJson.pairs = pairsJson;
-    }
+  protected enter_pairs(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix
 
-  protected enter_matrix(node: NodeInfo, _route: NodeInfo[]): void {
-    const matrixJsonArray = node.value as MatrixJson[];
-
-    if (matrixJsonArray.length > 0) {
-      this.bitJson.matrix = matrixJsonArray;
-    }
+  protected enter_matrix(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table
 
-  protected enter_table(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const tableJson = node.value as TableJson;
-    this.bitJson.table = tableJson;
-
-    // Stop traversal of this branch to avoid unnecessary processing
-    return false;
+  protected enter_table(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: false });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
 
-  protected enter_questions(node: NodeInfo, _route: NodeInfo[]): void {
-    const questionsJson = node.value as QuestionJson[];
-
-    if (questionsJson.length > 0) {
-      this.bitJson.questions = questionsJson;
-    }
+  protected enter_questions(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
 
-  protected enter_botResponses(node: NodeInfo, route: NodeInfo[]): void {
-    const responsesJson = node.value as BotResponseJson[];
-    // const botResponses = node.value as BotResponse[];
-
-    // Ignore responses that are not at the cardNode level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    if (responsesJson.length > 0) {
-      this.bitJson.responses = responsesJson;
-    }
+  protected enter_botResponses(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true, keyOverride: 'responses' });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
-  protected enter_ingredients(node: NodeInfo, route: NodeInfo[]): void {
-    const ingredientsJson = node.value as IngredientJson[];
-    // const ingredients = node.value as Ingredient[];
-
-    // Ignore statements that are not at the card node level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
-
-    if (ingredientsJson.length > 0) {
-      this.bitJson.ingredients = ingredientsJson;
-    }
+  protected enter_ingredients(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList
 
-  protected enter_captionDefinitionList(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const listJson = node.value as CaptionDefinitionListJson;
-
-    this.bitJson.captionDefinitionList = listJson;
-
-    // Stop traversal of this branch to avoid unnecessary processing
-    return false;
+  protected enter_captionDefinitionList(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: false });
   }
 
   // bitmarkAst -> bits -> bitsValue -> imagePlaceholder
 
-  protected enter_imagePlaceholder(node: NodeInfo, route: NodeInfo[]): boolean | void {
-    // Ignore imagePlaceholder that is not at the bit level as it are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    this.bitJson.imagePlaceholder = node.value as ImageResourceWrapperJson;
+  protected enter_imagePlaceholder(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
   // bitmarkAst -> bits -> bitsValue -> resources
 
-  protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean | void {
+  protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean {
     const resources = node.value as ResourceJson[];
     const bitType = this.getBitType(route);
     const resourceType = this.getResourceType(route);
 
-    if (!resources || !bitType) return;
+    if (!resources || !bitType) return true;
 
     let resourceJson: ResourceJson | undefined;
 
@@ -1001,75 +756,52 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     this.bitJson.resource = resourceJson;
+
+    return false;
   }
 
   //
   // Terminal nodes (leaves)
   //
 
-  // bitmarkAst -> bits -> bitsValue -> title
+  //  bitmarkAst -> bits -> bitsValue -> level
 
-  protected enter_title(node: NodeInfo, route: NodeInfo[]): void {
-    // Ignore title that are not at the bit or card node level as they are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
-
-    this.bitJson.title = node.value;
-  }
-
-  //  bitmarkAst -> bits -> bitsValue -> subtitle
-
-  protected enter_subtitle(node: NodeInfo, _route: NodeInfo[]): void {
-    this.bitJson.subtitle = node.value;
-  }
-
-  // //  bitmarkAst -> bits -> bitsValue -> level
-
-  protected leaf_level(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'level', node.value ?? 1, true);
+  protected leaf_level(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
   // bitmarkAst -> bits -> bitsValue -> book
 
-  protected leaf_book(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'book', node.value, true);
+  protected leaf_book(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
   //  bitmarkAst -> bits -> bitsValue -> anchor
 
-  protected leaf_anchor(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'anchor', node.value, true);
+  protected leaf_anchor(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
   //  bitmarkAst -> bits -> bitsValue -> reference
 
-  protected leaf_reference(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'reference', node.value, true);
+  protected leaf_reference(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
   //  bitmarkAst -> bits -> bitsValue -> referenceEnd
 
-  protected leaf_referenceEnd(node: NodeInfo, _route: NodeInfo[]): void {
-    if (node.value != null) this.addProperty(this.bitJson, 'referenceEnd', node.value, true);
-  }
-
-  //  bitmarkAst -> bits -> bitsValue -> caption
-
-  protected enter_caption(node: NodeInfo, route: NodeInfo[]): void {
-    const caption = node.value as BitmarkTextNode;
-
-    // Ignore caption that is not at the bit level as it are handled elsewhere
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
-
-    this.bitJson.caption = caption;
+  protected leaf_referenceEnd(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
   // bitmarkAst -> bits -> bitsValue -> markup
 
-  protected leaf_markup(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_markup(node: NodeInfo, _route: NodeInfo[]): boolean {
     const bitmark = node.value as string | undefined;
     if (bitmark) this.bitWrapperJson.bitmark = bitmark;
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> parser
@@ -1138,15 +870,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   //   }
   // }
 
-  // bitmarkAst -> bits -> bitsValue -> * -> __text__
-
-  protected enter____text__(_node: NodeInfo, _route: NodeInfo[]): boolean {
-    // Ignore text that is not at the bit level as it are handled elsewhere
-
-    // Do not traverse further
-    return false;
-  }
-
   //
   // Generated Node Handlers
   //
@@ -1192,7 +915,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         const jsonKey = propertyConfig.jsonKey ?? propertyConfig.tag;
 
         // Add the property
-        this.addProperty(this.bitJson, jsonKey, value, propertyConfig.single);
+        this.addProperty(this.bitJson, jsonKey, value, { array: !propertyConfig.single });
       };
 
       // Bind this
@@ -1206,6 +929,68 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   //
   // HELPER FUNCTIONS
   //
+
+  /**
+   * Default handler for properties.
+   *
+   * @param node the node
+   * @param route  the route to the node
+   * @param parentNodeTypes the parent node types for which to handle the node
+   * @returns
+   */
+  protected standardHandler(
+    node: NodeInfo,
+    route: NodeInfo[],
+    parentNodeTypes: NodeTypeType | NodeTypeType[] | undefined,
+    options: {
+      array: boolean;
+      allowNull?: boolean;
+      keyOverride?: string;
+      valueOverride?: unknown;
+    },
+  ): boolean {
+    // Ignore items not at the nodeType level
+    if (parentNodeTypes) {
+      const nodeTypeArray = Array.isArray(parentNodeTypes) ? parentNodeTypes : [parentNodeTypes];
+      const parent = this.getParentNode(route);
+      if (!parent?.key || !nodeTypeArray.includes(parent?.key)) return true;
+    }
+
+    // Add the property
+    this.addProperty(this.bitJson, options.keyOverride ?? node.key, options.valueOverride ?? node.value, options);
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  protected addProperty(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    target: any,
+    name: string,
+    values: unknown | unknown[] | undefined,
+    options: {
+      array: boolean;
+      allowNull?: boolean;
+    },
+  ): void {
+    if (values !== undefined) {
+      let finalValue: unknown | unknown[] | undefined;
+      if (!Array.isArray(values)) values = [values];
+      const valuesArr = values as unknown[];
+
+      if (valuesArr.length > 0) {
+        if (!options.array && valuesArr.length >= 1) {
+          finalValue = valuesArr[valuesArr.length - 1];
+        } else {
+          finalValue = valuesArr;
+        }
+      }
+
+      if (options.allowNull || finalValue != null) {
+        target[name] = finalValue;
+      }
+    }
+  }
 
   protected toExample(
     node: ExampleNode,
@@ -1240,33 +1025,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       example: exampleValue,
     };
   }
-
-  protected addProperty(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    target: any,
-    name: string,
-    values: unknown | unknown[] | undefined,
-    singleWithoutArray?: boolean,
-  ): void {
-    if (values !== undefined) {
-      let finalValue: unknown | unknown[] | undefined;
-      if (!Array.isArray(values)) values = [values];
-
-      if (Array.isArray(values) && values.length > 0) {
-        if (Array.isArray(values) && singleWithoutArray && values.length >= 1) {
-          finalValue = values[values.length - 1];
-        } else {
-          finalValue = values;
-        }
-      }
-
-      target[name] = finalValue;
-    }
-  }
-
-  //
-  // Helper functions
-  //
 
   /**
    * Get the bit type from any node
@@ -1343,16 +1101,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     return undefined;
-  }
-
-  protected getBitmarkTextAst(textNode: BitmarkTextNode | undefined): TextAst {
-    if (textNode != null) {
-      if (Array.isArray(textNode.__text__)) {
-        return textNode.__text__;
-      }
-    }
-
-    return [];
   }
 
   /**

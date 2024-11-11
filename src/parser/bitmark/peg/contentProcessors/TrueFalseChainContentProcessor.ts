@@ -1,10 +1,11 @@
 import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
-import { BodyPart, Highlight, HighlightText } from '../../../../model/ast/Nodes';
+import { BodyPart } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { ChoiceJson, ResponseJson, StatementJson } from '../../../../model/json/BitJson';
+import { HighlightJson, HighlightTextJson, SelectJson, SelectOptionJson } from '../../../../model/json/BodyBitJson';
 
 import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor';
 
@@ -200,7 +201,7 @@ function buildHighlight(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   highlightContent: BitContent[],
-): Highlight | undefined {
+): HighlightJson | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('highlight content', highlightContent);
 
   const { trueFalse, ...tags } = context.bitContentProcessor(
@@ -213,7 +214,7 @@ function buildHighlight(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('highlight TAGS', { trueFalse, ...tags });
 
-  const texts: HighlightText[] = [];
+  const texts: HighlightTextJson[] = [];
   if (trueFalse) {
     for (const tf of trueFalse) {
       texts.push(builder.highlightText({ ...tf, isHighlighted: false }));
@@ -234,7 +235,7 @@ function buildSelect(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   selectContent: BitContent[],
-): Select | undefined {
+): SelectJson | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('select content', selectContent);
 
   const { trueFalse, ...tags } = context.bitContentProcessor(
@@ -247,7 +248,7 @@ function buildSelect(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('select TAGS', { trueFalse, ...tags });
 
-  const options: SelectOption[] = [];
+  const options: SelectOptionJson[] = [];
   if (trueFalse) {
     for (const tf of trueFalse) {
       options.push(builder.selectOption(tf));

@@ -16,6 +16,8 @@
  *
  */
 
+import { Breakscape } from '../../../breakscaping/Breakscape';
+import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Bit } from '../../../model/ast/Nodes';
 import { CardSetVersion } from '../../../model/enum/CardSetVersion';
 import { ParserError } from '../../../model/parser/ParserError';
@@ -48,8 +50,6 @@ import {
 } from './BitmarkPegParserTypes';
 
 import '../../../config/Config';
-import { Breakscape } from '../../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 
 const ENABLE_DEBUG = true;
 const DEBUG_DATA = true;

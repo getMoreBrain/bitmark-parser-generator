@@ -66,17 +66,15 @@ import { Builder } from '../../../ast/Builder';
 import { Breakscape } from '../../../breakscaping/Breakscape';
 import { Config } from '../../../config/Config';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { Bit, BitmarkAst, BodyPart, BodyText, FooterText } from '../../../model/ast/Nodes';
+import { Bit, BitmarkAst, BodyPart } from '../../../model/ast/Nodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../model/enum/BitType';
-import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
 import { StringUtils } from '../../../utils/StringUtils';
-import { TextParser } from '../../text/TextParser';
 
 import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
 import { BodyContentProcessor } from './contentProcessors/BodyContentProcessor';
@@ -139,15 +137,12 @@ class BitmarkPegParserProcessor {
   private nonFatalWarnings: ParserError[] = [];
   private nonFatalErrors: ParserError[] = [];
   private parser: ParserInfo = {};
-  private textParser: TextParser;
 
   private parse: ParseFunction;
   private parserText: () => ParserError['text'];
   private parserLocation: () => ParserError['location'];
 
   constructor(options: ParserHelperOptions) {
-    this.textParser = new TextParser();
-
     this.parse = options.parse;
     this.parserText = options.parserText;
     this.parserLocation = options.parserLocation;

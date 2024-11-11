@@ -1,6 +1,6 @@
 import { Breakscape } from '../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
-import { JsonText, TextAst, TextNode } from '../../model/ast/TextNodes';
+import { JsonText, TextAst } from '../../model/ast/TextNodes';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson } from '../../model/json/BodyBitJson';

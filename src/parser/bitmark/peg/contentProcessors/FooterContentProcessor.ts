@@ -1,10 +1,12 @@
 import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { Footer } from '../../../../model/ast/Nodes';
 import { JsonText } from '../../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormat, TextFormatType } from '../../../../model/enum/TextFormat';
+import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 import { BitContentProcessorResult, BitmarkPegParserContext, ContentDepthType } from '../BitmarkPegParserTypes';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
@@ -31,11 +33,21 @@ class FooterContentProcessor {
     footerPlainText: BreakscapedString,
   ): Footer | undefined {
     let finalFooterText: JsonText | undefined;
-    //
+
+    footer = footer.trimStart() as BreakscapedString;
+    footerPlainText = footerPlainText.trimEnd() as BreakscapedString;
 
     // Create the body text AST
-    footer = footer.trim() as BreakscapedString;
-    footerPlainText = footerPlainText.trim() as BreakscapedString;
+    const haveFooter = !!footer.trim();
+    const haveFooterPlainText = !!footerPlainText.trim();
+
+    // Newlines will be lost from the end of footer, and start of footerPlainText
+    // Count then and add them back when merging
+    let newLines = 0;
+    if (haveFooter && haveFooterPlainText) {
+      newLines =
+        StringUtils.countOccurrencesAtEnd(footer, '\n') + StringUtils.countOccurrencesAtStart(footerPlainText, '\n');
+    }
 
     if (footer || footerPlainText) {
       const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
@@ -44,76 +56,28 @@ class FooterContentProcessor {
         footer = BitmarkPegParserValidator.checkFooter(context, contentDepth, bitType, footer);
       }
 
-      const footerTexts: BreakscapedString[] = [];
-      if (footer) footerTexts.push(footer);
-      if (footerPlainText) footerTexts.push(footerPlainText);
-      const trimmedFooterTexts: BreakscapedString[] = this.trimFooterTexts(footerTexts);
-      const timmedFooter = footer ? trimmedFooterTexts[0] : '';
-      const trimmedFooterPlainText = footerPlainText ? trimmedFooterTexts[footer ? 1 : 0] : '';
-
       const parsedFooterText: JsonText = isBitmarkText
-        ? textParser.toAst(timmedFooter, {
+        ? textParser.toAst(footer, {
             //
             textFormat,
           })
-        : timmedFooter;
+        : Breakscape.unbreakscape(footer, {
+            bitTagOnly: true,
+          });
+
+      const parsedFooterPlainText = Breakscape.unbreakscape(footerPlainText, {
+        bitTagOnly: true,
+      });
 
       finalFooterText = ContentProcessorUtils.concatenatePlainTextWithAstTexts(
         parsedFooterText,
-        trimmedFooterPlainText,
+        newLines,
+        parsedFooterPlainText,
       );
     }
 
     // Return the footer in the target
     return finalFooterText ? builder.footer({ footer: finalFooterText }) : undefined;
-  }
-
-  /**
-   * Trim the footer texts, removing any whitespace only parts at start and end of footer
-   *
-   * @param parts the footer texts to trim
-   * @returns the trimmed footer texts
-   */
-  private trimFooterTexts(parts: BreakscapedString[]): FooterText[] {
-    // Trim start
-    let foundText = false;
-    let trimmedParts: BreakscapedString[] = parts.reduce((acc, part) => {
-      let text = part as BreakscapedString;
-      if (!foundText) {
-        const t = text.trimStart() as BreakscapedString;
-        if (t) {
-          foundText = true;
-          text = t;
-          acc.push(text);
-        }
-      } else {
-        // Not body text, so add it
-        foundText = true;
-        acc.push(part);
-      }
-      return acc;
-    }, [] as FooterText[]);
-
-    // Trim end
-    foundText = false;
-    trimmedParts = trimmedParts.reduceRight((acc, part) => {
-      let text = part as BreakscapedString;
-      if (!foundText) {
-        const t = text.trimEnd() as BreakscapedString;
-        if (t) {
-          foundText = true;
-          text = t;
-          acc.unshift(text);
-        }
-      } else {
-        // Not body text, so add it
-        foundText = true;
-        acc.unshift(part);
-      }
-      return acc;
-    }, [] as FooterText[]);
-
-    return trimmedParts;
   }
 }
 

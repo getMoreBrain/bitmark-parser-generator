@@ -1,7 +1,6 @@
 import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
@@ -63,7 +62,7 @@ function extractAvatarImage(
   // Extract avatarImage from the resources
   // Return the actual resource, and add all other resources to excess resources
   let avatarImage: ImageResourceJson | undefined;
-  const excessResources: Resource[] = [];
+  const excessResources: ResourceJson[] = [];
 
   if (resources) {
     for (const r of resources.reverse()) {

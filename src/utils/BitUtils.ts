@@ -1,4 +1,5 @@
 import { WithExampleJson } from '../ast/BaseBuilder';
+import { TextAst } from '../model/ast/TextNodes';
 import { ExampleJson } from '../model/json/BitJson';
 import { TextParser } from '../parser/text/TextParser';
 
@@ -33,7 +34,7 @@ class BitUtils {
           node.isExample = true;
         } else {
           // node.isDefaultExample = false;
-          node.example = example ? textParser.toAst(example) : undefined;
+          node.example = (example ? textParser.toAst(example as TextAst) : undefined) as ExampleJson;
         }
         if (firstOnly) break;
       }

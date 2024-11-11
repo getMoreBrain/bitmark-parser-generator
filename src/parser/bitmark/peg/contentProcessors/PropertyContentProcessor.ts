@@ -5,7 +5,7 @@ import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { ConfigKey } from '../../../../model/config/enum/ConfigKey';
 import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';

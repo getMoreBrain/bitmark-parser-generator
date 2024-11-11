@@ -235,99 +235,6 @@ export interface ExtraProperties {
 
 export type Property = string[] | number[] | boolean[] | unknown[];
 
-// // (image-on-device) ImageSource
-// export interface ImageSource {
-//   url: string;
-//   mockupId: string;
-//   size?: number;
-//   format?: string;
-//   trim?: boolean;
-// }
-
-// // (chat) Partner
-// export interface Person {
-//   name: string;
-//   title?: string;
-//   avatarImage?: ImageResourceWrapperJson;
-// }
-
-// export interface MarkConfig {
-//   mark: string;
-//   color?: string;
-//   emphasis?: string;
-// }
-
-// // Table
-// export interface Table {
-//   columns: string[];
-//   rows: string[][];
-// }
-
-// Question
-
-// export interface Question {
-//   question: string;
-//   partialAnswer?: string;
-//   sampleSolution?: string;
-//   additionalSolutions?: string[];
-//   itemLead?: ItemLead;
-//   hint?: BitmarkTextNode;
-//   instruction?: BitmarkTextNode;
-//   reasonableNumOfChars?: number;
-//   isExample: boolean;
-//   isDefaultExample: boolean;
-//   example?: Example;
-// }
-
-// // Professional Name
-// export interface TechnicalTerm {
-//   technicalTerm: string;
-//   lang?: string;
-// }
-
-// // Servings
-// export interface Servings {
-//   servings: number;
-//   unit?: string;
-//   unitAbbr?: string;
-//   decimalPlaces?: number;
-//   disableCalculation?: boolean;
-//   hint?: string;
-// }
-
-// // Ingredient
-
-// export interface Ingredient {
-//   title?: string;
-//   checked?: boolean;
-//   item?: string; // BitmarkTextNode?;
-//   quantity?: number;
-//   unit?: string;
-//   unitAbbr?: string;
-//   decimalPlaces?: number;
-//   disableCalculation?: boolean;
-// }
-
-// // RatingLevelStartEnd
-// export interface RatingLevelStartEnd {
-//   level: number;
-//   label?: TextAst; // BitmarkTextNode
-// }
-
-// // CaptionDefinition
-
-// export interface CaptionDefinition {
-//   term: string;
-//   description: string;
-// }
-
-// // CaptionDefinitionList
-
-// export interface CaptionDefinitionList {
-//   columns: string[];
-//   definitions: CaptionDefinition[];
-// }
-
 // Body
 
 export interface Body {
@@ -339,7 +246,7 @@ export interface Body {
 
 export interface BodyPart {
   type: BodyBitTypeType;
-  // data: unknown;
+  data?: unknown;
 }
 
 export interface BodyBit extends BodyPart {

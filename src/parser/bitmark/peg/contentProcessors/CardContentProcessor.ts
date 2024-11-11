@@ -9,7 +9,6 @@ import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { SelectJson } from '../../../../model/json/BodyBitJson';
-import { AudioResourceJson, ImageResourceJson } from '../../../../model/json/ResourceJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
@@ -29,6 +28,12 @@ import {
   ResponseJson,
   StatementJson,
 } from '../../../../model/json/BitJson';
+import {
+  AudioResourceJson,
+  AudioResourceWrapperJson,
+  ImageResourceJson,
+  ImageResourceWrapperJson,
+} from '../../../../model/json/ResourceJson';
 import {
   BitContentLevel,
   BitContentProcessorResult,
@@ -559,9 +564,9 @@ function parseMatchPairs(
             const resource = resources[0];
             // console.log('WARNING: Match card has resource on first side', tags.resource);
             if (resource.type === ResourceTag.audio) {
-              keyAudio = resource as AudioResourceJson;
+              keyAudio = (resource as AudioResourceWrapperJson).audio;
             } else if (resource.type === ResourceTag.image) {
-              keyImage = resource as ImageResourceJson;
+              keyImage = (resource as ImageResourceWrapperJson).image;
             }
           } else {
             // If not a heading or resource, it is a pair
@@ -928,7 +933,10 @@ function parseIngredients(
         const ingredient = builder.ingredient({
           title,
           checked,
-          item: cardBodyStr,
+          // TS compiler very weird. It doesn't recognize that cardBodyStr is a string|undefined, even if cast!
+          // Casting to 'any' to avoid the error
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          item: cardBodyStr as any,
           quantity,
           unit: unit ?? Breakscape.EMPTY_STRING,
           unitAbbr: unitAbbr ?? Breakscape.EMPTY_STRING,
@@ -1030,29 +1038,5 @@ function parseCardBits(
     cardBits: cardBits.length > 0 ? cardBits : undefined,
   };
 }
-
-// function cardBodyToString(cardBody: Body | undefined): string {
-//   let bodyStr = '';
-
-//   if (cardBody && cardBody.body) {
-//     if (StringUtils.isString(cardBody.body)) {
-//       return cardBody.body as string;
-//     }
-//     const cb = ContentProcessorUtils.getBitmarkTextAst(cardBody.body as BitmarkTextNode);
-
-//     // TODO - should really use text generator here, then unbreakscape the string
-//     // The current code will mean
-//     for (const bodyPart of cb) {
-//       if (bodyPart.type === BodyBitType.text) {
-//         const asText = bodyPart as BodyText;
-//         const bodyTextPart = asText.data.bodyText;
-
-//         bodyStr += bodyTextPart;
-//       }
-//     }
-//   }
-
-//   return bodyStr as BreakscapedString;
-// }
 
 export { buildCards };
