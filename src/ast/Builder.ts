@@ -14,7 +14,6 @@ import { BitUtils } from '../utils/BitUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
-import { StringUtils } from '../utils/StringUtils';
 import { env } from '../utils/env/Env';
 
 import { BaseBuilder, WithExampleJson } from './BaseBuilder';
@@ -1261,10 +1260,8 @@ class Builder extends BaseBuilder {
   body(data: { body?: JsonText; bodyBits?: BodyBit[]; bodyString?: string; bodyJson?: unknown }): Body {
     const { body, bodyBits, bodyString, bodyJson } = data;
 
-    const bodyIsString = StringUtils.isString(body);
-
     const node: Body = {
-      body: bodyIsString ? (body as string) : this.toBitmarkTextNode(body as TextAst),
+      body,
       bodyBits,
       bodyString,
       bodyJson,
@@ -1303,10 +1300,8 @@ class Builder extends BaseBuilder {
   footer(data: { footer?: JsonText }): Footer {
     const { footer } = data;
 
-    const footerIsString = StringUtils.isString(footer);
-
     const node: Footer = {
-      footer: footerIsString ? (footer as string) : this.toBitmarkTextNode(footer as TextAst),
+      footer,
     };
 
     return node;
@@ -2275,7 +2270,7 @@ class Builder extends BaseBuilder {
     body: Body | undefined,
   ): void {
     if (!isDefaultExample && !example) return;
-    const bodyBitsJson = this.textParser.extractBodyBits(this.getBitmarkTextAst(body?.body));
+    const bodyBitsJson = this.textParser.extractBodyBits(body?.body as TextAst);
 
     for (const part of bodyBitsJson) {
       if (part) {
@@ -2345,7 +2340,7 @@ class Builder extends BaseBuilder {
       const bodyArray: Body[] = (Array.isArray(body) ? body : [body]) as Body[];
       for (const b of bodyArray) {
         if (b && b.body && bodyBitTypes) {
-          const bodyBitsJson = this.textParser.extractBodyBits(this.getBitmarkTextAst(b.body));
+          const bodyBitsJson = this.textParser.extractBodyBits(b.body as TextAst);
 
           if (bodyBitTypes && bodyBitsJson && bodyBitsJson.length > 0) {
             for (const part of bodyBitsJson) {
@@ -2410,7 +2405,7 @@ class Builder extends BaseBuilder {
     const { body, cardNode } = bit;
 
     // Body bit level
-    const bodyBitsJson = this.textParser.extractBodyBits(this.getBitmarkTextAst(body?.body));
+    const bodyBitsJson = this.textParser.extractBodyBits(body?.body as TextAst);
 
     for (const bodyPart of bodyBitsJson) {
       switch (bodyPart.type) {

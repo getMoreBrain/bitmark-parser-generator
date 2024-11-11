@@ -1,22 +1,15 @@
 import { Builder } from '../../../../ast/Builder';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { BodyPart, Footer, FooterText } from '../../../../model/ast/Nodes';
+import { Footer } from '../../../../model/ast/Nodes';
 import { JsonText } from '../../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
-import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { TextFormat, TextFormatType } from '../../../../model/enum/TextFormat';
 import { TextParser } from '../../../text/TextParser';
+import { BitContentProcessorResult, BitmarkPegParserContext, ContentDepthType } from '../BitmarkPegParserTypes';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import { ContentProcessorUtils } from './ContentProcessorUtils';
-
-import {
-  BitContent,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  ContentDepthType,
-} from '../BitmarkPegParserTypes';
 
 export interface FooterText {
   footerText: BreakscapedString;

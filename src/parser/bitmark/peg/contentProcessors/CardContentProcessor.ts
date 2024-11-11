@@ -1,8 +1,8 @@
 import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
-import { Body, BotResponse, CardBit, Ingredient } from '../../../../model/ast/Nodes';
-import { BitmarkTextNode, TextAst } from '../../../../model/ast/TextNodes';
+import { CardBit } from '../../../../model/ast/Nodes';
+import { TextAst } from '../../../../model/ast/TextNodes';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
@@ -12,8 +12,6 @@ import { SelectJson } from '../../../../model/json/BodyBitJson';
 import { AudioResourceJson, ImageResourceJson } from '../../../../model/json/ResourceJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
-
-import { ContentProcessorUtils } from './ContentProcessorUtils';
 
 import {
   BotResponseJson,
@@ -238,12 +236,12 @@ function parseFlashcardLike(
 
         if (variantIndex === 0) {
           questionVariant = content;
-          question = ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode);
+          question = cardBody?.body as TextAst;
           questionString = (cardBody?.bodyString ?? '') as string;
         } else if (variantIndex === 1) {
-          answer = ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode);
+          answer = cardBody?.body as TextAst;
         } else {
-          alternativeAnswers.push(ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode));
+          alternativeAnswers.push(cardBody?.body as TextAst);
         }
         variantIndex++;
       }
@@ -578,7 +576,7 @@ function parseMatchPairs(
           } else if (title == null) {
             // If not a heading, it is a pair
             const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
-            const valueAst = ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode);
+            const valueAst = cardBody?.body as TextAst;
             pairValues.push(value);
             _pairValuesAst.push(valueAst);
             if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = valueAst;
@@ -746,7 +744,7 @@ function parseMatchMatrix(
           } else if (tags.title == null) {
             // If not a heading, it is a matrix cell value
             const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
-            const valueAst = ContentProcessorUtils.getBitmarkTextAst(cardBody?.body as BitmarkTextNode);
+            const valueAst = cardBody?.body as TextAst;
             matrixCellValues.push(value);
             _matrixCellValuesAst.push(valueAst);
             if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = valueAst;

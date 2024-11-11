@@ -1,6 +1,6 @@
 import { Config } from '../config/Config';
 import { Property } from '../model/ast/Nodes';
-import { BitmarkTextNode, JsonText, TextAst } from '../model/ast/TextNodes';
+import { JsonText, TextAst } from '../model/ast/TextNodes';
 import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
 import { ExampleJson } from '../model/json/BitJson';
@@ -112,30 +112,6 @@ class BaseBuilder {
   //     isExample: false,
   //   };
   // }
-
-  /**
-   * Convert a TextAst to a BitmarkTextNode.
-   */
-  protected toBitmarkTextNode(textAst: TextAst | undefined): BitmarkTextNode | undefined {
-    if (textAst == null) return undefined;
-    return {
-      __text__: textAst ?? [],
-    };
-  }
-
-  /**
-   * Convert a BitmarkTextNode to TextAst.
-   */
-  protected getBitmarkTextAst(textNode: BitmarkTextNode | string | undefined): TextAst {
-    if (textNode != null) {
-      const nodeAsBitmarkTextNode = textNode as BitmarkTextNode;
-      if (Array.isArray(nodeAsBitmarkTextNode.__text__)) {
-        return nodeAsBitmarkTextNode.__text__;
-      }
-    }
-
-    return [];
-  }
 
   /**
    * Convert a raw bitmark property to an AST property.

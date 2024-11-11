@@ -7,7 +7,7 @@ import { NodeType } from '../../model/ast/NodeType';
 import { BitmarkAst, Bit } from '../../model/ast/Nodes';
 import { Example, ExtraProperties } from '../../model/ast/Nodes';
 import { Body, CardBit, Footer } from '../../model/ast/Nodes';
-import { BitmarkTextNode, JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
+import { JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { ExampleType } from '../../model/enum/ExampleType';
@@ -23,7 +23,6 @@ import { TextParser } from '../../parser/text/TextParser';
 import { ArrayUtils } from '../../utils/ArrayUtils';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { NumberUtils } from '../../utils/NumberUtils';
-import { StringUtils } from '../../utils/StringUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
 
 import {
@@ -688,10 +687,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Body is JSON
       this.bodyJson = value.bodyJson as JsonText;
     } else {
-      const isString = StringUtils.isString(value.body);
-      const bodyString: string | undefined = isString ? (value.body as string) : undefined;
-
-      this.bodyJson = (isString ? bodyString : this.getBitmarkTextAst(value.body as BitmarkTextNode)) as JsonText;
+      this.bodyJson = value.body as JsonText;
     }
 
     // Set the correct body property
@@ -712,10 +708,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected enter_footer(node: NodeInfo, _route: NodeInfo[]): boolean {
     const value = node.value as Footer;
 
-    const isString = StringUtils.isString(value.footer);
-    const footerString: string | undefined = isString ? (value.footer as string) : undefined;
-
-    this.bitJson.footer = isString ? footerString : this.getBitmarkTextAst(value.footer as BitmarkTextNode);
+    this.bitJson.footer = value.footer as JsonText;
 
     // Stop traversal of this branch
     return false;
