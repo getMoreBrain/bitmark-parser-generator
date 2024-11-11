@@ -1,4 +1,5 @@
 import { Config } from '../config/Config';
+import { Bit, BitmarkAst, Body, ExtraProperties, CardNode, CardBit, Footer, BodyBit } from '../model/ast/Nodes';
 import { JsonText, TextAst } from '../model/ast/TextNodes';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { BitType, BitTypeType } from '../model/enum/BitType';
@@ -19,18 +20,6 @@ import { env } from '../utils/env/Env';
 import { BaseBuilder, WithExampleJson } from './BaseBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
-import {
-  Bit,
-  BitmarkAst,
-  Body,
-  ItemLead,
-  ExtraProperties,
-  CardNode,
-  CardBit,
-  Table,
-  Footer,
-  BodyBit,
-} from '../model/ast/Nodes';
 import {
   BotResponseJson,
   CaptionDefinitionJson,
@@ -598,7 +587,7 @@ class Builder extends BaseBuilder {
       mailingList: this.toAstProperty(PropertyConfigKey.mailingList, mailingList),
       buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, buttonCaption),
       callToActionUrl: this.toAstProperty(PropertyConfigKey.callToActionUrl, callToActionUrl),
-      caption: this.toBitmarkTextNode(caption),
+      caption,
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
@@ -1002,6 +991,19 @@ class Builder extends BaseBuilder {
       ignoreAllEmptyArrays: true,
       ignoreUndefined: ['example', 'isCaseSensitive'],
     });
+
+    // if (node.key) {
+    //   delete node.keyAudio;
+    //   delete node.keyImage;
+    // }
+    // if (node.keyAudio != null) {
+    //   delete node.key;
+    //   delete node.keyImage;
+    // }
+    // if (node.keyImage != null) {
+    //   delete node.key;
+    //   delete node.keyAudio;
+    // }
 
     return node;
   }
@@ -2013,27 +2015,6 @@ class Builder extends BaseBuilder {
   //
   // Private
   //
-
-  private itemLead(
-    item: TextAst | undefined,
-    lead: TextAst | undefined,
-    pageNumber: TextAst | undefined,
-    marginNumber: TextAst | undefined,
-  ): ItemLead | undefined {
-    let node: ItemLead | undefined;
-
-    // NOTE: Node order is important and is defined here
-    if (item || lead || pageNumber || marginNumber) {
-      node = {
-        item: this.toBitmarkTextNode(item),
-        lead: this.toBitmarkTextNode(lead),
-        pageNumber: this.toBitmarkTextNode(pageNumber),
-        marginNumber: this.toBitmarkTextNode(marginNumber),
-      };
-    }
-
-    return node;
-  }
 
   /**
    * Build card bit node

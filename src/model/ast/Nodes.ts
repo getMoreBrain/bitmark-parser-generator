@@ -160,7 +160,7 @@ export interface Bit {
   mailingList?: Property;
   buttonCaption?: Property;
   callToActionUrl?: Property;
-  caption?: BitmarkTextNode; // BitmarkTextNode
+  caption?: TextAst;
   quotedPerson?: Property;
   partialAnswer?: Property;
   reasonableNumOfChars?: Property;
@@ -217,13 +217,6 @@ export interface Bit {
 
   markup?: string; // Called 'bitmark' in the JSON
   parser?: ParserInfo;
-}
-
-export interface ItemLead {
-  item?: BitmarkTextNode; // BitmarkTextNode;
-  lead?: BitmarkTextNode; // BitmarkTextNode;
-  pageNumber?: BitmarkTextNode; // BitmarkTextNode;
-  marginNumber?: BitmarkTextNode; // BitmarkTextNode;
 }
 
 export type Example = BitmarkTextNode | string | boolean; // BitmarkTextNode | string | boolean;
@@ -323,13 +316,13 @@ export interface MarkConfig {
 // }
 
 // Bot Response
-export interface BotResponse {
-  response: string;
-  reaction: string;
-  feedback: string;
-  itemLead?: ItemLead;
-  hint?: BitmarkTextNode; // BitmarkTextNode;
-}
+// export interface BotResponse {
+//   response: string;
+//   reaction: string;
+//   feedback: string;
+//   itemLead?: ItemLead;
+//   hint?: BitmarkTextNode; // BitmarkTextNode;
+// }
 
 // Quiz
 
@@ -365,25 +358,25 @@ export interface BotResponse {
 //   example?: Example;
 // }
 
-export interface Matrix {
-  key: string;
-  itemLead?: ItemLead;
-  hint?: BitmarkTextNode; // BitmarkTextNode;
-  instruction?: BitmarkTextNode; // BitmarkTextNode;
-  isExample: boolean;
-  cells: MatrixCell[];
-}
+// export interface Matrix {
+//   key: string;
+//   itemLead?: ItemLead;
+//   hint?: BitmarkTextNode; // BitmarkTextNode;
+//   instruction?: BitmarkTextNode; // BitmarkTextNode;
+//   isExample: boolean;
+//   cells: MatrixCell[];
+// }
 
-export interface MatrixCell {
-  values?: string[];
-  itemLead?: ItemLead;
-  hint?: BitmarkTextNode; // BitmarkTextNode;
-  instruction?: BitmarkTextNode; // BitmarkTextNode;
-  isCaseSensitive?: boolean;
-  isExample: boolean;
-  isDefaultExample: boolean;
-  example?: Example;
-}
+// export interface MatrixCell {
+//   values?: string[];
+//   itemLead?: ItemLead;
+//   hint?: BitmarkTextNode; // BitmarkTextNode;
+//   instruction?: BitmarkTextNode; // BitmarkTextNode;
+//   isCaseSensitive?: boolean;
+//   isExample: boolean;
+//   isDefaultExample: boolean;
+//   example?: Example;
+// }
 
 // Table
 export interface Table {
@@ -393,19 +386,19 @@ export interface Table {
 
 // Question
 
-export interface Question {
-  question: string;
-  partialAnswer?: string;
-  sampleSolution?: string;
-  additionalSolutions?: string[];
-  itemLead?: ItemLead;
-  hint?: BitmarkTextNode; // BitmarkTextNode;
-  instruction?: BitmarkTextNode; // BitmarkTextNode;
-  reasonableNumOfChars?: number;
-  isExample: boolean;
-  isDefaultExample: boolean;
-  example?: Example;
-}
+// export interface Question {
+//   question: string;
+//   partialAnswer?: string;
+//   sampleSolution?: string;
+//   additionalSolutions?: string[];
+//   itemLead?: ItemLead;
+//   hint?: BitmarkTextNode; // BitmarkTextNode;
+//   instruction?: BitmarkTextNode; // BitmarkTextNode;
+//   reasonableNumOfChars?: number;
+//   isExample: boolean;
+//   isDefaultExample: boolean;
+//   example?: Example;
+// }
 
 // Professional Name
 export interface TechnicalTerm {
@@ -476,33 +469,33 @@ export interface BodyBit extends BodyPart {
 
 // Gap
 
-export interface Gap extends BodyBit {
-  type: 'gap';
-  data: {
-    solutions: string[];
-    itemLead?: ItemLead;
-    hint?: BitmarkTextNode; // BitmarkTextNode;
-    instruction?: BitmarkTextNode; // BitmarkTextNode;
-    isCaseSensitive?: boolean;
-    isExample: boolean;
-    isDefaultExample: boolean;
-    example?: Example;
-  };
-}
+// export interface Gap extends BodyBit {
+//   type: 'gap';
+//   data: {
+//     solutions: string[];
+//     itemLead?: ItemLead;
+//     hint?: BitmarkTextNode; // BitmarkTextNode;
+//     instruction?: BitmarkTextNode; // BitmarkTextNode;
+//     isCaseSensitive?: boolean;
+//     isExample: boolean;
+//     isDefaultExample: boolean;
+//     example?: Example;
+//   };
+// }
 
-export interface Mark extends BodyBit {
-  type: 'mark';
-  data: {
-    solution: string;
-    mark?: string;
-    itemLead?: ItemLead;
-    hint?: BitmarkTextNode; // BitmarkTextNode;
-    instruction?: BitmarkTextNode; // BitmarkTextNode;
-    isExample: boolean;
-    isDefaultExample: boolean;
-    example?: Example;
-  };
-}
+// export interface Mark extends BodyBit {
+//   type: 'mark';
+//   data: {
+//     solution: string;
+//     mark?: string;
+//     itemLead?: ItemLead;
+//     hint?: BitmarkTextNode; // BitmarkTextNode;
+//     instruction?: BitmarkTextNode; // BitmarkTextNode;
+//     isExample: boolean;
+//     isDefaultExample: boolean;
+//     example?: Example;
+//   };
+// }
 
 // Select
 
@@ -534,30 +527,30 @@ export interface Mark extends BodyBit {
 
 // Highlight
 
-export interface Highlight extends BodyBit {
-  type: 'highlight';
-  data: {
-    prefix?: string;
-    texts: HighlightText[];
-    postfix?: string;
-    itemLead?: ItemLead;
-    hint?: BitmarkTextNode; // BitmarkTextNode;
-    instruction?: BitmarkTextNode; // BitmarkTextNode;
-    isExample?: boolean;
-  };
-}
+// export interface Highlight extends BodyBit {
+//   type: 'highlight';
+//   data: {
+//     prefix?: string;
+//     texts: HighlightText[];
+//     postfix?: string;
+//     itemLead?: ItemLead;
+//     hint?: BitmarkTextNode; // BitmarkTextNode;
+//     instruction?: BitmarkTextNode; // BitmarkTextNode;
+//     isExample?: boolean;
+//   };
+// }
 
-export interface HighlightText {
-  text: string;
-  isCorrect: boolean;
-  isHighlighted: boolean;
-  itemLead?: ItemLead;
-  hint?: BitmarkTextNode; // BitmarkTextNode;
-  instruction?: BitmarkTextNode; // BitmarkTextNode;
-  isExample: boolean;
-  isDefaultExample: boolean;
-  example?: Example;
-}
+// export interface HighlightText {
+//   text: string;
+//   isCorrect: boolean;
+//   isHighlighted: boolean;
+//   itemLead?: ItemLead;
+//   hint?: BitmarkTextNode; // BitmarkTextNode;
+//   instruction?: BitmarkTextNode; // BitmarkTextNode;
+//   isExample: boolean;
+//   isDefaultExample: boolean;
+//   example?: Example;
+// }
 
 export interface CardBit {
   item: TextAst;
