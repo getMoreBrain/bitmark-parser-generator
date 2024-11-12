@@ -31,6 +31,7 @@ import {
 } from '../../model/ast/TextNodes';
 
 const DEFAULT_OPTIONS: TextOptions = {
+  bodyBitCallback: undefined,
   debugGenerationInline: false,
 };
 
@@ -102,6 +103,18 @@ const LINK_REGEX = new RegExp(/https?:\/\/|mailto:(.*)/, 'g');
  */
 export interface TextOptions {
   /**
+   * Callback for writing text
+   *
+   * If set, the callback will be called, rather than writing to the output string
+   */
+  writeCallback?: WriteCallback;
+
+  /**
+   * Callback for rendering body bits
+   */
+  bodyBitCallback?: BodyBitCallback;
+
+  /**
    * [development only]
    * Generate debug information in the output.
    */
@@ -115,6 +128,9 @@ const Stage = {
 };
 
 export type StageType = EnumType<typeof Stage>;
+
+export type WriteCallback = (s: string) => void;
+export type BodyBitCallback = (bodyBit: BodyBitJson, index: number, route: NodeInfo[]) => string;
 
 /**
  * Generate text from a bitmark text AST
@@ -311,7 +327,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       case TextNodeType.select:
       case TextNodeType.highlight:
       case TextNodeType.mark:
-        this.writeBodyBit(node);
+        this.writeBodyBit(node, route);
         // Stop parsing the body bit
         return false;
       default:
@@ -467,12 +483,17 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   // WRITE FUNCTIONS
   //
 
-  protected writeBodyBit(node: TextNode) {
-    // Write placeholder to the text
+  protected writeBodyBit(node: TextNode, route: NodeInfo[]) {
     const placeholder = `[!${this.placeholderIndex}]`;
-    this.writerText += placeholder;
-
     this.placeholders[placeholder] = node as unknown as BodyBitJson;
+
+    if (this.options.bodyBitCallback) {
+      const bodyBit = this.options.bodyBitCallback(node as unknown as BodyBitJson, this.placeholderIndex, route);
+      this.write(bodyBit);
+    } else {
+      // Write placeholder to the text
+      this.write(placeholder);
+    }
 
     this.placeholderIndex++;
   }
@@ -900,7 +921,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    * @param value - The string value to be written.
    */
   write(value: string): this {
-    this.writerText += value;
+    if (this.options.writeCallback) {
+      this.options.writeCallback(value);
+    } else {
+      this.writerText += value;
+    }
     // for debugging console.log(this.writerText);
 
     return this;

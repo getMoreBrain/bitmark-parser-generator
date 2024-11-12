@@ -266,6 +266,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.json = [];
   }
 
+  protected exit_bitmarkAst(_node: NodeInfo, _route: NodeInfo[]): void {
+    // Walk the entire json object and remove all' '_xxx' properties
+    // (which are used to store temporary data during the generation process)
+    this.removeTemporaryProperties(this.json);
+  }
+
   // bitmarkAst -> bits
 
   // bitmarkAst -> bits -> bitsValue
@@ -1972,10 +1978,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Footer
     if (bitJson.footer == null) delete bitJson.footer;
 
-    // Walk the entire json object and remove all' '_xxx' properties
-    // (which are used to store temporary data during the generation process)
-    this.removeTemporaryProperties(bitJson);
-
     return bitJson;
   }
 
@@ -1984,12 +1986,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    *
    * @param json
    */
-  protected removeTemporaryProperties(json: Record<string, unknown>): void {
-    for (const key in json) {
+  protected removeTemporaryProperties(json: Record<string, unknown> | unknown[]): void {
+    const obj = json as Record<string, unknown>;
+    for (const key in obj) {
       if (key.startsWith('_')) {
-        delete json[key];
-      } else if (typeof json[key] === 'object') {
-        this.removeTemporaryProperties(json[key] as Record<string, unknown>);
+        delete obj[key];
+      } else if (typeof obj[key] === 'object') {
+        this.removeTemporaryProperties(obj[key] as Record<string, unknown>);
       }
     }
   }

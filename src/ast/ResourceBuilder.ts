@@ -249,8 +249,8 @@ class ResourceBuilder extends BaseBuilder {
       src2x?: string;
       src3x?: string;
       src4x?: string;
-      width?: string;
-      height?: string;
+      width?: string | null;
+      height?: string | null;
       alt?: string;
       zoomDisabled?: boolean;
       license?: string;

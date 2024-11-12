@@ -249,6 +249,7 @@ export interface BodyPart {
   data?: unknown;
 }
 
+// TODO: BodyBitJson ?? replace this type with the one from the JSON
 export interface BodyBit extends BodyPart {
   type: 'gap' | 'mark' | 'select' | 'highlight';
 }

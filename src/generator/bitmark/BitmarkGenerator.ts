@@ -1,43 +1,60 @@
 import { Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
+import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeTypeType, NodeType } from '../../model/ast/NodeType';
+import { BitmarkAst, Bit, Body, BodyPart, Footer } from '../../model/ast/Nodes';
+import { TextAst } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
 import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
+import { PropertyFormat, PropertyFormatType } from '../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { BodyBitJson, GapJson, HighlightTextJson, MarkJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { ObjectUtils } from '../../utils/ObjectUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
+import { TextGenerator } from '../text/TextGenerator';
 
 import {
-  BitmarkAst,
-  Bit,
-  ItemLead,
-  SelectOption,
-  HighlightText,
-  Response,
-  Statement,
-  Choice,
-  Body,
-  ImageResource,
-  Resource,
-  ArticleResource,
-  Person,
-  Example,
-  MarkConfig,
-  BodyPart,
-  ImageSource,
-  Ingredient,
-  TechnicalTerm,
-  Servings,
-  RatingLevelStartEnd,
-} from '../../model/ast/Nodes';
+  ChoiceJson,
+  ImageSourceJson,
+  IngredientJson,
+  MarkConfigJson,
+  PersonJson,
+  RatingLevelStartEndJson,
+  ResponseJson,
+  ServingsJson,
+  StatementJson,
+  TechnicalTermJson,
+} from '../../model/json/BitJson';
+import {
+  AppLinkResourceJson,
+  ArticleResourceJson,
+  AudioEmbedResourceJson,
+  AudioLinkResourceJson,
+  AudioResourceJson,
+  DocumentDownloadResourceJson,
+  DocumentEmbedResourceJson,
+  DocumentLinkResourceJson,
+  DocumentResourceJson,
+  ImageLinkResourceJson,
+  ImageResourceJson,
+  ResourceDataJson,
+  ResourceJson,
+  StillImageFilmEmbedResourceJson,
+  StillImageFilmLinkResourceJson,
+  StillImageFilmResourceJson,
+  VideoEmbedResourceJson,
+  VideoLinkResourceJson,
+  VideoResourceJson,
+  WebsiteLinkResourceJson,
+} from '../../model/json/ResourceJson';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
   debugGenerationInline: false,
@@ -104,6 +121,7 @@ export interface BitmarkGeneratorOptions {
  */
 class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected ast = new Ast();
+  protected textGenerator: TextGenerator;
   private bitmarkVersion: BitmarkVersionType;
   private options: BitmarkOptions;
   private writer: Writer;
@@ -131,6 +149,15 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   constructor(writer: Writer, options?: BitmarkGeneratorOptions) {
     super();
 
+    // Bind callbacks
+    this.enter = this.enter.bind(this);
+    this.between = this.between.bind(this);
+    this.exit = this.exit.bind(this);
+    this.leaf = this.leaf.bind(this);
+    this.write = this.write.bind(this);
+    this.bodyBitCallback = this.bodyBitCallback.bind(this);
+
+    // Set options
     this.bitmarkVersion = BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
@@ -153,13 +180,16 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Calculate the prettify space
     this.prettifySpace = this.options.prettifyJson === true ? 2 : this.options.prettifyJson || undefined;
 
+    // Create the text generator
+    this.textGenerator = new TextGenerator(this.bitmarkVersion, {
+      writeCallback: this.write,
+      bodyBitCallback: this.bodyBitCallback,
+      debugGenerationInline: this.debugGenerationInline,
+    });
+
     this.writer = writer;
 
-    this.enter = this.enter.bind(this);
-    this.between = this.between.bind(this);
-    this.exit = this.exit.bind(this);
-    this.leaf = this.leaf.bind(this);
-
+    this.generateResourceHandlers();
     this.generatePropertyHandlers();
   }
 
@@ -238,7 +268,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue
 
-  protected enter_bitsValue(node: NodeInfo, _route: NodeInfo[]): void {
+  protected enter_bitsValue(node: NodeInfo, _route: NodeInfo[]): boolean {
     const bit = node.value as Bit;
 
     const bitConfig = Config.getBitConfig(bit.bitType);
@@ -248,14 +278,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeOPD(bit.bitLevel);
 
     if (bit.isCommented) this.writeString('|');
-    this.writeString(bit.bitType);
+    this.writeString(Breakscape.breakscape(bit.bitType));
 
     if (bit.textFormat) {
       const write = this.isWriteTextFormat(bit.textFormat, bitConfig.textFormatDefault);
 
       if (write) {
         this.writeColon();
-        this.writeString(bit.textFormat);
+        this.writeString(Breakscape.breakscape(bit.textFormat));
       }
     }
 
@@ -280,11 +310,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (resourceType) {
       this.writeAmpersand();
-      this.writeString(resourceType);
+      this.writeString(Breakscape.breakscape(resourceType));
     }
 
     this.writeCL();
     this.writeNL();
+
+    // Continue traversal
+    return true;
   }
 
   protected between_bitsValue(node: NodeInfo, left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
@@ -304,108 +337,219 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> internalComment
 
-  protected enter_internalComment(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_internalComment(node: NodeInfo, route: NodeInfo[]): boolean {
     const internalComment = node.value as BreakscapedString[];
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return true;
 
     for (let i = 0; i < internalComment.length; i++) {
       const comment = internalComment[i];
       const last = i === internalComment.length - 1;
-      this.writeProperty('internalComment', comment);
+      this.writeProperty('internalComment', comment, {
+        format: PropertyFormat.trimmedString,
+        single: false,
+        ignoreEmpty: true,
+      });
       if (!last) this.writeNL();
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> labelTrue / labelFalse
 
-  protected enter_labelTrue(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_labelTrue(node: NodeInfo, route: NodeInfo[]): boolean {
     const value = node.value as string | undefined;
 
     // Ignore example that is not at the bit level as it are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return true;
 
     const bit = parent?.value as Bit;
     if (bit) {
-      if (value != '') this.writeProperty(PropertyTag.labelTrue, value, true);
-      if (bit.labelFalse && bit.labelFalse[0] != '') this.writeProperty(PropertyTag.labelFalse, bit.labelFalse, true);
+      if (value != '')
+        this.writeProperty(PropertyTag.labelTrue, value, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
+      if (bit.labelFalse && bit.labelFalse[0] != '')
+        this.writeProperty(PropertyTag.labelFalse, bit.labelFalse, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> imageSource
 
-  protected enter_imageSource(node: NodeInfo, route: NodeInfo[]): void {
-    const imageSource = node.value as ImageSource;
+  protected enter_imageSource(node: NodeInfo, route: NodeInfo[]): boolean {
+    const imageSource = node.value as ImageSourceJson;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return true;
 
     const { url, mockupId, size, format, trim } = imageSource;
 
-    this.writeProperty('imageSource', url, true);
+    this.writeProperty('imageSource', url, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
     if (url) {
-      if (mockupId) this.writeProperty('mockupId', mockupId, true);
-      if (size) this.writeProperty('size', size, true);
-      if (format) this.writeProperty('format', format, true);
-      if (BooleanUtils.isBoolean(trim)) this.writeProperty('trim', trim, true);
+      if (mockupId)
+        this.writeProperty('mockupId', mockupId, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
+      if (size)
+        this.writeProperty('size', size, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
+      if (format)
+        this.writeProperty('format', format, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
+      if (BooleanUtils.isBoolean(trim))
+        this.writeProperty('trim', trim, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> technicalTerm
 
-  protected enter_technicalTerm(node: NodeInfo, route: NodeInfo[]): void {
-    const nodeValue = node.value as TechnicalTerm;
+  protected enter_technicalTerm(node: NodeInfo, route: NodeInfo[]): boolean {
+    const nodeValue = node.value as TechnicalTermJson;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return true;
 
     const { technicalTerm, lang } = nodeValue;
 
-    this.writeProperty('technicalTerm', technicalTerm, true);
-    if (lang != null) this.writeProperty('lang', lang);
+    this.writeProperty('technicalTerm', technicalTerm, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
+    if (lang != null) {
+      this.writeProperty('lang', lang, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
+    }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> servings
 
-  protected enter_servings(node: NodeInfo, route: NodeInfo[]): void {
-    const nodeValue = node.value as Servings;
+  protected enter_servings(node: NodeInfo, route: NodeInfo[]): boolean {
+    const nodeValue = node.value as ServingsJson;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return true;
 
-    const { servings, unit, unitAbbr, decimalPlaces, disableCalculation } = nodeValue;
+    const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = nodeValue;
 
-    this.writeProperty('servings', servings, true);
-    if (unit != null) this.writeProperty('unit', unit);
-    if (unitAbbr != null) this.writeProperty('unitAbbr', unitAbbr);
-    if (decimalPlaces != null) this.writeProperty('decimalPlaces', decimalPlaces);
-    if (disableCalculation != null) this.writeProperty('disableCalculation', disableCalculation);
+    this.writeProperty('servings', servings, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
+    if (unit != null) {
+      this.writeProperty('unit', unit, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
+    }
+    if (unitAbbr != null) {
+      this.writeProperty('unitAbbr', unitAbbr, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
+    }
+    if (decimalPlaces != null) {
+      this.writeProperty('decimalPlaces', decimalPlaces, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
+    }
+    if (disableCalculation != null) {
+      this.writeProperty('disableCalculation', disableCalculation, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
+    }
+    if (hint != null) {
+      this.writeOPQ();
+      this.writeString(Breakscape.breakscape(hint as string));
+      this.writeCL();
+      // this.writeProperty('hint', hint, {
+      //   format: PropertyFormat.trimmedString,
+      //   single: true,
+      //   ignoreEmpty: true,
+      // });
+    }
+
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> person
 
-  protected enter_person(node: NodeInfo, route: NodeInfo[]): void {
-    const person = node.value as Person;
+  protected enter_person(node: NodeInfo, route: NodeInfo[]): boolean {
+    const person = node.value as PersonJson;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return true;
 
     const { name, title, avatarImage } = person;
 
-    this.writeProperty('person', name, true);
+    this.writeProperty('person', name, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
     if (title) {
-      this.writeProperty('title', title, true);
+      this.writeProperty('title', title, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
     }
     if (avatarImage) {
-      this.writeResource(avatarImage);
+      this.writeResource(ResourceTag.image, avatarImage.src);
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> ratingLevelStart
@@ -425,60 +569,130 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   // Common code for ratingLevelStart and ratingLevelEnd
-  protected enterRatingLevelStartEndCommon(node: NodeInfo, route: NodeInfo[]): void {
-    const n = node.value as RatingLevelStartEnd;
+  protected enterRatingLevelStartEndCommon(node: NodeInfo, route: NodeInfo[]): boolean {
+    const n = node.value as RatingLevelStartEndJson;
 
     // Ignore values that are not at the bit level as they might be handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return;
+    if (parent?.key !== NodeType.bitsValue) return true;
 
     const { level, label } = n;
     const levelKey = node.key === NodeType.ratingLevelStart ? PropertyTag.ratingLevelStart : PropertyTag.ratingLevelEnd;
 
-    this.writeProperty(levelKey, level, true);
+    this.writeProperty(levelKey, level, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
     if (label) {
-      this.writeProperty('label', label, true);
+      this.writeProperty('label', label, {
+        format: PropertyFormat.bitmarkMinusMinus,
+        single: true,
+        ignoreEmpty: true,
+      });
     }
+
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> markConfigValue
 
-  protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): void {
-    const markConfig = node.value as MarkConfig;
+  protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): boolean {
+    const markConfig = node.value as MarkConfigJson;
 
     // Ignore values that are not at the correct level as they might be handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.markConfig) return;
+    if (parent?.key !== NodeType.markConfig) return true;
 
     const { mark, color, emphasis } = markConfig;
 
     if (mark) {
-      this.writeProperty('mark', mark, true);
-      if (color) this.writeProperty('color', color, true);
-      if (emphasis) this.writeProperty('emphasis', emphasis, true);
+      this.writeProperty('mark', mark, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
+      if (color) {
+        this.writeProperty('color', color, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
+      }
+      if (emphasis) {
+        this.writeProperty('emphasis', emphasis, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
+      }
       this.writeNL();
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> partialAnswer
+
+  protected enter_partialAnswer(node: NodeInfo, _route: NodeInfo[]): boolean {
+    this.writeProperty('partialAnswer', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
+
+    // Stop traversal of this branch
+    return false;
+  }
+
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> partialAnswer
 
-  protected leaf_partialAnswer(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('partialAnswer', node.value);
+  protected leaf_partialAnswer(node: NodeInfo, _route: NodeInfo[]): boolean {
+    this.writeProperty('partialAnswer', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> sampleSolution
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> sampleSolution
 
-  protected leaf_sampleSolution(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('sampleSolution', node.value);
+  protected enter_sampleSolution(node: NodeInfo, _route: NodeInfo[]): boolean {
+    this.writeProperty('sampleSolution', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  protected leaf_sampleSolution(node: NodeInfo, _route: NodeInfo[]): boolean {
+    this.writeProperty('sampleSolution', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> reasonableNumOfChars
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> reasonableNumOfChars
 
   protected leaf_reasonableNumOfChars(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('reasonableNumOfChars', node.value);
+    this.writeProperty('reasonableNumOfChars', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> additionalSolutions
@@ -498,71 +712,322 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route, 2);
     if (parent?.key !== NodeType.questionsValue) return;
 
-    this.writeProperty('additionalSolutions', node.value);
+    this.writeProperty('additionalSolutions', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: false,
+    });
   }
 
-  // bitmarkAst -> bits -> bitsValue -> itemLead
+  // // bitmarkAst -> bits -> bitsValue -> itemLead
 
-  protected enter_itemLead(node: NodeInfo, _route: NodeInfo[]): void {
-    const itemLead = node.value as ItemLead;
-    if (itemLead && (itemLead.item || itemLead.lead || itemLead.pageNumber || itemLead.marginNumber)) {
-      // Always write item if item or lead is set
-      this.writeOPC();
-      this.writeString(itemLead.item || '');
-      this.writeCL();
+  // protected enter_itemLead(node: NodeInfo, _route: NodeInfo[]): void {
+  //   const itemLead = node.value as ItemLead;
+  //   if (itemLead && (itemLead.item || itemLead.lead || itemLead.pageNumber || itemLead.marginNumber)) {
+  //     // Always write item if item or lead is set
+  //     this.writeOPC();
+  //     this.writeString(itemLead.item || '');
+  //     this.writeCL();
 
-      if (itemLead.lead || itemLead.pageNumber || itemLead.marginNumber) {
-        this.writeOPC();
-        this.writeString(itemLead.lead || '');
-        this.writeCL();
-      }
+  //     if (itemLead.lead || itemLead.pageNumber || itemLead.marginNumber) {
+  //       this.writeOPC();
+  //       this.writeString(itemLead.lead || '');
+  //       this.writeCL();
+  //     }
 
-      if (itemLead.pageNumber || itemLead.marginNumber) {
-        this.writeOPC();
-        this.writeString(itemLead.pageNumber || '');
-        this.writeCL();
-      }
+  //     if (itemLead.pageNumber || itemLead.marginNumber) {
+  //       this.writeOPC();
+  //       this.writeString(itemLead.pageNumber || '');
+  //       this.writeCL();
+  //     }
 
-      if (itemLead.marginNumber) {
-        this.writeOPC();
-        this.writeString(itemLead.marginNumber || '');
-        this.writeCL();
-      }
-    }
+  //     if (itemLead.marginNumber) {
+  //       this.writeOPC();
+  //       this.writeString(itemLead.marginNumber || '');
+  //       this.writeCL();
+  //     }
+  //   }
+  // }
+
+  // bitmarkAst -> bits -> bitsValue -> item
+
+  protected enter_item(node: NodeInfo, route: NodeInfo[]): boolean {
+    const item = node.value as TextAst;
+    const parent = this.getParentNode(route);
+    if (this.isEmptyText(item)) return false; // Ignore empty
+    if (!this.isEmptyText(parent?.value?.lead)) return true; // Will be handled by lead
+    if (!this.isEmptyText(parent?.value?.pageNumber)) return true; // Will be handled by pageNumber
+    if (!this.isEmptyText(parent?.value?.marginNumber)) return true; // Will be handled by marginNumber
+
+    this.writeOPC();
+    this.textGenerator.generateSync(item, TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+
+    return true;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> lead
+
+  protected enter_lead(node: NodeInfo, route: NodeInfo[]): boolean {
+    const lead = node.value as TextAst;
+    const parent = this.getParentNode(route);
+    if (this.isEmptyText(lead)) return false; // Ignore empty
+    if (!this.isEmptyText(parent?.value?.pageNumber)) return true; // Will be handled by pageNumber
+    if (!this.isEmptyText(parent?.value?.marginNumber)) return true; // Will be handled by marginNumber
+
+    this.writeOPC();
+    this.textGenerator.generateSync(parent?.value?.item ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+    this.writeOPC();
+    this.textGenerator.generateSync(lead, TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+
+    return true;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> pageNumber
+
+  protected enter_pageNumber(node: NodeInfo, route: NodeInfo[]): boolean {
+    const pageNumber = node.value as TextAst;
+    const parent = this.getParentNode(route);
+    if (this.isEmptyText(pageNumber)) return false; // Ignore empty
+    if (!this.isEmptyText(parent?.value?.marginNumber)) return true; // Will be handled by marginNumber
+
+    this.writeOPC();
+    this.textGenerator.generateSync(parent?.value?.item ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+    this.writeOPC();
+    this.textGenerator.generateSync(parent?.value?.lead ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+    this.writeOPC();
+    this.textGenerator.generateSync(pageNumber ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+
+    return true;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> marginNumber
+
+  protected enter_marginNumber(node: NodeInfo, route: NodeInfo[]): boolean {
+    const marginNumber = node.value as TextAst;
+    const parent = this.getParentNode(route);
+    if (this.isEmptyText(marginNumber)) return false; // Ignore empty
+
+    this.writeOPC();
+    this.textGenerator.generateSync(parent?.value?.item ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+    this.writeOPC();
+    this.textGenerator.generateSync(parent?.value?.lead ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+    this.writeOPC();
+    this.textGenerator.generateSync(parent?.value?.pageNumber ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+    this.writeOPC();
+    this.textGenerator.generateSync(marginNumber, TextFormat.bitmarkMinusMinus);
+    this.writeCL();
+
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> body
 
-  protected enter_body(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_body(node: NodeInfo, route: NodeInfo[]): boolean {
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardBitsValue) return true;
+
     // always write a NL before the body content if there is any?
     const body = node.value as Body;
-    if ((body.bodyParts && body.bodyParts.length > 0) || body.bodyJson) {
-      this.writeNL();
+    const textFormat = this.getTextFormat(route);
 
-      // Write the plain text divider if not bitmark++/-- format
-      const textFormat = this.getTextFormat(route);
+    // Handle body
+    if (textFormat === TextFormat.json) {
+      const json = body.bodyJson ?? null;
+      if (Array.isArray(json) || ObjectUtils.isObject(json)) {
+        const text = JSON.stringify(json, null, this.prettifySpace);
+        if (text) {
+          this.writeNL();
+          this.writePlainTextDivider();
+          this.writeNL();
+          this.writeString(
+            Breakscape.breakscape(text, {
+              bitTagOnly: true,
+            }),
+          );
+        }
+      }
+    } else if (body.body && body.body.length > 0) {
       const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
-      if (!isBitmarkText) {
+      if (isBitmarkText) {
+        // handle bitmark text
+        this.writeNL();
+        // The text generator will write to the writer
+        this.textGenerator.generateSync(body.body as TextAst, textFormat);
+      } else {
+        // handle plain text
+        this.writeNL();
         this.writePlainTextDivider();
+        this.writeNL();
+        this.write(
+          Breakscape.breakscape(body.body as string, {
+            bitTagOnly: true,
+          }),
+        );
         this.writeNL();
       }
     }
+
+    // Stop traversal of this branch
+    return false;
+
+    // if ((body.body && body.body.length > 0) || body.bodyJson) {
+    //   this.writeNL();
+
+    //   // Write the plain text divider if not bitmark++/-- format
+    //   const textFormat = this.getTextFormat(route);
+    //   const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
+    //   if (!isBitmarkText) {
+    //     this.writePlainTextDivider();
+    //     this.writeNL();
+    //   }
+    // }
+  }
+
+  protected bodyBitCallback(bodyBit: BodyBitJson, _index: number, _route: NodeInfo[]): string {
+    // console.log('bodyBitCallback', bodyBit, index, route);
+    // TODO
+
+    // Walk the body bit AST
+    const nodeType = NodeType.fromValue(bodyBit.type) ?? NodeType.bodyBit;
+    this.ast.walk(bodyBit, nodeType, this, undefined);
+
+    return '';
+  }
+
+  // bodyBit -> gap
+
+  protected enter_gap(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const gap = node.value as GapJson;
+
+    if (gap.solutions && gap.solutions.length === 0) {
+      // If there are no solutions, we need to write the special cloze gap [_] to indicate this
+      this.writeOPU();
+      this.writeCL();
+    } else {
+      for (const solution of gap.solutions) {
+        this.writeOPU();
+        this.writeString(Breakscape.breakscape(solution));
+        this.writeCL();
+      }
+    }
+
+    // Continue traversal
+    return true;
+  }
+
+  // bodyBit -> mark
+
+  protected enter_mark(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const mark = node.value as MarkJson;
+
+    this.writeOPE();
+    this.writeString(Breakscape.breakscape(mark.solution));
+    this.writeCL();
+
+    // Continue traversal
+    return true;
+  }
+
+  // bodyBit -> select
+
+  protected enter_select(_node: NodeInfo, _route: NodeInfo[]): boolean {
+    // const select = node.value as SelectJson;
+
+    // for (const option of select.options) {
+    //   this.writeOPU();
+    //   this.writeString(solution);
+    //   this.writeCL();
+    // }
+
+    // Continue traversal
+    return true;
+  }
+
+  // bodyBit -> highlight
+
+  protected enter_highlight(_node: NodeInfo, _route: NodeInfo[]): boolean {
+    // const highlight = node.value as HighlightJson;
+
+    // if (gap.solutions && gap.solutions.length === 0) {
+    //   // If there are no solutions, we need to write the special cloze gap [_] to indicate this
+    //   this.writeOPU();
+    //   this.writeCL();
+    // } else {
+    //   for (const solution of gap.solutions) {
+    //     this.writeOPU();
+    //     this.writeString(solution);
+    //     this.writeCL();
+    //   }
+    // }
+
+    // Continue traversal
+    return true;
+  }
+
+  // bitmarkAst -> bits -> footer
+
+  protected enter_footer(node: NodeInfo, route: NodeInfo[]): boolean {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
+    const footer = node.value as Footer;
+
+    const textFormat = this.getTextFormat(route);
+
+    // Handle footer
+    if (textFormat === TextFormat.json) {
+      // Json footer?!
+      // Not valid, ignore
+    } else if (footer.footer && footer.footer.length > 0) {
+      const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
+      if (isBitmarkText) {
+        // handle bitmark text
+        this.write('~~~~');
+        this.writeNL();
+        // The text generator will write to the writer
+        this.textGenerator.generateSync(footer.footer as TextAst, textFormat);
+      } else {
+        // Plain text footer?!
+        // Not valid, ignore (plain text cannot have a card set / footer marker, so cannot have a footer!
+      }
+    }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> body -> bodyParts -> bodyPartsValue -> data -> solutions
 
-  protected enter_solutions(node: NodeInfo, _route: NodeInfo[]): void {
+  protected enter_solutions(node: NodeInfo, route: NodeInfo[]): boolean {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
     const solutions = node.value as string[];
     if (solutions && solutions.length === 0) {
       // If there are no solutions, we need to write the special cloze gap [_] to indicate this
       this.writeOPU();
       this.writeCL();
     }
+
+    // Continue traversal
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> body -> bodyParts -> bodyPartsValue -> data -> solution
 
   protected leaf_solution(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
     const solution = node.value as string;
 
     // Ignore values that are not at the correct level as they might be handled elsewhere
@@ -571,29 +1036,32 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (solution) {
       this.writeOPE();
-      this.writeString(solution);
+      this.writeString(Breakscape.breakscape(solution));
       this.writeCL();
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> body -> bodyParts -> bodyPartsValue -> data -> mark
+  // bitmarkAst -> bits -> bitsValue -> body -> bodyBit -> mark -> mark
 
   protected leaf_mark(node: NodeInfo, route: NodeInfo[]): void {
+    const root = route[0];
+    if (root?.key !== NodeType.mark) return;
+
     const mark = node.value as string;
 
-    // Ignore values that are not at the correct level as they might be handled elsewhere
-    const bodyPartsValue: BodyPart | undefined = this.getParentNode(route, 2)?.value;
-    if (bodyPartsValue?.type !== BodyBitType.mark) return;
-
     if (mark) {
-      this.writeProperty('mark', mark, true);
+      this.writeProperty('mark', mark, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
     }
   }
 
   // bitmarkAst -> bits -> bitsValue -> body -> bodyParts -> bodyPartsValue -> data -> options -> optionsValue
 
-  protected enter_optionsValue(node: NodeInfo, _route: NodeInfo[]): void {
-    const selectOption = node.value as SelectOption;
+  protected enter_optionsValue(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const selectOption = node.value as SelectOptionJson;
     if (selectOption.isCorrect) {
       this.writeOPP();
     } else {
@@ -601,12 +1069,15 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
     this.write(selectOption.text);
     this.writeCL();
+
+    // Continue traversal
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> body -> bodyParts -> bodyPartsValue -> data -> texts -> textsValue
 
-  protected enter_textsValue(node: NodeInfo, _route: NodeInfo[]): void {
-    const highlightText = node.value as HighlightText;
+  protected enter_textsValue(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const highlightText = node.value as HighlightTextJson;
     if (highlightText.isCorrect) {
       this.writeOPP();
     } else {
@@ -614,17 +1085,23 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
     this.write(highlightText.text);
     this.writeCL();
+
+    // Continue traversal
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode
 
-  protected enter_cardNode(_node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_cardNode(_node: NodeInfo, route: NodeInfo[]): boolean {
     // Ignore cards for xxx-1
     const isBitType1 = this.isOfBitType1(route);
-    if (isBitType1) return;
+    if (isBitType1) return true;
 
     this.writeCardSetStart();
     this.writeNL();
+
+    // Continue traversal
+    return true;
   }
 
   protected between_cardNode(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
@@ -680,7 +1157,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.writeNL();
       this.writeCardSetSideDivider();
       this.writeNL();
-    } else if (right.key === NodeType.alternativeAnswers) {
+    } else if (right.key === NodeType.alternativeAnswers && right.value?.length !== 0) {
       this.writeNL();
       this.writeCardSetVariantDivider();
       this.writeNL();
@@ -689,14 +1166,17 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue -> answer
 
-  protected leaf_answer(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_answer(node: NodeInfo, route: NodeInfo[]): boolean {
     // Ignore responses that are not at the flashcardsValue level as they are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.flashcardsValue) return;
+    if (parent?.key !== NodeType.flashcardsValue) return true;
 
     if (node.value) {
-      this.writeString(node.value);
+      this.textGenerator.generateSync(node.value as TextAst, TextFormat.bitmarkMinusMinus);
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue -> alternativeAnswers
@@ -709,17 +1189,27 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue -> alternativeAnswers -> alternativeAnswersValue
 
-  protected leaf_alternativeAnswersValue(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_alternativeAnswersValue(node: NodeInfo, route: NodeInfo[]): boolean {
     // Ignore responses that are not at the alternativeAnswers level as they are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.alternativeAnswers) return;
+    if (parent?.key !== NodeType.alternativeAnswers) return true;
 
     if (node.value) {
-      this.writeString(node.value);
+      // this.writeString(node.value);
+      this.textGenerator.generateSync(node.value as TextAst, TextFormat.bitmarkMinusMinus);
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> alternativeDescriptions
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> alternativeDescriptions -> alternativeDescriptionsValueValue
+
+  // protected enter_alternativeDescriptions(_node: NodeInfo, _route: NodeInfo[]): void {
+  //   this.writeNL();
+  //   this.writeCardSetVariantDivider();
+  //   this.writeNL();
+  // }
 
   protected between_alternativeDescriptions(_node: NodeInfo, _route: NodeInfo[]): void {
     this.writeNL();
@@ -729,14 +1219,20 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> alternativeDescriptions -> alternativeDescriptionsValue
 
-  protected leaf_alternativeDescriptionsValue(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_alternativeDescriptionsValue(node: NodeInfo, route: NodeInfo[]): boolean {
     // Ignore responses that are not at the alternativeAnswers level as they are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.alternativeDescriptions) return;
+    if (parent?.key !== NodeType.alternativeDescriptions) return true;
 
     if (node.value) {
-      this.writeString(node.value);
+      // this.writeNL();
+      // this.writeCardSetVariantDivider();
+      // this.writeNL();
+      this.textGenerator.generateSync(node.value as TextAst, TextFormat.bitmarkMinusMinus);
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> statements
@@ -761,15 +1257,18 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> statements -> statementsValue
 
-  protected enter_statementsValue(node: NodeInfo, _route: NodeInfo[]): void {
-    const statement = node.value as Statement;
+  protected enter_statementsValue(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const statement = node.value as StatementJson;
     if (statement.isCorrect) {
       this.writeOPP();
     } else {
       this.writeOPM();
     }
-    this.write(statement.text);
+    this.write(statement.statement);
     this.writeCL();
+
+    // Continue traversal
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> choices
@@ -786,15 +1285,18 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> choices -> choicesValue
   // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices -> choicesValue
 
-  protected enter_choicesValue(node: NodeInfo, _route: NodeInfo[]): void {
-    const choice = node.value as Choice;
+  protected enter_choicesValue(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const choice = node.value as ChoiceJson;
     if (choice.isCorrect) {
       this.writeOPP();
     } else {
       this.writeOPM();
     }
-    this.write(choice.text);
+    this.write(choice.choice);
     this.writeCL();
+
+    // Continue traversal
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> responses
@@ -811,15 +1313,18 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> responses -> responsesValue
   // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses -> responsesValue
 
-  protected enter_responsesValue(node: NodeInfo, _route: NodeInfo[]): void {
-    const response = node.value as Response;
+  protected enter_responsesValue(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const response = node.value as ResponseJson;
     if (response.isCorrect) {
       this.writeOPP();
     } else {
       this.writeOPM();
     }
-    this.write(response.text);
+    this.write(response.response);
     this.writeCL();
+
+    // Continue traversal
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes
@@ -908,20 +1413,26 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue -> keyAudio
 
-  protected enter_keyAudio(node: NodeInfo, _route: NodeInfo[]): boolean | void {
-    const resource = node.value as Resource;
+  protected enter_keyAudio(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const resource = node.value as AudioResourceJson;
 
     // This is a resource, so handle it with the common code
-    this.writeResource(resource);
+    this.writeResource(ResourceTag.audio, resource.src);
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue -> keyImage
 
-  protected enter_keyImage(node: NodeInfo, _route: NodeInfo[]): boolean | void {
-    const resource = node.value as Resource;
+  protected enter_keyImage(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const resource = node.value as ImageResourceJson;
 
     // This is a resource, so handle it with the common code
-    this.writeResource(resource);
+    this.writeResource(ResourceTag.image, resource.src);
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix
@@ -972,9 +1483,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL();
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> rows
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data
 
-  protected between_rows(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_data(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.table) return;
 
@@ -1001,24 +1512,27 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_columnsValue(node: NodeInfo, _route: NodeInfo[]): void {
     this.writeOPHASH();
-    if (node.value) this.writeString(node.value);
+    if (node.value) this.writeString(Breakscape.breakscape(node.value as string));
     this.writeCL();
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> rows -> rowsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data -> dataValue
 
-  protected between_rowsValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.rows) return;
+  protected between_dataValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route, 2);
+    if (parent?.key !== NodeType.table) return;
 
     this.writeNL();
     this.writeCardSetSideDivider();
     this.writeNL();
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> rows -> rowsValue -> rowsValueValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data -> dataValue -> dataValueValue
 
-  protected leaf_rowsValueValue(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_dataValueValue(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route, 3);
+    if (parent?.key !== NodeType.table) return;
+
     if (node.value) this.write(node.value);
   }
 
@@ -1055,24 +1569,60 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL();
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue -> term
   // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> term
 
-  protected leaf_term(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_term(node: NodeInfo, route: NodeInfo[]): boolean {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.definitionsValue && parent?.key !== NodeType.descriptionsValue) return;
+    if (parent?.key !== NodeType.definitionsValue && parent?.key !== NodeType.descriptionsValue) return true;
 
-    if (node.value) this.write(node.value);
+    if (node.value) {
+      this.textGenerator.generateSync(node.value as TextAst, TextFormat.bitmarkMinusMinus);
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue -> term
+
+  protected leaf_term(node: NodeInfo, route: NodeInfo[]): boolean {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.definitionsValue) return true;
+
+    if (node.value) {
+      this.write(node.value);
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> description
+
+  protected enter_description(node: NodeInfo, route: NodeInfo[]): boolean {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.definitionsValue && parent?.key !== NodeType.descriptionsValue) return true;
+
+    if (node.value) {
+      this.textGenerator.generateSync(node.value as TextAst, TextFormat.bitmarkMinusMinus);
+    }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue -> description
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> description
 
-  protected leaf_description(node: NodeInfo, route: NodeInfo[]): void {
+  protected leaf_description(node: NodeInfo, route: NodeInfo[]): boolean {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.definitionsValue && parent?.key !== NodeType.descriptionsValue) return;
+    if (parent?.key !== NodeType.definitionsValue) return true;
 
-    if (node.value) this.write(node.value);
+    if (node.value) {
+      this.write(node.value);
+    }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions
@@ -1086,7 +1636,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL();
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue
   // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue
 
   protected between_descriptionsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
@@ -1097,12 +1646,29 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.writeNL();
       this.writeCardSetSideDivider();
       this.writeNL();
-    } else if (right.key === NodeType.alternativeDescriptions) {
+    } else if (right.key === NodeType.alternativeDescriptions && right.value?.length > 0) {
       this.writeNL();
       this.writeCardSetVariantDivider();
       this.writeNL();
     }
   }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue
+
+  // protected between_definitionsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.definitions) return;
+
+  //   if (right.key === NodeType.definition) {
+  //     this.writeNL();
+  //     this.writeCardSetSideDivider();
+  //     this.writeNL();
+  //   } else if (right.key === NodeType.alternativeDefinitions && right.value?.length > 0) {
+  //     this.writeNL();
+  //     this.writeCardSetVariantDivider();
+  //     this.writeNL();
+  //   }
+  // }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> questions
 
@@ -1158,12 +1724,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
 
-  protected enter_ingredientsValue(node: NodeInfo, _route: NodeInfo[]): void {
-    const ingredient = node.value as Ingredient;
+  protected enter_ingredientsValue(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const ingredient = node.value as IngredientJson;
 
     if (ingredient.title != null) {
       this.writeOPHASH();
-      this.writeString(ingredient.title);
+      this.writeString(Breakscape.breakscape(ingredient.title));
       this.writeCL();
       this.writeNL();
     }
@@ -1179,24 +1745,47 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // [!43]
     if (ingredient.quantity != null) {
       this.writeOPB();
-      this.writeString(`${ingredient.quantity}`);
+      this.writeString(Breakscape.breakscape(`${ingredient.quantity}`));
       this.writeCL();
     }
 
     // [@unit:kilograms]
-    if (ingredient.unit != null) this.writeProperty('unit', ingredient.unit, true);
+    if (ingredient.unit != null)
+      this.writeProperty('unit', ingredient.unit, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
 
     // [@unitAbbr:kg]
-    if (ingredient.unitAbbr != null) this.writeProperty('unitAbbr', ingredient.unitAbbr, true);
+    if (ingredient.unitAbbr != null)
+      this.writeProperty('unitAbbr', ingredient.unitAbbr, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
 
     // [@decimalPlaces:1]
-    if (ingredient.decimalPlaces != null) this.writeProperty('decimalPlaces', ingredient.decimalPlaces, true);
+    if (ingredient.decimalPlaces != null)
+      this.writeProperty('decimalPlaces', ingredient.decimalPlaces, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
 
     // [@disableCalculation]
-    if (ingredient.disableCalculation) this.writeProperty('disableCalculation', true, true);
+    if (ingredient.disableCalculation)
+      this.writeProperty('disableCalculation', true, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: true,
+      });
 
     // item
     if (ingredient.item != null) this.write(ingredient.item);
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
@@ -1242,80 +1831,91 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> response
 
-  protected leaf_response(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_response(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.botResponsesValue) return;
+
     this.writeOPB();
-    this.writeString(node.value);
+    this.writeString(Breakscape.breakscape(node.value as string));
     this.writeCL();
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> reaction
 
-  protected leaf_reaction(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('reaction', node.value, true);
+  protected leaf_reaction(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.botResponsesValue) return;
+
+    this.writeProperty('reaction', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> feedback
 
-  protected leaf_feedback(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_feedback(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.botResponsesValue) return;
+
     const feeback = node.value as string;
     if (feeback) {
       this.write(feeback);
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> resources
-
-  protected between_resources(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
-    this.writeNL();
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> resourcesValue
-
-  protected enter_resourcesValue(node: NodeInfo, _route: NodeInfo[]): boolean | void {
-    const resource = node.value as Resource;
-
-    // This is a resource, so handle it with the common code
-    this.writeResource(resource);
-  }
-
   // bitmarkAst -> bits -> bitsValue -> imagePlaceholder
-  protected enter_imagePlaceholder(node: NodeInfo, _route: NodeInfo[]): boolean | void {
-    const resource = node.value as Resource;
+  protected enter_imagePlaceholder(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const resource = node.value as ResourceJson;
 
     // This is a resource, so handle it with the common code
     this.writePropertyStyleResource(node.key, resource);
+
+    // Continue traversal
+    return true;
   }
 
-  protected exit_imagePlaceholder(_node: NodeInfo, _route: NodeInfo[]): boolean | void {
+  protected exit_imagePlaceholder(_node: NodeInfo, _route: NodeInfo[]): void {
     this.writeNL();
   }
 
   // bitmarkAst -> bits -> bitsValue -> posterImage
   // bitmarkAst -> bits -> bitsValue -> resource -> posterImage
 
-  protected enter_posterImage(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_posterImage(node: NodeInfo, route: NodeInfo[]): boolean {
     const parent = this.getParentNode(route);
     if (parent?.key === NodeType.bitsValue) {
       // Bit poster image
       const posterImage = node.value as string;
       if (posterImage) {
-        this.writeProperty('posterImage', posterImage);
+        this.writeProperty('posterImage', posterImage, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
+      }
+    } else {
+      // Resource poster image
+      const posterImage = node.value as ImageResourceJson;
+      if (posterImage && posterImage.src) {
+        this.writeProperty('posterImage', posterImage.src, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
       }
     }
-    // else {
-    //   // Resource poster image
-    //   const posterImage = node.value as ImageResource;
-    //   if (posterImage && posterImage.value) {
-    //     this.writeProperty('posterImage', posterImage.value);
-    //   }
-    // }
+
+    // Continue traversal
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> resource -> thumbnails
   // [src1x,src2x,src3x,src4x,width,height,alt,zoomDisabled,caption]
 
-  protected enter_thumbnails(node: NodeInfo, _route: NodeInfo[]): void {
-    const thumbnails = node.value as ImageResource[];
+  protected enter_thumbnails(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const thumbnails = node.value as ImageResourceJson[];
 
     if (Array.isArray(thumbnails)) {
       const thumbnailKeys = ['src1x', 'src2x', 'src3x', 'src4x'];
@@ -1325,14 +1925,17 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (i === thumbnailKeys.length) break;
         const thumbnail = thumbnails[i];
         const key = thumbnailKeys[i];
-        this.writeProperty(key, thumbnail.value, true);
+        this.writeProperty(key, thumbnail.src, {
+          format: PropertyFormat.trimmedString,
+          single: true,
+          ignoreEmpty: true,
+        });
       }
     }
-  }
 
-  //
-  // Terminal nodes (leaves)
-  //
+    // Stop traversal of this branch
+    return false;
+  }
 
   // bitmarkAst -> bits -> bitsValue -> bitType
 
@@ -1340,13 +1943,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   //  bitmarkAst -> bits -> title
 
-  protected leaf_title(node: NodeInfo, route: NodeInfo[]): void {
-    const parent = this.getParentNode(route);
-
+  protected enter_title(node: NodeInfo, route: NodeInfo[]): boolean {
     // Ensure this is at the bit level
-    if (parent?.key !== NodeType.bitsValue) return;
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
 
-    const value = node.value as string;
+    const value = node.value as TextAst;
     const title = value;
     const bit = parent?.value as Bit;
     const level = bit.level || 1;
@@ -1354,23 +1956,33 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (level && title) {
       this.writeOP();
       for (let i = 0; i < +level; i++) this.writeHash();
-      this.writeString(title);
+      this.textGenerator.generateSync(title, TextFormat.bitmarkMinusMinus);
       this.writeCL();
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   //  bitmarkAst -> bits -> subtitle
 
-  protected leaf_subtitle(node: NodeInfo, _route: NodeInfo[]): void {
-    const value = node.value as string;
+  protected enter_subtitle(node: NodeInfo, route: NodeInfo[]): boolean {
+    // Ensure this is at the bit level
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
+    const value = node.value as TextAst;
     const subtitle = value;
     const level = 2;
     if (level && subtitle) {
       this.writeOP();
       for (let i = 0; i < level; i++) this.writeHash();
-      this.writeString(subtitle);
+      this.textGenerator.generateSync(subtitle, TextFormat.bitmarkMinusMinus);
       this.writeCL();
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> book
@@ -1380,15 +1992,19 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const bit = parent?.value as Bit;
 
     if (bit && node.value) {
-      this.writeProperty('book', node.value);
+      this.writeProperty('book', node.value, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: false,
+      });
       if (bit.reference) {
         this.writeOPRANGLE();
-        this.writeString(bit.reference);
+        this.writeString(Breakscape.breakscape(bit.reference));
         this.writeCL();
 
         if (bit.referenceEnd) {
           this.writeOPRANGLE();
-          this.writeString(bit.referenceEnd);
+          this.writeString(Breakscape.breakscape(bit.referenceEnd));
           this.writeCL();
         }
       }
@@ -1400,7 +2016,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_anchor(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPDANGLE();
-      this.writeString(node.value);
+      this.writeString(Breakscape.breakscape(node.value as string));
       this.writeCL();
     }
   }
@@ -1415,7 +2031,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Only write reference if it is not chained to 'book'
       if (!bit.book) {
         this.writeOPRANGLE();
-        this.writeString(node.value);
+        this.writeString(Breakscape.breakscape(node.value as string));
         this.writeCL();
       }
     }
@@ -1427,116 +2043,143 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   //  * -> hint
 
-  protected leaf_hint(node: NodeInfo, _route: NodeInfo[]): void {
-    const value = node.value as string;
+  protected enter_hint(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const value = node.value as TextAst;
     const text = value;
-    if (text) {
+    if (!this.isEmptyText(text)) {
       this.writeOPQ();
-      this.writeString(text);
+      this.textGenerator.generateSync(text, TextFormat.bitmarkMinusMinus);
       this.writeCL();
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue ->  * -> instruction
 
-  protected leaf_instruction(node: NodeInfo, _route: NodeInfo[]): void {
-    const value = node.value as string;
+  protected enter_instruction(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const value = node.value as TextAst;
     const text = value;
-    if (text) {
+    if (!this.isEmptyText(text)) {
       this.writeOPB();
-      this.writeString(text);
+      this.textGenerator.generateSync(text, TextFormat.bitmarkMinusMinus);
       this.writeCL();
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue ->  * -> example
+  // bitmarkAst -> bits -> bitsValue ->  * -> isExample / example
 
-  protected leaf_example(node: NodeInfo, route: NodeInfo[]): void {
-    const value = node.value as Example | undefined;
-    const parent = this.getParentNode(route);
-    const isExample = parent?.value.isExample ?? false;
-    const isDefaultExample = parent?.value.isDefaultExample ?? false;
-
+  protected leaf_isExample(node: NodeInfo, route: NodeInfo[]): void {
+    const isExample = node.value as boolean | undefined;
     if (!isExample) return;
 
-    if (isDefaultExample) {
-      this.writeOPA();
-      this.writeString('example');
-      this.writeCL();
-    } else if (value != null) {
+    const parent = this.getParentNode(route);
+    const example = parent?.value.example ?? null;
+    // const isDefaultExample = parent?.value.isDefaultExample ?? false;
+
+    if (example != null && example !== '') {
       this.writeOPA();
       this.writeString('example');
       this.writeColon();
 
-      if (value === true) {
+      if (example === true) {
         this.writeString('true');
-      } else if (value === false) {
+      } else if (example === false) {
         this.writeString('false');
+      } else if (Array.isArray(example)) {
+        // TextAst
+        this.textGenerator.generateSync(example, TextFormat.bitmarkMinusMinus);
       } else {
         // String
-        this.writeString(value);
+        this.writeString(Breakscape.breakscape(example as string));
       }
       this.writeCL();
+    } else {
+      // Don't write example if it is null.
+      // this.writeOPA();
+      // this.writeString('example');
+      // this.writeCL();
     }
   }
 
-  // bitmarkAst -> bits -> body -> bodyValue -> bodyText
+  // // bitmarkAst -> bits -> bitsValue ->  * -> example / isExample
 
-  protected leaf_bodyText(node: NodeInfo, _route: NodeInfo[]): void {
-    const value = node.value as string;
-    const text = value;
-    if (text) {
-      this.writeString(text);
-    }
-  }
+  // protected leaf_example(node: NodeInfo, route: NodeInfo[]): void {
+  //   const value = node.value as ExampleJson | undefined;
+  //   const parent = this.getParentNode(route);
+  //   const isExample = parent?.value.isExample ?? false;
+  //   const isDefaultExample = parent?.value.isDefaultExample ?? false;
 
-  // bitmarkAst -> bits -> body -> bodyValue -> bodyJson
+  //   if (!isExample) return;
 
-  protected enter_bodyJson(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const value = node.value as unknown;
-    if (Array.isArray(value) || ObjectUtils.isObject(value)) {
-      const text = JSON.stringify(value, null, this.prettifySpace);
-      if (text) {
-        this.writeString(text);
-      }
-    }
+  //   if (isDefaultExample) {
+  //     this.writeOPA();
+  //     this.writeString('example');
+  //     this.writeCL();
+  //   } else if (value != null) {
+  //     this.writeOPA();
+  //     this.writeString('example');
+  //     this.writeColon();
 
-    // Stop traversal of this branch to avoid processing the bodyJson
-    return false;
-  }
+  //     if (value === true) {
+  //       this.writeString('true');
+  //     } else if (value === false) {
+  //       this.writeString('false');
+  //     } else {
+  //       // String
+  //       this.writeString(value);
+  //     }
+  //     this.writeCL();
+  //   }
+  // }
 
-  // bitmarkAst -> bits -> footer
+  // // bitmarkAst -> bits -> body -> bodyValue -> bodyText
 
-  protected enter_footer(_node: NodeInfo, _route: NodeInfo[]): void {
-    this.write('~~~~');
-    this.writeNL();
-  }
+  // protected leaf_bodyText(node: NodeInfo, _route: NodeInfo[]): void {
+  //   const value = node.value as string;
+  //   const text = value;
+  //   if (text) {
+  //     this.writeString(text);
+  //   }
+  // }
 
-  // bitmarkAst -> bits -> footer -> footerText
+  // // bitmarkAst -> bits -> body -> bodyValue -> bodyJson
 
-  protected leaf_footerText(node: NodeInfo, _route: NodeInfo[]): void {
-    const value = node.value as string;
-    const text = value;
-    if (text) {
-      this.writeString(text);
-    }
-  }
+  // protected enter_bodyJson(node: NodeInfo, _route: NodeInfo[]): boolean {
+  //   const value = node.value as unknown;
+  //   if (Array.isArray(value) || ObjectUtils.isObject(value)) {
+  //     const text = JSON.stringify(value, null, this.prettifySpace);
+  //     if (text) {
+  //       this.writeString(text);
+  //     }
+  //   }
+
+  //   // Stop traversal of this branch to avoid processing the bodyJson
+  //   return false;
+  // }
 
   // bitmarkAst -> bits -> bitsValue -> elements -> elementsValue
 
   protected leaf_elementsValue(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
-      this.writeString(node.value);
+      this.writeString(Breakscape.breakscape(node.value as string));
     }
   }
 
   // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions -> solution
   // ? -> solutions -> solution
 
-  protected leaf_solutionsValue(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_solutionsValue(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route, 2);
+    if (parent?.key !== NodeType.bitsValue) return;
+
     if (node.value != null) {
       this.writeOPU();
-      this.writeString(node.value);
+      this.writeString(Breakscape.breakscape(node.value as string));
       this.writeCL();
     }
   }
@@ -1547,7 +2190,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_prefix(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPPRE();
-      this.writeString(node.value);
+      this.writeString(Breakscape.breakscape(node.value as string));
       this.writeCL();
     }
   }
@@ -1558,7 +2201,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_postfix(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPPOST();
-      this.writeString(node.value);
+      this.writeString(Breakscape.breakscape(node.value as string));
       this.writeCL();
     }
   }
@@ -1566,7 +2209,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue ->  * -> isCaseSensitive
 
   protected leaf_isCaseSensitive(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('isCaseSensitive', node.value, true, false, true);
+    this.writeProperty('isCaseSensitive', node.value, {
+      format: PropertyFormat.boolean,
+      single: true,
+      ignoreFalse: false,
+      ignoreTrue: true,
+    });
   }
 
   // bitmarkAst -> bits -> bitsValue ->  * -> isCorrect
@@ -1575,7 +2223,15 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_forKeys(node: NodeInfo, _route: NodeInfo[]): void {
     this.writeOPHASH();
-    this.writeString(node.value);
+    this.writeString(Breakscape.breakscape(node.value as string));
+    this.writeCL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> heading -> forValues
+
+  protected leaf_forValues(node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeOPHASH();
+    this.writeString(Breakscape.breakscape(node.value as string));
     this.writeCL();
   }
 
@@ -1583,7 +2239,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_forValuesValue(node: NodeInfo, _route: NodeInfo[]): void {
     this.writeOPHASH();
-    this.writeString(node.value);
+    this.writeString(Breakscape.breakscape(node.value as string));
     this.writeCL();
   }
 
@@ -1592,7 +2248,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_key(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
-      this.writeString(node.value);
+      this.writeString(Breakscape.breakscape(node.value as string));
     }
   }
 
@@ -1601,7 +2257,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_valuesValue(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
-      this.writeString(node.value);
+      this.writeString(Breakscape.breakscape(node.value as string));
     }
   }
 
@@ -1614,9 +2270,24 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.questionsValue && parent?.key !== NodeType.flashcardsValue) return;
 
     if (node.value) {
-      this.writeString(node.value);
+      this.writeString(Breakscape.breakscape(node.value as string));
       // this.writeNL();
     }
+  }
+
+  protected enter_question(node: NodeInfo, route: NodeInfo[]): boolean {
+    // Ignore responses that are not at the questionsValue level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.questionsValue && parent?.key !== NodeType.flashcardsValue) return true;
+
+    if (node.value) {
+      this.textGenerator.generateSync(node.value as TextAst, TextFormat.bitmarkMinusMinus);
+      // this.writeString(node.value);
+      // this.writeNL();
+    }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> statements -> text
@@ -1627,31 +2298,59 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // [src1x,src2x,src3x,src4x,width,height,alt,zoomDisabled,caption]
 
   protected leaf_src1x(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('src1x', node.value);
+    this.writeProperty('src1x', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_src2x(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('src2x', node.value);
+    this.writeProperty('src2x', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_src3x(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('src3x', node.value);
+    this.writeProperty('src3x', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_src4x(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('src4x', node.value);
+    this.writeProperty('src4x', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_width(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('width', node.value);
+    this.writeProperty('width', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_height(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('height', node.value);
+    this.writeProperty('height', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_alt(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('alt', node.value);
+    this.writeProperty('alt', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_zoomDisabled(node: NodeInfo, route: NodeInfo[]): void {
@@ -1665,18 +2364,36 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         BitType.prototypeImages,
       ])
     ) {
-      this.writeProperty('zoomDisabled', node.value, undefined, false, true);
+      this.writeProperty('zoomDisabled', node.value, {
+        format: PropertyFormat.boolean,
+        single: true,
+        ignoreFalse: false,
+        ignoreTrue: true,
+      });
     } else {
-      this.writeProperty('zoomDisabled', node.value, undefined, true, false);
+      this.writeProperty('zoomDisabled', node.value, {
+        format: PropertyFormat.boolean,
+        single: true,
+        ignoreFalse: true,
+        ignoreTrue: false,
+      });
     }
   }
 
   protected leaf_license(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('license', node.value);
+    this.writeProperty('license', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_copyright(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('copyright', node.value);
+    this.writeProperty('copyright', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_provider(_node: NodeInfo, _route: NodeInfo[]): void {
@@ -1685,17 +2402,33 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected leaf_showInIndex(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('showInIndex', node.value);
+    this.writeProperty('showInIndex', node.value, {
+      format: PropertyFormat.boolean,
+      single: true,
+      ignoreEmpty: true,
+      ignoreFalse: true,
+    });
   }
 
-  protected leaf_caption(node: NodeInfo, _route: NodeInfo[]): void {
+  protected enter_caption(node: NodeInfo, _route: NodeInfo[]): boolean {
     const value = node.value as string;
-    this.writeProperty('caption', value);
+    this.writeProperty('caption', value, {
+      format: PropertyFormat.bitmarkMinusMinus,
+      single: true, // ??
+      ignoreEmpty: true,
+    });
+
+    // Stop traversal of this branch
+    return false;
   }
 
   protected leaf_search(node: NodeInfo, _route: NodeInfo[]): void {
     const value = node.value as string;
-    this.writeProperty('search', value);
+    this.writeProperty('search', value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   // bitmarkAst -> bits -> bitsValue -> resource -> ...
@@ -1708,28 +2441,109 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key === NodeType.bitsValue) return;
 
-    this.writeProperty('duration', node.value);
+    this.writeProperty('duration', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_mute(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('mute', node.value);
+    this.writeProperty('mute', node.value, {
+      format: PropertyFormat.boolean,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_autoplay(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('autoplay', node.value);
+    this.writeProperty('autoplay', node.value, {
+      format: PropertyFormat.boolean,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_allowSubtitles(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('allowSubtitles', node.value);
+    this.writeProperty('allowSubtitles', node.value, {
+      format: PropertyFormat.boolean,
+      single: true,
+      ignoreEmpty: true,
+    });
   }
 
   protected leaf_showSubtitles(node: NodeInfo, _route: NodeInfo[]): void {
-    this.writeProperty('showSubtitles', node.value);
+    this.writeProperty('showSubtitles', node.value, {
+      format: PropertyFormat.boolean,
+      single: true,
+      ignoreEmpty: true,
+    });
+  }
+
+  //
+  // Resources
+  //
+
+  // bitmarkAst -> bits -> bitsValue -> resources
+
+  protected between_resources(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    this.writeNL();
+  }
+
+  protected exit_resources(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    this.writeNL();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> resourcesValue
+
+  protected between_resourcesValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    this.writeNL();
   }
 
   //
   // Generated Node Handlers
   //
+
+  /**
+   * Generate the handlers for resources, as they are mostly the same, but not quite
+   */
+
+  protected generateResourceHandlers() {
+    for (const tag of ResourceTag.keys()) {
+      // skip unknown
+      if (tag === ResourceTag.keyFromValue(ResourceTag.unknown)) continue;
+
+      const enterFuncName = `enter_${tag}`;
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (this as any)[enterFuncName] = (node: NodeInfo, route: NodeInfo[]): boolean => {
+        const resource = node.value as ResourceDataJson | undefined;
+        if (resource == null) return false;
+
+        // Ignore any property that is not at the bit level as that will be handled by a different handler
+        const parent = this.getParentNode(route);
+        if (parent?.key !== NodeType.resourcesValue) return true;
+
+        // Get the resource alias
+        const alias = ResourceTag.fromValue(parent.value._typeAlias);
+        const type = alias ?? ResourceTag.fromValue(parent.value.type);
+        if (!type) return false;
+
+        // url / src / href / app
+        const url = resource.url || resource.src || resource.body || '';
+
+        // Write the resource
+        this.writeResource(type, url);
+
+        // Continue traversal
+        return true;
+      };
+
+      // Bind this
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (this as any)[enterFuncName] = (this as any)[enterFuncName].bind(this);
+    }
+  }
 
   /**
    * Generate the handlers for properties, as they are mostly the same, but not quite
@@ -1764,6 +2578,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (astKey === PropertyAstKey.ast_markConfig) continue;
       if (astKey === PropertyTag.ratingLevelStart) continue;
       if (astKey === PropertyTag.ratingLevelEnd) continue;
+      if (astKey === PropertyTag.caption) continue;
+      if (astKey === PropertyTag.tag_title) continue;
+      if (astKey === PropertyTag.tag_mark) continue;
+      if (astKey === PropertyTag.tag_sampleSolution) continue;
+      if (astKey === PropertyTag.partialAnswer) continue;
 
       const enterFuncName = `enter_${astKey}`;
 
@@ -1779,13 +2598,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (parent?.key !== NodeType.bitsValue) return;
 
         // Write the property
-        this.writeProperty(
-          propertyConfig.tag,
-          node.value,
-          propertyConfig.single,
-          propertyConfig.defaultValue === 'false',
-          propertyConfig.defaultValue === 'true',
-        );
+        this.writeProperty(propertyConfig.tag, node.value, {
+          format: propertyConfig.format ?? PropertyFormat.trimmedString,
+          single: propertyConfig.single ?? false,
+          ignoreFalse: propertyConfig.defaultValue === 'false',
+          ignoreTrue: propertyConfig.defaultValue === 'true',
+        });
       };
 
       // Bind this
@@ -1994,93 +2812,180 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.write('\n');
   }
 
-  protected writePropertyStyleResource(key: string, resource: Resource): boolean | void {
-    const resourceAsArticle = resource as ArticleResource;
-
+  protected writePropertyStyleResource(key: string, resource: ResourceJson): boolean | void {
     if (key && resource) {
+      const resourceTag = ResourceTag.keyFromValue(resource.type) ?? '';
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const resourceData = (resource as any)[resourceTag];
+      const src = resourceData ? resourceData.src || resourceData.url || resourceData.body || '' : '';
+
       this.writeOPA();
-      this.writeString(key);
-      if (resource.type === ResourceTag.article && resourceAsArticle.value) {
-        this.writeColon();
-        // this.writeNL();
-        this.writeString(resourceAsArticle.value);
+      this.writeString(Breakscape.breakscape(key));
+      this.writeColon();
+      this.writeString(Breakscape.breakscape(src as string));
+
+      if (resource.type === ResourceTag.article) {
         this.writeNL();
-      } else if (resource.value) {
-        this.writeColon();
-        this.writeString(resource.value);
       }
       this.writeCL();
     }
   }
 
-  protected writeResource(resource: Resource): boolean | void {
-    const resourceAsArticle = resource as ArticleResource;
+  // protected writeResource(resource: ResourceJson): void {
+  //   // const resourceAsArticle = resource as ArticleResource;
 
-    if (resource) {
-      // All resources should now be valid as they are validated in the AST
-      // TODO: remove code below
+  //   if (resource) {
+  //     const resourceTag = ResourceTag.keyFromValue(resource.type) ?? '';
 
-      // // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-      // let valid = false;
-      // if (resource.value) {
-      //   valid = true;
-      // }
+  //     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  //     const resourceData = (resource as any)[resourceTag];
+  //     const src = resourceData ? resourceData.src || resourceData.url || resourceData.body || '' : '';
 
-      // // Resource is not valid, cancel walking it's tree.
-      // if (!valid) return false;
+  //     // Standard case
+  //     this.writeOPAMP();
+  //     this.writeString(resource.type);
+  //     this.writeColon();
+  //     this.writeString(src);
 
+  //     if (resource.type === ResourceTag.article) {
+  //       this.writeNL();
+  //     }
+  //     this.writeCL();
+  //   }
+
+  //   // if (resource) {
+  //   //   // All resources should now be valid as they are validated in the AST
+  //   //   // TODO: remove code below
+
+  //   //   // // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
+  //   //   // let valid = false;
+  //   //   // if (resource.value) {
+  //   //   //   valid = true;
+  //   //   // }
+
+  //   //   // // Resource is not valid, cancel walking it's tree.
+  //   //   // if (!valid) return false;
+
+  //   //   // Standard case
+  //   //   this.writeOPAMP();
+  //   //   this.writeString(resource.typeAlias ?? resource.type);
+  //   //   if (resource.type === ResourceTag.article && resourceAsArticle.value) {
+  //   //     this.writeColon();
+  //   //     // this.writeNL();
+  //   //     this.writeString(resourceAsArticle.value);
+  //   //     this.writeNL();
+  //   //   } else if (resource.value) {
+  //   //     this.writeColon();
+  //   //     this.writeString(resource.value);
+  //   //   }
+  //   //   this.writeCL();
+  //   // }
+  // }
+
+  protected writeResource(type: ResourceTagType, value: string): void {
+    // const resourceAsArticle = resource as ArticleResource;
+
+    if (type) {
       // Standard case
       this.writeOPAMP();
-      this.writeString(resource.typeAlias ?? resource.type);
-      if (resource.type === ResourceTag.article && resourceAsArticle.value) {
-        this.writeColon();
-        // this.writeNL();
-        this.writeString(resourceAsArticle.value);
+      this.writeString(Breakscape.breakscape(type));
+      this.writeColon();
+      this.writeString(Breakscape.breakscape(value));
+
+      if (type === ResourceTag.article) {
         this.writeNL();
-      } else if (resource.value) {
-        this.writeColon();
-        this.writeString(resource.value);
       }
       this.writeCL();
     }
+
+    // if (resource) {
+    //   // All resources should now be valid as they are validated in the AST
+    //   // TODO: remove code below
+
+    //   // // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
+    //   // let valid = false;
+    //   // if (resource.value) {
+    //   //   valid = true;
+    //   // }
+
+    //   // // Resource is not valid, cancel walking it's tree.
+    //   // if (!valid) return false;
+
+    //   // Standard case
+    //   this.writeOPAMP();
+    //   this.writeString(resource.typeAlias ?? resource.type);
+    //   if (resource.type === ResourceTag.article && resourceAsArticle.value) {
+    //     this.writeColon();
+    //     // this.writeNL();
+    //     this.writeString(resourceAsArticle.value);
+    //     this.writeNL();
+    //   } else if (resource.value) {
+    //     this.writeColon();
+    //     this.writeString(resource.value);
+    //   }
+    //   this.writeCL();
+    // }
   }
 
   protected writeProperty(
     name: string,
-    values?: unknown | unknown[],
-    singleOnly?: boolean,
-    ignoreFalse?: boolean,
-    ignoreTrue?: boolean,
+    values: unknown | unknown[] | undefined,
+    options: {
+      format: PropertyFormatType;
+      single: boolean;
+      ignoreFalse?: boolean;
+      ignoreTrue?: boolean;
+      ignoreEmpty?: boolean;
+    },
   ): void {
     let valuesArray: unknown[];
     let wroteSomething = false;
 
     if (values !== undefined) {
-      if (!Array.isArray(values)) {
-        valuesArray = [values];
+      const isBitmarkText =
+        options.format === PropertyFormat.bitmarkMinusMinus || options.format === PropertyFormat.bitmarkPlusPlus;
+
+      if (isBitmarkText) {
+        // Write bitmark text
+        if (options.ignoreEmpty && isBitmarkText && this.isEmptyText(values as TextAst)) return;
+        this.writeOPA();
+        this.writeString(Breakscape.breakscape(name));
+        this.writeColon();
+        this.textGenerator.generateSync(
+          values as TextAst,
+          TextFormat.fromValue(options.format) ?? TextFormat.bitmarkMinusMinus,
+        );
+        this.writeCL();
+        wroteSomething = true;
       } else {
-        valuesArray = values;
-      }
+        // Write any other property type
+        if (!Array.isArray(values)) {
+          valuesArray = [values];
+        } else {
+          valuesArray = values;
+        }
 
-      if (valuesArray.length > 0) {
-        if (singleOnly) valuesArray = valuesArray.slice(valuesArray.length - 1);
+        if (valuesArray.length > 0) {
+          if (options.single) valuesArray = valuesArray.slice(valuesArray.length - 1);
 
-        let propertyIndex = 0;
-        for (const val of valuesArray) {
-          if (val !== undefined) {
-            if (ignoreFalse && val === false) continue;
-            if (ignoreTrue && val === true) continue;
-            if (propertyIndex > 0) this.writeNL();
-            this.writeOPA();
-            this.writeString(name);
-            this.writeColon();
-            this.writeString(`${val}`);
-            this.writeCL();
-            wroteSomething = true;
-            propertyIndex++;
+          let propertyIndex = 0;
+          for (const val of valuesArray) {
+            if (val !== undefined) {
+              if (options.ignoreFalse && val === false) continue;
+              if (options.ignoreTrue && val === true) continue;
+              if (options.ignoreEmpty && val === '') continue;
+              if (propertyIndex > 0) this.writeNL();
+              this.writeOPA();
+              this.writeString(Breakscape.breakscape(name));
+              this.writeColon();
+              this.writeString(Breakscape.breakscape(`${val}`));
+              this.writeCL();
+              wroteSomething = true;
+              propertyIndex++;
+            }
           }
         }
-      }
+      } // isBitmarkText
     }
 
     if (!wroteSomething) {
@@ -2104,6 +3009,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   //
   // Helper functions
   //
+
+  protected isEmptyText(text: TextAst | undefined): boolean {
+    if (!text) return true;
+    if (Array.isArray(text)) return text.length === 0;
+    return true; // true as not valid TextAst?
+  }
 
   protected isWriteTextFormat(bitsValue: string, textFormatDefault: TextFormatType): boolean {
     const isDefault = TextFormat.fromValue(bitsValue) === textFormatDefault;

@@ -4,9 +4,7 @@
       "type": "sequence",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285747"
-      ],
+      "id": ["285747"],
       "item": [
         {
           "type": "paragraph",
@@ -38,12 +36,7 @@
       "isExample": true,
       "example": true,
       "body": [],
-      "elements": [
-        "Ein Elefant",
-        "ist",
-        "grösser als",
-        "eine Maus."
-      ]
+      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."]
     },
     "parser": {
       "version": "1.31.0",
@@ -57,9 +50,53 @@
       "type": "sequence",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285749"
+      "id": ["285748"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "32",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
       ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "sequence",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "isExample": true,
+      "example": true,
+      "body": [],
+      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."]
+    },
+    "parser": {
+      "version": "2.0.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.1"
+    },
+    "bitmark": "[.sequence]\n[@id:285748]\n[%32][%sequence]\n[@example:true]\n\n====\nEin Elefant\n++\nist\n++\ngrösser als\n++\neine Maus."
+  },
+  {
+    "bit": {
+      "type": "sequence",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["285749"],
       "item": [
         {
           "type": "paragraph",

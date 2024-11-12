@@ -177,7 +177,7 @@ function handleStandardStringExample(
   example: BreakscapedString | boolean,
   target: BitContentProcessorResult,
 ): void {
-  if (example === true) {
+  if (example === true || example === 'true') {
     target.isDefaultExample = true;
     target.example = undefined;
   } else {

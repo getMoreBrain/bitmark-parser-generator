@@ -89,7 +89,10 @@ abstract class AstWalkerGenerator<Ast, R, Context = undefined> implements Genera
   //
 
   protected getParentNode(route: NodeInfo[], nodesBack = 1): NodeInfo | undefined {
-    if (route.length > nodesBack + 1) {
+    // if (route.length > nodesBack + 1) {
+    //   return route[route.length - nodesBack - 1];
+    // }
+    if (route.length > nodesBack) {
       return route[route.length - nodesBack - 1];
     }
 

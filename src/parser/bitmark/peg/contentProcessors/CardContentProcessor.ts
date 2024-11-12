@@ -853,7 +853,7 @@ function parseTable(
 
   const table = builder.table({
     columns,
-    rows,
+    data: rows,
   });
 
   return { table };

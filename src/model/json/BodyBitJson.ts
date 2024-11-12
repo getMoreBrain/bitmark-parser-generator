@@ -23,6 +23,7 @@ export interface BaseBodyBitJson {
 
 export interface GapJson extends BaseBodyBitJson {
   type: 'gap'; // body bit type
+  solutions: string[];
   item: JsonText;
   lead: JsonText;
   // pageNumber: JsonText;
@@ -33,7 +34,6 @@ export interface GapJson extends BaseBodyBitJson {
   isExample: boolean;
   example: ExampleJson;
   _defaultExample: ExampleJson;
-  solutions: string[];
 }
 
 export interface MarkJson extends BaseBodyBitJson {
@@ -51,10 +51,10 @@ export interface MarkJson extends BaseBodyBitJson {
 
 export interface SelectJson extends BaseBodyBitJson {
   type: 'select'; // body bit type
+  options: SelectOptionJson[];
   prefix: string;
   postfix: string;
   isExample: boolean;
-  options: SelectOptionJson[];
   _hintString: string;
   _instructionString: string;
 }
@@ -75,9 +75,9 @@ export interface SelectOptionJson {
 
 export interface HighlightJson extends BaseBodyBitJson {
   type: 'highlight'; // body bit type
+  texts: HighlightTextJson[];
   prefix: string;
   postfix: string;
-  texts: HighlightTextJson[];
 }
 
 export interface HighlightTextJson {

@@ -302,7 +302,6 @@ export interface PairJson {
   key: string;
   keyAudio: AudioResourceJson;
   keyImage: ImageResourceJson;
-  values: string[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -311,17 +310,18 @@ export interface PairJson {
   isExample: boolean;
   example: ExampleJson;
   _defaultExample: ExampleJson;
+  values: string[];
 }
 
 export interface MatrixJson {
   key: string;
-  cells: MatrixCellJson[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
   // example: ExampleJson;
+  cells: MatrixCellJson[];
 }
 
 export interface MatrixCellJson {

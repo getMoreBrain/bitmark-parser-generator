@@ -825,7 +825,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.label]: {
     tag: PropertyTag.label,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.bitmarkMinusMinus,
   },
   [PropertyConfigKey.imageFirst]: {
     tag: PropertyTag.imageFirst,

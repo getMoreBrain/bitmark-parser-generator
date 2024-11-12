@@ -968,20 +968,20 @@ class Builder extends BaseBuilder {
       _valuesAst,
     } = data;
 
-    const defaultExample = Array.isArray(_valuesAst) && _valuesAst.length > 0 && _valuesAst[0];
+    const defaultExample = Array.isArray(_valuesAst) && _valuesAst.length > 0 ? _valuesAst[0] : null;
 
     // NOTE: Node order is important and is defined here
     const node: PairJson = {
       key: key ?? '',
       keyAudio: (keyAudio ?? undefined) as AudioResourceJson,
       keyImage: (keyImage ?? undefined) as ImageResourceJson,
-      values,
       item: (item ?? []) as TextAst,
       lead: (lead ?? undefined) as TextAst,
       hint: (hint ?? []) as TextAst,
       instruction: (instruction ?? []) as TextAst,
       isCaseSensitive: isCaseSensitive as boolean,
       ...this.toExample(isDefaultExample, example, defaultExample),
+      values,
     };
 
     // Remove Unset Optionals
@@ -1047,12 +1047,12 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: MatrixJson = {
       key: key ?? '',
-      cells,
       item: (item ?? []) as TextAst,
       lead: (lead ?? undefined) as TextAst,
       hint: (hint ?? []) as TextAst,
       instruction: (instruction ?? undefined) as TextAst,
       isExample,
+      cells,
     };
 
     // Remove Unset Optionals
@@ -1127,13 +1127,13 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  table(data: { columns: string[]; rows: string[][] }): TableJson {
-    const { columns, rows } = data;
+  table(dataIn: { columns: string[]; data: string[][] }): TableJson {
+    const { columns, data } = dataIn;
 
     // NOTE: Node order is important and is defined here
     const node: TableJson = {
       columns,
-      data: rows,
+      data,
     };
 
     // Remove Unset Optionals
@@ -1358,6 +1358,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: GapJson = {
       type: BodyBitType.gap,
+      solutions: solutions ?? [], // Must be before other properties except type
       item: (item ?? []) as TextAst,
       lead: (lead ?? []) as TextAst,
       hint: (hint ?? []) as TextAst,
@@ -1365,7 +1366,6 @@ class Builder extends BaseBuilder {
       isCaseSensitive: isCaseSensitive as boolean,
       // ...this.toExample(isDefaultExample, example),
       ...this.toExample(isDefaultExample, example, defaultExample),
-      solutions: solutions ?? [],
     };
 
     // Remove Unset Optionals
@@ -1426,7 +1426,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: MarkJson = {
       type: BodyBitType.mark,
-      solution: solution ?? '',
+      solution: solution ?? '', // Must be before other properties except type
       mark: mark ?? '',
       item: (item ?? []) as TextAst,
       lead: (lead ?? []) as TextAst,
@@ -1482,6 +1482,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: SelectJson = {
       type: BodyBitType.select,
+      options, // Must be before other properties except type
       prefix: prefix ?? '',
       postfix: postfix ?? '',
       item: (item ?? []) as TextAst,
@@ -1489,7 +1490,6 @@ class Builder extends BaseBuilder {
       hint: (hint ?? []) as TextAst,
       instruction: (instruction ?? []) as TextAst,
       ...this.toExample(false, undefined, undefined), // Will be set in later
-      options,
       _hintString: _hintString ?? '',
       _instructionString: _instructionString ?? '',
 
@@ -1550,7 +1550,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: SelectOptionJson = {
-      text: text ?? '',
+      text: text ?? '', // Must be before other properties except type
       isCorrect: !!isCorrect,
       item: (item ?? []) as TextAst,
       lead: (lead ?? []) as TextAst,
@@ -1591,6 +1591,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: HighlightJson = {
       type: BodyBitType.highlight,
+      texts, // Must be before other properties except type
       prefix: prefix ?? '',
       postfix: postfix ?? '',
       item: (item ?? []) as TextAst,
@@ -1598,7 +1599,6 @@ class Builder extends BaseBuilder {
       hint: (hint ?? []) as TextAst,
       instruction: (instruction ?? []) as TextAst,
       ...this.toExample(false, undefined, undefined), // Will be set in later
-      texts,
     };
 
     // Remove Unset Optionals
@@ -1646,7 +1646,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: HighlightTextJson = {
-      text: text ?? '',
+      text: text ?? '', // Must be before other properties except type
       isCorrect: !!isCorrect,
       isHighlighted: !!isHighlighted,
       item: (item ?? []) as TextAst,
