@@ -60,7 +60,7 @@ function markConfigChainContentProcessor(
     ...tags,
   });
 
-  markConfig.push(config);
+  if (config) markConfig.push(config);
 }
 
 export { markConfigChainContentProcessor };

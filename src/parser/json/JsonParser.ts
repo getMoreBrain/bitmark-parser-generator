@@ -9,6 +9,7 @@ import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
+import { BodyBitsJson, BodyBitJson } from '../../model/json/BodyBitJson';
 import { ResourceJson, ImageResourceWrapperJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
 import { TextParser } from '../text/TextParser';
@@ -21,29 +22,10 @@ import {
   ExampleJson,
   ListItemJson,
 } from '../../model/json/BitJson';
-import {
-  SelectOptionJson,
-  HighlightTextJson,
-  BodyBitsJson,
-  BodyBitJson,
-  GapJson,
-  SelectJson,
-  HighlightJson,
-  MarkJson,
-} from '../../model/json/BodyBitJson';
 
 interface ReferenceAndReferenceProperty {
   reference?: string;
   referenceProperty?: string | string[];
-}
-
-interface ItemLeadHintInstruction {
-  item?: TextAst;
-  lead?: TextAst;
-  pageNumber?: TextAst;
-  marginNumber?: TextAst;
-  hint?: TextAst;
-  instruction?: TextAst;
 }
 
 interface Example {
@@ -199,22 +181,19 @@ class JsonParser {
     const resourcesNode = this.processResources(bitType, bit.resource, bit.images, bit.logos);
 
     // body & placeholders
-    const bodyNode = this.bodyToAst(bit.body, textFormat, bit.placeholders);
+    const bodyNode = this.processBody(bit.body as JsonText, textFormat, bit.placeholders);
 
     //+-statement
     const statementNodes = this.processStatements(statement, bit.isCorrect, bit.statements, bit.example);
 
-    // ingredients
-    // const ingredientsNodes = this.ingredientsBitsToAst(bit.ingredients);
-
     // listItems / sections (cardBits)
-    const cardBitNodes = this.listItemsToAst(bit.listItems ?? bit.sections, textFormat, bit.placeholders);
+    const cardBitNodes = this.processListItems(bit.listItems ?? bit.sections, textFormat, bit.placeholders);
 
     // footer
     const footerNode = this.footerToAst(bit.footer, textFormat);
 
     // Convert reference to referenceProperty
-    const { reference, referenceProperty } = this.referenceToAst(referenceBit);
+    const { reference, referenceProperty } = this.processReference(referenceBit);
 
     // Build bit
     const bitNode = builder.bit({
@@ -279,43 +258,6 @@ class JsonParser {
     return responses;
   }
 
-  private selectOptionBitsToAst(options?: SelectOptionJson[]): SelectOptionJson[] {
-    const nodes: SelectOptionJson[] = [];
-    if (Array.isArray(options)) {
-      for (const o of options) {
-        const { text, isCorrect, item, lead, hint, instruction, example } = o;
-        const node = builder.selectOption({
-          text: text ?? '',
-          isCorrect,
-          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example),
-        });
-        nodes.push(node);
-      }
-    }
-
-    return nodes;
-  }
-
-  private highlightTextBitsToAst(highlightTexts?: HighlightTextJson[]): HighlightTextJson[] {
-    const nodes: HighlightTextJson[] = [];
-    if (Array.isArray(highlightTexts)) {
-      for (const t of highlightTexts) {
-        const { text, isCorrect, isHighlighted, item, lead, hint, instruction, example } = t;
-        const node = builder.highlightText({
-          text: text ?? '',
-          isCorrect,
-          isHighlighted,
-          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          ...this.parseExample(example),
-        });
-        nodes.push(node);
-      }
-    }
-
-    return nodes;
-  }
-
   private processBotResponse(bitType: BitTypeType, responses?: BotResponseJson[]): BotResponseJson[] | undefined {
     // Return early if NOT bot response as the responses should be interpreted as standard responses
     if (!Config.isOfBitType(bitType, BitType.botActionResponse)) return undefined;
@@ -323,7 +265,7 @@ class JsonParser {
     return responses;
   }
 
-  private listItemsToAst(
+  private processListItems(
     listItems: ListItemJson[],
     textFormat: TextFormatType,
     placeholders: BodyBitsJson,
@@ -334,8 +276,13 @@ class JsonParser {
       for (const li of listItems) {
         const { item, lead, hint, instruction, body } = li;
         const node = builder.cardBit({
-          ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-          body: this.bodyToAst(body, textFormat, placeholders),
+          item: this.convertJsonTextToAstText(item),
+          lead: this.convertJsonTextToAstText(lead),
+          pageNumber: [] as TextAst,
+          marginNumber: [] as TextAst,
+          hint: this.convertJsonTextToAstText(hint),
+          instruction: this.convertJsonTextToAstText(instruction),
+          body: this.processBody(body, textFormat, placeholders),
         });
         if (node) nodes.push(node);
       }
@@ -390,9 +337,10 @@ class JsonParser {
    *
    * - Convert the string like body into AST body,
    * - re-build all the body bits to validate them.
+   * // TODO: This must still handle the placeholders for v2
    *
    */
-  private bodyToAst(body: JsonText, textFormat: TextFormatType, placeholders: BodyBitsJson): Body | undefined {
+  private processBody(body: JsonText, textFormat: TextFormatType, placeholders: BodyBitsJson): Body | undefined {
     let node: Body | undefined;
     let bodyStr: BreakscapedString | undefined;
     const placeholderNodes: {
@@ -460,117 +408,39 @@ class JsonParser {
     return node;
   }
 
-  // private bodyToAst(body: JsonText, textFormat: TextFormatType, placeholders: BodyBitsJson): Body | undefined {
-  //   let node: Body | undefined;
-  //   let bodyStr: BreakscapedString | undefined;
-  //   const placeholderNodes: {
-  //     [keyof: string]: BodyBit;
-  //   } = {};
-
-  //   if (textFormat === TextFormat.json) {
-  //     // If the text format is JSON, handle appropriately
-  //     let bodyObject: unknown = body;
-
-  //     // Attempt to parse a string body as JSON to support the legacy format
-  //     if (typeof bodyObject === 'string') {
-  //       try {
-  //         bodyObject = JSON.parse(bodyObject);
-  //       } catch (e) {
-  //         // Could not parse JSON - set body to null
-  //         bodyObject = null;
-  //       }
-  //     }
-  //     node = builder.body({ bodyJson: bodyObject });
-  //   } else {
-  //     if (Array.isArray(body)) {
-  //       // Body is an array (prosemirror like JSON)
-
-  //       // Parse the body to string in case it is in JSON format
-  //       bodyStr = this.convertJsonTextToBreakscapedString(body, textFormat);
-
-  //       // Get the placeholders from the text parser
-  //       placeholders = this.textGenerator.getPlaceholders();
-  //     } else {
-  //       // Body is a string (legacy bitmark v2, or not bitmark--/++)
-  //       bodyStr = this.convertJsonTextToBreakscapedString(body, textFormat);
-  //     }
-
-  //     // Placeholders
-  //     if (placeholders) {
-  //       for (const [key, val] of Object.entries(placeholders)) {
-  //         const bit = this.bodyBitToAst(val);
-  //         placeholderNodes[key] = bit as BodyBit;
-  //       }
-  //     }
-
-  //     if (bodyStr) {
-  //       // Split the body string and insert the placeholders
-  //       const bodyPartNodes: BodyPart[] = [];
-  //       const bodyParts: BreakscapedString[] = StringUtils.splitPlaceholders(
-  //         bodyStr,
-  //         Object.keys(placeholderNodes),
-  //       ) as BreakscapedString[];
-
-  //       for (let i = 0, len = bodyParts.length; i < len; i++) {
-  //         const bodyPart = bodyParts[i];
-
-  //         if (placeholderNodes[bodyPart]) {
-  //           // Replace the placeholder
-  //           bodyPartNodes.push(placeholderNodes[bodyPart]);
-  //         } else {
-  //           // Treat as text
-  //           const bodyText = this.bodyTextToAst(bodyPart);
-  //           bodyPartNodes.push(bodyText);
-  //         }
-  //       }
-
-  //       node = builder.body({ bodyParts: bodyPartNodes });
-  //     }
-  //   }
-  //   return node;
-  // }
-
-  private bodyTextToAst(bodyText: BreakscapedString): BodyText {
-    return null; // TODO builder.bodyText({ text: bodyText ?? '' }, false);
+  private bodyTextToAst(_bodyText: BreakscapedString): BodyPart {
+    return null as unknown as BodyPart; // TODO builder.bodyText({ text: bodyText ?? '' }, false);
   }
 
   private bodyBitToAst(bit: BodyBitJson): BodyPart {
     switch (bit.type) {
-      case BodyBitType.gap: {
-        const gap = this.gapBitToAst(bit);
-        return gap;
-      }
-      case BodyBitType.mark: {
-        const mark = this.markBitToAst(bit);
-        return mark;
-      }
-      case BodyBitType.select: {
-        const select = this.selectBitToAst(bit);
-        return select;
-      }
-      case BodyBitType.highlight: {
-        const hightlight = this.highlightBitToAst(bit);
-        return hightlight;
-      }
+      case BodyBitType.gap:
+      case BodyBitType.mark:
+      case BodyBitType.select:
+      case BodyBitType.highlight:
+        return bit;
+        break;
+      default:
+      // Do nothing
     }
-    return this.bodyTextToAst('');
+    return this.bodyTextToAst('' as BreakscapedString);
   }
 
-  private footerToAst(footerText: JsonText, textFormat: TextFormatType): Footer | undefined {
+  private footerToAst(footerText: JsonText, _textFormat: TextFormatType): Footer | undefined {
     if (!footerText) return undefined;
     return {
       footer: footerText,
     };
-    const text = this.convertJsonTextToAstText(footerText, textFormat);
+    // const text = this.convertJsonTextToAstText(footerText, textFormat);
 
-    if (text) {
-      const footerText = builder.footerText({ text }, false);
-      return builder.footer({ footerParts: [footerText] });
-    }
-    return undefined;
+    // if (text) {
+    //   const footerText = builder.footerText({ text }, false);
+    //   return builder.footer({ footerParts: [footerText] });
+    // }
+    // return undefined;
   }
 
-  private referenceToAst(reference: string | string[]): ReferenceAndReferenceProperty {
+  private processReference(reference: string | string[]): ReferenceAndReferenceProperty {
     if (Array.isArray(reference) && reference.length > 0) {
       return {
         reference: undefined,
@@ -584,96 +454,13 @@ class JsonParser {
     };
   }
 
-  private gapBitToAst(bit: GapJson): Gap {
-    const { item, lead, hint, instruction, example, isCaseSensitive, solutions } = bit;
-
-    // Build bit
-    const bitNode = builder.gap({
-      solutions: solutions ?? [],
-      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-      ...this.parseExample(example),
-      isCaseSensitive,
-    });
-
-    return bitNode;
-  }
-
-  private markBitToAst(bit: MarkJson): Mark {
-    const { solution, mark, item, lead, hint, instruction, example } = bit;
-
-    // Build bit
-    const bitNode = builder.mark({
-      solution: solution ?? '',
-      mark,
-      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-      ...this.parseExample(example),
-    });
-
-    return bitNode;
-  }
-
-  private selectBitToAst(bit: SelectJson): Select {
-    const { options, prefix, postfix, item, lead, hint, instruction, example } = bit;
-
-    // Build options bits
-    const selectOptionNodes = this.selectOptionBitsToAst(options);
-
-    // Build bit
-    const node = builder.select({
-      options: selectOptionNodes,
-      prefix,
-      postfix,
-      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-      ...this.parseExample(example),
-    });
-
-    return node;
-  }
-
-  private highlightBitToAst(bit: HighlightJson): Highlight {
-    const { texts, prefix, postfix, item, lead, hint, instruction, example } = bit;
-
-    // Build options bits
-    const highlightTextNodes = this.highlightTextBitsToAst(texts);
-
-    // Build bit
-    const node = builder.highlight({
-      texts: highlightTextNodes,
-      prefix,
-      postfix,
-      ...this.parseItemLeadHintInstruction(item, lead, hint, instruction),
-      ...this.parseExample(example),
-    });
-
-    return node;
-  }
-
-  private parseItemLeadHintInstruction(
-    item: JsonText,
-    lead: JsonText,
-    hint: JsonText,
-    instruction: JsonText,
-  ): ItemLeadHintInstruction {
-    return {
-      item: this.convertJsonTextToAstText(item),
-      lead: this.convertJsonTextToAstText(lead),
-      pageNumber: [] as TextAst,
-      marginNumber: [] as TextAst,
-      hint: this.convertJsonTextToAstText(hint),
-      instruction: this.convertJsonTextToAstText(instruction),
-    };
-  }
-
   private parseExample(example: ExampleJson | undefined): Example | undefined {
     if (example == null) return undefined;
     if (example === true) return { example: true };
     if (example === false) return { example: false };
-    // return {
-    //   example: example,
-    // };
-    const exampleStr = this.convertJsonTextToAstText(example as JsonText);
-    if (exampleStr) {
-      return { example: exampleStr };
+    const exampleText = StringUtils.isString(example) || Array.isArray(example) ? example : undefined;
+    if (exampleText) {
+      return { example: exampleText };
     }
     return { example: !!example };
   }

@@ -1,6 +1,6 @@
 import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
-import { BodyPart, Example } from '../../../../model/ast/Nodes';
+import { BodyPart } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
