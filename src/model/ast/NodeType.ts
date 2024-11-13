@@ -4,12 +4,13 @@ import { EnumType, superenum } from '@ncoderz/superenum';
  * Defines the type of a node in the AST.
  * All valid node types should be defined here.
  *
+ * Nodes not defined here will not be walked by the AST walker.
+ *
  * @enum
  */
 const NodeType = superenum({
   unknown: 'unknown', // unknown
 
-  __text__: '__text__', // bitmark text
   action: 'action',
   actionValue: 'actionValue',
   activityType: 'activityType',
@@ -25,7 +26,6 @@ const NodeType = superenum({
   allowedBit: 'allowedBit',
   allowedBitValue: 'allowedBitValue',
   alt: 'alt',
-  choice: 'choice',
   alternativeAnswers: 'alternativeAnswers',
   alternativeAnswersValue: 'alternativeAnswersValue',
   alternativeDescriptions: 'alternativeDescriptions',
@@ -45,10 +45,6 @@ const NodeType = superenum({
   availableClassificationsValue: 'availableClassificationsValue',
   avatarImage: 'avatarImage',
   backgroundWallpaper: 'backgroundWallpaper',
-  document: 'document',
-  documentEmbed: 'documentEmbed',
-  documentLink: 'documentLink',
-  documentDownload: 'documentDownload',
   backgroundWallpaperValue: 'backgroundWallpaperValue',
   bitLevel: 'bitLevel', // bit level
   bitmarkAst: 'bitmarkAst', // bitmarkAst
@@ -87,6 +83,7 @@ const NodeType = superenum({
   cells: 'cells',
   cellsValue: 'cellsValue',
   checked: 'checked',
+  choice: 'choice',
   choices: 'choices',
   choicesValue: 'choicesValue',
   class: 'class',
@@ -133,6 +130,10 @@ const NodeType = superenum({
   disableCalculation: 'disableCalculation',
   disableFeedback: 'disableFeedback',
   disableFeedbackValue: 'disableFeedbackValue',
+  document: 'document',
+  documentDownload: 'documentDownload',
+  documentEmbed: 'documentEmbed',
+  documentLink: 'documentLink',
   duration: 'duration',
   durationValue: 'durationValue',
   elements: 'elements',
@@ -187,11 +188,11 @@ const NodeType = superenum({
   imageFirst: 'imageFirst',
   imageFirstValue: 'imageFirstValue',
   imageLandscape: 'imageLandscape',
+  imageLink: 'imageLink',
   imagePlaceholder: 'imagePlaceholder',
   imagePlaceholderValue: 'imagePlaceholderValue',
   imagePortrait: 'imagePortrait',
   imageSource: 'imageSource',
-  imageLink: 'imageLink',
   index: 'index',
   indexValue: 'indexValue',
   ingredients: 'ingredients',
@@ -395,12 +396,12 @@ const NodeType = superenum({
   statements: 'statements',
   statementsValue: 'statementsValue',
   statementText: 'statementText',
+  stillImageFilmEmbed: 'stillImageFilmEmbed',
+  stillImageFilmLink: 'stillImageFilmLink',
   stripePricingTableId: 'stripePricingTableId',
   stripePricingTableIdValue: 'stripePricingTableIdValue',
   stripePublishableKey: 'stripePublishableKey',
   stripePublishableKeyValue: 'stripePublishableKeyValue',
-  stillImageFilmLink: 'stillImageFilmLink',
-  stillImageFilmEmbed: 'stillImageFilmEmbed',
   subject: 'subject',
   subjectValue: 'subjectValue',
   subtitle: 'subtitle',
@@ -463,15 +464,15 @@ const NodeType = superenum({
   vendorUrlValue: 'vendorUrlValue',
   version: 'version',
   video: 'video',
-  videoEmbed: 'videoEmbed',
-  videoLink: 'videoLink',
   videoCallLink: 'videoCallLink',
   videoCallLinkValue: 'videoCallLinkValue',
+  videoEmbed: 'videoEmbed',
+  videoLink: 'videoLink',
   warnings: 'warnings',
   warningsValue: 'warningsValue',
+  websiteLink: 'websiteLink',
   width: 'width',
   widthValue: 'widthValue',
-  websiteLink: 'websiteLink',
   x: 'x',
   xValue: 'xValue',
   y: 'y',

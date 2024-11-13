@@ -219,7 +219,7 @@ function parseFlashcardLike(
   let alternativeAnswers: TextAst[] = [];
   let cardIndex = 0;
   let variantIndex = 0;
-  let extraTags = {};
+  let extraTags: BitContentProcessorResult = {};
   let questionVariant: ProcessedCardVariant | undefined;
   const onlyOneCardAllowed = bitType === BitType.flashcard1;
 
@@ -256,25 +256,29 @@ function parseFlashcardLike(
     if (cardIndex === 0 || !onlyOneCardAllowed) {
       if (Config.isOfBitType(bitType, BitType.descriptionList)) {
         // .description-list
-        descriptions.push(
-          builder.descriptionListItem({
+        const dl = builder.descriptionListItem(
+          {
             term: question,
             description: answer,
-            alternativeDescriptions: alternativeAnswers.length > 0 ? alternativeAnswers : undefined,
+            alternativeDescriptions: alternativeAnswers,
             ...extraTags,
-          }),
+          },
+          extraTags.isDefaultExample,
         );
+        if (dl) descriptions.push(dl);
       } else {
         // .flashcard
         // if (question) {
-        flashcards.push(
-          builder.flashcard({
+        const fc = builder.flashcard(
+          {
             question,
             answer,
-            alternativeAnswers: alternativeAnswers.length > 0 ? alternativeAnswers : undefined,
+            alternativeAnswers,
             ...extraTags,
-          }),
+          },
+          extraTags.isDefaultExample,
         );
+        if (fc) flashcards.push(fc);
         // } else {
         //   context.addWarning('Ignoring card with empty question', questionVariant);
         // }
@@ -335,7 +339,9 @@ function parseStatements(
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { statements: chainedStatements, ...tags } = content.data;
+        const { statements: chainedStatements, statement: _ignore, ...tags } = content.data;
+        // Remove statement from rest, tags
+        _ignore;
 
         // Re-build the statement, adding any tags that were not in the True/False chain
         // These tags are actually not in the correct place, but we can still interpret them and fix the data.
@@ -343,20 +349,22 @@ function parseStatements(
         if (Array.isArray(chainedStatements)) {
           for (const s of chainedStatements) {
             // if (s.text) {
-            const statement = builder.statement({
-              text: s.statement,
-              isCorrect: s.isCorrect,
-              item: s.item as TextAst,
-              lead: s.lead as TextAst,
-              pageNumber: undefined,
-              marginNumber: undefined,
-              hint: s.hint as TextAst,
-              instruction: s.instruction as TextAst,
-              isDefaultExample: false, // ???
-              example: s.example as TextAst,
-              ...tags,
-            });
-            statements.push(statement);
+            const statement = builder.statement(
+              {
+                statement: s.statement ?? '',
+                isCorrect: s.isCorrect,
+                item: s.item,
+                lead: s.lead,
+                // pageNumber: undefined,
+                // marginNumber: undefined,
+                hint: s.hint,
+                instruction: s.instruction,
+                example: s.example,
+                ...tags,
+              },
+              tags.isDefaultExample,
+            );
+            if (statement) statements.push(statement);
             // } else {
             //   context.addWarning('Ignoring card with empty statement', content);
             // }

@@ -2,7 +2,6 @@ import { Builder } from '../../ast/Builder';
 import { ResourceBuilder } from '../../ast/ResourceBuilder';
 import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
-import { TextGenerator } from '../../generator/text/TextGenerator';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { Bit, BitmarkAst, Body, BodyBit, BodyPart, CardBit, Footer } from '../../model/ast/Nodes';
 import { JsonText, TextAst } from '../../model/ast/TextNodes';
@@ -21,23 +20,14 @@ import {
   MatrixJson,
   PairJson,
   QuestionJson,
-  FlashcardJson,
   QuizJson,
   ResponseJson,
   StatementJson,
-  PersonJson,
   BotResponseJson,
   ExampleJson,
-  MarkConfigJson,
-  ImageSourceJson,
   ListItemJson,
   IngredientJson,
-  TechnicalTermJson,
-  TableJson,
-  ServingsJson,
-  RatingLevelStartEndJson,
   CaptionDefinitionListJson,
-  DescriptionListItemJson,
   MatrixCellJson,
 } from '../../model/json/BitJson';
 import {
@@ -54,10 +44,7 @@ import {
   ResourceJson,
   ResourceDataJson,
   ImageResourceWrapperJson,
-  ImageResourceJson,
   AudioResourceWrapperJson,
-  ImageResponsiveResourceJson,
-  StillImageFilmResourceJson,
 } from '../../model/json/ResourceJson';
 
 interface ReferenceAndReferenceProperty {
@@ -85,11 +72,9 @@ const resourceBuilder = new ResourceBuilder();
  * A parser for parsing bitmark JSON to bitmark AST
  */
 class JsonParser {
-  private textGenerator: TextGenerator;
   private textParser: TextParser;
 
   constructor() {
-    this.textGenerator = new TextGenerator();
     this.textParser = new TextParser();
   }
 
@@ -403,31 +388,16 @@ class JsonParser {
     const resourceAttachmentType = this.getResourceType(resource);
 
     // resource(s)
-    const resourcesNode = this.resourceBitToAst(bitType, resource, images ?? logos);
+    const resourcesNode = this.resourceBitToAst2(bitType, resource, images, logos);
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
 
-    // imagePlaceholder
-    const imagePlaceholderNode = this.imagePlaceholderBitToAst(bitType, imagePlaceholder);
-
-    // imageSource
-    const imageSourceNode = this.imageSourceBitToAst(imageSource);
-
-    // Person (partner, deprecated)
-    const personNode = this.personBitToAst(bitType, person ?? partner);
-
-    // Mark Config
-    const markConfigNode = this.markConfigBitToAst(marks);
-
-    // flashcards
-    const flashcardNodes = this.flashcardBitsToAst(cards);
-
     // descriptions
-    const descriptionNodes = this.descriptionsBitsToAst(descriptions);
+    // const descriptionNodes = this.descriptionsBitsToAst(descriptions);
 
     //+-statement
-    const statementNodes = this.statementBitsToAst(statement, isCorrect, statements, example);
+    const statementNodes = this.processStatements(statement, isCorrect, statements, example);
 
     //+-response
     const responseNodes = this.responseBitsToAst(bitType, responses as ResponseJson[]);
@@ -444,35 +414,14 @@ class JsonParser {
     // matrix
     const matrixNodes = this.matrixBitsToAst(matrix);
 
-    // table / captionDefinitionList
-    const tableNode = this.tableToAst(table);
-
     //+-choice
     const choiceNodes = this.choiceBitsToAst(choices);
 
     // questions
     const questionNodes = this.questionBitsToAst(questions);
 
-    // botResponses
-    const botResponseNodes = this.botResponseBitsToAst(bitType, responses as BotResponseJson[]);
-
-    // technicalTerm
-    const technicalTermNode = this.technicalTermToAst(technicalTerm);
-
-    // servings
-    const servingsNode = this.servingsToAst(servings);
-
     // ingredients
     const ingredientsNodes = this.ingredientsBitsToAst(ingredients);
-
-    // ratingLevelStart
-    const ratingLevelStartNodes = this.ratingLevelStartEndToAst(ratingLevelStart);
-
-    // ratingLevelEnd
-    const ratingLevelEndNodes = this.ratingLevelStartEndToAst(ratingLevelEnd);
-
-    // captionDefinitionList
-    const captionDefinitionListNode = this.captionDefinitionListToAst(captionDefinitionList);
 
     // listItems / sections (cardBits)
     const cardBitNodes = this.listItemsToAst(listItems ?? sections, textFormat, placeholders);
@@ -597,7 +546,7 @@ class JsonParser {
       mailingList,
       buttonCaption,
       callToActionUrl,
-      caption: this.convertJsonTextToAstText(caption),
+      caption,
       quotedPerson,
       partialAnswer,
       reasonableNumOfChars,
@@ -613,50 +562,48 @@ class JsonParser {
       productList: product,
       productVideoList: productVideo,
       productFolder,
-      technicalTerm: technicalTermNode,
-      servings: servingsNode,
-      ratingLevelStart: ratingLevelStartNodes,
-      ratingLevelEnd: ratingLevelEndNodes,
+      technicalTerm,
+      servings,
+      ratingLevelStart,
+      ratingLevelEnd,
       ratingLevelSelected,
       book,
-      title: this.convertJsonTextToAstText(title),
-      subtitle: this.convertJsonTextToAstText(subtitle),
+      title,
+      subtitle,
       level,
       toc,
       progress,
       anchor,
       reference,
       referenceEnd,
-      ...this.parseItemLeadHintInstructionPageNumberMarginNumber(
-        item,
-        lead,
-        hint,
-        instruction,
-        pageNumber,
-        marginNumber,
-      ),
+      item,
+      lead,
+      hint,
+      instruction,
+      pageNumber,
+      marginNumber,
       ...this.parseExample(example),
-      imageSource: imageSourceNode,
-      person: personNode,
-      markConfig: markConfigNode,
-      imagePlaceholder: imagePlaceholderNode,
+      imageSource,
+      person: partner ?? person,
+      markConfig: marks,
+      imagePlaceholder,
       resources: resourcesNode,
       body: bodyNode,
       elements,
-      flashcards: flashcardNodes,
-      descriptions: descriptionNodes,
+      flashcards: cards,
+      descriptions,
       statements: statementNodes,
       responses: responseNodes,
       quizzes: quizNodes,
       heading: headingNode,
       pairs: pairsNodes,
       matrix: matrixNodes,
-      table: tableNode,
+      table,
       choices: choiceNodes,
       questions: questionNodes,
-      botResponses: botResponseNodes,
+      botResponses: this.processBotResponse(bitType, responses as BotResponseJson[]),
       ingredients: ingredientsNodes,
-      captionDefinitionList: captionDefinitionListNode,
+      captionDefinitionList,
       cardBits: cardBitNodes,
       footer: footerNode,
     });
@@ -664,85 +611,7 @@ class JsonParser {
     return bitNode;
   }
 
-  private imageSourceBitToAst(imageSource?: ImageSourceJson): ImageSourceJson | undefined {
-    if (!imageSource) return undefined;
-    return builder.imageSource(imageSource);
-  }
-
-  private imagePlaceholderBitToAst(
-    bitType: BitTypeType,
-    imagePlaceholder?: ImageResourceWrapperJson,
-  ): ImageResourceWrapperJson | undefined {
-    if (!imagePlaceholder) return undefined;
-
-    return this.resourceDataToAst(bitType, ResourceTag.image, imagePlaceholder.image) as ImageResourceWrapperJson;
-  }
-
-  private personBitToAst(bitType: BitTypeType, person?: PersonJson): PersonJson | undefined {
-    if (!person) return undefined;
-
-    const avatarImage = person.avatarImage
-      ? (this.resourceDataToAst(bitType, ResourceTag.image, person.avatarImage) as ImageResourceWrapperJson)?.image
-      : undefined;
-
-    return builder.person({
-      ...person,
-      avatarImage,
-    });
-  }
-
-  private markConfigBitToAst(marks?: MarkConfigJson[]): MarkConfigJson[] | undefined {
-    if (!Array.isArray(marks)) return undefined;
-    return marks.map((m) => builder.markConfig(m));
-  }
-
-  private flashcardBitsToAst(flashcards?: FlashcardJson[]): FlashcardJson[] | undefined {
-    if (!Array.isArray(flashcards)) return undefined;
-
-    const nodes: FlashcardJson[] = [];
-    for (const item of flashcards) {
-      const node = builder.flashcard({
-        ...item,
-        question: this.convertJsonTextToAstText(item.question),
-        answer: this.convertJsonTextToAstText(item.answer),
-        alternativeAnswers: this.convertJsonTextToAstText(item.alternativeAnswers),
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        instruction: this.convertJsonTextToAstText(item.instruction),
-        ...this.parseExample(item.example),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
-  }
-
-  private descriptionsBitsToAst(descriptionList?: DescriptionListItemJson[]): DescriptionListItemJson[] | undefined {
-    if (!Array.isArray(descriptionList)) return undefined;
-
-    const nodes: DescriptionListItemJson[] = [];
-    for (const item of descriptionList) {
-      const node = builder.descriptionListItem({
-        ...item,
-        term: this.convertJsonTextToAstText(item.term),
-        description: this.convertJsonTextToAstText(item.description),
-        alternativeDescriptions: this.convertJsonTextToAstText(item.alternativeDescriptions),
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        instruction: this.convertJsonTextToAstText(item.instruction),
-        ...this.parseExample(item.example),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
-  }
-
-  private statementBitsToAst(
+  private processStatements(
     statement?: string,
     isCorrect?: boolean,
     statements?: StatementJson[],
@@ -750,29 +619,18 @@ class JsonParser {
   ): StatementJson[] | undefined {
     const nodes: StatementJson[] = [];
 
+    // Add statement defined in the bit
     if (statement) {
       const node = builder.statement({
-        text: statement ?? '',
+        statement: statement ?? '',
         isCorrect: isCorrect ?? false,
         ...this.parseExample(example),
       });
-      nodes.push(node);
+      if (node) nodes.push(node);
     }
 
-    if (Array.isArray(statements)) {
-      for (const item of statements) {
-        const node = builder.statement({
-          ...item,
-          text: item.statement ?? '',
-          item: this.convertJsonTextToAstText(item.item),
-          lead: this.convertJsonTextToAstText(item.lead),
-          hint: this.convertJsonTextToAstText(item.hint),
-          instruction: this.convertJsonTextToAstText(item.instruction),
-          ...this.parseExample(item.example),
-        });
-        if (node) nodes.push(node);
-      }
-    }
+    // add standard statements
+    if (Array.isArray(statements)) for (const item of statements) nodes.push(item);
 
     if (nodes.length === 0) return undefined;
 
@@ -960,11 +818,6 @@ class JsonParser {
     return nodes;
   }
 
-  private tableToAst(table?: TableJson): TableJson | undefined {
-    if (!table) return undefined;
-    return builder.table(table);
-  }
-
   private questionBitsToAst(questions?: QuestionJson[]): QuestionJson[] | undefined {
     if (!Array.isArray(questions)) return undefined;
 
@@ -985,39 +838,11 @@ class JsonParser {
     return nodes;
   }
 
-  private botResponseBitsToAst(bitType: BitTypeType, responses?: BotResponseJson[]): BotResponseJson[] | undefined {
+  private processBotResponse(bitType: BitTypeType, responses?: BotResponseJson[]): BotResponseJson[] | undefined {
     // Return early if NOT bot response as the responses should be interpreted as standard responses
     if (!Config.isOfBitType(bitType, BitType.botActionResponse)) return undefined;
-
     if (!Array.isArray(responses)) return undefined;
-
-    const nodes: BotResponseJson[] = [];
-    for (const item of responses) {
-      const node = builder.botResponse({
-        ...item,
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        // instruction: this.convertJsonTextToAstText(item.instruction),
-        // ...this.parseExample(item.example),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
-  }
-
-  private technicalTermToAst(technicalTerm?: TechnicalTermJson): TechnicalTermJson | undefined {
-    if (!technicalTerm) return undefined;
-    return builder.technicalTerm(technicalTerm);
-  }
-
-  private servingsToAst(servings?: ServingsJson): ServingsJson | undefined {
-    if (!servings) return undefined;
-
-    const item = servings;
-    return builder.servings(item);
+    return responses;
   }
 
   private ingredientsBitsToAst(ingredients?: IngredientJson[]): IngredientJson[] | undefined {
@@ -1062,32 +887,22 @@ class JsonParser {
     // return nodes;
   }
 
-  private ratingLevelStartEndToAst(ratingLevelStartEnd: RatingLevelStartEndJson): RatingLevelStartEndJson | undefined {
-    if (!ratingLevelStartEnd) return undefined;
+  // private captionDefinitionListToAst(
+  //   captionDefinitionList: CaptionDefinitionListJson,
+  // ): CaptionDefinitionListJson | undefined {
+  //   if (!captionDefinitionList) return undefined;
 
-    const item = ratingLevelStartEnd;
-    return builder.ratingLevelStartEnd({
-      ...item,
-      label: this.convertJsonTextToAstText(item.label),
-    });
-  }
-
-  private captionDefinitionListToAst(
-    captionDefinitionList: CaptionDefinitionListJson,
-  ): CaptionDefinitionListJson | undefined {
-    if (!captionDefinitionList) return undefined;
-
-    const item = captionDefinitionList;
-    return builder.captionDefinitionList({
-      ...item,
-      definitions: (item.definitions ?? []).map((d) => {
-        return builder.captionDefinition({
-          term: this.convertJsonTextToAstText(d.term),
-          description: this.convertJsonTextToAstText(d.description),
-        });
-      }),
-    });
-  }
+  //   const item = captionDefinitionList;
+  //   return builder.captionDefinitionList({
+  //     ...item,
+  //     definitions: (item.definitions ?? []).map((d) => {
+  //       return builder.captionDefinition({
+  //         term: this.convertJsonTextToAstText(d.term),
+  //         description: this.convertJsonTextToAstText(d.description),
+  //       });
+  //     }),
+  //   });
+  // }
 
   private listItemsToAst(
     listItems: ListItemJson[],
@@ -1121,49 +936,29 @@ class JsonParser {
     return undefined;
   }
 
-  private resourceBitToAst(
+  private resourceBitToAst2(
     bitType: BitTypeType,
     resource: ResourceJson | undefined,
     images: ImageResourceWrapperJson[] | undefined,
+    logos: ImageResourceWrapperJson[] | undefined,
   ): ResourceJson[] | undefined {
     const nodes: ResourceJson[] | undefined = [];
 
-    if (resource) {
-      const resourceKey = ResourceTag.keyFromValue(resource.type) ?? ResourceTag.unknown;
-      let data: ResourceDataJson | undefined;
+    if (resource) nodes.push(resource);
 
-      // TODO: This code should use the config to handle the combo resources. For now the logic is hardcoded
-
-      // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
-      if (resource.type === ResourceTag.imageResponsive) {
-        const r = resource as unknown as ImageResponsiveResourceJson;
-        const imagePortraitNode = this.resourceDataToAst(bitType, ResourceTag.imagePortrait, r.imagePortrait);
-        const imageLandscapeNode = this.resourceDataToAst(bitType, ResourceTag.imageLandscape, r.imageLandscape);
-        if (imagePortraitNode) nodes.push(imagePortraitNode);
-        if (imageLandscapeNode) nodes.push(imageLandscapeNode);
-      } else if (resource.type === ResourceTag.stillImageFilm) {
-        const r = resource as unknown as StillImageFilmResourceJson;
-        const imageNode = this.resourceDataToAst(bitType, ResourceTag.image, r.image);
-        const audioNode = this.resourceDataToAst(bitType, ResourceTag.audio, r.audio);
-        if (imageNode) nodes.push(imageNode);
-        if (audioNode) nodes.push(audioNode);
-      } else {
-        // Standard single resource case
-
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        data = (resource as any)[resourceKey];
-
-        if (!data) return undefined;
-
-        const node = this.resourceDataToAst(bitType, resource.type, data);
-        if (node) nodes.push(node);
-      }
-    }
-
-    if (Config.isOfBitType(bitType, [BitType.imagesLogoGrave, BitType.prototypeImages])) {
+    if (Config.isOfBitType(bitType, [BitType.prototypeImages])) {
       // Add the logo images
       if (Array.isArray(images)) {
         for (const image of images) {
+          if (image) nodes.push(image);
+        }
+      }
+    }
+
+    if (Config.isOfBitType(bitType, [BitType.imagesLogoGrave])) {
+      // Add the logo images
+      if (Array.isArray(logos)) {
+        for (const image of logos) {
           if (image) nodes.push(image);
         }
       }
@@ -1516,24 +1311,6 @@ class JsonParser {
       lead: this.convertJsonTextToAstText(lead),
       pageNumber: [] as TextAst,
       marginNumber: [] as TextAst,
-      hint: this.convertJsonTextToAstText(hint),
-      instruction: this.convertJsonTextToAstText(instruction),
-    };
-  }
-
-  private parseItemLeadHintInstructionPageNumberMarginNumber(
-    item: JsonText,
-    lead: JsonText,
-    hint: JsonText,
-    instruction: JsonText,
-    pageNumber: JsonText,
-    marginNumber: JsonText,
-  ): ItemLeadHintInstruction {
-    return {
-      item: this.convertJsonTextToAstText(item),
-      lead: this.convertJsonTextToAstText(lead),
-      pageNumber: this.convertJsonTextToAstText(pageNumber),
-      marginNumber: this.convertJsonTextToAstText(marginNumber),
       hint: this.convertJsonTextToAstText(hint),
       instruction: this.convertJsonTextToAstText(instruction),
     };

@@ -1,9 +1,12 @@
+import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
 import { Property } from '../model/ast/Nodes';
 import { JsonText, TextAst } from '../model/ast/TextNodes';
 import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
+import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { ExampleJson } from '../model/json/BitJson';
+import { TextParser } from '../parser/text/TextParser';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
@@ -19,10 +22,16 @@ export interface WithExampleJson {
   // isDefaultExample?: boolean;
   isExample: boolean;
   example: ExampleJson;
-  _defaultExample: ExampleJson;
+  _defaultExample?: ExampleJson;
 }
 
 class BaseBuilder {
+  protected textParser: TextParser;
+
+  constructor() {
+    this.textParser = new TextParser();
+  }
+
   /**
    * Convert example to an Example.
    * - If example is set, then the isExample will be true and example with be example as a BreakscapedText.
@@ -72,46 +81,6 @@ class BaseBuilder {
       _defaultExample: defaultExample ?? null,
     };
   }
-
-  // /**
-  //  * Convert example to an Example, only allowing boolean values.
-  //  * - If example is set, then the isExample will be true and example with be example as a boolean.
-  //  * - Else if isDefaultExample is true, then isDefaultExample / isExample will both be true.
-  //  * - Else isDefaultExample / isExample will both be false.
-  //  *
-  //  * @param isDefaultExample - true if the example is the default value
-  //  * @param example - the example to convert (string, boolean) or undefined if none / default
-  //  * @returns example/isDefaultExample resolved to an Example object
-  //  */
-  // protected toExampleBoolean(
-  //   isDefaultExample: boolean | undefined,
-  //   example: TextAst | string | boolean | undefined,
-  // ): WithExampleJson {
-  //   const isExampleButNotBoolean = example != undefined && !BooleanUtils.isBooleanString(example);
-
-  //   // Example
-  //   if (example != undefined && !isExampleButNotBoolean) {
-  //     return {
-  //       isDefaultExample: false,
-  //       isExample: true,
-  //       example: BooleanUtils.toBoolean(example),
-  //     };
-  //   }
-
-  //   // Default example
-  //   if (isDefaultExample || isExampleButNotBoolean) {
-  //     return {
-  //       isDefaultExample: true,
-  //       isExample: true,
-  //     };
-  //   }
-
-  //   // Not an example
-  //   return {
-  //     isDefaultExample: false,
-  //     isExample: false,
-  //   };
-  // }
 
   /**
    * Convert a raw bitmark property to an AST property.
@@ -165,6 +134,65 @@ class BaseBuilder {
     }
 
     return ArrayUtils.asArray(value);
+  }
+
+  /**
+   * Convert the JsonText from the JSON to the AST format:
+   * Input:
+   *  - Bitmark v2: breakscaped string
+   *  - Bitmark v3: bitmark text JSON (TextAst)
+   * Output:
+   *  - breakscaped string
+   *
+   * In the case of Bitmark v2 type texts, there is nothing to do but cast the type.
+   *
+   * @param breakscaped string or TextAst or breakscaped string[] or TextAst[]
+   * @param textFormat format of TextAst
+   * @returns Breakscaped string or breakscaped string[]
+   */
+  protected convertJsonTextToAstText<
+    T extends JsonText | JsonText[] | undefined,
+    R = T extends JsonText[] ? TextAst[] : TextAst,
+  >(text: T, textFormat?: TextFormatType): R {
+    // NOTE: it is ok to default to bitmarkMinusMinus here as if the text is text then it will not be an array or
+    // return true from isAst() and so will be treated as a string
+    textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
+
+    const bitTagOnly = (textFormat !== TextFormat.bitmarkPlusPlus &&
+      textFormat !== TextFormat.bitmarkMinusMinus) as boolean;
+
+    if (text == null) return [] as R;
+    if (this.textParser.isAst(text)) {
+      // Use the text generator to convert the TextAst to breakscaped string
+      // this.ast.printTree(text, NodeType.textAst);
+
+      return text as R;
+    } else if (Array.isArray(text)) {
+      const strArray: TextAst[] = [];
+      for (let i = 0, len = text.length; i < len; i++) {
+        const t = text[i];
+
+        if (this.textParser.isAst(t)) {
+          // Use the text generator to convert the TextAst to breakscaped string
+          // this.ast.printTree(text, NodeType.textAst);
+          strArray[i] = t as TextAst;
+        } else {
+          strArray[i] = this.textParser.toAst(
+            Breakscape.breakscape(t as string, {
+              bitTagOnly,
+            }),
+          );
+          // strArray[i] = t as BreakscapedString;
+        }
+      }
+      return strArray as R;
+    }
+
+    return this.textParser.toAst(
+      Breakscape.breakscape(text as string, {
+        bitTagOnly,
+      }),
+    ) as R;
   }
 }
 

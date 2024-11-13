@@ -8,7 +8,6 @@ import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
-import { TextParser } from '../parser/text/TextParser';
 import { ArrayUtils } from '../utils/ArrayUtils';
 import { BitUtils } from '../utils/BitUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
@@ -17,6 +16,7 @@ import { ObjectUtils } from '../utils/ObjectUtils';
 import { env } from '../utils/env/Env';
 
 import { BaseBuilder, WithExampleJson } from './BaseBuilder';
+import { ResourceBuilder } from './ResourceBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
 import {
@@ -63,7 +63,7 @@ import {
  * Builder to build bitmark AST node programmatically
  */
 class Builder extends BaseBuilder {
-  private textParser: TextParser = new TextParser();
+  private resourceBuilder: ResourceBuilder = new ResourceBuilder();
 
   /**
    * Build bitmark node
@@ -205,7 +205,7 @@ class Builder extends BaseBuilder {
     mailingList?: string;
     buttonCaption?: string;
     callToActionUrl?: string;
-    caption?: TextAst;
+    caption?: JsonText;
     quotedPerson?: string;
     reasonableNumOfChars?: number;
     resolved?: boolean;
@@ -227,8 +227,8 @@ class Builder extends BaseBuilder {
     ratingLevelSelected?: number;
     partialAnswer?: string;
     book?: string;
-    title?: TextAst;
-    subtitle?: TextAst;
+    title?: JsonText;
+    subtitle?: JsonText;
     level?: number | string;
     toc?: boolean;
     progress?: boolean;
@@ -238,12 +238,12 @@ class Builder extends BaseBuilder {
     reference?: string;
     referenceEnd?: string;
     isCaseSensitive?: boolean;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
+    item?: JsonText;
+    lead?: JsonText;
+    pageNumber?: JsonText;
+    marginNumber?: JsonText;
+    hint?: JsonText;
+    instruction?: JsonText;
     isDefaultExample?: boolean;
     example?: ExampleJson;
     imageSource?: ImageSourceJson;
@@ -439,7 +439,7 @@ class Builder extends BaseBuilder {
       markConfig,
       extraProperties,
       imagePlaceholder,
-      resources: _resources,
+      resources,
       body,
       footer,
 
@@ -449,8 +449,8 @@ class Builder extends BaseBuilder {
 
     const bitConfig = Config.getBitConfig(bitType);
 
-    // Convert resources into an array
-    const resources = ArrayUtils.asArray(_resources);
+    // Validate and convert resources, and ensure it is an array
+    // const resources = ArrayUtils.asArray(resourcesIn);
 
     // Set the card node data
     const cardNode = this.cardNode(data);
@@ -586,7 +586,7 @@ class Builder extends BaseBuilder {
       mailingList: this.toAstProperty(PropertyConfigKey.mailingList, mailingList),
       buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, buttonCaption),
       callToActionUrl: this.toAstProperty(PropertyConfigKey.callToActionUrl, callToActionUrl),
-      caption,
+      caption: this.convertJsonTextToAstText(caption),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, quotedPerson),
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, partialAnswer),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
@@ -604,32 +604,34 @@ class Builder extends BaseBuilder {
       productVideo: this.toAstProperty(PropertyConfigKey.productVideo, productVideo),
       productVideoList: this.toAstProperty(PropertyConfigKey.productVideoList, productVideoList),
       productFolder: this.toAstProperty(PropertyConfigKey.productFolder, productFolder),
-      technicalTerm,
-      servings,
-      ratingLevelStart,
-      ratingLevelEnd,
+      technicalTerm: this.technicalTerm(technicalTerm),
+      servings: this.servings(servings),
+      ratingLevelStart: this.ratingLevelStartEnd(ratingLevelStart),
+      ratingLevelEnd: this.ratingLevelStartEnd(ratingLevelEnd),
       ratingLevelSelected: this.toAstProperty(PropertyConfigKey.ratingLevelSelected, ratingLevelSelected),
-      title,
-      subtitle,
+      title: this.convertJsonTextToAstText(title),
+      subtitle: this.convertJsonTextToAstText(subtitle),
       level: NumberUtils.asNumber(level),
       toc: this.toAstProperty(PropertyConfigKey.toc, toc),
       progress: this.toAstProperty(PropertyConfigKey.progress, progress),
       anchor,
       reference,
       referenceEnd,
-      markConfig,
-      item,
-      lead,
-      pageNumber,
-      marginNumber,
-      hint,
-      instruction,
+      markConfig: this.buildMarkConfigs(markConfig),
+      item: this.convertJsonTextToAstText(item),
+      lead: this.convertJsonTextToAstText(lead),
+      pageNumber: this.convertJsonTextToAstText(pageNumber),
+      marginNumber: this.convertJsonTextToAstText(marginNumber),
+      hint: this.convertJsonTextToAstText(hint),
+      instruction: this.convertJsonTextToAstText(instruction),
       ...this.toExample(isDefaultExample, example),
       isDefaultExample: isDefaultExample ?? false,
-      imageSource,
-      person,
-      imagePlaceholder,
-      resources,
+      imageSource: this.imageSource(imageSource),
+      person: this.person(bitType, person),
+      imagePlaceholder: ArrayUtils.asSingle(
+        this.resourceBuilder.resourceFromResourceDataJson(bitType, ResourceTag.image, imagePlaceholder?.image),
+      ) as ImageResourceWrapperJson,
+      resources: ArrayUtils.asArray(this.resourceBuilder.resourceFromResourceJson(bitType, resources)),
       body,
       cardNode,
       footer,
@@ -787,39 +789,42 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build bot response[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildBotResponses(data: Partial<BotResponseJson>[] | undefined): BotResponseJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.botResponse(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build bot response node
    *
    * @param data - data for the node
    * @returns
    */
-  botResponse(data: {
-    response: string;
-    reaction: string;
-    feedback: string;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-  }): BotResponseJson {
-    const { response, reaction, feedback, item, lead, /*pageNumber, marginNumber,*/ hint } = data;
+  botResponse(data: Partial<BotResponseJson> | undefined): BotResponseJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: BotResponseJson = {
-      response: response ?? '',
-      reaction: reaction ?? '',
-      feedback: feedback ?? '',
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? undefined) as TextAst,
+      response: data.response ?? '',
+      reaction: data.reaction ?? '',
+      feedback: data.feedback ?? '',
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreEmptyString: ['response', 'reaction', 'feedback'],
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
-      ignoreUndefined: ['example', 'lead', 'hint'],
+      ignoreEmptyArrays: ['item'],
+      ignoreUndefined: ['example'],
     });
 
     return node;
@@ -1127,13 +1132,13 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  table(dataIn: { columns: string[]; data: string[][] }): TableJson {
-    const { columns, data } = dataIn;
+  table(dataIn: Partial<TableJson> | undefined): TableJson | undefined {
+    if (!dataIn) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: TableJson = {
-      columns,
-      data,
+      columns: dataIn.columns ?? [],
+      data: (dataIn.data ?? []).map((row) => row ?? []),
     };
 
     // Remove Unset Optionals
@@ -1376,6 +1381,18 @@ class Builder extends BaseBuilder {
     });
 
     return node;
+  }
+
+  /**
+   * Build mark configs node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildMarkConfigs(data: MarkConfigJson[] | undefined): MarkConfigJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.markConfig(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
   }
 
   /**
@@ -1667,58 +1684,58 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build flashcards node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildFlashcards(data: Partial<FlashcardJson>[] | undefined): FlashcardJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.flashcard(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build flashcard node
    *
    * @param data - data for the node
    * @returns
    */
-  flashcard(data: {
-    question: TextAst;
-    answer?: TextAst;
-    alternativeAnswers?: TextAst[];
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    isDefaultExample?: boolean;
-    example?: ExampleJson;
-  }): FlashcardJson {
-    const {
-      question,
-      answer,
-      alternativeAnswers,
-      item,
-      lead,
-      /*pageNumber,
-      marginNumber,*/
-      hint,
-      instruction,
-      isDefaultExample,
-      example,
-    } = data;
+  flashcard(data: Partial<FlashcardJson> | undefined, isDefaultExample?: boolean): FlashcardJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: FlashcardJson = {
-      question: (question ?? []) as TextAst,
-      answer: (answer ?? []) as TextAst,
-      alternativeAnswers: (alternativeAnswers ?? []) as TextAst[],
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      ...this.toExample(isDefaultExample, example, true),
+      question: this.convertJsonTextToAstText(data.question),
+      answer: this.convertJsonTextToAstText(data.answer),
+      alternativeAnswers: this.convertJsonTextToAstText(data.alternativeAnswers),
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(isDefaultExample, data.example, true),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['question', 'answer', 'alternativeAnswers', 'item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
     });
 
     return node;
+  }
+
+  /**
+   * Build descriptionListItem[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildDescriptionList(data: Partial<DescriptionListItemJson>[] | undefined): DescriptionListItemJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.descriptionListItem(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
   }
 
   /**
@@ -1727,53 +1744,44 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  descriptionListItem(data: {
-    term: TextAst;
-    description?: TextAst;
-    alternativeDescriptions?: TextAst[];
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    isDefaultExample?: boolean;
-    example?: ExampleJson;
-  }): DescriptionListItemJson {
-    const {
-      term,
-      description,
-      alternativeDescriptions,
-      item,
-      lead,
-      /*pageNumber,
-      marginNumber,*/
-      hint,
-      instruction,
-      isDefaultExample,
-      example,
-    } = data;
+  descriptionListItem(
+    data: Partial<DescriptionListItemJson> | undefined,
+    isDefaultExample?: boolean,
+  ): DescriptionListItemJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: DescriptionListItemJson = {
-      term: (term ?? []) as TextAst,
-      description: (description ?? []) as TextAst,
-      alternativeDescriptions: (alternativeDescriptions ?? []) as TextAst[],
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      ...this.toExample(isDefaultExample, example, true),
+      term: this.convertJsonTextToAstText(data.term),
+      description: this.convertJsonTextToAstText(data.description),
+      alternativeDescriptions: this.convertJsonTextToAstText(data.alternativeDescriptions),
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(isDefaultExample, data.example, true),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['question', 'answer', 'alternativeDescriptions', 'item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
     });
 
     return node;
+  }
+
+  /**
+   * Build statement[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildStatements(data: Partial<StatementJson>[] | undefined): StatementJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.statement(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
   }
 
   /**
@@ -1782,30 +1790,18 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  statement(data: {
-    text: string;
-    isCorrect: boolean;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    isDefaultExample?: boolean;
-    example?: ExampleJson;
-  }): StatementJson {
-    const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, isDefaultExample, example } =
-      data;
+  statement(data: Partial<StatementJson> | undefined, isDefaultExample?: boolean): StatementJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: StatementJson = {
-      statement: text ?? '',
-      isCorrect: !!isCorrect,
-      item: item as TextAst,
-      lead: lead as TextAst,
-      hint: hint as TextAst,
-      instruction: instruction as TextAst,
-      ...this.toExample(isDefaultExample, example, !!isCorrect),
+      statement: data.statement ?? '',
+      isCorrect: !!data.isCorrect,
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(isDefaultExample, data.example, !!data.isCorrect),
     };
 
     // Remove Unset Optionals
@@ -1824,13 +1820,8 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  imageSource(data: {
-    url: string;
-    mockupId: string;
-    size?: number;
-    format?: string;
-    trim?: boolean;
-  }): ImageSourceJson {
+  imageSource(data: Partial<ImageSourceJson> | undefined): ImageSourceJson | undefined {
+    if (!data) return undefined;
     const { url, mockupId, size, format, trim } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1858,14 +1849,20 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  person(data: { name: string; title?: string; avatarImage?: ImageResourceJson }): PersonJson {
+  person(bitType: BitTypeType, data: Partial<PersonJson> | undefined): PersonJson | undefined {
+    if (!data) return undefined;
     const { name, title, avatarImage } = data;
+    // { name: string; title?: string; avatarImage?: ImageResourceJson }
 
     // NOTE: Node order is important and is defined here
     const node: PersonJson = {
       name: name ?? '',
       title: (title ?? undefined) as string,
-      avatarImage: (avatarImage ?? undefined) as ImageResourceJson,
+      avatarImage: (
+        ArrayUtils.asSingle(
+          this.resourceBuilder.resourceFromResourceDataJson(bitType, ResourceTag.image, avatarImage),
+        ) as ImageResourceWrapperJson
+      )?.image,
     };
 
     // Remove Unset Optionals
@@ -1883,7 +1880,8 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  technicalTerm(data: { technicalTerm: string; lang?: string }): TechnicalTermJson {
+  technicalTerm(data: Partial<TechnicalTermJson> | undefined): TechnicalTermJson | undefined {
+    if (!data) return undefined;
     const { technicalTerm, lang } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1907,19 +1905,13 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  servings(data: {
-    servings: number;
-    unit?: string;
-    unitAbbr?: string;
-    decimalPlaces?: number;
-    disableCalculation?: boolean;
-    hint?: string;
-  }): ServingsJson {
+  servings(data: Partial<ServingsJson> | undefined): ServingsJson | undefined {
+    if (!data) return undefined;
     const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ServingsJson = {
-      servings: servings ?? '',
+      servings: servings ?? 0,
       unit: unit ?? '',
       unitAbbr: unitAbbr ?? '',
       decimalPlaces: decimalPlaces ?? 1,
@@ -1942,13 +1934,14 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  ratingLevelStartEnd(data: { level: number; label?: TextAst }): RatingLevelStartEndJson {
+  ratingLevelStartEnd(data: Partial<RatingLevelStartEndJson> | undefined): RatingLevelStartEndJson | undefined {
+    if (!data) return undefined;
     const { level, label } = data;
 
     // NOTE: Node order is important and is defined here
     const node: RatingLevelStartEndJson = {
       level: level ?? 0,
-      label: (label ?? undefined) as TextAst,
+      label: this.convertJsonTextToAstText(label),
     };
 
     // Remove Unset Optionals
@@ -1966,13 +1959,15 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  captionDefinition(data: { term: string; description: string }): CaptionDefinitionJson {
-    const { term, description } = data;
+  captionDefinition(data: Partial<CaptionDefinitionJson> | undefined): CaptionDefinitionJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: CaptionDefinitionJson = {
-      term: term ?? '',
-      description: description ?? '',
+      // term: this.convertJsonTextToAstText(data.term),
+      // description: this.convertJsonTextToAstText(data.description),
+      term: data.term ?? '',
+      description: data.description ?? '',
     };
 
     // Remove Unset Optionals
@@ -1990,13 +1985,20 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  captionDefinitionList(data: { columns: string[]; definitions: CaptionDefinitionJson[] }): CaptionDefinitionListJson {
-    const { columns, definitions } = data;
+  captionDefinitionList(data: Partial<CaptionDefinitionListJson> | undefined): CaptionDefinitionListJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: CaptionDefinitionListJson = {
-      columns: columns ?? [],
-      definitions: definitions ?? [],
+      columns: data.columns ?? [],
+      definitions: (data.definitions ?? [])
+        .map((d) => {
+          return this.captionDefinition({
+            term: d.term,
+            description: d.description,
+          });
+        })
+        .filter((d) => d != null),
     };
 
     // Remove Unset Optionals
@@ -2131,20 +2133,20 @@ class Builder extends BaseBuilder {
       node = {
         questions,
         elements,
-        flashcards,
-        descriptions,
-        statement,
-        statements,
+        flashcards: this.buildFlashcards(flashcards),
+        descriptions: this.buildDescriptionList(descriptions),
+        statement, //: this.statement(statement),
+        statements, //: this.buildStatements(statements),
         choices,
         responses,
         quizzes,
         heading,
         pairs,
         matrix,
-        table,
-        botResponses,
+        table: this.table(table),
+        botResponses: this.buildBotResponses(botResponses),
         ingredients,
-        captionDefinitionList,
+        captionDefinitionList: this.captionDefinitionList(captionDefinitionList),
         cardBits,
       };
 

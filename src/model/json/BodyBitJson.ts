@@ -18,7 +18,7 @@ export interface BaseBodyBitJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
-  _defaultExample: ExampleJson;
+  _defaultExample?: ExampleJson;
 }
 
 export interface GapJson extends BaseBodyBitJson {
@@ -33,7 +33,7 @@ export interface GapJson extends BaseBodyBitJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
-  _defaultExample: ExampleJson;
+  _defaultExample?: ExampleJson;
 }
 
 export interface MarkJson extends BaseBodyBitJson {
@@ -46,7 +46,7 @@ export interface MarkJson extends BaseBodyBitJson {
   // instruction: Text;
   isExample: boolean;
   example: ExampleJson;
-  _defaultExample: ExampleJson;
+  _defaultExample?: ExampleJson;
 }
 
 export interface SelectJson extends BaseBodyBitJson {
@@ -70,7 +70,7 @@ export interface SelectOptionJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
-  _defaultExample: ExampleJson;
+  _defaultExample?: ExampleJson;
 }
 
 export interface HighlightJson extends BaseBodyBitJson {
@@ -92,5 +92,5 @@ export interface HighlightTextJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
-  _defaultExample: ExampleJson;
+  _defaultExample?: ExampleJson;
 }

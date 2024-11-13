@@ -17,6 +17,7 @@ import {
   BitmarkPegParserContext,
   StatementsOrChoicesOrResponses,
   TypeKey,
+  TrueFalseValue,
 } from '../BitmarkPegParserTypes';
 
 const builder = new Builder();
@@ -116,8 +117,19 @@ function buildStatement(
 
   let statement: StatementJson | undefined;
 
+  let firstTrueFalse: TrueFalseValue | undefined;
   if (trueFalse && trueFalse.length > 0) {
-    statement = builder.statement({ ...trueFalse[0], ...tags });
+    firstTrueFalse = trueFalse[0];
+  }
+
+  if (firstTrueFalse) {
+    // Have to remove the statement JSON tag to keep typescript happy
+    const { statement: _ignore, ...tagsRest } = tags;
+    _ignore;
+    statement = builder.statement(
+      { ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest },
+      tags.isDefaultExample,
+    );
   }
 
   return statement;
@@ -165,19 +177,27 @@ function buildStatementsChoicesResponses(
 
     if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (choices/responses)', tags);
 
-    if (insertStatements) {
-      if (trueFalse && trueFalse.length > 0) {
-        const statement = builder.statement({ ...trueFalse[0], ...tags });
-        statements.push(statement);
-      }
-    } else if (insertChoices) {
-      if (trueFalse && trueFalse.length > 0) {
-        const choice = builder.choice({ ...trueFalse[0], ...tags });
+    let firstTrueFalse: TrueFalseValue | undefined;
+    if (trueFalse && trueFalse.length > 0) {
+      firstTrueFalse = trueFalse[0];
+    }
+
+    if (firstTrueFalse) {
+      if (insertStatements) {
+        // Have to remove the statement JSON tag to keep typescript happy
+        const { statement: _ignore, ...tagsRest } = tags;
+        _ignore;
+
+        const statement = builder.statement(
+          { ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest },
+          tags.isDefaultExample,
+        );
+        if (statement) statements.push(statement);
+      } else if (insertChoices) {
+        const choice = builder.choice({ ...firstTrueFalse, ...tags });
         choices.push(choice);
-      }
-    } else if (insertResponses) {
-      if (trueFalse && trueFalse.length > 0) {
-        const response = builder.response({ ...trueFalse[0], ...tags });
+      } else if (insertResponses) {
+        const response = builder.response({ ...firstTrueFalse, ...tags });
         responses.push(response);
       }
     }

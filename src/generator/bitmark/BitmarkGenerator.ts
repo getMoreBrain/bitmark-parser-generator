@@ -10,12 +10,12 @@ import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
 import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
-import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
 import { PropertyFormat, PropertyFormatType } from '../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BodyBitJson, GapJson, HighlightTextJson, MarkJson, SelectOptionJson } from '../../model/json/BodyBitJson';
+import { AudioResourceJson, ImageResourceJson, ResourceDataJson, ResourceJson } from '../../model/json/ResourceJson';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { ObjectUtils } from '../../utils/ObjectUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
@@ -33,28 +33,6 @@ import {
   StatementJson,
   TechnicalTermJson,
 } from '../../model/json/BitJson';
-import {
-  AppLinkResourceJson,
-  ArticleResourceJson,
-  AudioEmbedResourceJson,
-  AudioLinkResourceJson,
-  AudioResourceJson,
-  DocumentDownloadResourceJson,
-  DocumentEmbedResourceJson,
-  DocumentLinkResourceJson,
-  DocumentResourceJson,
-  ImageLinkResourceJson,
-  ImageResourceJson,
-  ResourceDataJson,
-  ResourceJson,
-  StillImageFilmEmbedResourceJson,
-  StillImageFilmLinkResourceJson,
-  StillImageFilmResourceJson,
-  VideoEmbedResourceJson,
-  VideoLinkResourceJson,
-  VideoResourceJson,
-  WebsiteLinkResourceJson,
-} from '../../model/json/ResourceJson';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
   debugGenerationInline: false,
@@ -595,7 +573,15 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> markConfigValue
+  // bitmarkAst -> bits -> bitsValue -> markConfig
+
+  protected enter_markConfig(_node: NodeInfo, _route: NodeInfo[]): boolean {
+    // Handler so markConfig is not processed by the default property handler
+    // Continue traversal
+    return true;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
 
   protected enter_markConfigValue(node: NodeInfo, route: NodeInfo[]): boolean {
     const markConfig = node.value as MarkConfigJson;
@@ -2515,6 +2501,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
       const enterFuncName = `enter_${tag}`;
 
+      // Skip if the function already exists, allows for custom handlers
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (typeof (this as any)[enterFuncName] === 'function') {
+        continue;
+      }
+
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[enterFuncName] = (node: NodeInfo, route: NodeInfo[]): boolean => {
         const resource = node.value as ResourceDataJson | undefined;
@@ -2564,27 +2556,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     for (const propertyConfig of Object.values(propertiesConfig)) {
       const astKey = propertyConfig.astKey ?? propertyConfig.tag;
 
-      // Special cases (handled outside of the automatically generated handlers)
-      if (astKey === PropertyTag.internalComment) continue;
-      if (astKey === PropertyTag.example) continue;
-      if (astKey === PropertyTag.labelTrue) continue;
-      if (astKey === PropertyTag.labelFalse) continue;
-      if (astKey === PropertyTag.posterImage) continue;
-      if (astKey === PropertyTag.imageSource) continue;
-      if (astKey === PropertyTag.imagePlaceholder) continue;
-      if (astKey === PropertyTag.technicalTerm) continue;
-      if (astKey === PropertyTag.servings) continue;
-      if (astKey === PropertyTag.person) continue;
-      if (astKey === PropertyAstKey.ast_markConfig) continue;
-      if (astKey === PropertyTag.ratingLevelStart) continue;
-      if (astKey === PropertyTag.ratingLevelEnd) continue;
-      if (astKey === PropertyTag.caption) continue;
-      if (astKey === PropertyTag.tag_title) continue;
-      if (astKey === PropertyTag.tag_mark) continue;
-      if (astKey === PropertyTag.tag_sampleSolution) continue;
-      if (astKey === PropertyTag.partialAnswer) continue;
-
       const enterFuncName = `enter_${astKey}`;
+
+      // Skip if the function already exists, allows for custom handlers
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (typeof (this as any)[enterFuncName] === 'function') {
+        continue;
+      }
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[enterFuncName] = (node: NodeInfo, route: NodeInfo[]) => {

@@ -147,8 +147,6 @@ class Ast {
 
           // Stop traversing the tree if the last node is bodyJson
           if (route[route.length - 1].key === NodeType.bodyJson) return false;
-          // Stop traversing the tree if the last node is __text__
-          if (route[route.length - 1].key === NodeType.__text__) return false;
 
           return true;
         },
@@ -160,9 +158,6 @@ class Ast {
         },
         leaf: (_node: NodeInfo, route: NodeInfo[]) => {
           console.log('Leaf:    ' + this.getRouteKey(route));
-
-          // Stop traversing the tree if the last node is __text__
-          if (route[route.length - 1].key === NodeType.__text__) return false;
         },
       },
       undefined,

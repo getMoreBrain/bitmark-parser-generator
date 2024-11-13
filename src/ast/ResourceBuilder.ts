@@ -4,6 +4,7 @@ import { TextAst } from '../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../model/enum/BitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { ObjectUtils } from '../utils/ObjectUtils';
+import { StringUtils } from '../utils/StringUtils';
 import { UrlUtils } from '../utils/UrlUtils';
 
 import { BaseBuilder } from './BaseBuilder';
@@ -22,9 +23,12 @@ import {
   ImageLinkResourceWrapperJson,
   ImageResourceJson,
   ImageResourceWrapperJson,
+  ImageResponsiveResourceJson,
+  ResourceDataJson,
   ResourceJson,
   StillImageFilmEmbedResourceWrapperJson,
   StillImageFilmLinkResourceWrapperJson,
+  StillImageFilmResourceJson,
   VideoEmbedResourceWrapperJson,
   VideoLinkResourceWrapperJson,
   VideoResourceWrapperJson,
@@ -36,12 +40,159 @@ import {
  */
 class ResourceBuilder extends BaseBuilder {
   /**
+   * Build and validate resource JSON object(s) from external resource JSON object(s)
+   *
+   * Note: a single input resource object can be converted to multiple resource objects
+   * (e.g. stillImageFilm -> image + audio)
+   *
+   * @param bitType
+   * @param resource
+   * @returns
+   */
+  public resourceFromResourceJson(
+    bitType: BitTypeType,
+    resource?: Partial<ResourceJson> | Partial<ResourceJson>[],
+  ): ResourceJson | ResourceJson[] | undefined {
+    if (!resource) return undefined;
+
+    const nodes: ResourceJson[] | undefined = [];
+
+    // Convert single resource to array
+    if (!Array.isArray(resource)) resource = [resource];
+
+    for (const thisResource of resource) {
+      // Validate we have a valid resource type
+      let type = ResourceTag.fromValue(thisResource.type);
+      if (!type) return undefined;
+
+      // Get the resource key
+      const resourceKey = ResourceTag.keyFromValue(type);
+      if (!resourceKey) return undefined;
+
+      // Override original type with type alias if present
+      const typeAlias = ResourceTag.fromValue(thisResource._typeAlias);
+      type = typeAlias ?? type;
+
+      let data: ResourceDataJson | undefined;
+
+      // TODO: This code should use the config to handle the combo resources. For now the logic is hardcoded
+
+      // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
+      if (type === ResourceTag.imageResponsive) {
+        const r = thisResource as unknown as ImageResponsiveResourceJson;
+        const imagePortraitNode = this.resourceFromResourceDataJson(
+          bitType,
+          ResourceTag.imagePortrait,
+          r.imagePortrait,
+        );
+        const imageLandscapeNode = this.resourceFromResourceDataJson(
+          bitType,
+          ResourceTag.imageLandscape,
+          r.imageLandscape,
+        );
+        if (imagePortraitNode) nodes.push(imagePortraitNode);
+        if (imageLandscapeNode) nodes.push(imageLandscapeNode);
+      } else if (type === ResourceTag.stillImageFilm) {
+        const r = thisResource as unknown as StillImageFilmResourceJson;
+        const imageNode = this.resourceFromResourceDataJson(bitType, ResourceTag.image, r.image);
+        const audioNode = this.resourceFromResourceDataJson(bitType, ResourceTag.audio, r.audio);
+        if (imageNode) nodes.push(imageNode);
+        if (audioNode) nodes.push(audioNode);
+      } else {
+        // Standard single resource case
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        data = (thisResource as any)[resourceKey];
+
+        if (!data) return undefined;
+
+        const node = this.resourceFromResourceDataJson(bitType, type, data);
+        if (node) nodes.push(node);
+      }
+    }
+
+    if (nodes.length === 0) return undefined;
+    if (nodes.length === 1) return nodes[0];
+    return nodes;
+  }
+
+  public resourceFromResourceDataJson(
+    bitType: BitTypeType,
+    type: ResourceTagType,
+    data: Partial<ResourceDataJson> | undefined,
+  ): ResourceJson | undefined {
+    if (!data) return undefined;
+    type = ResourceTag.fromValue(type) as ResourceTagType;
+    if (!type) return undefined;
+
+    const dataAsString: string | undefined = StringUtils.isString(data) ? (data as unknown as string) : undefined;
+
+    // url / src / href / app
+    const url = data.url || data.src || data.body || dataAsString;
+
+    // Sub resources
+    const posterImage = data.posterImage
+      ? (this.resourceFromResourceDataJson(bitType, ResourceTag.image, data.posterImage) as ImageResourceWrapperJson)
+          ?.image
+      : undefined;
+    const thumbnails = data.thumbnails
+      ? data.thumbnails.map((t) => {
+          return (this.resourceFromResourceDataJson(bitType, ResourceTag.image, t) as ImageResourceWrapperJson)?.image;
+        })
+      : undefined;
+
+    // Resource
+    const node = this.resource(bitType, {
+      type,
+
+      // Generic (except Article / Document)
+      value: url,
+
+      // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
+      format: data.format,
+
+      // ImageLikeResource
+      src1x: data.src1x,
+      src2x: data.src2x,
+      src3x: data.src3x,
+      src4x: data.src4x,
+      caption: this.convertJsonTextToAstText(data.caption),
+
+      // ImageLikeResource / VideoLikeResource
+      width: data.width ?? undefined,
+      height: data.height ?? undefined,
+      alt: data.alt,
+      zoomDisabled: data.zoomDisabled,
+
+      // VideoLikeResource
+      duration: data.duration,
+      mute: data.mute,
+      autoplay: data.autoplay,
+      allowSubtitles: data.allowSubtitles,
+      showSubtitles: data.showSubtitles,
+      posterImage,
+      thumbnails,
+
+      // WebsiteLinkResource
+      siteName: undefined, //data.siteName,
+
+      // Generic Resource
+      license: data.license,
+      copyright: data.copyright,
+      showInIndex: data.showInIndex,
+      search: data.search,
+    });
+
+    return node;
+  }
+
+  /**
    * Build resource node
    *
    * @param data - data for the node
    * @returns
    */
-  resource(
+  /* private */ resource(
     bitType: BitTypeType,
     data: {
       type: ResourceTagType;
@@ -310,7 +461,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -387,7 +538,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -438,7 +589,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -488,7 +639,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -539,7 +690,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -619,7 +770,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -702,7 +853,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -785,7 +936,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -892,7 +1043,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -975,7 +1126,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1020,7 +1171,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1063,7 +1214,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1107,7 +1258,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1151,7 +1302,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1195,7 +1346,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1239,7 +1390,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1284,7 +1435,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: (caption ?? []) as TextAst,
+        caption: this.convertJsonTextToAstText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1299,6 +1450,10 @@ class ResourceBuilder extends BaseBuilder {
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateResource(node);
   }
+
+  //
+  //
+  //
 
   //
   // Private

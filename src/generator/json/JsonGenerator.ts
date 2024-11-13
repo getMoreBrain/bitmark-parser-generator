@@ -11,8 +11,6 @@ import { JsonText, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { ExampleType } from '../../model/enum/ExampleType';
-import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
-import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextNodeType } from '../../model/enum/TextNodeType';
@@ -380,6 +378,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Stop traversal of this branch
     return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> markConfig
+
+  protected enter_markConfig(_node: NodeInfo, _route: NodeInfo[]): boolean {
+    // Handler so markConfig is not processed by the default property handler
+    // Continue traversal
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> markConfig -> markConfigValue
@@ -810,8 +816,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> parser
   // bitmarkAst -> bits -> bitsValue -> * -> internalComment
+
+  protected enter_internalComment(_node: NodeInfo, _route: NodeInfo[]): boolean {
+    // Stop traversal of this branch, handled in enter_parser()
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> parser
 
   protected enter_parser(node: NodeInfo, route: NodeInfo[]): void {
     const parser = node.value as ParserInfo | undefined;
@@ -889,22 +901,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     for (const propertyConfig of Object.values(propertiesConfig)) {
       const astKey = propertyConfig.astKey ?? propertyConfig.tag;
 
-      // Special cases (handled outside of the automatically generated handlers)
-      if (astKey === PropertyTag.internalComment) continue;
-      if (astKey === PropertyTag.caption) continue;
-      if (astKey === PropertyTag.example) continue;
-      if (astKey === PropertyTag.imageSource) continue;
-      if (astKey === PropertyTag.person) continue;
-      if (astKey === PropertyTag.imagePlaceholder) continue;
-      if (astKey === PropertyTag.width) continue;
-      if (astKey === PropertyTag.height) continue;
-      if (astKey === PropertyAstKey.ast_markConfig) continue;
-      if (astKey === PropertyTag.ratingLevelStart) continue;
-      if (astKey === PropertyTag.ratingLevelEnd) continue;
-      if (astKey === PropertyTag.productId) continue;
-      if (astKey === PropertyTag.tag_title) continue;
-
       const funcName = `enter_${astKey}`;
+
+      // Skip if the function already exists, allows for custom handlers
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (typeof (this as any)[funcName] === 'function') {
+        continue;
+      }
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, route: NodeInfo[]) => {
