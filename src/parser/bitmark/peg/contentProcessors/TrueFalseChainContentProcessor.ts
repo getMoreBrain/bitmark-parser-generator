@@ -188,11 +188,11 @@ function buildStatementsChoicesResponses(
         const statement = builder.statement({ ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest });
         if (statement) statements.push(statement);
       } else if (insertChoices) {
-        const choice = builder.choice({ ...firstTrueFalse, ...tags });
-        choices.push(choice);
+        const choice = builder.choice({ ...firstTrueFalse, choice: firstTrueFalse.text, ...tags });
+        if (choice) choices.push(choice);
       } else if (insertResponses) {
-        const response = builder.response({ ...firstTrueFalse, ...tags });
-        responses.push(response);
+        const response = builder.response({ ...firstTrueFalse, response: firstTrueFalse.text, ...tags });
+        if (response) responses.push(response);
       }
     }
   }

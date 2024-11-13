@@ -702,45 +702,57 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build choice[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildChoices(data: Partial<ChoiceJson>[] | undefined): ChoiceJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.choice(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build choice node
    *
    * @param data - data for the node
    * @returns
    */
-  choice(data: {
-    text: string;
-    isCorrect: boolean;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    example?: ExampleJson;
-    _isDefaultExample?: boolean;
-  }): ChoiceJson {
-    const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, _isDefaultExample, example } =
-      data;
+  choice(data: Partial<ChoiceJson> | undefined): ChoiceJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: ChoiceJson = {
-      choice: text ?? '',
-      isCorrect: !!isCorrect,
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      ...this.toExample(_isDefaultExample, example, !!isCorrect),
+      choice: data.choice ?? '',
+      isCorrect: !!data.isCorrect,
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(data._isDefaultExample, data.example, !!data.isCorrect),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
     });
 
     return node;
+  }
+
+  /**
+   * Build response[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildResponses(data: Partial<ResponseJson>[] | undefined): ResponseJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.response(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
   }
 
   /**
@@ -749,36 +761,24 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  response(data: {
-    text: string;
-    isCorrect: boolean;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    _isDefaultExample?: boolean;
-    example?: ExampleJson;
-  }): ResponseJson {
-    const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, _isDefaultExample, example } =
-      data;
+  response(data: Partial<ResponseJson> | undefined): ResponseJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: ResponseJson = {
-      response: text ?? '',
-      isCorrect: !!isCorrect,
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      ...this.toExample(_isDefaultExample, example, !!isCorrect),
+      response: data.response ?? '',
+      isCorrect: !!data.isCorrect,
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(data._isDefaultExample, data.example, !!data.isCorrect),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
     });
 
@@ -828,71 +828,63 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build quiz[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildQuizzes(data: Partial<QuizJson>[] | undefined): QuizJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.quiz(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build quiz node
    *
    * @param data - data for the node
    * @returns
    */
-  quiz(data: {
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    _isDefaultExample?: boolean;
-    example?: ExampleJson;
-    choices?: ChoiceJson[];
-    responses?: ResponseJson[];
-  }): QuizJson {
-    const {
-      choices,
-      responses,
-      item,
-      lead,
-      /*pageNumber, marginNumber,*/ hint,
-      instruction,
-      _isDefaultExample,
-      example,
-    } = data;
+  quiz(data: Partial<QuizJson> | undefined): QuizJson | undefined {
+    if (!data) return undefined;
 
     const convertedExample = {
-      ...this.toExample(_isDefaultExample, example),
+      ...this.toExample(data._isDefaultExample, data._defaultExample),
     };
 
-    // Push _isDefaultExample down the tree
-    this.pushExampleDownTreeBoolean(_isDefaultExample, convertedExample.example, true, choices);
-    this.pushExampleDownTreeBoolean(_isDefaultExample, convertedExample.example, false, responses);
+    let choices: ChoiceJson[] | undefined;
+    let responses: ResponseJson[] | undefined;
+
+    if (data.choices) {
+      choices = this.buildChoices(data.choices);
+
+      // Push _isDefaultExample down the tree
+      this.pushExampleDownTreeBoolean(data._isDefaultExample, convertedExample.example, true, choices);
+    } else if (data.responses) {
+      responses = this.buildResponses(data.responses);
+
+      // Push _isDefaultExample down the tree
+      this.pushExampleDownTreeBoolean(data._isDefaultExample, convertedExample.example, false, responses);
+    } else {
+      // No choices or responses, not a valid quiz
+      return undefined;
+    }
 
     // NOTE: Node order is important and is defined here
     const node: QuizJson = {
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      isExample: !!example,
-      // example: example ?? null,
-      // itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      // hint: this.toBitmarkTextNode(hint),
-      // instruction: this.toBitmarkTextNode(instruction),
-      // isExample: _isDefaultExample || example != null,
-      choices: choices ?? [],
-      responses: responses ?? [],
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      isExample: !!data._defaultExample,
+      choices: choices as ChoiceJson[],
+      responses: responses as ResponseJson[],
     };
-
-    // Remove either choices or responses - only one should be present
-    if (!choices) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      delete (node as any).choices;
-    } else {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      delete (node as any).responses;
-    }
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
     });
 
     return node;
@@ -904,21 +896,14 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  heading(
-    data: {
-      forKeys: string;
-      forValues: string | string[];
-    },
-    forValuesDefault: string | string[] = '',
-  ): HeadingJson | undefined {
-    const { forKeys, forValues } = data;
-
-    if (forKeys == null) return undefined;
+  heading(data: HeadingJson | undefined): HeadingJson | undefined {
+    if (!data) return undefined;
+    if (data.forKeys == null) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: HeadingJson = {
-      forKeys: forKeys ?? '',
-      forValues: forValues ?? forValuesDefault,
+      forKeys: data.forKeys,
+      forValues: data.forValues ?? data._forValuesDefault ?? '',
     };
 
     // Remove Unset Optionals
@@ -1009,23 +994,25 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build matrix[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildMatricies(data: Partial<MatrixJson>[] | undefined): MatrixJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.matrix(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build matrix node
    *
    * @param data - data for the node
    * @returns
    */
-  matrix(data: {
-    key: string;
-    cells: MatrixCellJson[];
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    _isDefaultExample?: boolean;
-  }): MatrixJson {
-    const { key, cells, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, _isDefaultExample } = data;
+  matrix(data: Partial<MatrixJson> | undefined): MatrixJson | undefined {
+    if (!data) return undefined;
 
     // const convertedExample = {
     //   ...this.toExample(_isDefaultExample, example),
@@ -1038,8 +1025,8 @@ class Builder extends BaseBuilder {
     let isExample = false;
 
     // Set isExample for matrix based on isExample for cells
-    for (const c of cells ?? []) {
-      if (_isDefaultExample && !c.isExample) {
+    for (const c of data.cells ?? []) {
+      if (data._isDefaultExample && !c.isExample) {
         c.isExample = true;
       }
       isExample = c.isExample ? true : isExample;
@@ -1047,20 +1034,20 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: MatrixJson = {
-      key: key ?? '',
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? undefined) as TextAst,
+      key: data.key ?? '',
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
       isExample,
-      cells,
+      cells: (data.cells ?? []).map((c) => this.matrixCell(c)).filter((c) => c != null),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
-      ignoreUndefined: ['lead', 'hint', 'isCaseSensitive'],
+      ignoreEmptyArrays: ['hint', 'item', 'cells'],
+      ignoreUndefined: ['isCaseSensitive'],
     });
 
     return node;
@@ -1072,56 +1059,31 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  matrixCell(data: {
-    values: string[];
-    item?: TextAst;
-    lead?: TextAst;
-    hint?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    instruction?: TextAst;
-    isCaseSensitive?: boolean;
-    _isDefaultExample?: boolean;
-    example?: ExampleJson;
-    _valuesAst?: TextAst[];
-    _defaultExample?: ExampleJson;
-  }): MatrixCellJson {
-    const {
-      values,
-      item,
-      lead,
-      /*pageNumber,
-      marginNumber,*/
-      hint,
-      instruction,
-      isCaseSensitive,
-      _isDefaultExample,
-      example,
-      _valuesAst,
-    } = data;
+  matrixCell(data: Partial<MatrixCellJson> | undefined): MatrixCellJson | undefined {
+    if (!data) return undefined;
 
     // Set default example
     let defaultExample = data._defaultExample;
     if (defaultExample == null) {
-      defaultExample = Array.isArray(_valuesAst) && _valuesAst.length > 0 ? _valuesAst[0] : null;
+      defaultExample = Array.isArray(data._valuesAst) && data._valuesAst.length > 0 ? data._valuesAst[0] : null;
     }
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCellJson = {
-      values: values ?? [],
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? undefined) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      isCaseSensitive: isCaseSensitive as boolean,
-      ...this.toExample(_isDefaultExample, example, defaultExample),
+      values: data.values ?? [],
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      isCaseSensitive: data.isCaseSensitive as boolean,
+      ...this.toExample(data._isDefaultExample, data.example, defaultExample),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
-      ignoreUndefined: ['example', 'lead', 'hint', 'isCaseSensitive'],
+      ignoreEmptyArrays: ['instruction', 'item', 'values'],
+      ignoreUndefined: ['example', 'isCaseSensitive'],
     });
 
     return node;
@@ -2089,12 +2051,12 @@ class Builder extends BaseBuilder {
       descriptions: this.buildDescriptionList(data.descriptions),
       statement: this.statement(data.statement),
       statements: this.buildStatements(data.statements),
-      choices: data.choices,
-      responses: data.responses,
-      quizzes: data.quizzes,
-      heading: data.heading,
+      choices: this.buildChoices(data.choices),
+      responses: this.buildResponses(data.responses),
+      quizzes: this.buildQuizzes(data.quizzes),
+      heading: this.heading(data.heading),
       pairs: this.buildPairs(bitType, data.pairs),
-      matrix: data.matrix,
+      matrix: this.buildMatricies(data.matrix),
       table: this.table(data.table),
       botResponses: this.buildBotResponses(data.botResponses),
       ingredients: data.ingredients,

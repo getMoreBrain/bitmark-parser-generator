@@ -418,7 +418,7 @@ function parseQuiz(
             const example = exampleTf || exampleCard;
 
             const response = builderFunc({
-              text: tfTags.text,
+              response: tfTags.text,
               isCorrect: tfTags.isCorrect,
               // item: tfTags.item as TextAst,
               // lead: tfTags.lead as TextAst,
@@ -431,7 +431,7 @@ function parseQuiz(
               // _isDefaultExample,
               // example,
             });
-            responsesOrChoices.push(response);
+            if (response) responsesOrChoices.push(response);
           }
 
           if (insertResponses) tags.responses = responsesOrChoices as ResponseJson[];
@@ -442,9 +442,9 @@ function parseQuiz(
         const quiz = builder.quiz({
           ...tags,
           _isDefaultExample: isDefaultExampleCard,
-          example: exampleCard,
+          _defaultExample: exampleCard,
         });
-        quizzes.push(quiz);
+        if (quiz) quizzes.push(quiz);
         // } else {
         //   context.addWarning('Ignoring card with empty quiz', content);
         // }
@@ -457,13 +457,13 @@ function parseQuiz(
     const quiz = builder.quiz({
       choices: choicesV1,
     });
-    quizzes.push(quiz);
+    if (quiz) quizzes.push(quiz);
   }
   if (insertResponses && Array.isArray(responsesV1) && responsesV1.length > 0) {
     const quiz = builder.quiz({
       responses: responsesV1,
     });
-    quizzes.push(quiz);
+    if (quiz) quizzes.push(quiz);
   }
 
   return {
@@ -773,7 +773,7 @@ function parseMatchMatrix(
           example,
           isCaseSensitive: isCaseSensitiveCell,
         });
-        matrixCells.push(matrixCell);
+        if (matrixCell) matrixCells.push(matrixCell);
       }
 
       sideIdx++;
@@ -794,7 +794,7 @@ function parseMatchMatrix(
         cells: matrixCells,
         ...matrixKeyTags,
       });
-      matrix.push(m);
+      if (m) matrix.push(m);
       // } else {
       //   context.addWarning('Ignoring card with empty body text', variant);
       // }

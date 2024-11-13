@@ -1,5 +1,4 @@
 import { Builder } from '../../ast/Builder';
-import { ResourceBuilder } from '../../ast/ResourceBuilder';
 import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
@@ -10,7 +9,7 @@ import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { ResourceJson, ResourceDataJson, ImageResourceWrapperJson } from '../../model/json/ResourceJson';
+import { ResourceJson, ImageResourceWrapperJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
 import { TextParser } from '../text/TextParser';
 
@@ -18,8 +17,6 @@ import {
   BitJson,
   ChoiceJson,
   HeadingJson,
-  MatrixJson,
-  QuestionJson,
   QuizJson,
   ResponseJson,
   StatementJson,
@@ -27,7 +24,6 @@ import {
   ExampleJson,
   ListItemJson,
   IngredientJson,
-  MatrixCellJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -59,7 +55,6 @@ interface Example {
 }
 
 const builder = new Builder();
-const resourceBuilder = new ResourceBuilder();
 
 /**
  * A parser for parsing bitmark JSON to bitmark AST
@@ -185,415 +180,72 @@ class JsonParser {
   }
 
   private bitToAst(bit: BitJson, internalComments: string[] | undefined): Bit | undefined {
-    const {
-      type,
-      originalType,
-      bitLevel,
-      format,
-      id,
-      externalId,
-      spaceId,
-      padletId,
-      jupyterId,
-      jupyterExecutionCount,
-      isPublic,
-      aiGenerated,
-      machineTranslated,
-      analyticsTag,
-      feedbackEngine,
-      feedbackType,
-      disableFeedback,
-      releaseVersion,
-      releaseKind,
-      releaseDate,
-      ageRange,
-      lang,
-      language,
-      publisher,
-      publisherName,
-      theme,
-      computerLanguage,
-      target,
-      slug,
-      tag,
-      reductionTag,
-      bubbleTag,
-      levelCEFRp,
-      levelCEFR,
-      levelILR,
-      levelACTFL,
-      icon,
-      iconTag,
-      colorTag,
-      flashcardSet,
-      subtype,
-      bookAlias,
-      coverImage,
-      coverColor,
-      publications,
-      author,
-      date,
-      dateEnd,
-      location,
-      kind,
-      hasMarkAsDone,
-      processHandIn,
-      showInIndex,
-      blockId,
-      pageNo,
-      x,
-      y,
-      width,
-      height,
-      index,
-      classification,
-      availableClassifications,
-      allowedBit,
-      tableFixedHeader,
-      tableSearch,
-      tableSort,
-      tablePagination,
-      tablePaginationLimit,
-      tableHeight,
-      tableWhitespaceNoWrap,
-      tableAutoWidth,
-      tableResizableColumns,
-      quizCountItems,
-      quizStrikethroughSolutions,
-      codeLineNumbers,
-      codeMinimap,
-      stripePricingTableId,
-      stripePublishableKey,
-      action,
-      thumbImage,
-      scormSource,
-      posterImage,
-      focusX,
-      focusY,
-      pointerLeft,
-      pointerTop,
-      listItemIndent,
-      backgroundWallpaper,
-      hasBookNavigation,
-      duration,
-      deeplink,
-      externalLink,
-      externalLinkText,
-      videoCallLink,
-      vendorUrl,
-      search,
-      bot,
-      list,
-      textReference,
-      isTracked,
-      isInfoOnly,
-      imageFirst,
-      activityType,
-      labelTrue,
-      labelFalse,
-      content2Buy,
-      mailingList,
-      buttonCaption,
-      callToActionUrl,
-      caption,
-      quotedPerson,
-      partialAnswer,
-      reasonableNumOfChars,
-      sampleSolution,
-      additionalSolutions,
-      resolved,
-      resolvedDate,
-      resolvedBy,
-      maxCreatedBits,
-      maxDisplayLevel,
-      page,
-      productId,
-      product,
-      productVideo,
-      productFolder,
-      technicalTerm,
-      servings,
-      ratingLevelStart,
-      ratingLevelEnd,
-      ratingLevelSelected,
-      book,
-      title,
-      subtitle,
-      level,
-      toc,
-      progress,
-      anchor,
-      reference: referenceIn,
-      referenceEnd,
-      item,
-      lead,
-      pageNumber,
-      marginNumber,
-      hint,
-      instruction,
-      example,
-      imageSource,
-      person,
-      partner,
-      marks,
-      imagePlaceholder,
-      resource,
-      logos,
-      images,
-      body,
-      elements,
-      statement,
-      isCorrect,
-      cards,
-      descriptions,
-      statements,
-      responses,
-      quizzes,
-      heading,
-      pairs,
-      matrix,
-      table,
-      captionDefinitionList,
-      choices,
-      questions,
-      ingredients,
-      listItems,
-      sections,
-      footer,
-      placeholders,
-    } = bit;
+    const { statement, product, productVideo, reference: referenceBit, ...bitRest } = bit;
 
-    const isCommented = type === BitType._comment && originalType !== undefined;
+    const isCommented = bit.type === BitType._comment && bit.originalType !== undefined;
 
     // Bit type
-    const bitType = Config.getBitType(isCommented ? originalType : type);
+    const bitType = Config.getBitType(isCommented ? bit.originalType : bit.type);
 
     // Bit level
-    const bitLevelValidated = Math.max(Math.min(bitLevel ?? 1, Config.bitLevelMax), Config.bitLevelMin);
+    const bitLevelValidated = Math.max(Math.min(bit.bitLevel ?? 1, Config.bitLevelMax), Config.bitLevelMin);
 
     // Get the bit config for the bit type
     const bitConfig = Config.getBitConfig(bitType);
 
     // Text Format
-    const textFormat = TextFormat.fromValue(format) ?? bitConfig.textFormatDefault;
+    const textFormat = TextFormat.fromValue(bit.format) ?? bitConfig.textFormatDefault;
 
     // Resource attachement type
-    const resourceAttachmentType = this.getResourceType(resource);
+    const resourceAttachmentType = this.getResourceType(bit.resource);
 
     // resource(s)
-    const resourcesNode = this.processResources(bitType, resource, images, logos);
+    const resourcesNode = this.processResources(bitType, bit.resource, bit.images, bit.logos);
 
     // body & placeholders
-    const bodyNode = this.bodyToAst(body, textFormat, placeholders);
-
-    // descriptions
-    // const descriptionNodes = this.descriptionsBitsToAst(descriptions);
+    const bodyNode = this.bodyToAst(bit.body, textFormat, bit.placeholders);
 
     //+-statement
-    const statementNodes = this.processStatements(statement, isCorrect, statements, example);
-
-    //+-response
-    const responseNodes = this.responseBitsToAst(bitType, responses as ResponseJson[]);
-
-    // quizzes
-    const quizNodes = this.quizBitsToAst(bitType, quizzes);
-
-    // heading
-    const headingNode = this.headingBitToAst(heading);
-
-    // matrix
-    const matrixNodes = this.matrixBitsToAst(matrix);
-
-    //+-choice
-    const choiceNodes = this.choiceBitsToAst(choices);
-
-    // questions
-    // const questionNodes = this.questionBitsToAst(questions);
+    const statementNodes = this.processStatements(statement, bit.isCorrect, bit.statements, bit.example);
 
     // ingredients
-    const ingredientsNodes = this.ingredientsBitsToAst(ingredients);
+    const ingredientsNodes = this.ingredientsBitsToAst(bit.ingredients);
 
     // listItems / sections (cardBits)
-    const cardBitNodes = this.listItemsToAst(listItems ?? sections, textFormat, placeholders);
+    const cardBitNodes = this.listItemsToAst(bit.listItems ?? bit.sections, textFormat, bit.placeholders);
 
     // footer
-    const footerNode = this.footerToAst(footer, textFormat);
+    const footerNode = this.footerToAst(bit.footer, textFormat);
 
     // Convert reference to referenceProperty
-    const { reference, referenceProperty } = this.referenceToAst(referenceIn);
+    const { reference, referenceProperty } = this.referenceToAst(referenceBit);
 
     // Build bit
     const bitNode = builder.bit({
+      ...bitRest,
       bitType,
       bitLevel: bitLevelValidated,
-      textFormat: format as TextFormatType,
+      textFormat: bit.format as TextFormatType,
       resourceType: resourceAttachmentType,
       isCommented,
-      id,
       internalComment: internalComments,
-      externalId,
-      spaceId,
-      padletId,
-      jupyterId,
-      jupyterExecutionCount,
-      isPublic,
-      aiGenerated,
-      machineTranslated,
-      analyticsTag,
-      feedbackEngine,
-      feedbackType,
-      disableFeedback,
-      releaseVersion,
-      releaseKind,
-      releaseDate,
-      ageRange,
-      lang,
-      language,
-      publisher,
-      publisherName,
-      theme,
-      computerLanguage,
-      target,
-      slug,
-      tag,
-      reductionTag,
-      bubbleTag,
-      levelCEFRp,
-      levelCEFR,
-      levelILR,
-      levelACTFL,
-      icon,
-      iconTag,
-      colorTag,
-      flashcardSet,
-      subtype,
-      bookAlias,
-      coverImage,
-      coverColor,
-      publications,
-      author,
-      date,
-      dateEnd,
-      location,
-      kind,
-      hasMarkAsDone,
-      processHandIn,
-      action,
-      showInIndex,
-      blockId,
-      pageNo,
-      x,
-      y,
-      width,
-      height,
-      index,
-      classification,
-      availableClassifications,
-      allowedBit,
-      tableFixedHeader,
-      tableSearch,
-      tableSort,
-      tablePagination,
-      tablePaginationLimit,
-      tableHeight,
-      tableWhitespaceNoWrap,
-      tableAutoWidth,
-      tableResizableColumns,
-      quizCountItems,
-      quizStrikethroughSolutions,
-      codeLineNumbers,
-      codeMinimap,
-      stripePricingTableId,
-      stripePublishableKey,
-      duration,
       referenceProperty,
-      thumbImage,
-      scormSource,
-      posterImage,
-      focusX,
-      focusY,
-      pointerLeft,
-      pointerTop,
-      listItemIndent,
-      backgroundWallpaper,
-      hasBookNavigation,
-      deeplink,
-      externalLink,
-      externalLinkText,
-      videoCallLink,
-      vendorUrl,
-      search,
-      bot,
-      list,
-      textReference,
-      isTracked,
-      isInfoOnly,
-      imageFirst,
-      activityType,
-      labelTrue,
-      labelFalse,
-      content2Buy,
-      mailingList,
-      buttonCaption,
-      callToActionUrl,
-      caption,
-      quotedPerson,
-      partialAnswer,
-      reasonableNumOfChars,
-      sampleSolution, //: this.convertJsonTextToAstText(sampleSolution),
-      additionalSolutions, //: this.convertJsonTextToAstText(additionalSolutions),
-      resolved,
-      resolvedDate,
-      resolvedBy,
-      maxCreatedBits,
-      maxDisplayLevel,
-      page,
-      productId,
       productList: product,
       productVideoList: productVideo,
-      productFolder,
-      technicalTerm,
-      servings,
-      ratingLevelStart,
-      ratingLevelEnd,
-      ratingLevelSelected,
-      book,
-      title,
-      subtitle,
-      level,
-      toc,
-      progress,
-      anchor,
       reference,
-      referenceEnd,
-      item,
-      lead,
-      hint,
-      instruction,
-      pageNumber,
-      marginNumber,
-      ...this.parseExample(example),
-      imageSource,
-      person: partner ?? person,
-      markConfig: marks,
-      imagePlaceholder,
+      ...this.parseExample(bit.example),
+      person: bit.partner ?? bit.person,
+      markConfig: bit.marks,
       resources: resourcesNode,
       body: bodyNode,
-      elements,
-      flashcards: cards,
-      descriptions,
+      flashcards: bit.cards,
       statements: statementNodes,
-      responses: responseNodes,
-      quizzes: quizNodes,
-      heading: headingNode,
-      pairs,
-      matrix: matrixNodes,
-      table,
-      choices: choiceNodes,
-      questions,
-      botResponses: this.processBotResponse(bitType, responses as BotResponseJson[]),
+      responses: this.processResponses(bitType, bit.responses as ResponseJson[]),
+      // quizzes: quizNodes,
+      // heading: headingNode,
+      // choices: choiceNodes,
+      botResponses: this.processBotResponse(bitType, bit.responses as BotResponseJson[]),
       ingredients: ingredientsNodes,
-      captionDefinitionList,
       cardBits: cardBitNodes,
       footer: footerNode,
     });
@@ -627,49 +279,12 @@ class JsonParser {
     return nodes;
   }
 
-  private choiceBitsToAst(choices?: ChoiceJson[]): ChoiceJson[] | undefined {
-    if (!Array.isArray(choices)) return undefined;
-
-    const nodes: ChoiceJson[] = [];
-    for (const item of choices) {
-      const node = builder.choice({
-        ...item,
-        text: item.choice ?? '',
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        instruction: this.convertJsonTextToAstText(item.instruction),
-        ...this.parseExample(item.example),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
-  }
-
-  private responseBitsToAst(bitType: BitTypeType, responses?: ResponseJson[]): ResponseJson[] | undefined {
+  private processResponses(bitType: BitTypeType, responses?: ResponseJson[]): ResponseJson[] | undefined {
     // Return early if bot response as the responses should be interpreted as bot responses
     if (Config.isOfBitType(bitType, BitType.botActionResponse)) return undefined;
-
     if (!Array.isArray(responses)) return undefined;
 
-    const nodes: ResponseJson[] = [];
-    for (const item of responses) {
-      const node = builder.response({
-        ...item,
-        text: item.response ?? '',
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        instruction: this.convertJsonTextToAstText(item.instruction),
-        ...this.parseExample(item.example),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
+    return responses;
   }
 
   private selectOptionBitsToAst(options?: SelectOptionJson[]): SelectOptionJson[] {
@@ -708,98 +323,6 @@ class JsonParser {
 
     return nodes;
   }
-
-  private quizBitsToAst(bitType: BitTypeType, quizzes?: QuizJson[]): QuizJson[] | undefined {
-    if (!Array.isArray(quizzes)) return undefined;
-
-    const nodes: QuizJson[] = [];
-    for (const item of quizzes) {
-      const choices = this.choiceBitsToAst(item.choices);
-      const responses = this.responseBitsToAst(bitType, item.responses);
-
-      const node = builder.quiz({
-        ...item,
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        instruction: this.convertJsonTextToAstText(item.instruction),
-        choices,
-        responses,
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
-  }
-
-  private headingBitToAst(heading?: HeadingJson): HeadingJson | undefined {
-    if (!heading) return undefined;
-    return builder.heading(heading);
-  }
-
-  private matrixBitsToAst(matrix?: MatrixJson[]): MatrixJson[] | undefined {
-    if (!Array.isArray(matrix)) return undefined;
-
-    const nodes: MatrixJson[] = [];
-    for (const item of matrix) {
-      const cells = this.matrixCellsToAst(item.cells) ?? [];
-
-      const node = builder.matrix({
-        ...item,
-        cells,
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        instruction: this.convertJsonTextToAstText(item.instruction),
-        // ...this.parseExample(item.example),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
-  }
-
-  private matrixCellsToAst(matrixCells?: MatrixCellJson[]): MatrixCellJson[] | undefined {
-    if (!Array.isArray(matrixCells)) return undefined;
-
-    const nodes: MatrixCellJson[] = [];
-    for (const item of matrixCells) {
-      const node = builder.matrixCell({
-        ...item,
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        instruction: this.convertJsonTextToAstText(item.instruction),
-        ...this.parseExample(item.example),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
-  }
-
-  // private questionBitsToAst(questions?: QuestionJson[]): QuestionJson[] | undefined {
-  //   if (!Array.isArray(questions)) return undefined;
-
-  //   const nodes: QuestionJson[] = [];
-  //   for (const item of questions) {
-  //     const node = builder.question({
-  //       ...item,
-  //       item: this.convertJsonTextToAstText(item.item),
-  //       lead: this.convertJsonTextToAstText(item.lead),
-  //       hint: this.convertJsonTextToAstText(item.hint),
-  //       instruction: this.convertJsonTextToAstText(item.instruction),
-  //       ...this.parseExample(item.example),
-  //     });
-  //     if (node) nodes.push(node);
-  //   }
-  //   if (nodes.length === 0) return undefined;
-
-  //   return nodes;
-  // }
 
   private processBotResponse(bitType: BitTypeType, responses?: BotResponseJson[]): BotResponseJson[] | undefined {
     // Return early if NOT bot response as the responses should be interpreted as standard responses
@@ -1263,42 +786,6 @@ class JsonParser {
       }),
     ) as R;
   }
-
-  /**
-   * Convert the string from the JSON to the AST format:
-   * Input:
-   *  - Bitmark v2/v3: string
-   * Output:
-   *  - breakscaped string
-   *
-   * In the case of Bitmark v2 type texts, there is nothing to do but cast the type.
-   *
-   * @param text string or TextAst or string[] or TextAst[]
-   * @param textFormat format of TextAst
-   * @returns Breakscaped string or breakscaped string[]
-   */
-  // private convertStringToBreakscapedString<T extends string | string[] | undefined>(
-  //   text: T,
-  // ): (T extends string[] ? BreakscapedString[] : BreakscapedString) | undefined {
-  //   type R = T extends string[] ? BreakscapedString[] : BreakscapedString;
-
-  //   if (text == null) return undefined;
-  //   if (Array.isArray(text)) {
-  //     const strArray: string[] = [];
-  //     for (let i = 0, len = text.length; i < len; i++) {
-  //       const t = text[i];
-
-  //       strArray[i] = Breakscape.breakscape(t as string);
-  //     }
-  //     return strArray as R;
-  //   }
-
-  //   return Breakscape.breakscape(text as string) as R;
-  // }
-  // private convertStringToBreakscapedString<T extends string | string[] | undefined>(text: T): T | undefined {
-  //   if (text == null) return undefined;
-  //   return text;
-  // }
 }
 
 export { JsonParser };

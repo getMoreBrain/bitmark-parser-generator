@@ -271,6 +271,7 @@ export interface ChoiceJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
@@ -283,6 +284,7 @@ export interface ResponseJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
@@ -294,11 +296,14 @@ export interface QuizJson {
   isExample: boolean;
   choices: ChoiceJson[];
   responses: ResponseJson[];
+  _isDefaultExample?: boolean;
+  _defaultExample?: ExampleJson;
 }
 
 export interface HeadingJson {
   forKeys: string;
   forValues: string | string[];
+  _forValuesDefault?: string | string[];
 }
 
 export interface PairJson {
@@ -327,6 +332,7 @@ export interface MatrixJson {
   isExample: boolean;
   // example: ExampleJson;
   cells: MatrixCellJson[];
+  _isDefaultExample?: boolean;
 }
 
 export interface MatrixCellJson {
@@ -338,6 +344,8 @@ export interface MatrixCellJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
+  _valuesAst?: TextAst[];
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 

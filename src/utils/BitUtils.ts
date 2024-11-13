@@ -30,7 +30,7 @@ class BitUtils {
     for (const node of nodes) {
       if (!node.isExample) {
         if (_isDefaultExample) {
-          node.example = node._defaultExample;
+          node.example = node._defaultExample as ExampleJson;
           node.isExample = true;
         } else {
           // node._isDefaultExample = false;
@@ -64,7 +64,7 @@ class BitUtils {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       if (!node.isExample && (!firstCorrectOnly || (node as any).isCorrect)) {
         if (_isDefaultExample) {
-          node.example = node._defaultExample;
+          node.example = node._defaultExample as ExampleJson;
           node.isExample = true;
         } else {
           // node._isDefaultExample = false;
