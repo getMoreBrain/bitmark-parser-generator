@@ -10,6 +10,7 @@ import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
+import { ResourceJson, ResourceDataJson, ImageResourceWrapperJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
 import { TextParser } from '../text/TextParser';
 
@@ -18,7 +19,6 @@ import {
   ChoiceJson,
   HeadingJson,
   MatrixJson,
-  PairJson,
   QuestionJson,
   QuizJson,
   ResponseJson,
@@ -27,7 +27,6 @@ import {
   ExampleJson,
   ListItemJson,
   IngredientJson,
-  CaptionDefinitionListJson,
   MatrixCellJson,
 } from '../../model/json/BitJson';
 import {
@@ -40,12 +39,6 @@ import {
   HighlightJson,
   MarkJson,
 } from '../../model/json/BodyBitJson';
-import {
-  ResourceJson,
-  ResourceDataJson,
-  ImageResourceWrapperJson,
-  AudioResourceWrapperJson,
-} from '../../model/json/ResourceJson';
 
 interface ReferenceAndReferenceProperty {
   reference?: string;
@@ -388,7 +381,7 @@ class JsonParser {
     const resourceAttachmentType = this.getResourceType(resource);
 
     // resource(s)
-    const resourcesNode = this.resourceBitToAst2(bitType, resource, images, logos);
+    const resourcesNode = this.processResources(bitType, resource, images, logos);
 
     // body & placeholders
     const bodyNode = this.bodyToAst(body, textFormat, placeholders);
@@ -408,9 +401,6 @@ class JsonParser {
     // heading
     const headingNode = this.headingBitToAst(heading);
 
-    // pairs
-    const pairsNodes = this.pairBitsToAst(bitType, pairs);
-
     // matrix
     const matrixNodes = this.matrixBitsToAst(matrix);
 
@@ -418,7 +408,7 @@ class JsonParser {
     const choiceNodes = this.choiceBitsToAst(choices);
 
     // questions
-    const questionNodes = this.questionBitsToAst(questions);
+    // const questionNodes = this.questionBitsToAst(questions);
 
     // ingredients
     const ingredientsNodes = this.ingredientsBitsToAst(ingredients);
@@ -596,11 +586,11 @@ class JsonParser {
       responses: responseNodes,
       quizzes: quizNodes,
       heading: headingNode,
-      pairs: pairsNodes,
+      pairs,
       matrix: matrixNodes,
       table,
       choices: choiceNodes,
-      questions: questionNodes,
+      questions,
       botResponses: this.processBotResponse(bitType, responses as BotResponseJson[]),
       ingredients: ingredientsNodes,
       captionDefinitionList,
@@ -748,33 +738,6 @@ class JsonParser {
     return builder.heading(heading);
   }
 
-  private pairBitsToAst(bitType: BitTypeType, pairs?: PairJson[]): PairJson[] | undefined {
-    if (!Array.isArray(pairs)) return undefined;
-
-    const nodes: PairJson[] = [];
-    for (const item of pairs) {
-      const keyAudio = (this.resourceDataToAst(bitType, ResourceTag.audio, item.keyAudio) as AudioResourceWrapperJson)
-        ?.audio;
-      const keyImage = (this.resourceDataToAst(bitType, ResourceTag.image, item.keyImage) as ImageResourceWrapperJson)
-        ?.image;
-
-      const node = builder.pair({
-        ...item,
-        keyAudio,
-        keyImage,
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        instruction: this.convertJsonTextToAstText(item.instruction),
-        ...this.parseExample(item.example),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
-  }
-
   private matrixBitsToAst(matrix?: MatrixJson[]): MatrixJson[] | undefined {
     if (!Array.isArray(matrix)) return undefined;
 
@@ -818,25 +781,25 @@ class JsonParser {
     return nodes;
   }
 
-  private questionBitsToAst(questions?: QuestionJson[]): QuestionJson[] | undefined {
-    if (!Array.isArray(questions)) return undefined;
+  // private questionBitsToAst(questions?: QuestionJson[]): QuestionJson[] | undefined {
+  //   if (!Array.isArray(questions)) return undefined;
 
-    const nodes: QuestionJson[] = [];
-    for (const item of questions) {
-      const node = builder.question({
-        ...item,
-        item: this.convertJsonTextToAstText(item.item),
-        lead: this.convertJsonTextToAstText(item.lead),
-        hint: this.convertJsonTextToAstText(item.hint),
-        instruction: this.convertJsonTextToAstText(item.instruction),
-        ...this.parseExample(item.example),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
+  //   const nodes: QuestionJson[] = [];
+  //   for (const item of questions) {
+  //     const node = builder.question({
+  //       ...item,
+  //       item: this.convertJsonTextToAstText(item.item),
+  //       lead: this.convertJsonTextToAstText(item.lead),
+  //       hint: this.convertJsonTextToAstText(item.hint),
+  //       instruction: this.convertJsonTextToAstText(item.instruction),
+  //       ...this.parseExample(item.example),
+  //     });
+  //     if (node) nodes.push(node);
+  //   }
+  //   if (nodes.length === 0) return undefined;
 
-    return nodes;
-  }
+  //   return nodes;
+  // }
 
   private processBotResponse(bitType: BitTypeType, responses?: BotResponseJson[]): BotResponseJson[] | undefined {
     // Return early if NOT bot response as the responses should be interpreted as standard responses
@@ -887,23 +850,6 @@ class JsonParser {
     // return nodes;
   }
 
-  // private captionDefinitionListToAst(
-  //   captionDefinitionList: CaptionDefinitionListJson,
-  // ): CaptionDefinitionListJson | undefined {
-  //   if (!captionDefinitionList) return undefined;
-
-  //   const item = captionDefinitionList;
-  //   return builder.captionDefinitionList({
-  //     ...item,
-  //     definitions: (item.definitions ?? []).map((d) => {
-  //       return builder.captionDefinition({
-  //         term: this.convertJsonTextToAstText(d.term),
-  //         description: this.convertJsonTextToAstText(d.description),
-  //       });
-  //     }),
-  //   });
-  // }
-
   private listItemsToAst(
     listItems: ListItemJson[],
     textFormat: TextFormatType,
@@ -936,7 +882,7 @@ class JsonParser {
     return undefined;
   }
 
-  private resourceBitToAst2(
+  private processResources(
     bitType: BitTypeType,
     resource: ResourceJson | undefined,
     images: ImageResourceWrapperJson[] | undefined,
@@ -965,77 +911,6 @@ class JsonParser {
     }
 
     return nodes;
-  }
-
-  private resourceDataToAst(
-    bitType: BitTypeType,
-    type: ResourceTagType,
-    data?: Partial<ResourceDataJson>,
-  ): ResourceJson | undefined {
-    let node: ResourceJson | undefined;
-
-    if (data) {
-      if (!data) return undefined;
-
-      const dataAsString: string | undefined = StringUtils.isString(data) ? (data as unknown as string) : undefined;
-
-      // url / src / href / app
-      const url = data.url || data.src || data.body || dataAsString;
-
-      // Sub resources
-      const posterImage = (
-        this.resourceDataToAst(bitType, ResourceTag.image, data.posterImage) as ImageResourceWrapperJson
-      )?.image;
-      const thumbnails = data.thumbnails
-        ? data.thumbnails.map((t) => {
-            return (this.resourceDataToAst(bitType, ResourceTag.image, t) as ImageResourceWrapperJson)?.image;
-          })
-        : undefined;
-
-      // Resource
-      node = resourceBuilder.resource(bitType, {
-        type,
-
-        // Generic (except Article / Document)
-        value: url,
-
-        // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
-        format: data.format,
-
-        // ImageLikeResource
-        src1x: data.src1x,
-        src2x: data.src2x,
-        src3x: data.src3x,
-        src4x: data.src4x,
-        caption: this.convertJsonTextToAstText(data.caption),
-
-        // ImageLikeResource / VideoLikeResource
-        width: data.width ?? undefined,
-        height: data.height ?? undefined,
-        alt: data.alt,
-        zoomDisabled: data.zoomDisabled,
-
-        // VideoLikeResource
-        duration: data.duration,
-        mute: data.mute,
-        autoplay: data.autoplay,
-        allowSubtitles: data.allowSubtitles,
-        showSubtitles: data.showSubtitles,
-        posterImage,
-        thumbnails,
-
-        // WebsiteLinkResource
-        siteName: undefined, //data.siteName,
-
-        // Generic Resource
-        license: data.license,
-        copyright: data.copyright,
-        showInIndex: data.showInIndex,
-        search: data.search,
-      });
-    }
-
-    return node;
   }
 
   /** TODO

@@ -6,6 +6,7 @@ import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
+import { AudioResourceWrapperJson, ImageResourceWrapperJson, ResourceJson } from '../model/json/ResourceJson';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
 import { ArrayUtils } from '../utils/ArrayUtils';
@@ -52,12 +53,6 @@ import {
   SelectJson,
   SelectOptionJson,
 } from '../model/json/BodyBitJson';
-import {
-  AudioResourceJson,
-  ImageResourceJson,
-  ImageResourceWrapperJson,
-  ResourceJson,
-} from '../model/json/ResourceJson';
 
 /**
  * Builder to build bitmark AST node programmatically
@@ -453,7 +448,7 @@ class Builder extends BaseBuilder {
     // const resources = ArrayUtils.asArray(resourcesIn);
 
     // Set the card node data
-    const cardNode = this.cardNode(data);
+    const cardNode = this.cardNode(bitType, data);
 
     // Add reasonableNumOfChars to the bit only for essay bits (in other cases it will be pushed down the tree)
     const reasonableNumOfCharsProperty = Config.isOfBitType(bitType, BitType.essay)
@@ -935,64 +930,63 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build pair[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildPairs(bitType: BitTypeType, data: Partial<PairJson>[] | undefined): PairJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.pair(bitType, d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build pair node
    *
    * @param data - data for the node
    * @returns
    */
-  pair(data: {
-    key?: string;
-    keyAudio?: AudioResourceJson;
-    keyImage?: ImageResourceJson;
-    values: string[];
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    isCaseSensitive?: boolean;
-    isDefaultExample?: boolean;
-    example?: ExampleJson;
-    _valuesAst?: TextAst[];
-  }): PairJson {
-    const {
-      key,
-      keyAudio,
-      keyImage,
-      values,
-      item,
-      lead,
-      /*pageNumber,
-      marginNumber,*/
-      hint,
-      instruction,
-      isCaseSensitive,
-      isDefaultExample,
-      example,
-      _valuesAst,
-    } = data;
+  pair(bitType: BitTypeType, data: Partial<PairJson> | undefined, isDefaultExample?: boolean): PairJson | undefined {
+    if (!data) return undefined;
 
-    const defaultExample = Array.isArray(_valuesAst) && _valuesAst.length > 0 ? _valuesAst[0] : null;
+    // Set default example
+    let defaultExample = data._defaultExample;
+    if (defaultExample == null) {
+      defaultExample = Array.isArray(data._valuesAst) && data._valuesAst.length > 0 ? data._valuesAst[0] : null;
+    }
+
+    // Process the keyAudio and keyImage resources
+    const keyAudio = (
+      ArrayUtils.asSingle(
+        this.resourceBuilder.resourceFromResourceDataJson(bitType, ResourceTag.audio, data.keyAudio),
+      ) as AudioResourceWrapperJson
+    )?.audio;
+
+    const keyImage = (
+      ArrayUtils.asSingle(
+        this.resourceBuilder.resourceFromResourceDataJson(bitType, ResourceTag.image, data.keyImage),
+      ) as ImageResourceWrapperJson
+    )?.image;
 
     // NOTE: Node order is important and is defined here
     const node: PairJson = {
-      key: key ?? '',
-      keyAudio: (keyAudio ?? undefined) as AudioResourceJson,
-      keyImage: (keyImage ?? undefined) as ImageResourceJson,
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      isCaseSensitive: isCaseSensitive as boolean,
-      ...this.toExample(isDefaultExample, example, defaultExample),
-      values,
+      key: data.key ?? '',
+      keyAudio,
+      keyImage,
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      isCaseSensitive: data.isCaseSensitive as boolean,
+      ...this.toExample(isDefaultExample, data.example, defaultExample),
+      values: data.values ?? [],
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction', 'values'],
       ignoreUndefined: ['example', 'isCaseSensitive'],
     });
 
@@ -1088,6 +1082,7 @@ class Builder extends BaseBuilder {
     isDefaultExample?: boolean;
     example?: ExampleJson;
     _valuesAst?: TextAst[];
+    _defaultExample?: ExampleJson;
   }): MatrixCellJson {
     const {
       values,
@@ -1103,7 +1098,11 @@ class Builder extends BaseBuilder {
       _valuesAst,
     } = data;
 
-    const defaultExample = Array.isArray(_valuesAst) && _valuesAst.length > 0 ? _valuesAst[0] : null;
+    // Set default example
+    let defaultExample = data._defaultExample;
+    if (defaultExample == null) {
+      defaultExample = Array.isArray(_valuesAst) && _valuesAst.length > 0 ? _valuesAst[0] : null;
+    }
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCellJson = {
@@ -1150,64 +1149,50 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build question[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildQuestions(data: Partial<QuestionJson>[] | undefined): QuestionJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.question(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build question node
    *
    * @param data - data for the node
    * @returns
    */
-  question(data: {
-    question: string;
-    partialAnswer?: string;
-    sampleSolution?: string;
-    additionalSolutions?: string[];
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    reasonableNumOfChars?: number;
-    isDefaultExample?: boolean;
-    example?: ExampleJson;
-    _sampleSolutionAst?: TextAst;
-  }): QuestionJson {
-    const {
-      question,
-      partialAnswer,
-      item,
-      lead,
-      /*pageNumber,
-      marginNumber,*/
-      hint,
-      instruction,
-      reasonableNumOfChars,
-      sampleSolution,
-      additionalSolutions,
-      isDefaultExample,
-      example,
-      _sampleSolutionAst,
-    } = data;
+  question(data: Partial<QuestionJson> | undefined, isDefaultExample?: boolean): QuestionJson | undefined {
+    if (!data) return undefined;
 
-    const defaultExample = _sampleSolutionAst;
+    // Set default example
+    let defaultExample = data._defaultExample;
+    if (defaultExample == null) {
+      defaultExample = data._sampleSolutionAst;
+    }
 
     // NOTE: Node order is important and is defined here
     const node: QuestionJson = {
-      question: question ?? '',
-      partialAnswer: partialAnswer ?? '',
-      sampleSolution: sampleSolution ?? '',
-      additionalSolutions: (additionalSolutions ?? undefined) as string[],
-      reasonableNumOfChars: (reasonableNumOfChars ?? undefined) as number,
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? undefined) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      ...this.toExample(isDefaultExample, example, defaultExample),
+      question: data.question ?? '',
+      partialAnswer: data.partialAnswer ?? '',
+      sampleSolution: data.sampleSolution ?? '',
+      additionalSolutions: (data.additionalSolutions ?? undefined) as string[],
+      reasonableNumOfChars: (data.reasonableNumOfChars ?? undefined) as number,
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(isDefaultExample, data.example, defaultExample),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
       ignoreEmptyString: ['question', 'partialAnswer', 'sampleSolution'],
     });
@@ -1330,6 +1315,7 @@ class Builder extends BaseBuilder {
     isDefaultExample?: boolean;
     example?: ExampleJson;
     _solutionsAst: TextAst[];
+    _defaultExample?: ExampleJson;
   }): GapJson {
     const {
       solutions,
@@ -1358,7 +1344,11 @@ class Builder extends BaseBuilder {
     // _defaultExample: ExampleJson;
     // solutions: string[];
 
-    const defaultExample = Array.isArray(_solutionsAst) && _solutionsAst.length > 0 ? _solutionsAst[0] : null;
+    // Set default example
+    let defaultExample = data._defaultExample;
+    if (defaultExample == null) {
+      defaultExample = Array.isArray(_solutionsAst) && _solutionsAst.length > 0 ? _solutionsAst[0] : null;
+    }
 
     // NOTE: Node order is important and is defined here
     const node: GapJson = {
@@ -2071,90 +2061,52 @@ class Builder extends BaseBuilder {
     return NodeValidator.validateCardBit(node);
   }
 
-  private cardNode(data: {
-    flashcards?: FlashcardJson[];
-    descriptions?: DescriptionListItemJson[];
-    questions?: QuestionJson[];
-    elements?: string[];
-    statement?: StatementJson;
-    statements?: StatementJson[];
-    choices?: ChoiceJson[];
-    responses?: ResponseJson[];
-    quizzes?: QuizJson[];
-    heading?: HeadingJson;
-    pairs?: PairJson[];
-    matrix?: MatrixJson[];
-    table?: TableJson;
-    botResponses?: BotResponseJson[];
-    ingredients?: IngredientJson[];
-    captionDefinitionList?: CaptionDefinitionListJson;
-    cardBits?: CardBit[];
-  }): CardNode | undefined {
-    let node: CardNode | undefined;
-    const {
-      questions,
-      elements,
-      flashcards,
-      descriptions,
-      statement,
-      statements,
-      choices,
-      responses,
-      quizzes,
-      heading,
-      pairs,
-      matrix,
-      table,
-      botResponses,
-      ingredients,
-      captionDefinitionList,
-      cardBits,
-    } = data;
+  private cardNode(
+    bitType: BitTypeType,
+    data: {
+      flashcards?: FlashcardJson[];
+      descriptions?: DescriptionListItemJson[];
+      questions?: QuestionJson[];
+      elements?: string[];
+      statement?: StatementJson;
+      statements?: StatementJson[];
+      choices?: ChoiceJson[];
+      responses?: ResponseJson[];
+      quizzes?: QuizJson[];
+      heading?: HeadingJson;
+      pairs?: PairJson[];
+      matrix?: MatrixJson[];
+      table?: TableJson;
+      botResponses?: BotResponseJson[];
+      ingredients?: IngredientJson[];
+      captionDefinitionList?: CaptionDefinitionListJson;
+      cardBits?: CardBit[];
+    },
+  ): CardNode | undefined {
+    const node: CardNode = {
+      questions: this.buildQuestions(data.questions),
+      elements: data.elements,
+      flashcards: this.buildFlashcards(data.flashcards),
+      descriptions: this.buildDescriptionList(data.descriptions),
+      statement: this.statement(data.statement),
+      statements: this.buildStatements(data.statements),
+      choices: data.choices,
+      responses: data.responses,
+      quizzes: data.quizzes,
+      heading: data.heading,
+      pairs: this.buildPairs(bitType, data.pairs),
+      matrix: data.matrix,
+      table: this.table(data.table),
+      botResponses: this.buildBotResponses(data.botResponses),
+      ingredients: data.ingredients,
+      captionDefinitionList: this.captionDefinitionList(data.captionDefinitionList),
+      cardBits: data.cardBits,
+    };
 
-    if (
-      questions ||
-      elements ||
-      flashcards ||
-      descriptions ||
-      statement ||
-      statements ||
-      choices ||
-      responses ||
-      quizzes ||
-      heading ||
-      pairs ||
-      matrix ||
-      table ||
-      botResponses ||
-      ingredients ||
-      captionDefinitionList ||
-      cardBits
-    ) {
-      node = {
-        questions,
-        elements,
-        flashcards: this.buildFlashcards(flashcards),
-        descriptions: this.buildDescriptionList(descriptions),
-        statement, //: this.statement(statement),
-        statements, //: this.buildStatements(statements),
-        choices,
-        responses,
-        quizzes,
-        heading,
-        pairs,
-        matrix,
-        table: this.table(table),
-        botResponses: this.buildBotResponses(botResponses),
-        ingredients,
-        captionDefinitionList: this.captionDefinitionList(captionDefinitionList),
-        cardBits,
-      };
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node);
 
-      // Remove Unset Optionals
-      ObjectUtils.removeUnwantedProperties(node);
-    }
-
-    return node;
+    return Object.keys(node).length > 0 ? node : undefined;
   }
 
   /**

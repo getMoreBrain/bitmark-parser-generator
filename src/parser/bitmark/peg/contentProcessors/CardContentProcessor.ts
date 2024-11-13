@@ -493,11 +493,14 @@ function parseQuestions(
         const tags = content.data;
 
         // if (tags.cardBody) {
-        const q = builder.question({
-          question: tags.cardBodyStr ?? Breakscape.EMPTY_STRING,
-          ...tags,
-        });
-        questions.push(q);
+        const q = builder.question(
+          {
+            question: tags.cardBodyStr ?? Breakscape.EMPTY_STRING,
+            ...tags,
+          },
+          tags.isDefaultExample,
+        );
+        if (q) questions.push(q);
         // }
         // else {
         //   context.addWarning('Ignoring card with empty body text', content);
@@ -633,17 +636,21 @@ function parseMatchPairs(
       const isDefaultExample = isDefaultExampleCard || isDefaultExampleCardSet;
       const example = exampleCard || exampleCardSet;
 
-      const pair = builder.pair({
-        key: pairKey ?? Breakscape.EMPTY_STRING,
-        keyAudio,
-        keyImage,
-        values: pairValues,
-        _valuesAst: _pairValuesAst,
-        ...extraTags,
+      const pair = builder.pair(
+        bitType,
+        {
+          key: pairKey ?? '',
+          keyAudio,
+          keyImage,
+          values: pairValues,
+          _valuesAst: _pairValuesAst,
+          ...extraTags,
+          // isDefaultExample,
+          example,
+        },
         isDefaultExample,
-        example,
-      });
-      pairs.push(pair);
+      );
+      if (pair) pairs.push(pair);
       // } else {
       //   context.addWarning('Ignoring card with empty body text', variant);
       // }
@@ -885,7 +892,7 @@ function parseBotActionResponses(
           feedback: feedback ?? Breakscape.EMPTY_STRING,
           ...tags,
         });
-        botResponses.push(botResponse);
+        if (botResponse) botResponses.push(botResponse);
       }
     }
   }
@@ -1009,12 +1016,14 @@ function parseCaptionDefinitionsList(
     columns.length > 0
       ? builder.captionDefinitionList({
           columns,
-          definitions: rows.map((row) => {
-            return builder.captionDefinition({
-              term: row[0],
-              description: row[1],
-            });
-          }),
+          definitions: rows
+            .map((row) => {
+              return builder.captionDefinition({
+                term: row[0],
+                description: row[1],
+              });
+            })
+            .filter((d) => d != null),
         })
       : undefined;
 

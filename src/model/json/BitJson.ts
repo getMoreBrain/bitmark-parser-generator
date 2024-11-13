@@ -1,4 +1,4 @@
-import { JsonText } from '../ast/TextNodes';
+import { JsonText, TextAst } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
 import { AudioResourceJson, ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
@@ -310,6 +310,8 @@ export interface PairJson {
   isExample: boolean;
   example: ExampleJson;
   values: string[];
+  _valuesAst?: TextAst[];
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
@@ -353,6 +355,7 @@ export interface QuestionJson {
   reasonableNumOfChars: number;
   isExample: boolean;
   example: ExampleJson;
+  _sampleSolutionAst?: TextAst;
   _defaultExample?: ExampleJson;
 }
 

@@ -12,14 +12,7 @@ import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { StringUtils } from '../utils/StringUtils';
 
-// export interface WithExample {
-//   isDefaultExample: boolean;
-//   isExample: boolean;
-//   example?: Example;
-// }
-
 export interface WithExampleJson {
-  // isDefaultExample?: boolean;
   isExample: boolean;
   example: ExampleJson;
   _defaultExample?: ExampleJson;
