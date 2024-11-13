@@ -94,8 +94,8 @@ export interface BitHeader {
 export interface TrueFalseValue {
   text: string;
   isCorrect: boolean;
-  isDefaultExample: boolean;
   example?: ExampleJson;
+  _isDefaultExample: boolean;
 }
 
 export interface CardData {
@@ -120,7 +120,6 @@ export interface BitContentProcessorResult {
   person?: PersonJson;
   propertyTitle?: BreakscapedString;
   trueFalse?: TrueFalseValue[];
-  isDefaultExample?: boolean;
   lang?: BreakscapedString;
   example?: ExampleJson;
   isCorrect?: boolean;
@@ -186,6 +185,8 @@ export interface BitContentProcessorResult {
 
   extraProperties?: ExtraProperties;
   internalComments?: BreakscapedString[];
+
+  _isDefaultExample?: boolean;
 }
 
 export interface BitSpecificTitles {

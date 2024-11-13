@@ -199,9 +199,7 @@ export interface Bit {
   hint?: TextAst;
   instruction?: TextAst;
   isExample?: boolean;
-  isDefaultExample: boolean;
   example?: ExampleJson;
-  _defaultExample?: ExampleJson;
   imageSource?: ImageSourceJson;
   person?: PersonJson;
   imagePlaceholder?: ImageResourceWrapperJson;
@@ -217,12 +215,16 @@ export interface Bit {
 
   markup?: string; // Called 'bitmark' in the JSON
   parser?: ParserInfo;
+
+  // Private properties
+  _isDefaultExample: boolean;
+  _defaultExample?: ExampleJson;
 }
 
 export type Example = JsonText | string | boolean; // BitmarkTextNode | string | boolean;
 
 export interface WithExample {
-  isDefaultExample: boolean;
+  _isDefaultExample: boolean;
   isExample: boolean;
   example?: Example;
 }
@@ -260,10 +262,10 @@ export interface CardBit {
   hint?: TextAst;
   instruction?: TextAst;
   isExample?: boolean;
-  isDefaultExample: boolean;
   example?: ExampleJson;
   extraProperties?: ExtraProperties;
   body?: Body;
+  _isDefaultExample: boolean;
 }
 
 // Card Node

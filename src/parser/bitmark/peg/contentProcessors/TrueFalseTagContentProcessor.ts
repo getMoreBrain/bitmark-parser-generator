@@ -32,7 +32,7 @@ function trueFalseTagContentProcessor(
   trueFalse.push({
     text: trimmedStringValue,
     isCorrect: type === TypeKey.True,
-    isDefaultExample: false,
+    _isDefaultExample: false,
   });
 }
 export { trueFalseTagContentProcessor };

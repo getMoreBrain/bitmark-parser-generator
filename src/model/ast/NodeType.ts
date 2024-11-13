@@ -203,7 +203,7 @@ const NodeType = superenum({
   isCaseSensitive: 'isCaseSensitive',
   isCommented: 'isCommented',
   isCorrect: 'isCorrect',
-  isDefaultExample: 'isDefaultExample',
+  _isDefaultExample: '_isDefaultExample',
   isExample: 'isExample',
   isInfoOnly: 'isInfoOnly',
   isInfoOnlyValue: 'isInfoOnlyValue',

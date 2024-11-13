@@ -119,7 +119,7 @@ export interface JsonGeneratorOptions {
 interface ExampleNode {
   isExample: boolean;
   example?: Example | undefined;
-  isDefaultExample: boolean;
+  _isDefaultExample: boolean;
 }
 
 interface ExampleJsonWrapper {
@@ -1008,7 +1008,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       isBoolean: boolean;
     },
   ): ExampleJsonWrapper {
-    const { isExample, example, isDefaultExample } = node;
+    const { isExample, example, _isDefaultExample } = node;
     const { defaultExample, isBoolean } = options;
 
     if (!isExample) {
@@ -1019,7 +1019,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     let exampleValue;
-    if (isDefaultExample) {
+    if (_isDefaultExample) {
       exampleValue = isBoolean
         ? BooleanUtils.toBoolean(defaultExample)
         : this.convertBreakscapedStringToJsonText(defaultExample as BreakscapedString, TextFormat.bitmarkMinusMinus);

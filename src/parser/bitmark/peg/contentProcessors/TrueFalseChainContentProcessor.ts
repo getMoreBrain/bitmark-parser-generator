@@ -126,10 +126,7 @@ function buildStatement(
     // Have to remove the statement JSON tag to keep typescript happy
     const { statement: _ignore, ...tagsRest } = tags;
     _ignore;
-    statement = builder.statement(
-      { ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest },
-      tags.isDefaultExample,
-    );
+    statement = builder.statement({ ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest });
   }
 
   return statement;
@@ -188,10 +185,7 @@ function buildStatementsChoicesResponses(
         const { statement: _ignore, ...tagsRest } = tags;
         _ignore;
 
-        const statement = builder.statement(
-          { ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest },
-          tags.isDefaultExample,
-        );
+        const statement = builder.statement({ ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest });
         if (statement) statements.push(statement);
       } else if (insertChoices) {
         const choice = builder.choice({ ...firstTrueFalse, ...tags });

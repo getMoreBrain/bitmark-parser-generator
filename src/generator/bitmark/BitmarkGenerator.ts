@@ -2065,7 +2065,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const parent = this.getParentNode(route);
     const example = parent?.value.example ?? null;
-    // const isDefaultExample = parent?.value.isDefaultExample ?? false;
+    // const _isDefaultExample = parent?.value._isDefaultExample ?? false;
 
     if (example != null && example !== '') {
       this.writeOPA();
@@ -2098,11 +2098,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   //   const value = node.value as ExampleJson | undefined;
   //   const parent = this.getParentNode(route);
   //   const isExample = parent?.value.isExample ?? false;
-  //   const isDefaultExample = parent?.value.isDefaultExample ?? false;
+  //   const _isDefaultExample = parent?.value._isDefaultExample ?? false;
 
   //   if (!isExample) return;
 
-  //   if (isDefaultExample) {
+  //   if (_isDefaultExample) {
   //     this.writeOPA();
   //     this.writeString('example');
   //     this.writeCL();

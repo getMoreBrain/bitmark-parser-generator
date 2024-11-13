@@ -231,6 +231,7 @@ export interface FlashcardJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
@@ -244,6 +245,7 @@ export interface DescriptionListItemJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
@@ -256,6 +258,7 @@ export interface StatementJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
@@ -356,6 +359,7 @@ export interface QuestionJson {
   isExample: boolean;
   example: ExampleJson;
   _sampleSolutionAst?: TextAst;
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
