@@ -732,13 +732,13 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  heading(data: HeadingJson | undefined): HeadingJson | undefined {
+  heading(data: Partial<HeadingJson> | undefined): HeadingJson | undefined {
     if (!data) return undefined;
     if (data.forKeys == null) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: HeadingJson = {
-      forKeys: data.forKeys,
+      forKeys: data.forKeys ?? '',
       forValues: data.forValues ?? data._forValuesDefault ?? '',
     };
 
@@ -774,10 +774,7 @@ class Builder extends BaseBuilder {
     if (!data) return undefined;
 
     // Set default example
-    let defaultExample = data._defaultExample;
-    if (defaultExample == null) {
-      defaultExample = Array.isArray(data._valuesAst) && data._valuesAst.length > 0 ? data._valuesAst[0] : null;
-    }
+    const defaultExample = Array.isArray(data._valuesAst) && data._valuesAst.length > 0 ? data._valuesAst[0] : null;
 
     // Process the keyAudio and keyImage resources
     const keyAudio = (
@@ -804,6 +801,7 @@ class Builder extends BaseBuilder {
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data._isDefaultExample, data.example, defaultExample),
       values: data.values ?? [],
+      _valuesAst: data._valuesAst,
     };
 
     // Remove Unset Optionals
@@ -899,10 +897,7 @@ class Builder extends BaseBuilder {
     if (!data) return undefined;
 
     // Set default example
-    let defaultExample = data._defaultExample;
-    if (defaultExample == null) {
-      defaultExample = Array.isArray(data._valuesAst) && data._valuesAst.length > 0 ? data._valuesAst[0] : null;
-    }
+    const defaultExample = Array.isArray(data._valuesAst) && data._valuesAst.length > 0 ? data._valuesAst[0] : null;
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCellJson = {
@@ -913,6 +908,7 @@ class Builder extends BaseBuilder {
       instruction: this.convertJsonTextToAstText(data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data._isDefaultExample, data.example, defaultExample),
+      _valuesAst: data._valuesAst,
     };
 
     // Remove Unset Optionals
@@ -970,10 +966,7 @@ class Builder extends BaseBuilder {
     if (!data) return undefined;
 
     // Set default example
-    let defaultExample = data._defaultExample;
-    if (defaultExample == null) {
-      defaultExample = data._sampleSolutionAst;
-    }
+    const defaultExample = data._sampleSolutionAst;
 
     // NOTE: Node order is important and is defined here
     const node: QuestionJson = {
@@ -987,6 +980,7 @@ class Builder extends BaseBuilder {
       hint: this.convertJsonTextToAstText(data.hint),
       instruction: this.convertJsonTextToAstText(data.instruction),
       ...this.toExample(data._isDefaultExample, data.example, defaultExample),
+      _sampleSolutionAst: data._sampleSolutionAst,
     };
 
     // Remove Unset Optionals
@@ -1001,33 +995,36 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build ingredient[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildIngredients(data: Partial<IngredientJson>[] | undefined): IngredientJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.ingredient(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build ingredient node
    *
    * @param data - data for the node
    * @returns
    */
-  ingredient(data: {
-    title?: string;
-    checked?: boolean;
-    item?: string;
-    quantity?: number;
-    unit?: string;
-    unitAbbr?: string;
-    decimalPlaces?: number;
-    disableCalculation?: boolean;
-  }): IngredientJson {
-    const { title, checked, item, quantity, unit, unitAbbr, decimalPlaces, disableCalculation } = data;
+  ingredient(data: Partial<IngredientJson> | undefined): IngredientJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: IngredientJson = {
-      title: title ?? '',
-      checked: checked ?? false,
-      item: item ?? '',
-      quantity: quantity ?? 0,
-      unit: unit ?? '',
-      unitAbbr: unitAbbr ?? '',
-      decimalPlaces: decimalPlaces ?? 1,
-      disableCalculation: disableCalculation ?? false,
+      title: data.title ?? '',
+      checked: data.checked ?? false,
+      item: data.item ?? '',
+      quantity: data.quantity ?? 0,
+      unit: data.unit ?? '',
+      unitAbbr: data.unitAbbr ?? '',
+      decimalPlaces: data.decimalPlaces ?? 1,
+      disableCalculation: data.disableCalculation ?? false,
     };
 
     // Remove Unset Optionals
@@ -1060,27 +1057,6 @@ class Builder extends BaseBuilder {
     return node;
   }
 
-  // /**
-  //  * Build bodyPartText node
-  //  *
-  //  * @param data - data for the node
-  //  * @param isPlain - true if plain text, otherwise false
-  //  * @returns
-  //  */
-  // bodyText(data: { text: TextAst }, isPlain: boolean): BodyText {
-  //   const { text } = data;
-
-  //   // NOTE: Node order is important and is defined here
-  //   const node: BodyText = {
-  //     type: BodyBitType.text,
-  //     data: {
-  //       bodyText: this.toBitmarkTextNode(text),
-  //       isPlain,
-  //     },
-  //   };
-  //   return node;
-  // }
-
   /**
    * Build footer node
    *
@@ -1103,64 +1079,24 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  gap(data: {
-    solutions: string[];
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    isCaseSensitive?: boolean;
-    _isDefaultExample?: boolean;
-    example?: ExampleJson;
-    _solutionsAst: TextAst[];
-    _defaultExample?: ExampleJson;
-  }): GapJson {
-    const {
-      solutions,
-      item,
-      lead,
-      /*pageNumber,
-      marginNumber,*/
-      hint,
-      instruction,
-      isCaseSensitive,
-      _isDefaultExample,
-      example,
-      _solutionsAst,
-    } = data;
-
-    // type: 'gap'; // body bit type
-    // item: JsonText;
-    // lead: JsonText;
-    // // pageNumber: JsonText;
-    // // marginNumber: JsonText;
-    // hint: JsonText;
-    // instruction: JsonText;
-    // isCaseSensitive: boolean;
-    // isExample: boolean;
-    // example: ExampleJson;
-    // _defaultExample: ExampleJson;
-    // solutions: string[];
+  gap(data: Partial<GapJson> | undefined): GapJson | undefined {
+    if (!data) return undefined;
 
     // Set default example
-    let defaultExample = data._defaultExample;
-    if (defaultExample == null) {
-      defaultExample = Array.isArray(_solutionsAst) && _solutionsAst.length > 0 ? _solutionsAst[0] : null;
-    }
+    const defaultExample =
+      Array.isArray(data._solutionsAst) && data._solutionsAst.length > 0 ? data._solutionsAst[0] : null;
 
     // NOTE: Node order is important and is defined here
     const node: GapJson = {
       type: BodyBitType.gap,
-      solutions: solutions ?? [], // Must be before other properties except type
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? []) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      isCaseSensitive: isCaseSensitive as boolean,
-      // ...this.toExample(_isDefaultExample, example),
-      ...this.toExample(_isDefaultExample, example, defaultExample),
+      solutions: data.solutions ?? [], // Must be before other properties except type
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      isCaseSensitive: data.isCaseSensitive as boolean,
+      ...this.toExample(data._isDefaultExample, data.example, defaultExample),
+      _solutionsAst: data._solutionsAst ?? [],
     };
 
     // Remove Unset Optionals
@@ -1179,7 +1115,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildMarkConfigs(data: MarkConfigJson[] | undefined): MarkConfigJson[] | undefined {
+  buildMarkConfigs(data: Partial<MarkConfigJson>[] | undefined): MarkConfigJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
     const nodes = data.map((d) => this.markConfig(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
@@ -1191,14 +1127,14 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  markConfig(data: { mark: string; color?: string; emphasis?: string }): MarkConfigJson {
-    const { mark, color, emphasis } = data;
+  markConfig(data: Partial<MarkConfigJson> | undefined): MarkConfigJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: MarkConfigJson = {
-      mark: mark ?? 'unknown',
-      color: color ?? '',
-      emphasis: emphasis ?? '',
+      mark: data.mark ?? 'unknown',
+      color: data.color ?? '',
+      emphasis: data.emphasis ?? '',
     };
 
     // Remove Unset Optionals
@@ -1215,31 +1151,19 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  mark(data: {
-    solution: string;
-    mark?: string;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    _isDefaultExample?: boolean;
-    example?: ExampleJson;
-  }): MarkJson {
-    const { solution, mark, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, _isDefaultExample, example } =
-      data;
+  mark(data: Partial<MarkJson> | undefined): MarkJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: MarkJson = {
       type: BodyBitType.mark,
-      solution: solution ?? '', // Must be before other properties except type
-      mark: mark ?? '',
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? []) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      ...this.toExample(_isDefaultExample, example, true),
+      solution: data.solution ?? '', // Must be before other properties except type
+      mark: data.mark ?? '',
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(data._isDefaultExample, data.example, true),
     };
 
     // Remove Unset Optionals
@@ -1259,57 +1183,22 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  select(data: {
-    options: SelectOptionJson[];
-    prefix?: string;
-    postfix?: string;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    _hintString?: string;
-    _instructionString?: string;
-  }): SelectJson {
-    const {
-      options,
-      prefix,
-      postfix,
-      item,
-      lead,
-      /*pageNumber,
-      marginNumber,*/
-      hint,
-      instruction,
-      _hintString,
-      _instructionString,
-    } = data;
+  select(data: Partial<SelectJson> | undefined): SelectJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: SelectJson = {
       type: BodyBitType.select,
-      options, // Must be before other properties except type
-      prefix: prefix ?? '',
-      postfix: postfix ?? '',
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? []) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
+      options: this.buildSelectOptions(data.options) ?? [], // Must be before other properties except type
+      prefix: data.prefix ?? '',
+      postfix: data.postfix ?? '',
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
-      _hintString: _hintString ?? '',
-      _instructionString: _instructionString ?? '',
-
-      // data: {
-      //   prefix,
-      //   options,
-      //   postfix,
-      //   itemLead: this.itemLead(item, lead, pageNumber, marginNumber),
-      //   hint: this.toBitmarkTextNode(hint),
-      //   _hintString,
-      //   instruction: this.toBitmarkTextNode(instruction),
-      //   _instructionString,
-      // },
+      _hintString: data._hintString ?? '',
+      _instructionString: data._instructionString ?? '',
     };
 
     // Remove Unset Optionals
@@ -1323,47 +1212,35 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build selectOption[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildSelectOptions(data: Partial<SelectOptionJson>[] | undefined): SelectOptionJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.selectOption(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build selectOption node
    *
    * @param data - data for the node
    * @returns
    */
-  selectOption(data: {
-    text: string;
-    isCorrect: boolean;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    _isDefaultExample?: boolean;
-    example?: ExampleJson;
-  }): SelectOptionJson {
-    const { text, isCorrect, item, lead, /*pageNumber, marginNumber,*/ hint, instruction, _isDefaultExample, example } =
-      data;
-
-    //     text: string;
-    // isCorrect: boolean;
-    // item: JsonText;
-    // lead: JsonText;
-    // pageNumber: JsonText;
-    // marginNumber: JsonText;
-    // hint: JsonText;
-    // instruction: JsonText;
-    // isExample: boolean;
-    // example: ExampleJson;
-    // _defaultExample: ExampleJson;
+  selectOption(data: Partial<SelectOptionJson> | undefined): SelectOptionJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: SelectOptionJson = {
-      text: text ?? '', // Must be before other properties except type
-      isCorrect: !!isCorrect,
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? []) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      ...this.toExample(_isDefaultExample, example, !!isCorrect),
+      text: data.text ?? '', // Must be before other properties except type
+      isCorrect: !!data.isCorrect,
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(data._isDefaultExample, data.example, !!data.isCorrect),
     };
 
     // Remove Unset Optionals
@@ -1382,29 +1259,19 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  highlight(data: {
-    texts: HighlightTextJson[];
-    prefix?: string;
-    postfix?: string;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-  }): HighlightJson {
-    const { texts, prefix, postfix, item, lead, /*pageNumber, marginNumber,*/ hint, instruction } = data;
+  highlight(data: Partial<HighlightJson> | undefined): HighlightJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: HighlightJson = {
       type: BodyBitType.highlight,
-      texts, // Must be before other properties except type
-      prefix: prefix ?? '',
-      postfix: postfix ?? '',
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? []) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
+      texts: this.buildHighlightTexts(data.texts) ?? [], // Must be before other properties except type
+      prefix: data.prefix ?? '',
+      postfix: data.postfix ?? '',
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
     };
 
@@ -1419,48 +1286,36 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build highlightText[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildHighlightTexts(data: Partial<HighlightTextJson>[] | undefined): HighlightTextJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.highlightText(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
    * Build highlightText node
    *
    * @param data - data for the node
    * @returns
    */
-  highlightText(data: {
-    text: string;
-    isCorrect: boolean;
-    isHighlighted: boolean;
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
-    _isDefaultExample?: boolean;
-    example?: ExampleJson;
-  }): HighlightTextJson {
-    const {
-      text,
-      isCorrect,
-      isHighlighted,
-      item,
-      lead,
-      /*pageNumber,
-      marginNumber,*/
-      hint,
-      instruction,
-      _isDefaultExample,
-      example,
-    } = data;
+  highlightText(data: Partial<HighlightTextJson> | undefined): HighlightTextJson | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: HighlightTextJson = {
-      text: text ?? '', // Must be before other properties except type
-      isCorrect: !!isCorrect,
-      isHighlighted: !!isHighlighted,
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? []) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      ...this.toExample(_isDefaultExample, example, !!isCorrect),
+      text: data.text ?? '', // Must be before other properties except type
+      isCorrect: !!data.isCorrect,
+      isHighlighted: !!data.isHighlighted,
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(data._isDefaultExample, data.example, !!data.isCorrect),
     };
 
     // Remove Unset Optionals
@@ -1807,12 +1662,12 @@ class Builder extends BaseBuilder {
    * @returns
    */
   cardBit(data: {
-    item?: TextAst;
-    lead?: TextAst;
-    pageNumber?: TextAst;
-    marginNumber?: TextAst;
-    hint?: TextAst;
-    instruction?: TextAst;
+    item?: JsonText;
+    lead?: JsonText;
+    pageNumber?: JsonText;
+    marginNumber?: JsonText;
+    hint?: JsonText;
+    instruction?: JsonText;
     _isDefaultExample?: boolean;
     example?: ExampleJson;
     extraProperties?: {
@@ -1895,7 +1750,7 @@ class Builder extends BaseBuilder {
       matrix: this.buildMatricies(data.matrix),
       table: this.table(data.table),
       botResponses: this.buildBotResponses(data.botResponses),
-      ingredients: data.ingredients,
+      ingredients: this.buildIngredients(data.ingredients),
       captionDefinitionList: this.captionDefinitionList(data.captionDefinitionList),
       cardBits: data.cardBits,
     };

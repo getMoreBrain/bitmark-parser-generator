@@ -1,4 +1,4 @@
-import { JsonText } from '../ast/TextNodes';
+import { JsonText, TextAst } from '../ast/TextNodes';
 
 import { ExampleJson } from './BitJson';
 
@@ -33,6 +33,8 @@ export interface GapJson extends BaseBodyBitJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
+  _solutionsAst: TextAst[];
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
@@ -46,6 +48,7 @@ export interface MarkJson extends BaseBodyBitJson {
   // instruction: Text;
   isExample: boolean;
   example: ExampleJson;
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
@@ -70,6 +73,7 @@ export interface SelectOptionJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
 
@@ -92,5 +96,6 @@ export interface HighlightTextJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }

@@ -1,8 +1,9 @@
 import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
-import { BodyPart } from '../../../../model/ast/Nodes';
+import { BodyPart, Example } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { Tag } from '../../../../model/enum/Tag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { GapJson } from '../../../../model/json/BodyBitJson';
@@ -61,12 +62,9 @@ function buildGap(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', chainTags);
 
-  const { solutions, _solutionsAst, ...rest } = chainTags;
-
   const gap = builder.gap({
-    solutions: solutions ?? [],
-    _solutionsAst: _solutionsAst ?? [],
-    ...rest,
+    type: BodyBitType.gap,
+    ...chainTags,
   });
 
   return gap;

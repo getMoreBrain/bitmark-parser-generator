@@ -943,7 +943,7 @@ function parseIngredients(
           disableCalculation: disableCalculation,
           ...tags,
         });
-        ingredients.push(ingredient);
+        if (ingredient) ingredients.push(ingredient);
       }
     }
   }

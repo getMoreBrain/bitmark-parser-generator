@@ -11,7 +11,7 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Body, ExtraProperties, CardBit, Footer } from '../../../model/ast/Nodes';
-import { TextAst } from '../../../model/ast/TextNodes';
+import { JsonText, TextAst } from '../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
@@ -138,7 +138,7 @@ export interface BitContentProcessorResult {
   propertyStyleResources?: { [key: string]: ResourceJson };
   resources?: ResourceJson[];
   itemLead?: TextAst[];
-  item?: TextAst;
+  item?: JsonText;
   itemString?: string;
   lead?: TextAst;
   pageNumber?: TextAst;

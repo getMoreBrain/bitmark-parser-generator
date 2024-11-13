@@ -231,7 +231,8 @@ function buildHighlight(
   const texts: HighlightTextJson[] = [];
   if (trueFalse) {
     for (const tf of trueFalse) {
-      texts.push(builder.highlightText({ ...tf, isHighlighted: false }));
+      const ht = builder.highlightText({ ...tf, isHighlighted: false });
+      if (ht) texts.push(ht);
     }
   }
 
@@ -265,7 +266,8 @@ function buildSelect(
   const options: SelectOptionJson[] = [];
   if (trueFalse) {
     for (const tf of trueFalse) {
-      options.push(builder.selectOption(tf));
+      const so = builder.selectOption(tf);
+      if (so) options.push(so);
     }
   }
 

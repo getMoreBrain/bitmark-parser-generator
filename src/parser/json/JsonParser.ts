@@ -15,15 +15,11 @@ import { TextParser } from '../text/TextParser';
 
 import {
   BitJson,
-  ChoiceJson,
-  HeadingJson,
-  QuizJson,
   ResponseJson,
   StatementJson,
   BotResponseJson,
   ExampleJson,
   ListItemJson,
-  IngredientJson,
 } from '../../model/json/BitJson';
 import {
   SelectOptionJson,
@@ -209,7 +205,7 @@ class JsonParser {
     const statementNodes = this.processStatements(statement, bit.isCorrect, bit.statements, bit.example);
 
     // ingredients
-    const ingredientsNodes = this.ingredientsBitsToAst(bit.ingredients);
+    // const ingredientsNodes = this.ingredientsBitsToAst(bit.ingredients);
 
     // listItems / sections (cardBits)
     const cardBitNodes = this.listItemsToAst(bit.listItems ?? bit.sections, textFormat, bit.placeholders);
@@ -241,11 +237,7 @@ class JsonParser {
       flashcards: bit.cards,
       statements: statementNodes,
       responses: this.processResponses(bitType, bit.responses as ResponseJson[]),
-      // quizzes: quizNodes,
-      // heading: headingNode,
-      // choices: choiceNodes,
       botResponses: this.processBotResponse(bitType, bit.responses as BotResponseJson[]),
-      ingredients: ingredientsNodes,
       cardBits: cardBitNodes,
       footer: footerNode,
     });
@@ -329,48 +321,6 @@ class JsonParser {
     if (!Config.isOfBitType(bitType, BitType.botActionResponse)) return undefined;
     if (!Array.isArray(responses)) return undefined;
     return responses;
-  }
-
-  private ingredientsBitsToAst(ingredients?: IngredientJson[]): IngredientJson[] | undefined {
-    return ingredients;
-    if (!Array.isArray(ingredients)) return undefined;
-
-    const nodes: IngredientJson[] = [];
-    for (const item of ingredients) {
-      const node = builder.ingredient({
-        ...item,
-        item: this.convertJsonTextToAstText(item.item),
-      });
-      if (node) nodes.push(node);
-    }
-    if (nodes.length === 0) return undefined;
-
-    return nodes;
-
-    // if (!imageSource) return undefined;
-    // return builder.imageSource(imageSource);
-
-    // const nodes: Ingredient[] = [];
-    // if (Array.isArray(ingredients)) {
-    //   for (const i of ingredients) {
-    //     const { title, checked, item, quantity, unit, unitAbbr, decimalPlaces, disableCalculation } = i;
-    //     const node = builder.ingredient({
-    //       title,
-    //       checked,
-    //       item: this.convertJsonTextToAstText(item),
-    //       quantity,
-    //       unit: unit ?? '',
-    //       unitAbbr,
-    //       decimalPlaces: decimalPlaces ?? 1,
-    //       disableCalculation,
-    //     });
-    //     nodes.push(node);
-    //   }
-    // }
-
-    // if (nodes.length === 0) return undefined;
-
-    // return nodes;
   }
 
   private listItemsToAst(
