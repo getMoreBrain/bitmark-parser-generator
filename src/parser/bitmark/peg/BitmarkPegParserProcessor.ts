@@ -496,7 +496,7 @@ class BitmarkPegParserProcessor {
 
     result.title = [];
     result.solutions = [];
-    result._solutionsAst = [];
+    result.__solutionsAst = [];
     result.statements = [];
     result.choices = [];
     result.responses = [];

@@ -231,8 +231,8 @@ export interface FlashcardJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
-  _isDefaultExample?: boolean;
-  _defaultExample?: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface DescriptionListItemJson {
@@ -245,8 +245,8 @@ export interface DescriptionListItemJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
-  _isDefaultExample?: boolean;
-  _defaultExample?: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface StatementJson {
@@ -258,8 +258,8 @@ export interface StatementJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
-  _isDefaultExample?: boolean;
-  _defaultExample?: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface ChoiceJson {
@@ -271,8 +271,8 @@ export interface ChoiceJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
-  _isDefaultExample?: boolean;
-  _defaultExample?: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface ResponseJson {
@@ -284,8 +284,8 @@ export interface ResponseJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
-  _isDefaultExample?: boolean;
-  _defaultExample?: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface QuizJson {
@@ -296,14 +296,14 @@ export interface QuizJson {
   isExample: boolean;
   choices: ChoiceJson[];
   responses: ResponseJson[];
-  _isDefaultExample?: boolean;
-  _defaultExample?: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface HeadingJson {
   forKeys: string;
   forValues: string | string[];
-  _forValuesDefault?: string | string[];
+  __forValuesDefault?: string | string[];
 }
 
 export interface PairJson {
@@ -318,9 +318,9 @@ export interface PairJson {
   isExample: boolean;
   example: ExampleJson;
   values: string[];
-  _valuesAst?: TextAst[];
-  _isDefaultExample?: boolean;
-  _defaultExample?: ExampleJson;
+  __valuesAst?: TextAst[];
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface MatrixJson {
@@ -332,7 +332,7 @@ export interface MatrixJson {
   isExample: boolean;
   // example: ExampleJson;
   cells: MatrixCellJson[];
-  _isDefaultExample?: boolean;
+  __isDefaultExample?: boolean;
 }
 
 export interface MatrixCellJson {
@@ -344,9 +344,9 @@ export interface MatrixCellJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
-  _valuesAst?: TextAst[];
-  _isDefaultExample?: boolean;
-  _defaultExample?: ExampleJson;
+  __valuesAst?: TextAst[];
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface TableJson {
@@ -366,9 +366,9 @@ export interface QuestionJson {
   reasonableNumOfChars: number;
   isExample: boolean;
   example: ExampleJson;
-  _sampleSolutionAst?: TextAst;
-  _isDefaultExample?: boolean;
-  _defaultExample?: ExampleJson;
+  __sampleSolutionAst?: TextAst;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface BotResponseJson {

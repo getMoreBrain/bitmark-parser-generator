@@ -74,23 +74,23 @@ function handleGapOrSelectOrTrueFalseExample(
   if (trueFalse) {
     // Example is set on the true/false tag [+...] / [-...]
     if (example === true) {
-      trueFalse._isDefaultExample = true;
+      trueFalse.__isDefaultExample = true;
       trueFalse.example = !!trueFalse.isCorrect;
     } else {
       if (BooleanUtils.isBooleanString(example)) {
         trueFalse.example = BooleanUtils.toBoolean(example);
       } else {
         // Example is set to a value other than true / false which is not valid in the case of select
-        trueFalse._isDefaultExample = true;
+        trueFalse.__isDefaultExample = true;
         trueFalse.example = undefined;
         context.addWarning(`Only 'true' / 'false' / default are allowed here, using default`, content);
       }
     }
-  } else if (Array.isArray(target._solutionsAst) && target._solutionsAst.length > 0) {
+  } else if (Array.isArray(target.__solutionsAst) && target.__solutionsAst.length > 0) {
     // Example is set on the gap solution tag [_...]
     if (example === true) {
       // Extract the solution nearest [@example] tag as the example value
-      target.example = target._solutionsAst[target._solutionsAst.length - 1] ?? undefined;
+      target.example = target.__solutionsAst[target.__solutionsAst.length - 1] ?? undefined;
     } else {
       target.example = example ? textParser.toAst(example) : undefined;
     }
@@ -114,7 +114,7 @@ function handleGapOrSelectOrTrueFalseExample(
     ) {
       // For these bits, a specific example value higher up the chain makes no sense
       // Set example to default, and raise a warning if any value is set.
-      target._isDefaultExample = true;
+      target.__isDefaultExample = true;
       target.example = undefined;
 
       if (example !== true) {
@@ -138,7 +138,7 @@ function handleDefaultOnlyExample(
   target: BitContentProcessorResult,
 ): void {
   // This bit can have only default examples - nothing else makes sense
-  target._isDefaultExample = true;
+  target.__isDefaultExample = true;
   target.example = undefined;
 
   if (example !== true) {
@@ -155,7 +155,7 @@ function handleStandardBooleanExample(
   target: BitContentProcessorResult,
 ): void {
   if (example === true) {
-    target._isDefaultExample = true;
+    target.__isDefaultExample = true;
     target.example = undefined;
   } else {
     const exampleStr = example ? Breakscape.unbreakscape(example) : undefined;
@@ -163,7 +163,7 @@ function handleStandardBooleanExample(
       target.example = BooleanUtils.toBoolean(exampleStr);
     } else {
       // Example is set to a value other than true / false which is not valid in the case of select
-      target._isDefaultExample = true;
+      target.__isDefaultExample = true;
       target.example = undefined;
       context.addWarning(`Only 'true' / 'false' / default are allowed here, using default`, content);
     }
@@ -178,7 +178,7 @@ function handleStandardStringExample(
   target: BitContentProcessorResult,
 ): void {
   if (example === true || example === 'true') {
-    target._isDefaultExample = true;
+    target.__isDefaultExample = true;
     target.example = undefined;
   } else {
     target.example = example ? textParser.toAst(example) : undefined;

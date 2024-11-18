@@ -44,7 +44,7 @@ export type ResourceJson =
 
 export interface ResourceWrapperJson {
   type: string; // resource bit type
-  _typeAlias: ResourceTagType;
+  __typeAlias: ResourceTagType;
 }
 
 export interface ImageResourceWrapperJson extends ResourceWrapperJson {

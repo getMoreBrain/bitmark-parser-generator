@@ -1,4 +1,3 @@
-import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { CardBit } from '../../../../model/ast/Nodes';
@@ -14,6 +13,8 @@ import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
   BotResponseJson,
+  CaptionDefinitionJson,
+  CaptionDefinitionListJson,
   ChoiceJson,
   DescriptionListItemJson,
   ExampleJson,
@@ -27,6 +28,7 @@ import {
   QuizJson,
   ResponseJson,
   StatementJson,
+  TableJson,
 } from '../../../../model/json/BitJson';
 import {
   AudioResourceJson,
@@ -46,17 +48,15 @@ import {
   ProcessedCardVariant,
 } from '../BitmarkPegParserTypes';
 
-const builder = new Builder();
-
 function buildCards(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
   textFormat: TextFormatType,
   parsedCardSet: ParsedCardSet | undefined,
-  statementV1: StatementJson | undefined,
-  statementsV1: StatementJson[] | undefined,
-  choicesV1: ChoiceJson[] | undefined,
-  responsesV1: ResponseJson[] | undefined,
+  statementV1: Partial<StatementJson> | undefined,
+  statementsV1: Partial<StatementJson>[] | undefined,
+  choicesV1: Partial<ChoiceJson>[] | undefined,
+  responsesV1: Partial<ResponseJson>[] | undefined,
 ): BitSpecificCards {
   if (context.DEBUG_CARD_SET) context.debugPrint('card set', parsedCardSet);
 
@@ -211,8 +211,8 @@ function parseFlashcardLike(
   bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const flashcards: FlashcardJson[] = [];
-  const descriptions: DescriptionListItemJson[] = [];
+  const flashcards: Partial<FlashcardJson>[] = [];
+  const descriptions: Partial<DescriptionListItemJson>[] = [];
   let question: TextAst = [];
   let questionString = '';
   let answer: TextAst = [];
@@ -256,22 +256,22 @@ function parseFlashcardLike(
     if (cardIndex === 0 || !onlyOneCardAllowed) {
       if (Config.isOfBitType(bitType, BitType.descriptionList)) {
         // .description-list
-        const dl = builder.buildDescriptionListItem({
+        const dl: Partial<DescriptionListItemJson> = {
           term: question,
           description: answer,
           alternativeDescriptions: alternativeAnswers,
           ...extraTags,
-        });
+        };
         if (dl) descriptions.push(dl);
       } else {
         // .flashcard
         // if (question) {
-        const fc = builder.buildFlashcard({
+        const fc: Partial<FlashcardJson> = {
           question,
           answer,
           alternativeAnswers,
           ...extraTags,
-        });
+        };
         if (fc) flashcards.push(fc);
         // } else {
         //   context.addWarning('Ignoring card with empty question', questionVariant);
@@ -325,10 +325,10 @@ function parseStatements(
   _context: BitmarkPegParserContext,
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
-  statementV1: StatementJson | undefined,
-  statementsV1: StatementJson[] | undefined,
+  statementV1: Partial<StatementJson> | undefined,
+  statementsV1: Partial<StatementJson>[] | undefined,
 ): BitSpecificCards {
-  const statements: StatementJson[] = [];
+  const statements: Partial<StatementJson>[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
@@ -343,18 +343,16 @@ function parseStatements(
         if (Array.isArray(chainedStatements)) {
           for (const s of chainedStatements) {
             // if (s.text) {
-            const statement = builder.buildStatement({
+            const statement: Partial<StatementJson> = {
               statement: s.statement ?? '',
               isCorrect: s.isCorrect,
               item: s.item,
               lead: s.lead,
-              // pageNumber: undefined,
-              // marginNumber: undefined,
               hint: s.hint,
               instruction: s.instruction,
               example: s.example,
               ...tags,
-            });
+            };
             if (statement) statements.push(statement);
             // } else {
             //   context.addWarning('Ignoring card with empty statement', content);
@@ -384,10 +382,10 @@ function parseQuiz(
   _context: BitmarkPegParserContext,
   bitType: BitTypeType,
   cardSet: ProcessedCardSet,
-  choicesV1: ChoiceJson[] | undefined,
-  responsesV1: ResponseJson[] | undefined,
+  choicesV1: Partial<ChoiceJson>[] | undefined,
+  responsesV1: Partial<ResponseJson>[] | undefined,
 ): BitSpecificCards {
-  const quizzes: QuizJson[] = [];
+  const quizzes: Partial<QuizJson>[] = [];
   const insertChoices = Config.isOfBitType(bitType, BitType.multipleChoice);
   const insertResponses = Config.isOfBitType(bitType, BitType.multipleResponse);
   if (!insertChoices && !insertResponses) return {};
@@ -401,10 +399,10 @@ function parseQuiz(
 
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { _isDefaultExample, example, ...tags } = content.data;
+        const { __isDefaultExample, example, ...tags } = content.data;
 
         // Example
-        isDefaultExampleCard = _isDefaultExample === true ? true : isDefaultExampleCard;
+        isDefaultExampleCard = __isDefaultExample === true ? true : isDefaultExampleCard;
         exampleCard = example ? example : exampleCard;
 
         // Insert choices / responses
@@ -412,13 +410,13 @@ function parseQuiz(
           const responsesOrChoices: (Partial<ChoiceJson> | Partial<ResponseJson>)[] = [];
 
           for (const tf of tags.trueFalse) {
-            const { _isDefaultExample: isDefaultExampleTf, example: exampleTf, ...tfTags } = tf;
-            const _isDefaultExample = isDefaultExampleTf || isDefaultExampleCard;
+            const { __isDefaultExample: isDefaultExampleTf, example: exampleTf, ...tfTags } = tf;
+            const __isDefaultExample = isDefaultExampleTf || isDefaultExampleCard;
             const example = exampleTf || exampleCard;
 
             const response: Partial<ChoiceJson> & Partial<ResponseJson> = {
               isCorrect: tfTags.isCorrect,
-              _isDefaultExample,
+              __isDefaultExample,
               example,
             };
             if (insertResponses) response.response = tfTags.text;
@@ -426,16 +424,18 @@ function parseQuiz(
             if (response) responsesOrChoices.push(response);
           }
 
-          if (insertResponses) tags.responses = responsesOrChoices as ResponseJson[];
-          else tags.choices = responsesOrChoices as ChoiceJson[];
+          if (insertResponses) tags.responses = responsesOrChoices as Partial<ResponseJson>[];
+          else tags.choices = responsesOrChoices as Partial<ChoiceJson>[];
         }
 
         // if (tags.choices || tags.responses) {
-        const quiz = builder.buildQuiz({
+        const quiz: Partial<QuizJson> = {
           ...tags,
-          _isDefaultExample: isDefaultExampleCard,
-          _defaultExample: exampleCard,
-        });
+          choices: tags.choices as ChoiceJson[],
+          responses: tags.responses as ResponseJson[],
+          __isDefaultExample: isDefaultExampleCard,
+          __defaultExample: exampleCard,
+        };
         if (quiz) quizzes.push(quiz);
         // } else {
         //   context.addWarning('Ignoring card with empty quiz', content);
@@ -446,15 +446,15 @@ function parseQuiz(
 
   // Add a quiz for the V1 choices / responses
   if (insertChoices && Array.isArray(choicesV1) && choicesV1.length > 0) {
-    const quiz = builder.buildQuiz({
-      choices: choicesV1,
-    });
+    const quiz: Partial<QuizJson> = {
+      choices: choicesV1 as ChoiceJson[],
+    };
     if (quiz) quizzes.push(quiz);
   }
   if (insertResponses && Array.isArray(responsesV1) && responsesV1.length > 0) {
-    const quiz = builder.buildQuiz({
-      responses: responsesV1,
-    });
+    const quiz: Partial<QuizJson> = {
+      responses: responsesV1 as ResponseJson[],
+    };
     if (quiz) quizzes.push(quiz);
   }
 
@@ -468,7 +468,7 @@ function parseQuestions(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const questions: QuestionJson[] = [];
+  const questions: Partial<QuestionJson>[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
@@ -476,10 +476,10 @@ function parseQuestions(
         const tags = content.data;
 
         // if (tags.cardBody) {
-        const q = builder.buildQuestion({
+        const q: Partial<QuestionJson> = {
           question: tags.cardBodyStr ?? Breakscape.EMPTY_STRING,
           ...tags,
-        });
+        };
         if (q) questions.push(q);
         // }
         // else {
@@ -501,8 +501,8 @@ function parseMatchPairs(
 ): BitSpecificCards {
   let sideIdx = 0;
   let isHeading = false;
-  let heading: HeadingJson | undefined;
-  const pairs: PairJson[] = [];
+  let heading: Partial<HeadingJson> | undefined;
+  const pairs: Partial<PairJson>[] = [];
   let forKeys: string | undefined = undefined;
   let forValues: string[] = [];
   let pairKey: string | undefined = undefined;
@@ -534,10 +534,10 @@ function parseMatchPairs(
     for (const side of card.sides) {
       for (const content of side.variants) {
         // variant = content;
-        const { cardBody, cardBodyStr, title, resources, _isDefaultExample, example, ...tags } = content.data;
+        const { cardBody, cardBodyStr, title, resources, __isDefaultExample, example, ...tags } = content.data;
 
         // Example
-        isDefaultExampleCard = _isDefaultExample === true ? true : isDefaultExampleCard;
+        isDefaultExampleCard = __isDefaultExample === true ? true : isDefaultExampleCard;
         exampleCard = example ? (example as TextAst) : exampleCard;
 
         // Get the 'heading' which is the [#title] at level 1
@@ -548,7 +548,7 @@ function parseMatchPairs(
           // First side
           forKeys = heading;
           if (heading != null) {
-            isDefaultExampleCardSet = _isDefaultExample === true ? true : isDefaultExampleCardSet;
+            isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
             exampleCardSet = example ? (example as TextAst) : exampleCardSet;
           } else if (Array.isArray(resources) && resources.length > 0) {
             // TODO - should search the correct resource type based on the bit type
@@ -567,7 +567,7 @@ function parseMatchPairs(
           // Subsequent sides
           forValues.push(heading ?? '');
           if (heading != null) {
-            isDefaultExampleCardSet = _isDefaultExample === true ? true : isDefaultExampleCardSet;
+            isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
             exampleCardSet = example ? (example as TextAst) : exampleCardSet;
           } else if (title == null) {
             // If not a heading, it is a pair
@@ -605,27 +605,27 @@ function parseMatchPairs(
           forValuesFinal = '';
         }
       }
-      heading = builder.buildHeading({
+      heading = {
         forKeys: forKeys ?? '',
         forValues: forValuesFinal,
-      });
+      };
     } else {
       // if (pairKey || keyAudio || keyImage) {
-      // Calculate final example and _isDefaultExample
+      // Calculate final example and __isDefaultExample
       if (isDefaultExampleCard) exampleCardSet = undefined;
-      const _isDefaultExample = isDefaultExampleCard || isDefaultExampleCardSet;
+      const __isDefaultExample = isDefaultExampleCard || isDefaultExampleCardSet;
       const example = exampleCard || exampleCardSet;
 
-      const pair = builder.buildPair(bitType, {
+      const pair: Partial<PairJson> = {
         key: pairKey ?? '',
         keyAudio,
         keyImage,
         values: pairValues,
-        _valuesAst: _pairValuesAst,
+        __valuesAst: _pairValuesAst,
         ...extraTags,
-        _isDefaultExample,
+        __isDefaultExample,
         example,
-      });
+      };
       if (pair) pairs.push(pair);
       // } else {
       //   context.addWarning('Ignoring card with empty body text', variant);
@@ -646,13 +646,13 @@ function parseMatchMatrix(
 ): BitSpecificCards {
   let sideIdx = 0;
   let isHeading = false;
-  let heading: HeadingJson | undefined;
+  let heading: Partial<HeadingJson> | undefined;
   let forKeys: string | undefined = undefined;
   let forValues: string[] = [];
   let matrixKey: string | undefined = undefined;
   let matrixKeyTags: BitContentProcessorResult | undefined = undefined;
-  const matrix: MatrixJson[] = [];
-  let matrixCells: MatrixCellJson[] = [];
+  const matrix: Partial<MatrixJson>[] = [];
+  let matrixCells: Partial<MatrixCellJson>[] = [];
   let matrixCellValues: string[] = [];
   let _matrixCellValuesAst: TextAst[] = [];
   let matrixCellTags: BitContentProcessorResult = {};
@@ -697,10 +697,10 @@ function parseMatchMatrix(
         // variant = content;
         const tags = content.data;
 
-        const { title, cardBody, cardBodyStr, _isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
+        const { title, cardBody, cardBodyStr, __isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
 
         // Example
-        isDefaultExampleSide = _isDefaultExample === true ? true : isDefaultExampleSide;
+        isDefaultExampleSide = __isDefaultExample === true ? true : isDefaultExampleSide;
         exampleSide = example ? example : exampleSide;
 
         // Merge the tags into the matrix cell tags
@@ -721,13 +721,13 @@ function parseMatchMatrix(
             //   } else if (tags.resource.type === ResourceTag.image) {
             //     keyImage = tags.resource as ImageResource;
             //   }
-            isDefaultExampleCardSet = _isDefaultExample === true ? true : isDefaultExampleCardSet;
+            isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
             exampleCardSet = example ? example : exampleCardSet;
           } else {
             // If not a heading or resource, it is a matrix
             matrixKey = cardBodyStr;
             matrixKeyTags = restTags;
-            isDefaultExampleCard = _isDefaultExample === true ? true : isDefaultExampleCard;
+            isDefaultExampleCard = __isDefaultExample === true ? true : isDefaultExampleCard;
             exampleCard = example ? example : exampleCard;
             isCaseSensitiveMatrix = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
           }
@@ -735,7 +735,7 @@ function parseMatchMatrix(
           // Subsequent sides
           forValues.push(heading ?? Breakscape.EMPTY_STRING);
           if (heading != null) {
-            isDefaultExampleCardSet = _isDefaultExample === true ? true : isDefaultExampleCardSet;
+            isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
             exampleCardSet = example ? example : exampleCardSet;
           } else if (tags.title == null) {
             // If not a heading, it is a matrix cell value
@@ -751,20 +751,20 @@ function parseMatchMatrix(
 
       // Finished looping variants, create matrix cell
       if (sideIdx > 0) {
-        // Calculate final example and _isDefaultExample
+        // Calculate final example and __isDefaultExample
         if (isDefaultExampleSide) exampleCard = exampleCardSet = undefined;
         if (isDefaultExampleCard) exampleCardSet = undefined;
-        const _isDefaultExample = isDefaultExampleSide || isDefaultExampleCard || isDefaultExampleCardSet;
+        const __isDefaultExample = isDefaultExampleSide || isDefaultExampleCard || isDefaultExampleCardSet;
         const example = exampleSide || exampleCard || exampleCardSet;
 
-        const matrixCell = builder.buildMatrixCell({
+        const matrixCell: Partial<MatrixCellJson> = {
           values: matrixCellValues,
-          _valuesAst: _matrixCellValuesAst,
+          __valuesAst: _matrixCellValuesAst,
           ...matrixCellTags,
-          _isDefaultExample: _isDefaultExample,
+          __isDefaultExample: __isDefaultExample,
           example,
           isCaseSensitive: isCaseSensitiveCell,
-        });
+        };
         if (matrixCell) matrixCells.push(matrixCell);
       }
 
@@ -772,20 +772,20 @@ function parseMatchMatrix(
     }
 
     if (isHeading) {
-      heading = builder.buildHeading({
+      heading = {
         forKeys: forKeys ?? Breakscape.EMPTY_STRING,
         forValues,
-      });
+      };
     } else {
       // if (matrixKey) {
-      const m = builder.buildMatrix({
+      const m: Partial<MatrixJson> = {
         key: matrixKey ?? Breakscape.EMPTY_STRING,
         // item: matrixItem ?? Breakscape.EMPTY_STRING,
         // keyAudio,
         // keyImage,
-        cells: matrixCells,
+        cells: matrixCells as MatrixCellJson[],
         ...matrixKeyTags,
-      });
+      };
       if (m) matrix.push(m);
       // } else {
       //   context.addWarning('Ignoring card with empty body text', variant);
@@ -842,10 +842,10 @@ function parseTable(
     cardIdx++;
   }
 
-  const table = builder.buildTable({
+  const table: Partial<TableJson> = {
     columns,
     data: rows,
-  });
+  };
 
   return { table };
 }
@@ -855,19 +855,19 @@ function parseBotActionResponses(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const botResponses: BotResponseJson[] = [];
+  const botResponses: Partial<BotResponseJson>[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { _instructionString, reaction, cardBodyStr: feedback, ...tags } = content.data;
+        const { __instructionString, reaction, cardBodyStr: feedback, ...tags } = content.data;
 
-        const botResponse = builder.botResponse({
-          response: _instructionString ?? Breakscape.EMPTY_STRING,
+        const botResponse: Partial<BotResponseJson> = {
+          response: __instructionString ?? Breakscape.EMPTY_STRING,
           reaction: reaction ?? Breakscape.EMPTY_STRING,
           feedback: feedback ?? Breakscape.EMPTY_STRING,
           ...tags,
-        });
+        };
         if (botResponse) botResponses.push(botResponse);
       }
     }
@@ -883,14 +883,14 @@ function parseIngredients(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const ingredients: IngredientJson[] = [];
+  const ingredients: Partial<IngredientJson>[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
         const {
           title: titleArray,
-          _instructionString,
+          __instructionString,
           unit,
           unitAbbr,
           decimalPlaces,
@@ -908,20 +908,20 @@ function parseIngredients(
             ? titleArray[titleArray.length - 1].titleString
             : undefined;
         let checked = false;
-        let quantity: number | undefined = NumberUtils.asNumber(_instructionString);
+        let quantity: number | undefined = NumberUtils.asNumber(__instructionString);
         if (cardBody && cardBody.bodyBits) {
           const select: SelectJson | undefined = cardBody.bodyBits.find((c) => c.type === BodyBitType.select) as
             | SelectJson
             | undefined;
           if (select) {
-            quantity = select._instructionString ? NumberUtils.asNumber(select._instructionString) : quantity;
+            quantity = select.__instructionString ? NumberUtils.asNumber(select.__instructionString) : quantity;
             if (select.options && select.options.length > 0) {
               checked = select.options[0].isCorrect;
             }
           }
         }
 
-        const ingredient = builder.buildIngredient({
+        const ingredient: Partial<IngredientJson> = {
           title,
           checked,
           // TS compiler very weird. It doesn't recognize that cardBodyStr is a string|undefined, even if cast!
@@ -934,7 +934,7 @@ function parseIngredients(
           decimalPlaces: decimalPlaces ?? 1,
           disableCalculation: disableCalculation,
           ...tags,
-        });
+        };
         if (ingredient) ingredients.push(ingredient);
       }
     }
@@ -988,19 +988,20 @@ function parseCaptionDefinitionsList(
     cardIdx++;
   }
 
-  const captionDefinitionList =
+  const captionDefinitionList: Partial<CaptionDefinitionListJson> | undefined =
     columns.length > 0
-      ? builder.buildCaptionDefinitionList({
+      ? {
           columns,
           definitions: rows
             .map((row) => {
-              return builder.buildCaptionDefinition({
+              const col: Partial<CaptionDefinitionJson> = {
                 term: row[0],
                 description: row[1],
-              });
+              };
+              return col as CaptionDefinitionJson;
             })
             .filter((d) => d != null),
-        })
+        }
       : undefined;
 
   return { captionDefinitionList };
@@ -1009,20 +1010,20 @@ function parseCaptionDefinitionsList(
 function parseCardBits(
   _context: BitmarkPegParserContext,
   _bitType: BitTypeType,
-  textFormat: TextFormatType,
+  _textFormat: TextFormatType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const cardBits: CardBit[] = [];
+  const cardBits: Partial<CardBit>[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
         const { cardBody: body, ...rest } = content.data;
 
-        const cardBit = builder.buildCardBit(textFormat, {
+        const cardBit: Partial<CardBit> = {
           body,
           ...rest,
-        });
+        };
         if (cardBit) cardBits.push(cardBit);
       }
     }

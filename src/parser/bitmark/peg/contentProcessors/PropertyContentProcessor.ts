@@ -190,7 +190,7 @@ function propertyContentProcessor(
   if (tag === PropertyTag.tag_sampleSolution) {
     addProperty(
       target,
-      '_sampleSolutionAst',
+      '__sampleSolutionAst',
       value,
       new PropertyTagConfig(
         ConfigKey.sampleSolution,

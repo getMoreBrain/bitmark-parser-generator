@@ -28,7 +28,7 @@ function clozeTagContentProcessor(
   const { value } = content as TypeValue;
 
   const solutions = target.solutions;
-  const solutionsAst = target._solutionsAst;
+  const solutionsAst = target.__solutionsAst;
 
   if (!solutions || !solutionsAst) return;
 

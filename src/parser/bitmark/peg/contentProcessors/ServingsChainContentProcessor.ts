@@ -1,7 +1,7 @@
-import { Builder } from '../../../../ast/Builder';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { ServingsJson } from '../../../../model/json/BitJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 
 import {
@@ -11,8 +11,6 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function servingsChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -31,19 +29,19 @@ function servingsChainContentProcessor(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('servings TAGS', tags);
 
-  const { unit, unitAbbr, decimalPlaces, disableCalculation, _hintString } = tags;
+  const { unit, unitAbbr, decimalPlaces, disableCalculation, __hintString } = tags;
 
   // Extract the servings from the content tag
   const servings = NumberUtils.asNumber(content.value) ?? 1;
 
-  const node = builder.buildServings({
+  const node: Partial<ServingsJson> = {
     servings,
     unit,
     unitAbbr,
     decimalPlaces: decimalPlaces ?? 1,
     disableCalculation,
-    hint: _hintString,
-  });
+    hint: __hintString,
+  };
 
   target.servings = node;
 }

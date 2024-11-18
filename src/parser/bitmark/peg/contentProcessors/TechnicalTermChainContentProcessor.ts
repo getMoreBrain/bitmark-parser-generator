@@ -1,9 +1,9 @@
-import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { TechnicalTermJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -13,8 +13,6 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function technicalTermChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -38,10 +36,10 @@ function technicalTermChainContentProcessor(
   // Extract the technicalTerm from the content tag
   const technicalTerm = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString);
 
-  const node = builder.buildTechnicalTerm({
+  const node: Partial<TechnicalTermJson> = {
     technicalTerm,
     lang,
-  });
+  };
 
   target.technicalTerm = node;
 }

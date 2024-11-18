@@ -15,7 +15,7 @@ import { StringUtils } from '../utils/StringUtils';
 export interface WithExampleJson {
   isExample: boolean;
   example: ExampleJson;
-  _defaultExample?: ExampleJson;
+  __defaultExample?: ExampleJson;
 }
 
 class BaseBuilder {
@@ -28,15 +28,15 @@ class BaseBuilder {
   /**
    * Convert example to an Example.
    * - If example is set, then the isExample will be true and example with be example as a BreakscapedText.
-   * - Else if _isDefaultExample is true, then _isDefaultExample / isExample will both be true.
-   * - Else _isDefaultExample / isExample will both be false.
+   * - Else if __isDefaultExample is true, then __isDefaultExample / isExample will both be true.
+   * - Else __isDefaultExample / isExample will both be false.
    *
-   * @param _isDefaultExample - true if the example is the default value
+   * @param __isDefaultExample - true if the example is the default value
    * @param example - the example to convert (BreakscapedText, boolean) or undefined if none / default
-   * @returns example/_isDefaultExample resolved to an Example object
+   * @returns example/__isDefaultExample resolved to an Example object
    */
   protected toExample(
-    _isDefaultExample: boolean | undefined,
+    __isDefaultExample: boolean | undefined,
     example: TextAst | string | boolean | undefined | null,
     defaultExample?: TextAst | string | boolean | undefined | null,
   ): WithExampleJson {
@@ -54,16 +54,16 @@ class BaseBuilder {
       return {
         isExample: true,
         example: exampleValue,
-        _defaultExample: defaultExample ?? null,
+        __defaultExample: defaultExample ?? null,
       };
     }
 
     // Default example
-    if (_isDefaultExample) {
+    if (__isDefaultExample) {
       return {
         isExample: true,
         example: defaultExample ?? null,
-        _defaultExample: defaultExample ?? null,
+        __defaultExample: defaultExample ?? null,
       };
     }
 
@@ -71,7 +71,7 @@ class BaseBuilder {
     return {
       isExample: false,
       example: null,
-      _defaultExample: defaultExample ?? null,
+      __defaultExample: defaultExample ?? null,
     };
   }
 

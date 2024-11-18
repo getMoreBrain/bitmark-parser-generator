@@ -218,14 +218,14 @@ export interface Bit {
   parser?: ParserInfo;
 
   // Private properties
-  _isDefaultExample: boolean;
-  _defaultExample?: ExampleJson;
+  __isDefaultExample: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export type Example = JsonText | string | boolean; // BitmarkTextNode | string | boolean;
 
 export interface WithExample {
-  _isDefaultExample: boolean;
+  __isDefaultExample: boolean;
   isExample: boolean;
   example?: Example;
 }
@@ -261,7 +261,7 @@ export interface CardBit {
   example?: ExampleJson;
   extraProperties?: ExtraProperties;
   body?: Body;
-  _isDefaultExample: boolean;
+  __isDefaultExample: boolean;
 }
 
 // Card Node

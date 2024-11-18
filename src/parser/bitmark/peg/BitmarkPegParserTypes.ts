@@ -95,7 +95,7 @@ export interface TrueFalseValue {
   text: string;
   isCorrect: boolean;
   example?: ExampleJson;
-  _isDefaultExample: boolean;
+  __isDefaultExample: boolean;
 }
 
 export interface CardData {
@@ -111,25 +111,25 @@ export interface BitContentProcessorResult {
   cardBodyStr?: string;
   body?: Body;
   footer?: Footer;
-  imageSource?: ImageSourceJson;
-  technicalTerm?: TechnicalTermJson;
-  servings?: ServingsJson;
-  ratingLevelStart?: RatingLevelStartEndJson;
-  ratingLevelEnd?: RatingLevelStartEndJson;
+  imageSource?: Partial<ImageSourceJson>;
+  technicalTerm?: Partial<TechnicalTermJson>;
+  servings?: Partial<ServingsJson>;
+  ratingLevelStart?: Partial<RatingLevelStartEndJson>;
+  ratingLevelEnd?: Partial<RatingLevelStartEndJson>;
   label?: TextAst;
-  person?: PersonJson;
+  person?: Partial<PersonJson>;
   propertyTitle?: BreakscapedString;
   trueFalse?: TrueFalseValue[];
   lang?: BreakscapedString;
   example?: ExampleJson;
   isCorrect?: boolean;
-  markConfig?: MarkConfigJson[];
+  markConfig?: Partial<MarkConfigJson>[];
   solutions?: string[];
-  _solutionsAst?: TextAst[];
-  statement?: StatementJson;
-  statements?: StatementJson[];
-  choices?: ChoiceJson[];
-  responses?: ResponseJson[];
+  __solutionsAst?: TextAst[];
+  statement?: Partial<StatementJson>;
+  statements?: Partial<StatementJson>[];
+  choices?: Partial<ChoiceJson>[];
+  responses?: Partial<ResponseJson>[];
   solution?: BreakscapedString;
   mark?: BreakscapedString[];
   title?: { titleAst: TextAst; titleString: string }[];
@@ -144,15 +144,15 @@ export interface BitContentProcessorResult {
   pageNumber?: TextAst;
   marginNumber?: TextAst;
   instruction?: TextAst;
-  _instructionString?: string;
+  __instructionString?: string;
   hint?: TextAst;
-  _hintString?: string;
+  __hintString?: string;
   anchor?: string;
   book?: string;
   reference?: string;
   referenceEnd?: string;
   sampleSolution?: string;
-  _sampleSolutionAst?: TextAst;
+  __sampleSolutionAst?: TextAst;
   additionalSolutions?: string[];
   isCaseSensitive?: boolean;
   reaction?: BreakscapedString;
@@ -186,7 +186,7 @@ export interface BitContentProcessorResult {
   extraProperties?: ExtraProperties;
   internalComments?: BreakscapedString[];
 
-  _isDefaultExample?: boolean;
+  __isDefaultExample?: boolean;
 }
 
 export interface BitSpecificTitles {
@@ -198,29 +198,29 @@ export interface BitSpecificTitles {
 }
 
 export interface StatementsOrChoicesOrResponses {
-  statements?: StatementJson[];
-  choices?: ChoiceJson[];
-  responses?: ResponseJson[];
+  statements?: Partial<StatementJson>[];
+  choices?: Partial<ChoiceJson>[];
+  responses?: Partial<ResponseJson>[];
 }
 
 export interface BitSpecificCards {
   sampleSolution?: string; // ??
   elements?: string[];
-  flashcards?: FlashcardJson[];
-  descriptions?: DescriptionListItemJson[];
-  statements?: StatementJson[];
-  responses?: ResponseJson[];
-  quizzes?: QuizJson[];
-  heading?: HeadingJson;
-  pairs?: PairJson[];
-  matrix?: MatrixJson[];
-  choices?: ChoiceJson[];
-  questions?: QuestionJson[];
-  table?: TableJson;
-  botResponses?: BotResponseJson[];
-  ingredients?: IngredientJson[];
-  captionDefinitionList?: CaptionDefinitionListJson;
-  cardBits?: CardBit[];
+  flashcards?: Partial<FlashcardJson>[];
+  descriptions?: Partial<DescriptionListItemJson>[];
+  statements?: Partial<StatementJson>[];
+  responses?: Partial<ResponseJson>[];
+  quizzes?: Partial<QuizJson>[];
+  heading?: Partial<HeadingJson>;
+  pairs?: Partial<PairJson>[];
+  matrix?: Partial<MatrixJson>[];
+  choices?: Partial<ChoiceJson>[];
+  questions?: Partial<QuestionJson>[];
+  table?: Partial<TableJson>;
+  botResponses?: Partial<BotResponseJson>[];
+  ingredients?: Partial<IngredientJson>[];
+  captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+  cardBits?: Partial<CardBit>[];
   internalComments?: string[]; // ??
 }
 

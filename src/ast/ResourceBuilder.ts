@@ -70,8 +70,8 @@ class ResourceBuilder extends BaseBuilder {
       if (!resourceKey) return undefined;
 
       // Override original type with type alias if present
-      const _typeAlias = ResourceTag.fromValue(thisResource._typeAlias);
-      type = _typeAlias ?? type;
+      const __typeAlias = ResourceTag.fromValue(thisResource.__typeAlias);
+      type = __typeAlias ?? type;
 
       let data: ResourceDataJson | undefined;
 
@@ -410,7 +410,7 @@ class ResourceBuilder extends BaseBuilder {
       caption?: TextAst;
       search?: string;
     },
-    _typeAlias?: ResourceTagType,
+    __typeAlias?: ResourceTagType,
   ): ImageResourceWrapperJson | undefined {
     const {
       value,
@@ -445,7 +445,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: ImageResourceWrapperJson = {
       type: ResourceTag.image,
-      _typeAlias: _typeAlias ?? ResourceTag.image,
+      __typeAlias: __typeAlias ?? ResourceTag.image,
       image: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -521,7 +521,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: ImageLinkResourceWrapperJson = {
       type: ResourceTag.imageLink,
-      _typeAlias: ResourceTag.imageLink,
+      __typeAlias: ResourceTag.imageLink,
       imageLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -578,7 +578,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AudioResourceWrapperJson = {
       type: ResourceTag.audio,
-      _typeAlias: ResourceTag.audio,
+      __typeAlias: ResourceTag.audio,
       audio: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -628,7 +628,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResourceWrapperJson = {
       type: ResourceTag.audioEmbed,
-      _typeAlias: ResourceTag.audioEmbed,
+      __typeAlias: ResourceTag.audioEmbed,
       audioEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -678,7 +678,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResourceWrapperJson = {
       type: ResourceTag.audioLink,
-      _typeAlias: ResourceTag.audioLink,
+      __typeAlias: ResourceTag.audioLink,
       audioLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -752,7 +752,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: VideoResourceWrapperJson = {
       type: ResourceTag.video,
-      _typeAlias: ResourceTag.video,
+      __typeAlias: ResourceTag.video,
       video: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -834,7 +834,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: VideoEmbedResourceWrapperJson = {
       type: ResourceTag.videoEmbed,
-      _typeAlias: ResourceTag.videoEmbed,
+      __typeAlias: ResourceTag.videoEmbed,
       videoEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -917,7 +917,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: VideoLinkResourceWrapperJson = {
       type: ResourceTag.videoLink,
-      _typeAlias: ResourceTag.videoLink,
+      __typeAlias: ResourceTag.videoLink,
       videoLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -965,7 +965,7 @@ class ResourceBuilder extends BaseBuilder {
   //   // NOTE: Node order is important and is defined here
   //   const node: StillImageFilmResource = {
   //     type: ResourceTag.stillImageFilm,
-  //     _typeAlias: ResourceTag.stillImageFilm,
+  //     __typeAlias: ResourceTag.stillImageFilm,
   //     image: image ?? this.imageResource({ format: '', value: '' }),
   //     audio: audio ?? this.audioResource({ format: '', value: '' }),
   //   };
@@ -1024,7 +1024,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmEmbedResourceWrapperJson = {
       type: ResourceTag.stillImageFilmEmbed,
-      _typeAlias: ResourceTag.stillImageFilmEmbed,
+      __typeAlias: ResourceTag.stillImageFilmEmbed,
       stillImageFilmEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1107,7 +1107,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmLinkResourceWrapperJson = {
       type: ResourceTag.stillImageFilmLink,
-      _typeAlias: ResourceTag.stillImageFilmLink,
+      __typeAlias: ResourceTag.stillImageFilmLink,
       stillImageFilmLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1163,7 +1163,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: ArticleResourceWrapperJson = {
       type: ResourceTag.article,
-      _typeAlias: ResourceTag.article,
+      __typeAlias: ResourceTag.article,
       article: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1206,7 +1206,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentResourceWrapperJson = {
       type: ResourceTag.document,
-      _typeAlias: ResourceTag.document,
+      __typeAlias: ResourceTag.document,
       document: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1250,7 +1250,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentEmbedResourceWrapperJson = {
       type: ResourceTag.documentEmbed,
-      _typeAlias: ResourceTag.documentEmbed,
+      __typeAlias: ResourceTag.documentEmbed,
       documentEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1294,7 +1294,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentLinkResourceWrapperJson = {
       type: ResourceTag.documentLink,
-      _typeAlias: ResourceTag.documentLink,
+      __typeAlias: ResourceTag.documentLink,
       documentLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1338,7 +1338,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: DocumentDownloadResourceWrapperJson = {
       type: ResourceTag.documentDownload,
-      _typeAlias: ResourceTag.documentDownload,
+      __typeAlias: ResourceTag.documentDownload,
       documentDownload: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1381,7 +1381,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: AppLinkResourceWrapperJson = {
       type: ResourceTag.appLink,
-      _typeAlias: ResourceTag.appLink,
+      __typeAlias: ResourceTag.appLink,
       appLink: {
         // format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         // provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1426,7 +1426,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResourceWrapperJson = {
       type: ResourceTag.websiteLink,
-      _typeAlias: ResourceTag.websiteLink,
+      __typeAlias: ResourceTag.websiteLink,
       websiteLink: {
         // provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         provider: undefined as unknown as string,

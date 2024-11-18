@@ -1,4 +1,3 @@
-import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { Body, BodyPart } from '../../../../model/ast/Nodes';
@@ -23,7 +22,6 @@ export interface BodyText extends BodyPart {
   };
 }
 
-const builder = new Builder();
 const textParser = new TextParser();
 
 class BodyContentProcessor {
@@ -36,7 +34,7 @@ class BodyContentProcessor {
     _target: BitContentProcessorResult,
     bodyParts: BodyPart[],
     isCardBody: boolean,
-  ): Body | undefined {
+  ): Partial<Body> | undefined {
     const bodyBits: BodyBitJson[] = [];
     let finalBody: JsonText | unknown | undefined;
     let finalBodyString: string | undefined;
@@ -194,11 +192,11 @@ class BodyContentProcessor {
     } // Standard body
 
     // Return the body in the target
-    return builder.buildBody(textFormat, {
+    return {
       body: finalBody,
       bodyBits: bodyBits.length > 0 ? bodyBits : undefined,
       bodyString: finalBodyString,
-    });
+    };
   }
 
   public buildBodyText(bodyTextPart: BreakscapedString, isPlain: boolean): BodyText {

@@ -1,4 +1,3 @@
-import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
@@ -6,6 +5,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { ImageSourceJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -17,8 +17,6 @@ import {
   TypeKeyValue,
   TypeValue,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function imageSourceChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -88,11 +86,11 @@ function buildImageSource(
     context.addWarning('[@mockupId:xxx] is missing from [@imageSource]', content);
   }
 
-  const imageSource = builder.buildImageSource({
+  const imageSource: Partial<ImageSourceJson> = {
     url: url ?? '',
     mockupId: mockupId ?? '',
     ...rest,
-  });
+  };
 
   target.imageSource = imageSource;
 }

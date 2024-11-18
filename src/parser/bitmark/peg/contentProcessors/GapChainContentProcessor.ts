@@ -1,4 +1,3 @@
-import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
 import { BodyPart } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
@@ -18,8 +17,6 @@ import {
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
 
-const builder = new Builder();
-
 function gapChainContentProcessor(
   context: BitmarkPegParserContext,
   contentDepth: ContentDepthType,
@@ -33,8 +30,8 @@ function gapChainContentProcessor(
   if (contentDepth === BitContentLevel.Chain) {
     clozeTagContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
   } else {
-    const gap = buildGap(context, contentDepth, bitType, textFormat, tagsConfig, content);
-    if (gap) bodyParts.push(gap);
+    const gap: Partial<GapJson> | undefined = buildGap(context, contentDepth, bitType, textFormat, tagsConfig, content);
+    if (gap) bodyParts.push(gap as BodyPart);
   }
 }
 
@@ -45,7 +42,7 @@ function buildGap(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
-): GapJson | undefined {
+): Partial<GapJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
   const gapConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
@@ -62,10 +59,10 @@ function buildGap(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', chainTags);
 
-  const gap = builder.buildGap({
+  const gap: Partial<GapJson> = {
     type: BodyBitType.gap,
     ...chainTags,
-  });
+  };
 
   return gap;
 }

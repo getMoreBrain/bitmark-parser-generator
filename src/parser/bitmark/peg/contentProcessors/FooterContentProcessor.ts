@@ -1,4 +1,3 @@
-import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { Footer } from '../../../../model/ast/Nodes';

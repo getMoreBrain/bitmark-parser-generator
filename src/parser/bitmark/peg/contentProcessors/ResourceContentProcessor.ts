@@ -48,8 +48,8 @@ function buildResources(
   // Find the excess resources and ensure we have the minimum resources
   if (resources) {
     for (const r of resources.reverse()) {
-      let countMin = countsMin.get(r._typeAlias) ?? 0;
-      let countMax = countsMax.get(r._typeAlias) ?? 0;
+      let countMin = countsMin.get(r.__typeAlias) ?? 0;
+      let countMax = countsMax.get(r.__typeAlias) ?? 0;
 
       // Decrement the minimum count and later ensure it is 0
       countMin = Math.max(0, countMin - 1);
@@ -65,8 +65,8 @@ function buildResources(
       }
 
       // Set the new counts
-      countsMin.set(r._typeAlias, countMin);
-      countsMax.set(r._typeAlias, countMax);
+      countsMin.set(r.__typeAlias, countMin);
+      countsMax.set(r.__typeAlias, countMax);
     }
   }
 

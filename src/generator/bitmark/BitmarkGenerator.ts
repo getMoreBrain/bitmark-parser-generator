@@ -881,13 +881,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected bodyBitCallback(bodyBit: BodyBitJson, _index: number, _route: NodeInfo[]): string {
     // console.log('bodyBitCallback', bodyBit, index, route);
-    // TODO
 
     // Walk the body bit AST
     const nodeType = NodeType.fromValue(bodyBit.type) ?? NodeType.bodyBit;
     this.ast.walk(bodyBit, nodeType, this, undefined);
 
-    return '';
+    return ''; // Return empty string as we are writing to the writer
   }
 
   // bodyBit -> gap
@@ -2044,7 +2043,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const parent = this.getParentNode(route);
     const example = parent?.value.example ?? null;
-    // const _isDefaultExample = parent?.value._isDefaultExample ?? false;
+    // const __isDefaultExample = parent?.value.__isDefaultExample ?? false;
 
     if (example != null && example !== '') {
       this.writeOPA();
@@ -2077,11 +2076,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   //   const value = node.value as ExampleJson | undefined;
   //   const parent = this.getParentNode(route);
   //   const isExample = parent?.value.isExample ?? false;
-  //   const _isDefaultExample = parent?.value._isDefaultExample ?? false;
+  //   const __isDefaultExample = parent?.value.__isDefaultExample ?? false;
 
   //   if (!isExample) return;
 
-  //   if (_isDefaultExample) {
+  //   if (__isDefaultExample) {
   //     this.writeOPA();
   //     this.writeString('example');
   //     this.writeCL();
@@ -2496,7 +2495,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (parent?.key !== NodeType.resourcesValue) return true;
 
         // Get the resource alias
-        const alias = ResourceTag.fromValue(parent.value._typeAlias);
+        const alias = ResourceTag.fromValue(parent.value.__typeAlias);
         const type = alias ?? ResourceTag.fromValue(parent.value.type);
         if (!type) return false;
 
@@ -2788,57 +2787,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
-  // protected writeResource(resource: ResourceJson): void {
-  //   // const resourceAsArticle = resource as ArticleResource;
-
-  //   if (resource) {
-  //     const resourceTag = ResourceTag.keyFromValue(resource.type) ?? '';
-
-  //     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  //     const resourceData = (resource as any)[resourceTag];
-  //     const src = resourceData ? resourceData.src || resourceData.url || resourceData.body || '' : '';
-
-  //     // Standard case
-  //     this.writeOPAMP();
-  //     this.writeString(resource.type);
-  //     this.writeColon();
-  //     this.writeString(src);
-
-  //     if (resource.type === ResourceTag.article) {
-  //       this.writeNL();
-  //     }
-  //     this.writeCL();
-  //   }
-
-  //   // if (resource) {
-  //   //   // All resources should now be valid as they are validated in the AST
-  //   //   // TODO: remove code below
-
-  //   //   // // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-  //   //   // let valid = false;
-  //   //   // if (resource.value) {
-  //   //   //   valid = true;
-  //   //   // }
-
-  //   //   // // Resource is not valid, cancel walking it's tree.
-  //   //   // if (!valid) return false;
-
-  //   //   // Standard case
-  //   //   this.writeOPAMP();
-  //   //   this.writeString(resource._typeAlias ?? resource.type);
-  //   //   if (resource.type === ResourceTag.article && resourceAsArticle.value) {
-  //   //     this.writeColon();
-  //   //     // this.writeNL();
-  //   //     this.writeString(resourceAsArticle.value);
-  //   //     this.writeNL();
-  //   //   } else if (resource.value) {
-  //   //     this.writeColon();
-  //   //     this.writeString(resource.value);
-  //   //   }
-  //   //   this.writeCL();
-  //   // }
-  // }
-
   protected writeResource(type: ResourceTagType, value: string): void {
     // const resourceAsArticle = resource as ArticleResource;
 
@@ -2854,34 +2802,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
       this.writeCL();
     }
-
-    // if (resource) {
-    //   // All resources should now be valid as they are validated in the AST
-    //   // TODO: remove code below
-
-    //   // // Check if a resource has a value, if not, we should not write it (or any of its chained properties)
-    //   // let valid = false;
-    //   // if (resource.value) {
-    //   //   valid = true;
-    //   // }
-
-    //   // // Resource is not valid, cancel walking it's tree.
-    //   // if (!valid) return false;
-
-    //   // Standard case
-    //   this.writeOPAMP();
-    //   this.writeString(resource._typeAlias ?? resource.type);
-    //   if (resource.type === ResourceTag.article && resourceAsArticle.value) {
-    //     this.writeColon();
-    //     // this.writeNL();
-    //     this.writeString(resourceAsArticle.value);
-    //     this.writeNL();
-    //   } else if (resource.value) {
-    //     this.writeColon();
-    //     this.writeString(resource.value);
-    //   }
-    //   this.writeCL();
-    // }
   }
 
   protected writeProperty(

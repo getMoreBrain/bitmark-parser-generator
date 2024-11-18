@@ -32,13 +32,13 @@ function defaultTagContentProcessor(
   switch (type) {
     case TypeKey.Instruction: {
       target.instruction = textParser.toAst(trimmedStringValue);
-      target._instructionString = Breakscape.unbreakscape(trimmedStringValue);
+      target.__instructionString = Breakscape.unbreakscape(trimmedStringValue);
       break;
     }
 
     case TypeKey.Hint: {
       target.hint = textParser.toAst(trimmedStringValue);
-      target._hintString = Breakscape.unbreakscape(trimmedStringValue);
+      target.__hintString = Breakscape.unbreakscape(trimmedStringValue);
       break;
     }
 
@@ -55,7 +55,7 @@ function defaultTagContentProcessor(
     // 16.08.2023 Deprecated, but currently still supported
     case TypeKey.SampleSolution: {
       target.sampleSolution = Breakscape.unbreakscape(trimmedStringValue);
-      target._sampleSolutionAst = textParser.toAst(trimmedStringValue);
+      target.__sampleSolutionAst = textParser.toAst(trimmedStringValue);
       context.addWarning('[$...] tag is deprecated, use [@sampleSolution:...] instead', content);
       break;
     }

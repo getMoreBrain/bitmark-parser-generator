@@ -17,6 +17,7 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
+import { BodyBitType } from '../../../../model/enum/BodyBitType';
 
 const builder = new Builder();
 
@@ -33,8 +34,15 @@ function markChainContentProcessor(
   if (contentDepth === BitContentLevel.Chain) {
     markTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
   } else {
-    const mark = buildMark(context, contentDepth, bitType, textFormat, tagsConfig, content);
-    if (mark) bodyParts.push(mark);
+    const mark: Partial<MarkJson> | undefined = buildMark(
+      context,
+      contentDepth,
+      bitType,
+      textFormat,
+      tagsConfig,
+      content,
+    );
+    if (mark) bodyParts.push(mark as BodyPart);
   }
 }
 
@@ -45,7 +53,7 @@ function buildMark(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
-): MarkJson | undefined {
+): Partial<MarkJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('mark content', content);
 
   const markConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
@@ -64,11 +72,12 @@ function buildMark(
   const { solution } = tags;
   const { mark: markType, ...rest } = chainTags;
 
-  const mark = builder.buildMark({
+  const mark: Partial<MarkJson> = {
+    type: BodyBitType.mark,
     solution: solution ?? '',
     mark: ArrayUtils.asSingle(markType) ?? '',
     ...rest,
-  });
+  };
 
   return mark;
 }

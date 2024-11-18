@@ -7,7 +7,7 @@ import { NodeType, NodeTypeType } from '../../model/ast/NodeType';
 import { BitmarkAst, Bit } from '../../model/ast/Nodes';
 import { Example, ExtraProperties } from '../../model/ast/Nodes';
 import { Body, CardBit } from '../../model/ast/Nodes';
-import { JsonText, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
+import { JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { ExampleType } from '../../model/enum/ExampleType';
@@ -15,6 +15,7 @@ import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
+import { BodyBitJson } from '../../model/json/BodyBitJson';
 import { ImageResourceWrapperJson, ResourceJson, ResourceWrapperJson } from '../../model/json/ResourceJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
 import { TextParser } from '../../parser/text/TextParser';
@@ -22,6 +23,7 @@ import { ArrayUtils } from '../../utils/ArrayUtils';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { NumberUtils } from '../../utils/NumberUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
+import { TextGenerator } from '../text/TextGenerator';
 
 import {
   BitJson,
@@ -119,7 +121,7 @@ export interface JsonGeneratorOptions {
 interface ExampleNode {
   isExample: boolean;
   example?: Example | undefined;
-  _isDefaultExample: boolean;
+  __isDefaultExample: boolean;
 }
 
 interface ExampleJsonWrapper {
@@ -134,6 +136,7 @@ interface ExampleJsonWrapper {
  */
 class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected ast = new Ast();
+  protected textGenerator: TextGenerator;
   private bitmarkVersion: BitmarkVersionType;
   private textParserVersion: string;
   private textParser = new TextParser();
@@ -151,6 +154,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   private bodyDefault: JsonText = Breakscape.EMPTY_STRING;
   private bodyJson: JsonText = this.bodyDefault;
   private listItem: ListItemJson | undefined;
+  private placeholderIndex = 0;
 
   /**
    * Generate bitmark JSON from a bitmark AST
@@ -160,6 +164,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
   constructor(writer: Writer, options?: JsonGeneratorOptions) {
     super();
+
+    // Bind callbacks
+    this.enter = this.enter.bind(this);
+    this.between = this.between.bind(this);
+    this.exit = this.exit.bind(this);
+    this.leaf = this.leaf.bind(this);
+    this.bodyBitCallback = this.bodyBitCallback.bind(this);
 
     this.bitmarkVersion = BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.textParserVersion = this.textParser.version();
@@ -182,12 +193,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
     }
 
-    this.writer = writer;
+    // Create the text generator for generating v2 texts
+    this.textGenerator = new TextGenerator(this.bitmarkVersion, {
+      // writeCallback: this.write,
+      bodyBitCallback: this.bodyBitCallback,
+      debugGenerationInline: this.debugGenerationInline,
+    });
 
-    this.enter = this.enter.bind(this);
-    this.between = this.between.bind(this);
-    this.exit = this.exit.bind(this);
-    this.leaf = this.leaf.bind(this);
+    this.writer = writer;
 
     this.generatePropertyHandlers();
   }
@@ -240,6 +253,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.textDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
     this.bodyDefault = this.options.textAsPlainText ? Breakscape.EMPTY_STRING : [];
     this.bodyJson = this.bodyDefault;
+    this.listItem = undefined;
+    this.placeholderIndex = 0;
 
     this.printed = false;
   }
@@ -268,6 +283,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Walk the entire json object and remove all' '_xxx' properties
     // (which are used to store temporary data during the generation process)
     this.removeTemporaryProperties(this.json);
+
+    // Convert all bitmark text to plain text if required
+    if (this.options.textAsPlainText) {
+      // Convert all bitmark text to plain text
+      this.convertAllBitmarkTextsToStringsForPlainText(this.json);
+    }
   }
 
   // bitmarkAst -> bits
@@ -324,7 +345,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected exit_bitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
     // Clean up the bit JSON, removing any unwanted values
-    this.cleanAndSetDefaultsForBitJson(this.bitJson);
+    this.cleanBitJson(this.bitJson);
   }
 
   // bitmarkAst -> bits -> bitsValue -> imageSource
@@ -558,12 +579,20 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (!parent) return false;
 
+    const textFormat = this.getTextFormat(route);
+    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+
     this.bodyJson = value.body as JsonText;
 
     // Set the correct body property
     if (parent.key === NodeType.bitsValue) {
       // Body is at the bit level
       this.bitJson.body = this.bodyJson;
+
+      // Convert the body to plain text if required
+      if (this.options.textAsPlainText && isBitmarkText && this.isBitmarkText(this.bodyJson)) {
+        this.bitJson.body = this.textGenerator.generateSync(this.bodyJson as TextAst, TextFormat.bitmarkMinusMinus);
+      }
     } else if (parent.key === NodeType.cardBitsValue) {
       // Body is at the list item (card bit) level
       if (this.listItem) this.listItem.body = this.bodyJson;
@@ -571,6 +600,17 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Stop traversal of this branch
     return false;
+  }
+
+  protected bodyBitCallback(bodyBit: BodyBitJson, _index: number, _route: NodeInfo[]): string {
+    // console.log('bodyBitCallback', bodyBit, index, route);
+
+    const placeholder = `{${this.placeholderIndex}}`;
+    this.placeholderIndex++;
+    this.bitJson.placeholders = this.bitJson.placeholders ?? {};
+    this.bitJson.placeholders[placeholder] = bodyBit;
+
+    return placeholder;
   }
 
   // bitmarkAst -> bits -> bitsValue -> footer
@@ -717,18 +757,18 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         // Create the combo resource wrapper
         const wrapper: ResourceWrapperJson = {
           type: comboTagType,
-          _typeAlias: comboTagType,
+          __typeAlias: comboTagType,
         };
 
         // For each of the resources in this combo resource, find the actual resource and add it to the JSON
         for (const rt of resourceTags) {
-          const r = resources.find((r) => r._typeAlias === rt);
+          const r = resources.find((r) => r.__typeAlias === rt);
           // Extract everything except the type from the resource
           if (r) {
-            const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r._typeAlias);
-            const key = tagConfig?.jsonKey ?? r._typeAlias;
-            const tag = tagConfig?.tag ?? r._typeAlias;
-            const json = r._typeAlias === tag ? r : undefined;
+            const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.__typeAlias);
+            const key = tagConfig?.jsonKey ?? r.__typeAlias;
+            const tag = tagConfig?.tag ?? r.__typeAlias;
+            const json = r.__typeAlias === tag ? r : undefined;
             if (json) {
               for (const [k, v] of Object.entries(json)) {
                 if (k !== 'type') {
@@ -982,13 +1022,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (!Array.isArray(values)) values = [values];
       const valuesArr = values as unknown[];
 
-      if (valuesArr.length > 0) {
-        if (!options.array && valuesArr.length >= 1) {
-          finalValue = valuesArr[valuesArr.length - 1];
-        } else {
-          finalValue = valuesArr;
-        }
+      // if (valuesArr.length > 0) {
+      if (!options.array && valuesArr.length >= 1) {
+        finalValue = valuesArr[valuesArr.length - 1];
+      } else {
+        finalValue = valuesArr;
       }
+      // }
 
       if (options.allowNull || finalValue != null) {
         target[name] = finalValue;
@@ -1003,7 +1043,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       isBoolean: boolean;
     },
   ): ExampleJsonWrapper {
-    const { isExample, example, _isDefaultExample } = node;
+    const { isExample, example, __isDefaultExample } = node;
     const { defaultExample, isBoolean } = options;
 
     if (!isExample) {
@@ -1014,7 +1054,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     let exampleValue;
-    if (_isDefaultExample) {
+    if (__isDefaultExample) {
       exampleValue = isBoolean
         ? BooleanUtils.toBoolean(defaultExample)
         : this.convertBreakscapedStringToJsonText(defaultExample as BreakscapedString, TextFormat.bitmarkMinusMinus);
@@ -1194,40 +1234,22 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return `${text ?? ''}${textPlain ?? ''}`;
   }
 
-  // /**
-  //  * Walk the body AST to find the placeholder and replace it with the body bit.
-  //  *
-  //  * @param bodyAst the body AST
-  //  * @param bodyBitJson the body bit json to insert at the placeholder position
-  //  * @param index the index of the placeholder to replace
-  //  */
-  // protected replacePlaceholderWithBodyBit(bodyAst: TextAst, bodyBitJson: BodyBitJson, index: number) {
-  //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  //   const walkRecursive = (node: any, parent: any, parentKey: any): boolean => {
-  //     if (Array.isArray(node)) {
-  //       // Walk the array of nodes
-  //       for (let i = 0; i < node.length; i++) {
-  //         const child = node[i];
-  //         const done = walkRecursive(child, node, i);
-  //         if (done) return true;
-  //       }
-  //     } else {
-  //       if (node.type === 'bit' && node.index === index) {
-  //         // Found the placeholder, replace it with the body bit
-  //         parent[parentKey] = bodyBitJson;
-  //         return true;
-  //       }
-  //       if (node.content) {
-  //         // Walk the child content
-  //         const done = walkRecursive(node.content, node, 'content');
-  //         if (done) return true;
-  //       }
-  //     }
-  //     return false;
-  //   };
+  /**
+   * Check if an object is bitmark text
+   * An empty array is considered bitmark text if ignoreEmptyArrays is false
+   *
+   * @param obj object that might be bitmark text
+   * @returns
+   */
+  protected isBitmarkText(obj: unknown, ignoreEmptyArrays: boolean = false): boolean {
+    if (!Array.isArray(obj)) return false;
+    if (ignoreEmptyArrays && obj.length === 0) return false;
+    if (obj.length === 0) return true;
+    const firstNode = obj[0] as TextNode;
+    if (firstNode.type === TextNodeType.paragraph) return true;
 
-  //   walkRecursive(bodyAst, null, null);
-  // }
+    return false;
+  }
 
   //
   // WRITE FUNCTIONS
@@ -1263,211 +1285,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       originalType: bit.isCommented ? bit.bitType : undefined,
       format: bit.textFormat,
       bitLevel: bit.bitLevel,
-
-      // Properties
-      id: undefined,
-      internalComment: undefined,
-      externalId: undefined,
-      spaceId: undefined,
-      padletId: undefined,
-      jupyterId: undefined,
-      jupyterExecutionCount: undefined,
-      isPublic: undefined,
-      aiGenerated: undefined,
-      machineTranslated: undefined,
-      analyticsTag: undefined,
-      feedbackEngine: undefined,
-      feedbackType: undefined,
-      disableFeedback: undefined,
-      releaseVersion: undefined,
-      releaseKind: undefined,
-      releaseDate: undefined,
-      book: undefined,
-      ageRange: undefined,
-      lang: undefined,
-      language: undefined,
-      publisher: undefined,
-      publisherName: undefined,
-      theme: undefined,
-      computerLanguage: undefined,
-      target: undefined,
-      slug: undefined,
-      tag: undefined,
-      reductionTag: undefined,
-      bubbleTag: undefined,
-      levelCEFRp: undefined,
-      levelCEFR: undefined,
-      levelILR: undefined,
-      levelACTFL: undefined,
-      icon: undefined,
-      iconTag: undefined,
-      colorTag: undefined,
-      flashcardSet: undefined,
-      subtype: undefined,
-      bookAlias: undefined,
-      coverImage: undefined,
-      coverColor: undefined,
-      publications: undefined,
-      author: undefined,
-      subject: undefined,
-      date: undefined,
-      dateEnd: undefined,
-      location: undefined,
-      kind: undefined,
-      hasMarkAsDone: undefined,
-      processHandIn: undefined,
-      action: undefined,
-      showInIndex: undefined,
-      blockId: undefined,
-      pageNo: undefined,
-      x: undefined,
-      y: undefined,
-      width: undefined,
-      height: undefined,
-      index: undefined,
-      classification: undefined,
-      availableClassifications: undefined,
-      allowedBit: undefined,
-      tableFixedHeader: undefined,
-      tableSearch: undefined,
-      tableSort: undefined,
-      tablePagination: undefined,
-      tablePaginationLimit: undefined,
-      tableHeight: undefined,
-      tableWhitespaceNoWrap: undefined,
-      tableAutoWidth: undefined,
-      tableResizableColumns: undefined,
-      quizCountItems: undefined,
-      quizStrikethroughSolutions: undefined,
-      codeLineNumbers: undefined,
-      codeMinimap: undefined,
-      stripePricingTableId: undefined,
-      stripePublishableKey: undefined,
-      thumbImage: undefined,
-      scormSource: undefined,
-      posterImage: undefined,
-      focusX: undefined,
-      focusY: undefined,
-      pointerLeft: undefined,
-      pointerTop: undefined,
-      listItemIndent: undefined,
-      backgroundWallpaper: undefined,
-      hasBookNavigation: undefined,
-      duration: undefined,
-      deeplink: undefined,
-      externalLink: undefined,
-      externalLinkText: undefined,
-      videoCallLink: undefined,
-      vendorUrl: undefined,
-      search: undefined,
-      list: undefined,
-      textReference: undefined,
-      isTracked: undefined,
-      isInfoOnly: undefined,
-      imageFirst: undefined,
-      activityType: undefined,
-      labelTrue: undefined,
-      labelFalse: undefined,
-      content2Buy: undefined,
-      mailingList: undefined,
-      buttonCaption: undefined,
-      callToActionUrl: undefined,
-      caption: undefined,
-      quotedPerson: undefined,
-      reasonableNumOfChars: undefined,
-      resolved: undefined,
-      resolvedDate: undefined,
-      resolvedBy: undefined,
-      maxCreatedBits: undefined,
-      maxDisplayLevel: undefined,
-      page: undefined,
-      productId: undefined,
-      product: undefined,
-      productVideo: undefined,
-      productFolder: undefined,
-      technicalTerm: undefined,
-      servings: undefined,
-      ratingLevelStart: undefined,
-      ratingLevelEnd: undefined,
-      ratingLevelSelected: undefined,
-
-      // Book data
-      title: undefined,
-      subtitle: undefined,
-      level: undefined,
-      toc: undefined,
-      progress: undefined,
-      anchor: undefined,
-      reference: undefined,
-      referenceEnd: undefined,
-
-      // Item, Lead, Hint, Instruction
-      item: undefined,
-      lead: undefined,
-      pageNumber: undefined,
-      marginNumber: undefined,
-      hint: undefined,
-      instruction: undefined,
-
-      // Example
-      isExample: undefined,
-      example: undefined,
-
-      // Person .conversion-xxx, page-person, etc
-      person: undefined,
-
-      // Marks (config)
-      marks: undefined,
-
-      // Extra Properties
-      extraProperties: undefined,
-
-      // Body
-      body: undefined,
-
-      // Resource
-      imagePlaceholder: undefined,
-      resource: undefined,
-      logos: undefined,
-      images: undefined,
-
-      // Children
-      statement: undefined,
-      isCorrect: undefined,
-      sampleSolution: undefined,
-      additionalSolutions: undefined,
-      partialAnswer: undefined,
-      elements: undefined,
-      cards: undefined,
-      descriptions: undefined,
-      statements: undefined,
-      responses: undefined,
-      quizzes: undefined,
-      heading: undefined,
-      pairs: undefined,
-      matrix: undefined,
-      choices: undefined,
-      questions: undefined,
-      captionDefinitionList: undefined,
-      listItems: undefined,
-      sections: undefined,
-
-      // Placeholders
-      placeholders: undefined,
-
-      // Footer
-      footer: undefined,
     };
-
-    // Add the resource template if there should be a resource (indicated by resourceType) but there is none defined.
-    // if (bit.resourceType && !bitJson.resource) {
-    //   const jsonKey = ResourceTag.keyFromValue(bit.resourceType);
-    //   bitJson.resource = {
-    //     type: bit.resourceType,
-    //   } as ResourceJson;
-    //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    //   if (jsonKey) (bitJson.resource as any)[jsonKey] = {};
-    // }
 
     return bitJson;
   }
@@ -1476,13 +1294,15 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * Remove wanted properties from bit json object.
    * - This function defines the defaults for properties in the json.
    *
+   * TODO: All these defaults should come from the config and be set in the Builder.
+   *
    * @param bit
    * @returns
    */
-  protected cleanAndSetDefaultsForBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
+  protected cleanBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
     const bitType = Config.getBitType(bitJson.type);
-    const textFormat = bitJson.format;
-    const plainText = this.options.textAsPlainText;
+    // const textFormat = bitJson.format;
+    // const plainText = this.options.textAsPlainText;
 
     // Clear 'originalType' if not set
     if (bitJson.originalType == null) bitJson.originalType = undefined;
@@ -1497,8 +1317,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //       The properties used are a bit random sometimes?
     //       It would be better if this functionality was generated from the bit config
     if (Config.isOfBitType(bitType, [BitType._error, BitType._comment])) {
-      // Special caes for _error and _comment bits
+      // Special case for _error and _comment bits
       delete bitJson.format;
+      delete bitJson.item;
+      delete bitJson.lead;
+      delete bitJson.pageNumber;
+      delete bitJson.marginNumber;
+      delete bitJson.hint;
+      delete bitJson.instruction;
       //
     } else {
       let isTopLevelExample = false;
@@ -1507,6 +1333,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
       if (Config.isOfBitType(bitType, [BitType.page])) {
         // Bits without item, lead, etc
+        if (bitJson.item == null || bitJson.item?.length === 0) delete bitJson.item;
+        if (bitJson.lead == null || bitJson.lead?.length === 0) delete bitJson.lead;
+        if (bitJson.pageNumber == null || bitJson.pageNumber?.length === 0) delete bitJson.pageNumber;
+        if (bitJson.marginNumber == null || bitJson.marginNumber?.length === 0) delete bitJson.marginNumber;
+        if (bitJson.hint == null || bitJson.hint?.length === 0) delete bitJson.hint;
+        if (bitJson.instruction == null || bitJson.instruction?.length === 0) delete bitJson.instruction;
       } else {
         // Majority of bits
         if (bitJson.item == null) bitJson.item = this.textDefault;
@@ -1780,214 +1612,35 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
     }
 
-    // Remove unwanted properties
-
-    // Properties
-    if (bitJson.id == null) delete bitJson.id;
-    if (bitJson.internalComment == null) delete bitJson.internalComment;
-    if (bitJson.externalId == null) delete bitJson.externalId;
-    if (bitJson.spaceId == null) delete bitJson.spaceId;
-    if (bitJson.padletId == null) delete bitJson.padletId;
-    if (bitJson.jupyterId == null) delete bitJson.jupyterId;
-    if (bitJson.jupyterExecutionCount == null) delete bitJson.jupyterExecutionCount;
-    if (bitJson.isPublic == null) delete bitJson.isPublic;
-    if (bitJson.aiGenerated == null) delete bitJson.aiGenerated;
-    if (bitJson.machineTranslated == null) delete bitJson.machineTranslated;
-    if (bitJson.analyticsTag == null) delete bitJson.analyticsTag;
-    if (bitJson.feedbackEngine == null) delete bitJson.feedbackEngine;
-    if (bitJson.feedbackType == null) delete bitJson.feedbackType;
-    if (bitJson.disableFeedback == null) delete bitJson.disableFeedback;
-    if (bitJson.releaseVersion == null) delete bitJson.releaseVersion;
-    if (bitJson.releaseKind == null) delete bitJson.releaseKind;
-    if (bitJson.releaseDate == null) delete bitJson.releaseDate;
-    if (bitJson.book == null) delete bitJson.book;
-    if (bitJson.ageRange == null) delete bitJson.ageRange;
-    if (bitJson.lang == null) delete bitJson.lang;
-    if (bitJson.language == null) delete bitJson.language;
-    if (bitJson.publisher == null) delete bitJson.publisher;
-    if (bitJson.publisherName == null) delete bitJson.publisherName;
-    if (bitJson.theme == null) delete bitJson.theme;
-    if (bitJson.computerLanguage == null) delete bitJson.computerLanguage;
-    if (bitJson.target == null) delete bitJson.target;
-    if (bitJson.slug == null) delete bitJson.slug;
-    if (bitJson.tag == null) delete bitJson.tag;
-    if (bitJson.reductionTag == null) delete bitJson.reductionTag;
-    if (bitJson.bubbleTag == null) delete bitJson.bubbleTag;
-    if (bitJson.levelCEFRp == null) delete bitJson.levelCEFRp;
-    if (bitJson.levelCEFR == null) delete bitJson.levelCEFR;
-    if (bitJson.levelILR == null) delete bitJson.levelILR;
-    if (bitJson.levelACTFL == null) delete bitJson.levelACTFL;
-    if (bitJson.icon == null) delete bitJson.icon;
-    if (bitJson.iconTag == null) delete bitJson.iconTag;
-    if (bitJson.colorTag == null) delete bitJson.colorTag;
-    if (bitJson.flashcardSet == null) delete bitJson.flashcardSet;
-    if (bitJson.subtype == null) delete bitJson.subtype;
-    if (bitJson.bookAlias == null) delete bitJson.bookAlias;
-    if (bitJson.coverImage == null) delete bitJson.coverImage;
-    if (bitJson.coverColor == null) delete bitJson.coverColor;
-    if (bitJson.publications == null) delete bitJson.publications;
-    if (bitJson.author == null) delete bitJson.author;
-    if (bitJson.subject == null) delete bitJson.subject;
-    if (bitJson.date == null) delete bitJson.date;
-    if (bitJson.dateEnd == null) delete bitJson.dateEnd;
-    if (bitJson.location == null) delete bitJson.location;
-    if (bitJson.kind == null) delete bitJson.kind;
-    if (bitJson.hasMarkAsDone == null) delete bitJson.hasMarkAsDone;
-    if (bitJson.processHandIn == null) delete bitJson.processHandIn;
-    if (bitJson.action == null) delete bitJson.action;
-    if (bitJson.showInIndex == null) delete bitJson.showInIndex;
-    if (bitJson.blockId == null) delete bitJson.blockId;
-    if (bitJson.pageNo == null) delete bitJson.pageNo;
-    if (bitJson.x == null) delete bitJson.x;
-    if (bitJson.y == null) delete bitJson.y;
-    if (bitJson.width == null) delete bitJson.width;
-    if (bitJson.height == null) delete bitJson.height;
-    if (bitJson.index == null) delete bitJson.index;
-    if (bitJson.classification == null) delete bitJson.classification;
-    if (bitJson.availableClassifications == null) delete bitJson.availableClassifications;
-    if (bitJson.allowedBit == null) delete bitJson.allowedBit;
-    if (bitJson.tableFixedHeader == null) delete bitJson.tableFixedHeader;
-    if (bitJson.tableSearch == null) delete bitJson.tableSearch;
-    if (bitJson.tableSort == null) delete bitJson.tableSort;
-    if (bitJson.tablePagination == null) delete bitJson.tablePagination;
-    if (bitJson.tablePaginationLimit == null) delete bitJson.tablePaginationLimit;
-    if (bitJson.tableHeight == null) delete bitJson.tableHeight;
-    if (bitJson.tableWhitespaceNoWrap == null) delete bitJson.tableWhitespaceNoWrap;
-    if (bitJson.tableAutoWidth == null) delete bitJson.tableAutoWidth;
-    if (bitJson.tableResizableColumns == null) delete bitJson.tableResizableColumns;
-    if (bitJson.quizCountItems == null) delete bitJson.quizCountItems;
-    if (bitJson.quizStrikethroughSolutions == null) delete bitJson.quizStrikethroughSolutions;
-    if (bitJson.codeLineNumbers == null) delete bitJson.codeLineNumbers;
-    if (bitJson.codeMinimap == null) delete bitJson.codeMinimap;
-    if (bitJson.stripePricingTableId == null) delete bitJson.stripePricingTableId;
-    if (bitJson.stripePublishableKey == null) delete bitJson.stripePublishableKey;
-    if (bitJson.thumbImage == null) delete bitJson.thumbImage;
-    if (bitJson.scormSource == null) delete bitJson.scormSource;
-    if (bitJson.posterImage == null) delete bitJson.posterImage;
-    if (bitJson.focusX == null) delete bitJson.focusX;
-    if (bitJson.focusY == null) delete bitJson.focusY;
-    if (bitJson.pointerLeft == null) delete bitJson.pointerLeft;
-    if (bitJson.pointerTop == null) delete bitJson.pointerTop;
-    if (bitJson.listItemIndent == null) delete bitJson.listItemIndent;
-    if (bitJson.backgroundWallpaper == null) delete bitJson.backgroundWallpaper;
-    if (bitJson.hasBookNavigation == null) delete bitJson.hasBookNavigation;
-    if (bitJson.duration == null) delete bitJson.duration;
-    if (bitJson.deeplink == null) delete bitJson.deeplink;
-    if (bitJson.externalLink == null) delete bitJson.externalLink;
-    if (bitJson.externalLinkText == null) delete bitJson.externalLinkText;
-    if (bitJson.videoCallLink == null) delete bitJson.videoCallLink;
-    if (bitJson.vendorUrl == null) delete bitJson.vendorUrl;
-    if (bitJson.search == null) delete bitJson.search;
-    if (bitJson.list == null) delete bitJson.list;
-    if (bitJson.textReference == null) delete bitJson.textReference;
-    if (bitJson.isTracked == null) delete bitJson.isTracked;
-    if (bitJson.isInfoOnly == null) delete bitJson.isInfoOnly;
-    if (bitJson.imageFirst == null) delete bitJson.imageFirst;
-    if (bitJson.activityType == null) delete bitJson.activityType;
-    if (bitJson.labelTrue == null) delete bitJson.labelTrue;
-    if (bitJson.labelFalse == null) delete bitJson.labelFalse;
-    if (bitJson.content2Buy == null) delete bitJson.content2Buy;
-    if (bitJson.mailingList == null) delete bitJson.mailingList;
-    if (bitJson.buttonCaption == null) delete bitJson.buttonCaption;
-    if (bitJson.callToActionUrl == null) delete bitJson.callToActionUrl;
-    if (bitJson.caption == null) delete bitJson.caption;
-    if (bitJson.quotedPerson == null) delete bitJson.quotedPerson;
-    if (bitJson.resolved == null) delete bitJson.resolved;
-    if (bitJson.resolvedDate == null) delete bitJson.resolvedDate;
-    if (bitJson.resolvedBy == null) delete bitJson.resolvedBy;
-    if (bitJson.maxCreatedBits == null) delete bitJson.maxCreatedBits;
-    if (bitJson.maxDisplayLevel == null) delete bitJson.maxDisplayLevel;
-    if (bitJson.page == null) delete bitJson.page;
-    if (bitJson.productId == null) delete bitJson.productId;
-    if (bitJson.product == null) delete bitJson.product;
-    if (bitJson.productVideo == null) delete bitJson.productVideo;
-    if (bitJson.productFolder == null) delete bitJson.productFolder;
-    if (bitJson.technicalTerm == null) delete bitJson.technicalTerm;
-    if (bitJson.servings == null) delete bitJson.servings;
-    if (bitJson.ratingLevelStart == null) delete bitJson.ratingLevelStart;
-    if (bitJson.ratingLevelEnd == null) delete bitJson.ratingLevelEnd;
-    if (bitJson.ratingLevelSelected == null) delete bitJson.ratingLevelSelected;
-
-    // Book data
-    if (bitJson.title == null) delete bitJson.title;
-    if (bitJson.subtitle == null) delete bitJson.subtitle;
-    if (bitJson.level == null) delete bitJson.level;
-    if (bitJson.toc == null) delete bitJson.toc;
-    if (bitJson.progress == null) delete bitJson.progress;
-    if (bitJson.anchor == null) delete bitJson.anchor;
-    if (bitJson.reference == null) delete bitJson.reference;
-    if (bitJson.referenceEnd == null) delete bitJson.referenceEnd;
-
-    // Item, Lead, Hint, Instruction
-    if (bitJson.item == null) delete bitJson.item;
-    if (bitJson.lead == null) delete bitJson.lead;
-    if (bitJson.pageNumber == null) delete bitJson.pageNumber;
-    if (bitJson.marginNumber == null) delete bitJson.marginNumber;
-    if (bitJson.hint == null) delete bitJson.hint;
-    if (bitJson.instruction == null) delete bitJson.instruction;
-
-    // Example
-    if (bitJson.example === undefined) delete bitJson.example;
-    if (bitJson.isExample == null) delete bitJson.isExample;
-
-    // Mark
-    if (bitJson.marks == null) delete bitJson.marks;
-
-    // Extra Properties
-    if (bitJson.extraProperties == null) delete bitJson.extraProperties;
-
-    // Body
-    if (bitJson.body == null && textFormat !== TextFormat.json) delete bitJson.body;
-
-    // Placeholders
-    if (bitJson.placeholders == null || Object.keys(bitJson.placeholders).length === 0) delete bitJson.placeholders;
-
-    // Resource
-    if (bitJson.imagePlaceholder == null) delete bitJson.imagePlaceholder;
-    if (bitJson.resource == null) delete bitJson.resource;
-    if (bitJson.logos == null) delete bitJson.logos;
-    if (bitJson.images == null) delete bitJson.images;
-
-    // Children
-    if (bitJson.statement == null) delete bitJson.statement;
-    if (bitJson.isCorrect == null) delete bitJson.isCorrect;
-    if (bitJson.sampleSolution == null) delete bitJson.sampleSolution;
-    if (bitJson.additionalSolutions == null) delete bitJson.additionalSolutions;
-    if (bitJson.partialAnswer == null) delete bitJson.partialAnswer;
-    if (bitJson.elements == null) delete bitJson.elements;
-    if (bitJson.cards == null) delete bitJson.cards;
-    if (bitJson.descriptions == null) delete bitJson.descriptions;
-    if (bitJson.statements == null) delete bitJson.statements;
-    if (bitJson.responses == null) delete bitJson.responses;
-    if (bitJson.quizzes == null) delete bitJson.quizzes;
-    if (bitJson.heading == null) delete bitJson.heading;
-    if (bitJson.pairs == null) delete bitJson.pairs;
-    if (bitJson.matrix == null) delete bitJson.matrix;
-    if (bitJson.table == null) delete bitJson.table;
-    if (bitJson.choices == null) delete bitJson.choices;
-    if (bitJson.questions == null) delete bitJson.questions;
-    if (bitJson.captionDefinitionList == null) delete bitJson.captionDefinitionList;
-    if (bitJson.listItems == null) delete bitJson.listItems;
-    if (bitJson.sections == null) delete bitJson.sections;
-
-    // Placeholders
-    if (!plainText || bitJson.placeholders == null) delete bitJson.placeholders;
-
-    // Footer
-    if (bitJson.footer == null) delete bitJson.footer;
-
     return bitJson;
   }
 
   /**
-   * Remove any property with a key starting with an underscore.
+   * Convert any bitmark texts to strings.
+   */
+  protected convertAllBitmarkTextsToStringsForPlainText(json: Record<string, unknown> | unknown[]): void {
+    if (!this.options.textAsPlainText) return;
+
+    const obj = json as Record<string, unknown>;
+    for (const key in obj) {
+      const val = obj[key];
+      if (this.isBitmarkText(val)) {
+        obj[key] = this.textGenerator.generateSync(val as TextAst, TextFormat.bitmarkMinusMinus);
+      } else if (typeof obj[key] === 'object') {
+        this.convertAllBitmarkTextsToStringsForPlainText(obj[key] as Record<string, unknown>);
+      }
+    }
+  }
+
+  /**
+   * Remove any property with a key starting with an double underscore.
    *
    * @param json
    */
   protected removeTemporaryProperties(json: Record<string, unknown> | unknown[]): void {
     const obj = json as Record<string, unknown>;
     for (const key in obj) {
-      if (key.startsWith('_')) {
+      if (key.startsWith('__')) {
         delete obj[key];
       } else if (typeof obj[key] === 'object') {
         this.removeTemporaryProperties(obj[key] as Record<string, unknown>);

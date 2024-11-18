@@ -1,4 +1,3 @@
-import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
@@ -6,6 +5,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { MarkConfigJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -16,8 +16,6 @@ import {
   BitmarkPegParserContext,
   TypeKeyValue,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function markConfigChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -54,11 +52,11 @@ function markConfigChainContentProcessor(
     (StringUtils.trimmedString(content.value) ?? 'unknown') as BreakscapedString,
   );
 
-  const config = builder.buildMarkConfig({
+  const config: Partial<MarkConfigJson> = {
     mark,
     emphasis: 'underline' as string,
     ...tags,
-  });
+  };
 
   if (config) markConfig.push(config);
 }

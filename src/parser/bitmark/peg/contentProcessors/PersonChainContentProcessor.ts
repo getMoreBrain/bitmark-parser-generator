@@ -1,10 +1,10 @@
-import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { PersonJson } from '../../../../model/json/BitJson';
 import { ImageResourceJson, ResourceJson } from '../../../../model/json/ResourceJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -15,8 +15,6 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function personChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -46,11 +44,11 @@ function personChainContentProcessor(
   // Extract avatarImage from the resources
   const avatarImage = extractAvatarImage(context, resources);
 
-  const person = builder.buildPerson(bitType, {
+  const person: Partial<PersonJson> = {
     name,
     title,
     avatarImage,
-  });
+  };
 
   target.person = person;
 }

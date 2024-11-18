@@ -1,8 +1,8 @@
-import { Builder } from '../../../../ast/Builder';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { RatingLevelStartEndJson } from '../../../../model/json/BitJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { TextParser } from '../../../text/TextParser';
 
@@ -15,7 +15,6 @@ import {
   TypeKeyValue,
 } from '../BitmarkPegParserTypes';
 
-const builder = new Builder();
 const textParser = new TextParser();
 
 function ratingLevelChainContentProcessor(
@@ -40,10 +39,10 @@ function ratingLevelChainContentProcessor(
   // Extract the technicalTerm from the content tag
   const level = NumberUtils.asNumber(value) ?? 0;
 
-  const node = builder.buildRatingLevelStartEnd({
+  const node: Partial<RatingLevelStartEndJson> = {
     level,
     label: label ? textParser.toAst(label) : undefined,
-  });
+  };
 
   switch (key) {
     case PropertyTag.ratingLevelStart:
