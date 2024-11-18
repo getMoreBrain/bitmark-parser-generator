@@ -28,7 +28,7 @@ import {
   CaptionDefinitionJson,
   CaptionDefinitionListJson,
   ChoiceJson,
-  DescriptionListItemJson,
+  DefinitionListItemJson,
   ExampleJson,
   FlashcardJson,
   HeadingJson,
@@ -247,6 +247,7 @@ class Builder extends BaseBuilder {
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
+
     markConfig?: Partial<MarkConfigJson>[];
     imagePlaceholder?: Partial<ImageResourceWrapperJson>;
     resources?: Partial<ResourceJson> | Partial<ResourceJson>[];
@@ -255,7 +256,7 @@ class Builder extends BaseBuilder {
     additionalSolutions?: string | string[];
     elements?: string[];
     flashcards?: Partial<FlashcardJson>[];
-    descriptions?: Partial<DescriptionListItemJson>[];
+    definitions?: Partial<DefinitionListItemJson>[];
     statement?: Partial<StatementJson>;
     statements?: Partial<StatementJson>[];
     responses?: Partial<ResponseJson>[];
@@ -1530,35 +1531,35 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Build descriptionListItem[] node
+   * Build definitionListItem[] node
    *
    * @param data - data for the node
    * @returns
    */
-  protected buildDescriptionList(
-    data: Partial<DescriptionListItemJson>[] | undefined,
-  ): DescriptionListItemJson[] | undefined {
+  protected buildDefinitionList(
+    data: Partial<DefinitionListItemJson>[] | undefined,
+  ): DefinitionListItemJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.buildDescriptionListItem(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildDefinitionListItem(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
   /**
-   * Build descriptionListItem node
+   * Build definitionListItem node
    *
    * @param data - data for the node
    * @returns
    */
-  protected buildDescriptionListItem(
-    data: Partial<DescriptionListItemJson> | undefined,
-  ): DescriptionListItemJson | undefined {
+  protected buildDefinitionListItem(
+    data: Partial<DefinitionListItemJson> | undefined,
+  ): DefinitionListItemJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
-    const node: DescriptionListItemJson = {
+    const node: DefinitionListItemJson = {
       term: this.handleJsonText(data.term),
-      description: this.handleJsonText(data.description),
-      alternativeDescriptions: this.handleJsonText(data.alternativeDescriptions),
+      definition: this.handleJsonText(data.definition),
+      alternativeDefinitions: this.handleJsonText(data.alternativeDefinitions),
       item: this.handleJsonText(data.item),
       lead: this.handleJsonText(data.lead),
       hint: this.handleJsonText(data.hint),
@@ -1569,7 +1570,7 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreEmptyArrays: ['question', 'answer', 'alternativeDescriptions', 'item', 'hint', 'instruction'],
+      ignoreEmptyArrays: ['question', 'answer', 'alternativeDefinitions', 'item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
     });
 
@@ -1775,7 +1776,7 @@ class Builder extends BaseBuilder {
       // term: this.convertJsonTextToAstText(data.term),
       // description: this.convertJsonTextToAstText(data.description),
       term: data.term ?? '',
-      description: data.description ?? '',
+      definition: data.definition ?? '',
     };
 
     // Remove Unset Optionals
@@ -1805,7 +1806,7 @@ class Builder extends BaseBuilder {
         .map((d) => {
           return this.buildCaptionDefinition({
             term: d.term,
-            description: d.description,
+            definition: d.definition,
           });
         })
         .filter((d) => d != null),
@@ -1874,7 +1875,7 @@ class Builder extends BaseBuilder {
     textFormat: TextFormatType,
     data: {
       flashcards?: Partial<FlashcardJson>[];
-      descriptions?: Partial<DescriptionListItemJson>[];
+      definitions?: Partial<DefinitionListItemJson>[];
       questions?: Partial<QuestionJson>[];
       elements?: string[];
       statement?: Partial<StatementJson>;
@@ -1896,7 +1897,7 @@ class Builder extends BaseBuilder {
       questions: this.buildQuestions(data.questions),
       elements: data.elements,
       flashcards: this.buildFlashcards(data.flashcards),
-      descriptions: this.buildDescriptionList(data.descriptions),
+      definitions: this.buildDefinitionList(data.definitions),
       statement: this.buildStatement(data.statement),
       statements: this.buildStatements(data.statements),
       choices: this.buildChoices(data.choices),
@@ -1937,7 +1938,7 @@ class Builder extends BaseBuilder {
       if (cardNode) {
         this.pushExampleDownTreeString(__isDefaultExample, example, cardNode.pairs as WithExampleJson[]);
         this.pushExampleDownTreeBoolean(__isDefaultExample, example, false, cardNode.flashcards as WithExampleJson[]);
-        this.pushExampleDownTreeBoolean(__isDefaultExample, example, false, cardNode.descriptions as WithExampleJson[]);
+        this.pushExampleDownTreeBoolean(__isDefaultExample, example, false, cardNode.definitions as WithExampleJson[]);
         this.pushExampleDownTreeBoolean(__isDefaultExample, example, true, cardNode.choices as WithExampleJson[]);
         this.pushExampleDownTreeBoolean(
           __isDefaultExample,
@@ -2208,8 +2209,8 @@ class Builder extends BaseBuilder {
         checkIsExample(v as WithExampleJson);
       }
 
-      // descriptions
-      for (const v of cardNode.descriptions ?? []) {
+      // definitions
+      for (const v of cardNode.definitions ?? []) {
         checkIsExample(v as WithExampleJson);
       }
 

@@ -16,7 +16,7 @@ import {
   CaptionDefinitionJson,
   CaptionDefinitionListJson,
   ChoiceJson,
-  DescriptionListItemJson,
+  DefinitionListItemJson,
   ExampleJson,
   FlashcardJson,
   HeadingJson,
@@ -212,7 +212,7 @@ function parseFlashcardLike(
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const flashcards: Partial<FlashcardJson>[] = [];
-  const descriptions: Partial<DescriptionListItemJson>[] = [];
+  const definitions: Partial<DefinitionListItemJson>[] = [];
   let question: TextAst = [];
   let questionString = '';
   let answer: TextAst = [];
@@ -254,15 +254,15 @@ function parseFlashcardLike(
 
     // Add the flashcard
     if (cardIndex === 0 || !onlyOneCardAllowed) {
-      if (Config.isOfBitType(bitType, BitType.descriptionList)) {
-        // .description-list
-        const dl: Partial<DescriptionListItemJson> = {
+      if (Config.isOfBitType(bitType, BitType.definitionList)) {
+        // .definition-list
+        const dl: Partial<DefinitionListItemJson> = {
           term: question,
-          description: answer,
-          alternativeDescriptions: alternativeAnswers,
+          definition: answer,
+          alternativeDefinitions: alternativeAnswers,
           ...extraTags,
         };
-        if (dl) descriptions.push(dl);
+        if (dl) definitions.push(dl);
       } else {
         // .flashcard
         // if (question) {
@@ -291,7 +291,7 @@ function parseFlashcardLike(
 
   return {
     flashcards: flashcards.length > 0 ? flashcards : undefined,
-    descriptions: descriptions.length > 0 ? descriptions : undefined,
+    definitions: definitions.length > 0 ? definitions : undefined,
   };
 }
 
@@ -996,7 +996,7 @@ function parseCaptionDefinitionsList(
             .map((row) => {
               const col: Partial<CaptionDefinitionJson> = {
                 term: row[0],
-                description: row[1],
+                definition: row[1],
               };
               return col as CaptionDefinitionJson;
             })

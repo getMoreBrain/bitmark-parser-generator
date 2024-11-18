@@ -101,7 +101,7 @@ export type {
   PersonJson,
   MarkConfigJson,
   FlashcardJson,
-  DescriptionListItemJson,
+  DefinitionListItemJson,
   StatementJson,
   ChoiceJson,
   ResponseJson,

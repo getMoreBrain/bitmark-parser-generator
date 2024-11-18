@@ -50,6 +50,7 @@ abstract class StreamWriter implements Writer {
       this._stream.write(this.endOfLineString);
       this.lastWrite = this.endOfLineString;
     }
+
     return this;
   }
 
@@ -62,7 +63,6 @@ abstract class StreamWriter implements Writer {
       const value = values[i];
       this._stream.write(value);
       str += value;
-
       if (delimiter && i < len - 1) {
         this._stream.write(delimiter);
         str += delimiter;

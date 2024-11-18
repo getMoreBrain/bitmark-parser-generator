@@ -635,9 +635,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return this.standardHandler(node, route, NodeType.cardNode, { array: true, keyOverride: 'cards' });
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions
 
-  protected enter_descriptions(node: NodeInfo, route: NodeInfo[]): boolean {
+  protected enter_definitions(node: NodeInfo, route: NodeInfo[]): boolean {
     return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
@@ -1199,11 +1199,19 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * @param text the text to concatenate
    * @param textPlain the plain text to concatenate
    */
-  protected concatenatePlainTextWithJsonTexts(text: JsonText, textPlain: string): JsonText {
+  protected concatenatePlainTextWithJsonTexts(text: JsonText, extraBreaks: number, textPlain: string): JsonText {
     if (Array.isArray(text)) {
+      textPlain = textPlain.trim();
       if (textPlain) {
         const splitText = textPlain.split('\n');
         const content: TextNode[] = [];
+
+        for (let i = 0; i < extraBreaks; i++) {
+          content.push({
+            type: TextNodeType.hardBreak,
+          });
+        }
+
         for (let i = 0; i < splitText.length; i++) {
           const t = splitText[i];
           if (t) {
@@ -1235,7 +1243,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       return text;
     }
 
-    return `${text ?? ''}${textPlain ?? ''}`;
+    return `${text ?? ''}${'\n'.repeat(extraBreaks)}${textPlain ?? ''}`;
   }
 
   /**
@@ -1377,7 +1385,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           BitType.sequence,
           BitType.mark,
           BitType.flashcard,
-          BitType.descriptionList,
+          BitType.definitionList,
         ])
       ) {
         // With no 'example' value at the bit level.

@@ -53,18 +53,15 @@
         }
       },
       "captionDefinitionList": {
-        "columns": [
-          "Legende",
-          ""
-        ],
+        "columns": ["Legende", ""],
         "definitions": [
           {
             "term": "A",
-            "description": "Körper"
+            "definition": "Körper"
           },
           {
             "term": "B",
-            "description": "Stromquelle"
+            "definition": "Stromquelle"
           }
         ]
       },
@@ -264,18 +261,15 @@
         }
       },
       "captionDefinitionList": {
-        "columns": [
-          "Legende",
-          ""
-        ],
+        "columns": ["Legende", ""],
         "definitions": [
           {
             "term": "A",
-            "description": "Körper"
+            "definition": "Körper"
           },
           {
             "term": "B",
-            "description": "Stromquelle"
+            "definition": "Stromquelle"
           }
         ]
       },

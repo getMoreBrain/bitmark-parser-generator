@@ -1,47 +1,47 @@
-[.description-list]
+[.definition-list]
 
 Somebody
 ====
 Term 1?
 Card 1, Side 1
 --
-Description 1
+Definition 1
 Card 1, Side 2
 ====
 Term 2?
 Card 2, Side 1
 --
-Description 2
+Definition 2
 Card 2, Side 2
 ++
-Alternative Description 2
+Alternative Definition 2
 Card 2, Side 2
 ~~~~
 
 Footer anyone?
 
 
-[.description-list]
+[.definition-list]
 
 Somebody
 ====
 Term 1?
 Card 1, Side 1
 --
-Description 1
+Definition 1
 Card 1, Side 2
 ++
-Alternative Description 2
+Alternative Definition 2
 Card 1, Side 2
 ====
 Term 2?
 Card 2, Side 1
 --
-Description 2
+Definition 2
 Card 2, Side 2, No footer
 
 
-[.description-list]
+[.definition-list]
 [@example]
 [%item][%lead]
 Somebody
@@ -49,40 +49,40 @@ Somebody
 Term 1?
 Card 1, Side 1
 --
-Description 1
+Definition 1
 Card 1, Side 2
 ++
-Alternative Description 1
+Alternative Definition 1
 Card 1, Side 2
 ++
-Alternative Description 2
+Alternative Definition 2
 Card 1, Side 2
 ====
 Term 2?
 Card 2, Side 1
 --
-Description 2
+Definition 2
 Card 2, Side 2, No footer
 [%item][%lead]
 
 
-[.description-list]
+[.definition-list]
 [%item][%lead]
 Somebody
 ====
 Term 1?
 Card 1, Side 1
 --
-Description 1
+Definition 1
 Card 1, Side 2
 ++
-Alternative Description 2
+Alternative Definition 2
 Card 1, Side 2
 ====
 Term 2?
 Card 2, Side 1
 --
-Description 2
+Definition 2
 Card 2, Side 2, No footer
 [%item][%lead]
 [@example]

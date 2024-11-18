@@ -28,7 +28,7 @@ import {
   BotResponseJson,
   CaptionDefinitionListJson,
   ChoiceJson,
-  DescriptionListItemJson,
+  DefinitionListItemJson,
   ExampleJson,
   FlashcardJson,
   HeadingJson,
@@ -207,7 +207,7 @@ export interface BitSpecificCards {
   sampleSolution?: string; // ??
   elements?: string[];
   flashcards?: Partial<FlashcardJson>[];
-  descriptions?: Partial<DescriptionListItemJson>[];
+  definitions?: Partial<DefinitionListItemJson>[];
   statements?: Partial<StatementJson>[];
   responses?: Partial<ResponseJson>[];
   quizzes?: Partial<QuizJson>[];

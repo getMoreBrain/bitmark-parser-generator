@@ -511,7 +511,6 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.latex,
   },
-
   [BitType.appCodeCell]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.appCodeEditor]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.appCodeIde]: { since: '1.4.3', baseBitType: BitType.code },
@@ -767,7 +766,7 @@ const BITS: _BitsConfig = {
   [BitType.correction]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.danger]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.dangerAlt]: { since: '1.16.0', baseBitType: BitType.article },
-  [BitType.descriptionTerm]: { since: '1.33.0', baseBitType: BitType.article },
+  [BitType.definitionTerm]: { since: '1.34.0', baseBitType: BitType.article },
   [BitType.details1]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.details]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.editorial]: { since: '1.3.0', baseBitType: BitType.article },
@@ -1055,8 +1054,8 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey._exampleBitList,
   },
-  [BitType.descriptionList]: {
-    since: '1.3.0',
+  [BitType.definitionList]: {
+    since: '1.34.0',
     tags: [
       {
         type: BitTagType.group,

@@ -1,7 +1,7 @@
 [
   {
     "bit": {
-      "type": "description-list",
+      "type": "definition-list",
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
@@ -35,7 +35,7 @@
           "attrs": {}
         }
       ],
-      "descriptions": [
+      "definitions": [
         {
           "term": [
             {
@@ -56,12 +56,12 @@
               "attrs": {}
             }
           ],
-          "description": [
+          "definition": [
             {
               "type": "paragraph",
               "content": [
                 {
-                  "text": "Description 1",
+                  "text": "Definition 1",
                   "type": "text"
                 },
                 {
@@ -75,7 +75,7 @@
               "attrs": {}
             }
           ],
-          "alternativeDescriptions": [],
+          "alternativeDefinitions": [],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -102,12 +102,12 @@
               "attrs": {}
             }
           ],
-          "description": [
+          "definition": [
             {
               "type": "paragraph",
               "content": [
                 {
-                  "text": "Description 2",
+                  "text": "Definition 2",
                   "type": "text"
                 },
                 {
@@ -121,13 +121,13 @@
               "attrs": {}
             }
           ],
-          "alternativeDescriptions": [
+          "alternativeDefinitions": [
             [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Description 2",
+                    "text": "Alternative Definition 2",
                     "type": "text"
                   },
                   {
@@ -155,11 +155,11 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.description-list]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDescription 1\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDescription 2\nCard 2, Side 2\n++\nAlternative Description 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
+    "bitmark": "[.definition-list]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2\n++\nAlternative Definition 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
   },
   {
     "bit": {
-      "type": "description-list",
+      "type": "definition-list",
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
@@ -181,7 +181,7 @@
           "attrs": {}
         }
       ],
-      "descriptions": [
+      "definitions": [
         {
           "term": [
             {
@@ -202,12 +202,12 @@
               "attrs": {}
             }
           ],
-          "description": [
+          "definition": [
             {
               "type": "paragraph",
               "content": [
                 {
-                  "text": "Description 1",
+                  "text": "Definition 1",
                   "type": "text"
                 },
                 {
@@ -221,13 +221,13 @@
               "attrs": {}
             }
           ],
-          "alternativeDescriptions": [
+          "alternativeDefinitions": [
             [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Description 2",
+                    "text": "Alternative Definition 2",
                     "type": "text"
                   },
                   {
@@ -268,12 +268,12 @@
               "attrs": {}
             }
           ],
-          "description": [
+          "definition": [
             {
               "type": "paragraph",
               "content": [
                 {
-                  "text": "Description 2",
+                  "text": "Definition 2",
                   "type": "text"
                 },
                 {
@@ -287,7 +287,7 @@
               "attrs": {}
             }
           ],
-          "alternativeDescriptions": [],
+          "alternativeDefinitions": [],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -301,11 +301,11 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.description-list]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDescription 1\nCard 1, Side 2\n++\nAlternative Description 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDescription 2\nCard 2, Side 2, No footer"
+    "bitmark": "[.definition-list]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer"
   },
   {
     "bit": {
-      "type": "description-list",
+      "type": "definition-list",
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [
@@ -349,7 +349,7 @@
           "attrs": {}
         }
       ],
-      "descriptions": [
+      "definitions": [
         {
           "term": [
             {
@@ -370,12 +370,12 @@
               "attrs": {}
             }
           ],
-          "description": [
+          "definition": [
             {
               "type": "paragraph",
               "content": [
                 {
-                  "text": "Description 1",
+                  "text": "Definition 1",
                   "type": "text"
                 },
                 {
@@ -389,13 +389,13 @@
               "attrs": {}
             }
           ],
-          "alternativeDescriptions": [
+          "alternativeDefinitions": [
             [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Description 1",
+                    "text": "Alternative Definition 1",
                     "type": "text"
                   },
                   {
@@ -414,7 +414,7 @@
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Description 2",
+                    "text": "Alternative Definition 2",
                     "type": "text"
                   },
                   {
@@ -455,12 +455,12 @@
               "attrs": {}
             }
           ],
-          "description": [
+          "definition": [
             {
               "type": "paragraph",
               "content": [
                 {
-                  "text": "Description 2",
+                  "text": "Definition 2",
                   "type": "text"
                 },
                 {
@@ -474,7 +474,7 @@
               "attrs": {}
             }
           ],
-          "alternativeDescriptions": [],
+          "alternativeDefinitions": [],
           "item": [
             {
               "type": "paragraph",
@@ -511,11 +511,11 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.description-list]\n[@example]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDescription 1\nCard 1, Side 2\n++\nAlternative Description 1\nCard 1, Side 2\n++\nAlternative Description 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDescription 2\nCard 2, Side 2, No footer\n[%item][%lead]"
+    "bitmark": "[.definition-list]\n[@example]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]"
   },
   {
     "bit": {
-      "type": "description-list",
+      "type": "definition-list",
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [
@@ -571,7 +571,7 @@
           "attrs": {}
         }
       ],
-      "descriptions": [
+      "definitions": [
         {
           "term": [
             {
@@ -592,12 +592,12 @@
               "attrs": {}
             }
           ],
-          "description": [
+          "definition": [
             {
               "type": "paragraph",
               "content": [
                 {
-                  "text": "Description 1",
+                  "text": "Definition 1",
                   "type": "text"
                 },
                 {
@@ -611,13 +611,13 @@
               "attrs": {}
             }
           ],
-          "alternativeDescriptions": [
+          "alternativeDefinitions": [
             [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Description 2",
+                    "text": "Alternative Definition 2",
                     "type": "text"
                   },
                   {
@@ -658,12 +658,12 @@
               "attrs": {}
             }
           ],
-          "description": [
+          "definition": [
             {
               "type": "paragraph",
               "content": [
                 {
-                  "text": "Description 2",
+                  "text": "Definition 2",
                   "type": "text"
                 },
                 {
@@ -677,7 +677,7 @@
               "attrs": {}
             }
           ],
-          "alternativeDescriptions": [],
+          "alternativeDefinitions": [],
           "item": [
             {
               "type": "paragraph",
@@ -714,6 +714,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.description-list]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDescription 1\nCard 1, Side 2\n++\nAlternative Description 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDescription 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
+    "bitmark": "[.definition-list]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
   }
 ]

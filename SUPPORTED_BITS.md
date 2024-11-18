@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 2.0.0
+Version: 1.35.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -176,8 +176,8 @@ correction (since: 1.3.0)
 danger (since: 1.3.0)
 danger-alt (since: 1.16.0)
 danger-collapsible (since: 1.21.0)
-description-list (since: 1.3.0)
-description-term (since: 1.33.0)
+definition-list (since: 1.34.0)
+definition-term (since: 1.34.0)
 details (since: 1.3.0)
 details-1 (since: 1.3.0)
 details-image (since: 1.3.0)

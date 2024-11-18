@@ -181,7 +181,8 @@ export interface BitJson {
   statement: string;
   isCorrect: boolean;
   cards: FlashcardJson[];
-  descriptions: DescriptionListItemJson[];
+  definitions: DefinitionListItemJson[];
+  descriptions: DefinitionListItemJson[];
   statements: StatementJson[];
   responses: ResponseJson[] | BotResponseJson[];
   quizzes: QuizJson[];
@@ -235,10 +236,10 @@ export interface FlashcardJson {
   __defaultExample?: ExampleJson;
 }
 
-export interface DescriptionListItemJson {
+export interface DefinitionListItemJson {
   term: JsonText;
-  description: JsonText;
-  alternativeDescriptions: JsonText[];
+  definition: JsonText;
+  alternativeDefinitions: JsonText[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -414,7 +415,7 @@ export interface RatingLevelStartEndJson {
 
 export interface CaptionDefinitionJson {
   term: string;
-  description: string;
+  definition: string;
 }
 
 // CaptionDefinitionList

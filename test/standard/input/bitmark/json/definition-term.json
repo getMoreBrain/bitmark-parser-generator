@@ -1,7 +1,7 @@
 [
   {
     "bit": {
-      "type": "description-term",
+      "type": "definition-term",
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["342339"],
@@ -36,6 +36,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.17.0"
     },
-    "bitmark": "[.description-term]\n[@id:342339]\nFeatured\nIt's exactly the same as an .article."
+    "bitmark": "[.definition-term]\n[@id:342339]\nFeatured\nIt's exactly the same as an .article."
   }
 ]

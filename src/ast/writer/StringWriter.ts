@@ -61,6 +61,7 @@ class StringWriter implements Writer {
       this._buffer.push(this.endOfLineString);
       this.lastWrite = this.endOfLineString;
     }
+
     return this;
   }
 
@@ -73,7 +74,6 @@ class StringWriter implements Writer {
       const value = values[i];
       this._buffer.push(value);
       str += value;
-
       if (delimiter && i < len - 1) {
         this._buffer.push(delimiter);
         str += delimiter;

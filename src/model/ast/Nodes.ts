@@ -13,7 +13,7 @@ import {
   BotResponseJson,
   CaptionDefinitionListJson,
   ChoiceJson,
-  DescriptionListItemJson,
+  DefinitionListItemJson,
   ExampleJson,
   FlashcardJson,
   HeadingJson,
@@ -269,7 +269,7 @@ export interface CardNode {
   questions?: QuestionJson[];
   elements?: string[];
   flashcards?: FlashcardJson[];
-  descriptions?: DescriptionListItemJson[];
+  definitions?: DefinitionListItemJson[];
   statement?: StatementJson;
   statements?: StatementJson[];
   choices?: ChoiceJson[];

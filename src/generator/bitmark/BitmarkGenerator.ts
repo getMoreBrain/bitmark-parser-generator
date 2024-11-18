@@ -1167,26 +1167,20 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  // // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> alternativeDescriptions -> alternativeDescriptionsValueValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions -> definitionsValue -> alternativeDefintions
 
-  // protected enter_alternativeDescriptions(_node: NodeInfo, _route: NodeInfo[]): void {
-  //   this.writeNL();
-  //   this.writeCardSetVariantDivider();
-  //   this.writeNL();
-  // }
-
-  protected between_alternativeDescriptions(_node: NodeInfo, _route: NodeInfo[]): void {
+  protected between_alternativeDefinitions(_node: NodeInfo, _route: NodeInfo[]): void {
     this.writeNL();
     this.writeCardSetVariantDivider();
     this.writeNL();
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> alternativeDescriptions -> alternativeDescriptionsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions -> definitionsValue -> alternativeDefinitions -> alternativeDefinitionsValue
 
-  protected enter_alternativeDescriptionsValue(node: NodeInfo, route: NodeInfo[]): boolean {
+  protected enter_alternativeDefinitionsValue(node: NodeInfo, route: NodeInfo[]): boolean {
     // Ignore responses that are not at the alternativeAnswers level as they are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.alternativeDescriptions) return true;
+    if (parent?.key !== NodeType.alternativeDefinitions) return true;
 
     if (node.value) {
       // this.writeNL();
@@ -1511,33 +1505,33 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL();
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions
 
-  protected between_definitions(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.captionDefinitionList) return;
+  // protected between_definitions(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.captionDefinitionList) return;
 
-    this.writeNL();
-    this.writeCardSetCardDivider();
-    this.writeNL();
-  }
+  //   this.writeNL();
+  //   this.writeCardSetCardDivider();
+  //   this.writeNL();
+  // }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue
+  // // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue
 
-  protected between_definitionsValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
-    const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.definitions) return;
+  // protected between_definitionsValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  //   const parent = this.getParentNode(route);
+  //   if (parent?.key !== NodeType.definitions) return;
 
-    this.writeNL();
-    this.writeCardSetSideDivider();
-    this.writeNL();
-  }
+  //   this.writeNL();
+  //   this.writeCardSetSideDivider();
+  //   this.writeNL();
+  // }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> term
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions -> definitionsValue -> term
 
   protected enter_term(node: NodeInfo, route: NodeInfo[]): boolean {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.definitionsValue && parent?.key !== NodeType.descriptionsValue) return true;
+    if (parent?.key !== NodeType.definitionsValue) return true;
 
     if (node.value) {
       this.textGenerator.generateSync(node.value as TextAst, TextFormat.bitmarkMinusMinus);
@@ -1561,11 +1555,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue -> description
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions -> definitionsValue -> definition
 
-  protected enter_description(node: NodeInfo, route: NodeInfo[]): boolean {
+  protected enter_definition(node: NodeInfo, route: NodeInfo[]): boolean {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.definitionsValue && parent?.key !== NodeType.descriptionsValue) return true;
+    if (parent?.key !== NodeType.definitionsValue) return true;
 
     if (node.value) {
       this.textGenerator.generateSync(node.value as TextAst, TextFormat.bitmarkMinusMinus);
@@ -1575,9 +1569,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue -> description
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions -> definitionsValue -> definition
 
-  protected leaf_description(node: NodeInfo, route: NodeInfo[]): boolean {
+  protected leaf_definition(node: NodeInfo, route: NodeInfo[]): boolean {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.definitionsValue) return true;
 
@@ -1589,28 +1583,29 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions
 
-  protected between_descriptions(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_definitions(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.cardNode) return;
+    if (parent?.key !== NodeType.cardNode && parent?.key !== NodeType.captionDefinitionList) return;
 
     this.writeNL();
     this.writeCardSetCardDivider();
     this.writeNL();
   }
 
-  // bitmarkAst -> bits -> bitsValue -> cardNode -> descriptions -> descriptionsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions -> definitionsValue
 
-  protected between_descriptionsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+  protected between_definitionsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.descriptions) return;
+    if (parent?.key !== NodeType.definitions) return;
 
-    if (right.key === NodeType.description) {
+    if (right.key === NodeType.definition) {
       this.writeNL();
       this.writeCardSetSideDivider();
       this.writeNL();
-    } else if (right.key === NodeType.alternativeDescriptions && right.value?.length > 0) {
+    } else if (right.key === NodeType.alternativeDefinitions && right.value?.length > 0) {
       this.writeNL();
       this.writeCardSetVariantDivider();
       this.writeNL();
