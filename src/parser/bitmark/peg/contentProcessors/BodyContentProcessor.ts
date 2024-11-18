@@ -1,7 +1,7 @@
 import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { Body, BodyBit, BodyPart } from '../../../../model/ast/Nodes';
+import { Body, BodyPart } from '../../../../model/ast/Nodes';
 import { JsonText, TextAst } from '../../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
@@ -36,10 +36,9 @@ class BodyContentProcessor {
     _target: BitContentProcessorResult,
     bodyParts: BodyPart[],
     isCardBody: boolean,
-  ): Body {
-    let bodyJson: unknown | undefined | null;
-    const bodyBits: BodyBit[] = [];
-    let finalBodyText: JsonText | undefined;
+  ): Body | undefined {
+    const bodyBits: BodyBitJson[] = [];
+    let finalBody: JsonText | unknown | undefined;
     let finalBodyString: string | undefined;
     //
     const trimmedBodyParts = bodyParts.length > 0 ? this.trimBodyParts(bodyParts) : undefined;
@@ -50,7 +49,7 @@ class BodyContentProcessor {
     // If the text format is JSON, check the body is valid JSON
     // In this case, the body will already have been 'squashed' so will not contain any parsed inline body tags
     if (textFormat === TextFormat.json && validatedBodyParts) {
-      bodyJson = validatedBodyParts.reduce((acc, val) => {
+      finalBody = validatedBodyParts.reduce((acc, val) => {
         if (val.type === BodyBitType.text && val.data) {
           const bodyTextVal = val as BodyText;
           return (acc + (bodyTextVal.data.bodyText ?? '')) as string;
@@ -58,9 +57,9 @@ class BodyContentProcessor {
         return acc;
       }, '');
       try {
-        bodyJson = JSON.parse(bodyJson as string);
+        finalBody = JSON.parse(finalBody as string);
       } catch (e) {
-        bodyJson = null;
+        finalBody = null;
         context.addError(`Body JSON is invalid.`);
       }
     } else {
@@ -105,7 +104,7 @@ class BodyContentProcessor {
             bodyTextStr = Breakscape.concatenate(bodyTextStr, placeholderKey);
 
             // Add the body bit to the body bits
-            bodyBits.push(bodyPart as BodyBit);
+            bodyBits.push(bodyPart as BodyBitJson);
 
             placeholderIndex++;
           }
@@ -134,10 +133,10 @@ class BodyContentProcessor {
         StringUtils.countOccurrencesAtEnd(bodyTextStr, '\n') +
         StringUtils.countOccurrencesAtStart(plainBodyTextStr, '\n');
 
-      finalBodyText = ContentProcessorUtils.concatenatePlainTextWithAstTexts(parsedBodyText, newlines, parserPlainText);
+      finalBody = ContentProcessorUtils.concatenatePlainTextWithAstTexts(parsedBodyText, newlines, parserPlainText);
       finalBodyString = Breakscape.unbreakscape(bodyStr).trim() as BreakscapedString;
-      const finalBodyIsAst = Array.isArray(finalBodyText);
-      const bodyAst = finalBodyIsAst ? (finalBodyText as TextAst) : undefined;
+      const finalBodyIsAst = Array.isArray(finalBody);
+      const bodyAst = finalBodyIsAst ? (finalBody as TextAst) : undefined;
 
       // Loop the body parts again to create the body bits:
       // - The body bits are inserted into body AST, replacing the placeholders created by the text parser
@@ -150,7 +149,7 @@ class BodyContentProcessor {
           const isText = bodyPart.type === BodyBitType.text;
           if (isText) continue;
 
-          const bodyBit = bodyPart as BodyBit;
+          const bodyBit = bodyPart as BodyBitJson;
           let bodyBitJson: BodyBitJson | undefined;
 
           switch (bodyPart.type) {
@@ -195,11 +194,10 @@ class BodyContentProcessor {
     } // Standard body
 
     // Return the body in the target
-    return builder.body({
-      body: finalBodyText,
+    return builder.buildBody(textFormat, {
+      body: finalBody,
       bodyBits: bodyBits.length > 0 ? bodyBits : undefined,
       bodyString: finalBodyString,
-      bodyJson,
     });
   }
 
@@ -296,132 +294,6 @@ class BodyContentProcessor {
 
     return trimmedParts;
   }
-
-  // protected createGapJson(gap: Gap): GapJson {
-  //   const data = gap.data;
-
-  //   const defaultExample = data.solutions && data.solutions.length > 0 ? data.solutions[0] : '';
-
-  //   // Create the gap
-  //   const gapJson: Partial<GapJson> = {
-  //     type: 'gap',
-  //     ...ContentProcessorUtils.toItemLeadHintInstruction(data),
-  //     isCaseSensitive: data.isCaseSensitive ?? true,
-  //     ...ContentProcessorUtils.toExample(data, {
-  //       defaultExample,
-  //       isBoolean: false,
-  //     }),
-  //     solutions: data.solutions,
-  //   };
-
-  //   // Remove unwanted properties
-  //   // if (!data.itemLead?.lead) delete gapJson.lead;
-
-  //   return gapJson as GapJson;
-  // }
-
-  // protected createMarkJson(mark: Mark): MarkJson {
-  //   const data = mark.data;
-
-  //   // Create the mark
-  //   const markJson: Partial<MarkJson> = {
-  //     type: 'mark',
-  //     solution: data.solution,
-  //     mark: data.mark,
-  //     ...ContentProcessorUtils.toItemLeadHintInstruction(data),
-  //     ...ContentProcessorUtils.toExample(data, {
-  //       defaultExample: true,
-  //       isBoolean: true,
-  //     }),
-  //     //
-  //   };
-
-  //   // Remove unwanted properties
-  //   // if (!data.itemLead?.lead) delete markJson.lead;
-
-  //   return markJson as MarkJson;
-  // }
-
-  // protected createSelectJson(select: Select): SelectJson {
-  //   const data = select.data;
-
-  //   // Create the select options
-  //   const options: SelectOptionJson[] = [];
-  //   for (const option of data.options) {
-  //     const optionJson: Partial<SelectOptionJson> = {
-  //       text: option.text,
-  //       isCorrect: option.isCorrect ?? false,
-  //       ...ContentProcessorUtils.toItemLeadHintInstruction(option),
-  //       ...ContentProcessorUtils.toExample(option, {
-  //         defaultExample: !!option.isCorrect,
-  //         isBoolean: true,
-  //       }),
-  //     };
-
-  //     // Remove unwanted properties
-  //     // if (!option.itemLead?.item) delete optionJson.item;
-  //     // if (!option.itemLead?.lead) delete optionJson.lead;
-  //     // if (!option.instruction) delete optionJson.instruction;
-
-  //     options.push(optionJson as SelectOptionJson);
-  //   }
-
-  //   // Create the select
-  //   const selectJson: Partial<SelectJson> = {
-  //     type: 'select',
-  //     prefix: data.prefix ?? '',
-  //     postfix: data.postfix ?? '',
-  //     ...ContentProcessorUtils.toItemLeadHintInstruction(data),
-  //     isExample: data.isExample ?? false,
-  //     options,
-  //   };
-
-  //   // Remove unwanted properties
-  //   // if (!data.itemLead?.lead) delete selectJson.lead;
-
-  //   return selectJson as SelectJson;
-  // }
-
-  // protected createHighlightJson(highlight: Highlight): HighlightJson {
-  //   const data = highlight.data;
-
-  //   // Create the highlight options
-  //   const texts: HighlightTextJson[] = [];
-  //   for (const text of data.texts) {
-  //     const textJson: Partial<HighlightTextJson> = {
-  //       text: text.text,
-  //       isCorrect: text.isCorrect ?? false,
-  //       isHighlighted: text.isHighlighted ?? false,
-  //       ...ContentProcessorUtils.toItemLeadHintInstruction(text),
-  //       ...ContentProcessorUtils.toExample(text, {
-  //         defaultExample: !!text.isCorrect,
-  //         isBoolean: true,
-  //       }),
-  //     };
-
-  //     // Remove unwanted properties
-  //     // if (!text.itemLead?.item) delete textJson.item;
-  //     // if (!text.itemLead?.lead) delete textJson.lead;
-  //     // if (!text.hint) delete textJson.hint;
-
-  //     texts.push(textJson as HighlightTextJson);
-  //   }
-
-  //   // Create the select
-  //   const highlightJson: Partial<HighlightJson> = {
-  //     type: 'highlight',
-  //     prefix: data.prefix ?? '',
-  //     postfix: data.postfix ?? '',
-  //     ...ContentProcessorUtils.toItemLeadHintInstruction(data),
-  //     isExample: data.isExample ?? false,
-  //     texts,
-  //   };
-
-  //   // Remove unwanted properties
-  //   // if (!data.itemLead?.lead) delete highlightJson.lead;
-
-  //   return highlightJson as HighlightJson;
-  // }
 }
 
 const instance = new BodyContentProcessor();

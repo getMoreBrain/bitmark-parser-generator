@@ -187,6 +187,22 @@ class BaseBuilder {
       }),
     ) as R;
   }
+
+  // /**
+  //  * Remove any property with a key starting with an underscore.
+  //  *
+  //  * @param json
+  //  */
+  // protected removeTemporaryProperties(json: Record<string, unknown> | unknown[]): void {
+  //   const obj = json as Record<string, unknown>;
+  //   for (const key in obj) {
+  //     if (key.startsWith('_')) {
+  //       delete obj[key];
+  //     } else if (typeof obj[key] === 'object') {
+  //       this.removeTemporaryProperties(obj[key] as Record<string, unknown>);
+  //     }
+  //   }
+  // }
 }
 
 export { BaseBuilder };

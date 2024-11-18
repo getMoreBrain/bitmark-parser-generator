@@ -92,17 +92,7 @@ export type { CardSetVersionType } from './model/enum/CardSetVersion';
 export type { Generator } from './generator/Generator';
 
 export type { NodeInfo, AstWalkCallbacks } from './ast/Ast';
-export type {
-  Node,
-  BitmarkAst,
-  Bit,
-  Example,
-  ExtraProperties,
-  Property,
-  Body,
-  BodyPart,
-  BodyBit,
-} from './model/ast/Nodes';
+export type { Node, BitmarkAst, Bit, Example, ExtraProperties, Property, Body, BodyPart } from './model/ast/Nodes';
 export type { JsonText as Text, TextAst } from './model/ast/TextNodes';
 export type { BitWrapperJson } from './model/json/BitWrapperJson';
 export type {

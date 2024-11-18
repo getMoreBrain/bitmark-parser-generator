@@ -117,7 +117,7 @@ function buildCards(
 
     case CardSetConfigKey._clozeList:
     case CardSetConfigKey._exampleBitList:
-      result = parseCardBits(context, bitType, processedCardSet);
+      result = parseCardBits(context, bitType, textFormat, processedCardSet);
       break;
 
     case CardSetConfigKey._captionDefinitionsList:
@@ -256,7 +256,7 @@ function parseFlashcardLike(
     if (cardIndex === 0 || !onlyOneCardAllowed) {
       if (Config.isOfBitType(bitType, BitType.descriptionList)) {
         // .description-list
-        const dl = builder.descriptionListItem({
+        const dl = builder.buildDescriptionListItem({
           term: question,
           description: answer,
           alternativeDescriptions: alternativeAnswers,
@@ -266,7 +266,7 @@ function parseFlashcardLike(
       } else {
         // .flashcard
         // if (question) {
-        const fc = builder.flashcard({
+        const fc = builder.buildFlashcard({
           question,
           answer,
           alternativeAnswers,
@@ -343,7 +343,7 @@ function parseStatements(
         if (Array.isArray(chainedStatements)) {
           for (const s of chainedStatements) {
             // if (s.text) {
-            const statement = builder.statement({
+            const statement = builder.buildStatement({
               statement: s.statement ?? '',
               isCorrect: s.isCorrect,
               item: s.item,
@@ -409,28 +409,20 @@ function parseQuiz(
 
         // Insert choices / responses
         if (tags.trueFalse && tags.trueFalse.length > 0) {
-          const responsesOrChoices: (ChoiceJson | ResponseJson)[] = [];
-          const builderFunc = insertResponses ? builder.response : builder.choice;
+          const responsesOrChoices: (Partial<ChoiceJson> | Partial<ResponseJson>)[] = [];
 
           for (const tf of tags.trueFalse) {
             const { _isDefaultExample: isDefaultExampleTf, example: exampleTf, ...tfTags } = tf;
             const _isDefaultExample = isDefaultExampleTf || isDefaultExampleCard;
             const example = exampleTf || exampleCard;
 
-            const response = builderFunc({
-              response: tfTags.text,
+            const response: Partial<ChoiceJson> & Partial<ResponseJson> = {
               isCorrect: tfTags.isCorrect,
-              // item: tfTags.item as TextAst,
-              // lead: tfTags.lead as TextAst,
-              // pageNumber: undefined,
-              // marginNumber: undefined,
-              // hint: tfTags.hint as TextAst,
-              // instruction: tfTags.instruction as TextAst,
               _isDefaultExample,
               example,
-              // _isDefaultExample,
-              // example,
-            });
+            };
+            if (insertResponses) response.response = tfTags.text;
+            else response.choice = tfTags.text;
             if (response) responsesOrChoices.push(response);
           }
 
@@ -439,7 +431,7 @@ function parseQuiz(
         }
 
         // if (tags.choices || tags.responses) {
-        const quiz = builder.quiz({
+        const quiz = builder.buildQuiz({
           ...tags,
           _isDefaultExample: isDefaultExampleCard,
           _defaultExample: exampleCard,
@@ -454,13 +446,13 @@ function parseQuiz(
 
   // Add a quiz for the V1 choices / responses
   if (insertChoices && Array.isArray(choicesV1) && choicesV1.length > 0) {
-    const quiz = builder.quiz({
+    const quiz = builder.buildQuiz({
       choices: choicesV1,
     });
     if (quiz) quizzes.push(quiz);
   }
   if (insertResponses && Array.isArray(responsesV1) && responsesV1.length > 0) {
-    const quiz = builder.quiz({
+    const quiz = builder.buildQuiz({
       responses: responsesV1,
     });
     if (quiz) quizzes.push(quiz);
@@ -484,7 +476,7 @@ function parseQuestions(
         const tags = content.data;
 
         // if (tags.cardBody) {
-        const q = builder.question({
+        const q = builder.buildQuestion({
           question: tags.cardBodyStr ?? Breakscape.EMPTY_STRING,
           ...tags,
         });
@@ -613,7 +605,7 @@ function parseMatchPairs(
           forValuesFinal = '';
         }
       }
-      heading = builder.heading({
+      heading = builder.buildHeading({
         forKeys: forKeys ?? '',
         forValues: forValuesFinal,
       });
@@ -624,7 +616,7 @@ function parseMatchPairs(
       const _isDefaultExample = isDefaultExampleCard || isDefaultExampleCardSet;
       const example = exampleCard || exampleCardSet;
 
-      const pair = builder.pair(bitType, {
+      const pair = builder.buildPair(bitType, {
         key: pairKey ?? '',
         keyAudio,
         keyImage,
@@ -765,7 +757,7 @@ function parseMatchMatrix(
         const _isDefaultExample = isDefaultExampleSide || isDefaultExampleCard || isDefaultExampleCardSet;
         const example = exampleSide || exampleCard || exampleCardSet;
 
-        const matrixCell = builder.matrixCell({
+        const matrixCell = builder.buildMatrixCell({
           values: matrixCellValues,
           _valuesAst: _matrixCellValuesAst,
           ...matrixCellTags,
@@ -780,13 +772,13 @@ function parseMatchMatrix(
     }
 
     if (isHeading) {
-      heading = builder.heading({
+      heading = builder.buildHeading({
         forKeys: forKeys ?? Breakscape.EMPTY_STRING,
         forValues,
       });
     } else {
       // if (matrixKey) {
-      const m = builder.matrix({
+      const m = builder.buildMatrix({
         key: matrixKey ?? Breakscape.EMPTY_STRING,
         // item: matrixItem ?? Breakscape.EMPTY_STRING,
         // keyAudio,
@@ -850,7 +842,7 @@ function parseTable(
     cardIdx++;
   }
 
-  const table = builder.table({
+  const table = builder.buildTable({
     columns,
     data: rows,
   });
@@ -929,7 +921,7 @@ function parseIngredients(
           }
         }
 
-        const ingredient = builder.ingredient({
+        const ingredient = builder.buildIngredient({
           title,
           checked,
           // TS compiler very weird. It doesn't recognize that cardBodyStr is a string|undefined, even if cast!
@@ -998,11 +990,11 @@ function parseCaptionDefinitionsList(
 
   const captionDefinitionList =
     columns.length > 0
-      ? builder.captionDefinitionList({
+      ? builder.buildCaptionDefinitionList({
           columns,
           definitions: rows
             .map((row) => {
-              return builder.captionDefinition({
+              return builder.buildCaptionDefinition({
                 term: row[0],
                 description: row[1],
               });
@@ -1017,6 +1009,7 @@ function parseCaptionDefinitionsList(
 function parseCardBits(
   _context: BitmarkPegParserContext,
   _bitType: BitTypeType,
+  textFormat: TextFormatType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const cardBits: CardBit[] = [];
@@ -1026,7 +1019,7 @@ function parseCardBits(
       for (const content of side.variants) {
         const { cardBody: body, ...rest } = content.data;
 
-        const cardBit = builder.cardBit({
+        const cardBit = builder.buildCardBit(textFormat, {
           body,
           ...rest,
         });

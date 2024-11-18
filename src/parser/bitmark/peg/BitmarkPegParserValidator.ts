@@ -10,6 +10,7 @@
 import { Config } from '../../../config/Config';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Body, BodyPart } from '../../../model/ast/Nodes';
+import { JsonText } from '../../../model/ast/TextNodes';
 import { CardSetConfig } from '../../../model/config/CardSetConfig';
 import { CardVariantConfig } from '../../../model/config/CardVariantConfig';
 import { TagsConfig } from '../../../model/config/TagsConfig';
@@ -251,7 +252,7 @@ class BitmarkPegParserValidator {
 
     const { bodyAllowed } = variantConfig;
 
-    const hasBody = cardBody.body.length > 0;
+    const hasBody = (cardBody.body as JsonText).length > 0;
 
     // this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, cardBody);
 

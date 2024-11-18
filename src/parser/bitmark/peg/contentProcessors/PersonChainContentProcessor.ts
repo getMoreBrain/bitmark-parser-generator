@@ -46,7 +46,7 @@ function personChainContentProcessor(
   // Extract avatarImage from the resources
   const avatarImage = extractAvatarImage(context, resources);
 
-  const person = builder.person(bitType, {
+  const person = builder.buildPerson(bitType, {
     name,
     title,
     avatarImage,

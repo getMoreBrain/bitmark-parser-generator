@@ -18,6 +18,7 @@ import { BodyBitJson, GapJson, HighlightTextJson, MarkJson, SelectOptionJson } f
 import { AudioResourceJson, ImageResourceJson, ResourceDataJson, ResourceJson } from '../../model/json/ResourceJson';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { ObjectUtils } from '../../utils/ObjectUtils';
+import { StringUtils } from '../../utils/StringUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
 import { TextGenerator } from '../text/TextGenerator';
 
@@ -824,10 +825,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // always write a NL before the body content if there is any?
     const body = node.value as Body;
     const textFormat = this.getTextFormat(route);
+    const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
 
     // Handle body
     if (textFormat === TextFormat.json) {
-      const json = body.bodyJson ?? null;
+      const json = body.body ?? null;
       if (Array.isArray(json) || ObjectUtils.isObject(json)) {
         const text = JSON.stringify(json, null, this.prettifySpace);
         if (text) {
@@ -841,25 +843,24 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           );
         }
       }
-    } else if (body.body && body.body.length > 0) {
-      const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
-      if (isBitmarkText) {
-        // handle bitmark text
-        this.writeNL();
-        // The text generator will write to the writer
-        this.textGenerator.generateSync(body.body as TextAst, textFormat);
-      } else {
-        // handle plain text
-        this.writeNL();
-        this.writePlainTextDivider();
-        this.writeNL();
-        this.write(
-          Breakscape.breakscape(body.body as string, {
-            bitTagOnly: true,
-          }),
-        );
-        this.writeNL();
-      }
+    } else if (isBitmarkText) {
+      // handle bitmark text
+      this.writeNL();
+      // The text generator will write to the writer
+      const b = (Array.isArray(body.body) ? body.body : []) as TextAst;
+      this.textGenerator.generateSync(b as TextAst, textFormat);
+    } else {
+      // handle plain text
+      this.writeNL();
+      this.writePlainTextDivider();
+      this.writeNL();
+      const s = (StringUtils.isString(body.body) ? body.body : '') as string;
+      this.write(
+        Breakscape.breakscape(s, {
+          bitTagOnly: true,
+        }),
+      );
+      this.writeNL();
     }
 
     // Stop traversal of this branch
@@ -926,14 +927,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bodyBit -> select
 
   protected enter_select(_node: NodeInfo, _route: NodeInfo[]): boolean {
-    // const select = node.value as SelectJson;
-
-    // for (const option of select.options) {
-    //   this.writeOPU();
-    //   this.writeString(solution);
-    //   this.writeCL();
-    // }
-
     // Continue traversal
     return true;
   }
@@ -941,20 +934,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bodyBit -> highlight
 
   protected enter_highlight(_node: NodeInfo, _route: NodeInfo[]): boolean {
-    // const highlight = node.value as HighlightJson;
-
-    // if (gap.solutions && gap.solutions.length === 0) {
-    //   // If there are no solutions, we need to write the special cloze gap [_] to indicate this
-    //   this.writeOPU();
-    //   this.writeCL();
-    // } else {
-    //   for (const solution of gap.solutions) {
-    //     this.writeOPU();
-    //     this.writeString(solution);
-    //     this.writeCL();
-    //   }
-    // }
-
     // Continue traversal
     return true;
   }
@@ -2846,7 +2825,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   //   //   // Standard case
   //   //   this.writeOPAMP();
-  //   //   this.writeString(resource.typeAlias ?? resource.type);
+  //   //   this.writeString(resource._typeAlias ?? resource.type);
   //   //   if (resource.type === ResourceTag.article && resourceAsArticle.value) {
   //   //     this.writeColon();
   //   //     // this.writeNL();
@@ -2891,7 +2870,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     //   // Standard case
     //   this.writeOPAMP();
-    //   this.writeString(resource.typeAlias ?? resource.type);
+    //   this.writeString(resource._typeAlias ?? resource.type);
     //   if (resource.type === ResourceTag.article && resourceAsArticle.value) {
     //     this.writeColon();
     //     // this.writeNL();

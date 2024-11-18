@@ -1,7 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 class JsonCleanupUtils {
-  cleanupBitJson(obj: any, options?: { removeMarkup?: boolean; removeParser?: boolean; removeErrors?: boolean }): void {
+  cleanupBitJson(
+    obj: any,
+    options?: {
+      removeMarkup?: boolean;
+      removeParser?: boolean;
+      removeErrors?: boolean;
+      removeTemporaryProperties?: boolean;
+    },
+  ): void {
     options = Object.assign({}, options);
 
     if (obj) {
@@ -31,6 +39,12 @@ class JsonCleanupUtils {
         const idx = bitWrappers.indexOf(bw);
         if (idx >= 0) bitWrappers.splice(idx, 1);
       }
+
+      if (options.removeTemporaryProperties) {
+        for (const bw of bitWrappers) {
+          this.removeTemporaryProperties(bw);
+        }
+      }
     }
   }
 
@@ -58,6 +72,22 @@ class JsonCleanupUtils {
       for (const block of blocksToRemove) {
         const idx = blocks.indexOf(block);
         if (idx >= 0) blocks.splice(idx, 1);
+      }
+    }
+  }
+
+  /**
+   * Remove any property with a key starting with an underscore.
+   *
+   * @param json
+   */
+  protected removeTemporaryProperties(json: Record<string, unknown> | unknown[]): void {
+    const obj = json as Record<string, unknown>;
+    for (const key in obj) {
+      if (key.startsWith('_')) {
+        delete obj[key];
+      } else if (typeof obj[key] === 'object') {
+        this.removeTemporaryProperties(obj[key] as Record<string, unknown>);
       }
     }
   }

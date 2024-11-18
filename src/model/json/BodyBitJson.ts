@@ -33,7 +33,7 @@ export interface GapJson extends BaseBodyBitJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
-  _solutionsAst: TextAst[];
+  _solutionsAst?: TextAst[];
   _isDefaultExample?: boolean;
   _defaultExample?: ExampleJson;
 }
@@ -58,8 +58,8 @@ export interface SelectJson extends BaseBodyBitJson {
   prefix: string;
   postfix: string;
   isExample: boolean;
-  _hintString: string;
-  _instructionString: string;
+  _hintString?: string;
+  _instructionString?: string;
 }
 
 export interface SelectOptionJson {

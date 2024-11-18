@@ -429,7 +429,7 @@ export interface ListItemJson {
   lead: JsonText;
   hint: JsonText;
   instruction: JsonText;
-  body: JsonText;
+  body: JsonText | unknown; // unknown is for JSON body
 }
 
 export type ExampleJson = JsonText | boolean | null;

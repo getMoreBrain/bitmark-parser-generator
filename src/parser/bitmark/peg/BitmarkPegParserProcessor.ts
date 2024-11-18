@@ -197,7 +197,7 @@ class BitmarkPegParserProcessor {
       }
     }
 
-    const res = builder.bitmark({
+    const res = builder.buildBitmark({
       bits,
       errors: errors.length > 0 ? errors : undefined,
     });
@@ -279,7 +279,7 @@ class BitmarkPegParserProcessor {
     if (errors) this.parser.errors = errors;
 
     // Build the final bit
-    const bit = builder.bit({
+    const bit = builder.buildBit({
       bitType,
       bitLevel,
       isCommented,
@@ -312,7 +312,7 @@ class BitmarkPegParserProcessor {
     this.parser.errors = this.buildBitLevelErrors();
 
     // Build the error bit
-    const bit = builder.bit({
+    const bit = builder.buildBit({
       bitType: Config.getBitType(BitType._error),
       bitLevel: 1,
       parser: this.parser,

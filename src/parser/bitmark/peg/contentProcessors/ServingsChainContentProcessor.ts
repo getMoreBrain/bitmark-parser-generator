@@ -36,7 +36,7 @@ function servingsChainContentProcessor(
   // Extract the servings from the content tag
   const servings = NumberUtils.asNumber(content.value) ?? 1;
 
-  const node = builder.servings({
+  const node = builder.buildServings({
     servings,
     unit,
     unitAbbr,

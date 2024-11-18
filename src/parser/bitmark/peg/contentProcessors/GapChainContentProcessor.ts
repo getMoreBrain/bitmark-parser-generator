@@ -62,7 +62,7 @@ function buildGap(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', chainTags);
 
-  const gap = builder.gap({
+  const gap = builder.buildGap({
     type: BodyBitType.gap,
     ...chainTags,
   });

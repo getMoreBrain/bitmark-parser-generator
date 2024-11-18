@@ -64,7 +64,7 @@ function buildMark(
   const { solution } = tags;
   const { mark: markType, ...rest } = chainTags;
 
-  const mark = builder.mark({
+  const mark = builder.buildMark({
     solution: solution ?? '',
     mark: ArrayUtils.asSingle(markType) ?? '',
     ...rest,

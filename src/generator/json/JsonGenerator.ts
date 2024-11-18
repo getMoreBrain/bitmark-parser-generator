@@ -558,12 +558,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (!parent) return false;
 
-    if (value.bodyJson) {
-      // Body is JSON
-      this.bodyJson = value.bodyJson as JsonText;
-    } else {
-      this.bodyJson = value.body as JsonText;
-    }
+    this.bodyJson = value.body as JsonText;
 
     // Set the correct body property
     if (parent.key === NodeType.bitsValue) {

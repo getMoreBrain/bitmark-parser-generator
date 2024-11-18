@@ -88,7 +88,7 @@ function buildImageSource(
     context.addWarning('[@mockupId:xxx] is missing from [@imageSource]', content);
   }
 
-  const imageSource = builder.imageSource({
+  const imageSource = builder.buildImageSource({
     url: url ?? '',
     mockupId: mockupId ?? '',
     ...rest,

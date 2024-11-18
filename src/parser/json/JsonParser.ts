@@ -1,18 +1,14 @@
 import { Builder } from '../../ast/Builder';
-import { Breakscape } from '../../breakscaping/Breakscape';
 import { Config } from '../../config/Config';
-import { BreakscapedString } from '../../model/ast/BreakscapedString';
-import { Bit, BitmarkAst, Body, BodyBit, BodyPart, CardBit, Footer } from '../../model/ast/Nodes';
-import { JsonText, TextAst } from '../../model/ast/TextNodes';
+import { Bit, BitmarkAst, Body, CardBit, Footer } from '../../model/ast/Nodes';
+import { JsonText } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
-import { BodyBitType } from '../../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { BodyBitsJson, BodyBitJson } from '../../model/json/BodyBitJson';
+import { BodyBitsJson } from '../../model/json/BodyBitJson';
 import { ResourceJson, ImageResourceWrapperJson } from '../../model/json/ResourceJson';
 import { StringUtils } from '../../utils/StringUtils';
-import { TextParser } from '../text/TextParser';
 
 import {
   BitJson,
@@ -38,12 +34,6 @@ const builder = new Builder();
  * A parser for parsing bitmark JSON to bitmark AST
  */
 class JsonParser {
-  private textParser: TextParser;
-
-  constructor() {
-    this.textParser = new TextParser();
-  }
-
   /**
    * Convert JSON to AST.
    *
@@ -68,7 +58,7 @@ class JsonParser {
 
     const bits = bitsNodes.length > 0 ? { bits: bitsNodes } : {};
 
-    const ast = builder.bitmark(bits);
+    const ast = builder.buildBitmark(bits);
 
     return ast;
   }
@@ -165,60 +155,36 @@ class JsonParser {
     // Bit type
     const bitType = Config.getBitType(isCommented ? bit.originalType : bit.type);
 
-    // Bit level
-    const bitLevelValidated = Math.max(Math.min(bit.bitLevel ?? 1, Config.bitLevelMax), Config.bitLevelMin);
-
     // Get the bit config for the bit type
     const bitConfig = Config.getBitConfig(bitType);
 
     // Text Format
     const textFormat = TextFormat.fromValue(bit.format) ?? bitConfig.textFormatDefault;
-
-    // Resource attachement type
-    const resourceAttachmentType = this.getResourceType(bit.resource);
-
-    // resource(s)
-    const resourcesNode = this.processResources(bitType, bit.resource, bit.images, bit.logos);
-
-    // body & placeholders
-    const bodyNode = this.processBody(bit.body as JsonText, textFormat, bit.placeholders);
-
-    //+-statement
-    const statementNodes = this.processStatements(statement, bit.isCorrect, bit.statements, bit.example);
-
-    // listItems / sections (cardBits)
-    const cardBitNodes = this.processListItems(bit.listItems ?? bit.sections, textFormat, bit.placeholders);
-
-    // footer
-    const footerNode = this.footerToAst(bit.footer, textFormat);
-
-    // Convert reference to referenceProperty
-    const { reference, referenceProperty } = this.processReference(referenceBit);
+    textFormat; // Unused
 
     // Build bit
-    const bitNode = builder.bit({
+    const bitNode = builder.buildBit({
       ...bitRest,
       bitType,
-      bitLevel: bitLevelValidated,
+      bitLevel: Math.max(Math.min(bit.bitLevel ?? 1, Config.bitLevelMax), Config.bitLevelMin),
       textFormat: bit.format as TextFormatType,
-      resourceType: resourceAttachmentType,
+      resourceType: this.getResourceType(bit.resource),
       isCommented,
       internalComment: internalComments,
-      referenceProperty,
       productList: product,
       productVideoList: productVideo,
-      reference,
+      ...this.processReference(referenceBit), // reference and referenceProperty
       ...this.parseExample(bit.example),
       person: bit.partner ?? bit.person,
       markConfig: bit.marks,
-      resources: resourcesNode,
-      body: bodyNode,
+      resources: this.processResources(bitType, bit.resource, bit.images, bit.logos),
+      body: this.processBody(bit.body as JsonText, bit.placeholders),
       flashcards: bit.cards,
-      statements: statementNodes,
+      statements: this.processStatements(statement, bit.isCorrect, bit.statements, bit.example),
       responses: this.processResponses(bitType, bit.responses as ResponseJson[]),
       botResponses: this.processBotResponse(bitType, bit.responses as BotResponseJson[]),
-      cardBits: cardBitNodes,
-      footer: footerNode,
+      cardBits: this.processListItems(bit.listItems ?? bit.sections, bit.placeholders),
+      footer: this.processFooter(bit.footer),
     });
 
     return bitNode;
@@ -227,18 +193,19 @@ class JsonParser {
   private processStatements(
     statement?: string,
     isCorrect?: boolean,
-    statements?: StatementJson[],
+    statements?: Partial<StatementJson>[],
     example?: ExampleJson,
-  ): StatementJson[] | undefined {
-    const nodes: StatementJson[] = [];
+  ): Partial<StatementJson>[] | undefined {
+    const nodes: Partial<StatementJson>[] = [];
 
     // Add statement defined in the bit
     if (statement) {
-      const node = builder.statement({
+      const node: Partial<StatementJson> = {
         statement: statement ?? '',
         isCorrect: isCorrect ?? false,
         ...this.parseExample(example),
-      });
+      };
+
       if (node) nodes.push(node);
     }
 
@@ -265,25 +232,20 @@ class JsonParser {
     return responses;
   }
 
-  private processListItems(
-    listItems: ListItemJson[],
-    textFormat: TextFormatType,
-    placeholders: BodyBitsJson,
-  ): CardBit[] | undefined {
+  private processListItems(listItems: ListItemJson[], placeholders: BodyBitsJson): CardBit[] | undefined {
     const nodes: CardBit[] = [];
 
     if (Array.isArray(listItems)) {
       for (const li of listItems) {
-        const { item, lead, hint, instruction, body } = li;
-        const node = builder.cardBit({
-          item: this.convertJsonTextToAstText(item),
-          lead: this.convertJsonTextToAstText(lead),
-          pageNumber: [] as TextAst,
-          marginNumber: [] as TextAst,
-          hint: this.convertJsonTextToAstText(hint),
-          instruction: this.convertJsonTextToAstText(instruction),
-          body: this.processBody(body, textFormat, placeholders),
-        });
+        const node: CardBit = {
+          ...li,
+        } as CardBit;
+        if (node.body) {
+          node.body = {
+            body: node.body,
+            placeholders,
+          };
+        }
         if (node) nodes.push(node);
       }
     }
@@ -333,111 +295,18 @@ class JsonParser {
     return nodes;
   }
 
-  /** TODO
-   *
-   * - Convert the string like body into AST body,
-   * - re-build all the body bits to validate them.
-   * // TODO: This must still handle the placeholders for v2
-   *
-   */
-  private processBody(body: JsonText, textFormat: TextFormatType, placeholders: BodyBitsJson): Body | undefined {
-    let node: Body | undefined;
-    let bodyStr: BreakscapedString | undefined;
-    const placeholderNodes: {
-      [keyof: string]: BodyBit;
-    } = {};
-
-    if (textFormat === TextFormat.json) {
-      // If the text format is JSON, handle appropriately
-      let bodyObject: unknown = body;
-
-      // Attempt to parse a string body as JSON to support the legacy format
-      if (typeof bodyObject === 'string') {
-        try {
-          bodyObject = JSON.parse(bodyObject);
-        } catch (e) {
-          // Could not parse JSON - set body to null
-          bodyObject = null;
-        }
-      }
-      node = builder.body({ bodyJson: bodyObject });
-    } else {
-      // return { body } as Body;
-
-      if (Array.isArray(body)) {
-        // Body is an array (prosemirror like JSON)
-        return { body } as Body;
-      } else {
-        // Body is a string (legacy bitmark v2, or not bitmark--/++)
-        bodyStr = body as BreakscapedString; // TODO!! this.convertJsonTextToBreakscapedString(body, textFormat);
-      }
-
-      // Placeholders
-      if (placeholders) {
-        for (const [key, val] of Object.entries(placeholders)) {
-          const bit = this.bodyBitToAst(val);
-          placeholderNodes[key] = bit as BodyBit;
-        }
-      }
-
-      if (bodyStr) {
-        // Split the body string and insert the placeholders
-        const bodyPartNodes: BodyPart[] = [];
-        const bodyParts: BreakscapedString[] = StringUtils.splitPlaceholders(
-          bodyStr,
-          Object.keys(placeholderNodes),
-        ) as BreakscapedString[];
-
-        for (let i = 0, len = bodyParts.length; i < len; i++) {
-          const bodyPart = bodyParts[i];
-
-          if (placeholderNodes[bodyPart]) {
-            // Replace the placeholder
-            bodyPartNodes.push(placeholderNodes[bodyPart]);
-          } else {
-            // Treat as text
-            const bodyText = this.bodyTextToAst(bodyPart);
-            bodyPartNodes.push(bodyText);
-          }
-        }
-
-        // node = builder.body({ bodyParts: bodyPartNodes });
-        node = builder.body({ body: bodyStr });
-      }
-    }
-    return node;
+  private processBody(body: JsonText, placeholders: BodyBitsJson): Body | undefined {
+    return {
+      body,
+      placeholders,
+    };
   }
 
-  private bodyTextToAst(_bodyText: BreakscapedString): BodyPart {
-    return null as unknown as BodyPart; // TODO builder.bodyText({ text: bodyText ?? '' }, false);
-  }
-
-  private bodyBitToAst(bit: BodyBitJson): BodyPart {
-    switch (bit.type) {
-      case BodyBitType.gap:
-      case BodyBitType.mark:
-      case BodyBitType.select:
-      case BodyBitType.highlight:
-        return bit;
-        break;
-      default:
-      // Do nothing
-    }
-    return this.bodyTextToAst('' as BreakscapedString);
-  }
-
-  private footerToAst(footerText: JsonText, _textFormat: TextFormatType): Footer | undefined {
+  private processFooter(footerText: JsonText): Footer | undefined {
     if (!footerText) return undefined;
     return {
       footer: footerText,
     };
-    // const text = this.convertJsonTextToAstText(footerText, textFormat);
-
-    // if (text) {
-    //   const footerText = builder.footerText({ text }, false);
-    //   return builder.footer({ footerParts: [footerText] });
-    // }
-    // return undefined;
   }
 
   private processReference(reference: string | string[]): ReferenceAndReferenceProperty {
@@ -463,65 +332,6 @@ class JsonParser {
       return { example: exampleText };
     }
     return { example: !!example };
-  }
-
-  /**
-   * Convert the JsonText from the JSON to the AST format:
-   * Input:
-   *  - Bitmark v2: breakscaped string
-   *  - Bitmark v3: bitmark text JSON (TextAst)
-   * Output:
-   *  - breakscaped string
-   *
-   * In the case of Bitmark v2 type texts, there is nothing to do but cast the type.
-   *
-   * @param breakscaped string or TextAst or breakscaped string[] or TextAst[]
-   * @param textFormat format of TextAst
-   * @returns Breakscaped string or breakscaped string[]
-   */
-  private convertJsonTextToAstText<
-    T extends JsonText | JsonText[] | undefined,
-    R = T extends JsonText[] ? TextAst[] : TextAst,
-  >(text: T, textFormat?: TextFormatType): R {
-    // NOTE: it is ok to default to bitmarkMinusMinus here as if the text is text then it will not be an array or
-    // return true from isAst() and so will be treated as a string
-    textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
-
-    const bitTagOnly = (textFormat !== TextFormat.bitmarkPlusPlus &&
-      textFormat !== TextFormat.bitmarkMinusMinus) as boolean;
-
-    if (text == null) return [] as R;
-    if (this.textParser.isAst(text)) {
-      // Use the text generator to convert the TextAst to breakscaped string
-      // this.ast.printTree(text, NodeType.textAst);
-
-      return text as R;
-    } else if (Array.isArray(text)) {
-      const strArray: TextAst[] = [];
-      for (let i = 0, len = text.length; i < len; i++) {
-        const t = text[i];
-
-        if (this.textParser.isAst(t)) {
-          // Use the text generator to convert the TextAst to breakscaped string
-          // this.ast.printTree(text, NodeType.textAst);
-          strArray[i] = t as TextAst;
-        } else {
-          strArray[i] = this.textParser.toAst(
-            Breakscape.breakscape(t as string, {
-              bitTagOnly,
-            }),
-          );
-          // strArray[i] = t as BreakscapedString;
-        }
-      }
-      return strArray as R;
-    }
-
-    return this.textParser.toAst(
-      Breakscape.breakscape(text as string, {
-        bitTagOnly,
-      }),
-    ) as R;
   }
 }
 

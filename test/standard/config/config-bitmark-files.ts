@@ -28,7 +28,7 @@ let TEST_FILES: string[] = [
   // 'article-responsive.bit',
   // 'article-alt.bit',
   // 'assignment.bit',
-  // 'assignment-list.bit',
+  'assignment-list.bit',
   // 'audio-embed.bit',
   // 'audio-link.bit',
   // 'audio-transcript.bit',

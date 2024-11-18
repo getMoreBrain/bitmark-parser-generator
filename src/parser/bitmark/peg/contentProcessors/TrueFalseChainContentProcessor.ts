@@ -126,7 +126,7 @@ function buildStatement(
     // Have to remove the statement JSON tag to keep typescript happy
     const { statement: _ignore, ...tagsRest } = tags;
     _ignore;
-    statement = builder.statement({ ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest });
+    statement = builder.buildStatement({ ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest });
   }
 
   return statement;
@@ -185,13 +185,13 @@ function buildStatementsChoicesResponses(
         const { statement: _ignore, ...tagsRest } = tags;
         _ignore;
 
-        const statement = builder.statement({ ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest });
+        const statement = builder.buildStatement({ ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest });
         if (statement) statements.push(statement);
       } else if (insertChoices) {
-        const choice = builder.choice({ ...firstTrueFalse, choice: firstTrueFalse.text, ...tags });
+        const choice = builder.buildChoice({ ...firstTrueFalse, choice: firstTrueFalse.text, ...tags });
         if (choice) choices.push(choice);
       } else if (insertResponses) {
-        const response = builder.response({ ...firstTrueFalse, response: firstTrueFalse.text, ...tags });
+        const response = builder.buildResponse({ ...firstTrueFalse, response: firstTrueFalse.text, ...tags });
         if (response) responses.push(response);
       }
     }
@@ -231,12 +231,12 @@ function buildHighlight(
   const texts: HighlightTextJson[] = [];
   if (trueFalse) {
     for (const tf of trueFalse) {
-      const ht = builder.highlightText({ ...tf, isHighlighted: false });
+      const ht = builder.buildHighlightText({ ...tf, isHighlighted: false });
       if (ht) texts.push(ht);
     }
   }
 
-  const highlight = builder.highlight({
+  const highlight = builder.buildHighlight({
     texts,
     ...tags,
   });
@@ -266,12 +266,12 @@ function buildSelect(
   const options: SelectOptionJson[] = [];
   if (trueFalse) {
     for (const tf of trueFalse) {
-      const so = builder.selectOption(tf);
+      const so = builder.buildSelectOption(tf);
       if (so) options.push(so);
     }
   }
 
-  const select = builder.select({
+  const select = builder.buildSelect({
     options,
     ...tags,
   });

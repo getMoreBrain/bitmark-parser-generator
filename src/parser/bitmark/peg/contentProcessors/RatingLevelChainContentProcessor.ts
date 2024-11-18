@@ -40,7 +40,7 @@ function ratingLevelChainContentProcessor(
   // Extract the technicalTerm from the content tag
   const level = NumberUtils.asNumber(value) ?? 0;
 
-  const node = builder.ratingLevelStartEnd({
+  const node = builder.buildRatingLevelStartEnd({
     level,
     label: label ? textParser.toAst(label) : undefined,
   });

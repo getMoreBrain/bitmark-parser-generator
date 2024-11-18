@@ -2,6 +2,7 @@ import { BitTypeType } from '../enum/BitType';
 import { BodyBitTypeType } from '../enum/BodyBitType';
 import { ResourceTagType } from '../enum/ResourceTag';
 import { TextFormatType } from '../enum/TextFormat';
+import { BodyBitJson, BodyBitsJson } from '../json/BodyBitJson';
 import { ImageResourceWrapperJson, ResourceJson } from '../json/ResourceJson';
 import { ParserError } from '../parser/ParserError';
 import { ParserInfo } from '../parser/ParserInfo';
@@ -240,10 +241,10 @@ export type Property = string[] | number[] | boolean[] | unknown[];
 // Body
 
 export interface Body {
-  body?: JsonText;
-  bodyBits?: BodyBit[];
+  body?: JsonText | unknown;
+  bodyBits?: BodyBitJson[];
+  placeholders?: BodyBitsJson;
   bodyString?: string;
-  bodyJson?: unknown;
 }
 
 export interface BodyPart {
@@ -251,16 +252,11 @@ export interface BodyPart {
   data?: unknown;
 }
 
-// TODO: BodyBitJson ?? replace this type with the one from the JSON
-export interface BodyBit extends BodyPart {
-  type: 'gap' | 'mark' | 'select' | 'highlight';
-}
-
 export interface CardBit {
-  item: TextAst;
-  lead: TextAst;
-  hint?: TextAst;
-  instruction?: TextAst;
+  item: JsonText;
+  lead: JsonText;
+  hint?: JsonText;
+  instruction?: JsonText;
   isExample?: boolean;
   example?: ExampleJson;
   extraProperties?: ExtraProperties;

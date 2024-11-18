@@ -54,7 +54,7 @@ function markConfigChainContentProcessor(
     (StringUtils.trimmedString(content.value) ?? 'unknown') as BreakscapedString,
   );
 
-  const config = builder.markConfig({
+  const config = builder.buildMarkConfig({
     mark,
     emphasis: 'underline' as string,
     ...tags,

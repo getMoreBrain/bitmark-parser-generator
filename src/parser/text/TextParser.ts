@@ -94,7 +94,7 @@ class TextParser {
     const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
 
     // There is a special case for pre-processing the string passed to the text parser
-    // If the string contains starts with ^/n, contains /n^/n or ends with /n^, the parser will generated
+    // If the string starts with ^/n, contains /n^/n or ends with /n^, the parser will generated
     // an empty text block:
     // {
     //   "text": "",
@@ -104,7 +104,10 @@ class TextParser {
     // This happens because the single ^ is removed by the breakscaping algorithm.
     // This in itself is not wrong, but it is undesired because it will be lost when converting back to text.
     // Therefore the string is pre-processed to remove these empty text blocks.
-    str = str.replace(START_HAT_REGEX, '\n').replace(END_HAT_REGEX, '\n').replace(MIDDLE_HAT_REGEX, '\n\n').trim();
+    str = str.replace(START_HAT_REGEX, '\n').replace(END_HAT_REGEX, '\n').replace(MIDDLE_HAT_REGEX, '\n\n');
+
+    // Always trim the string before parsing (parser handles leading/trailing whitespace inconsistently)
+    str = str.trim();
 
     return bitmarkTextParse(str, {
       startRule,
@@ -182,6 +185,33 @@ class TextParser {
     }
 
     return bodyBits;
+  }
+
+  /**
+   * Walk all the body bits from the text AST
+   *
+   * @param text
+   * @returns
+   */
+  public walkBodyBits(text: JsonText, callback: (parent: TextAst, index: number, bodyBit: BodyBitJson) => void): void {
+    if (!Array.isArray(text)) return;
+
+    const textAst = text as TextAst;
+    for (let i = 0; i < textAst.length; i++) {
+      const node = textAst[i];
+      switch (node.type) {
+        case TextNodeType.gap:
+        case TextNodeType.select:
+        case TextNodeType.highlight:
+        case TextNodeType.mark:
+          callback(textAst, i, node as BodyBitJson);
+          break;
+        default: {
+          // Recurse into children
+          this.walkBodyBits(node.content as TextAst, callback);
+        }
+      }
+    }
   }
 }
 

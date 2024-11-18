@@ -1,5 +1,6 @@
 import { Config } from '../config/Config';
-import { Bit, BitmarkAst, Body, ExtraProperties, CardNode, CardBit, Footer, BodyBit } from '../model/ast/Nodes';
+import { BreakscapedString } from '../model/ast/BreakscapedString';
+import { Bit, BitmarkAst, Body, ExtraProperties, CardNode, CardBit, Footer } from '../model/ast/Nodes';
 import { JsonText, TextAst } from '../model/ast/TextNodes';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { BitType, BitTypeType } from '../model/enum/BitType';
@@ -14,6 +15,7 @@ import { BitUtils } from '../utils/BitUtils';
 import { BooleanUtils } from '../utils/BooleanUtils';
 import { NumberUtils } from '../utils/NumberUtils';
 import { ObjectUtils } from '../utils/ObjectUtils';
+import { StringUtils } from '../utils/StringUtils';
 import { env } from '../utils/env/Env';
 
 import { BaseBuilder, WithExampleJson } from './BaseBuilder';
@@ -46,6 +48,7 @@ import {
   TechnicalTermJson,
 } from '../model/json/BitJson';
 import {
+  BodyBitJson,
   GapJson,
   HighlightJson,
   HighlightTextJson,
@@ -66,7 +69,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  bitmark(data: { bits?: Bit[]; errors?: ParserError[] }): BitmarkAst {
+  buildBitmark(data: { bits?: Bit[]; errors?: ParserError[] }): BitmarkAst {
     const { bits, errors } = data;
 
     const node: BitmarkAst = {
@@ -86,7 +89,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  bit(data: {
+  buildBit(data: {
     bitType: BitTypeType;
     bitLevel: number;
     textFormat?: TextFormatType;
@@ -215,10 +218,10 @@ class Builder extends BaseBuilder {
     productVideo?: string | string[];
     productVideoList?: string | string[];
     productFolder?: string;
-    technicalTerm?: TechnicalTermJson;
-    servings?: ServingsJson;
-    ratingLevelStart?: RatingLevelStartEndJson;
-    ratingLevelEnd?: RatingLevelStartEndJson;
+    technicalTerm?: Partial<TechnicalTermJson>;
+    servings?: Partial<ServingsJson>;
+    ratingLevelStart?: Partial<RatingLevelStartEndJson>;
+    ratingLevelEnd?: Partial<RatingLevelStartEndJson>;
     ratingLevelSelected?: number;
     partialAnswer?: string;
     book?: string;
@@ -239,48 +242,49 @@ class Builder extends BaseBuilder {
     marginNumber?: JsonText;
     hint?: JsonText;
     instruction?: JsonText;
-    example?: ExampleJson;
-    imageSource?: ImageSourceJson;
-    person?: PersonJson;
+    example?: Partial<ExampleJson>;
+    imageSource?: Partial<ImageSourceJson>;
+    person?: Partial<PersonJson>;
     extraProperties?: {
       [key: string]: unknown | unknown[];
     };
-    markConfig?: MarkConfigJson[];
-    imagePlaceholder?: ImageResourceWrapperJson;
-    resources?: ResourceJson | ResourceJson[];
-    body?: Body;
+    markConfig?: Partial<MarkConfigJson>[];
+    imagePlaceholder?: Partial<ImageResourceWrapperJson>;
+    resources?: Partial<ResourceJson> | Partial<ResourceJson>[];
+    body?: Partial<Body>;
     sampleSolution?: string;
     additionalSolutions?: string | string[];
     elements?: string[];
-    flashcards?: FlashcardJson[];
-    descriptions?: DescriptionListItemJson[];
-    statement?: StatementJson;
-    statements?: StatementJson[];
-    responses?: ResponseJson[];
-    quizzes?: QuizJson[];
-    heading?: HeadingJson;
-    pairs?: PairJson[];
-    matrix?: MatrixJson[];
-    table?: TableJson;
-    choices?: ChoiceJson[];
-    questions?: QuestionJson[];
-    botResponses?: BotResponseJson[];
-    ingredients?: IngredientJson[];
-    captionDefinitionList?: CaptionDefinitionListJson;
-    cardBits?: CardBit[];
-    footer?: Footer;
+    flashcards?: Partial<FlashcardJson>[];
+    descriptions?: Partial<DescriptionListItemJson>[];
+    statement?: Partial<StatementJson>;
+    statements?: Partial<StatementJson>[];
+    responses?: Partial<ResponseJson>[];
+    quizzes?: Partial<QuizJson>[];
+    heading?: Partial<HeadingJson>;
+    pairs?: Partial<PairJson>[];
+    matrix?: Partial<MatrixJson>[];
+    table?: Partial<TableJson>;
+    choices?: Partial<ChoiceJson>[];
+    questions?: Partial<QuestionJson>[];
+    botResponses?: Partial<BotResponseJson>[];
+    ingredients?: Partial<IngredientJson>[];
+    captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+    cardBits?: Partial<CardBit>[];
+    footer?: Partial<Footer>;
 
     markup?: string;
     parser?: ParserInfo;
     _isDefaultExample?: boolean;
   }): Bit | undefined {
     const bitConfig = Config.getBitConfig(data.bitType);
+    const textFormat = TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
 
     // Validate and convert resources, and ensure it is an array
     // const resources = ArrayUtils.asArray(resourcesIn);
 
     // Set the card node data
-    const cardNode = this.cardNode(data.bitType, data);
+    const cardNode = this.buildCardNode(data.bitType, textFormat, data);
 
     // Add reasonableNumOfChars to the bit only for essay bits (in other cases it will be pushed down the tree)
     const reasonableNumOfCharsProperty = Config.isOfBitType(data.bitType, BitType.essay)
@@ -288,14 +292,14 @@ class Builder extends BaseBuilder {
       : undefined;
 
     const convertedExample = {
-      ...this.toExample(data._isDefaultExample, data.example),
+      ...this.toExample(data._isDefaultExample, data.example as TextAst),
     };
 
     // NOTE: Node order is important and is defined here
     const node: Bit = {
       bitType: data.bitType,
       bitLevel: data.bitLevel,
-      textFormat: TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault,
+      textFormat,
       resourceType: ResourceTag.fromValue(data.resourceType),
       isCommented: data.isCommented,
       id: this.toAstProperty(PropertyConfigKey.id, data.id),
@@ -431,10 +435,10 @@ class Builder extends BaseBuilder {
       productVideo: this.toAstProperty(PropertyConfigKey.productVideo, data.productVideo),
       productVideoList: this.toAstProperty(PropertyConfigKey.productVideoList, data.productVideoList),
       productFolder: this.toAstProperty(PropertyConfigKey.productFolder, data.productFolder),
-      technicalTerm: this.technicalTerm(data.technicalTerm),
-      servings: this.servings(data.servings),
-      ratingLevelStart: this.ratingLevelStartEnd(data.ratingLevelStart),
-      ratingLevelEnd: this.ratingLevelStartEnd(data.ratingLevelEnd),
+      technicalTerm: this.buildTechnicalTerm(data.technicalTerm),
+      servings: this.buildServings(data.servings),
+      ratingLevelStart: this.buildRatingLevelStartEnd(data.ratingLevelStart),
+      ratingLevelEnd: this.buildRatingLevelStartEnd(data.ratingLevelEnd),
       ratingLevelSelected: this.toAstProperty(PropertyConfigKey.ratingLevelSelected, data.ratingLevelSelected),
       title: this.convertJsonTextToAstText(data.title),
       subtitle: this.convertJsonTextToAstText(data.subtitle),
@@ -451,9 +455,9 @@ class Builder extends BaseBuilder {
       marginNumber: this.convertJsonTextToAstText(data.marginNumber),
       hint: this.convertJsonTextToAstText(data.hint),
       instruction: this.convertJsonTextToAstText(data.instruction),
-      ...this.toExample(data._isDefaultExample, data.example),
-      imageSource: this.imageSource(data.imageSource),
-      person: this.person(data.bitType, data.person),
+      ...this.toExample(data._isDefaultExample, data.example as TextAst),
+      imageSource: this.buildImageSource(data.imageSource),
+      person: this.buildPerson(data.bitType, data.person),
       imagePlaceholder: ArrayUtils.asSingle(
         this.resourceBuilder.resourceFromResourceDataJson(
           data.bitType,
@@ -462,9 +466,9 @@ class Builder extends BaseBuilder {
         ),
       ) as ImageResourceWrapperJson,
       resources: ArrayUtils.asArray(this.resourceBuilder.resourceFromResourceJson(data.bitType, data.resources)),
-      body: data.body,
+      body: this.buildBody(textFormat, data.body),
       cardNode,
-      footer: data.footer,
+      footer: this.buildFooter(data.footer),
 
       markup: data.markup,
       parser: data.parser,
@@ -543,9 +547,9 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildChoices(data: Partial<ChoiceJson>[] | undefined): ChoiceJson[] | undefined {
+  protected buildChoices(data: Partial<ChoiceJson>[] | undefined): ChoiceJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.choice(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildChoice(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -555,7 +559,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  choice(data: Partial<ChoiceJson> | undefined): ChoiceJson | undefined {
+  buildChoice(data: Partial<ChoiceJson> | undefined): ChoiceJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -585,9 +589,9 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildResponses(data: Partial<ResponseJson>[] | undefined): ResponseJson[] | undefined {
+  protected buildResponses(data: Partial<ResponseJson>[] | undefined): ResponseJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.response(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildResponse(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -597,7 +601,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  response(data: Partial<ResponseJson> | undefined): ResponseJson | undefined {
+  buildResponse(data: Partial<ResponseJson> | undefined): ResponseJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -627,7 +631,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildBotResponses(data: Partial<BotResponseJson>[] | undefined): BotResponseJson[] | undefined {
+  protected buildBotResponses(data: Partial<BotResponseJson>[] | undefined): BotResponseJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
     const nodes = data.map((d) => this.botResponse(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
@@ -669,9 +673,9 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildQuizzes(data: Partial<QuizJson>[] | undefined): QuizJson[] | undefined {
+  protected buildQuizzes(data: Partial<QuizJson>[] | undefined): QuizJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.quiz(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildQuiz(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -681,7 +685,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  quiz(data: Partial<QuizJson> | undefined): QuizJson | undefined {
+  buildQuiz(data: Partial<QuizJson> | undefined): QuizJson | undefined {
     if (!data) return undefined;
 
     const convertedExample = {
@@ -732,7 +736,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  heading(data: Partial<HeadingJson> | undefined): HeadingJson | undefined {
+  buildHeading(data: Partial<HeadingJson> | undefined): HeadingJson | undefined {
     if (!data) return undefined;
     if (data.forKeys == null) return undefined;
 
@@ -758,9 +762,9 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildPairs(bitType: BitTypeType, data: Partial<PairJson>[] | undefined): PairJson[] | undefined {
+  protected buildPairs(bitType: BitTypeType, data: Partial<PairJson>[] | undefined): PairJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.pair(bitType, d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildPair(bitType, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -770,7 +774,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  pair(bitType: BitTypeType, data: Partial<PairJson> | undefined): PairJson | undefined {
+  buildPair(bitType: BitTypeType, data: Partial<PairJson> | undefined): PairJson | undefined {
     if (!data) return undefined;
 
     // Set default example
@@ -833,9 +837,9 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildMatricies(data: Partial<MatrixJson>[] | undefined): MatrixJson[] | undefined {
+  protected buildMatricies(data: Partial<MatrixJson>[] | undefined): MatrixJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.matrix(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildMatrix(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -845,7 +849,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  matrix(data: Partial<MatrixJson> | undefined): MatrixJson | undefined {
+  buildMatrix(data: Partial<MatrixJson> | undefined): MatrixJson | undefined {
     if (!data) return undefined;
 
     // const convertedExample = {
@@ -874,7 +878,7 @@ class Builder extends BaseBuilder {
       hint: this.convertJsonTextToAstText(data.hint),
       instruction: this.convertJsonTextToAstText(data.instruction),
       isExample,
-      cells: (data.cells ?? []).map((c) => this.matrixCell(c)).filter((c) => c != null),
+      cells: (data.cells ?? []).map((c) => this.buildMatrixCell(c)).filter((c) => c != null),
     };
 
     // Remove Unset Optionals
@@ -893,7 +897,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  matrixCell(data: Partial<MatrixCellJson> | undefined): MatrixCellJson | undefined {
+  buildMatrixCell(data: Partial<MatrixCellJson> | undefined): MatrixCellJson | undefined {
     if (!data) return undefined;
 
     // Set default example
@@ -927,7 +931,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  table(dataIn: Partial<TableJson> | undefined): TableJson | undefined {
+  buildTable(dataIn: Partial<TableJson> | undefined): TableJson | undefined {
     if (!dataIn) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -950,9 +954,9 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildQuestions(data: Partial<QuestionJson>[] | undefined): QuestionJson[] | undefined {
+  protected buildQuestions(data: Partial<QuestionJson>[] | undefined): QuestionJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.question(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildQuestion(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -962,7 +966,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  question(data: Partial<QuestionJson> | undefined): QuestionJson | undefined {
+  buildQuestion(data: Partial<QuestionJson> | undefined): QuestionJson | undefined {
     if (!data) return undefined;
 
     // Set default example
@@ -1000,9 +1004,9 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildIngredients(data: Partial<IngredientJson>[] | undefined): IngredientJson[] | undefined {
+  protected buildIngredients(data: Partial<IngredientJson>[] | undefined): IngredientJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.ingredient(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildIngredient(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1012,7 +1016,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  ingredient(data: Partial<IngredientJson> | undefined): IngredientJson | undefined {
+  buildIngredient(data: Partial<IngredientJson> | undefined): IngredientJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1040,18 +1044,155 @@ class Builder extends BaseBuilder {
 
   /**
    * Build body node
+   * - Handles JSON, Bitmark text, and plain text
+   *   - body: set to either string, TextAst, or JSON
+   *   - bodyBits: set to array of BodyBitJson (will be validated and merged into body if it is a string)
+   *   - placeholders: set to placeholders from v2 JSON
+   *   *** REMOVE *** - bodyJson: set to JSON if body is JSON
+   *   *** RENAME *** - bodyString: set to the original string if body is a string (only used for card body)
    *
    * @param data - data for the node
    * @returns
    */
-  body(data: { body?: JsonText; bodyBits?: BodyBit[]; bodyString?: string; bodyJson?: unknown }): Body {
-    const { body, bodyBits, bodyString, bodyJson } = data;
+  buildBody(textFormat: TextFormatType, data: Partial<Body> | undefined): Body | undefined {
+    if (!data) return undefined;
+    let body: JsonText | unknown | undefined;
+    const bodyBits: BodyBitJson[] = [];
+    const placeholders = data.placeholders;
+    const bodyString = data.bodyString;
+
+    // Handle JSON type body
+    const handleJsonBody = () => {
+      // Attempt to parse a string body as JSON to support the legacy format
+      if (typeof data.body === 'string') {
+        try {
+          body = JSON.parse(data.body);
+        } catch (e) {
+          // Could not parse JSON - set body to null
+          body = null;
+        }
+      } else {
+        body = data.body;
+      }
+    };
+
+    // Handle Bitmark text type body (both AST v3 and plain text v2)
+    const handleBitmarkTextBody = () => {
+      let rawBody: TextAst = data.body as TextAst;
+      let bodyStr: BreakscapedString | undefined;
+      const placeholderNodes: {
+        [keyof: string]: BodyBitJson;
+      } = {};
+      // TODO - process body bits through the correct builders.
+
+      if (StringUtils.isString(data.body)) {
+        // Body is a string (legacy bitmark v2, or not bitmark--/++)
+        bodyStr = ((data.body as BreakscapedString) ?? '').trim() as BreakscapedString;
+        rawBody = [];
+      } else if (Array.isArray(data.body)) {
+        // Body is an array (prosemirror like JSON)
+        // Already in the correct format
+      } else {
+        // body is invalid
+        rawBody = [];
+      }
+
+      if (placeholders) {
+        for (const [key, val] of Object.entries(placeholders)) {
+          // const bit = this.bodyBitToAst(val);
+          // placeholderNodes[key] = bit as BodyBit;
+          placeholderNodes[key] = val as BodyBitJson;
+        }
+      }
+
+      if (bodyStr) {
+        // Convert placeholders {1} to [!1], etc.
+        let index = 0;
+        const newPlaceholderNodes: BodyBitJson[] = [];
+        for (const [key, val] of Object.entries(placeholderNodes)) {
+          if (bodyStr) {
+            const newKey = `[!${index}]`;
+            bodyStr = bodyStr.replace(`${key}`, newKey) as BreakscapedString;
+            newPlaceholderNodes.push(val);
+            index++;
+          }
+        }
+
+        // Convert the body string to AST
+        rawBody = this.textParser.toAst(bodyStr, {
+          textFormat: TextFormat.bitmarkMinusMinus, // Treat as bitmark-- for v2 text
+        });
+
+        const replaceBitsRecursive = (bodyText: TextAst) => {
+          for (let i = 0, len = bodyText.length; i < len; i++) {
+            const bodyPart = bodyText[i];
+            if ((bodyPart.type as string) === 'bit') {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              const index = (bodyPart as any).index as number;
+              if (newPlaceholderNodes[index] != null) {
+                bodyText[i] = newPlaceholderNodes[index];
+              }
+            } else {
+              if (bodyPart.content) replaceBitsRecursive(bodyPart.content);
+            }
+          }
+        };
+
+        // Replace the placeholders with the AST
+        replaceBitsRecursive(rawBody);
+      }
+
+      // Process the body bits to ensure they are valid
+      this.textParser.walkBodyBits(rawBody, (parent, index, bodyBit) => {
+        // Ensure the body bit is valid
+        let parsedBit: BodyBitJson | undefined;
+        switch (bodyBit.type) {
+          case BodyBitType.gap:
+            parsedBit = this.buildGap(bodyBit as GapJson);
+            break;
+          case BodyBitType.mark:
+            parsedBit = this.buildMark(bodyBit as MarkJson);
+            break;
+          case BodyBitType.select:
+            parsedBit = this.buildSelect(bodyBit as SelectJson);
+            break;
+          case BodyBitType.highlight:
+            parsedBit = this.buildHighlight(bodyBit as HighlightJson);
+            break;
+          default:
+          // TODO?? Ensure other parts are valid
+        }
+        if (parsedBit != undefined) {
+          parent[index] = parsedBit;
+          bodyBits.push(parsedBit);
+        }
+      });
+
+      // Set the body
+      body = rawBody;
+    };
+
+    const handlePlainTextBody = () => {
+      body = data.body as string;
+    };
+
+    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+    if (textFormat === TextFormat.json) {
+      // JSON
+      handleJsonBody();
+    } else if (isBitmarkText) {
+      // Bitmark text (either ast or string)
+      handleBitmarkTextBody();
+    } else {
+      // Text but not bitmark (plain text)
+      handlePlainTextBody();
+    }
 
     const node: Body = {
       body,
       bodyBits,
       bodyString,
-      bodyJson,
+      // Placeholders are only ever parsed into AST, never stored directly
     };
 
     return node;
@@ -1063,11 +1204,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  footer(data: { footer?: JsonText }): Footer {
-    const { footer } = data;
-
+  protected buildFooter(data: Partial<Footer> | undefined): Footer | undefined {
+    if (!data) return undefined;
     const node: Footer = {
-      footer,
+      footer: this.convertJsonTextToAstText(data.footer),
     };
 
     return node;
@@ -1079,7 +1219,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  gap(data: Partial<GapJson> | undefined): GapJson | undefined {
+  buildGap(data: Partial<GapJson> | undefined): GapJson | undefined {
     if (!data) return undefined;
 
     // Set default example
@@ -1096,7 +1236,7 @@ class Builder extends BaseBuilder {
       instruction: this.convertJsonTextToAstText(data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data._isDefaultExample, data.example, defaultExample),
-      _solutionsAst: data._solutionsAst ?? [],
+      _solutionsAst: data._solutionsAst,
     };
 
     // Remove Unset Optionals
@@ -1117,7 +1257,7 @@ class Builder extends BaseBuilder {
    */
   buildMarkConfigs(data: Partial<MarkConfigJson>[] | undefined): MarkConfigJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.markConfig(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildMarkConfig(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1127,7 +1267,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  markConfig(data: Partial<MarkConfigJson> | undefined): MarkConfigJson | undefined {
+  buildMarkConfig(data: Partial<MarkConfigJson> | undefined): MarkConfigJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1151,7 +1291,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  mark(data: Partial<MarkJson> | undefined): MarkJson | undefined {
+  buildMark(data: Partial<MarkJson> | undefined): MarkJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1183,7 +1323,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  select(data: Partial<SelectJson> | undefined): SelectJson | undefined {
+  buildSelect(data: Partial<SelectJson> | undefined): SelectJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1197,8 +1337,8 @@ class Builder extends BaseBuilder {
       hint: this.convertJsonTextToAstText(data.hint),
       instruction: this.convertJsonTextToAstText(data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
-      _hintString: data._hintString ?? '',
-      _instructionString: data._instructionString ?? '',
+      _hintString: data._hintString,
+      _instructionString: data._instructionString,
     };
 
     // Remove Unset Optionals
@@ -1219,7 +1359,7 @@ class Builder extends BaseBuilder {
    */
   buildSelectOptions(data: Partial<SelectOptionJson>[] | undefined): SelectOptionJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.selectOption(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildSelectOption(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1229,7 +1369,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  selectOption(data: Partial<SelectOptionJson> | undefined): SelectOptionJson | undefined {
+  buildSelectOption(data: Partial<SelectOptionJson> | undefined): SelectOptionJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1259,7 +1399,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  highlight(data: Partial<HighlightJson> | undefined): HighlightJson | undefined {
+  buildHighlight(data: Partial<HighlightJson> | undefined): HighlightJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1293,7 +1433,7 @@ class Builder extends BaseBuilder {
    */
   buildHighlightTexts(data: Partial<HighlightTextJson>[] | undefined): HighlightTextJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.highlightText(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildHighlightText(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1303,7 +1443,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  highlightText(data: Partial<HighlightTextJson> | undefined): HighlightTextJson | undefined {
+  buildHighlightText(data: Partial<HighlightTextJson> | undefined): HighlightTextJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1336,7 +1476,7 @@ class Builder extends BaseBuilder {
    */
   buildFlashcards(data: Partial<FlashcardJson>[] | undefined): FlashcardJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.flashcard(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildFlashcard(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1346,7 +1486,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  flashcard(data: Partial<FlashcardJson> | undefined): FlashcardJson | undefined {
+  buildFlashcard(data: Partial<FlashcardJson> | undefined): FlashcardJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1379,7 +1519,7 @@ class Builder extends BaseBuilder {
    */
   buildDescriptionList(data: Partial<DescriptionListItemJson>[] | undefined): DescriptionListItemJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.descriptionListItem(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildDescriptionListItem(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1389,7 +1529,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  descriptionListItem(data: Partial<DescriptionListItemJson> | undefined): DescriptionListItemJson | undefined {
+  buildDescriptionListItem(data: Partial<DescriptionListItemJson> | undefined): DescriptionListItemJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1422,7 +1562,7 @@ class Builder extends BaseBuilder {
    */
   buildStatements(data: Partial<StatementJson>[] | undefined): StatementJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.statement(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildStatement(d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1432,7 +1572,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  statement(data: Partial<StatementJson> | undefined): StatementJson | undefined {
+  buildStatement(data: Partial<StatementJson> | undefined): StatementJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1462,7 +1602,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  imageSource(data: Partial<ImageSourceJson> | undefined): ImageSourceJson | undefined {
+  buildImageSource(data: Partial<ImageSourceJson> | undefined): ImageSourceJson | undefined {
     if (!data) return undefined;
     const { url, mockupId, size, format, trim } = data;
 
@@ -1491,7 +1631,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  person(bitType: BitTypeType, data: Partial<PersonJson> | undefined): PersonJson | undefined {
+  buildPerson(bitType: BitTypeType, data: Partial<PersonJson> | undefined): PersonJson | undefined {
     if (!data) return undefined;
     const { name, title, avatarImage } = data;
     // { name: string; title?: string; avatarImage?: ImageResourceJson }
@@ -1522,7 +1662,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  technicalTerm(data: Partial<TechnicalTermJson> | undefined): TechnicalTermJson | undefined {
+  buildTechnicalTerm(data: Partial<TechnicalTermJson> | undefined): TechnicalTermJson | undefined {
     if (!data) return undefined;
     const { technicalTerm, lang } = data;
 
@@ -1547,7 +1687,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  servings(data: Partial<ServingsJson> | undefined): ServingsJson | undefined {
+  buildServings(data: Partial<ServingsJson> | undefined): ServingsJson | undefined {
     if (!data) return undefined;
     const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = data;
 
@@ -1576,7 +1716,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  ratingLevelStartEnd(data: Partial<RatingLevelStartEndJson> | undefined): RatingLevelStartEndJson | undefined {
+  buildRatingLevelStartEnd(data: Partial<RatingLevelStartEndJson> | undefined): RatingLevelStartEndJson | undefined {
     if (!data) return undefined;
     const { level, label } = data;
 
@@ -1601,7 +1741,7 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  captionDefinition(data: Partial<CaptionDefinitionJson> | undefined): CaptionDefinitionJson | undefined {
+  buildCaptionDefinition(data: Partial<CaptionDefinitionJson> | undefined): CaptionDefinitionJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1627,7 +1767,9 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  captionDefinitionList(data: Partial<CaptionDefinitionListJson> | undefined): CaptionDefinitionListJson | undefined {
+  buildCaptionDefinitionList(
+    data: Partial<CaptionDefinitionListJson> | undefined,
+  ): CaptionDefinitionListJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1635,7 +1777,7 @@ class Builder extends BaseBuilder {
       columns: data.columns ?? [],
       definitions: (data.definitions ?? [])
         .map((d) => {
-          return this.captionDefinition({
+          return this.buildCaptionDefinition({
             term: d.term,
             description: d.description,
           });
@@ -1651,9 +1793,17 @@ class Builder extends BaseBuilder {
     return node;
   }
 
-  //
-  // Private
-  //
+  /**
+   * Build card bit[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  buildCardBits(textFormat: TextFormatType, data: Partial<CardBit>[] | undefined): CardBit[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.buildCardBit(textFormat, d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
 
   /**
    * Build card bit node
@@ -1661,45 +1811,38 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  cardBit(data: {
-    item?: JsonText;
-    lead?: JsonText;
-    pageNumber?: JsonText;
-    marginNumber?: JsonText;
-    hint?: JsonText;
-    instruction?: JsonText;
-    _isDefaultExample?: boolean;
-    example?: ExampleJson;
-    extraProperties?: {
-      [key: string]: unknown | unknown[];
-    };
-    body?: Body;
-  }): CardBit | undefined {
-    const {
-      item,
-      lead,
-      /*pageNumber,
-      marginNumber,*/
-      hint,
-      instruction,
-      _isDefaultExample,
-      example,
-      extraProperties,
-      body,
-    } = data;
+  buildCardBit(
+    textFormat: TextFormatType,
+    // data: {
+    //   item?: JsonText;
+    //   lead?: JsonText;
+    //   pageNumber?: JsonText;
+    //   marginNumber?: JsonText;
+    //   hint?: JsonText;
+    //   instruction?: JsonText;
+    //   _isDefaultExample?: boolean;
+    //   example?: ExampleJson;
+    //   extraProperties?: {
+    //     [key: string]: unknown | unknown[];
+    //   };
+    //   body?: Body;
+    // },
+    data: Partial<CardBit> | undefined,
+  ): CardBit | undefined {
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: CardBit = {
-      item: (item ?? []) as TextAst,
-      lead: (lead ?? []) as TextAst,
-      hint: (hint ?? []) as TextAst,
-      instruction: (instruction ?? []) as TextAst,
-      ...this.toExample(_isDefaultExample, example),
-      _isDefaultExample: _isDefaultExample ?? false,
-      body,
+      item: this.convertJsonTextToAstText(data.item),
+      lead: this.convertJsonTextToAstText(data.lead),
+      hint: this.convertJsonTextToAstText(data.hint),
+      instruction: this.convertJsonTextToAstText(data.instruction),
+      ...this.toExample(data._isDefaultExample, data.example),
+      _isDefaultExample: data._isDefaultExample ?? false,
+      body: this.buildBody(textFormat, data.body),
 
       // Must always be last in the AST so key clashes are avoided correctly with other properties
-      extraProperties: this.parseExtraProperties(extraProperties),
+      extraProperties: this.parseExtraProperties(data.extraProperties),
     };
 
     // Remove Unset Optionals
@@ -1713,26 +1856,31 @@ class Builder extends BaseBuilder {
     return NodeValidator.validateCardBit(node);
   }
 
-  private cardNode(
+  //
+  // Private
+  //
+
+  private buildCardNode(
     bitType: BitTypeType,
+    textFormat: TextFormatType,
     data: {
-      flashcards?: FlashcardJson[];
-      descriptions?: DescriptionListItemJson[];
-      questions?: QuestionJson[];
+      flashcards?: Partial<FlashcardJson>[];
+      descriptions?: Partial<DescriptionListItemJson>[];
+      questions?: Partial<QuestionJson>[];
       elements?: string[];
-      statement?: StatementJson;
-      statements?: StatementJson[];
-      choices?: ChoiceJson[];
-      responses?: ResponseJson[];
-      quizzes?: QuizJson[];
-      heading?: HeadingJson;
-      pairs?: PairJson[];
-      matrix?: MatrixJson[];
-      table?: TableJson;
-      botResponses?: BotResponseJson[];
-      ingredients?: IngredientJson[];
-      captionDefinitionList?: CaptionDefinitionListJson;
-      cardBits?: CardBit[];
+      statement?: Partial<StatementJson>;
+      statements?: Partial<StatementJson>[];
+      choices?: Partial<ChoiceJson>[];
+      responses?: Partial<ResponseJson>[];
+      quizzes?: Partial<QuizJson>[];
+      heading?: Partial<HeadingJson>;
+      pairs?: Partial<PairJson>[];
+      matrix?: Partial<MatrixJson>[];
+      table?: Partial<TableJson>;
+      botResponses?: Partial<BotResponseJson>[];
+      ingredients?: Partial<IngredientJson>[];
+      captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+      cardBits?: Partial<CardBit>[];
     },
   ): CardNode | undefined {
     const node: CardNode = {
@@ -1740,19 +1888,19 @@ class Builder extends BaseBuilder {
       elements: data.elements,
       flashcards: this.buildFlashcards(data.flashcards),
       descriptions: this.buildDescriptionList(data.descriptions),
-      statement: this.statement(data.statement),
+      statement: this.buildStatement(data.statement),
       statements: this.buildStatements(data.statements),
       choices: this.buildChoices(data.choices),
       responses: this.buildResponses(data.responses),
       quizzes: this.buildQuizzes(data.quizzes),
-      heading: this.heading(data.heading),
+      heading: this.buildHeading(data.heading),
       pairs: this.buildPairs(bitType, data.pairs),
       matrix: this.buildMatricies(data.matrix),
-      table: this.table(data.table),
+      table: this.buildTable(data.table),
       botResponses: this.buildBotResponses(data.botResponses),
       ingredients: this.buildIngredients(data.ingredients),
-      captionDefinitionList: this.captionDefinitionList(data.captionDefinitionList),
-      cardBits: data.cardBits,
+      captionDefinitionList: this.buildCaptionDefinitionList(data.captionDefinitionList),
+      cardBits: this.buildCardBits(textFormat, data.cardBits),
     };
 
     // Remove Unset Optionals

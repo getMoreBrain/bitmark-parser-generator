@@ -18,7 +18,6 @@ export interface FooterText {
   isPlain: boolean;
 }
 
-const builder = new Builder();
 const textParser = new TextParser();
 
 class FooterContentProcessor {
@@ -77,7 +76,7 @@ class FooterContentProcessor {
     }
 
     // Return the footer in the target
-    return finalFooterText ? builder.footer({ footer: finalFooterText }) : undefined;
+    return finalFooterText ? { footer: finalFooterText } : undefined;
   }
 }
 

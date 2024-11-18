@@ -70,8 +70,8 @@ class ResourceBuilder extends BaseBuilder {
       if (!resourceKey) return undefined;
 
       // Override original type with type alias if present
-      const typeAlias = ResourceTag.fromValue(thisResource._typeAlias);
-      type = typeAlias ?? type;
+      const _typeAlias = ResourceTag.fromValue(thisResource._typeAlias);
+      type = _typeAlias ?? type;
 
       let data: ResourceDataJson | undefined;
 
@@ -410,7 +410,7 @@ class ResourceBuilder extends BaseBuilder {
       caption?: TextAst;
       search?: string;
     },
-    typeAlias?: ResourceTagType,
+    _typeAlias?: ResourceTagType,
   ): ImageResourceWrapperJson | undefined {
     const {
       value,
@@ -445,7 +445,7 @@ class ResourceBuilder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: ImageResourceWrapperJson = {
       type: ResourceTag.image,
-      _typeAlias: typeAlias ?? ResourceTag.image,
+      _typeAlias: _typeAlias ?? ResourceTag.image,
       image: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -965,7 +965,7 @@ class ResourceBuilder extends BaseBuilder {
   //   // NOTE: Node order is important and is defined here
   //   const node: StillImageFilmResource = {
   //     type: ResourceTag.stillImageFilm,
-  //     typeAlias: ResourceTag.stillImageFilm,
+  //     _typeAlias: ResourceTag.stillImageFilm,
   //     image: image ?? this.imageResource({ format: '', value: '' }),
   //     audio: audio ?? this.audioResource({ format: '', value: '' }),
   //   };

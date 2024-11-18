@@ -453,7 +453,7 @@ const NodeType = superenum({
   tocValue: 'tocValue',
   trim: 'trim',
   type: 'type',
-  typeAlias: 'typeAlias',
+  _typeAlias: '_typeAlias',
   unit: 'unit',
   unitAbbr: 'unitAbbr',
   url: 'url',
