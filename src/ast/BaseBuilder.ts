@@ -143,10 +143,10 @@ class BaseBuilder {
    * @param textFormat format of TextAst
    * @returns Breakscaped string or breakscaped string[]
    */
-  protected convertJsonTextToAstText<
-    T extends JsonText | JsonText[] | undefined,
-    R = T extends JsonText[] ? TextAst[] : TextAst,
-  >(text: T, textFormat?: TextFormatType): R {
+  protected handleJsonText<T extends JsonText | JsonText[] | undefined, R = T extends JsonText[] ? TextAst[] : TextAst>(
+    text: T,
+    textFormat?: TextFormatType,
+  ): R {
     // NOTE: it is ok to default to bitmarkMinusMinus here as if the text is text then it will not be an array or
     // return true from isAst() and so will be treated as a string
     textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;

@@ -156,7 +156,7 @@ class ResourceBuilder extends BaseBuilder {
       src2x: data.src2x,
       src3x: data.src3x,
       src4x: data.src4x,
-      caption: this.convertJsonTextToAstText(data.caption),
+      caption: this.handleJsonText(data.caption),
 
       // ImageLikeResource / VideoLikeResource
       width: data.width ?? undefined,
@@ -461,7 +461,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -538,7 +538,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -589,7 +589,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -639,7 +639,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -690,7 +690,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -770,7 +770,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -853,7 +853,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -936,7 +936,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1043,7 +1043,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1126,7 +1126,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1171,7 +1171,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1214,7 +1214,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1258,7 +1258,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1302,7 +1302,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1346,7 +1346,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1390,7 +1390,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1435,7 +1435,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.convertJsonTextToAstText(caption),
+        caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
       },
     };

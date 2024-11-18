@@ -22,6 +22,7 @@ import { TextParser } from '../../parser/text/TextParser';
 import { ArrayUtils } from '../../utils/ArrayUtils';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { NumberUtils } from '../../utils/NumberUtils';
+import { StringUtils } from '../../utils/StringUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
 import { TextGenerator } from '../text/TextGenerator';
 
@@ -591,7 +592,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
       // Convert the body to plain text if required
       if (this.options.textAsPlainText && isBitmarkText && this.isBitmarkText(this.bodyJson)) {
-        this.bitJson.body = this.textGenerator.generateSync(this.bodyJson as TextAst, TextFormat.bitmarkMinusMinus);
+        const textBody = this.textGenerator.generateSync(this.bodyJson as TextAst, textFormat);
+        this.bitJson.body = (Breakscape.unbreakscape(textBody) || '').trim();
       }
     } else if (parent.key === NodeType.cardBitsValue) {
       // Body is at the list item (card bit) level
@@ -1246,7 +1248,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (ignoreEmptyArrays && obj.length === 0) return false;
     if (obj.length === 0) return true;
     const firstNode = obj[0] as TextNode;
-    if (firstNode.type === TextNodeType.paragraph) return true;
+    if (StringUtils.isString(firstNode.type) && firstNode.attrs) return true;
 
     return false;
   }
@@ -1623,9 +1625,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const obj = json as Record<string, unknown>;
     for (const key in obj) {
+      // Special cases - don't convert empty arrays to empty strings
+      if (key === 'allowedBit') continue;
+
       const val = obj[key];
       if (this.isBitmarkText(val)) {
-        obj[key] = this.textGenerator.generateSync(val as TextAst, TextFormat.bitmarkMinusMinus);
+        const s = this.textGenerator.generateSync(val as TextAst, TextFormat.bitmarkMinusMinus);
+        obj[key] = (Breakscape.unbreakscape(s) || '').trim();
       } else if (typeof obj[key] === 'object') {
         this.convertAllBitmarkTextsToStringsForPlainText(obj[key] as Record<string, unknown>);
       }

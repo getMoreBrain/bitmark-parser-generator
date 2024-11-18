@@ -415,7 +415,7 @@ class Builder extends BaseBuilder {
       mailingList: this.toAstProperty(PropertyConfigKey.mailingList, data.mailingList),
       buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, data.buttonCaption),
       callToActionUrl: this.toAstProperty(PropertyConfigKey.callToActionUrl, data.callToActionUrl),
-      caption: this.convertJsonTextToAstText(data.caption),
+      caption: this.handleJsonText(data.caption),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, data.quotedPerson),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
       resolved: this.toAstProperty(PropertyConfigKey.resolved, data.resolved),
@@ -442,8 +442,8 @@ class Builder extends BaseBuilder {
       referenceProperty: this.toAstProperty(PropertyConfigKey.property_reference, data.referenceProperty),
 
       // Book data
-      title: this.convertJsonTextToAstText(data.title),
-      subtitle: this.convertJsonTextToAstText(data.subtitle),
+      title: this.handleJsonText(data.title),
+      subtitle: this.handleJsonText(data.subtitle),
       level: NumberUtils.asNumber(data.level),
       toc: this.toAstProperty(PropertyConfigKey.toc, data.toc),
       progress: this.toAstProperty(PropertyConfigKey.progress, data.progress),
@@ -452,12 +452,12 @@ class Builder extends BaseBuilder {
       referenceEnd: data.referenceEnd,
 
       // Item, Lead, Hint, Instruction
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      pageNumber: this.convertJsonTextToAstText(data.pageNumber),
-      marginNumber: this.convertJsonTextToAstText(data.marginNumber),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      pageNumber: this.handleJsonText(data.pageNumber),
+      marginNumber: this.handleJsonText(data.marginNumber),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
 
       // Example
       ...this.toExample(data.__isDefaultExample, data.example as TextAst),
@@ -577,10 +577,10 @@ class Builder extends BaseBuilder {
     const node: ChoiceJson = {
       choice: data.choice ?? '',
       isCorrect: !!data.isCorrect,
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -619,10 +619,10 @@ class Builder extends BaseBuilder {
     const node: ResponseJson = {
       response: data.response ?? '',
       isCorrect: !!data.isCorrect,
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -662,9 +662,9 @@ class Builder extends BaseBuilder {
       response: data.response ?? '',
       reaction: data.reaction ?? '',
       feedback: data.feedback ?? '',
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
     };
 
     // Remove Unset Optionals
@@ -723,10 +723,10 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: QuizJson = {
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       isExample: !!data.__defaultExample,
       choices: choices as ChoiceJson[],
       responses: responses as ResponseJson[],
@@ -809,10 +809,10 @@ class Builder extends BaseBuilder {
       key: data.key ?? '',
       keyAudio,
       keyImage,
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       values: data.values ?? [],
@@ -884,10 +884,10 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: MatrixJson = {
       key: data.key ?? '',
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       isExample,
       cells: (data.cells ?? []).map((c) => this.buildMatrixCell(c)).filter((c) => c != null),
     };
@@ -917,10 +917,10 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: MatrixCellJson = {
       values: data.values ?? [],
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __valuesAst: data.__valuesAst,
@@ -990,10 +990,10 @@ class Builder extends BaseBuilder {
       sampleSolution: data.sampleSolution ?? '',
       additionalSolutions: (data.additionalSolutions ?? undefined) as string[],
       reasonableNumOfChars: (data.reasonableNumOfChars ?? undefined) as number,
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __sampleSolutionAst: data.__sampleSolutionAst,
     };
@@ -1217,7 +1217,7 @@ class Builder extends BaseBuilder {
   protected buildFooter(data: Partial<Footer> | undefined): Footer | undefined {
     if (!data) return undefined;
     const node: Footer = {
-      footer: this.convertJsonTextToAstText(data.footer),
+      footer: this.handleJsonText(data.footer),
     };
 
     return node;
@@ -1240,10 +1240,10 @@ class Builder extends BaseBuilder {
     const node: GapJson = {
       type: BodyBitType.gap,
       solutions: data.solutions ?? [], // Must be before other properties except type
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __solutionsAst: data.__solutionsAst,
@@ -1309,10 +1309,10 @@ class Builder extends BaseBuilder {
       type: BodyBitType.mark,
       solution: data.solution ?? '', // Must be before other properties except type
       mark: data.mark ?? '',
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
     };
 
@@ -1342,10 +1342,10 @@ class Builder extends BaseBuilder {
       options: this.buildSelectOptions(data.options) ?? [], // Must be before other properties except type
       prefix: data.prefix ?? '',
       postfix: data.postfix ?? '',
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
       __hintString: data.__hintString,
       __instructionString: data.__instructionString,
@@ -1386,10 +1386,10 @@ class Builder extends BaseBuilder {
     const node: SelectOptionJson = {
       text: data.text ?? '', // Must be before other properties except type
       isCorrect: !!data.isCorrect,
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -1418,10 +1418,10 @@ class Builder extends BaseBuilder {
       texts: this.buildHighlightTexts(data.texts) ?? [], // Must be before other properties except type
       prefix: data.prefix ?? '',
       postfix: data.postfix ?? '',
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
     };
 
@@ -1461,10 +1461,10 @@ class Builder extends BaseBuilder {
       text: data.text ?? '', // Must be before other properties except type
       isCorrect: !!data.isCorrect,
       isHighlighted: !!data.isHighlighted,
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -1501,13 +1501,13 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: FlashcardJson = {
-      question: this.convertJsonTextToAstText(data.question),
-      answer: this.convertJsonTextToAstText(data.answer),
-      alternativeAnswers: this.convertJsonTextToAstText(data.alternativeAnswers),
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      question: this.handleJsonText(data.question),
+      answer: this.handleJsonText(data.answer),
+      alternativeAnswers: this.handleJsonText(data.alternativeAnswers),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
     };
 
@@ -1548,13 +1548,13 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DescriptionListItemJson = {
-      term: this.convertJsonTextToAstText(data.term),
-      description: this.convertJsonTextToAstText(data.description),
-      alternativeDescriptions: this.convertJsonTextToAstText(data.alternativeDescriptions),
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      term: this.handleJsonText(data.term),
+      description: this.handleJsonText(data.description),
+      alternativeDescriptions: this.handleJsonText(data.alternativeDescriptions),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
     };
 
@@ -1593,10 +1593,10 @@ class Builder extends BaseBuilder {
     const node: StatementJson = {
       statement: data.statement ?? '',
       isCorrect: !!data.isCorrect,
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -1739,7 +1739,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: RatingLevelStartEndJson = {
       level: level ?? 0,
-      label: this.convertJsonTextToAstText(label),
+      label: this.handleJsonText(label),
     };
 
     // Remove Unset Optionals
@@ -1834,10 +1834,10 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: CardBit = {
-      item: this.convertJsonTextToAstText(data.item),
-      lead: this.convertJsonTextToAstText(data.lead),
-      hint: this.convertJsonTextToAstText(data.hint),
-      instruction: this.convertJsonTextToAstText(data.instruction),
+      item: this.handleJsonText(data.item),
+      lead: this.handleJsonText(data.lead),
+      hint: this.handleJsonText(data.hint),
+      instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example),
       __isDefaultExample: data.__isDefaultExample ?? false,
       body: this.buildBody(textFormat, data.body),

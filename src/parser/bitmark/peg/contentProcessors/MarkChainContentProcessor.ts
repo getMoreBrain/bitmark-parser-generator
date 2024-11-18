@@ -1,8 +1,8 @@
-import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
 import { BodyPart } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { Tag } from '../../../../model/enum/Tag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { MarkJson } from '../../../../model/json/BodyBitJson';
@@ -17,9 +17,6 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
-import { BodyBitType } from '../../../../model/enum/BodyBitType';
-
-const builder = new Builder();
 
 function markChainContentProcessor(
   context: BitmarkPegParserContext,
