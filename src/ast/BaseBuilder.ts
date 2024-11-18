@@ -135,7 +135,7 @@ class BaseBuilder {
    *  - Bitmark v2: breakscaped string
    *  - Bitmark v3: bitmark text JSON (TextAst)
    * Output:
-   *  - breakscaped string
+   *  - bitmark text JSON (TextAst) with __tag property to indicate item is text
    *
    * In the case of Bitmark v2 type texts, there is nothing to do but cast the type.
    *
@@ -154,38 +154,53 @@ class BaseBuilder {
     const bitTagOnly = (textFormat !== TextFormat.bitmarkPlusPlus &&
       textFormat !== TextFormat.bitmarkMinusMinus) as boolean;
 
-    if (text == null) return [] as R;
-    if (this.textParser.isAst(text)) {
-      // Use the text generator to convert the TextAst to breakscaped string
-      // this.ast.printTree(text, NodeType.textAst);
+    let res: R;
 
-      return text as R;
-    } else if (Array.isArray(text)) {
-      const strArray: TextAst[] = [];
-      for (let i = 0, len = text.length; i < len; i++) {
-        const t = text[i];
+    if (text == null) {
+      res = [] as R;
+    } else {
+      if (this.textParser.isAst(text)) {
+        // Use the text generator to convert the TextAst to breakscaped string
+        // this.ast.printTree(text, NodeType.textAst);
 
-        if (this.textParser.isAst(t)) {
-          // Use the text generator to convert the TextAst to breakscaped string
-          // this.ast.printTree(text, NodeType.textAst);
-          strArray[i] = t as TextAst;
-        } else {
-          strArray[i] = this.textParser.toAst(
-            Breakscape.breakscape(t as string, {
-              bitTagOnly,
-            }),
-          );
-          // strArray[i] = t as BreakscapedString;
+        res = text as R;
+      } else if (Array.isArray(text)) {
+        const strArray: TextAst[] = [];
+        for (let i = 0, len = text.length; i < len; i++) {
+          const t = text[i];
+
+          if (this.textParser.isAst(t)) {
+            // Use the text generator to convert the TextAst to breakscaped string
+            // this.ast.printTree(text, NodeType.textAst);
+            strArray[i] = t as TextAst;
+          } else {
+            strArray[i] = this.textParser.toAst(
+              Breakscape.breakscape(t as string, {
+                bitTagOnly,
+              }),
+            );
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (strArray[i] as any).__tag = 'text';
+          }
         }
+        // Return the array of TextAst texts
+        return strArray as R;
+      } else {
+        res = this.textParser.toAst(
+          Breakscape.breakscape(text as string, {
+            bitTagOnly,
+          }),
+        ) as R;
       }
-      return strArray as R;
     }
 
-    return this.textParser.toAst(
-      Breakscape.breakscape(text as string, {
-        bitTagOnly,
-      }),
-    ) as R;
+    // Add the __tag property to indicate this is a text item
+    // This is somewhat ugly, but otherwise we would need an AST structure that is not so similar to the JSON
+    // resulting in a lot more conversion code
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (res as any).__tag = 'text';
+
+    return res;
   }
 
   // /**

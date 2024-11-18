@@ -22,7 +22,6 @@ import { TextParser } from '../../parser/text/TextParser';
 import { ArrayUtils } from '../../utils/ArrayUtils';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { NumberUtils } from '../../utils/NumberUtils';
-import { StringUtils } from '../../utils/StringUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
 import { TextGenerator } from '../text/TextGenerator';
 
@@ -281,15 +280,15 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected exit_bitmarkAst(_node: NodeInfo, _route: NodeInfo[]): void {
-    // Walk the entire json object and remove all' '_xxx' properties
-    // (which are used to store temporary data during the generation process)
-    this.removeTemporaryProperties(this.json);
-
     // Convert all bitmark text to plain text if required
     if (this.options.textAsPlainText) {
       // Convert all bitmark text to plain text
       this.convertAllBitmarkTextsToStringsForPlainText(this.json);
     }
+
+    // Walk the entire json object and remove all' '_xxx' properties
+    // (which are used to store temporary data during the generation process)
+    this.removeTemporaryProperties(this.json);
   }
 
   // bitmarkAst -> bits
@@ -342,6 +341,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else if (bit.isExample) {
       this.bitJson.isExample = true;
     }
+
+    // Reset the placeholder index
+    this.placeholderIndex = 0;
   }
 
   protected exit_bitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
@@ -1238,17 +1240,18 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   /**
    * Check if an object is bitmark text
-   * An empty array is considered bitmark text if ignoreEmptyArrays is false
+   * The check looks for a special tag on the array (__tag: 'text')
    *
    * @param obj object that might be bitmark text
    * @returns
    */
-  protected isBitmarkText(obj: unknown, ignoreEmptyArrays: boolean = false): boolean {
+  protected isBitmarkText(obj: unknown): boolean {
+    if (obj == null) return false;
     if (!Array.isArray(obj)) return false;
-    if (ignoreEmptyArrays && obj.length === 0) return false;
-    if (obj.length === 0) return true;
-    const firstNode = obj[0] as TextNode;
-    if (StringUtils.isString(firstNode.type) && firstNode.attrs) return true;
+
+    // Check for the hidden text tag
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if ((obj as any).__tag === 'text') return true;
 
     return false;
   }
@@ -1625,9 +1628,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const obj = json as Record<string, unknown>;
     for (const key in obj) {
-      // Special cases - don't convert empty arrays to empty strings
-      if (key === 'allowedBit') continue;
-
       const val = obj[key];
       if (this.isBitmarkText(val)) {
         const s = this.textGenerator.generateSync(val as TextAst, TextFormat.bitmarkMinusMinus);

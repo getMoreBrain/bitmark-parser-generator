@@ -1,3 +1,4 @@
+import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
 import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { Bit, BitmarkAst, Body, ExtraProperties, CardNode, CardBit, Footer } from '../model/ast/Nodes';
@@ -1116,6 +1117,9 @@ class Builder extends BaseBuilder {
       }
 
       if (bodyStr) {
+        // Breakscape
+        bodyStr = Breakscape.breakscape(bodyStr);
+
         // Convert placeholders {1} to [!1], etc.
         let index = 0;
         const newPlaceholderNodes: BodyBitJson[] = [];
@@ -1180,6 +1184,10 @@ class Builder extends BaseBuilder {
 
       // Set the body
       body = rawBody;
+
+      // Mark the body as text
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (body as any).__tag = 'text';
     };
 
     const handlePlainTextBody = () => {
