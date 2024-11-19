@@ -141,20 +141,16 @@ class BaseBuilder {
    *
    * @param breakscaped string or TextAst or breakscaped string[] or TextAst[]
    * @param textFormat format of TextAst
+   * @param inBody true if the text is in the body
    * @returns Breakscaped string or breakscaped string[]
    */
   protected handleJsonText<T extends JsonText | JsonText[] | undefined, R = T extends JsonText[] ? TextAst[] : TextAst>(
     text: T,
     textFormat?: TextFormatType,
   ): R {
-    // NOTE: it is ok to default to bitmarkMinusMinus here as if the text is text then it will not be an array or
-    // return true from isAst() and so will be treated as a string
-    textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
-
-    const bitTagOnly = (textFormat !== TextFormat.bitmarkPlusPlus &&
-      textFormat !== TextFormat.bitmarkMinusMinus) as boolean;
-
     let res: R;
+
+    if (!textFormat) textFormat = TextFormat.bitmarkMinusMinus;
 
     if (text == null) {
       res = [] as R;
@@ -176,7 +172,7 @@ class BaseBuilder {
           } else {
             strArray[i] = this.textParser.toAst(
               Breakscape.breakscape(t as string, {
-                bitTagOnly,
+                textFormat,
               }),
             );
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -188,7 +184,7 @@ class BaseBuilder {
       } else {
         res = this.textParser.toAst(
           Breakscape.breakscape(text as string, {
-            bitTagOnly,
+            textFormat,
           }),
         ) as R;
       }

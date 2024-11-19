@@ -1122,7 +1122,9 @@ class Builder extends BaseBuilder {
 
       if (bodyStr) {
         // Breakscape
-        bodyStr = Breakscape.breakscape(bodyStr);
+        bodyStr = Breakscape.breakscape(bodyStr, {
+          textFormat: TextFormat.bitmarkMinusMinus, // Treat as bitmark-- for v2 text
+        });
 
         // Convert placeholders {1} to [!1], etc.
         let index = 0;
@@ -1560,7 +1562,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DefinitionListItemJson = {
-      term: this.handleJsonText(data.term),
+      term: this.handleJsonText(data.term, TextFormat.bitmarkMinusMinus),
       definition: this.handleJsonText(data.definition),
       alternativeDefinitions: this.handleJsonText(data.alternativeDefinitions),
       item: this.handleJsonText(data.item),

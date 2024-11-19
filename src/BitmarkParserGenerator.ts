@@ -221,28 +221,26 @@ export interface CreateAstOptions {
  * Breakscape options
  */
 export interface BreakscapeOptions {
-  // /**
-  //  * Breakscape as if in a tag (default: in the body)
-  //  */
-  // inTag?: boolean;
-  // /**
-  //  * Specify the text format (default: bitmark--)
-  //  * Irrelevant if inTag is true as only bitmark-- is supported in tags
-  //  */
-  // textFormat?: TextFormatType;
   /**
    * Set to force input to be interpreted as a particular format, overriding the auto-detection
    * Auto-detection can fail or open unwanted files for strings that look like paths
    */
   inputFormat?: InputType;
+
   /**
    * Specify a file to write the output to
    */
   outputFile?: fs.PathLike;
+
   /**
    * Options for the output file
    */
   fileOptions?: FileOptions;
+
+  /**
+   * Specify the text format (default:  bitmark--)
+   */
+  textFormat?: TextFormatType;
 }
 
 /**
@@ -262,6 +260,11 @@ export interface UnbreakscapeOptions {
    * Options for the output file
    */
   fileOptions?: FileOptions;
+
+  /**
+   * Specify the text format (default: bitmark--)
+   */
+  textFormat?: TextFormatType;
 }
 
 /**
@@ -892,6 +895,7 @@ class BitmarkParserGenerator {
 
     const opts: BreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
+    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
 
     let inStr: string = input as string;
 
@@ -913,8 +917,7 @@ class BitmarkParserGenerator {
 
     // Do the breakscape
     const res = Breakscape.breakscape(inStr, {
-      // inTag: opts.inTag,
-      // textFormat: opts.textFormat,
+      textFormat: opts.textFormat,
     });
 
     if (opts.outputFile) {
@@ -950,8 +953,9 @@ class BitmarkParserGenerator {
   public unbreakscapeText(input: string, options?: UnbreakscapeOptions): string | void {
     if (!input) return input;
 
-    const opts: ConvertTextOptions = Object.assign({}, options);
+    const opts: UnbreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
+    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus; // Default to bitmark--
 
     let inStr: BreakscapedString = input as BreakscapedString;
 
@@ -972,7 +976,9 @@ class BitmarkParserGenerator {
     }
 
     // Do the unbreakscape
-    const res = Breakscape.unbreakscape(inStr);
+    const res = Breakscape.unbreakscape(inStr, {
+      textFormat: opts.textFormat,
+    });
 
     if (opts.outputFile) {
       const output = opts.outputFile.toString();

@@ -1,5 +1,3 @@
-import { Breakscape } from '../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { JsonText, TextAst } from '../../model/ast/TextNodes';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextNodeType } from '../../model/enum/TextNodeType';
@@ -112,47 +110,6 @@ class TextParser {
     return bitmarkTextParse(str, {
       startRule,
     }) as TextAst;
-  }
-
-  /**
-   * Convert breakscaped text to the JSON format using the text parser:
-   * Input:
-   *  - breakscaped string
-   * Output:
-   *  - text: plain text
-   *  - json: bitmark text JSON (TextAst)
-   *
-   * @param text
-   * @returns
-   */
-  public breakscapedStringToJsonText(
-    text: BreakscapedString | undefined,
-    format: TextFormatType, // = TextFormat.bitmarkMinusMinus,
-  ): JsonText {
-    if (!text) undefined;
-
-    const isBitmarkText = format === TextFormat.bitmarkMinusMinus || format === TextFormat.bitmarkPlusPlus;
-
-    if (!isBitmarkText) {
-      // Not bitmark text, so plain text, so  unbreakscape only the start of bit tags
-      return (
-        Breakscape.unbreakscape(text, {
-          bitTagOnly: true,
-        }) || Breakscape.EMPTY_STRING
-      );
-    }
-
-    // const asPlainText = this.options.textAsPlainText;
-    // if (asPlainText) {
-    //   return Breakscape.unbreakscape(text) || Breakscape.EMPTY_STRING;
-    // }
-
-    // Use the text parser to parse the text
-    const textAst = this.toAst(text, {
-      textFormat: format,
-    });
-
-    return textAst;
   }
 
   /**
