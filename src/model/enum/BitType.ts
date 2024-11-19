@@ -24,6 +24,7 @@ const BitType = superenum({
   articleEmbed: 'article-embed',
   articleLink: 'article-link',
   articleResponsive: 'article-responsive',
+  articleResponsiveAlt: 'article-responsive-alt',
   assignment: 'assignment',
   assignmentList: 'assignment-list',
   audio: 'audio',
