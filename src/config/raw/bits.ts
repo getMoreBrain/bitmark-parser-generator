@@ -84,6 +84,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.articleResponsiveAlt]: { since: '2.0.0', baseBitType: BitType.articleResponsive },
   [BitType.standardArticleNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.standardArticleNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.smartStandardArticleNormative]: { since: '1.28.0', baseBitType: BitType.standardArticleNormative },
