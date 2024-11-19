@@ -23,6 +23,7 @@ import { AstWalkerGenerator } from '../AstWalkerGenerator';
 import { TextGenerator } from '../text/TextGenerator';
 
 import {
+  BookJson,
   ChoiceJson,
   ImageSourceJson,
   IngredientJson,
@@ -1925,7 +1926,46 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  // bitmarkAst -> bits -> bitsValue -> book
+  // bitmarkAst -> bits -> bitsValue -> book (array)
+  // bitmarkAst -> bits -> bitsValue -> book (array) -> bookValue
+
+  protected enter_book(_node: NodeInfo, _route: NodeInfo[]): void {
+    // Block standard property handling
+  }
+
+  protected between_book(_node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeNL();
+  }
+
+  protected enter_bookValue(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const book = node.value as BookJson;
+    // const parent = this.getParentNode(route);
+    // const bit = parent?.value as Bit;
+
+    if (book) {
+      this.writeProperty('book', book.book, {
+        format: PropertyFormat.trimmedString,
+        single: true,
+        ignoreEmpty: false,
+      });
+      if (book.reference) {
+        this.writeOPRANGLE();
+        this.writeBreakscapedTagString(book.reference);
+        this.writeCL();
+
+        if (book.referenceEnd) {
+          this.writeOPRANGLE();
+          this.writeBreakscapedTagString(book.referenceEnd);
+          this.writeCL();
+        }
+      }
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> book (single)
 
   protected leaf_book(node: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);

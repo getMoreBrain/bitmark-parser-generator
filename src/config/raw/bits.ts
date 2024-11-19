@@ -1023,10 +1023,40 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.book,
+        chain: [
+          {
+            type: BitTagType.tag,
+            configKey: TagConfigKey.tag_reference,
+            maxCount: 2,
+          },
+        ],
       },
       {
+        /* Allow incorrectly chained reference tag */
         type: BitTagType.tag,
         configKey: TagConfigKey.tag_reference,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+  },
+  [BitType.pageOpenBookList]: {
+    since: '2.1.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.book,
+        maxCount: Count.infinity,
+        chain: [
+          {
+            type: BitTagType.tag,
+            configKey: TagConfigKey.tag_reference,
+            maxCount: 2,
+          },
+        ],
       },
       {
         type: BitTagType.property,

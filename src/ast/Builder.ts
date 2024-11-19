@@ -24,6 +24,7 @@ import { ResourceBuilder } from './ResourceBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
 import {
+  BookJson,
   BotResponseJson,
   CaptionDefinitionJson,
   CaptionDefinitionListJson,
@@ -226,7 +227,7 @@ class Builder extends BaseBuilder {
     ratingLevelEnd?: Partial<RatingLevelStartEndJson>;
     ratingLevelSelected?: number;
     partialAnswer?: string;
-    book?: string;
+    book?: string | BookJson[];
     title?: JsonText;
     subtitle?: JsonText;
     level?: number | string;
@@ -322,7 +323,7 @@ class Builder extends BaseBuilder {
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, data.releaseVersion),
       releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, data.releaseKind),
       releaseDate: this.toAstProperty(PropertyConfigKey.releaseDate, data.releaseDate),
-      book: data.book,
+      book: this.buildBooks(data.book),
       ageRange: this.toAstProperty(PropertyConfigKey.ageRange, data.ageRange),
       lang: this.toAstProperty(PropertyConfigKey.lang, data.lang),
       language: this.toAstProperty(PropertyConfigKey.language, data.language),
@@ -555,6 +556,44 @@ class Builder extends BaseBuilder {
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateBit(node);
+  }
+
+  /**
+   * Build books[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildBooks(data: Partial<BookJson>[] | string | undefined): BookJson[] | string | undefined {
+    if (StringUtils.isString(data)) return data as string;
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.buildBook(d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
+   * Build choice node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildBook(data: Partial<BookJson> | undefined): BookJson | undefined {
+    if (!data) return undefined;
+
+    // NOTE: Node order is important and is defined here
+    const node: BookJson = {
+      book: data.book ?? '',
+      reference: data.reference ?? '',
+      referenceEnd: (data.referenceEnd ?? undefined) as string,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyString: ['book', 'reference'],
+    });
+
+    return node;
   }
 
   /**

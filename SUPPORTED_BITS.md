@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 2.0.0
+Version: 2.1.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -356,6 +356,7 @@ page-cover-image (since: 1.22.0)
 page-footer (since: 1.4.13)
 page-hero (since: 1.11.0)
 page-open-book (since: 1.5.10)
+page-open-book-list (since: 2.1.0)
 page-person (since: 1.5.16)
 page-product (since: 1.4.17)
 page-product-list (since: 1.4.17)
