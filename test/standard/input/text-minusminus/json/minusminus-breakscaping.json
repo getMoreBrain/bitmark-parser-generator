@@ -3,6 +3,16 @@
     "type": "paragraph",
     "content": [
       {
+        "text": "*",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
         "text": "The parser un-breakscapes the following:",
         "type": "text"
       },
@@ -1683,10 +1693,45 @@
         "type": "hardBreak"
       },
       {
+        "text": "_Nasty______",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "*****^Nasty^______",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "^___^____^______^_______^__",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "^!!!^!_==^_``***^_**____^__",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
         "type": "hardBreak"
       },
       {
         "text": "The end!",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "_",
         "type": "text"
       }
     ],
