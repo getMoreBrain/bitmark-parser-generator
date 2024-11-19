@@ -84,6 +84,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.articleResponsiveAlt]: { since: '2.0.0', baseBitType: BitType.articleResponsive },
   [BitType.standardArticleNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.standardArticleNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.smartStandardArticleNormative]: { since: '1.28.0', baseBitType: BitType.standardArticleNormative },
@@ -458,6 +459,15 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.quizStrikethroughSolutions,
       },
       {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.quizStrikethroughSolutions,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.additionalSolutions,
+        maxCount: Count.infinity,
+      },
+      {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_gap,
       },
@@ -767,7 +777,6 @@ const BITS: _BitsConfig = {
   [BitType.danger]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.dangerAlt]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.definitionTerm]: { since: '1.34.0', baseBitType: BitType.article },
-  [BitType.descriptionTerm]: { since: '1.33.0', baseBitType: BitType.article },
   [BitType.details1]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.details]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.editorial]: { since: '1.3.0', baseBitType: BitType.article },
@@ -1064,10 +1073,6 @@ const BITS: _BitsConfig = {
       },
     ],
     cardSet: CardSetConfigKey._flashcardLike,
-  },
-  [BitType.descriptionList]: {
-    since: '1.33.0',
-    baseBitType: BitType.definitionList,
   },
   [BitType.flashcard]: {
     since: '1.3.0',
@@ -2154,6 +2159,10 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.tableResizableColumns,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableColumnMinWidth,
       },
     ],
     cardSet: CardSetConfigKey._table,

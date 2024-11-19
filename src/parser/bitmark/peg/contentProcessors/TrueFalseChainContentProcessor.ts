@@ -1,21 +1,14 @@
-import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
+import { BodyPart } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { ChoiceJson, ResponseJson, StatementJson } from '../../../../model/json/BitJson';
+import { HighlightJson, HighlightTextJson, SelectJson, SelectOptionJson } from '../../../../model/json/BodyBitJson';
 
 import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor';
 
-import {
-  BodyPart,
-  Choice,
-  Highlight,
-  HighlightText,
-  Response,
-  Select,
-  SelectOption,
-  Statement,
-} from '../../../../model/ast/Nodes';
 import {
   BitContent,
   BitContentLevel,
@@ -24,9 +17,8 @@ import {
   BitmarkPegParserContext,
   StatementsOrChoicesOrResponses,
   TypeKey,
+  TrueFalseValue,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function trueFalseChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -84,11 +76,11 @@ function buildTrueFalse(
   } else if (Config.isOfBitType(bitType, BitType.highlightText)) {
     // Treat as highlight text
     const highlight = buildHighlight(context, bitType, textFormat, tagsConfig, chainContent);
-    if (highlight) bodyParts.push(highlight);
+    if (highlight) bodyParts.push(highlight as BodyPart);
   } else {
     // Treat as select
     const select = buildSelect(context, bitType, textFormat, tagsConfig, chainContent);
-    if (select) bodyParts.push(select);
+    if (select) bodyParts.push(select as BodyPart);
   }
 }
 
@@ -106,7 +98,7 @@ function buildStatement(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   trueFalseContent: BitContent[],
-): Statement | undefined {
+): Partial<StatementJson> | undefined {
   if (!Config.isOfBitType(bitType, BitType.trueFalse1)) return undefined;
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
@@ -121,10 +113,18 @@ function buildStatement(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (statement)', tags);
 
-  let statement: Statement | undefined;
+  let statement: Partial<StatementJson> | undefined;
 
+  let firstTrueFalse: TrueFalseValue | undefined;
   if (trueFalse && trueFalse.length > 0) {
-    statement = builder.statement({ ...trueFalse[0], ...tags });
+    firstTrueFalse = trueFalse[0];
+  }
+
+  if (firstTrueFalse) {
+    // Have to remove the statement JSON tag to keep typescript happy
+    const { statement: _ignore, ...tagsRest } = tags;
+    _ignore;
+    statement = { ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest };
   }
 
   return statement;
@@ -151,9 +151,9 @@ function buildStatementsChoicesResponses(
   const insertResponses = Config.isOfBitType(bitType, [BitType.multipleResponse, BitType.multipleResponse1]);
   if (!insertStatements && !insertChoices && !insertResponses) return {};
 
-  const statements: Statement[] = [];
-  const choices: Choice[] = [];
-  const responses: Response[] = [];
+  const statements: Partial<StatementJson>[] = [];
+  const choices: Partial<ChoiceJson>[] = [];
+  const responses: Partial<ResponseJson>[] = [];
 
   const trueFalseContents = context.splitBitContent(trueFalseContent, [TypeKey.True, TypeKey.False]);
 
@@ -172,20 +172,29 @@ function buildStatementsChoicesResponses(
 
     if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (choices/responses)', tags);
 
-    if (insertStatements) {
-      if (trueFalse && trueFalse.length > 0) {
-        const statement = builder.statement({ ...trueFalse[0], ...tags });
-        statements.push(statement);
-      }
-    } else if (insertChoices) {
-      if (trueFalse && trueFalse.length > 0) {
-        const choice = builder.choice({ ...trueFalse[0], ...tags });
-        choices.push(choice);
-      }
-    } else if (insertResponses) {
-      if (trueFalse && trueFalse.length > 0) {
-        const response = builder.response({ ...trueFalse[0], ...tags });
-        responses.push(response);
+    let firstTrueFalse: TrueFalseValue | undefined;
+    if (trueFalse && trueFalse.length > 0) {
+      firstTrueFalse = trueFalse[0];
+    }
+
+    if (firstTrueFalse) {
+      if (insertStatements) {
+        // Have to remove the statement JSON tag to keep typescript happy
+        const { statement: _ignore, ...tagsRest } = tags;
+        _ignore;
+
+        const statement: Partial<StatementJson> = {
+          ...firstTrueFalse,
+          statement: firstTrueFalse.text,
+          ...tagsRest,
+        };
+        if (statement) statements.push(statement);
+      } else if (insertChoices) {
+        const choice = { ...firstTrueFalse, choice: firstTrueFalse.text, ...tags };
+        if (choice) choices.push(choice);
+      } else if (insertResponses) {
+        const response = { ...firstTrueFalse, response: firstTrueFalse.text, ...tags };
+        if (response) responses.push(response);
       }
     }
   }
@@ -208,7 +217,7 @@ function buildHighlight(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   highlightContent: BitContent[],
-): Highlight | undefined {
+): Partial<HighlightJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('highlight content', highlightContent);
 
   const { trueFalse, ...tags } = context.bitContentProcessor(
@@ -221,17 +230,19 @@ function buildHighlight(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('highlight TAGS', { trueFalse, ...tags });
 
-  const texts: HighlightText[] = [];
+  const texts: Partial<HighlightTextJson>[] = [];
   if (trueFalse) {
     for (const tf of trueFalse) {
-      texts.push(builder.highlightText({ ...tf, isHighlighted: false }));
+      const ht: Partial<HighlightTextJson> = { ...tf, isHighlighted: false };
+      if (ht) texts.push(ht);
     }
   }
 
-  const highlight = builder.highlight({
-    texts,
+  const highlight: Partial<HighlightJson> = {
+    type: BodyBitType.highlight,
+    texts: texts as HighlightTextJson[],
     ...tags,
-  });
+  };
 
   return highlight;
 }
@@ -242,7 +253,7 @@ function buildSelect(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   selectContent: BitContent[],
-): Select | undefined {
+): Partial<SelectJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('select content', selectContent);
 
   const { trueFalse, ...tags } = context.bitContentProcessor(
@@ -255,17 +266,19 @@ function buildSelect(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('select TAGS', { trueFalse, ...tags });
 
-  const options: SelectOption[] = [];
+  const options: Partial<SelectOptionJson>[] = [];
   if (trueFalse) {
     for (const tf of trueFalse) {
-      options.push(builder.selectOption(tf));
+      const so: Partial<SelectOptionJson> = tf;
+      if (so) options.push(so);
     }
   }
 
-  const select = builder.select({
-    options,
+  const select: Partial<SelectJson> = {
+    type: BodyBitType.select,
+    options: options as SelectOptionJson[],
     ...tags,
-  });
+  };
 
   return select;
 }

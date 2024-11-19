@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 1.35.0
+Version: 2.0.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -24,6 +24,7 @@ article-attachment (since: 1.3.0)
 article-embed (since: 1.3.0)
 article-link (since: 1.3.0)
 article-responsive (since: 1.21.0)
+article-responsive-alt (since: 2.0.0)
 assignment (since: 1.3.0)
 assignment-list (since: 1.4.13)
 audio (since: 1.3.0)
@@ -178,8 +179,6 @@ danger-alt (since: 1.16.0)
 danger-collapsible (since: 1.21.0)
 definition-list (since: 1.34.0)
 definition-term (since: 1.34.0)
-description-list (since: 1.33.0)
-description-term (since: 1.33.0)
 details (since: 1.3.0)
 details-1 (since: 1.3.0)
 details-image (since: 1.3.0)

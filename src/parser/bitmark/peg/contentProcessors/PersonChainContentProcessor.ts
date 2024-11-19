@@ -1,10 +1,11 @@
-import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { ImageResource, Resource } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { PersonJson } from '../../../../model/json/BitJson';
+import { ImageResourceJson, ResourceJson } from '../../../../model/json/ResourceJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -14,8 +15,6 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function personChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -37,36 +36,36 @@ function personChainContentProcessor(
   const { propertyTitle, resources } = tags;
 
   // Extract the name from the content tag
-  const name = StringUtils.trimmedString(content.value) as BreakscapedString;
+  const name = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString);
 
   // Extract the title from the propertyTitle tag
-  const title = StringUtils.trimmedString(propertyTitle) as BreakscapedString;
+  const title = StringUtils.trimmedString(propertyTitle);
 
   // Extract avatarImage from the resources
   const avatarImage = extractAvatarImage(context, resources);
 
-  const person = builder.person({
+  const person: Partial<PersonJson> = {
     name,
     title,
     avatarImage,
-  });
+  };
 
   target.person = person;
 }
 
 function extractAvatarImage(
   context: BitmarkPegParserContext,
-  resources: Resource[] | undefined,
-): ImageResource | undefined {
+  resources: ResourceJson[] | undefined,
+): ImageResourceJson | undefined {
   // Extract avatarImage from the resources
   // Return the actual resource, and add all other resources to excess resources
-  let avatarImage: ImageResource | undefined;
-  const excessResources: Resource[] = [];
+  let avatarImage: ImageResourceJson | undefined;
+  const excessResources: ResourceJson[] = [];
 
   if (resources) {
     for (const r of resources.reverse()) {
       if (!avatarImage && ResourceTag.image === r.type) {
-        avatarImage = r as ImageResource;
+        avatarImage = r.image;
       } else {
         excessResources.push(r);
       }

@@ -1,3 +1,4 @@
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
@@ -41,9 +42,9 @@ function buildBook(
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
 ): {
-  book: BreakscapedString | undefined;
-  reference: BreakscapedString | undefined;
-  referenceEnd: BreakscapedString | undefined;
+  book: string | undefined;
+  reference: string | undefined;
+  referenceEnd: string | undefined;
 } {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('book content', content);
 
@@ -54,7 +55,7 @@ function buildBook(
   const { reference, referenceEnd } = tags;
 
   // Extract the book from the content tag
-  const book = StringUtils.trimmedString(content.value) as BreakscapedString;
+  const book = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString);
 
   return {
     book,

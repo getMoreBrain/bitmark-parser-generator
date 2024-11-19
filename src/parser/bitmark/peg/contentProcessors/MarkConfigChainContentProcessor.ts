@@ -1,10 +1,11 @@
-import { Builder } from '../../../../ast/Builder';
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { MarkConfigJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -15,8 +16,6 @@ import {
   BitmarkPegParserContext,
   TypeKeyValue,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function markConfigChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -49,15 +48,17 @@ function markConfigChainContentProcessor(
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('mark TAGS', tags);
 
   // Extract the name from the content tag
-  const mark: BreakscapedString = (StringUtils.trimmedString(content.value) ?? 'unknown') as BreakscapedString;
+  const mark: string = Breakscape.unbreakscape(
+    (StringUtils.trimmedString(content.value) ?? 'unknown') as BreakscapedString,
+  );
 
-  const config = builder.markConfig({
+  const config: Partial<MarkConfigJson> = {
     mark,
-    emphasis: 'underline' as BreakscapedString,
+    emphasis: 'underline' as string,
     ...tags,
-  });
+  };
 
-  markConfig.push(config);
+  if (config) markConfig.push(config);
 }
 
 export { markConfigChainContentProcessor };

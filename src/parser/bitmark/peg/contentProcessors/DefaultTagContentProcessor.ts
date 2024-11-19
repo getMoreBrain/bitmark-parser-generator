@@ -1,8 +1,10 @@
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
+import { TextParser } from '../../../text/TextParser';
 
 import {
   BitContent,
@@ -23,33 +25,37 @@ function defaultTagContentProcessor(
   target: BitContentProcessorResult,
 ): void {
   const { type, value } = content as TypeValue;
+  const textParser = new TextParser();
 
   const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
   switch (type) {
     case TypeKey.Instruction: {
-      target.instruction = trimmedStringValue;
+      target.instruction = textParser.toAst(trimmedStringValue);
+      target.__instructionString = Breakscape.unbreakscape(trimmedStringValue);
       break;
     }
 
     case TypeKey.Hint: {
-      target.hint = trimmedStringValue;
+      target.hint = textParser.toAst(trimmedStringValue);
+      target.__hintString = Breakscape.unbreakscape(trimmedStringValue);
       break;
     }
 
     case TypeKey.Anchor: {
-      target.anchor = trimmedStringValue;
+      target.anchor = Breakscape.unbreakscape(trimmedStringValue);
       break;
     }
 
     case TypeKey.Reference: {
-      target.reference = trimmedStringValue;
+      target.reference = Breakscape.unbreakscape(trimmedStringValue);
       break;
     }
 
     // 16.08.2023 Deprecated, but currently still supported
     case TypeKey.SampleSolution: {
-      target.sampleSolution = trimmedStringValue;
+      target.sampleSolution = Breakscape.unbreakscape(trimmedStringValue);
+      target.__sampleSolutionAst = textParser.toAst(trimmedStringValue);
       context.addWarning('[$...] tag is deprecated, use [@sampleSolution:...] instead', content);
       break;
     }

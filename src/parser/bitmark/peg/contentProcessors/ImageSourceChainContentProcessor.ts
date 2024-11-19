@@ -1,4 +1,3 @@
-import { Builder } from '../../../../ast/Builder';
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
@@ -6,6 +5,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { ImageSourceJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -17,8 +17,6 @@ import {
   TypeKeyValue,
   TypeValue,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function imageSourceChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -48,7 +46,7 @@ function imageSourceTagContentProcessor(
   const { value } = content as TypeValue;
 
   // Extract the url from the content tag
-  const url = StringUtils.trimmedString(value) as BreakscapedString;
+  const url = Breakscape.unbreakscape(StringUtils.trimmedString(value) as BreakscapedString);
 
   target.imageSourceUrl = url;
 }
@@ -88,11 +86,11 @@ function buildImageSource(
     context.addWarning('[@mockupId:xxx] is missing from [@imageSource]', content);
   }
 
-  const imageSource = builder.imageSource({
-    url: url ?? Breakscape.EMPTY_STRING,
-    mockupId: mockupId ?? Breakscape.EMPTY_STRING,
+  const imageSource: Partial<ImageSourceJson> = {
+    url: url ?? '',
+    mockupId: mockupId ?? '',
     ...rest,
-  });
+  };
 
   target.imageSource = imageSource;
 }

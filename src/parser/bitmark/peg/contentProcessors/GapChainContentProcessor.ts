@@ -1,10 +1,11 @@
-import { Builder } from '../../../../ast/Builder';
 import { Config } from '../../../../config/Config';
-import { BodyPart, Gap } from '../../../../model/ast/Nodes';
+import { BodyPart } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { Tag } from '../../../../model/enum/Tag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { GapJson } from '../../../../model/json/BodyBitJson';
 
 import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
 
@@ -15,8 +16,6 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function gapChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -31,8 +30,8 @@ function gapChainContentProcessor(
   if (contentDepth === BitContentLevel.Chain) {
     clozeTagContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
   } else {
-    const gap = buildGap(context, contentDepth, bitType, textFormat, tagsConfig, content);
-    if (gap) bodyParts.push(gap);
+    const gap: Partial<GapJson> | undefined = buildGap(context, contentDepth, bitType, textFormat, tagsConfig, content);
+    if (gap) bodyParts.push(gap as BodyPart);
   }
 }
 
@@ -43,7 +42,7 @@ function buildGap(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
-): Gap | undefined {
+): Partial<GapJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
   const gapConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
@@ -60,12 +59,10 @@ function buildGap(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', chainTags);
 
-  const { solutions, ...rest } = chainTags;
-
-  const gap = builder.gap({
-    solutions: solutions ?? [],
-    ...rest,
-  });
+  const gap: Partial<GapJson> = {
+    type: BodyBitType.gap,
+    ...chainTags,
+  };
 
   return gap;
 }
