@@ -10,11 +10,14 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
+import { Body, ExtraProperties, CardBit, Footer } from '../../../model/ast/Nodes';
+import { JsonText, TextAst } from '../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag } from '../../../model/enum/Tag';
 import { TextFormatType } from '../../../model/enum/TextFormat';
+import { ResourceJson } from '../../../model/json/ResourceJson';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
@@ -22,33 +25,28 @@ import { ParserInfo } from '../../../model/parser/ParserInfo';
 import { PeggyGrammarLocation } from './PeggyGrammarLocation';
 
 import {
-  Body,
-  Statement,
-  Response,
-  Quiz,
-  Heading,
-  Pair,
-  Matrix,
-  Choice,
-  Question,
-  Resource,
-  BotResponse,
-  Person,
-  ExtraProperties,
-  ImageResource,
-  MarkConfig,
-  Flashcard,
-  ImageSource,
-  CardBit,
-  Ingredient,
-  TechnicalTerm,
-  Table,
-  Servings,
-  RatingLevelStartEnd,
-  CaptionDefinitionList,
-  Footer,
-  DefinitionListItem,
-} from '../../../model/ast/Nodes';
+  BotResponseJson,
+  CaptionDefinitionListJson,
+  ChoiceJson,
+  DefinitionListItemJson,
+  ExampleJson,
+  FlashcardJson,
+  HeadingJson,
+  ImageSourceJson,
+  IngredientJson,
+  MarkConfigJson,
+  MatrixJson,
+  PairJson,
+  PersonJson,
+  QuestionJson,
+  QuizJson,
+  RatingLevelStartEndJson,
+  ResponseJson,
+  ServingsJson,
+  StatementJson,
+  TableJson,
+  TechnicalTermJson,
+} from '../../../model/json/BitJson';
 
 const CARD_DIVIDER_V2 = '====';
 const CARD_SIDE_DIVIDER_V2 = '--';
@@ -94,10 +92,10 @@ export interface BitHeader {
 }
 
 export interface TrueFalseValue {
-  text: BreakscapedString;
+  text: string;
   isCorrect: boolean;
-  isDefaultExample: boolean;
-  example?: BreakscapedString;
+  example?: ExampleJson;
+  __isDefaultExample: boolean;
 }
 
 export interface CardData {
@@ -110,68 +108,73 @@ export interface CardData {
 export interface BitContentProcessorResult {
   cardSet?: ParsedCardSet;
   cardBody?: Body;
-  cardBodyStr?: BreakscapedString;
+  cardBodyStr?: string;
   body?: Body;
   footer?: Footer;
-  imageSource?: ImageSource;
-  technicalTerm?: TechnicalTerm;
-  servings?: Servings;
-  ratingLevelStart?: RatingLevelStartEnd;
-  ratingLevelEnd?: RatingLevelStartEnd;
-  label?: BreakscapedString;
-  person?: Person;
+  imageSource?: Partial<ImageSourceJson>;
+  technicalTerm?: Partial<TechnicalTermJson>;
+  servings?: Partial<ServingsJson>;
+  ratingLevelStart?: Partial<RatingLevelStartEndJson>;
+  ratingLevelEnd?: Partial<RatingLevelStartEndJson>;
+  label?: TextAst;
+  person?: Partial<PersonJson>;
   propertyTitle?: BreakscapedString;
   trueFalse?: TrueFalseValue[];
-  isDefaultExample?: boolean;
   lang?: BreakscapedString;
-  example?: BreakscapedString;
+  example?: ExampleJson;
   isCorrect?: boolean;
-  markConfig?: MarkConfig[];
-  solutions?: BreakscapedString[];
-  statement?: Statement;
-  statements?: Statement[];
-  choices?: Choice[];
-  responses?: Response[];
+  markConfig?: Partial<MarkConfigJson>[];
+  solutions?: string[];
+  __solutionsAst?: TextAst[];
+  statement?: Partial<StatementJson>;
+  statements?: Partial<StatementJson>[];
+  choices?: Partial<ChoiceJson>[];
+  responses?: Partial<ResponseJson>[];
   solution?: BreakscapedString;
   mark?: BreakscapedString[];
-  title?: BreakscapedString[];
-  subtitle?: BreakscapedString;
-  propertyStyleResources?: { [key: string]: Resource };
-  resources?: Resource[];
-  itemLead?: BreakscapedString[];
-  item?: BreakscapedString;
-  lead?: BreakscapedString;
-  pageNumber?: BreakscapedString;
-  marginNumber?: BreakscapedString;
-  instruction?: BreakscapedString;
-  hint?: BreakscapedString;
-  anchor?: BreakscapedString;
-  book?: BreakscapedString;
-  reference?: BreakscapedString;
-  referenceEnd?: BreakscapedString;
-  sampleSolution?: BreakscapedString;
-  additionalSolutions?: BreakscapedString[];
+  title?: { titleAst: TextAst; titleString: string }[];
+  // title?: TextAst[];
+  // subtitle?: BreakscapedString;
+  propertyStyleResources?: { [key: string]: ResourceJson };
+  resources?: ResourceJson[];
+  itemLead?: TextAst[];
+  item?: JsonText;
+  itemString?: string;
+  lead?: TextAst;
+  pageNumber?: TextAst;
+  marginNumber?: TextAst;
+  instruction?: TextAst;
+  __instructionString?: string;
+  hint?: TextAst;
+  __hintString?: string;
+  anchor?: string;
+  book?: string;
+  reference?: string;
+  referenceEnd?: string;
+  sampleSolution?: string;
+  __sampleSolutionAst?: TextAst;
+  additionalSolutions?: string[];
   isCaseSensitive?: boolean;
   reaction?: BreakscapedString;
-  license?: BreakscapedString;
-  copyright?: BreakscapedString;
+  license?: string;
+  copyright?: string;
   showInIndex?: boolean;
-  caption?: BreakscapedString;
-  src1x?: BreakscapedString;
-  src2x?: BreakscapedString;
-  src3x?: BreakscapedString;
-  src4x?: BreakscapedString;
+  caption?: TextAst;
+  src1x?: string;
+  src2x?: string;
+  src3x?: string;
+  src4x?: string;
   width?: string;
   height?: string;
-  alt?: BreakscapedString;
+  alt?: string;
   // duration?: BreakscapedString | BreakscapedString[]; // number? - there is a collision between duration at bit level, and duration in resource.
   mute?: boolean;
   autoplay?: boolean;
   allowSubtitles?: boolean;
   showSubtitles?: boolean;
-  posterImage?: ImageResource | BreakscapedString;
-  siteName?: BreakscapedString;
-  imageSourceUrl?: BreakscapedString;
+  posterImage?: /*ImageResourceJson |*/ string;
+  siteName?: string;
+  imageSourceUrl?: string;
   mockupId?: BreakscapedString;
   size?: number;
   format?: BreakscapedString;
@@ -182,39 +185,43 @@ export interface BitContentProcessorResult {
 
   extraProperties?: ExtraProperties;
   internalComments?: BreakscapedString[];
+
+  __isDefaultExample?: boolean;
 }
 
 export interface BitSpecificTitles {
-  title?: BreakscapedString;
-  subtitle?: BreakscapedString;
+  title?: TextAst;
+  titleString?: string;
+  subtitle?: TextAst;
+  subtitleString?: string;
   level?: number;
 }
 
 export interface StatementsOrChoicesOrResponses {
-  statements?: Statement[];
-  choices?: Choice[];
-  responses?: Response[];
+  statements?: Partial<StatementJson>[];
+  choices?: Partial<ChoiceJson>[];
+  responses?: Partial<ResponseJson>[];
 }
 
 export interface BitSpecificCards {
-  sampleSolution?: BreakscapedString;
-  elements?: BreakscapedString[];
-  flashcards?: Flashcard[];
-  definitions?: DefinitionListItem[];
-  statements?: Statement[];
-  responses?: Response[];
-  quizzes?: Quiz[];
-  heading?: Heading;
-  pairs?: Pair[];
-  matrix?: Matrix[];
-  choices?: Choice[];
-  questions?: Question[];
-  table?: Table;
-  botResponses?: BotResponse[];
-  ingredients?: Ingredient[];
-  captionDefinitionList?: CaptionDefinitionList;
-  cardBits?: CardBit[];
-  internalComments?: BreakscapedString[];
+  sampleSolution?: string; // ??
+  elements?: string[];
+  flashcards?: Partial<FlashcardJson>[];
+  definitions?: Partial<DefinitionListItemJson>[];
+  statements?: Partial<StatementJson>[];
+  responses?: Partial<ResponseJson>[];
+  quizzes?: Partial<QuizJson>[];
+  heading?: Partial<HeadingJson>;
+  pairs?: Partial<PairJson>[];
+  matrix?: Partial<MatrixJson>[];
+  choices?: Partial<ChoiceJson>[];
+  questions?: Partial<QuestionJson>[];
+  table?: Partial<TableJson>;
+  botResponses?: Partial<BotResponseJson>[];
+  ingredients?: Partial<IngredientJson>[];
+  captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+  cardBits?: Partial<CardBit>[];
+  internalComments?: string[]; // ??
 }
 
 export type BitContent = TypeValue | TypeKeyValue;

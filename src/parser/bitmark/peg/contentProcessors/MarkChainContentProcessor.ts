@@ -1,11 +1,11 @@
-import { Builder } from '../../../../ast/Builder';
-import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
-import { BodyPart, Mark } from '../../../../model/ast/Nodes';
+import { BodyPart } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { Tag } from '../../../../model/enum/Tag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { MarkJson } from '../../../../model/json/BodyBitJson';
 import { ArrayUtils } from '../../../../utils/ArrayUtils';
 
 import { markTagContentProcessor } from './MarkTagContentProcessor';
@@ -17,8 +17,6 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
-
-const builder = new Builder();
 
 function markChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -33,8 +31,15 @@ function markChainContentProcessor(
   if (contentDepth === BitContentLevel.Chain) {
     markTagContentProcessor(context, BitContentLevel.Chain, bitType, content, target);
   } else {
-    const mark = buildMark(context, contentDepth, bitType, textFormat, tagsConfig, content);
-    if (mark) bodyParts.push(mark);
+    const mark: Partial<MarkJson> | undefined = buildMark(
+      context,
+      contentDepth,
+      bitType,
+      textFormat,
+      tagsConfig,
+      content,
+    );
+    if (mark) bodyParts.push(mark as BodyPart);
   }
 }
 
@@ -45,7 +50,7 @@ function buildMark(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
-): Mark | undefined {
+): Partial<MarkJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('mark content', content);
 
   const markConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
@@ -64,11 +69,12 @@ function buildMark(
   const { solution } = tags;
   const { mark: markType, ...rest } = chainTags;
 
-  const mark = builder.mark({
-    solution: solution ?? Breakscape.EMPTY_STRING,
-    mark: ArrayUtils.asSingle(markType) ?? Breakscape.EMPTY_STRING,
+  const mark: Partial<MarkJson> = {
+    type: BodyBitType.mark,
+    solution: solution ?? '',
+    mark: ArrayUtils.asSingle(markType) ?? '',
     ...rest,
-  });
+  };
 
   return mark;
 }

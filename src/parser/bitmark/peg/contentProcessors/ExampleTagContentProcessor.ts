@@ -1,8 +1,10 @@
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
+import { TextParser } from '../../../text/TextParser';
 
 import {
   BitContent,
@@ -14,6 +16,7 @@ import {
 } from '../BitmarkPegParserTypes';
 
 // const builder = new Builder();
+const textParser = new TextParser();
 
 function exampleTagContentProcessor(
   context: BitmarkPegParserContext,
@@ -24,7 +27,7 @@ function exampleTagContentProcessor(
   target: BitContentProcessorResult,
 ): void {
   const { value } = content as TypeValue;
-  const example = value as string | boolean;
+  const example = value as BreakscapedString | boolean;
 
   // Each bit type handles example tags differently
   if (
@@ -59,7 +62,7 @@ function handleGapOrSelectOrTrueFalseExample(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
   content: BitContent,
-  example: string | boolean,
+  example: BreakscapedString | boolean,
   target: BitContentProcessorResult,
 ): void {
   let trueFalse: TrueFalseValue | undefined;
@@ -71,25 +74,25 @@ function handleGapOrSelectOrTrueFalseExample(
   if (trueFalse) {
     // Example is set on the true/false tag [+...] / [-...]
     if (example === true) {
-      trueFalse.isDefaultExample = true;
-      trueFalse.example = undefined;
+      trueFalse.__isDefaultExample = true;
+      trueFalse.example = !!trueFalse.isCorrect;
     } else {
       if (BooleanUtils.isBooleanString(example)) {
-        trueFalse.example = example as BreakscapedString;
+        trueFalse.example = BooleanUtils.toBoolean(example);
       } else {
         // Example is set to a value other than true / false which is not valid in the case of select
-        trueFalse.isDefaultExample = true;
+        trueFalse.__isDefaultExample = true;
         trueFalse.example = undefined;
         context.addWarning(`Only 'true' / 'false' / default are allowed here, using default`, content);
       }
     }
-  } else if (Array.isArray(target.solutions) && target.solutions.length > 0) {
+  } else if (Array.isArray(target.__solutionsAst) && target.__solutionsAst.length > 0) {
     // Example is set on the gap solution tag [_...]
     if (example === true) {
       // Extract the solution nearest [@example] tag as the example value
-      target.example = target.solutions[target.solutions.length - 1] ?? undefined;
+      target.example = target.__solutionsAst[target.__solutionsAst.length - 1] ?? undefined;
     } else {
-      target.example = example as BreakscapedString;
+      target.example = example ? textParser.toAst(example) : undefined;
     }
   } else {
     // Example is higher up the chain, so how it is handled depends on the bit type
@@ -106,13 +109,12 @@ function handleGapOrSelectOrTrueFalseExample(
       // Treat as a standard boolean
       handleStandardBooleanExample(context, bitType, content, example, target);
       //
-    }
-    if (
+    } else if (
       Config.isOfBitType(bitType, [BitType.clozeAndMultipleChoiceText, BitType.multipleChoice, BitType.multipleChoice1])
     ) {
       // For these bits, a specific example value higher up the chain makes no sense
       // Set example to default, and raise a warning if any value is set.
-      target.isDefaultExample = true;
+      target.__isDefaultExample = true;
       target.example = undefined;
 
       if (example !== true) {
@@ -136,7 +138,7 @@ function handleDefaultOnlyExample(
   target: BitContentProcessorResult,
 ): void {
   // This bit can have only default examples - nothing else makes sense
-  target.isDefaultExample = true;
+  target.__isDefaultExample = true;
   target.example = undefined;
 
   if (example !== true) {
@@ -149,18 +151,19 @@ function handleStandardBooleanExample(
   context: BitmarkPegParserContext,
   _bitType: BitTypeType,
   content: BitContent,
-  example: string | boolean,
+  example: BreakscapedString | boolean,
   target: BitContentProcessorResult,
 ): void {
   if (example === true) {
-    target.isDefaultExample = true;
+    target.__isDefaultExample = true;
     target.example = undefined;
   } else {
-    if (BooleanUtils.isBooleanString(example)) {
-      target.example = example as BreakscapedString;
+    const exampleStr = example ? Breakscape.unbreakscape(example) : undefined;
+    if (BooleanUtils.isBooleanString(exampleStr)) {
+      target.example = BooleanUtils.toBoolean(exampleStr);
     } else {
       // Example is set to a value other than true / false which is not valid in the case of select
-      target.isDefaultExample = true;
+      target.__isDefaultExample = true;
       target.example = undefined;
       context.addWarning(`Only 'true' / 'false' / default are allowed here, using default`, content);
     }
@@ -171,14 +174,14 @@ function handleStandardStringExample(
   _context: BitmarkPegParserContext,
   _bitType: BitTypeType,
   _content: BitContent,
-  example: string | boolean,
+  example: BreakscapedString | boolean,
   target: BitContentProcessorResult,
 ): void {
-  if (example === true) {
-    target.isDefaultExample = true;
+  if (example === true || example === 'true') {
+    target.__isDefaultExample = true;
     target.example = undefined;
   } else {
-    target.example = example as BreakscapedString;
+    target.example = example ? textParser.toAst(example) : undefined;
   }
 }
 

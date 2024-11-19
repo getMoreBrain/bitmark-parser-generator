@@ -57,11 +57,11 @@
         "definitions": [
           {
             "term": "A",
-            "description": "Körper"
+            "definition": "Körper"
           },
           {
             "term": "B",
-            "description": "Stromquelle"
+            "definition": "Stromquelle"
           }
         ]
       },

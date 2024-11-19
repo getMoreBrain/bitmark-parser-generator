@@ -1,3 +1,4 @@
+import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
@@ -26,12 +27,12 @@ function trueFalseTagContentProcessor(
 
   if (!trueFalse) return;
 
-  const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
+  const trimmedStringValue = Breakscape.unbreakscape(StringUtils.trimmedString(value) as BreakscapedString);
 
   trueFalse.push({
     text: trimmedStringValue,
     isCorrect: type === TypeKey.True,
-    isDefaultExample: false,
+    __isDefaultExample: false,
   });
 }
 export { trueFalseTagContentProcessor };

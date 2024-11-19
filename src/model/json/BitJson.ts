@@ -1,4 +1,4 @@
-import { JsonText } from '../ast/TextNodes';
+import { JsonText, TextAst } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
 import { AudioResourceJson, ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
@@ -172,7 +172,7 @@ export interface BitJson {
   logos: ImageResourceWrapperJson[];
   images: ImageResourceWrapperJson[];
 
-  body: JsonText;
+  body: JsonText | unknown; // unknown is for JSON body
 
   sampleSolution: string;
   additionalSolutions: string[];
@@ -182,7 +182,7 @@ export interface BitJson {
   isCorrect: boolean;
   cards: FlashcardJson[];
   definitions: DefinitionListItemJson[];
-  descriptions: DescriptionListItemJson[];
+  descriptions: DefinitionListItemJson[];
   statements: StatementJson[];
   responses: ResponseJson[] | BotResponseJson[];
   quizzes: QuizJson[];
@@ -232,11 +232,13 @@ export interface FlashcardJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface DefinitionListItemJson {
   term: JsonText;
-  description: JsonText;
+  definition: JsonText;
   alternativeDefinitions: JsonText[];
   item: JsonText;
   lead: JsonText;
@@ -244,18 +246,8 @@ export interface DefinitionListItemJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
-}
-
-export interface DescriptionListItemJson {
-  term: JsonText;
-  description: JsonText;
-  alternativeDescriptions: JsonText[];
-  item: JsonText;
-  lead: JsonText;
-  hint: JsonText;
-  instruction: JsonText;
-  isExample: boolean;
-  example: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface StatementJson {
@@ -267,6 +259,8 @@ export interface StatementJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface ChoiceJson {
@@ -278,6 +272,8 @@ export interface ChoiceJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface ResponseJson {
@@ -289,6 +285,8 @@ export interface ResponseJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface QuizJson {
@@ -299,18 +297,20 @@ export interface QuizJson {
   isExample: boolean;
   choices: ChoiceJson[];
   responses: ResponseJson[];
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface HeadingJson {
   forKeys: string;
   forValues: string | string[];
+  __forValuesDefault?: string | string[];
 }
 
 export interface PairJson {
   key: string;
   keyAudio: AudioResourceJson;
   keyImage: ImageResourceJson;
-  values: string[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -318,17 +318,22 @@ export interface PairJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
+  values: string[];
+  __valuesAst?: TextAst[];
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface MatrixJson {
   key: string;
-  cells: MatrixCellJson[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
-  example: ExampleJson;
+  // example: ExampleJson;
+  cells: MatrixCellJson[];
+  __isDefaultExample?: boolean;
 }
 
 export interface MatrixCellJson {
@@ -340,6 +345,9 @@ export interface MatrixCellJson {
   isCaseSensitive: boolean;
   isExample: boolean;
   example: ExampleJson;
+  __valuesAst?: TextAst[];
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface TableJson {
@@ -359,6 +367,9 @@ export interface QuestionJson {
   reasonableNumOfChars: number;
   isExample: boolean;
   example: ExampleJson;
+  __sampleSolutionAst?: TextAst;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
 }
 
 export interface BotResponseJson {
@@ -404,7 +415,7 @@ export interface RatingLevelStartEndJson {
 
 export interface CaptionDefinitionJson {
   term: string;
-  description: string;
+  definition: string;
 }
 
 // CaptionDefinitionList
@@ -419,7 +430,7 @@ export interface ListItemJson {
   lead: JsonText;
   hint: JsonText;
   instruction: JsonText;
-  body: JsonText;
+  body: JsonText | unknown; // unknown is for JSON body
 }
 
 export type ExampleJson = JsonText | boolean | null;

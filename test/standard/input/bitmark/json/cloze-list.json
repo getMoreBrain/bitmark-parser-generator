@@ -78,12 +78,10 @@
                   "isCaseSensitive": true,
                   "isExample": false,
                   "example": null,
-                  "solutions": [
-                    "gap"
-                  ]
+                  "solutions": ["gap"]
                 },
                 {
-                  "text": " text with another ",
+                  "text": " text with ^ another ",
                   "type": "text"
                 },
                 {
@@ -106,9 +104,7 @@
                   "isCaseSensitive": true,
                   "isExample": false,
                   "example": null,
-                  "solutions": [
-                    "cloze"
-                  ]
+                  "solutions": ["cloze"]
                 },
                 {
                   "text": ".",
@@ -152,9 +148,7 @@
                   "isCaseSensitive": true,
                   "isExample": false,
                   "example": null,
-                  "solutions": [
-                    "gap"
-                  ]
+                  "solutions": ["gap"]
                 },
                 {
                   "text": " text.",
@@ -176,9 +170,7 @@
                   "isCaseSensitive": true,
                   "isExample": false,
                   "example": null,
-                  "solutions": [
-                    "two"
-                  ]
+                  "solutions": ["two"]
                 },
                 {
                   "text": " lines.",

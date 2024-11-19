@@ -4,10 +4,7 @@
       "type": "page-cover-image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "body": [
         {
           "type": "paragraph",

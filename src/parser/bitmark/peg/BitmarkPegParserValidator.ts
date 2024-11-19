@@ -7,21 +7,20 @@
  *
  */
 
-import { Builder } from '../../../ast/Builder';
 import { Config } from '../../../config/Config';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { Body, BodyText } from '../../../model/ast/Nodes';
+import { Body, BodyPart } from '../../../model/ast/Nodes';
+import { JsonText } from '../../../model/ast/TextNodes';
 import { CardSetConfig } from '../../../model/config/CardSetConfig';
 import { CardVariantConfig } from '../../../model/config/CardVariantConfig';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTagType, BitTagTypeType } from '../../../model/enum/BitTagType';
 import { BitTypeType } from '../../../model/enum/BitType';
-import { BodyBitType } from '../../../model/enum/BodyBitType';
 import { Count, CountType } from '../../../model/enum/Count';
 import { PropertyTag, PropertyTagType } from '../../../model/enum/PropertyTag';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag, TagType } from '../../../model/enum/Tag';
-import { TextFormat, TextFormatType } from '../../../model/enum/TextFormat';
+import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
 import { TagValidationData } from '../../../model/parser/TagValidationData';
 
@@ -93,8 +92,6 @@ interface ValidateChainRecursiveReturn {
   remaining?: BitContent; // Tag split off from the chain
 }
 
-const builder = new Builder();
-
 class BitmarkPegParserValidator {
   /**
    * Validate the bit tags and tag chains.
@@ -156,41 +153,22 @@ class BitmarkPegParserValidator {
     context: BitmarkPegParserContext,
     _contentDepth: ContentDepthType,
     bitType: BitTypeType,
-    textFormat: TextFormatType,
-    body: Body | undefined,
-  ): Body | undefined {
-    if (!body || !body.bodyParts) return body;
+    _textFormat: TextFormatType,
+    bodyParts: BodyPart[] | undefined,
+  ): BodyPart[] | undefined {
+    if (!bodyParts) return bodyParts;
 
     // Get the bit config to check how to parse the bit
     const bitConfig = Config.getBitConfig(bitType);
     const { bodyAllowed } = bitConfig;
 
-    const hasBody = body.bodyParts.length > 0;
+    const hasBody = bodyParts.length > 0;
 
     if (hasBody && !bodyAllowed) {
       context.addWarning(`Bit '${bitType}' should not have a body.`);
     }
 
-    // If the text format is JSON, check the body is valid JSON
-    // In this case, the body will already have been 'squashed' so will not contain any parsed inline body tags
-    if (textFormat === TextFormat.json) {
-      let bodyJson: unknown = body.bodyParts.reduce((acc, val) => {
-        if (val.type === BodyBitType.text && val.data) {
-          const bodyTextVal = val as BodyText;
-          return (acc + (bodyTextVal.data.bodyText ?? '')) as string;
-        }
-        return acc;
-      }, '');
-      try {
-        bodyJson = JSON.parse(bodyJson as string);
-      } catch (e) {
-        bodyJson = null;
-        context.addError(`Body JSON is invalid.`);
-      }
-      body = builder.body({ bodyJson });
-    }
-
-    return body;
+    return bodyParts;
   }
 
   /**
@@ -263,7 +241,7 @@ class BitmarkPegParserValidator {
     sideNo: number,
     variantNo: number,
   ): Body | undefined {
-    if (!cardBody || !cardBody.bodyParts) return cardBody;
+    if (!cardBody || !cardBody.body) return cardBody;
 
     // Get the bit config to check how to parse the bit
     const bitConfig = Config.getBitConfig(bitType);
@@ -274,7 +252,7 @@ class BitmarkPegParserValidator {
 
     const { bodyAllowed } = variantConfig;
 
-    const hasBody = cardBody.bodyParts.length > 0;
+    const hasBody = (cardBody.body as JsonText).length > 0;
 
     // this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, cardBody);
 

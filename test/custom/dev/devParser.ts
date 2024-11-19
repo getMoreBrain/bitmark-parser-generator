@@ -42,6 +42,7 @@ class DevParser {
         jsonOptions: {
           enableWarnings: true,
           textAsPlainText: false,
+          // textAsPlainText: true,
           prettify: true,
         },
       });

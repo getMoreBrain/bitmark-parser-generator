@@ -109,7 +109,11 @@ describe('bitmark-parser', () => {
         const originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        JsonCleanupUtils.cleanupBitJson(originalJson, { removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitJson(originalJson, {
+          removeParser: true,
+          removeErrors: true,
+          removeTemporaryProperties: true,
+        });
 
         // // Write original bitmark (and JSON?)
         // writeTestJsonAndBitmark(originalJson, fullFolder, id);
@@ -135,8 +139,13 @@ describe('bitmark-parser', () => {
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        JsonCleanupUtils.cleanupBitJson(originalJson, { removeMarkup: true });
-        JsonCleanupUtils.cleanupBitJson(newJson, { removeMarkup: true, removeParser: true, removeErrors: true });
+        JsonCleanupUtils.cleanupBitJson(originalJson, { removeMarkup: true, removeTemporaryProperties: true });
+        JsonCleanupUtils.cleanupBitJson(newJson, {
+          removeMarkup: true,
+          removeParser: true,
+          removeErrors: true,
+          removeTemporaryProperties: true,
+        });
 
         // Compare old and new JSONs
         const diffMap = deepDiffMapper.map(originalJson, newJson, {

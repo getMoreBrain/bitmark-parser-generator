@@ -12,6 +12,7 @@ const dependencies = {
   '{ TypeKey }': '../../../parser/bitmark/peg/BitmarkPegParserTypes',
   '{ BitmarkPegParserHelper }': '../../../parser/bitmark/peg/BitmarkPegParserHelper',
   '{ BitmarkPegParserProcessor }': '../../../parser/bitmark/peg/BitmarkPegParserProcessor',
+  '{ Breakscape }': '../../../breakscaping/Breakscape',
 };
 
 const inputPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'bit-grammar.pegjs');

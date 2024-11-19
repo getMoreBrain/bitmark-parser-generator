@@ -4,10 +4,7 @@
       "type": "page",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "body": [
         {
           "type": "paragraph",
@@ -146,10 +143,7 @@
       "type": "page-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "body": [
         {
           "type": "paragraph",

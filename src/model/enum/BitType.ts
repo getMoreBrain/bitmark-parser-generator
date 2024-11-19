@@ -178,8 +178,6 @@ const BitType = superenum({
   dangerCollapsible: 'danger-collapsible',
   definitionList: 'definition-list',
   definitionTerm: 'definition-term',
-  descriptionList: 'description-list',
-  descriptionTerm: 'description-term',
   details: 'details',
   details1: 'details-1',
   detailsImage: 'details-image',
