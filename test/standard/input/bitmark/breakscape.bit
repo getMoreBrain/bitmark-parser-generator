@@ -19,4 +19,9 @@ the body and here is a [_[gap^]][@example:^] with square bracked at beginning []
 
 [&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]
 
-
+[.article]
+__^_particularly exciting_^__
+__^^_particularly exciting_^^__
+*F_^_^_^_^_^_
+F_^__^__^_
+F_^^____^^_^

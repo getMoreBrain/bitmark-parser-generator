@@ -84,24 +84,28 @@ import { StringUtils } from '../utils/StringUtils';
 // Breakscaping
 //
 
-const REGEX_MARKS = /([*`_!=])\1/; // $1^$1
-const REGEX_START = /^([*`_!=])/; // ^$2
-const REGEX_END = /([*`_!=\\[])$/; // $3^
-const REGEX_BLOCKS = /^(\|)(code[\s]*|code:|image:|[\s]*$)/; // $4^$5
-const REGEX_TITLE_BLOCKS = /^([#]{1,3})([^\S\r\n]+)/; // $6^$7
-const REGEX_LIST_BLOCKS = /^(•)([0-9]+[iI]*|[a-zA-Z]{1}|_|\+|-|)([^\S\r\n]+)/; // $8^$9$10
-const REGEX_START_OF_TAG = /(\[)([.@#▼►%!?+\-$_=&])/; // $11^$12
-const REGEX_FOOTER_DIVIDER = /^(~)(~~~)/; // $13^$14
-const REGEX_PLAIN_TEXT_DIVIDER = /^(\$)(\$\$\$)/; // $15^$16
-const REGEX_END_OF_TAG = /(\^*])/; // ^$17
-const REGEX_HATS = /(\^+)/; // $18^  // Must be last
+const REGEX_MARKS = /([*`_!=])(?=\1)/; // $1^
+const REGEX_BLOCKS = /^(\|)(code[\s]*|code:|image:|[\s]*$)/; // $2^$3
+const REGEX_TITLE_BLOCKS = /^([#]{1,3})([^\S\r\n]+)/; // $4^$5
+const REGEX_LIST_BLOCKS = /^(•)([0-9]+[iI]*|[a-zA-Z]{1}|_|\+|-|)([^\S\r\n]+)/; // $6^$7$8
+const REGEX_START_OF_TAG = /(\[)([.@#▼►%!?+\-$_=&])/; // $9^$10
+const REGEX_FOOTER_DIVIDER = /^(~)(~~~)[ \t]*$/; // $11^$12
+const REGEX_PLAIN_TEXT_DIVIDER = /^(\$)(\$\$\$)[ \t]*$/; // $13^$14
+const REGEX_END_OF_TAG = /(\^*])/; // ^$15
+const REGEX_HATS = /(\^+)/; // $16^  // Must be last
 
-// const BREAKSCAPE_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_FOOTER_DIVIDER.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
-const BREAKSCAPE_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_START.source}|${REGEX_END.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_FOOTER_DIVIDER.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
+const BREAKSCAPE_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_FOOTER_DIVIDER.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
+// const BREAKSCAPE_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_START.source}|${REGEX_END.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_FOOTER_DIVIDER.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
+
+const REGEX_START = /^([*`_!=])/; // ^$1
+const REGEX_END = /([*`_!=\\[])$/; // $2^
+const BREAKSCAPE_ENDS_REGEX_SOURCE = `${REGEX_START.source}|${REGEX_END.source}`;
 
 const BREAKSCAPE_REGEX = new RegExp(BREAKSCAPE_REGEX_SOURCE, 'gm');
-// const BREAKSCAPE_REGEX_REPLACER = '$1$2$4$6$9$11$13$16^$1$3$5$7$8$10$12$14$15';
-const BREAKSCAPE_REGEX_REPLACER = '$1$3$4$6$8$11$13$15$18^$1$2$5$7$9$10$12$14$16$17';
+const BREAKSCAPE_REGEX_REPLACER = '$1$2$4$6$9$11$13$16^$3$5$7$8$10$12$14$15';
+// const BREAKSCAPE_REGEX_REPLACER = '$1$3$4$6$8$11$13$15$18^$1$2$5$7$9$10$12$14$16$17';
+const BREAKSCAPE_ENDS_REGEX = new RegExp(BREAKSCAPE_ENDS_REGEX_SOURCE, 'g');
+const BREAKSCAPE_ENDS_REGEX_REPLACER = '$2^$1';
 const BREAKSCAPE_BIT_TAG_ONLY_REGEX = new RegExp('^(\\[)(\\^*)(\\.)', 'gm');
 const BREAKSCAPE_BIT_TAG_ONLY_REGEX_REPLACER = '$1^$2$3';
 
@@ -159,6 +163,11 @@ class Breakscape {
       const regex = opts.bitTagOnly ? BREAKSCAPE_BIT_TAG_ONLY_REGEX : BREAKSCAPE_REGEX;
       const replacer = opts.bitTagOnly ? BREAKSCAPE_BIT_TAG_ONLY_REGEX_REPLACER : BREAKSCAPE_REGEX_REPLACER;
       str = str.replace(regex, replacer);
+
+      // Ends
+      if (!opts.bitTagOnly) {
+        str = str.replace(BREAKSCAPE_ENDS_REGEX, BREAKSCAPE_ENDS_REGEX_REPLACER);
+      }
 
       return str;
     };
