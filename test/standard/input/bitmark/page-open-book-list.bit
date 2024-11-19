@@ -1,0 +1,9 @@
+[.page-open-book-list]
+[@id:342341]
+[@slug:testing-1234]
+[@book:the_book][►ch-5]
+[%Publisher, optional]
+[!Book title]
+[?Document Type, optional]
+[@product:https://123.com][@product:https://1234.com]
+Open

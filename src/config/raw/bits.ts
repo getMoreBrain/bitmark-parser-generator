@@ -1034,6 +1034,17 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.pageOpenBookList]: {
+    since: '2.0.0',
+    baseBitType: BitType.pageOpenBook,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.productList,
+        maxCount: Count.infinity,
+      },
+    ],
+  },
   [BitType.pageSubscribe]: {
     since: '1.5.10',
     baseBitType: BitType.article,
