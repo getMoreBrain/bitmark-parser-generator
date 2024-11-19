@@ -153,6 +153,7 @@ const propertyConfigKeys = {
   tablePagination: 'tablePagination',
   tablePaginationLimit: 'tablePaginationLimit',
   tableResizableColumns: 'tableResizableColumns',
+  tableColumnMinWidth: 'tableColumnMinWidth',
   tableSearch: 'tableSearch',
   tableSort: 'tableSort',
   tableWhitespaceNoWrap: 'tableWhitespaceNoWrap',

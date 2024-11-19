@@ -777,6 +777,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.tableColumnMinWidth]: {
+    tag: PropertyTag.tableColumnMinWidth,
+    single: true,
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.quizCountItems]: {
     tag: PropertyTag.quizCountItems,
     single: true,

@@ -89,6 +89,7 @@ mark@gmail.com
 [@tableSearch:true]
 [@tableSort:true]
 [@tablePagination:true]
+[@tableColumnMinWidth:200]
 ====
 [#Name]
 --

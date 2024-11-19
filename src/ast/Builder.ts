@@ -167,6 +167,7 @@ class Builder extends BaseBuilder {
     tableWhitespaceNoWrap?: boolean;
     tableAutoWidth?: boolean;
     tableResizableColumns?: boolean;
+    tableColumnMinWidth?: number;
     quizCountItems?: boolean;
     quizStrikethroughSolutions?: boolean;
     codeLineNumbers?: boolean;
@@ -379,6 +380,7 @@ class Builder extends BaseBuilder {
       tableWhitespaceNoWrap: this.toAstProperty(PropertyConfigKey.tableWhitespaceNoWrap, data.tableWhitespaceNoWrap),
       tableAutoWidth: this.toAstProperty(PropertyConfigKey.tableAutoWidth, data.tableAutoWidth),
       tableResizableColumns: this.toAstProperty(PropertyConfigKey.tableResizableColumns, data.tableResizableColumns),
+      tableColumnMinWidth: this.toAstProperty(PropertyConfigKey.tableColumnMinWidth, data.tableColumnMinWidth),
       quizCountItems: this.toAstProperty(PropertyConfigKey.quizCountItems, data.quizCountItems),
       quizStrikethroughSolutions: this.toAstProperty(
         PropertyConfigKey.quizStrikethroughSolutions,
