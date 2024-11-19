@@ -4,11 +4,10 @@
       "type": "cloze-instruction-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287822"
-      ],
+      "id": ["287822"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
+      "additionalSolutions": ["canvas"],
       "item": [],
       "lead": [
         {
@@ -66,9 +65,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "erfreut"
-              ]
+              "solutions": ["erfreut"]
             },
             {
               "text": " sich nicht nur in Deutschland besonderer Beliebtheit, er ",
@@ -94,9 +91,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "steht"
-              ]
+              "solutions": ["steht"]
             },
             {
               "text": " auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...",
@@ -119,11 +114,10 @@
       "type": "cloze-instruction-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "107938"
-      ],
+      "id": ["107938"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": false,
+      "additionalSolutions": ["canvas", "texture", "figurative", "abstract", "contrast"],
       "item": [
         {
           "type": "paragraph",
@@ -191,9 +185,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Woher"
-              ]
+              "solutions": ["Woher"]
             },
             {
               "text": " kommen Sie?",
@@ -222,9 +214,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Wo"
-              ]
+              "solutions": ["Wo"]
             },
             {
               "text": " wohnen Sie?",
@@ -253,9 +243,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Was"
-              ]
+              "solutions": ["Was"]
             },
             {
               "text": " studieren Sie?",
@@ -284,9 +272,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Welche"
-              ]
+              "solutions": ["Welche"]
             },
             {
               "text": " Sprachen sprechen Sie?",

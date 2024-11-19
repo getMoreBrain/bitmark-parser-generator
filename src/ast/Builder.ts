@@ -461,6 +461,10 @@ class Builder extends BaseBuilder {
       hint: this.handleJsonText(data.hint),
       instruction: this.handleJsonText(data.instruction),
 
+      partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, data.partialAnswer),
+      sampleSolution: this.toAstProperty(PropertyConfigKey.property_sampleSolution, data.sampleSolution),
+      additionalSolutions: this.toAstProperty(PropertyConfigKey.additionalSolutions, data.additionalSolutions),
+
       // Example
       ...this.toExample(data.__isDefaultExample, data.example as TextAst),
 
@@ -477,9 +481,6 @@ class Builder extends BaseBuilder {
       ) as ImageResourceWrapperJson,
       resources: ArrayUtils.asArray(this.resourceBuilder.resourceFromResourceJson(data.bitType, data.resources)),
       cardNode,
-      partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, data.partialAnswer),
-      sampleSolution: this.toAstProperty(PropertyConfigKey.property_sampleSolution, data.sampleSolution),
-      additionalSolutions: this.toAstProperty(PropertyConfigKey.additionalSolutions, data.additionalSolutions),
       footer: this.buildFooter(data.footer),
 
       markup: data.markup,
