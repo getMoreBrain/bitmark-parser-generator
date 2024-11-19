@@ -124,6 +124,7 @@ export interface Bit {
   tableWhitespaceNoWrap?: Property;
   tableAutoWidth?: Property;
   tableResizableColumns?: Property;
+  tableColumnMinWidth?: Property;
   quizCountItems?: Property;
   quizStrikethroughSolutions?: Property;
   codeLineNumbers?: Property;

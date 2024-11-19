@@ -2159,6 +2159,10 @@ const BITS: _BitsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.tableResizableColumns,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tableColumnMinWidth,
+      },
     ],
     cardSet: CardSetConfigKey._table,
   },

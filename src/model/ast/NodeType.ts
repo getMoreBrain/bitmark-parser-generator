@@ -420,6 +420,8 @@ const NodeType = superenum({
   tablePaginationValue: 'tablePaginationValue',
   tableResizableColumns: 'tableResizableColumns',
   tableResizableColumnsValue: 'tableResizableColumnsValue',
+  tableColumnMinWidth: 'tableColumnMinWidth',
+  tableColumnMinWidthValue: 'tableColumnMinWidthValue',
   tableSearch: 'tableSearch',
   tableSearchValue: 'tableSearchValue',
   tableSort: 'tableSort',
