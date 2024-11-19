@@ -1,7 +1,10 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
+import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
+import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
 import { BitTypeType } from '../../../../model/enum/BitType';
+import { Count } from '../../../../model/enum/Count';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -12,8 +15,6 @@ import {
   BitContentProcessorResult,
   BitmarkPegParserContext,
 } from '../BitmarkPegParserTypes';
-
-// const builder = new Builder();
 
 function bookChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -27,10 +28,7 @@ function bookChainContentProcessor(
   if (contentDepth === BitContentLevel.Chain) {
     // Do nothing
   } else {
-    const book = buildBook(context, contentDepth, bitType, textFormat, tagsConfig, content);
-    target.book = book.book;
-    target.reference = book.reference;
-    target.referenceEnd = book.referenceEnd;
+    buildBook(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
   }
 }
 
@@ -41,11 +39,8 @@ function buildBook(
   textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
-): {
-  book: string | undefined;
-  reference: string | undefined;
-  referenceEnd: string | undefined;
-} {
+  target: BitContentProcessorResult,
+): void {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('book content', content);
 
   const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, content.chain);
@@ -57,11 +52,24 @@ function buildBook(
   // Extract the book from the content tag
   const book = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString);
 
-  return {
-    book,
-    reference,
-    referenceEnd,
-  };
+  // Get the config for the bit
+  const bitConfig = Config.getBitConfig(bitType);
+  const bookConfig = bitConfig.tags[PropertyConfigKey.book];
+  if (bookConfig && (bookConfig.maxCount === Count.infinity || bookConfig.maxCount > 1)) {
+    // Add the book to the list of books
+    if (!Array.isArray(target.book)) target.book = [];
+    target.book.push({
+      book,
+      reference: reference ?? '',
+      referenceEnd: (referenceEnd ?? undefined) as string,
+    });
+    return;
+  }
+
+  // Book should be added at the body level
+  target.book = book;
+  target.reference = reference;
+  target.referenceEnd = referenceEnd;
 }
 
 export { bookChainContentProcessor };
