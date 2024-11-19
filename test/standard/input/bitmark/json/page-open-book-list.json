@@ -1,0 +1,34 @@
+[
+  {
+    "bit": {
+      "type": "page-open-book-list",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["342341"],
+      "book": [
+        {
+          "book": "the_book_id",
+          "reference": "ch-5"
+        },
+        {
+          "book": "the_other_book_id",
+          "reference": "ch-6"
+        }
+      ],
+      "buttonCaption": "Open",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "2.0.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.1"
+    },
+    "bitmark": "[.page-open-book-list]\n[@id:342341]\n[@slug:testing-1234]\n[@book:the_book_id][►ch-5]\n[@book:the_other_book_id][►ch-6]\n\n[@buttonCaption: Open ]"
+  }
+]

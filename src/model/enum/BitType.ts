@@ -356,6 +356,7 @@ const BitType = superenum({
   pageFooter: 'page-footer',
   pageHero: 'page-hero',
   pageOpenBook: 'page-open-book',
+  pageOpenBookList: 'page-open-book-list',
   pagePerson: 'page-person',
   pageProduct: 'page-product',
   pageProductList: 'page-product-list',

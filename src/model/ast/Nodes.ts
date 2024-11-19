@@ -10,6 +10,7 @@ import { ParserInfo } from '../parser/ParserInfo';
 import { JsonText, TextAst } from './TextNodes';
 
 import {
+  BookJson,
   BotResponseJson,
   CaptionDefinitionListJson,
   ChoiceJson,
@@ -185,7 +186,7 @@ export interface Bit {
   ratingLevelSelected?: Property;
   markConfig?: MarkConfigJson[];
   extraProperties?: ExtraProperties;
-  book?: string;
+  book?: string | BookJson[];
   title?: TextAst;
   subtitle?: TextAst;
   level?: number; // 'level' can either the subtitle level [##subtitle]

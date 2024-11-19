@@ -815,17 +815,19 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  //
-  // Terminal nodes (leaves)
-  //
-
   //  bitmarkAst -> bits -> bitsValue -> level
 
   protected leaf_level(node: NodeInfo, route: NodeInfo[]): boolean {
     return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
-  // bitmarkAst -> bits -> bitsValue -> book
+  // bitmarkAst -> bits -> bitsValue -> book (array)
+
+  protected enter_book(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> book (single)
 
   protected leaf_book(node: NodeInfo, route: NodeInfo[]): boolean {
     return this.standardHandler(node, route, NodeType.bitsValue, { array: false });

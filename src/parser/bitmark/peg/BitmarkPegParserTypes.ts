@@ -25,6 +25,7 @@ import { ParserInfo } from '../../../model/parser/ParserInfo';
 import { PeggyGrammarLocation } from './PeggyGrammarLocation';
 
 import {
+  BookJson,
   BotResponseJson,
   CaptionDefinitionListJson,
   ChoiceJson,
@@ -148,7 +149,7 @@ export interface BitContentProcessorResult {
   hint?: TextAst;
   __hintString?: string;
   anchor?: string;
-  book?: string;
+  book?: string | BookJson[];
   reference?: string;
   referenceEnd?: string;
   sampleSolution?: string;

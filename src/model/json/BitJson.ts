@@ -137,7 +137,7 @@ export interface BitJson {
   ratingLevelEnd: RatingLevelStartEndJson;
   ratingLevelSelected: number;
 
-  book: string;
+  book: string | BookJson[];
 
   title: JsonText;
   subtitle: JsonText;
@@ -201,6 +201,12 @@ export interface BitJson {
   footer: JsonText;
 
   placeholders: BodyBitsJson;
+}
+
+export interface BookJson {
+  book: string;
+  reference: string;
+  referenceEnd: string;
 }
 
 export interface ImageSourceJson {
