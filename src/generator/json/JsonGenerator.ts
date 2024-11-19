@@ -595,7 +595,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Convert the body to plain text if required
       if (this.options.textAsPlainText && isBitmarkText && this.isBitmarkText(this.bodyJson)) {
         const textBody = this.textGenerator.generateSync(this.bodyJson as TextAst, textFormat);
-        this.bitJson.body = (Breakscape.unbreakscape(textBody) || '').trim();
+        this.bitJson.body = (
+          Breakscape.unbreakscape(textBody, {
+            textFormat: TextFormat.bitmarkMinusMinus,
+          }) || ''
+        ).trim();
       }
     } else if (parent.key === NodeType.cardBitsValue) {
       // Body is at the list item (card bit) level

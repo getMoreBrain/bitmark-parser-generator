@@ -1724,6 +1724,67 @@
         "type": "hardBreak"
       },
       {
+        "text": "Lettered list, upper tag",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "•A item 1",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "•A ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ],
+        "text": "\nitem 2",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "•A item 3",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "\t•A item 3.1",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "\t•A item 3.2",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "•A item 4",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
         "text": "The end!",
         "type": "text"
       },

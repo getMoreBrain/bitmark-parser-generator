@@ -141,7 +141,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private options: TextOptions;
 
   // State
-  private textFormat: string = TextFormat.bitmarkMinusMinus;
+  private textFormat: TextFormatType = TextFormat.bitmarkMinusMinus;
   private writerText = '';
   private nodeIndex = 0;
   private currentIndent = 0;
@@ -510,10 +510,14 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     // Breakscape the text
     let s: string = node.text;
     if (!codeBreakscaping) {
-      s = Breakscape.breakscape(s);
+      s = Breakscape.breakscape(s, {
+        textFormat: this.textFormat,
+      });
     } else {
       // s = Breakscape.breakscapeCode(s);
-      s = Breakscape.breakscape(s);
+      s = Breakscape.breakscape(s, {
+        textFormat: this.textFormat,
+      });
     }
 
     // Apply any required indentation
@@ -532,7 +536,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     const href = this.getLinkHref(node);
     if (href) {
       // Breakscape the text
-      let s = Breakscape.breakscape(node.text);
+      let s = Breakscape.breakscape(node.text, {
+        textFormat: this.textFormat,
+      });
 
       // Apply any required indentation
       if (this.currentIndent > 1) {

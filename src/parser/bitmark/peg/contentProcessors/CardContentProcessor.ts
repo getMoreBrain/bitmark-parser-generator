@@ -308,7 +308,7 @@ function parseElements(
         const tags = content.data;
 
         // if (tags.cardBody) {
-        elements.push(tags.cardBodyStr ?? Breakscape.EMPTY_STRING);
+        elements.push(tags.cardBodyStr ?? '');
         // } else {
         //   context.addWarning('Ignoring card with empty element', content);
         // }
@@ -477,7 +477,7 @@ function parseQuestions(
 
         // if (tags.cardBody) {
         const q: Partial<QuestionJson> = {
-          question: tags.cardBodyStr ?? Breakscape.EMPTY_STRING,
+          question: tags.cardBodyStr ?? '',
           ...tags,
         };
         if (q) questions.push(q);
@@ -571,7 +571,7 @@ function parseMatchPairs(
             exampleCardSet = example ? (example as TextAst) : exampleCardSet;
           } else if (title == null) {
             // If not a heading, it is a pair
-            const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
+            const value = cardBodyStr ?? '';
             const valueAst = cardBody?.body as TextAst;
             pairValues.push(value);
             _pairValuesAst.push(valueAst);

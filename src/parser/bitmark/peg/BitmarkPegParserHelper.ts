@@ -20,6 +20,7 @@ import { Breakscape } from '../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Bit } from '../../../model/ast/Nodes';
 import { CardSetVersion } from '../../../model/enum/CardSetVersion';
+import { TextFormat } from '../../../model/enum/TextFormat';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserLocation } from '../../../model/parser/ParserLocation';
 import { StringUtils } from '../../../utils/StringUtils';
@@ -187,7 +188,9 @@ class BitmarkPegParserHelper {
 
     return {
       type: TypeKey.Property,
-      key: Breakscape.unbreakscape(key),
+      key: Breakscape.unbreakscape(key, {
+        textFormat: TextFormat.text,
+      }),
       value,
       parser: {
         text: this.parserText(),
@@ -201,7 +204,9 @@ class BitmarkPegParserHelper {
 
     return {
       type: TypeKey.Resource,
-      key: Breakscape.unbreakscape(key),
+      key: Breakscape.unbreakscape(key, {
+        textFormat: TextFormat.text,
+      }),
       value,
       parser: {
         text: this.parserText(),

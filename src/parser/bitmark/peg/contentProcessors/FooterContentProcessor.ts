@@ -60,11 +60,11 @@ class FooterContentProcessor {
             textFormat,
           })
         : Breakscape.unbreakscape(footer, {
-            bitTagOnly: true,
+            textFormat: TextFormat.text,
           });
 
       const parsedFooterPlainText = Breakscape.unbreakscape(footerPlainText, {
-        bitTagOnly: true,
+        textFormat: TextFormat.text,
       });
 
       finalFooterText = ContentProcessorUtils.concatenatePlainTextWithAstTexts(

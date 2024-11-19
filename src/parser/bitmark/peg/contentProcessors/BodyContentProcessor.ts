@@ -118,11 +118,11 @@ class BodyContentProcessor {
             textFormat,
           })
         : Breakscape.unbreakscape(bodyTextStr, {
-            bitTagOnly: !isBitmarkText,
+            textFormat: TextFormat.text,
           });
 
       const parserPlainText: JsonText = Breakscape.unbreakscape(plainBodyTextStr, {
-        bitTagOnly: true,
+        textFormat: TextFormat.text,
       });
 
       // Newlines will have been lost from the end of bodyTextStr, and start of plainBodyTextStr
@@ -132,7 +132,9 @@ class BodyContentProcessor {
         StringUtils.countOccurrencesAtStart(plainBodyTextStr, '\n');
 
       finalBody = ContentProcessorUtils.concatenatePlainTextWithAstTexts(parsedBodyText, newlines, parserPlainText);
-      finalBodyString = Breakscape.unbreakscape(bodyStr).trim() as BreakscapedString;
+      finalBodyString = Breakscape.unbreakscape(bodyStr, {
+        textFormat,
+      }).trim() as BreakscapedString;
       const finalBodyIsAst = Array.isArray(finalBody);
       const bodyAst = finalBodyIsAst ? (finalBody as TextAst) : undefined;
 
