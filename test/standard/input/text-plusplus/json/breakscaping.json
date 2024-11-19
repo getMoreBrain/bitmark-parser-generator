@@ -1920,6 +1920,125 @@
         "type": "hardBreak"
       },
       {
+        "text": "Lettered list, upper tag",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "letteredList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "item 1",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ],
+                "text": "\nitem 2",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "item 3",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "letteredList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "text": "item 3.1",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "text": "item 3.2",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "item 4",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
         "text": "The end!",
         "type": "text"
       },
