@@ -458,6 +458,15 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.quizStrikethroughSolutions,
       },
       {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.quizStrikethroughSolutions,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.additionalSolutions,
+        maxCount: Count.infinity,
+      },
+      {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_gap,
       },

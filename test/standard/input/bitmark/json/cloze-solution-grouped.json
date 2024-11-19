@@ -4,11 +4,10 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "249781"
-      ],
+      "id": ["249781"],
       "quizCountItems": false,
       "quizStrikethroughSolutions": false,
+      "additionalSolutions": ["canvas"],
       "item": [
         {
           "type": "paragraph",
@@ -73,9 +72,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Infektionsquelle"
-              ]
+              "solutions": ["Infektionsquelle"]
             },
             {
               "type": "hardBreak"
@@ -93,9 +90,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Austrittspforte"
-              ]
+              "solutions": ["Austrittspforte"]
             },
             {
               "type": "hardBreak"
@@ -113,9 +108,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Übertragungswege direkt oder indirekt"
-              ]
+              "solutions": ["Übertragungswege direkt oder indirekt"]
             },
             {
               "type": "hardBreak"
@@ -133,9 +126,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Eintrittspforte"
-              ]
+              "solutions": ["Eintrittspforte"]
             },
             {
               "type": "hardBreak"
@@ -153,9 +144,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "neue Infektionsquelle"
-              ]
+              "solutions": ["neue Infektionsquelle"]
             }
           ],
           "attrs": {}
@@ -174,11 +163,10 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287825"
-      ],
+      "id": ["287825"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
+      "additionalSolutions": ["canvas", "texture", "figurative", "abstract", "contrast"],
       "item": [],
       "lead": [
         {
@@ -225,9 +213,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "erfreut"
-              ]
+              "solutions": ["erfreut"]
             },
             {
               "text": " sich nicht nur in Deutschland besonderer Beliebtheit, er ",
@@ -242,9 +228,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "steht"
-              ]
+              "solutions": ["steht"]
             },
             {
               "text": " auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...",
@@ -267,9 +251,7 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "131518"
-      ],
+      "id": ["131518"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
       "item": [
@@ -332,9 +314,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Erinnerung"
-              ]
+              "solutions": ["Erinnerung"]
             },
             {
               "text": " war Leipzig, meine Heimatstadt, ein düsterer, grauer Ort. Es ",
@@ -360,9 +340,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "gab"
-              ]
+              "solutions": ["gab"]
             },
             {
               "text": " dort sehr viel Industrie. Die Luft und der Fluss waren zu jeder ",
@@ -388,9 +366,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Jahreszeit"
-              ]
+              "solutions": ["Jahreszeit"]
             },
             {
               "text": " schmutzig. Meine Mutter ",
@@ -416,9 +392,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "musste"
-              ]
+              "solutions": ["musste"]
             },
             {
               "text": " fast täglich den ",
@@ -444,9 +418,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Balkon"
-              ]
+              "solutions": ["Balkon"]
             },
             {
               "text": " und die Fenster putzen. Auch der ",
@@ -472,9 +444,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "Regen"
-              ]
+              "solutions": ["Regen"]
             },
             {
               "text": " war schmutzig, also waren die Häuser grau, und viele waren noch kaputt vom Krieg.",
@@ -507,9 +477,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "trotzdem"
-              ]
+              "solutions": ["trotzdem"]
             },
             {
               "text": " fühlte ich mich dort wohl, auch noch, wenn ich sie später besuchte. Heute ",
@@ -535,9 +503,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "fällt"
-              ]
+              "solutions": ["fällt"]
             },
             {
               "text": " es mir schwer, mir vorzustellen, wie man in einer solchen Enge überhaupt Kinder grossziehen ",
@@ -563,9 +529,7 @@
               "isCaseSensitive": true,
               "isExample": false,
               "example": null,
-              "solutions": [
-                "konnte"
-              ]
+              "solutions": ["konnte"]
             },
             {
               "text": ".",
@@ -588,9 +552,7 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "131518"
-      ],
+      "id": ["131518"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
       "item": [
@@ -664,9 +626,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "Erinnerung"
-              ]
+              "solutions": ["Erinnerung"]
             },
             {
               "text": " war Leipzig, meine Heimatstadt, ein düsterer, grauer Ort. Es ",
@@ -703,9 +663,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "gab"
-              ]
+              "solutions": ["gab"]
             },
             {
               "text": " dort sehr viel Industrie. Die Luft und der Fluss waren zu jeder ",
@@ -742,9 +700,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "Jahreszeit"
-              ]
+              "solutions": ["Jahreszeit"]
             },
             {
               "text": " schmutzig. Meine Mutter ",
@@ -781,9 +737,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "musste"
-              ]
+              "solutions": ["musste"]
             },
             {
               "text": " fast täglich den ",
@@ -820,9 +774,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "Balkon"
-              ]
+              "solutions": ["Balkon"]
             },
             {
               "text": " und die Fenster putzen. Auch der ",
@@ -859,9 +811,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "Regen"
-              ]
+              "solutions": ["Regen"]
             },
             {
               "text": " war schmutzig, also waren die Häuser grau, und viele waren noch kaputt vom Krieg.",
@@ -905,9 +855,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "trotzdem"
-              ]
+              "solutions": ["trotzdem"]
             },
             {
               "text": " fühlte ich mich dort wohl, auch noch, wenn ich sie später besuchte. Heute ",
@@ -944,9 +892,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "fällt"
-              ]
+              "solutions": ["fällt"]
             },
             {
               "text": " es mir schwer, mir vorzustellen, wie man in einer solchen Enge überhaupt Kinder grossziehen ",
@@ -983,9 +929,7 @@
                   "attrs": {}
                 }
               ],
-              "solutions": [
-                "konnte"
-              ]
+              "solutions": ["konnte"]
             },
             {
               "text": ".",
