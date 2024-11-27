@@ -111,6 +111,9 @@ const BREAKSCAPE_MINUSMINUS_REGEX_REPLACER = '$1$2$4$6^$3$5$7$8$9';
 const BREAKSCAPE_PLAIN_IN_BODY_REGEX = new RegExp('^(\\[)(\\^*)(\\.)', 'gm');
 const BREAKSCAPE_PLAIN_IN_BODY_REGEX_REPLACER = '$1^$2$3';
 
+const BREAKSCAPE_V2_REGEX = new RegExp('^(?:(\\[)(\\^*)(\\.))|(?:(\\^+))', 'gm');
+const BREAKSCAPE_V2_REGEX_REPLACER = '$1$4^$2$3';
+
 const BREAKSCAPE_ENDS_REGEX = new RegExp(BREAKSCAPE_ENDS_REGEX_SOURCE, 'g');
 const BREAKSCAPE_ENDS_REGEX_REPLACER = '$2^$1';
 
@@ -140,6 +143,11 @@ export interface BreakscapeOptions {
    * if true, the original array will be modified rather than a copy being made
    */
   modifyArray?: boolean;
+
+  /**
+   * if true, perform v2 breakscaping from JSON
+   */
+  v2?: boolean;
 }
 
 const DEFAULT_BREAKSCAPE_OPTIONS: BreakscapeOptions = {
@@ -170,6 +178,12 @@ class Breakscape {
 
     const breakscapeStr = (str: string) => {
       if (!str) return str;
+
+      // Hack for v2 breakscaping
+      if (opts.v2) {
+        str = str.replace(BREAKSCAPE_V2_REGEX, BREAKSCAPE_V2_REGEX_REPLACER);
+        return str;
+      }
 
       let regex = BREAKSCAPE_PLAIN_IN_BODY_REGEX;
       let replacer = BREAKSCAPE_PLAIN_IN_BODY_REGEX_REPLACER;
