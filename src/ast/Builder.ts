@@ -1160,9 +1160,13 @@ class Builder extends BaseBuilder {
       }
 
       if (bodyStr) {
-        // Breakscape
+        // Bug #7141: Use textFormat for textParser, not always bitmark-- if it is a v2 string body
+        // However, only use plain text breakscaping the text from the v2 JSON body
+
+        // Special v2 Breakscaping
         bodyStr = Breakscape.breakscape(bodyStr, {
-          textFormat: TextFormat.bitmarkMinusMinus, // Treat as bitmark-- for v2 text
+          textFormat,
+          v2: true,
         });
 
         // Convert placeholders {1} to [!1], etc.
@@ -1179,7 +1183,7 @@ class Builder extends BaseBuilder {
 
         // Convert the body string to AST
         rawBody = this.textParser.toAst(bodyStr, {
-          textFormat: TextFormat.bitmarkMinusMinus, // Treat as bitmark-- for v2 text
+          textFormat,
         });
 
         const replaceBitsRecursive = (bodyText: TextAst) => {
