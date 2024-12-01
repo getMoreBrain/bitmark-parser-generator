@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 2.1.0
+Version: 2.2.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -68,6 +68,7 @@ book-postscript (since: 1.3.0)
 book-preface (since: 1.3.0)
 book-prologue (since: 1.3.0)
 book-read-more (since: 1.3.0)
+book-reference (since: 2.2.0)
 book-reference-list (since: 1.3.0)
 book-request-for-a-book-review (since: 1.3.0)
 book-summary (since: 1.3.0)

@@ -106,6 +106,9 @@ export interface Bit {
   processHandIn?: Property;
   action?: Property;
   showInIndex?: Property;
+  refAuthor?: Property;
+  refBookTitle?: Property;
+  refPublisher?: Property;
   blockId?: Property;
   pageNo?: Property;
   x?: Property;
