@@ -176,6 +176,19 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.bookAlias,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.refAuthor]: {
+    tag: PropertyTag.refAuthor,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.refBookTitle]: {
+    tag: PropertyTag.refBookTitle,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.refPublisher]: {
+    tag: PropertyTag.refPublisher,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.coverImage]: {
     tag: PropertyTag.coverImage,
     format: PropertyFormat.trimmedString,

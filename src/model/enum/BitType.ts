@@ -68,6 +68,7 @@ const BitType = superenum({
   bookPreface: 'book-preface',
   bookPrologue: 'book-prologue',
   bookReadMore: 'book-read-more',
+  bookReference: 'book-reference',
   bookReferenceList: 'book-reference-list',
   bookRequestForABookReview: 'book-request-for-a-book-review',
   bookSummary: 'book-summary',

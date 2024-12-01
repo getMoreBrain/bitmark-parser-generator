@@ -1504,6 +1504,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
       }
 
+      if (Config.isOfBitType(bitType, BitType.bookReference)) {
+        //
+        if (bitJson.refAuthor == null) bitJson.refAuthor = [];
+        if (bitJson.refBookTitle == null) bitJson.refBookTitle = '';
+        if (bitJson.refPublisher == null) bitJson.refPublisher = [];
+        //
+      }
+
       if (
         Config.isOfBitType(bitType, [
           BitType.pageBanner,

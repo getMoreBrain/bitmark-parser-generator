@@ -1,0 +1,135 @@
+[
+  {
+    "bit": {
+      "type": "book-reference",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["135647"],
+      "lang": "en-US",
+      "refAuthor": ["Philippe Pointet"],
+      "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
+      "refPublisher": ["kpmg"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "2.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.1"
+    },
+    "bitmark": "[.book-reference]\n[@id:135647]\n[@lang:en-US]\n[@refPublisher:kpmg]\n[@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[@refAuthor:Philippe Pointet]"
+  },
+  {
+    "bit": {
+      "type": "book-reference",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["135647"],
+      "lang": "en-US",
+      "refAuthor": ["Philippe Pointet"],
+      "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
+      "refPublisher": ["kpmg", "gmpk"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "2.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.1"
+    },
+    "bitmark": "[.book-reference]\n[@id:135647]\n[@lang:en-US]\n[@refPublisher:kpmg]\n[@refPublisher:gmpk]\n[@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[@refAuthor:Philippe Pointet]"
+  },
+  {
+    "bit": {
+      "type": "book-reference",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["135647"],
+      "lang": "en-US",
+      "refAuthor": ["Philippe Pointet", "Someone Else"],
+      "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
+      "refPublisher": ["kpmg"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "2.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.1",
+      "warnings": [
+        {
+          "message": "[@refBookTitle] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]",
+          "location": {
+            "start": {
+              "line": 21,
+              "column": 1,
+              "offset": 556
+            },
+            "end": {
+              "line": 21,
+              "column": 124,
+              "offset": 679
+            }
+          },
+          "original": {
+            "text": "[@refBookTitle:Overridden]",
+            "location": {
+              "start": {
+                "line": 20,
+                "column": 1,
+                "offset": 529
+              },
+              "end": {
+                "line": 20,
+                "column": 27,
+                "offset": 555
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.book-reference]\n[@id:135647]\n[@lang:en-US]\n[@refPublisher:kpmg]\n[@refBookTitle:Overridden]\n[@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[@refAuthor:Philippe Pointet]\n[@refAuthor:Someone Else]"
+  },
+  {
+    "bit": {
+      "type": "book-reference",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["135647"],
+      "lang": "en-US",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "refAuthor": [],
+      "refBookTitle": "",
+      "refPublisher": []
+    },
+    "parser": {
+      "version": "2.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.1"
+    },
+    "bitmark": "[.book-reference]\n[@id:135647]\n[@lang:en-US]"
+  }
+]

@@ -62,6 +62,9 @@ export interface BitJson {
   processHandIn: boolean;
   action: string;
   showInIndex: boolean;
+  refAuthor: string | string[];
+  refBookTitle: string;
+  refPublisher: string | string[];
   blockId: string;
   pageNo: number;
   x: number;
