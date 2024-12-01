@@ -149,6 +149,9 @@ class Builder extends BaseBuilder {
     processHandIn?: boolean;
     action?: string;
     showInIndex?: boolean;
+    refAuthor?: string | string[];
+    refBookTitle?: string;
+    refPublisher?: string | string[];
     blockId?: string;
     pageNo?: number;
     x?: number;
@@ -359,6 +362,9 @@ class Builder extends BaseBuilder {
       processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, data.processHandIn),
       action: this.toAstProperty(PropertyConfigKey.action, data.action),
       showInIndex: this.toAstProperty(PropertyConfigKey.showInIndex, data.showInIndex),
+      refAuthor: this.toAstProperty(PropertyConfigKey.refAuthor, data.refAuthor),
+      refBookTitle: this.toAstProperty(PropertyConfigKey.refBookTitle, data.refBookTitle),
+      refPublisher: this.toAstProperty(PropertyConfigKey.refPublisher, data.refPublisher),
       blockId: this.toAstProperty(PropertyConfigKey.blockId, data.blockId),
       pageNo: this.toAstProperty(PropertyConfigKey.pageNo, data.pageNo),
       x: this.toAstProperty(PropertyConfigKey.x, data.x),

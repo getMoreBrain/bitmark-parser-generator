@@ -344,6 +344,26 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.bookReference]: {
+    since: '2.2.0',
+    baseBitType: BitType.article,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.refAuthor,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.refBookTitle,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.refPublisher,
+        maxCount: Count.infinity,
+      },
+    ],
+  },
   [BitType.botActionResponse]: {
     since: '1.3.0',
     tags: [
