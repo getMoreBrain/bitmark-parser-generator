@@ -33,6 +33,7 @@ node_modules
 /assets/test
 /assets/test.*
 bitmark.txt
+out.json
 generated
 
 

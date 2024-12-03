@@ -1,7 +1,7 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { CardBit } from '../../../../model/ast/Nodes';
-import { TextAst } from '../../../../model/ast/TextNodes';
+import { JsonText, TextAst } from '../../../../model/ast/TextNodes';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
@@ -806,9 +806,9 @@ function parseTable(
 ): BitSpecificCards {
   let cardIdx = 0;
   let isHeading = false;
-  const columns: string[] = [];
-  const rows: string[][] = [];
-  let rowValues: string[] = [];
+  const columns: JsonText[] = [];
+  const rows: JsonText[][] = [];
+  let rowValues: JsonText[] = [];
 
   for (const card of cardSet.cards) {
     isHeading = false;
@@ -819,17 +819,19 @@ function parseTable(
         // variant = content;
         const tags = content.data;
 
-        const { title, cardBodyStr } = tags;
+        const { title, cardBody } = tags;
 
         // Get the 'heading' which is the [#title] at level 1
-        const heading = title && title[1].titleString;
+        // const heading = title && title[1].titleString;
+        const heading = title && title[1].titleAst;
         if (cardIdx === 0 && heading != null) isHeading = true;
 
         if (isHeading) {
-          columns.push(heading ?? '');
+          columns.push(heading ?? []);
         } else {
           // If not a heading, it is a row cell value
-          const value = cardBodyStr ?? '';
+          // const value = cardBodyStr ?? '';
+          const value = (cardBody?.body ?? []) as JsonText;
           rowValues.push(value);
         }
       }
