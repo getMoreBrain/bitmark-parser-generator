@@ -997,8 +997,8 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: TableJson = {
-      columns: dataIn.columns ?? [],
-      data: (dataIn.data ?? []).map((row) => row ?? []),
+      columns: (dataIn.columns ?? []).map((col) => this.handleJsonText(col)),
+      data: (dataIn.data ?? []).map((row) => (row ?? []).map((cell) => this.handleJsonText(cell))),
     };
 
     // Remove Unset Optionals

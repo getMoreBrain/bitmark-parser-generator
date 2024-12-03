@@ -1456,6 +1456,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeCL();
   }
 
+  protected enter_columnsValue(node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeOPHASH();
+    if (node.value) {
+      this.textGenerator.generateSync(node.value, TextFormat.bitmarkMinusMinus);
+    }
+    this.writeCL();
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data -> dataValue
 
   protected between_dataValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
@@ -1473,7 +1481,19 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route, 3);
     if (parent?.key !== NodeType.table) return;
 
-    if (node.value) this.write(node.value);
+    this.write(node.value);
+  }
+
+  protected enter_dataValueValue(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route, 3);
+    if (parent?.key !== NodeType.table) return;
+
+    const textFormat = this.getTextFormat(route) ?? TextFormat.bitmarkMinusMinus;
+
+    if (node.value) {
+      this.textGenerator.generateSync(node.value, textFormat);
+    }
+    // this.write(node.value);
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList

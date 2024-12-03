@@ -182,9 +182,11 @@ class BaseBuilder {
         // Return the array of TextAst texts
         return strArray as R;
       } else {
+        // v2 text(?)
         res = this.textParser.toAst(
           Breakscape.breakscape(text as string, {
             textFormat,
+            v2: true,
           }),
         ) as R;
       }
