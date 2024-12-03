@@ -34,6 +34,7 @@ node_modules
 /assets/test.*
 /assets/classtime
 bitmark.txt
+out.json
 generated
 
 

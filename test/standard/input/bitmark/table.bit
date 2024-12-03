@@ -216,3 +216,34 @@ mark@gmail.com
 --
 (01) 22 888 4444
 ====
+
+[.table:bitmark++]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+**John**
+--
+john@example.com
+--
+(353) __01__ 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+
+• Leitbild
+• transparente Kommunikation
+• marktübliche Vergütung
+• etc.
+
+====

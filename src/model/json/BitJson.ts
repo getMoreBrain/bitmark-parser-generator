@@ -361,8 +361,8 @@ export interface MatrixCellJson {
 }
 
 export interface TableJson {
-  columns: string[];
-  data: string[][];
+  columns: JsonText[];
+  data: JsonText[][];
 }
 
 export interface QuestionJson {
