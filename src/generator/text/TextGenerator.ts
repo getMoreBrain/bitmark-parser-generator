@@ -858,9 +858,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   protected writeXRefMark(mark: XRefMark) {
-    const ref = mark.attrs?.xref ?? '';
+    const xref = mark.attrs?.xref ?? '';
+    const ref = mark.attrs?.reference ?? '';
 
-    const s = `xref:${ref}`;
+    let s = `xref:${xref}`;
+    if (ref) s += `|►${ref}`;
     this.write(s);
   }
 

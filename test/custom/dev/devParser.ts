@@ -14,6 +14,7 @@ import { Ast } from '../../../src/ast/Ast';
 import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
 import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
 import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
+import { BitmarkVersion } from '../../../src/model/enum/BitmarkVersion';
 
 const ast = new Ast();
 const bitmarkParserGenerator = new BitmarkParserGenerator();
@@ -39,9 +40,11 @@ class DevParser {
 
       // AST ==> JSON
       const generator = new JsonObjectGenerator({
+        // bitmarkVersion: BitmarkVersion.v2,
+        bitmarkVersion: BitmarkVersion.v3,
         jsonOptions: {
           enableWarnings: true,
-          textAsPlainText: false,
+          // textAsPlainText: false,
           // textAsPlainText: true,
           prettify: true,
         },
