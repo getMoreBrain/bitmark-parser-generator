@@ -13,8 +13,8 @@ import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
 import { Ast } from '../../../src/ast/Ast';
 import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
 import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
-import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
 import { BitmarkVersion } from '../../../src/model/enum/BitmarkVersion';
+import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
 
 const ast = new Ast();
 const bitmarkParserGenerator = new BitmarkParserGenerator();
