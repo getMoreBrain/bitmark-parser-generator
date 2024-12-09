@@ -102,6 +102,113 @@
       {
         "text": " with empty xreference",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "xref",
+            "attrs": {
+              "xref": "this is an xreference",
+              "reference": "this is a reference"
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " on the previous text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "bulletList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "Test link in a list 2",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "text": "Entgelt ",
+                        "type": "text"
+                      },
+                      {
+                        "marks": [
+                          {
+                            "type": "xref",
+                            "attrs": {
+                              "xref": "this is **an** xreference",
+                              "reference": "this is __a__ reference"
+                            }
+                          }
+                        ],
+                        "text": "Some\ntext",
+                        "type": "text"
+                      },
+                      {
+                        "text": " on the previous text",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "xref",
+            "attrs": {
+              "xref": "",
+              "reference": ""
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " with empty xreference",
+        "type": "text"
       }
     ],
     "attrs": {}
