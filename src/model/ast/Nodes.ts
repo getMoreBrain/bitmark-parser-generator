@@ -175,6 +175,7 @@ export interface Bit {
   resolvedBy?: Property;
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
+  maxTocChapterLevel?: Property;
   page?: Property;
   productId?: Property;
   product?: Property;

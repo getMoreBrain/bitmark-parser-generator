@@ -89,6 +89,7 @@ const propertyConfigKeys = {
   markConfig: 'markConfig',
   maxCreatedBits: 'maxCreatedBits',
   maxDisplayLevel: 'maxDisplayLevel',
+  maxTocChapterLevel: 'maxTocChapterLevel',
   mockupId: 'mockupId',
   mute: 'mute',
   padletId: 'padletId',
