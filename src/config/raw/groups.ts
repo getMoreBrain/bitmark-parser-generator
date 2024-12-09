@@ -451,6 +451,10 @@ const GROUPS: _GroupsConfig = {
         type: BitTagType.property,
         configKey: PropertyConfigKey.duration,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.maxTocChapterLevel,
+      },
     ],
   },
   [GroupConfigKey.group_learningPathCommon]: {

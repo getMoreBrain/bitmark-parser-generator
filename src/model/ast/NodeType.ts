@@ -267,6 +267,8 @@ const NodeType = superenum({
   maxCreatedBitsValue: 'maxCreatedBitsValue',
   maxDisplayLevel: 'maxDisplayLevel',
   maxDisplayLevelValue: 'maxDisplayLevelValue',
+  maxTocChapterLevel: 'maxTocChapterLevel',
+  maxTocChapterLevelValue: 'maxTocChapterLevelValue',
   message: 'message',
   mockupId: 'mockupId',
   name: 'name',

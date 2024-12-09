@@ -1039,9 +1039,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode
 
   protected enter_cardNode(_node: NodeInfo, route: NodeInfo[]): boolean {
-    // Ignore cards for xxx-1
-    const isBitType1 = this.isOfBitType1(route);
-    if (isBitType1) return true;
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return true;
 
     this.writeCardSetStart();
     this.writeNL();
@@ -1051,9 +1050,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected between_cardNode(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
-    // Ignore cards for xxx-1
-    const isBitType1 = this.isOfBitType1(route);
-    if (isBitType1) return;
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
 
     this.writeNL();
     this.writeCardSetCardDivider();
@@ -1061,9 +1059,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected exit_cardNode(_node: NodeInfo, route: NodeInfo[]): void {
-    // Ignore cards for xxx-1
-    const isBitType1 = this.isOfBitType1(route);
-    if (isBitType1) return;
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
 
     this.writeNL();
     this.writeCardSetEnd();
@@ -1098,7 +1095,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
 
-  protected between_flashcardsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_flashcardsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
+
     if (right.key === NodeType.answer) {
       this.writeNL();
       this.writeCardSetSideDivider();
@@ -1303,7 +1303,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_heading(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_heading(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
+
     this.writeNL();
     this.writeCardSetSideDivider();
     this.writeNL();
@@ -1319,7 +1322,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_forValues(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_forValues(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
+
     this.writeNL();
     this.writeCardSetSideDivider();
     this.writeNL();
@@ -1400,13 +1406,19 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue -> values
   // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix -> matrixValue -> cells -> cellsValue -> values
 
-  protected enter_values(_node: NodeInfo, _route: NodeInfo[]): void {
+  protected enter_values(_node: NodeInfo, route: NodeInfo[]): void {
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
+
     this.writeNL();
     this.writeCardSetSideDivider();
     this.writeNL();
   }
 
-  protected between_values(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_values(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
+
     this.writeNL();
     this.writeCardSetVariantDivider();
     this.writeNL();
@@ -1417,6 +1429,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected between_table(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
+
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
 
     this.writeNL();
     this.writeCardSetCardDivider();
@@ -1441,6 +1456,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     const parentKey = parent?.key;
     if (parentKey !== NodeType.table && parentKey !== NodeType.captionDefinitionList) return;
+
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
 
     this.writeNL();
     this.writeCardSetSideDivider();
@@ -1469,6 +1487,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected between_dataValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route, 2);
     if (parent?.key !== NodeType.table) return;
+
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
 
     this.writeNL();
     this.writeCardSetSideDivider();
@@ -1523,6 +1544,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // protected between_definitionsValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
   //   const parent = this.getParentNode(route);
   //   if (parent?.key !== NodeType.definitions) return;
+
+  // // Ignore cards if not allowed
+  // if (!this.isCardAllowed(route)) return;
 
   //   this.writeNL();
   //   this.writeCardSetSideDivider();
@@ -1603,6 +1627,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.definitions) return;
 
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
+
     if (right.key === NodeType.definition) {
       this.writeNL();
       this.writeCardSetSideDivider();
@@ -1619,6 +1646,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // protected between_definitionsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
   //   const parent = this.getParentNode(route);
   //   if (parent?.key !== NodeType.definitions) return;
+
+  // // Ignore cards if not allowed
+  // if (!this.isCardAllowed(route)) return;
 
   //   if (right.key === NodeType.definition) {
   //     this.writeNL();
@@ -2898,6 +2928,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     return undefined;
+  }
+
+  protected isCardAllowed(route: NodeInfo[]): boolean {
+    const textFormat = this.getTextFormat(route);
+    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+
+    return isBitmarkText && !this.isOfBitType1(route);
   }
 
   protected isOfBitType1(route: NodeInfo[]): boolean {

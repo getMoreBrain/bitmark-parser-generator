@@ -398,6 +398,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
+  [PropertyConfigKey.maxTocChapterLevel]: {
+    tag: PropertyTag.maxTocChapterLevel,
+    single: true,
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.technicalTerm]: {
     tag: PropertyTag.technicalTerm,
     single: true,
