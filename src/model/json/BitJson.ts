@@ -129,6 +129,7 @@ export interface BitJson {
   resolvedBy: string;
   maxCreatedBits: number;
   maxDisplayLevel: number;
+  maxTocChapterLevel: number;
   page: string;
   productId: string | string[];
   product: string;

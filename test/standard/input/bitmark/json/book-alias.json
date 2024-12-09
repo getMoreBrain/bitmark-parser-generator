@@ -4,29 +4,17 @@
       "type": "book-alias",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135647"
-      ],
-      "externalId": [
-        "e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"
-      ],
-      "spaceId": [
-        "sl"
-      ],
+      "id": ["135647"],
+      "externalId": ["e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"],
+      "spaceId": ["sl"],
       "isPublic": false,
       "lang": "en-US",
-      "language": [
-        "de"
-      ],
+      "language": ["de"],
       "subtype": "draft-book",
-      "bookAlias": [
-        "e-garantie-du-revenu_lj4qvpq8gk5m",
-        "test-id"
-      ],
-      "author": [
-        "Philippe Pointet"
-      ],
+      "bookAlias": ["e-garantie-du-revenu_lj4qvpq8gk5m", "test-id"],
+      "author": ["Philippe Pointet"],
       "kind": "learning-path",
+      "maxTocChapterLevel": 45,
       "hasMarkAsDone": false,
       "processHandIn": false,
       "title": [
@@ -67,5 +55,29 @@
       "textParserVersion": "8.17.0"
     },
     "bitmark": "[.book-alias]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@bookAlias: e-garantie-du-revenu_lj4qvpq8gk5m]\n[@bookAlias: test-id]"
+  },
+  {
+    "bit": {
+      "type": "book-alias",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "maxTocChapterLevel": -1,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "isPublic": false
+    },
+    "parser": {
+      "version": "2.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.1"
+    },
+    "bitmark": "[.book-alias]"
   }
 ]
