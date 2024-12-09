@@ -1472,5 +1472,39 @@
       "textParserVersion": "8.17.1"
     },
     "bitmark": "[.table:bitmark++]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\n**John**\n--\njohn@example.com\n--\n(353) __01__ 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc.\n\n===="
+  },
+  {
+    "bit": {
+      "type": "table",
+      "format": "xml",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n  <to>Tove</to>\n  <from>Jani</from>\n  <heading>Reminder</heading>\n  <body>Don't forget me this weekend!</body>\n</note>",
+      "table": {
+        "columns": [],
+        "data": []
+      },
+      "tableFixedHeader": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": true,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "2.4.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.1"
+    },
+    "bitmark": "[.table:xml]\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n  <to>Tove</to>\n  <from>Jani</from>\n  <heading>Reminder</heading>\n  <body>Don't forget me this weekend!</body>\n</note>"
   }
 ]
