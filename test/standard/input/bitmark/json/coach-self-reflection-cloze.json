@@ -4,9 +4,7 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "152331"
-      ],
+      "id": ["152331"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -124,16 +122,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "151.640"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["151.640"]
+              }
             },
             {
               "type": "hardBreak"
@@ -147,16 +145,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "-77.206"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["-77.206"]
+              }
             },
             {
               "type": "hardBreak"
@@ -170,16 +168,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "74.434"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["74.434"]
+              }
             }
           ],
           "attrs": {}
@@ -198,9 +196,7 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "193275"
-      ],
+      "id": ["193275"],
       "anchor": "Ref_Roche",
       "item": [],
       "lead": [
@@ -233,16 +229,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Roche"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Roche"]
+              }
             }
           ],
           "attrs": {}
@@ -261,9 +257,7 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "193276"
-      ],
+      "id": ["193276"],
       "anchor": "Ref_Emmi",
       "item": [],
       "lead": [
@@ -296,16 +290,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Emmi"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Emmi"]
+              }
             }
           ],
           "attrs": {}
@@ -324,9 +318,7 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "136524"
-      ],
+      "id": ["136524"],
       "item": [
         {
           "type": "paragraph",
@@ -369,16 +361,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "c"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["c"]
+              }
             },
             {
               "text": " ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!",
@@ -392,16 +384,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "x"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["x"]
+              }
             },
             {
               "text": " Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.",
@@ -415,16 +407,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "a"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["a"]
+              }
             },
             {
               "text": " RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.",
@@ -438,16 +430,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "b"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["b"]
+              }
             },
             {
               "text": " JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner.",
@@ -486,9 +478,7 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "245337"
-      ],
+      "id": ["245337"],
       "item": [
         {
           "type": "paragraph",
@@ -535,16 +525,16 @@
           "content": [
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Insekten"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Insekten"]
+              }
             }
           ],
           "attrs": {}
@@ -563,9 +553,7 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "273397"
-      ],
+      "id": ["273397"],
       "item": [
         {
           "type": "paragraph",
@@ -605,16 +593,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "qualitativen"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["qualitativen"]
+              }
             },
             {
               "text": " Marktforschung versucht man, mehr Klarheit zu einer ",
@@ -622,16 +610,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "offenen"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["offenen"]
+              }
             },
             {
               "text": " Fragestellung zu erhalten. Bei der quantitativen Marktforschung hingegen geht es um geschlossene Fragestellungen. Bei der ",
@@ -639,16 +627,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Sekundärmarktforschung"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Sekundärmarktforschung"]
+              }
             },
             {
               "text": " arbeitet man mit bereits vorhandenen Daten. Diese liegen aus internen oder externen Quellen vor. Ein Vorteil ist, dass die Daten schnell zu beschaffen sind. Ein Nachteil ist, dass die Daten nicht mehr ",
@@ -656,16 +644,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "aktuell"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["aktuell"]
+              }
             },
             {
               "text": " sein können.",
@@ -680,16 +668,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Primärmarktforschung"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Primärmarktforschung"]
+              }
             },
             {
               "text": " durchgeführt wird. Hierbei erhebt man ",
@@ -697,16 +685,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "eigene Daten"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["eigene Daten"]
+              }
             },
             {
               "text": " zur Erforschung einer bestimmten Fragestellung, meistens mit einem professionellen Marktforschungsinstitut zusammen. Die folgenden Methoden gibt es: ",
@@ -714,16 +702,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Befragung"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Befragung"]
+              }
             },
             {
               "text": ", Beobachtung / Test, Mystery Shopping, Panel oder ",
@@ -731,16 +719,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Fokusgruppen"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Fokusgruppen"]
+              }
             },
             {
               "text": ". Die Nachteile sind der zeitliche Aufwand und die ",
@@ -748,16 +736,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Kosten"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Kosten"]
+              }
             },
             {
               "text": ". Dafür passen die gewonnenen Daten genau auf die Fragestellung des Unternehmens.",
@@ -780,9 +768,7 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "273304"
-      ],
+      "id": ["273304"],
       "item": [
         {
           "type": "paragraph",
@@ -880,17 +866,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "A",
-                "C"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["A", "C"]
+              }
             },
             {
               "text": " Neue Kaffeerostanlage in einer Rosterei",
@@ -901,17 +886,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "F",
-                "G"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["F", "G"]
+              }
             },
             {
               "text": " Beratungen durch Steuerberater",
@@ -922,17 +906,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "F",
-                "B"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["F", "B"]
+              }
             },
             {
               "text": " Patente für die Herstellung von Energie aus Kompost",
@@ -943,17 +926,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "A",
-                "D"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["A", "D"]
+              }
             },
             {
               "text": " Putzmittel im Haushalt",
@@ -964,17 +946,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "A",
-                "E"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["A", "E"]
+              }
             },
             {
               "text": " Autos von Privatpersonen",
@@ -985,17 +966,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "F",
-                "G"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["F", "G"]
+              }
             },
             {
               "text": " Haarschnitte beim Coiffeur",
@@ -1006,17 +986,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "A",
-                "C"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["A", "C"]
+              }
             },
             {
               "text": " Zwei moderne Autowaschanlagen",
@@ -1027,17 +1006,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "A",
-                "D"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["A", "D"]
+              }
             },
             {
               "text": " Medikamente gegen Migräne",
@@ -1060,9 +1038,7 @@
       "type": "coach-self-reflection-cloze",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "272904"
-      ],
+      "id": ["272904"],
       "item": [
         {
           "type": "paragraph",
@@ -1102,28 +1078,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "Hint",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "direkten Vertrieb",
-                "direkten Vertrieb2"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Hint",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["direkten Vertrieb", "direkten Vertrieb2"]
+              }
             },
             {
               "text": " verkauft eigene ",
@@ -1131,16 +1106,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Verkaufsstellen"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Verkaufsstellen"]
+              }
             },
             {
               "text": " einrichten, ",
@@ -1148,16 +1123,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Verkaufsmitarbeitende"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Verkaufsmitarbeitende"]
+              }
             },
             {
               "text": " einstellen. Beim ",
@@ -1165,28 +1140,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "HINT?",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "indirekten Vertrieb",
-                "indirekten Vertrieb2"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "HINT?",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["indirekten Vertrieb", "indirekten Vertrieb2"]
+              }
             },
             {
               "text": " läuft den ",
@@ -1194,16 +1168,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Grosshandel"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Grosshandel"]
+              }
             },
             {
               "text": " ",
@@ -1211,16 +1185,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "NOT Grosshandel2"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["NOT Grosshandel2"]
+              }
             },
             {
               "text": " und / oder den ",
@@ -1228,16 +1202,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "Einzelhandel"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Einzelhandel"]
+              }
             },
             {
               "text": ".",
@@ -1277,28 +1251,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "solution",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": [
-                "solution",
-                "problem"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "solution",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["solution", "problem"]
+              }
             }
           ],
           "attrs": {}
@@ -1334,28 +1307,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "wrong answer",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": [
-                "solution",
-                "problem"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "wrong answer",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["solution", "problem"]
+              }
             }
           ],
           "attrs": {}

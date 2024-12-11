@@ -138,14 +138,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": false,
-              "isExample": false,
-              "example": null,
-              "solutions": ["solution", "problem"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": false,
+                "isExample": false,
+                "example": null,
+                "solutions": ["solution", "problem"]
+              }
             },
             {
               "text": " with a separate gap",
@@ -160,14 +162,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["different"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["different"]
+              }
             },
             {
               "text": " case sensitivity. There is even a gap which inherits the default",
@@ -182,14 +186,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["sensitivity"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["sensitivity"]
+              }
             }
           ],
           "attrs": {}
@@ -256,14 +262,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": false,
-              "isExample": false,
-              "example": null,
-              "solutions": ["solu^tion", "problem"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": false,
+                "isExample": false,
+                "example": null,
+                "solutions": ["solu^tion", "problem"]
+              }
             },
             {
               "text": " with a separate gap",
@@ -481,14 +489,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["gap"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["gap"]
+              }
             },
             {
               "text": " :)",

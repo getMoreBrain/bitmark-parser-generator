@@ -49,14 +49,16 @@
             },
             {
               "type": "mark",
-              "solution": "letzten",
-              "mark": "adjective",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "example": null
+              "attrs": {
+                "solution": "letzten",
+                "mark": "adjective",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "example": null
+              }
             },
             {
               "text": " Zeit vermehrten sich die Gerüchte, Bruno habe ein Verhältnis",
@@ -71,14 +73,16 @@
             },
             {
               "type": "mark",
-              "solution": "schönen",
-              "mark": "adjective",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "example": null
+              "attrs": {
+                "solution": "schönen",
+                "mark": "adjective",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "example": null
+              }
             },
             {
               "text": " Backgroundsängerin Sharika.",
@@ -110,14 +114,16 @@
             },
             {
               "type": "mark",
-              "solution": "erfolgreichen",
-              "mark": "adjective",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "example": null
+              "attrs": {
+                "solution": "erfolgreichen",
+                "mark": "adjective",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "example": null
+              }
             },
             {
               "text": " Scheidungsanwalt Otto August von",
@@ -139,14 +145,16 @@
             },
             {
               "type": "mark",
-              "solution": "alleinige",
-              "mark": "adjective",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "example": null
+              "attrs": {
+                "solution": "alleinige",
+                "mark": "adjective",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "example": null
+              }
             },
             {
               "text": " Sorgerecht für den ",
@@ -154,14 +162,16 @@
             },
             {
               "type": "mark",
-              "solution": "gemeinsamen",
-              "mark": "adjective",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "example": null
+              "attrs": {
+                "solution": "gemeinsamen",
+                "mark": "adjective",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "example": null
+              }
             },
             {
               "text": " Sohn Lucas (6 Jahre).",
@@ -176,14 +186,16 @@
             },
             {
               "type": "mark",
-              "solution": "betrogenen",
-              "mark": "verb",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "example": null
+              "attrs": {
+                "solution": "betrogenen",
+                "mark": "verb",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "example": null
+              }
             },
             {
               "text": " Ehefrau wenig Chancen ein. Sie",
@@ -198,14 +210,16 @@
             },
             {
               "type": "mark",
-              "solution": "finanzielle",
-              "mark": "adjective",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "example": null
+              "attrs": {
+                "solution": "finanzielle",
+                "mark": "adjective",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "example": null
+              }
             },
             {
               "text": " Ansprüche im Fall",
@@ -237,14 +251,16 @@
             },
             {
               "type": "mark",
-              "solution": "unerwartete",
-              "mark": "adjective",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "example": null
+              "attrs": {
+                "solution": "unerwartete",
+                "mark": "adjective",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "example": null
+              }
             },
             {
               "text": " Wendung. Ein ",
@@ -252,14 +268,16 @@
             },
             {
               "type": "mark",
-              "solution": "stadtbekannter",
-              "mark": "adjective",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "example": true
+              "attrs": {
+                "solution": "stadtbekannter",
+                "mark": "adjective",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "example": true
+              }
             },
             {
               "text": " Juwelier",
@@ -281,14 +299,16 @@
             },
             {
               "type": "mark",
-              "solution": "wertvolle",
-              "mark": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "example": null
+              "attrs": {
+                "solution": "wertvolle",
+                "mark": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "example": null
+              }
             },
             {
               "text": " Schmuck für Corinna? Will Bruno seinen Fehler wieder gutmachen? Gibt es am Ende",
@@ -303,14 +323,16 @@
             },
             {
               "type": "mark",
-              "solution": "romantische",
-              "mark": "adjective",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "example": true
+              "attrs": {
+                "solution": "romantische",
+                "mark": "adjective",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "example": true
+              }
             },
             {
               "text": " Versöhnung?",

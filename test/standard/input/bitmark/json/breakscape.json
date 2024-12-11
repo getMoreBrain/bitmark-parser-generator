@@ -123,25 +123,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "] with square bracked at beginning [",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["[gap]"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "] with square bracked at beginning [",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["[gap]"]
+              }
             },
             {
               "text": " with square brackets",

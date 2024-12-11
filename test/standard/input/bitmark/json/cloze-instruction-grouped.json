@@ -36,36 +36,38 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "erfreuen",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "erfreut",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["erfreut"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "erfreuen",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "erfreut",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["erfreut"]
+              }
             },
             {
               "text": " sich nicht nur in Deutschland besonderer Beliebtheit, er ",
@@ -73,25 +75,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "stehen",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["steht"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "stehen",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["steht"]
+              }
             },
             {
               "text": " auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...",
@@ -167,25 +171,27 @@
           "content": [
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "woher",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Woher"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "woher",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Woher"]
+              }
             },
             {
               "text": " kommen Sie?",
@@ -196,25 +202,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "wo",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Wo"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "wo",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Wo"]
+              }
             },
             {
               "text": " wohnen Sie?",
@@ -225,25 +233,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "was",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Was"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "was",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Was"]
+              }
             },
             {
               "text": " studieren Sie?",
@@ -254,25 +264,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "welche",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Welche"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "welche",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Welche"]
+              }
             },
             {
               "text": " Sprachen sprechen Sie?",

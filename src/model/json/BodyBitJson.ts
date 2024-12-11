@@ -1,4 +1,4 @@
-import { JsonText, TextAst } from '../ast/TextNodes';
+import { JsonText, TextAst, TextNode } from '../ast/TextNodes';
 
 import { ExampleJson } from './BitJson';
 
@@ -6,19 +6,21 @@ export interface BodyBitsJson {
   [key: string]: BodyBitJson;
 }
 
-export type BodyBitJson = GapJson | MarkJson | SelectJson | HighlightJson;
+export type BodyBitJson = TextNode | GapJson | MarkJson | SelectJson | HighlightJson;
 
 export interface BaseBodyBitJson {
   type: string; // body bit type
   item: JsonText;
   lead: JsonText;
-  // pageNumber: JsonText;
-  // marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
   __defaultExample?: ExampleJson;
+
+  // NOTE: Internally, the body bit is stored as it appears in bitmark v2, but in v3 all the properties
+  // are stored in the `attrs` property. The properies are only moved to 'attrs' for the JSON output
+  attrs: Record<string, unknown>;
 }
 
 export interface GapJson extends BaseBodyBitJson {
@@ -26,8 +28,6 @@ export interface GapJson extends BaseBodyBitJson {
   solutions: string[];
   item: JsonText;
   lead: JsonText;
-  // pageNumber: JsonText;
-  // marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isCaseSensitive: boolean;
@@ -42,10 +42,6 @@ export interface MarkJson extends BaseBodyBitJson {
   type: 'mark'; // body bit type
   solution: string;
   mark: string;
-  // item: Text;
-  // lead: Text;
-  // hint: Text;
-  // instruction: Text;
   isExample: boolean;
   example: ExampleJson;
   __isDefaultExample?: boolean;
@@ -67,8 +63,6 @@ export interface SelectOptionJson {
   isCorrect: boolean;
   item: JsonText;
   lead: JsonText;
-  // pageNumber: JsonText;
-  // marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
@@ -90,8 +84,6 @@ export interface HighlightTextJson {
   isCorrect: boolean;
   item: JsonText;
   lead: JsonText;
-  // pageNumber: JsonText;
-  // marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;
   isExample: boolean;
