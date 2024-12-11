@@ -559,9 +559,9 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreUndefined: ['example'],
-      ignoreEmptyArrays: ['item', 'lead', 'pageNumber', 'marginNumber', 'hint', 'instruction'],
+      // ignoreAllFalse: true,
+      // ignoreUndefined: ['example'],
+      // ignoreEmptyArrays: ['item', 'lead', 'pageNumber', 'marginNumber', 'hint', 'instruction'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -599,7 +599,7 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
+      // ignoreAllFalse: true,
       ignoreEmptyString: ['book', 'reference'],
     });
 
@@ -640,9 +640,11 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      // ignoreUndefined: ['example'],
+      ignoreEmptyString: ['choice'],
+      ignoreFalse: ['isCorrect', '__defaultExample'],
     });
 
     return node;
@@ -682,9 +684,11 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      // ignoreUndefined: ['example'],
+      ignoreEmptyString: ['response'],
+      ignoreFalse: ['isCorrect', '__defaultExample'],
     });
 
     return node;
@@ -724,9 +728,9 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreEmptyString: ['response', 'reaction', 'feedback'],
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['item'],
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['item'],
+      // ignoreUndefined: ['example'],
     });
 
     return node;
@@ -788,8 +792,8 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['item', 'hint', 'instruction'],
     });
 
     return node;
@@ -813,7 +817,7 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
+      // ignoreAllFalse: true,
       ignoreEmptyString: ['forKeys', 'forValues'],
       ignoreEmptyArrays: ['forValues'],
     });
@@ -875,9 +879,11 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['item', 'hint', 'instruction', 'values'],
-      ignoreUndefined: ['example', 'isCaseSensitive'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['item', 'hint', 'instruction', 'values'],
+      // ignoreUndefined: ['example', 'isCaseSensitive'],
+      ignoreFalse: ['isCaseSensitive'],
+      ignoreEmptyArrays: ['values'],
     });
 
     // if (node.key) {
@@ -948,9 +954,10 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['hint', 'item', 'cells'],
-      ignoreUndefined: ['isCaseSensitive'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['hint', 'item', 'cells'],
+      // ignoreUndefined: ['isCaseSensitive'],
+      ignoreEmptyArrays: ['cells'],
     });
 
     return node;
@@ -982,9 +989,11 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['instruction', 'item', 'values'],
-      ignoreUndefined: ['example', 'isCaseSensitive'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['instruction', 'item', 'values'],
+      // ignoreUndefined: ['example', 'isCaseSensitive'],
+      ignoreFalse: ['isCaseSensitive'],
+      ignoreEmptyArrays: ['values'],
     });
 
     return node;
@@ -1006,9 +1015,9 @@ class Builder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    // ObjectUtils.removeUnwantedProperties(node, {
-    //   ignoreAllFalse: true,
-    // });
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['columns', 'data'],
+    });
 
     return node;
   }
@@ -1054,10 +1063,11 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      // ignoreUndefined: ['example'],
       ignoreEmptyString: ['question', 'partialAnswer', 'sampleSolution'],
+      ignoreEmptyArrays: ['additionalSolutions'],
     });
 
     return node;
@@ -1098,7 +1108,7 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
+      // ignoreAllFalse: true,
       // ignoreAllEmptyArrays: true,
       // ignoreUndefined: ['example'],
       ignoreEmptyString: ['item', 'unit'],
@@ -1325,9 +1335,11 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
-      ignoreUndefined: ['example', 'isCaseSensitive'],
+      // ignoreAllFalse: true,
+      // ignoreAllEmptyArrays: true,
+      // ignoreUndefined: ['example', 'isCaseSensitive'],
+      ignoreEmptyArrays: ['solutions'],
+      ignoreFalse: ['isCaseSensitive'],
     });
 
     return node;
@@ -1363,7 +1375,8 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllEmptyString: true,
+      // ignoreAllEmptyString: true,
+      ignoreEmptyString: ['mark'],
     });
 
     return node;
@@ -1397,9 +1410,9 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // ignoreAllEmptyArrays: true,
+      // ignoreUndefined: ['example'],
       ignoreEmptyString: ['solution', 'mark'],
     });
 
@@ -1437,9 +1450,10 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
-      ignoreEmptyString: ['prefix', 'postfix'],
+      // ignoreAllFalse: true,
+      // ignoreAllEmptyArrays: true,
+      // ignoreEmptyString: ['prefix', 'postfix'],
+      ignoreEmptyArrays: ['options'],
     });
 
     return node;
@@ -1479,9 +1493,11 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // ignoreAllEmptyArrays: true,
+      // ignoreUndefined: ['example'],
+      ignoreEmptyString: ['text'],
+      ignoreFalse: ['isCorrect', '__defaultExample'],
     });
 
     return node;
@@ -1516,9 +1532,10 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
-      ignoreEmptyString: ['prefix', 'postfix'],
+      // ignoreAllFalse: true,
+      // ignoreAllEmptyArrays: true,
+      // ignoreEmptyString: ['prefix', 'postfix'],
+      ignoreEmptyArrays: ['texts'],
     });
 
     return node;
@@ -1559,9 +1576,11 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreAllEmptyArrays: true,
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // ignoreAllEmptyArrays: true,
+      // ignoreUndefined: ['example'],
+      ignoreEmptyString: ['text'],
+      ignoreFalse: ['isCorrect', 'isHighlighted', '__defaultExample'],
     });
 
     return node;
@@ -1602,9 +1621,10 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['question', 'answer', 'alternativeAnswers', 'item', 'hint', 'instruction'],
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['question', 'answer', 'alternativeAnswers', 'item', 'hint', 'instruction'],
+      // ignoreUndefined: ['example'],
+      ignoreEmptyArrays: ['question', 'answer', 'alternativeAnswers'],
     });
 
     return node;
@@ -1649,9 +1669,10 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      ignoreEmptyArrays: ['question', 'answer', 'alternativeDefinitions', 'item', 'hint', 'instruction'],
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // ignoreEmptyArrays: ['term', 'definition', 'alternativeDefinitions', 'item', 'hint', 'instruction'],
+      // ignoreUndefined: ['example'],
+      ignoreEmptyArrays: ['term', 'definition', 'alternativeDefinitions'],
     });
 
     return node;
@@ -1691,9 +1712,11 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      // ignoreAllEmptyArrays: true,
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // // ignoreAllEmptyArrays: true,
+      // ignoreUndefined: ['example'],
+      ignoreEmptyString: ['statement'],
+      ignoreFalse: ['isCorrect', 'example', '__defaultExample'],
     });
 
     return node;
@@ -1722,7 +1745,7 @@ class Builder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreFalse: ['trim'],
       ignoreEmptyString: ['url', 'mockupId'],
-      ignoreAllUndefined: true,
+      // ignoreAllUndefined: true,
     });
 
     return node;
@@ -1752,8 +1775,9 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
+      // ignoreAllUndefined: true,
       ignoreEmptyString: ['name'],
-      ignoreAllUndefined: true,
+      ignoreUndefined: ['title'],
     });
 
     return node;
@@ -1777,8 +1801,9 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreEmptyString: ['technicalTerm'],
+      // ignoreEmptyString: ['technicalTerm'],
       // ignoreAllUndefined: true,
+      ignoreEmptyString: ['technicalTerm'],
     });
 
     return node;
@@ -1806,8 +1831,9 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreEmptyString: ['servings', 'unit'],
+      // ignoreEmptyString: ['servings', 'unit'],
       // ignoreAllUndefined: true,
+      ignoreEmptyString: ['servings', 'unit'],
     });
 
     return node;
@@ -1835,6 +1861,7 @@ class Builder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node, {
       // ignoreEmptyArrays: ['servings', 'unit'],
       // ignoreAllUndefined: true,
+      ignoreEmptyArrays: ['label'],
     });
 
     return node;
@@ -1861,8 +1888,9 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreEmptyString: ['term', 'description'],
+      // ignoreEmptyString: ['term', 'description'],
       // ignoreAllUndefined: true,
+      ignoreEmptyString: ['term', 'description'],
     });
 
     return node;
@@ -1894,7 +1922,8 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllEmptyArrays: true,
+      // ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['columns', 'definitions'],
     });
 
     return node;
@@ -1937,9 +1966,9 @@ class Builder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllFalse: true,
-      // ignoreEmptyArrays: ['example'],
-      ignoreUndefined: ['example'],
+      // ignoreAllFalse: true,
+      // // ignoreEmptyArrays: ['example'],
+      // ignoreUndefined: ['example'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -2264,7 +2293,13 @@ class Builder extends BaseBuilder {
           example.isExample = false;
         }
       }
-      return example.isExample;
+
+      // If isExample is false, remove it from the object as that is the default
+      const res = example.isExample;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (res === false) delete (example as any).isExample;
+
+      return res;
     };
 
     const { body, cardNode } = bit;
@@ -2286,7 +2321,7 @@ class Builder extends BaseBuilder {
           for (const option of select.options) {
             hasExample = checkIsExample(option as WithExampleJson) ? true : hasExample;
           }
-          select.isExample = hasExample;
+          if (hasExample) select.isExample = hasExample;
           break;
         }
 
@@ -2296,7 +2331,7 @@ class Builder extends BaseBuilder {
           for (const text of highlight.texts) {
             hasExample = checkIsExample(text as WithExampleJson) ? true : hasExample;
           }
-          highlight.isExample = hasExample;
+          if (hasExample) highlight.isExample = hasExample;
           break;
         }
       }
@@ -2327,7 +2362,7 @@ class Builder extends BaseBuilder {
         for (const v of mx.cells ?? []) {
           hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
-        mx.isExample = hasExample;
+        if (hasExample) mx.isExample = hasExample;
       }
       // quizzes
       for (const quiz of cardNode.quizzes ?? []) {
@@ -2341,7 +2376,7 @@ class Builder extends BaseBuilder {
         for (const v of quiz.choices ?? []) {
           hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
-        quiz.isExample = hasExample;
+        if (hasExample) quiz.isExample = hasExample;
       }
       // responses
       for (const v of cardNode.responses ?? []) {

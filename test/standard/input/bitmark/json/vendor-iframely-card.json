@@ -4,17 +4,9 @@
       "type": "vendor-iframely-card",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "width": "100",
       "height": "120",
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "body": "Here is some code"
     },
     "parser": {

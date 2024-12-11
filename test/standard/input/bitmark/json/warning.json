@@ -4,16 +4,7 @@
       "type": "warning",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      "ageRange": ["18", "120"],
       "body": [
         {
           "type": "paragraph",
@@ -100,12 +91,7 @@
       "type": "warning-alt",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
+      "id": ["151971"],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -118,8 +104,6 @@
           "attrs": {}
         }
       ],
-      "hint": [],
-      "instruction": [],
       "body": [
         {
           "type": "paragraph",

@@ -5,21 +5,11 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["119761"],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "body": [],
       "resource": {
         "type": "website-link",
         "websiteLink": {
-          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4"
         }
       }
     },

@@ -4,12 +4,6 @@
       "type": "video-link",
       "format": "bitmark--",
       "bitLevel": 1,
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -80,13 +74,7 @@
           "video": {
             "format": "wmv",
             "provider": "docs.bitbook.education",
-            "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
-            "width": null,
-            "height": null,
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": []
+            "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv"
           }
         }
       ]
@@ -98,15 +86,7 @@
       "type": "video-link",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      "id": ["119760"],
       "body": [],
       "resource": {
         "type": "video-link",
@@ -121,34 +101,14 @@
             {
               "format": "png",
               "provider": "www.youtube.com",
-              "src": "https://www.youtube.com/tumb_201809210816.png",
-              "width": null,
-              "height": null,
-              "alt": "",
-              "zoomDisabled": false,
-              "license": "",
-              "copyright": "",
-              "showInIndex": false,
-              "caption": []
+              "src": "https://www.youtube.com/tumb_201809210816.png"
             },
             {
               "format": "png",
               "provider": "www.youtube.com",
-              "src": "https://www.youtube.com/tumb_201809210816.png",
-              "width": null,
-              "height": null,
-              "alt": "",
-              "zoomDisabled": false,
-              "license": "",
-              "copyright": "",
-              "showInIndex": false,
-              "caption": []
+              "src": "https://www.youtube.com/tumb_201809210816.png"
             }
-          ],
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          ]
         }
       }
     },
@@ -164,12 +124,6 @@
       "type": "video-link",
       "format": "bitmark--",
       "bitLevel": 1,
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -200,13 +154,7 @@
         "videoLink": {
           "format": "wmv",
           "provider": "docs.bitbook.education",
-          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
-          "width": null,
-          "height": null,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv"
         }
       }
     },
@@ -222,26 +170,13 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186837"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      "id": ["186837"],
       "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
           "provider": "www.youtube.com",
           "url": "https://www.youtube.com/watch?v=E41oFn8EdqY",
-          "width": null,
-          "height": null,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
           "caption": [
             {
               "type": "paragraph",
@@ -269,26 +204,13 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187546"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      "id": ["187546"],
       "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
           "provider": "www.youtube.com",
           "url": "https://www.youtube.com/watch?v=FW47I-KbmF4&t=6s",
-          "width": null,
-          "height": null,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
           "caption": [
             {
               "type": "paragraph",
@@ -316,27 +238,13 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "185332"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      "id": ["185332"],
       "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
           "provider": "vimeo.com",
-          "url": "https://vimeo.com/585451927",
-          "width": null,
-          "height": null,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          "url": "https://vimeo.com/585451927"
         }
       }
     },
@@ -352,27 +260,13 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "185329"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      "id": ["185329"],
       "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
           "provider": "vimeo.com",
-          "url": "https://vimeo.com/585450701",
-          "width": null,
-          "height": null,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          "url": "https://vimeo.com/585450701"
         }
       }
     },
@@ -388,27 +282,13 @@
       "type": "article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "185330"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      "id": ["185330"],
       "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
           "provider": "vimeo.com",
-          "url": "https://vimeo.com/585457783",
-          "width": null,
-          "height": null,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          "url": "https://vimeo.com/585457783"
         }
       }
     },

@@ -1403,20 +1403,20 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Most bits have these defaults, but there are special cases (not sure if that is by error or design)
       if (Config.isOfBitType(bitType, [BitType.page])) {
         // Bits without item, lead, etc
-        if (bitJson.item == null || bitJson.item?.length === 0) delete bitJson.item;
-        if (bitJson.lead == null || bitJson.lead?.length === 0) delete bitJson.lead;
-        if (bitJson.pageNumber == null || bitJson.pageNumber?.length === 0) delete bitJson.pageNumber;
-        if (bitJson.marginNumber == null || bitJson.marginNumber?.length === 0) delete bitJson.marginNumber;
-        if (bitJson.hint == null || bitJson.hint?.length === 0) delete bitJson.hint;
-        if (bitJson.instruction == null || bitJson.instruction?.length === 0) delete bitJson.instruction;
+        // if (bitJson.item == null || bitJson.item?.length === 0) delete bitJson.item;
+        // if (bitJson.lead == null || bitJson.lead?.length === 0) delete bitJson.lead;
+        // if (bitJson.pageNumber == null || bitJson.pageNumber?.length === 0) delete bitJson.pageNumber;
+        // if (bitJson.marginNumber == null || bitJson.marginNumber?.length === 0) delete bitJson.marginNumber;
+        // if (bitJson.hint == null || bitJson.hint?.length === 0) delete bitJson.hint;
+        // if (bitJson.instruction == null || bitJson.instruction?.length === 0) delete bitJson.instruction;
       } else {
         // Majority of bits
-        if (bitJson.item == null) bitJson.item = this.textDefault;
-        if (bitJson.lead == null) bitJson.lead = this.textDefault;
-        if (bitJson.hint == null) bitJson.hint = this.textDefault;
-        if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
-        if (bitJson.pageNumber == null) bitJson.pageNumber = this.textDefault;
-        if (bitJson.marginNumber == null) bitJson.marginNumber = this.textDefault;
+        // if (bitJson.item == null) bitJson.item = this.textDefault;
+        // if (bitJson.lead == null) bitJson.lead = this.textDefault;
+        // if (bitJson.hint == null) bitJson.hint = this.textDefault;
+        // if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
+        // if (bitJson.pageNumber == null) bitJson.pageNumber = this.textDefault;
+        // if (bitJson.marginNumber == null) bitJson.marginNumber = this.textDefault;
       }
       if (bitJson.body == null) bitJson.body = this.bodyDefault;
 
@@ -1677,19 +1677,19 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
 
       // Remove top level example if it is not required
-      if (isTopLevelExample) {
-        if (bitJson.isExample == null) bitJson.isExample = false;
-      } else {
-        // Remove example
-        delete bitJson.isExample;
-        delete bitJson.example;
-      }
-      if (isTopLevelExampleValue) {
-        if (bitJson.example == null) bitJson.example = null;
-      } else {
-        // Remove example value
-        delete bitJson.example;
-      }
+      // if (isTopLevelExample) {
+      //   if (bitJson.isExample == null) bitJson.isExample = false;
+      // } else {
+      //   // Remove example
+      //   delete bitJson.isExample;
+      //   delete bitJson.example;
+      // }
+      // if (isTopLevelExampleValue) {
+      //   if (bitJson.example == null) bitJson.example = null;
+      // } else {
+      //   // Remove example value
+      //   delete bitJson.example;
+      // }
     }
 
     return bitJson;

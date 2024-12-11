@@ -4,12 +4,9 @@
       "type": "true-false",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
-      "item": [],
       "lead": [
         {
           "type": "paragraph",
@@ -22,30 +19,19 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
-      "isExample": false,
       "body": [],
       "statements": [
         {
           "statement": "A house is bigger than a car.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "A tiger is bigger than a cat.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "A cow is bigger than a dog.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         }
       ]
     },
@@ -61,12 +47,9 @@
       "type": "true-false",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287885"
-      ],
+      "id": ["287885"],
       "labelTrue": "",
       "labelFalse": "",
-      "item": [],
       "lead": [
         {
           "type": "paragraph",
@@ -79,9 +62,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -94,32 +74,23 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "statements": [
         {
           "statement": "brown",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "purple, but only in chocolate ads",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "blue",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "green",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         }
       ]
     },
@@ -135,12 +106,9 @@
       "type": "true-false",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287887"
-      ],
+      "id": ["287887"],
       "labelTrue": "",
       "labelFalse": "",
-      "item": [],
       "lead": [
         {
           "type": "paragraph",
@@ -153,11 +121,6 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
-      "isExample": false,
       "body": [],
       "resource": {
         "type": "image",
@@ -165,28 +128,17 @@
           "format": "png",
           "provider": "docs.bitmark.cloud",
           "src": "https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png",
-          "width": "928",
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          "width": "928"
         }
       },
       "statements": [
         {
           "statement": "On the picture, you see a mouse.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "There is a cat on the picture.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         }
       ]
     },
@@ -202,12 +154,9 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "249542"
-      ],
+      "id": ["249542"],
       "labelTrue": "Richtig",
       "labelFalse": "Falsch",
-      "item": [],
       "lead": [
         {
           "type": "paragraph",
@@ -220,150 +169,99 @@
           "attrs": {}
         }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
-      "isExample": false,
       "body": [],
       "statements": [
         {
           "statement": "Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Die Leukozyten haben die Fächigkeit, sich aktiv fortzubewegen. Sie können fremde Zellen erkennen und diese imitieren, indem sie spezielle Substanzen freisetzen.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Zu den Schutzbarrieren des Körpers gehören u.a. der Säureschutzmantel (pH-Wert), die Melanozyten (pigmentbildend gegen UV-Strahlen) und die Hornschicht der Haut.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Lzmphozyten werden auch als spezifisches Immunsystem bezeichnet, da sie nur an spezifischen Geweben des Körpers ihre Immunabwehr verrichten.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Makrophagen werden angelockt, indem die Antikörper aus den B-Lymphozyten die Antigene auf dem eingedrungenen Erreger besetzen.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "T- und B-Lymphozyten, Granulozyten und Makrophagen sind von Geburt an zur Abwehr von Krankeitserregern im Einsatz.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Fieber zeigt an, dass das Immunsystem der Körpers aktiv ist, denn ab einer Körpertemperatur von 37°C können sich die Lymphoyzten besser vermehren und sind aktiver.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Bei einer aktiven Impfung werden abgeschwächte Krankheitserreger in den Körper gespritzt, woraufhin die T- und B-Lzmphozyten gegen die Antigene bilden.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Zu den Mikroorganismen zählen z. B. Pilze, Bakterien und Viren.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Um sich zu vermehren und den Stoffwechsel aufrechtzuerhalten, benötigen Bakterien Wärme, Feuchtigkeit, Nährszoffe und einen Wirt (z. B. den Menschen).",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Eine Mzkosen werden Kugelbakterien (Kokken) verursacht.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Medikamente, die gegen Pilze wirken, heissen Antimykotika. Medikamente gegen Viren sint Virostatika und solche gegen Bakkterien Antibiotika.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Stresshormone dienen dem Körper dazu, um in lebensbedrohlichen Situationen sofort reagieren zu können.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Bei der therapeutischen Nutzung von Kortison muss grundsätzlich bei alle Anwendungen, ob lokal oder systemisch, mit erheblichen Nebenwirkungen gerechnet werden.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Bei den sogenannten Superinfektionen handelt es sich um die jeweiligen Varianten der Influenza, die gerade in Umlauf sind und viele Menschenleben kosten können.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Sobald die klassischen Entzündungszeichen erkennbar sind, liegt immer eine Infektion mit Krankheitserregern vor.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Bei der indirekten Übertragung werden Keime beispielsweise über die Türklinke weitergegeben, bei der direkten Übertragung zum Beispiel über Tröpfchen.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Bei der vektoriellen Übertragung werden Krankheitserreger von z. B. Mücken oder Zecken auf den Menschen übertragen.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Eine nosokomiale Infektion wurde in einer Einrichtung der Gesundheitswesens (z- B- Spital, Pflegeheim, Arztpraxis) erworben.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "MRSA ist die Abkürzung für Methicillin resistenter Staphylococcus aureus.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Eine Händedesinfektion hat nach WHO immer zu erfolgen:\n\n• bei Arbeitsbeginn und -Ende\n• vor Mahlzeitzubereitung\n• vor und nach dem Engpässen\n• vor und nach Pausen\n• bei sichtbarer Verschmutzung der Hände\n• nach der Toilettenbenutzung",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Zur persönlicher Hygiene (Individualhyhiene) gehören die Haut-, die Haar-, die Nagel- und die Mundpflege.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Hygiene bezieht such nicht nur auf die persönliche Hygiene (Individualhygiene). Hygiene umfasst auch Themen wie:\n\n• Lebensmittel gyhiene\n• Wasserhygiene (Trinkwasser und Abwasser)\n• Umwelthygiene (Luft, Boden)\n• Abfallentsorgung\n• Arbeitsschutz, die\n• Sozialhygiene und Psychohygiene",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         }
       ]
     },
@@ -379,79 +277,50 @@
       "type": "true-false",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "165223"
-      ],
+      "id": ["165223"],
       "labelTrue": "richtig",
       "labelFalse": "falsch",
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
-      "isExample": false,
       "body": [],
       "statements": [
         {
           "statement": "Der Säureschutzmantel und die Lipidbarriere sind in oder auf der Epidermis zu finden.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Glycerin und Hyaluronsäure binden Feuchtigkeit in der Haut.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Zu den Funktionen der Haut gehören die Bildung einer Lichtschwiele und die Ausscheidung von Urin.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Die Haut verändert sich mit dem Alter, unter anderem verliert sie an Elastizität.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Pflegeprodukte sind dazu da, gesunde Haut für Krankheiten empfänglicher zu machen.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Wird Wasser zur Reinigung der Haut eingesetzt, so löst es vor allem Fett und hat dadurch eine austrocknende Wirkung.",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Wer seine Ernährung fettarm gestaltet oder die falschen Fette zu sich nimmt, kann unter trockener Haut und Juckreiz leiden.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Schwitzen ist ein Mechanismus, der dem Körper hilft, die Temperatur zu regulieren.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Deos beeinflussen den Geruch, Antitranispirantien reduzieren das Schwitzen.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Meditation kann dabei helfen, Stress abzubauen und damit auch weniger zu schwitzen.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         }
       ]
     },
@@ -467,9 +336,7 @@
       "type": "true-false",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "213731"
-      ],
+      "id": ["213731"],
       "labelTrue": "p",
       "labelFalse": "s",
       "item": [
@@ -484,10 +351,6 @@
           "attrs": {}
         }
       ],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -500,44 +363,31 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "statements": [
         {
           "statement": "Beobachtung",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Test",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Daten aus ausserbetrieblichen Quellen",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Daten aus innerbetrieblichen Quellen",
-          "isCorrect": false,
-          "isExample": false,
-          "example": null
+          "isCorrect": false
         },
         {
           "statement": "Telefonische Befragungen",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         },
         {
           "statement": "Panel",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
+          "isCorrect": true
         }
       ]
     },
@@ -555,12 +405,6 @@
       "bitLevel": 1,
       "labelTrue": "",
       "labelFalse": "",
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "isExample": true,
       "body": [],
       "statements": [
@@ -592,12 +436,6 @@
       "bitLevel": 1,
       "labelTrue": "",
       "labelFalse": "",
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "isExample": true,
       "body": [],
       "statements": [
@@ -629,12 +467,6 @@
       "bitLevel": 1,
       "labelTrue": "",
       "labelFalse": "",
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "isExample": true,
       "body": [],
       "statements": [

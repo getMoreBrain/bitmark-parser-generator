@@ -4,16 +4,7 @@
       "type": "workbook-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      "ageRange": ["18", "120"],
       "body": [
         {
           "type": "paragraph",

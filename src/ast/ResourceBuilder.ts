@@ -468,10 +468,11 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.image, {
-      ignoreFalse: ['zoomDisabled', 'showInIndex'],
-      ignoreEmptyArrays: ['caption'],
-      ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      // ignoreFalse: ['zoomDisabled', 'showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreUndefined: ['width', 'height'],
+      // ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['src'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -545,10 +546,11 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.imageLink, {
-      ignoreFalse: ['zoomDisabled', 'showInIndex'],
-      ignoreEmptyArrays: ['caption'],
-      ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      // ignoreFalse: ['zoomDisabled', 'showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreUndefined: ['width', 'height'],
+      // ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -596,9 +598,10 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.audio, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['src'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -646,9 +649,10 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.audioEmbed, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['src', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreEmptyString: ['src', /*'alt',*/ 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['src'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -777,10 +781,11 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.video, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['src', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreUndefined: ['width', 'height'],
+      // ignoreEmptyString: ['src', /*'alt',*/ 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['src'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -860,10 +865,11 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.videoEmbed, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreUndefined: ['width', 'height'],
+      // ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -943,10 +949,11 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.videoLink, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreUndefined: ['width', 'height'],
+      // ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1050,10 +1057,11 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.stillImageFilmEmbed, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreUndefined: ['width', 'height'],
+      // ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1133,10 +1141,11 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.stillImageFilmLink, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreUndefined: ['width', 'height'],
-      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreUndefined: ['width', 'height'],
+      // ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1178,8 +1187,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.article, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['body', 'alt', 'license', 'copyright'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreEmptyString: ['body', 'alt', 'license', 'copyright'],
+      ignoreEmptyString: ['body'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1221,9 +1231,10 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.document, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1265,9 +1276,10 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.documentEmbed, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1309,9 +1321,10 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.documentLink, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1353,9 +1366,10 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.documentDownload, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1397,9 +1411,10 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.appLink, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1442,9 +1457,10 @@ class ResourceBuilder extends BaseBuilder {
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.websiteLink, {
-      ignoreEmptyArrays: ['caption'],
-      ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      // ignoreEmptyArrays: ['caption'],
+      // ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
+      // ignoreFalse: ['showInIndex'],
+      ignoreEmptyString: ['url'],
     });
 
     // Validate and correct invalid bits as much as possible

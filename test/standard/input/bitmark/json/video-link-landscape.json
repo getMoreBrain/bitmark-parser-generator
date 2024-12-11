@@ -4,12 +4,6 @@
       "type": "video-link-landscape",
       "format": "bitmark--",
       "bitLevel": 1,
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -80,13 +74,7 @@
           "video": {
             "format": "wmv",
             "provider": "docs.bitbook.education",
-            "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
-            "width": null,
-            "height": null,
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": []
+            "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv"
           }
         }
       ]
@@ -98,15 +86,7 @@
       "type": "video-link-landscape",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      "id": ["119760"],
       "body": [],
       "resource": {
         "type": "video-link",
@@ -121,34 +101,14 @@
             {
               "format": "png",
               "provider": "www.youtube.com",
-              "src": "https://www.youtube.com/tumb_201809210816.png",
-              "width": null,
-              "height": null,
-              "alt": "",
-              "zoomDisabled": false,
-              "license": "",
-              "copyright": "",
-              "showInIndex": false,
-              "caption": []
+              "src": "https://www.youtube.com/tumb_201809210816.png"
             },
             {
               "format": "png",
               "provider": "www.youtube.com",
-              "src": "https://www.youtube.com/tumb_201809210816.png",
-              "width": null,
-              "height": null,
-              "alt": "",
-              "zoomDisabled": false,
-              "license": "",
-              "copyright": "",
-              "showInIndex": false,
-              "caption": []
+              "src": "https://www.youtube.com/tumb_201809210816.png"
             }
-          ],
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          ]
         }
       }
     },
@@ -164,12 +124,6 @@
       "type": "video-link-landscape",
       "format": "bitmark--",
       "bitLevel": 1,
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "body": [
         {
           "type": "paragraph",
@@ -200,13 +154,7 @@
         "videoLink": {
           "format": "wmv",
           "provider": "docs.bitbook.education",
-          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
-          "width": null,
-          "height": null,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv"
         }
       }
     },

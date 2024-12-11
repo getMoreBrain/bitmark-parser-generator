@@ -17,10 +17,6 @@
           "attrs": {}
         }
       ],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -63,11 +59,6 @@
           "attrs": {}
         }
       ],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "body": null
     },
     "parser": {
@@ -112,10 +103,6 @@
           "attrs": {}
         }
       ],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -176,10 +163,6 @@
           "attrs": {}
         }
       ],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
@@ -222,10 +205,6 @@
           "attrs": {}
         }
       ],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
       "instruction": [
         {
           "type": "paragraph",
