@@ -4,9 +4,7 @@
       "type": "highlight-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285686"
-      ],
+      "id": ["285686"],
       "item": [
         {
           "type": "paragraph",
@@ -46,37 +44,39 @@
             },
             {
               "type": "highlight",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "texts": [
-                {
-                  "text": "mall",
-                  "isCorrect": true,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "sea",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "texts": [
+                  {
+                    "text": "mall",
+                    "isCorrect": true,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "sea",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " and ate ",
@@ -84,48 +84,50 @@
             },
             {
               "type": "highlight",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "texts": [
-                {
-                  "text": "breakfast",
-                  "isCorrect": true,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "fish",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "trees",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "texts": [
+                  {
+                    "text": "breakfast",
+                    "isCorrect": true,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "fish",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "trees",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": ".",
@@ -148,9 +150,7 @@
       "type": "highlight-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285687"
-      ],
+      "id": ["285687"],
       "item": [
         {
           "type": "paragraph",
@@ -190,37 +190,39 @@
             },
             {
               "type": "highlight",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "texts": [
-                {
-                  "text": "mall",
-                  "isCorrect": true,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "sea",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "texts": [
+                  {
+                    "text": "mall",
+                    "isCorrect": true,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  },
+                  {
+                    "text": "sea",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " and ate ",
@@ -228,48 +230,50 @@
             },
             {
               "type": "highlight",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "texts": [
-                {
-                  "text": "breakfast",
-                  "isCorrect": true,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "fish",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "trees",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "texts": [
+                  {
+                    "text": "breakfast",
+                    "isCorrect": true,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  },
+                  {
+                    "text": "fish",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "trees",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": ".",
@@ -292,9 +296,7 @@
       "type": "highlight-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285688"
-      ],
+      "id": ["285688"],
       "item": [
         {
           "type": "paragraph",
@@ -334,37 +336,39 @@
             },
             {
               "type": "highlight",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "texts": [
-                {
-                  "text": "mall",
-                  "isCorrect": true,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "sea",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "texts": [
+                  {
+                    "text": "mall",
+                    "isCorrect": true,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "sea",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " and ate ",
@@ -372,48 +376,50 @@
             },
             {
               "type": "highlight",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "texts": [
-                {
-                  "text": "breakfast",
-                  "isCorrect": true,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "fish",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": false
-                },
-                {
-                  "text": "trees",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "texts": [
+                  {
+                    "text": "breakfast",
+                    "isCorrect": true,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "fish",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": false
+                  },
+                  {
+                    "text": "trees",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": ".",
@@ -436,9 +442,7 @@
       "type": "highlight-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285689"
-      ],
+      "id": ["285689"],
       "item": [
         {
           "type": "paragraph",
@@ -478,37 +482,39 @@
             },
             {
               "type": "highlight",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "texts": [
-                {
-                  "text": "mall",
-                  "isCorrect": true,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "sea",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "texts": [
+                  {
+                    "text": "mall",
+                    "isCorrect": true,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "sea",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " and ate ",
@@ -516,48 +522,50 @@
             },
             {
               "type": "highlight",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "texts": [
-                {
-                  "text": "breakfast",
-                  "isCorrect": true,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "fish",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "trees",
-                  "isCorrect": false,
-                  "isHighlighted": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "texts": [
+                  {
+                    "text": "breakfast",
+                    "isCorrect": true,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  },
+                  {
+                    "text": "fish",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "trees",
+                    "isCorrect": false,
+                    "isHighlighted": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": ".",

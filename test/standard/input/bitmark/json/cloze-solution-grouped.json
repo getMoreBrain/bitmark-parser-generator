@@ -65,14 +65,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Infektionsquelle"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Infektionsquelle"]
+              }
             },
             {
               "type": "hardBreak"
@@ -83,14 +85,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Austrittspforte"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Austrittspforte"]
+              }
             },
             {
               "type": "hardBreak"
@@ -101,14 +105,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Übertragungswege direkt oder indirekt"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Übertragungswege direkt oder indirekt"]
+              }
             },
             {
               "type": "hardBreak"
@@ -119,14 +125,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Eintrittspforte"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Eintrittspforte"]
+              }
             },
             {
               "type": "hardBreak"
@@ -137,14 +145,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["neue Infektionsquelle"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["neue Infektionsquelle"]
+              }
             }
           ],
           "attrs": {}
@@ -195,25 +205,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "erfreut",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["erfreut"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "erfreut",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["erfreut"]
+              }
             },
             {
               "text": " sich nicht nur in Deutschland besonderer Beliebtheit, er ",
@@ -221,14 +233,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["steht"]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["steht"]
+              }
             },
             {
               "text": " auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...",
@@ -296,25 +310,27 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "82",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Erinnerung"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "82",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Erinnerung"]
+              }
             },
             {
               "text": " war Leipzig, meine Heimatstadt, ein düsterer, grauer Ort. Es ",
@@ -322,25 +338,27 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "83",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["gab"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "83",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["gab"]
+              }
             },
             {
               "text": " dort sehr viel Industrie. Die Luft und der Fluss waren zu jeder ",
@@ -348,25 +366,27 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "84",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Jahreszeit"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "84",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Jahreszeit"]
+              }
             },
             {
               "text": " schmutzig. Meine Mutter ",
@@ -374,25 +394,27 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "85",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["musste"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "85",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["musste"]
+              }
             },
             {
               "text": " fast täglich den ",
@@ -400,25 +422,27 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "86",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Balkon"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "86",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Balkon"]
+              }
             },
             {
               "text": " und die Fenster putzen. Auch der ",
@@ -426,25 +450,27 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "87",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["Regen"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "87",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["Regen"]
+              }
             },
             {
               "text": " war schmutzig, also waren die Häuser grau, und viele waren noch kaputt vom Krieg.",
@@ -459,25 +485,27 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "88",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["trotzdem"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "88",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["trotzdem"]
+              }
             },
             {
               "text": " fühlte ich mich dort wohl, auch noch, wenn ich sie später besuchte. Heute ",
@@ -485,25 +513,27 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "89",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["fällt"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "89",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["fällt"]
+              }
             },
             {
               "text": " es mir schwer, mir vorzustellen, wie man in einer solchen Enge überhaupt Kinder grossziehen ",
@@ -511,25 +541,27 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "90",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": ["konnte"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "90",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["konnte"]
+              }
             },
             {
               "text": ".",
@@ -597,36 +629,38 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "82",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "Erinnerung",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["Erinnerung"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "82",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Erinnerung",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["Erinnerung"]
+              }
             },
             {
               "text": " war Leipzig, meine Heimatstadt, ein düsterer, grauer Ort. Es ",
@@ -634,36 +668,38 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "83",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "gab",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["gab"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "83",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "gab",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["gab"]
+              }
             },
             {
               "text": " dort sehr viel Industrie. Die Luft und der Fluss waren zu jeder ",
@@ -671,36 +707,38 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "84",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "Jahreszeit",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["Jahreszeit"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "84",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Jahreszeit",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["Jahreszeit"]
+              }
             },
             {
               "text": " schmutzig. Meine Mutter ",
@@ -708,36 +746,38 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "85",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "musste",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["musste"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "85",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "musste",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["musste"]
+              }
             },
             {
               "text": " fast täglich den ",
@@ -745,36 +785,38 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "86",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "Balkon",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["Balkon"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "86",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Balkon",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["Balkon"]
+              }
             },
             {
               "text": " und die Fenster putzen. Auch der ",
@@ -782,36 +824,38 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "87",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "Regen",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["Regen"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "87",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Regen",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["Regen"]
+              }
             },
             {
               "text": " war schmutzig, also waren die Häuser grau, und viele waren noch kaputt vom Krieg.",
@@ -826,36 +870,38 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "88",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "trotzdem",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["trotzdem"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "88",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "trotzdem",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["trotzdem"]
+              }
             },
             {
               "text": " fühlte ich mich dort wohl, auch noch, wenn ich sie später besuchte. Heute ",
@@ -863,36 +909,38 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "89",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "fällt",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["fällt"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "89",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "fällt",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["fällt"]
+              }
             },
             {
               "text": " es mir schwer, mir vorzustellen, wie man in einer solchen Enge überhaupt Kinder grossziehen ",
@@ -900,36 +948,38 @@
             },
             {
               "type": "gap",
-              "item": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "90",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "konnte",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": ["konnte"]
+              "attrs": {
+                "item": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "90",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "konnte",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["konnte"]
+              }
             },
             {
               "text": ".",

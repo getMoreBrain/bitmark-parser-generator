@@ -4,9 +4,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287839"
-      ],
+      "id": ["287839"],
       "item": [],
       "lead": [
         {
@@ -35,45 +33,47 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "d",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "t",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "s",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": false
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "options": [
+                  {
+                    "text": "d",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "t",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "s",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": false
+                  }
+                ]
+              }
             },
             {
               "text": " the ",
@@ -81,45 +81,47 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "cloze",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "cloth",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "close",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "cloze",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "cloth",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "close",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " with the correct verb forms.",
@@ -142,9 +144,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "213773"
-      ],
+      "id": ["213773"],
       "item": [
         {
           "type": "paragraph",
@@ -180,55 +180,57 @@
           "content": [
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Zahlungsbereitschaft Kunde",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Konkurrenz",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Kapazität",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Kosten",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Zahlungsbereitschaft Kunde",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Konkurrenz",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Kapazität",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Kosten",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Wir sollten günstiger sein als Polyconsult, sonst kriegen sie diesen Auftrag auch noch und können weiter Mitarbeitende einstellen, die uns dann fehlen.",
@@ -242,55 +244,57 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Zahlungsbereitschaft Kunde",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Konkurrenz",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Kapazität",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Kosten",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Zahlungsbereitschaft Kunde",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Konkurrenz",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Kapazität",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Kosten",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Wenn wir das Projekt im Januar machen können, können wir 10% Rabatt geben. Im Januar ist wenig los. Sonst offerieren wir den normalen Preis.",
@@ -304,55 +308,57 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Zahlungsbereitschaft Kunde",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Konkurrenz",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Kapazität",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Kosten",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Zahlungsbereitschaft Kunde",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Konkurrenz",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Kapazität",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Kosten",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Ich glaube, wir sollten dieses Projekt wirklich tief offerieren, weil sie kaum Budget haben. Wenn wir dieses Projekt sauber durchführen, können wir bet Folgeprojekten, wenn der Kredit gesprochen ist, die verlorene Marge wieder gutmachen.",
@@ -366,55 +372,57 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Zahlungsbereitschaft Kunde",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Konkurrenz",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Kapazität",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Kosten",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Zahlungsbereitschaft Kunde",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Konkurrenz",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Kapazität",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Kosten",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Für den Marktforschungsteil müssen wir höhere Ansätze verlangen, weil wir den extern einkaufen müssen.",
@@ -437,9 +445,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "213840"
-      ],
+      "id": ["213840"],
       "item": [
         {
           "type": "paragraph",
@@ -475,45 +481,47 @@
           "content": [
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Leistungsziel",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Finanzziel",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Soziales Ziel",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Leistungsziel",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Finanzziel",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Soziales Ziel",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Bis 20xx zählen wir im Produktbereich XY mindestens 120 000 Kunden bei einem Umsatz von mindestens CHF 4 Mio",
@@ -524,45 +532,47 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Leistungsziel",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Finanzziel",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Soziales Ziel",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Leistungsziel",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Finanzziel",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Soziales Ziel",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Aus unserem erzielten Reingewinn (vor Steuern) fliessen jährlich maximal 3% In die regionale und die überregionale Jugendsportförderung.",
@@ -573,45 +583,47 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Leistungsziel",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Finanzziel",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Soziales Ziel",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Leistungsziel",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Finanzziel",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Soziales Ziel",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Mittels des Führungsmodells MbO (Management by Objectives) beteiligen wir unsere Mitarbeitenden finanziell am persönlichen Leistungserfolg.",
@@ -622,45 +634,47 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Leistungsziel",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Finanzziel",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Soziales Ziel",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Leistungsziel",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Finanzziel",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Soziales Ziel",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Sämtliche Investitionsvorhaben, die die Erweiterung unserer Fertigungskapazitäten betreffen, müssen zu mindestens 75% eigenfinanziert sein.",
@@ -683,9 +697,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "208481"
-      ],
+      "id": ["208481"],
       "item": [
         {
           "type": "paragraph",
@@ -725,35 +737,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Beschaffungsmarkt",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Absatzmarkt",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Beschaffungsmarkt",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Absatzmarkt",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "type": "hardBreak"
@@ -764,35 +778,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Beschaffungsmarkt",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Absatzmarkt",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Beschaffungsmarkt",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Absatzmarkt",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "type": "hardBreak"
@@ -803,35 +819,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Beschaffungsmarkt",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Absatzmarkt",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Beschaffungsmarkt",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Absatzmarkt",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "type": "hardBreak"
@@ -842,35 +860,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Beschaffungsmarkt",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Absatzmarkt",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Beschaffungsmarkt",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Absatzmarkt",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "type": "hardBreak"
@@ -881,35 +901,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "Beschaffungsmarkt",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "Absatzmarkt",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "Beschaffungsmarkt",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "Absatzmarkt",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             }
           ],
           "attrs": {}
@@ -928,9 +950,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "107949"
-      ],
+      "id": ["107949"],
       "item": [
         {
           "type": "paragraph",
@@ -984,35 +1004,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "dürfen",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "müssen",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "dürfen",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "müssen",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Sie nicht parken.",
@@ -1027,35 +1049,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "können",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "müssen",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "können",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "müssen",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Sie über die Straße gehen.",
@@ -1070,35 +1094,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "dürfen",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "müssen",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "dürfen",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "müssen",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " Sie warten.",
@@ -1154,45 +1180,47 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "cloze",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "cloth",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "close",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "options": [
+                  {
+                    "text": "cloze",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  },
+                  {
+                    "text": "cloth",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "close",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " with the correct verb forms.",
@@ -1232,45 +1260,47 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "cloze",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "cloth",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "close",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "options": [
+                  {
+                    "text": "cloze",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  },
+                  {
+                    "text": "cloth",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "close",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " with the correct verb forms.",
@@ -1310,45 +1340,47 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "cloze",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "cloth",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": false
-                },
-                {
-                  "text": "close",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "options": [
+                  {
+                    "text": "cloze",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "cloth",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": false
+                  },
+                  {
+                    "text": "close",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " with the correct verb forms.",

@@ -1,8 +1,10 @@
+import structuredClone from '@ungap/structured-clone';
+
 import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
 import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { Bit, BitmarkAst, Body, ExtraProperties, CardNode, CardBit, Footer } from '../model/ast/Nodes';
-import { JsonText, TextAst } from '../model/ast/TextNodes';
+import { JsonText, TextAst, TextNode } from '../model/ast/TextNodes';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
@@ -505,7 +507,7 @@ class Builder extends BaseBuilder {
     };
 
     // Push reasonableNumOfChars down the tree for the interview bit
-    if (Config.isOfBitType(data.bitType, BitType.interview)) {
+    if (Config.isOfBitType(node.bitType, BitType.interview)) {
       this.pushDownTree(
         undefined,
         undefined,
@@ -518,10 +520,10 @@ class Builder extends BaseBuilder {
 
     // Push isCaseSensitive down the tree for the cloze, match and match-matrix bits
     this.pushDownTree(
-      [data.body, ...(cardNode?.cardBits?.map((cardBit) => cardBit.body) ?? [])],
+      [node.body, ...(cardNode?.cardBits?.map((cardBit) => cardBit.body) ?? [])],
       [BodyBitType.gap],
       undefined,
-      'isCaseSensitive',
+      undefined, //'isCaseSensitive',
       PropertyConfigKey.isCaseSensitive,
       data.isCaseSensitive ?? true,
     );
@@ -544,7 +546,7 @@ class Builder extends BaseBuilder {
     );
 
     // If __isDefaultExample is set at the bit level, push the default example down the tree to the relevant nodes
-    this.pushExampleDownTree(data.body, cardNode, data.__isDefaultExample, convertedExample.example);
+    this.pushExampleDownTree(node.body, cardNode, node.__isDefaultExample, convertedExample.example);
 
     // Set default values
     this.setDefaultBitValues(node);
@@ -1201,7 +1203,7 @@ class Builder extends BaseBuilder {
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               const index = (bodyPart as any).index as number;
               if (newPlaceholderNodes[index] != null) {
-                bodyText[i] = newPlaceholderNodes[index];
+                bodyText[i] = newPlaceholderNodes[index] as TextNode;
               }
             } else {
               if (bodyPart.content) replaceBitsRecursive(bodyPart.content);
@@ -1214,6 +1216,8 @@ class Builder extends BaseBuilder {
       }
 
       // Process the body bits to ensure they are valid
+      // Walking the body bits will change them, so we should make a copy before processing
+      rawBody = structuredClone(rawBody);
       this.textParser.walkBodyBits(rawBody, (parent, index, bodyBit) => {
         // Ensure the body bit is valid
         let parsedBit: BodyBitJson | undefined;
@@ -1234,7 +1238,7 @@ class Builder extends BaseBuilder {
           // TODO?? Ensure other parts are valid
         }
         if (parsedBit != undefined) {
-          parent[index] = parsedBit;
+          parent[index] = parsedBit as TextNode;
           bodyBits.push(parsedBit);
         }
       });
@@ -1301,6 +1305,9 @@ class Builder extends BaseBuilder {
     const defaultExample =
       Array.isArray(data.__solutionsAst) && data.__solutionsAst.length > 0 ? data.__solutionsAst[0] : null;
 
+    // Copy any attributes from 'attrs' to the body bit (data is in 'attrs' when coming from JSON)
+    data = this.bodyBitCopyFromAttrs(data);
+
     // NOTE: Node order is important and is defined here
     const node: GapJson = {
       type: BodyBitType.gap,
@@ -1312,6 +1319,8 @@ class Builder extends BaseBuilder {
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __solutionsAst: data.__solutionsAst,
+
+      attrs: {},
     };
 
     // Remove Unset Optionals
@@ -1369,6 +1378,9 @@ class Builder extends BaseBuilder {
   protected buildMark(data: Partial<MarkJson> | undefined): MarkJson | undefined {
     if (!data) return undefined;
 
+    // Copy any attributes from 'attrs' to the body bit (data is in 'attrs' when coming from JSON)
+    data = this.bodyBitCopyFromAttrs(data);
+
     // NOTE: Node order is important and is defined here
     const node: MarkJson = {
       type: BodyBitType.mark,
@@ -1379,6 +1391,8 @@ class Builder extends BaseBuilder {
       hint: this.handleJsonText(data.hint),
       instruction: this.handleJsonText(data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
+
+      attrs: {},
     };
 
     // Remove Unset Optionals
@@ -1401,6 +1415,9 @@ class Builder extends BaseBuilder {
   protected buildSelect(data: Partial<SelectJson> | undefined): SelectJson | undefined {
     if (!data) return undefined;
 
+    // Copy any attributes from 'attrs' to the body bit (data is in 'attrs' when coming from JSON)
+    data = this.bodyBitCopyFromAttrs(data);
+
     // NOTE: Node order is important and is defined here
     const node: SelectJson = {
       type: BodyBitType.select,
@@ -1414,6 +1431,8 @@ class Builder extends BaseBuilder {
       ...this.toExample(false, undefined, undefined), // Will be set in later
       __hintString: data.__hintString,
       __instructionString: data.__instructionString,
+
+      attrs: {},
     };
 
     // Remove Unset Optionals
@@ -1477,6 +1496,9 @@ class Builder extends BaseBuilder {
   buildHighlight(data: Partial<HighlightJson> | undefined): HighlightJson | undefined {
     if (!data) return undefined;
 
+    // Copy any attributes from 'attrs' to the body bit (data is in 'attrs' when coming from JSON)
+    data = this.bodyBitCopyFromAttrs(data);
+
     // NOTE: Node order is important and is defined here
     const node: HighlightJson = {
       type: BodyBitType.highlight,
@@ -1488,6 +1510,8 @@ class Builder extends BaseBuilder {
       hint: this.handleJsonText(data.hint),
       instruction: this.handleJsonText(data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
+
+      attrs: {},
     };
 
     // Remove Unset Optionals
@@ -1976,6 +2000,27 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Copy any attributes from 'attrs' property to the root node (necessary when the input if from JSON)
+   * The values in 'attrs' will overwrite any existing values in the node
+   *
+   * The original object is not modified, a new object is returned
+   *
+   * @param data
+   */
+  private bodyBitCopyFromAttrs<T extends Partial<BodyBitJson>>(data: T): T {
+    const copy = { ...data };
+    // Copy any attributes from 'attrs' to the node (necessary when the input if from JSON)
+    if (data.attrs) {
+      for (const [key, value] of Object.entries(data.attrs)) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (copy as any)[key] = value;
+      }
+    }
+
+    return copy;
+  }
+
+  /**
    * Set examples down the tree
    *
    * @param body
@@ -2165,7 +2210,7 @@ class Builder extends BaseBuilder {
           if (bodyBitTypes && bodyBitsJson && bodyBitsJson.length > 0) {
             for (const part of bodyBitsJson) {
               if (part) {
-                if (bodyBitTypes.indexOf(part.type) !== -1) {
+                if (bodyBitTypes.indexOf(part.type as BodyBitTypeType) !== -1) {
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   const data = part as any;
                   if (data[path] == null) {

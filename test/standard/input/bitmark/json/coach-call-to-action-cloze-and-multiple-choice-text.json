@@ -4,9 +4,7 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287842"
-      ],
+      "id": ["287842"],
       "item": [],
       "lead": [
         {
@@ -35,16 +33,16 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null,
-              "solutions": [
-                "cloze"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null,
+                "solutions": ["cloze"]
+              }
             },
             {
               "text": " with the correct verb ",
@@ -52,35 +50,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "forms",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "formats",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "forms",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "formats",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "type": "hardBreak"
@@ -90,35 +90,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "other",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "options",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " is on another line and may cause issues with bit chaining.",
@@ -136,35 +138,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "other",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "options",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " correctly",
@@ -182,25 +186,27 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "other",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " ",
@@ -208,25 +214,27 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "options",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " incorrectly",
@@ -249,9 +257,7 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287843"
-      ],
+      "id": ["287843"],
       "item": [],
       "lead": [
         {
@@ -280,27 +286,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "cloze",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": [
-                "cloze"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "cloze",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["cloze"]
+              }
             },
             {
               "text": " with the correct verb ",
@@ -308,35 +314,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "forms",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "formats",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "options": [
+                  {
+                    "text": "forms",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  },
+                  {
+                    "text": "formats",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "type": "hardBreak"
@@ -346,35 +354,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "options": [
+                  {
+                    "text": "other",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  },
+                  {
+                    "text": "options",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " is on another line and may cause issues with bit chaining.",
@@ -392,35 +402,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "options": [
+                  {
+                    "text": "other",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  },
+                  {
+                    "text": "options",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " correctly",
@@ -438,25 +450,27 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "options": [
+                  {
+                    "text": "other",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  }
+                ]
+              }
             },
             {
               "text": " ",
@@ -464,25 +478,27 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "options",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " incorrectly",
@@ -505,9 +521,7 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287844"
-      ],
+      "id": ["287844"],
       "item": [],
       "lead": [
         {
@@ -536,28 +550,27 @@
             },
             {
               "type": "gap",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": true,
-              "example": [
-                {
-                  "type": "paragraph",
-                  "content": [
-                    {
-                      "text": "gap",
-                      "type": "text"
-                    }
-                  ],
-                  "attrs": {}
-                }
-              ],
-              "solutions": [
-                "cloze",
-                "gap"
-              ]
+              "attrs": {
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": true,
+                "example": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "gap",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "solutions": ["cloze", "gap"]
+              }
             },
             {
               "text": " with the correct verb ",
@@ -565,35 +578,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "forms",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "formats",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "forms",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "formats",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "type": "hardBreak"
@@ -603,35 +618,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                },
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "other",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  },
+                  {
+                    "text": "options",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " is on another line and may cause issues with bit chaining.",
@@ -649,35 +666,37 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": true,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": true,
-                  "example": true
-                },
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true,
+                "options": [
+                  {
+                    "text": "other",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": true,
+                    "example": true
+                  },
+                  {
+                    "text": "options",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " correctly",
@@ -695,25 +714,27 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "other",
-                  "isCorrect": true,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "other",
+                    "isCorrect": true,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " ",
@@ -721,25 +742,27 @@
             },
             {
               "type": "select",
-              "prefix": "",
-              "postfix": "",
-              "item": [],
-              "lead": [],
-              "hint": [],
-              "instruction": [],
-              "isExample": false,
-              "options": [
-                {
-                  "text": "options",
-                  "isCorrect": false,
-                  "item": [],
-                  "lead": [],
-                  "hint": [],
-                  "instruction": [],
-                  "isExample": false,
-                  "example": null
-                }
-              ]
+              "attrs": {
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false,
+                "options": [
+                  {
+                    "text": "options",
+                    "isCorrect": false,
+                    "item": [],
+                    "lead": [],
+                    "hint": [],
+                    "instruction": [],
+                    "isExample": false,
+                    "example": null
+                  }
+                ]
+              }
             },
             {
               "text": " incorrectly",
