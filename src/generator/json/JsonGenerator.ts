@@ -1,3 +1,5 @@
+import structuredClone from '@ungap/structured-clone';
+
 import { Ast, NodeInfo } from '../../ast/Ast';
 import { Writer } from '../../ast/writer/Writer';
 import { Breakscape } from '../../breakscaping/Breakscape';
@@ -10,6 +12,7 @@ import { Body, CardBit } from '../../model/ast/Nodes';
 import { JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
+import { BodyBitType, BodyBitTypeType } from '../../model/enum/BodyBitType';
 import { ExampleType } from '../../model/enum/ExampleType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
@@ -33,6 +36,8 @@ import {
   MarkConfigJson,
   StatementJson,
 } from '../../model/json/BitJson';
+
+const MOVE_BODY_RECURSION_LIMIT = 5000;
 
 const DEFAULT_OPTIONS: JsonOptions = {
   // debugGenerationInline: true,
@@ -592,14 +597,19 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Body is at the bit level
       this.bitJson.body = this.bodyJson;
 
+      const bodyIsBitmarkText = isBitmarkText && this.isBitmarkText(this.bodyJson);
+
       // Convert the body to plain text if required
-      if (this.options.textAsPlainText && isBitmarkText && this.isBitmarkText(this.bodyJson)) {
+      if (this.options.textAsPlainText && bodyIsBitmarkText) {
         const textBody = this.textGenerator.generateSync(this.bodyJson as TextAst, textFormat);
         this.bitJson.body = (
           Breakscape.unbreakscape(textBody, {
             textFormat: TextFormat.bitmarkMinusMinus,
           }) || ''
         ).trim();
+      } else if (bodyIsBitmarkText) {
+        // If the body is bitmark text, convert the body bits to move their attributes to the attrs property
+        this.bitJson.body = this.moveBodyBitPropertiesToAttrs(this.bodyJson as TextAst);
       }
     } else if (parent.key === NodeType.cardBitsValue) {
       // Body is at the list item (card bit) level
@@ -619,6 +629,47 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.bitJson.placeholders[placeholder] = bodyBit;
 
     return placeholder;
+  }
+
+  /**
+   * Move all properties of body bits to the attrs property.
+   * This function is called recursively to process all body bits in the body tree.
+   *
+   * NOTE: Internally, the body bit is stored as it appears in bitmark v2, but in v3 all the properties
+   * should be in the `attrs` property. The properies are only moved to 'attrs' for the JSON output
+   *
+   * The original body bit is not modified.
+   * The function returns a new body bit with the properties moved.
+   *
+   * @param nodes the body to process, or the subtree to process
+   * @param recursion leave as default, used for recursion only
+   * @returns
+   */
+  protected moveBodyBitPropertiesToAttrs(nodes: TextAst, recursion: number = 0): TextAst {
+    if (recursion === 0) {
+      nodes = structuredClone(nodes);
+    } else if (recursion > MOVE_BODY_RECURSION_LIMIT) {
+      throw new Error('Recursion limit exceeded');
+    }
+    for (const node of nodes) {
+      if (node.type !== BodyBitType.text && BodyBitType.values().includes(node.type as BodyBitTypeType)) {
+        const bodyBit = node as unknown as BodyBitJson;
+        bodyBit.attrs = {} as Record<string, unknown>;
+
+        // Move all properties except type to the attrs property
+        for (const [key, value] of Object.entries(bodyBit)) {
+          if (key === 'type' || key === 'attrs') continue;
+          bodyBit.attrs[key] = value;
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          delete (bodyBit as any)[key];
+        }
+      } else if (Array.isArray(node.content)) {
+        recursion++;
+        this.moveBodyBitPropertiesToAttrs(node.content as TextAst, recursion);
+      }
+    }
+
+    return nodes;
   }
 
   // bitmarkAst -> bits -> bitsValue -> footer

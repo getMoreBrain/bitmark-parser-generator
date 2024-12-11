@@ -71,6 +71,70 @@ class ObjectUtils {
   }
 
   /**
+   * Get the value of a property in a plain JS object
+   * using a path string or array.
+   *
+   * @param obj the object to get a property from
+   * @param path the path to the property to set as a dotted string or array or a mix of both
+   * @returns the value of the property, or undefined if the property does not exist
+   */
+  getViaPath(obj: unknown, path: string | string[]): unknown {
+    if (!obj) return undefined;
+    if (!path) return undefined;
+    if (!Array.isArray(path)) path = [path]; // Ensure path is an array
+
+    // Split dotted paths
+    path = path.flatMap((p) => p.split('.'));
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let node = obj as any;
+
+    for (const key of path) {
+      if (node == null) return undefined;
+      node = node[key];
+    }
+
+    return node;
+  }
+
+  /**
+   * Set the value of a property in a plain JS object
+   * using a path string or array.
+   *
+   * @param obj the object to modify
+   * @param path the path to the property to set as a dotted string or array or a mix of both
+   * @param value the value to set
+   * @param create - if true, create plain objects in the path if they do not exist
+   * @returns true if the value was set, false if the value was not set
+   */
+  setViaPath(obj: unknown, path: string | string[], value: unknown, create?: boolean): boolean {
+    if (!obj) return false;
+    if (!path) return false;
+    if (!Array.isArray(path)) path = [path]; // Ensure path is an array
+
+    // Split dotted paths
+    path = path.flatMap((p) => p.split('.'));
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let node = obj as any;
+
+    for (let i = 0; i < path.length - 1; i++) {
+      const key = path[i];
+      if (node[key] == undefined) {
+        if (create) {
+          node[key] = {};
+        } else {
+          return false;
+        }
+      }
+      node = node[key];
+    }
+
+    node[path[path.length - 1]] = value;
+    return true;
+  }
+
+  /**
    * Return an array of the objects at the end of the paths
    * specified in the path array.
    *
