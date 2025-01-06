@@ -483,8 +483,6 @@ class Builder extends BaseBuilder {
 
       // Person
 
-      // Body
-      body: this.buildBody(textFormat, data.body),
       imagePlaceholder: ArrayUtils.asSingle(
         this.resourceBuilder.resourceFromResourceDataJson(
           data.bitType,
@@ -493,14 +491,17 @@ class Builder extends BaseBuilder {
         ),
       ) as ImageResourceWrapperJson,
       resources: ArrayUtils.asArray(this.resourceBuilder.resourceFromResourceJson(data.bitType, data.resources)),
+
+      // Body, Card, Footer, must be after all other properties except the extraProperties and markup / parser
+      body: this.buildBody(textFormat, data.body),
       cardNode,
       footer: this.buildFooter(data.footer),
 
+      // Must be after other properties/tags in the AST so key clashes are avoided correctly
+      extraProperties: this.parseExtraProperties(data.extraProperties),
+
       markup: data.markup,
       parser: data.parser,
-
-      // Must always be last in the AST so key clashes are avoided correctly with other properties
-      extraProperties: this.parseExtraProperties(data.extraProperties),
 
       // Private properties
       __isDefaultExample: data.__isDefaultExample ?? false,
