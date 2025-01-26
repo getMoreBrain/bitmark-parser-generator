@@ -85,6 +85,18 @@ This is an article example with the target, tag, reductionTag, colorTag, icon, i
 
 ...this is an extension of the body
 
+[.article:bitmark++]
+
+This is an article with inline latex
+
+Inline ==\\left( x | y \\right)==|latex| text
+Inline == \\left( x | y \\right) ==|latex| text
+
+==
+\\left( x | y \\right)
+==|latex|
+
+Latex blocks are now separate bits!
 
 
 

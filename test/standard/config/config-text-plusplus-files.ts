@@ -28,8 +28,8 @@ let TEST_FILES: string[] = [
   // 'duration.text',
   // 'color.text',
   // 'inline.text',
-  // 'bad-unterminated-image.text',
   // 'latex.text',
+  // 'bad-unterminated-image.text',
 ];
 
 // ALL tests for CI
@@ -56,8 +56,8 @@ if (TEST_ALL) {
     'ref.text',
     'xref.text',
     'footnote.text',
+    'latex.text',
     'bad-unterminated-image.text',
-    // 'latex.text',
   ];
 }
 

@@ -1,7 +1,8 @@
-Inline 𝑓𝑓 LaTeX 𝑓𝑓 text
+Inline ==\\left( x | y \\right)==|latex| text
+Inline == \\left( x | y \\right) ==|latex| text
 
-|𝑓
-LaTeX block
-|
+==
+\\left( x | y \\right)
+==|latex|
 
-Not sure what the format should be!
+Latex blocks are now separate bits!
