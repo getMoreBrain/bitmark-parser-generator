@@ -22,7 +22,7 @@
 [@levelILR:levelILR]
 [@levelACTFL:levelACTFL]
 [@maxTocChapterLevel:5]
-
+[@processHandIn]
 
 
 [.article:bitmark++]
@@ -264,7 +264,6 @@ Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht
 
 [.book-dedication]
 [@id:51865]
-[@processHandIn]
 [%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]
 Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.
 
@@ -343,7 +342,6 @@ Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht
 
 [.book-summary]
 [@id:51889]
-[@processHandIn:true]
 [%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]
 Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.
 [.book-teaser]
