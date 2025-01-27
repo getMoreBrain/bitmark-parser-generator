@@ -23,7 +23,7 @@
       "author": ["Philippe Pointet"],
       "kind": "learning-path",
       "hasMarkAsDone": true,
-      "processHandIn": false,
+      "processHandIn": true,
       "duration": "PT2H",
       "maxTocChapterLevel": 5,
       "title": [
@@ -1724,10 +1724,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51877"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -1771,10 +1767,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51876"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -1818,10 +1810,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51873"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -1865,10 +1853,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51875"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -1911,12 +1895,8 @@
       "type": "book-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "isPublic": false,
       "ageRange": ["18", "120"],
       "language": ["en", "jp", "cn"],
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1949,10 +1929,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51885"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -1996,10 +1972,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51879"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2043,10 +2015,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51887"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2090,10 +2058,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51872"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2137,10 +2101,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51883"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2184,10 +2144,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51861"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2231,10 +2187,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51865"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": true,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2278,10 +2230,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51881"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2325,10 +2273,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51890"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2372,10 +2316,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51869"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2419,10 +2359,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51866"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2466,10 +2402,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51862"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2513,10 +2445,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51862"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2560,10 +2488,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51871"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2607,10 +2531,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51870"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2654,10 +2574,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51878"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2701,10 +2617,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51882"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2748,10 +2660,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51874"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2795,10 +2703,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["5186"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2842,10 +2746,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51868"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2889,10 +2789,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51888"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2936,10 +2832,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51880"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -2983,10 +2875,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51886"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -3030,10 +2918,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51889"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": true,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -3077,10 +2961,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51884"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
@@ -3124,10 +3004,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["51863"],
-      "isPublic": false,
-      "hasMarkAsDone": false,
-      "processHandIn": false,
-      "maxTocChapterLevel": -1,
       "item": [],
       "lead": [
         {
