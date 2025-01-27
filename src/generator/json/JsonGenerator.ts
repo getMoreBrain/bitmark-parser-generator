@@ -22,7 +22,6 @@ import { BodyBitJson } from '../../model/json/BodyBitJson';
 import { ImageResourceWrapperJson, ResourceJson, ResourceWrapperJson } from '../../model/json/ResourceJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
 import { TextParser } from '../../parser/text/TextParser';
-import { ArrayUtils } from '../../utils/ArrayUtils';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { NumberUtils } from '../../utils/NumberUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
@@ -334,7 +333,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       } else {
         // String example
-        defaultExample = (ArrayUtils.asSingle(bit.sampleSolution) as string) ?? '';
+        // Don't use sampleSolution as the default example for conversation bits
+        // See: https://github.com/getMoreBrain/cosmic/issues/7293
+        // defaultExample = (ArrayUtils.asSingle(bit.sampleSolution) as string) ?? '';
+        defaultExample = 'true';
       }
 
       const exampleRes = this.toExample(bit as ExampleNode, {
@@ -1004,6 +1006,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (typeof (this as any)[funcName] === 'function') {
         continue;
       }
+
+      // Skip 'example' property as it is non-standard and handled elsewhere
+      if (astKey === 'example') continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, route: NodeInfo[]) => {
