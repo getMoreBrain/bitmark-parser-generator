@@ -19,6 +19,7 @@ import {
   FootnoteMark,
   HeadingTextNode,
   ImageTextNode,
+  LatexTextNode,
   LinkMark,
   ListTextNode,
   RefMark,
@@ -310,6 +311,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       case TextNodeType.codeBlock:
         this.inCodeBlock = true;
         this.writeCodeBlock(node as CodeBlockTextNode);
+        break;
+
+      case TextNodeType.latex:
+        this.writeLatex(node as LatexTextNode);
         break;
 
       case TextNodeType.noBulletList:
@@ -822,6 +827,16 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     const attrs = node.attrs;
 
     const s = `|code:${attrs.language}\n`;
+
+    // Write the text
+    this.write(s);
+  }
+
+  protected writeLatex(node: LatexTextNode): void {
+    if (node.attrs == null || !node.attrs.formula) return;
+    const attrs = node.attrs;
+
+    const s = `==${attrs.formula}==|latex|`;
 
     // Write the text
     this.write(s);

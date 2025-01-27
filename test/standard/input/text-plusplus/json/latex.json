@@ -1,0 +1,61 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Inline ",
+        "type": "text"
+      },
+      {
+        "attrs": {
+          "formula": "\\\\left( x | y \\\\right)"
+        },
+        "type": "latex"
+      },
+      {
+        "text": " text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Inline ",
+        "type": "text"
+      },
+      {
+        "attrs": {
+          "formula": " \\\\left( x | y \\\\right) "
+        },
+        "type": "latex"
+      },
+      {
+        "text": " text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "attrs": {
+          "formula": "\n\\\\left( x | y \\\\right)\n"
+        },
+        "type": "latex"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Latex blocks are now separate bits!",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]
