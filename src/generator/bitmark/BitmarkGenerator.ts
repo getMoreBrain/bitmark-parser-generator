@@ -2552,6 +2552,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         continue;
       }
 
+      // Skip 'example' property as it is non-standard and handled elsewhere
+      if (astKey === 'example') continue;
+
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[enterFuncName] = (node: NodeInfo, route: NodeInfo[]) => {
         const value = node.value as unknown[] | undefined;

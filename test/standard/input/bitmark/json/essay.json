@@ -4,6 +4,8 @@
       "type": "essay",
       "format": "bitmark--",
       "bitLevel": 1,
+      "isExample": false,
+      "example": null,
       "reasonableNumOfChars": 100,
       "item": [
         {
@@ -33,21 +35,15 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
-      "body": [],
       "sampleSolution": "The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.",
-      "additionalSolutions": [
-        "Additional solution 1",
-        "Additional solution 2",
-        "Additional solution 3"
-      ],
+      "additionalSolutions": ["Additional solution 1", "Additional solution 2", "Additional solution 3"],
+      "body": [],
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.0.1",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.18.2",
       "warnings": [
         {
           "message": "[@sampleSolution] is included more than 1 time(s). The earlier ones will be ignored",
@@ -89,9 +85,9 @@
       "type": "essay",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "245552"
-      ],
+      "isExample": false,
+      "example": null,
+      "id": ["245552"],
       "item": [],
       "lead": [
         {
@@ -120,8 +116,8 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
+      "partialAnswer": "This is a **partialAnswer** 2",
+      "additionalSolutions": ["Additional solution 1", "Additional solution 2", "Additional solution 3"],
       "body": [
         {
           "type": "paragraph",
@@ -133,18 +129,12 @@
           ],
           "attrs": {}
         }
-      ],
-      "additionalSolutions": [
-        "Additional solution 1",
-        "Additional solution 2",
-        "Additional solution 3"
-      ],
-      "partialAnswer": "This is a **partialAnswer** 2"
+      ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.0.1",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.18.2",
       "warnings": [
         {
           "message": "[@partialAnswer] is included more than 1 time(s). The earlier ones will be ignored",
@@ -186,9 +176,33 @@
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "272740"
+      "isExample": true,
+      "example": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The train now approaching Platform ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "2",
+              "type": "text"
+            },
+            {
+              "text": " is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
       ],
+      "id": ["272740"],
       "item": [
         {
           "type": "paragraph",
@@ -228,8 +242,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
       "body": [
         {
           "type": "paragraph",
@@ -294,20 +306,20 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.0.1",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.18.2"
     },
-    "bitmark": "[.essay::bitmark++]\n[@id:272740]\n[%2][%Situationen und Aufgaben gemäss Lehrplan]\nEin Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.\n\n[!Machen Sie sich Gedanken zu folgenden Fragen:]\n\n• Haben Sie selbst dieses Problem auch schon erlebt, dass es Sie juckt? Was haben Sie dagegen unternommen?\n• Warum hat die Haut gejuckt? Welche Ursachen könnten eine Rolle spielen?"
+    "bitmark": "[.essay::bitmark++]\n[@id:272740]\n[%2][%Situationen und Aufgaben gemäss Lehrplan]\nEin Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.\n\n[!Machen Sie sich Gedanken zu folgenden Fragen:]\n\n• Haben Sie selbst dieses Problem auch schon erlebt, dass es Sie juckt? Was haben Sie dagegen unternommen?\n• Warum hat die Haut gejuckt? Welche Ursachen könnten eine Rolle spielen?\n\n[@example:The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]"
   },
   {
     "bit": {
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "152151"
-      ],
+      "isExample": false,
+      "example": null,
+      "id": ["152151"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -486,8 +498,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
       "body": [
         {
           "type": "image",
@@ -726,9 +736,9 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.0.1",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.18.2"
     },
     "bitmark": "[.essay:bitmark++]\n[@id:152151]\n[!Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:]\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png|\n\nErstellen Sie die Mehrwertsteuerabrechnung 20.1 aufgrund der nachfolgenden Angaben:\n\n**01.01. bis 31.12.20.1 - Beträge In CHF (exkl. MWST)**\n• Autohandels AG\n3.200.000 - Verkäufe an inländische Kunden\n80.000 - Verkäufe an Fahrschule\n100.000 - Dividendenerträge von Gruppengesellschaften\nInvestitionen 7,7% = 50% des Umsatzes\nÜbriger Aufwand 7,7% = 10% des Umsatzes\n\n• Immobilien AG\n120.000 - Mieterträge von Autohandels AG\n80.000 - Mieterträge von Reparatur und Carrossierie AG\n100.000 - Mietersträge von Fahrschule AG\n-65.000 - Aufwendungen (7,7%)\n\n• Reparatur und Carrosserie AG\n820.000 - Umsätze mit Dritten\n150.000 - Umsätze mit Fahrschule AG\n-360.000 - Aufwendungen (7,7%)\n\n• Fahrschule AG\n270.000 - Kurse und Schulungen im Inland\n80.000 - Kurse und Schulungen im Ausland\n40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte\n140.000 - Aufwendungen (7,7%)\n\n\n[?|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|\n1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t**147.840**\n2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|\n3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360\t    **23.423**\n\n4)direkte VOST auf Ausland-Umsätzen, da für diese\noptiert werden könnte (Art. 29 Ibis MWSTG).\nBerechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%\t       **2.211**\n\n**Abrechnung:**\n\nUmsatz (3.200.000+820.000+390.000)\t4.410.000\n./. ausg. Umsätze\t-390.000\nsteuerbare Umsätze\t4.020.000\n\n**Steuer 7,70%\t309.540**\n**VOST\t-176.557**\n**Nettozahllast\t132.983**\n]"
   },
@@ -737,9 +747,9 @@
       "type": "essay",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "136476"
-      ],
+      "isExample": false,
+      "example": null,
+      "id": ["136476"],
       "item": [
         {
           "type": "paragraph",
@@ -775,15 +785,13 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "example": null,
       "body": [],
       "partialAnswer": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.0.1",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.18.2"
     },
     "bitmark": "[.essay]\n[@id:136476]\n[%1]\n[!Gib das Ergebnis an:\n(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]"
   }
