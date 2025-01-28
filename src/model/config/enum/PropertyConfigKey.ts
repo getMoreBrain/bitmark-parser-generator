@@ -25,6 +25,8 @@ const propertyConfigKeys = {
   buttonCaption: 'buttonCaption',
   callToActionUrl: 'callToActionUrl',
   caption: 'caption',
+  chatWithBook: 'chatWithBook',
+  chatWithBookBrainKey: 'chatWithBookBrainKey',
   classification: 'classification',
   codeLineNumbers: 'codeLineNumbers',
   codeMinimap: 'codeMinimap',

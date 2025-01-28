@@ -414,6 +414,14 @@ const GROUPS: _GroupsConfig = {
         configKey: PropertyConfigKey.isPublic,
       },
       {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.chatWithBook,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.chatWithBookBrainKey,
+      },
+      {
         type: BitTagType.tag,
         configKey: TagConfigKey.title,
         maxCount: 2,

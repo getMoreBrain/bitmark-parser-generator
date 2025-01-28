@@ -60,6 +60,8 @@ export interface BitJson {
   kind: string;
   hasMarkAsDone: boolean;
   processHandIn: boolean;
+  chatWithBook: boolean;
+  chatWithBookBrainKey: string;
   action: string;
   showInIndex: boolean;
   refAuthor: string | string[];

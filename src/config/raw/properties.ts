@@ -266,6 +266,17 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.chatWithBook]: {
+    tag: PropertyTag.chatWithBook,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.chatWithBookBrainKey]: {
+    tag: PropertyTag.chatWithBookBrainKey,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.action]: {
     tag: PropertyTag.action,
     single: true,

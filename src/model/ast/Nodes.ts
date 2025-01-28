@@ -104,6 +104,8 @@ export interface Bit {
   kind?: Property;
   hasMarkAsDone?: Property;
   processHandIn?: Property;
+  chatWithBook?: Property;
+  chatWithBookBrainKey?: Property;
   action?: Property;
   showInIndex?: Property;
   refAuthor?: Property;
