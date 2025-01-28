@@ -6,6 +6,8 @@ try a link at the end https://image.com
 
 ==Highlight text==|link:https://image.com| as a link
 
+==Highlight text==|italic|link:https://image.com|bold| as a link
+
 
 • Test link in a list
 • Entgelt für https://image.com that was a link
