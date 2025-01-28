@@ -4,9 +4,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186304"
-      ],
+      "id": ["186304"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -59,9 +58,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186305"
-      ],
+      "id": ["186305"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -123,9 +121,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186703"
-      ],
+      "id": ["186703"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -196,9 +193,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187235"
-      ],
+      "id": ["187235"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -267,9 +263,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187236"
-      ],
+      "id": ["187236"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -338,9 +333,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187237"
-      ],
+      "id": ["187237"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -400,9 +394,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "107936"
-      ],
+      "id": ["107936"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -510,9 +503,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "107937"
-      ],
+      "id": ["107937"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -604,9 +596,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "107943"
-      ],
+      "id": ["107943"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -696,9 +687,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "131345"
-      ],
+      "id": ["131345"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -780,9 +770,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "131346"
-      ],
+      "id": ["131346"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -864,9 +853,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186303"
-      ],
+      "id": ["186303"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -930,9 +918,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "232614"
-      ],
+      "id": ["232614"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1012,9 +999,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "232875"
-      ],
+      "id": ["232875"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1107,9 +1093,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "232876"
-      ],
+      "id": ["232876"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1189,9 +1174,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "232876"
-      ],
+      "id": ["232876"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1271,9 +1255,8 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "232876"
-      ],
+      "id": ["232876"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

@@ -20,6 +20,7 @@ class BitConfig {
   readonly textFormatDefault: TextFormatType; // Default text format
   readonly tags: TagsConfig = {};
   readonly cardSet?: CardSetConfig;
+  readonly quizBit?: boolean; // True if the bit is a quiz bit
   readonly deprecated?: string; // Deprecated version
   readonly bodyAllowed?: boolean; // Default: true
   readonly bodyRequired?: boolean; // Default: false
@@ -29,22 +30,40 @@ class BitConfig {
   readonly rootExampleType?: ExampleTypeType;
   readonly comboResourceType?: ResourceTagType;
 
-  public constructor(
-    since: string,
-    bitType: BitTypeType,
-    inheritedBitTypes: BitTypeType[],
-    textFormatDefault: TextFormatType,
-    tags: TagsConfig,
-    cardSet: CardSetConfig | undefined,
-    deprecated: string | undefined,
-    bodyAllowed: boolean | undefined,
-    bodyRequired: boolean | undefined,
-    footerAllowed: boolean | undefined,
-    footerRequired: boolean | undefined,
-    resourceAttachmentAllowed: boolean | undefined,
-    rootExampleType: ExampleTypeType | undefined,
-    comboResourceType: ResourceTagType | undefined,
-  ) {
+  public constructor(config: {
+    since: string;
+    bitType: BitTypeType;
+    inheritedBitTypes: BitTypeType[];
+    textFormatDefault: TextFormatType;
+    tags: TagsConfig;
+    cardSet: CardSetConfig | undefined;
+    quizBit: boolean | undefined;
+    deprecated: string | undefined;
+    bodyAllowed: boolean | undefined;
+    bodyRequired: boolean | undefined;
+    footerAllowed: boolean | undefined;
+    footerRequired: boolean | undefined;
+    resourceAttachmentAllowed: boolean | undefined;
+    rootExampleType: ExampleTypeType | undefined;
+    comboResourceType: ResourceTagType | undefined;
+  }) {
+    const {
+      since,
+      bitType,
+      inheritedBitTypes,
+      textFormatDefault,
+      tags,
+      cardSet,
+      quizBit,
+      deprecated,
+      bodyAllowed,
+      bodyRequired,
+      footerAllowed,
+      footerRequired,
+      resourceAttachmentAllowed,
+      rootExampleType,
+      comboResourceType,
+    } = config;
     this.since = since;
     this.bitType = bitType;
     this.inheritedBitTypes = inheritedBitTypes;
@@ -52,6 +71,7 @@ class BitConfig {
     this.textFormatDefault = textFormatDefault;
     this.tags = tags;
     this.cardSet = cardSet;
+    this.quizBit = quizBit;
     this.deprecated = deprecated;
     this.bodyAllowed = bodyAllowed == null ? true : bodyAllowed;
     this.bodyRequired = bodyRequired;

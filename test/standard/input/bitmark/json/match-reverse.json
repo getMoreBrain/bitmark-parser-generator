@@ -4,9 +4,8 @@
       "type": "match-reverse",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "287869"
-      ],
+      "id": ["287869"],
+      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -41,9 +40,7 @@
       "pairs": [
         {
           "key": "Tier",
-          "values": [
-            "das"
-          ],
+          "values": ["das"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -64,9 +61,7 @@
         },
         {
           "key": "Kuh",
-          "values": [
-            "die"
-          ],
+          "values": ["die"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -76,9 +71,7 @@
         },
         {
           "key": "Löwe",
-          "values": [
-            "die"
-          ],
+          "values": ["die"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -88,9 +81,7 @@
         },
         {
           "key": "Schmetterling",
-          "values": [
-            "der"
-          ],
+          "values": ["der"],
           "item": [],
           "hint": [],
           "instruction": [],

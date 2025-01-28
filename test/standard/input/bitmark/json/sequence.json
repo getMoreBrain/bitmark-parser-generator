@@ -5,6 +5,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["285747"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -51,6 +52,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["285748"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -97,6 +99,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["285749"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",

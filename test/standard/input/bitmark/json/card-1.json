@@ -4,6 +4,7 @@
       "type": "card-1",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

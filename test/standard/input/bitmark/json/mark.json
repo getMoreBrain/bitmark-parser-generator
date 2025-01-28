@@ -4,6 +4,7 @@
       "type": "mark",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

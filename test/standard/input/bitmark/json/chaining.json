@@ -598,6 +598,7 @@
       "type": "match-solution-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -610,9 +611,7 @@
       "pairs": [
         {
           "key": "die Koffer",
-          "values": [
-            "packen"
-          ],
+          "values": ["packen"],
           "item": [
             {
               "type": "paragraph",

@@ -242,6 +242,7 @@ class Builder extends BaseBuilder {
     anchor?: string;
     reference?: string;
     referenceEnd?: string;
+    revealSolutions?: boolean;
     isCaseSensitive?: boolean;
     item?: JsonText;
     lead?: JsonText;
@@ -465,6 +466,7 @@ class Builder extends BaseBuilder {
       anchor: data.anchor,
       reference: data.reference,
       referenceEnd: data.referenceEnd,
+      revealSolutions: this.toAstProperty(PropertyConfigKey.revealSolutions, data.revealSolutions),
 
       // Item, Lead, Hint, Instruction
       item: this.handleJsonText(data.item),

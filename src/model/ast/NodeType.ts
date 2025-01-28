@@ -371,6 +371,7 @@ const NodeType = superenum({
   response: 'response',
   responses: 'responses',
   responsesValue: 'responsesValue',
+  revealSolutions: 'revealSolutions',
   root: 'root', // bit type (root)
   sampleSolution: 'sampleSolution',
   sampleSolutionValue: 'sampleSolutionValue',

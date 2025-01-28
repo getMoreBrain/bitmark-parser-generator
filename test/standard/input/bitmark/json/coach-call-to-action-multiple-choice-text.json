@@ -5,6 +5,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["287839"],
+      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -145,6 +146,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["213773"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -446,6 +448,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["213840"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -698,6 +701,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["208481"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -951,6 +955,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["107949"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -1163,6 +1168,7 @@
       "type": "coach-call-to-action-multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1243,6 +1249,7 @@
       "type": "coach-call-to-action-multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1323,6 +1330,7 @@
       "type": "coach-call-to-action-multiple-choice-text",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

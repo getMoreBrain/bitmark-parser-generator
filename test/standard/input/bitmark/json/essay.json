@@ -7,6 +7,7 @@
       "isExample": false,
       "example": null,
       "reasonableNumOfChars": 100,
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -88,6 +89,7 @@
       "isExample": false,
       "example": null,
       "id": ["245552"],
+      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -203,6 +205,7 @@
         }
       ],
       "id": ["272740"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -320,6 +323,7 @@
       "isExample": false,
       "example": null,
       "id": ["152151"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -750,6 +754,7 @@
       "isExample": false,
       "example": null,
       "id": ["136476"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",

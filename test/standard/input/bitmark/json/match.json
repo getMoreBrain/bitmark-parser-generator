@@ -4,9 +4,8 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "197919"
-      ],
+      "id": ["197919"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -33,9 +32,7 @@
       "pairs": [
         {
           "key": "2008",
-          "values": [
-            "- 150'000.00"
-          ],
+          "values": ["- 150'000.00"],
           "item": [
             {
               "type": "paragraph",
@@ -56,9 +53,7 @@
         },
         {
           "key": "2009",
-          "values": [
-            "- 70'000.00"
-          ],
+          "values": ["- 70'000.00"],
           "item": [
             {
               "type": "paragraph",
@@ -79,9 +74,7 @@
         },
         {
           "key": "2010",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -91,9 +84,7 @@
         },
         {
           "key": "2011",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -103,9 +94,7 @@
         },
         {
           "key": "2012",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -115,9 +104,7 @@
         },
         {
           "key": "2013",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -127,9 +114,7 @@
         },
         {
           "key": "2014",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -139,9 +124,7 @@
         },
         {
           "key": "2015",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -151,9 +134,7 @@
         },
         {
           "key": "2016",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -163,9 +144,7 @@
         },
         {
           "key": "2017",
-          "values": [
-            "0"
-          ],
+          "values": ["0"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -175,9 +154,7 @@
         },
         {
           "key": "Total",
-          "values": [
-            "- 220'000.00"
-          ],
+          "values": ["- 220'000.00"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -199,9 +176,8 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "213782"
-      ],
+      "id": ["213782"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -289,9 +265,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A"
-          ],
+          "values": ["A"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -301,9 +275,7 @@
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
-          "values": [
-            "E"
-          ],
+          "values": ["E"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -313,9 +285,7 @@
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -325,9 +295,7 @@
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
-          "values": [
-            "E"
-          ],
+          "values": ["E"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -337,9 +305,7 @@
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -349,9 +315,7 @@
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
-          "values": [
-            "D"
-          ],
+          "values": ["D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -361,9 +325,7 @@
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -373,9 +335,7 @@
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
-          "values": [
-            "B"
-          ],
+          "values": ["B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -397,9 +357,8 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "208467"
-      ],
+      "id": ["208467"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -487,9 +446,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A"
-          ],
+          "values": ["A"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -499,9 +456,7 @@
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
-          "values": [
-            "E"
-          ],
+          "values": ["E"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -511,9 +466,7 @@
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -523,9 +476,7 @@
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
-          "values": [
-            "E"
-          ],
+          "values": ["E"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -535,9 +486,7 @@
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -547,9 +496,7 @@
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
-          "values": [
-            "D"
-          ],
+          "values": ["D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -559,9 +506,7 @@
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
-          "values": [
-            "C"
-          ],
+          "values": ["C"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -571,9 +516,7 @@
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
-          "values": [
-            "B"
-          ],
+          "values": ["B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -595,6 +538,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -610,10 +554,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -623,10 +564,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -659,6 +597,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -674,10 +613,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -687,10 +623,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -723,6 +656,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -738,10 +672,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -762,10 +693,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -787,6 +715,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -802,10 +731,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -826,10 +752,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -851,6 +774,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -866,10 +790,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -890,10 +811,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -926,6 +844,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -941,10 +860,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -965,10 +881,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1001,6 +914,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1016,10 +930,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1040,10 +951,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1076,6 +984,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1091,10 +1000,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1115,10 +1021,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1151,6 +1054,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1166,10 +1070,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1190,10 +1091,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1226,6 +1124,7 @@
       "type": "match-solution-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1238,10 +1137,7 @@
       "pairs": [
         {
           "key": "auf eine Schule",
-          "values": [
-            "gehen",
-            "denken"
-          ],
+          "values": ["gehen", "denken"],
           "item": [
             {
               "type": "paragraph",
@@ -1273,9 +1169,7 @@
         },
         {
           "key": "an einer Hochschule",
-          "values": [
-            "studieren"
-          ],
+          "values": ["studieren"],
           "item": [
             {
               "type": "paragraph",
@@ -1308,6 +1202,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1323,10 +1218,7 @@
       "pairs": [
         {
           "key": "K",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1348,6 +1240,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1363,10 +1256,7 @@
       "pairs": [
         {
           "key": "K",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1388,6 +1278,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1403,10 +1294,7 @@
       "pairs": [
         {
           "key": "K",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1428,6 +1316,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1443,10 +1332,7 @@
       "pairs": [
         {
           "key": "K",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1468,6 +1354,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1483,10 +1370,7 @@
       "pairs": [
         {
           "key": "K",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1508,6 +1392,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1520,10 +1405,7 @@
       "pairs": [
         {
           "key": "K",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1545,6 +1427,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1560,10 +1443,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1573,10 +1453,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1586,10 +1463,7 @@
         },
         {
           "key": "A third pair is defined here",
-          "values": [
-            "E",
-            "F"
-          ],
+          "values": ["E", "F"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1599,10 +1473,7 @@
         },
         {
           "key": "And a fourth pair is defined here",
-          "values": [
-            "G",
-            "H"
-          ],
+          "values": ["G", "H"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1624,6 +1495,7 @@
       "type": "match",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1639,10 +1511,7 @@
       "pairs": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
-          "values": [
-            "A",
-            "B"
-          ],
+          "values": ["A", "B"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1652,10 +1521,7 @@
         },
         {
           "key": "should be the text not the value",
-          "values": [
-            "C",
-            "D"
-          ],
+          "values": ["C", "D"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1665,10 +1531,7 @@
         },
         {
           "key": "A third pair is defined here",
-          "values": [
-            "E",
-            "F"
-          ],
+          "values": ["E", "F"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -1678,10 +1541,7 @@
         },
         {
           "key": "And a fourth pair is defined here",
-          "values": [
-            "G",
-            "H"
-          ],
+          "values": ["G", "H"],
           "item": [],
           "hint": [],
           "instruction": [],

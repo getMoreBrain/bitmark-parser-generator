@@ -5,6 +5,7 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["193275"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -89,6 +90,7 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["152331"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -282,6 +284,7 @@
       "bitLevel": 1,
       "id": ["193275"],
       "anchor": "Ref_Roche",
+      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -343,6 +346,7 @@
       "bitLevel": 1,
       "id": ["193276"],
       "anchor": "Ref_Emmi",
+      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -403,6 +407,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["136524"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -563,6 +568,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["245337"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -638,6 +644,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["273397"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -853,6 +860,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["273304"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -1123,6 +1131,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["272904"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -1318,6 +1327,7 @@
       "type": "gap-text",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1374,6 +1384,7 @@
       "type": "gap-text",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

@@ -4,9 +4,8 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186986"
-      ],
+      "id": ["186986"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

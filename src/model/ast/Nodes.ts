@@ -199,6 +199,7 @@ export interface Bit {
   anchor?: string;
   reference?: string;
   referenceEnd?: string;
+  revealSolutions?: Property;
   item?: TextAst;
   lead?: TextAst;
   pageNumber?: TextAst;

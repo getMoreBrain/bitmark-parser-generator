@@ -4,9 +4,8 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -95,9 +94,8 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -220,9 +218,8 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -311,9 +308,8 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -420,6 +416,7 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -496,6 +493,7 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -572,6 +570,7 @@
       "type": "multiple-response",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

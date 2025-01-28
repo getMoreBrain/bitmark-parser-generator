@@ -4,9 +4,8 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187003"
-      ],
+      "id": ["187003"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1131,9 +1130,8 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186986"
-      ],
+      "id": ["186986"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1444,9 +1442,8 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "136408"
-      ],
+      "id": ["136408"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -2402,9 +2399,8 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "107942"
-      ],
+      "id": ["107942"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -2507,9 +2503,8 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "107955"
-      ],
+      "id": ["107955"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -2614,9 +2609,8 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "107956"
-      ],
+      "id": ["107956"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -2698,9 +2692,8 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "291806"
-      ],
+      "id": ["291806"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3052,6 +3045,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3122,6 +3116,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3192,6 +3187,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3262,6 +3258,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3350,6 +3347,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3438,6 +3436,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3526,6 +3525,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3646,6 +3646,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3705,6 +3706,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3764,6 +3766,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3823,6 +3826,7 @@
       "type": "multiple-choice",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

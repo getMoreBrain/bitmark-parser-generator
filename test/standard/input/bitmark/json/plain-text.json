@@ -121,6 +121,7 @@
       "type": "cloze",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -245,6 +246,7 @@
       "type": "cloze",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -438,6 +440,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["12345"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
