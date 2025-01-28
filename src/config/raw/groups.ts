@@ -518,6 +518,15 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [GroupConfigKey.group_quizCommon]: {
+    type: GroupConfigType.standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.revealSolutions,
+      },
+    ],
+  },
   //
   // Resource groups
   //

@@ -134,6 +134,7 @@ const propertyConfigKeys = {
   resolved: 'resolved',
   resolvedBy: 'resolvedBy',
   resolvedDate: 'resolvedDate',
+  revealSolutions: 'revealSolutions',
   scormSource: 'scormSource',
   search: 'search',
   servings: 'servings',

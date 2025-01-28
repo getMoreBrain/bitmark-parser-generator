@@ -4,9 +4,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186300"
-      ],
+      "id": ["186300"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -68,9 +67,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186301"
-      ],
+      "id": ["186301"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -141,9 +139,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "186302"
-      ],
+      "id": ["186302"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -214,9 +211,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187540"
-      ],
+      "id": ["187540"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -287,9 +283,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187541"
-      ],
+      "id": ["187541"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -367,9 +362,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187542"
-      ],
+      "id": ["187542"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -440,9 +434,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187543"
-      ],
+      "id": ["187543"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -520,9 +513,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187544"
-      ],
+      "id": ["187544"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -593,9 +585,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187233"
-      ],
+      "id": ["187233"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -673,9 +664,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "187234"
-      ],
+      "id": ["187234"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -744,9 +734,8 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "208470"
-      ],
+      "id": ["208470"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -866,6 +855,7 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -916,6 +906,7 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -966,6 +957,7 @@
       "type": "multiple-response-1",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

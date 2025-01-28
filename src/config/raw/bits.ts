@@ -22,10 +22,15 @@ const BITS: _BitsConfig = {
 
   [BitType.appFlashcards]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.tag,
@@ -403,10 +408,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.card1]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
     ],
   },
@@ -440,10 +450,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.clozeAndMultipleChoiceText]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.group,
@@ -461,10 +476,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.cloze]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.property,
@@ -501,10 +521,15 @@ const BITS: _BitsConfig = {
   [BitType.coachCallToActionCloze]: { since: '1.3.0', baseBitType: BitType.cloze },
   [BitType.clozeList]: {
     since: '1.4.13',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
     ],
     cardSet: CardSetConfigKey._clozeList,
@@ -719,10 +744,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.essay]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.property,
@@ -1126,10 +1156,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.flashcard]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
     ],
     cardSet: CardSetConfigKey._flashcardLike,
@@ -1151,10 +1186,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.highlightText]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.group,
@@ -1383,10 +1423,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.interview]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.property,
@@ -1598,10 +1643,15 @@ const BITS: _BitsConfig = {
   [BitType.smartStandardListItemCollapsible]: { since: '1.28.0', baseBitType: BitType.smartStandardListItem },
   [BitType.mark]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.group,
@@ -1615,10 +1665,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.match]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.property,
@@ -1650,10 +1705,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.multipleChoice1]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.group,
@@ -1664,10 +1724,15 @@ const BITS: _BitsConfig = {
   [BitType.coachSelfReflectionMultipleChoice1]: { since: '1.3.0', baseBitType: BitType.multipleChoice1 },
   [BitType.multipleChoice]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.group,
@@ -1679,10 +1744,15 @@ const BITS: _BitsConfig = {
   [BitType.coachSelfReflectionMultipleChoice]: { since: '1.3.0', baseBitType: BitType.multipleChoice },
   [BitType.multipleChoiceText]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.group,
@@ -1694,10 +1764,15 @@ const BITS: _BitsConfig = {
   [BitType.coachSelfReflectionMultipleChoiceText]: { since: '1.3.0', baseBitType: BitType.multipleChoiceText },
   [BitType.multipleResponse1]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.group,
@@ -1708,10 +1783,15 @@ const BITS: _BitsConfig = {
   [BitType.coachSelfReflectionMultipleResponse1]: { since: '1.3.0', baseBitType: BitType.multipleResponse1 },
   [BitType.multipleResponse]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.group,
@@ -1992,10 +2072,15 @@ const BITS: _BitsConfig = {
 
   [BitType.sequence]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
     ],
     cardSet: CardSetConfigKey._elements,
@@ -2295,10 +2380,15 @@ const BITS: _BitsConfig = {
   [BitType.handInVoice]: { since: '1.5.15', baseBitType: BitType.takePicture },
   [BitType.trueFalse1]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.property,
@@ -2322,10 +2412,15 @@ const BITS: _BitsConfig = {
 
   [BitType.trueFalse]: {
     since: '1.3.0',
+    quizBit: true,
     tags: [
       {
         type: BitTagType.group,
         configKey: GroupConfigKey.group_standardTags,
+      },
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_quizCommon,
       },
       {
         type: BitTagType.property,

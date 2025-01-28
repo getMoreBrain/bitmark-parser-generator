@@ -4,9 +4,8 @@
       "type": "assignment",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
+      "id": ["197915"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -108,9 +107,8 @@
       "type": "assignment",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "210109"
-      ],
+      "id": ["210109"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -167,9 +165,8 @@
       "type": "assignment",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "210110"
-      ],
+      "id": ["210110"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],

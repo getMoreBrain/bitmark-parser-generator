@@ -4,9 +4,8 @@
       "type": "true-false-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285736"
-      ],
+      "id": ["285736"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -53,9 +52,8 @@
       "type": "true-false-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285736"
-      ],
+      "id": ["285736"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -102,9 +100,8 @@
       "type": "true-false-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285736"
-      ],
+      "id": ["285736"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -151,9 +148,8 @@
       "type": "true-false-1",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285736"
-      ],
+      "id": ["285736"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",

@@ -8,6 +8,7 @@
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
       "additionalSolutions": ["canvas"],
+      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -122,6 +123,7 @@
       "quizCountItems": true,
       "quizStrikethroughSolutions": false,
       "additionalSolutions": ["canvas", "texture", "figurative", "abstract", "contrast"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",

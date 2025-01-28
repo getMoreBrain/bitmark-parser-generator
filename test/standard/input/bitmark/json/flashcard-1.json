@@ -4,6 +4,7 @@
       "type": "flashcard-1",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -116,6 +117,7 @@
       "type": "flashcard-1",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -235,6 +237,7 @@
       "type": "flashcard-1",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -360,6 +363,7 @@
       "type": "flashcard-1",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -485,6 +489,7 @@
       "type": "flashcard-1",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",

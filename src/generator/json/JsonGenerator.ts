@@ -354,6 +354,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected exit_bitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
+    // Move isExample / example to end of bit JSON from beginning
+    const isExample = this.bitJson.isExample;
+    const example = this.bitJson.example;
+    delete this.bitJson.isExample;
+    delete this.bitJson.example;
+    this.bitJson.isExample = isExample;
+    this.bitJson.example = example;
+
     // Clean up the bit JSON, removing any unwanted values
     this.cleanBitJson(this.bitJson);
   }
@@ -1376,6 +1384,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
   protected cleanBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
     const bitType = Config.getBitType(bitJson.type);
+    const bitConfig = Config.getBitConfig(bitType);
     // const textFormat = bitJson.format;
     // const plainText = this.options.textAsPlainText;
 
@@ -1568,6 +1577,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
       }
 
+      // Page bits
       if (
         Config.isOfBitType(bitType, [
           BitType.pageBanner,
@@ -1679,6 +1689,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Special case for 'container' bits
       if (Config.isOfBitType(bitType, BitType.container)) {
         if (bitJson.allowedBit == null) bitJson.allowedBit = [];
+      }
+
+      // Special case for 'quiz' bits
+      if (bitConfig.quizBit) {
+        if (bitJson.revealSolutions == null) bitJson.revealSolutions = false;
       }
 
       // Remove top level example if it is not required

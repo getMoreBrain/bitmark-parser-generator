@@ -4,6 +4,7 @@
       "type": "coach-call-to-action-essay",
       "format": "bitmark--",
       "bitLevel": 1,
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -50,9 +51,8 @@
       "type": "coach-call-to-action-essay",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "245552"
-      ],
+      "id": ["245552"],
+      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -109,9 +109,8 @@
       "type": "coach-call-to-action-essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "272740"
-      ],
+      "id": ["272740"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -215,9 +214,8 @@
       "type": "coach-call-to-action-essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "152151"
-      ],
+      "id": ["152151"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -600,9 +598,8 @@
       "type": "coach-call-to-action-essay",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "136476"
-      ],
+      "id": ["136476"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",

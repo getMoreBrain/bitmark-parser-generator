@@ -8,6 +8,7 @@
       "quizCountItems": false,
       "quizStrikethroughSolutions": false,
       "additionalSolutions": ["canvas"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -177,6 +178,7 @@
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
       "additionalSolutions": ["canvas", "texture", "figurative", "abstract", "contrast"],
+      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -268,6 +270,7 @@
       "id": ["131518"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -587,6 +590,7 @@
       "id": ["131518"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",

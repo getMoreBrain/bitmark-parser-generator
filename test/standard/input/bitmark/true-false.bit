@@ -152,6 +152,7 @@
 
 [.true-false]
 [@example]
+[@revealSolutions:false]
 ===
 [+TrueAnswer]
 ===
@@ -160,6 +161,7 @@
 
 
 [.true-false]
+[@revealSolutions:true]
 ===
 [+TrueAnswer][@example]
 ===
@@ -167,6 +169,7 @@
 ===
 
 [.true-false]
+[@revealSolutions]
 ===
 [+TrueAnswer][@example:false]
 ===

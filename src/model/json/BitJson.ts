@@ -152,6 +152,9 @@ export interface BitJson {
   reference: string | string[]; // Has 2 meanings, depending on bit (anchor/reference, or @reference)
   referenceEnd: string;
 
+  // All quizzes
+  revealSolutions: boolean;
+
   item: JsonText;
   lead: JsonText;
   pageNumber: JsonText;

@@ -4,9 +4,8 @@
       "type": "match-solution-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "213827"
-      ],
+      "id": ["213827"],
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -44,9 +43,7 @@
       "pairs": [
         {
           "key": "Beschreibt ein auf Dauerhaftigkeit ausgerichtetes Handeln.",
-          "values": [
-            "Nachhaltigkeit"
-          ],
+          "values": ["Nachhaltigkeit"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -56,9 +53,7 @@
         },
         {
           "key": "Leitvorstellungen über erwünschenswertes Verhalten.",
-          "values": [
-            "Werte"
-          ],
+          "values": ["Werte"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -68,9 +63,7 @@
         },
         {
           "key": "Gesamtheit von Verhaltensregeln innerhalb einer Gesellschaft.",
-          "values": [
-            "Moral"
-          ],
+          "values": ["Moral"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -80,9 +73,7 @@
         },
         {
           "key": "Konkrete Verhaltensanweisungen zur Umsetzung ethischen Verhaltens.",
-          "values": [
-            "Normen"
-          ],
+          "values": ["Normen"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -92,9 +83,7 @@
         },
         {
           "key": "Untersucht und argumentiert für oder gegen Verhaltensregeln.",
-          "values": [
-            "Ethik"
-          ],
+          "values": ["Ethik"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -116,9 +105,8 @@
       "type": "match-solution-grouped",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "265794"
-      ],
+      "id": ["265794"],
+      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -131,9 +119,7 @@
       "pairs": [
         {
           "key": "die Koffer",
-          "values": [
-            "packen"
-          ],
+          "values": ["packen"],
           "item": [
             {
               "type": "paragraph",
@@ -165,9 +151,7 @@
         },
         {
           "key": "in den Urlaub",
-          "values": [
-            "fahren"
-          ],
+          "values": ["fahren"],
           "item": [
             {
               "type": "paragraph",
@@ -188,9 +172,7 @@
         },
         {
           "key": "Geld",
-          "values": [
-            "ausgeben"
-          ],
+          "values": ["ausgeben"],
           "item": [
             {
               "type": "paragraph",
@@ -211,9 +193,7 @@
         },
         {
           "key": "über dem europäischen Durchschnitt",
-          "values": [
-            "liegen"
-          ],
+          "values": ["liegen"],
           "item": [
             {
               "type": "paragraph",
@@ -234,9 +214,7 @@
         },
         {
           "key": "mehr Inlandsreisen",
-          "values": [
-            "planen"
-          ],
+          "values": ["planen"],
           "item": [
             {
               "type": "paragraph",
@@ -257,10 +235,7 @@
         },
         {
           "key": "das angenehme Wetter",
-          "values": [
-            "genießen",
-            "nutzen"
-          ],
+          "values": ["genießen", "nutzen"],
           "item": [
             {
               "type": "paragraph",
@@ -281,9 +256,7 @@
         },
         {
           "key": "den Strandurlaub",
-          "values": [
-            "bevorzugen"
-          ],
+          "values": ["bevorzugen"],
           "item": [
             {
               "type": "paragraph",
@@ -304,9 +277,7 @@
         },
         {
           "key": "böse Überraschungen",
-          "values": [
-            "erleben"
-          ],
+          "values": ["erleben"],
           "item": [
             {
               "type": "paragraph",
@@ -327,9 +298,7 @@
         },
         {
           "key": "mobile Angebote",
-          "values": [
-            "nutzen"
-          ],
+          "values": ["nutzen"],
           "item": [
             {
               "type": "paragraph",
@@ -350,9 +319,7 @@
         },
         {
           "key": "sich über verschiede Angebote",
-          "values": [
-            "informieren"
-          ],
+          "values": ["informieren"],
           "item": [
             {
               "type": "paragraph",
@@ -373,9 +340,7 @@
         },
         {
           "key": "auf Serviceleistungen",
-          "values": [
-            "achten"
-          ],
+          "values": ["achten"],
           "item": [
             {
               "type": "paragraph",
@@ -396,9 +361,7 @@
         },
         {
           "key": "auf die Hotelbar Wert",
-          "values": [
-            "legen"
-          ],
+          "values": ["legen"],
           "item": [
             {
               "type": "paragraph",

@@ -44,6 +44,7 @@
       ],
       "externalId": ["[externalId with square bracked at end]"],
       "lang": "[lang] with square bracked in middle",
+      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",

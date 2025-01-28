@@ -861,6 +861,12 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.revealSolutions]: {
+    tag: PropertyTag.revealSolutions,
+    single: true,
+    format: PropertyFormat.boolean,
+    // defaultValue: 'false',
+  },
 };
 
 export { PROPERTIES };
