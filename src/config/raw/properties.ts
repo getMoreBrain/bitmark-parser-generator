@@ -266,6 +266,17 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.chatWithBook]: {
+    tag: PropertyTag.chatWithBook,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.chatWithBookBrainKey]: {
+    tag: PropertyTag.chatWithBookBrainKey,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.action]: {
     tag: PropertyTag.action,
     single: true,
@@ -860,6 +871,12 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.activityType,
     single: true,
     format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.revealSolutions]: {
+    tag: PropertyTag.revealSolutions,
+    single: true,
+    format: PropertyFormat.boolean,
+    // defaultValue: 'false',
   },
 };
 

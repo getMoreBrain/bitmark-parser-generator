@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.17.1"
+const VERSION = "8.18.2"
 
 //Parser peggy.js
 
@@ -17,7 +17,7 @@ const VERSION = "8.17.1"
 // - JSON for color
 
 // - LaTeX embed
-// The formula == $$ p \\left( x | y \\right) $$ ==|math:LaTeX| is inline.
+// The formula == \\left( x | y \\right) ==|latex| is inline.
 
 /*
 
@@ -529,13 +529,12 @@ InlinePlainText
 
 
 InlineHalfTag = '='
-InlineLaTexHalfTag = '𝑓'  // |𝑓 Latex Block
 
 InlineTag = InlineHalfTag InlineHalfTag
-InlineLaTexTag = InlineLaTexHalfTag InlineLaTexHalfTag
 
 InlineStyledText
   = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
+  / InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: t}, type: "latex" } }
   / InlineTag ' '? t: $((!(' '? InlineTag) .)* ) ' '? InlineTag marks: AttrChain { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
   / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
   / ItalicTag ' '? t: $((!(' '? ItalicTag) .)* ) ' '? ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
@@ -545,7 +544,6 @@ InlineStyledText
 
 InlineTagTags
   = $(InlineTag InlineHalfTag+)
-  / $(InlineLaTexTag InlineLaTexHalfTag+)
   / $(LightTag LightHalfTag+)
   / $(HighlightTag HighlightHalfTag+)
 
@@ -635,7 +633,7 @@ bitmarkMinusMinusString "MinimalStyledString"
   = first: PlainText? more: (StyledText / PlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
 
 PlainText
-  = t: NL { return { "type": "hardBreak" } }
+  = NL { return { "type": "hardBreak" } }
   / t: $(((TagTags? !StyledText char) / (TagTags !StyledText))+) { return { text: unbreakscape(t), type: "text" } } // remove breakscaping tags in body
 
 BoldHalfTag = '*'

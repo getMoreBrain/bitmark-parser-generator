@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.0.1
+Version: 3.1.0
 ## Supported Bits
 <pre>
 ai-prompt (since: 1.3.0)
@@ -372,6 +372,7 @@ page-subscribe (since: 1.5.10)
 parameters (since: 1.18.0)
 photo (since: 1.3.0)
 preparation-note (since: 1.3.0)
+pronunciation-table (since: 3.1.0)
 prototype-images (since: 1.6.1)
 question-1 (since: 1.3.0)
 quote (since: 1.3.0)

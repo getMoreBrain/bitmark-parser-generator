@@ -24,6 +24,8 @@ import {
   MatrixCellJson,
   MatrixJson,
   PairJson,
+  PronunciationTableCellJson,
+  PronunciationTableJson,
   QuestionJson,
   QuizJson,
   ResponseJson,
@@ -100,6 +102,10 @@ function buildCards(
     case CardSetConfigKey._matchMatrix:
       // ==> heading / matrix
       result = parseMatchMatrix(context, bitType, processedCardSet);
+      break;
+
+    case CardSetConfigKey._pronunciationTable:
+      result = parsePronunciationTable(context, bitType, processedCardSet);
       break;
 
     case CardSetConfigKey._table:
@@ -797,6 +803,50 @@ function parseMatchMatrix(
     heading,
     matrix: matrix.length > 0 ? matrix : undefined,
   };
+}
+
+function parsePronunciationTable(
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
+  const rows: PronunciationTableCellJson[][] = [];
+  let rowValues: PronunciationTableCellJson[] = [];
+
+  for (const card of cardSet.cards) {
+    rowValues = [];
+
+    for (const side of card.sides) {
+      for (const content of side.variants) {
+        // variant = content;
+        const tags = content.data;
+
+        const { title, cardBody, resources } = tags;
+
+        const heading = title && title[1].titleAst;
+        const audioWrapper =
+          resources && resources.length > 0 ? resources.find((r) => r.type === ResourceTag.audio) : undefined;
+        const audio = (
+          audioWrapper ? (audioWrapper as AudioResourceWrapperJson).audio : undefined
+        ) as AudioResourceJson;
+
+        const value: PronunciationTableCellJson = {
+          title: heading ?? [],
+          body: (cardBody?.body ?? []) as JsonText,
+          audio,
+        };
+        rowValues.push(value);
+      }
+    }
+
+    rows.push(rowValues);
+  }
+
+  const table: Partial<PronunciationTableJson> = {
+    data: rows,
+  };
+
+  return { pronunciationTable: table };
 }
 
 function parseTable(

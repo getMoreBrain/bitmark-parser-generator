@@ -69,6 +69,11 @@ export interface CodeBlockTextNode extends TextNode {
   attrs?: CodeBlockTextNodeAttributes;
 }
 
+export interface LatexTextNode extends TextNode {
+  type: 'latex';
+  attrs?: LatexTextNodeAttibutes;
+}
+
 export interface ListTextNode extends TextNode {
   type:
     | 'noBulletList'
@@ -106,6 +111,10 @@ export interface ImageTextNodeAttributes extends TextNodeAttibutes {
 
 export interface CodeBlockTextNodeAttributes extends TextNodeAttibutes {
   language: string;
+}
+
+export interface LatexTextNodeAttibutes extends TextNodeAttibutes {
+  formula: string;
 }
 
 export interface ListTextNodeAttributes extends TextNodeAttibutes {

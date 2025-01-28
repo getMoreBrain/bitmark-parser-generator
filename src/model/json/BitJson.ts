@@ -60,6 +60,8 @@ export interface BitJson {
   kind: string;
   hasMarkAsDone: boolean;
   processHandIn: boolean;
+  chatWithBook: boolean;
+  chatWithBookBrainKey: string;
   action: string;
   showInIndex: boolean;
   refAuthor: string | string[];
@@ -151,6 +153,9 @@ export interface BitJson {
   anchor: string;
   reference: string | string[]; // Has 2 meanings, depending on bit (anchor/reference, or @reference)
   referenceEnd: string;
+
+  // All quizzes
+  revealSolutions: boolean;
 
   item: JsonText;
   lead: JsonText;
@@ -359,6 +364,16 @@ export interface MatrixCellJson {
   __valuesAst?: TextAst[];
   __isDefaultExample?: boolean;
   __defaultExample?: ExampleJson;
+}
+
+export interface PronunciationTableCellJson {
+  title: JsonText;
+  body: JsonText;
+  audio: AudioResourceJson;
+}
+
+export interface PronunciationTableJson {
+  data: PronunciationTableCellJson[][];
 }
 
 export interface TableJson {

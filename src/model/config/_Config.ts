@@ -36,6 +36,7 @@ export interface _BitConfig {
   since: string; // Supported since version
   baseBitType?: BitTypeType; // The base bit type
   textFormatDefault?: TextFormatType; // Default text format
+  quizBit?: true; // True if the bit is a quiz bit
   tags?: _TagInfoConfig[];
   cardSet?: CardSetConfigKeyType;
   deprecated?: string; // Deprecated version

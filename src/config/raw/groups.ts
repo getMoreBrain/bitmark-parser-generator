@@ -414,6 +414,14 @@ const GROUPS: _GroupsConfig = {
         configKey: PropertyConfigKey.isPublic,
       },
       {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.chatWithBook,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.chatWithBookBrainKey,
+      },
+      {
         type: BitTagType.tag,
         configKey: TagConfigKey.title,
         maxCount: 2,
@@ -515,6 +523,15 @@ const GROUPS: _GroupsConfig = {
             maxCount: 2,
           },
         ],
+      },
+    ],
+  },
+  [GroupConfigKey.group_quizCommon]: {
+    type: GroupConfigType.standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.revealSolutions,
       },
     ],
   },

@@ -279,6 +279,31 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
+  [CardSetConfigKey._pronunciationTable]: {
+    variants: [
+      // Side 1
+      [
+        // Variant 1..N
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+            },
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
+            {
+              type: BitTagType.resource,
+              configKey: ResourceConfigKey.audio,
+            },
+          ],
+          repeatCount: Count.infinity,
+        },
+      ],
+    ],
+  },
   [CardSetConfigKey._botActionResponses]: {
     variants: [
       [

@@ -22,7 +22,6 @@ import { BodyBitJson } from '../../model/json/BodyBitJson';
 import { ImageResourceWrapperJson, ResourceJson, ResourceWrapperJson } from '../../model/json/ResourceJson';
 import { ParserInfo } from '../../model/parser/ParserInfo';
 import { TextParser } from '../../parser/text/TextParser';
-import { ArrayUtils } from '../../utils/ArrayUtils';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { NumberUtils } from '../../utils/NumberUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
@@ -334,7 +333,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       } else {
         // String example
-        defaultExample = (ArrayUtils.asSingle(bit.sampleSolution) as string) ?? '';
+        // Don't use sampleSolution as the default example for conversation bits
+        // See: https://github.com/getMoreBrain/cosmic/issues/7293
+        // defaultExample = (ArrayUtils.asSingle(bit.sampleSolution) as string) ?? '';
+        defaultExample = 'true';
       }
 
       const exampleRes = this.toExample(bit as ExampleNode, {
@@ -352,6 +354,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected exit_bitsValue(_node: NodeInfo, _route: NodeInfo[]): void {
+    // Move isExample / example to end of bit JSON from beginning
+    const isExample = this.bitJson.isExample;
+    const example = this.bitJson.example;
+    delete this.bitJson.isExample;
+    delete this.bitJson.example;
+    this.bitJson.isExample = isExample;
+    this.bitJson.example = example;
+
     // Clean up the bit JSON, removing any unwanted values
     this.cleanBitJson(this.bitJson);
   }
@@ -757,6 +767,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pronunciationTable
+
+  protected enter_pronunciationTable(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: false });
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table
 
   protected enter_table(node: NodeInfo, route: NodeInfo[]): boolean {
@@ -1004,6 +1020,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (typeof (this as any)[funcName] === 'function') {
         continue;
       }
+
+      // Skip 'example' property as it is non-standard and handled elsewhere
+      if (astKey === 'example') continue;
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (this as any)[funcName] = (node: NodeInfo, route: NodeInfo[]) => {
@@ -1371,6 +1390,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
   protected cleanBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
     const bitType = Config.getBitType(bitJson.type);
+    const bitConfig = Config.getBitConfig(bitType);
     // const textFormat = bitJson.format;
     // const plainText = this.options.textAsPlainText;
 
@@ -1563,6 +1583,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
       }
 
+      // Page bits
       if (
         Config.isOfBitType(bitType, [
           BitType.pageBanner,
@@ -1596,6 +1617,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.hasMarkAsDone == null) bitJson.hasMarkAsDone = false;
         if (bitJson.processHandIn == null) bitJson.processHandIn = false;
         if (bitJson.isPublic == null) bitJson.isPublic = false;
+        if (bitJson.chatWithBook == null) bitJson.chatWithBook = false;
+        if (bitJson.chatWithBookBrainKey == null) bitJson.chatWithBookBrainKey = '';
       }
 
       // Special case for 'ai' bits
@@ -1674,6 +1697,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Special case for 'container' bits
       if (Config.isOfBitType(bitType, BitType.container)) {
         if (bitJson.allowedBit == null) bitJson.allowedBit = [];
+      }
+
+      // Special case for 'quiz' bits
+      if (bitConfig.quizBit) {
+        if (bitJson.revealSolutions == null) bitJson.revealSolutions = false;
       }
 
       // Remove top level example if it is not required

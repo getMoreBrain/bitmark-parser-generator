@@ -22,6 +22,9 @@ const TextNodeType = superenum({
   image: 'image',
   codeBlock: 'codeBlock',
 
+  // Inline blocks
+  latex: 'latex',
+
   // Body bits
   gap: 'gap',
   select: 'select',

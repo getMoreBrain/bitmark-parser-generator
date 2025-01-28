@@ -118,6 +118,7 @@ class Config {
       const {
         since,
         textFormatDefault,
+        quizBit,
         tags: _tags,
         cardSet: _cardSet,
         deprecated,
@@ -144,13 +145,14 @@ class Config {
       }
 
       // Create the bit config
-      bitConfig = new BitConfig(
+      bitConfig = new BitConfig({
         since,
         bitType,
         inheritedBitTypes,
-        textFormatDefault ?? TextFormat.bitmarkMinusMinus,
+        textFormatDefault: textFormatDefault ?? TextFormat.bitmarkMinusMinus,
         tags,
         cardSet,
+        quizBit,
         deprecated,
         bodyAllowed,
         bodyRequired,
@@ -158,8 +160,8 @@ class Config {
         footerRequired,
         resourceAttachmentAllowed,
         rootExampleType,
-        comboResourceTagType,
-      );
+        comboResourceType: comboResourceTagType,
+      });
 
       // Add to cache
       this.bitCache.set(bitType, bitConfig);

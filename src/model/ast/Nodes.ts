@@ -24,6 +24,7 @@ import {
   MatrixJson,
   PairJson,
   PersonJson,
+  PronunciationTableJson,
   QuestionJson,
   QuizJson,
   RatingLevelStartEndJson,
@@ -104,6 +105,8 @@ export interface Bit {
   kind?: Property;
   hasMarkAsDone?: Property;
   processHandIn?: Property;
+  chatWithBook?: Property;
+  chatWithBookBrainKey?: Property;
   action?: Property;
   showInIndex?: Property;
   refAuthor?: Property;
@@ -199,6 +202,7 @@ export interface Bit {
   anchor?: string;
   reference?: string;
   referenceEnd?: string;
+  revealSolutions?: Property;
   item?: TextAst;
   lead?: TextAst;
   pageNumber?: TextAst;
@@ -284,6 +288,7 @@ export interface CardNode {
   heading?: HeadingJson;
   pairs?: PairJson[];
   matrix?: MatrixJson[];
+  pronunciationTable?: PronunciationTableJson;
   table?: TableJson;
   botResponses?: BotResponseJson[];
   cardBits?: CardBit[];
