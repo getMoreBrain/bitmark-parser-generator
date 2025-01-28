@@ -149,6 +149,8 @@ class Builder extends BaseBuilder {
     kind?: string;
     hasMarkAsDone?: boolean;
     processHandIn?: boolean;
+    chatWithBook?: boolean;
+    chatWithBookBrainKey?: string;
     action?: string;
     showInIndex?: boolean;
     refAuthor?: string | string[];
@@ -364,6 +366,8 @@ class Builder extends BaseBuilder {
       kind: this.toAstProperty(PropertyConfigKey.kind, data.kind),
       hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, data.hasMarkAsDone),
       processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, data.processHandIn),
+      chatWithBook: this.toAstProperty(PropertyConfigKey.chatWithBook, data.chatWithBook),
+      chatWithBookBrainKey: this.toAstProperty(PropertyConfigKey.chatWithBookBrainKey, data.chatWithBookBrainKey),
       action: this.toAstProperty(PropertyConfigKey.action, data.action),
       showInIndex: this.toAstProperty(PropertyConfigKey.showInIndex, data.showInIndex),
       refAuthor: this.toAstProperty(PropertyConfigKey.refAuthor, data.refAuthor),

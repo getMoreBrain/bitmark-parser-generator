@@ -24,6 +24,8 @@
       "kind": "learning-path",
       "hasMarkAsDone": true,
       "processHandIn": true,
+      "chatWithBook": true,
+      "chatWithBookBrainKey": "12435",
       "duration": "PT2H",
       "maxTocChapterLevel": 5,
       "title": [

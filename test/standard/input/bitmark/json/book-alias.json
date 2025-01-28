@@ -17,6 +17,8 @@
       "maxTocChapterLevel": 45,
       "hasMarkAsDone": false,
       "processHandIn": false,
+      "chatWithBook": false,
+      "chatWithBookBrainKey": "",
       "title": [
         {
           "type": "paragraph",
@@ -71,6 +73,8 @@
       "maxTocChapterLevel": -1,
       "hasMarkAsDone": false,
       "processHandIn": false,
+      "chatWithBook": false,
+      "chatWithBookBrainKey": "",
       "isPublic": false
     },
     "parser": {

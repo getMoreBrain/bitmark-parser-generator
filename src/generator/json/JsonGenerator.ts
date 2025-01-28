@@ -1611,6 +1611,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.hasMarkAsDone == null) bitJson.hasMarkAsDone = false;
         if (bitJson.processHandIn == null) bitJson.processHandIn = false;
         if (bitJson.isPublic == null) bitJson.isPublic = false;
+        if (bitJson.chatWithBook == null) bitJson.chatWithBook = false;
+        if (bitJson.chatWithBookBrainKey == null) bitJson.chatWithBookBrainKey = '';
       }
 
       // Special case for 'ai' bits
