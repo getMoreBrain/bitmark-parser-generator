@@ -81,6 +81,7 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.userCircle,
   TextMarkType.userHighlight,
   //
+  TextMarkType.link,
   TextMarkType.ref,
   TextMarkType.xref,
   TextMarkType.footnote,
@@ -506,14 +507,18 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   protected writeText(node: TextNode): void {
     if (node.text == null) return;
 
-    // Handle link - if it is a link, will return true and write the link
-    if (this.writeLink(node)) return;
-
     // Handle normal text
     const codeBreakscaping = this.inCodeBlock;
 
-    // Breakscape the text
+    // Get the text
     let s: string = node.text;
+
+    // If the node has a single link mark, and the mark is the same (without protocol) as the text, write the link
+    // instead of the text. This is a special case.
+    const linkText = this.getLinkText(node);
+    if (linkText) s = linkText;
+
+    // Breakscape the text
     if (!codeBreakscaping) {
       s = Breakscape.breakscape(s, {
         textFormat: this.textFormat,
@@ -535,37 +540,46 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.write(s);
   }
 
-  protected writeLink(node: TextNode): boolean {
+  /**
+   * Check if a node is a link node and if so and the node has only the link mark, and the link without the
+   * protocol is the same as the text, return true. Otherwise return false.
+   *
+   * @param node
+   * @returns true if a simple link, otherwise false
+   */
+  protected isSimpleLink(node: TextNode): boolean {
+    if (node.text == null) return false;
+    if (node.marks?.length !== 1) return false;
+
+    const href = this.getLinkHref(node);
+    if (href) {
+      // Get the text part of the link
+      const hrefText = href.replace(LINK_REGEX, '$1');
+      return hrefText === node.text;
+    }
+    return false;
+  }
+
+  /**
+   * Get the link text if the node is a link, otherwise return false
+   *
+   * @param node
+   * @returns
+   */
+  protected getLinkText(node: TextNode): string | false {
     if (node.text == null) return false;
 
     const href = this.getLinkHref(node);
     if (href) {
-      // Breakscape the text
-      let s = Breakscape.breakscape(node.text, {
-        textFormat: this.textFormat,
-      });
-
-      // Apply any required indentation
-      if (this.currentIndent > 1) {
-        const indentationString = this.getIndentationString();
-        s = s.replace(INDENTATION_REGEX, `$1${indentationString}`) as BreakscapedString;
-      }
-
-      // The node is a link.
       // Get the text part of the link
       const hrefText = href.replace(LINK_REGEX, '$1');
-      if (hrefText === s) {
-        // Write the link instead of the text
-        this.write(href);
+      if (hrefText === node.text) {
+        // Return the link as the text
+        return href;
       } else {
-        // Write as an inline mark
-        s = `==${s}==|link:${href}|` as BreakscapedString;
-        this.write(s);
+        return node.text;
       }
-
-      return true;
     }
-
     return false;
   }
 
@@ -616,7 +630,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         undefined as string | undefined,
       );
 
-      const haveMark = markStartEnd != null;
+      // Check the special case of a simple link mark
+      const isSimpleLinkMark = this.isSimpleLink(node);
+
+      const haveMark = markStartEnd != null && !isSimpleLinkMark;
 
       if (haveMark) {
         // Write the mark start / end around the text (==)
@@ -635,6 +652,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
             } else if (TextMarkType.comment === mark.type) {
               this.writeInlineMarkStartEnd();
               this.writeCommentMark(mark as CommentMark);
+            } else if (TextMarkType.link === mark.type) {
+              this.writeInlineMarkStartEnd();
+              this.writeLinkMark(mark as LinkMark);
             } else if (TextMarkType.ref === mark.type) {
               this.writeInlineMarkStartEnd();
               this.writeRefMark(mark as RefMark);
@@ -651,7 +671,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
               this.writeInlineMarkStartEnd();
               this.writeInlineMark(mark);
             } else {
-              // Do nothing (NOTE: link is handled in writeText)
+              // Do nothing
             }
           }
         }
@@ -666,6 +686,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
               }
             } else if (
               TextMarkType.comment === mark.type ||
+              TextMarkType.link === mark.type ||
               TextMarkType.ref === mark.type ||
               TextMarkType.xref === mark.type ||
               TextMarkType.footnote === mark.type ||
@@ -862,6 +883,13 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     const comment = mark.comment || '';
 
     const s = `#${comment}`;
+    this.write(s);
+  }
+
+  protected writeLinkMark(mark: LinkMark) {
+    const href = mark.attrs?.href || '';
+
+    const s = `link:${href}`;
     this.write(s);
   }
 

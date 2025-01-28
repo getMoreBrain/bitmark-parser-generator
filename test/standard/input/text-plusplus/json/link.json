@@ -91,6 +91,35 @@
       {
         "text": " as a link",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "italic"
+          },
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://image.com",
+              "target": "_blank"
+            }
+          },
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "Highlight text",
+        "type": "text"
+      },
+      {
+        "text": " as a link",
+        "type": "text"
       }
     ],
     "attrs": {}
