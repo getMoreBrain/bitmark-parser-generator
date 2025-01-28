@@ -1,0 +1,434 @@
+[
+  {
+    "bit": {
+      "type": "pronunciation-table",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Diphthongs",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "pronunciationTable": {
+        "data": [
+          [
+            {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "ɪə",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "ea",
+                      "type": "text"
+                    },
+                    {
+                      "text": "r",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "audio": {
+                "format": "mp3",
+                "provider": "https",
+                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            },
+            {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "eɪ",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "c",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "a",
+                      "type": "text"
+                    },
+                    {
+                      "text": "ke",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "audio": {
+                "format": "mp3",
+                "provider": "https",
+                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            }
+          ],
+          [
+            {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "ʊə",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "eu",
+                      "type": "text"
+                    },
+                    {
+                      "text": "ro",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "audio": {
+                "format": "mp3",
+                "provider": "https",
+                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            },
+            {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "ɔɪ",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "c",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "oi",
+                      "type": "text"
+                    },
+                    {
+                      "text": "n",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "audio": {
+                "format": "mp3",
+                "provider": "https",
+                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            },
+            {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "əʊ",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "b",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "oa",
+                      "type": "text"
+                    },
+                    {
+                      "text": "t",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "audio": {
+                "format": "mp3",
+                "provider": "https",
+                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            }
+          ],
+          [
+            {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "eə",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "ch",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "ai",
+                      "type": "text"
+                    },
+                    {
+                      "text": "r",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "audio": {
+                "format": "mp3",
+                "provider": "https",
+                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            },
+            {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "aɪ",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "i",
+                      "type": "text"
+                    },
+                    {
+                      "text": "ce",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "audio": {
+                "format": "mp3",
+                "provider": "https",
+                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            },
+            {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "aʊ",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "c",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "ow",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "audio": {
+                "format": "mp3",
+                "provider": "https",
+                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            }
+          ]
+        ]
+      }
+    },
+    "parser": {
+      "version": "3.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.18.2"
+    },
+    "bitmark": "[.pronunciation-table]\n[!Diphthongs]\n====\n[#ɪə]\n**ea**r\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#eɪ]\nc**a**ke\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n====\n[#ʊə]\n**eu**ro\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#ɔɪ]\nc**oi**n\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#əʊ]\nb**oa**t\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n====\n[#eə]\nch**ai**r\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#aɪ]\n**i**ce\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#aʊ]\nc**ow**\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n===="
+  },
+  {
+    "bit": {
+      "type": "pronunciation-table",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "pronunciationTable": {
+        "data": []
+      }
+    },
+    "parser": {
+      "version": "3.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.18.2"
+    },
+    "bitmark": "[.pronunciation-table]"
+  }
+]

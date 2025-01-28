@@ -24,6 +24,7 @@ import {
   MatrixJson,
   PairJson,
   PersonJson,
+  PronunciationTableJson,
   QuestionJson,
   QuizJson,
   RatingLevelStartEndJson,
@@ -287,6 +288,7 @@ export interface CardNode {
   heading?: HeadingJson;
   pairs?: PairJson[];
   matrix?: MatrixJson[];
+  pronunciationTable?: PronunciationTableJson;
   table?: TableJson;
   botResponses?: BotResponseJson[];
   cardBits?: CardBit[];

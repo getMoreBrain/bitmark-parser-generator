@@ -29,6 +29,7 @@ import {
   IngredientJson,
   MarkConfigJson,
   PersonJson,
+  PronunciationTableCellJson,
   RatingLevelStartEndJson,
   ResponseJson,
   ServingsJson,
@@ -1424,6 +1425,20 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL();
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pronunciationTable
+
+  protected between_pronunciationTable(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.cardNode) return;
+
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed(route)) return;
+
+    this.writeNL();
+    this.writeCardSetCardDivider();
+    this.writeNL();
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table
 
   protected between_table(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
@@ -1439,10 +1454,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pronunciationTable -> data
 
   protected between_data(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.table) return;
+    if (parent?.key !== NodeType.table && parent?.key !== NodeType.pronunciationTable) return;
 
     this.writeNL();
     this.writeCardSetCardDivider();
@@ -1483,10 +1499,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data -> dataValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pronunciationTable -> data -> dataValue
 
   protected between_dataValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
     const parent = this.getParentNode(route, 2);
-    if (parent?.key !== NodeType.table) return;
+    if (parent?.key !== NodeType.table && parent?.key !== NodeType.pronunciationTable) return;
 
     // Ignore cards if not allowed
     if (!this.isCardAllowed(route)) return;
@@ -1505,14 +1522,40 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.write(node.value);
   }
 
-  protected enter_dataValueValue(node: NodeInfo, route: NodeInfo[]): void {
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data -> dataValue -> dataValueValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pronunciationTable -> data -> dataValue -> dataValueValue
+
+  protected enter_dataValueValue(node: NodeInfo, route: NodeInfo[]): void | boolean {
     const parent = this.getParentNode(route, 3);
-    if (parent?.key !== NodeType.table) return;
+    if (parent?.key !== NodeType.table && parent?.key !== NodeType.pronunciationTable) return;
 
     const textFormat = this.getTextFormat(route) ?? TextFormat.bitmarkMinusMinus;
 
     if (node.value) {
-      this.textGenerator.generateSync(node.value, textFormat);
+      if (parent?.key === NodeType.pronunciationTable) {
+        // Pronunciation Table
+        const cell = node.value as PronunciationTableCellJson;
+        if (cell.title) {
+          this.writeOP();
+          this.writeHash();
+          this.textGenerator.generateSync(cell.title as TextAst, TextFormat.bitmarkMinusMinus);
+          this.writeCL();
+          this.writeNL();
+        }
+        if (cell.audio) {
+          this.writeResource(ResourceTag.audio, cell.audio.src);
+          this.writeNL();
+        }
+        if (cell.body) {
+          this.textGenerator.generateSync(cell.body as TextAst, textFormat);
+        }
+
+        // Stop traversal of this branch
+        return false;
+      } else {
+        // Table
+        this.textGenerator.generateSync(node.value, textFormat);
+      }
     }
     // this.write(node.value);
   }

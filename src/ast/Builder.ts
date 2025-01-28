@@ -42,6 +42,7 @@ import {
   MatrixJson,
   PairJson,
   PersonJson,
+  PronunciationTableJson,
   QuestionJson,
   QuizJson,
   RatingLevelStartEndJson,
@@ -275,6 +276,7 @@ class Builder extends BaseBuilder {
     heading?: Partial<HeadingJson>;
     pairs?: Partial<PairJson>[];
     matrix?: Partial<MatrixJson>[];
+    pronunciationTable?: Partial<PronunciationTableJson>;
     table?: Partial<TableJson>;
     choices?: Partial<ChoiceJson>[];
     questions?: Partial<QuestionJson>[];
@@ -993,6 +995,46 @@ class Builder extends BaseBuilder {
       ignoreEmptyArrays: ['instruction', 'item', 'values'],
       ignoreUndefined: ['example', 'isCaseSensitive'],
     });
+
+    return node;
+  }
+
+  /**
+   * Build pronunciation table node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildPronunciationTable(
+    bitType: BitTypeType,
+    dataIn: Partial<PronunciationTableJson> | undefined,
+  ): PronunciationTableJson | undefined {
+    if (!dataIn) return undefined;
+
+    // NOTE: Node order is important and is defined here
+    const node: PronunciationTableJson = {
+      data: (dataIn.data ?? []).map((row) =>
+        (row ?? []).map((cell) => {
+          // Process the audio resource
+          const audio = (
+            ArrayUtils.asSingle(
+              this.resourceBuilder.resourceFromResourceDataJson(bitType, ResourceTag.audio, cell.audio),
+            ) as AudioResourceWrapperJson
+          )?.audio;
+
+          return {
+            title: this.handleJsonText(cell.title),
+            body: this.handleJsonText(cell.body),
+            audio,
+          };
+        }),
+      ),
+    };
+
+    // Remove Unset Optionals
+    // ObjectUtils.removeUnwantedProperties(node, {
+    //   ignoreAllFalse: true,
+    // });
 
     return node;
   }
@@ -1973,6 +2015,7 @@ class Builder extends BaseBuilder {
       heading?: Partial<HeadingJson>;
       pairs?: Partial<PairJson>[];
       matrix?: Partial<MatrixJson>[];
+      pronunciationTable?: Partial<PronunciationTableJson>;
       table?: Partial<TableJson>;
       botResponses?: Partial<BotResponseJson>[];
       ingredients?: Partial<IngredientJson>[];
@@ -1993,6 +2036,7 @@ class Builder extends BaseBuilder {
       heading: this.buildHeading(data.heading),
       pairs: this.buildPairs(bitType, data.pairs),
       matrix: this.buildMatricies(data.matrix),
+      pronunciationTable: this.buildPronunciationTable(bitType, data.pronunciationTable),
       table: this.buildTable(data.table),
       botResponses: this.buildBotResponses(data.botResponses),
       ingredients: this.buildIngredients(data.ingredients),

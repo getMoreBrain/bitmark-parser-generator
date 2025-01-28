@@ -39,6 +39,7 @@ import {
   MatrixJson,
   PairJson,
   PersonJson,
+  PronunciationTableJson,
   QuestionJson,
   QuizJson,
   RatingLevelStartEndJson,
@@ -217,6 +218,7 @@ export interface BitSpecificCards {
   matrix?: Partial<MatrixJson>[];
   choices?: Partial<ChoiceJson>[];
   questions?: Partial<QuestionJson>[];
+  pronunciationTable?: Partial<PronunciationTableJson>;
   table?: Partial<TableJson>;
   botResponses?: Partial<BotResponseJson>[];
   ingredients?: Partial<IngredientJson>[];

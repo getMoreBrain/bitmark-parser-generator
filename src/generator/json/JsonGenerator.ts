@@ -767,6 +767,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> pronunciationTable
+
+  protected enter_pronunciationTable(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: false });
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table
 
   protected enter_table(node: NodeInfo, route: NodeInfo[]): boolean {

@@ -318,6 +318,7 @@ const NodeType = superenum({
   productVideoValue: 'productVideoValue',
   progress: 'progress',
   progressValue: 'progressValue',
+  pronunciationTable: 'pronunciationTable',
   properties: 'properties',
   property: 'property',
   propertyKey: 'propertyKey',
