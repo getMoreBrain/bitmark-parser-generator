@@ -366,6 +366,16 @@ export interface MatrixCellJson {
   __defaultExample?: ExampleJson;
 }
 
+export interface PronunciationTableCellJson {
+  title: JsonText;
+  body: JsonText;
+  audio: AudioResourceJson;
+}
+
+export interface PronunciationTableJson {
+  data: PronunciationTableCellJson[][];
+}
+
 export interface TableJson {
   columns: JsonText[];
   data: JsonText[][];

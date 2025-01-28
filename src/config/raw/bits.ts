@@ -2248,6 +2248,16 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.pronunciationTable]: {
+    since: '3.1.0',
+    tags: [
+      {
+        type: BitTagType.group,
+        configKey: GroupConfigKey.group_standardTags,
+      },
+    ],
+    cardSet: CardSetConfigKey._pronunciationTable,
+  },
   [BitType.table]: {
     since: '1.5.19',
     tags: [
