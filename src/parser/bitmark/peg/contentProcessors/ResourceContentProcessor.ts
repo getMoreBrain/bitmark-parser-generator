@@ -7,7 +7,7 @@ import { BitTypeType } from '../../../../model/enum/BitType';
 import { Count } from '../../../../model/enum/Count';
 import { ResourceTag, ResourceTagType } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
-import { ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
+import { ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
 
 import {
   BitContent,
@@ -109,6 +109,39 @@ function resourceContentProcessor(
     // Parse the resource chain
     const resourceConfig = Config.getTagConfigForTag(tagsConfig, type);
 
+    // const { posterImage, ...tags } = context.bitContentProcessor(
+    //   BitContentLevel.Chain,
+    //   bitType,
+    //   textFormat,
+    //   resourceConfig?.chain,
+    //   chain,
+    // );
+
+    // // If the chain contains a poster image, the chain is split at this point, and any tags after the poster image
+    // // apply to the poster image, not the original resource.
+    // const { originalChain, posterImageChain } = extractPosterImageChain(chain);
+    // const posterImageChainConfig = resourceConfig?.chain?.posterImage?.chain;
+
+    // // Process the poster image chain
+    // const { posterImage: unused, ...posterImageTags } = context.bitContentProcessor(
+    //   BitContentLevel.Chain,
+    //   bitType,
+    //   textFormat,
+    //   posterImageChainConfig,
+    //   posterImageChain,
+    // );
+    // unused;
+
+    // // Process the remaining chain
+    // const { posterImage, ...tags } = context.bitContentProcessor(
+    //   BitContentLevel.Chain,
+    //   bitType,
+    //   textFormat,
+    //   resourceConfig?.chain,
+    //   originalChain,
+    // );
+
+    // Process the chain
     const { posterImage, ...tags } = context.bitContentProcessor(
       BitContentLevel.Chain,
       bitType,
@@ -117,14 +150,34 @@ function resourceContentProcessor(
       chain,
     );
 
-    const posterImageResource = posterImage
-      ? (
-          resourceBuilder.resource(bitType, {
-            type: ResourceTag.image,
-            value: posterImage,
-          }) as ImageResourceWrapperJson
-        ).image
-      : undefined;
+    // Handle the poster image
+    let posterImageResource: ImageResourceJson | undefined;
+    if (posterImage) {
+      // Process the poster image chain
+      const { subConfig: posterImageChainConfig, subChain: posterImageChain } = extractSubChain(
+        resourceConfig?.chain,
+        chain,
+        'posterImage',
+      );
+
+      const { posterImage: unused, ...posterImageTags } = context.bitContentProcessor(
+        BitContentLevel.Chain,
+        bitType,
+        textFormat,
+        posterImageChainConfig,
+        posterImageChain,
+      );
+      unused;
+
+      // Build the poster image resource
+      posterImageResource = (
+        resourceBuilder.resource(bitType, {
+          type: ResourceTag.image,
+          value: posterImage,
+          ...posterImageTags,
+        }) as ImageResourceWrapperJson
+      ).image;
+    }
 
     const resource = resourceBuilder.resource(bitType, {
       type,
@@ -180,6 +233,29 @@ function propertyStyleResourceContentProcessor(
     });
     if (resource) target.propertyStyleResources[key] = resource;
   }
+}
+
+function extractSubChain(
+  config: TagsConfig | undefined,
+  chain: BitContent[] | undefined,
+  key: string,
+): { subConfig: TagsConfig | undefined; subChain: BitContent[] | undefined } {
+  let subConfig: TagsConfig | undefined;
+  if (config) {
+    subConfig = config[key]?.chain;
+  }
+
+  const subChain = chain?.reduce(
+    (acc, c) => {
+      if (acc) return acc;
+      const tkv = c as TypeKeyValue;
+      if (tkv.key === 'posterImage') return tkv.chain;
+      return undefined;
+    },
+    undefined as BitContent[] | undefined,
+  );
+
+  return { subConfig, subChain };
 }
 
 export { buildResources, resourceContentProcessor, propertyStyleResourceContentProcessor };
