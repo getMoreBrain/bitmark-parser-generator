@@ -765,13 +765,14 @@ class ResourceBuilder extends BaseBuilder {
         allowSubtitles: (allowSubtitles ?? undefined) as boolean,
         showSubtitles: (showSubtitles ?? undefined) as boolean,
         alt: alt ?? '',
-        posterImage: (posterImage ?? undefined) as ImageResourceJson,
-        thumbnails: (thumbnails ?? undefined) as ImageResourceJson[],
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(caption),
         search: (search ?? undefined) as string,
+        // Have sub-chains so must be at end of chain
+        posterImage: (posterImage ?? undefined) as ImageResourceJson,
+        thumbnails: (thumbnails ?? undefined) as ImageResourceJson[],
       },
     };
 
