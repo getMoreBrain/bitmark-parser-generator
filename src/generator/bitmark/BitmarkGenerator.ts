@@ -1915,7 +1915,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   // bitmarkAst -> bits -> bitsValue -> posterImage
-  // bitmarkAst -> bits -> bitsValue -> resource -> posterImage
+  // bitmarkAst -> bits -> bitsValue -> resource -> * -> posterImage
 
   protected enter_posterImage(node: NodeInfo, route: NodeInfo[]): boolean {
     const parent = this.getParentNode(route);

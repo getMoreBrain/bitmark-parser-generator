@@ -405,12 +405,28 @@ class BitmarkPegParserValidator {
         context.addWarning(warning.warning ?? '', warning.content, warning.previousContent);
       }
 
-      if (validatedTagContent && Array.isArray(validatedTagContent.chain) && validatedTagContent.chain.length > 0) {
-        // If the content has a chain, but the validation data does not have a chain, then the chain is invalid
-        // The chain is split off from the single tag for further processing.
-        // This allows non-chained tags to be compressed into a chain without breaking the behaviour, and makes the
-        // parser more forgiving.
+      // If the content does not have a chain, but the validation data does have a chain, and there are still more
+      // items in this chain, then the remaining items should be considered a sub-chain and processed as such.
+      // Split the remaining items off from the current chain and process them as a separate chain.
+      if (
+        contentDepth === BitContentLevel.Chain &&
+        tagData &&
+        tagData.chain &&
+        validatedTagContent &&
+        !validatedTagContent.chain
+      ) {
+        const restOfChain = dataOrNull.slice(i + 1);
+        if (restOfChain.length > 0) {
+          validatedTagContent.chain = restOfChain as BitContent[];
+        }
+        dataOrNull.splice(i + 1);
+      }
 
+      // If the content has a chain, but the validation data does not have a chain, then the chain is invalid
+      // The chain is split off from the single tag for further processing.
+      // This allows non-chained tags to be compressed into a chain without breaking the behaviour, and makes the
+      // parser more forgiving.
+      if (validatedTagContent && Array.isArray(validatedTagContent.chain) && validatedTagContent.chain.length > 0) {
         if (tagData && tagData.chain) {
           const { validated: validatedTagChainContent, remaining: remainingTagChainContent } =
             this.validateTagChainsRecursive(
