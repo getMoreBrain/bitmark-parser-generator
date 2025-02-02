@@ -177,6 +177,8 @@ export interface Bit {
   resolvedDate?: Property;
   resolvedBy?: Property;
   handInAcceptFileType?: Property;
+  handInRequirement?: Property;
+  handInInstruction?: Property;
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
   maxTocChapterLevel?: Property;

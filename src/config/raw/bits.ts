@@ -2177,6 +2177,26 @@ const BITS: _BitsConfig = {
   [BitType.handInLocation]: { since: '1.5.15', baseBitType: BitType._standard },
   [BitType.handInPhoto]: { since: '1.5.15', baseBitType: BitType._standard },
   [BitType.handInScan]: { since: '1.5.15', baseBitType: BitType._standard },
+  [BitType.handInSubmit]: {
+    //
+    since: '3.2.0',
+    baseBitType: BitType._standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.handInRequirement,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.handInInstruction,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+  },
   [BitType.handInVideo]: { since: '1.5.15', baseBitType: BitType._standard },
   [BitType.handInVoice]: { since: '1.5.15', baseBitType: BitType._standard },
   [BitType.trueFalse1]: {

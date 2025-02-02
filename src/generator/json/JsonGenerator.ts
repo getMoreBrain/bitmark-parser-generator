@@ -1694,6 +1694,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.handInAcceptFileType == null) bitJson.handInAcceptFileType = [];
       }
 
+      // Special case for 'hand-in-submit' bits
+      if (Config.isOfBitType(bitType, BitType.handInSubmit)) {
+        if (bitJson.handInRequirement == null) bitJson.handInRequirement = [];
+        if (bitJson.handInInstruction == null) bitJson.handInInstruction = '';
+        if (bitJson.buttonCaption == null) bitJson.buttonCaption = '';
+      }
+
       // Special case for 'module' bits
       if (Config.isOfBitType(bitType, BitType.module)) {
         if (bitJson.hasBookNavigation == null) bitJson.hasBookNavigation = true;
