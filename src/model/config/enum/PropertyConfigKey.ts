@@ -55,6 +55,7 @@ const propertyConfigKeys = {
   focusX: 'focusX',
   focusY: 'focusY',
   format: 'format',
+  handInAcceptFileType: 'handInAcceptFileType',
   hasBookNavigation: 'hasBookNavigation',
   hasMarkAsDone: 'hasMarkAsDone',
   height: 'height',

@@ -3,6 +3,7 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 const BitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
   _comment: '_comment', // Used to indicate a bit is commented out
+  _standard: '_standard', // Not to be used as a bit, but as a base for other bit types
   aiPrompt: 'ai-prompt',
   anchor: 'anchor',
   appAiPrompt: 'app-ai-prompt',
@@ -223,6 +224,7 @@ const BitType = superenum({
   handInAudio: 'hand-in-audio',
   handInContact: 'hand-in-contact',
   handInDocument: 'hand-in-document',
+  handInFile: 'hand-in-file',
   handInLocation: 'hand-in-location',
   handInPhoto: 'hand-in-photo',
   handInScan: 'hand-in-scan',
