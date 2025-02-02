@@ -1,8 +1,9 @@
 # bitmark-parser-generator
 
-Version: 3.1.1
+Version: 3.2.0
 ## Supported Bits
 <pre>
+_standard (since: 3.2.0)
 ai-prompt (since: 1.3.0)
 anchor (since: 1.3.0)
 app-ai-prompt (since: 1.3.0)
@@ -223,6 +224,7 @@ group-died (since: 1.3.0)
 hand-in-audio (since: 1.5.15)
 hand-in-contact (since: 1.5.15)
 hand-in-document (since: 1.5.15)
+hand-in-file (since: 3.2.0)
 hand-in-location (since: 1.5.15)
 hand-in-photo (since: 1.5.15)
 hand-in-scan (since: 1.5.15)

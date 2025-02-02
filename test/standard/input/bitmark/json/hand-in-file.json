@@ -1,0 +1,260 @@
+[
+  {
+    "bit": {
+      "type": "hand-in-file",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["189522"],
+      "handInAcceptFileType": ["application/pdf", "image/tiff"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Zeit: 60 Minuten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
+    },
+    "bitmark": "[.hand-in-file]\n[@id:189522]\n[!Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können.]\n\nWichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.\n\nZeit: 60 Minuten"
+  },
+  {
+    "bit": {
+      "type": "hand-in-file",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["213729"],
+      "handInAcceptFileType": [],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "7",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Begriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "image",
+          "attrs": {
+            "alignment": "center",
+            "textAlign": "left",
+            "src": "https://docs.bitmark.cloud/bit-books/compendio/marketing_quiz/web-resources/images/compendio_marketing_7_v2.png",
+            "alt": null,
+            "title": null,
+            "class": "center",
+            "zoomDisabled": false,
+            "width": 650
+          }
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
+    },
+    "bitmark": "[.hand-in-file:bitmark++]\n[@id:213729]\n[%7]\n[!Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.\nBegriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit]\n|image:https://docs.bitmark.cloud/bit-books/compendio/marketing_quiz/web-resources/images/compendio_marketing_7_v2.png|@width:650|"
+  },
+  {
+    "bit": {
+      "type": "hand-in-file",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["213734"],
+      "handInAcceptFileType": ["image/tiff"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Kunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
+    },
+    "bitmark": "[.hand-in-file:bitmark--]\n[@id:213734]\n[%12]\n[!Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:\nKunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel]"
+  },
+  {
+    "bit": {
+      "type": "hand-in-file",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["213737"],
+      "handInAcceptFileType": [],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "15 A",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ausgangslage",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erläutern Sie das Marktsystem, in dem sich die Easy Building bewegt.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sie sind Marketingverantwortliche/-r beim Bauberatungsunternehmen Easy Building AG. Ihre Kunden sind Bauherren (Privatpersonen), die ein Eigenheim bauen und eine unabhängige Expertenmeinung wünschen, z. B. bei der Vergabe von Aufträgen, der Beurteilung verschiedener Lieferanten und Dienstleister oder bei der Bauabnahme.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
+    },
+    "bitmark": "[.hand-in-file:bitmark--]\n[@id:213737]\n[%15 A][%Ausgangslage]\nSie sind Marketingverantwortliche/-r beim Bauberatungsunternehmen Easy Building AG. Ihre Kunden sind Bauherren (Privatpersonen), die ein Eigenheim bauen und eine unabhängige Expertenmeinung wünschen, z. B. bei der Vergabe von Aufträgen, der Beurteilung verschiedener Lieferanten und Dienstleister oder bei der Bauabnahme.\n[!Erläutern Sie das Marktsystem, in dem sich die Easy Building bewegt.]"
+  },
+  {
+    "bit": {
+      "type": "hand-in-file",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["197943"],
+      "handInAcceptFileType": [],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "1.31.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.17.0"
+    },
+    "bitmark": "[.hand-in-file]\n[@id:197943]"
+  }
+]

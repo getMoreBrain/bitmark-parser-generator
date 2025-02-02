@@ -129,6 +129,7 @@ export interface BitJson {
   resolved: boolean;
   resolvedDate: string;
   resolvedBy: string;
+  handInAcceptFileType: string | string[];
   maxCreatedBits: number;
   maxDisplayLevel: number;
   maxTocChapterLevel: number;

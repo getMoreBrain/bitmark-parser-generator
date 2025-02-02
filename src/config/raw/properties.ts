@@ -90,6 +90,10 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.handInAcceptFileType]: {
+    tag: PropertyTag.handInAcceptFileType,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.ageRange]: {
     tag: PropertyTag.ageRange,
     format: PropertyFormat.trimmedString,

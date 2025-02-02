@@ -173,6 +173,8 @@ const NodeType = superenum({
   forValues: 'forValues',
   forValuesValue: 'forValuesValue',
   gap: 'gap',
+  handInAcceptFileType: 'handInAcceptFileType',
+  handInAcceptFileTypeValue: 'handInAcceptFileTypeValue',
   hasBookNavigation: 'hasBookNavigation',
   hasBookNavigationValue: 'hasBookNavigationValue',
   hasMarkAsDone: 'hasMarkAsDone',

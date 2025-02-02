@@ -220,6 +220,7 @@ class Builder extends BaseBuilder {
     resolved?: boolean;
     resolvedDate?: string;
     resolvedBy?: string;
+    handInAcceptFileType?: string | string[];
     maxCreatedBits?: number;
     maxDisplayLevel?: number;
     maxTocChapterLevel?: number;
@@ -442,6 +443,7 @@ class Builder extends BaseBuilder {
       resolved: this.toAstProperty(PropertyConfigKey.resolved, data.resolved),
       resolvedDate: this.toAstProperty(PropertyConfigKey.resolvedDate, data.resolvedDate),
       resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, data.resolvedBy),
+      handInAcceptFileType: this.toAstProperty(PropertyConfigKey.handInAcceptFileType, data.handInAcceptFileType),
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, data.maxCreatedBits),
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, data.maxDisplayLevel),
       maxTocChapterLevel: this.toAstProperty(PropertyConfigKey.maxTocChapterLevel, data.maxTocChapterLevel),
