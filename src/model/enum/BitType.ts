@@ -228,6 +228,7 @@ const BitType = superenum({
   handInLocation: 'hand-in-location',
   handInPhoto: 'hand-in-photo',
   handInScan: 'hand-in-scan',
+  handInSubmit: 'hand-in-submit',
   handInVideo: 'hand-in-video',
   handInVoice: 'hand-in-voice',
   help: 'help',
