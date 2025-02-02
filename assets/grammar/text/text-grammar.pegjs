@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.18.2"
+const VERSION = "8.19.1"
 
 //Parser peggy.js
 
@@ -593,6 +593,7 @@ AlternativeStyleTags
   / 'userStrike'
   / 'userCircle'
   / 'userHighlight'
+  / 'notranslate'
 
 Color
   = 'aqua'
