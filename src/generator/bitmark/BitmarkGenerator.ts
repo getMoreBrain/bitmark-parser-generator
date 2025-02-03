@@ -813,7 +813,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         const text = JSON.stringify(json, null, this.prettifySpace);
         if (text) {
           this.writeNL();
-          this.writePlainTextDivider();
+          this.writeBodyPlainTextDivider();
           this.writeNL();
           this.write(
             Breakscape.breakscape(text, {
@@ -831,7 +831,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       // handle plain text
       this.writeNL();
-      this.writePlainTextDivider();
+      this.writeBodyPlainTextDivider();
       this.writeNL();
       const s = (StringUtils.isString(body.body) ? body.body : '') as string;
       this.write(
@@ -938,10 +938,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
       if (isBitmarkText) {
         // handle bitmark text
-        this.write('~~~~');
+        this.write('==== footer ====');
         this.writeNL();
         // The text generator will write to the writer
-        this.textGenerator.generateSync(footer.footer as TextAst, TextFormat.text);
+        this.textGenerator.generateSync(footer.footer as TextAst, textFormat);
       } else {
         // Plain text footer?!
         // Not valid, ignore (plain text cannot have a card set / footer marker, so cannot have a footer!
@@ -2782,8 +2782,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.write('#');
   }
 
-  protected writePlainTextDivider(): void {
-    this.write('$$$$');
+  protected writeBodyPlainTextDivider(): void {
+    this.write('==== body ====');
   }
 
   protected writeCardSetStart(): void {
@@ -2798,7 +2798,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (this.options.cardSetVersion === CardSetVersion.v1) {
       this.write('===');
     } else {
-      // this.write('~~~~'); // Written by the footer
+      // this.write('==== footer ===='); // Written by the footer
     }
   }
 

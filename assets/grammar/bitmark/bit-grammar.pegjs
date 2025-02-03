@@ -190,13 +190,21 @@ Divider
   FooterDivider
   / PlainTextDivider)
 
+// Plain text divider text
+PlainTextDividerText
+ = value: ("$$$$" / ("====" (WS+) "====") / ("====" (WS+)? "body" (WS+)? "===="))
+
 // Plain text divider
 PlainTextDivider
- = value: (NL "$$$$" WNL) { return helper.handlePlainTextDivider(value); }
+ = value: (NL PlainTextDividerText WNL) { return helper.handlePlainTextDivider(value); }
+
+// Footer text
+FooterDividerText
+ = value: ("~~~~" / ("====" (WS+)? "footer" (WS+)? "===="))
 
 // Footer divider
 FooterDivider
- = value: (NL "~~~~" WNL) { return helper.handleFooterDivider(value); }
+ = value: (NL FooterDividerText WNL) { return helper.handleFooterDivider(value); }
 
 // Modern CardSet
 CardSet_V2
@@ -206,7 +214,7 @@ CardSetStart_V2
   = NL &("====" WNL) { helper.handleCardSetStart(); }
 
 CardSetEnd_V2
-  = ("~~~~"? &WEOL) { helper.handleCardSetEnd(); }
+  = (FooterDividerText? &WEOL) { helper.handleCardSetEnd(); }
 
 Cards_V2
   = value: CardLineOrDivider_V2 { return helper.handleCards(value); }
@@ -216,7 +224,7 @@ CardLineOrDivider_V2
 
 CardLine_V2
 //  = value: $(Line NL) { return helper.handleCardLine(value); }
- = !("~~~~" WEOL) value: $(Line NL / Char+ EOL) { return helper.handleCardLine(value); }
+ = !(FooterDividerText WEOL) value: $(Line NL / Char+ EOL) { return helper.handleCardLine(value); }
 
 
 // Legacy CardSet

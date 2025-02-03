@@ -806,5 +806,503 @@
       ]
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n $$$$\n[!My first config in TOML]\n\nThis is NOT pre!\n$^$$$\n[!My first config in TOML]\nThis IS NOT pre!!\n\n$$$$\n[!My first config in TOML]\nThis IS pre!!!"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["12345"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My first config in TOML",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "[%${1}][%][%${originalPageNo}][%]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "[#${2}]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n$$$$\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
+  },
+  {
+    "bit": {
+      "type": "cloze",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["12345"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My first config in TOML",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Excellent",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is a ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["gap"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " :)",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "^Testing123^^",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "==== body ====",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "**Excellent**",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.cloze]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n** Excellent **\nThis is a [_gap] :)\n\n==== body ====\n\n^Testing123^^\n\n==== body ====\n**Excellent**"
+  },
+  {
+    "bit": {
+      "type": "extractor-configuration",
+      "format": "text",
+      "bitLevel": 1,
+      "id": ["12345"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My first config in TOML",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
+    },
+    "parser": {
+      "version": "3.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.extractor-configuration]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n====body    ====\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["12345"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My first config in TOML",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "==== body ====",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is NOT pre!",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "[!My first config in TOML]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This IS pre!",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n ==== body ====\n[!My first config in TOML]\n\nThis is NOT pre!\n==== ====\n[!My first config in TOML]\nThis IS pre!"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["12345"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My first config in TOML",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "====body====",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is NOT pre!",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "==== body ====",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This IS NOT pre!!",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "[!My first config in TOML]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This IS pre!!!",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1",
+      "warnings": [
+        {
+          "message": "[!] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[!My first config in TOML]",
+          "location": {
+            "start": {
+              "line": 46,
+              "column": 1,
+              "offset": 529
+            },
+            "end": {
+              "line": 46,
+              "column": 27,
+              "offset": 555
+            }
+          },
+          "original": {
+            "text": "[!My first config in TOML]",
+            "location": {
+              "start": {
+                "line": 42,
+                "column": 1,
+                "offset": 468
+              },
+              "end": {
+                "line": 42,
+                "column": 27,
+                "offset": 494
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n ====body====\n[!My first config in TOML]\n\nThis is NOT pre!\n=^=== body ====\n[!My first config in TOML]\nThis IS NOT pre!!\n\n====   body====\n[!My first config in TOML]\nThis IS pre!!!"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "id": ["12345"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "My first config in TOML",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "========",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is NOT pre!!!",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article]\n[@id:12345]\n[%1]\n========\n[!My first config in TOML]\nThis is NOT pre!!!"
   }
 ]
