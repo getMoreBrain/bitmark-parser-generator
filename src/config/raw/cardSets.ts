@@ -419,6 +419,37 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
+  [CardSetConfigKey._bookReferenceList]: {
+    variants: [
+      // Side 1
+      [
+        // Variant 1..N
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardTags,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.refAuthor,
+              maxCount: Count.infinity,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.refBookTitle,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.refPublisher,
+              maxCount: Count.infinity,
+            },
+          ],
+          repeatCount: Count.infinity,
+        },
+      ],
+    ],
+  },
 };
 
 export { CARDSETS as CARDS };

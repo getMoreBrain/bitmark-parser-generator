@@ -1070,6 +1070,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBitsValue
+
+  protected between_cardBitsValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    this.writeNL();
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
 
   protected enter_elements(_node: NodeInfo, _route: NodeInfo[]): void {
@@ -2142,6 +2148,46 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Stop traversal of this branch
     return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue ->  * -> lang
+
+  protected enter_lang(node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeProperty('lang', node.value, {
+      format: PropertyFormat.boolean,
+      single: true,
+      ignoreEmpty: true,
+    });
+  }
+
+  // bitmarkAst -> bits -> bitsValue ->  * -> refAuthor
+
+  protected enter_refAuthor(node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeProperty('refAuthor', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: false,
+      ignoreEmpty: true,
+    });
+  }
+
+  // bitmarkAst -> bits -> bitsValue ->  * -> refBookTitle
+
+  protected enter_refBookTitle(node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeProperty('refBookTitle', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
+  }
+
+  // bitmarkAst -> bits -> bitsValue ->  * -> refPublisher
+
+  protected enter_refPublisher(node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeProperty('refPublisher', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: false,
+      ignoreEmpty: true,
+    });
   }
 
   // bitmarkAst -> bits -> bitsValue ->  * -> isExample / example

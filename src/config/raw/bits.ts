@@ -297,7 +297,12 @@ const BITS: _BitsConfig = {
   [BitType.bookPreface]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookPrologue]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookReadMore]: { since: '1.3.0', baseBitType: BitType.article },
-  [BitType.bookReferenceList]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.bookReferenceList]: {
+    //
+    since: '3.2.0',
+    baseBitType: BitType._standard,
+    cardSet: CardSetConfigKey._bookReferenceList,
+  },
   [BitType.bookRequestForABookReview]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookSummary]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookTeaser]: { since: '1.3.0', baseBitType: BitType.article },
