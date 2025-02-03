@@ -29,6 +29,7 @@ import { TextGenerator } from '../text/TextGenerator';
 
 import {
   BitJson,
+  BookReferenceJson,
   ExampleJson,
   HeadingJson,
   ListItemJson,
@@ -558,31 +559,44 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const bitType = this.getBitType(route);
     if (!bitType) return;
 
-    // Create the listItems / sections if not already created
     let listItems: ListItemJson[] | undefined;
-    if (bitType === BitType.pageFooter) {
-      if (!this.bitJson.sections) this.bitJson.sections = [];
-      listItems = this.bitJson.sections;
+
+    if (bitType === BitType.bookReferenceList) {
+      if (!this.bitJson.bookReferences) this.bitJson.bookReferences = [];
+      const bookReference: Partial<BookReferenceJson> = {};
+
+      this.addProperty(bookReference, 'lang', cardBit.lang, { array: false });
+      this.addProperty(bookReference, 'refAuthor', cardBit.refAuthor ?? [], { array: true });
+      this.addProperty(bookReference, 'refBookTitle', cardBit.refBookTitle ?? [], { array: false });
+      this.addProperty(bookReference, 'refPublisher', cardBit.refPublisher ?? [], { array: true });
+
+      this.bitJson.bookReferences.push(bookReference as BookReferenceJson);
     } else {
-      if (!this.bitJson.listItems) this.bitJson.listItems = [];
-      listItems = this.bitJson.listItems;
+      // Create the listItems / sections if not already created
+      if (bitType === BitType.pageFooter) {
+        if (!this.bitJson.sections) this.bitJson.sections = [];
+        listItems = this.bitJson.sections;
+      } else {
+        if (!this.bitJson.listItems) this.bitJson.listItems = [];
+        listItems = this.bitJson.listItems;
+      }
+
+      // Create this list item
+      this.listItem = {
+        item: (cardBit.item ?? []) as JsonText,
+        lead: (cardBit.lead ?? []) as JsonText,
+        hint: (cardBit.hint ?? []) as JsonText,
+        instruction: (cardBit.instruction ?? []) as JsonText,
+        // ...this.toItemLeadHintInstruction(node.value),
+        body: this.bodyDefault,
+      };
+
+      // Delete unwanted properties
+      // const nv = node.value;
+      // const li: Partial<ListItemJson> = this.listItem;
+
+      listItems.push(this.listItem);
     }
-
-    // Create this list item
-    this.listItem = {
-      item: (cardBit.item ?? []) as JsonText,
-      lead: (cardBit.lead ?? []) as JsonText,
-      hint: (cardBit.hint ?? []) as JsonText,
-      instruction: (cardBit.instruction ?? []) as JsonText,
-      // ...this.toItemLeadHintInstruction(node.value),
-      body: this.bodyDefault,
-    };
-
-    // Delete unwanted properties
-    // const nv = node.value;
-    // const li: Partial<ListItemJson> = this.listItem;
-
-    listItems.push(this.listItem);
   }
 
   protected exit_cardBitsValue(_node: NodeInfo, _route: NodeInfo[]): void {

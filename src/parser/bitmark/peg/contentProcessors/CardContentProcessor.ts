@@ -123,6 +123,7 @@ function buildCards(
 
     case CardSetConfigKey._clozeList:
     case CardSetConfigKey._exampleBitList:
+    case CardSetConfigKey._bookReferenceList:
       result = parseCardBits(context, bitType, textFormat, processedCardSet);
       break;
 
@@ -1075,7 +1076,7 @@ function parseCardBits(
         const cardBit: Partial<CardBit> = {
           body,
           ...rest,
-        };
+        } as CardBit;
         if (cardBit) cardBits.push(cardBit);
       }
     }

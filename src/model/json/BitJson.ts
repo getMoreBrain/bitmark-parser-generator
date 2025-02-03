@@ -209,6 +209,7 @@ export interface BitJson {
   ingredients: IngredientJson[];
   listItems: ListItemJson[];
   sections: ListItemJson[]; // sections is just a pseudonym for listItems
+  bookReferences: BookReferenceJson[];
 
   footer: JsonText;
 
@@ -460,6 +461,13 @@ export interface ListItemJson {
   hint: JsonText;
   instruction: JsonText;
   body: JsonText | unknown; // unknown is for JSON body
+}
+
+export interface BookReferenceJson {
+  lang: string;
+  refAuthor: string;
+  refBookTitle: string[];
+  refPublisher: string;
 }
 
 export type ExampleJson = JsonText | boolean | null;
