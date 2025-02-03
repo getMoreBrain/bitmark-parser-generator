@@ -1,8 +1,9 @@
 # bitmark-parser-generator
 
-Version: 3.1.1
+Version: 3.2.0
 ## Supported Bits
 <pre>
+_standard (since: 3.2.0)
 ai-prompt (since: 1.3.0)
 anchor (since: 1.3.0)
 app-ai-prompt (since: 1.3.0)
@@ -69,7 +70,7 @@ book-preface (since: 1.3.0)
 book-prologue (since: 1.3.0)
 book-read-more (since: 1.3.0)
 book-reference (since: 2.2.0)
-book-reference-list (since: 1.3.0)
+book-reference-list (since: 3.2.0)
 book-request-for-a-book-review (since: 1.3.0)
 book-summary (since: 1.3.0)
 book-teaser (since: 1.3.0)
@@ -223,9 +224,11 @@ group-died (since: 1.3.0)
 hand-in-audio (since: 1.5.15)
 hand-in-contact (since: 1.5.15)
 hand-in-document (since: 1.5.15)
+hand-in-file (since: 3.2.0)
 hand-in-location (since: 1.5.15)
 hand-in-photo (since: 1.5.15)
 hand-in-scan (since: 1.5.15)
+hand-in-submit (since: 3.2.0)
 hand-in-video (since: 1.5.15)
 hand-in-voice (since: 1.5.15)
 help (since: 1.3.0)

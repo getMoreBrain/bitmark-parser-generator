@@ -176,6 +176,9 @@ export interface Bit {
   resolved?: Property;
   resolvedDate?: Property;
   resolvedBy?: Property;
+  handInAcceptFileType?: Property;
+  handInRequirement?: Property;
+  handInInstruction?: Property;
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
   maxTocChapterLevel?: Property;
@@ -262,17 +265,21 @@ export interface BodyPart {
   data?: unknown;
 }
 
-export interface CardBit {
-  item: JsonText;
-  lead: JsonText;
-  hint?: JsonText;
-  instruction?: JsonText;
-  isExample?: boolean;
-  example?: ExampleJson;
-  extraProperties?: ExtraProperties;
-  body?: Body;
-  __isDefaultExample: boolean;
+export interface CardBit extends Bit {
+  //
 }
+
+// export interface CardBit {
+//   item: JsonText;
+//   lead: JsonText;
+//   hint?: JsonText;
+//   instruction?: JsonText;
+//   isExample?: boolean;
+//   example?: ExampleJson;
+//   extraProperties?: ExtraProperties;
+//   body?: Body;
+//   __isDefaultExample: boolean;
+// }
 
 // Card Node
 export interface CardNode {
@@ -291,7 +298,7 @@ export interface CardNode {
   pronunciationTable?: PronunciationTableJson;
   table?: TableJson;
   botResponses?: BotResponseJson[];
-  cardBits?: CardBit[];
+  cardBits?: Bit[];
   ingredients?: IngredientJson[];
   captionDefinitionList?: CaptionDefinitionListJson;
 }

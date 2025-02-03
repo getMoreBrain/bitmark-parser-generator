@@ -220,6 +220,9 @@ class Builder extends BaseBuilder {
     resolved?: boolean;
     resolvedDate?: string;
     resolvedBy?: string;
+    handInAcceptFileType?: string | string[];
+    handInRequirement?: string | string[];
+    handInInstruction?: string;
     maxCreatedBits?: number;
     maxDisplayLevel?: number;
     maxTocChapterLevel?: number;
@@ -442,6 +445,9 @@ class Builder extends BaseBuilder {
       resolved: this.toAstProperty(PropertyConfigKey.resolved, data.resolved),
       resolvedDate: this.toAstProperty(PropertyConfigKey.resolvedDate, data.resolvedDate),
       resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, data.resolvedBy),
+      handInAcceptFileType: this.toAstProperty(PropertyConfigKey.handInAcceptFileType, data.handInAcceptFileType),
+      handInRequirement: this.toAstProperty(PropertyConfigKey.handInRequirement, data.handInRequirement),
+      handInInstruction: this.toAstProperty(PropertyConfigKey.handInInstruction, data.handInInstruction),
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, data.maxCreatedBits),
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, data.maxDisplayLevel),
       maxTocChapterLevel: this.toAstProperty(PropertyConfigKey.maxTocChapterLevel, data.maxTocChapterLevel),
@@ -1955,9 +1961,13 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildCardBits(textFormat: TextFormatType, data: Partial<CardBit>[] | undefined): CardBit[] | undefined {
+  protected buildCardBits(
+    bitType: BitTypeType,
+    textFormat: TextFormatType,
+    data: Partial<CardBit>[] | undefined,
+  ): Bit[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.buildCardBit(textFormat, d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildCardBit(bitType, textFormat, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1967,22 +1977,29 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildCardBit(textFormat: TextFormatType, data: Partial<CardBit> | undefined): CardBit | undefined {
+  protected buildCardBit(
+    bitType: BitTypeType,
+    textFormat: TextFormatType,
+    data: Partial<CardBit> | undefined,
+  ): CardBit | undefined {
     if (!data) return undefined;
 
-    // NOTE: Node order is important and is defined here
-    const node: CardBit = {
-      item: this.handleJsonText(data.item),
-      lead: this.handleJsonText(data.lead),
-      hint: this.handleJsonText(data.hint),
-      instruction: this.handleJsonText(data.instruction),
-      ...this.toExample(data.__isDefaultExample, data.example),
-      __isDefaultExample: data.__isDefaultExample ?? false,
-      body: this.buildBody(textFormat, data.body),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const node = this.buildBit({ ...data, bitType, textFormat } as any) as CardBit;
 
-      // Must always be last in the AST so key clashes are avoided correctly with other properties
-      extraProperties: this.parseExtraProperties(data.extraProperties),
-    };
+    // // NOTE: Node order is important and is defined here
+    // const node: CardBit = {
+    //   item: this.handleJsonText(data.item),
+    //   lead: this.handleJsonText(data.lead),
+    //   hint: this.handleJsonText(data.hint),
+    //   instruction: this.handleJsonText(data.instruction),
+    //   ...this.toExample(data.__isDefaultExample, data.example),
+    //   __isDefaultExample: data.__isDefaultExample ?? false,
+    //   body: this.buildBody(textFormat, data.body),
+
+    //   // Must always be last in the AST so key clashes are avoided correctly with other properties
+    //   extraProperties: this.parseExtraProperties(data.extraProperties),
+    // };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
@@ -2041,7 +2058,7 @@ class Builder extends BaseBuilder {
       botResponses: this.buildBotResponses(data.botResponses),
       ingredients: this.buildIngredients(data.ingredients),
       captionDefinitionList: this.buildCaptionDefinitionList(data.captionDefinitionList),
-      cardBits: this.buildCardBits(textFormat, data.cardBits),
+      cardBits: this.buildCardBits(bitType, textFormat, data.cardBits),
     };
 
     // Remove Unset Optionals

@@ -183,7 +183,7 @@ class JsonParser {
       statements: this.processStatements(statement, bit.isCorrect, bit.statements, bit.example),
       responses: this.processResponses(bitType, bit.responses as ResponseJson[]),
       botResponses: this.processBotResponse(bitType, bit.responses as BotResponseJson[]),
-      cardBits: this.processListItems(bit.listItems ?? bit.sections, bit.placeholders),
+      cardBits: this.processListItems(bit.listItems ?? bit.sections ?? bit.bookReferences, bit.placeholders),
       footer: this.processFooter(bit.footer),
     });
 
