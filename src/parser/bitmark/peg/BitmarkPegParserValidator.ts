@@ -37,30 +37,22 @@ import {
 
 const COMMON_MISTAKE_STRINGS = [
   // Card divider errors
-  '====',
   '----',
   '\n==\n',
   '\n---\n',
-  '\n--\n',
   // Remark errors
-  ':::',
-  '::::',
   // Comment errors
-  '|||',
-  '||||',
 ];
 
 const COMMON_STARTS_WITH_MISTAKE_STRINGS = [
   // Card divider errors
   '==\n',
-  '---\n',
   '--\n',
 ];
 
 const COMMON_ENDS_WITH_MISTAKE_STRINGS = [
   // Card divider errors
   '\n==',
-  '\n---',
   '\n--',
 ];
 

@@ -127,3 +127,77 @@ This IS NOT pre!!
 $$$$
 [!My first config in TOML]
 This IS pre!!!
+
+
+[.article]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+$$$$
+[%${1}][%][%${originalPageNo}][%]
+[#${2}]
+
+
+
+[.cloze]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+** Excellent **
+This is a [_gap] :)
+
+==== text ====
+
+^Testing123^^
+
+==== text ====
+**Excellent**
+
+[.extractor-configuration]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+==== text    ====
+[%${1}][%][%${originalPageNo}][%]
+[#${2}]
+
+[.article]
+[@id:12345]
+[%1]
+
+ ==== text ====
+[!My first config in TOML]
+
+This is NOT pre!
+==== text ====
+[!My first config in TOML]
+This IS pre!
+
+[.article]
+[@id:12345]
+[%1]
+
+ ==== text ====
+====text ====
+==== text====
+====text====
+[!My first config in TOML]
+
+This is NOT pre!
+=^=== text ====
+[!My first config in TOML]
+This IS NOT pre!!
+
+====   text ====
+[!My first config in TOML]
+This IS pre!!!
+
+[.article]
+[@id:12345]
+[%1]
+========
+[!My first config in TOML]
+This is NOT pre!!!
