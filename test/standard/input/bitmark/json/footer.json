@@ -805,7 +805,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
-    "bitmark": "[.article]\nThis is an article with a footer\n[?hint]\n\n====    footer====\n[!instruction]\nThis **is** the footer"
+    "bitmark": "[.article]\nThis is an article with a footer\n[?hint]\n\n====    footer ====\n[!instruction]\nThis **is** the footer"
   },
   {
     "bit": {
@@ -858,7 +858,7 @@
               "type": "hardBreak"
             },
             {
-              "text": "====    footer====",
+              "text": "====    footer ====",
               "type": "text"
             },
             {
@@ -894,7 +894,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
-    "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n\n====   ^ footer====\n[!instruction]\nThis is !!not!! a footer"
+    "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n\n====   ^ footer ====\n[!instruction]\nThis is !!not!! a footer"
   },
   {
     "bit": {
@@ -1180,7 +1180,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
-    "bitmark": "[.article]\nThis article has 2 footers which is not really valid.\nAll text after the first footer should be in the footer, and a warning should be given\n[?hint]\n\n==== footer====\nThis **is** a footer\n==== footer ====\n[!instruction]\nThis is **also** part of the footer and not a second footer!"
+    "bitmark": "[.article]\nThis article has 2 footers which is not really valid.\nAll text after the first footer should be in the footer, and a warning should be given\n[?hint]\n\n==== footer  ====\nThis **is** a footer\n==== footer ====\n[!instruction]\nThis is **also** part of the footer and not a second footer!"
   },
   {
     "bit": {

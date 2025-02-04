@@ -148,11 +148,11 @@ $$$$
 ** Excellent **
 This is a [_gap] :)
 
-==== body ====
+==== text ====
 
 ^Testing123^^
 
-==== body ====
+==== text ====
 **Excellent**
 
 [.extractor-configuration]
@@ -160,7 +160,7 @@ This is a [_gap] :)
 [%1]
 [!My first config in TOML]
 
-====body    ====
+==== text    ====
 [%${1}][%][%${originalPageNo}][%]
 [#${2}]
 
@@ -168,11 +168,11 @@ This is a [_gap] :)
 [@id:12345]
 [%1]
 
- ==== body ====
+ ==== text ====
 [!My first config in TOML]
 
 This is NOT pre!
-==== ====
+==== text ====
 [!My first config in TOML]
 This IS pre!
 
@@ -180,15 +180,18 @@ This IS pre!
 [@id:12345]
 [%1]
 
- ====body====
+ ==== text ====
+====text ====
+==== text====
+====text====
 [!My first config in TOML]
 
 This is NOT pre!
-=^=== body ====
+=^=== text ====
 [!My first config in TOML]
 This IS NOT pre!!
 
-====   body====
+====   text ====
 [!My first config in TOML]
 This IS pre!!!
 

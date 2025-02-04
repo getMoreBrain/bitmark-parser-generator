@@ -192,7 +192,7 @@ Divider
 
 // Plain text divider text
 PlainTextDividerText
- = value: ("$$$$" / ("====" (WS+) "====") / ("====" (WS+)? "body" (WS+)? "===="))
+ = value: ("$$$$" / ("====" WS+ "text" WS+ "===="))
 
 // Plain text divider
 PlainTextDivider
@@ -200,7 +200,7 @@ PlainTextDivider
 
 // Footer text
 FooterDividerText
- = value: ("~~~~" / ("====" (WS+)? "footer" (WS+)? "===="))
+ = value: ("~~~~" / ("====" WS+ "footer" WS+ "===="))
 
 // Footer divider
 FooterDivider

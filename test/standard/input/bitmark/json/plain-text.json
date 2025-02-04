@@ -959,7 +959,7 @@
               "type": "hardBreak"
             },
             {
-              "text": "==== body ====",
+              "text": "==== text ====",
               "type": "text"
             },
             {
@@ -981,7 +981,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
-    "bitmark": "[.cloze]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n** Excellent **\nThis is a [_gap] :)\n\n==== body ====\n\n^Testing123^^\n\n==== body ====\n**Excellent**"
+    "bitmark": "[.cloze]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n** Excellent **\nThis is a [_gap] :)\n\n==== text ====\n\n^Testing123^^\n\n==== text ====\n**Excellent**"
   },
   {
     "bit": {
@@ -1024,7 +1024,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
-    "bitmark": "[.extractor-configuration]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n====body    ====\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
+    "bitmark": "[.extractor-configuration]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n==== text    ====\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
   {
     "bit": {
@@ -1065,7 +1065,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "==== body ====",
+              "text": "==== text ====",
               "type": "text"
             },
             {
@@ -1105,7 +1105,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
-    "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n ==== body ====\n[!My first config in TOML]\n\nThis is NOT pre!\n==== ====\n[!My first config in TOML]\nThis IS pre!"
+    "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n ==== text ====\n[!My first config in TOML]\n\nThis is NOT pre!\n==== text ====\n[!My first config in TOML]\nThis IS pre!"
   },
   {
     "bit": {
@@ -1146,7 +1146,28 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "====body====",
+              "text": "==== text ====",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "====text ====",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "==== text====",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "====text====",
               "type": "text"
             },
             {
@@ -1166,7 +1187,7 @@
               "type": "hardBreak"
             },
             {
-              "text": "==== body ====",
+              "text": "==== text ====",
               "type": "text"
             },
             {
@@ -1211,35 +1232,35 @@
           "text": "[!My first config in TOML]",
           "location": {
             "start": {
-              "line": 46,
+              "line": 49,
               "column": 1,
-              "offset": 529
+              "offset": 578
             },
             "end": {
-              "line": 46,
+              "line": 49,
               "column": 27,
-              "offset": 555
+              "offset": 604
             }
           },
           "original": {
             "text": "[!My first config in TOML]",
             "location": {
               "start": {
-                "line": 42,
+                "line": 45,
                 "column": 1,
-                "offset": 468
+                "offset": 517
               },
               "end": {
-                "line": 42,
+                "line": 45,
                 "column": 27,
-                "offset": 494
+                "offset": 543
               }
             }
           }
         }
       ]
     },
-    "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n ====body====\n[!My first config in TOML]\n\nThis is NOT pre!\n=^=== body ====\n[!My first config in TOML]\nThis IS NOT pre!!\n\n====   body====\n[!My first config in TOML]\nThis IS pre!!!"
+    "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n ==== text ====\n====text ====\n==== text====\n====text====\n[!My first config in TOML]\n\nThis is NOT pre!\n=^=== text ====\n[!My first config in TOML]\nThis IS NOT pre!!\n\n====   text ====\n[!My first config in TOML]\nThis IS pre!!!"
   },
   {
     "bit": {

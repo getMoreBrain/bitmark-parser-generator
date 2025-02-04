@@ -84,7 +84,7 @@ This is !!not!! a footer
 This is an article with a footer
 [?hint]
 
-====    footer====
+====    footer ====
 [!instruction]
 This **is** the footer
 
@@ -93,7 +93,7 @@ This **is** the footer
 This is an article with an escaped footer, so no footer actually
 [?hint]
 
-====   ^ footer====
+====   ^ footer ====
 [!instruction]
 This is !!not!! a footer
 
@@ -120,7 +120,7 @@ This article has 2 footers which is not really valid.
 All text after the first footer should be in the footer, and a warning should be given
 [?hint]
 
-==== footer====
+==== footer  ====
 This **is** a footer
 ==== footer ====
 [!instruction]

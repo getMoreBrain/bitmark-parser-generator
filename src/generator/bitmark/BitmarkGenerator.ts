@@ -2783,7 +2783,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected writeBodyPlainTextDivider(): void {
-    this.write('==== body ====');
+    this.write('==== text ====');
   }
 
   protected writeCardSetStart(): void {
