@@ -9,7 +9,7 @@ import { BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextMarkType, TextMarkTypeType } from '../../model/enum/TextMarkType';
-import { TextNodeType } from '../../model/enum/TextNodeType';
+import { TextNodeType, TextNodeTypeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
 
@@ -35,6 +35,8 @@ const DEFAULT_OPTIONS: TextOptions = {
   bodyBitCallback: undefined,
   debugGenerationInline: false,
 };
+
+const FIRST_PARAGRAPH_CONTENT_DEPTH = 3;
 
 const BOLD_HALF_MARK = '*';
 const LIGHT_HALF_MARK = '`';
@@ -123,6 +125,10 @@ export interface TextOptions {
   debugGenerationInline?: boolean;
 }
 
+export type GenerateOptions = {
+  plainTextDividerAllowed?: boolean;
+};
+
 const Stage = {
   enter: 'enter',
   between: 'between',
@@ -143,6 +149,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private options: TextOptions;
 
   // State
+  private generateOptions: GenerateOptions = {};
   private textFormat: TextFormatType = TextFormat.bitmarkMinusMinus;
   private writerText = '';
   private nodeIndex = 0;
@@ -154,6 +161,15 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private inBulletList = false;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
+
+  // For pre-text
+  private rootParagraphNodeContentIndex = 0;
+  private previousRootParagraphContextType: TextNodeTypeType = TextNodeType.text;
+  private inPreText = false;
+  private thisNodeIsPreText = false;
+  private preTextIndexTemp = -1;
+  private havePreText = false;
+  private preTextIndex = -1;
 
   /**
    * Generate text from a bitmark text AST
@@ -190,14 +206,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    *
    * @param ast bitmark text AST
    */
-  public async generate(ast: TextAst, textFormat: TextFormatType): Promise<BreakscapedString> {
-    // Reset the state
-    this.resetState(textFormat);
-
-    // Walk the text AST
-    this.walkAndWrite(ast);
-
-    return this.writerText as BreakscapedString;
+  public async generate(
+    ast: TextAst,
+    textFormat: TextFormatType,
+    options?: GenerateOptions,
+  ): Promise<BreakscapedString> {
+    return this.generateSync(ast, textFormat, options);
   }
 
   /**
@@ -205,12 +219,50 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    *
    * @param ast bitmark text AST
    */
-  public generateSync(ast: TextAst, textFormat: TextFormatType): BreakscapedString {
-    // Reset the state
-    this.resetState(textFormat);
+  public generateSync(ast: TextAst, textFormat: TextFormatType, options?: GenerateOptions): BreakscapedString {
+    this.generateOptions = Object.assign({}, options);
 
-    // Walk the text AST
-    this.walkAndWrite(ast);
+    this.validateGenerateOptions(ast);
+
+    if (!this.generateOptions.plainTextDividerAllowed) {
+      // Normal case with no pre-text - need only walk once
+
+      // Reset the state
+      this.resetState(textFormat);
+
+      // Walk the text AST - this 1st walk is to determine if there is pre-text
+      this.walkAndWrite(ast);
+    } else {
+      // Plain text divider is allowed. We need to walk the text AST twice:
+      // 1. To determine if there is pre-text
+      // 2. To generate the text
+
+      // Save and clear the write callback / body bit callback for the first walk as we don't want to write the text
+      const writeCallback = this.options.writeCallback;
+      const bodyBitCallback = this.options.bodyBitCallback;
+      this.options.writeCallback = undefined;
+      this.options.bodyBitCallback = undefined;
+
+      // Reset the state
+      this.resetState(textFormat);
+
+      // Walk the text AST - this 1st walk is to determine if there is pre-text
+      this.walkAndWrite(ast);
+
+      // Restore the write callback
+      this.options.writeCallback = writeCallback;
+      this.options.bodyBitCallback = bodyBitCallback;
+
+      // Reset the state, preserving havePreText / preTextIndex from the first walk
+      const havePreText = this.havePreText;
+      const pti = this.preTextIndex;
+      this.resetState(textFormat);
+      this.havePreText = havePreText;
+      this.preTextIndex = pti;
+
+      // Walk the text AST - this is the 2nd walk to generate the text
+      this.walkAndWrite(ast);
+    }
 
     return this.writerText as BreakscapedString;
   }
@@ -233,6 +285,15 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.inBulletList = false;
     this.placeholderIndex = 0;
     this.placeholders = {};
+
+    // For pre-text
+    this.rootParagraphNodeContentIndex = 0;
+    this.previousRootParagraphContextType = TextNodeType.hardBreak;
+    this.inPreText = false;
+    this.thisNodeIsPreText = false;
+    this.preTextIndexTemp = -1;
+    this.havePreText = false;
+    this.preTextIndex = -1;
   }
 
   private walkAndWrite(ast: TextAst): void {
@@ -260,6 +321,20 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
   // * -> contentValue
 
+  protected enter_contentValue(node: NodeInfo, route: NodeInfo[]): void | false {
+    return this.handleEnterContentValueNode(node, route);
+  }
+
+  protected between_contentValue(node: NodeInfo, left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+    this.handleBetweenContentValueNode(node, left, right, route);
+  }
+
+  protected exit_contentValue(node: NodeInfo, route: NodeInfo[]): void | false {
+    this.handleExitContentValueNode(node, route);
+  }
+
+  // * -> contentValueValue
+
   protected enter_contentValueValue(node: NodeInfo, route: NodeInfo[]): void | false {
     return this.handleEnterNode(node.value, route);
   }
@@ -275,6 +350,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   // END NODE HANDLERS
 
   protected handleEnterNode(node: TextNode, route: NodeInfo[]): void | false {
+    this.handleEnterNodePreTextCheck(node, route);
+
     this.handleIndent(node);
 
     switch (node.type) {
@@ -444,6 +521,65 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
   }
 
+  protected handleEnterContentValueNode(_node: NodeInfo, route: NodeInfo[]): void | false {
+    if (route.length === FIRST_PARAGRAPH_CONTENT_DEPTH) {
+      this.thisNodeIsPreText = true;
+      this.inPreText = false;
+      this.previousRootParagraphContextType = TextNodeType.hardBreak;
+    }
+  }
+
+  protected handleBetweenContentValueNode(_node: NodeInfo, left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+    if (route.length === FIRST_PARAGRAPH_CONTENT_DEPTH) {
+      const leftNode = left.value as TextNode;
+      this.updatePreTextState();
+
+      this.thisNodeIsPreText = true;
+      this.previousRootParagraphContextType = leftNode.type;
+      this.rootParagraphNodeContentIndex++;
+    }
+  }
+
+  protected handleExitContentValueNode(_node: NodeInfo, route: NodeInfo[]): void | false {
+    if (route.length === FIRST_PARAGRAPH_CONTENT_DEPTH) {
+      this.updatePreTextState();
+
+      this.thisNodeIsPreText = false;
+      if (this.generateOptions.plainTextDividerAllowed && this.inPreText) {
+        this.havePreText = true;
+        this.preTextIndex = this.preTextIndexTemp;
+      }
+      this.inPreText = false;
+    }
+  }
+
+  private updatePreTextState(): void {
+    if (!this.inPreText && this.thisNodeIsPreText && this.previousRootParagraphContextType === TextNodeType.hardBreak) {
+      // Enter pre-text if this node could be pre-text, and the previous node was a hard break
+      this.inPreText = true;
+      this.preTextIndexTemp = this.rootParagraphNodeContentIndex;
+    } else if (this.inPreText && !this.thisNodeIsPreText) {
+      this.inPreText = false;
+      this.preTextIndexTemp = -1;
+    }
+  }
+
+  protected handleEnterNodePreTextCheck(node: TextNode, route: NodeInfo[]) {
+    const firstParagraphContent = route.length === 4;
+
+    // If this is the first paragraph content node, check for pre-text, otherwise cannot be pre-text
+    if (firstParagraphContent) {
+      // If in pre-text, and this node is a hard break, stay in pre-text
+      if (this.inPreText && node.type === TextNodeType.hardBreak) return;
+
+      // If this node is text, then we might be in pre-text
+      if (node.type === TextNodeType.text) return;
+    }
+
+    // Any other node and we are not in pre-text any longer
+    this.thisNodeIsPreText = false;
+  }
+
   /**
    * Check if a text node has a link mark, and if so, return the href
    *
@@ -524,7 +660,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         textFormat: this.textFormat,
       });
     } else {
-      // s = Breakscape.breakscapeCode(s);
       s = Breakscape.breakscape(s, {
         textFormat: this.textFormat,
       });
@@ -536,8 +671,30 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       s = s.replace(INDENTATION_REGEX, `$1${indentationString}`);
     }
 
-    // Write the text
-    this.write(s);
+    // If have pre-text, and this is the correct index, write the plain text divider
+    if (this.havePreText && this.rootParagraphNodeContentIndex === this.preTextIndex) {
+      // Write the plain text divider
+      this.writePlainTextDivider();
+      this.writeNL();
+    }
+    if (this.havePreText && this.rootParagraphNodeContentIndex >= this.preTextIndex) {
+      // Write the text as pre-text
+      const s = Breakscape.breakscape(node.text, {
+        textFormat: TextFormat.text,
+      });
+      this.write(s);
+    } else {
+      // Write the text
+      this.write(s);
+    }
+
+    // Handle pre-text check
+    if (this.currentIndent > 1 || codeBreakscaping) {
+      this.thisNodeIsPreText = false; // Not pre-text if indented or in code block
+    }
+    if (!this.inPreText && node.text === s) {
+      this.thisNodeIsPreText = false; // No-breakscaping, so don't enter pre-text
+    }
   }
 
   /**
@@ -583,6 +740,18 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     return false;
   }
 
+  protected validateGenerateOptions(ast: TextNode[]): void {
+    // Validate plain text divider allowed
+    if (this.generateOptions.plainTextDividerAllowed) {
+      // Check there is only one node in the AST, and that it is a paragraph
+      if (ast.length !== 1) {
+        this.generateOptions.plainTextDividerAllowed = false;
+      } else if (ast.length === 1 && ast[0].type !== TextNodeType.paragraph) {
+        this.generateOptions.plainTextDividerAllowed = false;
+      }
+    }
+  }
+
   /**
    * Write the marks for the node.
    *
@@ -602,6 +771,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    */
   protected writeMarks(node: TextNode, stage: StageType): void {
     if (node.marks) {
+      // If node has marks, it cannot be a pre-text node
+      this.thisNodeIsPreText = false;
+
       // Empty marks occur when the inline mark has no attributes - write an inline mark with no attributes
       const emptyMarks = node.marks.length === 0;
       if (emptyMarks) {
@@ -923,6 +1095,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.write('|');
   }
 
+  protected writePlainTextDivider(): void {
+    this.write('==== text ====');
+  }
+
   protected writeString(s?: string): void {
     if (s != null) this.write(`${s}`);
   }
@@ -977,6 +1153,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     } else {
       this.writerText += value;
     }
+
     // for debugging console.log(this.writerText);
 
     return this;
