@@ -13,9 +13,9 @@
       "body": "Article 1\n[?NOT a hint]\n[.article]\nArticle 1.1"
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.article:text]\nArticle 1\n[?NOT a hint]\n[^.article]\nArticle 1.1"
   },
@@ -79,9 +79,9 @@
       ]
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.article]\nArticle 2\n[?hint][^!NOT an instruction]\n\n[^.article]\nArticle 2.1"
   },
@@ -110,9 +110,9 @@
       ]
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.article]\nArticle 3"
   },
@@ -121,14 +121,12 @@
       "type": "cloze",
       "format": "bitmark--",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -140,14 +138,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["solution", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": false,
                 "isExample": false,
-                "example": null,
-                "solutions": ["solution", "problem"]
+                "example": null
               }
             },
             {
@@ -164,14 +162,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["different"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["different"]
+                "example": null
               }
             },
             {
@@ -188,25 +186,27 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["sensitivity"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["sensitivity"]
+                "example": null
               }
             }
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.cloze]\nThis is a multiple^^ [^_gap] [_solution][_problem][@isCaseSensitive:false] with a separate gap\nwith [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default\ncase [_sensitivity]"
   },
@@ -235,9 +235,9 @@
       "body": "This is some code and here no ^ hats should be\nremoved or anything [^.bit] [^.silly^] like that^\n[^notabit]\nThe only thing that should be removed is\n[.notabit]\n[^.notabit]\n[^^.notabit]\nthe start of a new bit\n\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.code]\n[?hint]\nThis is some code and here no ^ hats should be\nremoved or anything [^.bit] [^.silly^] like that^\n[^notabit]\nThe only thing that should be removed is\n[^.notabit]\n[^^.notabit]\n[^^^.notabit]\nthe start of a new bit\n\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
   },
@@ -246,14 +246,12 @@
       "type": "cloze",
       "format": "bitmark--",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -265,14 +263,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["solu^tion", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": false,
                 "isExample": false,
-                "example": null,
-                "solutions": ["solu^tion", "problem"]
+                "example": null
               }
             },
             {
@@ -282,12 +280,14 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.cloze]\nThis is a multiple^^ [^_gap] [_solu^^tion][_pro^blem][@isCaseSensitive:false] with a separate gap"
   },
@@ -318,9 +318,9 @@
       }
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.article:json]\n[?hint]\n{\n  \"hello\": \"world\"\n}"
   },
@@ -346,12 +346,12 @@
         }
       ],
       "instruction": [],
-      "body": null
+      "body": []
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1",
+      "textParserVersion": "8.19.1",
       "errors": [
         {
           "message": "Body JSON is invalid.",
@@ -428,9 +428,9 @@
       ]
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n$$$$\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -440,7 +440,6 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["12345"],
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -469,7 +468,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -493,14 +491,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["gap"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["gap"]
+                "example": null
               }
             },
             {
@@ -540,14 +538,16 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
-    "bitmark": "[.cloze]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n** Excellent **\nThis is a [_gap] :)\n\n$$$$\n\n^Testing123^^\n\n$$$$\n** Excellent **"
+    "bitmark": "[.cloze]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n** Excellent **\nThis is a [_gap] :)\n\n$$$$\n\n^Testing123^^\n\n$$$$\n**Excellent**"
   },
   {
     "bit": {
@@ -586,9 +586,9 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.extractor-configuration]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n$$$$\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -667,9 +667,9 @@
       ]
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n $$$$\n[!My first config in TOML]\n\nThis is NOT pre!\n$$$$\n[!My first config in TOML]\nThis IS pre!"
   },
@@ -768,9 +768,9 @@
       ]
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1",
+      "textParserVersion": "8.19.1",
       "warnings": [
         {
           "message": "[!] is included more than 1 time(s). The earlier ones will be ignored",
@@ -779,12 +779,12 @@
             "start": {
               "line": 124,
               "column": 1,
-              "offset": 1614
+              "offset": 1612
             },
             "end": {
               "line": 124,
               "column": 27,
-              "offset": 1640
+              "offset": 1638
             }
           },
           "original": {
@@ -793,12 +793,12 @@
               "start": {
                 "line": 120,
                 "column": 1,
-                "offset": 1563
+                "offset": 1561
               },
               "end": {
                 "line": 120,
                 "column": 27,
-                "offset": 1589
+                "offset": 1587
               }
             }
           }
@@ -862,7 +862,7 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
@@ -977,7 +977,7 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
@@ -1020,7 +1020,7 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
@@ -1101,7 +1101,7 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
@@ -1223,7 +1223,7 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1",
       "warnings": [
@@ -1232,28 +1232,28 @@
           "text": "[!My first config in TOML]",
           "location": {
             "start": {
-              "line": 49,
+              "line": 191,
               "column": 1,
-              "offset": 578
+              "offset": 2391
             },
             "end": {
-              "line": 49,
+              "line": 191,
               "column": 27,
-              "offset": 604
+              "offset": 2417
             }
           },
           "original": {
             "text": "[!My first config in TOML]",
             "location": {
               "start": {
-                "line": 45,
+                "line": 187,
                 "column": 1,
-                "offset": 517
+                "offset": 2330
               },
               "end": {
-                "line": 45,
+                "line": 187,
                 "column": 27,
-                "offset": 543
+                "offset": 2356
               }
             }
           }
@@ -1320,10 +1320,581 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n========\n[!My first config in TOML]\nThis is NOT pre!!!"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Absolutely **NOT** bold, just **stars**",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "[?not hint]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "More text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article:bitmark++]\n**bold**\n[!instruction]\n==== text ====\nAbsolutely **NOT** bold, just stars ** ** **\n\n[?not hint]\n\nMore text"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "italic",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Absolutely __NOT__ italic, just __underlines__",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "[?not hint]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "More text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article:bitmark++]\n**bold**\n\n==== footer ====\n__italic__\n[!instruction]\n==== text ====\nAbsolutely __NOT__ italic, just underlines __ __ __\n\n[?not hint]\n\nMore text"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "test",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article]\ntest"
+  },
+  {
+    "bit": {
+      "type": "flashcard",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "**bold**",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Card",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "alternativeAnswers": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A footer with",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Absolutely __NOT__ italic, just __underlines__",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "[?not hint]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "More text",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.flashcard]\n\n*^*bold*^*\n\n====\nCard\n--\nAnswer\n==== footer ====\n\nA footer with\n==== text ====\nAbsolutely __NOT__ italic, just underlines __ __ __\n\n[?not hint]\n\nMore text"
+  },
+  {
+    "bit": {
+      "type": "flashcard",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "**bold**",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Card",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "answer": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Answer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "alternativeAnswers": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.flashcard]\n\n*^*bold*^*\n\n====\nCard\n--\nAnswer"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "[.article]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article:bitmark++]\n**bold**\n[!instruction]\n==== text ====\nThis is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.\n\n[^.article]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "new article",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article]\n\nnew article"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "instruction",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "This is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "[.article]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article:bitmark++]\n[!instruction]\n\n**bold**\n\n==== text ====\nThis is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.\n\n[^.article]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "new article",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.article]\n\nnew article"
   }
 ]

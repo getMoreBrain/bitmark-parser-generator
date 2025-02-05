@@ -169,7 +169,7 @@ class BaseBuilder {
             // Use the text generator to convert the TextAst to breakscaped string
             // this.ast.printTree(text, NodeType.textAst);
             strArray[i] = t as TextAst;
-          } else {
+          } else if (StringUtils.isString(t)) {
             strArray[i] = this.textParser.toAst(
               Breakscape.breakscape(t as string, {
                 textFormat,
@@ -177,11 +177,14 @@ class BaseBuilder {
             );
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             (strArray[i] as any).__tag = 'text';
+          } else {
+            // Invalid data
+            strArray[i] = [];
           }
         }
         // Return the array of TextAst texts
         return strArray as R;
-      } else {
+      } else if (StringUtils.isString(text)) {
         // v2 text(?)
         res = this.textParser.toAst(
           Breakscape.breakscape(text as string, {
@@ -189,6 +192,9 @@ class BaseBuilder {
             v2: true,
           }),
         ) as R;
+      } else {
+        // Invalid data
+        res = [] as R;
       }
     }
 
