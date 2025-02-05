@@ -201,3 +201,91 @@ This IS pre!!!
 ========
 [!My first config in TOML]
 This is NOT pre!!!
+
+
+[.article:bitmark++]
+**bold**
+[!instruction]
+==== text ====
+Absolutely **NOT** bold, just **stars**
+
+[?not hint]
+
+More text
+
+
+[.article:bitmark++]
+**bold**
+
+==== footer ====
+__italic__
+[!instruction]
+==== text ====
+Absolutely __NOT__ italic, just __underlines__
+
+[?not hint]
+
+More text
+
+
+[.article]
+test
+
+[.flashcard]
+
+*^*bold*^*
+
+====
+Card
+--
+Answer
+==== footer ====
+
+A footer with
+==== text ====
+Absolutely __NOT__ italic, just __underlines__
+
+[?not hint]
+
+More text
+
+[.flashcard]
+
+*^*bold*^*
+
+====
+Card
+--
+Answer
+
+
+[.article:bitmark++]
+**bold**
+[!instruction]
+==== text ====
+This is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.
+
+[^.article]
+
+[.article]
+
+new article
+
+
+
+[.article:bitmark++]
+[!instruction]
+
+**bold**
+
+==== text ====
+This is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.
+
+[^.article]
+
+
+
+
+[.article]
+
+new article

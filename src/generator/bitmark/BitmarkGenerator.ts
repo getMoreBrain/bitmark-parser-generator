@@ -109,6 +109,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   private prettifySpace: number | undefined;
 
   // State
+  private hasCardSet = false;
+  private hasFooter = false;
   private skipNLBetweenBitsValue = false;
   private wroteSomething = false;
   private inTag = true;
@@ -220,6 +222,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   private resetState(): void {
+    this.hasCardSet = false;
+    this.hasFooter = false;
     this.skipNLBetweenBitsValue = false;
     this.wroteSomething = false;
     this.inTag = true;
@@ -259,6 +263,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const bitConfig = Config.getBitConfig(bit.bitType);
     const bitResourcesConfig = Config.getBitResourcesConfig(bit.bitType, bit.resourceType);
+
+    this.hasCardSet = this.haveValidCardSet(bit);
+    this.hasFooter = this.haveValidFooter(bit);
 
     // Write the bit tag opening
     this.writeOPD(bit.bitLevel);
@@ -813,7 +820,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         const text = JSON.stringify(json, null, this.prettifySpace);
         if (text) {
           this.writeNL();
-          this.writeBodyPlainTextDivider();
+          this.writePlainTextDivider();
           this.writeNL();
           this.write(
             Breakscape.breakscape(text, {
@@ -824,14 +831,17 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
     } else if (isBitmarkText) {
       // handle bitmark text
+      const plainTextDividerAllowed = !(this.hasCardSet || this.hasFooter);
       this.writeNL();
       // The text generator will write to the writer
       const b = (Array.isArray(body.body) ? body.body : []) as TextAst;
-      this.textGenerator.generateSync(b as TextAst, textFormat);
+      this.textGenerator.generateSync(b as TextAst, textFormat, {
+        plainTextDividerAllowed,
+      });
     } else {
       // handle plain text
       this.writeNL();
-      this.writeBodyPlainTextDivider();
+      this.writePlainTextDivider();
       this.writeNL();
       const s = (StringUtils.isString(body.body) ? body.body : '') as string;
       this.write(
@@ -941,7 +951,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         this.write('==== footer ====');
         this.writeNL();
         // The text generator will write to the writer
-        this.textGenerator.generateSync(footer.footer as TextAst, textFormat);
+        this.textGenerator.generateSync(footer.footer as TextAst, textFormat, {
+          plainTextDividerAllowed: true, // Always allowed for the footer.
+        });
       } else {
         // Plain text footer?!
         // Not valid, ignore (plain text cannot have a card set / footer marker, so cannot have a footer!
@@ -2706,6 +2718,50 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // END NODE HANDLERS
 
   //
+  // UTILITY FUNCTIONS
+  //
+
+  protected haveValidCardSet(bit: Bit): boolean {
+    const bitConfig = Config.getBitConfig(bit.bitType);
+    if (!bitConfig) return false;
+
+    // There is no easy way to determine if a card set is valid, so we will just check if the bit has a card set
+    // and if so, assume it is valid.
+
+    // This information is used for automatically generating the '==== text ====' divider, so this will not be
+    // generated for any bit that has a card set unless this function is improved, however, a bit that has a
+    // card set in the configuration does not make any sense without a card set, so this is a reasonable behaviour.
+
+    return !!bitConfig.cardSet;
+  }
+
+  protected haveValidFooter(bit: Bit): boolean {
+    const footer = bit.footer;
+    if (!footer) return false;
+    const textFormat = bit.textFormat;
+
+    // Handle footer
+    if (textFormat === TextFormat.json) {
+      // Json footer?!
+      // Not valid, ignore
+      return false;
+    } else if (footer.footer && footer.footer.length > 0) {
+      const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
+      if (isBitmarkText) {
+        // handle bitmark text
+        return true;
+      } else {
+        // Plain text footer?!
+        // Not valid, ignore (plain text cannot have a card set / footer marker, so cannot have a footer!
+        return false;
+      }
+    }
+    return false;
+  }
+
+  // END UTILITY FUNCTIONS
+
+  //
   // WRITE FUNCTIONS
   //
 
@@ -2828,7 +2884,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.write('#');
   }
 
-  protected writeBodyPlainTextDivider(): void {
+  protected writePlainTextDivider(): void {
     this.write('==== text ====');
   }
 
