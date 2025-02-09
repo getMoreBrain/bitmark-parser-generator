@@ -391,6 +391,7 @@ const BitType = superenum({
   remarkCollapsible: 'remark-collapsible',
   reviewApprovedNote: 'review-approved-note',
   reviewAuthorNote: 'review-author-note',
+  reviewCustomerNote: 'review-customer-note',
   reviewNote: 'review-note',
   reviewRequestForReviewNote: 'review-request-for-review-note',
   reviewReviewerNote: 'review-reviewer-note',

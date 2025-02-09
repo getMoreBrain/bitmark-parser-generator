@@ -1,0 +1,180 @@
+[
+  {
+    "bit": {
+      "type": "review-customer-note",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["210022"],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Lernziele",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Ordered list item 1",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Ordered list item 2",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolved": false,
+      "resolvedDate": "",
+      "resolvedBy": ""
+    },
+    "parser": {
+      "version": "3.5.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.review-customer-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n•1 Ordered list item 1\n•1 Ordered list item 2"
+  },
+  {
+    "bit": {
+      "type": "review-customer-note",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["210040"],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Lernziele",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Nach der Bearbeitung dieses Kapitels können Sie ...",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Ordered list item 1",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Ordered list item 2",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolved": false,
+      "resolvedDate": "",
+      "resolvedBy": ""
+    },
+    "parser": {
+      "version": "3.5.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.review-customer-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n•1 Ordered list item 1\n•1 Ordered list item 2"
+  }
+]
