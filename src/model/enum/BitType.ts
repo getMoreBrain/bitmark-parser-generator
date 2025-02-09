@@ -112,6 +112,7 @@ const BitType = superenum({
   clozeAndMultipleChoiceText: 'cloze-and-multiple-choice-text',
   clozeInstructionGrouped: 'cloze-instruction-grouped',
   clozeList: 'cloze-list',
+  clozeSeveral: 'cloze-several',
   clozeSolutionGrouped: 'cloze-solution-grouped',
   coachAudioTranscript: 'coach-audio-transcript',
   coachCallToActionChecklist: 'coach-call-to-action-checklist',
