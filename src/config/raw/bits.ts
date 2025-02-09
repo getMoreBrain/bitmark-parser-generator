@@ -755,6 +755,7 @@ const BITS: _BitsConfig = {
   [BitType.definitionTerm]: { since: '1.34.0', baseBitType: BitType.article },
   [BitType.details1]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.details]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.qAndA]: { since: '3.5.0', baseBitType: BitType.article },
   [BitType.editorial]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.editorNote]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.featured]: { since: '1.3.0', baseBitType: BitType.article },

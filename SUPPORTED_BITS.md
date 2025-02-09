@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.4.0
+Version: 3.5.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -377,6 +377,7 @@ photo (since: 1.3.0)
 preparation-note (since: 1.3.0)
 pronunciation-table (since: 3.1.0)
 prototype-images (since: 1.6.1)
+q-and-a (since: 3.5.0)
 question-1 (since: 1.3.0)
 quote (since: 1.3.0)
 rating (since: 1.3.0)
