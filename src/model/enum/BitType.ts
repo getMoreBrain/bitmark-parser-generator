@@ -377,6 +377,7 @@ const BitType = superenum({
   preparationNote: 'preparation-note',
   pronunciationTable: 'pronunciation-table',
   prototypeImages: 'prototype-images',
+  qAndA: 'q-and-a',
   question1: 'question-1',
   quote: 'quote',
   rating: 'rating',
