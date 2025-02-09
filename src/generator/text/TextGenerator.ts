@@ -82,6 +82,7 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.userStrike,
   TextMarkType.userCircle,
   TextMarkType.userHighlight,
+  TextMarkType.notranslate,
   //
   TextMarkType.link,
   TextMarkType.ref,

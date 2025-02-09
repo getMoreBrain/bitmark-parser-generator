@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.4.0
+Version: 3.5.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -112,6 +112,7 @@ cloze (since: 1.3.0)
 cloze-and-multiple-choice-text (since: 1.3.0)
 cloze-instruction-grouped (since: 1.3.0)
 cloze-list (since: 1.4.13)
+cloze-several (since: 3.5.0)
 cloze-solution-grouped (since: 1.3.0)
 coach-audio-transcript (since: 1.3.0)
 coach-call-to-action-checklist (since: 1.3.0)
@@ -377,6 +378,7 @@ photo (since: 1.3.0)
 preparation-note (since: 1.3.0)
 pronunciation-table (since: 3.1.0)
 prototype-images (since: 1.6.1)
+q-and-a (since: 3.5.0)
 question-1 (since: 1.3.0)
 quote (since: 1.3.0)
 rating (since: 1.3.0)
@@ -390,6 +392,7 @@ remark-alt (since: 1.16.0)
 remark-collapsible (since: 1.21.0)
 review-approved-note (since: 1.3.0)
 review-author-note (since: 1.3.0)
+review-customer-note (since: 3.5.0)
 review-note (since: 1.3.0)
 review-request-for-review-note (since: 1.3.0)
 review-reviewer-note (since: 1.3.0)

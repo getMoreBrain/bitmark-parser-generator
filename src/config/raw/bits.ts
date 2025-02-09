@@ -475,6 +475,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.clozeInstructionGrouped]: { since: '1.3.0', baseBitType: BitType.cloze },
   [BitType.clozeSolutionGrouped]: { since: '1.3.0', baseBitType: BitType.cloze },
+  [BitType.clozeSeveral]: { since: '3.5.0', baseBitType: BitType.cloze },
   [BitType.gapText]: { since: '1.5.15', baseBitType: BitType.cloze },
   [BitType.gapTextInstructionGrouped]: { since: '1.5.15', baseBitType: BitType.clozeInstructionGrouped },
   [BitType.coachSelfReflectionCloze]: { since: '1.3.0', baseBitType: BitType.cloze },
@@ -755,6 +756,7 @@ const BITS: _BitsConfig = {
   [BitType.definitionTerm]: { since: '1.34.0', baseBitType: BitType.article },
   [BitType.details1]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.details]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.qAndA]: { since: '3.5.0', baseBitType: BitType.article },
   [BitType.editorial]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.editorNote]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.featured]: { since: '1.3.0', baseBitType: BitType.article },
@@ -1872,6 +1874,12 @@ const BITS: _BitsConfig = {
     rootExampleType: ExampleType.string,
   },
   [BitType.reviewAuthorNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
+  [BitType.reviewCustomerNote]: {
+    //
+    since: '3.5.0',
+    baseBitType: BitType.reviewNote,
+    textFormatDefault: TextFormat.bitmarkPlusPlus,
+  },
   [BitType.reviewReviewerNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
   [BitType.reviewRequestForReviewNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
   [BitType.reviewApprovedNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
