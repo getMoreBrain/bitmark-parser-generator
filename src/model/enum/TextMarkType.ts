@@ -22,6 +22,7 @@ const TextMarkType = superenum({
   userStrike: 'userStrike',
   userCircle: 'userCircle',
   userHighlight: 'userHighlight',
+  notranslate: 'notranslate',
 
   // Attribute chain
   link: 'link',

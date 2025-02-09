@@ -401,6 +401,26 @@
         "type": "hardBreak"
       },
       {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "notranslate"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
         "type": "hardBreak"
       },
       {
