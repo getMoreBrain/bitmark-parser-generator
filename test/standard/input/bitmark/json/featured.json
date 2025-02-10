@@ -4,9 +4,8 @@
       "type": "featured",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "342339"
-      ],
+      "id": ["342339"],
+      "customerId": "themightyboosh",
       "item": [],
       "lead": [],
       "pageNumber": [],
