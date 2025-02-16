@@ -257,3 +257,34 @@ mark@gmail.com
   <heading>Reminder</heading>
   <body>Don't forget me this weekend!</body>
 </note>
+
+[.table:bitmark++]
+[@tableFixedHeader:false]
+[@tableSearch:false]
+[@tableSort:false]
+[@tablePagination:false]
+[@tablePaginationLimit:0]
+[@tableHeight:0]
+[@tableWhitespaceNoWrap:true]
+[@tableAutoWidth:true]
+[@tableResizableColumns:false]
+[@tableColumnMinWidth:0]
+
+
+
+====
+[#Fleischstück]
+--
+[#Schnittarten]
+--
+[#Klassische Gartechniken]
+====
+**Stotzen**
+==cuisseaud==|notranslate|
+==hindquarter==|notranslate|
+
+--
+ganz
+
+--
+Braten, Glasieren

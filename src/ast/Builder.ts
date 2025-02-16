@@ -1015,6 +1015,7 @@ class Builder extends BaseBuilder {
    */
   protected buildPronunciationTable(
     bitType: BitTypeType,
+    textFormat: TextFormatType,
     dataIn: Partial<PronunciationTableJson> | undefined,
   ): PronunciationTableJson | undefined {
     if (!dataIn) return undefined;
@@ -1032,7 +1033,7 @@ class Builder extends BaseBuilder {
 
           return {
             title: this.handleJsonText(cell.title),
-            body: this.handleJsonText(cell.body),
+            body: this.handleJsonText(cell.body, textFormat),
             audio,
           };
         }),
@@ -1053,13 +1054,13 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildTable(dataIn: Partial<TableJson> | undefined): TableJson | undefined {
+  protected buildTable(textFormat: TextFormatType, dataIn: Partial<TableJson> | undefined): TableJson | undefined {
     if (!dataIn) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: TableJson = {
-      columns: (dataIn.columns ?? []).map((col) => this.handleJsonText(col)),
-      data: (dataIn.data ?? []).map((row) => (row ?? []).map((cell) => this.handleJsonText(cell))),
+      columns: (dataIn.columns ?? []).map((col) => this.handleJsonText(col, textFormat)),
+      data: (dataIn.data ?? []).map((row) => (row ?? []).map((cell) => this.handleJsonText(cell, textFormat))),
     };
 
     // Remove Unset Optionals
@@ -1076,9 +1077,12 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildQuestions(data: Partial<QuestionJson>[] | undefined): QuestionJson[] | undefined {
+  protected buildQuestions(
+    textFormat: TextFormatType,
+    data: Partial<QuestionJson>[] | undefined,
+  ): QuestionJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.buildQuestion(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildQuestion(textFormat, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1088,11 +1092,17 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildQuestion(data: Partial<QuestionJson> | undefined): QuestionJson | undefined {
+  protected buildQuestion(
+    textFormat: TextFormatType,
+    data: Partial<QuestionJson> | undefined,
+  ): QuestionJson | undefined {
     if (!data) return undefined;
 
     // Set default example
     const defaultExample = data.__sampleSolutionAst;
+
+    // Unused
+    textFormat;
 
     // NOTE: Node order is important and is defined here
     const node: QuestionJson = {
@@ -1630,9 +1640,12 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildFlashcards(data: Partial<FlashcardJson>[] | undefined): FlashcardJson[] | undefined {
+  protected buildFlashcards(
+    textFormat: TextFormatType,
+    data: Partial<FlashcardJson>[] | undefined,
+  ): FlashcardJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.buildFlashcard(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildFlashcard(textFormat, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1642,14 +1655,17 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildFlashcard(data: Partial<FlashcardJson> | undefined): FlashcardJson | undefined {
+  protected buildFlashcard(
+    textFormat: TextFormatType,
+    data: Partial<FlashcardJson> | undefined,
+  ): FlashcardJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: FlashcardJson = {
-      question: this.handleJsonText(data.question),
-      answer: this.handleJsonText(data.answer),
-      alternativeAnswers: this.handleJsonText(data.alternativeAnswers),
+      question: this.handleJsonText(data.question, textFormat),
+      answer: this.handleJsonText(data.answer, textFormat),
+      alternativeAnswers: this.handleJsonText(data.alternativeAnswers, textFormat),
       item: this.handleJsonText(data.item),
       lead: this.handleJsonText(data.lead),
       hint: this.handleJsonText(data.hint),
@@ -1674,10 +1690,11 @@ class Builder extends BaseBuilder {
    * @returns
    */
   protected buildDefinitionList(
+    textFormat: TextFormatType,
     data: Partial<DefinitionListItemJson>[] | undefined,
   ): DefinitionListItemJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.buildDefinitionListItem(d)).filter((d) => d != null);
+    const nodes = data.map((d) => this.buildDefinitionListItem(textFormat, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1688,15 +1705,16 @@ class Builder extends BaseBuilder {
    * @returns
    */
   protected buildDefinitionListItem(
+    textFormat: TextFormatType,
     data: Partial<DefinitionListItemJson> | undefined,
   ): DefinitionListItemJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: DefinitionListItemJson = {
-      term: this.handleJsonText(data.term, TextFormat.bitmarkMinusMinus),
-      definition: this.handleJsonText(data.definition),
-      alternativeDefinitions: this.handleJsonText(data.alternativeDefinitions),
+      term: this.handleJsonText(data.term, textFormat),
+      definition: this.handleJsonText(data.definition, textFormat),
+      alternativeDefinitions: this.handleJsonText(data.alternativeDefinitions, textFormat),
       item: this.handleJsonText(data.item),
       lead: this.handleJsonText(data.lead),
       hint: this.handleJsonText(data.hint),
@@ -1904,9 +1922,13 @@ class Builder extends BaseBuilder {
    * @returns
    */
   protected buildCaptionDefinition(
+    textFormat: TextFormatType,
     data: Partial<CaptionDefinitionJson> | undefined,
   ): CaptionDefinitionJson | undefined {
     if (!data) return undefined;
+
+    // Unused
+    textFormat;
 
     // NOTE: Node order is important and is defined here
     const node: CaptionDefinitionJson = {
@@ -1932,6 +1954,7 @@ class Builder extends BaseBuilder {
    * @returns
    */
   protected buildCaptionDefinitionList(
+    textFormat: TextFormatType,
     data: Partial<CaptionDefinitionListJson> | undefined,
   ): CaptionDefinitionListJson | undefined {
     if (!data) return undefined;
@@ -1941,7 +1964,7 @@ class Builder extends BaseBuilder {
       columns: data.columns ?? [],
       definitions: (data.definitions ?? [])
         .map((d) => {
-          return this.buildCaptionDefinition({
+          return this.buildCaptionDefinition(textFormat, {
             term: d.term,
             definition: d.definition,
           });
@@ -2043,10 +2066,10 @@ class Builder extends BaseBuilder {
     },
   ): CardNode | undefined {
     const node: CardNode = {
-      questions: this.buildQuestions(data.questions),
+      questions: this.buildQuestions(textFormat, data.questions),
       elements: data.elements,
-      flashcards: this.buildFlashcards(data.flashcards),
-      definitions: this.buildDefinitionList(data.definitions),
+      flashcards: this.buildFlashcards(textFormat, data.flashcards),
+      definitions: this.buildDefinitionList(textFormat, data.definitions),
       statement: this.buildStatement(data.statement),
       statements: this.buildStatements(data.statements),
       choices: this.buildChoices(data.choices),
@@ -2055,11 +2078,11 @@ class Builder extends BaseBuilder {
       heading: this.buildHeading(data.heading),
       pairs: this.buildPairs(bitType, data.pairs),
       matrix: this.buildMatricies(data.matrix),
-      pronunciationTable: this.buildPronunciationTable(bitType, data.pronunciationTable),
-      table: this.buildTable(data.table),
+      pronunciationTable: this.buildPronunciationTable(bitType, textFormat, data.pronunciationTable),
+      table: this.buildTable(textFormat, data.table),
       botResponses: this.buildBotResponses(data.botResponses),
       ingredients: this.buildIngredients(data.ingredients),
-      captionDefinitionList: this.buildCaptionDefinitionList(data.captionDefinitionList),
+      captionDefinitionList: this.buildCaptionDefinitionList(textFormat, data.captionDefinitionList),
       cardBits: this.buildCardBits(bitType, textFormat, data.cardBits),
     };
 
