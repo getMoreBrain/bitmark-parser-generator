@@ -13,6 +13,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.internalComment,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.customerId]: {
+    tag: PropertyTag.customerId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.externalId]: {
     tag: PropertyTag.externalId,
     format: PropertyFormat.trimmedString,

@@ -19,6 +19,10 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.customerId,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.externalId,
         maxCount: Count.infinity,
       },

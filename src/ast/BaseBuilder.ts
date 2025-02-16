@@ -191,6 +191,9 @@ class BaseBuilder {
             textFormat,
             v2: true,
           }),
+          {
+            textFormat,
+          },
         ) as R;
       } else {
         // Invalid data

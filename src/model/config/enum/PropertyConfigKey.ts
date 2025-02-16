@@ -37,6 +37,7 @@ const propertyConfigKeys = {
   copyright: 'copyright',
   coverColor: 'coverColor',
   coverImage: 'coverImage',
+  customerId: 'customerId',
   date: 'date',
   dateEnd: 'dateEnd',
   decimalPlaces: 'decimalPlaces',

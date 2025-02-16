@@ -117,6 +117,8 @@ const NodeType = superenum({
   coverColorValue: 'coverColorValue',
   coverImage: 'coverImage',
   coverImageValue: 'coverImageValue',
+  customerId: 'customerId',
+  customerIdValue: 'customerIdValue',
   data: 'data',
   dataValue: 'dataValue',
   dataValueValue: 'dataValueValue',
