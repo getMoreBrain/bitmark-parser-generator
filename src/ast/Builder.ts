@@ -159,6 +159,7 @@ class Builder extends BaseBuilder {
     refAuthor?: string | string[];
     refBookTitle?: string;
     refPublisher?: string | string[];
+    citationStyle?: string;
     blockId?: string;
     pageNo?: number;
     x?: number;
@@ -382,6 +383,7 @@ class Builder extends BaseBuilder {
       refAuthor: this.toAstProperty(PropertyConfigKey.refAuthor, data.refAuthor),
       refBookTitle: this.toAstProperty(PropertyConfigKey.refBookTitle, data.refBookTitle),
       refPublisher: this.toAstProperty(PropertyConfigKey.refPublisher, data.refPublisher),
+      citationStyle: this.toAstProperty(PropertyConfigKey.citationStyle, data.citationStyle),
       blockId: this.toAstProperty(PropertyConfigKey.blockId, data.blockId),
       pageNo: this.toAstProperty(PropertyConfigKey.pageNo, data.pageNo),
       x: this.toAstProperty(PropertyConfigKey.x, data.x),

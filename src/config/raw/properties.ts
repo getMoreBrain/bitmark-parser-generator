@@ -211,6 +211,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.refPublisher,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.citationStyle]: {
+    tag: PropertyTag.citationStyle,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.coverImage]: {
     tag: PropertyTag.coverImage,
     format: PropertyFormat.trimmedString,
