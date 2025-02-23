@@ -87,7 +87,9 @@ class TextParser {
     const opts = Object.assign({}, options);
 
     // Default text format to bitmark-- if not specified
-    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
+    // if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
+    // Default text format to bitmark+ if not specified
+    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkPlusPlus; // TODO: Should be 'bitmark+' when text parser is updated
 
     const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
 

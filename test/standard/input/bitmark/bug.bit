@@ -10,5 +10,6 @@ Some more text.
 [.bug-alt:bitmark--]
 [@id:151971]
 [%][%][%][%marginNumber]
+[!Instruction with ==notranslate|notranslate==]
 
 The bit content

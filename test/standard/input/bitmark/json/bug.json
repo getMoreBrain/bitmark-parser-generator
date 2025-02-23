@@ -4,10 +4,7 @@
       "type": "bug",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -53,9 +50,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.6.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.19.1",
       "warnings": [
         {
           "message": "[&image] is included more than 0 time(s).",
@@ -100,9 +97,7 @@
       "type": "bug-alt",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -119,7 +114,18 @@
         }
       ],
       "hint": [],
-      "instruction": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Instruction with ==notranslate|notranslate==",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "body": [
         {
           "type": "paragraph",
@@ -134,10 +140,10 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.6.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.19.1"
     },
-    "bitmark": "[.bug-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+    "bitmark": "[.bug-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n[!Instruction with ==notranslate|notranslate==]\n\nThe bit content"
   }
 ]
