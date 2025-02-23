@@ -150,7 +150,8 @@ class BaseBuilder {
   ): R {
     let res: R;
 
-    if (!textFormat) textFormat = TextFormat.bitmarkMinusMinus;
+    // if (!textFormat) textFormat = TextFormat.bitmarkMinusMinus;
+    if (!textFormat) textFormat = TextFormat.bitmarkPlusPlus; // TODO: Should be 'bitmark+' when text parser is updated
 
     if (text == null) {
       res = [] as R;

@@ -444,6 +444,10 @@ const CARDSETS: _CardSetsConfig = {
               configKey: PropertyConfigKey.refPublisher,
               maxCount: Count.infinity,
             },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.citationStyle,
+            },
           ],
           repeatCount: Count.infinity,
         },

@@ -66,6 +66,7 @@ export interface Bit {
   isPublic?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
+  searchIndex?: Property;
   analyticsTag?: Property;
   feedbackEngine?: Property;
   feedbackType?: Property;
@@ -113,6 +114,7 @@ export interface Bit {
   refAuthor?: Property;
   refBookTitle?: Property;
   refPublisher?: Property;
+  citationStyle?: Property;
   blockId?: Property;
   pageNo?: Property;
   x?: Property;

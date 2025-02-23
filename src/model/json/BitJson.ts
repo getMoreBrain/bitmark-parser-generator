@@ -21,6 +21,7 @@ export interface BitJson {
   isPublic: boolean;
   aiGenerated: boolean;
   machineTranslated: string;
+  searchIndex: string | string[];
   analyticsTag: string | string[];
   feedbackEngine: string;
   feedbackType: string;
@@ -68,6 +69,7 @@ export interface BitJson {
   refAuthor: string | string[];
   refBookTitle: string;
   refPublisher: string | string[];
+  citationStyle: string;
   blockId: string;
   pageNo: number;
   x: number;

@@ -111,6 +111,7 @@ class Builder extends BaseBuilder {
     isPublic?: boolean;
     aiGenerated?: boolean;
     machineTranslated?: string;
+    searchIndex?: string | string[];
     analyticsTag?: string | string[];
     feedbackEngine?: string;
     feedbackType?: string;
@@ -158,6 +159,7 @@ class Builder extends BaseBuilder {
     refAuthor?: string | string[];
     refBookTitle?: string;
     refPublisher?: string | string[];
+    citationStyle?: string;
     blockId?: string;
     pageNo?: number;
     x?: number;
@@ -332,6 +334,7 @@ class Builder extends BaseBuilder {
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, data.isPublic),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, data.aiGenerated),
       machineTranslated: this.toAstProperty(PropertyConfigKey.machineTranslated, data.machineTranslated),
+      searchIndex: this.toAstProperty(PropertyConfigKey.searchIndex, data.searchIndex),
       analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, data.analyticsTag),
       feedbackEngine: this.toAstProperty(PropertyConfigKey.feedbackEngine, data.feedbackEngine),
       feedbackType: this.toAstProperty(PropertyConfigKey.feedbackType, data.feedbackType),
@@ -380,6 +383,7 @@ class Builder extends BaseBuilder {
       refAuthor: this.toAstProperty(PropertyConfigKey.refAuthor, data.refAuthor),
       refBookTitle: this.toAstProperty(PropertyConfigKey.refBookTitle, data.refBookTitle),
       refPublisher: this.toAstProperty(PropertyConfigKey.refPublisher, data.refPublisher),
+      citationStyle: this.toAstProperty(PropertyConfigKey.citationStyle, data.citationStyle),
       blockId: this.toAstProperty(PropertyConfigKey.blockId, data.blockId),
       pageNo: this.toAstProperty(PropertyConfigKey.pageNo, data.pageNo),
       x: this.toAstProperty(PropertyConfigKey.x, data.x),

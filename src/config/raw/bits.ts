@@ -346,6 +346,10 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.refPublisher,
         maxCount: Count.infinity,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.citationStyle,
+      },
     ],
   },
   [BitType.botActionResponse]: {

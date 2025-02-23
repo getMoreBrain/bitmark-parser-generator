@@ -51,6 +51,10 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.searchIndex]: {
+    tag: PropertyTag.searchIndex,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.analyticsTag]: {
     tag: PropertyTag.analyticsTag,
     format: PropertyFormat.trimmedString,
@@ -205,6 +209,11 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.refPublisher]: {
     tag: PropertyTag.refPublisher,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.citationStyle]: {
+    tag: PropertyTag.citationStyle,
+    single: true,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.coverImage]: {
