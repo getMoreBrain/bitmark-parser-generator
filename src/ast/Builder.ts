@@ -111,6 +111,7 @@ class Builder extends BaseBuilder {
     isPublic?: boolean;
     aiGenerated?: boolean;
     machineTranslated?: string;
+    searchIndex?: string | string[];
     analyticsTag?: string | string[];
     feedbackEngine?: string;
     feedbackType?: string;
@@ -332,6 +333,7 @@ class Builder extends BaseBuilder {
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, data.isPublic),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, data.aiGenerated),
       machineTranslated: this.toAstProperty(PropertyConfigKey.machineTranslated, data.machineTranslated),
+      searchIndex: this.toAstProperty(PropertyConfigKey.searchIndex, data.searchIndex),
       analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, data.analyticsTag),
       feedbackEngine: this.toAstProperty(PropertyConfigKey.feedbackEngine, data.feedbackEngine),
       feedbackType: this.toAstProperty(PropertyConfigKey.feedbackType, data.feedbackType),

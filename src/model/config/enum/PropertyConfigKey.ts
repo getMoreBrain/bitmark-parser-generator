@@ -143,6 +143,7 @@ const propertyConfigKeys = {
   revealSolutions: 'revealSolutions',
   scormSource: 'scormSource',
   search: 'search',
+  searchIndex: 'searchIndex',
   servings: 'servings',
   showInIndex: 'showInIndex',
   showSubtitles: 'showSubtitles',

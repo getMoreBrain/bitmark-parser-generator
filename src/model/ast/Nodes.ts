@@ -66,6 +66,7 @@ export interface Bit {
   isPublic?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
+  searchIndex?: Property;
   analyticsTag?: Property;
   feedbackEngine?: Property;
   feedbackType?: Property;

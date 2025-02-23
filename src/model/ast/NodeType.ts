@@ -392,6 +392,8 @@ const NodeType = superenum({
   scormSourceValue: 'scormSourceValue',
   search: 'search',
   searchValue: 'searchValue',
+  searchIndex: 'searchIndex',
+  searchIndexValue: 'searchIndexValue',
   section: 'section',
   select: 'select',
   servings: 'servings',

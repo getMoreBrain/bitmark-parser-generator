@@ -50,7 +50,7 @@
       ]
     },
     "parser": {
-      "version": "3.6.0",
+      "version": "3.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1",
       "warnings": [
@@ -98,6 +98,7 @@
       "format": "bitmark--",
       "bitLevel": 1,
       "id": ["151971"],
+      "searchIndex": ["Value1", "Value2"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -140,10 +141,10 @@
       ]
     },
     "parser": {
-      "version": "3.6.0",
+      "version": "3.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
-    "bitmark": "[.bug-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n[!Instruction with ==notranslate|notranslate==]\n\nThe bit content"
+    "bitmark": "[.bug-alt:bitmark--]\n[@id:151971]\n[@searchIndex:Value1]\n[@searchIndex:Value2 ]\n[%][%][%][%marginNumber]\n[!Instruction with ==notranslate|notranslate==]\n\nThe bit content"
   }
 ]
