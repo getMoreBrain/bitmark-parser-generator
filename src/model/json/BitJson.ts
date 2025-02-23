@@ -21,6 +21,7 @@ export interface BitJson {
   isPublic: boolean;
   aiGenerated: boolean;
   machineTranslated: string;
+  searchIndex: string | string[];
   analyticsTag: string | string[];
   feedbackEngine: string;
   feedbackType: string;

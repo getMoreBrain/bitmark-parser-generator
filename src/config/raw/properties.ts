@@ -51,6 +51,10 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.searchIndex]: {
+    tag: PropertyTag.searchIndex,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.analyticsTag]: {
     tag: PropertyTag.analyticsTag,
     format: PropertyFormat.trimmedString,
