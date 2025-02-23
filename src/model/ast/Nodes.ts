@@ -114,6 +114,7 @@ export interface Bit {
   refAuthor?: Property;
   refBookTitle?: Property;
   refPublisher?: Property;
+  citationStyle?: Property;
   blockId?: Property;
   pageNo?: Property;
   x?: Property;

@@ -569,6 +569,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.addProperty(bookReference, 'refAuthor', cardBit.refAuthor ?? [], { array: true });
       this.addProperty(bookReference, 'refBookTitle', cardBit.refBookTitle ?? [], { array: false });
       this.addProperty(bookReference, 'refPublisher', cardBit.refPublisher ?? [], { array: true });
+      this.addProperty(bookReference, 'citationStyle', cardBit.citationStyle ?? [], { array: false });
 
       this.bitJson.bookReferences.push(bookReference as BookReferenceJson);
     } else {

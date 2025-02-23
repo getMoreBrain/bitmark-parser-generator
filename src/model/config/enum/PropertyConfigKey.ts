@@ -27,6 +27,7 @@ const propertyConfigKeys = {
   caption: 'caption',
   chatWithBook: 'chatWithBook',
   chatWithBookBrainKey: 'chatWithBookBrainKey',
+  citationStyle: 'citationStyle',
   classification: 'classification',
   codeLineNumbers: 'codeLineNumbers',
   codeMinimap: 'codeMinimap',

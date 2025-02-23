@@ -4,6 +4,7 @@
 [@refPublisher:kpmg]
 [@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]
 [@refAuthor:Philippe Pointet]
+[@citationStyle:Stylish]
 
 [.book-reference]
 [@id:135647]
@@ -21,6 +22,8 @@
 [@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]
 [@refAuthor:Philippe Pointet]
 [@refAuthor:Someone Else]
+[@citationStyle:Stylish]
+[@citationStyle:Not so stylish]
 
 [.book-reference]
 [@id:135647]
