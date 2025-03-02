@@ -931,6 +931,12 @@ const BITS: _BitsConfig = {
     tags: [],
     textFormatDefault: TextFormat.text,
   },
+  [BitType.extractorInformation]: {
+    since: '3.8.0',
+    baseBitType: BitType._standard,
+    tags: [],
+    textFormatDefault: TextFormat.json,
+  },
   [BitType.extractorBlock]: {
     since: '1.5.16',
     baseBitType: BitType._standard,

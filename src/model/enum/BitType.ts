@@ -199,6 +199,7 @@ const BitType = superenum({
   exampleList: 'example-list',
   extractorBlock: 'extractor-block',
   extractorConfiguration: 'extractor-configuration',
+  extractorInformation: 'extractor-information',
   extractorPage: 'extractor-page',
   extractorPageCollapsible: 'extractor-page-collapsible',
   extractorPageFooter: 'extractor-page-footer',
