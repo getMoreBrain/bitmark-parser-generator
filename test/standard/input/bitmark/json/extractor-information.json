@@ -1,0 +1,35 @@
+[
+  {
+    "bit": {
+      "type": "extractor-information",
+      "format": "json",
+      "bitLevel": 1,
+      "id": ["5673456"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": {
+        "version": "1.2.3",
+        "input": {
+          "pdf": "pdf-filename.pdf",
+          "config": "config-filename.toml",
+          "feedback": "feedback-filename.pdf"
+        },
+        "output": {
+          "bitmark": "bitmark-filename.bit",
+          "info": "info-filename.txt",
+          "visualization": "visualization-filename.pdf"
+        }
+      }
+    },
+    "parser": {
+      "version": "3.8.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.19.1"
+    },
+    "bitmark": "[.extractor-information]\n[@id:5673456]\n==== text ====\n{\n  \"version\": \"1.2.3\",\n  \"input\": {\n    \"pdf\": \"pdf-filename.pdf\",\n    \"config\": \"config-filename.toml\",\n    \"feedback\": \"feedback-filename.pdf\"\n  },\n  \"output\": {\n    \"bitmark\": \"bitmark-filename.bit\",\n    \"info\": \"info-filename.txt\",\n    \"visualization\": \"visualization-filename.pdf\"\n  }\n}"
+  }
+]
