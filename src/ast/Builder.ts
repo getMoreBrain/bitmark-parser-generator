@@ -202,6 +202,7 @@ class Builder extends BaseBuilder {
     externalLink?: string;
     externalLinkText?: string;
     videoCallLink?: string;
+    vendorSurveyId?: string;
     vendorUrl?: string;
     search?: string;
     bot?: string | string[];
@@ -431,6 +432,7 @@ class Builder extends BaseBuilder {
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, data.externalLink),
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, data.externalLinkText),
       videoCallLink: this.toAstProperty(PropertyConfigKey.videoCallLink, data.videoCallLink),
+      vendorSurveyId: this.toAstProperty(PropertyConfigKey.vendorSurveyId, data.vendorSurveyId),
       vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, data.vendorUrl),
       search: this.toAstProperty(PropertyConfigKey.search, data.search),
       list: this.toAstProperty(PropertyConfigKey.list, data.list),
