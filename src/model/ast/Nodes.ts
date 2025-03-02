@@ -156,6 +156,7 @@ export interface Bit {
   externalLink?: Property;
   externalLinkText?: Property;
   videoCallLink?: Property;
+  vendorSurveyId?: Property;
   vendorUrl?: Property;
   search?: Property;
   bot?: Property;
