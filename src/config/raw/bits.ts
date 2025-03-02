@@ -931,6 +931,12 @@ const BITS: _BitsConfig = {
     tags: [],
     textFormatDefault: TextFormat.text,
   },
+  [BitType.extractorInformation]: {
+    since: '3.8.0',
+    baseBitType: BitType._standard,
+    tags: [],
+    textFormatDefault: TextFormat.json,
+  },
   [BitType.extractorBlock]: {
     since: '1.5.16',
     baseBitType: BitType._standard,
@@ -2270,6 +2276,28 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     tags: [],
     textFormatDefault: TextFormat.json,
+  },
+  [BitType.vendorFormbricksEmbed]: {
+    since: '3.8.0',
+    baseBitType: BitType.code,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.vendorSurveyId,
+      },
+    ],
+    textFormatDefault: TextFormat.text,
+  },
+  [BitType.vendorFormbricksLink]: {
+    since: '3.8.0',
+    baseBitType: BitType.code,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.vendorSurveyId,
+      },
+    ],
+    textFormatDefault: TextFormat.text,
   },
   [BitType.vendorHighchartsChart]: {
     since: '1.5.28',

@@ -353,6 +353,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.vendorSurveyId]: {
+    tag: PropertyTag.vendorSurveyId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.vendorUrl]: {
     tag: PropertyTag.vendorUrl,
     single: true,

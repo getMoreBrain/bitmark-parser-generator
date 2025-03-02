@@ -486,6 +486,8 @@ const NodeType = superenum({
   value: 'value',
   values: 'values',
   valuesValue: 'valuesValue',
+  vendorSurveyId: 'vendorSurveyId',
+  vendorSurveyIdValue: 'vendorSurveyIdValue',
   vendorUrl: 'vendorUrl',
   vendorUrlValue: 'vendorUrlValue',
   version: 'version',

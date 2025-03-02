@@ -180,6 +180,7 @@ const propertyConfigKeys = {
   trim: 'trim',
   unit: 'unit',
   unitAbbr: 'unitAbbr',
+  vendorSurveyId: 'vendorSurveyId',
   vendorUrl: 'vendorUrl',
   videoCallLink: 'videoCallLink',
   width: 'width',
