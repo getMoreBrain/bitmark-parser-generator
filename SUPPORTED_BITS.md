@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.8.0
+Version: 3.9.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -499,6 +499,8 @@ true-false-1 (since: 1.3.0)
 vendor-amcharts-5-chart (since: 1.5.8)
 vendor-formbricks-embed (since: 3.8.0)
 vendor-formbricks-link (since: 3.8.0)
+vendor-formbricks-embed-anonymous (since: 3.9.0)
+vendor-formbricks-link-anonymous (since: 3.9.0)
 vendor-highcharts-chart (since: 1.5.28)
 vendor-iframely-card (since: 1.5.10)
 vendor-iframely-embed (since: 1.5.10)

@@ -2288,6 +2288,7 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.text,
   },
+  [BitType.vendorFormbricksEmbedAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksEmbed },
   [BitType.vendorFormbricksLink]: {
     since: '3.8.0',
     baseBitType: BitType.code,
@@ -2299,6 +2300,7 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.text,
   },
+  [BitType.vendorFormbricksLinkAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksLink },
   [BitType.vendorHighchartsChart]: {
     since: '1.5.28',
     baseBitType: BitType.vendorAmcharts5Chart,
