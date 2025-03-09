@@ -4,16 +4,10 @@
       "type": "page-article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "lang": "en-UK",
-      "publisher": [
-        "kpmg"
-      ],
-      "theme": [
-        "grundzuege"
-      ],
+      "publisher": ["kpmg"],
+      "theme": ["grundzuege"],
       "item": [
         {
           "type": "paragraph",
@@ -144,9 +138,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.19.1",
       "warnings": [
         {
           "message": "[%] is included more than 3 time(s). The earlier ones will be ignored",
@@ -188,9 +182,7 @@
       "type": "page-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -232,9 +224,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.page-article:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nMan könnte davon ausgehen, dass es reicht, aus zahlreichen Möglichkeiten und Instrumenten diejenigen zu wählen, die am besten zur Unternehmung passen. Damit würde ein Unternehmen einen zu einfachen Weg wählen.\n\nBereits in der Strategieentwicklung war die Rede vom Kopieren verlockender Ideen und spannender Konzepte aus dem eigenen Netzwerk. Wenn diese ohne Abstimmung mit den strategischen Zielen erfolgt, kann dieses Vorgehen im Unternehmen bestenfalls keinen Nutzen generieren, schlimmstenfalls grossen Schaden anrichten. So verhält es sich auch mit Personalmarketingmassnahmen."
   },
@@ -243,9 +235,7 @@
       "type": "page-article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [
@@ -284,9 +274,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.page-article:bitmark++]\n[@id:151972]\n[%][%][%pageNumber]\n\n|example:Beispiel\nGoogle ist seit Jahren weltweit einer der attraktivsten Arbeitgeber. Man liest von Wäscheservice, Fitness-Centers oder Abenteuerrutschbahnen, welche die Mitarbeitenden gratis nutzen können. Es wäre nicht zielführend, im eigenen Unternehmen eine Abenteuerrutschbahn aufzustellen, ohne Nutzen und Auswirkungen zu hinterfragen."
   },
@@ -295,9 +285,7 @@
       "type": "page-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "151973"
-      ],
+      "id": ["151973"],
       "item": [
         {
           "type": "paragraph",
@@ -412,9 +400,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.page-article:bitmark--]\n[@id:151973]\n[%item][%lead][%pageNumber][%marginNumber]\n\nWerfen wir einen Blick ins Marketing. Gängig ist die folgende Kurzdefinition Ein systematischer Ansatz, um unternehmerische Entscheidungen nach den Bedürfnissen des Marktes und der Kunden auszurichten. Diese Definition kann wie folgt erweitert werden … um Wettbewerbsvorteile zu schaffen, zu erhalten und weiter zu entwickeln.\n\nMarketingprofis mögen mit dieser rudimentären Definition Nachsicht üben.\n\nWenn wir diese Denkhaltung ins Personalmarketing übersetzen, könnte die Definition wie folgt lauten\n\nEin systematischer Ansatz, um unternehmerische Entscheidungen nach den Bedürfnissen des Arbeitsmarktes und der bestehenden und potentiellen Mitarbeitenden auszurichten, um Wettbewerbsvorteile zu schaffen, zu erhalten und weiter zu entwickeln.\n\nWichtig ist primär die Aussage systematisch. Sie zeigt, dass Einzelmassnahmen nicht der ideale Weg sind, die Attraktivität als Arbeitgeber zu stärken.\n\nIn den folgenden Unterkapiteln wählen wir einzelne Methoden des Marketings und transferieren einige Ansätze in die Überlegungen zu einem systematischen Personalmarketing."
   },
@@ -423,9 +411,7 @@
       "type": "page-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "239893"
-      ],
+      "id": ["239893"],
       "item": [],
       "lead": [
         {
@@ -443,6 +429,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitmark.cloud",
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_7.png",
+          "width": "150",
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -475,28 +477,12 @@
           ],
           "attrs": {}
         }
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "png",
-          "provider": "docs.bitmark.cloud",
-          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_7.png",
-          "width": "150",
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.page-article:bitmark--&image]\n[@id:239893]\n[%][%Ablauf der Methode]\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_7.png][@width:150]\n• In einer (digitalen) Runde zusammenkommen, beim ersten Mal den Zweck der Runde und Ablauf kurz erklären.\n• Eine Einstiegsfrage formulieren und beim ersten Mal am besten selbst mit einem Beispiel anfangen.\n• Gute Einstiegsfragen können sein: „Wie geht es euch heute? Was habt ihr heute schon gemacht/gelernt? Was ist euch heute wichtig? Was beschäftigt euch gerade?“\n• Lieber wenige Fragen und kurze Antworten. Bei einer kurzen Check-In-Runde reichen schon zwei Sätze. Bei längeren Sequenzen lasst euch mehr Zeit."
   },
@@ -505,16 +491,13 @@
       "type": "page-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "191143"
-      ],
+      "id": ["191143"],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -530,12 +513,13 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.page-article:bitmark--&image]\n[@id:191143]\n[&image:https://docs.bitmark.cloud/bit-books/bumbacher/bumbacher_dT_workshop/web-resources/images/bumbacher_dT_workshop_1.png]"
   },
@@ -544,16 +528,13 @@
       "type": "page-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "245285"
-      ],
+      "id": ["245285"],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -580,12 +561,13 @@
             }
           ]
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.page-article:bitmark--&image]\n[@id:245285]\n[&image:https://docs.bitmark.cloud/bit-books/careum/fachfrau_fachmann_gesundheit/web-resources/images/careum_fage_tabel_2_neu.png][@caption: Abb. 17: Sprosspilz. Abb. 18: Myzelpilz. Abb. 19: Myzelpilz mit Sporenträger]"
   },
@@ -594,9 +576,7 @@
       "type": "page-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "162205"
-      ],
+      "id": ["162205"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -620,7 +600,24 @@
               "type": "hardBreak"
             },
             {
-              "text": "|image:https://docs.bitmark.cloud/bit-books/careum/gesundheitsfoerderung/web-resources/images/careum_gesundheitsfoerderung_8_v2.png|",
+              "text": "|image:",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://docs.bitmark.cloud/bit-books/careum/gesundheitsfoerderung/web-resources/images/careum_gesundheitsfoerderung_8_v2.png",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "text": "docs.bitmark.cloud/bit-books/careum/gesundheitsfoerderung/web-resources/images/careum_gesundheitsfoerderung_8_v2.png",
+              "type": "text"
+            },
+            {
+              "text": "|",
               "type": "text"
             }
           ],
@@ -629,9 +626,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.19.1",
       "warnings": [
         {
           "message": "[&image] is required at least 1 time(s)",
@@ -674,31 +671,13 @@
       "type": "page-article",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "5743563"
-      ],
-      "target": [
-        "target1",
-        "target2",
-        "target3"
-      ],
-      "tag": [
-        "green",
-        "yellow",
-        "red"
-      ],
-      "reductionTag": [
-        "green",
-        "yellow"
-      ],
+      "id": ["5743563"],
+      "target": ["target1", "target2", "target3"],
+      "tag": ["green", "yellow", "red"],
+      "reductionTag": ["green", "yellow"],
       "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII=",
       "iconTag": "this is the icon tag",
-      "colorTag": [
-        "green",
-        "white",
-        "purple",
-        "orange"
-      ],
+      "colorTag": ["green", "white", "purple", "orange"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -762,9 +741,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.19.1",
       "warnings": [
         {
           "message": "[@icon] is included more than 1 time(s). The earlier ones will be ignored",

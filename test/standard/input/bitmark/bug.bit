@@ -7,11 +7,22 @@ followed by some plain text. cloze open close cloze1 book.
 
 Some more text.
 
-[.bug-alt:bitmark--]
+[.bug-alt:bitmark++]
 [@id:151971]
 [@searchIndex:Value1]
 [@searchIndex:Value2 ]
 [%][%][%][%marginNumber]
-[!Instruction with ==notranslate|notranslate==]
+[!
 
-The bit content
+Instruction with ==notranslate==|notranslate|
+
+• List 1
+• List 2
+
+]
+
+Bit content with ==notranslate==|notranslate|
+
+• List 1
+• List 2
+

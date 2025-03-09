@@ -4,9 +4,7 @@
       "type": "statement",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "191210"
-      ],
+      "id": ["191210"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -27,9 +25,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.statement]\n[@id:191210]\nAlle kriegen mit, egal wo sie sind, wie sehr wir selber die digitale Technologie-Nutzung nicht richtig unter Kontrolle haben. Da ist niemand ausgenommen."
   },
@@ -38,9 +36,7 @@
       "type": "statement",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "191207"
-      ],
+      "id": ["191207"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -52,7 +48,24 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Ruhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)",
+              "text": "Ruhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://www.domainmarkt.de/pabloruiz.de",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "text": "Pablo Ruiz",
+              "type": "text"
+            },
+            {
+              "text": ")",
               "type": "text"
             }
           ],
@@ -61,9 +74,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.19.1"
     },
     "bitmark": "[.statement]\n[@id:191207]\nRuhe und konzentriertes Arbeiten – das soll Offtime bieten. (Foto: ==Pablo Ruiz==|link:https://www.domainmarkt.de/pabloruiz.de|)"
   }
