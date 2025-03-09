@@ -40,7 +40,7 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.6.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
@@ -98,7 +98,7 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.6.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
@@ -203,7 +203,7 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.6.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
@@ -221,20 +221,32 @@
       "marginNumber": [],
       "hint": [
         {
-          "type": "image",
-          "attrs": {
-            "alignment": "center",
-            "textAlign": "left",
-            "src": "https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png",
-            "alt": null,
-            "title": null,
-            "class": "center",
-            "zoomDisabled": false
-          }
-        },
-        {
           "type": "paragraph",
           "content": [
+            {
+              "text": "|image:",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "text": "docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png",
+              "type": "text"
+            },
+            {
+              "text": "|",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
             {
               "text": "1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t",
               "type": "text"
@@ -609,7 +621,7 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.6.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },
@@ -663,7 +675,7 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.6.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.19.1"
     },

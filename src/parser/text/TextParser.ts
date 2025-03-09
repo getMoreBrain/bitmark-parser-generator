@@ -89,9 +89,10 @@ class TextParser {
     // Default text format to bitmark-- if not specified
     // if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
     // Default text format to bitmark+ if not specified
-    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkPlusPlus; // TODO: Should be 'bitmark+' when text parser is updated
+    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
 
-    const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
+    // NOTE: bitmark-- in bitmark now corresponds to bitmarkPlus in the text parser(!!)
+    const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkPlus';
 
     // There is a special case for pre-processing the string passed to the text parser
     // If the string starts with ^/n, contains /n^/n or ends with /n^, the parser will generated
