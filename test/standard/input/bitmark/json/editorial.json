@@ -4,13 +4,11 @@
       "type": "editorial",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "342338"
-      ],
-      "analyticsTag": [
-        "235",
-        "geruyghoenhru"
-      ],
+      "id": ["342338"],
+      "analyticsTag": ["235", "geruyghoenhru"],
+      "categoryTag": ["monsters", "knights"],
+      "topicTag": ["almonds", "peanuts"],
+      "altLangTag": "en",
       "feedbackEngine": "google",
       "feedbackType": "unknown",
       "disableFeedback": true,
@@ -41,43 +39,74 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.9.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.19.1",
       "warnings": [
+        {
+          "message": "[@altLangTag] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@altLangTag:en]",
+          "location": {
+            "start": {
+              "line": 10,
+              "column": 1,
+              "offset": 180
+            },
+            "end": {
+              "line": 10,
+              "column": 17,
+              "offset": 196
+            }
+          },
+          "original": {
+            "text": "[@altLangTag:fr]",
+            "location": {
+              "start": {
+                "line": 9,
+                "column": 1,
+                "offset": 163
+              },
+              "end": {
+                "line": 9,
+                "column": 17,
+                "offset": 179
+              }
+            }
+          }
+        },
         {
           "message": "[@disableFeedback] is included more than 1 time(s). The earlier ones will be ignored",
           "text": "[@disableFeedback:true]",
           "location": {
             "start": {
-              "line": 8,
+              "line": 14,
               "column": 1,
-              "offset": 149
+              "offset": 270
             },
             "end": {
-              "line": 8,
+              "line": 14,
               "column": 24,
-              "offset": 172
+              "offset": 293
             }
           },
           "original": {
             "text": "[@disableFeedback:true]",
             "location": {
               "start": {
-                "line": 7,
+                "line": 13,
                 "column": 1,
-                "offset": 125
+                "offset": 246
               },
               "end": {
-                "line": 7,
+                "line": 13,
                 "column": 24,
-                "offset": 148
+                "offset": 269
               }
             }
           }
         }
       ]
     },
-    "bitmark": "[.editorial]\n[@id:342338]\n[@analyticsTag:235]\n[@analyticsTag:geruyghoenhru]\n[@feedbackEngine:google]\n[@feedbackType:unknown]\n[@disableFeedback:true]\n[@disableFeedback:true]\nEditorial\nIt's exactly the same as an .article."
+    "bitmark": "[.editorial]\n[@id:342338]\n[@analyticsTag:235]\n[@analyticsTag:geruyghoenhru]\n[@categoryTag:monsters]\n[@categoryTag:knights]\n[@topicTag:almonds]\n[@topicTag:peanuts]\n[@altLangTag:fr]\n[@altLangTag:en]\n[@feedbackEngine:google]\n[@feedbackType:unknown]\n[@disableFeedback:true]\n[@disableFeedback:true]\nEditorial\nIt's exactly the same as an .article."
   }
 ]

@@ -24,6 +24,9 @@ export interface BitJson {
   machineTranslated: string;
   searchIndex: string | string[];
   analyticsTag: string | string[];
+  categoryTag: string | string[];
+  topicTag: string | string[];
+  altLangTag: string;
   feedbackEngine: string;
   feedbackType: string;
   disableFeedback: boolean;

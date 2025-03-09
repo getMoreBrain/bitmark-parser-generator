@@ -114,6 +114,9 @@ class Builder extends BaseBuilder {
     machineTranslated?: string;
     searchIndex?: string | string[];
     analyticsTag?: string | string[];
+    categoryTag?: string | string[];
+    topicTag?: string | string[];
+    altLangTag?: string;
     feedbackEngine?: string;
     feedbackType?: string;
     disableFeedback?: boolean;
@@ -339,6 +342,9 @@ class Builder extends BaseBuilder {
       machineTranslated: this.toAstProperty(PropertyConfigKey.machineTranslated, data.machineTranslated),
       searchIndex: this.toAstProperty(PropertyConfigKey.searchIndex, data.searchIndex),
       analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, data.analyticsTag),
+      categoryTag: this.toAstProperty(PropertyConfigKey.categoryTag, data.categoryTag),
+      topicTag: this.toAstProperty(PropertyConfigKey.topicTag, data.topicTag),
+      altLangTag: this.toAstProperty(PropertyConfigKey.altLangTag, data.altLangTag),
       feedbackEngine: this.toAstProperty(PropertyConfigKey.feedbackEngine, data.feedbackEngine),
       feedbackType: this.toAstProperty(PropertyConfigKey.feedbackType, data.feedbackType),
       disableFeedback: this.toAstProperty(PropertyConfigKey.disableFeedback, data.disableFeedback),

@@ -46,6 +46,20 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.categoryTag,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.topicTag,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.altLangTag,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.feedbackEngine,
       },
       {
