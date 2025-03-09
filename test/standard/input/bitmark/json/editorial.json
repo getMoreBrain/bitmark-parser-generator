@@ -12,6 +12,10 @@
       "feedbackEngine": "google",
       "feedbackType": "unknown",
       "disableFeedback": true,
+      "diffOp": "add",
+      "diffRef": "funjw34i7th9",
+      "diffContext": "global",
+      "diffTime": 32958078658,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -104,9 +108,133 @@
               }
             }
           }
+        },
+        {
+          "message": "[@diffOp] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@diffOp:add]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 311
+            },
+            "end": {
+              "line": 16,
+              "column": 14,
+              "offset": 324
+            }
+          },
+          "original": {
+            "text": "[@diffOp:delete]",
+            "location": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 294
+              },
+              "end": {
+                "line": 15,
+                "column": 17,
+                "offset": 310
+              }
+            }
+          }
+        },
+        {
+          "message": "[@diffRef] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@diffRef:funjw34i7th9]",
+          "location": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 349
+            },
+            "end": {
+              "line": 18,
+              "column": 24,
+              "offset": 372
+            }
+          },
+          "original": {
+            "text": "[@diffRef:3046j893yyeg]",
+            "location": {
+              "start": {
+                "line": 17,
+                "column": 1,
+                "offset": 325
+              },
+              "end": {
+                "line": 17,
+                "column": 24,
+                "offset": 348
+              }
+            }
+          }
+        },
+        {
+          "message": "[@diffContext] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@diffContext:global]",
+          "location": {
+            "start": {
+              "line": 20,
+              "column": 1,
+              "offset": 393
+            },
+            "end": {
+              "line": 20,
+              "column": 22,
+              "offset": 414
+            }
+          },
+          "original": {
+            "text": "[@diffContext:user]",
+            "location": {
+              "start": {
+                "line": 19,
+                "column": 1,
+                "offset": 373
+              },
+              "end": {
+                "line": 19,
+                "column": 20,
+                "offset": 392
+              }
+            }
+          }
+        },
+        {
+          "message": "[@diffTime] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@diffTime:32958078658]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 439
+            },
+            "end": {
+              "line": 22,
+              "column": 24,
+              "offset": 462
+            }
+          },
+          "original": {
+            "text": "[@diffTime:69435066489]",
+            "location": {
+              "start": {
+                "line": 21,
+                "column": 1,
+                "offset": 415
+              },
+              "end": {
+                "line": 21,
+                "column": 24,
+                "offset": 438
+              }
+            }
+          }
         }
       ]
     },
-    "bitmark": "[.editorial]\n[@id:342338]\n[@analyticsTag:235]\n[@analyticsTag:geruyghoenhru]\n[@categoryTag:monsters]\n[@categoryTag:knights]\n[@topicTag:almonds]\n[@topicTag:peanuts]\n[@altLangTag:fr]\n[@altLangTag:en]\n[@feedbackEngine:google]\n[@feedbackType:unknown]\n[@disableFeedback:true]\n[@disableFeedback:true]\nEditorial\nIt's exactly the same as an .article."
+    "bitmark": "[.editorial]\n[@id:342338]\n[@analyticsTag:235]\n[@analyticsTag:geruyghoenhru]\n[@categoryTag:monsters]\n[@categoryTag:knights]\n[@topicTag:almonds]\n[@topicTag:peanuts]\n[@altLangTag:fr]\n[@altLangTag:en]\n[@feedbackEngine:google]\n[@feedbackType:unknown]\n[@disableFeedback:true]\n[@disableFeedback:true]\n[@diffOp:delete]\n[@diffOp:add]\n[@diffRef:3046j893yyeg]\n[@diffRef:funjw34i7th9]\n[@diffContext:user]\n[@diffContext:global]\n[@diffTime:69435066489]\n[@diffTime:32958078658]\nEditorial\nIt's exactly the same as an .article."
   }
 ]

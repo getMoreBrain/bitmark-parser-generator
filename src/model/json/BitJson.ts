@@ -30,6 +30,10 @@ export interface BitJson {
   feedbackEngine: string;
   feedbackType: string;
   disableFeedback: boolean;
+  diffOp: string;
+  diffRef: string;
+  diffContext: string;
+  diffTime: number;
   releaseVersion: string;
   releaseKind: string;
   releaseDate: string;

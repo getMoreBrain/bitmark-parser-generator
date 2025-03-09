@@ -72,6 +72,22 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.diffOp,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffRef,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffContext,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffTime,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.ageRange,
         maxCount: Count.infinity,
       },
