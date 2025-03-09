@@ -12,5 +12,13 @@
 [@feedbackType:unknown]
 [@disableFeedback:true]
 [@disableFeedback:true]
+[@diffOp:delete]
+[@diffOp:add]
+[@diffRef:3046j893yyeg]
+[@diffRef:funjw34i7th9]
+[@diffContext:user]
+[@diffContext:global]
+[@diffTime:69435066489]
+[@diffTime:32958078658]
 Editorial
 It's exactly the same as an .article.

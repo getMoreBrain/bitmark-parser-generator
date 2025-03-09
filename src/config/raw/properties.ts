@@ -87,6 +87,26 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.diffOp]: {
+    tag: PropertyTag.diffOp,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.diffRef]: {
+    tag: PropertyTag.diffRef,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.diffContext]: {
+    tag: PropertyTag.diffContext,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.diffTime]: {
+    tag: PropertyTag.diffTime,
+    single: true,
+    format: PropertyFormat.number,
+  },
   [PropertyConfigKey.releaseVersion]: {
     tag: PropertyTag.releaseVersion,
     single: true,
