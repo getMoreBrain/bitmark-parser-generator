@@ -69,6 +69,9 @@ export interface Bit {
   machineTranslated?: Property;
   searchIndex?: Property;
   analyticsTag?: Property;
+  categoryTag?: Property;
+  topicTag?: Property;
+  altLangTag?: Property;
   feedbackEngine?: Property;
   feedbackType?: Property;
   disableFeedback?: Property;

@@ -64,6 +64,19 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.analyticsTag,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.categoryTag]: {
+    tag: PropertyTag.categoryTag,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.topicTag]: {
+    tag: PropertyTag.topicTag,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.altLangTag]: {
+    tag: PropertyTag.altLangTag,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.feedbackEngine]: {
     tag: PropertyTag.feedbackEngine,
     single: true,
