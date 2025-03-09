@@ -103,6 +103,7 @@ class Builder extends BaseBuilder {
     id?: string | string[];
     internalComment?: string | string[];
     customerId?: string;
+    customerExternalId?: string | string[];
     externalId?: string | string[];
     spaceId?: string | string[];
     padletId?: string;
@@ -327,6 +328,7 @@ class Builder extends BaseBuilder {
       id: this.toAstProperty(PropertyConfigKey.id, data.id),
       internalComment: this.toAstProperty(PropertyConfigKey.internalComment, data.internalComment),
       customerId: this.toAstProperty(PropertyConfigKey.customerId, data.customerId),
+      customerExternalId: this.toAstProperty(PropertyConfigKey.customerExternalId, data.customerExternalId),
       externalId: this.toAstProperty(PropertyConfigKey.externalId, data.externalId),
       spaceId: this.toAstProperty(PropertyConfigKey.spaceId, data.spaceId),
       padletId: this.toAstProperty(PropertyConfigKey.padletId, data.padletId),

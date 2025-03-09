@@ -18,6 +18,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.customerExternalId]: {
+    tag: PropertyTag.customerExternalId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.externalId]: {
     tag: PropertyTag.externalId,
     format: PropertyFormat.trimmedString,
