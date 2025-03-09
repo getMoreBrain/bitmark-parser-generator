@@ -58,6 +58,7 @@ export interface Bit {
   id?: Property;
   internalComment?: Property;
   customerId?: Property;
+  customerExternalId?: Property;
   externalId?: Property;
   spaceId?: Property;
   padletId?: Property;
