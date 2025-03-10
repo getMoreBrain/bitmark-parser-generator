@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.9.0
+Version: 3.10.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -52,6 +52,7 @@ book-conclusion (since: 1.3.0)
 book-copyright (since: 1.3.0)
 book-copyright-permissions (since: 1.3.0)
 book-dedication (since: 1.3.0)
+book-diff (since: 3.10.0)
 book-endnotes (since: 1.3.0)
 book-epigraph (since: 1.3.0)
 book-epilogue (since: 1.3.0)

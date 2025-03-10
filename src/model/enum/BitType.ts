@@ -52,6 +52,7 @@ const BitType = superenum({
   bookCopyright: 'book-copyright',
   bookCopyrightPermissions: 'book-copyright-permissions',
   bookDedication: 'book-dedication',
+  bookDiff: 'book-diff',
   bookEndnotes: 'book-endnotes',
   bookEpigraph: 'book-epigraph',
   bookEpilogue: 'book-epilogue',

@@ -67,6 +67,8 @@ const NodeType = superenum({
   bookValue: 'bookValue',
   bookAlias: 'bookAlias',
   bookAliasValue: 'bookAliasValue',
+  bookDiff: 'bookDiff',
+  bookDiffValue: 'bookDiffValue',
   bot: 'bot',
   botResponses: 'botResponses',
   botResponsesValue: 'botResponsesValue',

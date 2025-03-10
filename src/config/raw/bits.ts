@@ -318,6 +318,16 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.bookDiff]: {
+    since: '3.10.0',
+    baseBitType: BitType.book,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.bookDiff,
+      },
+    ],
+  },
   [BitType.bookClose]: {
     since: '1.18.0',
     baseBitType: BitType.article,
