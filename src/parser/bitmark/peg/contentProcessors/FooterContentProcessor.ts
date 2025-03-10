@@ -3,8 +3,7 @@ import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { Footer } from '../../../../model/ast/Nodes';
 import { JsonText } from '../../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
-import { TextFormat, TextFormatType } from '../../../../model/enum/TextFormat';
+import { TextFormat } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 import { BitContentProcessorResult, BitmarkPegParserContext, ContentDepthType } from '../BitmarkPegParserTypes';
@@ -23,13 +22,12 @@ class FooterContentProcessor {
   public process(
     context: BitmarkPegParserContext,
     contentDepth: ContentDepthType,
-    bitType: BitTypeType,
-    textFormat: TextFormatType,
     _tagsConfig: TagsConfig | undefined,
     _target: BitContentProcessorResult,
     footer: BreakscapedString,
     footerPlainText: BreakscapedString,
   ): Footer | undefined {
+    const { textFormat } = context;
     let finalFooterText: JsonText | undefined;
 
     footer = footer.trimStart() as BreakscapedString;
@@ -51,13 +49,14 @@ class FooterContentProcessor {
       const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
 
       if (footer) {
-        footer = BitmarkPegParserValidator.checkFooter(context, contentDepth, bitType, footer);
+        footer = BitmarkPegParserValidator.checkFooter(context, contentDepth, footer);
       }
 
       const parsedFooterText: JsonText = isBitmarkText
         ? textParser.toAst(footer, {
             //
             textFormat,
+            isProperty: false,
           })
         : Breakscape.unbreakscape(footer, {
             textFormat: TextFormat.text,

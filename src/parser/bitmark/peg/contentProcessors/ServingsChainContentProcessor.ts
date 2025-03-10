@@ -1,6 +1,4 @@
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { ServingsJson } from '../../../../model/json/BitJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 
@@ -15,8 +13,6 @@ import {
 function servingsChainContentProcessor(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -25,7 +21,7 @@ function servingsChainContentProcessor(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('servings content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('servings TAGS', tags);
 

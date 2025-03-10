@@ -1,10 +1,8 @@
 import { Config } from '../../../../config/Config';
 import { BodyPart } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { Tag } from '../../../../model/enum/Tag';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { GapJson } from '../../../../model/json/BodyBitJson';
 
 import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
@@ -20,17 +18,15 @@ import {
 function gapChainContentProcessor(
   context: BitmarkPegParserContext,
   contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
 ): void {
   if (contentDepth === BitContentLevel.Chain) {
-    clozeTagContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
+    clozeTagContentProcessor(context, contentDepth, tagsConfig, content, target);
   } else {
-    const gap: Partial<GapJson> | undefined = buildGap(context, contentDepth, bitType, textFormat, tagsConfig, content);
+    const gap: Partial<GapJson> | undefined = buildGap(context, contentDepth, tagsConfig, content);
     if (gap) bodyParts.push(gap as BodyPart);
   }
 }
@@ -38,8 +34,6 @@ function gapChainContentProcessor(
 function buildGap(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
 ): Partial<GapJson> | undefined {
@@ -49,13 +43,7 @@ function buildGap(
 
   const chainContent = [content, ...(content.chain ?? [])];
 
-  const chainTags = context.bitContentProcessor(
-    BitContentLevel.Chain,
-    bitType,
-    textFormat,
-    gapConfig?.chain,
-    chainContent,
-  );
+  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, gapConfig?.chain, chainContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', chainTags);
 

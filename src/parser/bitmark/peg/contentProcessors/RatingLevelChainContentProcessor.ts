@@ -1,7 +1,5 @@
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { RatingLevelStartEndJson } from '../../../../model/json/BitJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { TextParser } from '../../../text/TextParser';
@@ -20,17 +18,16 @@ const textParser = new TextParser();
 function ratingLevelChainContentProcessor(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
+  const { textFormat } = context;
   const { key, value } = content as TypeKeyValue;
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('ratingLevel content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('ratingLevel TAGS', tags);
 
@@ -41,7 +38,7 @@ function ratingLevelChainContentProcessor(
 
   const node: Partial<RatingLevelStartEndJson> = {
     level,
-    label: label ? textParser.toAst(label) : undefined,
+    label: label ? textParser.toAst(label, { textFormat, isProperty: true }) : undefined,
   };
 
   switch (key) {

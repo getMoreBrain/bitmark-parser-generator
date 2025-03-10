@@ -60,17 +60,18 @@ function buildCards(
   choicesV1: Partial<ChoiceJson>[] | undefined,
   responsesV1: Partial<ResponseJson>[] | undefined,
 ): BitSpecificCards {
+  const { bitConfig } = context;
+
   if (context.DEBUG_CARD_SET) context.debugPrint('card set', parsedCardSet);
 
   let result: BitSpecificCards = {};
 
   // Process the card contents
-  const processedCardSet = processCardSet(context, bitType, textFormat, parsedCardSet);
+  const processedCardSet = processCardSet(context, parsedCardSet);
 
   // Parse the card contents according to the card set type
 
   // Get the bit metadata to check how to parse the card set
-  const bitConfig = Config.getBitConfig(bitType);
   const cardSetType = bitConfig.cardSet?.configKey;
 
   switch (cardSetType) {
@@ -143,12 +144,7 @@ function buildCards(
   return result;
 }
 
-function processCardSet(
-  context: BitmarkPegParserContext,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
-  parsedCardSet: ParsedCardSet | undefined,
-): ProcessedCardSet {
+function processCardSet(context: BitmarkPegParserContext, parsedCardSet: ParsedCardSet | undefined): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
     cards: [],
     internalComments: [],
@@ -156,6 +152,8 @@ function processCardSet(
 
   // Early return if no card set
   if (!parsedCardSet) return processedCardSet;
+
+  const { bitType } = context;
 
   // Process the card contents
   let cardNo = 0;
@@ -183,7 +181,7 @@ function processCardSet(
 
         const tagsConfig = Config.getTagsConfigForCardSet(bitType, sideNo, variantNo);
 
-        const tags = context.bitContentProcessor(BitContentLevel.Card, bitType, textFormat, tagsConfig, content);
+        const tags = context.bitContentProcessor(BitContentLevel.Card, tagsConfig, content);
 
         if (context.DEBUG_CARD_TAGS) context.debugPrint('card tags', tags);
 

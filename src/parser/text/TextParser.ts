@@ -7,7 +7,8 @@ import { StringUtils } from '../../utils/StringUtils';
 import { parse as bitmarkTextParse } from './peg/TextPegParser';
 
 export interface BitmarkTextParserOptions {
-  textFormat?: TextFormatType;
+  textFormat: TextFormatType;
+  isProperty: boolean;
 }
 
 const START_HAT_REGEX = new RegExp('^\\^\\n', 'gm');
@@ -74,7 +75,7 @@ class TextParser {
    * @param text - bitmark text
    * @returns bitmark text AST as plain JS object
    */
-  toAst(text: string | TextAst | undefined, options?: BitmarkTextParserOptions): TextAst {
+  toAst(text: string | TextAst | undefined, options: BitmarkTextParserOptions): TextAst {
     // If input is not a string, return it as is
     if (Array.isArray(text)) return text;
     let str = (text as string) ?? '';
@@ -86,13 +87,13 @@ class TextParser {
     // Ensure options is an object
     const opts = Object.assign({}, options);
 
-    // Default text format to bitmark-- if not specified
-    // if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
-    // Default text format to bitmark+ if not specified
-    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
-
-    // NOTE: bitmark-- in bitmark now corresponds to bitmarkPlus in the text parser(!!)
-    const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkPlus';
+    // Set the start rule.
+    // If the bit text format is bitmark++, and the text is a property, the start rule is bitmarkPlus
+    // Otherwise, the start rule is bitmarkMinusMinus
+    let startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
+    if (opts.isProperty && opts.textFormat === TextFormat.bitmarkPlusPlus) {
+      startRule = 'bitmarkPlus';
+    }
 
     // There is a special case for pre-processing the string passed to the text parser
     // If the string starts with ^/n, contains /n^/n or ends with /n^, the parser will generated

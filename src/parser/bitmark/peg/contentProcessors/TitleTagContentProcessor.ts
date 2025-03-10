@@ -3,7 +3,6 @@ import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TextAst } from '../../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 
@@ -19,14 +18,13 @@ import {
 const textParser = new TextParser();
 
 function titleTagContentProcessor(
-  _context: BitmarkPegParserContext,
+  context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  _bitType: BitTypeType,
-  _textFormat: TextFormatType,
   _tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
+  const { textFormat } = context;
   const { value } = content as TypeValue;
 
   const title = target.title;
@@ -40,7 +38,10 @@ function titleTagContentProcessor(
   const level = titleValue.level.length;
   title[level] = {
     //
-    titleAst: textParser.toAst(titleText ?? ''),
+    titleAst: textParser.toAst(titleText ?? '', {
+      textFormat,
+      isProperty: true,
+    }),
     titleString: titleText ?? '',
   };
 }
