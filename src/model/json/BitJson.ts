@@ -13,6 +13,7 @@ export interface BitJson {
   id: string | string[];
   internalComment: string | string[];
   customerId: string;
+  customerExternalId: string | string[];
   externalId: string | string[];
   spaceId: string | string[];
   padletId: string;
@@ -23,9 +24,16 @@ export interface BitJson {
   machineTranslated: string;
   searchIndex: string | string[];
   analyticsTag: string | string[];
+  categoryTag: string | string[];
+  topicTag: string | string[];
+  altLangTag: string;
   feedbackEngine: string;
   feedbackType: string;
   disableFeedback: boolean;
+  diffOp: string;
+  diffRef: string;
+  diffContext: string;
+  diffTime: number;
   releaseVersion: string;
   releaseKind: string;
   releaseDate: string;
@@ -48,6 +56,7 @@ export interface BitJson {
   flashcardSet: string | string[];
   subtype: string;
   bookAlias: string | string[];
+  bookDiff: string;
   coverImage: string | string[];
   coverColor: string;
   publisher: string | string[];

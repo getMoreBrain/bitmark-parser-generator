@@ -3,10 +3,8 @@ import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
 import { Count } from '../../../../model/enum/Count';
 import { ResourceTag, ResourceTagType } from '../../../../model/enum/ResourceTag';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
 
 import {
@@ -30,10 +28,10 @@ const resourceBuilder = new ResourceBuilder();
  */
 function buildResources(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
   resourceTypeAttachment: string | undefined,
   resources: ResourceJson[] | undefined,
 ): ResourceJson[] | undefined {
+  const { bitType } = context;
   const filteredResources: ResourceJson[] = [];
   const excessResources: ResourceJson[] = [];
 
@@ -91,8 +89,6 @@ function buildResources(
 function resourceContentProcessor(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -142,13 +138,7 @@ function resourceContentProcessor(
     // );
 
     // Process the chain
-    const { posterImage, ...tags } = context.bitContentProcessor(
-      BitContentLevel.Chain,
-      bitType,
-      textFormat,
-      resourceConfig?.chain,
-      chain,
-    );
+    const { posterImage, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, resourceConfig?.chain, chain);
 
     // Handle the poster image
     let posterImageResource: ImageResourceJson | undefined;
@@ -162,8 +152,6 @@ function resourceContentProcessor(
 
       const { posterImage: unused, ...posterImageTags } = context.bitContentProcessor(
         BitContentLevel.Chain,
-        bitType,
-        textFormat,
         posterImageChainConfig,
         posterImageChain,
       );
@@ -171,7 +159,7 @@ function resourceContentProcessor(
 
       // Build the poster image resource
       posterImageResource = (
-        resourceBuilder.resource(bitType, {
+        resourceBuilder.resource(context, {
           type: ResourceTag.image,
           value: posterImage,
           ...posterImageTags,
@@ -179,7 +167,7 @@ function resourceContentProcessor(
       ).image;
     }
 
-    const resource = resourceBuilder.resource(bitType, {
+    const resource = resourceBuilder.resource(context, {
       type,
       value: Breakscape.unbreakscape(value),
       posterImage: posterImageResource,
@@ -192,8 +180,6 @@ function resourceContentProcessor(
 function propertyStyleResourceContentProcessor(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -208,24 +194,18 @@ function propertyStyleResourceContentProcessor(
     // Parse the resource chain
     const resourceConfig = Config.getTagConfigForTag(tagsConfig, type);
 
-    const { posterImage, ...tags } = context.bitContentProcessor(
-      BitContentLevel.Chain,
-      bitType,
-      textFormat,
-      resourceConfig?.chain,
-      chain,
-    );
+    const { posterImage, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, resourceConfig?.chain, chain);
 
     const posterImageResource = posterImage
       ? (
-          resourceBuilder.resource(bitType, {
+          resourceBuilder.resource(context, {
             type: ResourceTag.image,
             value: posterImage,
           }) as ImageResourceWrapperJson
         ).image
       : undefined;
 
-    const resource = resourceBuilder.resource(bitType, {
+    const resource = resourceBuilder.resource(context, {
       type,
       value: Breakscape.unbreakscape(value),
       posterImage: posterImageResource,

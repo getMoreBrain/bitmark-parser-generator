@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.8.0
+Version: 3.10.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -52,6 +52,7 @@ book-conclusion (since: 1.3.0)
 book-copyright (since: 1.3.0)
 book-copyright-permissions (since: 1.3.0)
 book-dedication (since: 1.3.0)
+book-diff (since: 3.10.0)
 book-endnotes (since: 1.3.0)
 book-epigraph (since: 1.3.0)
 book-epilogue (since: 1.3.0)
@@ -182,6 +183,7 @@ danger-alt (since: 1.16.0)
 danger-collapsible (since: 1.21.0)
 definition-list (since: 1.34.0)
 definition-term (since: 1.34.0)
+deleted (since: 3.9.0)
 details (since: 1.3.0)
 details-1 (since: 1.3.0)
 details-image (since: 1.3.0)
@@ -499,6 +501,8 @@ true-false-1 (since: 1.3.0)
 vendor-amcharts-5-chart (since: 1.5.8)
 vendor-formbricks-embed (since: 3.8.0)
 vendor-formbricks-link (since: 3.8.0)
+vendor-formbricks-embed-anonymous (since: 3.9.0)
+vendor-formbricks-link-anonymous (since: 3.9.0)
 vendor-highcharts-chart (since: 1.5.28)
 vendor-iframely-card (since: 1.5.10)
 vendor-iframely-embed (since: 1.5.10)

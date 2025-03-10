@@ -318,6 +318,16 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.bookDiff]: {
+    since: '3.10.0',
+    baseBitType: BitType.book,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.bookDiff,
+      },
+    ],
+  },
   [BitType.bookClose]: {
     since: '1.18.0',
     baseBitType: BitType.article,
@@ -758,6 +768,7 @@ const BITS: _BitsConfig = {
   [BitType.danger]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.dangerAlt]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.definitionTerm]: { since: '1.34.0', baseBitType: BitType.article },
+  [BitType.deleted]: { since: '3.9.0', baseBitType: BitType.article },
   [BitType.details1]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.details]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.qAndA]: { since: '3.5.0', baseBitType: BitType.article },
@@ -2288,6 +2299,7 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.text,
   },
+  [BitType.vendorFormbricksEmbedAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksEmbed },
   [BitType.vendorFormbricksLink]: {
     since: '3.8.0',
     baseBitType: BitType.code,
@@ -2299,6 +2311,7 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.text,
   },
+  [BitType.vendorFormbricksLinkAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksLink },
   [BitType.vendorHighchartsChart]: {
     since: '1.5.28',
     baseBitType: BitType.vendorAmcharts5Chart,

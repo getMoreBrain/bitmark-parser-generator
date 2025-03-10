@@ -1,8 +1,6 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { TechnicalTermJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -17,8 +15,6 @@ import {
 function technicalTermChainContentProcessor(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -27,7 +23,7 @@ function technicalTermChainContentProcessor(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('technicalTerm content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('technicalTerm TAGS', tags);
 

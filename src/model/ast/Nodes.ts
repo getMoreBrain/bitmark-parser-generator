@@ -58,6 +58,7 @@ export interface Bit {
   id?: Property;
   internalComment?: Property;
   customerId?: Property;
+  customerExternalId?: Property;
   externalId?: Property;
   spaceId?: Property;
   padletId?: Property;
@@ -68,9 +69,16 @@ export interface Bit {
   machineTranslated?: Property;
   searchIndex?: Property;
   analyticsTag?: Property;
+  categoryTag?: Property;
+  topicTag?: Property;
+  altLangTag?: Property;
   feedbackEngine?: Property;
   feedbackType?: Property;
   disableFeedback?: Property;
+  diffOp?: Property;
+  diffRef?: Property;
+  diffContext?: Property;
+  diffTime?: Property;
   releaseVersion?: Property;
   releaseKind?: Property;
   releaseDate?: Property;
@@ -96,6 +104,7 @@ export interface Bit {
   flashcardSet?: Property;
   subtype?: Property;
   bookAlias?: Property;
+  bookDiff?: Property;
   coverImage?: Property;
   coverColor?: Property;
   publications?: Property;

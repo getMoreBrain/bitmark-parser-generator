@@ -18,7 +18,6 @@ import { BitTagType, BitTagTypeType } from '../../../model/enum/BitTagType';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { Count, CountType } from '../../../model/enum/Count';
 import { PropertyTag, PropertyTagType } from '../../../model/enum/PropertyTag';
-import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag, TagType } from '../../../model/enum/Tag';
 import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
@@ -97,17 +96,14 @@ class BitmarkPegParserValidator {
    *
    * @returns the validated and potentially unchained bit content
    */
-  validateBitTags(
-    context: BitmarkPegParserContext,
-    bitType: BitTypeType,
-    resourceType: ResourceTagType | undefined,
-    data: BitContent[],
-  ): BitContent[] {
+  validateBitTags(context: BitmarkPegParserContext, data: BitContent[]): BitContent[] {
     // if (context.DEBUG_BIT_TAG_VALIDATION) context.debugPrint('bit tag validation', data);
     if (!data) return [];
 
+    const { bitConfig, bitType, resourceType } = context;
+
     // Get the bit config to check how to parse the bit
-    const bitConfig = Config.getBitConfig(bitType);
+
     const { tags: bitTags, cardSet: cardSetConfig } = bitConfig;
 
     // Insert the resource tags from the resources config (which can depends on the resource type attachment in the bit header).
@@ -150,8 +146,10 @@ class BitmarkPegParserValidator {
   ): BodyPart[] | undefined {
     if (!bodyParts) return bodyParts;
 
+    const { bitConfig } = context;
+
     // Get the bit config to check how to parse the bit
-    const bitConfig = Config.getBitConfig(bitType);
+
     const { bodyAllowed } = bitConfig;
 
     const hasBody = bodyParts.length > 0;
@@ -175,12 +173,11 @@ class BitmarkPegParserValidator {
   checkBodyPart(
     context: BitmarkPegParserContext,
     contentDepth: ContentDepthType,
-    bitType: BitTypeType,
     bodyPart: BreakscapedString,
   ): BreakscapedString {
     if (!bodyPart) return bodyPart;
 
-    this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, bodyPart);
+    this.checkBodyForCommonPotentialMistakes(context, contentDepth, bodyPart);
 
     return bodyPart;
   }
@@ -197,16 +194,16 @@ class BitmarkPegParserValidator {
   checkFooter(
     context: BitmarkPegParserContext,
     contentDepth: ContentDepthType,
-    bitType: BitTypeType,
     footer: BreakscapedString,
   ): BreakscapedString {
     if (!footer) return footer;
 
+    const { bitConfig, bitType } = context;
+
     // Get the bit config to check how to parse the bit
-    const bitConfig = Config.getBitConfig(bitType);
     const { footerAllowed } = bitConfig;
 
-    this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, footer);
+    this.checkBodyForCommonPotentialMistakes(context, contentDepth, footer);
 
     if (!footerAllowed) {
       context.addWarning(`Bit '${bitType}' should not have a footer.`);
@@ -235,8 +232,9 @@ class BitmarkPegParserValidator {
   ): Body | undefined {
     if (!cardBody || !cardBody.body) return cardBody;
 
+    const { bitConfig } = context;
+
     // Get the bit config to check how to parse the bit
-    const bitConfig = Config.getBitConfig(bitType);
     if (!bitConfig.cardSet) return cardBody; // Won't happen. Just to make TS happy
 
     const variantConfig = this.getVariantConfig(bitConfig.cardSet.variants, sideNo, variantNo);
@@ -854,10 +852,11 @@ class BitmarkPegParserValidator {
   private checkBodyForCommonPotentialMistakes(
     context: BitmarkPegParserContext,
     _contentDepth: ContentDepthType,
-    bitType: BitTypeType,
     body: string,
   ): void {
     if (!body) return;
+
+    const { bitType } = context;
 
     for (const mistake of COMMON_MISTAKE_STRINGS) {
       if (body.includes(mistake)) {

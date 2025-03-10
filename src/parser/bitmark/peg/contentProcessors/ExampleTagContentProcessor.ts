@@ -1,8 +1,7 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
+import { BitType } from '../../../../model/enum/BitType';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { TextParser } from '../../../text/TextParser';
 
@@ -21,11 +20,10 @@ const textParser = new TextParser();
 function exampleTagContentProcessor(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  _textFormat: TextFormatType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
+  const { bitType } = context;
   const { value } = content as TypeValue;
   const example = value as BreakscapedString | boolean;
 
@@ -45,26 +43,26 @@ function exampleTagContentProcessor(
     ])
   ) {
     //
-    handleGapOrSelectOrTrueFalseExample(context, bitType, content, example, target);
+    handleGapOrSelectOrTrueFalseExample(context, content, example, target);
     //
   } else if (Config.isOfBitType(bitType, BitType.mark)) {
     // Default only example handling
-    handleDefaultOnlyExample(context, bitType, content, example, target);
+    handleDefaultOnlyExample(context, content, example, target);
     //
   } else {
     // Standard example handling
-    handleStandardStringExample(context, bitType, content, example, target);
+    handleStandardStringExample(context, content, example, target);
     //
   }
 }
 
 function handleGapOrSelectOrTrueFalseExample(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
   content: BitContent,
   example: BreakscapedString | boolean,
   target: BitContentProcessorResult,
 ): void {
+  const { bitType, textFormat } = context;
   let trueFalse: TrueFalseValue | undefined;
 
   if (Array.isArray(target.trueFalse) && target.trueFalse.length > 0) {
@@ -92,7 +90,12 @@ function handleGapOrSelectOrTrueFalseExample(
       // Extract the solution nearest [@example] tag as the example value
       target.example = target.__solutionsAst[target.__solutionsAst.length - 1] ?? undefined;
     } else {
-      target.example = example ? textParser.toAst(example) : undefined;
+      target.example = example
+        ? textParser.toAst(example, {
+            textFormat,
+            isProperty: true,
+          })
+        : undefined;
     }
   } else {
     // Example is higher up the chain, so how it is handled depends on the bit type
@@ -107,7 +110,7 @@ function handleGapOrSelectOrTrueFalseExample(
       ])
     ) {
       // Treat as a standard boolean
-      handleStandardBooleanExample(context, bitType, content, example, target);
+      handleStandardBooleanExample(context, content, example, target);
       //
     } else if (
       Config.isOfBitType(bitType, [BitType.clozeAndMultipleChoiceText, BitType.multipleChoice, BitType.multipleChoice1])
@@ -124,7 +127,7 @@ function handleGapOrSelectOrTrueFalseExample(
       //
     } else {
       // Treat as a standard string
-      handleStandardStringExample(context, bitType, content, example, target);
+      handleStandardStringExample(context, content, example, target);
       //
     }
   }
@@ -132,7 +135,6 @@ function handleGapOrSelectOrTrueFalseExample(
 
 function handleDefaultOnlyExample(
   context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
   content: BitContent,
   example: string | boolean,
   target: BitContentProcessorResult,
@@ -149,7 +151,6 @@ function handleDefaultOnlyExample(
 
 function handleStandardBooleanExample(
   context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
   content: BitContent,
   example: BreakscapedString | boolean,
   target: BitContentProcessorResult,
@@ -171,17 +172,17 @@ function handleStandardBooleanExample(
 }
 
 function handleStandardStringExample(
-  _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
+  context: BitmarkPegParserContext,
   _content: BitContent,
   example: BreakscapedString | boolean,
   target: BitContentProcessorResult,
 ): void {
+  const { textFormat } = context;
   if (example === true || example === 'true') {
     target.__isDefaultExample = true;
     target.example = undefined;
   } else {
-    target.example = example ? textParser.toAst(example) : undefined;
+    target.example = example ? textParser.toAst(example, { textFormat, isProperty: true }) : undefined;
   }
 }
 

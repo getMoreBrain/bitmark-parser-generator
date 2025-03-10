@@ -25,7 +25,7 @@ import { StringUtils } from '../utils/StringUtils';
  *  - hat:                                   ^                  ==>   ^^                         [bitmark-- / bitmark++]
  *  - hat:                                   ^^                 ==>   ^^^                        [bitmark-- / bitmark++]
  *  - hat:                                   ^..N               ==>   ^..N+1                     [bitmark-- / bitmark++]
- *  - inline:                                ==                 ==>   =^=                        [bitmark++]
+ *  - inline:                                ==                 ==>   =^=                        [bitmark-- / bitmark++]
  *  - title block:                   (SOL)[##]#(space)          ==>   (SOL)[##]#^(space)         [bitmark++]
  *  - new block:                     (SOL)|(WS EOL)             ==>   (SOL)|^(WS EOL)            [bitmark++]
  *  - code block:                    (SOL)|code(:type)          ==>   (SOL)|^code(:type)         [bitmark++]

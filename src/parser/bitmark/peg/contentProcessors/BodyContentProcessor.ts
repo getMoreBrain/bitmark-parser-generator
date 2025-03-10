@@ -116,6 +116,7 @@ class BodyContentProcessor {
         ? textParser.toAst(bodyTextStr, {
             //
             textFormat,
+            isProperty: false,
           })
         : Breakscape.unbreakscape(bodyTextStr, {
             textFormat: TextFormat.text,

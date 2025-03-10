@@ -18,6 +18,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.customerExternalId]: {
+    tag: PropertyTag.customerExternalId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.externalId]: {
     tag: PropertyTag.externalId,
     format: PropertyFormat.trimmedString,
@@ -59,6 +64,19 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.analyticsTag,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.categoryTag]: {
+    tag: PropertyTag.categoryTag,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.topicTag]: {
+    tag: PropertyTag.topicTag,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.altLangTag]: {
+    tag: PropertyTag.altLangTag,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.feedbackEngine]: {
     tag: PropertyTag.feedbackEngine,
     single: true,
@@ -68,6 +86,26 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.disableFeedback,
     single: true,
     format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.diffOp]: {
+    tag: PropertyTag.diffOp,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.diffRef]: {
+    tag: PropertyTag.diffRef,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.diffContext]: {
+    tag: PropertyTag.diffContext,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.diffTime]: {
+    tag: PropertyTag.diffTime,
+    single: true,
+    format: PropertyFormat.number,
   },
   [PropertyConfigKey.releaseVersion]: {
     tag: PropertyTag.releaseVersion,
@@ -196,6 +234,11 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.bookAlias]: {
     tag: PropertyTag.bookAlias,
+    format: PropertyFormat.trimmedString,
+  },
+  [PropertyConfigKey.bookDiff]: {
+    tag: PropertyTag.bookDiff,
+    single: true,
     format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.refAuthor]: {

@@ -46,6 +46,20 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.categoryTag,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.topicTag,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.altLangTag,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.feedbackEngine,
       },
       {
@@ -55,6 +69,22 @@ const GROUPS: _GroupsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.disableFeedback,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffOp,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffRef,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffContext,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffTime,
       },
       {
         type: BitTagType.property,
@@ -399,6 +429,11 @@ const GROUPS: _GroupsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.language,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.customerExternalId,
         maxCount: Count.infinity,
       },
       {

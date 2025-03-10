@@ -1,5 +1,4 @@
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { BitTypeType } from '../../../../model/enum/BitType';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -13,7 +12,6 @@ import {
 function markTagContentProcessor(
   _context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  _bitType: BitTypeType,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {

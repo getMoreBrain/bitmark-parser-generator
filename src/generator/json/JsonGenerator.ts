@@ -318,6 +318,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // This is ugly, but it is even uglier if the defaults at set in the AST.
 
     const bitConfig = Config.getBitConfig(bit.bitType);
+    const textFormat = this.getTextFormat(_route);
     const hasRootExample = !!bitConfig.rootExampleType;
     const isBoolean = bitConfig.rootExampleType === ExampleType.boolean;
 
@@ -343,6 +344,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       const exampleRes = this.toExample(bit as ExampleNode, {
         defaultExample,
         isBoolean,
+        textFormat,
       });
       this.bitJson.isExample = exampleRes.isExample;
       this.bitJson.example = exampleRes.example;
@@ -1136,6 +1138,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     options: {
       defaultExample: string | boolean | null;
       isBoolean: boolean;
+      textFormat: TextFormatType;
     },
   ): ExampleJsonWrapper {
     const { isExample, example, __isDefaultExample } = node;
@@ -1152,11 +1155,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (__isDefaultExample) {
       exampleValue = isBoolean
         ? BooleanUtils.toBoolean(defaultExample)
-        : this.convertBreakscapedStringToJsonText(defaultExample as BreakscapedString, TextFormat.bitmarkMinusMinus);
+        : this.convertBreakscapedStringToJsonText(defaultExample as BreakscapedString, options.textFormat, true);
     } else {
       exampleValue = isBoolean
         ? BooleanUtils.toBoolean(example)
-        : this.convertBreakscapedStringToJsonText(example as BreakscapedString, TextFormat.bitmarkMinusMinus);
+        : this.convertBreakscapedStringToJsonText(example as BreakscapedString, options.textFormat, true);
     }
 
     return {
@@ -1260,6 +1263,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected convertBreakscapedStringToJsonText(
     text: BreakscapedString | undefined,
     format: TextFormatType, // = TextFormat.bitmarkMinusMinus,
+    isProperty: boolean,
   ): JsonText {
     if (!text) undefined;
 
@@ -1278,6 +1282,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Use the text parser to parse the text
     const textAst = this.textParser.toAst(text, {
       textFormat: format,
+      isProperty,
     });
 
     return textAst;

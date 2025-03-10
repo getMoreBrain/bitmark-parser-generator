@@ -1,9 +1,7 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { PersonJson } from '../../../../model/json/BitJson';
 import { ImageResourceJson, ResourceJson } from '../../../../model/json/ResourceJson';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -19,8 +17,6 @@ import {
 function personChainContentProcessor(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -29,7 +25,7 @@ function personChainContentProcessor(
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('person content', content);
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, content.chain);
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('person TAGS', tags);
 
