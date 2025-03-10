@@ -11,19 +11,23 @@ import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { TextMarkType, TextMarkTypeType } from '../../model/enum/TextMarkType';
 import { TextNodeType, TextNodeTypeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
+import { StringUtils } from '../../utils/StringUtils';
 import { AstWalkerGenerator } from '../AstWalkerGenerator';
 
 import {
   CodeBlockTextNode,
   CommentMark,
+  ExtRefMark,
   FootnoteMark,
   HeadingTextNode,
   ImageTextNode,
   LatexTextNode,
   LinkMark,
   ListTextNode,
+  MediaAttributes,
   RefMark,
   SectionTextNode,
+  SymbolMark,
   TaskItemTextNode,
   TextAst,
   TextMark,
@@ -87,8 +91,10 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.link,
   TextMarkType.ref,
   TextMarkType.xref,
+  TextMarkType.extref,
   TextMarkType.footnote,
   TextMarkType.footnoteStar,
+  TextMarkType.symbol,
   TextMarkType.var,
   TextMarkType.code,
   TextMarkType.timer,
@@ -834,12 +840,18 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
             } else if (TextMarkType.xref === mark.type) {
               this.writeInlineMarkStartEnd();
               this.writeXRefMark(mark as XRefMark);
+            } else if (TextMarkType.extref === mark.type) {
+              this.writeInlineMarkStartEnd();
+              this.writeExtRefMark(mark as ExtRefMark);
             } else if (TextMarkType.footnote === mark.type) {
               this.writeInlineMarkStartEnd();
               this.writeFootnoteMark(mark as FootnoteMark);
             } else if (TextMarkType.footnoteStar === mark.type) {
               this.writeInlineMarkStartEnd();
               this.writeFootnoteStarMark(mark as FootnoteMark);
+            } else if (TextMarkType.symbol === mark.type) {
+              this.writeInlineMarkStartEnd();
+              this.writeSymbolMark(mark as SymbolMark);
             } else if (INLINE_MARK_TYPES.indexOf(mark.type) !== -1) {
               this.writeInlineMarkStartEnd();
               this.writeInlineMark(mark);
@@ -980,37 +992,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     if (node.attrs == null || !node.attrs.src) return;
     const attrs = node.attrs;
 
-    let s = `|image:${attrs.src}|`;
-
-    // Loop and write the attributes
-    for (const [k, v] of Object.entries(attrs)) {
-      switch (k) {
-        case 'textAlign':
-          if (v !== 'left') s += `@captionAlign:${v}|`;
-          break;
-        case 'alignment':
-          if (v !== 'center') if (v) s += `@alignment:${v}|`;
-          break;
-        case 'title':
-          if (v) s += `@caption:${v}|`;
-          break;
-        case 'class':
-          if (v !== 'center') if (v) s += `@align:${v}|`;
-          break;
-        case 'comment':
-          if (v) s += `#${v}|`;
-          break;
-        case 'alt':
-        case 'width':
-        case 'height':
-        default:
-          if (v) s += `@${k}:${v}|`;
-          break;
-        case 'src':
-          // Ignore, written above
-          break;
-      }
-    }
+    const mediaAttrs = this.getMediaAttrs('image', attrs);
+    const s = mediaAttrs ? `|${mediaAttrs}|` : '';
 
     // Write the text
     this.write(s);
@@ -1082,6 +1065,20 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.write(s);
   }
 
+  protected writeExtRefMark(mark: ExtRefMark) {
+    const extref = mark.attrs?.extref ?? '';
+    const refs = mark.attrs?.references ?? [];
+    const provider = mark.attrs?.provider ?? '';
+
+    let s = `extref:${extref}`;
+    for (const ref of refs) {
+      s += `|►${ref ?? ''}`;
+    }
+    s += `|provider:${provider}`;
+
+    this.write(s);
+  }
+
   protected writeFootnoteMark(_mark: FootnoteMark) {
     const s = `footnote:`;
     this.write(s);
@@ -1089,6 +1086,17 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
   protected writeFootnoteStarMark(_mark: FootnoteMark) {
     const s = `footnote*:`;
+    this.write(s);
+  }
+
+  protected writeSymbolMark(mark: SymbolMark) {
+    if (mark.attrs == null) return;
+    const attrs = mark.attrs;
+
+    const mediaAttrs = this.getMediaAttrs('symbol', attrs);
+    const s = mediaAttrs ?? '';
+
+    // Write the text
     this.write(s);
   }
 
@@ -1123,6 +1131,50 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
 
     this.writeString(tag);
+  }
+
+  protected getMediaAttrs(mediaType: string, attrs: MediaAttributes): string | undefined {
+    if (!mediaType) return undefined;
+
+    let s = `${mediaType}:${attrs?.src ?? ''}`;
+
+    // Loop and write the attributes (except src, as written above)
+    const entries = Object.entries(attrs).filter(([k, _v]) => k !== 'src');
+
+    for (let i = 0; i < entries.length; i++) {
+      const [k, v] = entries[i];
+
+      switch (k) {
+        case 'textAlign':
+          if (v !== 'left') s += `|@captionAlign:${v}`;
+          break;
+        case 'alignment':
+          if (v !== 'center') if (v) s += `|@alignment:${v}`;
+          break;
+        case 'title':
+          if (v) s += `|@caption:${v}`;
+          break;
+        case 'class':
+          if (v !== 'center') if (v) s += `|@align:${v}`;
+          break;
+        case 'comment':
+          if (v) s += `|#${v}`;
+          break;
+        case '':
+          // This case handles reverse of strange behaviour in the text parser when a key is empty
+          if (StringUtils.isString(v)) s += `|:${v}`;
+          else s += `|`;
+          break;
+        case 'alt':
+        case 'width':
+        case 'height':
+        default:
+          if (k && v) s += `|@${k}:${v}`;
+          break;
+      }
+    }
+
+    return s;
   }
 
   //

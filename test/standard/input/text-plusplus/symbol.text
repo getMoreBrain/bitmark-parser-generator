@@ -1,0 +1,15 @@
+==Some text==|symbol:this is a symbol|@width:928|height:10|#comment| on the previous text
+
+• Test link in a list 2
+	• Entgelt ==Some
+	text==|symbol:this is **a** symbol| on the previous text
+
+==Some text==|symbol:| with empty symbol
+
+==Some text==|symbol:this is a symbol|height:10| on the previous text
+
+• Test link in a list 2
+	• Entgelt ==Some
+	text==|symbol:this is **a** symbol|#comment| on the previous text
+
+==Some text==|symbol:|| with empty symbol

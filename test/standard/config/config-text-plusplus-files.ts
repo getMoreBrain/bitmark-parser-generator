@@ -28,7 +28,12 @@ let TEST_FILES: string[] = [
   // 'duration.text',
   // 'color.text',
   // 'inline.text',
+  // 'ref.text',
+  // 'xref.text',
+  // 'extref.text',
+  // 'footnote.text',
   // 'latex.text',
+  // 'symbol.text',
   // 'bad-unterminated-image.text',
 ];
 
@@ -55,8 +60,10 @@ if (TEST_ALL) {
     'inline.text',
     'ref.text',
     'xref.text',
+    'extref.text',
     'footnote.text',
     'latex.text',
+    'symbol.text',
     'bad-unterminated-image.text',
   ];
 }

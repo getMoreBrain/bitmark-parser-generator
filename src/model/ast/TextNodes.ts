@@ -39,9 +39,19 @@ export interface XRefMark {
   attrs?: XRefMarkAttibutes;
 }
 
+export interface ExtRefMark {
+  type: 'extref';
+  attrs?: ExtRefMarkAttibutes;
+}
+
 export interface FootnoteMark {
   type: 'footnote';
   attrs?: FootnoteAttibutes;
+}
+
+export interface SymbolMark {
+  type: 'symbol';
+  attrs?: SymbolMarkAttibutes;
 }
 
 export interface HeadingTextNode extends TextNode {
@@ -98,15 +108,8 @@ export interface TaskItemTextNodeAttributes extends TextNodeAttibutes {
   checked: boolean;
 }
 
-export interface ImageTextNodeAttributes extends TextNodeAttibutes {
-  src: string;
-  alt: string | null;
-  title: string | null;
-  textAlign: string;
-  width: string | number | null;
-  height: string | number | null;
-  class: string;
-  comment: string;
+export interface ImageTextNodeAttributes extends TextNodeAttibutes, MediaAttributes {
+  // MediaAttributes
 }
 
 export interface CodeBlockTextNodeAttributes extends TextNodeAttibutes {
@@ -139,6 +142,27 @@ export interface XRefMarkAttibutes extends TextMarkAttibutes {
   reference: string;
 }
 
+export interface ExtRefMarkAttibutes extends TextMarkAttibutes, MediaAttributes {
+  extref: string;
+  references: string[];
+  provider: string;
+}
+
 export interface FootnoteAttibutes extends TextMarkAttibutes {
   content: TextNode[];
+}
+
+export interface SymbolMarkAttibutes extends TextMarkAttibutes, MediaAttributes {
+  // MediaAttributes
+}
+
+export interface MediaAttributes {
+  src: string;
+  alt: string | null;
+  title: string | null;
+  textAlign: string;
+  width: string | number | null;
+  height: string | number | null;
+  class: string;
+  comment: string;
 }
