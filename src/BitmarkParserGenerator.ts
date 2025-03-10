@@ -845,6 +845,7 @@ class BitmarkParserGenerator {
     if (!isAst) {
       preRes = this.textParser.toAst(inStr, {
         textFormat,
+        isProperty: false,
       });
     } else {
       preRes = await this.textGenerator.generate(ast, textFormat);

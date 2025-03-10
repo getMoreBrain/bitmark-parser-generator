@@ -5,11 +5,10 @@ import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { ConfigKey } from '../../../../model/config/enum/ConfigKey';
 import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
-import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
-import { TextFormat, TextFormatType } from '../../../../model/enum/TextFormat';
+import { TextFormat } from '../../../../model/enum/TextFormat';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -41,8 +40,6 @@ const textParser = new TextParser();
 function propertyContentProcessor(
   context: BitmarkPegParserContext,
   contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -57,7 +54,7 @@ function propertyContentProcessor(
 
   // Handle internal comments
   if (tag === PropertyTag.internalComment) {
-    internalCommentTagContentProcessor(context, contentDepth, bitType, content, target);
+    internalCommentTagContentProcessor(context, contentDepth, content, target);
     return;
   }
 
@@ -66,63 +63,38 @@ function propertyContentProcessor(
   // should also be checked here if the property may occur in another bit with a different meaning.
   if (propertyConfig) {
     if (configKey === PropertyConfigKey.example) {
-      exampleTagContentProcessor(context, contentDepth, bitType, textFormat, content, target);
+      exampleTagContentProcessor(context, contentDepth, content, target);
       return;
     } else if (configKey === PropertyConfigKey.ratingLevelStart || configKey === PropertyConfigKey.ratingLevelEnd) {
-      ratingLevelChainContentProcessor(
-        context,
-        contentDepth,
-        bitType,
-        textFormat,
-        propertyConfig.chain,
-        content,
-        target,
-      );
+      ratingLevelChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.technicalTerm) {
-      technicalTermChainContentProcessor(
-        context,
-        contentDepth,
-        bitType,
-        textFormat,
-        propertyConfig.chain,
-        content,
-        target,
-      );
+      technicalTermChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.servings) {
-      servingsChainContentProcessor(context, contentDepth, bitType, textFormat, propertyConfig.chain, content, target);
+      servingsChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.person || configKey === PropertyConfigKey.partner) {
-      personChainContentProcessor(context, contentDepth, bitType, textFormat, propertyConfig.chain, content, target);
+      personChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.icon) {
       resourceContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
       // imageChainContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
       return;
     } else if (configKey === PropertyConfigKey.imageSource) {
-      imageSourceChainContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
+      imageSourceChainContentProcessor(context, contentDepth, tagsConfig, content, target);
       return;
     } else if (configKey === PropertyConfigKey.book) {
-      bookChainContentProcessor(context, contentDepth, bitType, textFormat, propertyConfig.chain, content, target);
+      bookChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.markConfig && !isChain) {
-      markConfigChainContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
+      markConfigChainContentProcessor(context, contentDepth, tagsConfig, content, target);
       return;
     } else if (configKey === PropertyConfigKey.property_title && isChain) {
       // Hack the intermediate tag so as not to clash with [#title] tags which are not chained (yet)
       tag = 'propertyTitle';
     } else if (configKey === PropertyConfigKey.imagePlaceholder) {
-      propertyStyleResourceContentProcessor(
-        context,
-        contentDepth,
-        bitType,
-        textFormat,
-        tagsConfig,
-        content,
-        target,
-        ResourceTag.image,
-      );
+      propertyStyleResourceContentProcessor(context, contentDepth, tagsConfig, content, target, ResourceTag.image);
       return;
     }
   }
@@ -156,10 +128,16 @@ function propertyContentProcessor(
             return !BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
 
           case PropertyFormat.bitmarkMinusMinus:
-            return textParser.toAst(v as BreakscapedString, { textFormat: TextFormat.bitmarkMinusMinus });
+            return textParser.toAst(v as BreakscapedString, {
+              textFormat: TextFormat.bitmarkMinusMinus,
+              isProperty: true,
+            });
 
           case PropertyFormat.bitmarkPlusPlus:
-            return textParser.toAst(v as BreakscapedString, { textFormat: TextFormat.bitmarkMinusMinus });
+            return textParser.toAst(v as BreakscapedString, {
+              textFormat: TextFormat.bitmarkPlusPlus,
+              isProperty: true,
+            });
         }
       }
       return Breakscape.unbreakscape(v as BreakscapedString);

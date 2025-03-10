@@ -2,9 +2,7 @@ import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { ImageSourceJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -21,24 +19,20 @@ import {
 function imageSourceChainContentProcessor(
   context: BitmarkPegParserContext,
   contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
   if (contentDepth === BitContentLevel.Chain) {
-    imageSourceTagContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
+    imageSourceTagContentProcessor(context, contentDepth, tagsConfig, content, target);
   } else {
-    buildImageSource(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
+    buildImageSource(context, contentDepth, tagsConfig, content, target);
   }
 }
 
 function imageSourceTagContentProcessor(
   _context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  _bitType: BitTypeType,
-  _textFormat: TextFormatType,
   _tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -54,8 +48,6 @@ function imageSourceTagContentProcessor(
 function buildImageSource(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -65,14 +57,8 @@ function buildImageSource(
   const { key: tag } = content as TypeKeyValue;
   const imageSourceConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
 
-  const tags = context.bitContentProcessor(BitContentLevel.Chain, bitType, textFormat, tagsConfig, [content]);
-  const chainTags = context.bitContentProcessor(
-    BitContentLevel.Chain,
-    bitType,
-    textFormat,
-    imageSourceConfig?.chain,
-    content.chain,
-  );
+  const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, [content]);
+  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, imageSourceConfig?.chain, content.chain);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('imageSource TAGS', chainTags);
 

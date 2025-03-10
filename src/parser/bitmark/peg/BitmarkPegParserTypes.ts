@@ -12,6 +12,7 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Body, ExtraProperties, CardBit, Footer } from '../../../model/ast/Nodes';
 import { JsonText, TextAst } from '../../../model/ast/TextNodes';
+import { BitConfig } from '../../../model/config/BitConfig';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
@@ -353,6 +354,11 @@ export interface ProcessedCardVariant extends ParserData {
 // Context
 
 export interface BitmarkPegParserContext {
+  bitConfig: BitConfig;
+  bitType: BitTypeType;
+  textFormat: TextFormatType;
+  resourceType?: ResourceTagType;
+
   DEBUG_BIT_RAW: boolean;
   DEBUG_BIT_CONTENT_RAW: boolean;
   DEBUG_BIT_CONTENT: boolean;
@@ -370,8 +376,6 @@ export interface BitmarkPegParserContext {
   parse: ParseFunction;
   bitContentProcessor(
     contentDepth: ContentDepthType,
-    bitType: BitTypeType,
-    textFormat: TextFormatType,
     tagsConfig: TagsConfig | undefined,
     data: BitContent[] | undefined,
   ): BitContentProcessorResult;

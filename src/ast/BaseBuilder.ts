@@ -2,9 +2,11 @@ import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
 import { Property } from '../model/ast/Nodes';
 import { JsonText, TextAst } from '../model/ast/TextNodes';
+import { BitConfig } from '../model/config/BitConfig';
 import { ConfigKeyType } from '../model/config/enum/ConfigKey';
+import { BitTypeType } from '../model/enum/BitType';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
-import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
+import { TextFormatType } from '../model/enum/TextFormat';
 import { ExampleJson } from '../model/json/BitJson';
 import { TextParser } from '../parser/text/TextParser';
 import { ArrayUtils } from '../utils/ArrayUtils';
@@ -16,6 +18,12 @@ export interface WithExampleJson {
   isExample: boolean;
   example: ExampleJson;
   __defaultExample?: ExampleJson;
+}
+
+export interface BuildContext {
+  bitConfig: BitConfig;
+  bitType: BitTypeType;
+  textFormat: TextFormatType;
 }
 
 class BaseBuilder {
@@ -145,12 +153,13 @@ class BaseBuilder {
    * @returns Breakscaped string or breakscaped string[]
    */
   protected handleJsonText<T extends JsonText | JsonText[] | undefined, R = T extends JsonText[] ? TextAst[] : TextAst>(
+    context: BuildContext,
+    isProperty: boolean,
     text: T,
-    textFormat?: TextFormatType,
   ): R {
     let res: R;
 
-    if (!textFormat) textFormat = TextFormat.bitmarkMinusMinus;
+    const { textFormat } = context;
 
     if (text == null) {
       res = [] as R;
@@ -174,6 +183,10 @@ class BaseBuilder {
               Breakscape.breakscape(t as string, {
                 textFormat,
               }),
+              {
+                textFormat,
+                isProperty,
+              },
             );
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             (strArray[i] as any).__tag = 'text';
@@ -193,6 +206,7 @@ class BaseBuilder {
           }),
           {
             textFormat,
+            isProperty,
           },
         ) as R;
       } else {

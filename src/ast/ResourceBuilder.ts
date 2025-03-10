@@ -1,13 +1,13 @@
 import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
 import { TextAst } from '../model/ast/TextNodes';
-import { BitType, BitTypeType } from '../model/enum/BitType';
+import { BitType } from '../model/enum/BitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { StringUtils } from '../utils/StringUtils';
 import { UrlUtils } from '../utils/UrlUtils';
 
-import { BaseBuilder } from './BaseBuilder';
+import { BaseBuilder, BuildContext } from './BaseBuilder';
 import { NodeValidator } from './rules/NodeValidator';
 
 import {
@@ -50,7 +50,7 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   public resourceFromResourceJson(
-    bitType: BitTypeType,
+    context: BuildContext,
     resource?: Partial<ResourceJson> | Partial<ResourceJson>[],
   ): ResourceJson | ResourceJson[] | undefined {
     if (!resource) return undefined;
@@ -81,12 +81,12 @@ class ResourceBuilder extends BaseBuilder {
       if (type === ResourceTag.imageResponsive) {
         const r = thisResource as unknown as ImageResponsiveResourceJson;
         const imagePortraitNode = this.resourceFromResourceDataJson(
-          bitType,
+          context,
           ResourceTag.imagePortrait,
           r.imagePortrait,
         );
         const imageLandscapeNode = this.resourceFromResourceDataJson(
-          bitType,
+          context,
           ResourceTag.imageLandscape,
           r.imageLandscape,
         );
@@ -94,8 +94,8 @@ class ResourceBuilder extends BaseBuilder {
         if (imageLandscapeNode) nodes.push(imageLandscapeNode);
       } else if (type === ResourceTag.stillImageFilm) {
         const r = thisResource as unknown as StillImageFilmResourceJson;
-        const imageNode = this.resourceFromResourceDataJson(bitType, ResourceTag.image, r.image);
-        const audioNode = this.resourceFromResourceDataJson(bitType, ResourceTag.audio, r.audio);
+        const imageNode = this.resourceFromResourceDataJson(context, ResourceTag.image, r.image);
+        const audioNode = this.resourceFromResourceDataJson(context, ResourceTag.audio, r.audio);
         if (imageNode) nodes.push(imageNode);
         if (audioNode) nodes.push(audioNode);
       } else {
@@ -106,7 +106,7 @@ class ResourceBuilder extends BaseBuilder {
 
         if (!data) return undefined;
 
-        const node = this.resourceFromResourceDataJson(bitType, type, data);
+        const node = this.resourceFromResourceDataJson(context, type, data);
         if (node) nodes.push(node);
       }
     }
@@ -117,7 +117,7 @@ class ResourceBuilder extends BaseBuilder {
   }
 
   public resourceFromResourceDataJson(
-    bitType: BitTypeType,
+    context: BuildContext,
     type: ResourceTagType,
     data: Partial<ResourceDataJson> | undefined,
   ): ResourceJson | undefined {
@@ -132,17 +132,17 @@ class ResourceBuilder extends BaseBuilder {
 
     // Sub resources
     const posterImage = data.posterImage
-      ? (this.resourceFromResourceDataJson(bitType, ResourceTag.image, data.posterImage) as ImageResourceWrapperJson)
+      ? (this.resourceFromResourceDataJson(context, ResourceTag.image, data.posterImage) as ImageResourceWrapperJson)
           ?.image
       : undefined;
     const thumbnails = data.thumbnails
       ? data.thumbnails.map((t) => {
-          return (this.resourceFromResourceDataJson(bitType, ResourceTag.image, t) as ImageResourceWrapperJson)?.image;
+          return (this.resourceFromResourceDataJson(context, ResourceTag.image, t) as ImageResourceWrapperJson)?.image;
         })
       : undefined;
 
     // Resource
-    const node = this.resource(bitType, {
+    const node = this.resource(context, {
       type,
 
       // Generic (except Article / Document)
@@ -156,7 +156,7 @@ class ResourceBuilder extends BaseBuilder {
       src2x: data.src2x,
       src3x: data.src3x,
       src4x: data.src4x,
-      caption: this.handleJsonText(data.caption),
+      caption: this.handleJsonText(context, true, data.caption),
 
       // ImageLikeResource / VideoLikeResource
       width: data.width ?? undefined,
@@ -193,7 +193,7 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   /* private */ resource(
-    bitType: BitTypeType,
+    context: BuildContext,
     data: {
       type: ResourceTagType;
 
@@ -260,7 +260,7 @@ class ResourceBuilder extends BaseBuilder {
           const dataAsAny = data as any;
           const value = dataAsAny[k];
           if (value) {
-            const image: ImageResourceWrapperJson = this.resource(bitType, {
+            const image: ImageResourceWrapperJson = this.resource(context, {
               type: ResourceTag.image,
               value,
             }) as ImageResourceWrapperJson;
@@ -277,7 +277,7 @@ class ResourceBuilder extends BaseBuilder {
       case ResourceTag.image:
       case ResourceTag.imagePortrait:
       case ResourceTag.imageLandscape:
-        node = this.imageResource(bitType, finalData, type);
+        node = this.imageResource(context, finalData, type);
         break;
 
       // case ResourceTag.imageResponsive: {
@@ -299,42 +299,42 @@ class ResourceBuilder extends BaseBuilder {
       // }
 
       case ResourceTag.imageLink:
-        node = this.imageLinkResource(finalData);
+        node = this.imageLinkResource(context, finalData);
         break;
 
       case ResourceTag.audio:
-        node = this.audioResource(finalData);
+        node = this.audioResource(context, finalData);
         break;
 
       case ResourceTag.audioEmbed:
-        node = this.audioEmbedResource(finalData);
+        node = this.audioEmbedResource(context, finalData);
         break;
 
       case ResourceTag.audioLink:
-        node = this.audioLinkResource(finalData);
+        node = this.audioLinkResource(context, finalData);
         break;
 
       case ResourceTag.video:
-        node = this.videoResource(finalData);
+        node = this.videoResource(context, finalData);
         break;
 
       case ResourceTag.videoEmbed:
-        node = this.videoEmbedResource(finalData);
+        node = this.videoEmbedResource(context, finalData);
         break;
 
       case ResourceTag.videoLink:
-        node = this.videoLinkResource(finalData);
+        node = this.videoLinkResource(context, finalData);
         break;
 
       // case ResourceTag.stillImageFilm: {
       //   node = this.stillImageFilmResource({
-      //     image: this.imageResource(
+      //     image: this.imageResource(context,
       //       finalData.image ?? {
       //         format: '',
       //         value: '',
       //       },
       //     ),
-      //     audio: this.audioResource(
+      //     audio: this.audioResource(context,
       //       finalData.audio ?? {
       //         format: '',
       //         value: '',
@@ -345,39 +345,39 @@ class ResourceBuilder extends BaseBuilder {
       // }
 
       case ResourceTag.stillImageFilmEmbed:
-        node = this.stillImageFilmEmbedResource(finalData);
+        node = this.stillImageFilmEmbedResource(context, finalData);
         break;
 
       case ResourceTag.stillImageFilmLink:
-        node = this.stillImageFilmLinkResource(finalData);
+        node = this.stillImageFilmLinkResource(context, finalData);
         break;
 
       case ResourceTag.article:
-        node = this.articleResource(finalData);
+        node = this.articleResource(context, finalData);
         break;
 
       case ResourceTag.document:
-        node = this.documentResource(finalData);
+        node = this.documentResource(context, finalData);
         break;
 
       case ResourceTag.documentEmbed:
-        node = this.documentEmbedResource(finalData);
+        node = this.documentEmbedResource(context, finalData);
         break;
 
       case ResourceTag.documentLink:
-        node = this.documentLinkResource(finalData);
+        node = this.documentLinkResource(context, finalData);
         break;
 
       case ResourceTag.documentDownload:
-        node = this.documentDownloadResource(finalData);
+        node = this.documentDownloadResource(context, finalData);
         break;
 
       case ResourceTag.appLink:
-        node = this.appLinkResource(finalData);
+        node = this.appLinkResource(context, finalData);
         break;
 
       case ResourceTag.websiteLink:
-        node = this.websiteLinkResource(finalData);
+        node = this.websiteLinkResource(context, finalData);
         break;
 
       default:
@@ -393,7 +393,7 @@ class ResourceBuilder extends BaseBuilder {
    * @returns
    */
   imageResource(
-    bitType: BitTypeType,
+    context: BuildContext,
     data: {
       format: string;
       value: string; //src
@@ -429,7 +429,7 @@ class ResourceBuilder extends BaseBuilder {
       caption,
       search,
     } = data;
-
+    const { bitType } = context;
     let zoomDisabledDefault = false;
 
     if (
@@ -462,7 +462,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -485,23 +485,26 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  imageLinkResource(data: {
-    format: string;
-    value: string;
-    src1x?: string;
-    src2x?: string;
-    src3x?: string;
-    src4x?: string;
-    width?: string;
-    height?: string;
-    alt?: string;
-    zoomDisabled?: boolean;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): ImageLinkResourceWrapperJson | undefined {
+  imageLinkResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string;
+      src1x?: string;
+      src2x?: string;
+      src3x?: string;
+      src4x?: string;
+      width?: string;
+      height?: string;
+      alt?: string;
+      zoomDisabled?: boolean;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): ImageLinkResourceWrapperJson | undefined {
     const {
       value,
       src1x,
@@ -539,7 +542,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -562,18 +565,21 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  audioResource(data: {
-    format: string;
-    value: string; // src
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): AudioResourceWrapperJson | undefined {
+  audioResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string; // src
+      duration?: number; // string?
+      mute?: boolean;
+      autoplay?: boolean;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): AudioResourceWrapperJson | undefined {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -590,7 +596,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -612,18 +618,21 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  audioEmbedResource(data: {
-    format: string;
-    value: string; // src
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): AudioEmbedResourceWrapperJson | undefined {
+  audioEmbedResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string; // src
+      duration?: number; // string?
+      mute?: boolean;
+      autoplay?: boolean;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): AudioEmbedResourceWrapperJson | undefined {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -640,7 +649,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -662,18 +671,21 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  audioLinkResource(data: {
-    format: string;
-    value: string;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): AudioLinkResourceWrapperJson | undefined {
+  audioLinkResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string;
+      duration?: number; // string?
+      mute?: boolean;
+      autoplay?: boolean;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): AudioLinkResourceWrapperJson | undefined {
     const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -691,7 +703,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -712,25 +724,28 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  videoResource(data: {
-    format: string;
-    value: string; // src
-    width?: string;
-    height?: string;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResourceJson;
-    thumbnails?: ImageResourceJson[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): VideoResourceWrapperJson | undefined {
+  videoResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string; // src
+      width?: string;
+      height?: string;
+      duration?: number; // string?
+      mute?: boolean;
+      autoplay?: boolean;
+      allowSubtitles?: boolean;
+      showSubtitles?: boolean;
+      alt?: string;
+      posterImage?: ImageResourceJson;
+      thumbnails?: ImageResourceJson[];
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): VideoResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -769,7 +784,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
         // Have sub-chains so must be at end of chain
         posterImage: (posterImage ?? undefined) as ImageResourceJson,
@@ -795,25 +810,28 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  videoEmbedResource(data: {
-    format: string;
-    value: string; // src
-    width?: string;
-    height?: string;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResourceJson;
-    thumbnails?: ImageResourceJson[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): VideoEmbedResourceWrapperJson | undefined {
+  videoEmbedResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string; // src
+      width?: string;
+      height?: string;
+      duration?: number; // string?
+      mute?: boolean;
+      autoplay?: boolean;
+      allowSubtitles?: boolean;
+      showSubtitles?: boolean;
+      alt?: string;
+      posterImage?: ImageResourceJson;
+      thumbnails?: ImageResourceJson[];
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): VideoEmbedResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -855,7 +873,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -878,25 +896,28 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  videoLinkResource(data: {
-    format: string;
-    value: string;
-    width?: string;
-    height?: string;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResourceJson;
-    thumbnails?: ImageResourceJson[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): VideoLinkResourceWrapperJson | undefined {
+  videoLinkResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string;
+      width?: string;
+      height?: string;
+      duration?: number; // string?
+      mute?: boolean;
+      autoplay?: boolean;
+      allowSubtitles?: boolean;
+      showSubtitles?: boolean;
+      alt?: string;
+      posterImage?: ImageResourceJson;
+      thumbnails?: ImageResourceJson[];
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): VideoLinkResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -938,7 +959,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -961,7 +982,7 @@ class ResourceBuilder extends BaseBuilder {
   //  * @param data - data for the node
   //  * @returns
   //  */
-  // stillImageFilmResource(data: { image?: ImageResource; audio?: AudioResource }): StillImageFilmResource {
+  // stillImageFilmResource(context: BuildContext, data: { image?: ImageResource; audio?: AudioResource }): StillImageFilmResource {
   //   const { image, audio } = data;
 
   //   // NOTE: Node order is important and is defined here
@@ -985,25 +1006,28 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  stillImageFilmEmbedResource(data: {
-    format: string;
-    value: string; // src
-    width?: string;
-    height?: string;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResourceJson;
-    thumbnails?: ImageResourceJson[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): StillImageFilmEmbedResourceWrapperJson | undefined {
+  stillImageFilmEmbedResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string; // src
+      width?: string;
+      height?: string;
+      duration?: number; // string?
+      mute?: boolean;
+      autoplay?: boolean;
+      allowSubtitles?: boolean;
+      showSubtitles?: boolean;
+      alt?: string;
+      posterImage?: ImageResourceJson;
+      thumbnails?: ImageResourceJson[];
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): StillImageFilmEmbedResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -1045,7 +1069,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1068,25 +1092,28 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  stillImageFilmLinkResource(data: {
-    format: string;
-    value: string;
-    width?: string;
-    height?: string;
-    duration?: number; // string?
-    mute?: boolean;
-    autoplay?: boolean;
-    allowSubtitles?: boolean;
-    showSubtitles?: boolean;
-    alt?: string;
-    posterImage?: ImageResourceJson;
-    thumbnails?: ImageResourceJson[];
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): StillImageFilmLinkResourceWrapperJson | undefined {
+  stillImageFilmLinkResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string;
+      width?: string;
+      height?: string;
+      duration?: number; // string?
+      mute?: boolean;
+      autoplay?: boolean;
+      allowSubtitles?: boolean;
+      showSubtitles?: boolean;
+      alt?: string;
+      posterImage?: ImageResourceJson;
+      thumbnails?: ImageResourceJson[];
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): StillImageFilmLinkResourceWrapperJson | undefined {
     const {
       value,
       width,
@@ -1128,7 +1155,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1151,15 +1178,18 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  articleResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): ArticleResourceWrapperJson | undefined {
+  articleResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): ArticleResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1173,7 +1203,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1194,15 +1224,18 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  documentResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): DocumentResourceWrapperJson | undefined {
+  documentResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): DocumentResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1216,7 +1249,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1238,15 +1271,18 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  documentEmbedResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): DocumentEmbedResourceWrapperJson | undefined {
+  documentEmbedResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): DocumentEmbedResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1260,7 +1296,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1282,15 +1318,18 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  documentLinkResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): DocumentLinkResourceWrapperJson | undefined {
+  documentLinkResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): DocumentLinkResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1304,7 +1343,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1326,15 +1365,18 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  documentDownloadResource(data: {
-    format: string;
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): DocumentDownloadResourceWrapperJson | undefined {
+  documentDownloadResource(
+    context: BuildContext,
+    data: {
+      format: string;
+      value: string;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): DocumentDownloadResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1348,7 +1390,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1370,14 +1412,17 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  appLinkResource(data: {
-    value: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): AppLinkResourceWrapperJson | undefined {
+  appLinkResource(
+    context: BuildContext,
+    data: {
+      value: string;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): AppLinkResourceWrapperJson | undefined {
     const { value, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1392,7 +1437,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1414,15 +1459,18 @@ class ResourceBuilder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  websiteLinkResource(data: {
-    value: string;
-    siteName?: string;
-    license?: string;
-    copyright?: string;
-    showInIndex?: boolean;
-    caption?: TextAst;
-    search?: string;
-  }): WebsiteLinkResourceWrapperJson | undefined {
+  websiteLinkResource(
+    context: BuildContext,
+    data: {
+      value: string;
+      siteName?: string;
+      license?: string;
+      copyright?: string;
+      showInIndex?: boolean;
+      caption?: TextAst;
+      search?: string;
+    },
+  ): WebsiteLinkResourceWrapperJson | undefined {
     const { value, /*siteName,*/ license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1437,7 +1485,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(caption),
+        caption: this.handleJsonText(context, true, caption),
         search: (search ?? undefined) as string,
       },
     };
