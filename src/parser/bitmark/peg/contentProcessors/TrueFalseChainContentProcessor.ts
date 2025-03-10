@@ -1,9 +1,8 @@
 import { Config } from '../../../../config/Config';
 import { BodyPart } from '../../../../model/ast/Nodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { BitType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { ChoiceJson, ResponseJson, StatementJson } from '../../../../model/json/BitJson';
 import { HighlightJson, HighlightTextJson, SelectJson, SelectOptionJson } from '../../../../model/json/BodyBitJson';
 
@@ -23,30 +22,27 @@ import {
 function trueFalseChainContentProcessor(
   context: BitmarkPegParserContext,
   contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
 ): void {
   if (contentDepth === BitContentLevel.Chain) {
-    trueFalseTagContentProcessor(context, BitContentLevel.Chain, bitType, textFormat, content, target);
+    trueFalseTagContentProcessor(context, BitContentLevel.Chain, content, target);
   } else {
-    buildTrueFalse(context, contentDepth, bitType, textFormat, tagsConfig, content, target, bodyParts);
+    buildTrueFalse(context, contentDepth, tagsConfig, content, target, bodyParts);
   }
 }
 
 function buildTrueFalse(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
   bodyParts: BodyPart[],
 ): void {
+  const { bitType } = context;
   const chainContent = [content, ...(content.chain ?? [])];
 
   const statements = target.statements;
@@ -57,7 +53,7 @@ function buildTrueFalse(
 
   if (Config.isOfBitType(bitType, BitType.trueFalse1)) {
     // Treat as true/false for statement
-    target.statement = buildStatement(context, bitType, textFormat, tagsConfig, chainContent);
+    target.statement = buildStatement(context, tagsConfig, chainContent);
   } else if (
     Config.isOfBitType(bitType, [
       BitType.trueFalse,
@@ -68,18 +64,18 @@ function buildTrueFalse(
     ])
   ) {
     // Treat as true/false for choices / responses
-    const tf = buildStatementsChoicesResponses(context, bitType, textFormat, tagsConfig, chainContent);
+    const tf = buildStatementsChoicesResponses(context, tagsConfig, chainContent);
 
     if (tf.statements) statements.push(...tf.statements);
     if (tf.choices) choices.push(...tf.choices);
     if (tf.responses) responses.push(...tf.responses);
   } else if (Config.isOfBitType(bitType, BitType.highlightText)) {
     // Treat as highlight text
-    const highlight = buildHighlight(context, bitType, textFormat, tagsConfig, chainContent);
+    const highlight = buildHighlight(context, tagsConfig, chainContent);
     if (highlight) bodyParts.push(highlight as BodyPart);
   } else {
     // Treat as select
-    const select = buildSelect(context, bitType, textFormat, tagsConfig, chainContent);
+    const select = buildSelect(context, tagsConfig, chainContent);
     if (select) bodyParts.push(select as BodyPart);
   }
 }
@@ -94,22 +90,15 @@ function buildTrueFalse(
  */
 function buildStatement(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   trueFalseContent: BitContent[],
 ): Partial<StatementJson> | undefined {
+  const { bitType } = context;
   if (!Config.isOfBitType(bitType, BitType.trueFalse1)) return undefined;
 
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(
-    BitContentLevel.Chain,
-    bitType,
-    textFormat,
-    tagsConfig,
-    trueFalseContent,
-  );
+  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, trueFalseContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (statement)', tags);
 
@@ -140,11 +129,10 @@ function buildStatement(
  */
 function buildStatementsChoicesResponses(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   trueFalseContent: BitContent[],
 ): StatementsOrChoicesOrResponses {
+  const { bitType } = context;
   // NOTE: We handle V1 tags in V2 multiple-choice / multiple-response for maxium backwards compatibility
   const insertStatements = Config.isOfBitType(bitType, BitType.trueFalse);
   const insertChoices = Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleChoice1]);
@@ -162,13 +150,7 @@ function buildStatementsChoicesResponses(
   }
 
   for (const contents of trueFalseContents) {
-    const { trueFalse, ...tags } = context.bitContentProcessor(
-      BitContentLevel.Chain,
-      bitType,
-      textFormat,
-      tagsConfig,
-      contents,
-    );
+    const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, contents);
 
     if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (choices/responses)', tags);
 
@@ -213,20 +195,12 @@ function buildStatementsChoicesResponses(
 
 function buildHighlight(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   highlightContent: BitContent[],
 ): Partial<HighlightJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('highlight content', highlightContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(
-    BitContentLevel.Chain,
-    bitType,
-    textFormat,
-    tagsConfig,
-    highlightContent,
-  );
+  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, highlightContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('highlight TAGS', { trueFalse, ...tags });
 
@@ -249,20 +223,12 @@ function buildHighlight(
 
 function buildSelect(
   context: BitmarkPegParserContext,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   selectContent: BitContent[],
 ): Partial<SelectJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('select content', selectContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(
-    BitContentLevel.Chain,
-    bitType,
-    textFormat,
-    tagsConfig,
-    selectContent,
-  );
+  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, selectContent);
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('select TAGS', { trueFalse, ...tags });
 

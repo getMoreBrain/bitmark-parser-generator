@@ -2,9 +2,7 @@ import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { MarkConfigJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -20,8 +18,6 @@ import {
 function markConfigChainContentProcessor(
   context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  bitType: BitTypeType,
-  textFormat: TextFormatType,
   tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
@@ -39,8 +35,6 @@ function markConfigChainContentProcessor(
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { mark: _ignoreMark, ...tags } = context.bitContentProcessor(
     BitContentLevel.Chain,
-    bitType,
-    textFormat,
     markTagConfig?.chain,
     content.chain,
   );
