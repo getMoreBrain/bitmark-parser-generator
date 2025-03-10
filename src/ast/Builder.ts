@@ -149,6 +149,7 @@ class Builder extends BaseBuilder {
     flashcardSet?: string | string[];
     subtype?: string;
     bookAlias?: string | string[];
+    bookDiff?: string;
     coverImage?: string | string[];
     coverColor?: string;
     publications?: string | string[];
@@ -382,6 +383,7 @@ class Builder extends BaseBuilder {
       flashcardSet: this.toAstProperty(PropertyConfigKey.flashcardSet, data.flashcardSet),
       subtype: this.toAstProperty(PropertyConfigKey.subtype, data.subtype),
       bookAlias: this.toAstProperty(PropertyConfigKey.bookAlias, data.bookAlias),
+      bookDiff: this.toAstProperty(PropertyConfigKey.bookDiff, data.bookDiff),
       coverImage: this.toAstProperty(PropertyConfigKey.coverImage, data.coverImage),
       coverColor: this.toAstProperty(PropertyConfigKey.coverColor, data.coverColor),
       publications: this.toAstProperty(PropertyConfigKey.publications, data.publications),

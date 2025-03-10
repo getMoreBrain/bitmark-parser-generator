@@ -56,6 +56,7 @@ export interface BitJson {
   flashcardSet: string | string[];
   subtype: string;
   bookAlias: string | string[];
+  bookDiff: string;
   coverImage: string | string[];
   coverColor: string;
   publisher: string | string[];

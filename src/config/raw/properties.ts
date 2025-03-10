@@ -236,6 +236,11 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.bookAlias,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.bookDiff]: {
+    tag: PropertyTag.bookDiff,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.refAuthor]: {
     tag: PropertyTag.refAuthor,
     format: PropertyFormat.trimmedString,

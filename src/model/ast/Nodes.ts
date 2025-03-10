@@ -104,6 +104,7 @@ export interface Bit {
   flashcardSet?: Property;
   subtype?: Property;
   bookAlias?: Property;
+  bookDiff?: Property;
   coverImage?: Property;
   coverColor?: Property;
   publications?: Property;

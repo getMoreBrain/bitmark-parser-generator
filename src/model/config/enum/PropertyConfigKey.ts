@@ -21,6 +21,7 @@ const propertyConfigKeys = {
   blockId: 'blockId',
   book: 'book',
   bookAlias: 'bookAlias',
+  bookDiff: 'bookDiff',
   bot: 'bot',
   bubbleTag: 'bubbleTag',
   buttonCaption: 'buttonCaption',
