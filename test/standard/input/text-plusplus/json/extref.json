@@ -1,0 +1,194 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "extref",
+            "attrs": {
+              "extref": "this is an extreference",
+              "references": [],
+              "provider": "must be set"
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " on the previous text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "bulletList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "Test link in a list 2",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "text": "Entgelt ",
+                        "type": "text"
+                      },
+                      {
+                        "marks": [
+                          {
+                            "type": "extref",
+                            "attrs": {
+                              "extref": "this is **an** extreference",
+                              "references": ["hello", "hello2"],
+                              "provider": "must be set"
+                            }
+                          }
+                        ],
+                        "text": "Some\ntext",
+                        "type": "text"
+                      },
+                      {
+                        "text": " on the previous text",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "==Some text==|extref:| with empty extreference and no provider, will not match",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "==Some text==|exyref:this is an extreference|►this is a reference|provider:must be set| on the previous text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "bulletList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "Test link in a list 2",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "text": "Entgelt ",
+                        "type": "text"
+                      },
+                      {
+                        "marks": [
+                          {
+                            "type": "extref",
+                            "attrs": {
+                              "extref": "this is **an** extreference",
+                              "references": ["this is __a__ reference"],
+                              "provider": "must be set"
+                            }
+                          }
+                        ],
+                        "text": "Some\ntext",
+                        "type": "text"
+                      },
+                      {
+                        "text": " on the previous text",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "extref",
+            "attrs": {
+              "extref": "",
+              "references": [""],
+              "provider": ""
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " with empty extreference and empty provider",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

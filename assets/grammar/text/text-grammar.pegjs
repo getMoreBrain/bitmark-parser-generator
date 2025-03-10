@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.19.1"
+const VERSION = "8.21.2"
 
 //Parser peggy.js
 
@@ -557,9 +557,11 @@ AttrChain
 
 AttrChainItem
   = 'link:' str: $((!BlockTag char)*) BlockTag {return { type: 'link', attrs: { href: str.trim(), target: '_blank' } }}
+  / 'extref:' str: $((!BlockTag char)*) rc: RefsChain BlockTag 'provider:' p: $((!BlockTag char)*) BlockTag {return { type: 'extref', attrs: { extref: str.trim(), references: rc, provider: p.trim() } }}
   / 'xref:' str: $((!BlockTag char)*) BlockTag '►' str2: $((!BlockTag char)*) BlockTag {return { type: 'xref', attrs: { xref: str.trim(), reference: str2.trim() } }}
   / 'xref:' str: $((!BlockTag char)*) BlockTag {return { type: 'xref', attrs: { xref: str.trim(), reference: '' } }}
   / '►' str: $((!BlockTag char)*) BlockTag {return { type: 'ref', attrs: { reference: str.trim() } }}
+  / 'symbol:' str: $((!BlockTag char)*) BlockTag ch: MediaChain {const chain = Object.assign({}, ...ch); return { type: 'symbol', attrs: { src: str.trim(), ...chain } }}
   / 'footnote:' str: $((!BlockTag char)*) BlockTag {return { type: 'footnote', attrs: { content: bitmarkPlusString(str.trim()) } }}
   / 'footnote*:' str: $((!BlockTag char)*) BlockTag {return { type: 'footnote*', attrs: { content: bitmarkPlusString(str.trim()) } }}
   / 'var:' str: $((!BlockTag char)*) BlockTag {return { type: 'var', attrs: { name: str.trim() } }}
@@ -573,6 +575,19 @@ AttrChainItem
   / '#' str: $((!BlockTag char)*) BlockTag {return { type: "comment", comment: str }}
  // / p: $((!(BlockTag / ':') word)*) ':' ' '? v: $((!BlockTag char)*) BlockTag { return { [p]: v } }
  // / p: $((!BlockTag word)*) BlockTag {return { [p]: true } }
+
+// glosary/index: ==term==|definition:term's definition|
+// symbol (inline image): ==power symbol==|symbol:https://img.com/ps.svg| >> alt:power symbol, zoomDisable:true, width and heigh?
+// explanation:
+// description:
+// translation: ==Haus==|translation:house|lang:en|
+// pronunciation:
+
+RefsChain
+  = (Ref)*
+
+Ref
+  = '|►' r: $((!BlockTag char)*) { return r.trim() }
 
 AlternativeStyleTags
   = 'bold'
