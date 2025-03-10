@@ -256,9 +256,9 @@ export interface MarkConfigJson {
 }
 
 export interface FlashcardJson {
-  question: JsonText;
-  answer: JsonText;
-  alternativeAnswers: JsonText[];
+  question: DefinitionJson;
+  answer: DefinitionJson;
+  alternativeAnswers: DefinitionJson[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -270,9 +270,9 @@ export interface FlashcardJson {
 }
 
 export interface DefinitionListItemJson {
-  term: JsonText;
-  definition: JsonText;
-  alternativeDefinitions: JsonText[];
+  term: DefinitionJson;
+  definition: DefinitionJson;
+  alternativeDefinitions: DefinitionJson[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -281,6 +281,11 @@ export interface DefinitionListItemJson {
   example: ExampleJson;
   __isDefaultExample?: boolean;
   __defaultExample?: ExampleJson;
+}
+
+export interface DefinitionJson {
+  text: JsonText;
+  icon: ImageResourceJson;
 }
 
 export interface StatementJson {

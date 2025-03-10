@@ -17,12 +17,13 @@ import { TextParser } from '../../../text/TextParser';
 
 import { bookChainContentProcessor } from './BookChainContentProcessor';
 import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
+import { imageChainContentProcessor } from './ImageChainContentProcessor';
 import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor';
 import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { personChainContentProcessor } from './PersonChainContentProcessor';
 import { ratingLevelChainContentProcessor } from './RatingLevelChainContentProcessor';
-import { propertyStyleResourceContentProcessor } from './ResourceContentProcessor';
+import { propertyStyleResourceContentProcessor, resourceContentProcessor } from './ResourceContentProcessor';
 import { servingsChainContentProcessor } from './ServingsChainContentProcessor';
 import { technicalTermChainContentProcessor } from './TechnicalTermChainContentProcessor';
 
@@ -94,6 +95,10 @@ function propertyContentProcessor(
       return;
     } else if (configKey === PropertyConfigKey.person || configKey === PropertyConfigKey.partner) {
       personChainContentProcessor(context, contentDepth, bitType, textFormat, propertyConfig.chain, content, target);
+      return;
+    } else if (configKey === PropertyConfigKey.icon) {
+      resourceContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
+      // imageChainContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
       return;
     } else if (configKey === PropertyConfigKey.imageSource) {
       imageSourceChainContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);

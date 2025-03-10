@@ -16,6 +16,7 @@ import {
   CaptionDefinitionJson,
   CaptionDefinitionListJson,
   ChoiceJson,
+  DefinitionJson,
   DefinitionListItemJson,
   ExampleJson,
   FlashcardJson,
@@ -220,10 +221,10 @@ function parseFlashcardLike(
 ): BitSpecificCards {
   const flashcards: Partial<FlashcardJson>[] = [];
   const definitions: Partial<DefinitionListItemJson>[] = [];
-  let question: TextAst = [];
+  let question: Partial<DefinitionJson> | undefined;
   let questionString = '';
-  let answer: TextAst = [];
-  let alternativeAnswers: TextAst[] = [];
+  let answer: Partial<DefinitionJson> | undefined;
+  let alternativeAnswers: Partial<DefinitionJson>[] = [];
   let cardIndex = 0;
   let variantIndex = 0;
   let extraTags: BitContentProcessorResult = {};
@@ -232,28 +233,38 @@ function parseFlashcardLike(
 
   for (const card of cardSet.cards) {
     // Reset the question and answers
-    question = [];
-    answer = [];
+    question = undefined;
+    answer = undefined;
     alternativeAnswers = [];
     variantIndex = 0;
     extraTags = {};
 
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { cardBody, ...tags } = content.data;
+        const { cardBody, resources, ...tags } = content.data;
         extraTags = {
           ...extraTags,
           ...tags,
         };
+        const icon = resources && resources.length > 0 ? (resources[0] as ImageResourceWrapperJson).image : undefined;
 
         if (variantIndex === 0) {
           questionVariant = content;
-          question = cardBody?.body as TextAst;
           questionString = (cardBody?.bodyString ?? '') as string;
+          question = {
+            text: cardBody?.body as TextAst,
+            icon,
+          };
         } else if (variantIndex === 1) {
-          answer = cardBody?.body as TextAst;
+          answer = {
+            text: cardBody?.body as TextAst,
+            icon,
+          };
         } else {
-          alternativeAnswers.push(cardBody?.body as TextAst);
+          alternativeAnswers.push({
+            text: cardBody?.body as TextAst,
+            icon: icon,
+          });
         }
         variantIndex++;
       }
@@ -264,9 +275,9 @@ function parseFlashcardLike(
       if (Config.isOfBitType(bitType, BitType.definitionList)) {
         // .definition-list
         const dl: Partial<DefinitionListItemJson> = {
-          term: question,
-          definition: answer,
-          alternativeDefinitions: alternativeAnswers,
+          term: question as DefinitionJson,
+          definition: answer as DefinitionJson,
+          alternativeDefinitions: alternativeAnswers as DefinitionJson[],
           ...extraTags,
         };
         if (dl) definitions.push(dl);
@@ -274,9 +285,9 @@ function parseFlashcardLike(
         // .flashcard
         // if (question) {
         const fc: Partial<FlashcardJson> = {
-          question,
-          answer,
-          alternativeAnswers,
+          question: question as DefinitionJson,
+          answer: answer as DefinitionJson,
+          alternativeAnswers: alternativeAnswers as DefinitionJson[],
           ...extraTags,
         };
         if (fc) flashcards.push(fc);
