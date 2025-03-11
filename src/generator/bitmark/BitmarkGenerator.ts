@@ -2202,6 +2202,16 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     });
   }
 
+  // bitmarkAst -> bits -> bitsValue ->  * -> refPublicationYear
+
+  protected enter_refPublicationYear(node: NodeInfo, _route: NodeInfo[]): void {
+    this.writeProperty('refPublicationYear', node.value, {
+      format: PropertyFormat.trimmedString,
+      single: true,
+      ignoreEmpty: true,
+    });
+  }
+
   // bitmarkAst -> bits -> bitsValue ->  * -> citationStyle
 
   protected enter_citationStyle(node: NodeInfo, _route: NodeInfo[]): void {

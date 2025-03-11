@@ -358,6 +358,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.refPublicationYear,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.citationStyle,
       },
     ],

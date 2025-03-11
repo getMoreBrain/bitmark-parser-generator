@@ -381,6 +381,7 @@ const NodeType = superenum({
   referenceProperty: 'referenceProperty',
   referencePropertyValue: 'referencePropertyValue',
   refPublisher: 'refPublisher',
+  refPublicationYear: 'refPublicationYear',
   citationStyle: 'citationStyle',
   citationStyleValue: 'citationStyleValue',
   releaseDate: 'releaseDate',
