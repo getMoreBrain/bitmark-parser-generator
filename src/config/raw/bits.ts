@@ -1087,11 +1087,17 @@ const BITS: _BitsConfig = {
     cardSet: CardSetConfigKey._exampleBitList,
   },
   [BitType.legend]: {
-    since: '3.11.0',
+    since: '3.12.0',
     baseBitType: BitType._standard,
     tags: [],
     cardSet: CardSetConfigKey._flashcardLike,
   },
+  [BitType.smartStandardLegend]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardLegendNonNormative]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardLegendNormative]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardRemarkLegend]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardRemarkLegendNonNormative]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardRemarkLegendNormative]: { since: '3.12.0', baseBitType: BitType.legend },
   [BitType.definitionList]: {
     since: '1.34.0',
     baseBitType: BitType._standard,

@@ -1773,7 +1773,7 @@ class Builder extends BaseBuilder {
     context: BuildContext,
     data: Partial<DefinitionListItemJson> | undefined,
   ): DefinitionListItemJson | undefined {
-    if (!data || !data.term || !data.definition) return undefined;
+    if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: DefinitionListItemJson = {
@@ -1803,17 +1803,15 @@ class Builder extends BaseBuilder {
     context: BuildContext,
     data: Partial<TextAndIconJson> | undefined,
   ): TextAndIconJson | undefined {
-    if (!data) return undefined;
-
     const icon = (
       ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data.icon),
+        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data?.icon),
       ) as ImageResourceWrapperJson
     )?.image;
 
     // NOTE: Node order is important and is defined here
     const node: TextAndIconJson = {
-      text: this.handleJsonText(context, true, data.text),
+      text: this.handleJsonText(context, true, data?.text),
       icon,
     };
 
