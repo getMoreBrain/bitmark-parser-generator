@@ -1105,6 +1105,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   protected writePlainTextDivider(): void {
+    this.writeNL();
     this.write('==== text ====');
   }
 
