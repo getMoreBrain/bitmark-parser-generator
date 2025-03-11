@@ -143,6 +143,7 @@ const propertyConfigKeys = {
   refAuthor: 'refAuthor',
   refBookTitle: 'refBookTitle',
   refPublisher: 'refPublisher',
+  refPublicationYear: 'refPublicationYear',
   releaseDate: 'releaseDate',
   releaseKind: 'releaseKind',
   releaseVersion: 'releaseVersion',
