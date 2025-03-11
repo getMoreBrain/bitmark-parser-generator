@@ -10,7 +10,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -21,6 +20,130 @@
             }
           ],
           "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Definition 1",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 2?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Definition 2",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeDefinitions": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Definition 2",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 2, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
         }
       ],
       "footer": [
@@ -35,125 +158,12 @@
           "attrs": {}
         }
       ],
-      "definitions": [
-        {
-          "term": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Term 1?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "definition": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Definition 1",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 2",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "alternativeDefinitions": [],
-          "item": [],
-          "hint": [],
-          "instruction": [],
-          "isExample": false,
-          "example": null
-        },
-        {
-          "term": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Term 2?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "definition": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Definition 2",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 2",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "alternativeDefinitions": [
-            [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "Alternative Definition 2",
-                    "type": "text"
-                  },
-                  {
-                    "type": "hardBreak"
-                  },
-                  {
-                    "text": "Card 2, Side 2",
-                    "type": "text"
-                  }
-                ],
-                "attrs": {}
-              }
-            ]
-          ],
-          "item": [],
-          "hint": [],
-          "instruction": [],
-          "isExample": false,
-          "example": null
-        }
-      ]
+      "isExample": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.21.2"
     },
     "bitmark": "[.definition-list]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2\n++\nAlternative Definition 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
   },
@@ -168,7 +178,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -183,51 +192,34 @@
       ],
       "definitions": [
         {
-          "term": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Term 1?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "definition": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Definition 1",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 2",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "alternativeDefinitions": [
-            [
+          "term": {
+            "text": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Definition 2",
+                    "text": "Term 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Definition 1",
                     "type": "text"
                   },
                   {
@@ -241,6 +233,29 @@
                 "attrs": {}
               }
             ]
+          },
+          "alternativeDefinitions": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Definition 2",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            }
           ],
           "item": [],
           "hint": [],
@@ -249,44 +264,48 @@
           "example": null
         },
         {
-          "term": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Term 2?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "definition": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Definition 2",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 2, No footer",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 2?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Definition 2",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
           "alternativeDefinitions": [],
           "item": [],
           "hint": [],
@@ -294,12 +313,13 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.21.2"
     },
     "bitmark": "[.definition-list]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer"
   },
@@ -336,7 +356,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -351,70 +370,34 @@
       ],
       "definitions": [
         {
-          "term": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Term 1?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "definition": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Definition 1",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 2",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "alternativeDefinitions": [
-            [
+          "term": {
+            "text": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Definition 1",
+                    "text": "Term 1?",
                     "type": "text"
                   },
                   {
                     "type": "hardBreak"
                   },
                   {
-                    "text": "Card 1, Side 2",
+                    "text": "Card 1, Side 1",
                     "type": "text"
                   }
                 ],
                 "attrs": {}
               }
-            ],
-            [
+            ]
+          },
+          "definition": {
+            "text": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Definition 2",
+                    "text": "Definition 1",
                     "type": "text"
                   },
                   {
@@ -428,6 +411,50 @@
                 "attrs": {}
               }
             ]
+          },
+          "alternativeDefinitions": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Definition 1",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            },
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Definition 2",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            }
           ],
           "item": [],
           "hint": [],
@@ -436,44 +463,48 @@
           "example": true
         },
         {
-          "term": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Term 2?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "definition": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Definition 2",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 2, No footer",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 2?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Definition 2",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
           "alternativeDefinitions": [],
           "item": [
             {
@@ -504,12 +535,13 @@
           "isExample": true,
           "example": true
         }
-      ]
+      ],
+      "isExample": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.21.2"
     },
     "bitmark": "[.definition-list]\n[@example]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]"
   },
@@ -546,7 +578,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -559,65 +590,36 @@
           "attrs": {}
         }
       ],
-      "footer": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Footer anyone?",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
       "definitions": [
         {
-          "term": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Term 1?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "definition": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Definition 1",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 2",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "alternativeDefinitions": [
-            [
+          "term": {
+            "text": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Definition 2",
+                    "text": "Term 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Definition 1",
                     "type": "text"
                   },
                   {
@@ -631,6 +633,29 @@
                 "attrs": {}
               }
             ]
+          },
+          "alternativeDefinitions": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Definition 2",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            }
           ],
           "item": [],
           "hint": [],
@@ -639,44 +664,48 @@
           "example": null
         },
         {
-          "term": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Term 2?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "definition": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Definition 2",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 2, No footer",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 2?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Definition 2",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
           "alternativeDefinitions": [],
           "item": [
             {
@@ -707,12 +736,25 @@
           "isExample": true,
           "example": true
         }
-      ]
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Footer anyone?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.21.2"
     },
     "bitmark": "[.definition-list]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
   }

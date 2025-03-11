@@ -76,7 +76,8 @@ function propertyContentProcessor(
     } else if (configKey === PropertyConfigKey.person || configKey === PropertyConfigKey.partner) {
       personChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
-    } else if (configKey === PropertyConfigKey.icon) {
+    } else if (configKey === PropertyConfigKey.icon && contentDepth === BitContentLevel.Card) {
+      // TODO - now the property is handled should be part of the config, not hardcoded here with the depth
       resourceContentProcessor(context, contentDepth, tagsConfig, content, target);
       return;
     } else if (configKey === PropertyConfigKey.imageSource) {

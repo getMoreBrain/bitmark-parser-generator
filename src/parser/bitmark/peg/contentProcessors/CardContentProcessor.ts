@@ -16,7 +16,6 @@ import {
   CaptionDefinitionJson,
   CaptionDefinitionListJson,
   ChoiceJson,
-  DefinitionJson,
   DefinitionListItemJson,
   ExampleJson,
   FlashcardJson,
@@ -32,6 +31,7 @@ import {
   ResponseJson,
   StatementJson,
   TableJson,
+  TextAndIconJson,
 } from '../../../../model/json/BitJson';
 import {
   AudioResourceJson,
@@ -219,10 +219,10 @@ function parseFlashcardLike(
 ): BitSpecificCards {
   const flashcards: Partial<FlashcardJson>[] = [];
   const definitions: Partial<DefinitionListItemJson>[] = [];
-  let question: Partial<DefinitionJson> | undefined;
+  let question: Partial<TextAndIconJson> | undefined;
   let questionString = '';
-  let answer: Partial<DefinitionJson> | undefined;
-  let alternativeAnswers: Partial<DefinitionJson>[] = [];
+  let answer: Partial<TextAndIconJson> | undefined;
+  let alternativeAnswers: Partial<TextAndIconJson>[] = [];
   let cardIndex = 0;
   let variantIndex = 0;
   let extraTags: BitContentProcessorResult = {};
@@ -273,9 +273,9 @@ function parseFlashcardLike(
       if (Config.isOfBitType(bitType, BitType.definitionList)) {
         // .definition-list
         const dl: Partial<DefinitionListItemJson> = {
-          term: question as DefinitionJson,
-          definition: answer as DefinitionJson,
-          alternativeDefinitions: alternativeAnswers as DefinitionJson[],
+          term: question as TextAndIconJson,
+          definition: answer as TextAndIconJson,
+          alternativeDefinitions: alternativeAnswers as TextAndIconJson[],
           ...extraTags,
         };
         if (dl) definitions.push(dl);
@@ -283,9 +283,9 @@ function parseFlashcardLike(
         // .flashcard
         // if (question) {
         const fc: Partial<FlashcardJson> = {
-          question: question as DefinitionJson,
-          answer: answer as DefinitionJson,
-          alternativeAnswers: alternativeAnswers as DefinitionJson[],
+          question: question as TextAndIconJson,
+          answer: answer as TextAndIconJson,
+          alternativeAnswers: alternativeAnswers as TextAndIconJson[],
           ...extraTags,
         };
         if (fc) flashcards.push(fc);
