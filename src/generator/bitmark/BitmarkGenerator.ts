@@ -2646,7 +2646,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected writePlainTextDivider(): void {
     this.writeNL();
-    this.writeNL();
     this.write('==== text ====');
   }
 
