@@ -329,6 +329,8 @@ const BitType = superenum({
   matchSolutionGrouped: 'match-solution-grouped',
   message: 'message',
   metalevelExplanation: 'metalevel-explanation',
+  metaSearchDefaultTerms: 'meta-search-default-terms',
+  metaSearchDefaultTopics: 'meta-search-default-topics',
   milestone: 'milestone',
   module: 'module',
   moduleProduct: 'module-product',

@@ -1104,6 +1104,13 @@ const BITS: _BitsConfig = {
     tags: [],
     cardSet: CardSetConfigKey._flashcardLike,
   },
+  [BitType.metaSearchDefaultTerms]: {
+    since: '3.12.0',
+    baseBitType: BitType._standard,
+    tags: [],
+    cardSet: CardSetConfigKey._flashcardLike,
+  },
+  [BitType.metaSearchDefaultTopics]: { since: '3.12.0', baseBitType: BitType.metaSearchDefaultTerms },
   [BitType.flashcard]: {
     since: '1.3.0',
     baseBitType: BitType._standard,

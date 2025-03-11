@@ -580,6 +580,34 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
+  protected leaf_text(node: NodeInfo, route: NodeInfo[]): boolean {
+    const parent = this.getParentNode(route);
+    if (
+      !parent ||
+      (parent.key !== NodeType.term &&
+        parent.key !== NodeType.definition &&
+        parent.key !== NodeType.alternativeDefinitionsValue &&
+        parent.key !== NodeType.question &&
+        parent.key !== NodeType.answer &&
+        parent.key !== NodeType.alternativeAnswersValue)
+    ) {
+      return true;
+    }
+
+    if (StringUtils.isString(node.value)) {
+      const str = node.value as string;
+      this.writeNL();
+      this.write(
+        Breakscape.breakscape(str, {
+          textFormat: TextFormat.text,
+        }),
+      );
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
   // bitmarkAst -> bits -> bitsValue -> * -> term -> icon
   // bitmarkAst -> bits -> bitsValue -> * -> definition -> icon
   // bitmarkAst -> bits -> bitsValue -> * -> alternativeDefinitionsValue -> icon
