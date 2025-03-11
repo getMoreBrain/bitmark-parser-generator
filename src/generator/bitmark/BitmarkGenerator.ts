@@ -592,10 +592,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (
       parent.key !== NodeType.term &&
       parent.key !== NodeType.definition &&
-      parent.key !== NodeType.alternativeDefinitions &&
+      parent.key !== NodeType.alternativeDefinitionsValue &&
       parent.key !== NodeType.question &&
       parent.key !== NodeType.answer &&
-      parent.key !== NodeType.alternativeAnswers
+      parent.key !== NodeType.alternativeAnswersValue
     ) {
       // Continue traversal of this branch
       return true;

@@ -1086,6 +1086,12 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey._exampleBitList,
   },
+  [BitType.legend]: {
+    since: '3.11.0',
+    baseBitType: BitType._standard,
+    tags: [],
+    cardSet: CardSetConfigKey._flashcardLike,
+  },
   [BitType.definitionList]: {
     since: '1.34.0',
     baseBitType: BitType._standard,

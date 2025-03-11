@@ -270,7 +270,7 @@ function parseFlashcardLike(
 
     // Add the flashcard
     if (cardIndex === 0 || !onlyOneCardAllowed) {
-      if (Config.isOfBitType(bitType, BitType.definitionList)) {
+      if (Config.isOfBitType(bitType, [BitType.definitionList, BitType.legend])) {
         // .definition-list
         const dl: Partial<DefinitionListItemJson> = {
           term: question as TextAndIconJson,

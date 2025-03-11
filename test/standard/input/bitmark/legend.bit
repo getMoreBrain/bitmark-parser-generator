@@ -1,91 +1,91 @@
-[.flashcard]
+[.legend]
 
 Somebody
 ====
-Question 1?
+Term 1?
 Card 1, Side 1
-[@icon:https://image.io/question1.svg]
+[@icon:https://image.io/term1.svg][@width:100][@height:200]
 --
-Answer 1
+Definition 1
 Card 1, Side 2
+[@icon:https://image.io/def1.svg]
 ====
-Question 2?
+Term 2?
 Card 2, Side 1
-[@icon:https://image.io/question2.svg]
 --
-Answer 2
+Definition 2
 Card 2, Side 2
-[@icon:https://image.io/answer2.svg]
 ++
-Alternative Answer 2
+Alternative Definition 2
 Card 2, Side 2
+[@icon:https://image.io/altdef2.svg]
 ~~~~
 
 Footer anyone?
 
 
-[.flashcard]
+[.legend]
 
 Somebody
 ====
-Question 1?
+Term 1?
 Card 1, Side 1
 --
-Answer 1
+Definition 1
 Card 1, Side 2
 ++
-Alternative Answer 2
+Alternative Definition 2
 Card 1, Side 2
 ====
-Question 2?
+Term 2?
 Card 2, Side 1
 --
-Answer 2
+Definition 2
 Card 2, Side 2, No footer
 
 
-[.flashcard]
+[.legend]
 [@example]
 [%item][%lead]
 Somebody
 ====
-Question 1?
+Term 1?
 Card 1, Side 1
 --
-Answer 1
+Definition 1
 Card 1, Side 2
 ++
-Alternative Answer 1
+Alternative Definition 1
 Card 1, Side 2
 ++
-Alternative Answer 2
+Alternative Definition 2
 Card 1, Side 2
 ====
-Question 2?
+Term 2?
 Card 2, Side 1
 --
-Answer 2
+Definition 2
 Card 2, Side 2, No footer
 [%item][%lead]
 
 
-[.flashcard]
+[.legend]
 [%item][%lead]
 Somebody
 ====
-Question 1?
+Term 1?
 Card 1, Side 1
 --
-Answer 1
+Definition 1
 Card 1, Side 2
 ++
-Alternative Answer 2
+Alternative Definition 2
 Card 1, Side 2
 ====
-Question 2?
+Term 2?
 Card 2, Side 1
 --
-Answer 2
+Definition 2
 Card 2, Side 2, No footer
 [%item][%lead]
 [@example]

@@ -43,7 +43,20 @@
                 ],
                 "attrs": {}
               }
-            ]
+            ],
+            "icon": {
+              "format": "svg",
+              "provider": "image.io",
+              "src": "https://image.io/question1.svg",
+              "width": null,
+              "height": null,
+              "alt": "",
+              "zoomDisabled": false,
+              "license": "",
+              "copyright": "",
+              "showInIndex": false,
+              "caption": []
+            }
           },
           "answer": {
             "text": [
@@ -93,7 +106,20 @@
                 ],
                 "attrs": {}
               }
-            ]
+            ],
+            "icon": {
+              "format": "svg",
+              "provider": "image.io",
+              "src": "https://image.io/question2.svg",
+              "width": null,
+              "height": null,
+              "alt": "",
+              "zoomDisabled": false,
+              "license": "",
+              "copyright": "",
+              "showInIndex": false,
+              "caption": []
+            }
           },
           "answer": {
             "text": [
@@ -114,7 +140,20 @@
                 ],
                 "attrs": {}
               }
-            ]
+            ],
+            "icon": {
+              "format": "svg",
+              "provider": "image.io",
+              "src": "https://image.io/answer2.svg",
+              "width": null,
+              "height": null,
+              "alt": "",
+              "zoomDisabled": false,
+              "license": "",
+              "copyright": "",
+              "showInIndex": false,
+              "caption": []
+            }
           },
           "alternativeAnswers": [
             {
@@ -162,11 +201,11 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.21.2"
     },
-    "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
+    "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n[@icon:https://image.io/question1.svg]\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n[@icon:https://image.io/question2.svg]\n--\nAnswer 2\nCard 2, Side 2\n[@icon:https://image.io/answer2.svg]\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
   },
   {
     "bit": {
@@ -319,7 +358,7 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.21.2"
     },
@@ -542,7 +581,7 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.21.2"
     },
@@ -756,7 +795,7 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.21.2"
     },
