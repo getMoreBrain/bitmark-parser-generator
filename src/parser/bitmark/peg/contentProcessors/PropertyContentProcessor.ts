@@ -16,7 +16,6 @@ import { TextParser } from '../../../text/TextParser';
 
 import { bookChainContentProcessor } from './BookChainContentProcessor';
 import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
-import { imageChainContentProcessor } from './ImageChainContentProcessor';
 import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor';
 import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
@@ -78,8 +77,7 @@ function propertyContentProcessor(
       personChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
     } else if (configKey === PropertyConfigKey.icon) {
-      resourceContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
-      // imageChainContentProcessor(context, contentDepth, bitType, textFormat, tagsConfig, content, target);
+      resourceContentProcessor(context, contentDepth, tagsConfig, content, target);
       return;
     } else if (configKey === PropertyConfigKey.imageSource) {
       imageSourceChainContentProcessor(context, contentDepth, tagsConfig, content, target);
