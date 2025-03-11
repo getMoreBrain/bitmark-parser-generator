@@ -45,3 +45,22 @@ All part of formula, as this text starts it
 $$$$
 [!part of formula below]
 \mathrm { X } _ { 1 } = \sigma \left( \mathrm { X } _ { 1 2 } \times \mathrm { X } _ { 1 3 } \right) ,
+
+
+[.smart-standard-formula]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-formula-non-normative]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-formula-normative]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-remark-formula]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-remark-formula-non-normative]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-remark-formula-normative]
+C = \left( X , G , P , D , A , N \right)
