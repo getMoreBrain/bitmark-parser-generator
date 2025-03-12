@@ -446,6 +446,10 @@ const CARDSETS: _CardSetsConfig = {
             },
             {
               type: BitTagType.property,
+              configKey: PropertyConfigKey.refPublicationYear,
+            },
+            {
+              type: BitTagType.property,
               configKey: PropertyConfigKey.citationStyle,
             },
           ],

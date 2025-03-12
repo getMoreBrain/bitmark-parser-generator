@@ -78,6 +78,7 @@ export interface BitJson {
   refAuthor: string | string[];
   refBookTitle: string;
   refPublisher: string | string[];
+  refPublicationYear: string;
   citationStyle: string;
   blockId: string;
   pageNo: number;

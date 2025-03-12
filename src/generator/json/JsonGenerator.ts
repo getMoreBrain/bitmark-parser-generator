@@ -571,6 +571,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.addProperty(bookReference, 'refAuthor', cardBit.refAuthor ?? [], { array: true });
       this.addProperty(bookReference, 'refBookTitle', cardBit.refBookTitle ?? [], { array: false });
       this.addProperty(bookReference, 'refPublisher', cardBit.refPublisher ?? [], { array: true });
+      this.addProperty(bookReference, 'refPublicationYear', cardBit.refPublicationYear ?? [], { array: false });
       this.addProperty(bookReference, 'citationStyle', cardBit.citationStyle ?? [], { array: false });
 
       this.bitJson.bookReferences.push(bookReference as BookReferenceJson);
@@ -1600,6 +1601,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.refAuthor == null) bitJson.refAuthor = [];
         if (bitJson.refBookTitle == null) bitJson.refBookTitle = '';
         if (bitJson.refPublisher == null) bitJson.refPublisher = [];
+        if (bitJson.refPublicationYear == null) bitJson.refPublicationYear = '';
         //
       }
 

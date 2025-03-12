@@ -123,6 +123,7 @@ export interface Bit {
   refAuthor?: Property;
   refBookTitle?: Property;
   refPublisher?: Property;
+  refPublicationYear?: Property;
   citationStyle?: Property;
   blockId?: Property;
   pageNo?: Property;
