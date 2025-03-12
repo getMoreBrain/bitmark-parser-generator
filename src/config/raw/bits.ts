@@ -358,6 +358,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.refPublicationYear,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.citationStyle,
       },
     ],
@@ -531,6 +535,12 @@ const BITS: _BitsConfig = {
     tags: [],
     textFormatDefault: TextFormat.latex,
   },
+  [BitType.smartStandardFormula]: { since: '3.11.0', baseBitType: BitType.formula },
+  [BitType.smartStandardFormulaNonNormative]: { since: '3.11.0', baseBitType: BitType.formula },
+  [BitType.smartStandardFormulaNormative]: { since: '3.11.0', baseBitType: BitType.formula },
+  [BitType.smartStandardRemarkFormula]: { since: '3.11.0', baseBitType: BitType.formula },
+  [BitType.smartStandardRemarkFormulaNonNormative]: { since: '3.11.0', baseBitType: BitType.formula },
+  [BitType.smartStandardRemarkFormulaNormative]: { since: '3.11.0', baseBitType: BitType.formula },
   [BitType.appCodeCell]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.appCodeEditor]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.appCodeIde]: { since: '1.4.3', baseBitType: BitType.code },

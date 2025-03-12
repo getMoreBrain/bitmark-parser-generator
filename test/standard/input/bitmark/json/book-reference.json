@@ -16,12 +16,13 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "refPublicationYear": ""
     },
     "parser": {
-      "version": "3.7.0",
+      "version": "3.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.21.2"
     },
     "bitmark": "[.book-reference]\n[@id:135647]\n[@lang:en-US]\n[@refPublisher:kpmg]\n[@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[@refAuthor:Philippe Pointet]\n[@citationStyle:Stylish]"
   },
@@ -41,12 +42,13 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "refPublicationYear": ""
     },
     "parser": {
-      "version": "3.7.0",
+      "version": "3.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.21.2"
     },
     "bitmark": "[.book-reference]\n[@id:135647]\n[@lang:en-US]\n[@refPublisher:kpmg]\n[@refPublisher:gmpk]\n[@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[@refAuthor:Philippe Pointet]"
   },
@@ -60,6 +62,7 @@
       "refAuthor": ["Philippe Pointet", "Someone Else"],
       "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
       "refPublisher": ["kpmg"],
+      "refPublicationYear": "2025",
       "citationStyle": "Not so stylish",
       "item": [],
       "lead": [],
@@ -70,37 +73,37 @@
       "body": []
     },
     "parser": {
-      "version": "3.7.0",
+      "version": "3.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1",
+      "textParserVersion": "8.21.2",
       "warnings": [
         {
           "message": "[@refBookTitle] is included more than 1 time(s). The earlier ones will be ignored",
           "text": "[@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]",
           "location": {
             "start": {
-              "line": 22,
+              "line": 23,
               "column": 1,
-              "offset": 581
+              "offset": 608
             },
             "end": {
-              "line": 22,
+              "line": 23,
               "column": 124,
-              "offset": 704
+              "offset": 731
             }
           },
           "original": {
             "text": "[@refBookTitle:Overridden]",
             "location": {
               "start": {
-                "line": 21,
+                "line": 22,
                 "column": 1,
-                "offset": 554
+                "offset": 581
               },
               "end": {
-                "line": 21,
+                "line": 22,
                 "column": 27,
-                "offset": 580
+                "offset": 607
               }
             }
           }
@@ -110,35 +113,35 @@
           "text": "[@citationStyle:Not so stylish]",
           "location": {
             "start": {
-              "line": 26,
+              "line": 27,
               "column": 1,
-              "offset": 786
+              "offset": 813
             },
             "end": {
-              "line": 26,
+              "line": 27,
               "column": 32,
-              "offset": 817
+              "offset": 844
             }
           },
           "original": {
             "text": "[@citationStyle:Stylish]",
             "location": {
               "start": {
-                "line": 25,
+                "line": 26,
                 "column": 1,
-                "offset": 761
+                "offset": 788
               },
               "end": {
-                "line": 25,
+                "line": 26,
                 "column": 25,
-                "offset": 785
+                "offset": 812
               }
             }
           }
         }
       ]
     },
-    "bitmark": "[.book-reference]\n[@id:135647]\n[@lang:en-US]\n[@refPublisher:kpmg]\n[@refBookTitle:Overridden]\n[@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[@refAuthor:Philippe Pointet]\n[@refAuthor:Someone Else]\n[@citationStyle:Stylish]\n[@citationStyle:Not so stylish]"
+    "bitmark": "[.book-reference]\n[@id:135647]\n[@lang:en-US]\n[@refPublisher:kpmg]\n[@refPublicationYear:2025]\n[@refBookTitle:Overridden]\n[@refBookTitle:How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[@refAuthor:Philippe Pointet]\n[@refAuthor:Someone Else]\n[@citationStyle:Stylish]\n[@citationStyle:Not so stylish]"
   },
   {
     "bit": {
@@ -156,12 +159,13 @@
       "body": [],
       "refAuthor": [],
       "refBookTitle": "",
-      "refPublisher": []
+      "refPublisher": [],
+      "refPublicationYear": ""
     },
     "parser": {
-      "version": "3.7.0",
+      "version": "3.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.21.2"
     },
     "bitmark": "[.book-reference]\n[@id:135647]\n[@lang:en-US]"
   }
