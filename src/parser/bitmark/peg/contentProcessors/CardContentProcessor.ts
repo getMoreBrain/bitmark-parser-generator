@@ -219,8 +219,8 @@ function parseFlashcardLike(
 ): BitSpecificCards {
   const flashcards: Partial<FlashcardJson>[] = [];
   const definitions: Partial<DefinitionListItemJson>[] = [];
+  let questionStr = '';
   let question: Partial<TextAndIconJson> | undefined;
-  let questionString = '';
   let answer: Partial<TextAndIconJson> | undefined;
   let alternativeAnswers: Partial<TextAndIconJson>[] = [];
   let cardIndex = 0;
@@ -245,22 +245,24 @@ function parseFlashcardLike(
           ...tags,
         };
         const icon = resources && resources.length > 0 ? (resources[0] as ImageResourceWrapperJson).image : undefined;
+        const text = cardBody?.body as TextAst;
+        const str = cardBody?.bodyString ?? '';
 
         if (variantIndex === 0) {
           questionVariant = content;
-          questionString = (cardBody?.bodyString ?? '') as string;
+          questionStr = str;
           question = {
-            text: cardBody?.body as TextAst,
+            text,
             icon,
           };
         } else if (variantIndex === 1) {
           answer = {
-            text: cardBody?.body as TextAst,
+            text,
             icon,
           };
         } else {
           alternativeAnswers.push({
-            text: cardBody?.body as TextAst,
+            text,
             icon: icon,
           });
         }
@@ -270,8 +272,8 @@ function parseFlashcardLike(
 
     // Add the flashcard
     if (cardIndex === 0 || !onlyOneCardAllowed) {
-      if (Config.isOfBitType(bitType, [BitType.definitionList, BitType.legend])) {
-        // .definition-list
+      if (Config.isOfBitType(bitType, [BitType.definitionList, BitType.legend, BitType.metaSearchDefaultTerms])) {
+        // .definition-list, etc
         const dl: Partial<DefinitionListItemJson> = {
           term: question as TextAndIconJson,
           definition: answer as TextAndIconJson,
@@ -296,7 +298,7 @@ function parseFlashcardLike(
     } else {
       // Only one card allowed, add a warning and ignore the card
       context.addWarning(
-        `Bit '${bitType}' should only contain one card. Ignore subsequent card: '${questionString}'`,
+        `Bit '${bitType}' should only contain one card. Ignore subsequent card: '${questionStr}'`,
         questionVariant,
       );
       break;

@@ -1777,12 +1777,16 @@ class Builder extends BaseBuilder {
   ): DefinitionListItemJson | undefined {
     if (!data) return undefined;
 
+    const { bitType } = context;
+
+    const textAsStrings = Config.isOfBitType(bitType, [BitType.metaSearchDefaultTerms]);
+
     // NOTE: Node order is important and is defined here
     const node: DefinitionListItemJson = {
-      term: this.buildTextAndIcon(context, data.term) as TextAndIconJson,
-      definition: this.buildTextAndIcon(context, data.definition) as TextAndIconJson,
+      term: this.buildTextAndIcon(context, data.term, textAsStrings) as TextAndIconJson,
+      definition: this.buildTextAndIcon(context, data.definition, textAsStrings) as TextAndIconJson,
       alternativeDefinitions: (data.alternativeDefinitions ?? [])
-        .map((d) => this.buildTextAndIcon(context, d))
+        .map((d) => this.buildTextAndIcon(context, d, textAsStrings))
         .filter((d) => d != null),
       item: this.handleJsonText(context, true, data.item),
       lead: this.handleJsonText(context, true, data.lead),
@@ -1804,6 +1808,7 @@ class Builder extends BaseBuilder {
   protected buildTextAndIcon(
     context: BuildContext,
     data: Partial<TextAndIconJson> | undefined,
+    textAsStrings: boolean = false,
   ): TextAndIconJson | undefined {
     const icon = (
       ArrayUtils.asSingle(
@@ -1811,9 +1816,17 @@ class Builder extends BaseBuilder {
       ) as ImageResourceWrapperJson
     )?.image;
 
+    // Ensure text is bitmark text
+    let text: JsonText = this.handleJsonText(context, true, data?.text);
+
+    if (textAsStrings) {
+      // Convert the bitmark text to plain text
+      text = this.textGenerator.generateSync(text as TextAst, TextFormat.text).trim();
+    }
+
     // NOTE: Node order is important and is defined here
     const node: TextAndIconJson = {
-      text: this.handleJsonText(context, true, data?.text),
+      text,
       icon,
     };
 
