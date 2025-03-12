@@ -18,7 +18,7 @@ import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag } from '../../../model/enum/Tag';
 import { TextFormatType } from '../../../model/enum/TextFormat';
-import { ResourceJson } from '../../../model/json/ResourceJson';
+import { ImageResourceJson, ResourceJson } from '../../../model/json/ResourceJson';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
@@ -178,6 +178,7 @@ export interface BitContentProcessorResult {
   posterImage?: /*ImageResourceJson |*/ string;
   siteName?: string;
   imageSourceUrl?: string;
+  image?: Partial<ImageResourceJson>;
   mockupId?: BreakscapedString;
   size?: number;
   format?: BreakscapedString;

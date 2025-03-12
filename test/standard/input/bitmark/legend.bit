@@ -1,4 +1,4 @@
-[.definition-list]
+[.legend]
 
 Somebody
 ====
@@ -24,7 +24,7 @@ Card 2, Side 2
 Footer anyone?
 
 
-[.definition-list]
+[.legend]
 
 Somebody
 ====
@@ -44,7 +44,7 @@ Definition 2
 Card 2, Side 2, No footer
 
 
-[.definition-list]
+[.legend]
 [@example]
 [%item][%lead]
 Somebody
@@ -69,7 +69,7 @@ Card 2, Side 2, No footer
 [%item][%lead]
 
 
-[.definition-list]
+[.legend]
 [%item][%lead]
 Somebody
 ====
@@ -96,3 +96,39 @@ Card 2, Side 2, No footer
 
 Footer anyone?
 
+
+[.smart-standard-legend]
+====
+Term 1?
+Card 1, Side 1
+[@icon:https://image.io/term1.svg][@width:100][@height:200]
+
+[.smart-standard-legend-non-normative]
+====
+Term 1?
+Card 1, Side 1
+[@icon:https://image.io/term1.svg][@width:100][@height:200]
+
+[.smart-standard-legend-normative]
+====
+Term 1?
+Card 1, Side 1
+[@icon:https://image.io/term1.svg][@width:100][@height:200]
+
+[.smart-standard-remark-legend]
+====
+Term 1?
+Card 1, Side 1
+[@icon:https://image.io/term1.svg][@width:100][@height:200]
+
+[.smart-standard-remark-legend-non-normative]
+====
+Term 1?
+Card 1, Side 1
+[@icon:https://image.io/term1.svg][@width:100][@height:200]
+
+[.smart-standard-remark-legend-normative]
+====
+Term 1?
+Card 1, Side 1
+[@icon:https://image.io/term1.svg][@width:100][@height:200]

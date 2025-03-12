@@ -4,15 +4,18 @@ Somebody
 ====
 Question 1?
 Card 1, Side 1
+[@icon:https://image.io/question1.svg]
 --
 Answer 1
 Card 1, Side 2
 ====
 Question 2?
 Card 2, Side 1
+[@icon:https://image.io/question2.svg]
 --
 Answer 2
 Card 2, Side 2
+[@icon:https://image.io/answer2.svg]
 ++
 Alternative Answer 2
 Card 2, Side 2

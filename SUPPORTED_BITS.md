@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.11.0
+Version: 3.12.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -304,6 +304,7 @@ le-completion (since: 1.25.0)
 le-external-link (since: 1.25.0)
 le-finishing-task (since: 1.27.0)
 le-follow-up-task (since: 1.27.0)
+legend (since: 3.12.0)
 le-learning-objectives (since: 1.25.0)
 le-learning-step (since: 1.25.0)
 le-listen-audio-embed (since: 1.27.0)
@@ -423,6 +424,9 @@ smart-standard-image-figure-non-normative (since: 1.28.0)
 smart-standard-image-figure-non-normative-collapsible (since: 1.28.0)
 smart-standard-image-figure-normative (since: 1.28.0)
 smart-standard-image-figure-normative-collapsible (since: 1.28.0)
+smart-standard-legend (since: 3.12.0)
+smart-standard-legend-non-normative (since: 3.12.0)
+smart-standard-legend-normative (since: 3.12.0)
 smart-standard-list (since: 1.28.0)
 smart-standard-list-collapsible (since: 1.28.0)
 smart-standard-list-item (since: 1.28.0)
@@ -431,6 +435,9 @@ smart-standard-note-non-normative (since: 1.28.0)
 smart-standard-note-non-normative-collapsible (since: 1.28.0)
 smart-standard-note-normative (since: 1.28.0)
 smart-standard-note-normative-collapsible (since: 1.28.0)
+smart-standard-remark-legend (since: 3.12.0)
+smart-standard-remark-legend-non-normative (since: 3.12.0)
+smart-standard-remark-legend-normative (since: 3.12.0)
 smart-standard-remark-formula (since: 3.11.0)
 smart-standard-remark-formula-non-normative (since: 3.11.0)
 smart-standard-remark-formula-normative (since: 3.11.0)

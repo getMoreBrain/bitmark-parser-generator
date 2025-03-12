@@ -273,6 +273,7 @@ class ResourceBuilder extends BaseBuilder {
     }
 
     switch (type) {
+      case ResourceTag.icon:
       case ResourceTag.image:
       case ResourceTag.imagePortrait:
       case ResourceTag.imageLandscape:

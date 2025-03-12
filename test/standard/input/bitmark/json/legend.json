@@ -1,7 +1,7 @@
 [
   {
     "bit": {
-      "type": "definition-list",
+      "type": "legend",
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
@@ -196,19 +196,18 @@
           ],
           "attrs": {}
         }
-      ],
-      "isExample": false
+      ]
     },
     "parser": {
       "version": "3.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.21.2"
     },
-    "bitmark": "[.definition-list]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n[@icon:https://image.io/term1.svg][@width:100][@height:200]\n--\nDefinition 1\nCard 1, Side 2\n[@icon:https://image.io/def1.svg]\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2\n++\nAlternative Definition 2\nCard 2, Side 2\n[@icon:https://image.io/altdef2.svg]\n~~~~\n\nFooter anyone?"
+    "bitmark": "[.legend]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n[@icon:https://image.io/term1.svg][@width:100][@height:200]\n--\nDefinition 1\nCard 1, Side 2\n[@icon:https://image.io/def1.svg]\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2\n++\nAlternative Definition 2\nCard 2, Side 2\n[@icon:https://image.io/altdef2.svg]\n~~~~\n\nFooter anyone?"
   },
   {
     "bit": {
-      "type": "definition-list",
+      "type": "legend",
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
@@ -352,19 +351,18 @@
           "isExample": false,
           "example": null
         }
-      ],
-      "isExample": false
+      ]
     },
     "parser": {
       "version": "3.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.21.2"
     },
-    "bitmark": "[.definition-list]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer"
+    "bitmark": "[.legend]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer"
   },
   {
     "bit": {
-      "type": "definition-list",
+      "type": "legend",
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [
@@ -574,19 +572,18 @@
           "isExample": true,
           "example": true
         }
-      ],
-      "isExample": true
+      ]
     },
     "parser": {
       "version": "3.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.21.2"
     },
-    "bitmark": "[.definition-list]\n[@example]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]"
+    "bitmark": "[.legend]\n[@example]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]"
   },
   {
     "bit": {
-      "type": "definition-list",
+      "type": "legend",
       "format": "bitmark--",
       "bitLevel": 1,
       "item": [
@@ -787,14 +784,415 @@
           ],
           "attrs": {}
         }
-      ],
-      "isExample": true
+      ]
     },
     "parser": {
       "version": "3.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.21.2"
     },
-    "bitmark": "[.definition-list]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
+    "bitmark": "[.legend]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-legend",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "icon": {
+              "format": "svg",
+              "provider": "image.io",
+              "src": "https://image.io/term1.svg",
+              "width": "100",
+              "height": "200",
+              "alt": "",
+              "zoomDisabled": false,
+              "license": "",
+              "copyright": "",
+              "showInIndex": false,
+              "caption": []
+            }
+          },
+          "definition": {
+            "text": []
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.11.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.21.2"
+    },
+    "bitmark": "[.smart-standard-legend]\n====\nTerm 1?\nCard 1, Side 1\n[@icon:https://image.io/term1.svg][@width:100][@height:200]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-legend-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "icon": {
+              "format": "svg",
+              "provider": "image.io",
+              "src": "https://image.io/term1.svg",
+              "width": "100",
+              "height": "200",
+              "alt": "",
+              "zoomDisabled": false,
+              "license": "",
+              "copyright": "",
+              "showInIndex": false,
+              "caption": []
+            }
+          },
+          "definition": {
+            "text": []
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.11.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.21.2"
+    },
+    "bitmark": "[.smart-standard-legend-non-normative]\n====\nTerm 1?\nCard 1, Side 1\n[@icon:https://image.io/term1.svg][@width:100][@height:200]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-legend-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "icon": {
+              "format": "svg",
+              "provider": "image.io",
+              "src": "https://image.io/term1.svg",
+              "width": "100",
+              "height": "200",
+              "alt": "",
+              "zoomDisabled": false,
+              "license": "",
+              "copyright": "",
+              "showInIndex": false,
+              "caption": []
+            }
+          },
+          "definition": {
+            "text": []
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.11.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.21.2"
+    },
+    "bitmark": "[.smart-standard-legend-normative]\n====\nTerm 1?\nCard 1, Side 1\n[@icon:https://image.io/term1.svg][@width:100][@height:200]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-legend",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "icon": {
+              "format": "svg",
+              "provider": "image.io",
+              "src": "https://image.io/term1.svg",
+              "width": "100",
+              "height": "200",
+              "alt": "",
+              "zoomDisabled": false,
+              "license": "",
+              "copyright": "",
+              "showInIndex": false,
+              "caption": []
+            }
+          },
+          "definition": {
+            "text": []
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.11.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.21.2"
+    },
+    "bitmark": "[.smart-standard-remark-legend]\n====\nTerm 1?\nCard 1, Side 1\n[@icon:https://image.io/term1.svg][@width:100][@height:200]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-legend-non-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "icon": {
+              "format": "svg",
+              "provider": "image.io",
+              "src": "https://image.io/term1.svg",
+              "width": "100",
+              "height": "200",
+              "alt": "",
+              "zoomDisabled": false,
+              "license": "",
+              "copyright": "",
+              "showInIndex": false,
+              "caption": []
+            }
+          },
+          "definition": {
+            "text": []
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.11.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.21.2"
+    },
+    "bitmark": "[.smart-standard-remark-legend-non-normative]\n====\nTerm 1?\nCard 1, Side 1\n[@icon:https://image.io/term1.svg][@width:100][@height:200]"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-legend-normative",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Term 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "icon": {
+              "format": "svg",
+              "provider": "image.io",
+              "src": "https://image.io/term1.svg",
+              "width": "100",
+              "height": "200",
+              "alt": "",
+              "zoomDisabled": false,
+              "license": "",
+              "copyright": "",
+              "showInIndex": false,
+              "caption": []
+            }
+          },
+          "definition": {
+            "text": []
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.11.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.21.2"
+    },
+    "bitmark": "[.smart-standard-remark-legend-normative]\n====\nTerm 1?\nCard 1, Side 1\n[@icon:https://image.io/term1.svg][@width:100][@height:200]"
   }
 ]
