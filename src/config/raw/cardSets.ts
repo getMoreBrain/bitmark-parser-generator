@@ -21,6 +21,10 @@ const CARDSETS: _CardSetsConfig = {
               type: BitTagType.group,
               configKey: GroupConfigKey.group_standardExample,
             },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_resourceIcon,
+            },
           ],
           repeatCount: Count.infinity,
         },

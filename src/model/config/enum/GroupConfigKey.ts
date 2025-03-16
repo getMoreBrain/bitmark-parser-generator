@@ -23,6 +23,7 @@ const groupConfigKeys = {
   group_resourceImageCommon: 'group_resourceImageCommon',
   group_resourceAudioCommon: 'group_resourceAudioCommon',
   group_resourceVideoCommon: 'group_resourceVideoCommon',
+  group_resourceIcon: 'group_resourceIcon', // Alias for image
   group_resourceImage: 'group_resourceImage',
   group_resourceImageEmbed: 'group_resourceImageEmbed',
   group_resourceImageLink: 'group_resourceImageLink',

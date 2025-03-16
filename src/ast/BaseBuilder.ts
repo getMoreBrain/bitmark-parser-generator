@@ -1,5 +1,6 @@
 import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
+import { TextGenerator } from '../generator/text/TextGenerator';
 import { Property } from '../model/ast/Nodes';
 import { JsonText, TextAst } from '../model/ast/TextNodes';
 import { BitConfig } from '../model/config/BitConfig';
@@ -28,9 +29,11 @@ export interface BuildContext {
 
 class BaseBuilder {
   protected textParser: TextParser;
+  protected textGenerator: TextGenerator;
 
   constructor() {
     this.textParser = new TextParser();
+    this.textGenerator = new TextGenerator();
   }
 
   /**

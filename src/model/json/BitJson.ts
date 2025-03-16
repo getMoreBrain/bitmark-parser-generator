@@ -121,6 +121,7 @@ export interface BitJson {
   externalLink: string;
   externalLinkText: string;
   videoCallLink: string;
+  vendorDashboardId: string;
   vendorSurveyId: string;
   vendorUrl: string;
   search: string;
@@ -257,9 +258,9 @@ export interface MarkConfigJson {
 }
 
 export interface FlashcardJson {
-  question: JsonText;
-  answer: JsonText;
-  alternativeAnswers: JsonText[];
+  question: TextAndIconJson;
+  answer: TextAndIconJson;
+  alternativeAnswers: TextAndIconJson[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -271,9 +272,9 @@ export interface FlashcardJson {
 }
 
 export interface DefinitionListItemJson {
-  term: JsonText;
-  definition: JsonText;
-  alternativeDefinitions: JsonText[];
+  term: TextAndIconJson;
+  definition: TextAndIconJson;
+  alternativeDefinitions: TextAndIconJson[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -282,6 +283,11 @@ export interface DefinitionListItemJson {
   example: ExampleJson;
   __isDefaultExample?: boolean;
   __defaultExample?: ExampleJson;
+}
+
+export interface TextAndIconJson {
+  text: JsonText;
+  icon: ImageResourceJson;
 }
 
 export interface StatementJson {

@@ -190,6 +190,7 @@ const propertyConfigKeys = {
   trim: 'trim',
   unit: 'unit',
   unitAbbr: 'unitAbbr',
+  vendorDashboardId: 'vendorDashboardId',
   vendorSurveyId: 'vendorSurveyId',
   vendorUrl: 'vendorUrl',
   videoCallLink: 'videoCallLink',

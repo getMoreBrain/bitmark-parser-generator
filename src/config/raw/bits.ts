@@ -1096,12 +1096,31 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey._exampleBitList,
   },
+  [BitType.legend]: {
+    since: '3.12.0',
+    baseBitType: BitType._standard,
+    tags: [],
+    cardSet: CardSetConfigKey._flashcardLike,
+  },
+  [BitType.smartStandardLegend]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardLegendNonNormative]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardLegendNormative]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardRemarkLegend]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardRemarkLegendNonNormative]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardRemarkLegendNormative]: { since: '3.12.0', baseBitType: BitType.legend },
   [BitType.definitionList]: {
     since: '1.34.0',
     baseBitType: BitType._standard,
     tags: [],
     cardSet: CardSetConfigKey._flashcardLike,
   },
+  [BitType.metaSearchDefaultTerms]: {
+    since: '3.12.0',
+    baseBitType: BitType._standard,
+    tags: [],
+    cardSet: CardSetConfigKey._flashcardLike,
+  },
+  [BitType.metaSearchDefaultTopics]: { since: '3.12.0', baseBitType: BitType.metaSearchDefaultTerms },
   [BitType.flashcard]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -2297,6 +2316,17 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     tags: [],
     textFormatDefault: TextFormat.json,
+  },
+  [BitType.vendorDatadogDashboardEmbed]: {
+    since: '3.12.0',
+    baseBitType: BitType.code,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.vendorDashboardId,
+      },
+    ],
+    textFormatDefault: TextFormat.text,
   },
   [BitType.vendorFormbricksEmbed]: {
     since: '3.8.0',

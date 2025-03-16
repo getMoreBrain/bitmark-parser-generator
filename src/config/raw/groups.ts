@@ -758,6 +758,21 @@ const GROUPS: _GroupsConfig = {
   //
   // Single resources
   //
+  [GroupConfigKey.group_resourceIcon]: {
+    type: GroupConfigType.standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.icon,
+        chain: [
+          {
+            type: BitTagType.group,
+            configKey: GroupConfigKey.group_resourceImageCommon,
+          },
+        ],
+      },
+    ],
+  },
   [GroupConfigKey.group_resourceImage]: {
     type: GroupConfigType.resource,
     tags: [

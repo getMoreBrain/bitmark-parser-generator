@@ -51,6 +51,7 @@ import {
   StatementJson,
   TableJson,
   TechnicalTermJson,
+  TextAndIconJson,
 } from '../model/json/BitJson';
 import {
   BodyBitJson,
@@ -212,6 +213,7 @@ class Builder extends BaseBuilder {
     externalLink?: string;
     externalLinkText?: string;
     videoCallLink?: string;
+    vendorDashboardId?: string;
     vendorSurveyId?: string;
     vendorUrl?: string;
     search?: string;
@@ -459,6 +461,7 @@ class Builder extends BaseBuilder {
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, data.externalLink),
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, data.externalLinkText),
       videoCallLink: this.toAstProperty(PropertyConfigKey.videoCallLink, data.videoCallLink),
+      vendorDashboardId: this.toAstProperty(PropertyConfigKey.vendorDashboardId, data.vendorDashboardId),
       vendorSurveyId: this.toAstProperty(PropertyConfigKey.vendorSurveyId, data.vendorSurveyId),
       vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, data.vendorUrl),
       search: this.toAstProperty(PropertyConfigKey.search, data.search),
@@ -1727,9 +1730,11 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: FlashcardJson = {
-      question: this.handleJsonText(context, true, data.question),
-      answer: this.handleJsonText(context, true, data.answer),
-      alternativeAnswers: this.handleJsonText(context, true, data.alternativeAnswers),
+      question: this.buildTextAndIcon(context, data.question) as TextAndIconJson,
+      answer: this.buildTextAndIcon(context, data.answer) as TextAndIconJson,
+      alternativeAnswers: (data.alternativeAnswers ?? [])
+        .map((d) => this.buildTextAndIcon(context, d))
+        .filter((d) => d != null),
       item: this.handleJsonText(context, true, data.item),
       lead: this.handleJsonText(context, true, data.lead),
       hint: this.handleJsonText(context, true, data.hint),
@@ -1774,11 +1779,17 @@ class Builder extends BaseBuilder {
   ): DefinitionListItemJson | undefined {
     if (!data) return undefined;
 
+    const { bitType } = context;
+
+    const textAsStrings = Config.isOfBitType(bitType, [BitType.metaSearchDefaultTerms]);
+
     // NOTE: Node order is important and is defined here
     const node: DefinitionListItemJson = {
-      term: this.handleJsonText(context, true, data.term),
-      definition: this.handleJsonText(context, true, data.definition),
-      alternativeDefinitions: this.handleJsonText(context, true, data.alternativeDefinitions),
+      term: this.buildTextAndIcon(context, data.term, textAsStrings) as TextAndIconJson,
+      definition: this.buildTextAndIcon(context, data.definition, textAsStrings) as TextAndIconJson,
+      alternativeDefinitions: (data.alternativeDefinitions ?? [])
+        .map((d) => this.buildTextAndIcon(context, d, textAsStrings))
+        .filter((d) => d != null),
       item: this.handleJsonText(context, true, data.item),
       lead: this.handleJsonText(context, true, data.lead),
       hint: this.handleJsonText(context, true, data.hint),
@@ -1791,6 +1802,40 @@ class Builder extends BaseBuilder {
       ignoreAllFalse: true,
       ignoreEmptyArrays: ['question', 'answer', 'alternativeDefinitions', 'item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
+    });
+
+    return node;
+  }
+
+  protected buildTextAndIcon(
+    context: BuildContext,
+    data: Partial<TextAndIconJson> | undefined,
+    textAsStrings: boolean = false,
+  ): TextAndIconJson | undefined {
+    const icon = (
+      ArrayUtils.asSingle(
+        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data?.icon),
+      ) as ImageResourceWrapperJson
+    )?.image;
+
+    // Ensure text is bitmark text
+    let text: JsonText = this.handleJsonText(context, true, data?.text);
+
+    if (textAsStrings) {
+      // Convert the bitmark text to plain text
+      text = this.textGenerator.generateSync(text as TextAst, TextFormat.text).trim();
+    }
+
+    // NOTE: Node order is important and is defined here
+    const node: TextAndIconJson = {
+      text,
+      icon,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['text'],
+      ignoreUndefined: ['icon'],
     });
 
     return node;
