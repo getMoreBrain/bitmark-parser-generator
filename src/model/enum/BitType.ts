@@ -514,6 +514,7 @@ const BitType = superenum({
   trueFalse: 'true-false',
   trueFalse1: 'true-false-1',
   vendorAmcharts5Chart: 'vendor-amcharts-5-chart',
+  vendorDatadogDashboardEmbed: 'vendor-datadog-dashboard-embed',
   vendorFormbricksEmbed: 'vendor-formbricks-embed',
   vendorFormbricksLink: 'vendor-formbricks-link',
   vendorFormbricksEmbedAnonymous: 'vendor-formbricks-embed-anonymous',
