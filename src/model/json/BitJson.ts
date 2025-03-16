@@ -121,6 +121,7 @@ export interface BitJson {
   externalLink: string;
   externalLinkText: string;
   videoCallLink: string;
+  vendorDashboardId: string;
   vendorSurveyId: string;
   vendorUrl: string;
   search: string;

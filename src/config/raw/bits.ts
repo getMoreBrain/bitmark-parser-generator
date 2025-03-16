@@ -2317,6 +2317,17 @@ const BITS: _BitsConfig = {
     tags: [],
     textFormatDefault: TextFormat.json,
   },
+  [BitType.vendorDatadogDashboardEmbed]: {
+    since: '3.12.0',
+    baseBitType: BitType.code,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.vendorDashboardId,
+      },
+    ],
+    textFormatDefault: TextFormat.text,
+  },
   [BitType.vendorFormbricksEmbed]: {
     since: '3.8.0',
     baseBitType: BitType.code,

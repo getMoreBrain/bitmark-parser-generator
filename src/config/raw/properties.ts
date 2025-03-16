@@ -401,6 +401,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.vendorDashboardId]: {
+    tag: PropertyTag.vendorDashboardId,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.vendorSurveyId]: {
     tag: PropertyTag.vendorSurveyId,
     single: true,
