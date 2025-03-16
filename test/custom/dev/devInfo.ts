@@ -13,7 +13,7 @@ const bitmarkParserGenerator = new BitmarkParserGenerator();
 
 class DevConfig {
   async run(): Promise<void> {
-    const info = bitmarkParserGenerator.info({
+    const info = await bitmarkParserGenerator.info({
       type: InfoType.all,
       // type: InfoType.bit,
       // bit: BitType.cloze,
