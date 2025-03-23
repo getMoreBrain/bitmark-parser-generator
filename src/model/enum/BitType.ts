@@ -187,6 +187,7 @@ const BitType = superenum({
   details: 'details',
   details1: 'details-1',
   detailsImage: 'details-image',
+  diff: 'diff',
   document: 'document',
   documentDownload: 'document-download',
   documentEmbed: 'document-embed',

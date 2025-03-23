@@ -75,6 +75,7 @@ export interface Bit {
   feedbackEngine?: Property;
   feedbackType?: Property;
   disableFeedback?: Property;
+  diffTo?: Property;
   diffOp?: Property;
   diffRef?: Property;
   diffContext?: Property;

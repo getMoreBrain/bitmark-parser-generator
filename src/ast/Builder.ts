@@ -121,6 +121,7 @@ class Builder extends BaseBuilder {
     feedbackEngine?: string;
     feedbackType?: string;
     disableFeedback?: boolean;
+    diffTo?: string;
     diffOp?: string;
     diffRef?: string;
     diffContext?: string;
@@ -363,6 +364,7 @@ class Builder extends BaseBuilder {
       feedbackEngine: this.toAstProperty(PropertyConfigKey.feedbackEngine, data.feedbackEngine),
       feedbackType: this.toAstProperty(PropertyConfigKey.feedbackType, data.feedbackType),
       disableFeedback: this.toAstProperty(PropertyConfigKey.disableFeedback, data.disableFeedback),
+      diffTo: this.toAstProperty(PropertyConfigKey.diffTo, data.diffTo),
       diffOp: this.toAstProperty(PropertyConfigKey.diffOp, data.diffOp),
       diffRef: this.toAstProperty(PropertyConfigKey.diffRef, data.diffRef),
       diffContext: this.toAstProperty(PropertyConfigKey.diffContext, data.diffContext),

@@ -144,6 +144,8 @@ const NodeType = superenum({
   disableCalculation: 'disableCalculation',
   disableFeedback: 'disableFeedback',
   disableFeedbackValue: 'disableFeedbackValue',
+  diffTo: 'diffTo',
+  diffToValue: 'diffToValue',
   diffOp: 'diffOp',
   diffOpValue: 'diffOpValue',
   diffRef: 'diffRef',
