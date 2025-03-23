@@ -49,6 +49,7 @@ const propertyConfigKeys = {
   deeplink: 'deeplink',
   disableCalculation: 'disableCalculation',
   disableFeedback: 'disableFeedback',
+  diffTo: 'diffTo',
   diffOp: 'diffOp',
   diffRef: 'diffRef',
   diffContext: 'diffContext',

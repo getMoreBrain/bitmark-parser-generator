@@ -1,0 +1,11 @@
+[.diff:bitmark++]
+[@diffTo:18]
+[@diffTo:59872359]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+
+
+[.diff:bitmark--]

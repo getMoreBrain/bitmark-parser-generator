@@ -261,6 +261,17 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.diff]: {
+    since: '3.13.0',
+    baseBitType: BitType._standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffTo,
+        minCount: 1,
+      },
+    ],
+  },
   [BitType.book]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
