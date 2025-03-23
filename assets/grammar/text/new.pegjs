@@ -97,14 +97,13 @@ function s(_string) {
 function unbreakscape(_str) {
 	let u_ = _str || ""
 
-	// function replacer(match, p1, offset, string, groups) {
-  // 		return match.replace("^", "");
-	// }
+	function replacer(match, p1, offset, string, groups) {
+  		return match.replace("^", "");
+	}
 
-  // let re_ = new RegExp( /=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
+  let re_ = new RegExp( /=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
 
-  // u_ = u_.replace(re_, replacer)
-  u_ = Breakscape.unbreakscape(u_);
+  u_ = u_.replace(re_, replacer)
 
   return u_
 }
@@ -123,44 +122,32 @@ function removeTempParsingParent(obj) {
 
 function bitmarkPlusPlus(_str) {
 
-  // if (parser) {
-  // 	return parser.parse(_str, { startRule: "bitmarkPlusPlus" })
-  // } else {
-  //   // embedded in Get More Brain
-  //   return parse(_str, { startRule: "bitmarkPlusPlus" })
-  // }
-  if (typeof parser !== 'undefined') {
+  if (parser) {
   	return parser.parse(_str, { startRule: "bitmarkPlusPlus" })
+  } else {
+    // embedded in Get More Brain
+    return parse(_str, { startRule: "bitmarkPlusPlus" })
   }
-  return peg$parse(_str, { startRule: "bitmarkPlusPlus" })
 }
 
 function bitmarkPlusString(_str) {
 
-  // if (parser) {
-  // 	return parser.parse(_str, { startRule: "bitmarkPlusString" })
-  // } else {
-  //   // embedded in Get More Brain
-  //   return parse(_str, { startRule: "bitmarkPlusString" })
-  // }
-  if (typeof parser !== 'undefined') {
-    return parser.parse(_str, { startRule: "bitmarkPlusString" })
+  if (parser) {
+  	return parser.parse(_str, { startRule: "bitmarkPlusString" })
+  } else {
+    // embedded in Get More Brain
+    return parse(_str, { startRule: "bitmarkPlusString" })
   }
-  return peg$parse(_str, { startRule: "bitmarkPlusString" })
 }
 
 function bitmarkMinusMinusString(_str) {
 
-  // if (parser) {
-  // 	return parser.parse(_str, { startRule: "bitmarkMinusMinusString" })
-  // } else {
-  //   // embedded in Get More Brain
-  //   return parse(_str, { startRule: "bitmarkMinusMinusString" })
-  // }
-  if (typeof parser !== 'undefined') {
+  if (parser) {
   	return parser.parse(_str, { startRule: "bitmarkMinusMinusString" })
+  } else {
+    // embedded in Get More Brain
+    return parse(_str, { startRule: "bitmarkMinusMinusString" })
   }
-  return peg$parse(_str, { startRule: "bitmarkMinusMinusString" })
 }
 
 }}
@@ -357,16 +344,16 @@ BulletListLine
 	  if ('•a ' == lt) {
         _tempParsingParent = 'letteredListLower'
       }
-      if ('•+ ' == lt || '•- ' == lt ) {
+	  if ('•+ ' == lt || '•- ' == lt ) {
         _tempParsingParent = 'taskList'
       }
 
-	  let li = (listItem + lines.join("")).trim()
+      let li = (listItem + lines.join("")).trim()
 
       let item = {
-      	type: "paragraph",
-		    attrs: {},
-		    content: bitmarkPlusString(li)
+		type: "paragraph",
+		attrs: {},
+		content: bitmarkPlusString(li)
       }
 
 	  let content = [item]
@@ -533,8 +520,7 @@ InlineHalfTag = '='
 InlineTag = InlineHalfTag InlineHalfTag
 
 InlineStyledText
-  = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
-  / InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: t}, type: "latex" } }
+  = InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: t}, type: "latex" } }
   / InlineTag alt: $((!InlineTag .)* ) InlineTag '|image:' u: Url '|' ch: InlineMediaChain? { return { attrs: { alt, src: (u.pr + u.t).trim(), title: null, ...Object.assign({}, ...ch), zoomDisabled: true }, type: "image" } }
   / InlineTag ' '? t: $((!(' '? InlineTag) .)* ) ' '? InlineTag marks: AttrChain { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
   / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
@@ -612,7 +598,7 @@ AlternativeStyleTags
   / 'doubleUnderline'
   / 'circle'
   / 'languageEm'
-   / 'userUnderline'
+  / 'userUnderline'
   / 'userDoubleUnderline'
   / 'userStrike'
   / 'userCircle'
@@ -671,14 +657,8 @@ ItalicTag = ItalicHalfTag ItalicHalfTag
 LightTag = LightHalfTag LightHalfTag
 HighlightTag = HighlightHalfTag HighlightHalfTag
 
-// Reuse the instruction tag for the body bit.
-// It cannot appear in the body as the bitmark parser would remove it, so it is safe to re-use.
-BodyBitOpenTag = '[!'
-BodyBitCloseTag = ']'
-
 StyledText
-  = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
-  / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
+  = BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
   / ItalicTag ' '? t: $((!(' '? ItalicTag) .)* ) ' '? ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
   / LightTag ' '? t: $((!(' '? LightTag) .)* ) ' '? LightTag { return { marks: [{type: "light"}], text: unbreakscape(t), type: "text" } }
   / HighlightTag ' '? t: $((!(' '? HighlightTag) .)* ) ' '? HighlightTag { return { marks: [{type: "highlight"}], text: unbreakscape(t), type: "text" } }

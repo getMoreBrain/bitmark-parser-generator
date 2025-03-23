@@ -1,4 +1,4 @@
-Some images follow:
+Some block images follow:
 
 |image:https://t.com/simple.png|
 
@@ -6,3 +6,8 @@ Some images follow:
 
 |image:https://t.com/simple.png|#A caption|@alt:Alt text|@captionAlign:right|@alignment:right|
 
+Some inline images follow:
+
+Here is the text ==alt text of the inline image==|image:https://img.io/img.svg| more text
+Here is the text ==alt text of the inline image==|image:https://img.io/img.svg|@width:400|height:200| more text
+Here is the text ==alt text of the inline image==|image:https://img.io/img.svg|width:400|@height:200|#comment| more text
