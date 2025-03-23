@@ -2424,6 +2424,8 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.vendorStripePricingTableExternal]: { since: '3.13.0', baseBitType: BitType.vendorStripePricingTable },
+
   [BitType.video]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
