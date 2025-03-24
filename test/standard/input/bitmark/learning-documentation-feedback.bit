@@ -1,0 +1,43 @@
+
+
+[.learning-documentation-feedback]
+[@id:67915]
+[@reasonableNumOfChars:100]
+====
+[!ICH BEVORZUGE …]
+[%1.]
+[+ Bier]
+[+ Wein]
+--
+[!Why?]
+Please answer in keywords
+====
+[!ICH HASSE …]
+[%1I.]
+[+ Bier]
+[- Wein]
+--
+[!Why?]
+Please answer in keywords
+[@reasonableNumOfChars:300]
+====
+
+
+[.learning-documentation-feedback]
+[@id:64574]
+[@reasonableNumOfChars:50]
+====
+[!ICH BEVORZUGE …]
+[%1.][%other]
+[+ Bier]
+[+ Wein]
+[@reasonableNumOfChars:300]
+--
+[!Why?]
+Please answer in keywords
+====
+[!ICH HASSE …]
+[%1I.]
+[- Bier]
+[- Wein]
+====

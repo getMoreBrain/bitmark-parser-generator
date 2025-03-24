@@ -213,6 +213,7 @@ export interface BitJson {
   descriptions: DefinitionListItemJson[];
   statements: StatementJson[];
   responses: ResponseJson[] | BotResponseJson[];
+  feedbacks: FeedbackJson[];
   quizzes: QuizJson[];
   heading: HeadingJson;
   pairs: PairJson[];
@@ -303,6 +304,33 @@ export interface StatementJson {
   __defaultExample?: ExampleJson;
 }
 
+export interface FeedbackChoiceJson {
+  choice: string;
+  requireReason: boolean;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
+  isExample: boolean;
+  example: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
+}
+
+export interface FeedbackReasonJson {
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
+  text: string;
+  reasonableNumOfChars: number;
+  isExample: boolean;
+  example: ExampleJson;
+  __textAst?: TextAst;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
+}
+
 export interface ChoiceJson {
   choice: string;
   isCorrect: boolean;
@@ -327,6 +355,18 @@ export interface ResponseJson {
   example: ExampleJson;
   __isDefaultExample?: boolean;
   __defaultExample?: ExampleJson;
+}
+
+export interface FeedbackJson {
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
+  // isExample: boolean;
+  choices: FeedbackChoiceJson[];
+  reason: FeedbackReasonJson;
+  // __isDefaultExample?: boolean;
+  // __defaultExample?: ExampleJson;
 }
 
 export interface QuizJson {
