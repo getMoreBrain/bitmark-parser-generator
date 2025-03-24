@@ -32,6 +32,8 @@ import {
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
+  FeedbackChoiceJson,
+  FeedbackJson,
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
@@ -131,6 +133,7 @@ export interface BitContentProcessorResult {
   __solutionsAst?: TextAst[];
   statement?: Partial<StatementJson>;
   statements?: Partial<StatementJson>[];
+  feedbackChoices?: Partial<FeedbackChoiceJson>[];
   choices?: Partial<ChoiceJson>[];
   responses?: Partial<ResponseJson>[];
   solution?: BreakscapedString;
@@ -214,6 +217,7 @@ export interface BitSpecificCards {
   definitions?: Partial<DefinitionListItemJson>[];
   statements?: Partial<StatementJson>[];
   responses?: Partial<ResponseJson>[];
+  feedbacks?: Partial<FeedbackJson>[];
   quizzes?: Partial<QuizJson>[];
   heading?: Partial<HeadingJson>;
   pairs?: Partial<PairJson>[];

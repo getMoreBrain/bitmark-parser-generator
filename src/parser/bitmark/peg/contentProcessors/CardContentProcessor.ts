@@ -18,6 +18,9 @@ import {
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
+  FeedbackChoiceJson,
+  FeedbackJson,
+  FeedbackReasonJson,
   FlashcardJson,
   HeadingJson,
   IngredientJson,
@@ -86,6 +89,10 @@ function buildCards(
 
     case CardSetConfigKey._statements:
       result = parseStatements(context, bitType, processedCardSet, statementV1, statementsV1);
+      break;
+
+    case CardSetConfigKey._feedback:
+      result = parseFeedback(context, bitType, processedCardSet);
       break;
 
     case CardSetConfigKey._quiz:
@@ -393,6 +400,79 @@ function parseStatements(
 
   return {
     statements: statements.length > 0 ? statements : undefined,
+  };
+}
+
+function parseFeedback(
+  _context: BitmarkPegParserContext,
+  _bitType: BitTypeType,
+  cardSet: ProcessedCardSet,
+): BitSpecificCards {
+  const feedbacks: Partial<FeedbackJson>[] = [];
+
+  let sideIdx = 0;
+  let feedback: Partial<FeedbackJson> | undefined;
+
+  for (const card of cardSet.cards) {
+    sideIdx = 0;
+    feedback = undefined;
+
+    for (const side of card.sides) {
+      for (const content of side.variants) {
+        const tags = content.data;
+
+        const { cardBody, cardBodyStr, choices: choiceTags, ...restTags } = tags;
+
+        if (sideIdx === 0) {
+          // First side (feedback choices)
+          const choices: Partial<FeedbackChoiceJson>[] = [];
+
+          if (choiceTags && choiceTags.length > 0) {
+            for (const tf of choiceTags) {
+              const { __isDefaultExample, example, ...tfTags } = tf;
+
+              const choice: Partial<FeedbackChoiceJson> = {
+                choice: tfTags.choice,
+                requireReason: tfTags.isCorrect,
+                __isDefaultExample,
+                example,
+              };
+              choices.push(choice);
+            }
+          }
+
+          // if (tags.choices || tags.responses) {
+          feedback = {
+            ...tags,
+            choices: choices as FeedbackChoiceJson[],
+          };
+          if (feedback) feedbacks.push(feedback);
+        } else {
+          // Second side (feedback reason)
+
+          const reason: Partial<FeedbackReasonJson> = {
+            text: cardBodyStr ?? '',
+            __textAst: cardBody?.body as TextAst,
+            ...restTags,
+          };
+          if (feedback) {
+            feedback.reason = reason as FeedbackReasonJson;
+          }
+        }
+
+        // Insert choices / responses
+
+        // } else {
+        //   context.addWarning('Ignoring card with empty quiz', content);
+        // }
+      }
+
+      sideIdx++;
+    }
+  }
+
+  return {
+    feedbacks: feedbacks.length > 0 ? feedbacks : undefined,
   };
 }
 

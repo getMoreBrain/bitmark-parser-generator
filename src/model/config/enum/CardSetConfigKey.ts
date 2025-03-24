@@ -5,6 +5,7 @@ const CardSetConfigKey = superenum({
   _elements: '_elements',
   _statements: '_statements',
   _quiz: '_quiz',
+  _feedback: '_feedback',
   _questions: '_questions',
   _matchPairs: '_matchPairs',
   _matchAudioPairs: '_matchAudioPairs',

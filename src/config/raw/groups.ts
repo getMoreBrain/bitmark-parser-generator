@@ -72,6 +72,10 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.diffTo,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.diffOp,
       },
       {

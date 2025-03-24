@@ -16,6 +16,7 @@ import {
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
+  FeedbackJson,
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
@@ -75,6 +76,7 @@ export interface Bit {
   feedbackEngine?: Property;
   feedbackType?: Property;
   disableFeedback?: Property;
+  diffTo?: Property;
   diffOp?: Property;
   diffRef?: Property;
   diffContext?: Property;
@@ -306,6 +308,7 @@ export interface CardNode {
   statements?: StatementJson[];
   choices?: ChoiceJson[];
   responses?: ResponseJson[];
+  feedbacks?: FeedbackJson[];
   quizzes?: QuizJson[];
   heading?: HeadingJson;
   pairs?: PairJson[];

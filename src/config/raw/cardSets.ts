@@ -102,6 +102,48 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
+  [CardSetConfigKey._feedback]: {
+    variants: [
+      // Side 1
+      [
+        // Variant 1..N
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+            },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_trueFalse,
+            },
+          ],
+          bodyAllowed: false,
+        },
+      ],
+      // Side 2
+      [
+        // Variant 1..N
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.reasonableNumOfChars,
+            },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardExample,
+            },
+          ],
+          bodyAllowed: true,
+        },
+      ],
+    ],
+  },
   [CardSetConfigKey._questions]: {
     variants: [
       [

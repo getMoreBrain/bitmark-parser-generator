@@ -147,6 +147,10 @@ export type StageType = EnumType<typeof Stage>;
 export type WriteCallback = (s: string) => void;
 export type BodyBitCallback = (bodyBit: BodyBitJson, index: number, route: NodeInfo[]) => string;
 
+interface MediaAttributeOptions {
+  ignoreAttributes?: Set<string>;
+}
+
 /**
  * Generate text from a bitmark text AST
  */
@@ -163,6 +167,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private currentIndent = 0;
   private prevIndent = 0;
   private indentationStringCache = '';
+  private inParagraph = false;
   private inCodeBlock = false;
   private exitedCodeBlock = false;
   private inBulletList = false;
@@ -287,6 +292,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.currentIndent = 0;
     this.prevIndent = 0;
     this.indentationStringCache = '';
+    this.inParagraph = false;
     this.inCodeBlock = false;
     this.exitedCodeBlock = false;
     this.inBulletList = false;
@@ -363,6 +369,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
     switch (node.type) {
       case TextNodeType.paragraph:
+        this.inParagraph = true;
         this.writeParagraph(node);
         break;
 
@@ -448,14 +455,17 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
           // - for bitmark-- where we don't write newlines for the single wrapping block
           this.writeNL();
         }
+        this.inParagraph = false;
         break;
 
       case TextNodeType.heading:
       case TextNodeType.section:
       case TextNodeType.image:
-        // Block type nodes, write 2x newline
-        this.writeNL();
-        this.writeNL();
+        if (!this.inParagraph) {
+          // Block type nodes, write 2x newline
+          this.writeNL();
+          this.writeNL();
+        }
         break;
 
       case TextNodeType.codeBlock:
@@ -992,8 +1002,17 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     if (node.attrs == null || !node.attrs.src) return;
     const attrs = node.attrs;
 
-    const mediaAttrs = this.getMediaAttrs('image', attrs);
-    const s = mediaAttrs ? `|${mediaAttrs}|` : '';
+    const inlineImage = this.inParagraph;
+
+    const mediaAttrs = this.getMediaAttrs('image', attrs, {
+      ignoreAttributes: inlineImage ? new Set(['alt', 'zoomDisabled']) : undefined,
+    });
+
+    let s = '';
+    if (inlineImage) {
+      s = `==${attrs.alt ?? ''}==`;
+    }
+    s += mediaAttrs ? `|${mediaAttrs}|` : '';
 
     // Write the text
     this.write(s);
@@ -1133,8 +1152,15 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.writeString(tag);
   }
 
-  protected getMediaAttrs(mediaType: string, attrs: MediaAttributes): string | undefined {
+  protected getMediaAttrs(
+    mediaType: string,
+    attrs: MediaAttributes,
+    options?: MediaAttributeOptions,
+  ): string | undefined {
     if (!mediaType) return undefined;
+
+    const opts = Object.assign({}, options);
+    const ignoreAttributes = opts.ignoreAttributes ?? new Set();
 
     let s = `${mediaType}:${attrs?.src ?? ''}`;
 
@@ -1144,18 +1170,21 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     for (let i = 0; i < entries.length; i++) {
       const [k, v] = entries[i];
 
+      // Ignore certain attributes
+      if (ignoreAttributes.has(k)) continue;
+
       switch (k) {
         case 'textAlign':
-          if (v !== 'left') s += `|@captionAlign:${v}`;
+          if (v !== 'left') s += `|captionAlign:${v}`;
           break;
         case 'alignment':
-          if (v !== 'center') if (v) s += `|@alignment:${v}`;
+          if (v !== 'center') if (v) s += `|alignment:${v}`;
           break;
         case 'title':
-          if (v) s += `|@caption:${v}`;
+          if (v) s += `|caption:${v}`;
           break;
         case 'class':
-          if (v !== 'center') if (v) s += `|@align:${v}`;
+          if (v !== 'center') if (v) s += `|align:${v}`;
           break;
         case 'comment':
           if (v) s += `|#${v}`;
@@ -1169,7 +1198,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         case 'width':
         case 'height':
         default:
-          if (k && v) s += `|@${k}:${v}`;
+          if (k && v) s += `|${k}:${v}`;
           break;
       }
     }

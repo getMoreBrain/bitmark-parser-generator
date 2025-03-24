@@ -87,6 +87,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.diffTo]: {
+    tag: PropertyTag.diffTo,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.diffOp]: {
     tag: PropertyTag.diffOp,
     single: true,

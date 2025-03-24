@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.21.2"
+const VERSION = "8.23.1"
 
 //Parser peggy.js
 
@@ -63,6 +63,8 @@ Alex
 
 
 |image:https://apple.com|width:300|height: 400|
+
+text ==alt text of the inline image==|image:https://img.io/img.svg|width:400|height:200|#comment| more text
 
 |code: javascript
 
@@ -510,8 +512,6 @@ Alignment
 
 
 
-
-
 // bitmark+
 
 bitmarkPlus "StyledText"
@@ -535,6 +535,7 @@ InlineTag = InlineHalfTag InlineHalfTag
 InlineStyledText
   = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
   / InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: t}, type: "latex" } }
+  / InlineTag alt: $((!InlineTag .)* ) InlineTag '|image:' u: Url '|' ch: InlineMediaChain? { return { attrs: { alt, src: (u.pr + u.t).trim(), title: null, ...Object.assign({}, ...ch), zoomDisabled: true }, type: "image" } }
   / InlineTag ' '? t: $((!(' '? InlineTag) .)* ) ' '? InlineTag marks: AttrChain { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
   / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
   / ItalicTag ' '? t: $((!(' '? ItalicTag) .)* ) ' '? ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
@@ -549,6 +550,14 @@ InlineTagTags
 
 AttrChain
   = '|' ch: AttrChainItem+ { return ch }
+
+InlineMediaChain
+  = ch: InlineMediaChainItem* { return ch }
+
+InlineMediaChainItem
+  = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
+  / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
+  / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be an positive integer.', found: v }}
 
 // ==This is a link==|link:https://www.apple.com/|
 // ==503==|var:AHV Mindestbeitrag|
@@ -577,7 +586,7 @@ AttrChainItem
  // / p: $((!BlockTag word)*) BlockTag {return { [p]: true } }
 
 // glosary/index: ==term==|definition:term's definition|
-// symbol (inline image): ==power symbol==|symbol:https://img.com/ps.svg| >> alt:power symbol, zoomDisable:true, width and heigh?
+// symbol (inline image): ==power symbol==|symbol:https://img.com/ps.svg| >> alt:power symbol, zoomDisable:true
 // explanation:
 // description:
 // translation: ==Haus==|translation:house|lang:en|
