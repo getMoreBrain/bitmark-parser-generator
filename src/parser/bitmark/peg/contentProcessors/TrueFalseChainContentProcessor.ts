@@ -61,6 +61,7 @@ function buildTrueFalse(
       BitType.multipleChoice1,
       BitType.multipleResponse,
       BitType.multipleResponse1,
+      BitType.feedback,
     ])
   ) {
     // Treat as true/false for choices / responses
@@ -135,7 +136,11 @@ function buildStatementsChoicesResponses(
   const { bitType } = context;
   // NOTE: We handle V1 tags in V2 multiple-choice / multiple-response for maxium backwards compatibility
   const insertStatements = Config.isOfBitType(bitType, BitType.trueFalse);
-  const insertChoices = Config.isOfBitType(bitType, [BitType.multipleChoice, BitType.multipleChoice1]);
+  const insertChoices = Config.isOfBitType(bitType, [
+    BitType.multipleChoice,
+    BitType.multipleChoice1,
+    BitType.feedback,
+  ]);
   const insertResponses = Config.isOfBitType(bitType, [BitType.multipleResponse, BitType.multipleResponse1]);
   if (!insertStatements && !insertChoices && !insertResponses) return {};
 

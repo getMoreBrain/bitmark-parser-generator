@@ -140,6 +140,10 @@ class BaseBuilder {
     return ArrayUtils.asArray(value);
   }
 
+  protected getEmptyTextAst(context: BuildContext): TextAst {
+    return this.handleJsonText(context, true, ' ');
+  }
+
   /**
    * Convert the JsonText from the JSON to the AST format:
    * Input:

@@ -242,7 +242,7 @@ class BitmarkPegParserValidator {
 
     const { bodyAllowed } = variantConfig;
 
-    const hasBody = (cardBody.body as JsonText).length > 0;
+    const hasBody = (cardBody.bodyString as JsonText).length > 0;
 
     // this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, cardBody);
 

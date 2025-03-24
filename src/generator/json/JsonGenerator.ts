@@ -749,6 +749,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> choices
   // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices
+  // X bitmarkAst -> bits -> bitsValue -> cardNode -> feedbacks -> feedbacksValue -> choices
 
   protected enter_choices(node: NodeInfo, route: NodeInfo[]): boolean {
     return this.standardHandler(node, route, NodeType.cardNode, { array: true });
@@ -758,6 +759,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // X bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> responses
 
   protected enter_responses(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.cardNode, { array: true });
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> feedbacks
+
+  protected enter_feedbacks(node: NodeInfo, route: NodeInfo[]): boolean {
     return this.standardHandler(node, route, NodeType.cardNode, { array: true });
   }
 

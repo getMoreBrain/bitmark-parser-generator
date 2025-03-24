@@ -25,6 +25,7 @@ import { TextGenerator } from '../text/TextGenerator';
 import {
   BookJson,
   ChoiceJson,
+  FeedbackChoiceJson,
   ImageSourceJson,
   IngredientJson,
   MarkConfigJson,
@@ -589,7 +590,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         parent.key !== NodeType.alternativeDefinitionsValue &&
         parent.key !== NodeType.question &&
         parent.key !== NodeType.answer &&
-        parent.key !== NodeType.alternativeAnswersValue)
+        parent.key !== NodeType.alternativeAnswersValue &&
+        parent.key !== NodeType.reason)
     ) {
       return true;
     }
@@ -1254,12 +1256,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> choices -> choicesValue
   // bitmarkAst -> bits -> bitsValue -> cardNode -> quizzes -> quizzesValue -> choices -> choicesValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> feedbacks -> feedbacksValue -> choices -> choicesValue
 
   protected enter_choicesValue(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const choice = node.value as ChoiceJson;
+    const choice = node.value as ChoiceJson & FeedbackChoiceJson;
 
     this.writeNL();
-    if (choice.isCorrect) {
+    if (choice.isCorrect || choice.requireReason) {
       this.writeOPP();
     } else {
       this.writeOPM();
@@ -1285,6 +1288,21 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
     this.write(response.response);
     this.writeCL();
+
+    // Continue traversal
+    return true;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> feedbacks
+
+  protected between_feedbacks(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    this.writeCardSetCardDivider();
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> feedbacks -> feedbacksValue -> reason
+
+  protected enter_reason(_node: NodeInfo, _route: NodeInfo[]): boolean {
+    this.writeCardSetSideDivider();
 
     // Continue traversal
     return true;
@@ -2503,6 +2521,15 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // UTILITY FUNCTIONS
   //
 
+  /**
+   * Check if in a chain.
+   *
+   * Return false if at the root of the bit or a card bit, otherwise true.
+   * This is useful to determine if a newline should be written before certain properties.
+   *
+   * @param route
+   * @returns
+   */
   protected isChain(route: NodeInfo[]): boolean {
     const parent = this.getParentNode(route);
     // Root of bit
@@ -2510,11 +2537,15 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Root of card bits
     if (parent?.key === NodeType.cardBitsValue) return false;
+    if (parent?.key === NodeType.feedbacksValue) return false;
     if (parent?.key === NodeType.quizzesValue) return false;
     if (parent?.key === NodeType.pairsValue) return false;
     if (parent?.key === NodeType.matrixValue) return false;
     if (parent?.key === NodeType.definitionsValue) return false;
     if (parent?.key === NodeType.questionsValue) return false;
+
+    // Root of sub-card bits
+    if (parent?.key === NodeType.reason) return false;
 
     return true;
   }

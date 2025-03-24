@@ -33,6 +33,9 @@ import {
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
+  FeedbackChoiceJson,
+  FeedbackJson,
+  FeedbackReasonJson,
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
@@ -557,7 +560,7 @@ class Builder extends BaseBuilder {
       __isDefaultExample: data.__isDefaultExample ?? false,
     };
 
-    // Push reasonableNumOfChars down the tree for the interview bit
+    // Push reasonableNumOfChars down the tree for the interview bits
     if (Config.isOfBitType(node.bitType, BitType.interview)) {
       this.pushDownTree(
         context,
@@ -565,6 +568,19 @@ class Builder extends BaseBuilder {
         undefined,
         cardNode,
         'questions',
+        PropertyConfigKey.reasonableNumOfChars,
+        data.reasonableNumOfChars,
+      );
+    }
+
+    // Push reasonableNumOfChars down the tree for the feedback bits
+    if (Config.isOfBitType(node.bitType, BitType.feedback)) {
+      this.pushDownTree(
+        context,
+        undefined,
+        undefined,
+        cardNode,
+        ['feedbacks', 'reason'],
         PropertyConfigKey.reasonableNumOfChars,
         data.reasonableNumOfChars,
       );
@@ -659,6 +675,92 @@ class Builder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
       ignoreEmptyString: ['book', 'reference'],
+    });
+
+    return node;
+  }
+
+  /**
+   * Build feedbackChoices[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedbackChoices(
+    context: BuildContext,
+    data: Partial<FeedbackChoiceJson>[] | undefined,
+  ): FeedbackChoiceJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.buildFeedbackChoice(context, d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
+   * Build feedbackChoice node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedbackChoice(
+    context: BuildContext,
+    data: Partial<FeedbackChoiceJson> | undefined,
+  ): FeedbackChoiceJson | undefined {
+    if (!data) return undefined;
+
+    // NOTE: Node order is important and is defined here
+    const node: FeedbackChoiceJson = {
+      choice: data.choice ?? '',
+      requireReason: !!data.requireReason,
+      item: this.handleJsonText(context, true, data.item),
+      lead: this.handleJsonText(context, true, data.lead),
+      hint: this.handleJsonText(context, true, data.hint),
+      instruction: this.handleJsonText(context, true, data.instruction),
+      ...this.toExample(data.__isDefaultExample, data.example, true),
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      ignoreUndefined: ['example'],
+    });
+
+    return node;
+  }
+
+  /**
+   * Build feedbackReason node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedbackReason(
+    context: BuildContext,
+    data: Partial<FeedbackReasonJson> | undefined,
+  ): FeedbackReasonJson | undefined {
+    if (!data) return undefined;
+
+    // Set default example
+    // Not __testAst - there is no default example
+    const defaultExample = this.handleJsonText(context, true, 'true');
+
+    // NOTE: Node order is important and is defined here
+    const node: FeedbackReasonJson = {
+      text: data.text ?? '',
+      reasonableNumOfChars: (data.reasonableNumOfChars ?? undefined) as number,
+      item: this.handleJsonText(context, true, data.item),
+      lead: this.handleJsonText(context, true, data.lead),
+      hint: this.handleJsonText(context, true, data.hint),
+      instruction: this.handleJsonText(context, true, data.instruction),
+      ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
+      __textAst: data.__textAst,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      ignoreUndefined: ['example', 'reasonableNumOfChars'],
     });
 
     return node;
@@ -800,7 +902,68 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Build quiz[] node
+   * Build feedbacks[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedbacks(
+    context: BuildContext,
+    data: Partial<FeedbackJson>[] | undefined,
+  ): FeedbackJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.buildFeedback(context, d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
+   * Build feedback node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedback(context: BuildContext, data: Partial<FeedbackJson> | undefined): FeedbackJson | undefined {
+    if (!data) return undefined;
+
+    let choices: FeedbackChoiceJson[] | undefined;
+    let reason: FeedbackReasonJson | undefined;
+
+    if (data.choices) {
+      choices = this.buildFeedbackChoices(context, data.choices);
+
+      // Push __isDefaultExample down the tree
+      // this.pushExampleDownTreeBoolean(context, data.__isDefaultExample, convertedExample.example, true, choices);
+    } else {
+      // No choices, not a valid feedback
+      return undefined;
+    }
+
+    if (data.reason) {
+      reason = this.buildFeedbackReason(context, data.reason);
+    }
+
+    // NOTE: Node order is important and is defined here
+    const node: FeedbackJson = {
+      item: this.handleJsonText(context, true, data.item),
+      lead: this.handleJsonText(context, true, data.lead),
+      hint: this.handleJsonText(context, true, data.hint),
+      instruction: this.handleJsonText(context, true, data.instruction),
+      // isExample: !!data.__defaultExample,
+      choices: choices as FeedbackChoiceJson[],
+      reason: reason as FeedbackReasonJson, // Might be undefined
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+    });
+
+    return node;
+  }
+
+  /**
+   * Build quizzes[] node
    *
    * @param data - data for the node
    * @returns
@@ -2163,6 +2326,7 @@ class Builder extends BaseBuilder {
       statements?: Partial<StatementJson>[];
       choices?: Partial<ChoiceJson>[];
       responses?: Partial<ResponseJson>[];
+      feedbacks?: Partial<FeedbackJson>[];
       quizzes?: Partial<QuizJson>[];
       heading?: Partial<HeadingJson>;
       pairs?: Partial<PairJson>[];
@@ -2184,6 +2348,7 @@ class Builder extends BaseBuilder {
       statements: this.buildStatements(context, data.statements),
       choices: this.buildChoices(context, data.choices),
       responses: this.buildResponses(context, data.responses),
+      feedbacks: this.buildFeedbacks(context, data.feedbacks),
       quizzes: this.buildQuizzes(context, data.quizzes),
       heading: this.buildHeading(context, data.heading),
       pairs: this.buildPairs(context, data.pairs),
@@ -2415,7 +2580,7 @@ class Builder extends BaseBuilder {
   ): void {
     if (value === undefined) return;
 
-    // Add value to card nodes if required (TODO - nested paths)
+    // Add value to card nodes if required
     if (cardNode && cardNodePath) {
       if (!Array.isArray(cardNodePath)) cardNodePath = [cardNodePath];
 

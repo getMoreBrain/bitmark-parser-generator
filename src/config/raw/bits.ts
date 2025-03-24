@@ -1633,18 +1633,28 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.match,
     cardSet: CardSetConfigKey._matchMatrix,
   },
-
   [BitType.matchAudio]: {
     since: '1.3.0',
     baseBitType: BitType.match,
     cardSet: CardSetConfigKey._matchAudioPairs,
   },
-
   [BitType.matchPicture]: {
     since: '1.3.0',
     baseBitType: BitType.match,
     cardSet: CardSetConfigKey._matchImagePairs,
   },
+  [BitType.feedback]: {
+    since: '3.13.0',
+    baseBitType: BitType._standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.reasonableNumOfChars,
+      },
+    ],
+    cardSet: CardSetConfigKey._feedback,
+  },
+  [BitType.learningDocumentationFeedback]: { since: '3.13.0', baseBitType: BitType.feedback },
   [BitType.multipleChoice1]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
