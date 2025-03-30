@@ -129,6 +129,7 @@ class Builder extends BaseBuilder {
     diffRef?: string;
     diffContext?: string;
     diffTime?: number;
+    platformPath?: string;
     releaseVersion?: string;
     releaseKind?: string;
     releaseDate?: string;
@@ -372,6 +373,7 @@ class Builder extends BaseBuilder {
       diffRef: this.toAstProperty(PropertyConfigKey.diffRef, data.diffRef),
       diffContext: this.toAstProperty(PropertyConfigKey.diffContext, data.diffContext),
       diffTime: this.toAstProperty(PropertyConfigKey.diffTime, data.diffTime),
+      platformPath: this.toAstProperty(PropertyConfigKey.platformPath, data.platformPath),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, data.releaseVersion),
       releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, data.releaseKind),
       releaseDate: this.toAstProperty(PropertyConfigKey.releaseDate, data.releaseDate),

@@ -112,6 +112,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
+  [PropertyConfigKey.platformPath]: {
+    tag: PropertyTag.platformPath,
+    single: true,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.releaseVersion]: {
     tag: PropertyTag.releaseVersion,
     single: true,
