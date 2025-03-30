@@ -113,6 +113,7 @@ const propertyConfigKeys = {
   partialAnswer: 'partialAnswer',
   partner: 'partner', // Deprecated, replaced by person
   person: 'person',
+  platformPath: 'platformPath',
   pointerLeft: 'pointerLeft',
   pointerTop: 'pointerTop',
   posterImage: 'posterImage',
