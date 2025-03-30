@@ -127,12 +127,14 @@ function propertyContentProcessor(
             return !BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
 
           case PropertyFormat.bitmarkMinusMinus:
+            v = StringUtils.isString(v) ? v : '';
             return textParser.toAst(v as BreakscapedString, {
               textFormat: TextFormat.bitmarkMinusMinus,
               isProperty: true,
             });
 
           case PropertyFormat.bitmarkPlusPlus:
+            v = StringUtils.isString(v) ? v : '';
             return textParser.toAst(v as BreakscapedString, {
               textFormat: TextFormat.bitmarkPlusPlus,
               isProperty: true,
