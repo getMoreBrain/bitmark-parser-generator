@@ -321,6 +321,8 @@ const NodeType = superenum({
   partialAnswer: 'partialAnswer',
   partialAnswerValue: 'partialAnswerValue',
   person: 'person',
+  platformPath: 'platformPath',
+  platformPathValue: 'platformPathValue',
   pointerLeft: 'pointerLeft',
   pointerLeftValue: 'pointerLeftValue',
   pointerTop: 'pointerTop',

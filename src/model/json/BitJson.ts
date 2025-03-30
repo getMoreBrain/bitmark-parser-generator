@@ -34,6 +34,7 @@ export interface BitJson {
   diffRef: string;
   diffContext: string;
   diffTime: number;
+  platformPath: string;
   releaseVersion: string;
   releaseKind: string;
   releaseDate: string;
