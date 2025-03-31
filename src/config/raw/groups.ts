@@ -92,10 +92,6 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
-        configKey: PropertyConfigKey.platformPath,
-      },
-      {
-        type: BitTagType.property,
         configKey: PropertyConfigKey.ageRange,
         maxCount: Count.infinity,
       },

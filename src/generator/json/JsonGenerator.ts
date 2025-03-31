@@ -1745,6 +1745,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.revealSolutions == null) bitJson.revealSolutions = false;
       }
 
+      // Special case for 'platform-path' bits
+      if (Config.isOfBitType(bitType, BitType.platformPath)) {
+        if (bitJson.path == null) bitJson.path = '';
+      }
+
       // Remove top level example if it is not required
       if (isTopLevelExample) {
         if (bitJson.isExample == null) bitJson.isExample = false;

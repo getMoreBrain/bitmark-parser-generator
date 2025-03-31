@@ -81,7 +81,7 @@ export interface Bit {
   diffRef?: Property;
   diffContext?: Property;
   diffTime?: Property;
-  platformPath?: Property;
+  path?: Property;
   releaseVersion?: Property;
   releaseKind?: Property;
   releaseDate?: Property;
