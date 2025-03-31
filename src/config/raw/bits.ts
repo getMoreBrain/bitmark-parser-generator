@@ -879,6 +879,16 @@ const BITS: _BitsConfig = {
   [BitType.exampleCollapsible]: { since: '1.21.0', baseBitType: BitType.article },
   [BitType.hintCollapsible]: { since: '1.21.0', baseBitType: BitType.article },
   [BitType.bugCollapsible]: { since: '1.21.0', baseBitType: BitType.article },
+  [BitType.platformPath]: {
+    since: '3.14.1',
+    baseBitType: BitType._standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.path,
+      },
+    ],
+  },
   [BitType.container]: {
     since: '1.9.0',
     baseBitType: BitType.article,
