@@ -112,8 +112,8 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
-  [PropertyConfigKey.platformPath]: {
-    tag: PropertyTag.platformPath,
+  [PropertyConfigKey.path]: {
+    tag: PropertyTag.path,
     single: true,
     format: PropertyFormat.trimmedString,
   },

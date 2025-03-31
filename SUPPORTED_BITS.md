@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.14.0
+Version: 3.14.1
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -384,6 +384,7 @@ page-subpage (since: 1.6.6)
 page-subscribe (since: 1.5.10)
 parameters (since: 1.18.0)
 photo (since: 1.3.0)
+platform-path (since: 3.14.1)
 preparation-note (since: 1.3.0)
 pronunciation-table (since: 3.1.0)
 prototype-images (since: 1.6.1)

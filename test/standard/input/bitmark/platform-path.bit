@@ -1,5 +1,6 @@
-[.warning:bitmark++]
+[.platform-path:bitmark++]
 [@ageRange:18][@ageRange:120]
+[@path:/this/is/a/path]
 
 **Some bold text,**
 followed by some plain text. cloze open close cloze1 book.
@@ -8,8 +9,11 @@ followed by some plain text. cloze open close cloze1 book.
 Some more text.
 
 
-[.warning-alt:bitmark--]
+[.platform-path:bitmark--]
 [@id:151971]
 [%][%][%][%marginNumber]
+[@path:/this/is/a/path]
 
 The bit content
+
+[.platform-path]
