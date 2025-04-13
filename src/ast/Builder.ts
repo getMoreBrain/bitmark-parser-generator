@@ -290,6 +290,7 @@ class Builder extends BaseBuilder {
     body?: Partial<Body>;
     sampleSolution?: string;
     additionalSolutions?: string | string[];
+    heading?: Partial<HeadingJson>;
     elements?: string[];
     flashcards?: Partial<FlashcardJson>[];
     definitions?: Partial<DefinitionListItemJson>[];
@@ -297,7 +298,6 @@ class Builder extends BaseBuilder {
     statements?: Partial<StatementJson>[];
     responses?: Partial<ResponseJson>[];
     quizzes?: Partial<QuizJson>[];
-    heading?: Partial<HeadingJson>;
     pairs?: Partial<PairJson>[];
     matrix?: Partial<MatrixJson>[];
     pronunciationTable?: Partial<PronunciationTableJson>;
@@ -2342,6 +2342,7 @@ class Builder extends BaseBuilder {
     },
   ): CardNode | undefined {
     const node: CardNode = {
+      heading: this.buildHeading(context, data.heading),
       questions: this.buildQuestions(context, data.questions),
       elements: data.elements,
       flashcards: this.buildFlashcards(context, data.flashcards),
@@ -2352,7 +2353,6 @@ class Builder extends BaseBuilder {
       responses: this.buildResponses(context, data.responses),
       feedbacks: this.buildFeedbacks(context, data.feedbacks),
       quizzes: this.buildQuizzes(context, data.quizzes),
-      heading: this.buildHeading(context, data.heading),
       pairs: this.buildPairs(context, data.pairs),
       matrix: this.buildMatricies(context, data.matrix),
       pronunciationTable: this.buildPronunciationTable(context, data.pronunciationTable),

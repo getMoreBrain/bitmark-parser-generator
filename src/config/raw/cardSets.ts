@@ -117,6 +117,10 @@ const CARDSETS: _CardSetsConfig = {
               type: BitTagType.group,
               configKey: GroupConfigKey.group_trueFalse,
             },
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
           ],
           bodyAllowed: false,
         },
@@ -137,6 +141,10 @@ const CARDSETS: _CardSetsConfig = {
             {
               type: BitTagType.group,
               configKey: GroupConfigKey.group_standardExample,
+            },
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
             },
           ],
           bodyAllowed: true,

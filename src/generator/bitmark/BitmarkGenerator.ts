@@ -559,6 +559,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // -> alternativeAnswersValue -> text
 
   protected enter_text(node: NodeInfo, route: NodeInfo[]): boolean {
+    const textFormat = this.getTextFormat(route) ?? TextFormat.bitmarkMinusMinus;
     const parent = this.getParentNode(route);
     if (
       !parent ||
@@ -574,7 +575,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (node.value) {
       this.writeNL();
-      this.textGenerator.generateSync(node.value as TextAst, TextFormat.bitmarkMinusMinus);
+      this.textGenerator.generateSync(node.value as TextAst, textFormat);
     }
 
     // Stop traversal of this branch

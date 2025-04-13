@@ -54,6 +54,12 @@ import {
   ProcessedCardVariant,
 } from '../BitmarkPegParserTypes';
 
+interface HeadingData {
+  heading: HeadingJson;
+  isDefaultExampleCardSet: boolean;
+  exampleCardSet: ExampleJson | undefined;
+}
+
 function buildCards(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
@@ -408,16 +414,23 @@ function parseFeedback(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
+  let feedback: Partial<FeedbackJson> | undefined;
   const feedbacks: Partial<FeedbackJson>[] = [];
 
-  let sideIdx = 0;
-  let feedback: Partial<FeedbackJson> | undefined;
+  // Extract the heading card if it exists
+  const headingData = extractHeadingCard(cardSet);
 
-  for (const card of cardSet.cards) {
-    sideIdx = 0;
+  for (let cardIdx = 0; cardIdx < cardSet.cards.length; cardIdx++) {
+    const card = cardSet.cards[cardIdx];
+
+    // Skip the headings card if it exists
+    if (headingData && cardIdx === 0) continue;
+
     feedback = undefined;
 
-    for (const side of card.sides) {
+    for (let sideIdx = 0; sideIdx < card.sides.length; sideIdx++) {
+      const side = card.sides[sideIdx];
+
       for (const content of side.variants) {
         const tags = content.data;
 
@@ -425,6 +438,7 @@ function parseFeedback(
 
         if (sideIdx === 0) {
           // First side (feedback choices)
+
           const choices: Partial<FeedbackChoiceJson>[] = [];
 
           if (choiceTags && choiceTags.length > 0) {
@@ -447,9 +461,8 @@ function parseFeedback(
             choices: choices as FeedbackChoiceJson[],
           };
           if (feedback) feedbacks.push(feedback);
-        } else {
+        } else if (sideIdx === 1) {
           // Second side (feedback reason)
-
           const reason: Partial<FeedbackReasonJson> = {
             text: cardBodyStr ?? '',
             __textAst: cardBody?.body as TextAst,
@@ -459,19 +472,12 @@ function parseFeedback(
             feedback.reason = reason as FeedbackReasonJson;
           }
         }
-
-        // Insert choices / responses
-
-        // } else {
-        //   context.addWarning('Ignoring card with empty quiz', content);
-        // }
       }
-
-      sideIdx++;
     }
   }
 
   return {
+    heading: headingData?.heading,
     feedbacks: feedbacks.length > 0 ? feedbacks : undefined,
   };
 }
@@ -597,58 +603,53 @@ function parseMatchPairs(
   bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  let sideIdx = 0;
-  let isHeading = false;
-  let heading: Partial<HeadingJson> | undefined;
   const pairs: Partial<PairJson>[] = [];
-  let forKeys: string | undefined = undefined;
-  let forValues: string[] = [];
   let pairKey: string | undefined = undefined;
   let pairValues: string[] = [];
   let _pairValuesAst: TextAst[] = [];
   let keyAudio: AudioResourceJson | undefined = undefined;
   let keyImage: ImageResourceJson | undefined = undefined;
   let extraTags: BitContentProcessorResult = {};
-  let isDefaultExampleCardSet = false;
-  let exampleCardSet: ExampleJson | undefined;
   let isDefaultExampleCard = false;
   let exampleCard: ExampleJson | undefined;
   // let variant: ProcessedCardVariant | undefined;
 
-  for (const card of cardSet.cards) {
-    isHeading = false;
-    forKeys = undefined;
-    forValues = [];
+  // Extract the heading card if it exists
+  const headingValuesIsArray = Config.isOfBitType(bitType, BitType.matchMatrix);
+  const headingData = extractHeadingCard(cardSet, headingValuesIsArray);
+
+  const isDefaultExampleCardSet = headingData?.isDefaultExampleCardSet ?? false;
+  let exampleCardSet = headingData?.exampleCardSet;
+
+  for (let cardIdx = 0; cardIdx < cardSet.cards.length; cardIdx++) {
+    const card = cardSet.cards[cardIdx];
+
+    // Skip the headings card if it exists
+    if (headingData && cardIdx === 0) continue;
+
     pairKey = undefined;
     pairValues = [];
     _pairValuesAst = [];
     keyAudio = undefined;
     keyImage = undefined;
-    sideIdx = 0;
     extraTags = {};
     isDefaultExampleCard = false;
     exampleCard = undefined;
 
-    for (const side of card.sides) {
+    for (let sideIdx = 0; sideIdx < card.sides.length; sideIdx++) {
+      const side = card.sides[sideIdx];
+
       for (const content of side.variants) {
         // variant = content;
-        const { cardBody, cardBodyStr, title, resources, __isDefaultExample, example, ...tags } = content.data;
+        const { cardBody, cardBodyStr, resources, __isDefaultExample, example, ...tags } = content.data;
 
         // Example
         isDefaultExampleCard = __isDefaultExample === true ? true : isDefaultExampleCard;
         exampleCard = example ? (example as TextAst) : exampleCard;
 
-        // Get the 'heading' which is the [#title] at level 1
-        const heading = title && title[1].titleString;
-        if (heading != null) isHeading = true;
-
         if (sideIdx === 0) {
           // First side
-          forKeys = heading;
-          if (heading != null) {
-            isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
-            exampleCardSet = example ? (example as TextAst) : exampleCardSet;
-          } else if (Array.isArray(resources) && resources.length > 0) {
+          if (Array.isArray(resources) && resources.length > 0) {
             // TODO - should search the correct resource type based on the bit type
             const resource = resources[0];
             // console.log('WARNING: Match card has resource on first side', tags.resource);
@@ -662,19 +663,12 @@ function parseMatchPairs(
             pairKey = cardBodyStr;
           }
         } else {
-          // Subsequent sides
-          forValues.push(heading ?? '');
-          if (heading != null) {
-            isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
-            exampleCardSet = example ? (example as TextAst) : exampleCardSet;
-          } else if (title == null) {
-            // If not a heading, it is a pair
-            const value = cardBodyStr ?? '';
-            const valueAst = cardBody?.body as TextAst;
-            pairValues.push(value);
-            _pairValuesAst.push(valueAst);
-            if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = valueAst;
-          }
+          // Subsequent sides (pair)
+          const value = cardBodyStr ?? '';
+          const valueAst = cardBody?.body as TextAst;
+          pairValues.push(value);
+          _pairValuesAst.push(valueAst);
+          if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = valueAst;
 
           // Fix: https://github.com/getMoreBrain/cosmic/issues/5454
           delete tags.item;
@@ -687,52 +681,32 @@ function parseMatchPairs(
           ...tags,
         };
       }
-      sideIdx++;
     }
 
-    if (isHeading) {
-      let forValuesFinal: string | string[] = forValues;
-      if (Config.isOfBitType(bitType, BitType.matchMatrix)) {
-        // forValues is an array of values
-        forValuesFinal = forValues;
-      } else {
-        // Standard match, forValues is a single value
-        if (forValues.length >= 1) {
-          forValuesFinal = forValues[forValues.length - 1];
-        } else {
-          forValuesFinal = '';
-        }
-      }
-      heading = {
-        forKeys: forKeys ?? '',
-        forValues: forValuesFinal,
-      };
-    } else {
-      // if (pairKey || keyAudio || keyImage) {
-      // Calculate final example and __isDefaultExample
-      if (isDefaultExampleCard) exampleCardSet = undefined;
-      const __isDefaultExample = isDefaultExampleCard || isDefaultExampleCardSet;
-      const example = exampleCard || exampleCardSet;
+    // if (pairKey || keyAudio || keyImage) {
+    // Calculate final example and __isDefaultExample
+    if (isDefaultExampleCard) exampleCardSet = undefined;
+    const __isDefaultExample = isDefaultExampleCard || isDefaultExampleCardSet;
+    const example = exampleCard || exampleCardSet;
 
-      const pair: Partial<PairJson> = {
-        key: pairKey ?? '',
-        keyAudio,
-        keyImage,
-        values: pairValues,
-        __valuesAst: _pairValuesAst,
-        ...extraTags,
-        __isDefaultExample,
-        example,
-      };
-      if (pair) pairs.push(pair);
-      // } else {
-      //   context.addWarning('Ignoring card with empty body text', variant);
-      // }
-    }
+    const pair: Partial<PairJson> = {
+      key: pairKey ?? '',
+      keyAudio,
+      keyImage,
+      values: pairValues,
+      __valuesAst: _pairValuesAst,
+      ...extraTags,
+      __isDefaultExample,
+      example,
+    };
+    if (pair) pairs.push(pair);
+    // } else {
+    //   context.addWarning('Ignoring card with empty body text', variant);
+    // }
   }
 
   return {
-    heading,
+    heading: headingData?.heading,
     pairs: pairs.length > 0 ? pairs : undefined,
   };
 }
@@ -742,11 +716,6 @@ function parseMatchMatrix(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  let sideIdx = 0;
-  let isHeading = false;
-  let heading: Partial<HeadingJson> | undefined;
-  let forKeys: string | undefined = undefined;
-  let forValues: string[] = [];
   let matrixKey: string | undefined = undefined;
   let matrixKeyTags: BitContentProcessorResult | undefined = undefined;
   const matrix: Partial<MatrixJson>[] = [];
@@ -754,8 +723,6 @@ function parseMatchMatrix(
   let matrixCellValues: string[] = [];
   let _matrixCellValuesAst: TextAst[] = [];
   let matrixCellTags: BitContentProcessorResult = {};
-  let isDefaultExampleCardSet = false;
-  let exampleCardSet: ExampleJson | undefined;
   let isDefaultExampleCard = false;
   let exampleCard: ExampleJson | undefined;
   let isDefaultExampleSide = false;
@@ -767,23 +734,32 @@ function parseMatchMatrix(
   // let keyImage: ImageResource | undefined = undefined;
   // let variant: ProcessedCardVariant | undefined;
 
-  for (const card of cardSet.cards) {
-    isHeading = false;
-    forKeys = undefined;
+  // Extract the heading card if it exists
+  const headingData = extractHeadingCard(cardSet, true);
+
+  const isDefaultExampleCardSet = headingData?.isDefaultExampleCardSet ?? false;
+  let exampleCardSet = headingData?.exampleCardSet;
+
+  for (let cardIdx = 0; cardIdx < cardSet.cards.length; cardIdx++) {
+    const card = cardSet.cards[cardIdx];
+
+    // Skip the headings card if it exists
+    if (headingData && cardIdx === 0) continue;
+
     matrixKey = undefined;
     matrixKeyTags = undefined;
-    forValues = [];
     // keyAudio = undefined;
     // keyImage = undefined;
     matrixCells = [];
     matrixCellValues = [];
     _matrixCellValuesAst = [];
-    sideIdx = 0;
     isDefaultExampleCard = false;
     exampleCard = undefined;
     isCaseSensitiveMatrix = undefined;
 
-    for (const side of card.sides) {
+    for (let sideIdx = 0; sideIdx < card.sides.length; sideIdx++) {
+      const side = card.sides[sideIdx];
+
       matrixCellValues = [];
       _matrixCellValuesAst = [];
       matrixCellTags = {};
@@ -795,7 +771,7 @@ function parseMatchMatrix(
         // variant = content;
         const tags = content.data;
 
-        const { title, cardBody, cardBodyStr, __isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
+        const { cardBody, cardBodyStr, __isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
 
         // Example
         isDefaultExampleSide = __isDefaultExample === true ? true : isDefaultExampleSide;
@@ -804,46 +780,21 @@ function parseMatchMatrix(
         // Merge the tags into the matrix cell tags
         Object.assign(matrixCellTags, restTags);
 
-        // Get the 'heading' which is the [#title] at level 1
-        const heading = title && title[1].titleString;
-        if (heading != null) isHeading = true;
-
         if (sideIdx === 0) {
-          // First side
-          forKeys = heading;
-          if (heading != null) {
-            // } else if (tags.resource) {
-            //   console.log('WARNING: Match card has resource on first side', tags.resource);
-            //   if (tags.resource.type === ResourceTag.audio) {
-            //     keyAudio = tags.resource as AudioResource;
-            //   } else if (tags.resource.type === ResourceTag.image) {
-            //     keyImage = tags.resource as ImageResource;
-            //   }
-            isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
-            exampleCardSet = example ? example : exampleCardSet;
-          } else {
-            // If not a heading or resource, it is a matrix
-            matrixKey = cardBodyStr;
-            matrixKeyTags = restTags;
-            isDefaultExampleCard = __isDefaultExample === true ? true : isDefaultExampleCard;
-            exampleCard = example ? example : exampleCard;
-            isCaseSensitiveMatrix = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
-          }
+          // First side (matrix)
+          matrixKey = cardBodyStr;
+          matrixKeyTags = restTags;
+          isDefaultExampleCard = __isDefaultExample === true ? true : isDefaultExampleCard;
+          exampleCard = example ? example : exampleCard;
+          isCaseSensitiveMatrix = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
         } else {
-          // Subsequent sides
-          forValues.push(heading ?? Breakscape.EMPTY_STRING);
-          if (heading != null) {
-            isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
-            exampleCardSet = example ? example : exampleCardSet;
-          } else if (tags.title == null) {
-            // If not a heading, it is a matrix cell value
-            const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
-            const valueAst = cardBody?.body as TextAst;
-            matrixCellValues.push(value);
-            _matrixCellValuesAst.push(valueAst);
-            if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = valueAst;
-            isCaseSensitiveCell = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
-          }
+          // Subsequent sides (matrix cell value)
+          const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
+          const valueAst = cardBody?.body as TextAst;
+          matrixCellValues.push(value);
+          _matrixCellValuesAst.push(valueAst);
+          if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = valueAst;
+          isCaseSensitiveCell = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
         }
       }
 
@@ -865,34 +816,25 @@ function parseMatchMatrix(
         };
         if (matrixCell) matrixCells.push(matrixCell);
       }
-
-      sideIdx++;
     }
 
-    if (isHeading) {
-      heading = {
-        forKeys: forKeys ?? Breakscape.EMPTY_STRING,
-        forValues,
-      };
-    } else {
-      // if (matrixKey) {
-      const m: Partial<MatrixJson> = {
-        key: matrixKey ?? Breakscape.EMPTY_STRING,
-        // item: matrixItem ?? Breakscape.EMPTY_STRING,
-        // keyAudio,
-        // keyImage,
-        cells: matrixCells as MatrixCellJson[],
-        ...matrixKeyTags,
-      };
-      if (m) matrix.push(m);
-      // } else {
-      //   context.addWarning('Ignoring card with empty body text', variant);
-      // }
-    }
+    // if (matrixKey) {
+    const m: Partial<MatrixJson> = {
+      key: matrixKey ?? Breakscape.EMPTY_STRING,
+      // item: matrixItem ?? Breakscape.EMPTY_STRING,
+      // keyAudio,
+      // keyImage,
+      cells: matrixCells as MatrixCellJson[],
+      ...matrixKeyTags,
+    };
+    if (m) matrix.push(m);
+    // } else {
+    //   context.addWarning('Ignoring card with empty body text', variant);
+    // }
   }
 
   return {
-    heading,
+    heading: headingData?.heading,
     matrix: matrix.length > 0 ? matrix : undefined,
   };
 }
@@ -946,13 +888,14 @@ function parseTable(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  let cardIdx = 0;
   let isHeading = false;
   const columns: JsonText[] = [];
   const rows: JsonText[][] = [];
   let rowValues: JsonText[] = [];
 
-  for (const card of cardSet.cards) {
+  for (let cardIdx = 0; cardIdx < cardSet.cards.length; cardIdx++) {
+    const card = cardSet.cards[cardIdx];
+
     isHeading = false;
     rowValues = [];
 
@@ -982,8 +925,6 @@ function parseTable(
     if (!isHeading) {
       rows.push(rowValues);
     }
-
-    cardIdx++;
   }
 
   const table: Partial<TableJson> = {
@@ -1094,13 +1035,14 @@ function parseCaptionDefinitionsList(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  let cardIdx = 0;
   let isHeading = false;
   const columns: string[] = [];
   const rows: string[][] = [];
   let rowValues: string[] = [];
 
-  for (const card of cardSet.cards) {
+  for (let cardIdx = 0; cardIdx < cardSet.cards.length; cardIdx++) {
+    const card = cardSet.cards[cardIdx];
+
     isHeading = false;
     rowValues = [];
 
@@ -1128,8 +1070,6 @@ function parseCaptionDefinitionsList(
     if (!isHeading) {
       rows.push(rowValues);
     }
-
-    cardIdx++;
   }
 
   const captionDefinitionList: Partial<CaptionDefinitionListJson> | undefined =
@@ -1176,6 +1116,78 @@ function parseCardBits(
   return {
     cardBits: cardBits.length > 0 ? cardBits : undefined,
   };
+}
+
+function extractHeadingCard(cardSet: ProcessedCardSet, valuesIsArray = false): HeadingData | undefined {
+  let isHeading = false;
+  let heading: Partial<HeadingJson> | undefined;
+  let forKeys: string | undefined = undefined;
+  const forValues: string[] = [];
+  let isDefaultExampleCardSet = false;
+  let exampleCardSet: ExampleJson | undefined;
+
+  if (cardSet.cards.length === 0) return undefined;
+  const card = cardSet.cards[0];
+
+  for (let sideIdx = 0; sideIdx < card.sides.length; sideIdx++) {
+    const side = card.sides[sideIdx];
+
+    if (side.variants.length === 0) continue;
+
+    const content = side.variants[0];
+    const tags = content.data;
+
+    const { title, __isDefaultExample, example } = tags;
+
+    // Get the 'heading' which is the [#title] at level 1
+    const heading = title && title[1].titleString;
+    if (heading != null) isHeading = true;
+
+    if (sideIdx === 0) {
+      // 1st side
+
+      if (isHeading) {
+        forKeys = heading;
+        isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
+        exampleCardSet = example ? (example as TextAst) : exampleCardSet;
+      }
+    } /*if (sideIdx === 1)*/ else {
+      // 2nd side
+      if (isHeading) {
+        forValues.push(heading ?? '');
+        isDefaultExampleCardSet = __isDefaultExample === true ? true : isDefaultExampleCardSet;
+        exampleCardSet = example ? (example as TextAst) : exampleCardSet;
+      }
+    }
+  }
+
+  if (isHeading) {
+    let forValuesFinal: string | string[] = forValues;
+    if (valuesIsArray) {
+      // forValues is an array of values
+      forValuesFinal = forValues;
+    } else {
+      // Standard match, forValues is a single value
+      if (forValues.length >= 1) {
+        forValuesFinal = forValues[forValues.length - 1];
+      } else {
+        forValuesFinal = '';
+      }
+    }
+
+    heading = {
+      forKeys: forKeys ?? '',
+      forValues: forValuesFinal,
+    };
+  }
+
+  return heading
+    ? {
+        heading: heading as HeadingJson,
+        isDefaultExampleCardSet,
+        exampleCardSet,
+      }
+    : undefined;
 }
 
 export { buildCards };
