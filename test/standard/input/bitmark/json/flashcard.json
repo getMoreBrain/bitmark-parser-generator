@@ -201,9 +201,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.11.0",
+      "version": "3.14.1",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.23.1"
     },
     "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n[@icon:https://image.io/question1.svg]\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n[@icon:https://image.io/question2.svg]\n--\nAnswer 2\nCard 2, Side 2\n[@icon:https://image.io/answer2.svg]\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
   },
@@ -358,9 +358,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.11.0",
+      "version": "3.14.1",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.23.1"
     },
     "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer"
   },
@@ -581,9 +581,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.11.0",
+      "version": "3.14.1",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.23.1"
     },
     "bitmark": "[.flashcard]\n[@example]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]"
   },
@@ -795,10 +795,355 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.11.0",
+      "version": "3.14.1",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.23.1"
     },
     "bitmark": "[.flashcard]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
+  },
+  {
+    "bit": {
+      "type": "flashcard-1",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["1785935"],
+      "revealSolutions": false,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "K, der den Verspätungszuschlag noch „abbiegen“ will, fragt sich, ob denn Entschuldigungsgründe für die verspätete Abgabe bestehen. Dann, so hat er gehört, ist ein Verspätungszuschlag nicht festzusetzen. Im Einzelnen nennt er folgende Vorfälle: Erkrankung, Abwesenheit, Vertreterverschulden",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Erkrankung:",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "attrs": {},
+                        "content": [
+                          {
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "text": "entschuldigt",
+                            "type": "text"
+                          },
+                          {
+                            "text": " bei plötzlicher schwerer Erkrankung;",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {}
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "attrs": {},
+                        "content": [
+                          {
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "text": "nicht entschuldigt",
+                            "type": "text"
+                          },
+                          {
+                            "text": ", wenn bei dauerhafter Erkrankung die zumutbare Bestellung eines Vertreters unterblieben ist.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {}
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Abwesenheit:",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "attrs": {},
+                        "content": [
+                          {
+                            "text": "generell sind bei Abwesenheit aus privaten oder geschäftlichen Gründen Vorkehrungen für die Entgegennahme von Verwaltungsakten zu treffen, so dass eine deshalb eingetretene Verspätung ",
+                            "type": "text"
+                          },
+                          {
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "text": "nicht entschuldigt",
+                            "type": "text"
+                          },
+                          {
+                            "text": " ist;",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "attrs": {},
+                        "content": [
+                          {
+                            "text": "als ",
+                            "type": "text"
+                          },
+                          {
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "text": "entschuldigt",
+                            "type": "text"
+                          },
+                          {
+                            "text": " gilt jedoch eine kurzfristige, urlaubsbedingte Abwesenheit ohne konkrete Anhaltspunkte für einen zu erwartenden Verwaltungsakt.",
+                            "type": "text"
+                          },
+                          {
+                            "type": "hardBreak"
+                          },
+                          {
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "text": "Vertreterverschulden:",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "attrs": {},
+                        "content": [
+                          {
+                            "text": "Der Steuerpflichtige muss sich das Verschulden seines gesetzlichen Vertreters (§ 110 Abs. 1 Satz 2, z.B. Eltern eines Minderjährigen) zurechnen lassen, ist also ",
+                            "type": "text"
+                          },
+                          {
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "text": "nicht entschuldigt",
+                            "type": "text"
+                          },
+                          {
+                            "text": ".",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {}
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Ebenso verhält es sich bei Verschulden eines Erfüllungsgehilfen (§ 152 Abs. 1 Satz 3), z.B. ",
+                    "type": "text"
+                  },
+                  {
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Steuerberater",
+                    "type": "text"
+                  },
+                  {
+                    "text": ", insbesondere ist dessen ",
+                    "type": "text"
+                  },
+                  {
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Arbeitsüberlastung",
+                    "type": "text"
+                  },
+                  {
+                    "text": " kein Entschuldigungsgrund.",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              },
+              {
+                "type": "bulletList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "attrs": {},
+                        "content": [
+                          {
+                            "text": "Wenn jedoch der sonst zuverlässige und gut überwachte ",
+                            "type": "text"
+                          },
+                          {
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "text": "Mitarbeiter",
+                            "type": "text"
+                          },
+                          {
+                            "text": " des Steuerberaters die Verspätung verursacht hat, liegt seitens des Steuerberaters schon kein Überwachungs- und Organisationsverschulden vor und K ist damit auch ",
+                            "type": "text"
+                          },
+                          {
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "text": "entschuldigt",
+                            "type": "text"
+                          },
+                          {
+                            "text": ".",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {}
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "marks": [
+                      {
+                        "type": "xref",
+                        "attrs": {
+                          "xref": "e-abgabenordnung-leicht-gemacht._8vqk25f6kcvb",
+                          "reference": "qaa-1733060"
+                        }
+                      }
+                    ],
+                    "text": "Zum Buch",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false
+    },
+    "parser": {
+      "version": "3.14.1",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.23.1"
+    },
+    "bitmark": "[.flashcard-1:bitmark++]\n[@id:1785935]\n[@revealSolutions:false]\n\n====\nK, der den Verspätungszuschlag noch „abbiegen“ will, fragt sich, ob denn Entschuldigungsgründe für die verspätete Abgabe bestehen. Dann, so hat er gehört, ist ein Verspätungszuschlag nicht festzusetzen. Im Einzelnen nennt er folgende Vorfälle: Erkrankung, Abwesenheit, Vertreterverschulden\n--\n\n**Erkrankung:**\n\n• **entschuldigt** bei plötzlicher schwerer Erkrankung;\n\n• **nicht entschuldigt**, wenn bei dauerhafter Erkrankung die zumutbare Bestellung eines Vertreters unterblieben ist.\n\n**Abwesenheit:**\n\n• generell sind bei Abwesenheit aus privaten oder geschäftlichen Gründen Vorkehrungen für die Entgegennahme von Verwaltungsakten zu treffen, so dass eine deshalb eingetretene Verspätung **nicht entschuldigt** ist;\n• als **entschuldigt** gilt jedoch eine kurzfristige, urlaubsbedingte Abwesenheit ohne konkrete Anhaltspunkte für einen zu erwartenden Verwaltungsakt.\n**Vertreterverschulden:**\n• Der Steuerpflichtige muss sich das Verschulden seines gesetzlichen Vertreters (§ 110 Abs. 1 Satz 2, z.B. Eltern eines Minderjährigen) zurechnen lassen, ist also **nicht entschuldigt**.\n\nEbenso verhält es sich bei Verschulden eines Erfüllungsgehilfen (§ 152 Abs. 1 Satz 3), z.B. **Steuerberater**, insbesondere ist dessen **Arbeitsüberlastung** kein Entschuldigungsgrund.\n• Wenn jedoch der sonst zuverlässige und gut überwachte **Mitarbeiter** des Steuerberaters die Verspätung verursacht hat, liegt seitens des Steuerberaters schon kein Überwachungs- und Organisationsverschulden vor und K ist damit auch **entschuldigt**.\n\n==Zum Buch==|xref:e-abgabenordnung-leicht-gemacht._8vqk25f6kcvb|►qaa-1733060|\n\n===="
   }
 ]
