@@ -400,6 +400,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         this.writeImage(node as ImageTextNode);
         break;
 
+      case TextNodeType.imageInline:
+        this.writeImage(node as ImageTextNode);
+        break;
+
       case TextNodeType.codeBlock:
         this.inCodeBlock = true;
         this.writeCodeBlock(node as CodeBlockTextNode);
@@ -1004,8 +1008,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
     const inlineImage = this.inParagraph;
 
-    const mediaAttrs = this.getMediaAttrs('image', attrs, {
-      ignoreAttributes: inlineImage ? new Set(['alt', 'zoomDisabled']) : undefined,
+    const mediaAttrs = this.getMediaAttrs(inlineImage ? 'imageInline' : 'image', attrs, {
+      ignoreAttributes: inlineImage ? new Set(['alt', 'zoomDisabled', 'title']) : undefined,
     });
 
     let s = '';

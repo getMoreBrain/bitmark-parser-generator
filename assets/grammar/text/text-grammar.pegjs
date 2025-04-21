@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.23.1"
+const VERSION = "8.24.2"
 
 //Parser peggy.js
 
@@ -535,7 +535,7 @@ InlineTag = InlineHalfTag InlineHalfTag
 InlineStyledText
   = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
   / InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: t}, type: "latex" } }
-  / InlineTag alt: $((!InlineTag .)* ) InlineTag '|image:' u: Url '|' ch: InlineMediaChain? { return { attrs: { alt, src: (u.pr + u.t).trim(), title: null, ...Object.assign({}, ...ch), zoomDisabled: true }, type: "image" } }
+  / InlineTag alt: $((!InlineTag .)* ) InlineTag '|imageInline:' u: Url '|' ch: InlineMediaChain? { return { attrs: { alt, src: (u.pr + u.t).trim(), ...Object.assign({}, ...ch), zoomDisabled: true }, type: "imageInline" } }
   / InlineTag ' '? t: $((!(' '? InlineTag) .)* ) ' '? InlineTag marks: AttrChain { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
   / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
   / ItalicTag ' '? t: $((!(' '? ItalicTag) .)* ) ' '? ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }

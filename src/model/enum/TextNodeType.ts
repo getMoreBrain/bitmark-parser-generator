@@ -20,6 +20,7 @@ const TextNodeType = superenum({
   listItem: 'listItem',
   taskItem: 'taskItem',
   image: 'image',
+  imageInline: 'imageInline',
   codeBlock: 'codeBlock',
 
   // Inline blocks
