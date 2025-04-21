@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-parser-generator",
-  "version": "3.15.0",
+  "version": "3.16.0",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Get More Brain Ltd",
   "license": "ISC",
@@ -51,7 +51,7 @@
     "tsc": "tsc",
     "jest": "jest"
   },
-  "packageManager": "yarn@4.5.0",
+  "packageManager": "yarn@4.9.1",
   "engines": {
     "node": ">=10",
     "npm": ">=6.8.0",

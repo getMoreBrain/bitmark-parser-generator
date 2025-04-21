@@ -69,10 +69,9 @@
         "attrs": {
           "alt": "alt text of the inline image",
           "src": "https://img.io/img.svg",
-          "title": null,
           "zoomDisabled": true
         },
-        "type": "image"
+        "type": "imageInline"
       },
       {
         "text": " more text",
@@ -89,12 +88,11 @@
         "attrs": {
           "alt": "alt text of the inline image",
           "src": "https://img.io/img.svg",
-          "title": null,
           "width": 400,
           "height": 200,
           "zoomDisabled": true
         },
-        "type": "image"
+        "type": "imageInline"
       },
       {
         "text": " more text",
@@ -111,13 +109,12 @@
         "attrs": {
           "alt": "alt text of the inline image",
           "src": "https://img.io/img.svg",
-          "title": null,
           "width": 400,
           "height": 200,
           "comment": "comment",
           "zoomDisabled": true
         },
-        "type": "image"
+        "type": "imageInline"
       },
       {
         "text": " more text",
