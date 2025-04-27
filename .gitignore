@@ -29,6 +29,10 @@ node_modules
 # !/.yarn/cache
 **/.pnp.*
 
+# IDE
+.idea
+.vscode/mise-tools
+
 # PACKAGE SPECIFIC
 /assets/test
 /assets/test.*
