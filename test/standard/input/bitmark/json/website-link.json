@@ -17,7 +17,7 @@
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
           "license": "",
           "copyright": "",
-          "showInIndex": false,
+          "showInIndex": true,
           "caption": []
         }
       },
