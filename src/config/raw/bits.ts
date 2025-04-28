@@ -268,7 +268,6 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.diffTo,
-        minCount: 1,
       },
     ],
   },
