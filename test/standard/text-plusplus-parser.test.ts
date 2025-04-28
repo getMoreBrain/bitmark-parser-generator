@@ -107,6 +107,7 @@ describe('text-parser', () => {
         performance.mark('PEG:Start');
         const textAst = textParser.toAst(originalMarkup, {
           textFormat: TextFormat.bitmarkPlusPlus,
+          isProperty: false,
         });
 
         // Write the new AST

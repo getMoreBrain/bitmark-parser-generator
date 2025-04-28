@@ -13,9 +13,9 @@
       "body": "Article 1\n[?NOT a hint]\n[.article]\nArticle 1.1"
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article:text]\nArticle 1\n[?NOT a hint]\n[^.article]\nArticle 1.1"
   },
@@ -79,9 +79,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\nArticle 2\n[?hint][^!NOT an instruction]\n\n[^.article]\nArticle 2.1"
   },
@@ -110,9 +110,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\nArticle 3"
   },
@@ -204,9 +204,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.cloze]\nThis is a multiple^^ [^_gap] [_solution][_problem][@isCaseSensitive:false] with a separate gap\nwith [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default\ncase [_sensitivity]"
   },
@@ -235,9 +235,9 @@
       "body": "This is some code and here no ^ hats should be\nremoved or anything [^.bit] [^.silly^] like that^\n[^notabit]\nThe only thing that should be removed is\n[.notabit]\n[^.notabit]\n[^^.notabit]\nthe start of a new bit\n\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.code]\n[?hint]\nThis is some code and here no ^ hats should be\nremoved or anything [^.bit] [^.silly^] like that^\n[^notabit]\nThe only thing that should be removed is\n[^.notabit]\n[^^.notabit]\n[^^^.notabit]\nthe start of a new bit\n\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
   },
@@ -285,9 +285,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.cloze]\nThis is a multiple^^ [^_gap] [_solu^^tion][_pro^blem][@isCaseSensitive:false] with a separate gap"
   },
@@ -318,9 +318,9 @@
       }
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article:json]\n[?hint]\n{\n  \"hello\": \"world\"\n}"
   },
@@ -349,9 +349,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2",
+      "textParserVersion": "8.24.2",
       "errors": [
         {
           "message": "Body JSON is invalid.",
@@ -428,9 +428,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n$$$$\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -543,9 +543,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.cloze]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n** Excellent **\nThis is a [_gap] :)\n\n$$$$\n\n^Testing123^^\n\n$$$$\n**Excellent**"
   },
@@ -586,9 +586,9 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.extractor-configuration]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n$$$$\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -667,9 +667,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n $$$$\n[!My first config in TOML]\n\nThis is NOT pre!\n$$$$\n[!My first config in TOML]\nThis IS pre!"
   },
@@ -768,9 +768,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2",
+      "textParserVersion": "8.24.2",
       "warnings": [
         {
           "message": "[!] is included more than 1 time(s). The earlier ones will be ignored",
@@ -862,9 +862,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n$$$$\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -977,9 +977,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.cloze]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n** Excellent **\nThis is a [_gap] :)\n\n==== text ====\n\n^Testing123^^\n\n==== text ====\n**Excellent**"
   },
@@ -1020,9 +1020,9 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.extractor-configuration]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n==== text    ====\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -1101,9 +1101,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n ==== text ====\n[!My first config in TOML]\n\nThis is NOT pre!\n==== text ====\n[!My first config in TOML]\nThis IS pre!"
   },
@@ -1223,9 +1223,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2",
+      "textParserVersion": "8.24.2",
       "warnings": [
         {
           "message": "[!] is included more than 1 time(s). The earlier ones will be ignored",
@@ -1320,16 +1320,16 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n========\n[!My first config in TOML]\nThis is NOT pre!!!"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark++",
+      "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -1397,16 +1397,16 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
-    "bitmark": "[.article:bitmark++]\n**bold**\n[!instruction]\n==== text ====\nAbsolutely **NOT** bold, just **stars**\n\n[?not hint]\n\nMore text"
+    "bitmark": "[.article:bitmark--]\n**bold**\n[!instruction]\n==== text ====\nAbsolutely **NOT** bold, just **stars**\n\n[?not hint]\n\nMore text"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark++",
+      "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -1491,11 +1491,11 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
-    "bitmark": "[.article:bitmark++]\n**bold**\n\n==== footer ====\n__italic__\n[!instruction]\n==== text ====\nAbsolutely __NOT__ italic, just __underlines__\n\n[?not hint]\n\nMore text"
+    "bitmark": "[.article:bitmark--]\n**bold**\n\n==== footer ====\n__italic__\n[!instruction]\n==== text ====\nAbsolutely __NOT__ italic, just __underlines__\n\n[?not hint]\n\nMore text"
   },
   {
     "bit": {
@@ -1522,9 +1522,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\ntest"
   },
@@ -1632,9 +1632,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.flashcard]\n\n*^*bold*^*\n\n====\nCard\n--\nAnswer\n==== footer ====\n\nA footer with\n==== text ====\nAbsolutely __NOT__ italic, just __underlines__\n\n[?not hint]\n\nMore text"
   },
@@ -1703,16 +1703,16 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.flashcard]\n\n*^*bold*^*\n\n====\nCard\n--\nAnswer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark++",
+      "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -1770,11 +1770,11 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
-    "bitmark": "[.article:bitmark++]\n**bold**\n[!instruction]\n==== text ====\nThis is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.\n\n[^.article]"
+    "bitmark": "[.article:bitmark--]\n**bold**\n[!instruction]\n==== text ====\nThis is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.\n\n[^.article]"
   },
   {
     "bit": {
@@ -1801,16 +1801,16 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\n\nnew article"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark++",
+      "format": "bitmark--",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -1868,11 +1868,11 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
-    "bitmark": "[.article:bitmark++]\n[!instruction]\n\n**bold**\n\n==== text ====\nThis is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.\n\n[^.article]"
+    "bitmark": "[.article:bitmark--]\n[!instruction]\n\n**bold**\n\n==== text ====\nThis is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.\n\n[^.article]"
   },
   {
     "bit": {
@@ -1899,9 +1899,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.16.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.24.2"
     },
     "bitmark": "[.article]\n\nnew article"
   }

@@ -99,6 +99,7 @@ describe('text-generation', () => {
         // Generate JSON from original bitmark markup using the PEG parser
         const textAst = textParser.toAst(originalMarkup, {
           textFormat: TextFormat.bitmarkPlusPlus,
+          isProperty: false,
         });
 
         // Write JSON file
@@ -129,6 +130,7 @@ describe('text-generation', () => {
         // Generate JSON from generated bitmark markup using the PEG parser
         const newTextAst = textParser.toAst(newMarkup, {
           textFormat: TextFormat.bitmarkPlusPlus,
+          isProperty: false,
         });
 
         // Write the new JSON file
