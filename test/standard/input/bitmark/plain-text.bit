@@ -203,7 +203,7 @@ This IS pre!!!
 This is NOT pre!!!
 
 
-[.article:bitmark++]
+[.article:bitmark--]
 **bold**
 [!instruction]
 ==== text ====
@@ -214,7 +214,7 @@ Absolutely **NOT** bold, just **stars**
 More text
 
 
-[.article:bitmark++]
+[.article:bitmark--]
 **bold**
 
 ==== footer ====
@@ -259,7 +259,7 @@ Card
 Answer
 
 
-[.article:bitmark++]
+[.article:bitmark--]
 **bold**
 [!instruction]
 ==== text ====
@@ -273,7 +273,7 @@ new article
 
 
 
-[.article:bitmark++]
+[.article:bitmark--]
 [!instruction]
 
 **bold**
