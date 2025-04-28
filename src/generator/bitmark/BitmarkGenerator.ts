@@ -1844,6 +1844,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const level = bit.level || 1;
 
     if (level && title) {
+      this.writeNL();
       this.writeOP();
       for (let i = 0; i < +level; i++) this.writeHash();
       this.textGenerator.generateSync(title, TextFormat.bitmarkMinusMinus);
@@ -1865,6 +1866,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const subtitle = value;
     const level = 2;
     if (level && subtitle) {
+      this.writeNL();
       this.writeOP();
       for (let i = 0; i < level; i++) this.writeHash();
       this.textGenerator.generateSync(subtitle, TextFormat.bitmarkMinusMinus);
@@ -1888,6 +1890,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // const bit = parent?.value as Bit;
 
     if (book) {
+      this.writeNL();
       this.writeProperty('book', book.book, {
         format: PropertyFormat.trimmedString,
         single: true,
@@ -1917,6 +1920,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const bit = parent?.value as Bit;
 
     if (bit && node.value) {
+      this.writeNL();
       this.writeProperty('book', node.value, {
         format: PropertyFormat.trimmedString,
         single: true,
@@ -1940,6 +1944,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_anchor(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
+      this.writeNL();
       this.writeOPDANGLE();
       this.writeBreakscapedTagString(node.value);
       this.writeCL();
@@ -1955,6 +1960,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bit && node.value) {
       // Only write reference if it is not chained to 'book'
       if (!bit.book) {
+        this.writeNL();
         this.writeOPRANGLE();
         this.writeBreakscapedTagString(node.value);
         this.writeCL();
@@ -2001,6 +2007,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue ->  * -> lang
 
   protected enter_lang(node: NodeInfo, _route: NodeInfo[]): void {
+    if (!node.value) return;
+
     this.writeNL();
     this.writeProperty('lang', node.value, {
       format: PropertyFormat.boolean,
@@ -2012,6 +2020,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue ->  * -> refAuthor
 
   protected enter_refAuthor(node: NodeInfo, _route: NodeInfo[]): void {
+    if (!node.value) return;
+
     this.writeNL();
     this.writeProperty('refAuthor', node.value, {
       format: PropertyFormat.trimmedString,
@@ -2023,6 +2033,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue ->  * -> refBookTitle
 
   protected enter_refBookTitle(node: NodeInfo, _route: NodeInfo[]): void {
+    if (!node.value) return;
+
     this.writeNL();
     this.writeProperty('refBookTitle', node.value, {
       format: PropertyFormat.trimmedString,
@@ -2034,6 +2046,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue ->  * -> refPublisher
 
   protected enter_refPublisher(node: NodeInfo, _route: NodeInfo[]): void {
+    if (!node.value) return;
+
     this.writeNL();
     this.writeProperty('refPublisher', node.value, {
       format: PropertyFormat.trimmedString,
@@ -2045,6 +2059,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue ->  * -> refPublicationYear
 
   protected enter_refPublicationYear(node: NodeInfo, _route: NodeInfo[]): void {
+    if (!node.value) return;
+
+    this.writeNL();
     this.writeProperty('refPublicationYear', node.value, {
       format: PropertyFormat.trimmedString,
       single: true,
@@ -2055,6 +2072,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue ->  * -> citationStyle
 
   protected enter_citationStyle(node: NodeInfo, _route: NodeInfo[]): void {
+    if (!node.value) return;
+
     this.writeNL();
     this.writeProperty('citationStyle', node.value, {
       format: PropertyFormat.trimmedString,
@@ -2331,7 +2350,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // this.writeProperty('provider', node.value);
   }
 
-  protected leaf_showInIndex(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_showInIndex(node: NodeInfo, route: NodeInfo[]): void {
+    if (node.value == null) return;
+
+    this.writeNL_IfNotChain(route);
     this.writeProperty('showInIndex', node.value, {
       format: PropertyFormat.boolean,
       single: true,
@@ -2354,8 +2376,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  protected leaf_search(node: NodeInfo, _route: NodeInfo[]): void {
+  protected leaf_search(node: NodeInfo, route: NodeInfo[]): void {
     const value = node.value as string;
+
+    if (!value) return;
+
+    this.writeNL_IfNotChain(route);
     this.writeProperty('search', value, {
       format: PropertyFormat.trimmedString,
       single: true,
@@ -2501,7 +2527,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (parent?.key !== NodeType.bitsValue) return;
 
         // Write the property
-        this.writeNL(); // Only if NOT in chain (how do we know this?)
+        this.writeNL_IfNotChain(route); // Only if NOT in chain
         this.writeProperty(propertyConfig.tag, node.value, {
           format: propertyConfig.format ?? PropertyFormat.trimmedString,
           single: propertyConfig.single ?? false,

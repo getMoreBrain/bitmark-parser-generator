@@ -168,9 +168,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private prevIndent = 0;
   private indentationStringCache = '';
   private inParagraph = false;
+  private inHeading = false;
   private inCodeBlock = false;
   private exitedCodeBlock = false;
   private inBulletList = false;
+  private inInline = false;
+  private textDepth = 0;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
 
@@ -286,16 +289,19 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private resetState(textFormat: TextFormatType): void {
     this.printed = false;
 
-    this.textFormat = textFormat;
+    this.textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
     this.writerText = '';
     this.nodeIndex = 0;
     this.currentIndent = 0;
     this.prevIndent = 0;
     this.indentationStringCache = '';
     this.inParagraph = false;
+    this.inHeading = false;
     this.inCodeBlock = false;
     this.exitedCodeBlock = false;
     this.inBulletList = false;
+    this.inInline = false;
+    this.textDepth = 0;
     this.placeholderIndex = 0;
     this.placeholders = {};
 
@@ -381,10 +387,15 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         this.writeMarks(node, Stage.enter);
         this.writeText(node);
         this.writeMarks(node, Stage.between);
+        if (this.textDepth === 0) {
+          this.inInline = true;
+        }
+        this.textDepth++;
         break;
 
       case TextNodeType.heading:
         this.writeHeading(node as HeadingTextNode);
+        this.inHeading = true;
         break;
 
       case TextNodeType.section:
@@ -449,6 +460,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   protected handleExitNode(node: TextNode, _route: NodeInfo[]): void | false {
     switch (node.type) {
       case TextNodeType.text:
+        this.textDepth--;
+        if (this.textDepth === 0) {
+          this.inInline = false;
+        }
         this.writeMarks(node, Stage.exit);
         break;
 
@@ -463,6 +478,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         break;
 
       case TextNodeType.heading:
+        this.inHeading = false;
+      // eslint-disable-next-line no-fallthrough
       case TextNodeType.section:
       case TextNodeType.image:
         if (!this.inParagraph) {
@@ -792,6 +809,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    */
   protected writeMarks(node: TextNode, stage: StageType): void {
     if (node.marks) {
+      // If this is a mark within inline text, or a heading, only inline marks are allowed, so set the text format to bitmark--
+      const textFormat = this.inInline || this.inHeading ? TextFormat.bitmarkMinusMinus : this.textFormat;
+
       // If node has marks, it cannot be a pre-text node
       this.thisNodeIsPreText = false;
 
@@ -804,7 +824,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       }
 
       // Single marks are only valid if there is only one mark for this text
-      const singleMark = node.marks.length === 1;
+      // If bitmark++, always write inline marks
+      const singleMark = node.marks.length === 1 && textFormat !== TextFormat.bitmarkPlusPlus;
 
       // Get the correct mark start / end
       const markStartEnd = node.marks.reduce(
