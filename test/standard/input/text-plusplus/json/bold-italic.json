@@ -104,7 +104,7 @@
             "type": "italic"
           }
         ],
-        "text": "BOLD/ITALIC",
+        "text": " BOLD/ITALIC ",
         "type": "text"
       },
       {
@@ -126,7 +126,7 @@
             "type": "italic"
           }
         ],
-        "text": "BOLD/ITALIC/Comment",
+        "text": " BOLD/ITALIC/Comment ",
         "type": "text"
       }
     ],

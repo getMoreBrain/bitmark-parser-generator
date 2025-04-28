@@ -76,7 +76,7 @@
             "type": "bold"
           }
         ],
-        "text": "# Won't be a title as it is wrapped, and outer tags win",
+        "text": " # Won't be a title as it is wrapped, and outer tags win ",
         "type": "text"
       },
       {
