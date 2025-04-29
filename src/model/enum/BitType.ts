@@ -308,6 +308,7 @@ const BitType = superenum({
   leFinishingTask: 'le-finishing-task',
   leFollowUpTask: 'le-follow-up-task',
   legend: 'legend',
+  leDocumentDownload: 'le-document-download',
   leLearningObjectives: 'le-learning-objectives',
   leLearningStep: 'le-learning-step',
   leListenAudioEmbed: 'le-listen-audio-embed',
