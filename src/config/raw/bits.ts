@@ -268,7 +268,6 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.diffTo,
-        minCount: 1,
       },
     ],
   },
@@ -678,6 +677,7 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: false,
   },
+  [BitType.leDocumentDownload]: { since: '3.18.0', baseBitType: BitType.documentDownload },
   [BitType.documentEmbed]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
