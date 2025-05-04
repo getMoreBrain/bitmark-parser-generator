@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.25.1"
+const VERSION = "8.26.1"
 
 //Parser peggy.js
 
@@ -558,6 +558,15 @@ InlineMediaChainItem
   = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
   / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
   / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be an positive integer.', found: v }}
+  / '@'? p: 'alignmentVertical' ':' ' '* v: InlineMediaAlignment BlockTag  { return { [p]: v } }
+  / '@'? p: 'size' ':' ' '* v: InlineMediaSize BlockTag  { return { [p]: v } }
+
+InlineMediaAlignment
+  = 'top' / 'middle' / 'bottom' / 'baseline' / 'sub' / 'super' / 'text-bottom' / 'text-top'
+
+InlineMediaSize
+  = 'line-height' / 'font-height' / 'super' / 'sub' / 'explicit'
+
 
 // ==This is a link==|link:https://www.apple.com/|
 // ==503==|var:AHV Mindestbeitrag|
