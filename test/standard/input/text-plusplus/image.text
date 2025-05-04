@@ -11,3 +11,4 @@ Some inline images follow:
 Here is the text ==alt text of the inline image==|imageInline:https://img.io/img.svg| more text
 Here is the text ==alt text of the inline image==|imageInline:https://img.io/img.svg|@width:400|height:200| more text
 Here is the text ==alt text of the inline image==|imageInline:https://img.io/img.svg|width:400|@height:200|#comment| more text
+Here is the text ==alt text of the inline image==|imageInline:https://img.io/img.svg|alignmentVertical:bottom|size:super| more text
