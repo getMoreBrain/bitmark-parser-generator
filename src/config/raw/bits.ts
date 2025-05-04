@@ -979,6 +979,7 @@ const BITS: _BitsConfig = {
     tags: [],
     textFormatDefault: TextFormat.json,
   },
+  [BitType.extractorAiChat]: { since: '3.19.0', baseBitType: BitType._standard },
   [BitType.extractorBlock]: {
     since: '1.5.16',
     baseBitType: BitType._standard,
