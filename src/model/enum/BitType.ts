@@ -200,6 +200,7 @@ const BitType = superenum({
   exampleAlt: 'example-alt',
   exampleCollapsible: 'example-collapsible',
   exampleList: 'example-list',
+  extractorAiChat: 'extractor-ai-chat',
   extractorBlock: 'extractor-block',
   extractorConfiguration: 'extractor-configuration',
   extractorInformation: 'extractor-information',

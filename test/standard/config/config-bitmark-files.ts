@@ -485,6 +485,7 @@ if (TEST_ALL) {
     'editorial.bit',
     'essay.bit',
     'example.bit',
+    'extractor-ai-chat.bit',
     'extractor-configuration.bit',
     'extractor-page.bit',
     'extractor-page-with-blocks.bit',

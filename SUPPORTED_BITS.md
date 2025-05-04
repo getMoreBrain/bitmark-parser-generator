@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.18.0
+Version: 3.19.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -200,6 +200,7 @@ example (since: 1.3.0)
 example-alt (since: 1.16.0)
 example-collapsible (since: 1.21.0)
 example-list (since: 1.4.13)
+extractor-ai-chat (since: 3.19.0)
 extractor-block (since: 1.5.16)
 extractor-configuration (since: 1.7.1)
 extractor-information (since: 3.8.0)
