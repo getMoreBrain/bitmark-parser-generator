@@ -119,6 +119,27 @@
       {
         "text": " more text",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is the text ",
+        "type": "text"
+      },
+      {
+        "attrs": {
+          "alt": "alt text of the inline image",
+          "src": "https://img.io/img.svg",
+          "alignmentVertical": "bottom",
+          "size": "super",
+          "zoomDisabled": true
+        },
+        "type": "imageInline"
+      },
+      {
+        "text": " more text",
+        "type": "text"
       }
     ],
     "attrs": {}
