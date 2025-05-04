@@ -26,7 +26,7 @@ const bitmarkParser = new BitmarkParser();
 
 class DevPrettify {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bit');
+    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bitmark');
     // const filename = path.resolve(__dirname, '../../..', 'assets', 'test.json');
 
     if (debug) {

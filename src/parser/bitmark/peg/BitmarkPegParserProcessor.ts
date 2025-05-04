@@ -57,7 +57,7 @@
  * -------------------------
  *
  * - To build the parser, run 'yarn build-grammar-bit'
- * - Modify the bitmark in '_simple.bit' to test the parser (this will be parsed after building the parser)
+ * - Modify the bitmark in '_simple.bitmark' to test the parser (this will be parsed after building the parser)
  * - To undersand the operation and to help debug and develop, use the DEBUG_XXX flags in the code below.
  *   and in BitmarkPegParserHelper.ts
  */

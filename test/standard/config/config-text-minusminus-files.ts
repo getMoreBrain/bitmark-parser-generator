@@ -1,36 +1,16 @@
 import path from 'path';
 
-// Enable or disable testing of specific files
-let TEST_ALL = true;
+import { FileUtils } from '../../../src/utils/FileUtils';
 
 const TEST_FILES_DIR = path.resolve(__dirname, '../input/text-minusminus');
 
-if (process.env.CI) {
-  TEST_ALL = true;
-}
-
-let TEST_FILES: string[] = [
-  //
-  // 'minusminus-plain.text',
-  // 'minusminus-breakscaping.text',
-  // 'minusminus-bold.text',
-  // 'minusminus-light.text',
-  // 'minusminus-italic.text',
-  // 'minusminus-highlight.text',
-];
-
-// ALL tests for CI
-if (TEST_ALL) {
-  TEST_FILES = [
-    //
-    'minusminus-plain.text',
-    'minusminus-breakscaping.text',
-    'minusminus-bold.text',
-    'minusminus-light.text',
-    'minusminus-italic.text',
-    'minusminus-highlight.text',
-  ];
-}
+// List all test files in the directory
+const TEST_FILES = (() => {
+  return FileUtils.getFilenamesSync(TEST_FILES_DIR, {
+    match: new RegExp('.+\\.text$'),
+    recursive: false,
+  }).map((file) => path.basename(file));
+})();
 
 function getTestFilesDir(): string {
   return TEST_FILES_DIR;

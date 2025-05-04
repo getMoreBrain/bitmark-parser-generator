@@ -20,13 +20,13 @@ class DevRegenerateBitmarkTests {
     const jsonFilesDir = path.resolve(bitmarkFilesDir, 'json');
 
     const bitmarkFiles = FileUtils.getFilenamesSync(bitmarkFilesDir, {
-      match: new RegExp('.+\\.bit$'),
+      match: new RegExp('.+\\.bitmark$'),
       recursive: false,
     });
 
     for (const bitmarkFile of bitmarkFiles) {
       const basename = path.basename(bitmarkFile);
-      const jsonFile = path.join(jsonFilesDir, `${path.basename(bitmarkFile, '.bit')}.json`);
+      const jsonFile = path.join(jsonFilesDir, `${path.basename(bitmarkFile, '.bitmark')}.json`);
 
       console.log(`Processing: ${basename}`);
       await bitmarkParserGenerator.convert(bitmarkFile, {

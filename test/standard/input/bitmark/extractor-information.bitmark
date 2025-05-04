@@ -9,7 +9,7 @@
     "feedback": "feedback-filename.pdf"
   },
   "output": {
-    "bitmark": "bitmark-filename.bit",
+    "bitmark": "bitmark-filename.bitmark",
     "info": "info-filename.txt",
     "visualization": "visualization-filename.pdf"
   }

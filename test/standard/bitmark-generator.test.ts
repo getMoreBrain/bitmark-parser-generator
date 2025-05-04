@@ -33,7 +33,7 @@ const bitmarkParser = new BitmarkParser();
  */
 function getTestFilenames(): string[] {
   const files = FileUtils.getFilenamesSync(TEST_INPUT_DIR, {
-    match: new RegExp('.+\\.bit$'),
+    match: new RegExp('.+\\.bitmark$'),
     recursive: true,
   });
 
@@ -50,7 +50,7 @@ describe('bitmark-generator', () => {
     // Filter out the files that are not in the test list
     allTestFiles = allTestFiles.filter((testFile) => {
       const fileId = testFile.replace(TEST_INPUT_DIR + '/', '');
-      // const id = path.basename(partFolderAndFile, '.bit');
+      // const id = path.basename(partFolderAndFile, '.bitmark');
       if (TEST_FILES.includes(fileId)) {
         return true;
       } else {
@@ -73,7 +73,7 @@ describe('bitmark-generator', () => {
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
       // const fullJsonInputFolder = path.join(JSON_INPUT_DIR, partFolder);
       const fileId = testFile.replace(TEST_INPUT_DIR + '/', '');
-      const id = path.basename(partFolderAndFile, '.bit');
+      const id = path.basename(partFolderAndFile, '.bitmark');
 
       // console.log('partFolderAndFile', partFolderAndFile);
       // console.log('partFolder', partFolder);
@@ -85,9 +85,9 @@ describe('bitmark-generator', () => {
 
         // Calculate the filenames
         // const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
-        const originalMarkupFile = path.resolve(fullFolder, `${id}.bit`);
+        const originalMarkupFile = path.resolve(fullFolder, `${id}.bitmark`);
         const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
-        const generatedMarkupFile = path.resolve(fullFolder, `${id}.gen.bit`);
+        const generatedMarkupFile = path.resolve(fullFolder, `${id}.gen.bitmark`);
         const generatedJsonFile = path.resolve(fullFolder, `${id}.gen.json`);
         const generatedAstFile = path.resolve(fullFolder, `${id}.ast.json`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);

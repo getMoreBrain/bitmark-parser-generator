@@ -74,10 +74,10 @@ const json = await bpg.convert("[.article] Hello World");
 const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "bitLevel": 1, "body": "Hello World" }}]');
 
 // Convert bitmark markup file to bitmark JSON
-await bpg.convert("./input.bit", { output: "./output.json" });
+await bpg.convert("./input.bitmark", { output: "./output.json" });
 
 // Convert bitmark JSON to bitmark markup
-await bpg.convert("./input.json", { output: "./output.bit" });
+await bpg.convert("./input.json", { output: "./output.bitmark" });
 ```
 
 ### Convertion Options
@@ -133,7 +133,7 @@ const ast = builder.bitmark({
 });
 
 // Write the AST to bitmark markup
-bpg.convert(ast, { output: "./output.bit" });
+bpg.convert(ast, { output: "./output.bitmark" });
 
 // Write the AST to bitmark JSON
 bpg.convert(ast, { output: "./output.json", outputFormat: 'json' });
@@ -161,7 +161,7 @@ const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": 
 "bitLevel": 1, "body": "Hello World", unknownProperty: "Will be removed" }}]');
 
 // Upgrade bitmark markup file to another file
-await bpg.convert("./input.bit", { output: "./output.bit" });
+await bpg.convert("./input.bitmark", { output: "./output.bitmark" });
 
 // Upgrade bitmark JSON file to another file
 await bpg.convert("./input.json", { output: "./output.json" });
