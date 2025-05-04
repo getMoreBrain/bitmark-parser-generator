@@ -4,9 +4,7 @@
       "type": "match-audio",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "285729"
-      ],
+      "id": ["285729"],
       "item": [
         {
           "type": "paragraph",
@@ -35,7 +33,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -48,12 +45,14 @@
           "attrs": {}
         }
       ],
-      "heading": {}
+      "isExample": false,
+      "heading": {},
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.19.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.match-audio]\n[@id:285729]\n[%26][%match-audio]\n[Listen to the audio and name the animal you are hearing.]\n===\n[&audio:https://cdn.bitmark.cloud/publishers/3/books/26363/miau.mp3]\n==\ncat\n==="
   }
