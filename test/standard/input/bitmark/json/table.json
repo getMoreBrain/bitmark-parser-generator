@@ -135,7 +135,7 @@
       },
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
       "tableColumnMinWidth": 0
@@ -295,7 +295,7 @@
       "tablePagination": false,
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
       "tableColumnMinWidth": 0
@@ -489,7 +489,7 @@
       "tablePagination": false,
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
       "tableColumnMinWidth": 0
@@ -638,7 +638,7 @@
       },
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false
     },
@@ -785,7 +785,7 @@
       },
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
       "tableColumnMinWidth": 0
@@ -933,7 +933,7 @@
       },
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
       "tableColumnMinWidth": 0
@@ -1081,7 +1081,7 @@
       },
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
       "tableColumnMinWidth": 0
@@ -1229,7 +1229,7 @@
       },
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
       "tableColumnMinWidth": 0
@@ -1461,7 +1461,7 @@
       },
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
       "tableColumnMinWidth": 0
@@ -1495,7 +1495,7 @@
       "tablePagination": false,
       "tablePaginationLimit": 0,
       "tableHeight": 0,
-      "tableWhitespaceNoWrap": true,
+      "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
       "tableColumnMinWidth": 0
