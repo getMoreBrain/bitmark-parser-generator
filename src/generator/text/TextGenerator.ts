@@ -692,15 +692,19 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     const linkText = this.getLinkText(node);
     if (linkText) s = linkText;
 
+    const shouldBreakscape = !linkText;
+
     // Breakscape the text
-    if (!codeBreakscaping) {
-      s = Breakscape.breakscape(s, {
-        textFormat: this.textFormat,
-      });
-    } else {
-      s = Breakscape.breakscape(s, {
-        textFormat: this.textFormat,
-      });
+    if (shouldBreakscape) {
+      if (!codeBreakscaping) {
+        s = Breakscape.breakscape(s, {
+          textFormat: this.textFormat,
+        });
+      } else {
+        s = Breakscape.breakscape(s, {
+          textFormat: this.textFormat,
+        });
+      }
     }
 
     // Apply any required indentation
