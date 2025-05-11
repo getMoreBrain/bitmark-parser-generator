@@ -9,17 +9,17 @@ Strikte Einhaltung der Hygienerichtlinien, mehr Zeit einrechnen für das An- und
 [.q-and-a:bitmark++&image]
 [@id:1920727]
 [%Übung 1][%][%19]
-[?Hint with link https://ex__ample.com/im**age.png]
 [!**Rechnungswesen als modellhafte Abbildung der betrieblichen Realität**
 Die:
-|image:https://ex__ample.com/im**age.png|@width:650|
+|image:https://ex__am==ple.com/im**age.png|@width:650|
 
 Welcher Verein wurde deutscher Meister?]
-[&image:https://ex__ample.com/im**age.png]
+[&image:https://ex__am==ple.com/im**age.png]
 
 Sie haben keinen Schimmer?
-==This is a link==|link:https://ex__ample.com/im**age.png|
+==This is a link==|link:https://ex__am==ple.com/im**age.png|
 
 
-https://ex__ample.com/im**age.png
+https://ex__am==ple.com/im**age.png
 
+[?customerId:https://ex__am==ple.com/im**age.png]
