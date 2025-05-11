@@ -95,7 +95,31 @@
         }
       ],
       "marginNumber": [],
-      "hint": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hint with link ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://ex__ample.com/im**age.png",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "text": "ex__ample.com/im**age.png",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "instruction": [
         {
           "type": "paragraph",
@@ -226,6 +250,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.26.1"
     },
-    "bitmark": "[.q-and-a:bitmark++&image]\n[@id:1920727]\n[%Übung 1][%][%19]\n[!**Rechnungswesen als modellhafte Abbildung der betrieblichen Realität**\nDie:\n|image:https://ex__ample.com/im**age.png|@width:650|\n\nWelcher Verein wurde deutscher Meister?]\n[&image:https://ex__ample.com/im**age.png]\n\nSie haben keinen Schimmer?\n==This is a link==|link:https://ex__ample.com/im**age.png|\n\n\nhttps://ex__ample.com/im**age.png"
+    "bitmark": "[.q-and-a:bitmark++&image]\n[@id:1920727]\n[%Übung 1][%][%19]\n[!**Rechnungswesen als modellhafte Abbildung der betrieblichen Realität**\nDie:\n|image:https://ex__ample.com/im**age.png|@width:650|\n\nWelcher Verein wurde deutscher Meister?]\n[&image:https://ex__ample.com/im**age.png]\n\nSie haben keinen Schimmer?\n==This is a link==|link:https://ex__ample.com/im**age.png|\n\n\nhttps://ex__ample.com/im**age.png\n\n[?customerId:https://ex__ample.com/im**age.png]"
   }
 ]
