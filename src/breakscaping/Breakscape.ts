@@ -39,17 +39,9 @@ import { StringUtils } from '../utils/StringUtils';
  *  - tag list +:                    (SOL)•+(space)             ==>   (SOL)•^+(space)            [bitmark++]
  *  - tag list -:                    (SOL)•-(space)             ==>   (SOL)•^-(space)            [bitmark++]
  *  - bold:                                  **                 ==>   *^*                        [bitmark-- / bitmark++]
- *  - half-bold (at end):                    *<end>             ==>   *^<end>                    [bitmark-- / bitmark++]
- *  - half-bold (at start):                  <start>*           ==>   <start>^*                  [bitmark-- / bitmark++]
  *  - light:                                 ``                 ==>   `^`                        [bitmark-- / bitmark++]
- *  - half-light (at end):                   `<end>             ==>   `^<end>                    [bitmark-- / bitmark++]
- *  - half-light (at start):                 <start>`           ==>   <start>^`                  [bitmark-- / bitmark++]
  *  - italic:                                __                 ==>   _^_                        [bitmark-- / bitmark++]
- *  - half-italic (at end):                  _<end>             ==>   _^<end>                    [bitmark-- / bitmark++]
- *  - half-italic (at start):                <start>_           ==>   <start>^_                  [bitmark-- / bitmark++]
  *  - highlight:                             !!                 ==>   !^!                        [bitmark-- / bitmark++]
- *  - half-highlight (at end):               !<end>             ==>   !^<end>                    [bitmark-- / bitmark++]
- *  - half-highlight (at start):             <start>!           ==>   <start>^!                  [bitmark-- / bitmark++]
  *  - start of bit (at end):                 [<end>             ==>   [^<end>                    [bitmark-- / bitmark++]
  *  - start of bit:                          [.                 ==>   [^.                        [bitmark-- / bitmark++]
  *  - start of property:                     [@                 ==>   [^@                        [bitmark-- / bitmark++]
@@ -98,9 +90,8 @@ const REGEX_HATS = /(\^+)/; // $16^   /   ^$9  // Must be last
 const BREAKSCAPE_PLUSPLUS_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_FOOTER_DIVIDER.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
 const BREAKSCAPE_MINUSMINUS_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_FOOTER_DIVIDER.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
 
-const REGEX_START = /^([*`_!=])/; // ^$1
-const REGEX_END = /([*`_!=\\[])$/; // $2^
-const BREAKSCAPE_ENDS_REGEX_SOURCE = `${REGEX_START.source}|${REGEX_END.source}`;
+const REGEX_END = /([\\[])$/; // $1^
+const BREAKSCAPE_ENDS_REGEX_SOURCE = `${REGEX_END.source}`;
 
 const BREAKSCAPE_PLUSPLUS_REGEX = new RegExp(BREAKSCAPE_PLUSPLUS_REGEX_SOURCE, 'gm');
 const BREAKSCAPE_PLUSPLUS_REGEX_REPLACER = '$1$2$4$6$9$11$13$16^$3$5$7$8$10$12$14$15';
@@ -115,7 +106,7 @@ const BREAKSCAPE_V2_REGEX = new RegExp('^(?:(\\[)(\\^*)(\\.))|(?:(\\^+))', 'gm')
 const BREAKSCAPE_V2_REGEX_REPLACER = '$1$4^$2$3';
 
 const BREAKSCAPE_ENDS_REGEX = new RegExp(BREAKSCAPE_ENDS_REGEX_SOURCE, 'g');
-const BREAKSCAPE_ENDS_REGEX_REPLACER = '$2^$1';
+const BREAKSCAPE_ENDS_REGEX_REPLACER = '$1^';
 
 // const UNBREAKSCAPE_REGEX = new RegExp(UNBREAKSCAPE_REGEX_SOURCE, 'gm');
 // const UNBREAKSCAPE_REGEX_REPLACER = BREAKSCAPE_REGEX_REPLACER.replace(/\^/g, ''); // Remove ^ from the regex replacer
