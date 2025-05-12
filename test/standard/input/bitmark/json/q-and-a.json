@@ -57,10 +57,199 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.20.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.q-and-a:bitmark--]\n[@id:245346]\n[!Lösungsweg Lernaufgabe E - 9]\nBedeutung für den Klienten:\nEinsamkeit, Langeweile, darf das Zimmer nur in Ausnahmefällen verlassen, mit der emotional belastenden Situation umgehen können, Pflege geht weniger ins Zimmer, weniger Besuche, da Angst vor einer Übertragung, Personen betreten das isolierte Zimmer mit Schutzkleidung, Körperkontakt wird reduziert. Bedeutung für die Angehörigen:\nDie Isolationsmassnahmen zu verstehen versuchen, das Zimmer mit Schutzkleidung betreten, Angst vor einer Übertragung, Angst vor Körperkontakt. Bedeutung für das Personal:\nStrikte Einhaltung der Hygienerichtlinien, mehr Zeit einrechnen für das An- und Ausziehen der Schutzkleidung, Konzentration, dass alles Material, das benötigt wird, auch mitgenommen wird (ansonsten klingeln, damit eine Person ausserhalb des Zimmers das benötigte Material besorgen kann), gute Personalplanung – evtl. umplanen, wenn die zuständige Person erkältet ist, Ideen bezüglich Aktivierungsmöglichkeiten gegen die Langeweile ausfindig machen und Angehörige bitten, diese mitzubringen (Laptop, Bücher, Zeitschriften)."
+  },
+  {
+    "bit": {
+      "type": "q-and-a",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["1920727"],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Übung 1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "19",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "customerId:",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://ex__am==ple.com/im**age.png",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "text": "ex__am==ple.com/im**age.png",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Rechnungswesen als modellhafte Abbildung der betrieblichen Realität",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Die:",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "|image:",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://ex__am==ple.com/im**age.png",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "text": "ex__am==ple.com/im**age.png",
+              "type": "text"
+            },
+            {
+              "text": "|@width:650|",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Welcher Verein wurde deutscher Meister?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "ex__am==ple.com",
+          "src": "https://ex__am==ple.com/im**age.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sie haben keinen Schimmer?",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://ex__am==ple.com/im**age.png",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "text": "This is a link",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://ex__am==ple.com/im**age.png",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "text": "ex__am==ple.com/im**age.png",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.q-and-a:bitmark++&image]\n[@id:1920727]\n[%Übung 1][%][%19]\n[!**Rechnungswesen als modellhafte Abbildung der betrieblichen Realität**\nDie:\n|image:https://ex__am==ple.com/im**age.png|@width:650|\n\nWelcher Verein wurde deutscher Meister?]\n[&image:https://ex__am==ple.com/im**age.png]\n\nSie haben keinen Schimmer?\n==This is a link==|link:https://ex__am==ple.com/im**age.png|\n\n\nhttps://ex__am==ple.com/im**age.png\n\n[?customerId:https://ex__am==ple.com/im**age.png]"
   }
 ]

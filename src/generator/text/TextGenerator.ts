@@ -108,6 +108,7 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
 const INDENTATION_REGEX = new RegExp(/(\n|\r\n)/, 'g');
 
 const LINK_REGEX = new RegExp(/https?:\/\/|mailto:(.*)/, 'g');
+const LINK_BREAKSCAPE_REGEX = new RegExp(/\]/, 'g');
 
 /**
  * Text generation options
@@ -693,14 +694,19 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     if (linkText) s = linkText;
 
     // Breakscape the text
-    if (!codeBreakscaping) {
-      s = Breakscape.breakscape(s, {
-        textFormat: this.textFormat,
-      });
+    if (linkText) {
+      // Only breakscape ] in links (done in getLinkText)
+      s = linkText;
     } else {
-      s = Breakscape.breakscape(s, {
-        textFormat: this.textFormat,
-      });
+      if (!codeBreakscaping) {
+        s = Breakscape.breakscape(s, {
+          textFormat: this.textFormat,
+        });
+      } else {
+        s = Breakscape.breakscape(s, {
+          textFormat: this.textFormat,
+        });
+      }
     }
 
     // Apply any required indentation
@@ -766,17 +772,22 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
     const href = this.getLinkHref(node);
     if (href) {
+      let res: string;
       // Get the text part of the link
       const hrefText = href.replace(LINK_REGEX, '$1');
       if (hrefText === node.text) {
         // Return the link as the text
-        return href;
+        res = href;
       } else {
-        return node.text;
+        res = node.text;
       }
+      res = (res ?? '').replace(LINK_BREAKSCAPE_REGEX, '^]'); // Link breakscaping
+      return res;
     }
     return false;
   }
+
+  // protected getHrefTextFromHref
 
   protected validateGenerateOptions(ast: TextNode[]): void {
     // Validate plain text divider allowed
@@ -1089,7 +1100,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   protected writeLinkMark(mark: LinkMark) {
     const href = mark.attrs?.href || '';
 
-    const s = `link:${href}`;
+    // Apply link breakscaping
+    const linkText = (href ?? '').replace(LINK_BREAKSCAPE_REGEX, '^]');
+
+    const s = `link:${linkText}`;
     this.write(s);
   }
 
