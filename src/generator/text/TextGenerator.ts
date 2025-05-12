@@ -798,7 +798,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     const firstChar = s.slice(0, 1);
 
     if (lastChar === firstChar && ALL_HALF_MARKS.indexOf(lastChar) !== -1) {
-      // If the last char is a half-mark, and the first char is a half-mark, insert a breakscape
+      // If the last char is a half-mark, and the first char is the same half-mark, insert a breakscape
       return '^';
     }
     return '';
