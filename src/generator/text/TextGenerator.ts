@@ -788,7 +788,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   /**
-   * If the existing written text ends with a half-mark, and the new text starts with a half-mark, insert a
+   * If the existing written text ends with a half-mark, and the new text starts with the same half-mark, insert a
    * breakscape ^ between them to break the sequence.
    *
    * @param s
