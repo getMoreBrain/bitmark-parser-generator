@@ -54,7 +54,7 @@ const ITALIC_MARK = ITALIC_HALF_MARK + ITALIC_HALF_MARK;
 const HIGHLIGHT_MARK = HIGHLIGHT_HALF_MARK + HIGHLIGHT_HALF_MARK;
 const INLINE_MARK = INLINE_HALF_MARK + INLINE_HALF_MARK;
 
-// const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHLIGHT_HALF_MARK];
+const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHLIGHT_HALF_MARK, INLINE_HALF_MARK];
 
 const HEADING_TAG = '#';
 
@@ -787,6 +787,23 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     return false;
   }
 
+  /**
+   * If the existing written text ends with a half-mark, and the new text starts with the same half-mark, insert a
+   * breakscape ^ between them to break the sequence.
+   *
+   * @param s
+   */
+  protected getInterTextBreakscape(s: string): string {
+    const lastChar = this.writerText.slice(-1);
+    const firstChar = s.slice(0, 1);
+
+    if (lastChar === firstChar && ALL_HALF_MARKS.indexOf(lastChar) !== -1) {
+      // If the last char is a half-mark, and the first char is the same half-mark, insert a breakscape
+      return '^';
+    }
+    return '';
+  }
+
   // protected getHrefTextFromHref
 
   protected validateGenerateOptions(ast: TextNode[]): void {
@@ -1269,11 +1286,14 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    * @param value - The string value to be written.
    */
   write(value: string): this {
+    // Handle case where the already written text, combined with this text, would create an unwanted control
+    // sequence, e.g. old* **new**. In this case, a ^ is inserted to break the sequence.
+    value = this.getInterTextBreakscape(value) + value;
+
     if (this.options.writeCallback) {
       this.options.writeCallback(value);
-    } else {
-      this.writerText += value;
     }
+    this.writerText += value;
 
     // for debugging console.log(this.writerText);
 
