@@ -4,6 +4,9 @@ import { ResourceJsonKey } from '../../model/enum/ResourceJsonKey';
 import { ResourceTag } from '../../model/enum/ResourceTag';
 
 const RESOURCES: _ResourcesConfig = {
+  [ResourceConfigKey.icon]: {
+    tag: ResourceTag.icon,
+  },
   [ResourceConfigKey.image]: {
     tag: ResourceTag.image,
   },

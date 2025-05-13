@@ -236,13 +236,20 @@ function parseFlashcardLike(
   let question: Partial<TextAndIconJson> | undefined;
   let answer: Partial<TextAndIconJson> | undefined;
   let alternativeAnswers: Partial<TextAndIconJson>[] = [];
-  let cardIndex = 0;
   let variantIndex = 0;
   let extraTags: BitContentProcessorResult = {};
   let questionVariant: ProcessedCardVariant | undefined;
   const onlyOneCardAllowed = bitType === BitType.flashcard1;
 
-  for (const card of cardSet.cards) {
+  // Extract the heading card if it exists
+  const headingData = extractHeadingCard(cardSet);
+
+  for (let cardIdx = 0; cardIdx < cardSet.cards.length; cardIdx++) {
+    const card = cardSet.cards[cardIdx];
+
+    // Skip the headings card if it exists
+    if (headingData && cardIdx === 0) continue;
+
     // Reset the question and answers
     question = undefined;
     answer = undefined;
@@ -284,7 +291,7 @@ function parseFlashcardLike(
     }
 
     // Add the flashcard
-    if (cardIndex === 0 || !onlyOneCardAllowed) {
+    if (cardIdx === 0 || !onlyOneCardAllowed) {
       if (Config.isOfBitType(bitType, [BitType.definitionList, BitType.legend, BitType.metaSearchDefaultTerms])) {
         // .definition-list, etc
         const dl: Partial<DefinitionListItemJson> = {
@@ -316,11 +323,10 @@ function parseFlashcardLike(
       );
       break;
     }
-
-    cardIndex++;
   }
 
   return {
+    heading: headingData?.heading,
     flashcards: flashcards.length > 0 ? flashcards : undefined,
     definitions: definitions.length > 0 ? definitions : undefined,
   };

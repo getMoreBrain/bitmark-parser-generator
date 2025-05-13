@@ -226,8 +226,7 @@ CardLine_V2
 //  = value: $(Line NL) { return helper.handleCardLine(value); }
  = !(FooterDividerText WEOL) value: $(Line NL / Char+ EOL) { return helper.handleCardLine(value); }
 
-
-// Legacy CardSet
+// Legacy CardSet (AUTO CLOSE VERSION)
 CardSet_V1
   = value: (CardSetStart_V1 Cards_V1* CardSetEnd_V1) { return helper.handleCardSet(value[1].flat()); }
 
@@ -235,18 +234,38 @@ CardSetStart_V1
   = NL &("===" WNL) { helper.handleCardSetStart(); }
 
 CardSetEnd_V1
-  = ("===" &WEOL) { helper.handleCardSetEnd(); }
+  = (FooterDividerText? &WEOL) { helper.handleCardSetEnd(); }
 
-// Matches anything that is NOT ('===' followed by anything except a '===' to the EOF), so matches the rest of the card
-// set without consuming the final '===' which is consumed by the CardSetEnd_V1 rule
 Cards_V1
-  = !("===" WS* (!(NL "===") .)* EOF) value: CardLineOrDivider_V1 { return helper.handleCards(value); }
+  = value: CardLineOrDivider_V1 { return helper.handleCards(value); }
 
 CardLineOrDivider_V1
-  = value: ("===" WNL / "==" WNL / "--" WNL / CardLine_V1) { return helper.handleCardLineOrDivider(value, 1); }
+  = value: ("===" (WNL / WEOL) / "==" (WNL / WEOL) / "--" (WNL / WEOL) / CardLine_V1) { return helper.handleCardLineOrDivider(value, 1); }
 
 CardLine_V1
- = value: $(Line NL) { return helper.handleCardLine(value); }
+ = !(FooterDividerText WEOL) value: $(Line NL / Char+ EOL) { return helper.handleCardLine(value); }
+
+
+// // Legacy CardSet (NO AUTO CLOSE VERSION)
+// CardSet_V1
+//   = value: (CardSetStart_V1 Cards_V1* CardSetEnd_V1) { return helper.handleCardSet(value[1].flat()); }
+
+// CardSetStart_V1
+//   = NL &("===" WNL) { helper.handleCardSetStart(); }
+
+// CardSetEnd_V1
+//   = ("===" &WEOL) { helper.handleCardSetEnd(); }
+
+// // Matches anything that is NOT ('===' followed by anything except a '===' to the EOF), so matches the rest of the card
+// // set without consuming the final '===' which is consumed by the CardSetEnd_V1 rule
+// Cards_V1
+//   = !("===" WS* (!(NL "===") .)* EOF) value: CardLineOrDivider_V1 { return helper.handleCards(value); }
+
+// CardLineOrDivider_V1
+//   = value: ("===" WNL / "==" WNL / "--" WNL / CardLine_V1) { return helper.handleCardLineOrDivider(value, 1); }
+
+// CardLine_V1
+//  = value: $(Line NL) { return helper.handleCardLine(value); }
 
 
 //

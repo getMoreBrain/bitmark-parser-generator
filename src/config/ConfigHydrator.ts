@@ -120,7 +120,9 @@ class ConfigHydrator {
     const { configKey: _configKey, maxCount, minCount, chain: _chain } = _tag;
     const configKey = PropertyConfigKey.fromKey(_configKey) || ConfigKey._unknown;
     const _propertyConfig = PROPERTIES[configKey];
-    if (!_propertyConfig) throw new Error(`No config found for property config key '${_configKey}'`);
+    if (!_propertyConfig) {
+      throw new Error(`No config found for property config key '${_configKey}'`);
+    }
     const { tag, deprecated, single, format, defaultValue, jsonKey, astKey } = _propertyConfig;
 
     let chain: TagsConfig | undefined;
@@ -154,7 +156,9 @@ class ConfigHydrator {
     const { configKey: _configKey, maxCount, minCount, chain: _chain } = _tag;
     const configKey = ResourceConfigKey.fromKey(_configKey) || ConfigKey._unknown;
     const _resourceConfig = RESOURCES[configKey];
-    if (!_resourceConfig) throw new Error(`No config found for resource config key '${_configKey}'`);
+    if (!_resourceConfig) {
+      throw new Error(`No config found for resource config key '${_configKey}'`);
+    }
     const { tag, deprecated, jsonKey } = _resourceConfig;
 
     let chain: TagsConfig | undefined;
