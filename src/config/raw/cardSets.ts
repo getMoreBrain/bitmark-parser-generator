@@ -22,6 +22,10 @@ const CARDSETS: _CardSetsConfig = {
               configKey: GroupConfigKey.group_standardExample,
             },
             {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
+            {
               type: BitTagType.group,
               configKey: GroupConfigKey.group_resourceIcon,
             },

@@ -22,6 +22,10 @@
           "attrs": {}
         }
       ],
+      "heading": {
+        "forKeys": "title 1",
+        "forValues": "title 2"
+      },
       "definitions": [
         {
           "term": {
