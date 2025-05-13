@@ -29,9 +29,10 @@ function keyClashCheck() {
   const keySets = [tagConfigKeys, propertyConfigKeys, resourceConfigKeys, groupConfigKeys];
   for (const keySet of keySets) {
     for (const key in keySet) {
-      if (keys.has(key)) {
-        throw new Error(`Duplicate ConfigKey: ${key}`);
-      }
+      // Clashes are not a problem, and necessary if for example a Property and Resource tag have the same name
+      // if (keys.has(key)) {
+      // throw new Error(`Duplicate ConfigKey: ${key}`);
+      // }
       keys.add(key);
     }
   }

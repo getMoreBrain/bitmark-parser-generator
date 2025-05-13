@@ -766,8 +766,8 @@ const GROUPS: _GroupsConfig = {
     type: GroupConfigType.standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.icon,
+        type: BitTagType.resource,
+        configKey: ResourceConfigKey.icon,
         chain: [
           {
             type: BitTagType.group,
