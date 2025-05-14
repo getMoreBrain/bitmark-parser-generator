@@ -15,7 +15,6 @@ import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BodyBitJson, GapJson, HighlightTextJson, MarkJson, SelectOptionJson } from '../../model/json/BodyBitJson';
-import { AudioResourceJson, ImageResourceJson, ResourceDataJson, ResourceJson } from '../../model/json/ResourceJson';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { ObjectUtils } from '../../utils/ObjectUtils';
 import { StringUtils } from '../../utils/StringUtils';
@@ -37,6 +36,13 @@ import {
   StatementJson,
   TechnicalTermJson,
 } from '../../model/json/BitJson';
+import {
+  AudioResourceWrapperJson,
+  ImageResourceJson,
+  ImageResourceWrapperJson,
+  ResourceDataJson,
+  ResourceJson,
+} from '../../model/json/ResourceJson';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
   debugGenerationInline: false,
@@ -615,7 +621,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> * -> definition -> icon
   // bitmarkAst -> bits -> bitsValue -> * -> alternativeDefinitionsValue -> icon
   protected enter_icon(node: NodeInfo, route: NodeInfo[]): boolean {
-    const resource = node.value as ImageResourceJson;
+    const resource = node.value as ImageResourceWrapperJson;
 
     const parent = this.getParentNode(route);
     if (!parent) return true;
@@ -634,7 +640,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // This is a resource, so handle it with the common code
     this.writeNL();
-    this.writeResource(ResourceTag.icon, resource.src);
+    this.writeResource(ResourceTag.icon, resource.image.src);
     // this.writePropertyStyleResource(ResourceTag.icon, resource as ResourceJson);
 
     // Continue traversal of this branch (for the chained properties)
@@ -1358,11 +1364,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue -> keyAudio
 
   protected enter_keyAudio(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const resource = node.value as AudioResourceJson;
+    const resource = node.value as AudioResourceWrapperJson;
 
     // This is a resource, so handle it with the common code
     this.writeNL();
-    this.writeResource(ResourceTag.audio, resource.src);
+    this.writeResource(ResourceTag.audio, resource.audio.src);
 
     // Stop traversal of this branch
     return false;
@@ -1371,11 +1377,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue -> keyImage
 
   protected enter_keyImage(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const resource = node.value as ImageResourceJson;
+    const resource = node.value as ImageResourceWrapperJson;
 
     // This is a resource, so handle it with the common code
     this.writeNL();
-    this.writeResource(ResourceTag.image, resource.src);
+    this.writeResource(ResourceTag.image, resource.image.src);
 
     // Stop traversal of this branch
     return false;

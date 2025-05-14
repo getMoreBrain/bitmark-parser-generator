@@ -39,7 +39,6 @@ import {
 import {
   AudioResourceJson,
   AudioResourceWrapperJson,
-  ImageResourceJson,
   ImageResourceWrapperJson,
 } from '../../../../model/json/ResourceJson';
 import {
@@ -264,7 +263,7 @@ function parseFlashcardLike(
           ...extraTags,
           ...tags,
         };
-        const icon = resources && resources.length > 0 ? (resources[0] as ImageResourceWrapperJson).image : undefined;
+        const icon = resources && resources.length > 0 ? (resources[0] as ImageResourceWrapperJson) : undefined;
         const text = cardBody?.body as TextAst;
         const str = cardBody?.bodyString ?? '';
 
@@ -613,8 +612,8 @@ function parseMatchPairs(
   let pairKey: string | undefined = undefined;
   let pairValues: string[] = [];
   let _pairValuesAst: TextAst[] = [];
-  let keyAudio: AudioResourceJson | undefined = undefined;
-  let keyImage: ImageResourceJson | undefined = undefined;
+  let keyAudio: AudioResourceWrapperJson | undefined = undefined;
+  let keyImage: ImageResourceWrapperJson | undefined = undefined;
   let extraTags: BitContentProcessorResult = {};
   let isDefaultExampleCard = false;
   let exampleCard: ExampleJson | undefined;
@@ -660,9 +659,9 @@ function parseMatchPairs(
             const resource = resources[0];
             // console.log('WARNING: Match card has resource on first side', tags.resource);
             if (resource.type === ResourceTag.audio) {
-              keyAudio = (resource as AudioResourceWrapperJson).audio;
+              keyAudio = resource as AudioResourceWrapperJson;
             } else if (resource.type === ResourceTag.image) {
-              keyImage = (resource as ImageResourceWrapperJson).image;
+              keyImage = resource as ImageResourceWrapperJson;
             }
           } else {
             // If not a heading or resource, it is a pair

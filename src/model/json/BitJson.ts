@@ -1,7 +1,14 @@
 import { JsonText, TextAst } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
-import { AudioResourceJson, ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
+
+import {
+  AudioResourceJson,
+  AudioResourceWrapperJson,
+  ImageResourceJson,
+  ImageResourceWrapperJson,
+  ResourceJson,
+} from './ResourceJson';
 
 export interface BitJson {
   type: string; // bit type
@@ -289,7 +296,7 @@ export interface DefinitionListItemJson {
 
 export interface TextAndIconJson {
   text: JsonText;
-  icon: ImageResourceJson;
+  icon: ImageResourceWrapperJson;
 }
 
 export interface StatementJson {
@@ -390,8 +397,8 @@ export interface HeadingJson {
 
 export interface PairJson {
   key: string;
-  keyAudio: AudioResourceJson;
-  keyImage: ImageResourceJson;
+  keyAudio: AudioResourceWrapperJson;
+  keyImage: ImageResourceWrapperJson;
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
