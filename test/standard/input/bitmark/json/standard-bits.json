@@ -36,9 +36,9 @@
       ]
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-article-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -79,9 +79,9 @@
       ]
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-article-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -90,8 +90,6 @@
       "type": "standard-example-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "isExample": false,
-      "example": null,
       "id": ["151971"],
       "item": [],
       "lead": [],
@@ -121,12 +119,14 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "example": null
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-example-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -135,8 +135,6 @@
       "type": "standard-example-non-normative",
       "format": "bitmark--",
       "bitLevel": 1,
-      "isExample": false,
-      "example": null,
       "id": ["151971"],
       "item": [],
       "lead": [],
@@ -166,12 +164,14 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "example": null
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-example-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -187,6 +187,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -211,28 +227,12 @@
           ],
           "attrs": {}
         }
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "png",
-          "provider": "docs.bitbook.education",
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      ]
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-image-figure-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
@@ -248,6 +248,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -273,35 +289,84 @@
           "attrs": {}
         }
       ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "png",
-          "provider": "docs.bitbook.education",
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
+      "heading": {
+        "forKeys": "Legende",
+        "forValues": ""
       },
-      "captionDefinitionList": {
-        "columns": ["Legende", ""],
-        "definitions": [
-          {
-            "term": "A",
-            "definition": "Körper"
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "A",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
           },
-          {
-            "term": "B",
-            "definition": "Stromquelle"
-          }
-        ]
-      },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Körper",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "B",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Stromquelle",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
       "footer": [
         {
           "type": "paragraph",
@@ -316,9 +381,9 @@
       ]
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-image-figure-non-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n====\n[#Legende]\n--\n[#]\n====\nA\n--\nKörper\n====\nB\n--\nStromquelle\n====\n\n~~~~\nOptional Footer"
   },
@@ -359,9 +424,9 @@
       ]
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-list:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -403,9 +468,9 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-list-item:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -424,9 +489,9 @@
       "body": []
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-list-item:bitmark++]\n[@listItemIndent:5]"
   },
@@ -467,9 +532,9 @@
       ]
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-note-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -510,9 +575,9 @@
       ]
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-note-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -553,9 +618,9 @@
       ]
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-remark-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -596,9 +661,9 @@
       ]
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-remark-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
@@ -614,7 +679,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -630,12 +694,13 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -651,7 +716,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -667,12 +731,13 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -688,7 +753,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -704,12 +768,13 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-remark-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -725,7 +790,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -741,12 +805,13 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-remark-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
@@ -892,9 +957,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1040,9 +1105,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1188,9 +1253,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-remark-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1336,9 +1401,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.standard-remark-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   }
