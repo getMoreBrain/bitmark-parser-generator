@@ -21,7 +21,7 @@ import { commentTagContentProcessor as internalCommentTagContentProcessor } from
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { personChainContentProcessor } from './PersonChainContentProcessor';
 import { ratingLevelChainContentProcessor } from './RatingLevelChainContentProcessor';
-import { propertyStyleResourceContentProcessor, resourceContentProcessor } from './ResourceContentProcessor';
+import { propertyStyleResourceContentProcessor } from './ResourceContentProcessor';
 import { servingsChainContentProcessor } from './ServingsChainContentProcessor';
 import { technicalTermChainContentProcessor } from './TechnicalTermChainContentProcessor';
 
@@ -76,10 +76,6 @@ function propertyContentProcessor(
     } else if (configKey === PropertyConfigKey.person || configKey === PropertyConfigKey.partner) {
       personChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
-    } else if (configKey === PropertyConfigKey.icon && contentDepth === BitContentLevel.Card) {
-      // TODO - now the property is handled should be part of the config, not hardcoded here with the depth
-      resourceContentProcessor(context, contentDepth, tagsConfig, content, target);
-      return;
     } else if (configKey === PropertyConfigKey.imageSource) {
       imageSourceChainContentProcessor(context, contentDepth, tagsConfig, content, target);
       return;
@@ -115,16 +111,33 @@ function propertyContentProcessor(
           case PropertyFormat.trimmedString:
             return Breakscape.unbreakscape(
               StringUtils.isString(v) ? (StringUtils.trimmedString(v) as BreakscapedString) : undefined,
+              {
+                textFormat: TextFormat.tag,
+              },
             );
 
           case PropertyFormat.number:
-            return NumberUtils.asNumber(Breakscape.unbreakscape(v as BreakscapedString));
+            return NumberUtils.asNumber(
+              Breakscape.unbreakscape(v as BreakscapedString, {
+                textFormat: TextFormat.tag,
+              }),
+            );
 
           case PropertyFormat.boolean:
-            return BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
+            return BooleanUtils.toBoolean(
+              Breakscape.unbreakscape(v as BreakscapedString, {
+                textFormat: TextFormat.tag,
+              }),
+              true,
+            );
 
           case PropertyFormat.invertedBoolean:
-            return !BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
+            return !BooleanUtils.toBoolean(
+              Breakscape.unbreakscape(v as BreakscapedString, {
+                textFormat: TextFormat.tag,
+              }),
+              true,
+            );
 
           case PropertyFormat.bitmarkMinusMinus:
             v = StringUtils.isString(v) ? v : '';
@@ -141,7 +154,9 @@ function propertyContentProcessor(
             });
         }
       }
-      return Breakscape.unbreakscape(v as BreakscapedString);
+      return Breakscape.unbreakscape(v as BreakscapedString, {
+        textFormat: TextFormat.tag,
+      });
     };
 
     // Convert property and key as needed

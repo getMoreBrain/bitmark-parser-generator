@@ -13,8 +13,6 @@ import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
 import {
   BotResponseJson,
-  CaptionDefinitionJson,
-  CaptionDefinitionListJson,
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
@@ -39,7 +37,6 @@ import {
 import {
   AudioResourceJson,
   AudioResourceWrapperJson,
-  ImageResourceJson,
   ImageResourceWrapperJson,
 } from '../../../../model/json/ResourceJson';
 import {
@@ -85,8 +82,9 @@ function buildCards(
   const cardSetType = bitConfig.cardSet?.configKey;
 
   switch (cardSetType) {
-    case CardSetConfigKey._flashcardLike:
-      result = parseFlashcardLike(context, bitType, processedCardSet);
+    case CardSetConfigKey._flashcard:
+    case CardSetConfigKey._definitionList:
+      result = parseFlashcardOrDefinitionList(context, bitType, processedCardSet);
       break;
 
     case CardSetConfigKey._elements:
@@ -142,10 +140,11 @@ function buildCards(
       result = parseCardBits(context, bitType, textFormat, processedCardSet);
       break;
 
-    case CardSetConfigKey._captionDefinitionsList:
-      // ==> captionDefinitionsList
-      result = parseCaptionDefinitionsList(context, bitType, processedCardSet);
-      break;
+    // DEPRECATED - REMOVE IN THE FUTURE
+    // case CardSetConfigKey._captionDefinitionsList:
+    //   // ==> captionDefinitionsList
+    //   result = parseCaptionDefinitionsList(context, bitType, processedCardSet);
+    //   break;
 
     default:
     // Return default empty object
@@ -225,7 +224,7 @@ function processCardSet(context: BitmarkPegParserContext, parsedCardSet: ParsedC
   return processedCardSet;
 }
 
-function parseFlashcardLike(
+function parseFlashcardOrDefinitionList(
   context: BitmarkPegParserContext,
   bitType: BitTypeType,
   cardSet: ProcessedCardSet,
@@ -264,7 +263,7 @@ function parseFlashcardLike(
           ...extraTags,
           ...tags,
         };
-        const icon = resources && resources.length > 0 ? (resources[0] as ImageResourceWrapperJson).image : undefined;
+        const icon = resources && resources.length > 0 ? (resources[0] as ImageResourceWrapperJson) : undefined;
         const text = cardBody?.body as TextAst;
         const str = cardBody?.bodyString ?? '';
 
@@ -292,16 +291,7 @@ function parseFlashcardLike(
 
     // Add the flashcard
     if (cardIdx === 0 || !onlyOneCardAllowed) {
-      if (Config.isOfBitType(bitType, [BitType.definitionList, BitType.legend, BitType.metaSearchDefaultTerms])) {
-        // .definition-list, etc
-        const dl: Partial<DefinitionListItemJson> = {
-          term: question as TextAndIconJson,
-          definition: answer as TextAndIconJson,
-          alternativeDefinitions: alternativeAnswers as TextAndIconJson[],
-          ...extraTags,
-        };
-        if (dl) definitions.push(dl);
-      } else {
+      if (Config.isOfBitType(bitType, [BitType.flashcard])) {
         // .flashcard
         // if (question) {
         const fc: Partial<FlashcardJson> = {
@@ -314,6 +304,15 @@ function parseFlashcardLike(
         // } else {
         //   context.addWarning('Ignoring card with empty question', questionVariant);
         // }
+      } else {
+        // .definition-list, etc
+        const dl: Partial<DefinitionListItemJson> = {
+          term: question as TextAndIconJson,
+          definition: answer as TextAndIconJson,
+          alternativeDefinitions: alternativeAnswers as TextAndIconJson[],
+          ...extraTags,
+        };
+        if (dl) definitions.push(dl);
       }
     } else {
       // Only one card allowed, add a warning and ignore the card
@@ -613,8 +612,8 @@ function parseMatchPairs(
   let pairKey: string | undefined = undefined;
   let pairValues: string[] = [];
   let _pairValuesAst: TextAst[] = [];
-  let keyAudio: AudioResourceJson | undefined = undefined;
-  let keyImage: ImageResourceJson | undefined = undefined;
+  let keyAudio: AudioResourceWrapperJson | undefined = undefined;
+  let keyImage: ImageResourceWrapperJson | undefined = undefined;
   let extraTags: BitContentProcessorResult = {};
   let isDefaultExampleCard = false;
   let exampleCard: ExampleJson | undefined;
@@ -660,9 +659,9 @@ function parseMatchPairs(
             const resource = resources[0];
             // console.log('WARNING: Match card has resource on first side', tags.resource);
             if (resource.type === ResourceTag.audio) {
-              keyAudio = (resource as AudioResourceWrapperJson).audio;
+              keyAudio = resource as AudioResourceWrapperJson;
             } else if (resource.type === ResourceTag.image) {
-              keyImage = (resource as ImageResourceWrapperJson).image;
+              keyImage = resource as ImageResourceWrapperJson;
             }
           } else {
             // If not a heading or resource, it is a pair
@@ -1036,66 +1035,67 @@ function parseIngredients(
   };
 }
 
-function parseCaptionDefinitionsList(
-  _context: BitmarkPegParserContext,
-  _bitType: BitTypeType,
-  cardSet: ProcessedCardSet,
-): BitSpecificCards {
-  let isHeading = false;
-  const columns: string[] = [];
-  const rows: string[][] = [];
-  let rowValues: string[] = [];
+// DEPRECATED - REMOVE IN THE FUTURE
+// function parseCaptionDefinitionsList(
+//   _context: BitmarkPegParserContext,
+//   _bitType: BitTypeType,
+//   cardSet: ProcessedCardSet,
+// ): BitSpecificCards {
+//   let isHeading = false;
+//   const columns: string[] = [];
+//   const rows: string[][] = [];
+//   let rowValues: string[] = [];
 
-  for (let cardIdx = 0; cardIdx < cardSet.cards.length; cardIdx++) {
-    const card = cardSet.cards[cardIdx];
+//   for (let cardIdx = 0; cardIdx < cardSet.cards.length; cardIdx++) {
+//     const card = cardSet.cards[cardIdx];
 
-    isHeading = false;
-    rowValues = [];
+//     isHeading = false;
+//     rowValues = [];
 
-    for (const side of card.sides) {
-      for (const content of side.variants) {
-        // variant = content;
-        const tags = content.data;
+//     for (const side of card.sides) {
+//       for (const content of side.variants) {
+//         // variant = content;
+//         const tags = content.data;
 
-        const { title, cardBodyStr } = tags;
+//         const { title, cardBodyStr } = tags;
 
-        // Get the 'heading' which is the [#title] at level 1
-        const heading = title && title[1].titleString;
-        if (cardIdx === 0 && heading != null) isHeading = true;
+//         // Get the 'heading' which is the [#title] at level 1
+//         const heading = title && title[1].titleString;
+//         if (cardIdx === 0 && heading != null) isHeading = true;
 
-        if (isHeading) {
-          columns.push(heading ?? '');
-        } else {
-          // If not a heading, it is a row cell value
-          const value = cardBodyStr ?? '';
-          rowValues.push(value);
-        }
-      }
-    }
+//         if (isHeading) {
+//           columns.push(heading ?? '');
+//         } else {
+//           // If not a heading, it is a row cell value
+//           const value = cardBodyStr ?? '';
+//           rowValues.push(value);
+//         }
+//       }
+//     }
 
-    if (!isHeading) {
-      rows.push(rowValues);
-    }
-  }
+//     if (!isHeading) {
+//       rows.push(rowValues);
+//     }
+//   }
 
-  const captionDefinitionList: Partial<CaptionDefinitionListJson> | undefined =
-    columns.length > 0
-      ? {
-          columns,
-          definitions: rows
-            .map((row) => {
-              const col: Partial<CaptionDefinitionJson> = {
-                term: row[0],
-                definition: row[1],
-              };
-              return col as CaptionDefinitionJson;
-            })
-            .filter((d) => d != null),
-        }
-      : undefined;
+//   const captionDefinitionList: Partial<CaptionDefinitionListJson> | undefined =
+//     columns.length > 0
+//       ? {
+//           heading: columns,
+//           definitions: rows
+//             .map((row) => {
+//               const col: Partial<CaptionDefinitionJson> = {
+//                 term: row[0],
+//                 definition: row[1],
+//               };
+//               return col as CaptionDefinitionJson;
+//             })
+//             .filter((d) => d != null),
+//         }
+//       : undefined;
 
-  return { captionDefinitionList };
-}
+//   return { captionDefinitionList };
+// }
 
 function parseCardBits(
   _context: BitmarkPegParserContext,

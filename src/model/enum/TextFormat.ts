@@ -1,7 +1,8 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 const TextFormat = superenum({
-  text: 'text', // plain text [only start of new bits will be breakscaped]
+  tag: 'tag', // tag, [only end of tag `]` will be breakscaped]
+  text: 'text', // plain text [only start of new bits `[.` will be breakscaped]
   latex: 'latex', // LaTeX code [breakscaping same as plain text]
   json: 'json', // json as text [breakscaping same as plain text]
   xml: 'xml', // xml as text [breakscaping same as plain text]

@@ -1,7 +1,14 @@
 import { JsonText, TextAst } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
-import { AudioResourceJson, ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
+
+import {
+  AudioResourceJson,
+  AudioResourceWrapperJson,
+  ImageResourceJson,
+  ImageResourceWrapperJson,
+  ResourceJson,
+} from './ResourceJson';
 
 export interface BitJson {
   type: string; // bit type
@@ -220,7 +227,8 @@ export interface BitJson {
   pairs: PairJson[];
   matrix: MatrixJson[];
   table: TableJson;
-  captionDefinitionList: CaptionDefinitionListJson;
+  // DEPRECATED - REMOVE IN THE FUTURE
+  // captionDefinitionList: CaptionDefinitionListJson;
   choices: ChoiceJson[];
   questions: QuestionJson[];
   ingredients: IngredientJson[];
@@ -289,7 +297,7 @@ export interface DefinitionListItemJson {
 
 export interface TextAndIconJson {
   text: JsonText;
-  icon: ImageResourceJson;
+  icon: ImageResourceWrapperJson;
 }
 
 export interface StatementJson {
@@ -390,8 +398,8 @@ export interface HeadingJson {
 
 export interface PairJson {
   key: string;
-  keyAudio: AudioResourceJson;
-  keyImage: ImageResourceJson;
+  keyAudio: AudioResourceWrapperJson;
+  keyImage: ImageResourceWrapperJson;
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -502,19 +510,20 @@ export interface RatingLevelStartEndJson {
   label?: JsonText;
 }
 
-// CaptionDefinition
+// DEPRECATED - REMOVE IN THE FUTURE
+// // CaptionDefinition
 
-export interface CaptionDefinitionJson {
-  term: string;
-  definition: string;
-}
+// export interface CaptionDefinitionJson {
+//   term: string;
+//   definition: string;
+// }
 
-// CaptionDefinitionList
+// // CaptionDefinitionList (a.k.a Legend)
 
-export interface CaptionDefinitionListJson {
-  columns: string[];
-  definitions: CaptionDefinitionJson[];
-}
+// export interface CaptionDefinitionListJson {
+//   heading: string[];
+//   definitions: CaptionDefinitionJson[];
+// }
 
 export interface ListItemJson {
   item: JsonText;

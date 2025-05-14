@@ -1,6 +1,7 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
+import { TextFormat } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 
@@ -40,12 +41,16 @@ function defaultTagContentProcessor(
     }
 
     case TypeKey.Anchor: {
-      target.anchor = Breakscape.unbreakscape(trimmedStringValue);
+      target.anchor = Breakscape.unbreakscape(trimmedStringValue, {
+        textFormat: TextFormat.tag,
+      });
       break;
     }
 
     case TypeKey.Reference: {
-      target.reference = Breakscape.unbreakscape(trimmedStringValue);
+      target.reference = Breakscape.unbreakscape(trimmedStringValue, {
+        textFormat: TextFormat.tag,
+      });
       break;
     }
 

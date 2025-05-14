@@ -28,8 +28,6 @@ import { NodeValidator } from './rules/NodeValidator';
 import {
   BookJson,
   BotResponseJson,
-  CaptionDefinitionJson,
-  CaptionDefinitionListJson,
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
@@ -294,6 +292,7 @@ class Builder extends BaseBuilder {
     elements?: string[];
     flashcards?: Partial<FlashcardJson>[];
     definitions?: Partial<DefinitionListItemJson>[];
+    legend?: Partial<DefinitionListItemJson>[];
     statement?: Partial<StatementJson>;
     statements?: Partial<StatementJson>[];
     responses?: Partial<ResponseJson>[];
@@ -306,7 +305,8 @@ class Builder extends BaseBuilder {
     questions?: Partial<QuestionJson>[];
     botResponses?: Partial<BotResponseJson>[];
     ingredients?: Partial<IngredientJson>[];
-    captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+    // DEPRECATED - TO BE REMOVED IN THE FUTURE
+    // captionDefinitionList?: Partial<CaptionDefinitionListJson>;
     cardBits?: Partial<CardBit>[];
     footer?: Partial<Footer>;
 
@@ -1078,17 +1078,8 @@ class Builder extends BaseBuilder {
     const defaultExample = Array.isArray(data.__valuesAst) && data.__valuesAst.length > 0 ? data.__valuesAst[0] : null;
 
     // Process the keyAudio and keyImage resources
-    const keyAudio = (
-      ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.audio, data.keyAudio),
-      ) as AudioResourceWrapperJson
-    )?.audio;
-
-    const keyImage = (
-      ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data.keyImage),
-      ) as ImageResourceWrapperJson
-    )?.image;
+    const keyAudio = this.resourceBuilder.resourceFromResourceJson(context, data.keyAudio) as AudioResourceWrapperJson;
+    const keyImage = this.resourceBuilder.resourceFromResourceJson(context, data.keyImage) as ImageResourceWrapperJson;
 
     // NOTE: Node order is important and is defined here
     const node: PairJson = {
@@ -1979,11 +1970,7 @@ class Builder extends BaseBuilder {
     data: Partial<TextAndIconJson> | undefined,
     textAsStrings: boolean = false,
   ): TextAndIconJson | undefined {
-    const icon = (
-      ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data?.icon),
-      ) as ImageResourceWrapperJson
-    )?.image;
+    const icon = this.resourceBuilder.resourceFromResourceJson(context, data?.icon) as ImageResourceWrapperJson;
 
     // Ensure text is bitmark text
     let text: JsonText = this.handleJsonText(context, true, data?.text);
@@ -2201,67 +2188,68 @@ class Builder extends BaseBuilder {
     return node;
   }
 
-  /**
-   * Build captionDefinition node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  protected buildCaptionDefinition(
-    _context: BuildContext,
-    data: Partial<CaptionDefinitionJson> | undefined,
-  ): CaptionDefinitionJson | undefined {
-    if (!data) return undefined;
+  // DEPRECATED - TO BE REMOVED IN FUTURE
+  // /**
+  //  * Build captionDefinition node
+  //  *
+  //  * @param data - data for the node
+  //  * @returns
+  //  */
+  // protected buildCaptionDefinition(
+  //   _context: BuildContext,
+  //   data: Partial<CaptionDefinitionJson> | undefined,
+  // ): CaptionDefinitionJson | undefined {
+  //   if (!data) return undefined;
 
-    // NOTE: Node order is important and is defined here
-    const node: CaptionDefinitionJson = {
-      // term: this.convertJsonTextToAstText(data.term),
-      // description: this.convertJsonTextToAstText(data.description),
-      term: data.term ?? '',
-      definition: data.definition ?? '',
-    };
+  //   // NOTE: Node order is important and is defined here
+  //   const node: CaptionDefinitionJson = {
+  //     // term: this.convertJsonTextToAstText(data.term),
+  //     // description: this.convertJsonTextToAstText(data.description),
+  //     term: data.term ?? '',
+  //     definition: data.definition ?? '',
+  //   };
 
-    // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
-      ignoreEmptyString: ['term', 'description'],
-      // ignoreAllUndefined: true,
-    });
+  //   // Remove Unset Optionals
+  //   ObjectUtils.removeUnwantedProperties(node, {
+  //     ignoreEmptyString: ['term', 'description'],
+  //     // ignoreAllUndefined: true,
+  //   });
 
-    return node;
-  }
+  //   return node;
+  // }
 
-  /**
-   * Build captionDefinitionList node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  protected buildCaptionDefinitionList(
-    context: BuildContext,
-    data: Partial<CaptionDefinitionListJson> | undefined,
-  ): CaptionDefinitionListJson | undefined {
-    if (!data) return undefined;
+  // /**
+  //  * Build captionDefinitionList node
+  //  *
+  //  * @param data - data for the node
+  //  * @returns
+  //  */
+  // protected buildCaptionDefinitionList(
+  //   context: BuildContext,
+  //   data: Partial<CaptionDefinitionListJson> | undefined,
+  // ): CaptionDefinitionListJson | undefined {
+  //   if (!data) return undefined;
 
-    // NOTE: Node order is important and is defined here
-    const node: CaptionDefinitionListJson = {
-      columns: data.columns ?? [],
-      definitions: (data.definitions ?? [])
-        .map((d) => {
-          return this.buildCaptionDefinition(context, {
-            term: d.term,
-            definition: d.definition,
-          });
-        })
-        .filter((d) => d != null),
-    };
+  //   // NOTE: Node order is important and is defined here
+  //   const node: CaptionDefinitionListJson = {
+  //     columns: data.columns ?? [],
+  //     definitions: (data.definitions ?? [])
+  //       .map((d) => {
+  //         return this.buildCaptionDefinition(context, {
+  //           term: d.term,
+  //           definition: d.definition,
+  //         });
+  //       })
+  //       .filter((d) => d != null),
+  //   };
 
-    // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllEmptyArrays: true,
-    });
+  //   // Remove Unset Optionals
+  //   ObjectUtils.removeUnwantedProperties(node, {
+  //     ignoreAllEmptyArrays: true,
+  //   });
 
-    return node;
-  }
+  //   return node;
+  // }
 
   /**
    * Build card bit[] node
@@ -2322,6 +2310,7 @@ class Builder extends BaseBuilder {
     data: {
       flashcards?: Partial<FlashcardJson>[];
       definitions?: Partial<DefinitionListItemJson>[];
+      legend?: Partial<DefinitionListItemJson>[];
       questions?: Partial<QuestionJson>[];
       elements?: string[];
       statement?: Partial<StatementJson>;
@@ -2337,7 +2326,8 @@ class Builder extends BaseBuilder {
       table?: Partial<TableJson>;
       botResponses?: Partial<BotResponseJson>[];
       ingredients?: Partial<IngredientJson>[];
-      captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+      // DEPRECATED - TO BE REMOVED IN FUTURE
+      // captionDefinitionList?: Partial<CaptionDefinitionListJson>;
       cardBits?: Partial<CardBit>[];
     },
   ): CardNode | undefined {
@@ -2346,7 +2336,7 @@ class Builder extends BaseBuilder {
       questions: this.buildQuestions(context, data.questions),
       elements: data.elements,
       flashcards: this.buildFlashcards(context, data.flashcards),
-      definitions: this.buildDefinitionList(context, data.definitions),
+      definitions: this.buildDefinitionList(context, data.definitions ?? data.legend),
       statement: this.buildStatement(context, data.statement),
       statements: this.buildStatements(context, data.statements),
       choices: this.buildChoices(context, data.choices),
@@ -2359,7 +2349,8 @@ class Builder extends BaseBuilder {
       table: this.buildTable(context, data.table),
       botResponses: this.buildBotResponses(context, data.botResponses),
       ingredients: this.buildIngredients(context, data.ingredients),
-      captionDefinitionList: this.buildCaptionDefinitionList(context, data.captionDefinitionList),
+      // DEPRECATED - TO BE REMOVED IN FUTURE
+      // captionDefinitionList: this.buildCaptionDefinitionList(context, data.captionDefinitionList),
       cardBits: this.buildCardBits(context, data.cardBits),
     };
 

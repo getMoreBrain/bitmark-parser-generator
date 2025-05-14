@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-parser-generator",
-  "version": "3.22.0",
+  "version": "3.23.0",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Get More Brain Ltd",
   "license": "ISC",
@@ -64,6 +64,7 @@
     "@types/ungap__structured-clone": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
     "@typescript-eslint/parser": "^8.27.0",
+    "diff": "^8.0.1",
     "esbuild-register": "^3.6.0",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
