@@ -10,24 +10,27 @@ import * as fs from 'fs-extra';
 import path from 'path';
 
 import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
+import { TextFormat } from '../../../src/model/enum/TextFormat';
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
-class DevTextbreakscape {
+class DevTextUnbreakscape {
   async test(): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text.breakscape');
+    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text.minusminus.unbreakscape');
 
     // Read in the test file
     const str = fs.readFileSync(filename, {
       encoding: 'utf8',
     });
 
-    const res = bitmarkParserGenerator.breakscapeText(str);
+    const res = bitmarkParserGenerator.unbreakscapeText(str, {
+      textFormat: TextFormat.bitmarkMinusMinus,
+    });
     console.log(res);
   }
 }
 
-const parser = new DevTextbreakscape();
+const parser = new DevTextUnbreakscape();
 
 void parser.test().then(() => {
   // Done

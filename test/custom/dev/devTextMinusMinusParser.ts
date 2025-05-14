@@ -33,6 +33,7 @@ class DevTextParser {
       // Generate AST from the Bitmark Text markup
       const textAst = textParser.toAst(bitStr.trim(), {
         textFormat: TextFormat.bitmarkMinusMinus,
+        isProperty: false,
       });
 
       const jsonStr = JSON.stringify(textAst, undefined, 2);

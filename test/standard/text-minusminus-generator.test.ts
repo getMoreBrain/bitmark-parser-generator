@@ -38,7 +38,7 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('text-generation', () => {
+describe('text-minusminus-generation', () => {
   describe('JSON => Text => JSON: Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
@@ -98,6 +98,7 @@ describe('text-generation', () => {
         // Generate JSON from breakscaped markup text
         const textAst = textParser.toAst(originalMarkup, {
           textFormat: TextFormat.bitmarkMinusMinus,
+          isProperty: false,
         });
 
         // Write JSON file
@@ -128,6 +129,7 @@ describe('text-generation', () => {
         // Generate JSON from generated text
         const newTextAst = textParser.toAst(newMarkup, {
           textFormat: TextFormat.bitmarkMinusMinus,
+          isProperty: false,
         });
 
         // Write the new JSON file

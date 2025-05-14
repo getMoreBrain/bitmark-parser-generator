@@ -1,6 +1,6 @@
 [.vendor-formbricks-link]
 [@id:342341]
-[@vendorSurveyId:here is ^^ the survey id]
+[@vendorSurveyId:here is ^ the survey id]
 <div style="position: relative; height:100vh; max-height:100vh; overflow:auto;">
   <iframe
     src="https://app.formbricks.com/s/<your-surveyId>"
@@ -17,7 +17,7 @@
 
 [.vendor-formbricks-link-anonymous]
 [@id:342341]
-[@vendorSurveyId:here is ^^ the survey id]
+[@vendorSurveyId:here is ^ the survey id]
 <div style="position: relative; height:100vh; max-height:100vh; overflow:auto;">
   <iframe
     src="https://app.formbricks.com/s/<your-surveyId>"

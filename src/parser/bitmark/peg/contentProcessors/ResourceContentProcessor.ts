@@ -5,6 +5,7 @@ import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { Count } from '../../../../model/enum/Count';
 import { ResourceTag, ResourceTagType } from '../../../../model/enum/ResourceTag';
+import { TextFormat } from '../../../../model/enum/TextFormat';
 import { ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
 
 import {
@@ -169,7 +170,9 @@ function resourceContentProcessor(
 
     const resource = resourceBuilder.resource(context, {
       type,
-      value: Breakscape.unbreakscape(value),
+      value: Breakscape.unbreakscape(value, {
+        textFormat: TextFormat.tag,
+      }),
       posterImage: posterImageResource,
       ...tags,
     });

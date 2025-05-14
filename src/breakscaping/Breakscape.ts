@@ -102,6 +102,9 @@ const BREAKSCAPE_MINUSMINUS_REGEX_REPLACER = '$1$2$4$6^$3$5$7$8$9';
 const BREAKSCAPE_PLAIN_IN_BODY_REGEX = new RegExp('^(\\[)(\\^*)(\\.)', 'gm');
 const BREAKSCAPE_PLAIN_IN_BODY_REGEX_REPLACER = '$1^$2$3';
 
+const BREAKSCAPE_TAG_REGEX = new RegExp('(\\^*)(\\])', 'gm');
+const BREAKSCAPE_TAG_REPLACER = '$1^$2';
+
 const BREAKSCAPE_V2_REGEX = new RegExp('^(?:(\\[)(\\^*)(\\.))|(?:(\\^+))', 'gm');
 const BREAKSCAPE_V2_REGEX_REPLACER = '$1$4^$2$3';
 
@@ -113,6 +116,9 @@ const BREAKSCAPE_ENDS_REGEX_REPLACER = '$1^';
 
 const UNBREAKSCAPE_REGEX = new RegExp('\\^([\\^]*)', 'gm');
 const UNBREAKSCAPE_REGEX_REPLACER = '$1';
+
+const UNBREAKSCAPE_TAG_REGEX = new RegExp('\\^(\\^*)(\\])', 'gm');
+const UNBREAKSCAPE_TAG_REPLACER = '$1$2';
 
 const UNBREAKSCAPE_PLAIN_IN_BODY_REGEX = new RegExp('^(\\[)\\^(\\^*)(\\.)', 'gm');
 const UNBREAKSCAPE_PLAIN_IN_BODY_REGEX_REPLACER = '$1$2$3';
@@ -170,28 +176,40 @@ class Breakscape {
     const breakscapeStr = (str: string) => {
       if (!str) return str;
 
-      // Hack for v2 breakscaping
-      if (opts.v2) {
-        str = str.replace(BREAKSCAPE_V2_REGEX, BREAKSCAPE_V2_REGEX_REPLACER);
-        return str;
-      }
-
       let regex = BREAKSCAPE_PLAIN_IN_BODY_REGEX;
       let replacer = BREAKSCAPE_PLAIN_IN_BODY_REGEX_REPLACER;
-      if (opts.textFormat === TextFormat.bitmarkMinusMinus) {
-        regex = BREAKSCAPE_MINUSMINUS_REGEX;
-        replacer = BREAKSCAPE_MINUSMINUS_REGEX_REPLACER;
+      if (opts.textFormat === TextFormat.tag) {
+        regex = BREAKSCAPE_TAG_REGEX;
+        replacer = BREAKSCAPE_TAG_REPLACER;
+      } else if (opts.textFormat === TextFormat.bitmarkMinusMinus) {
+        if (opts.v2) {
+          // Hack for v2 breakscaping
+          regex = BREAKSCAPE_V2_REGEX;
+          replacer = BREAKSCAPE_V2_REGEX_REPLACER;
+        } else {
+          regex = BREAKSCAPE_MINUSMINUS_REGEX;
+          replacer = BREAKSCAPE_MINUSMINUS_REGEX_REPLACER;
+        }
       } else if (opts.textFormat === TextFormat.bitmarkPlusPlus) {
-        regex = BREAKSCAPE_PLUSPLUS_REGEX;
-        replacer = BREAKSCAPE_PLUSPLUS_REGEX_REPLACER;
+        if (opts.v2) {
+          // Hack for v2 breakscaping
+          regex = BREAKSCAPE_V2_REGEX;
+          replacer = BREAKSCAPE_V2_REGEX_REPLACER;
+        } else {
+          regex = BREAKSCAPE_PLUSPLUS_REGEX;
+          replacer = BREAKSCAPE_PLUSPLUS_REGEX_REPLACER;
+        }
       }
 
       str = str.replace(regex, replacer);
 
       // Ends - ensures that the start and end of the string are breakscaped in cases where the ends could otherwise
       // come together to form a recognized sequence
-      if (opts.textFormat === TextFormat.bitmarkMinusMinus || opts.textFormat === TextFormat.bitmarkPlusPlus) {
-        str = str.replace(BREAKSCAPE_ENDS_REGEX, BREAKSCAPE_ENDS_REGEX_REPLACER);
+      // TODO: this should not be needed in the future
+      if (!opts.v2) {
+        if (opts.textFormat === TextFormat.bitmarkMinusMinus || opts.textFormat === TextFormat.bitmarkPlusPlus) {
+          str = str.replace(BREAKSCAPE_ENDS_REGEX, BREAKSCAPE_ENDS_REGEX_REPLACER);
+        }
       }
 
       return str;
@@ -236,7 +254,10 @@ class Breakscape {
 
       let regex = UNBREAKSCAPE_PLAIN_IN_BODY_REGEX;
       let replacer = UNBREAKSCAPE_PLAIN_IN_BODY_REGEX_REPLACER;
-      if (opts.textFormat === TextFormat.bitmarkMinusMinus || opts.textFormat === TextFormat.bitmarkPlusPlus) {
+      if (opts.textFormat === TextFormat.tag) {
+        regex = UNBREAKSCAPE_TAG_REGEX;
+        replacer = UNBREAKSCAPE_TAG_REPLACER;
+      } else if (opts.textFormat === TextFormat.bitmarkMinusMinus || opts.textFormat === TextFormat.bitmarkPlusPlus) {
         regex = UNBREAKSCAPE_REGEX;
         replacer = UNBREAKSCAPE_REGEX_REPLACER;
       }
