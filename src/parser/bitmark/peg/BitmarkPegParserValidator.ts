@@ -339,7 +339,7 @@ class BitmarkPegParserValidator {
       if (!content) continue;
 
       const { type, key } = content as TypeKeyValue;
-      let typeKey = TypeKey.fromValue(type);
+      const typeKey = TypeKey.fromValue(type);
       if (!typeKey) continue; // Should not happen
 
       // Build the final type key with the property / resource key added
@@ -349,17 +349,19 @@ class BitmarkPegParserValidator {
       }
 
       // Get the tag data for this tag type and key. If not found, the tag is not valid
-      let tagData = validTypeKeys.get(typeKeyPlusKey);
+      const tagData = validTypeKeys.get(typeKeyPlusKey);
 
+      // No longer support [@ fallback to [&:
+      // See: https://github.com/getMoreBrain/cosmic/issues/7859
       // In the case of a property tag that is not found, convert it to a resource tag and retry
       // (support @ instead of & for resources)
-      if (!tagData && typeKey === TypeKey.Property) {
-        tagData = validTypeKeys.get(`${TypeKey.Resource}:${key}`);
-        if (tagData) {
-          typeKey = TypeKey.Resource;
-          content.type = TypeKey.Resource;
-        }
-      }
+      // if (!tagData && typeKey === TypeKey.Property) {
+      //   tagData = validTypeKeys.get(`${TypeKey.Resource}:${key}`);
+      //   if (tagData) {
+      //     typeKey = TypeKey.Resource;
+      //     content.type = TypeKey.Resource;
+      //   }
+      // }
 
       // Validate the single tag
       const { validated: validatedTagContent, warning } = this.validateSingleTag(

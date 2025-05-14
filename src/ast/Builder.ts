@@ -1078,17 +1078,8 @@ class Builder extends BaseBuilder {
     const defaultExample = Array.isArray(data.__valuesAst) && data.__valuesAst.length > 0 ? data.__valuesAst[0] : null;
 
     // Process the keyAudio and keyImage resources
-    const keyAudio = (
-      ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.audio, data.keyAudio),
-      ) as AudioResourceWrapperJson
-    )?.audio;
-
-    const keyImage = (
-      ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data.keyImage),
-      ) as ImageResourceWrapperJson
-    )?.image;
+    const keyAudio = this.resourceBuilder.resourceFromResourceJson(context, data.keyAudio) as AudioResourceWrapperJson;
+    const keyImage = this.resourceBuilder.resourceFromResourceJson(context, data.keyImage) as ImageResourceWrapperJson;
 
     // NOTE: Node order is important and is defined here
     const node: PairJson = {
@@ -1979,11 +1970,7 @@ class Builder extends BaseBuilder {
     data: Partial<TextAndIconJson> | undefined,
     textAsStrings: boolean = false,
   ): TextAndIconJson | undefined {
-    const icon = (
-      ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data?.icon),
-      ) as ImageResourceWrapperJson
-    )?.image;
+    const icon = this.resourceBuilder.resourceFromResourceJson(context, data?.icon) as ImageResourceWrapperJson;
 
     // Ensure text is bitmark text
     let text: JsonText = this.handleJsonText(context, true, data?.text);

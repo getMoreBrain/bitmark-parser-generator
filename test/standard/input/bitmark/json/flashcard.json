@@ -45,17 +45,20 @@
               }
             ],
             "icon": {
-              "format": "svg",
-              "provider": "image.io",
-              "src": "https://image.io/question1.svg",
-              "width": null,
-              "height": null,
-              "alt": "",
-              "zoomDisabled": false,
-              "license": "",
-              "copyright": "",
-              "showInIndex": false,
-              "caption": []
+              "type": "image",
+              "image": {
+                "format": "svg",
+                "provider": "image.io",
+                "src": "https://image.io/question1.svg",
+                "width": null,
+                "height": null,
+                "alt": "",
+                "zoomDisabled": false,
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
             }
           },
           "answer": {
@@ -108,17 +111,20 @@
               }
             ],
             "icon": {
-              "format": "svg",
-              "provider": "image.io",
-              "src": "https://image.io/question2.svg",
-              "width": null,
-              "height": null,
-              "alt": "",
-              "zoomDisabled": false,
-              "license": "",
-              "copyright": "",
-              "showInIndex": false,
-              "caption": []
+              "type": "image",
+              "image": {
+                "format": "svg",
+                "provider": "image.io",
+                "src": "https://image.io/question2.svg",
+                "width": null,
+                "height": null,
+                "alt": "",
+                "zoomDisabled": false,
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
             }
           },
           "answer": {
@@ -142,17 +148,20 @@
               }
             ],
             "icon": {
-              "format": "svg",
-              "provider": "image.io",
-              "src": "https://image.io/answer2.svg",
-              "width": null,
-              "height": null,
-              "alt": "",
-              "zoomDisabled": false,
-              "license": "",
-              "copyright": "",
-              "showInIndex": false,
-              "caption": []
+              "type": "image",
+              "image": {
+                "format": "svg",
+                "provider": "image.io",
+                "src": "https://image.io/answer2.svg",
+                "width": null,
+                "height": null,
+                "alt": "",
+                "zoomDisabled": false,
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
             }
           },
           "alternativeAnswers": [
@@ -201,11 +210,11 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.14.1",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.26.1"
     },
-    "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n[@icon:https://image.io/question1.svg]\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n[@icon:https://image.io/question2.svg]\n--\nAnswer 2\nCard 2, Side 2\n[@icon:https://image.io/answer2.svg]\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
+    "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n[&icon:https://image.io/question1.svg]\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n[&icon:https://image.io/question2.svg]\n--\nAnswer 2\nCard 2, Side 2\n[&icon:https://image.io/answer2.svg]\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
   },
   {
     "bit": {
@@ -358,9 +367,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.14.1",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.flashcard]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer"
   },
@@ -581,9 +590,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.14.1",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.flashcard]\n[@example]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]"
   },
@@ -795,9 +804,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.14.1",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.flashcard]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
   },
@@ -1140,9 +1149,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.14.1",
+      "version": "3.23.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.26.1"
     },
     "bitmark": "[.flashcard-1:bitmark++]\n[@id:1785935]\n[@revealSolutions:false]\n\n====\nK, der den Verspätungszuschlag noch „abbiegen“ will, fragt sich, ob denn Entschuldigungsgründe für die verspätete Abgabe bestehen. Dann, so hat er gehört, ist ein Verspätungszuschlag nicht festzusetzen. Im Einzelnen nennt er folgende Vorfälle: Erkrankung, Abwesenheit, Vertreterverschulden\n--\n\n**Erkrankung:**\n\n• **entschuldigt** bei plötzlicher schwerer Erkrankung;\n\n• **nicht entschuldigt**, wenn bei dauerhafter Erkrankung die zumutbare Bestellung eines Vertreters unterblieben ist.\n\n**Abwesenheit:**\n\n• generell sind bei Abwesenheit aus privaten oder geschäftlichen Gründen Vorkehrungen für die Entgegennahme von Verwaltungsakten zu treffen, so dass eine deshalb eingetretene Verspätung **nicht entschuldigt** ist;\n• als **entschuldigt** gilt jedoch eine kurzfristige, urlaubsbedingte Abwesenheit ohne konkrete Anhaltspunkte für einen zu erwartenden Verwaltungsakt.\n**Vertreterverschulden:**\n• Der Steuerpflichtige muss sich das Verschulden seines gesetzlichen Vertreters (§ 110 Abs. 1 Satz 2, z.B. Eltern eines Minderjährigen) zurechnen lassen, ist also **nicht entschuldigt**.\n\nEbenso verhält es sich bei Verschulden eines Erfüllungsgehilfen (§ 152 Abs. 1 Satz 3), z.B. **Steuerberater**, insbesondere ist dessen **Arbeitsüberlastung** kein Entschuldigungsgrund.\n• Wenn jedoch der sonst zuverlässige und gut überwachte **Mitarbeiter** des Steuerberaters die Verspätung verursacht hat, liegt seitens des Steuerberaters schon kein Überwachungs- und Organisationsverschulden vor und K ist damit auch **entschuldigt**.\n\n==Zum Buch==|xref:e-abgabenordnung-leicht-gemacht._8vqk25f6kcvb|►qaa-1733060|\n\n===="
   }
