@@ -1,26 +1,24 @@
 import { describe, test } from '@jest/globals';
+import { diffChars } from 'diff';
 // import deepEqual from 'deep-equal';
 import * as fs from 'fs-extra';
 import path from 'path';
 import { performance } from 'perf_hooks';
 
+import { Breakscape } from '../../src/breakscaping/Breakscape';
+import { BreakscapedString } from '../../src/model/ast/BreakscapedString';
 import { TextFormat } from '../../src/model/enum/TextFormat';
-import { TextParser } from '../../src/parser/text/TextParser';
 import { FileUtils } from '../../src/utils/FileUtils';
-import { JsonCleanupUtils } from '../utils/JsonCleanupUtils';
-import { deepDiffMapper } from '../utils/deepDiffMapper';
 
 import { isDebugPerformance } from './config/config-test';
-import { getTestFiles, getTestFilesDir } from './config/config-text-plusplus-files';
+import { getTestFiles, getTestFilesDir } from './config/config-text-plain-files';
 
 const DEBUG_PERFORMANCE = isDebugPerformance();
 
 const TEST_FILES = getTestFiles();
 const TEST_INPUT_DIR = getTestFilesDir();
-const JSON_INPUT_DIR = path.resolve(TEST_INPUT_DIR, './json');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-plusplus-parser/output');
-
-const textParser = new TextParser();
+const BREAKSCAPED_INPUT_DIR = path.resolve(TEST_INPUT_DIR, './breakscaped');
+const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-plain-unbreakscape/output');
 
 /**
  * Get the list of files in the TEST_INPUT_DIR (text files)
@@ -35,8 +33,8 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('text-plusplus-parser', () => {
-  describe('Text => JSON (text): Tests', () => {
+describe('text-tag-unbreakscape', () => {
+  describe('Text => Unbreakscaped Text: Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
 
@@ -56,9 +54,6 @@ describe('text-plusplus-parser', () => {
 
     console.info(`Tests found: ${allTestFiles.length}`);
 
-    // describe.each(allTestFiles)('Test file: %s', (testFile: string) => {
-    //   test('JSON ==> Markup ==> JSON', async () => {
-
     allTestFiles.forEach((testFile: string) => {
       performance.clearMarks();
       performance.clearMeasures();
@@ -66,7 +61,7 @@ describe('text-plusplus-parser', () => {
       const partFolderAndFile = testFile.replace(TEST_INPUT_DIR, '');
       const partFolder = path.dirname(partFolderAndFile);
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
-      const fullJsonInputFolder = path.join(JSON_INPUT_DIR, partFolder);
+      const fullBreakscapedInputFolder = path.join(BREAKSCAPED_INPUT_DIR, partFolder);
       const fileId = testFile.replace(TEST_INPUT_DIR + '/', '');
       const id = path.basename(partFolderAndFile, '.text');
 
@@ -79,57 +74,44 @@ describe('text-plusplus-parser', () => {
         fs.ensureDirSync(fullFolder);
 
         // Calculate the filenames
-        const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
-        const originalMarkupFile = path.resolve(fullFolder, `${id}.text`);
-        const originalJsonFile = path.resolve(fullFolder, `${id}.json`);
-        const generatedJsonFile = path.resolve(fullFolder, `${id}.gen.json`);
+        const testBreakscapedFile = path.resolve(fullBreakscapedInputFolder, `${id}.breakscaped`);
+        const originalFile = path.resolve(fullFolder, `${id}.text`);
+        const originalBreakscapedFile = path.resolve(fullFolder, `${id}.breakscaped`);
+        const generatedTextFile = path.resolve(fullFolder, `${id}.gen.text`);
         const jsonDiffFile = path.resolve(fullFolder, `${id}.diff.json`);
 
-        // Copy the original test markup file to the output folder
-        fs.copySync(testFile, originalMarkupFile);
+        // Copy the original test file to the output folder
+        fs.copySync(testFile, originalFile);
 
-        // Read in the test markup file
-        const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
+        // Read in the test file
+        const originalText = fs.readFileSync(originalFile, 'utf8').trim();
 
-        // Copy the original expected JSON file to the output folder
-        fs.copySync(testJsonFile, originalJsonFile);
+        // Copy the original expected breakscaped file to the output folder
+        fs.copySync(testBreakscapedFile, originalBreakscapedFile);
 
-        // Read in the test expected JSON file
-        const originalJson = fs.readJsonSync(originalJsonFile, 'utf8');
+        // Read in the test expected breakscaped file
+        const originalBreakscaped = fs.readFileSync(originalBreakscapedFile, 'utf8').trim();
 
-        // Remove uninteresting JSON items
-        JsonCleanupUtils.cleanupBitmarkPlusPlusJson(originalJson, { removeErrors: true });
-
-        // // Write original bitmark (and JSON?)
-        // writeTestJsonAndBitmark(originalJson, fullFolder, id);
-
-        // Convert the Bitmark markup to bitmark AST
+        // Unbreakscape the text
         performance.mark('PEG:Start');
-        const textAst = textParser.toAst(originalMarkup, {
-          textFormat: TextFormat.bitmarkPlusPlus,
-          isProperty: false,
+        const text = Breakscape.unbreakscape(originalBreakscaped.trim() as BreakscapedString, {
+          textFormat: TextFormat.text,
         });
 
-        // Write the new AST
-        fs.writeFileSync(generatedJsonFile, JSON.stringify(textAst, null, 2), {
+        // Write the unbreakscaped text
+        fs.writeFileSync(generatedTextFile, text.trim(), {
           encoding: 'utf8',
         });
 
         performance.mark('PEG:End');
 
-        const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
+        const newText = fs.readFileSync(generatedTextFile, 'utf8');
 
-        // Remove uninteresting JSON items
-        JsonCleanupUtils.cleanupBitmarkPlusPlusJson(originalJson, { removeErrors: true });
-        JsonCleanupUtils.cleanupBitmarkPlusPlusJson(newJson, { removeErrors: true });
-
-        // Compare old and new JSONs
-        const diffMap = deepDiffMapper.map(originalJson, newJson, {
-          ignoreUnchanged: true,
-        });
+        // Compare old and new unbreakscaped text
+        const diff = diffChars(originalText, newText);
 
         // Write the diff Map JSON
-        fs.writeFileSync(jsonDiffFile, JSON.stringify(diffMap, null, 2), {
+        fs.writeFileSync(jsonDiffFile, JSON.stringify(diff, null, 2), {
           encoding: 'utf8',
         });
 
@@ -139,7 +121,7 @@ describe('text-plusplus-parser', () => {
           console.log(`'${fileId}' timing; PEG: ${pegTimeSecs} s`);
         }
 
-        expect(newJson).toEqual(originalJson);
+        expect(newText).toEqual(originalText);
 
         // If we get to here, we can delete the diff file as there were no important differences
         fs.removeSync(jsonDiffFile);

@@ -115,16 +115,33 @@ function propertyContentProcessor(
           case PropertyFormat.trimmedString:
             return Breakscape.unbreakscape(
               StringUtils.isString(v) ? (StringUtils.trimmedString(v) as BreakscapedString) : undefined,
+              {
+                textFormat: TextFormat.tag,
+              },
             );
 
           case PropertyFormat.number:
-            return NumberUtils.asNumber(Breakscape.unbreakscape(v as BreakscapedString));
+            return NumberUtils.asNumber(
+              Breakscape.unbreakscape(v as BreakscapedString, {
+                textFormat: TextFormat.tag,
+              }),
+            );
 
           case PropertyFormat.boolean:
-            return BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
+            return BooleanUtils.toBoolean(
+              Breakscape.unbreakscape(v as BreakscapedString, {
+                textFormat: TextFormat.tag,
+              }),
+              true,
+            );
 
           case PropertyFormat.invertedBoolean:
-            return !BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
+            return !BooleanUtils.toBoolean(
+              Breakscape.unbreakscape(v as BreakscapedString, {
+                textFormat: TextFormat.tag,
+              }),
+              true,
+            );
 
           case PropertyFormat.bitmarkMinusMinus:
             v = StringUtils.isString(v) ? v : '';
@@ -141,7 +158,9 @@ function propertyContentProcessor(
             });
         }
       }
-      return Breakscape.unbreakscape(v as BreakscapedString);
+      return Breakscape.unbreakscape(v as BreakscapedString, {
+        textFormat: TextFormat.tag,
+      });
     };
 
     // Convert property and key as needed

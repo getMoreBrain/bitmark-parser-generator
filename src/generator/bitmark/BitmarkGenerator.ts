@@ -2520,8 +2520,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         const value = node.value as unknown[] | undefined;
         if (value == null) return;
 
-        // if (propertyConfig.tag === 'progress') debugger;
-
         // Ignore any property that is not at the bit level as that will be handled by a different handler
         const parent = this.getParentNode(route);
         if (parent?.key !== NodeType.bitsValue) return;
@@ -2625,7 +2623,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (s != null) {
       this.write(
         Breakscape.breakscape(`${s}`, {
-          textFormat: TextFormat.bitmarkMinusMinus,
+          textFormat: TextFormat.tag,
         }),
       );
     }

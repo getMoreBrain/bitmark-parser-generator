@@ -3,6 +3,7 @@ import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
 import { Count } from '../../../../model/enum/Count';
+import { TextFormat } from '../../../../model/enum/TextFormat';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -45,7 +46,9 @@ function buildBook(
   const { reference, referenceEnd } = tags;
 
   // Extract the book from the content tag
-  const book = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString);
+  const book = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString, {
+    textFormat: TextFormat.tag,
+  });
 
   // Get the config for the bit
   const bookConfig = bitConfig.tags[PropertyConfigKey.book];

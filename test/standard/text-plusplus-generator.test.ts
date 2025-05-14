@@ -39,7 +39,7 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('text-generation', () => {
+describe('text-plusplus-generation', () => {
   describe('JSON => Text => JSON: Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);

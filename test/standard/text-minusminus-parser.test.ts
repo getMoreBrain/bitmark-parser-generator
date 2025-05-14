@@ -34,7 +34,7 @@ function getTestFilenames(): string[] {
   return files;
 }
 
-describe('text-parser', () => {
+describe('text-minusminus-parser', () => {
   describe('Text => JSON (text): Tests', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
@@ -106,6 +106,7 @@ describe('text-parser', () => {
         performance.mark('PEG:Start');
         const textAst = textParser.toAst(originalMarkup.trim(), {
           textFormat: TextFormat.bitmarkMinusMinus,
+          isProperty: false,
         });
 
         // Write the new AST

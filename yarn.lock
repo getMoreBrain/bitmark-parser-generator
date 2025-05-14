@@ -712,6 +712,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^8.27.0"
     "@typescript-eslint/parser": "npm:^8.27.0"
     "@ungap/structured-clone": "npm:^1.3.0"
+    diff: "npm:^8.0.1"
     esbuild-register: "npm:^3.6.0"
     eslint: "npm:^9.23.0"
     eslint-config-prettier: "npm:^10.1.1"
@@ -2880,6 +2881,13 @@ __metadata:
   version: 29.6.3
   resolution: "diff-sequences@npm:29.6.3"
   checksum: 10c0/32e27ac7dbffdf2fb0eb5a84efd98a9ad084fbabd5ac9abb8757c6770d5320d2acd172830b28c4add29bb873d59420601dfc805ac4064330ce59b1adfd0593b2
+  languageName: node
+  linkType: hard
+
+"diff@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "diff@npm:8.0.1"
+  checksum: 10c0/43ebbe63881d34067d77d7b9d16220f1efb8013e04be58c7748ab296d2a9637f49424c69477e36c81a53f2c347b396956966e708e1b5b4dde3620f2b4bb93d02
   languageName: node
   linkType: hard
 
