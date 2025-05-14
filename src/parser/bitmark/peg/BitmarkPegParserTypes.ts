@@ -28,7 +28,6 @@ import { PeggyGrammarLocation } from './PeggyGrammarLocation';
 import {
   BookJson,
   BotResponseJson,
-  CaptionDefinitionListJson,
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
@@ -228,7 +227,8 @@ export interface BitSpecificCards {
   table?: Partial<TableJson>;
   botResponses?: Partial<BotResponseJson>[];
   ingredients?: Partial<IngredientJson>[];
-  captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+  // DEPRECATED - TO BE REMOVED IN THE FUTURE
+  // captionDefinitionList?: Partial<CaptionDefinitionListJson>;
   cardBits?: Partial<CardBit>[];
   internalComments?: string[]; // ??
 }

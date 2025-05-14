@@ -12,7 +12,6 @@ import { JsonText, TextAst } from './TextNodes';
 import {
   BookJson,
   BotResponseJson,
-  CaptionDefinitionListJson,
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
@@ -319,7 +318,8 @@ export interface CardNode {
   botResponses?: BotResponseJson[];
   cardBits?: Bit[];
   ingredients?: IngredientJson[];
-  captionDefinitionList?: CaptionDefinitionListJson;
+  // DEPRECATED - TO BE REMOVED IN THE FUTURE
+  // captionDefinitionList?: CaptionDefinitionListJson;
 }
 
 // Footer

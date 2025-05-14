@@ -227,7 +227,8 @@ export interface BitJson {
   pairs: PairJson[];
   matrix: MatrixJson[];
   table: TableJson;
-  captionDefinitionList: CaptionDefinitionListJson;
+  // DEPRECATED - REMOVE IN THE FUTURE
+  // captionDefinitionList: CaptionDefinitionListJson;
   choices: ChoiceJson[];
   questions: QuestionJson[];
   ingredients: IngredientJson[];
@@ -509,19 +510,20 @@ export interface RatingLevelStartEndJson {
   label?: JsonText;
 }
 
-// CaptionDefinition
+// DEPRECATED - REMOVE IN THE FUTURE
+// // CaptionDefinition
 
-export interface CaptionDefinitionJson {
-  term: string;
-  definition: string;
-}
+// export interface CaptionDefinitionJson {
+//   term: string;
+//   definition: string;
+// }
 
-// CaptionDefinitionList
+// // CaptionDefinitionList (a.k.a Legend)
 
-export interface CaptionDefinitionListJson {
-  columns: string[];
-  definitions: CaptionDefinitionJson[];
-}
+// export interface CaptionDefinitionListJson {
+//   heading: string[];
+//   definitions: CaptionDefinitionJson[];
+// }
 
 export interface ListItemJson {
   item: JsonText;

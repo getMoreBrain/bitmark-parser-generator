@@ -117,8 +117,9 @@ export type {
   ServingsJson,
   IngredientJson,
   RatingLevelStartEndJson,
-  CaptionDefinitionJson,
-  CaptionDefinitionListJson,
+  // DEPRECATED - TO BE REMOVED IN THE FUTURE
+  // CaptionDefinitionJson,
+  // CaptionDefinitionListJson,
   ListItemJson,
   ExampleJson,
 } from './model/json/BitJson';
