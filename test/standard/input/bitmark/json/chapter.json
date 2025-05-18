@@ -4,9 +4,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135649"
-      ],
+      "id": ["135649"],
       "title": [
         {
           "type": "paragraph",
@@ -43,9 +41,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135651"
-      ],
+      "id": ["135651"],
       "title": [
         {
           "type": "paragraph",
@@ -82,9 +78,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135653"
-      ],
+      "id": ["135653"],
       "title": [
         {
           "type": "paragraph",
@@ -121,9 +115,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135655"
-      ],
+      "id": ["135655"],
       "title": [
         {
           "type": "paragraph",
@@ -160,9 +152,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135657"
-      ],
+      "id": ["135657"],
       "title": [
         {
           "type": "paragraph",
@@ -199,9 +189,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135659"
-      ],
+      "id": ["135659"],
       "title": [
         {
           "type": "paragraph",
@@ -238,9 +226,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135661"
-      ],
+      "id": ["135661"],
       "title": [
         {
           "type": "paragraph",
@@ -277,9 +263,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135663"
-      ],
+      "id": ["135663"],
       "title": [
         {
           "type": "paragraph",
@@ -316,9 +300,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135665"
-      ],
+      "id": ["135665"],
       "title": [
         {
           "type": "paragraph",
@@ -355,9 +337,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135667"
-      ],
+      "id": ["135667"],
       "title": [
         {
           "type": "paragraph",
@@ -394,9 +374,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135669"
-      ],
+      "id": ["135669"],
       "title": [
         {
           "type": "paragraph",
@@ -433,9 +411,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135671"
-      ],
+      "id": ["135671"],
       "title": [
         {
           "type": "paragraph",
@@ -472,9 +448,7 @@
       "type": "chapter",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "135673"
-      ],
+      "id": ["135673"],
       "title": [
         {
           "type": "paragraph",
@@ -505,5 +479,120 @@
       "textParserVersion": "8.17.0"
     },
     "bitmark": "[.chapter]\n[▼ch-13]\n[@id:135673]\n[##Useful links:]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true,
+      "level": 1
+    },
+    "parser": {
+      "version": "3.23.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.chapter]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "level": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true
+    },
+    "parser": {
+      "version": "3.23.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.chapter]\n[#]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "level": 2,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true
+    },
+    "parser": {
+      "version": "3.23.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.chapter]\n[##]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "level": 3,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true
+    },
+    "parser": {
+      "version": "3.23.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.chapter]\n[###]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "level": 4,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true
+    },
+    "parser": {
+      "version": "3.23.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.chapter]\n[####]"
   }
 ]
