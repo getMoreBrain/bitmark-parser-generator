@@ -265,5 +265,185 @@
       "textParserVersion": "8.21.2"
     },
     "bitmark": "[.smart-standard-remark-formula-normative]\nC = \\left( X , G , P , D , A , N \\right)"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "[text]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "attrs": {
+                "formula": "p = 100 \\times \\left(1 - \\sqrt[n]{\\frac{RW}{AK}}\\right)"
+              },
+              "type": "latex"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "end]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "[text]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "attrs": {
+                "formula": "p = 100 \\times \\left(1 - \\sqrt[n]{\\frac{RW}{AK}}\\right)"
+              },
+              "type": "latex"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "end]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.23.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.article:bitmark++]\n[!Start **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]]\n\nStart **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "[text]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "==p = 100 \\times \\left(1 - \\sqrt[n]{\\frac{RW}{AK}}\\right)==|latex|",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "end]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "[text]",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "==p = 100 \\times \\left(1 - \\sqrt[n]{\\frac{RW}{AK}}\\right)==|latex|",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "end]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.23.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.article:bitmark--]\n[!Start **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]]\n\nStart **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]"
   }
 ]
