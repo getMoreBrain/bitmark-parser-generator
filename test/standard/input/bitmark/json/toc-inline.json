@@ -1,0 +1,43 @@
+[
+  {
+    "bit": {
+      "type": "toc-inline",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "maxTocChapterLevel": 99,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "3.24.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.toc-inline]\n[@maxTocChapterLevel:99]"
+  },
+  {
+    "bit": {
+      "type": "toc-inline",
+      "format": "bitmark--",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "3.24.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.26.1"
+    },
+    "bitmark": "[.toc-inline]"
+  }
+]
