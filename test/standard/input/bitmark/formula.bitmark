@@ -64,22 +64,3 @@ C = \left( X , G , P , D , A , N \right)
 
 [.smart-standard-remark-formula-normative]
 C = \left( X , G , P , D , A , N \right)
-
-
-[.article:bitmark++]
-[!Start **[text^]**
-==p = 100 \times \left(1 - \sqrt[n^]{\frac{RW}{AK}}\right)==|latex|
-end^]]
-
-Start **[text^]**
-==p = 100 \times \left(1 - \sqrt[n^]{\frac{RW}{AK}}\right)==|latex|
-end^]
-
-[.article:bitmark--]
-[!Start **[text^]**
-==p = 100 \times \left(1 - \sqrt[n^]{\frac{RW}{AK}}\right)==|latex|
-end^]]
-
-Start **[text^]**
-==p = 100 \times \left(1 - \sqrt[n^]{\frac{RW}{AK}}\right)==|latex|
-end^]
