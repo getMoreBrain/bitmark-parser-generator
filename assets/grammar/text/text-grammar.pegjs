@@ -534,7 +534,7 @@ InlineTag = InlineHalfTag InlineHalfTag
 
 InlineStyledText
   = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
-  / InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: t}, type: "latex" } }
+  / InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: unbreakscape(t)}, type: "latex" } }
   / InlineTag alt: $((!InlineTag .)* ) InlineTag '|imageInline:' u: Url '|' ch: InlineMediaChain? { return { attrs: { alt, src: (u.pr + u.t).trim(), ...Object.assign({}, ...ch), zoomDisabled: true }, type: "imageInline" } }
   / InlineTag t: $((!InlineTag .)* ) InlineTag marks: AttrChain { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
   / BoldTag t: $((!BoldTag .)* ) BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }

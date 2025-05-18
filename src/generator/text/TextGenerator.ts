@@ -1085,7 +1085,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     if (node.attrs == null || !node.attrs.formula) return;
     const attrs = node.attrs;
 
-    const s = `==${attrs.formula}==|latex|`;
+    const formula = Breakscape.breakscape(attrs.formula, {
+      textFormat: TextFormat.bitmarkMinusMinus,
+    });
+
+    const s = `==${formula}==|latex|`;
 
     // Write the text
     this.write(s);
