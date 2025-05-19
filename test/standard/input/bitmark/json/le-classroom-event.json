@@ -123,6 +123,7 @@
       "location": "Zug",
       "action": "Päsenz-Seminar",
       "duration": "28800s",
+      "layer": ["testingLayer"],
       "textReference": "foo\nbar\nbaz",
       "isTracked": true,
       "isInfoOnly": false,
@@ -146,11 +147,11 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.24.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.26.1"
     },
-    "bitmark": "[.le-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:Zug]\n[@isTracked:true]\n[@isInfoOnly:false]\n[@textReference: foo\nbar\nbaz]"
+    "bitmark": "[.le-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:Zug]\n[@isTracked:true]\n[@isInfoOnly:false]\n[@layer:testingLayer]\n[@textReference: foo\nbar\nbaz]"
   },
   {
     "bit": {
@@ -161,6 +162,7 @@
       "location": "Zug",
       "action": "Päsenz-Seminar",
       "duration": "28800s",
+      "layer": ["testingLayer1", "testingLayer2"],
       "isTracked": true,
       "isInfoOnly": true,
       "item": [],
@@ -183,10 +185,10 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.24.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.26.1"
     },
-    "bitmark": "[.le-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:Zug]\n[@isTracked:trua]\n[@isInfoOnly:felse]"
+    "bitmark": "[.le-classroom-event]\n[!Grundlagen 1]\n[@action:Päsenz-Seminar]\n[@date:2022-10-01T08:00:00CET]\n[@duration:28800s]\n[@location:Zug]\n[@isTracked:trua]\n[@isInfoOnly:felse]\n[@layer:testingLayer1]\n[@layer:testingLayer2]"
   }
 ]
