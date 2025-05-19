@@ -222,6 +222,7 @@ class Builder extends BaseBuilder {
     search?: string;
     bot?: string | string[];
     list?: string | string[];
+    layer?: string | string[];
     textReference?: string;
     isTracked?: boolean;
     isInfoOnly?: boolean;
@@ -473,6 +474,7 @@ class Builder extends BaseBuilder {
       vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, data.vendorUrl),
       search: this.toAstProperty(PropertyConfigKey.search, data.search),
       list: this.toAstProperty(PropertyConfigKey.list, data.list),
+      layer: this.toAstProperty(PropertyConfigKey.layer, data.layer),
       textReference: this.toAstProperty(PropertyConfigKey.textReference, data.textReference),
       isTracked: this.toAstProperty(PropertyConfigKey.isTracked, data.isTracked),
       isInfoOnly: this.toAstProperty(PropertyConfigKey.isInfoOnly, data.isInfoOnly),

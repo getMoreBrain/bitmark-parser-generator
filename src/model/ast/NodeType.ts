@@ -266,6 +266,8 @@ const NodeType = superenum({
   language: 'language',
   languageValue: 'languageValue',
   langValue: 'langValue',
+  layer: 'layer',
+  layerValue: 'layerValue',
   lead: 'lead',
   level: 'level',
   levelACTFL: 'levelACTFL',

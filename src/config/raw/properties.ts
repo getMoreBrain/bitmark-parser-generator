@@ -449,6 +449,10 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.list,
     format: PropertyFormat.trimmedString,
   },
+  [PropertyConfigKey.layer]: {
+    tag: PropertyTag.layer,
+    format: PropertyFormat.trimmedString,
+  },
   [PropertyConfigKey.textReference]: {
     tag: PropertyTag.textReference,
     single: true,
