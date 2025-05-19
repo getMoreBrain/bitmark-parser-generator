@@ -58,7 +58,20 @@
     "type": "paragraph",
     "content": [
       {
-        "text": "#### Title level 4 - there is no title level 4, so this is just a paragraph",
+        "text": "#### Title level 4 - there is ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "no",
+        "type": "text"
+      },
+      {
+        "text": " title level 4, so this is just a paragraph",
         "type": "text"
       },
       {
