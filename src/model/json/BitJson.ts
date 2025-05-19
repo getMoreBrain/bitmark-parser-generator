@@ -1,7 +1,7 @@
 import { JsonText, TextAst } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
-import { AudioResourceWrapperJson, ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
+import { AudioResourceWrapperJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
 
 export interface BitJson {
   type: string; // bit type
@@ -252,7 +252,7 @@ export interface ImageSourceJson {
 export interface PersonJson {
   name: string;
   title: string;
-  avatarImage: ImageResourceJson;
+  avatarImage: ImageResourceWrapperJson;
 }
 
 export interface MarkConfigJson {

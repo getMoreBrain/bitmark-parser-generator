@@ -548,7 +548,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       });
     }
     if (avatarImage) {
-      this.writeResource(ResourceTag.image, avatarImage.src);
+      this.writeResource(ResourceTag.image, avatarImage.image.src);
     }
 
     // Stop traversal of this branch
