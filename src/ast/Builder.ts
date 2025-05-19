@@ -1235,11 +1235,7 @@ class Builder extends BaseBuilder {
       data: (dataIn.data ?? []).map((row) =>
         (row ?? []).map((cell) => {
           // Process the audio resource
-          const audio = (
-            ArrayUtils.asSingle(
-              this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.audio, cell.audio),
-            ) as AudioResourceWrapperJson
-          )?.audio;
+          const audio = this.resourceBuilder.resourceFromResourceJson(context, cell.audio) as AudioResourceWrapperJson;
 
           return {
             title: this.handleJsonText(context, true, cell.title),

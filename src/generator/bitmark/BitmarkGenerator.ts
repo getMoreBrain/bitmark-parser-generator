@@ -1526,7 +1526,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
         if (cell.audio) {
           this.writeNL();
-          this.writeResource(ResourceTag.audio, cell.audio.src);
+          this.writeResource(ResourceTag.audio, cell.audio.audio.src);
         }
         if (cell.body) {
           this.writeNL();
