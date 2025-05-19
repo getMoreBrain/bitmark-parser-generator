@@ -1837,6 +1837,33 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> textFormat
 
+  //  bitmarkAst -> bits -> level
+
+  protected leaf_level(node: NodeInfo, route: NodeInfo[]): boolean {
+    // Ensure this is at the bit level
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
+    // Ensure this is a chapter bit
+    const bitType = this.getBitType(route);
+    if (!Config.isOfBitType(bitType, [BitType.chapter])) return true;
+
+    const level = node.value as number;
+    const bit = parent?.value as Bit;
+
+    if (level > 0 && bit.title == null) {
+      // If the level is set, but there is no title, this is a [.chapter] bit with an empty title.
+      // We need to write an empty title tag at the correct level.
+      this.writeNL();
+      this.writeOP();
+      for (let i = 0; i < +level; i++) this.writeHash();
+      this.writeCL();
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
   //  bitmarkAst -> bits -> title
 
   protected enter_title(node: NodeInfo, route: NodeInfo[]): boolean {

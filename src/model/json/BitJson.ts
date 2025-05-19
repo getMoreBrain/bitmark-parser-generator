@@ -135,6 +135,7 @@ export interface BitJson {
   search: string;
   bot: string | string[];
   list: string | string[];
+  layer: string | string[];
   textReference: string;
   isTracked: boolean; // only .learningPathExternalLink?
   isInfoOnly: boolean; // only .learningPathExternalLink?
