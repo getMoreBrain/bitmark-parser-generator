@@ -2089,11 +2089,7 @@ class Builder extends BaseBuilder {
     const node: PersonJson = {
       name: name ?? '',
       title: (title ?? undefined) as string,
-      avatarImage: (
-        ArrayUtils.asSingle(
-          this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, avatarImage),
-        ) as ImageResourceWrapperJson
-      )?.image,
+      avatarImage: this.resourceBuilder.resourceFromResourceJson(context, avatarImage) as ImageResourceWrapperJson,
     };
 
     // Remove Unset Optionals
