@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.26.1"
+const VERSION = "8.27.1"
 
 //Parser peggy.js
 
@@ -224,10 +224,6 @@ BlockTag = '|'
 NoContent
     = '' { return [] }
 
-Heading
-  = ':' h: $(char*) { return bitmarkMinusMinusString(h.trim()) }
-  / '' { return [] }
-
 
 
 // Title Block
@@ -238,7 +234,7 @@ TitleTags
   / '# '
 
 TitleBlock
-  = h: TitleTags t: $char* EOL  NL? { return { type: "heading", content: bitmarkMinusMinusString(t), attrs: { level: h.length - 1 } } }
+  = h: TitleTags t: $char* EOL  NL? { return { type: "heading", content: bitmarkPlusString(t), attrs: { level: h.length - 1 } } }
 
 
 
