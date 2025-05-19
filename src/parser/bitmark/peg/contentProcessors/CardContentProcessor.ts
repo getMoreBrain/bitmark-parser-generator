@@ -8,6 +8,7 @@ import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormatType } from '../../../../model/enum/TextFormat';
 import { SelectJson } from '../../../../model/json/BodyBitJson';
+import { AudioResourceWrapperJson, ImageResourceWrapperJson } from '../../../../model/json/ResourceJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
 
@@ -34,11 +35,6 @@ import {
   TableJson,
   TextAndIconJson,
 } from '../../../../model/json/BitJson';
-import {
-  AudioResourceJson,
-  AudioResourceWrapperJson,
-  ImageResourceWrapperJson,
-} from '../../../../model/json/ResourceJson';
 import {
   BitContentLevel,
   BitContentProcessorResult,
@@ -863,11 +859,9 @@ function parsePronunciationTable(
         const { title, cardBody, resources } = tags;
 
         const heading = title && title[1].titleAst;
-        const audioWrapper =
-          resources && resources.length > 0 ? resources.find((r) => r.type === ResourceTag.audio) : undefined;
-        const audio = (
-          audioWrapper ? (audioWrapper as AudioResourceWrapperJson).audio : undefined
-        ) as AudioResourceJson;
+        const audio: AudioResourceWrapperJson = (
+          resources && resources.length > 0 ? resources.find((r) => r.type === ResourceTag.audio) : undefined
+        ) as AudioResourceWrapperJson;
 
         const value: PronunciationTableCellJson = {
           title: heading ?? [],

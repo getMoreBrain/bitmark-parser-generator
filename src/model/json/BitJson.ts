@@ -1,14 +1,7 @@
 import { JsonText, TextAst } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
-
-import {
-  AudioResourceJson,
-  AudioResourceWrapperJson,
-  ImageResourceJson,
-  ImageResourceWrapperJson,
-  ResourceJson,
-} from './ResourceJson';
+import { AudioResourceWrapperJson, ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
 
 export interface BitJson {
   type: string; // bit type
@@ -443,7 +436,7 @@ export interface MatrixCellJson {
 export interface PronunciationTableCellJson {
   title: JsonText;
   body: JsonText;
-  audio: AudioResourceJson;
+  audio: AudioResourceWrapperJson;
 }
 
 export interface PronunciationTableJson {
