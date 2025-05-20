@@ -1,0 +1,99 @@
+[.q-and-a-card]
+
+[%item][%lead]
+Somebody
+====
+Question 1?
+Card 1, Side 1
+[&icon:https://image.io/question1.svg]
+--
+Answer 1
+Card 1, Side 2, No footer
+====
+Question Too Many?
+Card 2, Side 1
+--
+Answer Too Many
+Card 2, Side 2,
+[&icon:https://image.io/answer2.svg]
+~~~~
+
+Footer anyone?
+
+
+[.q-and-a-card]
+
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2
+++
+Alternative Answer 2
+Card 1, Side 2
+~~~~
+
+Footer anyone?
+
+[.q-and-a-card]
+
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2
+++
+Alternative Answer 1
+Card 1, Side 2
+++
+Alternative Answer 2
+Card 1, Side 2
+
+
+[.q-and-a-card]
+[@example]
+[%item][%lead]
+Somebody
+====
+Question 2?
+Card 2, Side 1
+--
+Answer 2
+Card 2, Side 2, No footer
+[%item][%lead]
+
+
+[.q-and-a-card]
+[%item][%lead]
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2, No footer
+[%item][%lead]
+[@example]
+
+[.q-and-a-card]
+[%item][%lead]
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2, No footer
+====
+Question Too Many?
+Card 2, Side 1
+--
+Answer Too Many
+Card 2, Side 2,
+~~~~
+
+Footer anyone?
