@@ -58,6 +58,8 @@ class DevParser {
       console.log(jsonStr);
     } else {
       const res = await bitmarkParserGenerator.convert(filename, {
+        // bitmarkVersion: BitmarkVersion.v2,
+        bitmarkVersion: BitmarkVersion.v3,
         jsonOptions: {
           enableWarnings: true,
           textAsPlainText: false,

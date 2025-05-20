@@ -1,14 +1,7 @@
 import { JsonText, TextAst } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
-
-import {
-  AudioResourceJson,
-  AudioResourceWrapperJson,
-  ImageResourceJson,
-  ImageResourceWrapperJson,
-  ResourceJson,
-} from './ResourceJson';
+import { AudioResourceWrapperJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
 
 export interface BitJson {
   type: string; // bit type
@@ -135,6 +128,7 @@ export interface BitJson {
   search: string;
   bot: string | string[];
   list: string | string[];
+  layer: string | string[];
   textReference: string;
   isTracked: boolean; // only .learningPathExternalLink?
   isInfoOnly: boolean; // only .learningPathExternalLink?
@@ -258,7 +252,7 @@ export interface ImageSourceJson {
 export interface PersonJson {
   name: string;
   title: string;
-  avatarImage: ImageResourceJson;
+  avatarImage: ImageResourceWrapperJson;
 }
 
 export interface MarkConfigJson {
@@ -442,7 +436,7 @@ export interface MatrixCellJson {
 export interface PronunciationTableCellJson {
   title: JsonText;
   body: JsonText;
-  audio: AudioResourceJson;
+  audio: AudioResourceWrapperJson;
 }
 
 export interface PronunciationTableJson {

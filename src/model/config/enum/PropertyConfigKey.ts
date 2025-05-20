@@ -92,6 +92,7 @@ const propertyConfigKeys = {
   labelTrue: 'labelTrue',
   lang: 'lang',
   language: 'language',
+  layer: 'layer',
   levelCEFRp: 'levelCEFRp',
   levelCEFR: 'levelCEFR',
   levelILR: 'levelILR',

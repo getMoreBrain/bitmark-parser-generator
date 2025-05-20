@@ -25,6 +25,7 @@
 [@location:Zug]
 [@isTracked:true]
 [@isInfoOnly:false]
+[@layer:testingLayer]
 [@textReference: foo
 bar
 baz]
@@ -38,3 +39,5 @@ baz]
 [@location:Zug]
 [@isTracked:trua]
 [@isInfoOnly:felse]
+[@layer:testingLayer1]
+[@layer:testingLayer2]

@@ -1156,6 +1156,7 @@ const BITS: _BitsConfig = {
     cardSet: CardSetConfigKey._flashcard,
   },
   [BitType.flashcard1]: { since: '1.3.0', baseBitType: BitType.flashcard },
+  [BitType.qAndACard]: { since: '3.25.0', baseBitType: BitType.flashcard1 },
   [BitType.focusImage]: {
     since: '1.3.0',
     baseBitType: BitType.image,
@@ -2231,6 +2232,16 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.maxDisplayLevel,
+      },
+    ],
+  },
+  [BitType.tocInline]: {
+    since: '3.24.0',
+    baseBitType: BitType.toc,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.maxTocChapterLevel,
       },
     ],
   },

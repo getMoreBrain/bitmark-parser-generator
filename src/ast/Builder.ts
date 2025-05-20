@@ -222,6 +222,7 @@ class Builder extends BaseBuilder {
     search?: string;
     bot?: string | string[];
     list?: string | string[];
+    layer?: string | string[];
     textReference?: string;
     isTracked?: boolean;
     isInfoOnly?: boolean;
@@ -473,6 +474,7 @@ class Builder extends BaseBuilder {
       vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, data.vendorUrl),
       search: this.toAstProperty(PropertyConfigKey.search, data.search),
       list: this.toAstProperty(PropertyConfigKey.list, data.list),
+      layer: this.toAstProperty(PropertyConfigKey.layer, data.layer),
       textReference: this.toAstProperty(PropertyConfigKey.textReference, data.textReference),
       isTracked: this.toAstProperty(PropertyConfigKey.isTracked, data.isTracked),
       isInfoOnly: this.toAstProperty(PropertyConfigKey.isInfoOnly, data.isInfoOnly),
@@ -1233,11 +1235,7 @@ class Builder extends BaseBuilder {
       data: (dataIn.data ?? []).map((row) =>
         (row ?? []).map((cell) => {
           // Process the audio resource
-          const audio = (
-            ArrayUtils.asSingle(
-              this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.audio, cell.audio),
-            ) as AudioResourceWrapperJson
-          )?.audio;
+          const audio = this.resourceBuilder.resourceFromResourceJson(context, cell.audio) as AudioResourceWrapperJson;
 
           return {
             title: this.handleJsonText(context, true, cell.title),
@@ -2087,11 +2085,7 @@ class Builder extends BaseBuilder {
     const node: PersonJson = {
       name: name ?? '',
       title: (title ?? undefined) as string,
-      avatarImage: (
-        ArrayUtils.asSingle(
-          this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, avatarImage),
-        ) as ImageResourceWrapperJson
-      )?.image,
+      avatarImage: this.resourceBuilder.resourceFromResourceJson(context, avatarImage) as ImageResourceWrapperJson,
     };
 
     // Remove Unset Optionals

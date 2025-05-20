@@ -18,7 +18,7 @@ function markTagContentProcessor(
   const { value } = content as TypeValue;
 
   if (StringUtils.isString(value)) {
-    target.solution = value as BreakscapedString;
+    target.solution = StringUtils.trimmedString(value) as BreakscapedString;
   }
 }
 export { markTagContentProcessor };

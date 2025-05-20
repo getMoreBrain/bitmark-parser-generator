@@ -57,6 +57,9 @@ class DevGenerator {
         bitmarkOptions: {
           explicitTextFormat: false,
           prettifyJson: true,
+          spacesAroundValues: true,
+          // spacesAroundValues: false,
+          // spacesAroundValues: 2,
         },
       });
 
