@@ -5,6 +5,10 @@ import { StringUtils } from '../utils/StringUtils';
 /**
  * Utility class for breakscaping strings.
  *
+ * ============
+ * Breakscaping
+ * ============
+ *
  * Breakscaping is the process of escaping certain character sequences in a string so that they are not interpreted as
  * special sequences by the parser.
  *
@@ -14,35 +18,21 @@ import { StringUtils } from '../utils/StringUtils';
  * The special character is ^
  * To include the special character in a text which is breakscaped, use ^^ (once), ^^^ (twice), etc.
  *
- * Any sequence can be breakscaped by breaking it with a ^ character.
+ * Any sequence can be breakscaped by breaking it with a single ^ character.
  *
- * The following unbreakscaping rules are applied when unbreakscaping text:
- *  - hat:                                   ^                  ==>
- *  - hat:                                   ^^                 ==>   ^
- *  - hat:                                   ^..N               ==>   ^..N-1
+ * When breakscaping text programmatically, the following rules apply to keep the breakscaping to a minimum:
  *
  * The following breakscaping rules are applied when breakscaping text:
+ *    <item>                                 <from>                   <to>                       <textFormat>
  *  - hat:                                   ^                  ==>   ^^                         [bitmark-- / bitmark++]
  *  - hat:                                   ^^                 ==>   ^^^                        [bitmark-- / bitmark++]
  *  - hat:                                   ^..N               ==>   ^..N+1                     [bitmark-- / bitmark++]
  *  - inline:                                ==                 ==>   =^=                        [bitmark-- / bitmark++]
- *  - title block:                   (SOL)[##]#(space)          ==>   (SOL)[##]#^(space)         [bitmark++]
- *  - new block:                     (SOL)|(WS EOL)             ==>   (SOL)|^(WS EOL)            [bitmark++]
- *  - code block:                    (SOL)|code(:type)          ==>   (SOL)|^code(:type)         [bitmark++]
- *  - image block:                   (SOL)|image:(url)          ==>   (SOL)|^image:(url)         [bitmark++]
- *  - bullet list:                   (SOL)•(space)              ==>   (SOL)•^(space)             [bitmark++]
- *  - simple list:                   (SOL)•_(space)             ==>   (SOL)•^_(space)            [bitmark++]
- *  - ordered list (numeric):        (SOL)•<numbers>(space)     ==>   (SOL)•^<numbers>(space)    [bitmark++]
- *  - ordered list: (roman,lower)    (SOL)•<numbers>i(space)    ==>   (SOL)•^<numbers>i(space)   [bitmark++]
- *  - ordered list: (roman,upper)    (SOL)•<numbers>I(space)    ==>   (SOL)•^<numbers>I(space)   [bitmark++]
- *  - ordered list:                  (SOL)•<letters>(space)     ==>   (SOL)•^<letters>(space)    [bitmark++]
- *  - tag list +:                    (SOL)•+(space)             ==>   (SOL)•^+(space)            [bitmark++]
- *  - tag list -:                    (SOL)•-(space)             ==>   (SOL)•^-(space)            [bitmark++]
  *  - bold:                                  **                 ==>   *^*                        [bitmark-- / bitmark++]
  *  - light:                                 ``                 ==>   `^`                        [bitmark-- / bitmark++]
  *  - italic:                                __                 ==>   _^_                        [bitmark-- / bitmark++]
  *  - highlight:                             !!                 ==>   !^!                        [bitmark-- / bitmark++]
- *  - start of bit (at end):                 [<end>             ==>   [^<end>                    [bitmark-- / bitmark++]
+ *  - start of bit (at end):                 [<end>             ==>   [^<end>                    [bitmark-- / bitmark++] NOTE: this is not required if the generator performs a check for building accidental [., [@, etc
  *  - start of bit:                          [.                 ==>   [^.                        [bitmark-- / bitmark++]
  *  - start of property:                     [@                 ==>   [^@                        [bitmark-- / bitmark++]
  *  - start of title:                        [#                 ==>   [^#                        [bitmark-- / bitmark++]
@@ -57,33 +47,69 @@ import { StringUtils } from '../utils/StringUtils';
  *  - start of gap:                          [_                 ==>   [^_                        [bitmark-- / bitmark++]
  *  - start of mark:                         [=                 ==>   [^=                        [bitmark-- / bitmark++]
  *  - start of resource:                     [&                 ==>   [^&                        [bitmark-- / bitmark++]
- *  - end of tag:                            ]                  ==>   ^]                         [bitmark-- / bitmark++]
+ *  - old plain text divider:                $$$$               ==>   $^$$$                      [bitmark-- / bitmark++]
+ *  - old footer divider:                    ~~~~               ==>   ~^~~~                      [bitmark-- / bitmark++]
+ *  - title block:                   (SOL)[##]#(space)          ==>   (SOL)[##]#^(space)         [bitmark++]
+ *  - new block:                     (SOL)|(WS EOL)             ==>   (SOL)|^(WS EOL)            [bitmark++]
+ *  - code block:                    (SOL)|code(:type)          ==>   (SOL)|^code(:type)         [bitmark++]
+ *  - image block:                   (SOL)|image:(url)          ==>   (SOL)|^image:(url)         [bitmark++]
+ *  - bullet list:                   (SOL)•(space)              ==>   (SOL)•^(space)             [bitmark++]
+ *  - simple list:                   (SOL)•_(space)             ==>   (SOL)•^_(space)            [bitmark++]
+ *  - ordered list (numeric):        (SOL)•<numbers>(space)     ==>   (SOL)•^<numbers>(space)    [bitmark++]
+ *  - ordered list: (roman,lower)    (SOL)•<numbers>i(space)    ==>   (SOL)•^<numbers>i(space)   [bitmark++]
+ *  - ordered list: (roman,upper)    (SOL)•<numbers>I(space)    ==>   (SOL)•^<numbers>I(space)   [bitmark++]
+ *  - ordered list:                  (SOL)•<letters>(space)     ==>   (SOL)•^<letters>(space)    [bitmark++]
+ *  - tag list +:                    (SOL)•+(space)             ==>   (SOL)•^+(space)            [bitmark++]
+ *  - tag list -:                    (SOL)•-(space)             ==>   (SOL)•^-(space)            [bitmark++]
+ *  - start of bit:                  (SOL)[.                    ==>   (SOL)[^.                   [plain]
+ *  - start of bit:                  (SOL)[^.                   ==>   (SOL)[^^.                  [plain]
+ *  - start of bit:                  (SOL)[^..N.                ==>   (SOL)[^..N+1.              [plain]
+ *  - end of tag:                            ]                  ==>   ^]                         [tag]
  *
- * In non- bitmark++ / bitmark-- text, breakscaping is only applied to bit tags.
- * This is true for both breakscaping and unbreakscaping.
  *
- * The following unbreakscaping rules are applied when unbreakscaping plain text:
- *  - start of bit:              <line start>[^.                ==>   <line start>[.
- *  - start of bit:              <line start>[^^.               ==>   <line start>[^.
- *  - start of bit:              <line start>[^..N.             ==>   <line start>[^..N-1.
+ * ==============
+ * Unbreakscaping
+ * ==============
  *
- * The following breakscaping rules are applied when breakscaping plain text:
- *  - start of bit:              <line start>[.                 ==>   <line start>[^.
- *  - start of bit:              <line start>[^.                ==>   <line start>[^^.
- *  - start of bit:              <line start>[^..N.             ==>   <line start>[^..N+1.
+ * Unbreakscaping is the process of removing the breakscaping characters from a string.
+ * It is the opposite of breakscaping.
+ *
+ * In all text but plain text:
+ * ^ is always removed/reduced wherever it is found.
+ * ^^ is always needed to represent a ^.
+ *
+ * In plain text:
+ * ^ is only removed/reduced when it would break the start of a bit.
+ *
+ * The following unbreakscaping rules apply when unbreakscaping text:
+ *   <item>                                 <from>                         <to>                 <textFormat>
+ * - hat:                                   ^                   ==>                             [!plain]
+ * - hat:                                   ^^                  ==>        ^                    [!plain]
+ * - hat:                                   ^..N                ==>        ^..N-1               [!plain]
+ * - start of bit:                     (SOL)[^.                 ==>   (SOL)[.                   [plain]
+ * - start of bit:                     (SOL)[^^.                ==>   (SOL)[^.                  [plain]
+ * - start of bit:                     (SOL)[^..N.              ==>   (SOL)[^..N-1.             [plain]
+ *
  */
 
 //
 // Breakscaping
 //
 
+// RAS 2025-05-21
+// See: https://github.com/getMoreBrain/cosmic/issues/7919
+// We now only unbreakscape differently in plain in body text (see UNBREAKSCAPE_PLAIN_IN_BODY_REGEX).
+// In plain tag text or bitmark text, we ALWAYS need ^^ for ^ as ^ can breakscape anywhere, not just where needed.
+// This is by request from Gaba.
+const SPECIFIC_UNBREAKSCAPING = false; // true;
+
 const REGEX_MARKS = /([*`_!=])(?=\1)/; // $1^
 const REGEX_BLOCKS = /^(\|)(code[\s]*|code:|image:|[\s]*$)/; // $2^$3
 const REGEX_TITLE_BLOCKS = /^([#]{1,3})([^\S\r\n]+)/; // $4^$5
 const REGEX_LIST_BLOCKS = /^(•)([0-9]+[iI]*|[a-zA-Z]{1}|_|\+|-|)([^\S\r\n]+)/; // $6^$7$8
 const REGEX_START_OF_TAG = /(\[)([.@#▼►%!?+\-$_=&])/; // $9^$10   /   $2^$3
-const REGEX_FOOTER_DIVIDER = /^(~)(~~~)[ \t]*$/; // $11^$12   /   $4^$5
-const REGEX_PLAIN_TEXT_DIVIDER = /^(\$)(\$\$\$)[ \t]*$/; // $13^$14   /   $6^$7
+const REGEX_FOOTER_DIVIDER = /^(~)(~~~[ \t]*)$/; // $11^$12   /   $4^$5
+const REGEX_PLAIN_TEXT_DIVIDER = /^(\$)(\$\$\$[ \t]*)$/; // $13^$14   /   $6^$7
 const REGEX_END_OF_TAG = /(\^*])/; // ^$15   /   ^$8
 const REGEX_HATS = /(\^+)/; // $16^   /   ^$9  // Must be last
 
@@ -110,9 +136,6 @@ const BREAKSCAPE_V2_REGEX_REPLACER = '$1$4^$2$3';
 
 const BREAKSCAPE_ENDS_REGEX = new RegExp(BREAKSCAPE_ENDS_REGEX_SOURCE, 'g');
 const BREAKSCAPE_ENDS_REGEX_REPLACER = '$1^';
-
-// const UNBREAKSCAPE_REGEX = new RegExp(UNBREAKSCAPE_REGEX_SOURCE, 'gm');
-// const UNBREAKSCAPE_REGEX_REPLACER = BREAKSCAPE_REGEX_REPLACER.replace(/\^/g, ''); // Remove ^ from the regex replacer
 
 const UNBREAKSCAPE_REGEX = new RegExp('\\^([\\^]*)', 'gm');
 const UNBREAKSCAPE_REGEX_REPLACER = '$1';
@@ -255,8 +278,8 @@ class Breakscape {
       let regex = UNBREAKSCAPE_PLAIN_IN_BODY_REGEX;
       let replacer = UNBREAKSCAPE_PLAIN_IN_BODY_REGEX_REPLACER;
       if (opts.textFormat === TextFormat.tag) {
-        regex = UNBREAKSCAPE_TAG_REGEX;
-        replacer = UNBREAKSCAPE_TAG_REPLACER;
+        regex = SPECIFIC_UNBREAKSCAPING ? UNBREAKSCAPE_TAG_REGEX : UNBREAKSCAPE_REGEX;
+        replacer = SPECIFIC_UNBREAKSCAPING ? UNBREAKSCAPE_TAG_REPLACER : UNBREAKSCAPE_REGEX_REPLACER;
       } else if (opts.textFormat === TextFormat.bitmarkMinusMinus || opts.textFormat === TextFormat.bitmarkPlusPlus) {
         regex = UNBREAKSCAPE_REGEX;
         replacer = UNBREAKSCAPE_REGEX_REPLACER;
