@@ -6,7 +6,7 @@ import { Config } from '../../config/Config';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
 import { BitmarkAst, Bit, Body, BodyPart, Footer } from '../../model/ast/Nodes';
-import { TextAst } from '../../model/ast/TextNodes';
+import { JsonText, TextAst } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType } from '../../model/enum/BodyBitType';
@@ -15,6 +15,7 @@ import { PropertyFormat, PropertyFormatType } from '../../model/enum/PropertyFor
 import { PropertyTag } from '../../model/enum/PropertyTag';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { TextLocation, TextLocationType } from '../../model/enum/TextLocation';
 import { BodyBitJson, GapJson, HighlightTextJson, MarkJson, SelectOptionJson } from '../../model/json/BodyBitJson';
 import { BooleanUtils } from '../../utils/BooleanUtils';
 import { ObjectUtils } from '../../utils/ObjectUtils';
@@ -137,6 +138,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   private spacesAroundValuesStr: string;
 
   // State
+  private bitType: BitTypeType = BitType._error;
+  private textFormat: TextFormatType = TextFormat.bitmarkMinusMinus;
+  private tagTextFormat: TextFormatType = TextFormat.bitmarkMinusMinus;
+  private isBodyBitmarkText = false;
+  private isCardAllowed = false;
   private firstBit = true;
   private hasCardSet = false;
   private hasFooter = false;
@@ -255,6 +261,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   private resetState(): void {
+    this.bitType = BitType._error;
+    this.textFormat = TextFormat.bitmarkMinusMinus;
+    this.tagTextFormat = TextFormat.bitmarkMinusMinus;
+    this.isBodyBitmarkText = false;
+    this.isCardAllowed = false;
     this.firstBit = true;
     this.hasCardSet = false;
     this.hasFooter = false;
@@ -287,6 +298,22 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const bitConfig = Config.getBitConfig(bit.bitType);
     const bitResourcesConfig = Config.getBitResourcesConfig(bit.bitType, bit.resourceType);
+
+    // Set state variables
+    this.bitType = bit.bitType;
+    this.textFormat = bit.textFormat ?? bitConfig.textFormatDefault;
+    this.isBodyBitmarkText =
+      this.textFormat === TextFormat.bitmarkMinusMinus || this.textFormat === TextFormat.bitmarkPlusPlus;
+    this.isCardAllowed = this.calculateIsCardAllowed();
+
+    // NOTE:
+    // If the bit text format is bitmark++ then the tagTextFormat should be bitmark+, but that is not implemented yet.
+    // It works anyhow, and would require a lot of changes to implement.
+    // Since this may well change in the future, we will keep the code as is for now.
+    this.tagTextFormat =
+      this.textFormat === TextFormat.bitmarkPlusPlus
+        ? TextFormat.bitmarkPlusPlus // NOTE: should be bitmarkPlus
+        : TextFormat.bitmarkMinusMinus;
 
     this.hasCardSet = this.haveValidCardSet(bit);
     this.hasFooter = this.haveValidFooter(bit);
@@ -535,13 +562,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
     if (hint != null) {
       this.writeOPQ();
-      this.writePlainTextTagValue(hint);
+      this.writeTextOrValue(hint, TextFormat.text, TextLocation.tag);
       this.writeCL();
-      // this.writeProperty('hint', hint, {
-      //   format: PropertyFormat.trimmedString,
-      //   single: true,
-      //   ignoreEmpty: true,
-      // });
     }
 
     return false;
@@ -589,7 +611,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // -> alternativeAnswersValue -> text
 
   protected enter_text(node: NodeInfo, route: NodeInfo[]): boolean {
-    const textFormat = this.getTextFormat(route) ?? TextFormat.bitmarkMinusMinus;
     const parent = this.getParentNode(route);
     if (
       !parent ||
@@ -605,7 +626,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (node.value) {
       this.writeNL();
-      this.writeBitmarkText(node.value as TextAst, textFormat);
+      this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
 
     // Stop traversal of this branch
@@ -628,13 +649,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     if (StringUtils.isString(node.value)) {
-      const str = node.value as string;
       this.writeNL();
-      this.write(
-        Breakscape.breakscape(str, {
-          textFormat: TextFormat.text,
-        }),
-      );
+      this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
 
     // Stop traversal of this branch
@@ -875,7 +891,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     this.writeNL_IfNotChain(route);
     this.writeOPC();
-    this.writeBitmarkTextTagValue(item, TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(item, this.tagTextFormat, TextLocation.tag);
     this.writeCL();
 
     return true;
@@ -892,10 +908,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     this.writeNL_IfNotChain(route);
     this.writeOPC();
-    this.writeBitmarkTextTagValue(parent?.value?.item ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(parent?.value?.item ?? '', this.tagTextFormat, TextLocation.tag);
     this.writeCL();
     this.writeOPC();
-    this.writeBitmarkTextTagValue(lead, TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(lead, this.tagTextFormat, TextLocation.tag);
     this.writeCL();
 
     return true;
@@ -911,13 +927,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     this.writeNL_IfNotChain(route);
     this.writeOPC();
-    this.writeBitmarkTextTagValue(parent?.value?.item ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(parent?.value?.item ?? '', this.tagTextFormat, TextLocation.tag);
     this.writeCL();
     this.writeOPC();
-    this.writeBitmarkTextTagValue(parent?.value?.lead ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(parent?.value?.lead ?? '', this.tagTextFormat, TextLocation.tag);
     this.writeCL();
     this.writeOPC();
-    this.writeBitmarkTextTagValue(pageNumber ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(pageNumber ?? '', this.tagTextFormat, TextLocation.tag);
     this.writeCL();
 
     return true;
@@ -932,16 +948,16 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     this.writeNL_IfNotChain(route);
     this.writeOPC();
-    this.writeBitmarkTextTagValue(parent?.value?.item ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(parent?.value?.item ?? '', this.tagTextFormat, TextLocation.tag);
     this.writeCL();
     this.writeOPC();
-    this.writeBitmarkTextTagValue(parent?.value?.lead ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(parent?.value?.lead ?? '', this.tagTextFormat, TextLocation.tag);
     this.writeCL();
     this.writeOPC();
-    this.writeBitmarkTextTagValue(parent?.value?.pageNumber ?? '', TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(parent?.value?.pageNumber ?? '', this.tagTextFormat, TextLocation.tag);
     this.writeCL();
     this.writeOPC();
-    this.writeBitmarkTextTagValue(marginNumber, TextFormat.bitmarkMinusMinus);
+    this.writeTextOrValue(marginNumber, this.tagTextFormat, TextLocation.tag);
     this.writeCL();
 
     return true;
@@ -958,31 +974,25 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Always write a NL before the body content if there is any (see Handle body)
     const body = node.value as Body;
-    const textFormat = this.getTextFormat(route);
-    const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
 
     // Handle body
-    if (textFormat === TextFormat.json) {
+    if (this.textFormat === TextFormat.json) {
       const json = body.body ?? null;
       if (Array.isArray(json) || ObjectUtils.isObject(json)) {
         const text = JSON.stringify(json, null, this.prettifySpace);
         if (text) {
           this.writePlainTextDivider();
           this.writeNL();
-          this.write(
-            Breakscape.breakscape(text, {
-              textFormat: TextFormat.text,
-            }),
-          );
+          this.writeTextOrValue(text, TextFormat.text, TextLocation.body);
         }
       }
-    } else if (isBitmarkText) {
+    } else if (this.isBodyBitmarkText) {
       // handle bitmark text
       const plainTextDividerAllowed = !(this.hasCardSet || this.hasFooter);
       this.writeNL();
       // The text generator will write to the writer
       const b = (Array.isArray(body.body) ? body.body : []) as TextAst;
-      this.writeBitmarkText(b as TextAst, textFormat, {
+      this.writeTextOrValue(b, this.textFormat, TextLocation.body, {
         plainTextDividerAllowed,
       });
     } else {
@@ -990,11 +1000,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.writePlainTextDivider();
       this.writeNL();
       const s = (StringUtils.isString(body.body) ? body.body : '') as string;
-      this.write(
-        Breakscape.breakscape(`${s}`, {
-          textFormat: TextFormat.text,
-        }),
-      );
+      this.writeTextOrValue(`${s}`, TextFormat.text, TextLocation.body);
     }
 
     // Stop traversal of this branch
@@ -1027,7 +1033,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       for (const solution of gap.solutions) {
         this.writeOPU();
-        this.writePlainTextTagValue(solution);
+        this.writeTextOrValue(solution, TextFormat.text, TextLocation.tag);
         this.writeCL();
       }
     }
@@ -1042,7 +1048,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const mark = node.value as MarkJson;
 
     this.writeOPE();
-    this.writePlainTextTagValue(mark.solution);
+    this.writeTextOrValue(mark.solution, TextFormat.text, TextLocation.tag);
     this.writeCL();
 
     // Continue traversal
@@ -1071,21 +1077,18 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const footer = node.value as Footer;
 
-    const textFormat = this.getTextFormat(route);
-
     // Handle footer
-    if (textFormat === TextFormat.json) {
+    if (this.textFormat === TextFormat.json) {
       // Json footer?!
       // Not valid, ignore
     } else if (footer.footer && footer.footer.length > 0) {
-      const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
-      if (isBitmarkText) {
+      if (this.isBodyBitmarkText) {
         // handle bitmark text
         this.writeNL();
-        this.write('==== footer ====');
+        this.writeTextOrValue('==== footer ====', TextFormat.text, TextLocation.body);
         this.writeNL();
         // The text generator will write to the writer
-        this.writeBitmarkText(footer.footer as TextAst, textFormat, {
+        this.writeTextOrValue(footer.footer, this.textFormat, TextLocation.body, {
           plainTextDividerAllowed: true, // Always allowed for the footer.
         });
       } else {
@@ -1129,7 +1132,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (solution) {
       this.writeOPE();
-      this.writePlainTextTagValue(solution);
+      this.writeTextOrValue(solution, TextFormat.text, TextLocation.tag);
       this.writeCL();
     }
   }
@@ -1160,7 +1163,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       this.writeOPM();
     }
-    this.write(selectOption.text);
+    this.writeTextOrValue(selectOption.text, TextFormat.text, TextLocation.tag);
     this.writeCL();
 
     // Continue traversal
@@ -1176,7 +1179,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       this.writeOPM();
     }
-    this.write(highlightText.text);
+    this.writeTextOrValue(highlightText.text, TextFormat.text, TextLocation.tag);
     this.writeCL();
 
     // Continue traversal
@@ -1185,9 +1188,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode
 
-  protected enter_cardNode(_node: NodeInfo, route: NodeInfo[]): boolean {
+  protected enter_cardNode(_node: NodeInfo, _route: NodeInfo[]): boolean {
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return true;
+    if (!this.isCardAllowed) return true;
 
     this.writeCardSetStart();
 
@@ -1195,16 +1198,16 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return true;
   }
 
-  protected between_cardNode(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_cardNode(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetCardDivider();
   }
 
-  protected exit_cardNode(_node: NodeInfo, route: NodeInfo[]): void {
+  protected exit_cardNode(_node: NodeInfo, _route: NodeInfo[]): void {
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetEnd();
     if (this.options.cardSetVersion === CardSetVersion.v1) {
@@ -1230,9 +1233,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
 
-  protected between_flashcardsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+  protected between_flashcardsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, _route: NodeInfo[]): void {
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     if (right.key === NodeType.answer) {
       this.writeCardSetSideDivider();
@@ -1259,8 +1262,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_statements(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
-    const isTrueFalse1 = this.isOfBitType(route, BitType.trueFalse1);
+  protected between_statements(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+    const isTrueFalse1 = this.isOfBitType(BitType.trueFalse1);
 
     if (!isTrueFalse1) {
       this.writeCardSetCardDivider();
@@ -1278,7 +1281,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       this.writeOPM();
     }
-    this.write(statement.statement);
+    this.writeTextOrValue(statement.statement, TextFormat.text, TextLocation.tag);
     this.writeCL();
 
     // Continue traversal
@@ -1298,7 +1301,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       this.writeOPM();
     }
-    this.write(choice.choice);
+    this.writeTextOrValue(choice.choice, TextFormat.text, TextLocation.tag);
     this.writeCL();
 
     // Continue traversal
@@ -1317,7 +1320,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       this.writeOPM();
     }
-    this.write(response.response);
+    this.writeTextOrValue(response.response, TextFormat.text, TextLocation.tag);
     this.writeCL();
 
     // Continue traversal
@@ -1355,9 +1358,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_heading(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_heading(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetSideDivider();
   }
@@ -1368,9 +1371,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_forValues(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_forValues(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetSideDivider();
   }
@@ -1424,16 +1427,16 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pairs -> pairsValue -> values
   // bitmarkAst -> bits -> bitsValue -> cardNode -> matrix -> matrixValue -> cells -> cellsValue -> values
 
-  protected enter_values(_node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_values(_node: NodeInfo, _route: NodeInfo[]): void {
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetSideDivider();
   }
 
-  protected between_values(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_values(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetVariantDivider();
   }
@@ -1445,7 +1448,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.cardNode) return;
 
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetCardDivider();
   }
@@ -1457,7 +1460,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.cardNode) return;
 
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetCardDivider();
   }
@@ -1481,7 +1484,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parentKey !== NodeType.table && parentKey !== NodeType.captionDefinitionList) return;
 
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetSideDivider();
   }
@@ -1492,16 +1495,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_columnsValue(node: NodeInfo, _route: NodeInfo[]): void {
     this.writeNL();
     this.writeOPHASH();
-    if (node.value) this.writePlainTextTagValue(node.value);
+    this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
     this.writeCL();
   }
 
   protected enter_columnsValue(node: NodeInfo, _route: NodeInfo[]): void {
     this.writeNL();
     this.writeOPHASH();
-    if (node.value) {
-      this.writeBitmarkTextTagValue(node.value, TextFormat.bitmarkMinusMinus);
-    }
+    this.writeTextOrValue(node.value, this.tagTextFormat, TextLocation.tag);
     this.writeCL();
   }
 
@@ -1513,7 +1514,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.table && parent?.key !== NodeType.pronunciationTable) return;
 
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     this.writeCardSetSideDivider();
   }
@@ -1525,7 +1526,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.table) return;
 
     this.writeNL();
-    this.write(node.value);
+    this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data -> dataValue -> dataValueValue
@@ -1535,8 +1536,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route, 3);
     if (parent?.key !== NodeType.table && parent?.key !== NodeType.pronunciationTable) return;
 
-    const textFormat = this.getTextFormat(route) ?? TextFormat.bitmarkMinusMinus;
-
     if (node.value) {
       if (parent?.key === NodeType.pronunciationTable) {
         // Pronunciation Table
@@ -1545,7 +1544,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           this.writeNL();
           this.writeOP();
           this.writeHash();
-          this.writeBitmarkTextTagValue(cell.title as TextAst, TextFormat.bitmarkMinusMinus);
+          this.writeTextOrValue(cell.title, this.tagTextFormat, TextLocation.tag);
           this.writeCL();
         }
         if (cell.audio) {
@@ -1554,7 +1553,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
         if (cell.body) {
           this.writeNL();
-          this.writeBitmarkText(cell.body as TextAst, textFormat);
+          this.writeTextOrValue(cell.body, this.textFormat, TextLocation.body);
         }
 
         // Stop traversal of this branch
@@ -1562,10 +1561,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       } else {
         // Table
         this.writeNL();
-        this.writeBitmarkText(node.value, textFormat);
+        this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
       }
     }
-    // this.write(node.value);
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList
@@ -1585,7 +1583,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (node.value) {
       this.writeNL();
-      this.write(node.value);
+      this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
 
     // Stop traversal of this branch
@@ -1600,7 +1598,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (node.value) {
       this.writeNL();
-      this.write(node.value);
+      this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
 
     // Stop traversal of this branch
@@ -1624,7 +1622,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.definitions) return;
 
     // Ignore cards if not allowed
-    if (!this.isCardAllowed(route)) return;
+    if (!this.isCardAllowed) return;
 
     if (right.key === NodeType.definition) {
       this.writeCardSetSideDivider();
@@ -1661,7 +1659,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (ingredient.title != null) {
       this.writeNL();
       this.writeOPHASH();
-      this.writePlainTextTagValue(ingredient.title);
+      this.writeTextOrValue(ingredient.title, TextFormat.text, TextLocation.tag);
       this.writeCL();
       // this.writeNL();
     }
@@ -1679,7 +1677,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // [!43]
     if (ingredient.quantity != null) {
       this.writeOPB();
-      this.writePlainTextTagValue(`${ingredient.quantity}`);
+      this.writeTextOrValue(`${ingredient.quantity}`, TextFormat.text, TextLocation.tag);
       this.writeCL();
     }
 
@@ -1718,7 +1716,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // item
     if (ingredient.item != null) {
       this.writeNL();
-      this.write(ingredient.item);
+      this.writeTextOrValue(ingredient.item, this.textFormat, TextLocation.body);
     }
 
     // Stop traversal of this branch
@@ -1753,7 +1751,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     this.writeNL();
     this.writeOPB();
-    this.writePlainTextTagValue(node.value);
+    this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
     this.writeCL();
   }
 
@@ -1777,10 +1775,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.botResponsesValue) return;
 
-    const feeback = node.value as string;
-    if (feeback) {
+    const feedback = node.value as string;
+    if (feedback) {
       this.writeNL();
-      this.write(feeback);
+      this.writeTextOrValue(feedback, this.textFormat, TextLocation.body);
     }
   }
 
@@ -1869,8 +1867,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.bitsValue) return true;
 
     // Ensure this is a chapter bit
-    const bitType = this.getBitType(route);
-    if (!Config.isOfBitType(bitType, [BitType.chapter])) return true;
+    if (!Config.isOfBitType(this.bitType, [BitType.chapter])) return true;
 
     const level = node.value as number;
     const bit = parent?.value as Bit;
@@ -1904,7 +1901,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.writeNL();
       this.writeOP();
       for (let i = 0; i < +level; i++) this.writeHash();
-      this.writeBitmarkTextTagValue(title, TextFormat.bitmarkMinusMinus);
+      this.writeTextOrValue(title, this.tagTextFormat, TextLocation.tag);
       this.writeCL();
     }
 
@@ -1926,7 +1923,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.writeNL();
       this.writeOP();
       for (let i = 0; i < level; i++) this.writeHash();
-      this.writeBitmarkTextTagValue(subtitle, TextFormat.bitmarkMinusMinus);
+      this.writeTextOrValue(subtitle, this.tagTextFormat, TextLocation.tag);
       this.writeCL();
     }
 
@@ -1955,12 +1952,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       });
       if (book.reference) {
         this.writeOPRANGLE();
-        this.writePlainTextTagValue(book.reference);
+        this.writeTextOrValue(book.reference, TextFormat.text, TextLocation.tag);
         this.writeCL();
 
         if (book.referenceEnd) {
           this.writeOPRANGLE();
-          this.writePlainTextTagValue(book.referenceEnd);
+          this.writeTextOrValue(book.referenceEnd, TextFormat.text, TextLocation.tag);
           this.writeCL();
         }
       }
@@ -1985,12 +1982,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       });
       if (bit.reference) {
         this.writeOPRANGLE();
-        this.writePlainTextTagValue(bit.reference);
+        this.writeTextOrValue(bit.reference, TextFormat.text, TextLocation.tag);
         this.writeCL();
 
         if (bit.referenceEnd) {
           this.writeOPRANGLE();
-          this.writePlainTextTagValue(bit.referenceEnd);
+          this.writeTextOrValue(bit.referenceEnd, TextFormat.text, TextLocation.tag);
           this.writeCL();
         }
       }
@@ -2003,7 +2000,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (node.value) {
       this.writeNL();
       this.writeOPDANGLE();
-      this.writePlainTextTagValue(node.value);
+      this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
       this.writeCL();
     }
   }
@@ -2019,7 +2016,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (!bit.book) {
         this.writeNL();
         this.writeOPRANGLE();
-        this.writePlainTextTagValue(node.value);
+        this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
         this.writeCL();
       }
     }
@@ -2037,7 +2034,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (!this.isEmptyText(text)) {
       this.writeNL_IfNotChain(route);
       this.writeOPQ();
-      this.writeBitmarkTextTagValue(text, TextFormat.bitmarkMinusMinus);
+      this.writeTextOrValue(text, this.tagTextFormat, TextLocation.tag);
       this.writeCL();
     }
 
@@ -2053,7 +2050,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (!this.isEmptyText(text)) {
       this.writeNL_IfNotChain(route);
       this.writeOPB();
-      this.writeBitmarkTextTagValue(text, TextFormat.bitmarkMinusMinus);
+      this.writeTextOrValue(text, this.tagTextFormat, TextLocation.tag);
       this.writeCL();
     }
 
@@ -2163,10 +2160,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         this.writeString(' false ');
       } else if (Array.isArray(example)) {
         // TextAst
-        this.writeBitmarkTextTagValue(example, TextFormat.bitmarkMinusMinus);
+        this.writeTextOrValue(example, this.tagTextFormat, TextLocation.tag);
       } else {
         // String
-        this.writePlainTextTagValue(example);
+        this.writeTextOrValue(example, TextFormat.text, TextLocation.tag);
       }
       this.writeCL();
     } else {
@@ -2182,7 +2179,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_elementsValue(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeNL();
-      this.writeTagKey(node.value);
+      this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
   }
 
@@ -2195,7 +2192,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (node.value != null) {
       this.writeOPU();
-      this.writePlainTextTagValue(node.value);
+      this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
       this.writeCL();
     }
   }
@@ -2206,7 +2203,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_prefix(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPPRE();
-      this.writePlainTextTagValue(node.value);
+      this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
       this.writeCL();
     }
   }
@@ -2217,7 +2214,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_postfix(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeOPPOST();
-      this.writePlainTextTagValue(node.value);
+      this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
       this.writeCL();
     }
   }
@@ -2240,7 +2237,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_forKeys(node: NodeInfo, _route: NodeInfo[]): void {
     this.writeNL();
     this.writeOPHASH();
-    this.writePlainTextTagValue(node.value);
+    this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
     this.writeCL();
   }
 
@@ -2249,7 +2246,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_forValues(node: NodeInfo, _route: NodeInfo[]): void {
     this.writeNL();
     this.writeOPHASH();
-    this.writePlainTextTagValue(node.value);
+    this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
     this.writeCL();
   }
 
@@ -2258,7 +2255,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_forValuesValue(node: NodeInfo, _route: NodeInfo[]): void {
     this.writeNL();
     this.writeOPHASH();
-    this.writePlainTextTagValue(node.value);
+    this.writeTextOrValue(node.value, TextFormat.text, TextLocation.tag);
     this.writeCL();
   }
 
@@ -2268,7 +2265,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_key(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeNL();
-      this.writeTagKey(node.value);
+      this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
   }
 
@@ -2278,7 +2275,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_valuesValue(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeNL();
-      this.writeTagKey(node.value);
+      this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
   }
 
@@ -2292,7 +2289,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     if (node.value) {
       this.writeNL();
-      this.writeTagKey(node.value);
+      this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
   }
 
@@ -2359,11 +2356,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     });
   }
 
-  protected leaf_zoomDisabled(node: NodeInfo, route: NodeInfo[]): void {
-    const bitType = this.getBitType(route);
-
+  protected leaf_zoomDisabled(node: NodeInfo, _route: NodeInfo[]): void {
     if (
-      Config.isOfBitType(bitType, [
+      Config.isOfBitType(this.bitType, [
         BitType.imageSeparator,
         BitType.pageBanner,
         BitType.imagesLogoGrave,
@@ -2657,8 +2652,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Not valid, ignore
       return false;
     } else if (footer.footer && footer.footer.length > 0) {
-      const isBitmarkText = textFormat === TextFormat.bitmarkPlusPlus || textFormat === TextFormat.bitmarkMinusMinus;
-      if (isBitmarkText) {
+      if (this.isBodyBitmarkText) {
         // handle bitmark text
         return true;
       } else {
@@ -2703,7 +2697,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   /**
    * Helper function to write a tag key, breakscaping appropriately.
-   * Use only inside a tag. Inside a tag, use writePlainTextTagValue.
+   * Use only to write a tag key.
    *
    * @param s
    */
@@ -2711,68 +2705,82 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (s != null) {
       this.write(
         Breakscape.breakscape(`${s}`, {
-          textFormat: TextFormat.tag,
+          textFormat: TextFormat.text,
+          textLocation: TextLocation.tag,
         }),
       );
     }
   }
 
   /**
-   * Helper function to write a tag value, breakscaping appropriately, and adding wrapper spaces if required.
-   * Use only inside a tag. Outside a tag, use writeTagKey.
+   * Write text or value, handling the format and location (i.e. conversion to text and breakscaping).
    *
-   * @param s
-   */
-  protected writePlainTextTagValue<T extends string>(s?: T): void {
-    if (s != null) {
-      this.write(
-        `${this.spacesAroundValuesStr}${Breakscape.breakscape(`${s}`, {
-          textFormat: TextFormat.tag,
-        })}${this.spacesAroundValuesStr}`,
-      );
-    }
-  }
-
-  /**
-   * Helper function to write Bitmark text.
-   * Use only outside a tag. Inside a tag, use writeBitmarkTextTagValue.
-   *
-   * @param ast
+   * @param text
    * @param format
+   * @param location
    * @param options
    */
-  protected writeBitmarkText(ast: TextAst, format: TextFormatType, options?: GenerateOptions): void {
-    this.textGenerator.generateSync(ast, format, options);
-  }
+  protected writeTextOrValue(
+    text: JsonText,
+    format: TextFormatType,
+    location: TextLocationType,
+    options?: GenerateOptions,
+  ) {
+    const isTagValue = location === TextLocation.tag;
+    const s = StringUtils.isString(text) ? (text as string) : undefined;
+    const ast = Array.isArray(text) ? (text as TextAst) : undefined;
+    const isBitmarkText = format === TextFormat.bitmarkPlusPlus || format === TextFormat.bitmarkMinusMinus;
+    const isPlainText = !isBitmarkText;
+    const spacesAroundValues = isTagValue ? this.spacesAroundValuesStr : '';
 
-  /**
-   * Helper function to write Bitmark text in a tag, breakscaping appropriately, and adding wrapper spaces if required.
-   * Use only inside a tag. Outside a tag, use writeBitmarkText.
-   *
-   * @param ast
-   * @param format
-   */
-  protected writeBitmarkTextTagValue(ast: TextAst, format: TextFormatType): void {
-    // When writing a tag value, we don't know if it is empty until we write it, so we need to
-    // write it using the part writer, and then check if it is empty before writing to the main writer.
+    if (isPlainText) {
+      // Plain text
+      if (s != null) {
+        this.write(
+          `${spacesAroundValues}${Breakscape.breakscape(`${s}`, {
+            textFormat: TextFormat.text,
+            textLocation: location,
+          })}${spacesAroundValues}`,
+        );
+      }
+    } else {
+      // Bitmark text (but might not be AST as some values are just strings (and all v2 values are strings))
+      if (s != null) {
+        this.write(
+          `${spacesAroundValues}${Breakscape.breakscape(`${s}`, {
+            textFormat: format,
+            textLocation: location,
+          })}${spacesAroundValues}`,
+        );
+      } else if (ast != null) {
+        // When writing a tag value, we don't know if it is empty until we write it, so we need to
+        // write it using the part writer, and then check if it is empty before writing to the main writer.
+        // Body values can be written directly to the main writer.
 
-    // Change the writer to the part writer
-    this.writer = this.partWriter;
-    this.partWriter.openSync();
+        if (isTagValue) {
+          // Change the writer to the part writer
+          this.writer = this.partWriter;
+          this.partWriter.openSync();
 
-    // Write the text
-    this.textGenerator.generateSync(ast, format);
+          // Write the text
+          this.textGenerator.generateSync(ast, format, location, options);
 
-    // Get the written text
-    this.partWriter.closeSync();
-    const text = this.partWriter.getString();
+          // Get the written text
+          this.partWriter.closeSync();
+          const text = this.partWriter.getString();
 
-    // Restore the main writer
-    this.writer = this.mainWriter;
+          // Restore the main writer
+          this.writer = this.mainWriter;
 
-    // Write the text to the main writer, adding spaces around it where required
-    if (text) {
-      this.write(`${this.spacesAroundValuesStr}${text}${this.spacesAroundValuesStr}`);
+          // Write the text to the main writer, adding spaces around it where required
+          if (text) {
+            this.write(`${spacesAroundValues}${text.trim()}${spacesAroundValues}`);
+          }
+        } else {
+          // Write the text directly to the main writer
+          this.textGenerator.generateSync(ast, format, location, options);
+        }
+      }
     }
   }
 
@@ -2968,7 +2976,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.writeOPA();
       this.writeTagKey(key);
       this.writeColon();
-      this.writePlainTextTagValue(src);
+      this.writeTextOrValue(src, TextFormat.text, TextLocation.tag);
 
       if (resource.type === ResourceTag.article) {
         // this.writeNL();
@@ -2985,7 +2993,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.writeOPAMP();
       this.writeTagKey(type);
       this.writeColon();
-      this.writePlainTextTagValue(value);
+      this.writeTextOrValue(value, TextFormat.text, TextLocation.tag);
 
       if (type === ResourceTag.article) {
         // this.writeNL();
@@ -3017,9 +3025,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         this.writeOPA();
         this.writeTagKey(name);
         this.writeColon();
-        this.writeBitmarkTextTagValue(
+        this.writeTextOrValue(
           values as TextAst,
           TextFormat.fromValue(options.format) ?? TextFormat.bitmarkMinusMinus,
+          TextLocation.tag,
         );
         this.writeCL();
       } else {
@@ -3041,7 +3050,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
               this.writeOPA();
               this.writeTagKey(name);
               this.writeColon();
-              this.writePlainTextTagValue(`${val}`);
+              this.writeTextOrValue(`${val}`, TextFormat.text, TextLocation.tag);
               this.writeCL();
               // propertyIndex++;
             }
@@ -3080,42 +3089,16 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return !!writeFormat;
   }
 
-  protected getTextFormat(route: NodeInfo[]): TextFormatType | undefined {
-    for (const node of route) {
-      if (node.key === NodeType.bitsValue) {
-        const n = node.value as Bit;
-        return n?.textFormat;
-      }
-    }
-
-    return undefined;
+  protected calculateIsCardAllowed(): boolean {
+    return this.isBodyBitmarkText && !this.isOfBitType1();
   }
 
-  protected isCardAllowed(route: NodeInfo[]): boolean {
-    const textFormat = this.getTextFormat(route);
-    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
-
-    return isBitmarkText && !this.isOfBitType1(route);
+  protected isOfBitType1(): boolean {
+    return this.isOfBitType([BitType.trueFalse1, BitType.multipleChoice1, BitType.multipleResponse1]);
   }
 
-  protected isOfBitType1(route: NodeInfo[]): boolean {
-    return this.isOfBitType(route, [BitType.trueFalse1, BitType.multipleChoice1, BitType.multipleResponse1]);
-  }
-
-  protected isOfBitType(route: NodeInfo[], baseBitType: BitTypeType | BitTypeType[]): boolean {
-    const bt = this.getBitType(route);
-    return Config.isOfBitType(bt, baseBitType);
-  }
-
-  protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
-    for (const node of route) {
-      if (node.key === NodeType.bitsValue) {
-        const n = node.value as Bit;
-        return n?.bitType;
-      }
-    }
-
-    return undefined;
+  protected isOfBitType(baseBitType: BitTypeType | BitTypeType[]): boolean {
+    return Config.isOfBitType(this.bitType, baseBitType);
   }
 
   //

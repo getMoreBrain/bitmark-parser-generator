@@ -8,6 +8,7 @@ import { performance } from 'perf_hooks';
 import { Breakscape } from '../../src/breakscaping/Breakscape';
 import { BreakscapedString } from '../../src/model/ast/BreakscapedString';
 import { TextFormat } from '../../src/model/enum/TextFormat';
+import { TextLocation } from '../../src/model/enum/TextLocation';
 import { FileUtils } from '../../src/utils/FileUtils';
 
 import { isDebugPerformance } from './config/config-test';
@@ -96,6 +97,7 @@ describe('text-tag-unbreakscape', () => {
         performance.mark('PEG:Start');
         const text = Breakscape.unbreakscape(originalBreakscaped.trim() as BreakscapedString, {
           textFormat: TextFormat.text,
+          textLocation: TextLocation.body,
         });
 
         // Write the unbreakscaped text

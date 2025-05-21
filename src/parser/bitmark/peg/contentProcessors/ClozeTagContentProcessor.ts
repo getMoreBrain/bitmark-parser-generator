@@ -2,6 +2,7 @@ import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 
@@ -35,7 +36,8 @@ function clozeTagContentProcessor(
 
     solutions.push(
       Breakscape.unbreakscape(trimmedStringValue, {
-        textFormat: TextFormat.tag,
+        textFormat: TextFormat.bitmarkMinusMinus,
+        textLocation: TextLocation.tag,
       }),
     );
 

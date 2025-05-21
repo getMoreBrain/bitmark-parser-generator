@@ -352,9 +352,9 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.30.1"
     },
     "bitmark": "[.article:bitmark++]\n[!Start **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]]\n\nStart **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]"
   },
@@ -440,9 +440,9 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.30.1"
     },
     "bitmark": "[.article:bitmark--]\n[!Start **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]]\n\nStart **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]"
   }

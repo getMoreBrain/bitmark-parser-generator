@@ -25,3 +25,26 @@ __^^_particularly exciting_^^__
 *F_^_^_^_^_^_
 F_^__^__^_
 F_^^____^^_^
+
+
+[.article]
+[!^**A**]
+
+[.article:bitmark++]
+[!Start **[text^]** ==[n^]==|latex| end^]]
+
+[.article:bitmark++]
+==bold[^==|bold|
+**bold[^**
+__italic[^__
+!!highlight[^!!
+[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]
+
+[.article:bitmark--]
+==bold[^==|bold|
+**bold[^**
+__italic[^__
+!!highlight[^!!
+[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]
+
+

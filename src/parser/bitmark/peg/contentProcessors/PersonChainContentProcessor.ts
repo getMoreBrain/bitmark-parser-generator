@@ -3,6 +3,7 @@ import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { PersonJson } from '../../../../model/json/BitJson';
 import { ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -34,7 +35,8 @@ function personChainContentProcessor(
 
   // Extract the name from the content tag
   const name = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString, {
-    textFormat: TextFormat.tag,
+    textFormat: TextFormat.bitmarkMinusMinus,
+    textLocation: TextLocation.tag,
   });
 
   // Extract the title from the propertyTitle tag

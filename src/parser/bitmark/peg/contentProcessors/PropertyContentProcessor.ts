@@ -9,6 +9,7 @@ import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -112,21 +113,24 @@ function propertyContentProcessor(
             return Breakscape.unbreakscape(
               StringUtils.isString(v) ? (StringUtils.trimmedString(v) as BreakscapedString) : undefined,
               {
-                textFormat: TextFormat.tag,
+                textFormat: TextFormat.bitmarkMinusMinus,
+                textLocation: TextLocation.tag,
               },
             );
 
           case PropertyFormat.number:
             return NumberUtils.asNumber(
               Breakscape.unbreakscape(v as BreakscapedString, {
-                textFormat: TextFormat.tag,
+                textFormat: TextFormat.bitmarkMinusMinus,
+                textLocation: TextLocation.tag,
               }),
             );
 
           case PropertyFormat.boolean:
             return BooleanUtils.toBoolean(
               Breakscape.unbreakscape(v as BreakscapedString, {
-                textFormat: TextFormat.tag,
+                textFormat: TextFormat.bitmarkMinusMinus,
+                textLocation: TextLocation.tag,
               }),
               true,
             );
@@ -134,7 +138,8 @@ function propertyContentProcessor(
           case PropertyFormat.invertedBoolean:
             return !BooleanUtils.toBoolean(
               Breakscape.unbreakscape(v as BreakscapedString, {
-                textFormat: TextFormat.tag,
+                textFormat: TextFormat.bitmarkMinusMinus,
+                textLocation: TextLocation.tag,
               }),
               true,
             );
@@ -155,7 +160,8 @@ function propertyContentProcessor(
         }
       }
       return Breakscape.unbreakscape(v as BreakscapedString, {
-        textFormat: TextFormat.tag,
+        textFormat: TextFormat.bitmarkMinusMinus,
+        textLocation: TextLocation.tag,
       });
     };
 

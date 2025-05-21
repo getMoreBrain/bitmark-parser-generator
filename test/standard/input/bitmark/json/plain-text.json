@@ -263,7 +263,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["solu^^tion", "pro^blem"],
+                "solutions": ["solu^tion", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
