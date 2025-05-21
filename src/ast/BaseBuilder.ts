@@ -8,6 +8,7 @@ import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { BitTypeType } from '../model/enum/BitType';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
 import { TextFormatType } from '../model/enum/TextFormat';
+import { TextLocation } from '../model/enum/TextLocation';
 import { ExampleJson } from '../model/json/BitJson';
 import { TextParser } from '../parser/text/TextParser';
 import { ArrayUtils } from '../utils/ArrayUtils';
@@ -167,6 +168,7 @@ class BaseBuilder {
     let res: R;
 
     const { textFormat } = context;
+    const textLocation = isProperty ? TextLocation.tag : TextLocation.body;
 
     if (text == null) {
       res = [] as R;
@@ -189,6 +191,7 @@ class BaseBuilder {
             strArray[i] = this.textParser.toAst(
               Breakscape.breakscape(t as string, {
                 textFormat,
+                textLocation,
               }),
               {
                 textFormat,
@@ -209,6 +212,7 @@ class BaseBuilder {
         res = this.textParser.toAst(
           Breakscape.breakscape(text as string, {
             textFormat,
+            textLocation,
             v2: true,
           }),
           {

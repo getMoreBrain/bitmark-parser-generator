@@ -1,13 +1,14 @@
 import { EnumType } from '@ncoderz/superenum';
 
 import { Ast, NodeInfo } from '../../ast/Ast';
-import { Breakscape } from '../../breakscaping/Breakscape';
+import { Breakscape, BreakscapeOptions } from '../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
 import { Bit } from '../../model/ast/Nodes';
 import { BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { TextLocation, TextLocationType } from '../../model/enum/TextLocation';
 import { TextMarkType, TextMarkTypeType } from '../../model/enum/TextMarkType';
 import { TextNodeType, TextNodeTypeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
@@ -55,6 +56,8 @@ const HIGHLIGHT_MARK = HIGHLIGHT_HALF_MARK + HIGHLIGHT_HALF_MARK;
 const INLINE_MARK = INLINE_HALF_MARK + INLINE_HALF_MARK;
 
 const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHLIGHT_HALF_MARK, INLINE_HALF_MARK];
+
+const ALL_TAG_OPENING_ENDS = '@#▼►%!?+-$_=&';
 
 const HEADING_TAG = '#';
 
@@ -135,6 +138,7 @@ export interface TextOptions {
 
 export type GenerateOptions = {
   plainTextDividerAllowed?: boolean;
+  noBreakscaping?: boolean;
 };
 
 const Stage = {
@@ -163,6 +167,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   // State
   private generateOptions: GenerateOptions = {};
   private textFormat: TextFormatType = TextFormat.bitmarkMinusMinus;
+  private textLocation: TextLocationType = TextLocation.body;
   private writerText = '';
   private nodeIndex = 0;
   private currentIndent = 0;
@@ -225,9 +230,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   public async generate(
     ast: TextAst,
     textFormat: TextFormatType,
+    textLocation: TextLocationType,
     options?: GenerateOptions,
   ): Promise<BreakscapedString> {
-    return this.generateSync(ast, textFormat, options);
+    return this.generateSync(ast, textFormat, textLocation, options);
   }
 
   /**
@@ -235,7 +241,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    *
    * @param ast bitmark text AST
    */
-  public generateSync(ast: TextAst, textFormat: TextFormatType, options?: GenerateOptions): BreakscapedString {
+  public generateSync(
+    ast: TextAst,
+    textFormat: TextFormatType,
+    textLocation: TextLocationType,
+    options?: GenerateOptions,
+  ): BreakscapedString {
     this.generateOptions = Object.assign({}, options);
 
     this.validateGenerateOptions(ast);
@@ -244,7 +255,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       // Normal case with no pre-text - need only walk once
 
       // Reset the state
-      this.resetState(textFormat);
+      this.resetState(textFormat, textLocation);
 
       // Walk the text AST - this 1st walk is to determine if there is pre-text
       this.walkAndWrite(ast);
@@ -260,7 +271,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       this.options.bodyBitCallback = undefined;
 
       // Reset the state
-      this.resetState(textFormat);
+      this.resetState(textFormat, textLocation);
 
       // Walk the text AST - this 1st walk is to determine if there is pre-text
       this.walkAndWrite(ast);
@@ -272,7 +283,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       // Reset the state, preserving havePreText / preTextIndex from the first walk
       const havePreText = this.havePreText;
       const pti = this.preTextIndex;
-      this.resetState(textFormat);
+      this.resetState(textFormat, textLocation);
       this.havePreText = havePreText;
       this.preTextIndex = pti;
 
@@ -287,10 +298,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     return this.placeholders;
   }
 
-  private resetState(textFormat: TextFormatType): void {
+  private resetState(textFormat: TextFormatType, textLocation: TextLocationType): void {
     this.printed = false;
 
     this.textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
+    this.textLocation = textLocation;
     this.writerText = '';
     this.nodeIndex = 0;
     this.currentIndent = 0;
@@ -699,12 +711,14 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       s = linkText;
     } else {
       if (!codeBreakscaping) {
-        s = Breakscape.breakscape(s, {
+        s = this.breakscape(s, {
           textFormat: this.textFormat,
+          textLocation: this.textLocation,
         });
       } else {
-        s = Breakscape.breakscape(s, {
+        s = this.breakscape(s, {
           textFormat: this.textFormat,
+          textLocation: this.textLocation,
         });
       }
     }
@@ -723,13 +737,20 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
     if (this.havePreText && this.rootParagraphNodeContentIndex >= this.preTextIndex) {
       // Write the text as pre-text
-      const s = Breakscape.breakscape(node.text, {
+      const s = this.breakscape(node.text, {
         textFormat: TextFormat.text,
+        textLocation: this.textLocation, // Must be body for pre-text
       });
       this.write(s);
     } else {
       // Write the text
-      this.write(s);
+
+      // Special case for empty text in version > 2. Better would be NO empty text!
+      if (this.bitmarkVersion !== BitmarkVersion.v2 && s === '') {
+        this.write('^');
+      } else {
+        this.write(s);
+      }
     }
 
     // Handle pre-text check
@@ -791,16 +812,31 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    * If the existing written text ends with a half-mark, and the new text starts with the same half-mark, insert a
    * breakscape ^ between them to break the sequence.
    *
+   * Only applies to bitmark version > 2
+   *
    * @param s
    */
   protected getInterTextBreakscape(s: string): string {
+    if (this.bitmarkVersion === BitmarkVersion.v2) return '';
+    if (this.textFormat === TextFormat.text) return '';
+
     const lastChar = this.writerText.slice(-1);
     const firstChar = s.slice(0, 1);
 
+    // If the last char is a half-mark, and the first char is the same half-mark, insert a breakscape
     if (lastChar === firstChar && ALL_HALF_MARKS.indexOf(lastChar) !== -1) {
-      // If the last char is a half-mark, and the first char is the same half-mark, insert a breakscape
       return '^';
     }
+
+    // If in the body and the first char is a bit tag start, and the last char is the second part of the tag,
+    // insert a breakscape
+    if (this.textLocation === TextLocation.body) {
+      if (lastChar === '[' && ALL_TAG_OPENING_ENDS.indexOf(firstChar) !== -1) {
+        return '^';
+      }
+    }
+
+    // Normal case, no breakscape
     return '';
   }
 
@@ -1085,7 +1121,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     if (node.attrs == null || !node.attrs.formula) return;
     const attrs = node.attrs;
 
-    const s = `==${attrs.formula}==|latex|`;
+    const formula = this.breakscape(attrs.formula, {
+      textFormat: this.textFormat,
+      textLocation: this.textLocation,
+    });
+
+    const s = `==${formula}==|latex|`;
 
     // Write the text
     this.write(s);
@@ -1265,6 +1306,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   //
   // Helper functions
   //
+
+  protected breakscape(s: string, options: BreakscapeOptions): string {
+    if (this.generateOptions.noBreakscaping) return s;
+    return Breakscape.breakscape(s, options);
+  }
 
   protected getBitType(route: NodeInfo[]): BitTypeType | undefined {
     for (const node of route) {

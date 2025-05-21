@@ -7,6 +7,7 @@ import { performance } from 'perf_hooks';
 
 import { Breakscape } from '../../src/breakscaping/Breakscape';
 import { TextFormat } from '../../src/model/enum/TextFormat';
+import { TextLocation } from '../../src/model/enum/TextLocation';
 import { FileUtils } from '../../src/utils/FileUtils';
 
 import { isDebugPerformance } from './config/config-test';
@@ -94,7 +95,8 @@ describe('text-tag-breakscape', () => {
         // Breakscape the text
         performance.mark('PEG:Start');
         const breakscaped = Breakscape.breakscape(originalText.trim(), {
-          textFormat: TextFormat.tag,
+          textFormat: TextFormat.text,
+          textLocation: TextLocation.tag,
         });
 
         // Write the breakscaped text

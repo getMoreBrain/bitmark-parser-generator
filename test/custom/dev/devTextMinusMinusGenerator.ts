@@ -13,6 +13,7 @@ import { Ast } from '../../../src/ast/Ast';
 import { TextGenerator } from '../../../src/generator/text/TextGenerator';
 import { NodeType } from '../../../src/model/ast/NodeType';
 import { TextFormat } from '../../../src/model/enum/TextFormat';
+import { TextLocation } from '../../../src/model/enum/TextLocation';
 
 const ast = new Ast();
 const textGenerator = new TextGenerator();
@@ -29,7 +30,7 @@ class DevTextGenerator {
       console.log(`\n${textAst}\n\n`);
 
       // Convert the text JSON to text
-      const text = textGenerator.generateSync(textAst, TextFormat.bitmarkMinusMinus);
+      const text = textGenerator.generateSync(textAst, TextFormat.bitmarkMinusMinus, TextLocation.body);
 
       ast.printTree(textAst, NodeType.textAst);
       console.log(text);

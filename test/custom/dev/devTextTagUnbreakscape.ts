@@ -11,6 +11,7 @@ import path from 'path';
 
 import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
 import { TextFormat } from '../../../src/model/enum/TextFormat';
+import { TextLocation } from '../../../src/model/enum/TextLocation';
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
@@ -24,7 +25,8 @@ class DevTextUnbreakscape {
     });
 
     const res = bitmarkParserGenerator.unbreakscapeText(str, {
-      textFormat: TextFormat.tag,
+      textFormat: TextFormat.text,
+      textLocation: TextLocation.tag,
     });
     console.log(res);
   }

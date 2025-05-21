@@ -1,6 +1,7 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -25,7 +26,8 @@ function trueFalseTagContentProcessor(
   if (!trueFalse) return;
 
   const trimmedStringValue = Breakscape.unbreakscape(StringUtils.trimmedString(value) as BreakscapedString, {
-    textFormat: TextFormat.tag,
+    textFormat: TextFormat.bitmarkMinusMinus,
+    textLocation: TextLocation.tag,
   });
 
   trueFalse.push({

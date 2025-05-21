@@ -10,6 +10,7 @@ import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
+import { TextLocation } from '../model/enum/TextLocation';
 import { AudioResourceWrapperJson, ImageResourceWrapperJson, ResourceJson } from '../model/json/ResourceJson';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
@@ -1450,6 +1451,7 @@ class Builder extends BaseBuilder {
         // Special v2 Breakscaping
         bodyStr = Breakscape.breakscape(bodyStr, {
           textFormat,
+          textLocation: TextLocation.body,
           v2: true,
         });
 
@@ -1974,8 +1976,12 @@ class Builder extends BaseBuilder {
     let text: JsonText = this.handleJsonText(context, true, data?.text);
 
     if (textAsStrings) {
-      // Convert the bitmark text to plain text
-      text = this.textGenerator.generateSync(text as TextAst, TextFormat.text).trim();
+      // Convert the bitmark text to plain text (without breakscaping, as that will happen in the Bitmark Generator)
+      text = this.textGenerator
+        .generateSync(text as TextAst, TextFormat.text, TextLocation.body, {
+          noBreakscaping: true,
+        })
+        .trim();
     }
 
     // NOTE: Node order is important and is defined here

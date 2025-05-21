@@ -5,6 +5,7 @@ import path from 'path';
 
 import { TextGenerator } from '../../src/generator/text/TextGenerator';
 import { TextFormat } from '../../src/model/enum/TextFormat';
+import { TextLocation } from '../../src/model/enum/TextLocation';
 import { TextParser } from '../../src/parser/text/TextParser';
 import { FileUtils } from '../../src/utils/FileUtils';
 import { deepDiffMapper } from '../utils/deepDiffMapper';
@@ -114,7 +115,7 @@ describe('text-minusminus-generation', () => {
 
         // Convert the JSON to text
         performance.mark('GEN:Start');
-        const text = textGenerator.generateSync(originalJson, TextFormat.bitmarkMinusMinus);
+        const text = textGenerator.generateSync(originalJson, TextFormat.bitmarkMinusMinus, TextLocation.body);
 
         // Write the new text to file
         fs.writeFileSync(generatedMarkupFile, text, {
