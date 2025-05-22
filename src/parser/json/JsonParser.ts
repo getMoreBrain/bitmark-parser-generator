@@ -159,7 +159,13 @@ class JsonParser {
     const bitConfig = Config.getBitConfig(bitType);
 
     // Text Format
-    const textFormat = TextFormat.fromValue(bit.format) ?? bitConfig.textFormatDefault;
+    let textFormat = TextFormat.fromValue(bit.format) ?? bitConfig.textFormatDefault;
+
+    // bitmark-- deprecated
+    if (textFormat === TextFormat.bitmarkMinusMinus) {
+      textFormat = TextFormat.bitmarkPlusPlus;
+    }
+
     textFormat; // Unused
 
     // Build bit

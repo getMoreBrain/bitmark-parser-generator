@@ -152,7 +152,7 @@ class BitmarkPegParserProcessor {
     this.context = {
       bitConfig: Config.getBitConfig(BitType._error),
       bitType: BitType._error,
-      textFormat: TextFormat.bitmarkMinusMinus,
+      textFormat: TextFormat.bitmarkPlusPlus,
 
       DEBUG_BIT_RAW,
       DEBUG_BIT_CONTENT_RAW,
@@ -372,6 +372,13 @@ class BitmarkPegParserProcessor {
         `Invalid text format '${textFormatAndResourceType.textFormat}', defaulting to '${bitConfig.textFormatDefault}'`,
       );
     }
+
+    // Deprecated warning for bitmark--
+    if (textFormat === TextFormat.bitmarkMinusMinus) {
+      textFormat = TextFormat.bitmarkPlusPlus;
+      this.addWarning(`bitmark-- text format is deprecated. Bit will be parsed as bitmark++`);
+    }
+
     textFormat = textFormat ?? bitConfig.textFormatDefault;
 
     // Resource type
