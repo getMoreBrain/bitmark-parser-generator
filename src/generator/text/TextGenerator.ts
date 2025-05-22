@@ -744,13 +744,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       this.write(s);
     } else {
       // Write the text
-
-      // Special case for empty text in version > 2. Better would be NO empty text!
-      if (this.bitmarkVersion !== BitmarkVersion.v2 && s === '') {
-        this.write('^');
-      } else {
-        this.write(s);
-      }
+      this.write(s);
     }
 
     // Handle pre-text check

@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.30.1"
+const VERSION = "8.32.1"
 
 //Parser peggy.js
 
@@ -94,19 +94,25 @@ function s(_string) {
   return _string ?? ""
 }
 
-function unbreakscape(_str) {
+function legacyContextAwarewUnbreakscape(_str) {
 	let u_ = _str || ""
 
-	// function replacer(match, p1, offset, string, groups) {
-  // 		return match.replace("^", "");
-	// }
+	function replacer(match, p1, offset, string, groups) {
+  		return match.replace("^", "");
+	}
 
-  // let re_ = new RegExp( /=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
+  let re_ = new RegExp( /=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
 
-  // u_ = u_.replace(re_, replacer)
-  u_ = Breakscape.unbreakscape(u_);
+  u_ = u_.replace(re_, replacer)
 
   return u_
+}
+
+function unbreakscape(str) {
+  if (typeof str !== 'string') return null;
+  // return str.replace(/\^+/g, run => run.slice(1));
+
+  return Breakscape.unbreakscape(str);
 }
 
 function removeTempParsingParent(obj) {
@@ -119,6 +125,73 @@ function removeTempParsingParent(obj) {
             removeTempParsingParent(obj[key]);
         });
     }
+}
+
+// function cleanEmptyTextNodes(node) {
+//   debugger;
+//   if (Array.isArray(node)) {
+//     return node.map(cleanEmptyTextNodes);
+//   }
+//   if (node !== null && typeof node === 'object') {
+//     const hasType    = Object.prototype.hasOwnProperty.call(node, 'type');
+//     const hasContent = Object.prototype.hasOwnProperty.call(node, 'content');
+//     const result = {};
+
+//     for (const [key, value] of Object.entries(node)) {
+//       if (key === 'content' && hasType && hasContent && Array.isArray(value)) {
+//         // filter out items where item.text === ""
+//         const filtered = value.filter(item =>
+//           !(item && typeof item === 'object' && 'text' in item && item.text === '')
+//         );
+//         result[key] = filtered.map(cleanEmptyTextNodes);
+
+//       } else if (Array.isArray(value)) {
+//         result[key] = value.map(cleanEmptyTextNodes);
+
+//       } else {
+//         result[key] = cleanEmptyTextNodes(value);
+//       }
+//     }
+
+//     return result;
+//   }
+//   return node;
+// }
+
+function cleanEmptyTextNodes(root) {
+  // return root;
+  const isEmptyTextNode = (n) =>
+    n &&
+    typeof n === "object" &&
+    n.type === "text" &&
+    (n.text === "" || n.text == null); // catches null & undefined
+
+  /** Recursively walk only through `content` arrays */
+  function cleanContentArray(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+      const item = arr[i];
+
+      if (isEmptyTextNode(item)) {
+        arr.splice(i, 1);                    // drop the empty text node
+      } else if (
+        item &&
+        typeof item === "object" &&
+        Array.isArray(item.content)
+      ) {
+        cleanContentArray(item.content);     // recurse into nested `content`
+      }
+      // Any other shape is ignored.
+    }
+  }
+
+  // Kick-off: root may itself be an array or an object with `content`
+  if (Array.isArray(root)) {
+    cleanContentArray(root);
+  } else if (root && typeof root === "object" && Array.isArray(root.content)) {
+    cleanContentArray(root.content);
+  }
+
+  return root;
 }
 
 function bitmarkPlusPlus(_str) {
@@ -197,11 +270,11 @@ bitmarkPlusPlus "StyledText"
   / NoContent
 
 Block
-  = b: TitleBlock { return { ...b }}
-  / b: ListBlock { let lb_ = { ...b }; removeTempParsingParent(lb_); return lb_ }
+  = b: TitleBlock { const cleaned_ = cleanEmptyTextNodes({ ...b }); return cleaned_ }
+  / b: ListBlock { let lb_ = { ...b }; removeTempParsingParent(lb_); const cleaned_ = cleanEmptyTextNodes(lb_); return cleaned_ }
   / b: ImageBlock { return { ...b }}
   / b: CodeBlock { return { ...b }}
-  / b: Paragraph { return { ...b }}
+  / b: Paragraph { const cleaned_ = cleanEmptyTextNodes({ ...b }); return cleaned_ }
 
 
 BlockStartTags
@@ -474,8 +547,8 @@ ImageBlock
 		alignment: imageAlignment_,
         textAlign: textAlign_,
         src: u,
-        alt: alt_,
-        title: title_,
+        alt: unbreakscape(alt_),
+        title: unbreakscape(title_),
         class: class_,
 		zoomDisabled: zoomDisabled_,
         ...chain
@@ -517,7 +590,9 @@ bitmarkPlusString "StyledString"
   = InlineTags
 
 InlineTags
-  = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
+  // = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
+  = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { const cleaned_ = cleanEmptyTextNodes(first ? [first, ...more.flat()] : more.flat()); return cleaned_ }
+
 
 InlinePlainText
   = NL { return { "type": "hardBreak" } }
@@ -660,7 +735,8 @@ bitmarkMinusMinus "MinimalStyledText"
   = bs: bitmarkMinusMinusString { return [ { type: 'paragraph', content: bs, attrs: { } } ] }
 
 bitmarkMinusMinusString "MinimalStyledString"
-  = first: PlainText? more: (StyledText / PlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
+  // = first: PlainText? more: (StyledText / PlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
+  = first: PlainText? more: (StyledText / PlainText)*  { const cleaned_ = cleanEmptyTextNodes(first ? [first, ...more.flat()] : more.flat()); return cleaned_ }
 
 PlainText
   = NL { return { "type": "hardBreak" } }

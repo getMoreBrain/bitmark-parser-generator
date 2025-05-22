@@ -4,9 +4,7 @@
       "type": "correction",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "92553"
-      ],
+      "id": ["92553"],
       "item": [
         {
           "type": "paragraph",
@@ -112,9 +110,7 @@
       "type": "correction",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "92606"
-      ],
+      "id": ["92606"],
       "item": [
         {
           "type": "paragraph",
@@ -231,15 +227,6 @@
               "type": "text"
             },
             {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
-              "type": "text"
-            },
-            {
               "type": "hardBreak"
             },
             {
@@ -278,15 +265,6 @@
             },
             {
               "text": " ",
-              "type": "text"
-            },
-            {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
               "type": "text"
             },
             {
@@ -378,15 +356,6 @@
             },
             {
               "text": " ",
-              "type": "text"
-            },
-            {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
               "type": "text"
             },
             {
@@ -643,15 +612,6 @@
               "type": "text"
             },
             {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
-              "type": "text"
-            },
-            {
               "type": "hardBreak"
             },
             {
@@ -715,15 +675,6 @@
             },
             {
               "text": " ",
-              "type": "text"
-            },
-            {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
               "type": "text"
             },
             {
@@ -793,15 +744,6 @@
               "type": "text"
             },
             {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
-              "type": "text"
-            },
-            {
               "type": "hardBreak"
             },
             {
@@ -858,15 +800,6 @@
               "type": "text"
             },
             {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
-              "type": "text"
-            },
-            {
               "type": "hardBreak"
             },
             {
@@ -880,15 +813,6 @@
             },
             {
               "text": " ",
-              "type": "text"
-            },
-            {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
               "type": "text"
             },
             {
@@ -933,15 +857,6 @@
               "type": "text"
             },
             {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
-              "type": "text"
-            },
-            {
               "type": "hardBreak"
             },
             {
@@ -955,15 +870,6 @@
             },
             {
               "text": " ",
-              "type": "text"
-            },
-            {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "",
               "type": "text"
             },
             {
@@ -1368,9 +1274,7 @@
       "type": "correction",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "92750"
-      ],
+      "id": ["92750"],
       "item": [
         {
           "type": "paragraph",
@@ -1457,9 +1361,7 @@
       "type": "correction",
       "format": "bitmark--",
       "bitLevel": 1,
-      "id": [
-        "92838"
-      ],
+      "id": ["92838"],
       "item": [
         {
           "type": "paragraph",
