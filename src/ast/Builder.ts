@@ -318,7 +318,12 @@ class Builder extends BaseBuilder {
   }): Bit | undefined {
     const bitConfig = Config.getBitConfig(data.bitType);
     const bitType = data.bitType;
-    const textFormat = TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
+    let textFormat = TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
+
+    // bitmark-- deprecated
+    if (textFormat === TextFormat.bitmarkMinusMinus) {
+      textFormat = TextFormat.bitmarkPlusPlus;
+    }
 
     const context: BuildContext = {
       bitConfig,
