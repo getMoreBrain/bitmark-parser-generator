@@ -7,7 +7,7 @@
     "parser": {
       "version": "3.25.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.30.1",
+      "textParserVersion": "8.32.1",
       "errors": [
         {
           "message": "Invalid bit",
@@ -174,7 +174,7 @@
     "parser": {
       "version": "3.25.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.30.1"
+      "textParserVersion": "8.32.1"
     },
     "bitmark": "[.cloze:bitmark++&image]\n[@id:1234]\n[@id:[1234^]]\n[@id:[1234^]4321]\n[@id:id-with-a-^]-in-it-and-at-the-end-^]]\n[@id:id-with-a-^^]-in-it-and-at-the-end-^^]]\n[@id:id-with-a-^^^]-in-it-and-at-the-end-^^^]]\n\nHere\n\n[%[%item^]][%[%lead^]:)]\n[!Instruc[tion^]]\n[@externalId:[externalId with square bracked at end^]]\nis\n[@lang:[lang^] with square bracked in middle]\nthe body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets\n\n[&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]"
   },
@@ -218,7 +218,7 @@
               "type": "hardBreak"
             },
             {
-              "text": "*F______",
+              "text": "*F__ __ __",
               "type": "text"
             },
             {
@@ -234,7 +234,7 @@
                   "type": "italic"
                 }
               ],
-              "text": "",
+              "text": " ",
               "type": "text"
             },
             {
@@ -254,7 +254,7 @@
                   "type": "italic"
                 }
               ],
-              "text": "",
+              "text": " ",
               "type": "text"
             },
             {
@@ -269,9 +269,9 @@
     "parser": {
       "version": "3.25.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.30.1"
+      "textParserVersion": "8.32.1"
     },
-    "bitmark": "[.article]\n__^_particularly exciting_^__\n__^^_particularly exciting_^^__\n*F_^_^_^_^_^_\nF_^__^__^_\nF_^^____^^_^"
+    "bitmark": "[.article]\n__^_particularly exciting_^__\n__^^_particularly exciting_^^__\n*F_^_ ^_^_ ^_^_\nF_^__^ __^_\nF_^^__ __^^_^"
   },
   {
     "bit": {
@@ -287,10 +287,6 @@
         {
           "type": "paragraph",
           "content": [
-            {
-              "text": "",
-              "type": "text"
-            },
             {
               "marks": [
                 {
@@ -309,7 +305,7 @@
     "parser": {
       "version": "3.25.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.30.1"
+      "textParserVersion": "8.32.1"
     },
     "bitmark": "[.article]\n[!^**A**]"
   },
@@ -363,7 +359,7 @@
     "parser": {
       "version": "3.25.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.30.1"
+      "textParserVersion": "8.32.1"
     },
     "bitmark": "[.article:bitmark++]\n[!Start **[text^]** ==[n^]==|latex| end^]]"
   },
@@ -381,10 +377,6 @@
         {
           "type": "paragraph",
           "content": [
-            {
-              "text": "",
-              "type": "text"
-            },
             {
               "marks": [
                 {
@@ -494,7 +486,7 @@
     "parser": {
       "version": "3.25.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.30.1"
+      "textParserVersion": "8.32.1"
     },
     "bitmark": "[.article:bitmark++]\n==bold[^==|bold|\n**bold[^**\n__italic[^__\n!!highlight[^!!\n[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]"
   },
@@ -512,10 +504,6 @@
         {
           "type": "paragraph",
           "content": [
-            {
-              "text": "",
-              "type": "text"
-            },
             {
               "marks": [
                 {
@@ -611,7 +599,7 @@
     "parser": {
       "version": "3.25.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.30.1"
+      "textParserVersion": "8.32.1"
     },
     "bitmark": "[.article:bitmark--]\n==bold[^==|bold|\n**bold[^**\n__italic[^__\n!!highlight[^!!\n[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]"
   }
