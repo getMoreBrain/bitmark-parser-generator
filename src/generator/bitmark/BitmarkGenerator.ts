@@ -2713,7 +2713,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   /**
-   * Write text or value, handling the format and location (i.e. conversion to text and breakscaping).
+   * Write text or value, handling:
+   *  - the format and location (i.e. conversion to text and breakscaping).
+   *  - the spaces around values (if tag value).
    *
    * @param text
    * @param format
@@ -2727,59 +2729,64 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     options?: GenerateOptions,
   ) {
     const isTagValue = location === TextLocation.tag;
-    const s = StringUtils.isString(text) ? (text as string) : undefined;
+    const s = typeof text === 'string' ? text : undefined;
     const ast = Array.isArray(text) ? (text as TextAst) : undefined;
-    const isBitmarkText = format === TextFormat.bitmarkPlusPlus || format === TextFormat.bitmarkMinusMinus;
-    const isPlainText = !isBitmarkText;
-    const spacesAroundValues = isTagValue ? this.spacesAroundValuesStr : '';
+    const spaces = isTagValue ? this.spacesAroundValuesStr : '';
 
-    if (isPlainText) {
-      // Plain text
-      if (s != null) {
+    // For plain strings use TextFormat.text, otherwise keep the requested format
+    const effectiveFmt =
+      format === TextFormat.bitmarkPlusPlus || format === TextFormat.bitmarkMinusMinus ? format : TextFormat.text;
+
+    /** Wrap a piece of text in the required padding (only for tag values). */
+    const wrap = (content: string) => (isTagValue ? `${spaces}${content}${spaces}` : content);
+
+    /**
+     * Capture everything written by `action` into `partWriter`,
+     * then restore the original writer and return the trimmed text.
+     */
+    const writeToPartWriter = (action: () => void): string => {
+      const originalWriter = this.writer;
+
+      this.writer = this.partWriter;
+      this.partWriter.openSync();
+
+      action();
+
+      this.partWriter.closeSync();
+      const result = this.partWriter.getString().trim();
+
+      this.writer = originalWriter;
+      return result;
+    };
+
+    /* String */
+    if (s != null) {
+      const writeString = () =>
         this.write(
-          `${spacesAroundValues}${Breakscape.breakscape(`${s}`, {
-            textFormat: TextFormat.text,
+          Breakscape.breakscape(s, {
+            textFormat: effectiveFmt,
             textLocation: location,
-          })}${spacesAroundValues}`,
+          }),
         );
+
+      if (isTagValue) {
+        const written = writeToPartWriter(writeString);
+        if (written) this.write(wrap(written));
+      } else {
+        writeString(); // already writes directly to main writer
       }
-    } else {
-      // Bitmark text (but might not be AST as some values are just strings (and all v2 values are strings))
-      if (s != null) {
-        this.write(
-          `${spacesAroundValues}${Breakscape.breakscape(`${s}`, {
-            textFormat: format,
-            textLocation: location,
-          })}${spacesAroundValues}`,
-        );
-      } else if (ast != null) {
-        // When writing a tag value, we don't know if it is empty until we write it, so we need to
-        // write it using the part writer, and then check if it is empty before writing to the main writer.
-        // Body values can be written directly to the main writer.
+      return; // nothing more to do for string input
+    }
 
-        if (isTagValue) {
-          // Change the writer to the part writer
-          this.writer = this.partWriter;
-          this.partWriter.openSync();
+    /* AST */
+    if (ast != null) {
+      const generateAst = () => this.textGenerator.generateSync(ast, format, location, options);
 
-          // Write the text
-          this.textGenerator.generateSync(ast, format, location, options);
-
-          // Get the written text
-          this.partWriter.closeSync();
-          const text = this.partWriter.getString();
-
-          // Restore the main writer
-          this.writer = this.mainWriter;
-
-          // Write the text to the main writer, adding spaces around it where required
-          if (text) {
-            this.write(`${spacesAroundValues}${text.trim()}${spacesAroundValues}`);
-          }
-        } else {
-          // Write the text directly to the main writer
-          this.textGenerator.generateSync(ast, format, location, options);
-        }
+      if (isTagValue) {
+        const written = writeToPartWriter(generateAst);
+        if (written) this.write(wrap(written));
+      } else {
+        generateAst();
       }
     }
   }
