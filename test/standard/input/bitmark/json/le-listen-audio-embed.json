@@ -2,15 +2,13 @@
   {
     "bit": {
       "type": "le-listen-audio-embed",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "isTracked": true,
-      "isInfoOnly": false,
       "activityType": "le-listen-audio-embed",
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
@@ -25,39 +23,6 @@
           "content": [
             {
               "text": "Skript «Grundausbildung Altersvorsorge»",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
-      "body": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "First one is the normal reference.",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "Second is the optional property called “referenceEnd”",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "All these bits support all resources (like &website-link, …",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "All of these bits (starting with .learning-path support the following optional properties:",
               "type": "text"
             }
           ],
@@ -91,66 +56,7 @@
           "showInIndex": false,
           "caption": []
         }
-      }
-    },
-    "parser": {
-      "version": "1.31.0",
-      "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1",
-      "warnings": [
-        {
-          "message": "Resource type [&website-link] is specified in the bit header, but no extra resource is allowed for this bit.",
-          "text": "[.le-listen-audio-embed&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-listen-audio-embed]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[&audio-embed:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]\n[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]\n\n",
-          "location": {
-            "start": {
-              "line": 2,
-              "column": 1,
-              "offset": 1
-            },
-            "end": {
-              "line": 18,
-              "column": 1,
-              "offset": 723
-            }
-          }
-        }
-      ]
-    },
-    "bitmark": "[.le-listen-audio-embed&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-listen-audio-embed]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[&audio-embed:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]\n[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]"
-  },
-  {
-    "bit": {
-      "type": "le-listen-audio-embed",
-      "format": "bitmark--",
-      "bitLevel": 1,
-      "id": ["119760"],
-      "book": "e-876z78z87og87g8zg",
-      "date": "2015-03-25T12:00:00Z",
-      "location": "Zug",
-      "action": "Selbststudium",
-      "duration": "3600s",
-      "list": ["One", "Two", "Three", "Four"],
-      "isTracked": true,
-      "isInfoOnly": false,
-      "reference": "Ref4.2.34",
-      "referenceEnd": "Ref4.3.1",
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Skript «Grundausbildung Altersvorsorge»",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
+      },
       "body": [
         {
           "type": "paragraph",
@@ -184,6 +90,72 @@
           "attrs": {}
         }
       ],
+      "isTracked": true,
+      "isInfoOnly": false
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "Resource type [&website-link] is specified in the bit header, but no extra resource is allowed for this bit.",
+          "text": "[.le-listen-audio-embed&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-listen-audio-embed]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[&audio-embed:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]\n[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]\n\n",
+          "location": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 18,
+              "column": 1,
+              "offset": 723
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.le-listen-audio-embed&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-listen-audio-embed]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[&audio-embed:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]\n[@imagePlaceholder:https://miro.medium.com/v2/resizefit1400/12345678980.gif]"
+  },
+  {
+    "bit": {
+      "type": "le-listen-audio-embed",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "119760"
+      ],
+      "book": "e-876z78z87og87g8zg",
+      "date": "2015-03-25T12:00:00Z",
+      "location": "Zug",
+      "action": "Selbststudium",
+      "duration": "3600s",
+      "list": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "reference": "Ref4.2.34",
+      "referenceEnd": "Ref4.3.1",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Skript «Grundausbildung Altersvorsorge»",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "resource": {
         "type": "audio-embed",
         "audioEmbed": {
@@ -195,12 +167,47 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "First one is the normal reference.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Second is the optional property called “referenceEnd”",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "All these bits support all resources (like &website-link, …",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "All of these bits (starting with .learning-path support the following optional properties:",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isTracked": true,
+      "isInfoOnly": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[&website-link] is included more than 0 time(s).",

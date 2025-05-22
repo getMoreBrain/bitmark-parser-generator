@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "interview",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198779"],
-      "revealSolutions": false,
+      "id": [
+        "198779"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -34,18 +35,21 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "questions": [
         {
           "question": "",
           "partialAnswer": "",
           "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
-          "additionalSolutions": ["Additional solution 1", "Additional solution 2", "Additional solution 3"],
+          "additionalSolutions": [
+            "Additional solution 1",
+            "Additional solution 2",
+            "Additional solution 3"
+          ],
+          "reasonableNumOfChars": 101,
           "item": [],
           "hint": [],
           "instruction": [],
-          "reasonableNumOfChars": 101,
           "isExample": false,
           "example": null
         },
@@ -53,10 +57,10 @@
           "question": "",
           "partialAnswer": "",
           "sampleSolution": "Some other text **2**.",
+          "reasonableNumOfChars": 20,
           "item": [],
           "hint": [],
           "instruction": [],
-          "reasonableNumOfChars": 20,
           "isExample": false,
           "example": null
         },
@@ -67,9 +71,9 @@
           "item": [],
           "hint": [],
           "instruction": [],
-          "reasonableNumOfChars": 100,
           "isExample": false,
-          "example": null
+          "example": null,
+          "reasonableNumOfChars": 100
         },
         {
           "question": "",
@@ -78,18 +82,36 @@
           "item": [],
           "hint": [],
           "instruction": [],
-          "reasonableNumOfChars": 100,
           "isExample": false,
-          "example": null
+          "example": null,
+          "reasonableNumOfChars": 100
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 23,
+              "offset": 22
+            }
+          }
+        },
         {
           "message": "[@sampleSolution] is included more than 1 time(s). The earlier ones will be ignored",
           "text": "[@sampleSolution:Some other text **2**.]",
@@ -159,11 +181,17 @@
   {
     "bit": {
       "type": "interview",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136528"],
-      "bubbleTag": ["Tag 1", "", "Tag 2", "**Tag 3**"],
-      "revealSolutions": false,
+      "id": [
+        "136528"
+      ],
+      "bubbleTag": [
+        "Tag 1",
+        "",
+        "Tag 2",
+        "**Tag 3**"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -192,19 +220,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "body": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
       "resource": {
         "type": "image",
         "image": {
@@ -221,6 +236,18 @@
           "caption": []
         }
       },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "questions": [
         {
           "question": "Nothing here",
@@ -233,22 +260,43 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.interview:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 700
+            },
+            "end": {
+              "line": 25,
+              "column": 29,
+              "offset": 728
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.interview:bitmark--&image]\n[@id:136528]\n[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]\n[%3a]\n[@bubbleTag:Tag 1]\n[@bubbleTag:]\n[@bubbleTag:Tag 2]\n[@bubbleTag:**Tag 3**]\n[!Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.]\nWarum bist du hier? Wie fühlst du dich? Was denkst du gerade?\n===\nNothing here\n==="
   },
   {
     "bit": {
       "type": "interview",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198779"],
-      "revealSolutions": false,
+      "id": [
+        "198779"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -277,7 +325,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "questions": [
         {
@@ -291,13 +338,31 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 42,
+              "column": 1,
+              "offset": 1141
+            },
+            "end": {
+              "line": 42,
+              "column": 23,
+              "offset": 1163
+            }
+          }
+        },
         {
           "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
           "text": "[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]",
@@ -323,8 +388,9 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198781"],
-      "revealSolutions": false,
+      "id": [
+        "198781"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -353,7 +419,6 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -516,12 +581,14 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": true,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
@@ -546,10 +613,11 @@
   {
     "bit": {
       "type": "interview",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198782"],
-      "revealSolutions": false,
+      "id": [
+        "198782"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -578,7 +646,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "questions": [
         {
@@ -592,13 +659,31 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 108,
+              "column": 1,
+              "offset": 5115
+            },
+            "end": {
+              "line": 108,
+              "column": 23,
+              "offset": 5137
+            }
+          }
+        },
         {
           "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
           "text": "[$Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.]",
@@ -622,10 +707,11 @@
   {
     "bit": {
       "type": "interview",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187612"],
-      "revealSolutions": false,
+      "id": [
+        "187612"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -654,7 +740,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "questions": [
         {
@@ -708,22 +793,25 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.interview]\n[@id:187612]\n[%12]\n[!Datum / Unterschriften]\n===\nDieser Bildungsbericht wurde am\n===\nbesprochen.\n**Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:**\n===\n**Unterschrift der lernenden Person:**\n===\n**Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:**\nDatum:\n===\nUnterschrift:\n==="
   },
   {
     "bit": {
       "type": "interview",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136484"],
-      "revealSolutions": false,
+      "id": [
+        "136484"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -752,8 +840,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -770,6 +856,7 @@
           "caption": []
         }
       },
+      "body": [],
       "questions": [
         {
           "question": "Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?",
@@ -856,22 +943,25 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.interview&image]\n[@id:136484]\n[%9]\n[&image:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung3.png]\n[!Die beiden U-förmigen Teile A und B, die aus je 7 Würfeln bestehen, werden zu einer Gesamtfigur zusammengesetzt, wie es angegeben ist.]\n\n===\n[%a] Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?\n===\n[%b] Wie viele Quadrate der Figur A werden beim Zusammenfügen mit der Figur B verdeckt?\n===\n[%c] Wie viele Quadrate der Gesamtfigur sind von aussen sichtbar?\n===\n[%d] Auf der Gesamtfigur wandert man entlang von Würfelkanten vom Punkt P auf A zum Punkt Q auf B. Wie lange ist eine solcher Weg mindestens?\n==="
   },
   {
     "bit": {
       "type": "interview",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136405"],
-      "revealSolutions": false,
+      "id": [
+        "136405"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -889,7 +979,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "questions": [
         {
@@ -933,22 +1022,43 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 151,
+              "column": 1,
+              "offset": 6475
+            },
+            "end": {
+              "line": 151,
+              "column": 23,
+              "offset": 6497
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.interview:bitmark--]\n[@id:136405]\n[%Persönliche Angaben]\n\n===\nName:\n===\nVorname:\n===\nPrüfungsnummer:\n===\nKantonsschule:\n==="
   },
   {
     "bit": {
       "type": "interview",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198264"],
-      "revealSolutions": false,
+      "id": [
+        "198264"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -966,7 +1076,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "questions": [
         {
@@ -990,13 +1099,31 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 166,
+              "column": 1,
+              "offset": 6603
+            },
+            "end": {
+              "line": 166,
+              "column": 23,
+              "offset": 6625
+            }
+          }
+        },
         {
           "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
           "text": "[$Ja, die Eintragung ist zwingend, da die Geschwister eine unternehmerische Tätigkeit im Sinne von Art. 10 MWSTG ausüben und der Umsatz von CHF 100'000 mit dem Verkauf der Wohnung 1 (Verkauf vor Baubeginn stellt eine steuerbare Tätigkeit dar) überschritten wird.]",
@@ -1020,10 +1147,11 @@
   {
     "bit": {
       "type": "interview",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198267"],
-      "revealSolutions": false,
+      "id": [
+        "198267"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1052,7 +1180,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -1060,64 +1187,110 @@
             {
               "text": "Die Produktion AG wurde 2010 gegründet und hat zu diesem Zeitpunkt folgende zwei Liegenschaften erstellt:",
               "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Produktionsgebäude mit Lagerhalle, welches vollumfänglich für unternehmerische Tätigkeiten verwendet wird,",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hardBreak"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Produktionsgebäude mit Lagerhalle, welches vollumfänglich für unternehmerische Tätigkeiten verwendet wird,",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Verwaltungsgebäude, welches zu 50 % für die eigene Tätigkeit verwendet wird; die übrige Fläche – zwei Wohnungen – werden an Privatpersonen vermietet.",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "hardBreak"
-            },
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Verwaltungsgebäude, welches zu 50 % für die eigene Tätigkeit verwendet wird; die übrige Fläche – zwei Wohnungen – werden an Privatpersonen vermietet.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "paragraph",
+          "content": [
             {
               "text": "Die Investitionen für die Liegenschaften beliefen sich 2010 auf folgende Werte inkl. 7,60 % MWST:",
               "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Produktionsgebäude                 CHF 4'842'000 (inkl. 7,60% MWST)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hardBreak"
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Verwaltungsgebäude inkl. Wohnungen CHF 5'380'000 (inkl. 7,60% MWST)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Produktionsgebäude                 CHF 4'842'000 (inkl. 7,60% MWST)",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Verwaltungsgebäude inkl. Wohnungen CHF 5'380'000 (inkl. 7,60% MWST)",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Landanteil für beide Gebäude       CHF 1'800'000",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "hardBreak"
-            },
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Landanteil für beide Gebäude       CHF 1'800'000",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "paragraph",
+          "content": [
             {
               "text": "Im Geschäftsjahr 2017 wurden infolge Wasserschadens das Verwaltungsgebäude saniert werden. Die Sanierungskosten haben sich auf 648'000 inkl. 8.0% MWST belaufen. Der Gebäudeversicherungswert hat zu diesem Zeitpunkt (vor Sanierung) CHF 6'000'000 betragen.",
               "type": "text"
@@ -1131,30 +1304,49 @@
             {
               "text": "Nachdem die Gesellschaft in letzter Zeit massive Verluste erlitten hat, wurde vom Verwaltungsrat im Rahmen einer Sanierung beschlossen, die beiden Liegenschaften zu veräussern. Die Immo Invest AG ist bereit, die Grundstücke auf den 30. Juni 2021 wie folgt zu erwerben:",
               "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Produktionsgebäude: CHF 6'500'000 (inkl. Land CHF 1'000'000)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hardBreak"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Produktionsgebäude: CHF 6'500'000 (inkl. Land CHF 1'000'000)",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Verwaltungsgebäude: CHF 7'500'000 (inkl. Land CHF 1'400'000)",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "hardBreak"
-            },
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Verwaltungsgebäude: CHF 7'500'000 (inkl. Land CHF 1'400'000)",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "paragraph",
+          "content": [
             {
               "text": "Der öffentlich beurkundete Kaufvertrag wurde am 20. Juli 2021 unterzeichnet.",
               "type": "text"
@@ -1205,12 +1397,32 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 178,
+              "column": 1,
+              "offset": 7331
+            },
+            "end": {
+              "line": 178,
+              "column": 23,
+              "offset": 7353
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.interview:bitmark--]\n[@id:198267]\n[%Aufgabe 4][%Nutzungsänderung]\n\nDie Produktion AG wurde 2010 gegründet und hat zu diesem Zeitpunkt folgende zwei Liegenschaften erstellt:\n\n• Produktionsgebäude mit Lagerhalle, welches vollumfänglich für unternehmerische Tätigkeiten verwendet wird,\n• Verwaltungsgebäude, welches zu 50 % für die eigene Tätigkeit verwendet wird; die übrige Fläche – zwei Wohnungen – werden an Privatpersonen vermietet.\n\nDie Investitionen für die Liegenschaften beliefen sich 2010 auf folgende Werte inkl. 7,60 % MWST:\n\n• Produktionsgebäude                 CHF 4'842'000 (inkl. 7,60% MWST)\n• Verwaltungsgebäude inkl. Wohnungen CHF 5'380'000 (inkl. 7,60% MWST)\n• Landanteil für beide Gebäude       CHF 1'800'000\n\nIm Geschäftsjahr 2017 wurden infolge Wasserschadens das Verwaltungsgebäude saniert werden. Die Sanierungskosten haben sich auf 648'000 inkl. 8.0% MWST belaufen. Der Gebäudeversicherungswert hat zu diesem Zeitpunkt (vor Sanierung) CHF 6'000'000 betragen.\n\nNachdem die Gesellschaft in letzter Zeit massive Verluste erlitten hat, wurde vom Verwaltungsrat im Rahmen einer Sanierung beschlossen, die beiden Liegenschaften zu veräussern. Die Immo Invest AG ist bereit, die Grundstücke auf den 30. Juni 2021 wie folgt zu erwerben:\n\n• Produktionsgebäude: CHF 6'500'000 (inkl. Land CHF 1'000'000)\n• Verwaltungsgebäude: CHF 7'500'000 (inkl. Land CHF 1'400'000)\n\nDer öffentlich beurkundete Kaufvertrag wurde am 20. Juli 2021 unterzeichnet.\n\nZeigen Sie die mehrwertsteuerlichen Konsequenzen aus der Veräusserung der Grundstücke für jeder der drei folgenden Varianten auf:\n===\nVariante 1: Verkauf gemäss Art. 21 MWSTG\n===\nVariante 2: Verkauf mit Option gemäss Art. 22 MWSTG\n===\nVariante 3: Verkauf mittels Meldeverfahren gemäss Art. 38 MWSTG.\n==="
   }

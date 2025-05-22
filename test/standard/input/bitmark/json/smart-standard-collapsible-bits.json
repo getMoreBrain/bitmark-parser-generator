@@ -2,9 +2,11 @@
   {
     "bit": {
       "type": "smart-standard-article-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -36,18 +38,38 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-article-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 58,
+              "offset": 57
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-article-normative-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
       "type": "smart-standard-article-non-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -79,18 +101,38 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-article-non-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 111
+            },
+            "end": {
+              "line": 8,
+              "column": 62,
+              "offset": 172
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-article-non-normative-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
       "type": "smart-standard-example-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -124,18 +166,38 @@
       "example": null
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-example-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 225
+            },
+            "end": {
+              "line": 14,
+              "column": 58,
+              "offset": 282
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-example-normative-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
       "type": "smart-standard-example-non-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -169,16 +231,34 @@
       "example": null
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-example-non-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 21,
+              "column": 1,
+              "offset": 336
+            },
+            "end": {
+              "line": 21,
+              "column": 62,
+              "offset": 397
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-example-non-normative-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
       "type": "smart-standard-image-figure-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "backgroundWallpaper": "https://miro.medium.com/background.png",
       "item": [],
@@ -230,16 +310,16 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.smart-standard-image-figure-normative-collapsible]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
   {
     "bit": {
       "type": "smart-standard-image-figure-non-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "backgroundWallpaper": "https://miro.medium.com/background.png",
       "item": [],
@@ -381,18 +461,20 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.smart-standard-image-figure-non-normative-collapsible]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n====\n[#Legende]\n--\n[#]\n====\nA\n--\nKörper\n====\nB\n--\nStromquelle\n====\n\n~~~~\nOptional Footer"
   },
   {
     "bit": {
       "type": "smart-standard-list-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -424,18 +506,38 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-list-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 57,
+              "column": 1,
+              "offset": 1405
+            },
+            "end": {
+              "line": 57,
+              "column": 45,
+              "offset": 1449
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-list-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
   {
     "bit": {
       "type": "smart-standard-list-item-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -468,9 +570,27 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-list-item-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 63,
+              "column": 1,
+              "offset": 1506
+            },
+            "end": {
+              "line": 63,
+              "column": 50,
+              "offset": 1555
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-list-item-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -489,18 +609,20 @@
       "body": []
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.smart-standard-list-item-collapsible:bitmark++]\n[@listItemIndent:5]"
   },
   {
     "bit": {
       "type": "smart-standard-note-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -532,18 +654,38 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-note-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 72,
+              "column": 1,
+              "offset": 1683
+            },
+            "end": {
+              "line": 72,
+              "column": 55,
+              "offset": 1737
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-note-normative-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
       "type": "smart-standard-note-non-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -575,18 +717,38 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-note-non-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 79,
+              "column": 1,
+              "offset": 1791
+            },
+            "end": {
+              "line": 79,
+              "column": 59,
+              "offset": 1849
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-note-non-normative-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
       "type": "smart-standard-remark-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -618,18 +780,38 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-remark-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 85,
+              "column": 1,
+              "offset": 1902
+            },
+            "end": {
+              "line": 85,
+              "column": 57,
+              "offset": 1958
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-remark-normative-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
       "type": "smart-standard-remark-non-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -661,18 +843,38 @@
       ]
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-remark-non-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 92,
+              "column": 1,
+              "offset": 2012
+            },
+            "end": {
+              "line": 92,
+              "column": 61,
+              "offset": 2072
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-remark-non-normative-collapsible:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
       "type": "smart-standard-table-image-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -698,18 +900,38 @@
       "body": []
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-table-image-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 99,
+              "column": 1,
+              "offset": 2126
+            },
+            "end": {
+              "line": 99,
+              "column": 62,
+              "offset": 2187
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-table-image-normative-collapsible:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
   {
     "bit": {
       "type": "smart-standard-table-image-non-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -735,18 +957,38 @@
       "body": []
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-table-image-non-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 104,
+              "column": 1,
+              "offset": 2282
+            },
+            "end": {
+              "line": 104,
+              "column": 66,
+              "offset": 2347
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-table-image-non-normative-collapsible:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
   {
     "bit": {
       "type": "smart-standard-remark-table-image-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -772,18 +1014,38 @@
       "body": []
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-remark-table-image-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 109,
+              "column": 1,
+              "offset": 2442
+            },
+            "end": {
+              "line": 109,
+              "column": 69,
+              "offset": 2510
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-remark-table-image-normative-collapsible:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
   {
     "bit": {
       "type": "smart-standard-remark-table-image-non-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -809,16 +1071,34 @@
       "body": []
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.smart-standard-remark-table-image-non-normative-collapsible:bitmark--]",
+          "location": {
+            "start": {
+              "line": 114,
+              "column": 1,
+              "offset": 2605
+            },
+            "end": {
+              "line": 114,
+              "column": 73,
+              "offset": 2677
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.smart-standard-remark-table-image-non-normative-collapsible:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
   {
     "bit": {
       "type": "smart-standard-table-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
@@ -957,16 +1237,16 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.smart-standard-table-normative-collapsible]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
   {
     "bit": {
       "type": "smart-standard-table-non-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
@@ -1105,16 +1385,16 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.smart-standard-table-non-normative-collapsible]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
   {
     "bit": {
       "type": "smart-standard-remark-table-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
@@ -1253,16 +1533,16 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.smart-standard-remark-table-normative-collapsible]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
   {
     "bit": {
       "type": "smart-standard-remark-table-non-normative-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
@@ -1401,9 +1681,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.smart-standard-remark-table-non-normative-collapsible]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   }

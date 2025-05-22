@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "workbook-article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "ageRange": [
         "18",
@@ -40,9 +40,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[&image] is included more than 0 time(s).",

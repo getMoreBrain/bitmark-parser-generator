@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "quote",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191164"
@@ -28,9 +28,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.quote]\n[@id:191164]\n«Es geht um Freude an der Arbeit. Es gibt kein größeres Glück als die Erkenntnis, dass wir etwas erreicht haben.»\n[@quotedPerson: Henry Ford]"
   }

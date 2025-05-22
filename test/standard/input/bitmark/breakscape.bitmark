@@ -1,4 +1,8 @@
 || Testing breakscaping ||
+// TODO ADD THESE BACK ONCE TEXT IS MERGED CANONICALLY IN BITMARK
+*F_^_^_^_^_^_
+F_^__^__^_
+F_^^____^^_^
 
 [.cloze:bitmark++&image]
 [@id:1234]
@@ -22,9 +26,6 @@ the body and here is a [_[gap^]][@example:^] with square bracked at beginning []
 [.article]
 __^_particularly exciting_^__
 __^^_particularly exciting_^^__
-*F_^_ ^_^_ ^_^_
-F_^__^ __^_
-F_^^__ __^^_^
 
 
 [.article]

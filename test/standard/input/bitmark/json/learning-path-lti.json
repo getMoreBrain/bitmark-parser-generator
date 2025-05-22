@@ -2,15 +2,13 @@
   {
     "bit": {
       "type": "learning-path-lti",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "action": "Übungsprüfung",
       "duration": "3600s",
       "deeplink": [
         "https://other.platform/path/to/quiz"
       ],
-      "isTracked": true,
-      "isInfoOnly": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -28,6 +26,22 @@
           "attrs": {}
         }
       ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "jpg",
+          "provider": "our.s3",
+          "src": "https://our.s3/book_cover.jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -61,27 +75,13 @@
           "attrs": {}
         }
       ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "jpg",
-          "provider": "our.s3",
-          "src": "https://our.s3/book_cover.jpg",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      "isTracked": true,
+      "isInfoOnly": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.learning-path-lti&image]\n[&image:https://our.s3/book_cover.jpg]\n[!Nullserie]\n[@action:Übungsprüfung]\n[@deeplink:https://other.platform/path/to/quiz]\n[@duration:3600s]\nOf course, it exists without the image resource like any other bit.\nIt works like a .article (instruction, body, resources, …)\nIt just adds action, duration and deepLink\nThree strings"
   }

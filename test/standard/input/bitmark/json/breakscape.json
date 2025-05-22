@@ -5,13 +5,13 @@
       "bitLevel": 1
     },
     "parser": {
-      "version": "3.25.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.1",
+      "textParserVersion": "8.32.2",
       "errors": [
         {
           "message": "Invalid bit",
-          "text": "|| Testing breakscaping ||\n",
+          "text": "|| Testing breakscaping ||\n// TODO ADD THESE BACK ONCE TEXT IS MERGED CANONICALLY IN BITMARK\n*F_^_^_^_^_^_\nF_^__^__^_\nF_^^____^^_^\n",
           "location": {
             "start": {
               "line": 1,
@@ -19,15 +19,15 @@
               "offset": 0
             },
             "end": {
-              "line": 2,
+              "line": 6,
               "column": 1,
-              "offset": 27
+              "offset": 131
             }
           }
         }
       ]
     },
-    "bitmark": "|| Testing breakscaping ||"
+    "bitmark": "|| Testing breakscaping ||\n// TODO ADD THESE BACK ONCE TEXT IS MERGED CANONICALLY IN BITMARK\n*F_^_^_^_^_^_\nF_^__^__^_\nF_^^____^^_^"
   },
   {
     "bit": {
@@ -172,16 +172,16 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.25.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.cloze:bitmark++&image]\n[@id:1234]\n[@id:[1234^]]\n[@id:[1234^]4321]\n[@id:id-with-a-^]-in-it-and-at-the-end-^]]\n[@id:id-with-a-^^]-in-it-and-at-the-end-^^]]\n[@id:id-with-a-^^^]-in-it-and-at-the-end-^^^]]\n\nHere\n\n[%[%item^]][%[%lead^]:)]\n[!Instruc[tion^]]\n[@externalId:[externalId with square bracked at end^]]\nis\n[@lang:[lang^] with square bracked in middle]\nthe body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets\n\n[&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -213,53 +213,6 @@
               ],
               "text": "^_particularly exciting_^",
               "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "*F__ __ __",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "F_",
-              "type": "text"
-            },
-            {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": " ",
-              "type": "text"
-            },
-            {
-              "text": "_",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "F_^",
-              "type": "text"
-            },
-            {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": " ",
-              "type": "text"
-            },
-            {
-              "text": "^_",
-              "type": "text"
             }
           ],
           "attrs": {}
@@ -267,16 +220,16 @@
       ]
     },
     "parser": {
-      "version": "3.25.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.1"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.article]\n__^_particularly exciting_^__\n__^^_particularly exciting_^^__\n*F_^_ ^_^_ ^_^_\nF_^__^ __^_\nF_^^__ __^^_^"
+    "bitmark": "[.article]\n__^_particularly exciting_^__\n__^^_particularly exciting_^^__"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -303,9 +256,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\n[!^**A**]"
   },
@@ -357,9 +310,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n[!Start **[text^]** ==[n^]==|latex| end^]]"
   },
@@ -484,16 +437,16 @@
       ]
     },
     "parser": {
-      "version": "3.25.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n==bold[^==|bold|\n**bold[^**\n__italic[^__\n!!highlight[^!!\n[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -540,7 +493,16 @@
               "type": "text"
             },
             {
-              "text": " ==]bold[==|bold|",
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "]bold[",
               "type": "text"
             }
           ],
@@ -552,7 +514,12 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "==bold[==|bold|",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold[",
               "type": "text"
             },
             {
@@ -597,9 +564,27 @@
       ]
     },
     "parser": {
-      "version": "3.25.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 44,
+              "column": 1,
+              "offset": 992
+            },
+            "end": {
+              "line": 44,
+              "column": 21,
+              "offset": 1012
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--]\n==bold[^==|bold|\n**bold[^**\n__italic[^__\n!!highlight[^!!\n[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]"
   }

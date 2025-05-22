@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "details-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "245346"
@@ -59,9 +59,27 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.details-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 23,
+              "offset": 22
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.details-1:bitmark--]\n[@id:245346]\n[!Lösungsweg Lernaufgabe E - 9]\nBedeutung für den Klienten:\nEinsamkeit, Langeweile, darf das Zimmer nur in Ausnahmefällen verlassen, mit der emotional belastenden Situation umgehen können, Pflege geht weniger ins Zimmer, weniger Besuche, da Angst vor einer Übertragung, Personen betreten das isolierte Zimmer mit Schutzkleidung, Körperkontakt wird reduziert. Bedeutung für die Angehörigen:\nDie Isolationsmassnahmen zu verstehen versuchen, das Zimmer mit Schutzkleidung betreten, Angst vor einer Übertragung, Angst vor Körperkontakt. Bedeutung für das Personal:\nStrikte Einhaltung der Hygienerichtlinien, mehr Zeit einrechnen für das An- und Ausziehen der Schutzkleidung, Konzentration, dass alles Material, das benötigt wird, auch mitgenommen wird (ansonsten klingeln, damit eine Person ausserhalb des Zimmers das benötigte Material besorgen kann), gute Personalplanung – evtl. umplanen, wenn die zuständige Person erkältet ist, Ideen bezüglich Aktivierungsmöglichkeiten gegen die Langeweile ausfindig machen und Angehörige bitten, diese mitzubringen (Laptop, Bücher, Zeitschriften)."
   }

@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "interview-instruction-grouped",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92562"],
-      "revealSolutions": false,
+      "id": [
+        "92562"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -34,7 +35,6 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [],
       "questions": [
         {
@@ -238,13 +238,31 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": true,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.interview-instruction-grouped:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 43,
+              "offset": 42
+            }
+          }
+        },
         {
           "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
           "text": "[$Hast du das Geschirr schon aus der Spülmaschine genommen?]",
@@ -380,10 +398,11 @@
   {
     "bit": {
       "type": "interview-instruction-grouped",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92562"],
-      "revealSolutions": false,
+      "id": [
+        "92562"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -412,7 +431,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "questions": [
         {
@@ -437,12 +455,32 @@
           "example": null
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.interview-instruction-grouped:bitmark--]",
+          "location": {
+            "start": {
+              "line": 35,
+              "column": 1,
+              "offset": 1220
+            },
+            "end": {
+              "line": 35,
+              "column": 43,
+              "offset": 1262
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.interview-instruction-grouped:bitmark--]\n[@id:92562]\n[%C5]\n[!Bilden Sie Sätze in der angegebenen Zeitform.]\n===\n[%◇]Kerstin – Friseur – kommen – von__(Präsens)__\n==="
   }

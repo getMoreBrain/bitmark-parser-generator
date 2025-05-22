@@ -54,9 +54,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[&image] is included more than 0 time(s).",
@@ -101,31 +101,30 @@
       "type": "list-item",
       "format": "bitmark++",
       "bitLevel": 1,
-      "listItemIndent": 0,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "listItemIndent": 0
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.list-item:bitmark++]"
   },
   {
     "bit": {
       "type": "standard-list-item",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
-      "listItemIndent": 0,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -154,12 +153,31 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "listItemIndent": 0
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.standard-list-item:bitmark--]",
+          "location": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 243
+            },
+            "end": {
+              "line": 14,
+              "column": 32,
+              "offset": 274
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.standard-list-item:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
@@ -178,9 +196,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.standard-list-item:bitmark++]\n[@listItemIndent:5]"
   }

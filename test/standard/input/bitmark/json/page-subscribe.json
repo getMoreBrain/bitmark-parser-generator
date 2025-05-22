@@ -2,12 +2,11 @@
   {
     "bit": {
       "type": "page-subscribe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "190596"
       ],
-      "slug": "",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -25,24 +24,24 @@
           "attrs": {}
         }
       ],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subscribe]\n[@id:190596]\n[!Welche Bedeutung hat Arbeit für Sie?]"
   },
   {
     "bit": {
       "type": "page-subscribe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "190597"
       ],
-      "slug": "",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -60,24 +59,24 @@
           "attrs": {}
         }
       ],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subscribe]\n[@id:190597]\n[!Wo sehen Sie die Chancen und Gefahren „moderner“ Arbeit?]"
   },
   {
     "bit": {
       "type": "page-subscribe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "190598"
       ],
-      "slug": "",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -95,24 +94,24 @@
           "attrs": {}
         }
       ],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subscribe]\n[@id:190598]\n[!Ist Feelgood Management ein „Luxusproblem“?]"
   },
   {
     "bit": {
       "type": "page-subscribe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191144"
       ],
-      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -141,24 +140,24 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subscribe]\n[@id:191144]\n[%1][%Verstehen „Design Challenge“]"
   },
   {
     "bit": {
       "type": "page-subscribe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191145"
       ],
-      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -187,24 +186,24 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subscribe]\n[@id:191145]\n[%2][%Beobachten / befragen]"
   },
   {
     "bit": {
       "type": "page-subscribe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191146"
       ],
-      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -233,24 +232,24 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subscribe]\n[@id:191146]\n[%3][%Sichtweisen definieren / zusammen tragen „How might we“]"
   },
   {
     "bit": {
       "type": "page-subscribe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191147"
       ],
-      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -279,24 +278,24 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subscribe]\n[@id:191147]\n[%4][%Ideen finden]"
   },
   {
     "bit": {
       "type": "page-subscribe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191148"
       ],
-      "slug": "",
       "item": [
         {
           "type": "paragraph",
@@ -325,19 +324,20 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subscribe]\n[@id:191148]\n[%5][%Prototypen entwickeln]"
   },
   {
     "bit": {
       "type": "page-subscribe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191149"
@@ -376,9 +376,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subscribe]\n[@id:191149]\n[@slug:testing-1234]\n[%6][%Testen]\n[@buttonCaption:OK!]\n[@mailingList:gmb@getmorebrain.com;bmg@getmorebrain.com]"
   }

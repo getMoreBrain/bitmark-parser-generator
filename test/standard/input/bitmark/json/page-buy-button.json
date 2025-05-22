@@ -2,9 +2,11 @@
   {
     "bit": {
       "type": "page-buy-button",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "slug": "testing-1234",
       "content2Buy": "testing 123",
       "item": [],
@@ -38,18 +40,20 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-buy-button]\n[@id:342341]\n[@slug:testing-1234]\n[!.page-buy-button]\n[@content2Buy:testing 123 ]\nButton Text"
   },
   {
     "bit": {
       "type": "page-buy-button-alt",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "slug": "testing-1234",
       "content2Buy": "testing 123",
       "item": [],
@@ -83,9 +87,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-buy-button-alt]\n[@id:342341]\n[@slug:testing-1234]\n[!.page-buy-button]\n[@content2Buy:testing 123 ]\nButton Text Alt"
   }

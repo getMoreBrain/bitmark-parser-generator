@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "bot-action-send",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "date": "2022-10-01T08:00:00CET",
       "item": [],
@@ -14,9 +14,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bot-action-send]\n[@date:2022-10-01T08:00:00CET]"
   }

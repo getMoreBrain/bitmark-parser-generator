@@ -2,13 +2,13 @@
   {
     "bit": {
       "type": "cloze-instruction-grouped",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287822"],
+      "id": [
+        "287822"
+      ],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
-      "additionalSolutions": ["canvas"],
-      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -26,7 +26,9 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
+      "additionalSolutions": [
+        "canvas"
+      ],
       "body": [
         {
           "type": "paragraph",
@@ -38,6 +40,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "erfreut"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -66,8 +71,7 @@
                     ],
                     "attrs": {}
                   }
-                ],
-                "solutions": ["erfreut"]
+                ]
               }
             },
             {
@@ -77,6 +81,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "steht"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -94,8 +101,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["steht"]
+                "example": null
               }
             },
             {
@@ -105,25 +111,25 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.cloze-instruction-grouped]\n[@id:287822]\n[@quizCountItems:true]\n[@quizStrikethroughSolutions:true]\n[%][%cloze-instruction-grouped]\nDer Fußball [_erfreut][!erfreuen][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht][!stehen] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ..."
+    "bitmark": "[.cloze-instruction-grouped]\n[@id:287822]\n[@quizCountItems:true]\n[@quizStrikethroughSolutions:true]\n[%][%cloze-instruction-grouped]\n[@additionalSolutions: canvas]\nDer Fußball [_erfreut][!erfreuen][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht][!stehen] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ..."
   },
   {
     "bit": {
       "type": "cloze-instruction-grouped",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["107938"],
-      "quizCountItems": true,
-      "quizStrikethroughSolutions": false,
-      "additionalSolutions": ["canvas", "texture", "figurative", "abstract", "contrast"],
-      "revealSolutions": false,
+      "id": [
+        "107938"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -166,7 +172,13 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
+      "additionalSolutions": [
+        "canvas",
+        "texture",
+        "figurative",
+        "abstract",
+        "contrast"
+      ],
       "body": [
         {
           "type": "paragraph",
@@ -174,6 +186,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "Woher"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -191,8 +206,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Woher"]
+                "example": null
               }
             },
             {
@@ -205,6 +219,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "Wo"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -222,8 +239,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Wo"]
+                "example": null
               }
             },
             {
@@ -236,6 +252,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "Was"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -253,8 +272,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Was"]
+                "example": null
               }
             },
             {
@@ -267,6 +285,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "Welche"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -284,8 +305,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Welche"]
+                "example": null
               }
             },
             {
@@ -295,13 +315,17 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.cloze-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[_Woher][!woher] kommen Sie?\n[_Wo][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?"
+    "bitmark": "[.cloze-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[@additionalSolutions: canvas]\n[@additionalSolutions: texture]\n[@additionalSolutions: figurative]\n[@additionalSolutions: abstract]\n[@additionalSolutions: contrast]\n[_Woher][!woher] kommen Sie?\n[_Wo][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?"
   }
 ]

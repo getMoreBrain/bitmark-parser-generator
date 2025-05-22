@@ -2,12 +2,11 @@
   {
     "bit": {
       "type": "page-product-video-list",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
-      "slug": "",
       "productVideo": [
         "https://123.com"
       ],
@@ -17,19 +16,20 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-product-video-list]\n[@id:151970]\n[@productVideo:https://123.com]"
   },
   {
     "bit": {
       "type": "page-product-video-list",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "304379"
@@ -48,9 +48,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-product-video-list]\n[@id:304379]\n[@slug:testing-1234]\n[@productVideo:https://123.com][@productVideo:https://1234.com]"
   }

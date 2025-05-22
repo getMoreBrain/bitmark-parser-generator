@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "article-responsive",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "210051"
@@ -39,21 +39,20 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article-responsive]\n[@id:210051]\n[%][%Beispiel]\n[@imageFirst]\nDie Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet."
   },
   {
     "bit": {
       "type": "article-responsive",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
-      "imageFirst": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -82,19 +81,38 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "imageFirst": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article-responsive:bitmark--]",
+          "location": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 423
+            },
+            "end": {
+              "line": 8,
+              "column": 32,
+              "offset": 454
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article-responsive:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
   {
     "bit": {
       "type": "article-responsive",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
@@ -131,9 +149,27 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article-responsive:bitmark--]",
+          "location": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 512
+            },
+            "end": {
+              "line": 15,
+              "column": 32,
+              "offset": 543
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article-responsive:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n[@imageFirst:false]\n\nThe bit content"
   }

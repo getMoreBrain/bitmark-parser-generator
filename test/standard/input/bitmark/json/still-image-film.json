@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "still-image-film",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -10,7 +10,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "still-image-film",
         "image": {
@@ -35,19 +34,20 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.still-image-film]\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]\n[&audio:https://docs.bitmark.cloud/bit-books/ef/unit_1/web-resources/audio/b1_1_1_6_j.mp3]"
   },
   {
     "bit": {
       "type": "still-image-film",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -82,9 +82,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[&still-image-film] is not valid here (incorrectly chained?). It will be ignored",
@@ -141,7 +141,7 @@
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -149,7 +149,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "still-image-film",
         "image": {
@@ -174,12 +173,31 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--&still-image-film]",
+          "location": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 615
+            },
+            "end": {
+              "line": 11,
+              "column": 38,
+              "offset": 652
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--&still-image-film]\n[&image:https://docs.bitmark.cloud/bit-books/alemania/book_1/web-resources/images/alemania_book1_01_v2.png]\n[&audio:https://docs.bitmark.cloud/bit-books/alemania/book_1/web-resources/images/alemania_book1_01_v2.mp3]"
   }

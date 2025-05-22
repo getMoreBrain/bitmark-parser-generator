@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "parameters",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
@@ -141,16 +141,16 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.parameters]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
   {
     "bit": {
       "type": "parameters",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "tableSearch": false,
       "tableSort": false,
@@ -301,16 +301,16 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.parameters]\n[@tableSearch:false]\n[@tableSort:false]\n[@caption:This is the table caption]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
   {
     "bit": {
       "type": "parameters",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
@@ -461,16 +461,16 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.parameters]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n[@tablePaginationLimit:42]\n[@tableHeight:99]\n[@tableWhitespaceNoWrap:false]\n[@tableAutoWidth:false]\n[@tableResizableColumns:true]\n[@caption: This is the caption ]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
   {
     "bit": {
       "type": "parameters",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -495,9 +495,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.parameters]"
   }

@@ -2,9 +2,11 @@
   {
     "bit": {
       "type": "page-open-book-list",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "book": [
         {
           "book": "the_book_id",
@@ -25,10 +27,10 @@
       "body": []
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.page-open-book-list]\n[@id:342341]\n[@slug:testing-1234]\n[@book:the_book_id][►ch-5]\n[@book:the_other_book_id][►ch-6]\n\n[@buttonCaption: Open ]"
+    "bitmark": "[.page-open-book-list]\n[@id:342341]\n[@book:the_book_id][►ch-5]\n[@book:the_other_book_id][►ch-6]\n\n[@buttonCaption: Open ]"
   }
 ]

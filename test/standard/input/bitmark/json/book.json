@@ -2,26 +2,42 @@
   {
     "bit": {
       "type": "book",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135647"],
+      "id": [
+        "135647"
+      ],
       "customerExternalId": "a-bow-the-content-n_9374th83h20",
-      "externalId": ["e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"],
-      "spaceId": ["sl"],
+      "externalId": [
+        "e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"
+      ],
+      "spaceId": [
+        "sl"
+      ],
       "isPublic": true,
       "lang": "en-US",
-      "language": ["de"],
-      "publisher": ["kpmg"],
+      "language": [
+        "de"
+      ],
+      "publisher": [
+        "kpmg"
+      ],
       "publisherName": "KPMG",
-      "theme": ["grundzuege"],
+      "theme": [
+        "grundzuege"
+      ],
       "levelCEFRp": "levelCEFRp",
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
       "levelACTFL": "levelACTFL",
       "subtype": "draft-book",
-      "coverImage": ["https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png"],
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png"
+      ],
       "coverColor": "#F2F2F2",
-      "author": ["Philippe Pointet"],
+      "author": [
+        "Philippe Pointet"
+      ],
       "kind": "learning-path",
       "hasMarkAsDone": true,
       "processHandIn": true,
@@ -62,9 +78,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@publisher:kpmg]\n[@publisherName:KPMG]\n[@theme:grundzuege]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@customerExternalId:a-bow-the-content-n_9374th83h20]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@coverImage:https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png]\n[@coverColor:#F2F2F2]\n[@hasMarkAsDone]\n[@isPublic]\n[@duration:PT2H]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[@maxTocChapterLevel:5]\n[@processHandIn]\n[@chatWithBook]\n[@chatWithBookBrainKey:12435]"
   },
@@ -73,7 +89,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135648"],
+      "id": [
+        "135648"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -136,18 +154,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n[@id:135648]\nHave you ever wondered why schools, language courses, and professional development programs barely use digital textbooks?\n\nThe answer is simple: because there are hardly any digital textbooks.\n|image:https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png|\nThe world was made painfully aware of this during the COVID-19 lockdowns (for example, when students received teaching material for distance learning in a large envelope or an email with Word or PDF documents to print out themselves).\n\nBut what is the reason for the low penetration of digital textbooks?"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135649"],
+      "id": [
+        "135649"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -173,18 +193,20 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-1]\n[@id:135649]\n[##It’s complicated]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135650"],
+      "id": [
+        "135650"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -225,18 +247,38 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 46,
+              "column": 1,
+              "offset": 1549
+            },
+            "end": {
+              "line": 46,
+              "column": 21,
+              "offset": 1569
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--]\n[@id:135650]\n\nUntil now, the digitization of textbooks has largely been limited to transferring the learning content to “digital paper” (PDF, eBook and similar formats). However, this is not a good solution, if only because such formats are not suitable for interactive content (e.g. a quiz), nor small screens (mobile). Moreover, PDFs are easily copied and therefore do not adequately protect intellectual property (with the result that PDFs are de facto impossible to monetize).\n\nTrue digitization requires the transfer of learning content into a structured data format so that it can be processed by machines and played out via any learning media (learning platforms, learning apps, e-book readers etc.) or learning management system (LMS), and used with all devices (computers, tablets, mobiles).\n\nAnd, of course, digital textbooks must also be didactically useful and at least equal to their analog counterparts — after all, digitization is not an end in itself. In the sense of the emerging term “School 4.0”, the goal must be that digital textbooks enable new forms of learning and self-determined learning (enabling individual learning paths, learning processes etc.), as well as simplifying or, even better, promoting communication between all parties involved (learners, teachers, schools, employers, bots etc.)."
   },
   {
     "bit": {
       "type": "quote",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["278204"],
+      "id": [
+        "278204"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -267,18 +309,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.quote]\n[@id:278204]\nThe pandemic has shown us how important it is in schools to break up old patterns and be ready for new forms of learning. Digital transformation in schools does not just mean working with e-books instead of printed books. School 4.0 means rethinking.\n\n— Michael Hasler, Headmaster of Neue Stadtschulen St. Gallen"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["278205"],
+      "id": [
+        "278205"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -299,18 +343,38 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 61,
+              "column": 1,
+              "offset": 3230
+            },
+            "end": {
+              "line": 61,
+              "column": 21,
+              "offset": 3250
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--]\n[@id:278205]\nFor the “producers” of learning content (publishers, schools, teachers), true digitization understood in this way is a major challenge."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135651"],
+      "id": [
+        "135651"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -336,9 +400,9 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-2]\n[@id:135651]\n[##So Hedge Therefore, Who Join Forever]"
   },
@@ -347,7 +411,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135652"],
+      "id": [
+        "135652"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -417,18 +483,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n[@id:135652]\nPublishers must therefore think carefully about the digitization of their content, also from an economic point of view. If publishers want to offer their customers their own apps for playing out the learning content, they will incur development and maintenance costs in addition to the actual digitization costs (conversion of the learning content into a structured data format). If, on the other hand, the publisher uses third-party-developed learning media/LMS that is proprietary, i.e. based on non-public standards, this results in dependencies — a possible change of provider is associated with high additional costs.\n\nHowever, such a ==lock-in==|link:https://en.wikipedia.org/wiki/Vendor_lock-in| affects not only publishers but also the learners (i.e. the “consumers” of the learning content). As long as schools and publishers rely on proprietary solutions, learners are “trapped” in the application in question. The often very expensive textbooks are not compatible with other learning media/LMS (which may be preferred by the learner), and a manual migration of the content — or even of the learner’s progress, comments, own notes, etc. — to another application is also not possible, or only with a disproportionate effort.\n\nIt is therefore not surprising that until now both sides — the publishers and the learners — have largely disdained the digital textbook, true to the German poet Friedrich Schiller’s advice “So Hedge Therefore, Who Join Forever”.\n\n|image:https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/kermit.gif|"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135653"],
+      "id": [
+        "135653"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -454,18 +522,20 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-3]\n[@id:135653]\n[##The plug problem]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135654"],
+      "id": [
+        "135654"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -496,18 +566,38 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 85,
+              "column": 1,
+              "offset": 5127
+            },
+            "end": {
+              "line": 85,
+              "column": 21,
+              "offset": 5147
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--]\n[@id:135654]\nThe problem is basically the same as with power sockets: there are over a dozen different types of network plugs worldwide (plug type A, B, C…). In addition, network voltages differ from country to country (100 volts, 110 volts, 220 volt…). For example, if you buy a mixer in Japan (plug type A, 100 volts) and want to use it in Switzerland (plug type C, 220 volts), you will need a transition plug and a power adapter.\n\nSimilarly, very different formats come into question for the digitization of textbooks in order to structure the learning content and determine how the data is to be interpreted when it is processed electronically by learning media/LMS. To ensure that different data formats are compatible with each other, or playable on the same learning medium/LMS, “adapters” are then also required. However, the development and maintenance of such software components is not only complex and thus expensive but also inherently error-prone. In addition, many existing formats do not even allow automatic conversion, which means that, in the case of a change, the data must in fact be re-entered manually."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135655"],
+      "id": [
+        "135655"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -533,18 +623,20 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-4]\n[@id:135655]\n[##In principle, the solution would be simple, but…]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135656"],
+      "id": [
+        "135656"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -595,18 +687,38 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 96,
+              "column": 1,
+              "offset": 6361
+            },
+            "end": {
+              "line": 96,
+              "column": 21,
+              "offset": 6381
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--]\n[@id:135656]\nThe solution is obvious: standardization.\n\nIf all plugs had the same shape and power grids the same voltage, the mixer bought in Japan could be used anywhere in the world without any problem.\n\nThe same applies to digital textbooks: if all publishers used the same structured data format to digitize their textbooks, all learning content could be played out immediately on any learning media/LMS without the need for migration. There would thus be no lock-in for either publishers or learners, removing the biggest hurdle to the creation, distribution, and use of digital textbooks.\n\nIn the case of power sockets, global standardization is probably not realistic — too many devices with different plugs are already in use and no country wants to give up its type of plug. The situation is different with textbooks: standardization for the benefit of all stakeholders is still very much possible, especially since digital textbooks, as mentioned, are still hardly widespread today."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135657"],
+      "id": [
+        "135657"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -632,9 +744,9 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-5]\n[@id:135657]\n[##Existing e-learning standards (AICC, SCORM etc.) do not meet today’s requirements]"
   },
@@ -643,7 +755,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135658"],
+      "id": [
+        "135658"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -810,18 +924,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n[@id:135658]\nThe awareness that standardization of the data format is an important requirement with regard to the dissemination of digital learning content is, of course, not new. Accordingly, several “e-learning standards” have been launched in the past. Well-known examples are the ==AICC-Standard==|link:https://en.wikipedia.org/wiki/Aviation_Industry_Computer-Based_Training_Committee| launched by the US aerospace industry in 1988 and the ==SCORM-Standard==|link:https://en.wikipedia.org/wiki/Sharable_Content_Object_Reference_Model| of the Advanced Distributed Learning Initiative ==(ADL)==|link:https://en.wikipedia.org/wiki/Advanced_Distributed_Learning|. organization founded by the US Department of Defense in 1997. Other examples include the Experience ==API (xAPI)==|link:https://xapi.com/overview/?utm_source=google&utm_medium=natural_search| and  ==cmi5 standards==|link:https://aicc.github.io/CMI-5_Spec_Current/|, also backed by the U.S. aerospace industry and ADL, and the ==QTI-standard==|link:https://www.imsproject.org/question/index.html| from the  ==IMS Global Learning Consortium==|link:https://www.imsglobal.org/|, a U.S. organization founded in 1997.\n\nHowever, none of these standards has managed to keep pace with today’s requirements. Apart from political reasons (too many cooks…), the main cause seems to be that these approaches are too strongly oriented to old paradigms (especially fixation on layout instead of ==content-First==|link:https://www.clockwork.com/news/2017/03/20/760/what_the_content_first_approach_is_and_why_you_should_use_it/|, see also the comments below). AICC, SCORM, etc. also do not offer solutions for aspects that are crucial for the acceptance and dissemination of a standard, such as user management and monetization."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135659"],
+      "id": [
+        "135659"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -847,9 +963,9 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-6]\n[@id:135659]\n[##bitmark — the freely accessible content-first standard for interactive learning content]"
   },
@@ -858,7 +974,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135660"],
+      "id": [
+        "135660"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1021,18 +1139,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n[@id:135660]\n==bitmark==|link:https://docs.bitmark.cloud/| offers a sustainable solution for the creation of true digital learning tools in accordance with today’s technical and didactical requirements.\n\nbitmark is a **freely accessible** content-first standard **independent** of large corporations and influential nations. It was developed under the leadership of ==Thomas Gabathuler==|link:https://www.linkedin.com/in/thomas-gabathuler/| of the Swiss EdTech startup ==Get More Brain==|link:https://www.getmorebrain.com/| and published in 2019. The bitmark standard is specifically designed for **interactive learning content** such as quizzes and feedback via stored solutions.\n\nWith bitmark, learning **content is “atomized”**, meaning it is broken down into small, meaningful “bits” suitable for mobile screens (e.g. quizzes, exercises…) and then assembled into a coherent book.\n\nUnlike previous “theory-based” e-learning standards (AICC, SCORM, etc.), bitmark was created **bottom-up** in collaboration with publishers and other EdTech companies, originally out of the practical need to digitize language textbooks."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135661"],
+      "id": [
+        "135661"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -1058,18 +1178,20 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-7]\n[@id:135661]\n[###Suitable for all learning content]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135662"],
+      "id": [
+        "135662"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1100,18 +1222,38 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 137,
+              "column": 1,
+              "offset": 10634
+            },
+            "end": {
+              "line": 137,
+              "column": 21,
+              "offset": 10654
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--]\n[@id:135662]\nToday, the bitmark standard is used to digitize all learning content at all levels (children’s and adult education, including practical educational paths such as apprenticeship training).\n\nIn addition to language textbooks, bitmark is also ideally suited for the digitization of textbooks on, for example, business topics (marketing, project management, leadership, etc.) or scientific subjects (mathematics, chemistry, physics, etc.)."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135663"],
+      "id": [
+        "135663"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -1137,9 +1279,9 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-8]\n[@id:135663]\n[###Uncompromisingly “content-first”]"
   },
@@ -1148,7 +1290,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135664"],
+      "id": [
+        "135664"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1186,18 +1330,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n[@id:135664]\nUnlike AICC, SCORM etc., the bitmark standard is uncompromisingly “content-first”. This means that bitmark consistently allows only the description of ==metadata==|link:https://en.wikipedia.org/wiki/Metadata| (author, difficulty level, etc.) and learning content (“here is a gap”, “the solution to this gap is”, etc.). Visual information is not allowed — bitmark leaves the graphical representation entirely to the learning media/LMS."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135665"],
+      "id": [
+        "135665"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -1223,9 +1369,9 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-9]\n[@id:135665]\n[###Openness of the standard prevents “lock-in” effects]"
   },
@@ -1234,7 +1380,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135666"],
+      "id": [
+        "135666"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1343,18 +1491,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n[@id:135666]\nThe openness of bitmark is also central ==(open-source).==|link:https://en.wikipedia.org/wiki/Open-source_model| The standard documentation is freely available to the general public under a ==Creative Commons license==|link:https://en.wikipedia.org/wiki/Creative_Commons| and the software components developed by the ==bitmark Association==|link:https://docs.bitmark.cloud/bitmark-association/about_and_contact/| (see below) can be used free of charge under an ==MIT license==|link:https://en.wikipedia.org/wiki/MIT_License|.\n\nImportantly, the standard is also well suited as an import and export format between different systems.\n\nUnlike closed proprietary systems, bitmark thus does not result in any dependencies; a “lock-in” is avoided from the outset."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135667"],
+      "id": [
+        "135667"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -1380,18 +1530,20 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-10]\n[@id:135667]\n[###Digital transformation of learning]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135668"],
+      "id": [
+        "135668"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1412,18 +1564,38 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 170,
+              "column": 1,
+              "offset": 12602
+            },
+            "end": {
+              "line": 170,
+              "column": 21,
+              "offset": 12622
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--]\n[@id:135668]\nThe bitmark standard provides a future-proof foundation for the digital transformation of learning by enabling learners, teachers, classes, schools, employers, bots, etc. to communicate and collaborate in the way that best suits each individual case."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135669"],
+      "id": [
+        "135669"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -1449,18 +1621,20 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-11]\n[@id:135669]\n[##Democratization of learning]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135670"],
+      "id": [
+        "135670"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1491,18 +1665,38 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 179,
+              "column": 1,
+              "offset": 12954
+            },
+            "end": {
+              "line": 179,
+              "column": 21,
+              "offset": 12974
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--]\n[@id:135670]\nbitmark is designed to drastically simplify and accelerate the digitization process, i.e. the preparation, sharing and distribution of digital learning content. This gives smaller publishers and even schools and teachers the chance to digitize learning content and make it available in an appropriate form to learners anywhere in the world.\n\nIn this way, bitmark creates the basis for the “democratization of knowledge” and thus contributes to closing the worldwide education gap — all people should have access to high-quality learning content."
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135671"],
+      "id": [
+        "135671"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -1528,9 +1722,9 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-12]\n[@id:135671]\n[##The “bitmark Association”]"
   },
@@ -1539,7 +1733,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135672"],
+      "id": [
+        "135672"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1632,18 +1828,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n[@id:135672]\nThe further development and dissemination of the bitmark standard is supported by the non-profit ==bitmark Association==|link:https://docs.bitmark.cloud/bitmark-association/about_and_contact/|.\n\nThe bitmark Association provides **publishers, schools and teachers** as well as **developers of learning media and LMS** with free open-source software for the preparation and use of learning content in bitmark format or for the development of corresponding learning media and LMS.\n\n__You too can contribute to the dissemination of bitmark and thus to the democratization of knowledge, e.g. by becoming a  ==member==|mailto:member@bitmark-association.org| (publishers, schools, EdTech companies, …) or ==patron==|mailto:patron@bitmark-association.org)| (private individuals) of the bitmark Association or by distributing this article.__ 😊"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135673"],
+      "id": [
+        "135673"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -1669,18 +1867,20 @@
       "progress": true
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-13]\n[@id:135673]\n[##Useful links:]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135674"],
+      "id": [
+        "135674"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1689,25 +1889,78 @@
       "instruction": [],
       "body": [
         {
-          "type": "paragraph",
+          "type": "bulletList",
           "content": [
             {
-              "text": "• Documentation of the bitmark standard: https://docs.bitmark.cloud/",
-              "type": "text"
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Documentation of the bitmark standard: ",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "https://docs.bitmark.cloud/",
+                            "target": "_blank"
+                          }
+                        }
+                      ],
+                      "text": "docs.bitmark.cloud/",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "hardBreak"
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Homepage of the bitmark Association: ",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "https://docs.bitmark.cloud/bitmark-association/about_and_contact/",
+                            "target": "_blank"
+                          }
+                        }
+                      ],
+                      "text": "docs.bitmark.cloud/bitmark-association/about_and_contact/",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "text": "• Homepage of the bitmark Association: https://docs.bitmark.cloud/bitmark-association/about_and_contact/",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Linkedin page of the bitmark Association: linkedin.com/company/bitmark-association",
-              "type": "text"
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Linkedin page of the bitmark Association: linkedin.com/company/bitmark-association",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "attrs": {}
@@ -1715,18 +1968,38 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 203,
+              "column": 1,
+              "offset": 14522
+            },
+            "end": {
+              "line": 203,
+              "column": 21,
+              "offset": 14542
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--]\n[@id:135674]\n• Documentation of the bitmark standard: https://docs.bitmark.cloud/\n• Homepage of the bitmark Association: https://docs.bitmark.cloud/bitmark-association/about_and_contact/\n• Linkedin page of the bitmark Association: linkedin.com/company/bitmark-association"
   },
   {
     "bit": {
       "type": "book-acknowledgements",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51877"],
+      "id": [
+        "51877"
+      ],
       "item": [],
       "lead": [
         {
@@ -1758,18 +2031,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-acknowledgements]\n[@id:51877]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-addendum",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51876"],
+      "id": [
+        "51876"
+      ],
       "item": [],
       "lead": [
         {
@@ -1801,18 +2076,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-addendum]\n[@id:51876]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-afterword",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51873"],
+      "id": [
+        "51873"
+      ],
       "item": [],
       "lead": [
         {
@@ -1844,18 +2121,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-afterword]\n[@id:51873]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-appendix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51875"],
+      "id": [
+        "51875"
+      ],
       "item": [],
       "lead": [
         {
@@ -1887,18 +2166,21 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-appendix]\n[@id:51875]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1917,12 +2199,16 @@
           "attrs": {}
         }
       ],
-      "language": ["en", "jp", "cn"]
+      "language": [
+        "en",
+        "jp",
+        "cn"
+      ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[@language] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
@@ -1979,9 +2265,11 @@
   {
     "bit": {
       "type": "book-author-bio",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51885"],
+      "id": [
+        "51885"
+      ],
       "item": [],
       "lead": [
         {
@@ -2013,18 +2301,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-author-bio]\n[@id:51885]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-bibliography",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51879"],
+      "id": [
+        "51879"
+      ],
       "item": [],
       "lead": [
         {
@@ -2056,18 +2346,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-bibliography]\n[@id:51879]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-coming-soon",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51887"],
+      "id": [
+        "51887"
+      ],
       "item": [],
       "lead": [
         {
@@ -2099,18 +2391,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-coming-soon]\n[@id:51887]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-conclusion",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51872"],
+      "id": [
+        "51872"
+      ],
       "item": [],
       "lead": [
         {
@@ -2142,18 +2436,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-conclusion]\n[@id:51872]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-copyright-permissions",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51883"],
+      "id": [
+        "51883"
+      ],
       "item": [],
       "lead": [
         {
@@ -2185,18 +2481,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-copyright-permissions]\n[@id:51883]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-copyright",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51861"],
+      "id": [
+        "51861"
+      ],
       "item": [],
       "lead": [
         {
@@ -2228,18 +2526,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-copyright]\n[@id:51861]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-dedication",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51865"],
+      "id": [
+        "51865"
+      ],
       "item": [],
       "lead": [
         {
@@ -2271,18 +2571,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-dedication]\n[@id:51865]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-endnotes",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51881"],
+      "id": [
+        "51881"
+      ],
       "item": [],
       "lead": [
         {
@@ -2314,18 +2616,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-endnotes]\n[@id:51881]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-epigraph",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51890"],
+      "id": [
+        "51890"
+      ],
       "item": [],
       "lead": [
         {
@@ -2357,18 +2661,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-epigraph]\n[@id:51890]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-epilogue",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51869"],
+      "id": [
+        "51869"
+      ],
       "item": [],
       "lead": [
         {
@@ -2400,18 +2706,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-epilogue]\n[@id:51869]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-foreword",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51866"],
+      "id": [
+        "51866"
+      ],
       "item": [],
       "lead": [
         {
@@ -2443,18 +2751,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-foreword]\n[@id:51866]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-frontispiece",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51862"],
+      "id": [
+        "51862"
+      ],
       "item": [],
       "lead": [
         {
@@ -2486,18 +2796,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-frontispiece]\n[@id:51862]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-imprint",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51862"],
+      "id": [
+        "51862"
+      ],
       "item": [],
       "lead": [
         {
@@ -2529,18 +2841,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-imprint]\n[@id:51862]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-inciting-incident",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51871"],
+      "id": [
+        "51871"
+      ],
       "item": [],
       "lead": [
         {
@@ -2572,18 +2886,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-inciting-incident]\n[@id:51871]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-introduction",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51870"],
+      "id": [
+        "51870"
+      ],
       "item": [],
       "lead": [
         {
@@ -2615,18 +2931,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-introduction]\n[@id:51870]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-list-of-contributors",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51878"],
+      "id": [
+        "51878"
+      ],
       "item": [],
       "lead": [
         {
@@ -2658,18 +2976,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-list-of-contributors]\n[@id:51878]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-notes",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51882"],
+      "id": [
+        "51882"
+      ],
       "item": [],
       "lead": [
         {
@@ -2701,18 +3021,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-notes]\n[@id:51882]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-postscript",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51874"],
+      "id": [
+        "51874"
+      ],
       "item": [],
       "lead": [
         {
@@ -2744,18 +3066,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-postscript]\n[@id:51874]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-preface",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["5186"],
+      "id": [
+        "5186"
+      ],
       "item": [],
       "lead": [
         {
@@ -2787,18 +3111,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-preface]\n[@id:5186]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-prologue",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51868"],
+      "id": [
+        "51868"
+      ],
       "item": [],
       "lead": [
         {
@@ -2830,18 +3156,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-prologue]\n[@id:51868]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-read-more",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51888"],
+      "id": [
+        "51888"
+      ],
       "item": [],
       "lead": [
         {
@@ -2873,18 +3201,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-read-more]\n[@id:51888]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-reference-list",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51880"],
+      "id": [
+        "51880"
+      ],
       "item": [],
       "lead": [
         {
@@ -2916,18 +3246,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-reference-list]\n[@id:51880]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-request-for-a-book-review",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51886"],
+      "id": [
+        "51886"
+      ],
       "item": [],
       "lead": [
         {
@@ -2959,18 +3291,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-request-for-a-book-review]\n[@id:51886]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-summary",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51889"],
+      "id": [
+        "51889"
+      ],
       "item": [],
       "lead": [
         {
@@ -3002,18 +3336,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-summary]\n[@id:51889]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-teaser",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51884"],
+      "id": [
+        "51884"
+      ],
       "item": [],
       "lead": [
         {
@@ -3045,18 +3381,20 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-teaser]\n[@id:51884]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "book-title",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51863"],
+      "id": [
+        "51863"
+      ],
       "item": [],
       "lead": [
         {
@@ -3088,9 +3426,9 @@
       ]
     },
     "parser": {
-      "version": "3.10.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.21.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.book-title]\n[@id:51863]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   }

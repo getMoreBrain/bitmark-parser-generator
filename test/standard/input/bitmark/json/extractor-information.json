@@ -4,7 +4,9 @@
       "type": "extractor-information",
       "format": "json",
       "bitLevel": 1,
-      "id": ["5673456"],
+      "id": [
+        "5673456"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -26,10 +28,10 @@
       }
     },
     "parser": {
-      "version": "3.8.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.extractor-information]\n[@id:5673456]\n==== text ====\n{\n  \"version\": \"1.2.3\",\n  \"input\": {\n    \"pdf\": \"pdf-filename.pdf\",\n    \"config\": \"config-filename.toml\",\n    \"feedback\": \"feedback-filename.pdf\"\n  },\n  \"output\": {\n    \"bitmark\": \"bitmark-filename.bit\",\n    \"info\": \"info-filename.txt\",\n    \"visualization\": \"visualization-filename.pdf\"\n  }\n}"
+    "bitmark": "[.extractor-information]\n[@id:5673456]\n==== text ====\n{\n  \"version\": \"1.2.3\",\n  \"input\": {\n    \"pdf\": \"pdf-filename.pdf\",\n    \"config\": \"config-filename.toml\",\n    \"feedback\": \"feedback-filename.pdf\"\n  },\n  \"output\": {\n    \"bitmark\": \"bitmark-filename.bitmark\",\n    \"info\": \"info-filename.txt\",\n    \"visualization\": \"visualization-filename.pdf\"\n  }\n}"
   }
 ]

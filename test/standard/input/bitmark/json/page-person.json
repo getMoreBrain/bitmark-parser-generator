@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "page-person",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "slug": "testing-1234",
       "buttonCaption": "Follow",
@@ -46,9 +46,9 @@
       ]
     },
     "parser": {
-      "version": "3.24.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.27.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-person]\n[@slug:testing-1234]\n[@person:Morgan Sweeny][@title:Ant Collector][&image:https://cdn.bitbook.education/avatars/ds.jpg]\n[@buttonCaption:Follow]\nMorgan has collected ants since they were six years old and now has many dozen ants but none in their pants."
   }

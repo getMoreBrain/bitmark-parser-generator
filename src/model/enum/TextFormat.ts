@@ -1,5 +1,9 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
+// TODO: https://github.com/getMoreBrain/cosmic/issues/7941 Drop bitmark--
+// replace bitmark-- and bitmark++ with bitmarkText - there is only one type
+// For breakscaping, bitmarkText in the body is bitmark++ and bitmarkText in a tag is bitmark+
+
 const TextFormat = superenum({
   // plain text
   // [only start of new bits at start of lines `[.` will be (un)breakscaped]

@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "video-embed-landscape",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "301454"
@@ -13,7 +13,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video-embed",
         "videoEmbed": {
@@ -40,19 +39,20 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.video-embed-landscape]\n[@id:301454]\n[&video-embed:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
   },
   {
     "bit": {
       "type": "video-embed-landscape",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "300497"
@@ -66,9 +66,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[&video] is included more than 0 time(s).",
@@ -112,6 +112,10 @@
             "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0280.mp4",
             "width": null,
             "height": null,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": [],
             "posterImage": {
               "format": "png",
               "provider": "docs.bitbook.education",
@@ -124,11 +128,7 @@
               "copyright": "",
               "showInIndex": false,
               "caption": []
-            },
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": []
+            }
           }
         }
       ]
@@ -138,7 +138,7 @@
   {
     "bit": {
       "type": "video-embed-landscape",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "301460"
@@ -149,7 +149,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video-embed",
         "videoEmbed": {
@@ -176,12 +175,13 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.video-embed-landscape]\n[@id:301460]\n[&video-embed:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
   }

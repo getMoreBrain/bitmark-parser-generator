@@ -14,7 +14,7 @@ import { FileUtils } from '../../../src/utils/FileUtils';
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
-class DevRegenerateBitmarkTests {
+class DevRegenerateBitmarkTestJson {
   async test(_debug?: boolean): Promise<void> {
     const bitmarkFilesDir = path.resolve(__dirname, '../../..', 'test/standard/input/bitmark');
     const jsonFilesDir = path.resolve(bitmarkFilesDir, 'json');
@@ -44,7 +44,7 @@ class DevRegenerateBitmarkTests {
   }
 }
 
-const parser = new DevRegenerateBitmarkTests();
+const parser = new DevRegenerateBitmarkTestJson();
 
 void parser.test(true).then(() => {
   // Done

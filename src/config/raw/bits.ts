@@ -1961,7 +1961,6 @@ const BITS: _BitsConfig = {
     //
     since: '3.5.0',
     baseBitType: BitType.reviewNote,
-    textFormatDefault: TextFormat.bitmarkPlusPlus,
   },
   [BitType.reviewReviewerNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
   [BitType.reviewRequestForReviewNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },

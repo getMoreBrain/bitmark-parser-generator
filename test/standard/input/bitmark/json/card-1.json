@@ -2,9 +2,8 @@
   {
     "bit": {
       "type": "card-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -181,12 +180,13 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.card-1]\n::info::\n**Gebrauch der Zeitformen:**\nDas Präteritum verwendet man vor allem für schriftliche Äußerungen.\nIn der mündlichen Kommunikation gebrauchen wir in der Regel das Perfekt.\nDie Hilfsverben __haben__ und __sein__ und die Modalverben bilden eine Ausnahme und werden meistens im Präteritum verwendet.\n::\n\n::info::\n**Bildung des Perfekts:**\nAlle Verben, die einen Akkusativ verlangen, und alle reflexiven Verben bilden das Perfekt mit __haben__.\n__Wir haben ein Haus gebaut. Ich habe mich geärgert.__\nVerben der Orts- und Zustandsänderung sowie sein und bleiben bilden das Perfekt mit __sein__.\n__Wir sind nach Italien gefahren. Die Blumen sind verblüht.__\n::"
   }

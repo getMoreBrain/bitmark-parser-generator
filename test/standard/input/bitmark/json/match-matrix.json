@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287966"],
-      "revealSolutions": false,
+      "id": [
+        "287966"
+      ],
       "item": [],
       "lead": [
         {
@@ -34,18 +35,25 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [],
       "heading": {
         "forKeys": "Verb",
-        "forValues": ["Future, 1st Person, Singular", "Past, 3rd Person, Plural"]
+        "forValues": [
+          "Future, 1st Person, Singular",
+          "Past, 3rd Person, Plural"
+        ]
       },
       "matrix": [
         {
           "key": "gehen",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["ich werde gehen"],
+              "values": [
+                "ich werde gehen"
+              ],
               "item": [],
               "instruction": [
                 {
@@ -75,7 +83,9 @@
               ]
             },
             {
-              "values": ["sie gingen"],
+              "values": [
+                "sie gingen"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -93,16 +103,18 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         },
         {
           "key": "sprechen",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["ich werde sprechen"],
+              "values": [
+                "ich werde sprechen"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -110,51 +122,58 @@
               "example": null
             },
             {
-              "values": ["sie sprachen"],
+              "values": [
+                "sie sprachen"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.match-matrix]\n[@id:287966]\n[%][%match-matrix]\n[!Bring the german verbs into the correct tense.]\n\n===\n[#Verb]\n==\n[#Future, 1st Person, Singular]\n==\n[#Past, 3rd Person, Plural]\n===\ngehen[@isCaseSensitive:false]\n==\nich werde gehen[@example][!Instruction][@isCaseSensitive:true]\n==\nsie gingen[@example]\n===\nsprechen\n==\nich werde sprechen\n==\nsie sprachen\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -162,7 +181,10 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -180,16 +202,18 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -197,7 +221,10 @@
               "example": null
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -215,44 +242,67 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 27,
+              "column": 1,
+              "offset": 358
+            },
+            "end": {
+              "line": 27,
+              "column": 26,
+              "offset": 383
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB[@example]\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF[@example][@isCaseSensitive:false]\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -260,7 +310,10 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -278,16 +331,18 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -306,7 +361,10 @@
               ]
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -324,44 +382,67 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 52,
+              "column": 1,
+              "offset": 599
+            },
+            "end": {
+              "line": 52,
+              "column": 26,
+              "offset": 624
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB[@example:Y]\n--\nC\n===\nshould be the text not the value\n==\nD[@example]\n==\nE\n--\nF[@example:X]\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -380,7 +461,10 @@
               ]
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -398,16 +482,18 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -426,7 +512,10 @@
               ]
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -444,44 +533,67 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 77,
+              "column": 1,
+              "offset": 830
+            },
+            "end": {
+              "line": 77,
+              "column": 26,
+              "offset": 855
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\n[@example]Herr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\n[@example:Y]should be the text not the value\n==\nD\n==\nE\n--\nF[@example:X]\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -500,7 +612,10 @@
               ]
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -518,16 +633,18 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -546,7 +663,10 @@
               ]
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -564,44 +684,67 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 102,
+              "column": 1,
+              "offset": 1061
+            },
+            "end": {
+              "line": 102,
+              "column": 26,
+              "offset": 1086
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[@example:X][#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF[@example]\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -620,7 +763,10 @@
               ]
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -638,16 +784,18 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -666,7 +814,10 @@
               ]
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -684,44 +835,67 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 127,
+              "column": 1,
+              "offset": 1280
+            },
+            "end": {
+              "line": 127,
+              "column": 26,
+              "offset": 1305
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[@example][#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -740,7 +914,10 @@
               ]
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -758,16 +935,18 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -786,7 +965,10 @@
               ]
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -804,44 +986,67 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 152,
+              "column": 1,
+              "offset": 1487
+            },
+            "end": {
+              "line": 152,
+              "column": 26,
+              "offset": 1512
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n[@example]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -860,7 +1065,10 @@
               ]
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -878,16 +1086,18 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -906,7 +1116,10 @@
               ]
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -924,44 +1137,67 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 178,
+              "column": 1,
+              "offset": 1695
+            },
+            "end": {
+              "line": 178,
+              "column": 26,
+              "offset": 1720
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n[@example:X]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -980,7 +1216,10 @@
               ]
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -998,16 +1237,18 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": true,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1026,7 +1267,10 @@
               ]
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1044,44 +1288,67 @@
                 }
               ]
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": true
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 204,
+              "column": 1,
+              "offset": 1905
+            },
+            "end": {
+              "line": 204,
+              "column": 26,
+              "offset": 1930
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[@example:99][#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC[@example]\n===\n[@example:Y]should be the text not the value\n==\nD[@example:X]\n==\nE\n--\nF\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1089,51 +1356,77 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 230,
+              "column": 1,
+              "offset": 2150
+            },
+            "end": {
+              "line": 230,
+              "column": 26,
+              "offset": 2175
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1141,51 +1434,77 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 247,
+              "column": 1,
+              "offset": 2287
+            },
+            "end": {
+              "line": 247,
+              "column": 26,
+              "offset": 2312
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["", "Heading3"]
+        "forValues": [
+          "",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1193,51 +1512,77 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 263,
+              "column": 1,
+              "offset": 2420
+            },
+            "end": {
+              "line": 263,
+              "column": 26,
+              "offset": 2445
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["", "Heading3"]
+        "forValues": [
+          "",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1245,51 +1590,77 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 280,
+              "column": 1,
+              "offset": 2557
+            },
+            "end": {
+              "line": 280,
+              "column": 26,
+              "offset": 2582
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", ""]
+        "forValues": [
+          "Heading2",
+          ""
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1297,48 +1668,70 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 296,
+              "column": 1,
+              "offset": 2690
+            },
+            "end": {
+              "line": 296,
+              "column": 26,
+              "offset": 2715
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
-      "heading": {},
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1346,51 +1739,78 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "heading": {},
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 312,
+              "column": 1,
+              "offset": 2823
+            },
+            "end": {
+              "line": 312,
+              "column": 26,
+              "offset": 2848
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n==\n==\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "",
-        "forValues": ["", ""]
+        "forValues": [
+          "",
+          ""
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1398,66 +1818,69 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 326,
+              "column": 1,
+              "offset": 2932
+            },
+            "end": {
+              "line": 326,
+              "column": 26,
+              "offset": 2957
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n===\n[#]\n==\n[#]\n==\n[#]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA\n==\nB\n--\nC\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Title1",
-        "forValues": ["Title2", "Title3"]
+        "forValues": [
+          "Title2",
+          "Title3"
+        ]
       },
       "matrix": [
         {
           "key": "Beherbergung",
-          "cells": [
-            {
-              "values": ["Unterbringung"],
-              "item": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null
-            },
-            {
-              "values": ["Übernachtung"],
-              "item": [],
-              "instruction": [],
-              "isCaseSensitive": true,
-              "isExample": false,
-              "example": null
-            }
-          ],
           "item": [
             {
               "type": "paragraph",
@@ -1494,13 +1917,12 @@
               "attrs": {}
             }
           ],
-          "isExample": false
-        },
-        {
-          "key": "Herberge",
+          "isExample": false,
           "cells": [
             {
-              "values": ["Hotel"],
+              "values": [
+                "Unterbringung"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1508,14 +1930,19 @@
               "example": null
             },
             {
-              "values": ["Unterbringungsmöglichkeit"],
+              "values": [
+                "Übernachtung"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
+          ]
+        },
+        {
+          "key": "Herberge",
           "item": [
             {
               "type": "paragraph",
@@ -1529,41 +1956,71 @@
             }
           ],
           "hint": [],
-          "isExample": false
+          "isExample": false,
+          "cells": [
+            {
+              "values": [
+                "Hotel"
+              ],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            },
+            {
+              "values": [
+                "Unterbringungsmöglichkeit"
+              ],
+              "item": [],
+              "instruction": [],
+              "isCaseSensitive": true,
+              "isExample": false,
+              "example": null
+            }
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.match-matrix]\n===\n[#Title1]\n==\n[#Title2]\n==\n[#Title3]\n===\n[%1][!hint][?instruction] Beherbergung\n==\nUnterbringung\n==\nÜbernachtung\n===\n[%2] Herberge\n==\nHotel\n==\nUnterbringungsmöglichkeit\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -1571,23 +2028,28 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1595,51 +2057,77 @@
               "example": null
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 366,
+              "column": 1,
+              "offset": 3248
+            },
+            "end": {
+              "line": 366,
+              "column": 26,
+              "offset": 3273
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n[@isCaseSensitive:true]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA[@isCaseSensitive:false]\n==\nB\n--\nC[@isCaseSensitive:true]\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
   },
   {
     "bit": {
       "type": "match-matrix",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": ["Heading2", "Heading3"]
+        "forValues": [
+          "Heading2",
+          "Heading3"
+        ]
       },
       "matrix": [
         {
           "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["A"],
+              "values": [
+                "A"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -1647,23 +2135,28 @@
               "example": null
             },
             {
-              "values": ["B", "C"],
+              "values": [
+                "B",
+                "C"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         },
         {
           "key": "should be the text not the value",
+          "item": [],
+          "hint": [],
+          "isExample": false,
           "cells": [
             {
-              "values": ["D"],
+              "values": [
+                "D"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -1671,24 +2164,44 @@
               "example": null
             },
             {
-              "values": ["E", "F"],
+              "values": [
+                "E",
+                "F"
+              ],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
               "isExample": false,
               "example": null
             }
-          ],
-          "item": [],
-          "hint": [],
-          "isExample": false
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-matrix:bitmark--]",
+          "location": {
+            "start": {
+              "line": 392,
+              "column": 1,
+              "offset": 3516
+            },
+            "end": {
+              "line": 392,
+              "column": 26,
+              "offset": 3541
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-matrix:bitmark--]\n[@isCaseSensitive:false]\n===\n[#Heading1]\n==\n[#Heading2]\n==\n[#Heading3]\n===\nHerr De Weck kauft Milch und Brot im Supermarkt.\n==\nA[@isCaseSensitive:false]\n==\nB\n--\nC[@isCaseSensitive:true]\n===\nshould be the text not the value\n==\nD\n==\nE\n--\nF\n==="
   }
