@@ -4,6 +4,7 @@ import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
 import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { MarkConfigJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -46,7 +47,8 @@ function markConfigChainContentProcessor(
   const mark: string = Breakscape.unbreakscape(
     (StringUtils.trimmedString(content.value) ?? 'unknown') as BreakscapedString,
     {
-      textFormat: TextFormat.tag,
+      textFormat: TextFormat.bitmarkMinusMinus,
+      textLocation: TextLocation.tag,
     },
   );
 

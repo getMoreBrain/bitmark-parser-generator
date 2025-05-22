@@ -43,6 +43,7 @@ import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { Breakscape } from './breakscaping/Breakscape';
 import { BreakscapedString } from './model/ast/BreakscapedString';
+import { TextLocation, TextLocationType } from './model/enum/TextLocation';
 
 /* STRIP:END */
 STRIP;
@@ -156,23 +157,28 @@ export interface UpgradeOptions {
    * Specify the bitmark parser to use, overriding the default
    */
   bitmarkParserType?: BitmarkParserTypeType;
+
   /**
    * Set to force input to be interpreted as a particular format, overriding the auto-detection
    * Auto-detection can fail or open unwanted files for strings that look like paths
    */
   inputFormat?: InputType;
+
   /**
    * Specify a file to write the output to
    */
   outputFile?: fs.PathLike;
+
   /**
    * Options for the output file
    */
   fileOptions?: FileOptions;
+
   /**
    * Options for bitmark generation
    */
   bitmarkOptions?: BitmarkOptions;
+
   /**
    * Options for JSON generation
    */
@@ -187,19 +193,28 @@ export interface ConvertTextOptions {
    * Specify the text format (default: bitmark--)
    */
   textFormat?: TextFormatType;
+
+  /**
+   * Specify the text location (default: body)
+   */
+  textLocation?: TextLocationType;
+
   /**
    * Set to force input to be interpreted as a particular format, overriding the auto-detection
    * Auto-detection can fail or open unwanted files for strings that look like paths
    */
   inputFormat?: InputType;
+
   /**
    * Specify a file to write the output to
    */
   outputFile?: fs.PathLike;
+
   /**
    * Options for the output file
    */
   fileOptions?: FileOptions;
+
   /**
    * Options for JSON generation
    */
@@ -241,6 +256,11 @@ export interface BreakscapeOptions {
    * Specify the text format (default:  bitmark--)
    */
   textFormat?: TextFormatType;
+
+  /**
+   * Specify the text location (default: body)
+   */
+  textLocation?: TextLocationType;
 }
 
 /**
@@ -252,10 +272,12 @@ export interface UnbreakscapeOptions {
    * Auto-detection can fail or open unwanted files for strings that look like paths
    */
   inputFormat?: InputType;
+
   /**
    * Specify a file to write the output to
    */
   outputFile?: fs.PathLike;
+
   /**
    * Options for the output file
    */
@@ -265,6 +287,11 @@ export interface UnbreakscapeOptions {
    * Specify the text format (default: bitmark--)
    */
   textFormat?: TextFormatType;
+
+  /**
+   * Specify the text location (default: body)
+   */
+  textLocation?: TextLocationType;
 }
 
 /**
@@ -292,10 +319,12 @@ const Output = superenum({
    * Output bitmark string
    */
   bitmark: 'bitmark',
+
   /**
    * Output JSON as a plain JS object, or a file
    */
   json: 'json',
+
   /**
    * Output AST as a plain JS object, or a file
    */
@@ -819,6 +848,7 @@ class BitmarkParserGenerator {
     const fileOptions = Object.assign({}, opts.fileOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
     const textFormat = opts.textFormat ?? TextFormat.bitmarkMinusMinus;
+    const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
 
@@ -848,7 +878,7 @@ class BitmarkParserGenerator {
         isProperty: false,
       });
     } else {
-      preRes = await this.textGenerator.generate(ast, textFormat);
+      preRes = await this.textGenerator.generate(ast, textFormat, textLocation);
     }
 
     if (opts.outputFile) {
@@ -897,6 +927,7 @@ class BitmarkParserGenerator {
     const opts: BreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
     if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
+    if (!opts.textLocation) opts.textLocation = TextLocation.body;
 
     let inStr: string = input as string;
 
@@ -919,6 +950,7 @@ class BitmarkParserGenerator {
     // Do the breakscape
     const res = Breakscape.breakscape(inStr, {
       textFormat: opts.textFormat,
+      textLocation: opts.textLocation,
     });
 
     if (opts.outputFile) {
@@ -957,6 +989,7 @@ class BitmarkParserGenerator {
     const opts: UnbreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
     if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus; // Default to bitmark--
+    if (!opts.textLocation) opts.textLocation = TextLocation.body;
 
     let inStr: BreakscapedString = input as BreakscapedString;
 
@@ -979,6 +1012,7 @@ class BitmarkParserGenerator {
     // Do the unbreakscape
     const res = Breakscape.unbreakscape(inStr, {
       textFormat: opts.textFormat,
+      textLocation: opts.textLocation,
     });
 
     if (opts.outputFile) {

@@ -10,6 +10,7 @@ import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
+import { TextLocation } from '../model/enum/TextLocation';
 import { AudioResourceWrapperJson, ImageResourceWrapperJson, ResourceJson } from '../model/json/ResourceJson';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
@@ -1235,11 +1236,7 @@ class Builder extends BaseBuilder {
       data: (dataIn.data ?? []).map((row) =>
         (row ?? []).map((cell) => {
           // Process the audio resource
-          const audio = (
-            ArrayUtils.asSingle(
-              this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.audio, cell.audio),
-            ) as AudioResourceWrapperJson
-          )?.audio;
+          const audio = this.resourceBuilder.resourceFromResourceJson(context, cell.audio) as AudioResourceWrapperJson;
 
           return {
             title: this.handleJsonText(context, true, cell.title),
@@ -1454,6 +1451,7 @@ class Builder extends BaseBuilder {
         // Special v2 Breakscaping
         bodyStr = Breakscape.breakscape(bodyStr, {
           textFormat,
+          textLocation: TextLocation.body,
           v2: true,
         });
 
@@ -1978,8 +1976,12 @@ class Builder extends BaseBuilder {
     let text: JsonText = this.handleJsonText(context, true, data?.text);
 
     if (textAsStrings) {
-      // Convert the bitmark text to plain text
-      text = this.textGenerator.generateSync(text as TextAst, TextFormat.text).trim();
+      // Convert the bitmark text to plain text (without breakscaping, as that will happen in the Bitmark Generator)
+      text = this.textGenerator
+        .generateSync(text as TextAst, TextFormat.text, TextLocation.body, {
+          noBreakscaping: true,
+        })
+        .trim();
     }
 
     // NOTE: Node order is important and is defined here
@@ -2089,11 +2091,7 @@ class Builder extends BaseBuilder {
     const node: PersonJson = {
       name: name ?? '',
       title: (title ?? undefined) as string,
-      avatarImage: (
-        ArrayUtils.asSingle(
-          this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, avatarImage),
-        ) as ImageResourceWrapperJson
-      )?.image,
+      avatarImage: this.resourceBuilder.resourceFromResourceJson(context, avatarImage) as ImageResourceWrapperJson,
     };
 
     // Remove Unset Optionals

@@ -4,6 +4,7 @@ import { Footer } from '../../../../model/ast/Nodes';
 import { JsonText } from '../../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 import { BitContentProcessorResult, BitmarkPegParserContext, ContentDepthType } from '../BitmarkPegParserTypes';
@@ -60,10 +61,12 @@ class FooterContentProcessor {
           })
         : Breakscape.unbreakscape(footer, {
             textFormat: TextFormat.text,
+            textLocation: TextLocation.body,
           });
 
       const parsedFooterPlainText = Breakscape.unbreakscape(footerPlainText, {
         textFormat: TextFormat.text,
+        textLocation: TextLocation.body,
       });
 
       finalFooterText = ContentProcessorUtils.concatenatePlainTextWithAstTexts(

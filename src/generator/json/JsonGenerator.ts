@@ -16,6 +16,7 @@ import { BodyBitType, BodyBitTypeType } from '../../model/enum/BodyBitType';
 import { ExampleType } from '../../model/enum/ExampleType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { TextLocation } from '../../model/enum/TextLocation';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { BodyBitJson } from '../../model/json/BodyBitJson';
@@ -199,7 +200,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     // Create the text generator for generating v2 texts
-    this.textGenerator = new TextGenerator(this.bitmarkVersion, {
+    this.textGenerator = new TextGenerator(BitmarkVersion.v2, {
       // writeCallback: this.write,
       bodyBitCallback: this.bodyBitCallback,
       debugGenerationInline: this.debugGenerationInline,
@@ -629,12 +630,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
       // Convert the body to plain text if required
       if (this.options.textAsPlainText && bodyIsBitmarkText) {
-        const textBody = this.textGenerator.generateSync(this.bodyJson as TextAst, textFormat);
-        this.bitJson.body = (
-          Breakscape.unbreakscape(textBody, {
-            textFormat: TextFormat.bitmarkMinusMinus,
-          }) || ''
-        ).trim();
+        const textBody = this.textGenerator.generateSync(this.bodyJson as TextAst, textFormat, TextLocation.body, {
+          noBreakscaping: true,
+        });
+        this.bitJson.body = (textBody ?? '').trim();
       } else if (bodyIsBitmarkText) {
         // If the body is bitmark text, convert the body bits to move their attributes to the attrs property
         this.bitJson.body = this.moveBodyBitPropertiesToAttrs(this.bodyJson as TextAst);
@@ -1779,8 +1778,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     for (const key in obj) {
       const val = obj[key];
       if (this.isBitmarkText(val)) {
-        const s = this.textGenerator.generateSync(val as TextAst, TextFormat.bitmarkMinusMinus);
-        obj[key] = (Breakscape.unbreakscape(s) || '').trim();
+        const s = this.textGenerator.generateSync(val as TextAst, TextFormat.bitmarkMinusMinus, TextLocation.tag, {
+          noBreakscaping: true,
+        });
+        obj[key] = (s ?? '').trim();
       } else if (typeof obj[key] === 'object') {
         this.convertAllBitmarkTextsToStringsForPlainText(obj[key] as Record<string, unknown>);
       }

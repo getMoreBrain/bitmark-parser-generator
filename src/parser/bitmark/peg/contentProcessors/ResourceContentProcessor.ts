@@ -6,6 +6,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { Count } from '../../../../model/enum/Count';
 import { ResourceTag, ResourceTagType } from '../../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
 
 import {
@@ -171,7 +172,8 @@ function resourceContentProcessor(
     const resource = resourceBuilder.resource(context, {
       type,
       value: Breakscape.unbreakscape(value, {
-        textFormat: TextFormat.tag,
+        textFormat: TextFormat.bitmarkMinusMinus,
+        textLocation: TextLocation.tag,
       }),
       posterImage: posterImageResource,
       ...tags,
@@ -210,7 +212,10 @@ function propertyStyleResourceContentProcessor(
 
     const resource = resourceBuilder.resource(context, {
       type,
-      value: Breakscape.unbreakscape(value),
+      value: Breakscape.unbreakscape(value, {
+        textFormat: TextFormat.bitmarkMinusMinus,
+        textLocation: TextLocation.tag,
+      }),
       posterImage: posterImageResource,
       ...tags,
     });

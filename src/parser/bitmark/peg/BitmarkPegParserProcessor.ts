@@ -71,6 +71,7 @@ import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType } from '../../../model/enum/BitType';
 import { ResourceTag } from '../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../model/enum/TextFormat';
+import { TextLocation } from '../../../model/enum/TextLocation';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
@@ -341,7 +342,8 @@ class BitmarkPegParserProcessor {
   ): BitHeader {
     // Unbreakscape the bit type
     const bitType = Breakscape.unbreakscape(bitTypeBreakscaped, {
-      textFormat: TextFormat.tag,
+      textFormat: TextFormat.bitmarkMinusMinus,
+      textLocation: TextLocation.tag,
     });
 
     // Get / check bit type
@@ -394,7 +396,8 @@ class BitmarkPegParserProcessor {
     const processValue = (value: TypeValue | undefined) => {
       if (value) {
         const val = Breakscape.unbreakscape(StringUtils.string(value.value) as BreakscapedString, {
-          textFormat: TextFormat.tag,
+          textFormat: TextFormat.bitmarkMinusMinus,
+          textLocation: TextLocation.tag,
         });
         if (value.type === TypeKey.TextFormat) {
           // Set text format

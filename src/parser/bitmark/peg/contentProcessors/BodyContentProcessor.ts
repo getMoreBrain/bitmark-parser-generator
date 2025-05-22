@@ -6,6 +6,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { TextFormat, TextFormatType } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { BodyBitJson, GapJson, HighlightJson, MarkJson, SelectJson } from '../../../../model/json/BodyBitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
@@ -120,10 +121,12 @@ class BodyContentProcessor {
           })
         : Breakscape.unbreakscape(bodyTextStr, {
             textFormat: TextFormat.text,
+            textLocation: TextLocation.body,
           });
 
       const parserPlainText: JsonText = Breakscape.unbreakscape(plainBodyTextStr, {
         textFormat: TextFormat.text,
+        textLocation: TextLocation.body,
       });
 
       // Newlines will have been lost from the end of bodyTextStr, and start of plainBodyTextStr
@@ -135,6 +138,7 @@ class BodyContentProcessor {
       finalBody = ContentProcessorUtils.concatenatePlainTextWithAstTexts(parsedBodyText, newlines, parserPlainText);
       finalBodyString = Breakscape.unbreakscape(bodyStr, {
         textFormat,
+        textLocation: TextLocation.body,
       }).trim() as BreakscapedString;
       const finalBodyIsAst = Array.isArray(finalBody);
       const bodyAst = finalBodyIsAst ? (finalBody as TextAst) : undefined;

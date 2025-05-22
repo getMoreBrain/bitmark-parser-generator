@@ -2,6 +2,8 @@ import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { BitType } from '../../../../model/enum/BitType';
+import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { TextParser } from '../../../text/TextParser';
 
@@ -159,7 +161,12 @@ function handleStandardBooleanExample(
     target.__isDefaultExample = true;
     target.example = undefined;
   } else {
-    const exampleStr = example ? Breakscape.unbreakscape(example) : undefined;
+    const exampleStr = example
+      ? Breakscape.unbreakscape(example, {
+          textFormat: TextFormat.bitmarkMinusMinus,
+          textLocation: TextLocation.tag,
+        })
+      : undefined;
     if (BooleanUtils.isBooleanString(exampleStr)) {
       target.example = BooleanUtils.toBoolean(exampleStr);
     } else {

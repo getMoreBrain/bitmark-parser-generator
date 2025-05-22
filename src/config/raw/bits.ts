@@ -1156,6 +1156,7 @@ const BITS: _BitsConfig = {
     cardSet: CardSetConfigKey._flashcard,
   },
   [BitType.flashcard1]: { since: '1.3.0', baseBitType: BitType.flashcard },
+  [BitType.qAndACard]: { since: '3.25.0', baseBitType: BitType.flashcard1 },
   [BitType.focusImage]: {
     since: '1.3.0',
     baseBitType: BitType.image,
