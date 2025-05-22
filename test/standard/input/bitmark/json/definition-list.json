@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "definition-list",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -213,16 +213,16 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.definition-list]\n\nSomebody\n====\n[# title 1]\n--\n[# title 2]\n====\nTerm 1?\nCard 1, Side 1\n[&icon:https://image.io/term1.svg][@width:100][@height:200]\n--\nDefinition 1\nCard 1, Side 2\n[&icon:https://image.io/def1.svg]\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2\n++\nAlternative Definition 2\nCard 2, Side 2\n[&icon:https://image.io/altdef2.svg]\n~~~~\n\nFooter anyone?"
   },
   {
     "bit": {
       "type": "definition-list",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -369,16 +369,16 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.definition-list]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer"
   },
   {
     "bit": {
       "type": "definition-list",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [
         {
@@ -591,16 +591,16 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.definition-list]\n[@example]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]"
   },
   {
     "bit": {
       "type": "definition-list",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [
         {
@@ -804,9 +804,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.23.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.26.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.definition-list]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
   }

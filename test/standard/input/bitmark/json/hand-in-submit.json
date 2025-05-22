@@ -2,11 +2,16 @@
   {
     "bit": {
       "type": "hand-in-submit",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["189522"],
+      "id": [
+        "189522"
+      ],
       "buttonCaption": "Click Me!",
-      "handInRequirement": ["This is a requirement", "You'd better do this as well!"],
+      "handInRequirement": [
+        "This is a requirement",
+        "You'd better do this as well!"
+      ],
       "handInInstruction": "Fill out ✍️ and hand in",
       "item": [],
       "lead": [],
@@ -49,21 +54,20 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.hand-in-submit]\n[@id:189522]\n[!Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können.]\n\nWichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.\n\nZeit: 60 Minuten"
+    "bitmark": "[.hand-in-submit]\n[@id:189522]\n[!Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können.]\n[@handInRequirement:This is a requirement]\n[@handInRequirement:You'd better do this as well!]\n[@handInInstruction:Fill out ✍️ and hand in]\n[@buttonCaption: Click Me!  ]\n\n\nWichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.\n\nZeit: 60 Minuten"
   },
   {
     "bit": {
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213729"],
-      "buttonCaption": "",
-      "handInRequirement": [],
-      "handInInstruction": "",
+      "id": [
+        "213729"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -113,23 +117,27 @@
             "width": 650
           }
         }
-      ]
+      ],
+      "handInRequirement": [],
+      "handInInstruction": "",
+      "buttonCaption": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.hand-in-submit:bitmark++]\n[@id:213729]\n[%7]\n[!Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.\nBegriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit]\n|image:https://docs.bitmark.cloud/bit-books/compendio/marketing_quiz/web-resources/images/compendio_marketing_7_v2.png|@width:650|"
   },
   {
     "bit": {
       "type": "hand-in-submit",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213734"],
+      "id": [
+        "213734"
+      ],
       "buttonCaption": "Click Me!!!",
-      "handInRequirement": [],
       "handInInstruction": "Fill out ✍️ and hand in!!",
       "item": [
         {
@@ -166,24 +174,104 @@
           "attrs": {}
         }
       ],
-      "body": []
+      "body": [],
+      "handInRequirement": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.hand-in-submit:bitmark--]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 994
+            },
+            "end": {
+              "line": 22,
+              "column": 28,
+              "offset": 1021
+            }
+          }
+        },
+        {
+          "message": "[@handInInstruction] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@handInInstruction:Fill out ✍️ and hand in!!]",
+          "location": {
+            "start": {
+              "line": 28,
+              "column": 1,
+              "offset": 1384
+            },
+            "end": {
+              "line": 28,
+              "column": 47,
+              "offset": 1430
+            }
+          },
+          "original": {
+            "text": "[@handInInstruction:Fill out ✍️ and hand in]",
+            "location": {
+              "start": {
+                "line": 27,
+                "column": 1,
+                "offset": 1339
+              },
+              "end": {
+                "line": 27,
+                "column": 45,
+                "offset": 1383
+              }
+            }
+          }
+        },
+        {
+          "message": "[@buttonCaption] is included more than 1 time(s). The earlier ones will be ignored",
+          "text": "[@buttonCaption: Click Me!!!  ]",
+          "location": {
+            "start": {
+              "line": 30,
+              "column": 1,
+              "offset": 1461
+            },
+            "end": {
+              "line": 30,
+              "column": 32,
+              "offset": 1492
+            }
+          },
+          "original": {
+            "text": "[@buttonCaption: Click Me!  ]",
+            "location": {
+              "start": {
+                "line": 29,
+                "column": 1,
+                "offset": 1431
+              },
+              "end": {
+                "line": 29,
+                "column": 30,
+                "offset": 1460
+              }
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.hand-in-submit:bitmark--]\n[@id:213734]\n[%12]\n[!Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:\nKunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel]"
+    "bitmark": "[.hand-in-submit:bitmark--]\n[@id:213734]\n[%12]\n[!Erstellen Sie mit den folgenden Begriffen das Marktsystem nach R. Kühn für Konsumgüter:\nKunden, Detailhandel, Natur, Markt, Konkurrenz, Entscheider, Gesellschaft, Grossist, unser Unternehmen, interne Beeinflusser, externe Beeinflusser, Wirtschaft, Umfeld, Endkunden, Käufer, Technologie, Handel]\n[@handInInstruction:Fill out ✍️ and hand in]\n[@handInInstruction:Fill out ✍️ and hand in!!]\n[@buttonCaption: Click Me!  ]\n[@buttonCaption: Click Me!!!  ]"
   },
   {
     "bit": {
       "type": "hand-in-submit",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213737"],
-      "buttonCaption": "",
-      "handInRequirement": [],
-      "handInInstruction": "",
+      "id": [
+        "213737"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -234,36 +322,59 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "handInRequirement": [],
+      "handInInstruction": "",
+      "buttonCaption": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.hand-in-submit:bitmark--]",
+          "location": {
+            "start": {
+              "line": 34,
+              "column": 1,
+              "offset": 1496
+            },
+            "end": {
+              "line": 34,
+              "column": 28,
+              "offset": 1523
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.hand-in-submit:bitmark--]\n[@id:213737]\n[%15 A][%Ausgangslage]\nSie sind Marketingverantwortliche/-r beim Bauberatungsunternehmen Easy Building AG. Ihre Kunden sind Bauherren (Privatpersonen), die ein Eigenheim bauen und eine unabhängige Expertenmeinung wünschen, z. B. bei der Vergabe von Aufträgen, der Beurteilung verschiedener Lieferanten und Dienstleister oder bei der Bauabnahme.\n[!Erläutern Sie das Marktsystem, in dem sich die Easy Building bewegt.]"
   },
   {
     "bit": {
       "type": "hand-in-submit",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["197943"],
-      "buttonCaption": "",
-      "handInRequirement": [],
-      "handInInstruction": "",
+      "id": [
+        "197943"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "handInRequirement": [],
+      "handInInstruction": "",
+      "buttonCaption": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.hand-in-submit]\n[@id:197943]"
   }

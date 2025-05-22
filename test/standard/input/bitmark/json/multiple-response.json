@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "multiple-response",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
-      "revealSolutions": false,
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -23,7 +24,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "quizzes": [
         {
@@ -80,22 +80,43 @@
           ]
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 31,
+              "offset": 30
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response:bitmark--]\n[@id:291969]\n[%]\n[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]\n===\n[+Unselbständige]\n[+IV-Rentner]\n[-18 jähriger Schüler]\n[+22 jähriger Student]\n[-16 jähriger Lehrling]\n==="
   },
   {
     "bit": {
       "type": "multiple-response",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
-      "revealSolutions": false,
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -113,7 +134,6 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [],
       "quizzes": [
         {
@@ -170,13 +190,31 @@
           ]
         }
       ],
-      "footer": []
+      "isExample": true,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 230
+            },
+            "end": {
+              "line": 13,
+              "column": 31,
+              "offset": 260
+            }
+          }
+        },
         {
           "message": "Only 'true' / 'false' / default are allowed here, using default",
           "text": "[@example:Test]",
@@ -216,10 +254,11 @@
   {
     "bit": {
       "type": "multiple-response",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
-      "revealSolutions": false,
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -237,7 +276,6 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [],
       "quizzes": [
         {
@@ -294,22 +332,43 @@
           ]
         }
       ],
-      "footer": []
+      "isExample": true,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 503
+            },
+            "end": {
+              "line": 26,
+              "column": 31,
+              "offset": 533
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response:bitmark--]\n[@id:291969]\n[%]\n[!Welche der folgenden Personen sind grundsätzlich beitragspflichtig?]\n===\n[+Unselbständige]\n[+IV-Rentner]\n[-18 jähriger Schüler][@example]\n[+22 jähriger Student]\n[-16 jähriger Lehrling]\n==="
   },
   {
     "bit": {
       "type": "multiple-response",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
-      "revealSolutions": false,
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -327,7 +386,6 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [],
       "quizzes": [
         {
@@ -384,13 +442,31 @@
           ]
         }
       ],
-      "footer": []
+      "isExample": true,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 38,
+              "column": 1,
+              "offset": 743
+            },
+            "end": {
+              "line": 38,
+              "column": 31,
+              "offset": 773
+            }
+          }
+        },
         {
           "message": "Only 'true' / 'false' / default are allowed here, using default",
           "text": "[@example:Another text here]",
@@ -414,16 +490,14 @@
   {
     "bit": {
       "type": "multiple-response",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "quizzes": [
         {
@@ -479,28 +553,46 @@
           ]
         }
       ],
-      "footer": []
+      "isExample": true,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 50,
+              "column": 1,
+              "offset": 1021
+            },
+            "end": {
+              "line": 50,
+              "column": 31,
+              "offset": 1051
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response:bitmark--]\n[@example]\n===\n[+CorrectAnswer1]\n[+CorrectAnswer2]\n[-FalseAnswer3]\n===\n[-FalseAnswer4]\n==="
   },
   {
     "bit": {
       "type": "multiple-response",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "quizzes": [
         {
@@ -556,28 +648,46 @@
           ]
         }
       ],
-      "footer": []
+      "isExample": true,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 60,
+              "column": 1,
+              "offset": 1144
+            },
+            "end": {
+              "line": 60,
+              "column": 31,
+              "offset": 1174
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response:bitmark--]\n===\n[+CorrectAnswer1][@example]\n[+CorrectAnswer2][@example]\n[-FalseAnswer3][@example]\n===\n[-FalseAnswer4]\n==="
   },
   {
     "bit": {
       "type": "multiple-response",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "quizzes": [
         {
@@ -633,12 +743,32 @@
           ]
         }
       ],
-      "footer": []
+      "isExample": true,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 69,
+              "column": 1,
+              "offset": 1286
+            },
+            "end": {
+              "line": 69,
+              "column": 31,
+              "offset": 1316
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response:bitmark--]\n===\n[+CorrectAnswer1][@example:false]\n[+CorrectAnswer2]\n[-FalseAnswer3][@example:true]\n===\n[-FalseAnswer4]\n==="
   }

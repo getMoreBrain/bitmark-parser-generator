@@ -5,7 +5,10 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "path": "/this/is/a/path",
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -51,9 +54,9 @@
       ]
     },
     "parser": {
-      "version": "3.14.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[&image] is included more than 0 time(s).",
@@ -96,9 +99,11 @@
   {
     "bit": {
       "type": "platform-path",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "path": "/this/is/a/path",
       "item": [],
       "lead": [],
@@ -131,16 +136,34 @@
       ]
     },
     "parser": {
-      "version": "3.14.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.platform-path:bitmark--]",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 227
+            },
+            "end": {
+              "line": 12,
+              "column": 27,
+              "offset": 253
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.platform-path:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n[@path:/this/is/a/path]\n\nThe bit content"
   },
   {
     "bit": {
       "type": "platform-path",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -152,9 +175,9 @@
       "path": ""
     },
     "parser": {
-      "version": "3.14.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.platform-path]"
   }

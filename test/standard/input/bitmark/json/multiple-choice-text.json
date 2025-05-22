@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287839"],
-      "revealSolutions": false,
+      "id": [
+        "287839"
+      ],
       "item": [],
       "lead": [
         {
@@ -23,7 +24,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -35,13 +35,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": true,
                 "options": [
                   {
                     "text": "d",
@@ -73,7 +66,14 @@
                     "isExample": true,
                     "example": false
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true
               }
             },
             {
@@ -83,13 +83,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "cloze",
@@ -121,7 +114,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -131,22 +131,43 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-choice-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 34,
+              "offset": 33
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:287839]\n[%][%multiple-choice-text]\nThe students complete[+d][-t][-s][@example] the [+cloze][-cloth][-close] with the correct verb forms."
   },
   {
     "bit": {
       "type": "multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213773"],
-      "revealSolutions": false,
+      "id": [
+        "213773"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -175,7 +196,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -183,13 +203,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Zahlungsbereitschaft Kunde",
@@ -231,7 +244,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -247,13 +267,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Zahlungsbereitschaft Kunde",
@@ -295,7 +308,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -311,13 +331,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Zahlungsbereitschaft Kunde",
@@ -359,7 +372,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -375,13 +395,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Zahlungsbereitschaft Kunde",
@@ -423,7 +436,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -433,22 +453,43 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-choice-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 177
+            },
+            "end": {
+              "line": 6,
+              "column": 34,
+              "offset": 210
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:213773]\n[%46]\n[!ln einem Beratungsunternehmen für Evaluationen von Bundesprojekten diskutiert die Geschäftsleiterin mit drei Partnern, welchen Preis sie für ein ausgeschriebenes Mandat offerieren wollen. Dabei sind sie nicht einig, well sie sich an verschiedenen «K»onentieren. Welche Faktoren sind bei den folgenden Argumenten relevant?]\n[-Zahlungsbereitschaft Kunde][+Konkurrenz][-Kapazität][-Kosten] Wir sollten günstiger sein als Polyconsult, sonst kriegen sie diesen Auftrag auch noch und können weiter Mitarbeitende einstellen, die uns dann fehlen.\n\n[-Zahlungsbereitschaft Kunde][-Konkurrenz][+Kapazität][-Kosten] Wenn wir das Projekt im Januar machen können, können wir 10% Rabatt geben. Im Januar ist wenig los. Sonst offerieren wir den normalen Preis.\n\n[+Zahlungsbereitschaft Kunde][-Konkurrenz][-Kapazität][-Kosten] Ich glaube, wir sollten dieses Projekt wirklich tief offerieren, weil sie kaum Budget haben. Wenn wir dieses Projekt sauber durchführen, können wir bet Folgeprojekten, wenn der Kredit gesprochen ist, die verlorene Marge wieder gutmachen.\n\n[-Zahlungsbereitschaft Kunde][-Konkurrenz][-Kapazität][+Kosten] Für den Marktforschungsteil müssen wir höhere Ansätze verlangen, weil wir den extern einkaufen müssen."
   },
   {
     "bit": {
       "type": "multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213840"],
-      "revealSolutions": false,
+      "id": [
+        "213840"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -477,7 +518,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -485,13 +525,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Leistungsziel",
@@ -523,7 +556,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -536,13 +576,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Leistungsziel",
@@ -574,7 +607,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -587,13 +627,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Leistungsziel",
@@ -625,7 +658,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -638,13 +678,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Leistungsziel",
@@ -676,7 +709,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -686,22 +726,43 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-choice-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 1450
+            },
+            "end": {
+              "line": 19,
+              "column": 34,
+              "offset": 1483
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:213840]\n[%59]\n[!Es ist eine Aufgabe der Unternehmensführung, die strategischen Unternehmensziele festzulegen. Ordnen Sie die folgenden Aussagen dem richtigen Zielbereich zu.]\n[+Leistungsziel][-Finanzziel][-Soziales Ziel] Bis 20xx zählen wir im Produktbereich XY mindestens 120 000 Kunden bei einem Umsatz von mindestens CHF 4 Mio\n[-Leistungsziel][-Finanzziel][+Soziales Ziel] Aus unserem erzielten Reingewinn (vor Steuern) fliessen jährlich maximal 3% In die regionale und die überregionale Jugendsportförderung.\n[-Leistungsziel][-Finanzziel][+Soziales Ziel] Mittels des Führungsmodells MbO (Management by Objectives) beteiligen wir unsere Mitarbeitenden finanziell am persönlichen Leistungserfolg.\n[-Leistungsziel][+Finanzziel][-Soziales Ziel] Sämtliche Investitionsvorhaben, die die Erweiterung unserer Fertigungskapazitäten betreffen, müssen zu mindestens 75% eigenfinanziert sein."
   },
   {
     "bit": {
       "type": "multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["208481"],
-      "revealSolutions": false,
+      "id": [
+        "208481"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -730,7 +791,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -742,13 +802,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Beschaffungsmarkt",
@@ -770,7 +823,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -783,13 +843,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Beschaffungsmarkt",
@@ -811,7 +864,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -824,13 +884,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Beschaffungsmarkt",
@@ -852,7 +905,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -865,13 +925,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Beschaffungsmarkt",
@@ -893,7 +946,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -906,13 +966,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "Beschaffungsmarkt",
@@ -934,28 +987,56 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             }
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-choice-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 2376
+            },
+            "end": {
+              "line": 29,
+              "column": 34,
+              "offset": 2409
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:208481]\n[%15]\n[!Gehören die Personengruppen zum Beschaffungs- oder zum Absatzmarkt? Markieren Sie die zutreffende Antwort.]\n\nLieferanten [+Beschaffungsmarkt][-Absatzmarkt]\nKunden [-Beschaffungsmarkt][+Absatzmarkt]\nKonkurrenz  [-Beschaffungsmarkt][+Absatzmarkt]\nMitarbeitende[+Beschaffungsmarkt][-Absatzmarkt]\nKapitalgeber[+Beschaffungsmarkt][-Absatzmarkt]"
   },
   {
     "bit": {
       "type": "multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["107949"],
-      "revealSolutions": false,
+      "id": [
+        "107949"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -991,7 +1072,22 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -1010,13 +1106,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "dürfen",
@@ -1038,7 +1127,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -1055,13 +1151,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "können",
@@ -1083,7 +1172,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -1100,13 +1196,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "dürfen",
@@ -1128,7 +1217,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -1139,43 +1235,27 @@
           "attrs": {}
         }
       ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "png",
-          "provider": "docs.bitbook.education",
-          "src": "https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.multiple-choice-text&image]\n[@id:107949]\n[%16]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png]\n[!Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung.]\n\nWähl das richtige Wort.\nA) Hier [+dürfen][-müssen] Sie nicht parken.\nB) Hier [+können][-müssen] Sie über die Straße gehen.\nC) Hier [-dürfen][+müssen] Sie warten."
   },
   {
     "bit": {
       "type": "multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -1187,13 +1267,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": true,
                 "options": [
                   {
                     "text": "cloze",
@@ -1225,7 +1298,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true
               }
             },
             {
@@ -1235,28 +1315,28 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.multiple-choice-text]\nThe students completed the [+cloze][@example][-cloth][-close] with the correct verb forms."
   },
   {
     "bit": {
       "type": "multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -1268,13 +1348,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": true,
                 "options": [
                   {
                     "text": "cloze",
@@ -1306,7 +1379,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true
               }
             },
             {
@@ -1316,28 +1396,28 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.multiple-choice-text]\n[@example]\nThe students completed the [+cloze][-cloth][-close] with the correct verb forms."
   },
   {
     "bit": {
       "type": "multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -1349,13 +1429,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": true,
                 "options": [
                   {
                     "text": "cloze",
@@ -1387,7 +1460,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true
               }
             },
             {
@@ -1397,12 +1477,14 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.multiple-choice-text]\nThe students completed the [+cloze][-cloth][@example][-close] with the correct verb forms."
   }

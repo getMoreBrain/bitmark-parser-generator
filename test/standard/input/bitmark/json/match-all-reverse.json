@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "match-all-reverse",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["324342"],
-      "revealSolutions": false,
+      "id": [
+        "324342"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -45,26 +46,30 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
-      "heading": {},
       "pairs": [
         {
           "key": "He will fix your laptop for you.",
-          "values": ["Your laptop will be fixed by him.", "Your laptop will be fixed for you by him."],
           "item": [],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "Your laptop will be fixed by him.",
+            "Your laptop will be fixed for you by him."
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "heading": {},
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.match-all-reverse]\n[@id:324342]\n[%item][%Lead]\n[!Instruction]\n===\nHe will fix your laptop for you.\n==\nYour laptop will be fixed by him.\n--\nYour laptop will be fixed for you by him.\n==="
   }

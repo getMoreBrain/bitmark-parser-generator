@@ -2,9 +2,11 @@
   {
     "bit": {
       "type": "q-and-a",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["245346"],
+      "id": [
+        "245346"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -57,9 +59,27 @@
       ]
     },
     "parser": {
-      "version": "3.25.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.30.1"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.q-and-a:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 21,
+              "offset": 20
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.q-and-a:bitmark--]\n[@id:245346]\n[!Lösungsweg Lernaufgabe E - 9]\nBedeutung für den Klienten:\nEinsamkeit, Langeweile, darf das Zimmer nur in Ausnahmefällen verlassen, mit der emotional belastenden Situation umgehen können, Pflege geht weniger ins Zimmer, weniger Besuche, da Angst vor einer Übertragung, Personen betreten das isolierte Zimmer mit Schutzkleidung, Körperkontakt wird reduziert. Bedeutung für die Angehörigen:\nDie Isolationsmassnahmen zu verstehen versuchen, das Zimmer mit Schutzkleidung betreten, Angst vor einer Übertragung, Angst vor Körperkontakt. Bedeutung für das Personal:\nStrikte Einhaltung der Hygienerichtlinien, mehr Zeit einrechnen für das An- und Ausziehen der Schutzkleidung, Konzentration, dass alles Material, das benötigt wird, auch mitgenommen wird (ansonsten klingeln, damit eine Person ausserhalb des Zimmers das benötigte Material besorgen kann), gute Personalplanung – evtl. umplanen, wenn die zuständige Person erkältet ist, Ideen bezüglich Aktivierungsmöglichkeiten gegen die Langeweile ausfindig machen und Angehörige bitten, diese mitzubringen (Laptop, Bücher, Zeitschriften)."
   },
@@ -68,7 +88,9 @@
       "type": "q-and-a",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["1920727"],
+      "id": [
+        "1920727"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -257,9 +279,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.30.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.q-and-a:bitmark++&image]\n[@id:1920727]\n[%Übung 1][%][%19][%Nasty ^ ^^ =^=]\n[!**Rechnungswesen als modellhafte Abbildung der betrieblichen Realität**\nDie:\n|image:https://ex__am==ple.com/im**age.png|@width:650|\n\nWelcher Verein wurde deutscher Meister?]\n[&image:https://ex__am==ple.com/im**age.png]\n\nSie haben keinen Schimmer?\n==This is a link==|link:https://ex__am==ple.com/im**age.png|\n\n\nhttps://ex__am==ple.com/im**age.png\n\n[?customerId:https://ex__am==ple.com/im**age.png]"
   }

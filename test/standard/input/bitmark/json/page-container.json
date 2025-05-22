@@ -2,12 +2,11 @@
   {
     "bit": {
       "type": "page-container",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "197915"
       ],
-      "allowedBit": [],
       "item": [
         {
           "type": "paragraph",
@@ -47,24 +46,24 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "allowedBit": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-container]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
   {
     "bit": {
       "type": "page-container-wrap",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "197915"
       ],
-      "allowedBit": [],
       "item": [
         {
           "type": "paragraph",
@@ -104,24 +103,24 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "allowedBit": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-container-wrap]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
   {
     "bit": {
       "type": "page-container-nowrap",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "197915"
       ],
-      "allowedBit": [],
       "item": [
         {
           "type": "paragraph",
@@ -161,24 +160,24 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "allowedBit": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-container-nowrap]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
   {
     "bit": {
       "type": "page-container-nowrap-stretch",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "197915"
       ],
-      "allowedBit": [],
       "item": [
         {
           "type": "paragraph",
@@ -218,24 +217,24 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "allowedBit": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-container-nowrap-stretch]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
   {
     "bit": {
       "type": "page-container-group",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "197915"
       ],
-      "allowedBit": [],
       "item": [
         {
           "type": "paragraph",
@@ -275,19 +274,20 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "allowedBit": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-container-group]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
   {
     "bit": {
       "type": "page-container-folder",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "197915"
@@ -338,9 +338,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-container-folder]\n[@id:197915]\n[@allowedBit:test][@allowedBit:.test2]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   }

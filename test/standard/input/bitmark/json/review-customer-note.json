@@ -4,7 +4,9 @@
       "type": "review-customer-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210022"],
+      "id": [
+        "210022"
+      ],
       "item": [],
       "lead": [
         {
@@ -82,9 +84,9 @@
       "resolvedBy": ""
     },
     "parser": {
-      "version": "3.5.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.review-customer-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n•1 Ordered list item 1\n•1 Ordered list item 2"
   },
@@ -93,7 +95,9 @@
       "type": "review-customer-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210040"],
+      "id": [
+        "210040"
+      ],
       "item": [],
       "lead": [
         {
@@ -171,9 +175,9 @@
       "resolvedBy": ""
     },
     "parser": {
-      "version": "3.5.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.review-customer-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ...\n•1 Ordered list item 1\n•1 Ordered list item 2"
   }

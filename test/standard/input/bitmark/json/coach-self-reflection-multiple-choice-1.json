@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186304"],
-      "revealSolutions": false,
+      "id": [
+        "186304"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -23,7 +24,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "choices": [
         {
@@ -44,22 +44,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1]\n[@id:186304]\n[!Welche Aussage stimmt?]\n[+Um die Qualität der Bildung und die Einhaltung der Bildungsplanstandards zu gewährleisten, muss der Lehrbetrieb dem/der Berufsbilder/in ein angemessenes Arbeitspensum für die Betreuung der Lernenden, finanzielle Mittel und die materiell notwendigen Gegenstände (eingerichteter Arbeitsplatz mit nötigen Werkzeugen) zur Verfügung stellen. Anbieter von Bildung in beruflicher Praxis sollen potentielle Berufsbildnerinnen und Berufsbildner direkt und persönlich motivieren]\n[-Um die Qualität der Bildung und die Einhaltung der Bildungsplanstandards zu gewährleisten, kann der Lehrbetrieb dem/der Berufsbilder/in ein angemessenes Arbeitspensum für die Betreuung der Lernenden, finanzielle Mittel und die materiell notwendigen Gegenstände (eingerichteter Arbeitsplatz mit nötigen Werkzeugen) zur Verfügung stellen. Anbieter von Bildung in beruflicher Praxis sollen potentielle Berufsbildnerinnen und Berufsbildner direkt und persönlich motivieren]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186305"],
-      "revealSolutions": false,
+      "id": [
+        "186305"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -77,7 +80,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "choices": [
         {
@@ -107,22 +109,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1]\n[@id:186305]\n[!Welche Aussage stimmt?]\n[+Die Selbstevaluation ist ein Instrument, das den Lehrbetrieben helfen soll, die Qualität ihrer betrieblichen Ausbildung kontinuierlich weiterzuentiwckeln.]\n[-Die Selbstevaluation ist ein Instrument, das gesetzliche vorgeschrieben ist. Die Lehrbetreibe müssen die Resultate dem Kanton melden.]\n[-Neben dem Bilungsbericht, den die Eltern unterzeichnen müssen, werden die Eltern auch regelmässig über die Selbstevaluation informiert.]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186703"],
-      "revealSolutions": false,
+      "id": [
+        "186703"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -140,7 +145,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "choices": [
         {
@@ -179,22 +183,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1]\n[@id:186703]\n[!Die in der letzten QualiCarte festgehaltenen Massnahmen sind wirksam. Die gesetzten Ziele wurden erreicht.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187235"],
-      "revealSolutions": false,
+      "id": [
+        "187235"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -219,7 +226,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "choices": [
         {
@@ -249,22 +255,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-multiple-choice-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 24,
+              "column": 1,
+              "offset": 1867
+            },
+            "end": {
+              "line": 24,
+              "column": 53,
+              "offset": 1919
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1:bitmark--]\n[@id:187235]\n[!Wie oft sollte eine Lerndokumentation überprüft werden? (Empfehlung)\nBitte wählen Sie alle zutreffenden Antworten]\n[+ 1x im Monat]\n[-1x im Semester]\n[-1x im Jahr]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187236"],
-      "revealSolutions": false,
+      "id": [
+        "187236"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -289,7 +316,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "choices": [
         {
@@ -319,22 +345,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-multiple-choice-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 32,
+              "column": 1,
+              "offset": 2099
+            },
+            "end": {
+              "line": 32,
+              "column": 53,
+              "offset": 2151
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1:bitmark--]\n[@id:187236]\n[!Darf die Lerndokumentation beim Qualifikationsverfahren angewendet werden?\nBitte wählen Sie alle zutreffenden Antworten]\n[-Ja]\n[-Nein]\n[+Dies ist in der jeweiligen Bildungsverordnung genau definiert]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187237"],
-      "revealSolutions": false,
+      "id": [
+        "187237"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -359,7 +406,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "choices": [
         {
@@ -380,22 +426,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-multiple-choice-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 40,
+              "column": 1,
+              "offset": 2368
+            },
+            "end": {
+              "line": 40,
+              "column": 53,
+              "offset": 2420
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1:bitmark--]\n[@id:187237]\n[!Ist das Führen einer Lerndokumentation Pflicht?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Ja, das Führen der Lerndokumentation ist gemäss Bildungsverordnung für jeden Lernenden obligatorisch]\n[-nein, das kann der Betrieb bestimmen]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["107936"],
-      "revealSolutions": false,
+      "id": [
+        "107936"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -438,8 +505,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "body": [],
       "resource": {
         "type": "audio",
         "audio": {
@@ -452,6 +517,7 @@
           "caption": []
         }
       },
+      "body": [],
       "choices": [
         {
           "choice": "204",
@@ -489,22 +555,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1&audio]\n[@id:107936]\n[%3]\n[!Die Empfangsdame gibt dir den Zimmerschlüssel. Die Empfangsdame sagt dir deine Zimmernummer. Hör dir das Audio an und\nwähl die richtige Antwort.\nWelche Zimmernummer hast du?]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_03_dwdownload.mp3]\n\n[-204]\n[+224]\n[-240]\n[-242]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["107937"],
-      "revealSolutions": false,
+      "id": [
+        "107937"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -540,8 +609,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "body": [],
       "resource": {
         "type": "audio",
         "audio": {
@@ -554,6 +621,7 @@
           "caption": []
         }
       },
+      "body": [],
       "choices": [
         {
           "choice": "06.30 – 09.30 Uhr",
@@ -582,22 +650,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1&audio]\n[@id:107937]\n[%4]\n[!Du fragst die Empfangsdame nach den Frühstückszeiten. Hör dir den Dialog an und wähl die richtige Antwort. Um wie viel\nUhr kannst du frühstücken?]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_04_dwdownload.mp3]\n[+06.30 – 09.30 Uhr]\n[-07.30 – 09.30 Uhr]\n[-07.30 – 10.30 Uhr]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["107943"],
-      "revealSolutions": false,
+      "id": [
+        "107943"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -640,8 +711,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "body": [],
       "resource": {
         "type": "audio",
         "audio": {
@@ -654,6 +723,7 @@
           "caption": []
         }
       },
+      "body": [],
       "choices": [
         {
           "choice": "Ja",
@@ -673,22 +743,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1&audio]\n[@id:107943]\n[%10]\n[&audio:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/audio/einstufungstest_a1_10_dwdownload.mp3]\n[!Du bist am Flughafen in München und hörst eine Durchsage. Du möchtest den Flug LH 872 nehmen. Ist die Durchsage\nwichtig für dich? Wähl aus.\nIst die Durchsage wichtig für dich?]\n[+Ja]\n[-Nein]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["131345"],
-      "revealSolutions": false,
+      "id": [
+        "131345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -717,7 +790,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "choices": [
         {
@@ -756,22 +828,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-multiple-choice-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 83,
+              "column": 1,
+              "offset": 3881
+            },
+            "end": {
+              "line": 83,
+              "column": 53,
+              "offset": 3933
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1:bitmark--]\n[@id:131345][%5]\n[!Herr Cimildoro ___ in der Schweiz.] [-a) wohnst]\n[-b) Wohnung] [-c) wohnen] [+d) wohnt]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["131346"],
-      "revealSolutions": false,
+      "id": [
+        "131346"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -800,7 +893,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "choices": [
         {
@@ -839,22 +931,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-multiple-choice-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 88,
+              "column": 1,
+              "offset": 4042
+            },
+            "end": {
+              "line": 88,
+              "column": 53,
+              "offset": 4094
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1:bitmark--]\n[@id:131346][%6]\n[!Er ___ nach Italien.] [+a) fährt]\n[-b) fahre] [-c) fahrt] [-d) fahren]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186303"],
-      "revealSolutions": false,
+      "id": [
+        "186303"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -872,7 +985,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -904,22 +1016,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1]\n[@id:186303]\n[!Stimmst du dieser Aussage zu? ]\nDer Lehrbetrieb setzt sich für die Lernenden ein und arbeitet mit allen Partnern der Berufsbildung zusammen\n[+Ja]\n[-Nein]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["232614"],
-      "revealSolutions": false,
+      "id": [
+        "232614"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -937,7 +1052,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "choices": [
         {
@@ -985,12 +1099,14 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1]\n[@id:232614]\n[!Hauptstadt von Polen]\n[+Warschau]\n[-Berlin]\n[-Prag]\n[-Tegucigalpa]\n[-Rabat]"
   },
@@ -999,8 +1115,9 @@
       "type": "coach-self-reflection-multiple-choice-1",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["232875"],
-      "revealSolutions": false,
+      "id": [
+        "232875"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1018,7 +1135,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "image",
@@ -1079,22 +1195,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1:bitmark++]\n[@id:232875]\n\n[!Welche der Antwortmöglichkeiten ordnet der Abbildung die richtigen Bezeichnungen zu?]\n|image:https://docs.bitmark.cloud/bit-books/card2brain/uebungsaufgaben_wi_bba/web-resources/images/uebungsaufgaben_wi_bba_3.jpg|\n[+a) 1. Client mit Webbrowser - 2. Internet - 3. Webserver - 4. Anwendungsserver - 5. Datenbankserver - 6. Datenbank]\n[-b) 1. Datenbank - 2. Internet - 3. Webserver - 4. Anwendungsserver - 5. Datenbankserver - 6. Client mit Webbrowser]\n[-c) 1. Datenbank - 2. Internet - 3. Webserver - 4. Datenbankserver - 5. Anwendungsserver - 6. Client mit Webbrowser]\n[-d) 1. Datenbank - 2. Internet - 3. Anwendungsserver - 4. Webserver - 5. Datenbankserver - 6. Client mit Webbrowser]\n[-e) 1. Client mit Webbrowser - 2. Internet - 3. Webserver - 4. Datenbankserver - 5. Anwendungsserver - 6. Datenbank]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["232876"],
-      "revealSolutions": false,
+      "id": [
+        "232876"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1112,7 +1231,6 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [],
       "choices": [
         {
@@ -1160,22 +1278,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-multiple-choice-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 122,
+              "column": 1,
+              "offset": 5411
+            },
+            "end": {
+              "line": 122,
+              "column": 53,
+              "offset": 5463
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1:bitmark--]\n[@id:232876]\n\n[!Welches der folgenden Statements beschreibt das Anwendungssystem auf operativer Ebene?]\n[-a) Systeme, die dem Unternehmen dabei helfen, Kunden zu finden.]\n[-b) Systeme, die durch die Bereitstellung von Berichten über Entscheidungsfindungen dienen.]\n[-c) Systeme, um schwach strukturierte oder unstrukturierte Entscheidungsfindungsprozesse zu unterstützen.]\n[-d) Systeme, die zur Verwaltung der Ein- und Ausgaben eines Unternehmens dienen.][@example]\n[+e) Systeme, die die Aktivitäten und Transaktionen des Unternehmens überwachen und ausführen.]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["232876"],
-      "revealSolutions": false,
+      "id": [
+        "232876"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1193,7 +1332,6 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [],
       "choices": [
         {
@@ -1241,22 +1379,43 @@
           "isExample": true,
           "example": true
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-multiple-choice-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 132,
+              "column": 1,
+              "offset": 6027
+            },
+            "end": {
+              "line": 132,
+              "column": 53,
+              "offset": 6079
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1:bitmark--]\n[@id:232876]\n[@example]\n[!Welches der folgenden Statements beschreibt das Anwendungssystem auf operativer Ebene?]\n[-a) Systeme, die dem Unternehmen dabei helfen, Kunden zu finden.]\n[-b) Systeme, die durch die Bereitstellung von Berichten über Entscheidungsfindungen dienen.]\n[-c) Systeme, um schwach strukturierte oder unstrukturierte Entscheidungsfindungsprozesse zu unterstützen.]\n[-d) Systeme, die zur Verwaltung der Ein- und Ausgaben eines Unternehmens dienen.]\n[+e) Systeme, die die Aktivitäten und Transaktionen des Unternehmens überwachen und ausführen.]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-multiple-choice-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["232876"],
-      "revealSolutions": false,
+      "id": [
+        "232876"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1274,7 +1433,6 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [],
       "choices": [
         {
@@ -1322,12 +1480,32 @@
           "isExample": true,
           "example": true
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-multiple-choice-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 142,
+              "column": 1,
+              "offset": 6643
+            },
+            "end": {
+              "line": 142,
+              "column": 53,
+              "offset": 6695
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-multiple-choice-1:bitmark--]\n[@id:232876]\n[@example]\n[!Welches der folgenden Statements beschreibt das Anwendungssystem auf operativer Ebene?]\n[-a) Systeme, die dem Unternehmen dabei helfen, Kunden zu finden.]\n[-b) Systeme, die durch die Bereitstellung von Berichten über Entscheidungsfindungen dienen.]\n[-c) Systeme, um schwach strukturierte oder unstrukturierte Entscheidungsfindungsprozesse zu unterstützen.]\n[-d) Systeme, die zur Verwaltung der Ein- und Ausgaben eines Unternehmens dienen.]\n[+e) Systeme, die die Aktivitäten und Transaktionen des Unternehmens überwachen und ausführen.][@example]"
   }

@@ -2,9 +2,11 @@
   {
     "bit": {
       "type": "learning-documentation-feedback",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["67915"],
+      "id": [
+        "67915"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -150,18 +152,20 @@
       ]
     },
     "parser": {
-      "version": "3.13.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.learning-documentation-feedback]\n[@id:67915]\n[@reasonableNumOfChars:100]\n====\n[!ICH BEVORZUGE …]\n[%1.]\n[+ Bier]\n[+ Wein]\n--\n[!Why?]\nPlease answer in keywords\n====\n[!ICH HASSE …]\n[%1I.]\n[+ Bier]\n[- Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@reasonableNumOfChars:300]\n===="
   },
   {
     "bit": {
       "type": "learning-documentation-feedback",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["64574"],
+      "id": [
+        "64574"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -299,9 +303,9 @@
       ]
     },
     "parser": {
-      "version": "3.13.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",

@@ -2,9 +2,11 @@
   {
     "bit": {
       "type": "feedback",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["67915"],
+      "id": [
+        "67915"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -176,18 +178,20 @@
       ]
     },
     "parser": {
-      "version": "3.13.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.feedback]\n[@id:67915]\n[@reasonableNumOfChars:100]\n====\n[!ICH BEVORZUGE …]\n[%1.]\n[+ Bier][@example]\n[+ Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@example:Example text]\n====\n[!ICH HASSE …]\n[%1I.]\n[+ Bier]\n[- Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@reasonableNumOfChars:300]\n[@example]\n===="
+    "bitmark": "[.feedback]\n[@id:67915]\n[@reasonableNumOfChars:100]\n====\n[#AAA]\n--\n[#BBB]\n====\n[!ICH BEVORZUGE …]\n[%1.]\n[+ Bier][@example]\n[+ Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@example:Example text]\n====\n[!ICH HASSE …]\n[%1I.]\n[+ Bier]\n[- Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@reasonableNumOfChars:300]\n[@example]\n===="
   },
   {
     "bit": {
       "type": "feedback",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["64574"],
+      "id": [
+        "64574"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -325,23 +329,23 @@
       ]
     },
     "parser": {
-      "version": "3.13.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
           "text": "[@reasonableNumOfChars:300]",
           "location": {
             "start": {
-              "line": 35,
+              "line": 39,
               "column": 1,
-              "offset": 417
+              "offset": 439
             },
             "end": {
-              "line": 35,
+              "line": 39,
               "column": 28,
-              "offset": 444
+              "offset": 466
             }
           }
         }

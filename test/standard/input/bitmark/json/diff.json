@@ -47,9 +47,9 @@
       ]
     },
     "parser": {
-      "version": "3.13.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[@diffTo] is included more than 1 time(s). The earlier ones will be ignored",
@@ -89,7 +89,7 @@
   {
     "bit": {
       "type": "diff",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -100,13 +100,13 @@
       "body": []
     },
     "parser": {
-      "version": "3.13.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
-          "message": "[@diffTo] is required at least 1 time(s)",
-          "text": "[.diff:bitmark--]\n",
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.diff:bitmark--]",
           "location": {
             "start": {
               "line": 11,
@@ -114,9 +114,9 @@
               "offset": 149
             },
             "end": {
-              "line": 12,
-              "column": 1,
-              "offset": 167
+              "line": 11,
+              "column": 18,
+              "offset": 166
             }
           }
         }

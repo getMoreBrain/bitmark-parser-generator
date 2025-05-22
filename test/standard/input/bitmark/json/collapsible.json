@@ -145,9 +145,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[%] is included more than 3 time(s). The earlier ones will be ignored",
@@ -187,7 +187,7 @@
   {
     "bit": {
       "type": "side-note-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
@@ -234,16 +234,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.side-note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
   {
     "bit": {
       "type": "info-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
@@ -290,16 +290,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.info-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
   {
     "bit": {
       "type": "remark-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
@@ -346,16 +346,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.remark-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
   {
     "bit": {
       "type": "warning-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
@@ -402,16 +402,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.warning-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
   {
     "bit": {
       "type": "danger-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
@@ -458,16 +458,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.danger-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
   {
     "bit": {
       "type": "note-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
@@ -514,16 +514,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
   {
     "bit": {
       "type": "example-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
@@ -570,16 +570,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.example-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
   {
     "bit": {
       "type": "hint-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
@@ -626,16 +626,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.hint-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
   {
     "bit": {
       "type": "bug-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
@@ -682,9 +682,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bug-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   }

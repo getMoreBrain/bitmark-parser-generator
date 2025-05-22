@@ -2,9 +2,11 @@
   {
     "bit": {
       "type": "vendor-stripe-pricing-table",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342346"],
+      "id": [
+        "342346"
+      ],
       "stripePricingTableId": "prctb1_1NNeGVGt8{VgVjROuB0TVMu",
       "stripePublishableKey": "pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ",
       "item": [],
@@ -16,18 +18,20 @@
       "body": []
     },
     "parser": {
-      "version": "3.13.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.vendor-stripe-pricing-table]\n[@id:342346]\n[@stripePricingTableId: prctb1_1NNeGVGt8{VgVjROuB0TVMu ]\n[@stripePublishableKey: pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ ]"
   },
   {
     "bit": {
       "type": "vendor-stripe-pricing-table-external",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342346"],
+      "id": [
+        "342346"
+      ],
       "stripePricingTableId": "prctb1_1NNeGVGt8{VgVjROuB0TVMu",
       "stripePublishableKey": "pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ",
       "item": [],
@@ -39,9 +43,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.13.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.vendor-stripe-pricing-table-external]\n[@id:342346]\n[@stripePricingTableId: prctb1_1NNeGVGt8{VgVjROuB0TVMu ]\n[@stripePublishableKey: pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ ]"
   }

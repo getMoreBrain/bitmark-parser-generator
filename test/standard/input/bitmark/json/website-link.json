@@ -2,9 +2,11 @@
   {
     "bit": {
       "type": "website-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["119761"],
+      "id": [
+        "119761"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -24,16 +26,16 @@
       "body": []
     },
     "parser": {
-      "version": "3.14.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.website-link]\n[@id:119761]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]"
+    "bitmark": "[.website-link]\n[@id:119761]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@showInIndex]"
   },
   {
     "bit": {
       "type": "website-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -54,16 +56,16 @@
       "body": []
     },
     "parser": {
-      "version": "3.14.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.website-link]\n[&website-link:/logout][@caption]"
   },
   {
     "bit": {
       "type": "website-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -84,16 +86,16 @@
       "body": []
     },
     "parser": {
-      "version": "3.14.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.website-link]\n[&website-link:/logout][@caption:]"
   },
   {
     "bit": {
       "type": "website-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -125,9 +127,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.14.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.23.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.website-link]\n[&website-link:/logout][@caption:true]"
   }

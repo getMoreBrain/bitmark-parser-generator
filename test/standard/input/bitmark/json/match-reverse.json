@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "match-reverse",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287869"],
-      "revealSolutions": false,
+      "id": [
+        "287869"
+      ],
       "item": [],
       "lead": [
         {
@@ -34,13 +35,10 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
       "body": [],
-      "heading": {},
       "pairs": [
         {
           "key": "Tier",
-          "values": ["das"],
           "item": [],
           "hint": [],
           "instruction": [],
@@ -57,44 +55,56 @@
               ],
               "attrs": {}
             }
+          ],
+          "values": [
+            "das"
           ]
         },
         {
           "key": "Kuh",
-          "values": ["die"],
           "item": [],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "die"
+          ]
         },
         {
           "key": "Löwe",
-          "values": ["die"],
           "item": [],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "die"
+          ]
         },
         {
           "key": "Schmetterling",
-          "values": ["der"],
           "item": [],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "der"
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "heading": {},
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.match-reverse]\n[@id:287869]\n[%][%match-reverse]\n[!Wie heißen die passenden Nomen?]\n===\nTier\n==\ndas[@example]\n===\nKuh\n==\ndie\n===\nLöwe\n==\ndie\n===\nSchmetterling\n==\nder\n==="
   }

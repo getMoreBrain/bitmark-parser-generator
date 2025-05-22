@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "lang-audio-script",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "92375"
@@ -16,16 +16,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.lang-audio-script]\n[@id:92375]"
   },
   {
     "bit": {
       "type": "lang-audio-script",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "title": [
         {
@@ -59,16 +59,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.lang-audio-script]\n[#Summary of this Book]\nThis is the lang-audio-script of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link."
   },
   {
     "bit": {
       "type": "lang-audio-script",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "title": [
         {
@@ -102,16 +102,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.lang-audio-script]\n[#Summary of Chapter One]\nThis is a lang-audio-script of chapter 1."
   },
   {
     "bit": {
       "type": "lang-audio-script",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -122,9 +122,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.lang-audio-script]"
   }

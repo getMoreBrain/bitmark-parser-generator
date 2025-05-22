@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "recipe",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "technicalTerm": {
         "technicalTerm": "Consommé Murillo",
@@ -111,9 +111,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.recipe]\n[%][%ZUTATEN]\n\n[!Kraftbrühe Murillo]\n[@technicalTerm: Consommé Murillo ][@lang:fr]\n[@servings:4.5][@unit:Litre][@unitAbbr:l][?hint]\n\n====\n[#Title for the ingredient]\n[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe\n====\n[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...\n====\n[!5][@unitAbbr:Stk][@unit:Stück] Erbsen ...\n====\n[#Another title for an ingredient]\n[!1][@unit:Prise] Salz\n====\n[!2.5][@unit:kg] Mehl\n====\n[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time\n====\n[+]\n[!20]\n[@unit:minutes]\n[@unitAbbr:min]\n[@disableCalculation]\nCooking time\n===="
   }

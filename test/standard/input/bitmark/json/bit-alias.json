@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "bit-alias",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "reference": "com.firstpub.09823409h44",
       "item": [],
@@ -14,16 +14,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bit-alias][►com.firstpub.09823409h44]"
   },
   {
     "bit": {
       "type": "bit-alias",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "anchor": "b1_c03",
       "reference": "com.firstpub.09823409h50",
@@ -36,16 +36,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bit-alias][►com.firstpub.09823409h50][▼b1_c03]"
   },
   {
     "bit": {
       "type": "bit-alias",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "reference": "com.firstpub.09823409h54",
       "item": [],
@@ -57,16 +57,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bit-alias][►com.firstpub.09823409h54]"
   },
   {
     "bit": {
       "type": "bit-alias",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "reference": "com.firstpub.09823409h56",
       "item": [],
@@ -78,16 +78,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bit-alias][►com.firstpub.09823409h56]"
   },
   {
     "bit": {
       "type": "bit-alias",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "reference": "com.firstpub.09823409h42",
       "item": [],
@@ -99,16 +99,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bit-alias][►com.firstpub.09823409h42]"
   },
   {
     "bit": {
       "type": "bit-alias",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "reference": "com.firstpub.09823409h43",
       "item": [],
@@ -120,16 +120,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bit-alias][►com.firstpub.09823409h43]"
   },
   {
     "bit": {
       "type": "bit-alias",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "reference": "com.firstpub.09823409h44",
       "item": [],
@@ -141,16 +141,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bit-alias][►com.firstpub.09823409h44]"
   },
   {
     "bit": {
       "type": "bit-alias",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "reference": "com.firstpub.09823409h45",
       "item": [],
@@ -162,16 +162,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bit-alias][►com.firstpub.09823409h45]"
   },
   {
     "bit": {
       "type": "bit-alias",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "reference": "com.firstpub.09823409h47",
       "item": [],
@@ -183,9 +183,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.bit-alias][►com.firstpub.09823409h47]"
   }

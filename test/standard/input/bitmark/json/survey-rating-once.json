@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "survey-rating-once",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "93061"
@@ -59,9 +59,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.survey-rating-once]\n[@id:93061]\n[%D2]\n[@ratingLevelStart:0][@label:NOT AT ALL LIKELY]\n[@ratingLevelEnd:10][@label:EXTREMLY LIKELY]\n[@ratingLevelSelected:3]\n[@buttonCaption: Save My Stress Level ]"
   }

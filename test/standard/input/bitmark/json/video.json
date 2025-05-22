@@ -2,16 +2,17 @@
   {
     "bit": {
       "type": "video",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["301454"],
+      "id": [
+        "301454"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video",
         "video": {
@@ -20,6 +21,10 @@
           "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4",
           "width": null,
           "height": null,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
           "posterImage": {
             "format": "png",
             "provider": "docs.bitbook.education",
@@ -32,34 +37,32 @@
             "copyright": "",
             "showInIndex": false,
             "caption": []
-          },
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          }
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.video]\n[@id:301454]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
   },
   {
     "bit": {
       "type": "video",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["300497"],
+      "id": [
+        "300497"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video",
         "video": {
@@ -68,6 +71,10 @@
           "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0280.mp4",
           "width": null,
           "height": null,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
           "posterImage": {
             "format": "png",
             "provider": "docs.bitbook.education",
@@ -80,27 +87,26 @@
             "copyright": "",
             "showInIndex": false,
             "caption": []
-          },
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          }
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.video]\n[@id:300497]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0280.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_ruesten1.png]"
   },
   {
     "bit": {
       "type": "video",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["301460"],
+      "id": [
+        "301460"
+      ],
       "search": "Errungenschaftsbeteiligung, Scheidung, Güterrechtliche Auseinandersetzung, Vorschlag",
       "item": [],
       "lead": [],
@@ -108,7 +114,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video",
         "video": {
@@ -117,6 +122,10 @@
           "src": "https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4",
           "width": null,
           "height": null,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
           "posterImage": {
             "format": "png",
             "provider": "docs.bitbook.education",
@@ -129,25 +138,22 @@
             "copyright": "",
             "showInIndex": false,
             "caption": []
-          },
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          }
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.video]\n[@id:301460]\n[&video:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0295.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]\n[@search:Errungenschaftsbeteiligung, Scheidung, Güterrechtliche Auseinandersetzung, Vorschlag]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -163,6 +169,10 @@
           "width": "300",
           "height": "1024",
           "duration": "20.3",
+          "license": "testthign",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
           "posterImage": {
             "provider": "poster.png",
             "src": "https://poster.png",
@@ -174,20 +184,16 @@
             "copyright": "",
             "showInIndex": false,
             "caption": []
-          },
-          "license": "testthign",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
+          }
         }
       },
       "body": []
     },
     "parser": {
-      "version": "3.1.1",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.18.2"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.article&video]\n\n[&video:https://video.m4a][@width:300][@height:1024][@duration:20.3][@license:testthign][@posterImage:https://poster.png][@width:200][@height:512][@license:test]"
+    "bitmark": "[.article&video]\n[&video:https://video.m4a][@width:300][@height:1024][@duration:20.3][@license:testthign][@posterImage:https://poster.png][@width:200][@height:512][@license:test]"
   }
 ]

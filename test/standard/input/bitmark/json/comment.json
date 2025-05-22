@@ -4,7 +4,9 @@
       "type": "_comment",
       "originalType": "table",
       "bitLevel": 1,
-      "id": ["12353456"],
+      "id": [
+        "12353456"
+      ],
       "tableSearch": false,
       "tableSort": false,
       "caption": [
@@ -140,9 +142,9 @@
       }
     },
     "parser": {
-      "version": "2.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.|table]\n[@id:12353456]\n[@tableSearch:false]\n[@tableSort:false]\n[@caption:This is the table caption]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   }

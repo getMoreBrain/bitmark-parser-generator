@@ -52,6 +52,7 @@
     "test-text-tag-unbreakscape": "jest --config=jest.config.js --testMatch=\\<rootDir\\>/test/standard/text-tag-unbreakscape.test.ts --runInBand",
     "test-web-parser": "jest --config=jest.config.js --testMatch=\\<rootDir\\>/test/standard/web-parser.test.ts --runInBand",
     "test-web-generator": "jest --config=jest.config.js --testMatch=\\<rootDir\\>/test/standard/web-generator.test.ts --runInBand",
+    "regenerate-bitmark-test-json": "node --import tsx ./test/custom/dev/devRegenerateBitmarkTestJson.ts",
     "generate-build-info": "node ./scripts/generate-build-info.js",
     "publish": "yarn npm publish",
     "prepublish": "run clean && run build && run test",
