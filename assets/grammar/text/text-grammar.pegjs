@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.32.1"
+const VERSION = "8.32.2"
 
 //Parser peggy.js
 
@@ -158,36 +158,35 @@ function removeTempParsingParent(obj) {
 //   return node;
 // }
 
+/**
+ * RAS 2025-05-22
+ * Fixes / features
+ * - Handles arrays or objects as input (including root array) - main reason for change
+ * - Modifies in-place rather than copying array.
+ * - Removed some unnecessary checks - will work fine without them
+ */
 function cleanEmptyTextNodes(root) {
-  // return root;
-  const isEmptyTextNode = (n) =>
-    n &&
-    typeof n === "object" &&
-    n.type === "text" &&
-    (n.text === "" || n.text == null); // catches null & undefined
+  const isEmptyTextNode = (n) => n && n.type === "text" && !n.text;
 
-  /** Recursively walk only through `content` arrays */
+  // Recursively walk 'content' arrays
   function cleanContentArray(arr) {
     for (let i = arr.length - 1; i >= 0; i--) {
       const item = arr[i];
 
       if (isEmptyTextNode(item)) {
-        arr.splice(i, 1);                    // drop the empty text node
-      } else if (
-        item &&
-        typeof item === "object" &&
-        Array.isArray(item.content)
-      ) {
-        cleanContentArray(item.content);     // recurse into nested `content`
+        // drop the empty text node
+        arr.splice(i, 1);
+      } else if (item && Array.isArray(item.content)) {
+        // recurse into `content` array
+        cleanContentArray(item.content);
       }
       // Any other shape is ignored.
     }
   }
 
-  // Kick-off: root may itself be an array or an object with `content`
   if (Array.isArray(root)) {
     cleanContentArray(root);
-  } else if (root && typeof root === "object" && Array.isArray(root.content)) {
+  } else if (root && Array.isArray(root.content)) {
     cleanContentArray(root.content);
   }
 
@@ -590,6 +589,7 @@ bitmarkPlusString "StyledString"
   = InlineTags
 
 InlineTags
+  // RAS 2025-05-22 - for bitmarkPlus / bitmarkPlusString
   // = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
   = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { const cleaned_ = cleanEmptyTextNodes(first ? [first, ...more.flat()] : more.flat()); return cleaned_ }
 
@@ -735,6 +735,7 @@ bitmarkMinusMinus "MinimalStyledText"
   = bs: bitmarkMinusMinusString { return [ { type: 'paragraph', content: bs, attrs: { } } ] }
 
 bitmarkMinusMinusString "MinimalStyledString"
+  // RAS 2025-05-22 - for bitmarkMinusMinus / bitmarkMinusMinusString
   // = first: PlainText? more: (StyledText / PlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
   = first: PlainText? more: (StyledText / PlainText)*  { const cleaned_ = cleanEmptyTextNodes(first ? [first, ...more.flat()] : more.flat()); return cleaned_ }
 
