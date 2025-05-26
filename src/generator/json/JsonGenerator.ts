@@ -13,10 +13,11 @@ import { JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType, BodyBitTypeType } from '../../model/enum/BodyBitType';
+import { DeprecatedTextFormat } from '../../model/enum/DeprecatedTextFormat';
 import { ExampleType } from '../../model/enum/ExampleType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { TextLocation } from '../../model/enum/TextLocation';
+import { TextLocation, TextLocationType } from '../../model/enum/TextLocation';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
 import { BodyBitJson } from '../../model/json/BodyBitJson';
@@ -617,7 +618,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (!parent) return false;
 
     const textFormat = this.getTextFormat(route);
-    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+    const isBitmarkText = textFormat === TextFormat.bitmarkText;
 
     this.bodyJson = value.body as JsonText;
 
@@ -1162,11 +1163,15 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (__isDefaultExample) {
       exampleValue = isBoolean
         ? BooleanUtils.toBoolean(defaultExample)
-        : this.convertBreakscapedStringToJsonText(defaultExample as BreakscapedString, options.textFormat, true);
+        : this.convertBreakscapedStringToJsonText(
+            defaultExample as BreakscapedString,
+            options.textFormat,
+            TextLocation.tag,
+          );
     } else {
       exampleValue = isBoolean
         ? BooleanUtils.toBoolean(example)
-        : this.convertBreakscapedStringToJsonText(example as BreakscapedString, options.textFormat, true);
+        : this.convertBreakscapedStringToJsonText(example as BreakscapedString, options.textFormat, TextLocation.tag);
     }
 
     return {
@@ -1211,7 +1216,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
     }
 
-    return TextFormat.bitmarkMinusMinus;
+    return TextFormat.bitmarkText;
   }
 
   /**
@@ -1269,12 +1274,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
   protected convertBreakscapedStringToJsonText(
     text: BreakscapedString | undefined,
-    format: TextFormatType, // = TextFormat.bitmarkMinusMinus,
-    isProperty: boolean,
+    format: TextFormatType,
+    textLocation: TextLocationType,
   ): JsonText {
     if (!text) undefined;
 
-    const isBitmarkText = format === TextFormat.bitmarkMinusMinus || format === TextFormat.bitmarkPlusPlus;
+    const isBitmarkText = format === TextFormat.bitmarkText;
 
     if (!isBitmarkText) {
       // Not bitmark text, so plain text, so  unbreakscape only the start of bit tags
@@ -1289,7 +1294,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Use the text parser to parse the text
     const textAst = this.textParser.toAst(text, {
       textFormat: format,
-      isProperty,
+      textLocation,
     });
 
     return textAst;
@@ -1396,10 +1401,16 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * @returns
    */
   protected createBitJson(bit: Bit): Partial<BitJson> {
+    // TODO: don't convert bitmarkText to bitmark++ when it is clear that bitmarkText is supported by the clients.
+    let format: string = bit.textFormat as string;
+    if (bit.textFormat === TextFormat.bitmarkText) {
+      format = DeprecatedTextFormat.bitmarkPlusPlus as string;
+    }
+
     const bitJson: Partial<BitJson> = {
       type: bit.isCommented ? BitType._comment : bit.bitType,
       originalType: bit.isCommented ? bit.bitType : undefined,
-      format: bit.textFormat,
+      format,
       bitLevel: bit.bitLevel,
     };
 
@@ -1778,7 +1789,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     for (const key in obj) {
       const val = obj[key];
       if (this.isBitmarkText(val)) {
-        const s = this.textGenerator.generateSync(val as TextAst, TextFormat.bitmarkMinusMinus, TextLocation.tag, {
+        const s = this.textGenerator.generateSync(val as TextAst, TextFormat.bitmarkText, TextLocation.tag, {
           noBreakscaping: true,
         });
         obj[key] = (s ?? '').trim();

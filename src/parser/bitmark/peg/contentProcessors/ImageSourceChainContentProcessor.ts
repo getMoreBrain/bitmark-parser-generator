@@ -43,7 +43,7 @@ function imageSourceTagContentProcessor(
 
   // Extract the url from the content tag
   const url = Breakscape.unbreakscape(StringUtils.trimmedString(value) as BreakscapedString, {
-    textFormat: TextFormat.bitmarkMinusMinus,
+    textFormat: TextFormat.bitmarkText,
     textLocation: TextLocation.tag,
   });
 

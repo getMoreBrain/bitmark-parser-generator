@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.26.0
+Version: 3.27.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -51,8 +51,10 @@ book-coming-soon (since: 1.3.0)
 book-conclusion (since: 1.3.0)
 book-copyright (since: 1.3.0)
 book-copyright-permissions (since: 1.3.0)
+book-cover (since: 3.27.0)
 book-dedication (since: 1.3.0)
 book-diff (since: 3.10.0)
+book-end (since: 3.27.0)
 book-endnotes (since: 1.3.0)
 book-epigraph (since: 1.3.0)
 book-epilogue (since: 1.3.0)
@@ -166,6 +168,7 @@ conversation-right-1-thought (since: 1.3.0)
 cook-arrangement (since: 1.3.0)
 cook-ingredients (since: 1.5.16)
 cook-insert (since: 1.3.0)
+cook-note-on-quantity (since: 3.27.0)
 cook-personal-recommendation (since: 1.3.0)
 cook-plate (since: 1.3.0)
 cook-practice-advise (since: 1.3.0)

@@ -30,18 +30,18 @@ function defaultTagContentProcessor(
 
   switch (type) {
     case TypeKey.Instruction: {
-      target.instruction = textParser.toAst(trimmedStringValue, { textFormat, isProperty: true });
+      target.instruction = textParser.toAst(trimmedStringValue, { textFormat, textLocation: TextLocation.tag });
       target.__instructionString = Breakscape.unbreakscape(trimmedStringValue, {
-        textFormat: TextFormat.bitmarkMinusMinus,
+        textFormat: TextFormat.bitmarkText,
         textLocation: TextLocation.tag,
       });
       break;
     }
 
     case TypeKey.Hint: {
-      target.hint = textParser.toAst(trimmedStringValue, { textFormat, isProperty: true });
+      target.hint = textParser.toAst(trimmedStringValue, { textFormat, textLocation: TextLocation.tag });
       target.__hintString = Breakscape.unbreakscape(trimmedStringValue, {
-        textFormat: TextFormat.bitmarkMinusMinus,
+        textFormat: TextFormat.bitmarkText,
         textLocation: TextLocation.tag,
       });
       break;
@@ -49,7 +49,7 @@ function defaultTagContentProcessor(
 
     case TypeKey.Anchor: {
       target.anchor = Breakscape.unbreakscape(trimmedStringValue, {
-        textFormat: TextFormat.bitmarkMinusMinus,
+        textFormat: TextFormat.bitmarkText,
         textLocation: TextLocation.tag,
       });
       break;
@@ -57,7 +57,7 @@ function defaultTagContentProcessor(
 
     case TypeKey.Reference: {
       target.reference = Breakscape.unbreakscape(trimmedStringValue, {
-        textFormat: TextFormat.bitmarkMinusMinus,
+        textFormat: TextFormat.bitmarkText,
         textLocation: TextLocation.tag,
       });
       break;
@@ -66,10 +66,10 @@ function defaultTagContentProcessor(
     // 16.08.2023 Deprecated, but currently still supported
     case TypeKey.SampleSolution: {
       target.sampleSolution = Breakscape.unbreakscape(trimmedStringValue, {
-        textFormat: TextFormat.bitmarkMinusMinus,
+        textFormat: TextFormat.bitmarkText,
         textLocation: TextLocation.tag,
       });
-      target.__sampleSolutionAst = textParser.toAst(trimmedStringValue, { textFormat, isProperty: true });
+      target.__sampleSolutionAst = textParser.toAst(trimmedStringValue, { textFormat, textLocation: TextLocation.tag });
       context.addWarning('[$...] tag is deprecated, use [@sampleSolution:...] instead', content);
       break;
     }

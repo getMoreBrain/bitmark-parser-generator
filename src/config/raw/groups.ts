@@ -180,6 +180,11 @@ const GROUPS: _GroupsConfig = {
         configKey: PropertyConfigKey.layer,
         maxCount: Count.infinity,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.layerRole,
+        maxCount: Count.infinity,
+      },
     ],
   },
   [GroupConfigKey.group_standardItemLeadInstructionHint]: {

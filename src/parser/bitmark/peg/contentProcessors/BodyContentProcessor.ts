@@ -111,21 +111,21 @@ class BodyContentProcessor {
       }
 
       // Create the body text AST
-      const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+      const isBitmarkText = textFormat === TextFormat.bitmarkText;
 
       const parsedBodyText: JsonText = isBitmarkText
         ? textParser.toAst(bodyTextStr, {
             //
             textFormat,
-            isProperty: false,
+            textLocation: TextLocation.body,
           })
         : Breakscape.unbreakscape(bodyTextStr, {
-            textFormat: TextFormat.text,
+            textFormat: TextFormat.plainText,
             textLocation: TextLocation.body,
           });
 
       const parserPlainText: JsonText = Breakscape.unbreakscape(plainBodyTextStr, {
-        textFormat: TextFormat.text,
+        textFormat: TextFormat.plainText,
         textLocation: TextLocation.body,
       });
 

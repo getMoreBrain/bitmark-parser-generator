@@ -3,6 +3,7 @@ import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TextAst } from '../../../../model/ast/TextNodes';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitType, BitTypeType } from '../../../../model/enum/BitType';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 
@@ -40,7 +41,7 @@ function titleTagContentProcessor(
     //
     titleAst: textParser.toAst(titleText ?? '', {
       textFormat,
-      isProperty: true,
+      textLocation: TextLocation.tag,
     }),
     titleString: titleText ?? '',
   };

@@ -166,7 +166,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
   // State
   private generateOptions: GenerateOptions = {};
-  private textFormat: TextFormatType = TextFormat.bitmarkMinusMinus;
+  private textFormat: TextFormatType = TextFormat.bitmarkText;
   private textLocation: TextLocationType = TextLocation.body;
   private writerText = '';
   private nodeIndex = 0;
@@ -301,7 +301,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private resetState(textFormat: TextFormatType, textLocation: TextLocationType): void {
     this.printed = false;
 
-    this.textFormat = textFormat ?? TextFormat.bitmarkMinusMinus;
+    this.textFormat = textFormat ?? TextFormat.bitmarkText;
     this.textLocation = textLocation;
     this.writerText = '';
     this.nodeIndex = 0;
@@ -481,12 +481,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         break;
 
       case TextNodeType.paragraph:
-        if (this.textFormat !== TextFormat.bitmarkMinusMinus) {
-          // Paragraph Block type node, write 1x newline
-          // Except:
-          // - for bitmark-- where we don't write newlines for the single wrapping block
-          this.writeNL();
-        }
+        // if (this.textFormat !== TextFormat.bitmarkText) {
+        // Paragraph Block type node, write 1x newline
+        // Except:
+        // - for bitmark-- where we don't write newlines for the single wrapping block
+        this.writeNL();
+        // }
         this.inParagraph = false;
         break;
 
@@ -738,7 +738,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     if (this.havePreText && this.rootParagraphNodeContentIndex >= this.preTextIndex) {
       // Write the text as pre-text
       const s = this.breakscape(node.text, {
-        textFormat: TextFormat.text,
+        textFormat: TextFormat.plainText,
         textLocation: this.textLocation, // Must be body for pre-text
       });
       this.write(s);
@@ -812,7 +812,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    */
   protected getInterTextBreakscape(s: string): string {
     if (this.bitmarkVersion === BitmarkVersion.v2) return '';
-    if (this.textFormat === TextFormat.text) return '';
+    if (this.textFormat === TextFormat.plainText) return '';
 
     const lastChar = this.writerText.slice(-1);
     const firstChar = s.slice(0, 1);
@@ -868,7 +868,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   protected writeMarks(node: TextNode, stage: StageType): void {
     if (node.marks) {
       // If this is a mark within inline text, or a heading, only inline marks are allowed, so set the text format to bitmark--
-      const textFormat = this.inInline || this.inHeading ? TextFormat.bitmarkMinusMinus : this.textFormat;
+      const forceSingleMark = !!(this.inInline || this.inHeading);
 
       // If node has marks, it cannot be a pre-text node
       this.thisNodeIsPreText = false;
@@ -882,8 +882,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       }
 
       // Single marks are only valid if there is only one mark for this text
-      // If bitmark++, always write inline marks
-      const singleMark = node.marks.length === 1 && textFormat !== TextFormat.bitmarkPlusPlus;
+      // They are only used in inline / heading marks since bitmark-- was dropped.
+      const singleMark = node.marks.length === 1 && forceSingleMark;
 
       // Get the correct mark start / end
       const markStartEnd = node.marks.reduce(
@@ -985,7 +985,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
   protected writeParagraph(node: TextNode): void {
     // Write paragraph marker for bitmark++
-    if (this.textFormat === TextFormat.bitmarkPlusPlus) {
+    if (this.textFormat === TextFormat.bitmarkText) {
       // Do not write a paragraph marker when in a bullet list
       if (this.inBulletList) return;
 

@@ -93,6 +93,7 @@ const propertyConfigKeys = {
   lang: 'lang',
   language: 'language',
   layer: 'layer',
+  layerRole: 'layerRole',
   levelCEFRp: 'levelCEFRp',
   levelCEFR: 'levelCEFR',
   levelILR: 'levelILR',

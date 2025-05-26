@@ -69,6 +69,7 @@ import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Bit, BitmarkAst, BodyPart } from '../../../model/ast/Nodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType } from '../../../model/enum/BitType';
+import { DeprecatedTextFormat } from '../../../model/enum/DeprecatedTextFormat';
 import { ResourceTag } from '../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../model/enum/TextFormat';
 import { TextLocation } from '../../../model/enum/TextLocation';
@@ -152,7 +153,7 @@ class BitmarkPegParserProcessor {
     this.context = {
       bitConfig: Config.getBitConfig(BitType._error),
       bitType: BitType._error,
-      textFormat: TextFormat.bitmarkPlusPlus,
+      textFormat: TextFormat.bitmarkText,
 
       DEBUG_BIT_RAW,
       DEBUG_BIT_CONTENT_RAW,
@@ -342,7 +343,7 @@ class BitmarkPegParserProcessor {
   ): BitHeader {
     // Unbreakscape the bit type
     const bitType = Breakscape.unbreakscape(bitTypeBreakscaped, {
-      textFormat: TextFormat.bitmarkMinusMinus,
+      textFormat: TextFormat.plainText,
       textLocation: TextLocation.tag,
     });
 
@@ -367,16 +368,17 @@ class BitmarkPegParserProcessor {
 
     // Text format
     let textFormat = TextFormat.fromValue(textFormatAndResourceType.textFormat);
+    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(textFormatAndResourceType.textFormat);
     if (textFormatAndResourceType.textFormat && !textFormat) {
       this.addWarning(
         `Invalid text format '${textFormatAndResourceType.textFormat}', defaulting to '${bitConfig.textFormatDefault}'`,
       );
     }
 
-    // Deprecated warning for bitmark--
-    if (textFormat === TextFormat.bitmarkMinusMinus) {
-      textFormat = TextFormat.bitmarkPlusPlus;
-      this.addWarning(`bitmark-- text format is deprecated. Bit will be parsed as bitmark++`);
+    // Deprecated warning for bitmark--/++
+    if (deprecatedTextFormat) {
+      textFormat = TextFormat.bitmarkText;
+      this.addWarning(`${deprecatedTextFormat} text format is deprecated. Bit will be parsed as bitmarkText`);
     }
 
     textFormat = textFormat ?? bitConfig.textFormatDefault;
@@ -403,7 +405,7 @@ class BitmarkPegParserProcessor {
     const processValue = (value: TypeValue | undefined) => {
       if (value) {
         const val = Breakscape.unbreakscape(StringUtils.string(value.value) as BreakscapedString, {
-          textFormat: TextFormat.bitmarkMinusMinus,
+          textFormat: TextFormat.plainText,
           textLocation: TextLocation.tag,
         });
         if (value.type === TypeKey.TextFormat) {
@@ -442,7 +444,7 @@ class BitmarkPegParserProcessor {
 
     const { textFormat } = this.context;
 
-    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+    const isBitmarkText = textFormat === TextFormat.bitmarkText;
 
     // Format: text / latex
     // Body bits are only supported up to the first BodyText tag.

@@ -26,7 +26,7 @@ function trueFalseTagContentProcessor(
   if (!trueFalse) return;
 
   const trimmedStringValue = Breakscape.unbreakscape(StringUtils.trimmedString(value) as BreakscapedString, {
-    textFormat: TextFormat.bitmarkMinusMinus,
+    textFormat: TextFormat.bitmarkText,
     textLocation: TextLocation.tag,
   });
 
