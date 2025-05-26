@@ -453,6 +453,10 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.layer,
     format: PropertyFormat.plainText,
   },
+  [PropertyConfigKey.layerRole]: {
+    tag: PropertyTag.layerRole,
+    format: PropertyFormat.plainText,
+  },
   [PropertyConfigKey.textReference]: {
     tag: PropertyTag.textReference,
     single: true,

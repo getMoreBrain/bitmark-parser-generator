@@ -176,6 +176,7 @@ export interface Bit {
   referenceProperty?: Property;
   list?: Property;
   layer?: Property;
+  layerRole?: Property;
   textReference?: Property;
   isTracked?: Property;
   isInfoOnly?: Property;

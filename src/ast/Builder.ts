@@ -225,6 +225,7 @@ class Builder extends BaseBuilder {
     bot?: string | string[];
     list?: string | string[];
     layer?: string | string[];
+    layerRole?: string | string[];
     textReference?: string;
     isTracked?: boolean;
     isInfoOnly?: boolean;
@@ -486,6 +487,7 @@ class Builder extends BaseBuilder {
       search: this.toAstProperty(PropertyConfigKey.search, data.search),
       list: this.toAstProperty(PropertyConfigKey.list, data.list),
       layer: this.toAstProperty(PropertyConfigKey.layer, data.layer),
+      layerRole: this.toAstProperty(PropertyConfigKey.layerRole, data.layerRole),
       textReference: this.toAstProperty(PropertyConfigKey.textReference, data.textReference),
       isTracked: this.toAstProperty(PropertyConfigKey.isTracked, data.isTracked),
       isInfoOnly: this.toAstProperty(PropertyConfigKey.isInfoOnly, data.isInfoOnly),

@@ -26,6 +26,7 @@
 [@isTracked:true]
 [@isInfoOnly:false]
 [@layer:testingLayer]
+[@layerRole:testingLayerRole]
 [@textReference: foo
 bar
 baz]
@@ -37,7 +38,9 @@ baz]
 [@date:2022-10-01T08:00:00CET]
 [@duration:28800s]
 [@location:Zug]
+[@layerRole:testingLayerRole1]
 [@isTracked:trua]
 [@isInfoOnly:felse]
 [@layer:testingLayer1]
+[@layerRole:testingLayerRole2]
 [@layer:testingLayer2]
