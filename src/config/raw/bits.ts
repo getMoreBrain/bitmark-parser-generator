@@ -281,6 +281,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.bookEnd]: { since: '3.27.0', baseBitType: BitType.article },
   [BitType.bookAcknowledgements]: { since: '1.17.0', baseBitType: BitType.article },
   [BitType.bookAddendum]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookAfterword]: { since: '1.3.0', baseBitType: BitType.article },
@@ -317,6 +318,21 @@ const BITS: _BitsConfig = {
   [BitType.bookSummary]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookTeaser]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookTitle]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.bookCover]: {
+    since: '3.27.0',
+    baseBitType: BitType.image,
+    tags: [
+      {
+        type: BitTagType.tag,
+        configKey: TagConfigKey.title,
+        maxCount: 2, // title & subtitle
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.coverColor,
+      },
+    ],
+  },
   [BitType.bookAlias]: {
     since: '1.4.3',
     baseBitType: BitType.book,
