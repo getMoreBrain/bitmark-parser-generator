@@ -166,6 +166,7 @@ const BitType = superenum({
   cookArrangement: 'cook-arrangement',
   cookIngredients: 'cook-ingredients',
   cookInsert: 'cook-insert',
+  cookNoteOnQuantity: 'cook-note-on-quantity',
   cookPersonalRecommendation: 'cook-personal-recommendation',
   cookPlate: 'cook-plate',
   cookPracticeAdvise: 'cook-practice-advise',
