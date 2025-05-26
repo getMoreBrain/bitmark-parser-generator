@@ -25,49 +25,50 @@ import { StringUtils } from '../utils/StringUtils';
  *
  * The following breakscaping rules are applied when breakscaping text:
  *    <item>                                 <from>                   <to>                       <textFormat>
- *  - hat:                                   ^                  ==>   ^^                         [--/++/+]
- *  - hat:                                   ^^                 ==>   ^^^                        [--/++/+]
- *  - hat:                                   ^..N               ==>   ^..N+1                     [--/++/+]
- *  - inline:                                ==                 ==>   =^=                        [--/++/+]
- *  - bold:                                  **                 ==>   *^*                        [--/++/+]
- *  - light:                                 ``                 ==>   `^`                        [--/++/+]
- *  - italic:                                __                 ==>   _^_                        [--/++/+]
- *  - highlight:                             !!                 ==>   !^!                        [--/++/+]
- *  - title block:                   (SOL)[##]#(space)          ==>   (SOL)[##]#^(space)         [++] <== not in tag
- *  - new block:                     (SOL)|(WS EOL)             ==>   (SOL)|^(WS EOL)            [++] <== not in tag
- *  - code block:                    (SOL)|code(:type)          ==>   (SOL)|^code(:type)         [++] <== not in tag
- *  - image block:                   (SOL)|image:(url)          ==>   (SOL)|^image:(url)         [++] <== not in tag
- *  - bullet list:                   (SOL)•(space)              ==>   (SOL)•^(space)             [++] <== not in tag
- *  - simple list:                   (SOL)•_(space)             ==>   (SOL)•^_(space)            [++] <== not in tag
- *  - ordered list (numeric):        (SOL)•<numbers>(space)     ==>   (SOL)•^<numbers>(space)    [++] <== not in tag
- *  - ordered list: (roman,lower)    (SOL)•<numbers>i(space)    ==>   (SOL)•^<numbers>i(space)   [++] <== not in tag
- *  - ordered list: (roman,upper)    (SOL)•<numbers>I(space)    ==>   (SOL)•^<numbers>I(space)   [++] <== not in tag
- *  - ordered list:                  (SOL)•<letters>(space)     ==>   (SOL)•^<letters>(space)    [++] <== not in tag
- *  - tag list +:                    (SOL)•+(space)             ==>   (SOL)•^+(space)            [++] <== not in tag
- *  - tag list -:                    (SOL)•-(space)             ==>   (SOL)•^-(space)            [++] <== not in tag
+ *  - hat:                                   ^                  ==>   ^^                         [bodyBitmark, tagBitmark, tagPlain]
+ *  - hat:                                   ^^                 ==>   ^^^                        [bodyBitmark, tagBitmark, tagPlain]
+ *  - hat:                                   ^..N               ==>   ^..N+1                     [bodyBitmark, tagBitmark, tagPlain]
+ *  - inline:                                ==                 ==>   =^=                        [bodyBitmark, tagBitmark]
+ *  - bold:                                  **                 ==>   *^*                        [bodyBitmark, tagBitmark]
+ *  - light:                                 ``                 ==>   `^`                        [bodyBitmark, tagBitmark]
+ *  - italic:                                __                 ==>   _^_                        [bodyBitmark, tagBitmark]
+ *  - highlight:                             !!                 ==>   !^!                        [bodyBitmark, tagBitmark]
  *
- *  - start of bit:                          [.                 ==>   [^.                        [--/++ && body]
- *  - start of property:                     [@                 ==>   [^@                        [--/++ && body]
- *  - start of title:                        [#                 ==>   [^#                        [--/++ && body]
- *  - start of anchor:                       [▼                 ==>   [^▼                        [--/++ && body]
- *  - start of reference:                    [►                 ==>   [^►                        [--/++ && body]
- *  - start of item/lead:                    [%                 ==>   [^%                        [--/++ && body]
- *  - start of instruction:                  [!                 ==>   [^!                        [--/++ && body]
- *  - start of hint:                         [?                 ==>   [^?                        [--/++ && body]
- *  - start of true statement:               [+                 ==>   [^+                        [--/++ && body]
- *  - start of false statement:              [-                 ==>   [^-                        [--/++ && body]
- *  - start of sample solution:              [$                 ==>   [^$                        [--/++ && body]
- *  - start of gap:                          [_                 ==>   [^_                        [--/++ && body]
- *  - start of mark:                         [=                 ==>   [^=                        [--/++ && body]
- *  - start of resource:                     [&                 ==>   [^&                        [--/++ && body]
- *  - old plain text divider:                $$$$               ==>   $^$$$                      [--/++ && body]
- *  - old footer divider:                    ~~~~               ==>   ~^~~~                      [--/++ && body]
+ *  - title block:                   (SOL)[##]#(space)          ==>   (SOL)[##]#^(space)         [bodyBitmark]
+ *  - new block:                     (SOL)|(WS EOL)             ==>   (SOL)|^(WS EOL)            [bodyBitmark]
+ *  - code block:                    (SOL)|code(:type)          ==>   (SOL)|^code(:type)         [bodyBitmark]
+ *  - image block:                   (SOL)|image:(url)          ==>   (SOL)|^image:(url)         [bodyBitmark]
+ *  - bullet list:                   (SOL)•(space)              ==>   (SOL)•^(space)             [bodyBitmark]
+ *  - simple list:                   (SOL)•_(space)             ==>   (SOL)•^_(space)            [bodyBitmark]
+ *  - ordered list (numeric):        (SOL)•<numbers>(space)     ==>   (SOL)•^<numbers>(space)    [bodyBitmark]
+ *  - ordered list: (roman,lower)    (SOL)•<numbers>i(space)    ==>   (SOL)•^<numbers>i(space)   [bodyBitmark]
+ *  - ordered list: (roman,upper)    (SOL)•<numbers>I(space)    ==>   (SOL)•^<numbers>I(space)   [bodyBitmark]
+ *  - ordered list:                  (SOL)•<letters>(space)     ==>   (SOL)•^<letters>(space)    [bodyBitmark]
+ *  - tag list +:                    (SOL)•+(space)             ==>   (SOL)•^+(space)            [bodyBitmark]
+ *  - tag list -:                    (SOL)•-(space)             ==>   (SOL)•^-(space)            [bodyBitmark]
  *
- *  - start of bit:                  (SOL)[.                    ==>   (SOL)[^.                   [plain && body]
- *  - start of bit:                  (SOL)[^.                   ==>   (SOL)[^^.                  [plain && body]
- *  - start of bit:                  (SOL)[^..N.                ==>   (SOL)[^..N+1.              [plain && body]
+ *  - start of bit:                          [.                 ==>   [^.                        [bodyBitmark]
+ *  - start of property:                     [@                 ==>   [^@                        [bodyBitmark]
+ *  - start of title:                        [#                 ==>   [^#                        [bodyBitmark]
+ *  - start of anchor:                       [▼                 ==>   [^▼                        [bodyBitmark]
+ *  - start of reference:                    [►                 ==>   [^►                        [bodyBitmark]
+ *  - start of item/lead:                    [%                 ==>   [^%                        [bodyBitmark]
+ *  - start of instruction:                  [!                 ==>   [^!                        [bodyBitmark]
+ *  - start of hint:                         [?                 ==>   [^?                        [bodyBitmark]
+ *  - start of true statement:               [+                 ==>   [^+                        [bodyBitmark]
+ *  - start of false statement:              [-                 ==>   [^-                        [bodyBitmark]
+ *  - start of sample solution:              [$                 ==>   [^$                        [bodyBitmark]
+ *  - start of gap:                          [_                 ==>   [^_                        [bodyBitmark]
+ *  - start of mark:                         [=                 ==>   [^=                        [bodyBitmark]
+ *  - start of resource:                     [&                 ==>   [^&                        [bodyBitmark]
+ *  - old plain text divider:                $$$$               ==>   $^$$$                      [bodyBitmark]
+ *  - old footer divider:                    ~~~~               ==>   ~^~~~                      [bodyBitmark]
  *
- *  - end of tag:                            ]                  ==>   ^]                         [--/++/+/plain && tag]
+ *  - start of bit:                  (SOL)[.                    ==>   (SOL)[^.                   [bodyPlain]
+ *  - start of bit:                  (SOL)[^.                   ==>   (SOL)[^^.                  [bodyPlain]
+ *  - start of bit:                  (SOL)[^..N.                ==>   (SOL)[^..N+1.              [bodyPlain]
+ *
+ *  - end of tag:                            ]                  ==>   ^]                         [tagBitmark, tagPlain]
  *
  *
  * ==============
@@ -86,13 +87,13 @@ import { StringUtils } from '../utils/StringUtils';
  *
  * The following unbreakscaping rules apply when unbreakscaping text:
  *   <item>                                 <from>                         <to>                 <textFormat>
- * - hat:                                   ^                   ==>                             [--/++/+]
- * - hat:                                   ^^                  ==>        ^                    [--/++/+]
- * - hat:                                   ^..N                ==>        ^..N-1               [--/++/+]
+ * - hat:                                   ^                   ==>                             [bodyBitmark, tagBitmark, tagPlain]
+ * - hat:                                   ^^                  ==>        ^                    [bodyBitmark, tagBitmark, tagPlain]
+ * - hat:                                   ^..N                ==>        ^..N-1               [bodyBitmark, tagBitmark, tagPlain]
  *
- * - start of bit:                     (SOL)[^.                 ==>   (SOL)[.                   [plain && body]
- * - start of bit:                     (SOL)[^^.                ==>   (SOL)[^.                  [plain && body]
- * - start of bit:                     (SOL)[^..N.              ==>   (SOL)[^..N-1.             [plain && body]
+ * - start of bit:                     (SOL)[^.                 ==>   (SOL)[.                   [bodyPlain]
+ * - start of bit:                     (SOL)[^^.                ==>   (SOL)[^.                  [bodyPlain]
+ * - start of bit:                     (SOL)[^..N.              ==>   (SOL)[^..N-1.             [bodyPlain]
  *
  */
 
@@ -113,11 +114,10 @@ const REGEX_HATS = /(\^+)/; // BM_TAG: $3^  PLAIN_TAG: $2^  --BODY: ^$8  ++BODY:
 
 const BREAKSCAPE_BITMARK_TAG_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
 const BREAKSCAPE_PLAIN_TAG_REGEX_SOURCE = `${REGEX_END_OF_TAG.source}|${REGEX_HATS.source}`;
-const BREAKSCAPE_MINUSMINUS_BODY_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_FOOTER_DIVIDER.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_HATS.source}`;
-const BREAKSCAPE_PLUSPLUS_BODY_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_FOOTER_DIVIDER.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_HATS.source}`;
+const BREAKSCAPE_BITMARK_BODY_REGEX_SOURCE = `${REGEX_MARKS.source}|${REGEX_BLOCKS.source}|${REGEX_TITLE_BLOCKS.source}|${REGEX_LIST_BLOCKS.source}|${REGEX_START_OF_TAG.source}|${REGEX_FOOTER_DIVIDER.source}|${REGEX_PLAIN_TEXT_DIVIDER.source}|${REGEX_HATS.source}`;
 const BREAKSCAPE_PLAIN_BODY_REGEX_SOURCE = `${REGEX_BIT_START.source}`;
 
-// Breakscape regex for --/++/+ in tags
+// Breakscape regex for bitmarkText (bitmark+) in tags
 const BREAKSCAPE_BITMARK_TAG_REGEX = new RegExp(BREAKSCAPE_BITMARK_TAG_REGEX_SOURCE, 'gm');
 const BREAKSCAPE_BITMARK_TAG_REGEX_REPLACER = '$1$3^$2';
 
@@ -125,13 +125,9 @@ const BREAKSCAPE_BITMARK_TAG_REGEX_REPLACER = '$1$3^$2';
 const BREAKSCAPE_PLAIN_TAG_REGEX = new RegExp(BREAKSCAPE_PLAIN_TAG_REGEX_SOURCE, 'gm');
 const BREAKSCAPE_PLAIN_TAG_REGEX_REPLACER = '$2^$1';
 
-// Breakscape regex for --/+ in body
-const BREAKSCAPE_MINUSMINUS_BODY_REGEX = new RegExp(BREAKSCAPE_MINUSMINUS_BODY_REGEX_SOURCE, 'gm');
-const BREAKSCAPE_MINUSMINUS_BODY_REGEX_REPLACER = '$1$2$4$6^$3$5$7$8';
-
-// Breakscape regex for ++ in body
-const BREAKSCAPE_PLUSPLUS_BODY_REGEX = new RegExp(BREAKSCAPE_PLUSPLUS_BODY_REGEX_SOURCE, 'gm');
-const BREAKSCAPE_PLUSPLUS_BODY_REGEX_REPLACER = '$1$2$4$6$9$11$13$15^$3$5$7$8$10$12$14';
+// Breakscape regex for bitmarkText (bitmark++) in body
+const BREAKSCAPE_BITMARK_BODY_REGEX = new RegExp(BREAKSCAPE_BITMARK_BODY_REGEX_SOURCE, 'gm');
+const BREAKSCAPE_BITMARK_BODY_REGEX_REPLACER = '$1$2$4$6$9$11$13$15^$3$5$7$8$10$12$14';
 
 // Breakscape regex for plain text in body
 const BREAKSCAPE_PLAIN_BODY_REGEX = new RegExp(BREAKSCAPE_PLAIN_BODY_REGEX_SOURCE, 'gm');
@@ -163,12 +159,12 @@ const BREAKSCAPE_CODE_REGEX_REPLACER = '$1^';
 
 export interface BreakscapeOptions {
   /**
-   * The format of the text being breakscaped, defaults to TextFormat.bitmarkMinusMinus
+   * The format of the text being breakscaped, defaults to TextFormat.bitmarkText
    */
   textFormat: TextFormatType;
 
   /**
-   * The location of the text being breakscaped
+   * The location of the text being breakscaped, defaults to TextLocation.body
    */
   textLocation: TextLocationType;
 
@@ -184,7 +180,7 @@ export interface BreakscapeOptions {
 }
 
 const DEFAULT_BREAKSCAPE_OPTIONS: BreakscapeOptions = {
-  textFormat: TextFormat.bitmarkMinusMinus,
+  textFormat: TextFormat.bitmarkText,
   textLocation: TextLocation.body,
 };
 
@@ -342,7 +338,7 @@ class Breakscape {
     if (textLocation === TextLocation.tag) {
       regex = BREAKSCAPE_PLAIN_TAG_REGEX;
       replacer = BREAKSCAPE_PLAIN_TAG_REGEX_REPLACER;
-      if (!v2 && (textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus)) {
+      if (!v2 && textFormat === TextFormat.bitmarkText) {
         regex = BREAKSCAPE_BITMARK_TAG_REGEX;
         replacer = BREAKSCAPE_BITMARK_TAG_REGEX_REPLACER;
       }
@@ -350,23 +346,14 @@ class Breakscape {
       // if (textLocation === TextLocation.body) {
       regex = BREAKSCAPE_PLAIN_BODY_REGEX;
       replacer = BREAKSCAPE_PLAIN_BODY_REGEX_REPLACER;
-      if (textFormat === TextFormat.bitmarkMinusMinus) {
+      if (textFormat === TextFormat.bitmarkText) {
         if (v2) {
           // Hack for v2 breakscaping (still needed??)
           regex = BREAKSCAPE_V2_BODY_REGEX;
           replacer = BREAKSCAPE_V2_BODY_REGEX_REPLACER;
         } else {
-          regex = BREAKSCAPE_MINUSMINUS_BODY_REGEX;
-          replacer = BREAKSCAPE_MINUSMINUS_BODY_REGEX_REPLACER;
-        }
-      } else if (textFormat === TextFormat.bitmarkPlusPlus) {
-        if (v2) {
-          // Hack for v2 breakscaping (still needed??)
-          regex = BREAKSCAPE_V2_BODY_REGEX;
-          replacer = BREAKSCAPE_V2_BODY_REGEX_REPLACER;
-        } else {
-          regex = BREAKSCAPE_PLUSPLUS_BODY_REGEX;
-          replacer = BREAKSCAPE_PLUSPLUS_BODY_REGEX_REPLACER;
+          regex = BREAKSCAPE_BITMARK_BODY_REGEX;
+          replacer = BREAKSCAPE_BITMARK_BODY_REGEX_REPLACER;
         }
       }
     }
@@ -385,7 +372,8 @@ class Breakscape {
     textFormat: string,
     textLocation: string,
   ): { regex: RegExp; replacer: string } {
-    const isPlain = !(textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus);
+    const isBitmarkText = textFormat === TextFormat.bitmarkText;
+    const isPlain = !isBitmarkText;
 
     let regex: RegExp = UNBREAKSCAPE_REGEX;
     let replacer: string = UNBREAKSCAPE_REGEX_REPLACER;

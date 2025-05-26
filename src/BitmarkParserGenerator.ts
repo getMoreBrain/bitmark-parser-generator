@@ -847,7 +847,7 @@ class BitmarkParserGenerator {
     const opts: ConvertTextOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
-    const textFormat = opts.textFormat ?? TextFormat.bitmarkMinusMinus;
+    const textFormat = opts.textFormat ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
@@ -875,7 +875,7 @@ class BitmarkParserGenerator {
     if (!isAst) {
       preRes = this.textParser.toAst(inStr, {
         textFormat,
-        isProperty: false,
+        textLocation: TextLocation.body,
       });
     } else {
       preRes = await this.textGenerator.generate(ast, textFormat, textLocation);
@@ -906,13 +906,15 @@ class BitmarkParserGenerator {
   }
 
   /**
-   * Escape (breakscape) bitmark text.
+   * Breakscape bitmark text.
    *
    * Input type is detected automatically and may be:
    * - string: text
    * - file: path to a file containing text
    *
    * By default, the result is returned as a string.
+   * By default, the text is breakscaped as if it was bitmark text in the body.
+   * Use the options to change this behaviour.
    *
    * The options can be used to write the output to a file.
    *
@@ -926,7 +928,7 @@ class BitmarkParserGenerator {
 
     const opts: BreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
-    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
+    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkText;
     if (!opts.textLocation) opts.textLocation = TextLocation.body;
 
     let inStr: string = input as string;
@@ -975,6 +977,8 @@ class BitmarkParserGenerator {
    * - file: path to a file containing text
    *
    * By default, the result is returned as a string.
+   * By default, the text is unbreakscaped as if it was bitmark text in the body.
+   * Use the options to change this behaviour.
    *
    * The options can be used to write the output to a file.
    *
@@ -988,7 +992,7 @@ class BitmarkParserGenerator {
 
     const opts: UnbreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
-    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus; // Default to bitmark--
+    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkText; // Default to bitmark--
     if (!opts.textLocation) opts.textLocation = TextLocation.body;
 
     let inStr: BreakscapedString = input as BreakscapedString;

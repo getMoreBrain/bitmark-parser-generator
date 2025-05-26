@@ -25,7 +25,7 @@
       "definitions": [
         {
           "term": {
-            "text": "Term 1?\n•1 Ordered list item 1\nCard 1, **Side 1**",
+            "text": "Term 1?\n•1 Ordered list item 1\nCard 1, ==Side 1==|bold|",
             "icon": {
               "type": "image",
               "image": {

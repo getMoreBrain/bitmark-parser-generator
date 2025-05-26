@@ -95,7 +95,7 @@ function handleGapOrSelectOrTrueFalseExample(
       target.example = example
         ? textParser.toAst(example, {
             textFormat,
-            isProperty: true,
+            textLocation: TextLocation.tag,
           })
         : undefined;
     }
@@ -163,7 +163,7 @@ function handleStandardBooleanExample(
   } else {
     const exampleStr = example
       ? Breakscape.unbreakscape(example, {
-          textFormat: TextFormat.bitmarkMinusMinus,
+          textFormat: TextFormat.bitmarkText,
           textLocation: TextLocation.tag,
         })
       : undefined;
@@ -189,7 +189,7 @@ function handleStandardStringExample(
     target.__isDefaultExample = true;
     target.example = undefined;
   } else {
-    target.example = example ? textParser.toAst(example, { textFormat, isProperty: true }) : undefined;
+    target.example = example ? textParser.toAst(example, { textFormat, textLocation: TextLocation.tag }) : undefined;
   }
 }
 

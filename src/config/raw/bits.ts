@@ -164,7 +164,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.maxCreatedBits,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.appBitmarkFromEditor]: { since: '1.4.5', baseBitType: BitType.appBitmarkFromJavascript },
   [BitType.articleEmbed]: {
@@ -537,7 +537,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.codeMinimap,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.formula]: {
     since: '1.35.0',
@@ -971,7 +971,7 @@ const BITS: _BitsConfig = {
     since: '1.7.1',
     baseBitType: BitType._standard,
     tags: [],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.extractorInformation]: {
     since: '3.8.0',
@@ -2368,7 +2368,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.vendorDashboardId,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorFormbricksEmbed]: {
     since: '3.8.0',
@@ -2379,7 +2379,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.vendorSurveyId,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorFormbricksEmbedAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksEmbed },
   [BitType.vendorFormbricksLink]: {
@@ -2391,7 +2391,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.vendorSurveyId,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorFormbricksLinkAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksLink },
   [BitType.vendorHighchartsChart]: {
@@ -2415,7 +2415,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.vendorUrl,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorIframelyCard]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
   [BitType.vendorIframelyPreview]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
@@ -2433,7 +2433,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.jupyterExecutionCount,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorJupyterCellCode]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
   [BitType.vendorJupyterCellMarkdown]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
@@ -2448,7 +2448,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.padletId,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorStripePricingTable]: {
     since: '1.20.0',

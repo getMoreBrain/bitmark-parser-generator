@@ -8,7 +8,7 @@ import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { BitTypeType } from '../model/enum/BitType';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
 import { TextFormatType } from '../model/enum/TextFormat';
-import { TextLocation } from '../model/enum/TextLocation';
+import { TextLocation, TextLocationType } from '../model/enum/TextLocation';
 import { ExampleJson } from '../model/json/BitJson';
 import { TextParser } from '../parser/text/TextParser';
 import { ArrayUtils } from '../utils/ArrayUtils';
@@ -112,7 +112,7 @@ class BaseBuilder {
 
         //   return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
         // }
-        case PropertyFormat.trimmedString:
+        case PropertyFormat.plainText:
           // Convert number to string
           if (NumberUtils.asNumber(v) != null) v = `${v}`;
 
@@ -142,7 +142,7 @@ class BaseBuilder {
   }
 
   protected getEmptyTextAst(context: BuildContext): TextAst {
-    return this.handleJsonText(context, true, ' ');
+    return this.handleJsonText(context, TextLocation.tag, ' ');
   }
 
   /**
@@ -155,20 +155,20 @@ class BaseBuilder {
    *
    * In the case of Bitmark v2 type texts, there is nothing to do but cast the type.
    *
-   * @param breakscaped string or TextAst or breakscaped string[] or TextAst[]
+   * @param context BuildContext
    * @param textFormat format of TextAst
-   * @param inBody true if the text is in the body
+   * @param textLocation location of the text (body, tag, etc.)
+   * @param text JsonText or JsonText[] to convert
    * @returns Breakscaped string or breakscaped string[]
    */
   protected handleJsonText<T extends JsonText | JsonText[] | undefined, R = T extends JsonText[] ? TextAst[] : TextAst>(
     context: BuildContext,
-    isProperty: boolean,
+    textLocation: TextLocationType,
     text: T,
   ): R {
     let res: R;
 
     const { textFormat } = context;
-    const textLocation = isProperty ? TextLocation.tag : TextLocation.body;
 
     if (text == null) {
       res = [] as R;
@@ -195,7 +195,7 @@ class BaseBuilder {
               }),
               {
                 textFormat,
-                isProperty,
+                textLocation,
               },
             );
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -217,7 +217,7 @@ class BaseBuilder {
           }),
           {
             textFormat,
-            isProperty,
+            textLocation,
           },
         ) as R;
       } else {

@@ -149,7 +149,7 @@ class Config {
         since,
         bitType,
         inheritedBitTypes,
-        textFormatDefault: textFormatDefault ?? TextFormat.bitmarkPlusPlus,
+        textFormatDefault: textFormatDefault ?? TextFormat.bitmarkText,
         tags,
         cardSet,
         quizBit,

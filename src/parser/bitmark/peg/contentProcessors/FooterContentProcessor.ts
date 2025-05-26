@@ -47,7 +47,7 @@ class FooterContentProcessor {
     }
 
     if (footer || footerPlainText) {
-      const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+      const isBitmarkText = textFormat === TextFormat.bitmarkText;
 
       if (footer) {
         footer = BitmarkPegParserValidator.checkFooter(context, contentDepth, footer);
@@ -57,15 +57,15 @@ class FooterContentProcessor {
         ? textParser.toAst(footer, {
             //
             textFormat,
-            isProperty: false,
+            textLocation: TextLocation.body,
           })
         : Breakscape.unbreakscape(footer, {
-            textFormat: TextFormat.text,
+            textFormat: TextFormat.plainText,
             textLocation: TextLocation.body,
           });
 
       const parsedFooterPlainText = Breakscape.unbreakscape(footerPlainText, {
-        textFormat: TextFormat.text,
+        textFormat: TextFormat.plainText,
         textLocation: TextLocation.body,
       });
 

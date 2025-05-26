@@ -35,7 +35,7 @@ function personChainContentProcessor(
 
   // Extract the name from the content tag
   const name = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString, {
-    textFormat: TextFormat.bitmarkMinusMinus,
+    textFormat: TextFormat.bitmarkText,
     textLocation: TextLocation.tag,
   });
 

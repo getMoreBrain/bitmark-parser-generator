@@ -1,6 +1,7 @@
 import { WithExampleJson } from '../ast/BaseBuilder';
 import { TextAst } from '../model/ast/TextNodes';
 import { TextFormatType } from '../model/enum/TextFormat';
+import { TextLocation } from '../model/enum/TextLocation';
 import { ExampleJson } from '../model/json/BitJson';
 import { TextParser } from '../parser/text/TextParser';
 
@@ -37,7 +38,7 @@ class BitUtils {
         } else {
           // node.__isDefaultExample = false;
           node.example = (
-            example ? textParser.toAst(example as TextAst, { textFormat, isProperty: true }) : undefined
+            example ? textParser.toAst(example as TextAst, { textFormat, textLocation: TextLocation.tag }) : undefined
           ) as ExampleJson;
         }
         if (firstOnly) break;

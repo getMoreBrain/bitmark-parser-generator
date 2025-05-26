@@ -1,5 +1,6 @@
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 
@@ -27,7 +28,7 @@ function itemLeadTagContentProcessor(
   if (!target.itemLead) target.itemLead = [];
   const text = textParser.toAst(trimmedStringValue, {
     textFormat,
-    isProperty: true,
+    textLocation: TextLocation.tag,
   });
   target.itemLead.push(text);
 }

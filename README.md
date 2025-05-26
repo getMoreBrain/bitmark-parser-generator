@@ -120,7 +120,7 @@ const ast = builder.bitmark({
   bits: [
     builder.bit({
       bitType: BitType.article,
-      textFormat: TextFormat.bitmarkMinusMinus,
+      textFormat: TextFormat.bitmarkText,
       body: builder.body({
         bodyParts: [
           builder.bodyText({

@@ -60,8 +60,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (bitmark++) Parser",
-      "program": "${workspaceFolder}/test/custom/dev/devTextPlusPlusParser.ts",
+      "name": "Dev Text Parser (bitmark body)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkBodyParser.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -71,8 +71,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (bitmark++) Generator",
-      "program": "${workspaceFolder}/test/custom/dev/devTextPlusPlusGenerator.ts",
+      "name": "Dev Text Generator (bitmark body)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkBodyGenerator.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -82,8 +82,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (bitmark--) Parser",
-      "program": "${workspaceFolder}/test/custom/dev/devTextMinusMinusParser.ts",
+      "name": "Dev Text Parser (bitmark tag)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkTagParser.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -93,8 +93,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (bitmark--) Generator",
-      "program": "${workspaceFolder}/test/custom/dev/devTextMinusMinusGenerator.ts",
+      "name": "Dev Text Generator (bitmark tag)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkTagGenerator.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -104,8 +104,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (plusplus) Breakscape",
-      "program": "${workspaceFolder}/test/custom/dev/devTextPlusPlusBreakscape.ts",
+      "name": "Dev Text Breakscape (bitmark body)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkBodyBreakscape.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -115,8 +115,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (plusplus) Unbreakscape",
-      "program": "${workspaceFolder}/test/custom/dev/devTextPlusPlusUnbreakscape.ts",
+      "name": "Dev Text Unbreakscape (bitmark body)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkBodyUnbreakscape.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -126,8 +126,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (minusminus) Breakscape",
-      "program": "${workspaceFolder}/test/custom/dev/devTextMinusMinusBreakscape.ts",
+      "name": "Dev Text Breakscape (bitmark tag)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkTagBreakscape.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -137,8 +137,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (minusminus) Unbreakscape",
-      "program": "${workspaceFolder}/test/custom/dev/devTextMinusMinusUnbreakscape.ts",
+      "name": "Dev Text Unbreakscape (bitmark tag)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkTagUnbreakscape.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -148,8 +148,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (plain) Breakscape",
-      "program": "${workspaceFolder}/test/custom/dev/devTextPlainBreakscape.ts",
+      "name": "Dev Text Breakscape (plain body)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextPlainBodyBreakscape.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -159,8 +159,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (plain) Unbreakscape",
-      "program": "${workspaceFolder}/test/custom/dev/devTextPlainUnbreakscape.ts",
+      "name": "Dev Text Unbreakscape (plain body)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextPlainBodyUnbreakscape.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -170,8 +170,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (tag) Breakscape",
-      "program": "${workspaceFolder}/test/custom/dev/devTextTagBreakscape.ts",
+      "name": "Dev Text Breakscape (plain tag)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextPlainTagBreakscape.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -181,8 +181,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text (tag) Unbreakscape",
-      "program": "${workspaceFolder}/test/custom/dev/devTextTagUnbreakscape.ts",
+      "name": "Dev Text Unbreakscape (plain tag)",
+      "program": "${workspaceFolder}/test/custom/dev/devTextPlainTagUnbreakscape.ts",
       "runtimeArgs": ["--import", "tsx"],
       "console": "internalConsole",
       "outputCapture": "std",
@@ -269,20 +269,6 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Bitmark Parser - Book Tests",
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--config=./test/custom/parser/books/jest.parser.books.config.js", "-i"],
-      // "preLaunchTask": "build",
-      "console": "integratedTerminal"
-      // "disableOptimisticBPs": true,
-      // "internalConsoleOptions": "openOnSessionStart",
-      // "outFiles": ["${workspaceRoot}/dist/**/*"],
-      // "envFile": "${workspaceRoot}/.env",
-    },
-    {
-      "type": "node",
-      "request": "launch",
       "name": "Jest: Bitmark Generator - Standard Tests",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
@@ -297,41 +283,13 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Bitmark Generator - Book Tests",
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--config=./test/custom/generator/books/jest.generator.books.config.js", "-i"],
-      // "preLaunchTask": "build",
-      "console": "integratedTerminal"
-      // "disableOptimisticBPs": true,
-      // "internalConsoleOptions": "openOnSessionStart",
-      // "outFiles": ["${workspaceRoot}/dist/**/*"],
-      // "envFile": "${workspaceRoot}/.env",
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Jest: Text Parser (bitmark++)",
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--config=jest.config.js", "--testMatch", "<rootDir>/test/standard/text-plusplus-parser.test.ts", "-i"],
-      // "preLaunchTask": "build",
-      "console": "integratedTerminal"
-      // "disableOptimisticBPs": true,
-      // "internalConsoleOptions": "openOnSessionStart",
-      // "outFiles": ["${workspaceRoot}/dist/**/*"],
-      // "envFile": "${workspaceRoot}/.env",
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Jest: Text Generator (bitmark++)",
+      "name": "Jest: Text Parser (bitmark body)",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
-        "<rootDir>/test/standard/text-plusplus-generator.test.ts",
+        "<rootDir>/test/standard/text-bitmark-body-parser.test.ts",
         "-i"
       ],
       // "preLaunchTask": "build",
@@ -344,13 +302,13 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Parser (bitmark--)",
+      "name": "Jest: Text Generator (bitmark body)",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
-        "<rootDir>/test/standard/text-minusminus-parser.test.ts",
+        "<rootDir>/test/standard/text-bitmark-body-generator.test.ts",
         "-i"
       ],
       // "preLaunchTask": "build",
@@ -363,13 +321,13 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Generator (bitmark--)",
+      "name": "Jest: Text Parser (bitmark tag)",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
-        "<rootDir>/test/standard/text-minusminus-generator.test.ts",
+        "<rootDir>/test/standard/text-bitmark-tag-parser.test.ts",
         "-i"
       ],
       // "preLaunchTask": "build",
@@ -382,27 +340,13 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Breakscape (plain)",
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--config=jest.config.js", "--testMatch", "<rootDir>/test/standard/text-plain-breakscape.test.ts", "-i"],
-      // "preLaunchTask": "build",
-      "console": "integratedTerminal"
-      // "disableOptimisticBPs": true,
-      // "internalConsoleOptions": "openOnSessionStart",
-      // "outFiles": ["${workspaceRoot}/dist/**/*"],
-      // "envFile": "${workspaceRoot}/.env",
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Jest: Text Unbreakscape (plain)",
+      "name": "Jest: Text Generator (bitmark tag)",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
-        "<rootDir>/test/standard/text-plain-unbreakscape.test.ts",
+        "<rootDir>/test/standard/text-bitmark-tag-generator.test.ts",
         "-i"
       ],
       // "preLaunchTask": "build",
@@ -415,10 +359,15 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Breakscape (tag)",
+      "name": "Jest: Text Breakscape (bitmark body)",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--config=jest.config.js", "--testMatch", "<rootDir>/test/standard/text-tag-breakscape.test.ts", "-i"],
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-bitmark-body-breakscape.test.ts",
+        "-i"
+      ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
       // "disableOptimisticBPs": true,
@@ -429,10 +378,129 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Unbreakscape (tag)",
+      "name": "Jest: Text Unbreakscape (bitmark body)",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--config=jest.config.js", "--testMatch", "<rootDir>/test/standard/text-tag-unbreakscape.test.ts", "-i"],
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-bitmark-body-unbreakscape.test.ts",
+        "-i"
+      ],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Text Breakscape (bitmark tag)",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-bitmark-tag-breakscape.test.ts",
+        "-i"
+      ],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Text Unbreakscape (bitmark tag)",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-bitmark-tag-unbreakscape.test.ts",
+        "-i"
+      ],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Text Breakscape (plain body)",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-plain-body-breakscape.test.ts",
+        "-i"
+      ],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Text Unbreakscape (plain body)",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-plain-body-unbreakscape.test.ts",
+        "-i"
+      ],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Text Breakscape (plain tag)",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-plain-tag-breakscape.test.ts",
+        "-i"
+      ],
+      // "preLaunchTask": "build",
+      "console": "integratedTerminal"
+      // "disableOptimisticBPs": true,
+      // "internalConsoleOptions": "openOnSessionStart",
+      // "outFiles": ["${workspaceRoot}/dist/**/*"],
+      // "envFile": "${workspaceRoot}/.env",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest: Text Unbreakscape (plain tag)",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "args": [
+        "--config=jest.config.js",
+        "--testMatch",
+        "<rootDir>/test/standard/text-plain-tag-unbreakscape.test.ts",
+        "-i"
+      ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
       // "disableOptimisticBPs": true,
