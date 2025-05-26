@@ -48,7 +48,7 @@ function buildBook(
 
   // Extract the book from the content tag
   const book = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString, {
-    textFormat: TextFormat.bitmarkMinusMinus,
+    textFormat: TextFormat.bitmarkText,
     textLocation: TextLocation.tag,
   });
 

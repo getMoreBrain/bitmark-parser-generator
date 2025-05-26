@@ -27,12 +27,12 @@ function referenceTagContentProcessor(
 
   if (isReferenceEnd) {
     target.referenceEnd = Breakscape.unbreakscape(trimmedStringValue, {
-      textFormat: TextFormat.bitmarkMinusMinus,
+      textFormat: TextFormat.bitmarkText,
       textLocation: TextLocation.tag,
     });
   } else {
     target.reference = Breakscape.unbreakscape(trimmedStringValue, {
-      textFormat: TextFormat.bitmarkMinusMinus,
+      textFormat: TextFormat.bitmarkText,
       textLocation: TextLocation.tag,
     });
   }

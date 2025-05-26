@@ -109,11 +109,11 @@ function propertyContentProcessor(
           // case PropertyFormat.string:
           //   return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
 
-          case PropertyFormat.trimmedString:
+          case PropertyFormat.plainText:
             return Breakscape.unbreakscape(
               StringUtils.isString(v) ? (StringUtils.trimmedString(v) as BreakscapedString) : undefined,
               {
-                textFormat: TextFormat.bitmarkMinusMinus,
+                textFormat: TextFormat.plainText,
                 textLocation: TextLocation.tag,
               },
             );
@@ -121,7 +121,7 @@ function propertyContentProcessor(
           case PropertyFormat.number:
             return NumberUtils.asNumber(
               Breakscape.unbreakscape(v as BreakscapedString, {
-                textFormat: TextFormat.bitmarkMinusMinus,
+                textFormat: TextFormat.plainText,
                 textLocation: TextLocation.tag,
               }),
             );
@@ -129,7 +129,7 @@ function propertyContentProcessor(
           case PropertyFormat.boolean:
             return BooleanUtils.toBoolean(
               Breakscape.unbreakscape(v as BreakscapedString, {
-                textFormat: TextFormat.bitmarkMinusMinus,
+                textFormat: TextFormat.plainText,
                 textLocation: TextLocation.tag,
               }),
               true,
@@ -138,29 +138,22 @@ function propertyContentProcessor(
           case PropertyFormat.invertedBoolean:
             return !BooleanUtils.toBoolean(
               Breakscape.unbreakscape(v as BreakscapedString, {
-                textFormat: TextFormat.bitmarkMinusMinus,
+                textFormat: TextFormat.plainText,
                 textLocation: TextLocation.tag,
               }),
               true,
             );
 
-          case PropertyFormat.bitmarkMinusMinus:
+          case PropertyFormat.bitmarkText:
             v = StringUtils.isString(v) ? v : '';
             return textParser.toAst(v as BreakscapedString, {
-              textFormat: TextFormat.bitmarkMinusMinus,
-              isProperty: true,
-            });
-
-          case PropertyFormat.bitmarkPlusPlus:
-            v = StringUtils.isString(v) ? v : '';
-            return textParser.toAst(v as BreakscapedString, {
-              textFormat: TextFormat.bitmarkPlusPlus,
-              isProperty: true,
+              textFormat: TextFormat.bitmarkText,
+              textLocation: TextLocation.tag,
             });
         }
       }
       return Breakscape.unbreakscape(v as BreakscapedString, {
-        textFormat: TextFormat.bitmarkMinusMinus,
+        textFormat: TextFormat.plainText,
         textLocation: TextLocation.tag,
       });
     };
@@ -206,7 +199,7 @@ function propertyContentProcessor(
         undefined,
         undefined,
         true,
-        PropertyFormat.bitmarkMinusMinus,
+        PropertyFormat.bitmarkText,
         undefined,
         undefined,
       ),

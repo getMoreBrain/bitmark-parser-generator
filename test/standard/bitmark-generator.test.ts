@@ -41,7 +41,7 @@ function getTestFilenames(): string[] {
 }
 
 describe('bitmark-generator', () => {
-  describe('JSON => Markup => JSON: Tests', () => {
+  describe('JSON => Bitmark => JSON', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
 

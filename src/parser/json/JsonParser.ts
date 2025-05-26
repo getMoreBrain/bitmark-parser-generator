@@ -3,6 +3,7 @@ import { Config } from '../../config/Config';
 import { Bit, BitmarkAst, Body, CardBit, Footer } from '../../model/ast/Nodes';
 import { JsonText } from '../../model/ast/TextNodes';
 import { BitType, BitTypeType } from '../../model/enum/BitType';
+import { DeprecatedTextFormat } from '../../model/enum/DeprecatedTextFormat';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
 import { BitWrapperJson } from '../../model/json/BitWrapperJson';
@@ -159,11 +160,13 @@ class JsonParser {
     const bitConfig = Config.getBitConfig(bitType);
 
     // Text Format
+    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(bit.format);
     let textFormat = TextFormat.fromValue(bit.format) ?? bitConfig.textFormatDefault;
-
-    // bitmark-- deprecated
-    if (textFormat === TextFormat.bitmarkMinusMinus) {
-      textFormat = TextFormat.bitmarkPlusPlus;
+    if (
+      deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus ||
+      deprecatedTextFormat === DeprecatedTextFormat.bitmarkPlusPlus
+    ) {
+      textFormat = TextFormat.bitmarkText;
     }
 
     textFormat; // Unused

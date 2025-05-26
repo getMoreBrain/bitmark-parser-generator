@@ -8,6 +8,7 @@ import { JsonText, TextAst, TextNode } from '../model/ast/TextNodes';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
+import { DeprecatedTextFormat } from '../model/enum/DeprecatedTextFormat';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { TextLocation } from '../model/enum/TextLocation';
@@ -318,11 +319,15 @@ class Builder extends BaseBuilder {
   }): Bit | undefined {
     const bitConfig = Config.getBitConfig(data.bitType);
     const bitType = data.bitType;
-    let textFormat = TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
 
-    // bitmark-- deprecated
-    if (textFormat === TextFormat.bitmarkMinusMinus) {
-      textFormat = TextFormat.bitmarkPlusPlus;
+    // Text Format (accepts deprecated values, and converts them to the new format)
+    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(data.textFormat);
+    let textFormat = TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
+    if (
+      deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus ||
+      deprecatedTextFormat === DeprecatedTextFormat.bitmarkPlusPlus
+    ) {
+      textFormat = TextFormat.bitmarkText;
     }
 
     const context: BuildContext = {
@@ -492,7 +497,7 @@ class Builder extends BaseBuilder {
       mailingList: this.toAstProperty(PropertyConfigKey.mailingList, data.mailingList),
       buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, data.buttonCaption),
       callToActionUrl: this.toAstProperty(PropertyConfigKey.callToActionUrl, data.callToActionUrl),
-      caption: this.handleJsonText(context, true, data.caption),
+      caption: this.handleJsonText(context, TextLocation.tag, data.caption),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, data.quotedPerson),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
       resolved: this.toAstProperty(PropertyConfigKey.resolved, data.resolved),
@@ -523,8 +528,8 @@ class Builder extends BaseBuilder {
       referenceProperty: this.toAstProperty(PropertyConfigKey.property_reference, data.referenceProperty),
 
       // Book data
-      title: this.handleJsonText(context, true, data.title),
-      subtitle: this.handleJsonText(context, true, data.subtitle),
+      title: this.handleJsonText(context, TextLocation.tag, data.title),
+      subtitle: this.handleJsonText(context, TextLocation.tag, data.subtitle),
       level: NumberUtils.asNumber(data.level),
       toc: this.toAstProperty(PropertyConfigKey.toc, data.toc),
       progress: this.toAstProperty(PropertyConfigKey.progress, data.progress),
@@ -534,12 +539,12 @@ class Builder extends BaseBuilder {
       revealSolutions: this.toAstProperty(PropertyConfigKey.revealSolutions, data.revealSolutions),
 
       // Item, Lead, Hint, Instruction
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      pageNumber: this.handleJsonText(context, true, data.pageNumber),
-      marginNumber: this.handleJsonText(context, true, data.marginNumber),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      pageNumber: this.handleJsonText(context, TextLocation.tag, data.pageNumber),
+      marginNumber: this.handleJsonText(context, TextLocation.tag, data.marginNumber),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
 
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, data.partialAnswer),
       sampleSolution: this.toAstProperty(PropertyConfigKey.property_sampleSolution, data.sampleSolution),
@@ -721,10 +726,10 @@ class Builder extends BaseBuilder {
     const node: FeedbackChoiceJson = {
       choice: data.choice ?? '',
       requireReason: !!data.requireReason,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
     };
 
@@ -752,16 +757,16 @@ class Builder extends BaseBuilder {
 
     // Set default example
     // Not __testAst - there is no default example
-    const defaultExample = this.handleJsonText(context, true, 'true');
+    const defaultExample = this.handleJsonText(context, TextLocation.tag, 'true');
 
     // NOTE: Node order is important and is defined here
     const node: FeedbackReasonJson = {
       text: data.text ?? '',
       reasonableNumOfChars: (data.reasonableNumOfChars ?? undefined) as number,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __textAst: data.__textAst,
     };
@@ -801,10 +806,10 @@ class Builder extends BaseBuilder {
     const node: ChoiceJson = {
       choice: data.choice ?? '',
       isCorrect: !!data.isCorrect,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -846,10 +851,10 @@ class Builder extends BaseBuilder {
     const node: ResponseJson = {
       response: data.response ?? '',
       isCorrect: !!data.isCorrect,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -895,9 +900,9 @@ class Builder extends BaseBuilder {
       response: data.response ?? '',
       reaction: data.reaction ?? '',
       feedback: data.feedback ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
     };
 
     // Remove Unset Optionals
@@ -954,10 +959,10 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: FeedbackJson = {
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       // isExample: !!data.__defaultExample,
       choices: choices as FeedbackChoiceJson[],
       reason: reason as FeedbackReasonJson, // Might be undefined
@@ -1017,10 +1022,10 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: QuizJson = {
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isExample: !!data.__defaultExample,
       choices: choices as ChoiceJson[],
       responses: responses as ResponseJson[],
@@ -1094,10 +1099,10 @@ class Builder extends BaseBuilder {
       key: data.key ?? '',
       keyAudio,
       keyImage,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       values: data.values ?? [],
@@ -1169,10 +1174,10 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: MatrixJson = {
       key: data.key ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isExample,
       cells: (data.cells ?? []).map((c) => this.buildMatrixCell(context, c)).filter((c) => c != null),
     };
@@ -1205,10 +1210,10 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: MatrixCellJson = {
       values: data.values ?? [],
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __valuesAst: data.__valuesAst,
@@ -1244,8 +1249,8 @@ class Builder extends BaseBuilder {
           const audio = this.resourceBuilder.resourceFromResourceJson(context, cell.audio) as AudioResourceWrapperJson;
 
           return {
-            title: this.handleJsonText(context, true, cell.title),
-            body: this.handleJsonText(context, true, cell.body),
+            title: this.handleJsonText(context, TextLocation.tag, cell.title),
+            body: this.handleJsonText(context, TextLocation.tag, cell.body),
             audio,
           };
         }),
@@ -1271,8 +1276,10 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: TableJson = {
-      columns: (dataIn.columns ?? []).map((col) => this.handleJsonText(context, true, col)),
-      data: (dataIn.data ?? []).map((row) => (row ?? []).map((cell) => this.handleJsonText(context, true, cell))),
+      columns: (dataIn.columns ?? []).map((col) => this.handleJsonText(context, TextLocation.tag, col)),
+      data: (dataIn.data ?? []).map((row) =>
+        (row ?? []).map((cell) => this.handleJsonText(context, TextLocation.tag, cell)),
+      ),
     };
 
     // Remove Unset Optionals
@@ -1317,10 +1324,10 @@ class Builder extends BaseBuilder {
       sampleSolution: data.sampleSolution ?? '',
       additionalSolutions: (data.additionalSolutions ?? undefined) as string[],
       reasonableNumOfChars: (data.reasonableNumOfChars ?? undefined) as number,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __sampleSolutionAst: data.__sampleSolutionAst,
     };
@@ -1475,7 +1482,7 @@ class Builder extends BaseBuilder {
         // Convert the body string to AST
         rawBody = this.textParser.toAst(bodyStr, {
           textFormat,
-          isProperty: false,
+          textLocation: TextLocation.body,
         });
 
         const replaceBitsRecursive = (bodyText: TextAst) => {
@@ -1537,7 +1544,7 @@ class Builder extends BaseBuilder {
       body = data.body as string;
     };
 
-    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+    const isBitmarkText = textFormat === TextFormat.bitmarkText;
     if (textFormat === TextFormat.json) {
       // JSON
       handleJsonBody();
@@ -1568,7 +1575,7 @@ class Builder extends BaseBuilder {
   protected buildFooter(context: BuildContext, data: Partial<Footer> | undefined): Footer | undefined {
     if (!data) return undefined;
     const node: Footer = {
-      footer: this.handleJsonText(context, false, data.footer),
+      footer: this.handleJsonText(context, TextLocation.body, data.footer),
     };
 
     return node;
@@ -1594,10 +1601,10 @@ class Builder extends BaseBuilder {
     const node: GapJson = {
       type: BodyBitType.gap,
       solutions: data.solutions ?? [], // Must be before other properties except type
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __solutionsAst: data.__solutionsAst,
@@ -1674,10 +1681,10 @@ class Builder extends BaseBuilder {
       type: BodyBitType.mark,
       solution: data.solution ?? '', // Must be before other properties except type
       mark: data.mark ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
 
       attrs: {},
@@ -1712,10 +1719,10 @@ class Builder extends BaseBuilder {
       options: this.buildSelectOptions(context, data.options) ?? [], // Must be before other properties except type
       prefix: data.prefix ?? '',
       postfix: data.postfix ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
       __hintString: data.__hintString,
       __instructionString: data.__instructionString,
@@ -1764,10 +1771,10 @@ class Builder extends BaseBuilder {
     const node: SelectOptionJson = {
       text: data.text ?? '', // Must be before other properties except type
       isCorrect: !!data.isCorrect,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -1799,10 +1806,10 @@ class Builder extends BaseBuilder {
       texts: this.buildHighlightTexts(context, data.texts) ?? [], // Must be before other properties except type
       prefix: data.prefix ?? '',
       postfix: data.postfix ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
 
       attrs: {},
@@ -1850,10 +1857,10 @@ class Builder extends BaseBuilder {
       text: data.text ?? '', // Must be before other properties except type
       isCorrect: !!data.isCorrect,
       isHighlighted: !!data.isHighlighted,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -1898,10 +1905,10 @@ class Builder extends BaseBuilder {
       alternativeAnswers: (data.alternativeAnswers ?? [])
         .map((d) => this.buildTextAndIcon(context, d))
         .filter((d) => d != null),
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
     };
 
@@ -1953,10 +1960,10 @@ class Builder extends BaseBuilder {
       alternativeDefinitions: (data.alternativeDefinitions ?? [])
         .map((d) => this.buildTextAndIcon(context, d, textAsStrings))
         .filter((d) => d != null),
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
     };
 
@@ -1978,12 +1985,12 @@ class Builder extends BaseBuilder {
     const icon = this.resourceBuilder.resourceFromResourceJson(context, data?.icon) as ImageResourceWrapperJson;
 
     // Ensure text is bitmark text
-    let text: JsonText = this.handleJsonText(context, true, data?.text);
+    let text: JsonText = this.handleJsonText(context, TextLocation.tag, data?.text);
 
     if (textAsStrings) {
       // Convert the bitmark text to plain text (without breakscaping, as that will happen in the Bitmark Generator)
       text = this.textGenerator
-        .generateSync(text as TextAst, TextFormat.text, TextLocation.body, {
+        .generateSync(text as TextAst, TextFormat.plainText, TextLocation.body, {
           noBreakscaping: true,
         })
         .trim();
@@ -2032,10 +2039,10 @@ class Builder extends BaseBuilder {
     const node: StatementJson = {
       statement: data.statement ?? '',
       isCorrect: !!data.isCorrect,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -2181,7 +2188,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: RatingLevelStartEndJson = {
       level: level ?? 0,
-      label: this.handleJsonText(context, true, label),
+      label: this.handleJsonText(context, TextLocation.tag, label),
     };
 
     // Remove Unset Optionals

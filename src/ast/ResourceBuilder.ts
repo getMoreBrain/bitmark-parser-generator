@@ -3,6 +3,7 @@ import { Config } from '../config/Config';
 import { TextAst } from '../model/ast/TextNodes';
 import { BitType } from '../model/enum/BitType';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
+import { TextLocation } from '../model/enum/TextLocation';
 import { ObjectUtils } from '../utils/ObjectUtils';
 import { StringUtils } from '../utils/StringUtils';
 import { UrlUtils } from '../utils/UrlUtils';
@@ -156,7 +157,7 @@ class ResourceBuilder extends BaseBuilder {
       src2x: data.src2x,
       src3x: data.src3x,
       src4x: data.src4x,
-      caption: this.handleJsonText(context, true, data.caption),
+      caption: this.handleJsonText(context, TextLocation.tag, data.caption),
 
       // ImageLikeResource / VideoLikeResource
       width: data.width ?? undefined,
@@ -462,7 +463,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -542,7 +543,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -596,7 +597,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -649,7 +650,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -703,7 +704,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -784,7 +785,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
         // Have sub-chains so must be at end of chain
         posterImage: (posterImage ?? undefined) as ImageResourceJson,
@@ -873,7 +874,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -959,7 +960,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1069,7 +1070,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1155,7 +1156,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1203,7 +1204,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1249,7 +1250,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1296,7 +1297,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1343,7 +1344,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1390,7 +1391,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1437,7 +1438,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };
@@ -1485,7 +1486,7 @@ class ResourceBuilder extends BaseBuilder {
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
-        caption: this.handleJsonText(context, true, caption),
+        caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
       },
     };

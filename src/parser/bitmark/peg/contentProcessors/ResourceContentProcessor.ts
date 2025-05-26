@@ -172,7 +172,7 @@ function resourceContentProcessor(
     const resource = resourceBuilder.resource(context, {
       type,
       value: Breakscape.unbreakscape(value, {
-        textFormat: TextFormat.bitmarkMinusMinus,
+        textFormat: TextFormat.bitmarkText,
         textLocation: TextLocation.tag,
       }),
       posterImage: posterImageResource,
@@ -213,7 +213,7 @@ function propertyStyleResourceContentProcessor(
     const resource = resourceBuilder.resource(context, {
       type,
       value: Breakscape.unbreakscape(value, {
-        textFormat: TextFormat.bitmarkMinusMinus,
+        textFormat: TextFormat.bitmarkText,
         textLocation: TextLocation.tag,
       }),
       posterImage: posterImageResource,

@@ -1,5 +1,6 @@
 import { JsonText, TextAst } from '../../model/ast/TextNodes';
-import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { TextFormatType } from '../../model/enum/TextFormat';
+import { TextLocation, TextLocationType } from '../../model/enum/TextLocation';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson } from '../../model/json/BodyBitJson';
 import { StringUtils } from '../../utils/StringUtils';
@@ -8,7 +9,7 @@ import { parse as bitmarkTextParse } from './peg/TextPegParser';
 
 export interface BitmarkTextParserOptions {
   textFormat: TextFormatType;
-  isProperty: boolean;
+  textLocation: TextLocationType;
 }
 
 class TextParser {
@@ -84,10 +85,10 @@ class TextParser {
     const opts = Object.assign({}, options);
 
     // Set the start rule.
-    // If the bit text format is bitmark++, and the text is a property, the start rule is bitmarkPlus
+    // The start rule is bitmark++ for the body, and bitmark+ for the tags
     // Otherwise, the start rule is bitmarkMinusMinus
-    let startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
-    if (opts.isProperty && opts.textFormat === TextFormat.bitmarkPlusPlus) {
+    let startRule = 'bitmarkPlusPlus';
+    if (opts.textLocation === TextLocation.tag) {
       startRule = 'bitmarkPlus';
     }
 
