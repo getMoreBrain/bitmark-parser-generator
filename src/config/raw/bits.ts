@@ -637,6 +637,7 @@ const BITS: _BitsConfig = {
   [BitType.cookRemark]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookVariation]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookInsert]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.cookNoteOnQuantity]: { since: '3.27.0', baseBitType: BitType.article },
   [BitType.cookArrangement]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookPracticeAdvise]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookPlate]: { since: '1.3.0', baseBitType: BitType.article },
