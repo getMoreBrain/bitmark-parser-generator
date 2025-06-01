@@ -324,10 +324,7 @@ class Builder extends BaseBuilder {
     // Text Format (accepts deprecated values, and converts them to the new format)
     const deprecatedTextFormat = DeprecatedTextFormat.fromValue(data.textFormat);
     let textFormat = TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
-    if (
-      deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus ||
-      deprecatedTextFormat === DeprecatedTextFormat.bitmarkPlusPlus
-    ) {
+    if (deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus) {
       textFormat = TextFormat.bitmarkText;
     }
 
@@ -1439,7 +1436,7 @@ class Builder extends BaseBuilder {
       // TODO - process body bits through the correct builders.
 
       if (StringUtils.isString(data.body)) {
-        // Body is a string (legacy bitmark v2, or not bitmark--/++)
+        // Body is a string (legacy bitmark v2, or not bitmarkText)
         bodyStr = ((data.body as BreakscapedString) ?? '').trim() as BreakscapedString;
         rawBody = [];
       } else if (Array.isArray(data.body)) {
@@ -1459,7 +1456,7 @@ class Builder extends BaseBuilder {
       }
 
       if (bodyStr) {
-        // Bug #7141: Use textFormat for textParser, not always bitmark-- if it is a v2 string body
+        // Bug #7141: Use textFormat for textParser, not always bitmarkText if it is a v2 string body
         // However, only use plain text breakscaping the text from the v2 JSON body
 
         // Special v2 Breakscaping

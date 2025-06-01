@@ -71,7 +71,7 @@ const bpg = new BitmarkParserGenerator();
 const json = await bpg.convert("[.article] Hello World");
 
 // Convert bitmark JSON to bitmark markup
-const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "bitLevel": 1, "body": "Hello World" }}]');
+const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++", "bitLevel": 1, "body": "Hello World" }}]');
 
 // Convert bitmark markup file to bitmark JSON
 await bpg.convert("./input.bitmark", { output: "./output.json" });
@@ -99,7 +99,7 @@ await bpg.convert("./input.json", {
     debugGenerationInline: false,  // [development only] Include debugging tags in the generated output. Default: false
   },
   bitmarkOptions: {
-    explicitTextFormat: false,     // Include bitmark text format even when it is the default (bitmark--). Default: false
+    explicitTextFormat: false,     // Include bitmark text format even when it is the default (bitmark++). Default: false
     prettifyJson: 2,               // Prettify the body JSON output. Default: not prettified
     cardSetVersion: 1,             // Output markup using the specified cardSet format. Default: 1
     debugGenerationInline: false,  // [development only] Include debugging tags in the generated output. Default: false
@@ -157,7 +157,7 @@ const bpg = new BitmarkParserGenerator();
 const json = await bpg.convert("[.article] Hello World [$I will be removed as I am invalid]");
 
 // Upgrade bitmark JSON
-const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--",
+const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++",
 "bitLevel": 1, "body": "Hello World", unknownProperty: "Will be removed" }}]');
 
 // Upgrade bitmark markup file to another file

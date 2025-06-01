@@ -9,7 +9,7 @@ const TextFormat = superenum({
 
   // bitmarkText
   // bitmarkText in the body is bitmark++ and bitmarkText in a tag is bitmark+
-  bitmarkText: 'bitmarkText',
+  bitmarkText: 'bitmark++',
 });
 
 export type TextFormatType = EnumType<typeof TextFormat>;

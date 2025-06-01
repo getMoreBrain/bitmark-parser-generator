@@ -13,7 +13,6 @@ import { JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/
 import { BitType, BitTypeType } from '../../model/enum/BitType';
 import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
 import { BodyBitType, BodyBitTypeType } from '../../model/enum/BodyBitType';
-import { DeprecatedTextFormat } from '../../model/enum/DeprecatedTextFormat';
 import { ExampleType } from '../../model/enum/ExampleType';
 import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
@@ -1401,11 +1400,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * @returns
    */
   protected createBitJson(bit: Bit): Partial<BitJson> {
-    // TODO: don't convert bitmarkText to bitmark++ when it is clear that bitmarkText is supported by the clients.
-    let format: string = bit.textFormat as string;
-    if (bit.textFormat === TextFormat.bitmarkText) {
-      format = DeprecatedTextFormat.bitmarkPlusPlus as string;
-    }
+    const format: string = bit.textFormat as string;
 
     const bitJson: Partial<BitJson> = {
       type: bit.isCommented ? BitType._comment : bit.bitType,

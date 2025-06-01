@@ -162,10 +162,7 @@ class JsonParser {
     // Text Format
     const deprecatedTextFormat = DeprecatedTextFormat.fromValue(bit.format);
     let textFormat = TextFormat.fromValue(bit.format) ?? bitConfig.textFormatDefault;
-    if (
-      deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus ||
-      deprecatedTextFormat === DeprecatedTextFormat.bitmarkPlusPlus
-    ) {
+    if (deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus) {
       textFormat = TextFormat.bitmarkText;
     }
 

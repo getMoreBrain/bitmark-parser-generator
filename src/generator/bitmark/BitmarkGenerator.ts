@@ -723,7 +723,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     });
     if (label) {
       this.writeProperty('label', label, {
-        format: TextFormat.bitmarkText,
+        format: PropertyFormat.bitmarkText,
         single: true,
         ignoreEmpty: true,
       });
