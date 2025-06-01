@@ -13,7 +13,7 @@
  *    - The default output format is JSON.
  *    - The output could also be bitmark, therefore providing a way to prettify / standardise bitmark markup.
  * 3. The parser should not generate a fatal error under any circumstances, because all text is valid bitmark markup.
- *    - The only fatal error for a bit is if the bit header tag (e.g. [.cloze:bitmark--]) cannot be parsed. In this
+ *    - The only fatal error for a bit is if the bit header tag (e.g. [.cloze:bitmark++]) cannot be parsed. In this
  *      case the bit will be ignored and an error will be added at the AST top level. Parsing will continue.
  *    - If the parser encounters suspect bitmark it will generate 'warnings' which it will attach to the AST bit level
  * 4. The parser should be as fast as possible, without being overly complicated.
@@ -69,6 +69,7 @@ import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Bit, BitmarkAst, BodyPart } from '../../../model/ast/Nodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType } from '../../../model/enum/BitType';
+import { BodyTextFormat } from '../../../model/enum/BodyTextFormat';
 import { DeprecatedTextFormat } from '../../../model/enum/DeprecatedTextFormat';
 import { ResourceTag } from '../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../model/enum/TextFormat';
@@ -368,17 +369,20 @@ class BitmarkPegParserProcessor {
 
     // Text format
     let textFormat = TextFormat.fromValue(textFormatAndResourceType.textFormat);
-    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(textFormatAndResourceType.textFormat);
-    if (textFormatAndResourceType.textFormat && !textFormat) {
+    const isInvalidTextFormat = textFormatAndResourceType.textFormat && !textFormat;
+    if (isInvalidTextFormat) {
       this.addWarning(
-        `Invalid text format '${textFormatAndResourceType.textFormat}', defaulting to '${bitConfig.textFormatDefault}'`,
+        `Invalid text format '${textFormatAndResourceType.textFormat}', defaulting to '${BodyTextFormat.bitmarkPlusPlus}'`,
       );
     }
 
-    // Deprecated warning for bitmark--/++
+    // Deprecated warning for bitmark--
+    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(textFormatAndResourceType.textFormat);
     if (deprecatedTextFormat) {
       textFormat = TextFormat.bitmarkText;
-      this.addWarning(`${deprecatedTextFormat} text format is deprecated. Bit will be parsed as bitmarkText`);
+      this.addWarning(
+        `${deprecatedTextFormat} text format is deprecated. Bit will be parsed as '${BodyTextFormat.bitmarkPlusPlus}'`,
+      );
     }
 
     textFormat = textFormat ?? bitConfig.textFormatDefault;

@@ -867,7 +867,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    */
   protected writeMarks(node: TextNode, stage: StageType): void {
     if (node.marks) {
-      // If this is a mark within inline text, or a heading, only inline marks are allowed, so set the text format to bitmark--
+      // If this is a mark within inline text, or a heading, only inline marks are allowed
       const forceSingleMark = !!(this.inInline || this.inHeading);
 
       // If node has marks, it cannot be a pre-text node
