@@ -16,7 +16,7 @@ import { InfoBuilder, SupportedBit } from './info/InfoBuilder';
 import { InfoType, InfoTypeType } from './model/info/enum/InfoType';
 import { InfoFormat, InfoFormatType } from './model/info/enum/InfoFormat';
 import { Config } from './config/Config';
-import { TextFormat, TextFormatType } from './model/enum/TextFormat';
+// import { TextFormat, TextFormatType } from './model/enum/TextFormat';
 import { TextGenerator } from './generator/text/TextGenerator';
 import { TextParser } from './parser/text/TextParser';
 
@@ -44,6 +44,8 @@ import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { Breakscape } from './breakscaping/Breakscape';
 import { BreakscapedString } from './model/ast/BreakscapedString';
 import { TextLocation, TextLocationType } from './model/enum/TextLocation';
+import { BodyTextFormatType } from './model/enum/BodyTextFormat';
+import { TextFormat, TextFormatType } from './model/enum/TextFormat';
 
 /* STRIP:END */
 STRIP;
@@ -190,9 +192,9 @@ export interface UpgradeOptions {
  */
 export interface ConvertTextOptions {
   /**
-   * Specify the text format (default: bitmark--)
+   * Specify the text format (default: bitmark++)
    */
-  textFormat?: TextFormatType;
+  textFormat?: BodyTextFormatType;
 
   /**
    * Specify the text location (default: body)
@@ -253,9 +255,9 @@ export interface BreakscapeOptions {
   fileOptions?: FileOptions;
 
   /**
-   * Specify the text format (default:  bitmark--)
+   * Specify the text format (default:  bitmark++)
    */
-  textFormat?: TextFormatType;
+  textFormat?: BodyTextFormatType;
 
   /**
    * Specify the text location (default: body)
@@ -284,9 +286,9 @@ export interface UnbreakscapeOptions {
   fileOptions?: FileOptions;
 
   /**
-   * Specify the text format (default: bitmark--)
+   * Specify the text format (default: bitmark++)
    */
-  textFormat?: TextFormatType;
+  textFormat?: BodyTextFormatType;
 
   /**
    * Specify the text location (default: body)
@@ -847,7 +849,7 @@ class BitmarkParserGenerator {
     const opts: ConvertTextOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
-    const textFormat = opts.textFormat ?? TextFormat.bitmarkText;
+    const textFormat: TextFormatType = TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
@@ -928,8 +930,8 @@ class BitmarkParserGenerator {
 
     const opts: BreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
-    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkText;
-    if (!opts.textLocation) opts.textLocation = TextLocation.body;
+    const textFormat: TextFormatType = TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+    const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
 
@@ -951,8 +953,8 @@ class BitmarkParserGenerator {
 
     // Do the breakscape
     const res = Breakscape.breakscape(inStr, {
-      textFormat: opts.textFormat,
-      textLocation: opts.textLocation,
+      textFormat,
+      textLocation,
     });
 
     if (opts.outputFile) {
@@ -992,8 +994,8 @@ class BitmarkParserGenerator {
 
     const opts: UnbreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
-    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkText; // Default to bitmark--
-    if (!opts.textLocation) opts.textLocation = TextLocation.body;
+    const textFormat: TextFormatType = TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+    const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: BreakscapedString = input as BreakscapedString;
 
@@ -1015,8 +1017,8 @@ class BitmarkParserGenerator {
 
     // Do the unbreakscape
     const res = Breakscape.unbreakscape(inStr, {
-      textFormat: opts.textFormat,
-      textLocation: opts.textLocation,
+      textFormat,
+      textLocation,
     });
 
     if (opts.outputFile) {
