@@ -809,11 +809,6 @@ const PROPERTIES: _PropertiesConfig = {
     defaultValue: '0',
     format: PropertyFormat.number,
   },
-  [PropertyConfigKey.backgroundWallpaper]: {
-    tag: PropertyTag.backgroundWallpaper,
-    single: true,
-    format: PropertyFormat.plainText,
-  },
   [PropertyConfigKey.hasBookNavigation]: {
     tag: PropertyTag.hasBookNavigation,
     single: true,

@@ -5,6 +5,8 @@ import { EnumType, superenum } from '@ncoderz/superenum';
  */
 const resourceConfigKeys = {
   icon: 'icon',
+  backgroundWallpaper: 'backgroundWallpaper',
+
   image: 'image',
   // imageResponsive: 'imageResponsive',
   imagePortrait: 'imagePortrait',

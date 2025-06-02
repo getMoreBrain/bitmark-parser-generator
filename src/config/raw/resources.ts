@@ -7,6 +7,9 @@ const RESOURCES: _ResourcesConfig = {
   [ResourceConfigKey.icon]: {
     tag: ResourceTag.icon,
   },
+  [ResourceConfigKey.backgroundWallpaper]: {
+    tag: ResourceTag.backgroundWallpaper,
+  },
   [ResourceConfigKey.image]: {
     tag: ResourceTag.image,
   },

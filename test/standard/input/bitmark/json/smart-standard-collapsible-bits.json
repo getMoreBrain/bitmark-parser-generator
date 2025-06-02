@@ -4,9 +4,7 @@
       "type": "smart-standard-article-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -67,9 +65,7 @@
       "type": "smart-standard-article-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -130,9 +126,7 @@
       "type": "smart-standard-example-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -195,9 +189,7 @@
       "type": "smart-standard-example-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -260,7 +252,22 @@
       "type": "smart-standard-image-figure-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "backgroundWallpaper": "https://miro.medium.com/background.png",
+      "backgroundWallpaper": {
+        "image": {
+          "alt": "",
+          "caption": [],
+          "copyright": "",
+          "format": "png",
+          "height": null,
+          "license": "",
+          "provider": "miro.medium.com",
+          "showInIndex": false,
+          "src": "https://miro.medium.com/background.png",
+          "width": null,
+          "zoomDisabled": false
+        },
+        "type": "image"
+      },
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -314,14 +321,29 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.smart-standard-image-figure-normative-collapsible]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
+    "bitmark": "[.smart-standard-image-figure-normative-collapsible]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
   {
     "bit": {
       "type": "smart-standard-image-figure-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "backgroundWallpaper": "https://miro.medium.com/background.png",
+      "backgroundWallpaper": {
+        "image": {
+          "alt": "",
+          "caption": [],
+          "copyright": "",
+          "format": "png",
+          "height": null,
+          "license": "",
+          "provider": "miro.medium.com",
+          "showInIndex": false,
+          "src": "https://miro.medium.com/background.png",
+          "width": null,
+          "zoomDisabled": false
+        },
+        "type": "image"
+      },
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -465,16 +487,14 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.smart-standard-image-figure-non-normative-collapsible]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n====\n[#Legende]\n--\n[#]\n====\nA\n--\nKörper\n====\nB\n--\nStromquelle\n====\n\n~~~~\nOptional Footer"
+    "bitmark": "[.smart-standard-image-figure-non-normative-collapsible]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n====\n[#Legende]\n--\n[#]\n====\nA\n--\nKörper\n====\nB\n--\nStromquelle\n====\n\n~~~~\nOptional Footer"
   },
   {
     "bit": {
       "type": "smart-standard-list-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -535,9 +555,7 @@
       "type": "smart-standard-list-item-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -620,9 +638,7 @@
       "type": "smart-standard-note-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -683,9 +699,7 @@
       "type": "smart-standard-note-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -746,9 +760,7 @@
       "type": "smart-standard-remark-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -809,9 +821,7 @@
       "type": "smart-standard-remark-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -872,9 +882,7 @@
       "type": "smart-standard-table-image-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -929,9 +937,7 @@
       "type": "smart-standard-table-image-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -986,9 +992,7 @@
       "type": "smart-standard-remark-table-image-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1043,9 +1047,7 @@
       "type": "smart-standard-remark-table-image-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [],

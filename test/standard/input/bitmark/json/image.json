@@ -4,10 +4,23 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
-      "backgroundWallpaper": "https://miro.medium.com/background.png",
+      "id": ["304379"],
+      "backgroundWallpaper": {
+        "image": {
+          "alt": "",
+          "caption": [],
+          "copyright": "",
+          "format": "png",
+          "height": null,
+          "license": "",
+          "provider": "miro.medium.com",
+          "showInIndex": false,
+          "src": "https://miro.medium.com/background.png",
+          "width": null,
+          "zoomDisabled": false
+        },
+        "type": "image"
+      },
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -38,16 +51,14 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.image]\n[@id:304379]\n[@backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@search:testing **123**]"
+    "bitmark": "[.image]\n[@id:304379]\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@search:testing **123**]"
   },
   {
     "bit": {
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "levelCEFRp": "levelCEFRp",
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
@@ -88,9 +99,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -127,9 +136,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -166,9 +173,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -205,15 +210,9 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
-      "publisher": [
-        "kpmg"
-      ],
-      "theme": [
-        "grundzuege"
-      ],
+      "id": ["304379"],
+      "publisher": ["kpmg"],
+      "theme": ["grundzuege"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -250,9 +249,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -289,9 +286,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -328,9 +323,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -383,9 +376,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -438,9 +429,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -487,9 +476,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],

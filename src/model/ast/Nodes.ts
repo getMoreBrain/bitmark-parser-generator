@@ -161,7 +161,7 @@ export interface Bit {
   pointerLeft?: Property;
   pointerTop?: Property;
   listItemIndent?: Property;
-  backgroundWallpaper?: Property;
+  backgroundWallpaper?: ImageResourceWrapperJson;
   hasBookNavigation?: Property;
   duration?: Property;
   deeplink?: Property;

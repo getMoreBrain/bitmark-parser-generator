@@ -178,7 +178,15 @@ function resourceContentProcessor(
       posterImage: posterImageResource,
       ...tags,
     });
-    if (resource) resources.push(resource);
+    if (resource) {
+      // Depending on the resource type, add it to the appropriate part of the target
+      if (type === ResourceTag.backgroundWallpaper) {
+        if (target.propertyStyleResources)
+          target.propertyStyleResources[ResourceTag.backgroundWallpaper] = resource as ImageResourceWrapperJson;
+      } else {
+        resources.push(resource);
+      }
+    }
   }
 }
 

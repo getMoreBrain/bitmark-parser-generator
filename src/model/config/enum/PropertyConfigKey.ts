@@ -17,7 +17,6 @@ const propertyConfigKeys = {
   author: 'author',
   autoplay: 'autoplay',
   availableClassifications: 'availableClassifications',
-  backgroundWallpaper: 'backgroundWallpaper',
   blockId: 'blockId',
   book: 'book',
   bookAlias: 'bookAlias',
