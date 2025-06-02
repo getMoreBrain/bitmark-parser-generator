@@ -2,6 +2,7 @@ import { _BitsConfig } from '../../model/config/_Config';
 import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey';
 import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
 import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
+import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey';
 import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
 import { BitType } from '../../model/enum/BitType';
@@ -1208,8 +1209,14 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.backgroundWallpaper,
+        type: BitTagType.resource,
+        configKey: ResourceConfigKey.backgroundWallpaper,
+        chain: [
+          {
+            type: BitTagType.group,
+            configKey: GroupConfigKey.group_resourceImageCommon,
+          },
+        ],
       },
       {
         type: BitTagType.group,

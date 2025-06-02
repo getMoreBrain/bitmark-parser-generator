@@ -3,7 +3,6 @@ import { EnumType, superenum } from '@ncoderz/superenum';
 const ResourceTag = superenum({
   unknown: 'unknown',
 
-  icon: 'icon', // Alias for image
   image: 'image',
   imageResponsive: 'image-responsive',
   imagePortrait: 'image-portrait',
@@ -28,6 +27,11 @@ const ResourceTag = superenum({
   documentDownload: 'document-download',
   appLink: 'app-link',
   websiteLink: 'website-link',
+
+  // Aliases for image
+  icon: 'icon',
+  backgroundWallpaper: 'backgroundWallpaper',
+  imagePlaceholder: 'imagePlaceholder',
 });
 
 export type ResourceTagType = EnumType<typeof ResourceTag>;

@@ -4,7 +4,7 @@ import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { Count } from '../../../../model/enum/Count';
-import { ResourceTag, ResourceTagType } from '../../../../model/enum/ResourceTag';
+import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../../model/enum/TextFormat';
 import { TextLocation } from '../../../../model/enum/TextLocation';
 import { ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
@@ -178,48 +178,14 @@ function resourceContentProcessor(
       posterImage: posterImageResource,
       ...tags,
     });
-    if (resource) resources.push(resource);
-  }
-}
-
-function propertyStyleResourceContentProcessor(
-  context: BitmarkPegParserContext,
-  _contentDepth: ContentDepthType,
-  tagsConfig: TagsConfig | undefined,
-  content: BitContent,
-  target: BitContentProcessorResult,
-  type: ResourceTagType,
-): void {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { type: _ignoreType, key, value, chain } = content as TypeKeyValue<BreakscapedString>;
-
-  target.propertyStyleResources = target.propertyStyleResources ?? {};
-
-  if (type) {
-    // Parse the resource chain
-    const resourceConfig = Config.getTagConfigForTag(tagsConfig, type);
-
-    const { posterImage, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, resourceConfig?.chain, chain);
-
-    const posterImageResource = posterImage
-      ? (
-          resourceBuilder.resource(context, {
-            type: ResourceTag.image,
-            value: posterImage,
-          }) as ImageResourceWrapperJson
-        ).image
-      : undefined;
-
-    const resource = resourceBuilder.resource(context, {
-      type,
-      value: Breakscape.unbreakscape(value, {
-        textFormat: TextFormat.bitmarkText,
-        textLocation: TextLocation.tag,
-      }),
-      posterImage: posterImageResource,
-      ...tags,
-    });
-    if (resource) target.propertyStyleResources[key] = resource;
+    if (resource) {
+      // Depending on the resource type, add it to the appropriate part of the target
+      if (type === ResourceTag.backgroundWallpaper || type === ResourceTag.imagePlaceholder) {
+        if (target.propertyStyleResources) target.propertyStyleResources[type] = resource;
+      } else {
+        resources.push(resource);
+      }
+    }
   }
 }
 
@@ -246,4 +212,4 @@ function extractSubChain(
   return { subConfig, subChain };
 }
 
-export { buildResources, resourceContentProcessor, propertyStyleResourceContentProcessor };
+export { buildResources, resourceContentProcessor };

@@ -115,7 +115,7 @@ export interface BitJson {
   pointerLeft: string;
   pointerTop: string;
   listItemIndent: number;
-  backgroundWallpaper: string;
+  backgroundWallpaper: ImageResourceWrapperJson;
   hasBookNavigation: boolean;
   duration: string;
   deeplink: string | string[];

@@ -600,8 +600,8 @@ const GROUPS: _GroupsConfig = {
     type: GroupConfigType.standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.imagePlaceholder,
+        type: BitTagType.resource,
+        configKey: ResourceConfigKey.imagePlaceholder,
         chain: [
           {
             type: BitTagType.group,

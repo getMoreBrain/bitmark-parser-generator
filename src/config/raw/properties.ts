@@ -283,11 +283,6 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.plainText,
   },
-  [PropertyConfigKey.imagePlaceholder]: {
-    tag: PropertyTag.imagePlaceholder,
-    single: true,
-    format: PropertyFormat.plainText,
-  },
   [PropertyConfigKey.publisher]: {
     tag: PropertyTag.publisher,
     format: PropertyFormat.plainText,
@@ -808,11 +803,6 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     defaultValue: '0',
     format: PropertyFormat.number,
-  },
-  [PropertyConfigKey.backgroundWallpaper]: {
-    tag: PropertyTag.backgroundWallpaper,
-    single: true,
-    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.hasBookNavigation]: {
     tag: PropertyTag.hasBookNavigation,

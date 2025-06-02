@@ -210,7 +210,7 @@ class Builder extends BaseBuilder {
     pointerLeft?: string;
     pointerTop?: string;
     listItemIndent?: number;
-    backgroundWallpaper?: string;
+    backgroundWallpaper?: Partial<ImageResourceWrapperJson>;
     hasBookNavigation?: boolean;
     duration?: string;
     referenceProperty?: string | string[];
@@ -471,7 +471,7 @@ class Builder extends BaseBuilder {
       pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, data.pointerLeft),
       pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, data.pointerTop),
       listItemIndent: this.toAstProperty(PropertyConfigKey.listItemIndent, data.listItemIndent),
-      backgroundWallpaper: this.toAstProperty(PropertyConfigKey.backgroundWallpaper, data.backgroundWallpaper),
+      backgroundWallpaper: this.toImageResource(context, data.backgroundWallpaper),
       hasBookNavigation: this.toAstProperty(PropertyConfigKey.hasBookNavigation, data.hasBookNavigation),
       duration: this.toAstProperty(PropertyConfigKey.duration, data.duration),
       deeplink: this.toAstProperty(PropertyConfigKey.deeplink, data.deeplink),
@@ -554,9 +554,7 @@ class Builder extends BaseBuilder {
 
       // Person
 
-      imagePlaceholder: ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data.imagePlaceholder?.image),
-      ) as ImageResourceWrapperJson,
+      imagePlaceholder: this.toImageResource(context, data.imagePlaceholder),
       resources: ArrayUtils.asArray(this.resourceBuilder.resourceFromResourceJson(context, data.resources)),
 
       // Body, Card, Footer, must be after all other properties except the extraProperties and markup / parser
@@ -2310,6 +2308,15 @@ class Builder extends BaseBuilder {
 
     // Validate and correct invalid bits as much as possible
     return NodeValidator.validateCardBit(node);
+  }
+
+  protected toImageResource(
+    context: BuildContext,
+    data: Partial<ImageResourceWrapperJson> | undefined,
+  ): ImageResourceWrapperJson {
+    return ArrayUtils.asSingle(
+      this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data?.image),
+    ) as ImageResourceWrapperJson;
   }
 
   //
