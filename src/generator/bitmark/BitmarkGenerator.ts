@@ -1788,7 +1788,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // This is a resource, so handle it with the common code
     this.writeNL();
-    this.writePropertyStyleResource(node.key, resource, true);
+    this.writePropertyStyleResource(node.key, resource);
 
     // Continue traversal
     return true;

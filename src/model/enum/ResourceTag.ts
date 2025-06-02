@@ -31,6 +31,7 @@ const ResourceTag = superenum({
   // Aliases for image
   icon: 'icon',
   backgroundWallpaper: 'backgroundWallpaper',
+  imagePlaceholder: 'imagePlaceholder',
 });
 
 export type ResourceTagType = EnumType<typeof ResourceTag>;

@@ -4,12 +4,6 @@ import { ResourceJsonKey } from '../../model/enum/ResourceJsonKey';
 import { ResourceTag } from '../../model/enum/ResourceTag';
 
 const RESOURCES: _ResourcesConfig = {
-  [ResourceConfigKey.icon]: {
-    tag: ResourceTag.icon,
-  },
-  [ResourceConfigKey.backgroundWallpaper]: {
-    tag: ResourceTag.backgroundWallpaper,
-  },
   [ResourceConfigKey.image]: {
     tag: ResourceTag.image,
   },
@@ -92,6 +86,16 @@ const RESOURCES: _ResourcesConfig = {
   [ResourceConfigKey.websiteLink]: {
     tag: ResourceTag.websiteLink,
     jsonKey: ResourceJsonKey.websiteLink,
+  },
+  //
+  [ResourceConfigKey.icon]: {
+    tag: ResourceTag.icon,
+  },
+  [ResourceConfigKey.backgroundWallpaper]: {
+    tag: ResourceTag.backgroundWallpaper,
+  },
+  [ResourceConfigKey.imagePlaceholder]: {
+    tag: ResourceTag.imagePlaceholder,
   },
 };
 
