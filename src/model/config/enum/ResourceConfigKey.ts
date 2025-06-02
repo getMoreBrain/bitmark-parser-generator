@@ -4,9 +4,6 @@ import { EnumType, superenum } from '@ncoderz/superenum';
  * Config keys for resources
  */
 const resourceConfigKeys = {
-  icon: 'icon',
-  backgroundWallpaper: 'backgroundWallpaper',
-
   image: 'image',
   // imageResponsive: 'imageResponsive',
   imagePortrait: 'imagePortrait',
@@ -31,6 +28,10 @@ const resourceConfigKeys = {
   documentDownload: 'documentDownload',
   appLink: 'appLink',
   websiteLink: 'websiteLink',
+
+  icon: 'icon',
+  backgroundWallpaper: 'backgroundWallpaper',
+  imagePlaceholder: 'imagePlaceholder',
 } as const;
 
 const ResourceConfigKey = superenum(resourceConfigKeys);

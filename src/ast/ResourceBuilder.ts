@@ -274,11 +274,12 @@ class ResourceBuilder extends BaseBuilder {
     }
 
     switch (type) {
-      case ResourceTag.backgroundWallpaper:
-      case ResourceTag.icon:
       case ResourceTag.image:
       case ResourceTag.imagePortrait:
       case ResourceTag.imageLandscape:
+      case ResourceTag.backgroundWallpaper:
+      case ResourceTag.imagePlaceholder:
+      case ResourceTag.icon:
         node = this.imageResource(context, finalData, type);
         break;
 

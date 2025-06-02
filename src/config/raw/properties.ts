@@ -283,11 +283,6 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.plainText,
   },
-  [PropertyConfigKey.imagePlaceholder]: {
-    tag: PropertyTag.imagePlaceholder,
-    single: true,
-    format: PropertyFormat.plainText,
-  },
   [PropertyConfigKey.publisher]: {
     tag: PropertyTag.publisher,
     format: PropertyFormat.plainText,
