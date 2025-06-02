@@ -1770,13 +1770,25 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
+  // bitmarkAst -> bits -> bitsValue -> backgroundWallpaper
+  protected enter_backgroundWallpaper(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const resource = node.value as ResourceJson;
+
+    // This is a resource, so handle it with the common code
+    this.writeNL();
+    this.writePropertyStyleResource(node.key, resource);
+
+    // Continue traversal
+    return true;
+  }
+
   // bitmarkAst -> bits -> bitsValue -> imagePlaceholder
   protected enter_imagePlaceholder(node: NodeInfo, _route: NodeInfo[]): boolean {
     const resource = node.value as ResourceJson;
 
     // This is a resource, so handle it with the common code
     this.writeNL();
-    this.writePropertyStyleResource(node.key, resource);
+    this.writePropertyStyleResource(node.key, resource, true);
 
     // Continue traversal
     return true;
@@ -2960,14 +2972,22 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.write('\n');
   }
 
-  protected writePropertyStyleResource(key: string, resource: ResourceJson): boolean | void {
+  protected writePropertyStyleResource(
+    key: string,
+    resource: ResourceJson,
+    deprecated_writeAsProperty = false,
+  ): boolean | void {
     if (key && resource) {
       const resourceTag = ResourceTag.keyFromValue(resource.type) ?? '';
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const resourceData = (resource as any)[resourceTag];
       const src = resourceData ? resourceData.src || resourceData.url || resourceData.body || '' : '';
 
-      this.writeOPA();
+      if (deprecated_writeAsProperty) {
+        this.writeOPA();
+      } else {
+        this.writeOPAMP();
+      }
       this.writeTagKey(key);
       this.writeColon();
       this.writeTextOrValue(src, TextFormat.plainText, TextLocation.tag);
