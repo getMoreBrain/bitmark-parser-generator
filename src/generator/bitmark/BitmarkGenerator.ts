@@ -1647,7 +1647,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (ingredient.title != null) {
       this.writeNL();
       this.writeOPHASH();
-      this.writeTextOrValue(ingredient.title, TextFormat.plainText, TextLocation.tag);
+      this.writeTextOrValue(ingredient.title, TextFormat.bitmarkText, TextLocation.tag);
       this.writeCL();
       // this.writeNL();
     }
@@ -1702,13 +1702,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       });
 
     // item
-    if (ingredient.item != null) {
+    if (ingredient.ingredient != null) {
       this.writeNL();
-      this.writeTextOrValue(ingredient.item, this.textFormat, TextLocation.body);
+      this.writeTextOrValue(ingredient.ingredient, this.textFormat, TextLocation.body);
     }
 
-    // Stop traversal of this branch
-    return false;
+    // Continue traversal of this branch (item, lead, etc)
+    return true;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses

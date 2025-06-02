@@ -492,12 +492,15 @@ export interface ServingsJson {
 export interface IngredientJson {
   title: string;
   checked: boolean;
-  item: string;
+  ingredient: string;
   quantity: number;
   unit: string;
   unitAbbr: string;
   decimalPlaces: number;
   disableCalculation: boolean;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
 }
 
 export interface RatingLevelStartEndJson {

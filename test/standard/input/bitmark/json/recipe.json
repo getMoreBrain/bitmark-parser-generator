@@ -46,75 +46,276 @@
       "body": [],
       "ingredients": [
         {
-          "title": "Title for the ingredient",
+          "title": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Title for the ",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "text": "ingredient",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "checked": true,
-          "item": "Geflügelkraftbrühe",
+          "ingredient": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Geflügelkraftbrühe",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "quantity": 2,
           "unit": "Liter",
           "unitAbbr": "Lt",
           "decimalPlaces": 1,
-          "disableCalculation": false
+          "disableCalculation": false,
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "checked": false,
-          "item": "Scheiben vom Eierstich mit Kürbis ...",
+          "ingredient": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Scheiben vom Eierstich mit Kürbis ...",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "quantity": 30,
           "unit": "Stück",
           "unitAbbr": "Stk",
           "decimalPlaces": 1,
-          "disableCalculation": false
+          "disableCalculation": false,
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "checked": false,
-          "item": "Erbsen ...",
+          "ingredient": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ],
+                  "text": "Erbsen",
+                  "type": "text"
+                },
+                {
+                  "text": " ...",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "quantity": 5,
           "unit": "Stück",
           "unitAbbr": "Stk",
           "decimalPlaces": 1,
-          "disableCalculation": false
+          "disableCalculation": false,
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
-          "title": "Another title for an ingredient",
+          "title": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Another title for an ingredient",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "checked": false,
-          "item": "Salz",
+          "ingredient": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Salz",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "quantity": 1,
           "unit": "Prise",
           "decimalPlaces": 1,
-          "disableCalculation": false
+          "disableCalculation": false,
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "checked": false,
-          "item": "Mehl",
+          "ingredient": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Mehl",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "quantity": 2.5,
           "unit": "kg",
           "decimalPlaces": 1,
-          "disableCalculation": false
+          "disableCalculation": false,
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "checked": false,
-          "item": "Cooking time",
+          "ingredient": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Cooking time",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "quantity": 10,
           "unit": "minutes",
           "unitAbbr": "min",
           "decimalPlaces": 1,
-          "disableCalculation": true
+          "disableCalculation": true,
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         },
         {
           "checked": true,
-          "item": "Cooking time",
+          "ingredient": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Cooking time",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "quantity": 20,
           "unit": "minutes",
           "unitAbbr": "min",
           "decimalPlaces": 1,
-          "disableCalculation": true
+          "disableCalculation": true,
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
         }
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "3.29.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.recipe]\n[%][%ZUTATEN]\n\n[!Kraftbrühe Murillo]\n[@technicalTerm: Consommé Murillo ][@lang:fr]\n[@servings:4.5][@unit:Litre][@unitAbbr:l][?hint]\n\n====\n[#Title for the ingredient]\n[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe\n====\n[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...\n====\n[!5][@unitAbbr:Stk][@unit:Stück] Erbsen ...\n====\n[#Another title for an ingredient]\n[!1][@unit:Prise] Salz\n====\n[!2.5][@unit:kg] Mehl\n====\n[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time\n====\n[+]\n[!20]\n[@unit:minutes]\n[@unitAbbr:min]\n[@disableCalculation]\nCooking time\n===="
+    "bitmark": "[.recipe]\n[%][%ZUTATEN]\n\n[!Kraftbrühe Murillo]\n[@technicalTerm: Consommé Murillo ][@lang:fr]\n[@servings:4.5][@unit:Litre][@unitAbbr:l][?hint]\n\n====\n[#Title for the **ingredient**]\n[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe\n[%item]\n====\n[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...\n[%item]\n====\n[!5][@unitAbbr:Stk][@unit:Stück] __Erbsen__ ...\n[%item]\n====\n[#Another title for an ingredient]\n[!1][@unit:Prise] Salz\n[%item]\n====\n[!2.5][@unit:kg] Mehl\n[%item]\n====\n[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time\n[%item]\n====\n[+]\n[!20]\n[@unit:minutes]\n[@unitAbbr:min]\n[@disableCalculation]\nCooking time\n[%item]\n===="
   }
 ]
