@@ -389,7 +389,7 @@
           "format": "gif",
           "provider": "miro.medium.com",
           "src": "https://miro.medium.com/v2/resizefit1400/12345678980.gif",
-          "width": "300",
+          "width": 300,
           "height": null,
           "alt": "",
           "zoomDisabled": false,

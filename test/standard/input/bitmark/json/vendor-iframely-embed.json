@@ -4,11 +4,9 @@
       "type": "vendor-iframely-embed",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
-      "width": "100",
-      "height": "120",
+      "id": ["342341"],
+      "width": 100,
+      "height": 120,
       "vendorUrl": "https://a.url.com/example",
       "item": [],
       "lead": [],

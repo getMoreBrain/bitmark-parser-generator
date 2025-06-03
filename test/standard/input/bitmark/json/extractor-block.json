@@ -12,10 +12,7 @@
       "height": 100,
       "index": 99,
       "classification": "paragraph",
-      "availableClassifications": [
-        "test1",
-        "test2"
-      ],
+      "availableClassifications": ["test1", "test2"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -28,8 +25,8 @@
           "format": "img",
           "provider": "url.to",
           "src": "https://url.to/block.img",
-          "width": "100",
-          "height": "100",
+          "width": 100,
+          "height": 100,
           "alt": "",
           "zoomDisabled": false,
           "license": "",

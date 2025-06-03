@@ -4,17 +4,11 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        ":5__5:32]**fge!!--``test]"
-      ],
+      "id": [":5__5:32]**fge!!--``test]"],
       "machineTranslated": "© Google 2024",
       "lang": "en-UK",
-      "publisher": [
-        "kpmg"
-      ],
-      "theme": [
-        "grundzuege"
-      ],
+      "publisher": ["kpmg"],
+      "theme": ["grundzuege"],
       "item": [
         {
           "type": "paragraph",
@@ -189,9 +183,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        ":5__5:32]**fge!!--``test"
-      ],
+      "id": [":5__5:32]**fge!!--``test"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -262,9 +254,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [
@@ -314,9 +304,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151973"
-      ],
+      "id": ["151973"],
       "item": [
         {
           "type": "paragraph",
@@ -460,9 +448,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "239893"
-      ],
+      "id": ["239893"],
       "item": [],
       "lead": [
         {
@@ -486,7 +472,7 @@
           "format": "png",
           "provider": "docs.bitmark.cloud",
           "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_7.png",
-          "width": "150",
+          "width": 150,
           "height": null,
           "alt": "",
           "zoomDisabled": false,
@@ -595,9 +581,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191143"
-      ],
+      "id": ["191143"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -652,9 +636,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "245285"
-      ],
+      "id": ["245285"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -720,9 +702,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "162205"
-      ],
+      "id": ["162205"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -821,31 +801,13 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "5743563"
-      ],
-      "target": [
-        "target1",
-        "target2",
-        "target3"
-      ],
-      "tag": [
-        "green",
-        "yellow",
-        "red"
-      ],
-      "reductionTag": [
-        "green",
-        "yellow"
-      ],
+      "id": ["5743563"],
+      "target": ["target1", "target2", "target3"],
+      "tag": ["green", "yellow", "red"],
+      "reductionTag": ["green", "yellow"],
       "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII=",
       "iconTag": "this is the icon tag",
-      "colorTag": [
-        "green",
-        "white",
-        "purple",
-        "orange"
-      ],
+      "colorTag": ["green", "white", "purple", "orange"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1108,9 +1070,7 @@
       "type": "standard-article-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1171,9 +1131,7 @@
       "type": "standard-article-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],

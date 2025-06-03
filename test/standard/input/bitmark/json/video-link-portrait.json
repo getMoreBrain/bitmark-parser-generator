@@ -98,9 +98,7 @@
       "type": "video-link-portrait",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -113,8 +111,8 @@
           "format": "mp4",
           "provider": "docs.bitmark.cloud",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
-          "width": "740",
-          "height": "540",
+          "width": 740,
+          "height": 540,
           "duration": "PT12M31S",
           "thumbnails": [
             {
