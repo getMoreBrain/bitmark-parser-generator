@@ -1362,21 +1362,24 @@ class Builder extends BaseBuilder {
    * @returns
    */
   protected buildIngredient(
-    _context: BuildContext,
+    context: BuildContext,
     data: Partial<IngredientJson> | undefined,
   ): IngredientJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: IngredientJson = {
-      title: data.title ?? '',
+      title: this.handleJsonText(context, TextLocation.tag, data.title),
       checked: data.checked ?? false,
-      item: data.item ?? '',
+      ingredient: this.handleJsonText(context, TextLocation.tag, data.ingredient),
       quantity: data.quantity ?? 0,
       unit: data.unit ?? '',
       unitAbbr: data.unitAbbr ?? '',
       decimalPlaces: data.decimalPlaces ?? 1,
       disableCalculation: data.disableCalculation ?? false,
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
     };
 
     // Remove Unset Optionals

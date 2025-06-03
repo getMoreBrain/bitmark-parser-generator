@@ -685,12 +685,12 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.width]: {
     tag: PropertyTag.width,
     single: true,
-    format: PropertyFormat.plainText,
+    format: PropertyFormat.number,
   },
   [PropertyConfigKey.height]: {
     tag: PropertyTag.height,
     single: true,
-    format: PropertyFormat.plainText,
+    format: PropertyFormat.number,
   },
   [PropertyConfigKey.license]: {
     tag: PropertyTag.license,

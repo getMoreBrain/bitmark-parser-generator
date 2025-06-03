@@ -1011,7 +1011,7 @@ function parseIngredients(
           // TS compiler very weird. It doesn't recognize that cardBodyStr is a string|undefined, even if cast!
           // Casting to 'any' to avoid the error
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          item: cardBodyStr as any,
+          ingredient: cardBodyStr as any,
           quantity,
           unit: unit ?? Breakscape.EMPTY_STRING,
           unitAbbr: unitAbbr ?? Breakscape.EMPTY_STRING,

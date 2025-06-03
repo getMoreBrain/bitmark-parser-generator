@@ -234,6 +234,8 @@ const BitType = superenum({
   handInAudio: 'hand-in-audio',
   handInContact: 'hand-in-contact',
   handInDocument: 'hand-in-document',
+  handInFeedbackExpert: 'hand-in-feedback-expert',
+  handInFeedbackSelf: 'hand-in-feedback-self',
   handInFile: 'hand-in-file',
   handInLocation: 'hand-in-location',
   handInPhoto: 'hand-in-photo',
