@@ -4,9 +4,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -62,9 +60,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287885"
-      ],
+      "id": ["287885"],
       "item": [],
       "lead": [
         {
@@ -137,9 +133,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287887"
-      ],
+      "id": ["287887"],
       "item": [],
       "lead": [
         {
@@ -163,7 +157,7 @@
           "format": "png",
           "provider": "docs.bitmark.cloud",
           "src": "https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png",
-          "width": "928",
+          "width": 928,
           "height": null,
           "alt": "",
           "zoomDisabled": false,
@@ -223,9 +217,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "249542"
-      ],
+      "id": ["249542"],
       "labelTrue": "Richtig",
       "labelFalse": "Falsch",
       "item": [],
@@ -401,9 +393,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "165223"
-      ],
+      "id": ["165223"],
       "labelTrue": "richtig",
       "labelFalse": "falsch",
       "item": [],
@@ -508,9 +498,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213731"
-      ],
+      "id": ["213731"],
       "labelTrue": "p",
       "labelFalse": "s",
       "item": [

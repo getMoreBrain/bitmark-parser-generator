@@ -466,8 +466,8 @@
           "format": "png",
           "provider": "domain.com",
           "src": "https://domain.com/image.png",
-          "width": "100",
-          "height": "100",
+          "width": 100,
+          "height": 100,
           "alt": "alt text",
           "zoomDisabled": false,
           "license": "",
@@ -502,8 +502,8 @@
           "format": "png",
           "provider": "domain.com",
           "src": "https://domain.com/image.png",
-          "width": "100",
-          "height": "100",
+          "width": 100,
+          "height": 100,
           "alt": "alt text",
           "zoomDisabled": false,
           "license": "",
@@ -556,8 +556,8 @@
           "format": "png",
           "provider": "domain.com",
           "src": "https://domain.com/image.png",
-          "width": "100",
-          "height": "100",
+          "width": 100,
+          "height": 100,
           "alt": "alt text",
           "zoomDisabled": false,
           "license": "",
@@ -636,9 +636,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "packen"
-          ]
+          "values": ["packen"]
         }
       ],
       "isExample": true,

@@ -98,9 +98,7 @@
       "type": "video-link",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -113,8 +111,8 @@
           "format": "mp4",
           "provider": "docs.bitmark.cloud",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
-          "width": "740",
-          "height": "540",
+          "width": 740,
+          "height": 540,
           "duration": "PT12M31S",
           "thumbnails": [
             {
@@ -222,9 +220,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "186837"
-      ],
+      "id": ["186837"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -287,9 +283,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "187546"
-      ],
+      "id": ["187546"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -352,9 +346,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "185332"
-      ],
+      "id": ["185332"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -388,9 +380,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "185329"
-      ],
+      "id": ["185329"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -424,9 +414,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "185330"
-      ],
+      "id": ["185330"],
       "item": [],
       "lead": [],
       "pageNumber": [],

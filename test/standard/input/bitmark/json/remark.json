@@ -4,15 +4,8 @@
       "type": "remark",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "239803"
-      ],
-      "bubbleTag": [
-        "Tag 1",
-        "",
-        "Tag 2",
-        "**Tag 3**"
-      ],
+      "id": ["239803"],
+      "bubbleTag": ["Tag 1", "", "Tag 2", "**Tag 3**"],
       "item": [],
       "lead": [
         {
@@ -55,9 +48,7 @@
       "type": "remark",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "239896"
-      ],
+      "id": ["239896"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -70,7 +61,7 @@
           "format": "png",
           "provider": "docs.bitmark.cloud",
           "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png",
-          "width": "150",
+          "width": 150,
           "height": null,
           "alt": "",
           "zoomDisabled": false,
@@ -132,9 +123,7 @@
       "type": "remark",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "234993"
-      ],
+      "id": ["234993"],
       "item": [],
       "lead": [
         {
@@ -527,9 +516,7 @@
       "type": "remark-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -590,9 +577,7 @@
       "type": "standard-remark-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -653,9 +638,7 @@
       "type": "standard-remark-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],

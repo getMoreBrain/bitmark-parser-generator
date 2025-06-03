@@ -263,7 +263,7 @@
           "provider": "miro.medium.com",
           "showInIndex": false,
           "src": "https://miro.medium.com/background.png",
-          "width": "100",
+          "width": 100,
           "zoomDisabled": false
         },
         "type": "image"
@@ -334,7 +334,7 @@
           "caption": [],
           "copyright": "",
           "format": "png",
-          "height": "100",
+          "height": 100,
           "license": "",
           "provider": "miro.medium.com",
           "showInIndex": false,

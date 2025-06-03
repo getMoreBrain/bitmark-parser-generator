@@ -171,7 +171,7 @@ export interface BreakscapeOptions {
   /**
    * if true, the original array will be modified rather than a copy being made
    */
-  modifyArray?: boolean;
+  inPlaceArray?: boolean;
 
   /**
    * if true, perform v2 breakscaping from JSON
@@ -218,7 +218,7 @@ class Breakscape {
     };
 
     if (Array.isArray(val)) {
-      const newVal: unknown[] = opts.modifyArray ? val : new Array(val.length);
+      const newVal: unknown[] = opts.inPlaceArray ? val : new Array(val.length);
       for (let i = 0, len = val.length; i < len; i++) {
         const v = val[i];
         if (StringUtils.isString(v)) {
@@ -263,7 +263,7 @@ class Breakscape {
     };
 
     if (Array.isArray(val)) {
-      const newVal: unknown[] = opts.modifyArray ? val : new Array(val.length);
+      const newVal: unknown[] = opts.inPlaceArray ? val : new Array(val.length);
       for (let i = 0, len = val.length; i < len; i++) {
         const v = val[i];
         if (StringUtils.isString(v)) {
@@ -304,7 +304,7 @@ class Breakscape {
     };
 
     if (Array.isArray(val)) {
-      const newVal: unknown[] = opts.modifyArray ? val : [val.length];
+      const newVal: unknown[] = opts.inPlaceArray ? val : [val.length];
       for (let i = 0, len = val.length; i < len; i++) {
         const v = val[i];
         if (StringUtils.isString(v)) {
