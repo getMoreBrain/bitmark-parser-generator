@@ -1691,6 +1691,8 @@ const BITS: _BitsConfig = {
     cardSet: CardSetConfigKey._feedback,
   },
   [BitType.learningDocumentationFeedback]: { since: '3.13.0', baseBitType: BitType.feedback },
+  [BitType.handInFeedbackExpert]: { since: '3.30.0', baseBitType: BitType.feedback },
+  [BitType.handInFeedbackSelf]: { since: '3.30.0', baseBitType: BitType.feedback },
   [BitType.multipleChoice1]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
