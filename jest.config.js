@@ -19,6 +19,9 @@ module.exports = {
       },
     ],
   },
+  transformIgnorePatterns: [
+    '/node_modules/(?!@gmb/bitmark-breakscape)', // allow transpiling this package
+  ],
   reporters: [
     'default',
     [require.resolve('jest-junit'), { outputDirectory: '<rootDir>/test/standard/results' }],
