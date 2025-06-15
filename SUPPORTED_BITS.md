@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.30.2
+Version: 3.31.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -524,6 +524,7 @@ take-picture (since: 1.3.0)
 toc (since: 1.3.0)
 toc-chapter (since: 1.5.5)
 toc-inline (since: 3.24.0)
+toc-resource (since: 3.31.0)
 true-false (since: 1.3.0)
 true-false-1 (since: 1.3.0)
 vendor-amcharts-5-chart (since: 1.5.8)

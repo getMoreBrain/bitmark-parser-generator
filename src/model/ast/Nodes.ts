@@ -201,6 +201,7 @@ export interface Bit {
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
   maxTocChapterLevel?: Property;
+  tocResource?: Property;
   page?: Property;
   productId?: Property;
   product?: Property;
