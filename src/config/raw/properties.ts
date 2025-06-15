@@ -859,6 +859,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.tableHeaderWhitespaceNoWrap]: {
+    tag: PropertyTag.tableHeaderWhitespaceNoWrap,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
   [PropertyConfigKey.tableSearch]: {
     tag: PropertyTag.tableSearch,
     single: true,

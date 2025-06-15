@@ -467,6 +467,8 @@ const NodeType = superenum({
   tableAutoWidthValue: 'tableAutoWidthValue',
   tableFixedHeader: 'tableFixedHeader',
   tableFixedHeaderValue: 'tableFixedHeaderValue',
+  tableHeaderWhitespaceNoWrap: 'tableHeaderWhitespaceNoWrap',
+  tableHeaderWhitespaceNoWrapValue: 'tableHeaderWhitespaceNoWrapValue',
   tableHeight: 'tableHeight',
   tableHeightValue: 'tableHeightValue',
   tablePagination: 'tablePagination',

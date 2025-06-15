@@ -5,6 +5,7 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
+      "tableHeaderWhitespaceNoWrap": false,
       "tableSearch": true,
       "tableSort": true,
       "tablePagination": true,
@@ -292,6 +293,7 @@
         ]
       },
       "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": true,
       "tablePagination": false,
       "tablePaginationLimit": 0,
       "tableHeight": 0,
@@ -313,6 +315,7 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
+      "tableHeaderWhitespaceNoWrap": true,
       "tableSearch": true,
       "tableSort": true,
       "tablePagination": true,
@@ -484,6 +487,7 @@
         "data": []
       },
       "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": true,
       "tableSearch": false,
       "tableSort": false,
       "tablePagination": false,

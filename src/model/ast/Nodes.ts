@@ -138,6 +138,7 @@ export interface Bit {
   availableClassifications?: Property;
   allowedBit?: Property;
   tableFixedHeader?: Property;
+  tableHeaderWhitespaceNoWrap?: Property;
   tableSearch?: Property;
   tableSort?: Property;
   tablePagination?: Property;

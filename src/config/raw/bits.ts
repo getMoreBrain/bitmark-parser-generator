@@ -2179,6 +2179,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.tableHeaderWhitespaceNoWrap,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.tableSearch,
       },
       {

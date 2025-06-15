@@ -187,6 +187,7 @@ class Builder extends BaseBuilder {
     availableClassifications?: string | string[];
     allowedBit?: string | string[];
     tableFixedHeader?: boolean;
+    tableHeaderWhitespaceNoWrap?: boolean;
     tableSearch?: boolean;
     tableSort?: boolean;
     tablePagination?: boolean;
@@ -446,6 +447,10 @@ class Builder extends BaseBuilder {
       ),
       allowedBit: this.toAstProperty(PropertyConfigKey.allowedBit, data.allowedBit),
       tableFixedHeader: this.toAstProperty(PropertyConfigKey.tableFixedHeader, data.tableFixedHeader),
+      tableHeaderWhitespaceNoWrap: this.toAstProperty(
+        PropertyConfigKey.tableHeaderWhitespaceNoWrap,
+        data.tableHeaderWhitespaceNoWrap,
+      ),
       tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, data.tableSearch),
       tableSort: this.toAstProperty(PropertyConfigKey.tableSort, data.tableSort),
       tablePagination: this.toAstProperty(PropertyConfigKey.tablePagination, data.tablePagination),
