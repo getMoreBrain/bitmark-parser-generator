@@ -249,6 +249,7 @@ class Builder extends BaseBuilder {
     maxCreatedBits?: number;
     maxDisplayLevel?: number;
     maxTocChapterLevel?: number;
+    tocResource?: string | string[];
     page?: string | string[];
     productId?: string | string[];
     product?: string | string[];
@@ -508,6 +509,7 @@ class Builder extends BaseBuilder {
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, data.maxCreatedBits),
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, data.maxDisplayLevel),
       maxTocChapterLevel: this.toAstProperty(PropertyConfigKey.maxTocChapterLevel, data.maxTocChapterLevel),
+      tocResource: this.toAstProperty(PropertyConfigKey.tocResource, data.tocResource),
       page: this.toAstProperty(PropertyConfigKey.page, data.page),
       productId: this.toAstProperty(PropertyConfigKey.productId, data.productId),
       product: this.toAstProperty(PropertyConfigKey.product, data.product),

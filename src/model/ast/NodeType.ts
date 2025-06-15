@@ -306,6 +306,8 @@ const NodeType = superenum({
   maxDisplayLevelValue: 'maxDisplayLevelValue',
   maxTocChapterLevel: 'maxTocChapterLevel',
   maxTocChapterLevelValue: 'maxTocChapterLevelValue',
+  tocResource: 'tocResource',
+  tocResourceValue: 'tocResourceValue',
   message: 'message',
   mockupId: 'mockupId',
   name: 'name',

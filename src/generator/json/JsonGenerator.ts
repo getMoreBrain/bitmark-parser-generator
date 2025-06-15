@@ -1651,6 +1651,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
       }
 
+      // Special case for 'toc-resource' bits
+      if (Config.isOfBitType(bitType, BitType.tocResource)) {
+        if (bitJson.tocResource == null) bitJson.tocResource = [];
+      }
+
       // Special case for 'book' bits
       if (Config.isOfBitType(bitType, BitType.book)) {
         if (bitJson.maxTocChapterLevel == null) bitJson.maxTocChapterLevel = -1;
