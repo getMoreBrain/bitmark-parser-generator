@@ -173,6 +173,7 @@ const propertyConfigKeys = {
   subtype: 'subtype',
   tableAutoWidth: 'tableAutoWidth',
   tableFixedHeader: 'tableFixedHeader',
+  tableHeaderWhitespaceNoWrap: 'tableHeaderWhitespaceNoWrap',
   tableHeight: 'tableHeight',
   tablePagination: 'tablePagination',
   tablePaginationLimit: 'tablePaginationLimit',

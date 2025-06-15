@@ -92,6 +92,7 @@ export interface BitJson {
   availableClassifications: string | string[];
   allowedBit: string | string[];
   tableFixedHeader: boolean;
+  tableHeaderWhitespaceNoWrap: boolean;
   tableSearch: boolean;
   tableSort: boolean;
   tablePagination: boolean;
