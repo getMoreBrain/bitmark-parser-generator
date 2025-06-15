@@ -512,6 +512,10 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
+  [PropertyConfigKey.tocResource]: {
+    tag: PropertyTag.tocResource,
+    format: PropertyFormat.plainText,
+  },
   [PropertyConfigKey.technicalTerm]: {
     tag: PropertyTag.technicalTerm,
     single: true,
@@ -852,6 +856,11 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.tableFixedHeader]: {
     tag: PropertyTag.tableFixedHeader,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.tableHeaderWhitespaceNoWrap]: {
+    tag: PropertyTag.tableHeaderWhitespaceNoWrap,
     single: true,
     format: PropertyFormat.boolean,
   },

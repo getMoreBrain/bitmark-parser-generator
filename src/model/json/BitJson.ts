@@ -92,6 +92,7 @@ export interface BitJson {
   availableClassifications: string | string[];
   allowedBit: string | string[];
   tableFixedHeader: boolean;
+  tableHeaderWhitespaceNoWrap: boolean;
   tableSearch: boolean;
   tableSort: boolean;
   tablePagination: boolean;
@@ -153,6 +154,7 @@ export interface BitJson {
   maxCreatedBits: number;
   maxDisplayLevel: number;
   maxTocChapterLevel: number;
+  tocResource: string | string[];
   page: string;
   productId: string | string[];
   product: string;

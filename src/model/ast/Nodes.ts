@@ -138,6 +138,7 @@ export interface Bit {
   availableClassifications?: Property;
   allowedBit?: Property;
   tableFixedHeader?: Property;
+  tableHeaderWhitespaceNoWrap?: Property;
   tableSearch?: Property;
   tableSort?: Property;
   tablePagination?: Property;
@@ -201,6 +202,7 @@ export interface Bit {
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
   maxTocChapterLevel?: Property;
+  tocResource?: Property;
   page?: Property;
   productId?: Property;
   product?: Property;

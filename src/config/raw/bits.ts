@@ -2179,6 +2179,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.tableHeaderWhitespaceNoWrap,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.tableSearch,
       },
       {
@@ -2267,6 +2271,17 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.maxTocChapterLevel,
+      },
+    ],
+  },
+  [BitType.tocResource]: {
+    since: '3.31.0',
+    baseBitType: BitType.toc,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tocResource,
+        maxCount: Count.infinity,
       },
     ],
   },

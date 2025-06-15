@@ -1652,57 +1652,58 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // this.writeNL();
     }
 
-    this.writeNL();
-
-    // [+] / [-]
-    if (ingredient.checked) {
-      this.writeOPP();
-    } else {
-      this.writeOPM();
-    }
-    this.writeCL();
-
-    // [!43]
-    if (ingredient.quantity != null) {
-      this.writeOPB();
-      this.writeTextOrValue(`${ingredient.quantity}`, TextFormat.plainText, TextLocation.tag);
-      this.writeCL();
-    }
-
-    // [@unit:kilograms]
-    if (ingredient.unit != null)
-      this.writeProperty('unit', ingredient.unit, {
-        format: PropertyFormat.plainText,
-        single: true,
-        ignoreEmpty: true,
-      });
-
-    // [@unitAbbr:kg]
-    if (ingredient.unitAbbr != null)
-      this.writeProperty('unitAbbr', ingredient.unitAbbr, {
-        format: PropertyFormat.plainText,
-        single: true,
-        ignoreEmpty: true,
-      });
-
-    // [@decimalPlaces:1]
-    if (ingredient.decimalPlaces != null)
-      this.writeProperty('decimalPlaces', ingredient.decimalPlaces, {
-        format: PropertyFormat.plainText,
-        single: true,
-        ignoreEmpty: true,
-      });
-
-    // [@disableCalculation]
-    if (ingredient.disableCalculation)
-      this.writeProperty('disableCalculation', true, {
-        format: PropertyFormat.plainText,
-        single: true,
-        ignoreEmpty: true,
-      });
-
-    // item
     if (ingredient.ingredient != null) {
+      this.writeNL();
+
+      // [+] / [-]
+      if (ingredient.checked) {
+        this.writeOPP();
+      } else {
+        this.writeOPM();
+      }
+      this.writeCL();
+
+      // [!43]
+      if (ingredient.quantity != null) {
+        this.writeOPB();
+        this.writeTextOrValue(`${ingredient.quantity}`, TextFormat.plainText, TextLocation.tag);
+        this.writeCL();
+      }
+
+      // [@unit:kilograms]
+      if (ingredient.unit != null)
+        this.writeProperty('unit', ingredient.unit, {
+          format: PropertyFormat.plainText,
+          single: true,
+          ignoreEmpty: true,
+        });
+
+      // [@unitAbbr:kg]
+      if (ingredient.unitAbbr != null)
+        this.writeProperty('unitAbbr', ingredient.unitAbbr, {
+          format: PropertyFormat.plainText,
+          single: true,
+          ignoreEmpty: true,
+        });
+
+      // [@decimalPlaces:1]
+      if (ingredient.decimalPlaces != null)
+        this.writeProperty('decimalPlaces', ingredient.decimalPlaces, {
+          format: PropertyFormat.plainText,
+          single: true,
+          ignoreEmpty: true,
+        });
+
+      // [@disableCalculation]
+      if (ingredient.disableCalculation)
+        this.writeProperty('disableCalculation', true, {
+          format: PropertyFormat.plainText,
+          single: true,
+          ignoreEmpty: true,
+        });
+
+      // item
+
       this.writeNL();
       this.writeTextOrValue(ingredient.ingredient, this.textFormat, TextLocation.body);
     }

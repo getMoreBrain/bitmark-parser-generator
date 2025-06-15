@@ -187,6 +187,7 @@ class Builder extends BaseBuilder {
     availableClassifications?: string | string[];
     allowedBit?: string | string[];
     tableFixedHeader?: boolean;
+    tableHeaderWhitespaceNoWrap?: boolean;
     tableSearch?: boolean;
     tableSort?: boolean;
     tablePagination?: boolean;
@@ -249,6 +250,7 @@ class Builder extends BaseBuilder {
     maxCreatedBits?: number;
     maxDisplayLevel?: number;
     maxTocChapterLevel?: number;
+    tocResource?: string | string[];
     page?: string | string[];
     productId?: string | string[];
     product?: string | string[];
@@ -445,6 +447,10 @@ class Builder extends BaseBuilder {
       ),
       allowedBit: this.toAstProperty(PropertyConfigKey.allowedBit, data.allowedBit),
       tableFixedHeader: this.toAstProperty(PropertyConfigKey.tableFixedHeader, data.tableFixedHeader),
+      tableHeaderWhitespaceNoWrap: this.toAstProperty(
+        PropertyConfigKey.tableHeaderWhitespaceNoWrap,
+        data.tableHeaderWhitespaceNoWrap,
+      ),
       tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, data.tableSearch),
       tableSort: this.toAstProperty(PropertyConfigKey.tableSort, data.tableSort),
       tablePagination: this.toAstProperty(PropertyConfigKey.tablePagination, data.tablePagination),
@@ -508,6 +514,7 @@ class Builder extends BaseBuilder {
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, data.maxCreatedBits),
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, data.maxDisplayLevel),
       maxTocChapterLevel: this.toAstProperty(PropertyConfigKey.maxTocChapterLevel, data.maxTocChapterLevel),
+      tocResource: this.toAstProperty(PropertyConfigKey.tocResource, data.tocResource),
       page: this.toAstProperty(PropertyConfigKey.page, data.page),
       productId: this.toAstProperty(PropertyConfigKey.productId, data.productId),
       product: this.toAstProperty(PropertyConfigKey.product, data.product),

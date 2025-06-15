@@ -1602,6 +1602,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
         // if (bitJson.content2Buy == null) bitJson.content2Buy = '';
         if (bitJson.tableFixedHeader == null) bitJson.tableFixedHeader = false;
+        if (bitJson.tableHeaderWhitespaceNoWrap == null) bitJson.tableHeaderWhitespaceNoWrap = true;
         if (bitJson.tableSearch == null) bitJson.tableSearch = false;
         if (bitJson.tableSort == null) bitJson.tableSort = false;
         if (bitJson.tablePagination == null) bitJson.tablePagination = false;
@@ -1649,6 +1650,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (Config.isOfBitType(bitType, BitType.pageBuyButton)) {
           if (bitJson.content2Buy == null) bitJson.content2Buy = '';
         }
+      }
+
+      // Special case for 'toc-resource' bits
+      if (Config.isOfBitType(bitType, BitType.tocResource)) {
+        if (bitJson.tocResource == null) bitJson.tocResource = [];
       }
 
       // Special case for 'book' bits
