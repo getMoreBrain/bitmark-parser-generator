@@ -8,7 +8,9 @@ module.exports = {
   testEnvironment: 'node',
   verbose: true,
   testTimeout: 50000,
-  testMatch: ['<rootDir>/test/standard/**/*.test.ts'],
+  testMatch: ['<rootDir>/test/standard/**/*.test.ts', '<rootDir>/test/breakscape/**/*.test.ts'],
+  // testMatch: ['<rootDir>/test/standard/**/*.test.ts'],
+  // testMatch: ['<rootDir>/test/breakscape/**/*.test.ts'],
   transform: {
     '^.+\\.[jt]sx?$': [
       'ts-jest',
