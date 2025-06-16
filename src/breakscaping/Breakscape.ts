@@ -1,11 +1,8 @@
-import type * as BreakscapeModule from '@gmb/bitmark-breakscape';
-
 import { BreakscapedString } from '../model/ast/BreakscapedString';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
 import { TextLocation, TextLocationType } from '../model/enum/TextLocation';
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const ExternalBreakscape = require('@gmb/bitmark-breakscape') as typeof BreakscapeModule;
+import { Breakscape as BreakscapeImpl } from './BreakscapeRegex';
 
 /**
  * Utility class for breakscaping strings.
@@ -44,7 +41,7 @@ const DEFAULT_BREAKSCAPE_OPTIONS: BreakscapeOptions = {
   v2: false,
 };
 
-const externalBreakscape = new ExternalBreakscape.Breakscape();
+const externalBreakscape = new BreakscapeImpl();
 
 class Breakscape {
   public readonly EMPTY_STRING = '' as BreakscapedString;

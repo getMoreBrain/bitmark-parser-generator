@@ -699,20 +699,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gmb/bitmark-breakscape@npm:^3.30.2":
-  version: 3.30.2
-  resolution: "@gmb/bitmark-breakscape@npm:3.30.2"
-  dependencies:
-    "@ncoderz/superenum": "npm:^0.2.5"
-  checksum: 10c0/1515648e9036a0c3fef5b72bd9e417f09f3c2d4d66421402f7730b133b3a7e4b133b9dce74cbe412520af848640a8fa3799f1b698707f720388338d2b687629b
-  languageName: node
-  linkType: hard
-
 "@gmb/bitmark-parser-generator@workspace:.":
   version: 0.0.0-use.local
   resolution: "@gmb/bitmark-parser-generator@workspace:."
   dependencies:
-    "@gmb/bitmark-breakscape": "npm:^3.30.2"
     "@ncoderz/superenum": "npm:^0.2.5"
     "@types/eslint-plugin-prettier": "npm:^3.1.3"
     "@types/fs-extra": "npm:^11.0.4"
