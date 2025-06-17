@@ -56,17 +56,17 @@ class FooterContentProcessor {
       const parsedFooterText: JsonText = isBitmarkText
         ? textParser.toAst(footer, {
             //
-            textFormat,
-            textLocation: TextLocation.body,
+            format: textFormat,
+            location: TextLocation.body,
           })
         : Breakscape.unbreakscape(footer, {
-            textFormat: TextFormat.plainText,
-            textLocation: TextLocation.body,
+            format: TextFormat.plainText,
+            location: TextLocation.body,
           });
 
       const parsedFooterPlainText = Breakscape.unbreakscape(footerPlainText, {
-        textFormat: TextFormat.plainText,
-        textLocation: TextLocation.body,
+        format: TextFormat.plainText,
+        location: TextLocation.body,
       });
 
       finalFooterText = ContentProcessorUtils.concatenatePlainTextWithAstTexts(

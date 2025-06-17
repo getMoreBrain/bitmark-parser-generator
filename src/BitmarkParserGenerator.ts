@@ -876,8 +876,8 @@ class BitmarkParserGenerator {
 
     if (!isAst) {
       preRes = this.textParser.toAst(inStr, {
-        textFormat,
-        textLocation: TextLocation.body,
+        format: textFormat,
+        location: TextLocation.body,
       });
     } else {
       preRes = await this.textGenerator.generate(ast, textFormat, textLocation);
@@ -953,8 +953,8 @@ class BitmarkParserGenerator {
 
     // Do the breakscape
     const res = Breakscape.breakscape(inStr, {
-      textFormat,
-      textLocation,
+      format: textFormat,
+      location: textLocation,
     });
 
     if (opts.outputFile) {
@@ -1017,8 +1017,8 @@ class BitmarkParserGenerator {
 
     // Do the unbreakscape
     const res = Breakscape.unbreakscape(inStr, {
-      textFormat,
-      textLocation,
+      format: textFormat,
+      location: textLocation,
     });
 
     if (opts.outputFile) {

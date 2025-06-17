@@ -1298,8 +1298,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Use the text parser to parse the text
     const textAst = this.textParser.toAst(text, {
-      textFormat: format,
-      textLocation,
+      format,
+      location: textLocation,
     });
 
     return textAst;

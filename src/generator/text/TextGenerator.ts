@@ -1,7 +1,8 @@
 import { EnumType } from '@ncoderz/superenum';
 
 import { Ast, NodeInfo } from '../../ast/Ast';
-import { Breakscape, BreakscapeOptions } from '../../breakscaping/Breakscape';
+import { BreakscapeOptions } from '../../breakscaping/BreakscapeOptions';
+import { Breakscape } from '../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../model/ast/BreakscapedString';
 import { NodeType } from '../../model/ast/NodeType';
 import { Bit } from '../../model/ast/Nodes';
@@ -712,13 +713,13 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     } else {
       if (!codeBreakscaping) {
         s = this.breakscape(s, {
-          textFormat: this.textFormat,
-          textLocation: this.textLocation,
+          format: this.textFormat,
+          location: this.textLocation,
         });
       } else {
         s = this.breakscape(s, {
-          textFormat: this.textFormat,
-          textLocation: this.textLocation,
+          format: this.textFormat,
+          location: this.textLocation,
         });
       }
     }
@@ -738,8 +739,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     if (this.havePreText && this.rootParagraphNodeContentIndex >= this.preTextIndex) {
       // Write the text as pre-text
       const s = this.breakscape(node.text, {
-        textFormat: TextFormat.plainText,
-        textLocation: this.textLocation, // Must be body for pre-text
+        format: TextFormat.plainText,
+        location: this.textLocation, // Must be body for pre-text
       });
       this.write(s);
     } else {
@@ -1116,8 +1117,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     const attrs = node.attrs;
 
     const formula = this.breakscape(attrs.formula, {
-      textFormat: this.textFormat,
-      textLocation: this.textLocation,
+      format: this.textFormat,
+      location: this.textLocation,
     });
 
     const s = `==${formula}==|latex|`;

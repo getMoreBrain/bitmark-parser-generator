@@ -99,8 +99,8 @@ describe('text-bitmark-body-generator', () => {
 
         // Generate JSON from original bitmark markup using the PEG parser
         const textAst = textParser.toAst(originalMarkup, {
-          textFormat: TextFormat.bitmarkText,
-          textLocation: TextLocation.body,
+          format: TextFormat.bitmarkText,
+          location: TextLocation.body,
         });
 
         // Write JSON file
@@ -130,8 +130,8 @@ describe('text-bitmark-body-generator', () => {
 
         // Generate JSON from generated bitmark markup using the PEG parser
         const newTextAst = textParser.toAst(newMarkup, {
-          textFormat: TextFormat.bitmarkText,
-          textLocation: TextLocation.body,
+          format: TextFormat.bitmarkText,
+          location: TextLocation.body,
         });
 
         // Write the new JSON file

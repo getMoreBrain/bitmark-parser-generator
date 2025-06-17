@@ -139,6 +139,64 @@ bpg.convert(ast, { output: "./output.bitmark" });
 bpg.convert(ast, { output: "./output.json", outputFormat: 'json' });
 ```
 
+### Breakscaping
+
+A text can be breakscaped programmatically for inclusion in bitmark.
+
+NOTE: It is recommended the bit builder documented above in Programmatic Bitmark Creation is used rather than
+hand-coding bitmark creation, because it guarantees the bitmark will be valid, and all breakscaping will be correct.
+
+When breakscaping a text for inclusion in bitmark, the breakscaping applied depends on where that text appears in the
+bitmark. The following four text locations require different breakscaping:
+
+| Bit Format           | Text Location |
+|----------|-------------|
+| bitmark++            | body |
+| bitmark++            | tag |
+| text (not bitmark++) | body |
+| text (not bitmark++) | tag |
+
+Also, if a plain text divider `==== text ====` is used, then text after the divider must be breakscaped using
+`text:body` even if the bit is `bitmark++`.
+
+```ts
+import { BitmarkParserGenerator, BodyTextFormat, TextLocation, InputType } from 'bitmark-parser-generator';
+
+const bpg = new BitmarkParserGenerator();
+
+
+const breakscaped = bpg.breakscapeText("This is the [!text] to be breakscaped", {
+  inputFormat: InputType.string, // or "string"
+  textFormat: BodyTextFormat.bitmarkPlusPlus, // or "bitmark++"
+  textLocation: TextLocation.body, // or "body"
+});
+// breakscaped = "This is the [^!text] to be breakscaped"
+
+
+const breakscaped = bpg.breakscapeText("This is the [!text] to be breakscaped", {
+  inputFormat: InputType.string, // or "string"
+  textFormat: BodyTextFormat.bitmarkPlusPlus, // or "bitmark++"
+  textLocation: TextLocation.tag, // or "tag"
+});
+// breakscaped = "This is the [!text^] to be breakscaped"
+```
+
+
+
+### Info
+
+Information about the supported bits can be retreived via the info API
+
+```ts
+import { BitmarkParserGenerator } from 'bitmark-parser-generator';
+
+const bpg = new BitmarkParserGenerator();
+
+// Write supported bit info to the console
+const info = bpg.info();
+console.log(JSON.stringify(info, null, 2));
+```
+
 
 ### Upgrade
 

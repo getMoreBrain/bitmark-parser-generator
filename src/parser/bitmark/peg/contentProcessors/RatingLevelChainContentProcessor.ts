@@ -39,7 +39,7 @@ function ratingLevelChainContentProcessor(
 
   const node: Partial<RatingLevelStartEndJson> = {
     level,
-    label: label ? textParser.toAst(label, { textFormat, textLocation: TextLocation.tag }) : undefined,
+    label: label ? textParser.toAst(label, { format: textFormat, location: TextLocation.tag }) : undefined,
   };
 
   switch (key) {

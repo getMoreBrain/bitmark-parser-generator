@@ -1469,8 +1469,8 @@ class Builder extends BaseBuilder {
 
         // Special v2 Breakscaping
         bodyStr = Breakscape.breakscape(bodyStr, {
-          textFormat,
-          textLocation: TextLocation.body,
+          format: textFormat,
+          location: TextLocation.body,
           v2: true,
         });
 
@@ -1488,8 +1488,8 @@ class Builder extends BaseBuilder {
 
         // Convert the body string to AST
         rawBody = this.textParser.toAst(bodyStr, {
-          textFormat,
-          textLocation: TextLocation.body,
+          format: textFormat,
+          location: TextLocation.body,
         });
 
         const replaceBitsRecursive = (bodyText: TextAst) => {

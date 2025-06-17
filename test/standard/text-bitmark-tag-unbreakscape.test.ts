@@ -96,8 +96,8 @@ describe('text-bitmark-tag-unbreakscape', () => {
         // Unbreakscape the text
         performance.mark('PEG:Start');
         const text = Breakscape.unbreakscape(originalBreakscaped.trim() as BreakscapedString, {
-          textFormat: TextFormat.bitmarkText,
-          textLocation: TextLocation.tag,
+          format: TextFormat.bitmarkText,
+          location: TextLocation.tag,
         });
 
         // Write the unbreakscaped text

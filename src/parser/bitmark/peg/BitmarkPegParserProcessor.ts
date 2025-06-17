@@ -344,8 +344,8 @@ class BitmarkPegParserProcessor {
   ): BitHeader {
     // Unbreakscape the bit type
     const bitType = Breakscape.unbreakscape(bitTypeBreakscaped, {
-      textFormat: TextFormat.plainText,
-      textLocation: TextLocation.tag,
+      format: TextFormat.plainText,
+      location: TextLocation.tag,
     });
 
     // Get / check bit type
@@ -409,8 +409,8 @@ class BitmarkPegParserProcessor {
     const processValue = (value: TypeValue | undefined) => {
       if (value) {
         const val = Breakscape.unbreakscape(StringUtils.string(value.value) as BreakscapedString, {
-          textFormat: TextFormat.plainText,
-          textLocation: TextLocation.tag,
+          format: TextFormat.plainText,
+          location: TextLocation.tag,
         });
         if (value.type === TypeKey.TextFormat) {
           // Set text format

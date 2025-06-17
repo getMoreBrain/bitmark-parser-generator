@@ -47,8 +47,8 @@ function markConfigChainContentProcessor(
   const mark: string = Breakscape.unbreakscape(
     (StringUtils.trimmedString(content.value) ?? 'unknown') as BreakscapedString,
     {
-      textFormat: TextFormat.bitmarkText,
-      textLocation: TextLocation.tag,
+      format: TextFormat.bitmarkText,
+      location: TextLocation.tag,
     },
   );
 

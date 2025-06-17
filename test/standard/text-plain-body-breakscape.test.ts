@@ -95,8 +95,8 @@ describe('text-plain-body-breakscape', () => {
         // Breakscape the text
         performance.mark('PEG:Start');
         const breakscaped = Breakscape.breakscape(originalText.trim(), {
-          textFormat: TextFormat.plainText,
-          textLocation: TextLocation.body,
+          format: TextFormat.plainText,
+          location: TextLocation.body,
         });
 
         // Write the breakscaped text

@@ -106,8 +106,8 @@ describe('text-bitmark-tag-parser', () => {
         // Convert the Bitmark markup to bitmark AST
         performance.mark('PEG:Start');
         const textAst = textParser.toAst(originalMarkup.trim(), {
-          textFormat: TextFormat.bitmarkText,
-          textLocation: TextLocation.tag,
+          format: TextFormat.bitmarkText,
+          location: TextLocation.tag,
         });
 
         // Write the new AST

@@ -98,8 +98,8 @@ describe('text-bitmark-tag-generator', () => {
 
         // Generate JSON from breakscaped markup text
         const textAst = textParser.toAst(originalMarkup, {
-          textFormat: TextFormat.bitmarkText,
-          textLocation: TextLocation.tag,
+          format: TextFormat.bitmarkText,
+          location: TextLocation.tag,
         });
 
         // Write JSON file
@@ -129,8 +129,8 @@ describe('text-bitmark-tag-generator', () => {
 
         // Generate JSON from generated text
         const newTextAst = textParser.toAst(newMarkup, {
-          textFormat: TextFormat.bitmarkText,
-          textLocation: TextLocation.tag,
+          format: TextFormat.bitmarkText,
+          location: TextLocation.tag,
         });
 
         // Write the new JSON file
