@@ -190,12 +190,12 @@ class BaseBuilder {
           } else if (StringUtils.isString(t)) {
             strArray[i] = this.textParser.toAst(
               Breakscape.breakscape(t as string, {
-                textFormat,
-                textLocation,
+                format: textFormat,
+                location: textLocation,
               }),
               {
-                textFormat,
-                textLocation,
+                format: textFormat,
+                location: textLocation,
               },
             );
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -211,13 +211,13 @@ class BaseBuilder {
         // v2 text(?)
         res = this.textParser.toAst(
           Breakscape.breakscape(text as string, {
-            textFormat,
-            textLocation,
+            format: textFormat,
+            location: textLocation,
             v2: true,
           }),
           {
-            textFormat,
-            textLocation,
+            format: textFormat,
+            location: textLocation,
           },
         ) as R;
       } else {

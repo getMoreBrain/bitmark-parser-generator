@@ -190,8 +190,8 @@ class BitmarkPegParserHelper {
     return {
       type: TypeKey.Property,
       key: Breakscape.unbreakscape(key, {
-        textFormat: TextFormat.plainText,
-        textLocation: TextLocation.tag,
+        format: TextFormat.plainText,
+        location: TextLocation.tag,
       }),
       value,
       parser: {
@@ -207,8 +207,8 @@ class BitmarkPegParserHelper {
     return {
       type: TypeKey.Resource,
       key: Breakscape.unbreakscape(key, {
-        textFormat: TextFormat.plainText,
-        textLocation: TextLocation.tag,
+        format: TextFormat.plainText,
+        location: TextLocation.tag,
       }),
       value,
       parser: {

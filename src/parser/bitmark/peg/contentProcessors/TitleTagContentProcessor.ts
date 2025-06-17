@@ -40,8 +40,8 @@ function titleTagContentProcessor(
   title[level] = {
     //
     titleAst: textParser.toAst(titleText ?? '', {
-      textFormat,
-      textLocation: TextLocation.tag,
+      format: textFormat,
+      location: TextLocation.tag,
     }),
     titleString: titleText ?? '',
   };

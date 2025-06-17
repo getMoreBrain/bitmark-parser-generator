@@ -38,7 +38,9 @@ class BitUtils {
         } else {
           // node.__isDefaultExample = false;
           node.example = (
-            example ? textParser.toAst(example as TextAst, { textFormat, textLocation: TextLocation.tag }) : undefined
+            example
+              ? textParser.toAst(example as TextAst, { format: textFormat, location: TextLocation.tag })
+              : undefined
           ) as ExampleJson;
         }
         if (firstOnly) break;

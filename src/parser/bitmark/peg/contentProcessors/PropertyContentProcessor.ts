@@ -108,24 +108,24 @@ function propertyContentProcessor(
             return Breakscape.unbreakscape(
               StringUtils.isString(v) ? (StringUtils.trimmedString(v) as BreakscapedString) : undefined,
               {
-                textFormat: TextFormat.plainText,
-                textLocation: TextLocation.tag,
+                format: TextFormat.plainText,
+                location: TextLocation.tag,
               },
             );
 
           case PropertyFormat.number:
             return NumberUtils.asNumber(
               Breakscape.unbreakscape(v as BreakscapedString, {
-                textFormat: TextFormat.plainText,
-                textLocation: TextLocation.tag,
+                format: TextFormat.plainText,
+                location: TextLocation.tag,
               }),
             );
 
           case PropertyFormat.boolean:
             return BooleanUtils.toBoolean(
               Breakscape.unbreakscape(v as BreakscapedString, {
-                textFormat: TextFormat.plainText,
-                textLocation: TextLocation.tag,
+                format: TextFormat.plainText,
+                location: TextLocation.tag,
               }),
               true,
             );
@@ -133,8 +133,8 @@ function propertyContentProcessor(
           case PropertyFormat.invertedBoolean:
             return !BooleanUtils.toBoolean(
               Breakscape.unbreakscape(v as BreakscapedString, {
-                textFormat: TextFormat.plainText,
-                textLocation: TextLocation.tag,
+                format: TextFormat.plainText,
+                location: TextLocation.tag,
               }),
               true,
             );
@@ -142,14 +142,14 @@ function propertyContentProcessor(
           case PropertyFormat.bitmarkText:
             v = StringUtils.isString(v) ? v : '';
             return textParser.toAst(v as BreakscapedString, {
-              textFormat: TextFormat.bitmarkText,
-              textLocation: TextLocation.tag,
+              format: TextFormat.bitmarkText,
+              location: TextLocation.tag,
             });
         }
       }
       return Breakscape.unbreakscape(v as BreakscapedString, {
-        textFormat: TextFormat.plainText,
-        textLocation: TextLocation.tag,
+        format: TextFormat.plainText,
+        location: TextLocation.tag,
       });
     };
 

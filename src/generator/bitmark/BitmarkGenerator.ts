@@ -2706,8 +2706,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (s != null) {
       this.write(
         Breakscape.breakscape(`${s}`, {
-          textFormat: TextFormat.plainText,
-          textLocation: TextLocation.tag,
+          format: TextFormat.plainText,
+          location: TextLocation.tag,
         }),
       );
     }
@@ -2764,8 +2764,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       const writeString = () =>
         this.write(
           Breakscape.breakscape(s, {
-            textFormat: breakscapeFormat,
-            textLocation: location,
+            format: breakscapeFormat,
+            location,
           }),
         );
 

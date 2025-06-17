@@ -27,8 +27,8 @@ function itemLeadTagContentProcessor(
 
   if (!target.itemLead) target.itemLead = [];
   const text = textParser.toAst(trimmedStringValue, {
-    textFormat,
-    textLocation: TextLocation.tag,
+    format: textFormat,
+    location: TextLocation.tag,
   });
   target.itemLead.push(text);
 }

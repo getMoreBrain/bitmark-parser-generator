@@ -33,8 +33,8 @@ function technicalTermChainContentProcessor(
 
   // Extract the technicalTerm from the content tag
   const technicalTerm = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString, {
-    textFormat: TextFormat.bitmarkText,
-    textLocation: TextLocation.tag,
+    format: TextFormat.bitmarkText,
+    location: TextLocation.tag,
   });
 
   const node: Partial<TechnicalTermJson> = {
