@@ -1,0 +1,45 @@
+[
+  {
+    "bit": {
+      "type": "toc-content",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "tocContent": ["99", "This is a resource"],
+      "buttonCaption": "Click Me!",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "3.30.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.toc-content]\n[@tocContent:99]\n[@tocContent:This is a resource]"
+  },
+  {
+    "bit": {
+      "type": "toc-content",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "tocContent": []
+    },
+    "parser": {
+      "version": "3.30.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.toc-content]"
+  }
+]

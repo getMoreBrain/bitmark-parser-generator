@@ -156,6 +156,7 @@ export interface BitJson {
   maxDisplayLevel: number;
   maxTocChapterLevel: number;
   tocResource: string | string[];
+  tocContent: string | string[];
   page: string;
   productId: string | string[];
   product: string;

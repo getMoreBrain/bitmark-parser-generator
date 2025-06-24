@@ -532,6 +532,7 @@ const BitType = superenum({
   tocChapter: 'toc-chapter',
   tocInline: 'toc-inline',
   tocResource: 'toc-resource',
+  tocContent: 'toc-content',
   trueFalse: 'true-false',
   trueFalse1: 'true-false-1',
   vendorAmcharts5Chart: 'vendor-amcharts-5-chart',
