@@ -2302,6 +2302,10 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.tocResource,
         maxCount: Count.infinity,
       },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
     ],
   },
   [BitType.anchor]: { since: '1.3.0', baseBitType: BitType._standard },
