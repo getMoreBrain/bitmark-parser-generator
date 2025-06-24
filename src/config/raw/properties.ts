@@ -521,6 +521,10 @@ const PROPERTIES: _PropertiesConfig = {
     tag: PropertyTag.tocResource,
     format: PropertyFormat.plainText,
   },
+  [PropertyConfigKey.tocContent]: {
+    tag: PropertyTag.tocContent,
+    format: PropertyFormat.plainText,
+  },
   [PropertyConfigKey.technicalTerm]: {
     tag: PropertyTag.technicalTerm,
     single: true,

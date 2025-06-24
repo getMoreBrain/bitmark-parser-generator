@@ -252,6 +252,7 @@ class Builder extends BaseBuilder {
     maxDisplayLevel?: number;
     maxTocChapterLevel?: number;
     tocResource?: string | string[];
+    tocContent?: string | string[];
     page?: string | string[];
     productId?: string | string[];
     product?: string | string[];
@@ -517,6 +518,7 @@ class Builder extends BaseBuilder {
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, data.maxDisplayLevel),
       maxTocChapterLevel: this.toAstProperty(PropertyConfigKey.maxTocChapterLevel, data.maxTocChapterLevel),
       tocResource: this.toAstProperty(PropertyConfigKey.tocResource, data.tocResource),
+      tocContent: this.toAstProperty(PropertyConfigKey.tocContent, data.tocContent),
       page: this.toAstProperty(PropertyConfigKey.page, data.page),
       productId: this.toAstProperty(PropertyConfigKey.productId, data.productId),
       product: this.toAstProperty(PropertyConfigKey.product, data.product),

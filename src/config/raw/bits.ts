@@ -2308,6 +2308,21 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.tocContent]: {
+    since: '3.31.0',
+    baseBitType: BitType.toc,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tocContent,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+  },
   [BitType.anchor]: { since: '1.3.0', baseBitType: BitType._standard },
   [BitType.bitBookEnding]: { since: '1.3.0', baseBitType: BitType._standard },
   [BitType.bitBookSummary]: { since: '1.3.0', baseBitType: BitType._standard },

@@ -191,6 +191,7 @@ const propertyConfigKeys = {
   thumbImage: 'thumbImage',
   toc: 'toc',
   tocResource: 'tocResource',
+  tocContent: 'tocContent',
   topicTag: 'topicTag',
   trim: 'trim',
   unit: 'unit',
