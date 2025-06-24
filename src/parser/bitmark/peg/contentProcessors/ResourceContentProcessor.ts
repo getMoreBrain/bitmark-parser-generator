@@ -172,8 +172,8 @@ function resourceContentProcessor(
     const resource = resourceBuilder.resource(context, {
       type,
       value: Breakscape.unbreakscape(value, {
-        textFormat: TextFormat.bitmarkText,
-        textLocation: TextLocation.tag,
+        format: TextFormat.bitmarkText,
+        location: TextLocation.tag,
       }),
       posterImage: posterImageResource,
       ...tags,

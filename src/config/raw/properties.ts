@@ -340,8 +340,25 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.processHandInLocation]: {
+    tag: PropertyTag.processHandInLocation,
+    single: true,
+    format: PropertyFormat.plainText,
+  },
   [PropertyConfigKey.isPublic]: {
     tag: PropertyTag.isPublic,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.isTemplate]: {
+    tag: PropertyTag.isTemplate,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.isTemplateStripTheme]: {
+    tag: PropertyTag.isTemplateStripTheme,
     defaultValue: 'false',
     single: true,
     format: PropertyFormat.boolean,
@@ -514,6 +531,10 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.tocResource]: {
     tag: PropertyTag.tocResource,
+    format: PropertyFormat.plainText,
+  },
+  [PropertyConfigKey.tocContent]: {
+    tag: PropertyTag.tocContent,
     format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.technicalTerm]: {

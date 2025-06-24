@@ -114,6 +114,8 @@ class Builder extends BaseBuilder {
     jupyterId?: string;
     jupyterExecutionCount?: number;
     isPublic?: boolean;
+    isTemplate?: boolean;
+    isTemplateStripTheme?: boolean;
     aiGenerated?: boolean;
     machineTranslated?: string;
     searchIndex?: string | string[];
@@ -167,6 +169,7 @@ class Builder extends BaseBuilder {
     kind?: string;
     hasMarkAsDone?: boolean;
     processHandIn?: boolean;
+    processHandInLocation?: string;
     chatWithBook?: boolean;
     chatWithBookBrainKey?: string;
     action?: string;
@@ -251,6 +254,7 @@ class Builder extends BaseBuilder {
     maxDisplayLevel?: number;
     maxTocChapterLevel?: number;
     tocResource?: string | string[];
+    tocContent?: string | string[];
     page?: string | string[];
     productId?: string | string[];
     product?: string | string[];
@@ -370,6 +374,8 @@ class Builder extends BaseBuilder {
       jupyterId: this.toAstProperty(PropertyConfigKey.jupyterId, data.jupyterId),
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, data.jupyterExecutionCount),
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, data.isPublic),
+      isTemplate: this.toAstProperty(PropertyConfigKey.isTemplate, data.isTemplate),
+      isTemplateStripTheme: this.toAstProperty(PropertyConfigKey.isTemplateStripTheme, data.isTemplateStripTheme),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, data.aiGenerated),
       machineTranslated: this.toAstProperty(PropertyConfigKey.machineTranslated, data.machineTranslated),
       searchIndex: this.toAstProperty(PropertyConfigKey.searchIndex, data.searchIndex),
@@ -424,6 +430,7 @@ class Builder extends BaseBuilder {
       kind: this.toAstProperty(PropertyConfigKey.kind, data.kind),
       hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, data.hasMarkAsDone),
       processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, data.processHandIn),
+      processHandInLocation: this.toAstProperty(PropertyConfigKey.processHandInLocation, data.processHandInLocation),
       chatWithBook: this.toAstProperty(PropertyConfigKey.chatWithBook, data.chatWithBook),
       chatWithBookBrainKey: this.toAstProperty(PropertyConfigKey.chatWithBookBrainKey, data.chatWithBookBrainKey),
       action: this.toAstProperty(PropertyConfigKey.action, data.action),
@@ -515,6 +522,7 @@ class Builder extends BaseBuilder {
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, data.maxDisplayLevel),
       maxTocChapterLevel: this.toAstProperty(PropertyConfigKey.maxTocChapterLevel, data.maxTocChapterLevel),
       tocResource: this.toAstProperty(PropertyConfigKey.tocResource, data.tocResource),
+      tocContent: this.toAstProperty(PropertyConfigKey.tocContent, data.tocContent),
       page: this.toAstProperty(PropertyConfigKey.page, data.page),
       productId: this.toAstProperty(PropertyConfigKey.productId, data.productId),
       product: this.toAstProperty(PropertyConfigKey.product, data.product),
@@ -1469,8 +1477,8 @@ class Builder extends BaseBuilder {
 
         // Special v2 Breakscaping
         bodyStr = Breakscape.breakscape(bodyStr, {
-          textFormat,
-          textLocation: TextLocation.body,
+          format: textFormat,
+          location: TextLocation.body,
           v2: true,
         });
 
@@ -1488,8 +1496,8 @@ class Builder extends BaseBuilder {
 
         // Convert the body string to AST
         rawBody = this.textParser.toAst(bodyStr, {
-          textFormat,
-          textLocation: TextLocation.body,
+          format: textFormat,
+          location: TextLocation.body,
         });
 
         const replaceBitsRecursive = (bodyText: TextAst) => {

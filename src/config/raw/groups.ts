@@ -28,6 +28,14 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.isTemplate,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.isTemplateStripTheme,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.aiGenerated,
       },
       {
@@ -469,7 +477,19 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.processHandInLocation,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.isPublic,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.isTemplate,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.isTemplateStripTheme,
       },
       {
         type: BitTagType.property,

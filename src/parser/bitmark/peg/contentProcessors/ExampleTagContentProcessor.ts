@@ -94,8 +94,8 @@ function handleGapOrSelectOrTrueFalseExample(
     } else {
       target.example = example
         ? textParser.toAst(example, {
-            textFormat,
-            textLocation: TextLocation.tag,
+            format: textFormat,
+            location: TextLocation.tag,
           })
         : undefined;
     }
@@ -163,8 +163,8 @@ function handleStandardBooleanExample(
   } else {
     const exampleStr = example
       ? Breakscape.unbreakscape(example, {
-          textFormat: TextFormat.bitmarkText,
-          textLocation: TextLocation.tag,
+          format: TextFormat.bitmarkText,
+          location: TextLocation.tag,
         })
       : undefined;
     if (BooleanUtils.isBooleanString(exampleStr)) {
@@ -189,7 +189,9 @@ function handleStandardStringExample(
     target.__isDefaultExample = true;
     target.example = undefined;
   } else {
-    target.example = example ? textParser.toAst(example, { textFormat, textLocation: TextLocation.tag }) : undefined;
+    target.example = example
+      ? textParser.toAst(example, { format: textFormat, location: TextLocation.tag })
+      : undefined;
   }
 }
 

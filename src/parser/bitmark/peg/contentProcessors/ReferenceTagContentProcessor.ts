@@ -27,13 +27,13 @@ function referenceTagContentProcessor(
 
   if (isReferenceEnd) {
     target.referenceEnd = Breakscape.unbreakscape(trimmedStringValue, {
-      textFormat: TextFormat.bitmarkText,
-      textLocation: TextLocation.tag,
+      format: TextFormat.bitmarkText,
+      location: TextLocation.tag,
     });
   } else {
     target.reference = Breakscape.unbreakscape(trimmedStringValue, {
-      textFormat: TextFormat.bitmarkText,
-      textLocation: TextLocation.tag,
+      format: TextFormat.bitmarkText,
+      location: TextLocation.tag,
     });
   }
 }

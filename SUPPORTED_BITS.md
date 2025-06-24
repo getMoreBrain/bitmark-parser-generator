@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.31.1
+Version: 3.32.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -165,6 +165,12 @@ conversation-left-1-thought (since: 1.3.0)
 conversation-right-1 (since: 1.3.0)
 conversation-right-1-scream (since: 1.3.0)
 conversation-right-1-thought (since: 1.3.0)
+cloze-and-multiple-choice-text-conversation-left-1 (since: 1.3.0)
+cloze-and-multiple-choice-text-conversation-left-1-scream (since: 1.3.0)
+cloze-and-multiple-choice-text-conversation-left-1-thought (since: 1.3.0)
+cloze-and-multiple-choice-text-conversation-right-1 (since: 1.3.0)
+cloze-and-multiple-choice-text-conversation-right-1-scream (since: 1.3.0)
+cloze-and-multiple-choice-text-conversation-right-1-thought (since: 1.3.0)
 cook-arrangement (since: 1.3.0)
 cook-ingredients (since: 1.5.16)
 cook-insert (since: 1.3.0)
@@ -313,6 +319,7 @@ le-completion (since: 1.25.0)
 le-external-link (since: 1.25.0)
 le-finishing-task (since: 1.27.0)
 le-follow-up-task (since: 1.27.0)
+le-multi-day-event (since: 3.32.0)
 legend (since: 3.12.0)
 le-document-download (since: 3.18.0)
 le-learning-objectives (since: 1.25.0)
@@ -525,6 +532,7 @@ toc (since: 1.3.0)
 toc-chapter (since: 1.5.5)
 toc-inline (since: 3.24.0)
 toc-resource (since: 3.31.0)
+toc-content (since: 3.31.0)
 true-false (since: 1.3.0)
 true-false-1 (since: 1.3.0)
 vendor-amcharts-5-chart (since: 1.5.8)

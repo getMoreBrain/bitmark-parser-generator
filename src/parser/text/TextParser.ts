@@ -8,8 +8,8 @@ import { StringUtils } from '../../utils/StringUtils';
 import { parse as bitmarkTextParse } from './peg/TextPegParser';
 
 export interface BitmarkTextParserOptions {
-  textFormat: TextFormatType;
-  textLocation: TextLocationType;
+  format: TextFormatType;
+  location: TextLocationType;
 }
 
 class TextParser {
@@ -88,7 +88,7 @@ class TextParser {
     // The start rule is bitmark++ for the body, and bitmark+ for the tags
     // Otherwise, the start rule is bitmarkMinusMinus
     let startRule = 'bitmarkPlusPlus';
-    if (opts.textLocation === TextLocation.tag) {
+    if (opts.location === TextLocation.tag) {
       startRule = 'bitmarkPlus';
     }
 

@@ -1298,8 +1298,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Use the text parser to parse the text
     const textAst = this.textParser.toAst(text, {
-      textFormat: format,
-      textLocation,
+      format,
+      location: textLocation,
     });
 
     return textAst;
@@ -1655,6 +1655,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Special case for 'toc-resource' bits
       if (Config.isOfBitType(bitType, BitType.tocResource)) {
         if (bitJson.tocResource == null) bitJson.tocResource = [];
+      }
+
+      // Special case for 'toc-content' bits
+      if (Config.isOfBitType(bitType, BitType.tocContent)) {
+        if (bitJson.tocContent == null) bitJson.tocContent = [];
       }
 
       // Special case for 'book' bits

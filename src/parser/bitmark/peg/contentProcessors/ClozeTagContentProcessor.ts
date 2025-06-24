@@ -36,12 +36,12 @@ function clozeTagContentProcessor(
 
     solutions.push(
       Breakscape.unbreakscape(trimmedStringValue, {
-        textFormat: TextFormat.bitmarkText,
-        textLocation: TextLocation.tag,
+        format: TextFormat.bitmarkText,
+        location: TextLocation.tag,
       }),
     );
 
-    const solutionAst = textParser.toAst(trimmedStringValue, { textFormat, textLocation: TextLocation.tag });
+    const solutionAst = textParser.toAst(trimmedStringValue, { format: textFormat, location: TextLocation.tag });
     solutionsAst.push(solutionAst);
   }
 }

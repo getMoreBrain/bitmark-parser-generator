@@ -65,6 +65,8 @@ export interface Bit {
   jupyterId?: Property;
   jupyterExecutionCount?: Property;
   isPublic?: Property;
+  isTemplate?: Property;
+  isTemplateStripTheme?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
   searchIndex?: Property;
@@ -118,6 +120,7 @@ export interface Bit {
   kind?: Property;
   hasMarkAsDone?: Property;
   processHandIn?: Property;
+  processHandInLocation?: Property;
   chatWithBook?: Property;
   chatWithBookBrainKey?: Property;
   action?: Property;
@@ -203,6 +206,7 @@ export interface Bit {
   maxDisplayLevel?: Property;
   maxTocChapterLevel?: Property;
   tocResource?: Property;
+  tocContent?: Property;
   page?: Property;
   productId?: Property;
   product?: Property;

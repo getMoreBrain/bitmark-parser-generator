@@ -20,6 +20,8 @@ export interface BitJson {
   jupyterId: string;
   jupyterExecutionCount: number;
   isPublic: boolean;
+  isTemplate: boolean;
+  isTemplateStripTheme: boolean;
   aiGenerated: boolean;
   machineTranslated: string;
   searchIndex: string | string[];
@@ -72,6 +74,7 @@ export interface BitJson {
   kind: string;
   hasMarkAsDone: boolean;
   processHandIn: boolean;
+  processHandInLocation: string;
   chatWithBook: boolean;
   chatWithBookBrainKey: string;
   action: string;
@@ -155,6 +158,7 @@ export interface BitJson {
   maxDisplayLevel: number;
   maxTocChapterLevel: number;
   tocResource: string | string[];
+  tocContent: string | string[];
   page: string;
   productId: string | string[];
   product: string;

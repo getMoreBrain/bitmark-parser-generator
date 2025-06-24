@@ -1,7 +1,8 @@
 import { BreakscapedString } from '../model/ast/BreakscapedString';
-import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
-import { TextLocation, TextLocationType } from '../model/enum/TextLocation';
+import { TextFormat } from '../model/enum/TextFormat';
+import { TextLocation } from '../model/enum/TextLocation';
 
+import { BreakscapeOptions } from './BreakscapeOptions';
 import { Breakscape as BreakscapeImpl } from './BreakscapeRegex';
 
 /**
@@ -12,31 +13,9 @@ import { Breakscape as BreakscapeImpl } from './BreakscapeRegex';
  *
  */
 
-export interface BreakscapeOptions {
-  /**
-   * The format of the text being breakscaped, defaults to TextFormat.bitmarkText
-   */
-  textFormat: TextFormatType;
-
-  /**
-   * The location of the text being breakscaped, defaults to TextLocation.body
-   */
-  textLocation: TextLocationType;
-
-  /**
-   * if true, the original array will be modified rather than a copy being made
-   */
-  inPlaceArray?: boolean;
-
-  /**
-   * if true, perform v2 breakscaping from JSON
-   */
-  v2?: boolean;
-}
-
 const DEFAULT_BREAKSCAPE_OPTIONS: BreakscapeOptions = {
-  textFormat: TextFormat.bitmarkText,
-  textLocation: TextLocation.body,
+  format: TextFormat.bitmarkText,
+  location: TextLocation.body,
   inPlaceArray: false,
   v2: false,
 };
@@ -64,8 +43,8 @@ class Breakscape {
     const opts = Object.assign({}, DEFAULT_BREAKSCAPE_OPTIONS, options);
 
     return externalBreakscape.breakscape(val as BreakscapedString, {
-      format: opts.textFormat,
-      location: opts.textLocation,
+      format: opts.format,
+      location: opts.location,
       inPlaceArray: opts.inPlaceArray,
       v2: opts.v2,
     }) as R;
@@ -87,12 +66,7 @@ class Breakscape {
 
     const opts = Object.assign({}, DEFAULT_BREAKSCAPE_OPTIONS, options);
 
-    return externalBreakscape.unbreakscape(val as BreakscapedString, {
-      format: opts.textFormat,
-      location: opts.textLocation,
-      inPlaceArray: opts.inPlaceArray,
-      v2: opts.v2,
-    }) as R;
+    return externalBreakscape.unbreakscape(val as BreakscapedString, opts) as R;
   }
 
   /**
@@ -111,12 +85,7 @@ class Breakscape {
 
     const opts = Object.assign({}, DEFAULT_BREAKSCAPE_OPTIONS, options);
 
-    return externalBreakscape.breakscapeCode(val as BreakscapedString, {
-      format: opts.textFormat,
-      location: opts.textLocation,
-      inPlaceArray: opts.inPlaceArray,
-      v2: opts.v2,
-    }) as R;
+    return externalBreakscape.breakscapeCode(val as BreakscapedString, opts) as R;
   }
 
   /**
