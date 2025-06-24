@@ -1514,6 +1514,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.leMultiDayEvent]: { since: '3.32.0', baseBitType: BitType.leClassroomEvent },
   [BitType.leCompletion]: {
     since: '1.25.0',
     baseBitType: BitType.learningPathClosing,
