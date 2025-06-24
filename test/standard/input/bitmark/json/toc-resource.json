@@ -5,6 +5,7 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "tocResource": ["99", "This is a resource"],
+      "buttonCaption": "Click Me!",
       "item": [],
       "lead": [],
       "pageNumber": [],
