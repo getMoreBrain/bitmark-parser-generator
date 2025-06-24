@@ -20,6 +20,8 @@ export interface BitJson {
   jupyterId: string;
   jupyterExecutionCount: number;
   isPublic: boolean;
+  isTemplate: boolean;
+  isTemplateStripTheme: boolean;
   aiGenerated: boolean;
   machineTranslated: string;
   searchIndex: string | string[];

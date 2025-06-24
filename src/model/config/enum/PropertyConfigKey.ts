@@ -81,6 +81,8 @@ const propertyConfigKeys = {
   isCaseSensitive: 'isCaseSensitive',
   isInfoOnly: 'isInfoOnly',
   isPublic: 'isPublic',
+  isTemplate: 'isTemplate',
+  isTemplateStripTheme: 'isTemplateStripTheme',
   isTracked: 'isTracked',
   jupyterExecutionCount: 'jupyterExecutionCount',
   jupyterId: 'jupyterId',

@@ -351,6 +351,18 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.isTemplate]: {
+    tag: PropertyTag.isTemplate,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.isTemplateStripTheme]: {
+    tag: PropertyTag.isTemplateStripTheme,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
   [PropertyConfigKey.chatWithBook]: {
     tag: PropertyTag.chatWithBook,
     defaultValue: 'false',
