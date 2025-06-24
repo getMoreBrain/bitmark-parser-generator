@@ -313,6 +313,7 @@ const BitType = superenum({
   leExternalLink: 'le-external-link',
   leFinishingTask: 'le-finishing-task',
   leFollowUpTask: 'le-follow-up-task',
+  leMultiDayEvent: 'le-multi-day-event',
   legend: 'legend',
   leDocumentDownload: 'le-document-download',
   leLearningObjectives: 'le-learning-objectives',
