@@ -59,5 +59,66 @@
       "textParserVersion": "8.32.2"
     },
     "bitmark": "[.conversation-left-1-thought]\n[!conv right thought 1]\n[@partner:David][&image:https://cdn.bitbook.education/avatars/cat_70x70@3.jpg]\n\nAu 1ᵉʳ juillet 2014, l’Association suisse des banquiers (ASB) a édicté les directives suivantes concernant les exigences minimales pour les financements hypothécaires: Pour financer une hypothèque, il faut un apport minimal de fonds propres à la valeur de nantissement. Ces fonds propres ne doivent pas provenir de l’avoir du 2ᵉ pilier (versement anticipé et mise en gage). Cette part minimale de fonds propres est de 10%."
+  },
+  {
+    "bit": {
+      "type": "cloze-and-multiple-choice-text-conversation-left-1-thought",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "partner": {
+        "name": "David",
+        "avatarImage": {
+          "type": "image",
+          "image": {
+            "format": "jpg",
+            "provider": "cdn.bitbook.education",
+            "src": "https://cdn.bitbook.education/avatars/cat_70x70@3.jpg",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      },
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "conv right thought 1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Au 1ᵉʳ juillet 2014, l’Association suisse des banquiers (ASB) a édicté les directives suivantes concernant les exigences minimales pour les financements hypothécaires: Pour financer une hypothèque, il faut un apport minimal de fonds propres à la valeur de nantissement. Ces fonds propres ne doivent pas provenir de l’avoir du 2ᵉ pilier (versement anticipé et mise en gage). Cette part minimale de fonds propres est de 10%.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.cloze-and-multiple-choice-text-conversation-left-1-thought]\n[!conv right thought 1]\n[@partner:David][&image:https://cdn.bitbook.education/avatars/cat_70x70@3.jpg]\n\nAu 1ᵉʳ juillet 2014, l’Association suisse des banquiers (ASB) a édicté les directives suivantes concernant les exigences minimales pour les financements hypothécaires: Pour financer une hypothèque, il faut un apport minimal de fonds propres à la valeur de nantissement. Ces fonds propres ne doivent pas provenir de l’avoir du 2ᵉ pilier (versement anticipé et mise en gage). Cette part minimale de fonds propres est de 10%."
   }
 ]

@@ -611,6 +611,24 @@ const BITS: _BitsConfig = {
   [BitType.conversationRight1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Scream]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Thought]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.clozeAndMultipleChoiceTextConversationLeft1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.clozeAndMultipleChoiceTextConversationLeft1Scream]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
+  [BitType.clozeAndMultipleChoiceTextConversationLeft1Thought]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
+  [BitType.clozeAndMultipleChoiceTextConversationRight1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.clozeAndMultipleChoiceTextConversationRight1Scream]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
+  [BitType.clozeAndMultipleChoiceTextConversationRight1Thought]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
   [BitType.cookPreparation]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookStep]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookIngredients]: {
