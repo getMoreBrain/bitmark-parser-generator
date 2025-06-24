@@ -341,6 +341,8 @@ const NodeType = superenum({
   prefix: 'prefix',
   processHandIn: 'processHandIn',
   processHandInValue: 'processHandInValue',
+  processHandInLocation: 'processHandInLocation',
+  processHandInLocationValue: 'processHandInLocationValue',
   product: 'product',
   productFolder: 'productFolder',
   productFolderValue: 'productFolderValue',

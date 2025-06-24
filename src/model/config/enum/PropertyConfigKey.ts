@@ -119,6 +119,7 @@ const propertyConfigKeys = {
   posterImage: 'posterImage',
   page: 'page',
   processHandIn: 'processHandIn',
+  processHandInLocation: 'processHandInLocation',
   product: 'product',
   productFolder: 'productFolder',
   productId: 'productId',

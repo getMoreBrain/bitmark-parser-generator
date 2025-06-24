@@ -4,24 +4,14 @@
       "type": "book-diff",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135647"
-      ],
-      "externalId": [
-        "e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"
-      ],
-      "spaceId": [
-        "sl"
-      ],
+      "id": ["135647"],
+      "externalId": ["e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"],
+      "spaceId": ["sl"],
       "lang": "en-US",
-      "language": [
-        "de"
-      ],
+      "language": ["de"],
       "subtype": "draft-book",
       "bookDiff": "test-id",
-      "author": [
-        "Philippe Pointet"
-      ],
+      "author": ["Philippe Pointet"],
       "kind": "learning-path",
       "maxTocChapterLevel": 45,
       "title": [
@@ -57,6 +47,7 @@
       "body": [],
       "hasMarkAsDone": false,
       "processHandIn": false,
+      "processHandInLocation": "Auckland",
       "isPublic": false,
       "chatWithBook": false,
       "chatWithBookBrainKey": ""

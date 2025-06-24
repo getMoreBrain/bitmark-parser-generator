@@ -340,6 +340,11 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.processHandInLocation]: {
+    tag: PropertyTag.processHandInLocation,
+    single: true,
+    format: PropertyFormat.plainText,
+  },
   [PropertyConfigKey.isPublic]: {
     tag: PropertyTag.isPublic,
     defaultValue: 'false',
