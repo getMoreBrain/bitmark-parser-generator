@@ -65,6 +65,8 @@ export interface Bit {
   jupyterId?: Property;
   jupyterExecutionCount?: Property;
   isPublic?: Property;
+  isTemplate?: Property;
+  isTemplateStripTheme?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
   searchIndex?: Property;

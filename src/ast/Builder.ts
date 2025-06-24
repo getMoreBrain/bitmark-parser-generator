@@ -114,6 +114,8 @@ class Builder extends BaseBuilder {
     jupyterId?: string;
     jupyterExecutionCount?: number;
     isPublic?: boolean;
+    isTemplate?: boolean;
+    isTemplateStripTheme?: boolean;
     aiGenerated?: boolean;
     machineTranslated?: string;
     searchIndex?: string | string[];
@@ -372,6 +374,8 @@ class Builder extends BaseBuilder {
       jupyterId: this.toAstProperty(PropertyConfigKey.jupyterId, data.jupyterId),
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, data.jupyterExecutionCount),
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, data.isPublic),
+      isTemplate: this.toAstProperty(PropertyConfigKey.isTemplate, data.isTemplate),
+      isTemplateStripTheme: this.toAstProperty(PropertyConfigKey.isTemplateStripTheme, data.isTemplateStripTheme),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, data.aiGenerated),
       machineTranslated: this.toAstProperty(PropertyConfigKey.machineTranslated, data.machineTranslated),
       searchIndex: this.toAstProperty(PropertyConfigKey.searchIndex, data.searchIndex),
