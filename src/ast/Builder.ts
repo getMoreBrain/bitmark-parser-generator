@@ -167,6 +167,7 @@ class Builder extends BaseBuilder {
     kind?: string;
     hasMarkAsDone?: boolean;
     processHandIn?: boolean;
+    processHandInLocation?: string;
     chatWithBook?: boolean;
     chatWithBookBrainKey?: string;
     action?: string;
@@ -424,6 +425,7 @@ class Builder extends BaseBuilder {
       kind: this.toAstProperty(PropertyConfigKey.kind, data.kind),
       hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, data.hasMarkAsDone),
       processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, data.processHandIn),
+      processHandInLocation: this.toAstProperty(PropertyConfigKey.processHandInLocation, data.processHandInLocation),
       chatWithBook: this.toAstProperty(PropertyConfigKey.chatWithBook, data.chatWithBook),
       chatWithBookBrainKey: this.toAstProperty(PropertyConfigKey.chatWithBookBrainKey, data.chatWithBookBrainKey),
       action: this.toAstProperty(PropertyConfigKey.action, data.action),

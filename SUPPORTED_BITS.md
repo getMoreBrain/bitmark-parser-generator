@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 3.31.1
+Version: 3.32.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -313,6 +313,7 @@ le-completion (since: 1.25.0)
 le-external-link (since: 1.25.0)
 le-finishing-task (since: 1.27.0)
 le-follow-up-task (since: 1.27.0)
+le-multi-day-event (since: 3.32.0)
 legend (since: 3.12.0)
 le-document-download (since: 3.18.0)
 le-learning-objectives (since: 1.25.0)

@@ -118,6 +118,7 @@ export interface Bit {
   kind?: Property;
   hasMarkAsDone?: Property;
   processHandIn?: Property;
+  processHandInLocation?: Property;
   chatWithBook?: Property;
   chatWithBookBrainKey?: Property;
   action?: Property;

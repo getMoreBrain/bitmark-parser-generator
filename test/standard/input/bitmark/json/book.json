@@ -4,43 +4,28 @@
       "type": "book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135647"
-      ],
+      "id": ["135647"],
       "customerExternalId": "a-bow-the-content-n_9374th83h20",
-      "externalId": [
-        "e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"
-      ],
-      "spaceId": [
-        "sl"
-      ],
+      "externalId": ["e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"],
+      "spaceId": ["sl"],
       "isPublic": true,
       "lang": "en-US",
-      "language": [
-        "de"
-      ],
-      "publisher": [
-        "kpmg"
-      ],
+      "language": ["de"],
+      "publisher": ["kpmg"],
       "publisherName": "KPMG",
-      "theme": [
-        "grundzuege"
-      ],
+      "theme": ["grundzuege"],
       "levelCEFRp": "levelCEFRp",
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
       "levelACTFL": "levelACTFL",
       "subtype": "draft-book",
-      "coverImage": [
-        "https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png"
-      ],
+      "coverImage": ["https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png"],
       "coverColor": "#F2F2F2",
-      "author": [
-        "Philippe Pointet"
-      ],
+      "author": ["Philippe Pointet"],
       "kind": "learning-path",
       "hasMarkAsDone": true,
       "processHandIn": true,
+      "processHandInLocation": "Hong Kong",
       "chatWithBook": true,
       "chatWithBookBrainKey": "12435",
       "duration": "PT2H",
@@ -89,9 +74,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135648"
-      ],
+      "id": ["135648"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -165,9 +148,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135649"
-      ],
+      "id": ["135649"],
       "title": [
         {
           "type": "paragraph",
@@ -204,9 +185,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135650"
-      ],
+      "id": ["135650"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -276,9 +255,7 @@
       "type": "quote",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "278204"
-      ],
+      "id": ["278204"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -320,9 +297,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "278205"
-      ],
+      "id": ["278205"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -372,9 +347,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135651"
-      ],
+      "id": ["135651"],
       "title": [
         {
           "type": "paragraph",
@@ -411,9 +384,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135652"
-      ],
+      "id": ["135652"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -494,9 +465,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135653"
-      ],
+      "id": ["135653"],
       "title": [
         {
           "type": "paragraph",
@@ -533,9 +502,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135654"
-      ],
+      "id": ["135654"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -595,9 +562,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135655"
-      ],
+      "id": ["135655"],
       "title": [
         {
           "type": "paragraph",
@@ -634,9 +599,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135656"
-      ],
+      "id": ["135656"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -716,9 +679,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135657"
-      ],
+      "id": ["135657"],
       "title": [
         {
           "type": "paragraph",
@@ -755,9 +716,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135658"
-      ],
+      "id": ["135658"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -935,9 +894,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135659"
-      ],
+      "id": ["135659"],
       "title": [
         {
           "type": "paragraph",
@@ -974,9 +931,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135660"
-      ],
+      "id": ["135660"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1150,9 +1105,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135661"
-      ],
+      "id": ["135661"],
       "title": [
         {
           "type": "paragraph",
@@ -1189,9 +1142,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135662"
-      ],
+      "id": ["135662"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1251,9 +1202,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135663"
-      ],
+      "id": ["135663"],
       "title": [
         {
           "type": "paragraph",
@@ -1290,9 +1239,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135664"
-      ],
+      "id": ["135664"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1341,9 +1288,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135665"
-      ],
+      "id": ["135665"],
       "title": [
         {
           "type": "paragraph",
@@ -1380,9 +1325,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135666"
-      ],
+      "id": ["135666"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1502,9 +1445,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135667"
-      ],
+      "id": ["135667"],
       "title": [
         {
           "type": "paragraph",
@@ -1541,9 +1482,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135668"
-      ],
+      "id": ["135668"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1593,9 +1532,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135669"
-      ],
+      "id": ["135669"],
       "title": [
         {
           "type": "paragraph",
@@ -1632,9 +1569,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135670"
-      ],
+      "id": ["135670"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1694,9 +1629,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135671"
-      ],
+      "id": ["135671"],
       "title": [
         {
           "type": "paragraph",
@@ -1733,9 +1666,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135672"
-      ],
+      "id": ["135672"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1839,9 +1770,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135673"
-      ],
+      "id": ["135673"],
       "title": [
         {
           "type": "paragraph",
@@ -1878,9 +1807,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135674"
-      ],
+      "id": ["135674"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1997,9 +1924,7 @@
       "type": "book-acknowledgements",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51877"
-      ],
+      "id": ["51877"],
       "item": [],
       "lead": [
         {
@@ -2042,9 +1967,7 @@
       "type": "book-addendum",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51876"
-      ],
+      "id": ["51876"],
       "item": [],
       "lead": [
         {
@@ -2087,9 +2010,7 @@
       "type": "book-afterword",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51873"
-      ],
+      "id": ["51873"],
       "item": [],
       "lead": [
         {
@@ -2132,9 +2053,7 @@
       "type": "book-appendix",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51875"
-      ],
+      "id": ["51875"],
       "item": [],
       "lead": [
         {
@@ -2177,10 +2096,7 @@
       "type": "book-article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -2199,11 +2115,7 @@
           "attrs": {}
         }
       ],
-      "language": [
-        "en",
-        "jp",
-        "cn"
-      ]
+      "language": ["en", "jp", "cn"]
     },
     "parser": {
       "version": "3.25.2",
@@ -2267,9 +2179,7 @@
       "type": "book-author-bio",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51885"
-      ],
+      "id": ["51885"],
       "item": [],
       "lead": [
         {
@@ -2312,9 +2222,7 @@
       "type": "book-bibliography",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51879"
-      ],
+      "id": ["51879"],
       "item": [],
       "lead": [
         {
@@ -2357,9 +2265,7 @@
       "type": "book-coming-soon",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51887"
-      ],
+      "id": ["51887"],
       "item": [],
       "lead": [
         {
@@ -2402,9 +2308,7 @@
       "type": "book-conclusion",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51872"
-      ],
+      "id": ["51872"],
       "item": [],
       "lead": [
         {
@@ -2447,9 +2351,7 @@
       "type": "book-copyright-permissions",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51883"
-      ],
+      "id": ["51883"],
       "item": [],
       "lead": [
         {
@@ -2492,9 +2394,7 @@
       "type": "book-copyright",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51861"
-      ],
+      "id": ["51861"],
       "item": [],
       "lead": [
         {
@@ -2537,9 +2437,7 @@
       "type": "book-dedication",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51865"
-      ],
+      "id": ["51865"],
       "item": [],
       "lead": [
         {
@@ -2582,9 +2480,7 @@
       "type": "book-endnotes",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51881"
-      ],
+      "id": ["51881"],
       "item": [],
       "lead": [
         {
@@ -2627,9 +2523,7 @@
       "type": "book-epigraph",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51890"
-      ],
+      "id": ["51890"],
       "item": [],
       "lead": [
         {
@@ -2672,9 +2566,7 @@
       "type": "book-epilogue",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51869"
-      ],
+      "id": ["51869"],
       "item": [],
       "lead": [
         {
@@ -2717,9 +2609,7 @@
       "type": "book-foreword",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51866"
-      ],
+      "id": ["51866"],
       "item": [],
       "lead": [
         {
@@ -2762,9 +2652,7 @@
       "type": "book-frontispiece",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51862"
-      ],
+      "id": ["51862"],
       "item": [],
       "lead": [
         {
@@ -2807,9 +2695,7 @@
       "type": "book-imprint",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51862"
-      ],
+      "id": ["51862"],
       "item": [],
       "lead": [
         {
@@ -2852,9 +2738,7 @@
       "type": "book-inciting-incident",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51871"
-      ],
+      "id": ["51871"],
       "item": [],
       "lead": [
         {
@@ -2897,9 +2781,7 @@
       "type": "book-introduction",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51870"
-      ],
+      "id": ["51870"],
       "item": [],
       "lead": [
         {
@@ -2942,9 +2824,7 @@
       "type": "book-list-of-contributors",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51878"
-      ],
+      "id": ["51878"],
       "item": [],
       "lead": [
         {
@@ -2987,9 +2867,7 @@
       "type": "book-notes",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51882"
-      ],
+      "id": ["51882"],
       "item": [],
       "lead": [
         {
@@ -3032,9 +2910,7 @@
       "type": "book-postscript",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51874"
-      ],
+      "id": ["51874"],
       "item": [],
       "lead": [
         {
@@ -3077,9 +2953,7 @@
       "type": "book-preface",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "5186"
-      ],
+      "id": ["5186"],
       "item": [],
       "lead": [
         {
@@ -3122,9 +2996,7 @@
       "type": "book-prologue",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51868"
-      ],
+      "id": ["51868"],
       "item": [],
       "lead": [
         {
@@ -3167,9 +3039,7 @@
       "type": "book-read-more",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51888"
-      ],
+      "id": ["51888"],
       "item": [],
       "lead": [
         {
@@ -3212,9 +3082,7 @@
       "type": "book-reference-list",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51880"
-      ],
+      "id": ["51880"],
       "item": [],
       "lead": [
         {
@@ -3257,9 +3125,7 @@
       "type": "book-request-for-a-book-review",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51886"
-      ],
+      "id": ["51886"],
       "item": [],
       "lead": [
         {
@@ -3302,9 +3168,7 @@
       "type": "book-summary",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51889"
-      ],
+      "id": ["51889"],
       "item": [],
       "lead": [
         {
@@ -3347,9 +3211,7 @@
       "type": "book-teaser",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51884"
-      ],
+      "id": ["51884"],
       "item": [],
       "lead": [
         {
@@ -3392,9 +3254,7 @@
       "type": "book-title",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51863"
-      ],
+      "id": ["51863"],
       "item": [],
       "lead": [
         {

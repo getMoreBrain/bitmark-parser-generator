@@ -72,6 +72,7 @@ export interface BitJson {
   kind: string;
   hasMarkAsDone: boolean;
   processHandIn: boolean;
+  processHandInLocation: string;
   chatWithBook: boolean;
   chatWithBookBrainKey: string;
   action: string;
