@@ -111,7 +111,7 @@
             "alt": null,
             "title": null,
             "class": "center",
-            "zoomDisabled": false
+            "zoomDisabled": true
           }
         },
         {
@@ -448,7 +448,7 @@
             "alt": null,
             "title": null,
             "class": "center",
-            "zoomDisabled": false
+            "zoomDisabled": true
           }
         }
       ]

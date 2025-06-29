@@ -4,9 +4,7 @@
       "type": "hand-in-audio",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "189522"
-      ],
+      "id": ["189522"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -59,9 +57,7 @@
       "type": "hand-in-audio",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213729"
-      ],
+      "id": ["213729"],
       "item": [
         {
           "type": "paragraph",
@@ -107,7 +103,7 @@
             "alt": null,
             "title": null,
             "class": "center",
-            "zoomDisabled": false,
+            "zoomDisabled": true,
             "width": 650
           }
         }
@@ -125,9 +121,7 @@
       "type": "hand-in-audio",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213734"
-      ],
+      "id": ["213734"],
       "item": [
         {
           "type": "paragraph",
@@ -195,9 +189,7 @@
       "type": "hand-in-audio",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213737"
-      ],
+      "id": ["213737"],
       "item": [
         {
           "type": "paragraph",
@@ -280,9 +272,7 @@
       "type": "hand-in-audio",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197943"
-      ],
+      "id": ["197943"],
       "item": [],
       "lead": [],
       "pageNumber": [],

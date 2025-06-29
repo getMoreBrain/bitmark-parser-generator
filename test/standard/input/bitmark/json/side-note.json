@@ -4,9 +4,7 @@
       "type": "side-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210103"
-      ],
+      "id": ["210103"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -108,7 +106,7 @@
             "alt": null,
             "title": null,
             "class": "center",
-            "zoomDisabled": false
+            "zoomDisabled": true
           }
         },
         {
@@ -167,10 +165,7 @@
       "type": "side-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "lead": [],
       "pageNumber": [],
