@@ -18,7 +18,7 @@
       "alt": null,
       "title": null,
       "class": "center",
-      "zoomDisabled": false
+      "zoomDisabled": true
     }
   },
   {
@@ -30,7 +30,7 @@
       "alt": null,
       "title": null,
       "class": "center",
-      "zoomDisabled": false,
+      "zoomDisabled": true,
       "width": 928,
       "height": 10
     }
@@ -44,7 +44,7 @@
       "alt": "Alt text",
       "title": null,
       "class": "center",
-      "zoomDisabled": false,
+      "zoomDisabled": true,
       "comment": "A caption"
     }
   },
