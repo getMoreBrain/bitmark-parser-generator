@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.32.2"
+const VERSION = "8.33.5"
 
 //Parser peggy.js
 
@@ -275,6 +275,7 @@ Block
   / b: CodeBlock { return { ...b }}
   / b: Paragraph { const cleaned_ = cleanEmptyTextNodes({ ...b }); return cleaned_ }
 
+//const cleaned = cleanEmptyTextNodes(exampleData);
 
 BlockStartTags
   = TitleTags
@@ -538,18 +539,20 @@ ImageBlock
     let alt_ = chain.alt || null; delete chain.alt
     let title_ = chain.caption || null; delete chain.caption
     let class_ = chain.align || "center"; delete chain.align
-	let zoomDisabled_ = chain.zoomDisabled || Boolean(chain.zoomDisabled); delete chain.zoomDisabled
+    let zoomDisabled_ = chain.zoomDisabled === undefined ? true
+    	: typeof chain.zoomDisabled === 'boolean' ? chain.zoomDisabled
+    	: String(chain.zoomDisabled).toLowerCase() === 'true'; delete chain.zoomDisabled
 
     let image = {
       type: t,
       attrs: {
-		alignment: imageAlignment_,
+        alignment: imageAlignment_,
         textAlign: textAlign_,
         src: u,
         alt: unbreakscape(alt_),
         title: unbreakscape(title_),
         class: class_,
-		zoomDisabled: zoomDisabled_,
+        zoomDisabled: zoomDisabled_,
         ...chain
       }
     }
@@ -564,7 +567,7 @@ MediaChain
 MediaChainItem
   = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
   / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
-  / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be an positive integer.', found: v }}
+  / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be a positive integer.', found: v }}
   / '@'? p: AlignmentTags ':' ' '* v: Alignment BlockTag  { return { [p]: v } }
   / '@'? p: $((!(BlockTag / ':' / AlignmentTags ':') char)*) ':' ' '? v: $((!BlockTag char)*) BlockTag { return { [p]: v } }
   / '@'? p: $((!(BlockTag / AlignmentTags ':') char)*) BlockTag {return { [p]: true } }
@@ -592,7 +595,6 @@ InlineTags
   // RAS 2025-05-22 - for bitmarkPlus / bitmarkPlusString
   // = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
   = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { const cleaned_ = cleanEmptyTextNodes(first ? [first, ...more.flat()] : more.flat()); return cleaned_ }
-
 
 InlinePlainText
   = NL { return { "type": "hardBreak" } }
@@ -628,7 +630,7 @@ InlineMediaChain
 InlineMediaChainItem
   = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
   / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
-  / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be an positive integer.', found: v }}
+  / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be a positive integer.', found: v }}
   / '@'? p: 'alignmentVertical' ':' ' '* v: InlineMediaAlignment BlockTag  { return { [p]: v } }
   / '@'? p: 'size' ':' ' '* v: InlineMediaSize BlockTag  { return { [p]: v } }
 
@@ -691,6 +693,17 @@ AlternativeStyleTags
   / 'underline'
   / 'doubleUnderline'
   / 'circle'
+  / 'languageEmRed'
+  / 'languageEmOrange'
+  / 'languageEmYellow'
+  / 'languageEmGreen'
+  / 'languageEmBlue'
+  / 'languageEmPurple'
+  / 'languageEmPink'
+  / 'languageEmBrown'
+  / 'languageEmBlack'
+  / 'languageEmWhite'
+  / 'languageEmGray'
   / 'languageEm'
    / 'userUnderline'
   / 'userDoubleUnderline'
@@ -703,7 +716,7 @@ Color
   = 'aqua'
   / 'black'
   / 'blue'
-  / 'pink'
+  / 'brown'
   / 'fuchsia'
   / 'lightgrey'
   / 'gray'
@@ -715,6 +728,7 @@ Color
   / 'navy'
   / 'olive'
   / 'orange'
+  / 'pink'
   / 'purple'
   / 'red'
   / 'silver'

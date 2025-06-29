@@ -22,6 +22,7 @@ import {
   ExtRefMark,
   FootnoteMark,
   HeadingTextNode,
+  ImageInlineTextNode,
   ImageTextNode,
   LatexTextNode,
   LinkMark,
@@ -84,6 +85,17 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.underline,
   TextMarkType.doubleUnderline,
   TextMarkType.circle,
+  TextMarkType.languageEmRed,
+  TextMarkType.languageEmOrange,
+  TextMarkType.languageEmYellow,
+  TextMarkType.languageEmGreen,
+  TextMarkType.languageEmBlue,
+  TextMarkType.languageEmPurple,
+  TextMarkType.languageEmPink,
+  TextMarkType.languageEmBrown,
+  TextMarkType.languageEmBlack,
+  TextMarkType.languageEmWhite,
+  TextMarkType.languageEmGray,
   TextMarkType.languageEm,
   TextMarkType.userUnderline,
   TextMarkType.userDoubleUnderline,
@@ -1082,11 +1094,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     if (bullet) this.write(bullet);
   }
 
-  protected writeImage(node: ImageTextNode): void {
+  protected writeImage(node: ImageTextNode | ImageInlineTextNode): void {
     if (node.attrs == null || !node.attrs.src) return;
     const attrs = node.attrs;
 
-    const inlineImage = this.inParagraph;
+    const inlineImage = node.type === TextNodeType.imageInline;
 
     const mediaAttrs = this.getMediaAttrs(inlineImage ? 'imageInline' : 'image', attrs, {
       ignoreAttributes: inlineImage ? new Set(['alt', 'zoomDisabled', 'title']) : undefined,

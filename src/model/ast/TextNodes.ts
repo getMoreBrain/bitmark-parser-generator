@@ -74,6 +74,11 @@ export interface ImageTextNode extends TextNode {
   attrs?: ImageTextNodeAttributes;
 }
 
+export interface ImageInlineTextNode extends TextNode {
+  type: 'imageInline';
+  attrs?: ImageTextNodeAttributes;
+}
+
 export interface CodeBlockTextNode extends TextNode {
   type: 'codeBlock';
   attrs?: CodeBlockTextNodeAttributes;
