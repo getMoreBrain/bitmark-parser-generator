@@ -4,9 +4,7 @@
       "type": "cloze-instruction-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287822"
-      ],
+      "id": ["287822"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
       "item": [],
@@ -26,9 +24,7 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "additionalSolutions": [
-        "canvas"
-      ],
+      "additionalSolutions": ["canvas"],
       "body": [
         {
           "type": "paragraph",
@@ -40,9 +36,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "erfreut"
-                ],
+                "solutions": ["erfreut"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -81,9 +75,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "steht"
-                ],
+                "solutions": ["steht"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -116,9 +108,9 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "3.32.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.33.5"
     },
     "bitmark": "[.cloze-instruction-grouped]\n[@id:287822]\n[@quizCountItems:true]\n[@quizStrikethroughSolutions:true]\n[%][%cloze-instruction-grouped]\n[@additionalSolutions: canvas]\nDer Fußball [_erfreut][!erfreuen][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht][!stehen] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ..."
   },
@@ -127,9 +119,7 @@
       "type": "cloze-instruction-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "107938"
-      ],
+      "id": ["107938"],
       "item": [
         {
           "type": "paragraph",
@@ -172,13 +162,7 @@
           "attrs": {}
         }
       ],
-      "additionalSolutions": [
-        "canvas",
-        "texture",
-        "figurative",
-        "abstract",
-        "contrast"
-      ],
+      "additionalSolutions": ["canvas", "texture", "figurative", "abstract", "contrast"],
       "body": [
         {
           "type": "paragraph",
@@ -186,9 +170,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Woher"
-                ],
+                "solutions": ["Woher"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -219,9 +201,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Wo"
-                ],
+                "solutions": ["Wo"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -252,9 +232,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Was"
-                ],
+                "solutions": ["Was"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -285,9 +263,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Welche"
-                ],
+                "solutions": ["Welche"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -322,10 +298,269 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "3.32.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.33.5"
     },
     "bitmark": "[.cloze-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[@additionalSolutions: canvas]\n[@additionalSolutions: texture]\n[@additionalSolutions: figurative]\n[@additionalSolutions: abstract]\n[@additionalSolutions: contrast]\n[_Woher][!woher] kommen Sie?\n[_Wo][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?"
+  },
+  {
+    "bit": {
+      "type": "cloze-instruction-grouped",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["1779156"],
+      "feedbackType": "2-step",
+      "icon": "https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/icons/a2_icon.svg",
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
+      "revealSolutions": false,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "5",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "IM BÜRO. Ergänzen Sie die Verben.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "1.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "attrs": {
+                "alt": "a",
+                "src": "https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png",
+                "zoomDisabled": true
+              },
+              "type": "imageInline"
+            },
+            {
+              "text": " Frau Schweiker, haben Sie einen Moment Zeit? Ich ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["möchte"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "möchten",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " gerne über die Präsentation sprechen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "attrs": {
+                "alt": "a",
+                "src": "https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png",
+                "zoomDisabled": true
+              },
+              "type": "imageInline"
+            },
+            {
+              "text": " Das tut mir leid. Jetzt ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["kann"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "können",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " ich nicht. ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["Können"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "können",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " wir einen Termin in der nächsten Woche machen?",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "attrs": {
+                "alt": "a",
+                "src": "https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png",
+                "zoomDisabled": true
+              },
+              "type": "imageInline"
+            },
+            {
+              "text": " Leider nicht. Nächste Woche ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["kann"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "können",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " ich nicht. Ich habe Urlaub. Meine Frau und ich ",
+              "type": "text"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["wollen"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "wollen",
+                        "type": "text"
+                      }
+                    ],
+                    "attrs": {}
+                  }
+                ],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " nach Rom fahren.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false
+    },
+    "parser": {
+      "version": "3.32.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.33.5"
+    },
+    "bitmark": "[.cloze-instruction-grouped]\n[@id: 1779156 ]\n[@feedbackType: 2-step ]\n[@icon: https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/icons/a2_icon.svg ]\n[@quizCountItems: true ]\n[@quizStrikethroughSolutions: false ]\n[@revealSolutions: false ]\n[% 5 ]\n[! IM BÜRO. Ergänzen Sie die Verben. ]\n==1.==|bold|\n==a==|imageInline:https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png| Frau Schweiker, haben Sie einen Moment Zeit? Ich [_ möchte ][! möchten ] gerne über die Präsentation sprechen.\n\n==a==|imageInline:https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png| Das tut mir leid. Jetzt [_ kann ][! können ] ich nicht. [_ Können ][! können ] wir einen Termin in der nächsten Woche machen?\n\n\n==a==|imageInline:https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png| Leider nicht. Nächste Woche [_ kann ][! können ] ich nicht. Ich habe Urlaub. Meine Frau und ich [_ wollen ][! wollen ] nach Rom fahren."
   }
 ]
