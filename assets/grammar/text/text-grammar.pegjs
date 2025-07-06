@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.33.5"
+const VERSION = "8.34.3"
 
 //Parser peggy.js
 
@@ -529,7 +529,7 @@ ImageTag
   = BlockTag t: ImageType { return t }
 
 ImageBlock
-  = t: ImageTag ':' ' '? u: UrlHttp BlockTag ch: MediaChain? $([ \t]* EOL) NL?
+  = t: ImageTag ':' ' '? u: UrlHttp ' '* BlockTag ch: MediaChain? $([ \t]* EOL) NL?
   {
 
     const chain = Object.assign({}, ...ch)
@@ -565,21 +565,33 @@ MediaChain
   = ch: MediaChainItem* { return ch }
 
 MediaChainItem
-  = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
-  / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
-  / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be a positive integer.', found: v }}
-  / '@'? p: AlignmentTags ':' ' '* v: Alignment BlockTag  { return { [p]: v } }
-  / '@'? p: $((!(BlockTag / ':' / AlignmentTags ':') char)*) ':' ' '? v: $((!BlockTag char)*) BlockTag { return { [p]: v } }
-  / '@'? p: $((!(BlockTag / AlignmentTags ':') char)*) BlockTag {return { [p]: true } }
+  = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str.trim() }}
+  / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) ' '* BlockTag { return { [p]: parseInt(v) } }
+  / '@'? p: MediaTextTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { [p]: v.trim() } }
+  / '@'? p: MediaAlignmentTags ':' ' '* v: MediaAlignment ' '* BlockTag  { return { [p]: v } }
+  / '@'? p: MediaBooleanTags ':' ' '* v: Boolean ' '* BlockTag  { return { [p]: v } }
+  / '@'? p: MediaBooleanTags ' '* BlockTag  { return { [p]: true } }
+  / '@'? BlockTag  { return } // ignore empty chain elements ||
+  / '@'? p: $((!BlockTag char)*) BlockTag { return { error: 'Found unknown property or invalid value: '+ p }} // don't break on unknown properties, but don't accept them neither
 
 MediaSizeTags
   = 'width' / 'height'
 
-AlignmentTags
+MediaAlignmentTags
   = 'alignment' / 'captionAlign'
 
-Alignment
+MediaAlignment
   = 'left' / 'center' / 'right'
+
+MediaTextTags
+  = 'alt' / 'caption'
+
+MediaBooleanTags
+  = 'zoomDisabled'
+
+Boolean
+  = 'true' / 'false'
+
 
 
 
