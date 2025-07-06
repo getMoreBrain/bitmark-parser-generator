@@ -42,10 +42,10 @@
       "textAlign": "right",
       "src": "https://t.com/simple.png",
       "alt": "Alt text",
-      "title": null,
+      "title": "A caption",
       "class": "center",
       "zoomDisabled": true,
-      "comment": "A caption"
+      "comment": "A comment"
     }
   },
   {

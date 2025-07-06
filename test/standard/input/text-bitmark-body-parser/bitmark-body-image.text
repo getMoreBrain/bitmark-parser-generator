@@ -4,7 +4,7 @@ Some block images follow:
 
 |image:https://t.com/simple.png|@width:928|height:10|
 
-|image:https://t.com/simple.png|#A caption|@alt:Alt text|@captionAlign:right|@alignment:right|
+|image:https://t.com/simple.png|#A comment|@alt:Alt text|@captionAlign:right|@alignment:right|zoomDisabled:true|caption:A caption|
 
 Some inline images follow:
 
