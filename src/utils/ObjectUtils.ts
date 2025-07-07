@@ -352,9 +352,12 @@ class ObjectUtils {
 
     if (!options.ignoreAllUndefined) this.removeUndefinedProperties(obj, options.ignoreUndefined);
     if (!options.ignoreAllFalse) this.removeFalseProperties(obj, options.ignoreFalse);
-    if (!options.ignoreAllEmptyString) this.removeEmptyStringProperties(obj, options.ignoreEmptyString);
-    if (!options.ignoreAllEmptyArrays) this.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
-    if (!options.ignoreAllEmptyObjects) this.removeEmptyObjectProperties(obj, options.ignoreEmptyObjects);
+    if (!options.ignoreAllEmptyString)
+      this.removeEmptyStringProperties(obj, options.ignoreEmptyString);
+    if (!options.ignoreAllEmptyArrays)
+      this.removeEmptyArrayProperties(obj, options.ignoreEmptyArrays);
+    if (!options.ignoreAllEmptyObjects)
+      this.removeEmptyObjectProperties(obj, options.ignoreEmptyObjects);
   }
 
   /**
@@ -409,7 +412,11 @@ class ObjectUtils {
       function mergeObj(clone: any, obj: any) {
         for (const [key, value] of Object.entries(obj)) {
           const type = getType(value);
-          if (clone[key] !== undefined && getType(clone[key]) === type && ['array', 'object'].includes(type)) {
+          if (
+            clone[key] !== undefined &&
+            getType(clone[key]) === type &&
+            ['array', 'object'].includes(type)
+          ) {
             clone[key] = _deepMerge(clone[key], value);
           } else {
             clone[key] = structuredClone(value);

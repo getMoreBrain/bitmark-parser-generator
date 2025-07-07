@@ -1,19 +1,18 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
-import { Count } from '../../../../model/enum/Count';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { StringUtils } from '../../../../utils/StringUtils';
-
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { Count } from '../../../../model/enum/Count.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+} from '../BitmarkPegParserTypes.ts';
 
 function bookChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -47,10 +46,13 @@ function buildBook(
   const { reference, referenceEnd } = tags;
 
   // Extract the book from the content tag
-  const book = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString, {
-    format: TextFormat.bitmarkText,
-    location: TextLocation.tag,
-  });
+  const book = Breakscape.unbreakscape(
+    StringUtils.trimmedString(content.value) as BreakscapedString,
+    {
+      format: TextFormat.bitmarkText,
+      location: TextLocation.tag,
+    },
+  );
 
   // Get the config for the bit
   const bookConfig = bitConfig.tags[PropertyConfigKey.book];

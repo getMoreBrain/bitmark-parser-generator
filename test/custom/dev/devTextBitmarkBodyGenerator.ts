@@ -6,15 +6,19 @@ Copyright ©2023 Get More Brain
 
 */
 
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
-import { Ast } from '../../../src/ast/Ast';
-import { TextGenerator } from '../../../src/generator/text/TextGenerator';
-import { NodeType } from '../../../src/model/ast/NodeType';
-import { TextFormat } from '../../../src/model/enum/TextFormat';
-import { TextLocation } from '../../../src/model/enum/TextLocation';
+import fs from 'fs-extra';
+
+import { Ast } from '../../../src/ast/Ast.ts';
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator.ts';
+import { TextGenerator } from '../../../src/generator/text/TextGenerator.ts';
+import { NodeType } from '../../../src/model/ast/NodeType.ts';
+import { TextFormat } from '../../../src/model/enum/TextFormat.ts';
+import { TextLocation } from '../../../src/model/enum/TextLocation.ts';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 const ast = new Ast();
@@ -22,7 +26,7 @@ const textGenerator = new TextGenerator();
 
 class DevTextGenerator {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text.bitmark.body.json');
+    const filename = path.resolve(dirname, '../../..', 'assets', 'test.text.bitmark.body.json');
 
     if (debug) {
       // Read in the test file

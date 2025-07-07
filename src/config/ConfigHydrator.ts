@@ -1,24 +1,23 @@
-import { CardSetConfig } from '../model/config/CardSetConfig';
-import { CardVariantConfig } from '../model/config/CardVariantConfig';
-import { MarkupTagConfig } from '../model/config/MarkupTagConfig';
-import { PropertyTagConfig } from '../model/config/PropertyTagConfig';
-import { ResourceTagConfig } from '../model/config/ResourceTagConfig';
-import { TagsConfigWithInfo } from '../model/config/TagsConfigWithInfo';
-import { TagsConfig } from '../model/config/TagsConfig';
-import { _TagInfoConfig, _CardVariantConfig } from '../model/config/_Config';
-import { CardSetConfigKeyType } from '../model/config/enum/CardSetConfigKey';
-import { ConfigKey } from '../model/config/enum/ConfigKey';
-import { GroupConfigKey } from '../model/config/enum/GroupConfigKey';
-import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
-import { ResourceConfigKey } from '../model/config/enum/ResourceConfigKey';
-import { TagConfigKey } from '../model/config/enum/TagConfigKey';
-import { BitTagType } from '../model/enum/BitTagType';
-
-import { CARDS } from './raw/cardSets';
-import { GROUPS } from './raw/groups';
-import { PROPERTIES } from './raw/properties';
-import { RESOURCES } from './raw/resources';
-import { TAGS } from './raw/tags';
+import { type _CardVariantConfig, type _TagInfoConfig } from '../model/config/_Config.ts';
+import { CardSetConfig } from '../model/config/CardSetConfig.ts';
+import { CardVariantConfig } from '../model/config/CardVariantConfig.ts';
+import { type CardSetConfigKeyType } from '../model/config/enum/CardSetConfigKey.ts';
+import { ConfigKey } from '../model/config/enum/ConfigKey.ts';
+import { GroupConfigKey } from '../model/config/enum/GroupConfigKey.ts';
+import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey.ts';
+import { ResourceConfigKey } from '../model/config/enum/ResourceConfigKey.ts';
+import { TagConfigKey } from '../model/config/enum/TagConfigKey.ts';
+import { MarkupTagConfig } from '../model/config/MarkupTagConfig.ts';
+import { PropertyTagConfig } from '../model/config/PropertyTagConfig.ts';
+import { ResourceTagConfig } from '../model/config/ResourceTagConfig.ts';
+import { type TagsConfig } from '../model/config/TagsConfig.ts';
+import { type TagsConfigWithInfo } from '../model/config/TagsConfigWithInfo.ts';
+import { BitTagType } from '../model/enum/BitTagType.ts';
+import { CARDS } from './raw/cardSets.ts';
+import { GROUPS } from './raw/groups.ts';
+import { PROPERTIES } from './raw/properties.ts';
+import { RESOURCES } from './raw/resources.ts';
+import { TAGS } from './raw/tags.ts';
 
 const MAX_COUNT_DEFAULT = 1;
 const MIN_COUNT_DEFAULT = 0;
@@ -65,7 +64,9 @@ class ConfigHydrator {
     return tagsWithInfo;
   }
 
-  public hydrateCardSetConfig(_cardSet: CardSetConfigKeyType | undefined): CardSetConfig | undefined {
+  public hydrateCardSetConfig(
+    _cardSet: CardSetConfigKeyType | undefined,
+  ): CardSetConfig | undefined {
     if (!_cardSet) return undefined;
     const _cardSetConfig = CARDS[_cardSet];
     if (!_cardSetConfig) throw new Error(`No config found for card set config key '${_cardSet}'`);

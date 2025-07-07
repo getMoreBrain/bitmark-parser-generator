@@ -26,7 +26,7 @@ const deepDiffMapper = (function () {
         };
       }
 
-      const _map = (key, val1, val2) => {
+      const _map = (key: string, val1: undefined, val2: any) => {
         const thisDiff = this.map(val1, val2, options, depth + 1);
 
         const ignore = _options.ignoreUnchanged && thisDiff.type === this.VALUE_UNCHANGED;
@@ -37,7 +37,7 @@ const deepDiffMapper = (function () {
         }
       };
 
-      const diff = {};
+      const diff = {} as any;
       for (const key in obj1) {
         if (this.isFunction(obj1[key])) {
           continue;
@@ -87,11 +87,14 @@ const deepDiffMapper = (function () {
 
       return diff;
     },
-    compareValues: function (value1, value2) {
+    compareValues: function (
+      value1: { getTime: () => any } | undefined,
+      value2: { getTime: () => any } | undefined,
+    ) {
       if (value1 === value2) {
         return this.VALUE_UNCHANGED;
       }
-      if (this.isDate(value1) && this.isDate(value2) && value1.getTime() === value2.getTime()) {
+      if (this.isDate(value1) && this.isDate(value2) && value1?.getTime() === value2?.getTime()) {
         return this.VALUE_UNCHANGED;
       }
       if (value1 === undefined) {
@@ -102,19 +105,19 @@ const deepDiffMapper = (function () {
       }
       return this.VALUE_UPDATED;
     },
-    isFunction: function (x) {
+    isFunction: function (x: any) {
       return Object.prototype.toString.call(x) === '[object Function]';
     },
-    isArray: function (x) {
+    isArray: function (x: any) {
       return Object.prototype.toString.call(x) === '[object Array]';
     },
-    isDate: function (x) {
+    isDate: function (x: any) {
       return Object.prototype.toString.call(x) === '[object Date]';
     },
-    isObject: function (x) {
+    isObject: function (x: any) {
       return Object.prototype.toString.call(x) === '[object Object]';
     },
-    isValue: function (x) {
+    isValue: function (x: any) {
       return !this.isObject(x) && !this.isArray(x);
     },
   };

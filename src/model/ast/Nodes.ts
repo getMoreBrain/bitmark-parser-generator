@@ -1,39 +1,37 @@
-import { BitTypeType } from '../enum/BitType';
-import { BodyBitTypeType } from '../enum/BodyBitType';
-import { ResourceTagType } from '../enum/ResourceTag';
-import { TextFormatType } from '../enum/TextFormat';
-import { BodyBitJson, BodyBitsJson } from '../json/BodyBitJson';
-import { ImageResourceWrapperJson, ResourceJson } from '../json/ResourceJson';
-import { ParserError } from '../parser/ParserError';
-import { ParserInfo } from '../parser/ParserInfo';
-
-import { JsonText, TextAst } from './TextNodes';
-
+import { type BitTypeType } from '../enum/BitType.ts';
+import { type BodyBitTypeType } from '../enum/BodyBitType.ts';
+import { type ResourceTagType } from '../enum/ResourceTag.ts';
+import { type TextFormatType } from '../enum/TextFormat.ts';
 import {
-  BookJson,
-  BotResponseJson,
-  ChoiceJson,
-  DefinitionListItemJson,
-  ExampleJson,
-  FeedbackJson,
-  FlashcardJson,
-  HeadingJson,
-  ImageSourceJson,
-  IngredientJson,
-  MarkConfigJson,
-  MatrixJson,
-  PairJson,
-  PersonJson,
-  PronunciationTableJson,
-  QuestionJson,
-  QuizJson,
-  RatingLevelStartEndJson,
-  ResponseJson,
-  ServingsJson,
-  StatementJson,
-  TableJson,
-  TechnicalTermJson,
-} from '../json/BitJson';
+  type BookJson,
+  type BotResponseJson,
+  type ChoiceJson,
+  type DefinitionListItemJson,
+  type ExampleJson,
+  type FeedbackJson,
+  type FlashcardJson,
+  type HeadingJson,
+  type ImageSourceJson,
+  type IngredientJson,
+  type MarkConfigJson,
+  type MatrixJson,
+  type PairJson,
+  type PersonJson,
+  type PronunciationTableJson,
+  type QuestionJson,
+  type QuizJson,
+  type RatingLevelStartEndJson,
+  type ResponseJson,
+  type ServingsJson,
+  type StatementJson,
+  type TableJson,
+  type TechnicalTermJson,
+} from '../json/BitJson.ts';
+import { type BodyBitJson, type BodyBitsJson } from '../json/BodyBitJson.ts';
+import { type ImageResourceWrapperJson, type ResourceJson } from '../json/ResourceJson.ts';
+import { type ParserError } from '../parser/ParserError.ts';
+import { type ParserInfo } from '../parser/ParserInfo.ts';
+import { type JsonText, type TextAst } from './TextNodes.ts';
 
 // Node
 

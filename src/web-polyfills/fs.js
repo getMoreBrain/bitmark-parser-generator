@@ -1,4 +1,5 @@
-function existsSync(_filename: string): boolean {
+// eslint-disable-next-line no-unused-vars
+function existsSync(_filename) {
   return false;
 }
 

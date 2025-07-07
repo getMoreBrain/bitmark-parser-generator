@@ -6,15 +6,19 @@ Copyright ©2023 Get More Brain
 
 */
 
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
-import { Ast } from '../../../src/ast/Ast';
-import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
-import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
-import { BitmarkVersion } from '../../../src/model/enum/BitmarkVersion';
-import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
+import fs from 'fs-extra';
+
+import { Ast } from '../../../src/ast/Ast.ts';
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator.ts';
+import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator.ts';
+import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType.ts';
+import { BitmarkVersion } from '../../../src/model/enum/BitmarkVersion.ts';
+import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser.ts';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const ast = new Ast();
 const bitmarkParserGenerator = new BitmarkParserGenerator();
@@ -22,7 +26,7 @@ const bitmarkParser = new BitmarkParser();
 
 class DevParser {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bitmark');
+    const filename = path.resolve(dirname, '../../..', 'assets', 'test.bitmark');
 
     if (debug) {
       // Read in the test file

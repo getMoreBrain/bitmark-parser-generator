@@ -7,50 +7,53 @@
  *
  */
 
-import { EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType, superenum } from '@ncoderz/superenum';
 
-import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { Body, ExtraProperties, CardBit, Footer } from '../../../model/ast/Nodes';
-import { JsonText, TextAst } from '../../../model/ast/TextNodes';
-import { BitConfig } from '../../../model/config/BitConfig';
-import { TagsConfig } from '../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../model/enum/BitType';
-import { ResourceTagType } from '../../../model/enum/ResourceTag';
-import { Tag } from '../../../model/enum/Tag';
-import { TextFormatType } from '../../../model/enum/TextFormat';
-import { ImageResourceJson, ResourceJson } from '../../../model/json/ResourceJson';
-import { ParserData } from '../../../model/parser/ParserData';
-import { ParserError } from '../../../model/parser/ParserError';
-import { ParserInfo } from '../../../model/parser/ParserInfo';
-
-import { PeggyGrammarLocation } from './PeggyGrammarLocation';
-
+import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
 import {
-  BookJson,
-  BotResponseJson,
-  ChoiceJson,
-  DefinitionListItemJson,
-  ExampleJson,
-  FeedbackChoiceJson,
-  FeedbackJson,
-  FlashcardJson,
-  HeadingJson,
-  ImageSourceJson,
-  IngredientJson,
-  MarkConfigJson,
-  MatrixJson,
-  PairJson,
-  PersonJson,
-  PronunciationTableJson,
-  QuestionJson,
-  QuizJson,
-  RatingLevelStartEndJson,
-  ResponseJson,
-  ServingsJson,
-  StatementJson,
-  TableJson,
-  TechnicalTermJson,
-} from '../../../model/json/BitJson';
+  type Body,
+  type CardBit,
+  type ExtraProperties,
+  type Footer,
+} from '../../../model/ast/Nodes.ts';
+import { type JsonText, type TextAst } from '../../../model/ast/TextNodes.ts';
+import { BitConfig } from '../../../model/config/BitConfig.ts';
+import { type TagsConfig } from '../../../model/config/TagsConfig.ts';
+import { type BitTypeType } from '../../../model/enum/BitType.ts';
+import { type ResourceTagType } from '../../../model/enum/ResourceTag.ts';
+import { Tag } from '../../../model/enum/Tag.ts';
+import { type TextFormatType } from '../../../model/enum/TextFormat.ts';
+import {
+  type BookJson,
+  type BotResponseJson,
+  type ChoiceJson,
+  type DefinitionListItemJson,
+  type ExampleJson,
+  type FeedbackChoiceJson,
+  type FeedbackJson,
+  type FlashcardJson,
+  type HeadingJson,
+  type ImageSourceJson,
+  type IngredientJson,
+  type MarkConfigJson,
+  type MatrixJson,
+  type PairJson,
+  type PersonJson,
+  type PronunciationTableJson,
+  type QuestionJson,
+  type QuizJson,
+  type RatingLevelStartEndJson,
+  type ResponseJson,
+  type ServingsJson,
+  type StatementJson,
+  type TableJson,
+  type TechnicalTermJson,
+} from '../../../model/json/BitJson.ts';
+import { type ImageResourceJson, type ResourceJson } from '../../../model/json/ResourceJson.ts';
+import { type ParserData } from '../../../model/parser/ParserData.ts';
+import { type ParserError } from '../../../model/parser/ParserError.ts';
+import { type ParserInfo } from '../../../model/parser/ParserInfo.ts';
+import { PeggyGrammarLocation } from './PeggyGrammarLocation.ts';
 
 const CARD_DIVIDER_V2 = '====';
 const CARD_SIDE_DIVIDER_V2 = '--';
@@ -393,12 +396,12 @@ export interface BitmarkPegParserContext {
 }
 
 export {
-  TypeKey,
   ContentDepth as BitContentLevel,
-  CARD_DIVIDER_V2,
-  CARD_SIDE_DIVIDER_V2,
-  CARD_VARIANT_DIVIDER_V2,
   CARD_DIVIDER_V1,
+  CARD_DIVIDER_V2,
   CARD_SIDE_DIVIDER_V1,
+  CARD_SIDE_DIVIDER_V2,
   CARD_VARIANT_DIVIDER_V1,
+  CARD_VARIANT_DIVIDER_V2,
+  TypeKey,
 };

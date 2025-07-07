@@ -6,18 +6,27 @@ Copyright ©2023 Get More Brain
 
 */
 
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
-import { TextFormat } from '../../../src/model/enum/TextFormat';
-import { TextLocation } from '../../../src/model/enum/TextLocation';
+import fs from 'fs-extra';
+
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator.ts';
+import { TextFormat } from '../../../src/model/enum/TextFormat.ts';
+import { TextLocation } from '../../../src/model/enum/TextLocation.ts';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
 class DevTextUnbreakscape {
   async test(): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text.bitmark.tag.unbreakscape');
+    const filename = path.resolve(
+      dirname,
+      '../../..',
+      'assets',
+      'test.text.bitmark.tag.unbreakscape',
+    );
 
     // Read in the test file
     const str = fs.readFileSync(filename, {

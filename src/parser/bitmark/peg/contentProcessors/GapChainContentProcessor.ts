@@ -1,19 +1,17 @@
-import { Config } from '../../../../config/Config';
-import { BodyPart } from '../../../../model/ast/Nodes';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BodyBitType } from '../../../../model/enum/BodyBitType';
-import { Tag } from '../../../../model/enum/Tag';
-import { GapJson } from '../../../../model/json/BodyBitJson';
-
-import { clozeTagContentProcessor } from './ClozeTagContentProcessor';
-
+import { Config } from '../../../../config/Config.ts';
+import { type BodyPart } from '../../../../model/ast/Nodes.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { BodyBitType } from '../../../../model/enum/BodyBitType.ts';
+import { Tag } from '../../../../model/enum/Tag.ts';
+import { type GapJson } from '../../../../model/json/BodyBitJson.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+} from '../BitmarkPegParserTypes.ts';
+import { clozeTagContentProcessor } from './ClozeTagContentProcessor.ts';
 
 function gapChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -43,7 +41,11 @@ function buildGap(
 
   const chainContent = [content, ...(content.chain ?? [])];
 
-  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, gapConfig?.chain, chainContent);
+  const chainTags = context.bitContentProcessor(
+    BitContentLevel.Chain,
+    gapConfig?.chain,
+    chainContent,
+  );
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('gap TAGS', chainTags);
 

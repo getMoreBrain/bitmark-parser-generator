@@ -1,10 +1,9 @@
-import * as fs from 'fs-extra';
+import fs from 'fs-extra';
 
-import { FileOptions, FileWriter } from '../../ast/writer/FileWriter';
-import { BitmarkAst } from '../../model/ast/Nodes';
-import { Generator } from '../Generator';
-
-import { JsonGenerator, JsonGeneratorOptions } from './JsonGenerator';
+import { type FileOptions, FileWriter } from '../../ast/writer/FileWriter.ts';
+import { type BitmarkAst } from '../../model/ast/Nodes.ts';
+import { type Generator } from '../Generator.ts';
+import { JsonGenerator, type JsonGeneratorOptions } from './JsonGenerator.ts';
 
 /**
  * JSON file generator options

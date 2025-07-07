@@ -6,18 +6,22 @@ Copyright ©2023 Get More Brain
 
 */
 
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
-// import { Ast } from '../../../src/ast/Ast';
-// import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator';
-import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
-// import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator';
-import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType';
-import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser';
+import fs from 'fs-extra';
 
-// import { JsonParser } from '../../../src/parser/json/JsonParser';
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator.ts';
+// import { Ast } from '../../../src/ast/Ast.ts';
+// import { BitmarkFileGenerator } from '../../..src/generator/bitmark/BitmarkFileGenerator.ts';
+import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator.ts';
+// import { JsonObjectGenerator } from '../../../src/generator/json/JsonObjectGenerator.ts';
+import { BitmarkParserType } from '../../../src/model/enum/BitmarkParserType.ts';
+import { BitmarkParser } from '../../../src/parser/bitmark/BitmarkParser.ts';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// import { JsonParser } from '../../../src/parser/json/JsonParser.ts';
 
 // const jsonParser = new JsonParser();
 // const ast = new Ast();
@@ -26,8 +30,8 @@ const bitmarkParser = new BitmarkParser();
 
 class DevPrettify {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bitmark');
-    // const filename = path.resolve(__dirname, '../../..', 'assets', 'test.json');
+    const filename = path.resolve(dirname, '../../..', 'assets', 'test.bitmark');
+    // const filename = path.resolve(dirname, '../../..', 'assets', 'test.json');
 
     if (debug) {
       // Read in the test file

@@ -1,42 +1,45 @@
-import { EnumType } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-import { Ast, NodeInfo } from '../../ast/Ast';
-import { BreakscapeOptions } from '../../breakscaping/BreakscapeOptions';
-import { Breakscape } from '../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../model/ast/BreakscapedString';
-import { NodeType } from '../../model/ast/NodeType';
-import { Bit } from '../../model/ast/Nodes';
-import { BitTypeType } from '../../model/enum/BitType';
-import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
-import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { TextLocation, TextLocationType } from '../../model/enum/TextLocation';
-import { TextMarkType, TextMarkTypeType } from '../../model/enum/TextMarkType';
-import { TextNodeType, TextNodeTypeType } from '../../model/enum/TextNodeType';
-import { BodyBitJson, BodyBitsJson } from '../../model/json/BodyBitJson';
-import { StringUtils } from '../../utils/StringUtils';
-import { AstWalkerGenerator } from '../AstWalkerGenerator';
-
+import { Ast, type NodeInfo } from '../../ast/Ast.ts';
+import { Breakscape } from '../../breakscaping/Breakscape.ts';
+import { type BreakscapeOptions } from '../../breakscaping/BreakscapeOptions.ts';
+import { type BreakscapedString } from '../../model/ast/BreakscapedString.ts';
+import { type Bit } from '../../model/ast/Nodes.ts';
+import { NodeType } from '../../model/ast/NodeType.ts';
 import {
-  CodeBlockTextNode,
-  CommentMark,
-  ExtRefMark,
-  FootnoteMark,
-  HeadingTextNode,
-  ImageInlineTextNode,
-  ImageTextNode,
-  LatexTextNode,
-  LinkMark,
-  ListTextNode,
-  MediaAttributes,
-  RefMark,
-  SectionTextNode,
-  SymbolMark,
-  TaskItemTextNode,
-  TextAst,
-  TextMark,
-  TextNode,
-  XRefMark,
-} from '../../model/ast/TextNodes';
+  type CodeBlockTextNode,
+  type CommentMark,
+  type ExtRefMark,
+  type FootnoteMark,
+  type HeadingTextNode,
+  type ImageInlineTextNode,
+  type ImageTextNode,
+  type LatexTextNode,
+  type LinkMark,
+  type ListTextNode,
+  type MediaAttributes,
+  type RefMark,
+  type SectionTextNode,
+  type SymbolMark,
+  type TaskItemTextNode,
+  type TextAst,
+  type TextMark,
+  type TextNode,
+  type XRefMark,
+} from '../../model/ast/TextNodes.ts';
+import {
+  BitmarkVersion,
+  type BitmarkVersionType,
+  DEFAULT_BITMARK_VERSION,
+} from '../../model/enum/BitmarkVersion.ts';
+import { type BitTypeType } from '../../model/enum/BitType.ts';
+import { TextFormat, type TextFormatType } from '../../model/enum/TextFormat.ts';
+import { TextLocation, type TextLocationType } from '../../model/enum/TextLocation.ts';
+import { TextMarkType, type TextMarkTypeType } from '../../model/enum/TextMarkType.ts';
+import { TextNodeType, type TextNodeTypeType } from '../../model/enum/TextNodeType.ts';
+import { type BodyBitJson, type BodyBitsJson } from '../../model/json/BodyBitJson.ts';
+import { StringUtils } from '../../utils/StringUtils.ts';
+import { AstWalkerGenerator } from '../AstWalkerGenerator.ts';
 
 const DEFAULT_OPTIONS: TextOptions = {
   bodyBitCallback: undefined,
@@ -57,7 +60,13 @@ const ITALIC_MARK = ITALIC_HALF_MARK + ITALIC_HALF_MARK;
 const HIGHLIGHT_MARK = HIGHLIGHT_HALF_MARK + HIGHLIGHT_HALF_MARK;
 const INLINE_MARK = INLINE_HALF_MARK + INLINE_HALF_MARK;
 
-const ALL_HALF_MARKS = [BOLD_HALF_MARK, LIGHT_HALF_MARK, ITALIC_HALF_MARK, HIGHLIGHT_HALF_MARK, INLINE_HALF_MARK];
+const ALL_HALF_MARKS = [
+  BOLD_HALF_MARK,
+  LIGHT_HALF_MARK,
+  ITALIC_HALF_MARK,
+  HIGHLIGHT_HALF_MARK,
+  INLINE_HALF_MARK,
+];
 
 const ALL_TAG_OPENING_ENDS = '@#▼►%!?+-$_=&';
 
@@ -356,7 +365,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     return this.handleEnterNode(node.value, route);
   }
 
-  protected between_textAstValue(node: NodeInfo, left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void | false {
+  protected between_textAstValue(
+    node: NodeInfo,
+    left: NodeInfo,
+    right: NodeInfo,
+    route: NodeInfo[],
+  ): void | false {
     return this.handleBetweenNode(node.value, left, right, route);
   }
 
@@ -370,7 +384,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     return this.handleEnterContentValueNode(node, route);
   }
 
-  protected between_contentValue(node: NodeInfo, left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+  protected between_contentValue(
+    node: NodeInfo,
+    left: NodeInfo,
+    right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     this.handleBetweenContentValueNode(node, left, right, route);
   }
 
@@ -384,7 +403,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     return this.handleEnterNode(node.value, route);
   }
 
-  protected between_contentValueValue(node: NodeInfo, left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+  protected between_contentValueValue(
+    node: NodeInfo,
+    left: NodeInfo,
+    right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     this.handleBetweenNode(node.value, left, right, route);
   }
 
@@ -476,7 +500,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.exitedCodeBlock = false;
   }
 
-  protected handleBetweenNode(node: TextNode, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected handleBetweenNode(
+    node: TextNode,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     switch (node.type) {
       default:
       // Ignore unknown type
@@ -505,7 +534,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
       case TextNodeType.heading:
         this.inHeading = false;
-      // eslint-disable-next-line no-fallthrough
+
       case TextNodeType.section:
       case TextNodeType.image:
         if (!this.inParagraph) {
@@ -593,7 +622,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
   }
 
-  protected handleBetweenContentValueNode(_node: NodeInfo, left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected handleBetweenContentValueNode(
+    _node: NodeInfo,
+    left: NodeInfo,
+    _right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     if (route.length === FIRST_PARAGRAPH_CONTENT_DEPTH) {
       const leftNode = left.value as TextNode;
       this.updatePreTextState();
@@ -618,7 +652,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   private updatePreTextState(): void {
-    if (!this.inPreText && this.thisNodeIsPreText && this.previousRootParagraphContextType === TextNodeType.hardBreak) {
+    if (
+      !this.inPreText &&
+      this.thisNodeIsPreText &&
+      this.previousRootParagraphContextType === TextNodeType.hardBreak
+    ) {
       // Enter pre-text if this node could be pre-text, and the previous node was a hard break
       this.inPreText = true;
       this.preTextIndexTemp = this.rootParagraphNodeContentIndex;
@@ -694,7 +732,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.placeholders[placeholder] = node as unknown as BodyBitJson;
 
     if (this.options.bodyBitCallback) {
-      const bodyBit = this.options.bodyBitCallback(node as unknown as BodyBitJson, this.placeholderIndex, route);
+      const bodyBit = this.options.bodyBitCallback(
+        node as unknown as BodyBitJson,
+        this.placeholderIndex,
+        route,
+      );
       this.write(bodyBit);
     } else {
       // Write placeholder to the text
@@ -1147,7 +1189,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     let s = `${mark.type}`;
     if (mark.attrs) {
       for (const [k, v] of Object.entries(mark.attrs)) {
-        if ((k === 'language' && v !== 'plain text') || k === 'color' || k === 'name' || k === 'duration') {
+        if (
+          (k === 'language' && v !== 'plain text') ||
+          k === 'color' ||
+          k === 'name' ||
+          k === 'duration'
+        ) {
           s = `${s}:${v}`;
         }
       }
@@ -1243,7 +1290,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.write('\n');
   }
 
-  protected writeInlineDebug(key: string, state: { open?: boolean; close?: boolean; single?: boolean }) {
+  protected writeInlineDebug(
+    key: string,
+    state: { open?: boolean; close?: boolean; single?: boolean },
+  ) {
     let tag = key;
     if (state.open) {
       tag = `<${key}>`;

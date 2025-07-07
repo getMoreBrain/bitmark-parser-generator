@@ -1,22 +1,21 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { Config } from '../../../../config/Config';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { PropertyTag } from '../../../../model/enum/PropertyTag';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { ImageSourceJson } from '../../../../model/json/BitJson';
-import { StringUtils } from '../../../../utils/StringUtils';
-
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { Config } from '../../../../config/Config.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { PropertyTag } from '../../../../model/enum/PropertyTag.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { type ImageSourceJson } from '../../../../model/json/BitJson.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  TypeKeyValue,
-  TypeValue,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type TypeKeyValue,
+  type TypeValue,
+} from '../BitmarkPegParserTypes.ts';
 
 function imageSourceChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -63,7 +62,11 @@ function buildImageSource(
   const imageSourceConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
 
   const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, [content]);
-  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, imageSourceConfig?.chain, content.chain);
+  const chainTags = context.bitContentProcessor(
+    BitContentLevel.Chain,
+    imageSourceConfig?.chain,
+    content.chain,
+  );
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('imageSource TAGS', chainTags);
 

@@ -1,24 +1,29 @@
-import { Builder } from '../../ast/Builder';
-import { Config } from '../../config/Config';
-import { Bit, BitmarkAst, Body, CardBit, Footer } from '../../model/ast/Nodes';
-import { JsonText } from '../../model/ast/TextNodes';
-import { BitType, BitTypeType } from '../../model/enum/BitType';
-import { DeprecatedTextFormat } from '../../model/enum/DeprecatedTextFormat';
-import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
-import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { BodyBitsJson } from '../../model/json/BodyBitJson';
-import { ResourceJson, ImageResourceWrapperJson } from '../../model/json/ResourceJson';
-import { StringUtils } from '../../utils/StringUtils';
-
+import { Builder } from '../../ast/Builder.ts';
+import { Config } from '../../config/Config.ts';
 import {
-  BitJson,
-  ResponseJson,
-  StatementJson,
-  BotResponseJson,
-  ExampleJson,
-  ListItemJson,
-} from '../../model/json/BitJson';
+  type Bit,
+  type BitmarkAst,
+  type Body,
+  type CardBit,
+  type Footer,
+} from '../../model/ast/Nodes.ts';
+import { type JsonText } from '../../model/ast/TextNodes.ts';
+import { BitType, type BitTypeType } from '../../model/enum/BitType.ts';
+import { DeprecatedTextFormat } from '../../model/enum/DeprecatedTextFormat.ts';
+import { ResourceTag, type ResourceTagType } from '../../model/enum/ResourceTag.ts';
+import { TextFormat, type TextFormatType } from '../../model/enum/TextFormat.ts';
+import {
+  type BitJson,
+  type BotResponseJson,
+  type ExampleJson,
+  type ListItemJson,
+  type ResponseJson,
+  type StatementJson,
+} from '../../model/json/BitJson.ts';
+import { type BitWrapperJson } from '../../model/json/BitWrapperJson.ts';
+import { type BodyBitsJson } from '../../model/json/BodyBitJson.ts';
+import { type ImageResourceWrapperJson, type ResourceJson } from '../../model/json/ResourceJson.ts';
+import { StringUtils } from '../../utils/StringUtils.ts';
 
 interface ReferenceAndReferenceProperty {
   reference?: string;
@@ -78,7 +83,7 @@ class JsonParser {
       const str = json as string;
       try {
         json = JSON.parse(str);
-      } catch (e) {
+      } catch (_e) {
         // Failed to parse JSON, return empty array
         return [];
       }
@@ -161,12 +166,10 @@ class JsonParser {
 
     // Text Format
     const deprecatedTextFormat = DeprecatedTextFormat.fromValue(bit.format);
-    let textFormat = TextFormat.fromValue(bit.format) ?? bitConfig.textFormatDefault;
+    let _textFormat = TextFormat.fromValue(bit.format) ?? bitConfig.textFormatDefault;
     if (deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus) {
-      textFormat = TextFormat.bitmarkText;
+      _textFormat = TextFormat.bitmarkText;
     }
-
-    textFormat; // Unused
 
     // Build bit
     const bitNode = builder.buildBit({
@@ -189,7 +192,10 @@ class JsonParser {
       statements: this.processStatements(statement, bit.isCorrect, bit.statements, bit.example),
       responses: this.processResponses(bitType, bit.responses as ResponseJson[]),
       botResponses: this.processBotResponse(bitType, bit.responses as BotResponseJson[]),
-      cardBits: this.processListItems(bit.listItems ?? bit.sections ?? bit.bookReferences, bit.placeholders),
+      cardBits: this.processListItems(
+        bit.listItems ?? bit.sections ?? bit.bookReferences,
+        bit.placeholders,
+      ),
       footer: this.processFooter(bit.footer),
     });
 
@@ -223,7 +229,10 @@ class JsonParser {
     return nodes;
   }
 
-  private processResponses(bitType: BitTypeType, responses?: ResponseJson[]): ResponseJson[] | undefined {
+  private processResponses(
+    bitType: BitTypeType,
+    responses?: ResponseJson[],
+  ): ResponseJson[] | undefined {
     // Return early if bot response as the responses should be interpreted as bot responses
     if (Config.isOfBitType(bitType, BitType.botActionResponse)) return undefined;
     if (!Array.isArray(responses)) return undefined;
@@ -231,14 +240,20 @@ class JsonParser {
     return responses;
   }
 
-  private processBotResponse(bitType: BitTypeType, responses?: BotResponseJson[]): BotResponseJson[] | undefined {
+  private processBotResponse(
+    bitType: BitTypeType,
+    responses?: BotResponseJson[],
+  ): BotResponseJson[] | undefined {
     // Return early if NOT bot response as the responses should be interpreted as standard responses
     if (!Config.isOfBitType(bitType, BitType.botActionResponse)) return undefined;
     if (!Array.isArray(responses)) return undefined;
     return responses;
   }
 
-  private processListItems(listItems: ListItemJson[], placeholders: BodyBitsJson): CardBit[] | undefined {
+  private processListItems(
+    listItems: ListItemJson[],
+    placeholders: BodyBitsJson,
+  ): CardBit[] | undefined {
     const nodes: CardBit[] = [];
 
     if (Array.isArray(listItems)) {
@@ -333,7 +348,8 @@ class JsonParser {
     if (example == null) return undefined;
     if (example === true) return { example: true };
     if (example === false) return { example: false };
-    const exampleText = StringUtils.isString(example) || Array.isArray(example) ? example : undefined;
+    const exampleText =
+      StringUtils.isString(example) || Array.isArray(example) ? example : undefined;
     if (exampleText) {
       return { example: exampleText };
     }

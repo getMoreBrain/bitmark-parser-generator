@@ -1,4 +1,4 @@
-import { Writer } from './Writer';
+import { type Writer } from './Writer.ts';
 
 /**
  * Writer to write to a string.

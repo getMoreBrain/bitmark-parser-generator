@@ -1,20 +1,19 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { Config } from '../../../../config/Config';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { BitType } from '../../../../model/enum/BitType';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { BooleanUtils } from '../../../../utils/BooleanUtils';
-import { TextParser } from '../../../text/TextParser';
-
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { Config } from '../../../../config/Config.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { BitType } from '../../../../model/enum/BitType.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { BooleanUtils } from '../../../../utils/BooleanUtils.ts';
+import { TextParser } from '../../../text/TextParser.ts';
 import {
-  BitContent,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  TrueFalseValue,
-  TypeValue,
-} from '../BitmarkPegParserTypes';
+  type BitContent,
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type TrueFalseValue,
+  type TypeValue,
+} from '../BitmarkPegParserTypes.ts';
 
 // const builder = new Builder();
 const textParser = new TextParser();
@@ -83,7 +82,10 @@ function handleGapOrSelectOrTrueFalseExample(
         // Example is set to a value other than true / false which is not valid in the case of select
         trueFalse.__isDefaultExample = true;
         trueFalse.example = undefined;
-        context.addWarning(`Only 'true' / 'false' / default are allowed here, using default`, content);
+        context.addWarning(
+          `Only 'true' / 'false' / default are allowed here, using default`,
+          content,
+        );
       }
     }
   } else if (Array.isArray(target.__solutionsAst) && target.__solutionsAst.length > 0) {
@@ -115,7 +117,11 @@ function handleGapOrSelectOrTrueFalseExample(
       handleStandardBooleanExample(context, content, example, target);
       //
     } else if (
-      Config.isOfBitType(bitType, [BitType.clozeAndMultipleChoiceText, BitType.multipleChoice, BitType.multipleChoice1])
+      Config.isOfBitType(bitType, [
+        BitType.clozeAndMultipleChoiceText,
+        BitType.multipleChoice,
+        BitType.multipleChoice1,
+      ])
     ) {
       // For these bits, a specific example value higher up the chain makes no sense
       // Set example to default, and raise a warning if any value is set.
@@ -124,7 +130,10 @@ function handleGapOrSelectOrTrueFalseExample(
 
       if (example !== true) {
         // Example is set to a value other than true / false which is not valid in the case of select
-        context.addWarning(`At this level, only default [@example] is allowed, using default`, content);
+        context.addWarning(
+          `At this level, only default [@example] is allowed, using default`,
+          content,
+        );
       }
       //
     } else {
@@ -173,7 +182,10 @@ function handleStandardBooleanExample(
       // Example is set to a value other than true / false which is not valid in the case of select
       target.__isDefaultExample = true;
       target.example = undefined;
-      context.addWarning(`Only 'true' / 'false' / default are allowed here, using default`, content);
+      context.addWarning(
+        `Only 'true' / 'false' / default are allowed here, using default`,
+        content,
+      );
     }
   }
 }

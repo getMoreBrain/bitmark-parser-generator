@@ -1,50 +1,65 @@
-import { Ast, NodeInfo } from '../../ast/Ast';
-import { StringWriter } from '../../ast/writer/StringWriter';
-import { Writer } from '../../ast/writer/Writer';
-import { Breakscape } from '../../breakscaping/Breakscape';
-import { Config } from '../../config/Config';
-import { BreakscapedString } from '../../model/ast/BreakscapedString';
-import { NodeType } from '../../model/ast/NodeType';
-import { BitmarkAst, Bit, Body, BodyPart, Footer } from '../../model/ast/Nodes';
-import { JsonText, TextAst } from '../../model/ast/TextNodes';
-import { BitType, BitTypeType } from '../../model/enum/BitType';
-import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
-import { BodyBitType } from '../../model/enum/BodyBitType';
-import { CardSetVersion, CardSetVersionType } from '../../model/enum/CardSetVersion';
-import { PropertyFormat, PropertyFormatType } from '../../model/enum/PropertyFormat';
-import { PropertyTag } from '../../model/enum/PropertyTag';
-import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
-import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { TextLocation, TextLocationType } from '../../model/enum/TextLocation';
-import { BodyBitJson, GapJson, HighlightTextJson, MarkJson, SelectOptionJson } from '../../model/json/BodyBitJson';
-import { BooleanUtils } from '../../utils/BooleanUtils';
-import { ObjectUtils } from '../../utils/ObjectUtils';
-import { StringUtils } from '../../utils/StringUtils';
-import { AstWalkerGenerator } from '../AstWalkerGenerator';
-import { GenerateOptions, TextGenerator } from '../text/TextGenerator';
-
+import { Ast, type NodeInfo } from '../../ast/Ast.ts';
+import { StringWriter } from '../../ast/writer/StringWriter.ts';
+import { type Writer } from '../../ast/writer/Writer.ts';
+import { Breakscape } from '../../breakscaping/Breakscape.ts';
+import { Config } from '../../config/Config.ts';
+import { type BreakscapedString } from '../../model/ast/BreakscapedString.ts';
 import {
-  BookJson,
-  ChoiceJson,
-  FeedbackChoiceJson,
-  ImageSourceJson,
-  IngredientJson,
-  MarkConfigJson,
-  PersonJson,
-  PronunciationTableCellJson,
-  RatingLevelStartEndJson,
-  ResponseJson,
-  ServingsJson,
-  StatementJson,
-  TechnicalTermJson,
-} from '../../model/json/BitJson';
+  type Bit,
+  type BitmarkAst,
+  type Body,
+  type BodyPart,
+  type Footer,
+} from '../../model/ast/Nodes.ts';
+import { NodeType } from '../../model/ast/NodeType.ts';
+import { type JsonText, type TextAst } from '../../model/ast/TextNodes.ts';
 import {
-  AudioResourceWrapperJson,
-  ImageResourceJson,
-  ImageResourceWrapperJson,
-  ResourceDataJson,
-  ResourceJson,
-} from '../../model/json/ResourceJson';
+  BitmarkVersion,
+  type BitmarkVersionType,
+  DEFAULT_BITMARK_VERSION,
+} from '../../model/enum/BitmarkVersion.ts';
+import { BitType, type BitTypeType } from '../../model/enum/BitType.ts';
+import { BodyBitType } from '../../model/enum/BodyBitType.ts';
+import { CardSetVersion, type CardSetVersionType } from '../../model/enum/CardSetVersion.ts';
+import { PropertyFormat, type PropertyFormatType } from '../../model/enum/PropertyFormat.ts';
+import { PropertyTag } from '../../model/enum/PropertyTag.ts';
+import { ResourceTag, type ResourceTagType } from '../../model/enum/ResourceTag.ts';
+import { TextFormat, type TextFormatType } from '../../model/enum/TextFormat.ts';
+import { TextLocation, type TextLocationType } from '../../model/enum/TextLocation.ts';
+import {
+  type BookJson,
+  type ChoiceJson,
+  type FeedbackChoiceJson,
+  type ImageSourceJson,
+  type IngredientJson,
+  type MarkConfigJson,
+  type PersonJson,
+  type PronunciationTableCellJson,
+  type RatingLevelStartEndJson,
+  type ResponseJson,
+  type ServingsJson,
+  type StatementJson,
+  type TechnicalTermJson,
+} from '../../model/json/BitJson.ts';
+import {
+  type BodyBitJson,
+  type GapJson,
+  type HighlightTextJson,
+  type MarkJson,
+  type SelectOptionJson,
+} from '../../model/json/BodyBitJson.ts';
+import {
+  type AudioResourceWrapperJson,
+  type ImageResourceJson,
+  type ImageResourceWrapperJson,
+  type ResourceDataJson,
+  type ResourceJson,
+} from '../../model/json/ResourceJson.ts';
+import { BooleanUtils } from '../../utils/BooleanUtils.ts';
+import { ObjectUtils } from '../../utils/ObjectUtils.ts';
+import { StringUtils } from '../../utils/StringUtils.ts';
+import { AstWalkerGenerator } from '../AstWalkerGenerator.ts';
+import { type GenerateOptions, TextGenerator } from '../text/TextGenerator.ts';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
   debugGenerationInline: false,
@@ -165,8 +180,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   constructor(writer: Writer, options?: BitmarkGeneratorOptions) {
     super();
 
-    // Keep TS happy
-    this.inTag;
+    // // Keep TS happy
+    // this.inTag;
 
     // Bind callbacks
     this.enter = this.enter.bind(this);
@@ -177,7 +192,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.bodyBitCallback = this.bodyBitCallback.bind(this);
 
     // Set options
-    this.bitmarkVersion = BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
+    this.bitmarkVersion =
+      BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
       ...options?.bitmarkOptions,
@@ -197,7 +213,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     // Calculate the prettify space
-    this.prettifySpace = this.options.prettifyJson === true ? 2 : this.options.prettifyJson || undefined;
+    this.prettifySpace =
+      this.options.prettifyJson === true ? 2 : this.options.prettifyJson || undefined;
 
     // Calculate the spaces around values
     this.spacesAroundValues = this.calcSpacesAroundValues();
@@ -713,7 +730,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.bitsValue) return true;
 
     const { level, label } = n;
-    const levelKey = node.key === NodeType.ratingLevelStart ? PropertyTag.ratingLevelStart : PropertyTag.ratingLevelEnd;
+    const levelKey =
+      node.key === NodeType.ratingLevelStart
+        ? PropertyTag.ratingLevelStart
+        : PropertyTag.ratingLevelEnd;
 
     this.writeNL();
     this.writeProperty(levelKey, level, {
@@ -942,7 +962,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeTextOrValue(parent?.value?.lead ?? '', TextFormat.bitmarkText, TextLocation.tag);
     this.writeCL();
     this.writeOPC();
-    this.writeTextOrValue(parent?.value?.pageNumber ?? '', TextFormat.bitmarkText, TextLocation.tag);
+    this.writeTextOrValue(
+      parent?.value?.pageNumber ?? '',
+      TextFormat.bitmarkText,
+      TextLocation.tag,
+    );
     this.writeCL();
     this.writeOPC();
     this.writeTextOrValue(marginNumber, TextFormat.bitmarkText, TextLocation.tag);
@@ -1186,7 +1210,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return true;
   }
 
-  protected between_cardNode(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_cardNode(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     // Ignore cards if not allowed
     if (!this.isCardAllowed) return;
 
@@ -1209,19 +1238,34 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_elements(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_elements(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetVariantDivider();
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards
 
-  protected between_flashcards(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_flashcards(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetCardDivider();
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue
 
-  protected between_flashcardsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_flashcardsValue(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     // Ignore cards if not allowed
     if (!this.isCardAllowed) return;
 
@@ -1250,7 +1294,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_statements(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_statements(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     const isTrueFalse1 = this.isOfBitType(BitType.trueFalse1);
 
     if (!isTrueFalse1) {
@@ -1317,7 +1366,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> feedbacks
 
-  protected between_feedbacks(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_feedbacks(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetCardDivider();
   }
 
@@ -1336,7 +1390,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_quizzes(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_quizzes(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetCardDivider();
   }
 
@@ -1346,7 +1405,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_heading(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_heading(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     // Ignore cards if not allowed
     if (!this.isCardAllowed) return;
 
@@ -1359,7 +1423,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_forValues(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_forValues(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     // Ignore cards if not allowed
     if (!this.isCardAllowed) return;
 
@@ -1372,7 +1441,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_pairs(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_pairs(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetCardDivider();
   }
 
@@ -1408,7 +1482,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_matrix(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_matrix(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetCardDivider();
   }
 
@@ -1422,7 +1501,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeCardSetSideDivider();
   }
 
-  protected between_values(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_values(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     // Ignore cards if not allowed
     if (!this.isCardAllowed) return;
 
@@ -1431,7 +1515,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pronunciationTable
 
-  protected between_pronunciationTable(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_pronunciationTable(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
@@ -1443,7 +1532,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table
 
-  protected between_table(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_table(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
@@ -1456,7 +1550,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pronunciationTable -> data
 
-  protected between_data(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_data(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.table && parent?.key !== NodeType.pronunciationTable) return;
 
@@ -1466,7 +1565,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> columns
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> columns
 
-  protected between_columns(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_columns(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     const parent = this.getParentNode(route);
     const parentKey = parent?.key;
     if (parentKey !== NodeType.table && parentKey !== NodeType.captionDefinitionList) return;
@@ -1497,7 +1601,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data -> dataValue
   // bitmarkAst -> bits -> bitsValue -> cardNode -> pronunciationTable -> data -> dataValue
 
-  protected between_dataValue(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_dataValue(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     const parent = this.getParentNode(route, 2);
     if (parent?.key !== NodeType.table && parent?.key !== NodeType.pronunciationTable) return;
 
@@ -1556,7 +1665,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList
 
-  protected between_captionDefinitionList(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_captionDefinitionList(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return;
 
@@ -1596,7 +1710,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> captionDefinitionList -> definitions
   // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions
 
-  protected between_definitions(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, route: NodeInfo[]): void {
+  protected between_definitions(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode && parent?.key !== NodeType.captionDefinitionList) return;
 
@@ -1605,7 +1724,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions -> definitionsValue
 
-  protected between_definitionsValue(_node: NodeInfo, _left: NodeInfo, right: NodeInfo, route: NodeInfo[]): void {
+  protected between_definitionsValue(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    right: NodeInfo,
+    route: NodeInfo[],
+  ): void {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.definitions) return;
 
@@ -1625,7 +1749,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_questions(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_questions(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetCardDivider();
   }
 
@@ -1635,7 +1764,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_ingredients(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_ingredients(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetCardDivider();
   }
 
@@ -1718,7 +1852,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_botResponses(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_botResponses(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetCardDivider();
   }
 
@@ -1728,7 +1867,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //
   }
 
-  protected between_cardBits(_node: NodeInfo, _left: NodeInfo, _right: NodeInfo, _route: NodeInfo[]): void {
+  protected between_cardBits(
+    _node: NodeInfo,
+    _left: NodeInfo,
+    _right: NodeInfo,
+    _route: NodeInfo[],
+  ): void {
     this.writeCardSetCardDivider();
   }
 
@@ -2883,7 +3027,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // HACK to fix breakscaping when string ends with a ^ (must add a space) if
     // options.spacesAroundValues is 0
     if (this.spacesAroundValues === 0) {
-      this.writer.getLastWrite().endsWith('^') ? this.write(' ]') : this.write(']');
+      if (this.writer.getLastWrite().endsWith('^')) {
+        this.write(' ]');
+      } else {
+        this.write(']');
+      }
     } else {
       this.write(']');
     }
@@ -2982,7 +3130,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       const resourceTag = ResourceTag.keyFromValue(resource.type) ?? '';
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const resourceData = (resource as any)[resourceTag];
-      const src = resourceData ? resourceData.src || resourceData.url || resourceData.body || '' : '';
+      const src = resourceData
+        ? resourceData.src || resourceData.url || resourceData.body || ''
+        : '';
 
       if (deprecated_writeAsProperty) {
         this.writeOPA();
@@ -3070,7 +3220,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
-  protected writeInlineDebug(key: string, state: { open?: boolean; close?: boolean; single?: boolean }) {
+  protected writeInlineDebug(
+    key: string,
+    state: { open?: boolean; close?: boolean; single?: boolean },
+  ) {
     let tag = key;
     if (state.open) {
       tag = `<${key}>`;
@@ -3104,7 +3257,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected isOfBitType1(): boolean {
-    return this.isOfBitType([BitType.trueFalse1, BitType.multipleChoice1, BitType.multipleResponse1]);
+    return this.isOfBitType([
+      BitType.trueFalse1,
+      BitType.multipleChoice1,
+      BitType.multipleResponse1,
+    ]);
   }
 
   protected isOfBitType(baseBitType: BitTypeType | BitTypeType[]): boolean {

@@ -1,4 +1,4 @@
-import { EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType, superenum } from '@ncoderz/superenum';
 
 /**
  * The location of text.

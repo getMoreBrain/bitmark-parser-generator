@@ -6,21 +6,25 @@ Copyright ©2023 Get More Brain
 
 */
 
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { Ast } from '../../../src/ast/Ast';
-import { NodeType } from '../../../src/model/ast/NodeType';
-import { TextFormat } from '../../../src/model/enum/TextFormat';
-import { TextLocation } from '../../../src/model/enum/TextLocation';
-import { TextParser } from '../../../src/parser/text/TextParser';
+import fs from 'fs-extra';
+
+import { Ast } from '../../../src/ast/Ast.ts';
+import { NodeType } from '../../../src/model/ast/NodeType.ts';
+import { TextFormat } from '../../../src/model/enum/TextFormat.ts';
+import { TextLocation } from '../../../src/model/enum/TextLocation.ts';
+import { TextParser } from '../../../src/parser/text/TextParser.ts';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const ast = new Ast();
 const textParser = new TextParser();
 
 class DevTextParser {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.text.bitmark.tag');
+    const filename = path.resolve(dirname, '../../..', 'assets', 'test.text.bitmark.tag');
 
     if (debug) {
       // Read in the test file
@@ -33,8 +37,8 @@ class DevTextParser {
 
       // Generate AST from the Bitmark Text markup
       const textAst = textParser.toAst(bitStr.trim(), {
-        textFormat: TextFormat.bitmarkText,
-        textLocation: TextLocation.tag,
+        format: TextFormat.bitmarkText,
+        location: TextLocation.tag,
       });
 
       const jsonStr = JSON.stringify(textAst, undefined, 2);

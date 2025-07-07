@@ -1,5 +1,5 @@
-import { CardVariantConfig } from './CardVariantConfig';
-import { CardSetConfigKeyType } from './enum/CardSetConfigKey';
+import { CardVariantConfig } from './CardVariantConfig.ts';
+import { type CardSetConfigKeyType } from './enum/CardSetConfigKey.ts';
 
 interface ToStringOptions {
   includeChains?: boolean;
