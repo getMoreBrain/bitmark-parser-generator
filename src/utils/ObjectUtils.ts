@@ -1,5 +1,3 @@
-import structuredClone from '@ungap/structured-clone';
-
 export interface GetFilenamesSyncOptions {
   match?: RegExp;
   recursive?: boolean;

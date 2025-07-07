@@ -1,5 +1,3 @@
-import structuredClone from '@ungap/structured-clone';
-
 import { Ast, type NodeInfo } from '../../ast/Ast.ts';
 import { type Writer } from '../../ast/writer/Writer.ts';
 import { Breakscape } from '../../breakscaping/Breakscape.ts';

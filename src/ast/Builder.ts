@@ -1,5 +1,3 @@
-import structuredClone from '@ungap/structured-clone';
-
 import { Breakscape } from '../breakscaping/Breakscape.ts';
 import { Config } from '../config/Config.ts';
 import { type BreakscapedString } from '../model/ast/BreakscapedString.ts';

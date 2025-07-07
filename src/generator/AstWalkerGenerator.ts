@@ -12,8 +12,8 @@ import { type Generator } from './Generator.ts';
  * exit_<nodeKey>() - called when exiting a branch node
  * leaf_<nodeKey>() - called when entering a leaf node
  */
-abstract class AstWalkerGenerator<Ast, R, Context = undefined>
-  implements Generator<Ast, R>, AstWalkCallbacks<Context>
+abstract class AstWalkerGenerator<AstType, R, Context = undefined>
+  implements Generator<AstType, R>, AstWalkCallbacks<Context>
 {
   protected ast = new Ast();
 
@@ -21,9 +21,9 @@ abstract class AstWalkerGenerator<Ast, R, Context = undefined>
   protected debugGenerationInline = false;
   protected printed = false;
 
-  public abstract generate(ast: Ast, param1?: unknown, param2?: unknown): Promise<R>;
+  public abstract generate(ast: AstType, param1?: unknown, param2?: unknown): Promise<R>;
 
-  public abstract generateSync(ast: Ast, param1?: unknown, param2?: unknown): R;
+  public abstract generateSync(ast: AstType, param1?: unknown, param2?: unknown): R;
 
   enter(node: NodeInfo, route: NodeInfo[], context: Context): boolean | void {
     let res: boolean | void = void 0;
