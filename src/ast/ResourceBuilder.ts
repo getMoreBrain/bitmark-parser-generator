@@ -269,7 +269,7 @@ class ResourceBuilder extends BaseBuilder {
           }
         }
         // Merge with existing thumbnails
-        finalData.thumbnails = [...(finalData.thumbnails ?? []), ...thumbnails];
+        finalData.thumbnails = [...(finalData.thumbnails || []), ...thumbnails];
       }
     }
 

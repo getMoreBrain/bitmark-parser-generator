@@ -616,7 +616,7 @@ class Builder extends BaseBuilder {
     // Push isCaseSensitive down the tree for the cloze, match and match-matrix bits
     this.pushDownTree(
       context,
-      [node.body, ...(cardNode?.cardBits?.map((cardBit) => cardBit.body) ?? [])],
+      [node.body, ...(cardNode?.cardBits?.map((cardBit) => cardBit.body) || [])],
       [BodyBitType.gap],
       undefined,
       undefined, //'isCaseSensitive',
@@ -1117,7 +1117,7 @@ class Builder extends BaseBuilder {
       instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
-      values: data.values ?? [],
+      values: data.values || [],
       __valuesAst: data.__valuesAst,
     };
 
@@ -1176,7 +1176,7 @@ class Builder extends BaseBuilder {
     let isExample = false;
 
     // Set isExample for matrix based on isExample for cells
-    for (const c of data.cells ?? []) {
+    for (const c of data.cells || []) {
       if (data.__isDefaultExample && !c.isExample) {
         c.isExample = true;
       }
@@ -1191,7 +1191,7 @@ class Builder extends BaseBuilder {
       hint: this.handleJsonText(context, TextLocation.tag, data.hint),
       instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isExample,
-      cells: (data.cells ?? []).map((c) => this.buildMatrixCell(context, c)).filter((c) => c != null),
+      cells: (data.cells || []).map((c) => this.buildMatrixCell(context, c)).filter((c) => c != null),
     };
 
     // Remove Unset Optionals
@@ -1221,7 +1221,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCellJson = {
-      values: data.values ?? [],
+      values: data.values || [],
       item: this.handleJsonText(context, TextLocation.tag, data.item),
       lead: this.handleJsonText(context, TextLocation.tag, data.lead),
       hint: this.handleJsonText(context, TextLocation.tag, data.hint),
@@ -1255,8 +1255,8 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: PronunciationTableJson = {
-      data: (dataIn.data ?? []).map((row) =>
-        (row ?? []).map((cell) => {
+      data: (dataIn.data || []).map((row) =>
+        (row || []).map((cell) => {
           // Process the audio resource
           const audio = this.resourceBuilder.resourceFromResourceJson(context, cell.audio) as AudioResourceWrapperJson;
 
@@ -1288,9 +1288,9 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: TableJson = {
-      columns: (dataIn.columns ?? []).map((col) => this.handleJsonText(context, TextLocation.tag, col)),
-      data: (dataIn.data ?? []).map((row) =>
-        (row ?? []).map((cell) => this.handleJsonText(context, TextLocation.tag, cell)),
+      columns: (dataIn.columns || []).map((col) => this.handleJsonText(context, TextLocation.tag, col)),
+      data: (dataIn.data || []).map((row) =>
+        (row || []).map((cell) => this.handleJsonText(context, TextLocation.tag, cell)),
       ),
     };
 
@@ -1615,7 +1615,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: GapJson = {
       type: BodyBitType.gap,
-      solutions: data.solutions ?? [], // Must be before other properties except type
+      solutions: data.solutions || [], // Must be before other properties except type
       item: this.handleJsonText(context, TextLocation.tag, data.item),
       lead: this.handleJsonText(context, TextLocation.tag, data.lead),
       hint: this.handleJsonText(context, TextLocation.tag, data.hint),
@@ -1731,7 +1731,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: SelectJson = {
       type: BodyBitType.select,
-      options: this.buildSelectOptions(context, data.options) ?? [], // Must be before other properties except type
+      options: this.buildSelectOptions(context, data.options) || [], // Must be before other properties except type
       prefix: data.prefix ?? '',
       postfix: data.postfix ?? '',
       item: this.handleJsonText(context, TextLocation.tag, data.item),
@@ -1818,7 +1818,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: HighlightJson = {
       type: BodyBitType.highlight,
-      texts: this.buildHighlightTexts(context, data.texts) ?? [], // Must be before other properties except type
+      texts: this.buildHighlightTexts(context, data.texts) || [], // Must be before other properties except type
       prefix: data.prefix ?? '',
       postfix: data.postfix ?? '',
       item: this.handleJsonText(context, TextLocation.tag, data.item),
@@ -1917,7 +1917,7 @@ class Builder extends BaseBuilder {
     const node: FlashcardJson = {
       question: this.buildTextAndIcon(context, data.question) as TextAndIconJson,
       answer: this.buildTextAndIcon(context, data.answer) as TextAndIconJson,
-      alternativeAnswers: (data.alternativeAnswers ?? [])
+      alternativeAnswers: (data.alternativeAnswers || [])
         .map((d) => this.buildTextAndIcon(context, d))
         .filter((d) => d != null),
       item: this.handleJsonText(context, TextLocation.tag, data.item),
@@ -1972,7 +1972,7 @@ class Builder extends BaseBuilder {
     const node: DefinitionListItemJson = {
       term: this.buildTextAndIcon(context, data.term, textAsStrings) as TextAndIconJson,
       definition: this.buildTextAndIcon(context, data.definition, textAsStrings) as TextAndIconJson,
-      alternativeDefinitions: (data.alternativeDefinitions ?? [])
+      alternativeDefinitions: (data.alternativeDefinitions || [])
         .map((d) => this.buildTextAndIcon(context, d, textAsStrings))
         .filter((d) => d != null),
       item: this.handleJsonText(context, TextLocation.tag, data.item),
@@ -2000,7 +2000,7 @@ class Builder extends BaseBuilder {
     const icon = this.resourceBuilder.resourceFromResourceJson(context, data?.icon) as ImageResourceWrapperJson;
 
     // Ensure text is bitmark text
-    let text: JsonText = this.handleJsonText(context, TextLocation.tag, data?.text);
+    let text: JsonText = this.handleJsonText(context, TextLocation.tag, data?.text || (data as string));
 
     if (textAsStrings) {
       // Convert the bitmark text to plain text (without breakscaping, as that will happen in the Bitmark Generator)
@@ -2259,8 +2259,8 @@ class Builder extends BaseBuilder {
 
   //   // NOTE: Node order is important and is defined here
   //   const node: CaptionDefinitionListJson = {
-  //     columns: data.columns ?? [],
-  //     definitions: (data.definitions ?? [])
+  //     columns: data.columns || [],
+  //     definitions: (data.definitions || [])
   //       .map((d) => {
   //         return this.buildCaptionDefinition(context, {
   //           term: d.term,
@@ -2729,60 +2729,60 @@ class Builder extends BaseBuilder {
 
     if (cardNode) {
       // flashcards
-      for (const v of cardNode.flashcards ?? []) {
+      for (const v of cardNode.flashcards || []) {
         checkIsExample(v as WithExampleJson);
       }
 
       // definitions
-      for (const v of cardNode.definitions ?? []) {
+      for (const v of cardNode.definitions || []) {
         checkIsExample(v as WithExampleJson);
       }
 
       // pairs
-      for (const v of cardNode.pairs ?? []) {
+      for (const v of cardNode.pairs || []) {
         checkIsExample(v as WithExampleJson);
       }
       // matrix
-      for (const mx of cardNode.matrix ?? []) {
+      for (const mx of cardNode.matrix || []) {
         let hasExample = false;
 
         // matrix cell
-        for (const v of mx.cells ?? []) {
+        for (const v of mx.cells || []) {
           hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
         mx.isExample = hasExample;
       }
       // quizzes
-      for (const quiz of cardNode.quizzes ?? []) {
+      for (const quiz of cardNode.quizzes || []) {
         let hasExample = false;
 
         // responses
-        for (const v of quiz.responses ?? []) {
+        for (const v of quiz.responses || []) {
           hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
         // choices
-        for (const v of quiz.choices ?? []) {
+        for (const v of quiz.choices || []) {
           hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
         quiz.isExample = hasExample;
       }
       // responses
-      for (const v of cardNode.responses ?? []) {
+      for (const v of cardNode.responses || []) {
         checkIsExample(v as WithExampleJson);
       }
       // choices
-      for (const v of cardNode.choices ?? []) {
+      for (const v of cardNode.choices || []) {
         checkIsExample(v as WithExampleJson);
       }
       // statements
-      for (const v of cardNode.statements ?? []) {
+      for (const v of cardNode.statements || []) {
         checkIsExample(v as WithExampleJson);
       }
       // statement
       checkIsExample(cardNode.statement as WithExampleJson);
       // NO: elements
       // questions
-      for (const v of cardNode.questions ?? []) {
+      for (const v of cardNode.questions || []) {
         checkIsExample(v as WithExampleJson);
       }
     }
@@ -2792,11 +2792,11 @@ class Builder extends BaseBuilder {
     // statement
     checkIsExample(bit.statement as WithExampleJson);
     // responses
-    for (const v of bit.responses ?? []) {
+    for (const v of bit.responses || []) {
       checkIsExample(v as WithExampleJson);
     }
     // choices
-    for (const v of bit.choices ?? []) {
+    for (const v of bit.choices || []) {
       checkIsExample(v as WithExampleJson);
     }
 
