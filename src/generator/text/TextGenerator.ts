@@ -1298,6 +1298,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
           if (StringUtils.isString(v)) s += `|:${v}`;
           else s += `|`;
           break;
+        case 'zoomDisabled':
+          if (!v) s += '|zoomDisabled:false';
+          break;
         case 'alt':
         case 'width':
         case 'height':
