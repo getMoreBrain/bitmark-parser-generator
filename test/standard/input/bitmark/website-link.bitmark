@@ -1,0 +1,12 @@
+[.website-link]
+[@id:119761]
+[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@showInIndex]
+
+[.website-link]
+[&website-link:/logout][@caption]
+
+[.website-link]
+[&website-link:/logout][@caption:]
+
+[.website-link]
+[&website-link:/logout][@caption:true]

@@ -3,6 +3,8 @@ import { Config } from '../../../../config/Config';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
+import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { ImageSourceJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -40,7 +42,10 @@ function imageSourceTagContentProcessor(
   const { value } = content as TypeValue;
 
   // Extract the url from the content tag
-  const url = Breakscape.unbreakscape(StringUtils.trimmedString(value) as BreakscapedString);
+  const url = Breakscape.unbreakscape(StringUtils.trimmedString(value) as BreakscapedString, {
+    format: TextFormat.bitmarkText,
+    location: TextLocation.tag,
+  });
 
   target.imageSourceUrl = url;
 }

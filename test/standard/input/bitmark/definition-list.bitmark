@@ -1,0 +1,102 @@
+[.definition-list]
+
+Somebody
+====
+[# title 1]
+--
+[# title 2]
+====
+Term 1?
+Card 1, Side 1
+[&icon:https://image.io/term1.svg][@width:100][@height:200]
+--
+Definition 1
+Card 1, Side 2
+[&icon:https://image.io/def1.svg]
+====
+Term 2?
+Card 2, Side 1
+--
+Definition 2
+Card 2, Side 2
+++
+Alternative Definition 2
+Card 2, Side 2
+[&icon:https://image.io/altdef2.svg]
+~~~~
+
+Footer anyone?
+
+
+[.definition-list]
+
+Somebody
+====
+Term 1?
+Card 1, Side 1
+--
+Definition 1
+Card 1, Side 2
+++
+Alternative Definition 2
+Card 1, Side 2
+====
+Term 2?
+Card 2, Side 1
+--
+Definition 2
+Card 2, Side 2, No footer
+
+
+[.definition-list]
+[@example]
+[%item][%lead]
+Somebody
+====
+Term 1?
+Card 1, Side 1
+--
+Definition 1
+Card 1, Side 2
+++
+Alternative Definition 1
+Card 1, Side 2
+++
+Alternative Definition 2
+Card 1, Side 2
+====
+Term 2?
+Card 2, Side 1
+--
+Definition 2
+Card 2, Side 2, No footer
+[%item][%lead]
+
+
+[.definition-list]
+[%item][%lead]
+Somebody
+====
+Term 1?
+Card 1, Side 1
+--
+Definition 1
+Card 1, Side 2
+++
+Alternative Definition 2
+Card 1, Side 2
+====
+Term 2?
+Card 2, Side 1
+--
+Definition 2
+Card 2, Side 2, No footer
+[%item][%lead]
+[@example]
+====
+
+
+~~~~
+
+Footer anyone?
+

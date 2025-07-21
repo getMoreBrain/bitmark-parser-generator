@@ -1,5 +1,6 @@
 import { Breakscape } from '../breakscaping/Breakscape';
 import { Config } from '../config/Config';
+import { TextGenerator } from '../generator/text/TextGenerator';
 import { Property } from '../model/ast/Nodes';
 import { JsonText, TextAst } from '../model/ast/TextNodes';
 import { BitConfig } from '../model/config/BitConfig';
@@ -7,6 +8,7 @@ import { ConfigKeyType } from '../model/config/enum/ConfigKey';
 import { BitTypeType } from '../model/enum/BitType';
 import { PropertyFormat } from '../model/enum/PropertyFormat';
 import { TextFormatType } from '../model/enum/TextFormat';
+import { TextLocation, TextLocationType } from '../model/enum/TextLocation';
 import { ExampleJson } from '../model/json/BitJson';
 import { TextParser } from '../parser/text/TextParser';
 import { ArrayUtils } from '../utils/ArrayUtils';
@@ -28,9 +30,11 @@ export interface BuildContext {
 
 class BaseBuilder {
   protected textParser: TextParser;
+  protected textGenerator: TextGenerator;
 
   constructor() {
     this.textParser = new TextParser();
+    this.textGenerator = new TextGenerator();
   }
 
   /**
@@ -108,7 +112,7 @@ class BaseBuilder {
 
         //   return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
         // }
-        case PropertyFormat.trimmedString:
+        case PropertyFormat.plainText:
           // Convert number to string
           if (NumberUtils.asNumber(v) != null) v = `${v}`;
 
@@ -137,6 +141,10 @@ class BaseBuilder {
     return ArrayUtils.asArray(value);
   }
 
+  protected getEmptyTextAst(context: BuildContext): TextAst {
+    return this.handleJsonText(context, TextLocation.tag, ' ');
+  }
+
   /**
    * Convert the JsonText from the JSON to the AST format:
    * Input:
@@ -147,14 +155,15 @@ class BaseBuilder {
    *
    * In the case of Bitmark v2 type texts, there is nothing to do but cast the type.
    *
-   * @param breakscaped string or TextAst or breakscaped string[] or TextAst[]
+   * @param context BuildContext
    * @param textFormat format of TextAst
-   * @param inBody true if the text is in the body
+   * @param textLocation location of the text (body, tag, etc.)
+   * @param text JsonText or JsonText[] to convert
    * @returns Breakscaped string or breakscaped string[]
    */
   protected handleJsonText<T extends JsonText | JsonText[] | undefined, R = T extends JsonText[] ? TextAst[] : TextAst>(
     context: BuildContext,
-    isProperty: boolean,
+    textLocation: TextLocationType,
     text: T,
   ): R {
     let res: R;
@@ -181,11 +190,12 @@ class BaseBuilder {
           } else if (StringUtils.isString(t)) {
             strArray[i] = this.textParser.toAst(
               Breakscape.breakscape(t as string, {
-                textFormat,
+                format: textFormat,
+                location: textLocation,
               }),
               {
-                textFormat,
-                isProperty,
+                format: textFormat,
+                location: textLocation,
               },
             );
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -201,12 +211,13 @@ class BaseBuilder {
         // v2 text(?)
         res = this.textParser.toAst(
           Breakscape.breakscape(text as string, {
-            textFormat,
+            format: textFormat,
+            location: textLocation,
             v2: true,
           }),
           {
-            textFormat,
-            isProperty,
+            format: textFormat,
+            location: textLocation,
           },
         ) as R;
       } else {

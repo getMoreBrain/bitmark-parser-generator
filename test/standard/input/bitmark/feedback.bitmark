@@ -1,0 +1,88 @@
+
+[.feedback]
+[@id:67915]
+[@reasonableNumOfChars:100]
+====
+[#AAA]
+--
+[#BBB]
+====
+[!ICH BEVORZUGE …]
+[%1.]
+[+ Bier][@example]
+[+ Wein]
+--
+[!Why?]
+Please answer in keywords
+[@example:Example text]
+====
+[!ICH HASSE …]
+[%1I.]
+[+ Bier]
+[- Wein]
+--
+[!Why?]
+Please answer in keywords
+[@reasonableNumOfChars:300]
+[@example]
+====
+
+
+[.feedback]
+[@id:64574]
+[@reasonableNumOfChars:50]
+====
+[!ICH BEVORZUGE …]
+[%1.][%other]
+[+ Bier]
+[+ Wein][@example]
+[@reasonableNumOfChars:300]
+--
+[!Why?]
+Please answer in keywords
+====
+[!ICH HASSE …]
+[%1I.]
+[- Bier]
+[- Wein]
+====
+
+
+[.hand-in-feedback-expert]
+[@id:64574]
+[@reasonableNumOfChars:50]
+====
+[!ICH BEVORZUGE …]
+[%1.][%other]
+[+ Bier]
+[+ Wein][@example]
+[@reasonableNumOfChars:300]
+--
+[!Why?]
+Please answer in keywords
+====
+[!ICH HASSE …]
+[%1I.]
+[- Bier]
+[- Wein]
+====
+
+
+[.hand-in-feedback-self]
+[@id:64574]
+[@reasonableNumOfChars:50]
+====
+[!ICH BEVORZUGE …]
+[%1.][%other]
+[+ Bier]
+[+ Wein][@example]
+[@reasonableNumOfChars:300]
+--
+[!Why?]
+Please answer in keywords
+====
+[!ICH HASSE …]
+[%1I.]
+[- Bier]
+[- Wein]
+====

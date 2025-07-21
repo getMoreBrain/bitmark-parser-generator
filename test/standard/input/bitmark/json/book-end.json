@@ -1,0 +1,76 @@
+[
+  {
+    "bit": {
+      "type": "book-end",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["135647"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Have you ever wondered why schools, language courses, and professional development programs barely use digital textbooks?",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "The answer is simple: because there are hardly any digital textbooks.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "alignment": "center",
+            "textAlign": "left",
+            "src": "https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png",
+            "alt": null,
+            "title": null,
+            "class": "center",
+            "zoomDisabled": true
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The world was made painfully aware of this during the COVID-19 lockdowns (for example, when students received teaching material for distance learning in a large envelope or an email with Word or PDF documents to print out themselves).",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "But what is the reason for the low penetration of digital textbooks?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.27.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.book-end]\n[@id:135647]\nHave you ever wondered why schools, language courses, and professional development programs barely use digital textbooks?\n\nThe answer is simple: because there are hardly any digital textbooks.\n|image:https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png|\nThe world was made painfully aware of this during the COVID-19 lockdowns (for example, when students received teaching material for distance learning in a large envelope or an email with Word or PDF documents to print out themselves).\n\nBut what is the reason for the low penetration of digital textbooks?"
+  }
+]

@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "extractor-page-number",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -24,16 +24,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.extractor-page-number]\nXI"
   },
   {
     "bit": {
       "type": "extractor-page-number-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -55,9 +55,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.extractor-page-number-collapsible]\n10"
   }

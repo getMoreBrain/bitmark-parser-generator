@@ -18,7 +18,7 @@ import { BitTypeType } from '../../../model/enum/BitType';
 import { ResourceTagType } from '../../../model/enum/ResourceTag';
 import { Tag } from '../../../model/enum/Tag';
 import { TextFormatType } from '../../../model/enum/TextFormat';
-import { ResourceJson } from '../../../model/json/ResourceJson';
+import { ImageResourceJson, ResourceJson } from '../../../model/json/ResourceJson';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
@@ -28,10 +28,11 @@ import { PeggyGrammarLocation } from './PeggyGrammarLocation';
 import {
   BookJson,
   BotResponseJson,
-  CaptionDefinitionListJson,
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
+  FeedbackChoiceJson,
+  FeedbackJson,
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
@@ -131,6 +132,7 @@ export interface BitContentProcessorResult {
   __solutionsAst?: TextAst[];
   statement?: Partial<StatementJson>;
   statements?: Partial<StatementJson>[];
+  feedbackChoices?: Partial<FeedbackChoiceJson>[];
   choices?: Partial<ChoiceJson>[];
   responses?: Partial<ResponseJson>[];
   solution?: BreakscapedString;
@@ -178,6 +180,7 @@ export interface BitContentProcessorResult {
   posterImage?: /*ImageResourceJson |*/ string;
   siteName?: string;
   imageSourceUrl?: string;
+  image?: Partial<ImageResourceJson>;
   mockupId?: BreakscapedString;
   size?: number;
   format?: BreakscapedString;
@@ -213,6 +216,7 @@ export interface BitSpecificCards {
   definitions?: Partial<DefinitionListItemJson>[];
   statements?: Partial<StatementJson>[];
   responses?: Partial<ResponseJson>[];
+  feedbacks?: Partial<FeedbackJson>[];
   quizzes?: Partial<QuizJson>[];
   heading?: Partial<HeadingJson>;
   pairs?: Partial<PairJson>[];
@@ -223,7 +227,8 @@ export interface BitSpecificCards {
   table?: Partial<TableJson>;
   botResponses?: Partial<BotResponseJson>[];
   ingredients?: Partial<IngredientJson>[];
-  captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+  // DEPRECATED - TO BE REMOVED IN THE FUTURE
+  // captionDefinitionList?: Partial<CaptionDefinitionListJson>;
   cardBits?: Partial<CardBit>[];
   internalComments?: string[]; // ??
 }

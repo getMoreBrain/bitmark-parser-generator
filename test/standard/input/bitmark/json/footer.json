@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -71,16 +71,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis is an article with a footer\n[?hint]\n\n~~~~\n[!instruction]\nThis **is** the footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -160,16 +160,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n\n~^~~~\n[!instruction]\nThis is !!not!! a footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -236,16 +236,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis article does not have a footer\n[?hint]\n\n~~~~~\n[!instruction]\nThis is not a footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -331,16 +331,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nNeither does this article have a footer\n[?hint]\n[!instruction]\n~~~~This is **not** a footer\n!!Nor!! is this"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -446,25 +446,23 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis article has 2 footers which is not really valid.\nAll text after the first footer should be in the footer, and a warning should be given\n[?hint]\n\n~~~~\nThis **is** a footer\n~~~~\n[!instruction]\nThis is **also** part of the footer and not a second footer!"
   },
   {
     "bit": {
       "type": "flashcard-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -475,6 +473,33 @@
             }
           ],
           "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": []
+          },
+          "alternativeAnswers": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
         }
       ],
       "footer": [
@@ -509,41 +534,20 @@
           "attrs": {}
         }
       ],
-      "cards": [
-        {
-          "question": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "answer": [],
-          "alternativeAnswers": [],
-          "item": [],
-          "hint": [],
-          "instruction": [],
-          "isExample": false,
-          "example": null
-        }
-      ]
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nCard 1, Side 1\n~~~~\n\nFooter anyone?\n\n~~~~\n\nStill in the footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -632,16 +636,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n~~~~\n**\n[!instruction]\nThis is !!not!! a footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -723,16 +727,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n~^~~~\n**\n[!instruction]\nThis is !!not!! a footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -801,16 +805,16 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis is an article with a footer\n[?hint]\n\n====    footer ====\n[!instruction]\nThis **is** the footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -890,16 +894,16 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n\n====   ^ footer ====\n[!instruction]\nThis is !!not!! a footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -966,16 +970,16 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis article does not have a footer\n[?hint]\n\n===== footer ====\n[!instruction]\nThis is not a footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -1061,16 +1065,16 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nNeither does this article have a footer\n[?hint]\n[!instruction]\n==== footer ====This is **not** a footer\n!!Nor!! is this"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -1176,16 +1180,16 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis article has 2 footers which is not really valid.\nAll text after the first footer should be in the footer, and a warning should be given\n[?hint]\n\n==== footer  ====\nThis **is** a footer\n==== footer ====\n[!instruction]\nThis is **also** part of the footer and not a second footer!"
   },
   {
     "bit": {
       "type": "flashcard-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -1207,19 +1211,23 @@
       ],
       "cards": [
         {
-          "question": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "answer": [],
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": []
+          },
           "alternativeAnswers": [],
           "item": [],
           "hint": [],
@@ -1264,16 +1272,16 @@
       "revealSolutions": false
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nCard 1, Side 1\n====            footer               ====\n\nFooter anyone?\n\n==== footer ====\n\nStill in the footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -1362,16 +1370,16 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n==== footer ====\n**\n[!instruction]\nThis is !!not!! a footer"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -1453,9 +1461,9 @@
       ]
     },
     "parser": {
-      "version": "3.2.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n=^=== footer ====\n**\n[!instruction]\nThis is !!not!! a footer"
   }

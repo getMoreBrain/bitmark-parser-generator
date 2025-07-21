@@ -71,13 +71,13 @@ const bpg = new BitmarkParserGenerator();
 const json = await bpg.convert("[.article] Hello World");
 
 // Convert bitmark JSON to bitmark markup
-const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "bitLevel": 1, "body": "Hello World" }}]');
+const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++", "bitLevel": 1, "body": "Hello World" }}]');
 
 // Convert bitmark markup file to bitmark JSON
-await bpg.convert("./input.bit", { output: "./output.json" });
+await bpg.convert("./input.bitmark", { output: "./output.json" });
 
 // Convert bitmark JSON to bitmark markup
-await bpg.convert("./input.json", { output: "./output.bit" });
+await bpg.convert("./input.json", { output: "./output.bitmark" });
 ```
 
 ### Convertion Options
@@ -99,7 +99,7 @@ await bpg.convert("./input.json", {
     debugGenerationInline: false,  // [development only] Include debugging tags in the generated output. Default: false
   },
   bitmarkOptions: {
-    explicitTextFormat: false,     // Include bitmark text format even when it is the default (bitmark--). Default: false
+    explicitTextFormat: false,     // Include bitmark text format even when it is the default (bitmark++). Default: false
     prettifyJson: 2,               // Prettify the body JSON output. Default: not prettified
     cardSetVersion: 1,             // Output markup using the specified cardSet format. Default: 1
     debugGenerationInline: false,  // [development only] Include debugging tags in the generated output. Default: false
@@ -120,7 +120,7 @@ const ast = builder.bitmark({
   bits: [
     builder.bit({
       bitType: BitType.article,
-      textFormat: TextFormat.bitmarkMinusMinus,
+      textFormat: TextFormat.bitmarkText,
       body: builder.body({
         bodyParts: [
           builder.bodyText({
@@ -133,10 +133,68 @@ const ast = builder.bitmark({
 });
 
 // Write the AST to bitmark markup
-bpg.convert(ast, { output: "./output.bit" });
+bpg.convert(ast, { output: "./output.bitmark" });
 
 // Write the AST to bitmark JSON
 bpg.convert(ast, { output: "./output.json", outputFormat: 'json' });
+```
+
+### Breakscaping
+
+A text can be breakscaped programmatically for inclusion in bitmark.
+
+NOTE: It is recommended the bit builder documented above in Programmatic Bitmark Creation is used rather than
+hand-coding bitmark creation, because it guarantees the bitmark will be valid, and all breakscaping will be correct.
+
+When breakscaping a text for inclusion in bitmark, the breakscaping applied depends on where that text appears in the
+bitmark. The following four text locations require different breakscaping:
+
+| Bit Format           | Text Location |
+|----------|-------------|
+| bitmark++            | body |
+| bitmark++            | tag |
+| text (not bitmark++) | body |
+| text (not bitmark++) | tag |
+
+Also, if a plain text divider `==== text ====` is used, then text after the divider must be breakscaped using
+`text:body` even if the bit is `bitmark++`.
+
+```ts
+import { BitmarkParserGenerator, BodyTextFormat, TextLocation, InputType } from 'bitmark-parser-generator';
+
+const bpg = new BitmarkParserGenerator();
+
+
+const breakscaped = bpg.breakscapeText("This is the [!text] to be breakscaped", {
+  inputFormat: InputType.string, // or "string"
+  textFormat: BodyTextFormat.bitmarkPlusPlus, // or "bitmark++"
+  textLocation: TextLocation.body, // or "body"
+});
+// breakscaped = "This is the [^!text] to be breakscaped"
+
+
+const breakscaped = bpg.breakscapeText("This is the [!text] to be breakscaped", {
+  inputFormat: InputType.string, // or "string"
+  textFormat: BodyTextFormat.bitmarkPlusPlus, // or "bitmark++"
+  textLocation: TextLocation.tag, // or "tag"
+});
+// breakscaped = "This is the [!text^] to be breakscaped"
+```
+
+
+
+### Info
+
+Information about the supported bits can be retreived via the info API
+
+```ts
+import { BitmarkParserGenerator } from 'bitmark-parser-generator';
+
+const bpg = new BitmarkParserGenerator();
+
+// Write supported bit info to the console
+const info = bpg.info();
+console.log(JSON.stringify(info, null, 2));
 ```
 
 
@@ -157,11 +215,11 @@ const bpg = new BitmarkParserGenerator();
 const json = await bpg.convert("[.article] Hello World [$I will be removed as I am invalid]");
 
 // Upgrade bitmark JSON
-const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--",
+const bitmark = await bpg.convert('[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++",
 "bitLevel": 1, "body": "Hello World", unknownProperty: "Will be removed" }}]');
 
 // Upgrade bitmark markup file to another file
-await bpg.convert("./input.bit", { output: "./output.bit" });
+await bpg.convert("./input.bitmark", { output: "./output.bitmark" });
 
 // Upgrade bitmark JSON file to another file
 await bpg.convert("./input.json", { output: "./output.json" });

@@ -1,0 +1,19 @@
+[.platform-path:bitmark++]
+[@ageRange:18][@ageRange:120]
+[@path:/this/is/a/path]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+[&image:https://cdn.bitbook.education/cat.jpg]
+
+Some more text.
+
+
+[.platform-path:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+[@path:/this/is/a/path]
+
+The bit content
+
+[.platform-path]

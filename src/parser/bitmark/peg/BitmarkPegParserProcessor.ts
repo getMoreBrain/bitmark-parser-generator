@@ -13,7 +13,7 @@
  *    - The default output format is JSON.
  *    - The output could also be bitmark, therefore providing a way to prettify / standardise bitmark markup.
  * 3. The parser should not generate a fatal error under any circumstances, because all text is valid bitmark markup.
- *    - The only fatal error for a bit is if the bit header tag (e.g. [.cloze:bitmark--]) cannot be parsed. In this
+ *    - The only fatal error for a bit is if the bit header tag (e.g. [.cloze:bitmark++]) cannot be parsed. In this
  *      case the bit will be ignored and an error will be added at the AST top level. Parsing will continue.
  *    - If the parser encounters suspect bitmark it will generate 'warnings' which it will attach to the AST bit level
  * 4. The parser should be as fast as possible, without being overly complicated.
@@ -57,7 +57,7 @@
  * -------------------------
  *
  * - To build the parser, run 'yarn build-grammar-bit'
- * - Modify the bitmark in '_simple.bit' to test the parser (this will be parsed after building the parser)
+ * - Modify the bitmark in '_simple.bitmark' to test the parser (this will be parsed after building the parser)
  * - To undersand the operation and to help debug and develop, use the DEBUG_XXX flags in the code below.
  *   and in BitmarkPegParserHelper.ts
  */
@@ -69,8 +69,11 @@ import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Bit, BitmarkAst, BodyPart } from '../../../model/ast/Nodes';
 import { TagsConfig } from '../../../model/config/TagsConfig';
 import { BitType } from '../../../model/enum/BitType';
+import { BodyTextFormat } from '../../../model/enum/BodyTextFormat';
+import { DeprecatedTextFormat } from '../../../model/enum/DeprecatedTextFormat';
 import { ResourceTag } from '../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../model/enum/TextFormat';
+import { TextLocation } from '../../../model/enum/TextLocation';
 import { ParserData } from '../../../model/parser/ParserData';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserInfo } from '../../../model/parser/ParserInfo';
@@ -151,7 +154,7 @@ class BitmarkPegParserProcessor {
     this.context = {
       bitConfig: Config.getBitConfig(BitType._error),
       bitType: BitType._error,
-      textFormat: TextFormat.bitmarkMinusMinus,
+      textFormat: TextFormat.bitmarkText,
 
       DEBUG_BIT_RAW,
       DEBUG_BIT_CONTENT_RAW,
@@ -341,7 +344,8 @@ class BitmarkPegParserProcessor {
   ): BitHeader {
     // Unbreakscape the bit type
     const bitType = Breakscape.unbreakscape(bitTypeBreakscaped, {
-      textFormat: TextFormat.text,
+      format: TextFormat.plainText,
+      location: TextLocation.tag,
     });
 
     // Get / check bit type
@@ -365,11 +369,22 @@ class BitmarkPegParserProcessor {
 
     // Text format
     let textFormat = TextFormat.fromValue(textFormatAndResourceType.textFormat);
-    if (textFormatAndResourceType.textFormat && !textFormat) {
+    const isInvalidTextFormat = textFormatAndResourceType.textFormat && !textFormat;
+    if (isInvalidTextFormat) {
       this.addWarning(
-        `Invalid text format '${textFormatAndResourceType.textFormat}', defaulting to '${bitConfig.textFormatDefault}'`,
+        `Invalid text format '${textFormatAndResourceType.textFormat}', defaulting to '${BodyTextFormat.bitmarkPlusPlus}'`,
       );
     }
+
+    // Deprecated warning for bitmark--
+    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(textFormatAndResourceType.textFormat);
+    if (deprecatedTextFormat) {
+      textFormat = TextFormat.bitmarkText;
+      this.addWarning(
+        `${deprecatedTextFormat} text format is deprecated. Bit will be parsed as '${BodyTextFormat.bitmarkPlusPlus}'`,
+      );
+    }
+
     textFormat = textFormat ?? bitConfig.textFormatDefault;
 
     // Resource type
@@ -394,7 +409,8 @@ class BitmarkPegParserProcessor {
     const processValue = (value: TypeValue | undefined) => {
       if (value) {
         const val = Breakscape.unbreakscape(StringUtils.string(value.value) as BreakscapedString, {
-          textFormat: TextFormat.text,
+          format: TextFormat.plainText,
+          location: TextLocation.tag,
         });
         if (value.type === TypeKey.TextFormat) {
           // Set text format
@@ -432,7 +448,7 @@ class BitmarkPegParserProcessor {
 
     const { textFormat } = this.context;
 
-    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+    const isBitmarkText = textFormat === TextFormat.bitmarkText;
 
     // Format: text / latex
     // Body bits are only supported up to the first BodyText tag.

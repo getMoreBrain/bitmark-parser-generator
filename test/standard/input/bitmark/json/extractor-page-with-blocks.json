@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "extractor-page-with-blocks",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -10,6 +10,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "page.com",
+          "src": "https://page.com/1.png",
+          "width": 400,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -21,35 +37,19 @@
           ],
           "attrs": {}
         }
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "png",
-          "provider": "page.com",
-          "src": "https://page.com/1.png",
-          "width": "400",
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.extractor-page-with-blocks]\n[&image:https://page.com/1.png][@width:400]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   },
   {
     "bit": {
       "type": "extractor-page-with-blocks-collapsible",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -57,6 +57,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "page.com",
+          "src": "https://page.com/1.png",
+          "width": 400,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -68,28 +84,12 @@
           ],
           "attrs": {}
         }
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "png",
-          "provider": "page.com",
-          "src": "https://page.com/1.png",
-          "width": "400",
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.extractor-page-with-blocks-collapsible]\n[&image:https://page.com/1.png][@width:400]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag."
   }

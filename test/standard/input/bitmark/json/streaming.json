@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "revealSolutions": false,
+      "id": [
+        "287883"
+      ],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -25,75 +26,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
-      "body": [],
-      "statements": [
-        {
-          "statement": "A house is bigger than a car.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
-        },
-        {
-          "statement": "A tiger is bigger than a cat.",
-          "isCorrect": true,
-          "isExample": false,
-          "example": null
-        }
-      ]
-    },
-    "parser": {
-      "version": "1.31.0",
-      "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
-      "warnings": [
-        {
-          "message": "'-' tag is not valid here (incorrectly chained?). It will be ignored",
-          "text": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n===\n[+A house is bigger than a car.]\n===\n[+A tiger is bigger than a cat.]\n===\n[-A cow is bigger than a dog.]\n\n",
-          "location": {
-            "start": {
-              "line": 2,
-              "column": 1,
-              "offset": 1
-            },
-            "end": {
-              "line": 13,
-              "column": 1,
-              "offset": 202
-            }
-          }
-        }
-      ]
-    },
-    "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n===\n[+A house is bigger than a car.]\n===\n[+A tiger is bigger than a cat.]\n===\n[-A cow is bigger than a dog.]"
-  },
-  {
-    "bit": {
-      "type": "true-false",
-      "format": "bitmark--",
-      "bitLevel": 1,
-      "id": ["287883"],
-      "revealSolutions": false,
-      "labelTrue": "rather yes",
-      "labelFalse": "rather no",
-      "item": [],
-      "lead": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "true-false",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
-      "isExample": false,
       "body": [],
       "statements": [
         {
@@ -114,58 +46,25 @@
           "isExample": false,
           "example": null
         }
-      ]
-    },
-    "parser": {
-      "version": "1.31.0",
-      "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
-    },
-    "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n====\n[+A house is bigger than a car.]\n====\n[+A tiger is bigger than a cat.]\n====\n[-A cow is bigger than a dog.]"
-  },
-  {
-    "bit": {
-      "type": "true-false",
-      "format": "bitmark--",
-      "bitLevel": 1,
-      "id": ["287883"],
-      "revealSolutions": false,
-      "labelTrue": "rather yes",
-      "labelFalse": "rathe",
-      "item": [],
-      "lead": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "true-false",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
       ],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
       "isExample": false,
-      "body": []
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rathe"
+    "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n===\n[+A house is bigger than a car.]\n===\n[+A tiger is bigger than a cat.]\n===\n[-A cow is bigger than a dog.]"
   },
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "revealSolutions": false,
+      "id": [
+        "287883"
+      ],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -185,7 +84,102 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "body": [],
+      "statements": [
+        {
+          "statement": "A house is bigger than a car.",
+          "isCorrect": true,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "statement": "A tiger is bigger than a cat.",
+          "isCorrect": true,
+          "isExample": false,
+          "example": null
+        },
+        {
+          "statement": "A cow is bigger than a dog.",
+          "isCorrect": false,
+          "isExample": false,
+          "example": null
+        }
+      ],
       "isExample": false,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n====\n[+A house is bigger than a car.]\n====\n[+A tiger is bigger than a cat.]\n====\n[-A cow is bigger than a dog.]"
+  },
+  {
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "287883"
+      ],
+      "labelTrue": "rather yes",
+      "labelFalse": "rathe",
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "true-false",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "isExample": false,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rathe"
+  },
+  {
+    "bit": {
+      "type": "true-false",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "287883"
+      ],
+      "labelTrue": "rather yes",
+      "labelFalse": "rather no",
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "true-false",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "body": [],
       "statements": [
         {
@@ -194,12 +188,14 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n====\n[+A house"
   },
@@ -209,9 +205,9 @@
       "bitLevel": 1
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "errors": [
         {
           "message": "Invalid bit type: 'true-fals\n\n\n\n[.true-false'",
@@ -236,18 +232,14 @@
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "labelTrue": "",
-      "labelFalse": "",
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -259,24 +251,27 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "labelFalse": "",
+      "labelTrue": "",
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false]\n[@id:2878"
   },
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "labelTrue": "",
-      "labelFalse": "",
-      "revealSolutions": false,
+      "id": [
+        "287883"
+      ],
       "item": [],
       "lead": [
         {
@@ -294,50 +289,55 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "body": [],
       "isExample": false,
-      "body": []
+      "labelFalse": "",
+      "labelTrue": "",
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-f"
   },
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "labelTrue": "",
-      "labelFalse": "",
-      "revealSolutions": false,
+      "id": [
+        "287883"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "body": [],
       "isExample": false,
-      "body": []
+      "labelFalse": "",
+      "labelTrue": "",
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false]\n[@id:287883]\n[%"
   },
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
+      "id": [
+        "287883"
+      ],
       "labelTrue": "ra",
-      "labelFalse": "",
-      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -355,25 +355,26 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "body": [],
       "isExample": false,
-      "body": []
+      "labelFalse": "",
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:ra"
   },
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "labelTrue": "",
-      "labelFalse": "",
-      "revealSolutions": false,
+      "id": [
+        "287883"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -391,25 +392,27 @@
           "attrs": {}
         }
       ],
+      "body": [],
       "isExample": false,
-      "body": []
+      "labelFalse": "",
+      "labelTrue": "",
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false]\n[@id:287883]\n[!instruction"
   },
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "labelTrue": "",
-      "labelFalse": "",
-      "revealSolutions": false,
+      "id": [
+        "287883"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -427,38 +430,43 @@
         }
       ],
       "instruction": [],
+      "body": [],
       "isExample": false,
-      "body": []
+      "labelFalse": "",
+      "labelTrue": "",
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false]\n[@id:287883]\n[?hint"
   },
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "labelTrue": "",
-      "labelFalse": "",
-      "revealSolutions": false,
+      "id": [
+        "287883"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "body": [],
       "isExample": false,
-      "body": []
+      "labelFalse": "",
+      "labelTrue": "",
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "'#' tag is not valid here (incorrectly chained?). It will be ignored",
@@ -483,25 +491,27 @@
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "labelTrue": "",
-      "labelFalse": "",
-      "revealSolutions": false,
+      "id": [
+        "287883"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "body": [],
       "isExample": false,
-      "body": []
+      "labelFalse": "",
+      "labelTrue": "",
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "'#' tag is not valid here (incorrectly chained?). It will be ignored",
@@ -526,16 +536,14 @@
   {
     "bit": {
       "type": "cloze",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -547,45 +555,46 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "gap tag"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["gap tag"]
+                "example": null
               }
             }
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.cloze]\nThis is a [_gap tag"
   },
   {
     "bit": {
       "type": "true-false",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "labelTrue": "",
-      "labelFalse": "",
-      "revealSolutions": false,
+      "id": [
+        "287883"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -600,12 +609,17 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": [],
+      "isExample": false,
+      "labelFalse": "",
+      "labelTrue": "",
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false&image]\n[@id:287883]\n[&image:https://not-finished.com"
   }

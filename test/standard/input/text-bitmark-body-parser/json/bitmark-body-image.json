@@ -1,0 +1,147 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Some block images follow:",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "image",
+    "attrs": {
+      "alignment": "center",
+      "textAlign": "left",
+      "src": "https://t.com/simple.png",
+      "alt": null,
+      "title": null,
+      "class": "center",
+      "zoomDisabled": true
+    }
+  },
+  {
+    "type": "image",
+    "attrs": {
+      "alignment": "center",
+      "textAlign": "left",
+      "src": "https://t.com/simple.png",
+      "alt": null,
+      "title": null,
+      "class": "center",
+      "zoomDisabled": true,
+      "width": 928,
+      "height": 10
+    }
+  },
+  {
+    "type": "image",
+    "attrs": {
+      "alignment": "right",
+      "textAlign": "right",
+      "src": "https://t.com/simple.png",
+      "alt": "Alt text",
+      "title": "A caption",
+      "class": "center",
+      "zoomDisabled": true,
+      "comment": "A comment"
+    }
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Some inline images follow:",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is the text ",
+        "type": "text"
+      },
+      {
+        "attrs": {
+          "alt": "alt text of the inline image",
+          "src": "https://img.io/img.svg",
+          "zoomDisabled": true
+        },
+        "type": "imageInline"
+      },
+      {
+        "text": " more text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is the text ",
+        "type": "text"
+      },
+      {
+        "attrs": {
+          "alt": "alt text of the inline image",
+          "src": "https://img.io/img.svg",
+          "width": 400,
+          "height": 200,
+          "zoomDisabled": true
+        },
+        "type": "imageInline"
+      },
+      {
+        "text": " more text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is the text ",
+        "type": "text"
+      },
+      {
+        "attrs": {
+          "alt": "alt text of the inline image",
+          "src": "https://img.io/img.svg",
+          "width": 400,
+          "height": 200,
+          "comment": "comment",
+          "zoomDisabled": true
+        },
+        "type": "imageInline"
+      },
+      {
+        "text": " more text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is the text ",
+        "type": "text"
+      },
+      {
+        "attrs": {
+          "alt": "alt text of the inline image",
+          "src": "https://img.io/img.svg",
+          "alignmentVertical": "bottom",
+          "size": "super",
+          "zoomDisabled": true
+        },
+        "type": "imageInline"
+      },
+      {
+        "text": " more text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

@@ -8,8 +8,10 @@ import { JsonText, TextAst, TextNode } from '../model/ast/TextNodes';
 import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
 import { BitType, BitTypeType } from '../model/enum/BitType';
 import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
+import { DeprecatedTextFormat } from '../model/enum/DeprecatedTextFormat';
 import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
 import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
+import { TextLocation } from '../model/enum/TextLocation';
 import { AudioResourceWrapperJson, ImageResourceWrapperJson, ResourceJson } from '../model/json/ResourceJson';
 import { ParserError } from '../model/parser/ParserError';
 import { ParserInfo } from '../model/parser/ParserInfo';
@@ -28,11 +30,12 @@ import { NodeValidator } from './rules/NodeValidator';
 import {
   BookJson,
   BotResponseJson,
-  CaptionDefinitionJson,
-  CaptionDefinitionListJson,
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
+  FeedbackChoiceJson,
+  FeedbackJson,
+  FeedbackReasonJson,
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
@@ -51,6 +54,7 @@ import {
   StatementJson,
   TableJson,
   TechnicalTermJson,
+  TextAndIconJson,
 } from '../model/json/BitJson';
 import {
   BodyBitJson,
@@ -110,6 +114,8 @@ class Builder extends BaseBuilder {
     jupyterId?: string;
     jupyterExecutionCount?: number;
     isPublic?: boolean;
+    isTemplate?: boolean;
+    isTemplateStripTheme?: boolean;
     aiGenerated?: boolean;
     machineTranslated?: string;
     searchIndex?: string | string[];
@@ -120,10 +126,12 @@ class Builder extends BaseBuilder {
     feedbackEngine?: string;
     feedbackType?: string;
     disableFeedback?: boolean;
+    diffTo?: string;
     diffOp?: string;
     diffRef?: string;
     diffContext?: string;
     diffTime?: number;
+    path?: string;
     releaseVersion?: string;
     releaseKind?: string;
     releaseDate?: string;
@@ -161,6 +169,7 @@ class Builder extends BaseBuilder {
     kind?: string;
     hasMarkAsDone?: boolean;
     processHandIn?: boolean;
+    processHandInLocation?: string;
     chatWithBook?: boolean;
     chatWithBookBrainKey?: string;
     action?: string;
@@ -181,6 +190,7 @@ class Builder extends BaseBuilder {
     availableClassifications?: string | string[];
     allowedBit?: string | string[];
     tableFixedHeader?: boolean;
+    tableHeaderWhitespaceNoWrap?: boolean;
     tableSearch?: boolean;
     tableSort?: boolean;
     tablePagination?: boolean;
@@ -204,7 +214,7 @@ class Builder extends BaseBuilder {
     pointerLeft?: string;
     pointerTop?: string;
     listItemIndent?: number;
-    backgroundWallpaper?: string;
+    backgroundWallpaper?: Partial<ImageResourceWrapperJson>;
     hasBookNavigation?: boolean;
     duration?: string;
     referenceProperty?: string | string[];
@@ -212,11 +222,14 @@ class Builder extends BaseBuilder {
     externalLink?: string;
     externalLinkText?: string;
     videoCallLink?: string;
+    vendorDashboardId?: string;
     vendorSurveyId?: string;
     vendorUrl?: string;
     search?: string;
     bot?: string | string[];
     list?: string | string[];
+    layer?: string | string[];
+    layerRole?: string | string[];
     textReference?: string;
     isTracked?: boolean;
     isInfoOnly?: boolean;
@@ -240,6 +253,8 @@ class Builder extends BaseBuilder {
     maxCreatedBits?: number;
     maxDisplayLevel?: number;
     maxTocChapterLevel?: number;
+    tocResource?: string | string[];
+    tocContent?: string | string[];
     page?: string | string[];
     productId?: string | string[];
     product?: string | string[];
@@ -283,14 +298,15 @@ class Builder extends BaseBuilder {
     body?: Partial<Body>;
     sampleSolution?: string;
     additionalSolutions?: string | string[];
+    heading?: Partial<HeadingJson>;
     elements?: string[];
     flashcards?: Partial<FlashcardJson>[];
     definitions?: Partial<DefinitionListItemJson>[];
+    legend?: Partial<DefinitionListItemJson>[];
     statement?: Partial<StatementJson>;
     statements?: Partial<StatementJson>[];
     responses?: Partial<ResponseJson>[];
     quizzes?: Partial<QuizJson>[];
-    heading?: Partial<HeadingJson>;
     pairs?: Partial<PairJson>[];
     matrix?: Partial<MatrixJson>[];
     pronunciationTable?: Partial<PronunciationTableJson>;
@@ -299,7 +315,8 @@ class Builder extends BaseBuilder {
     questions?: Partial<QuestionJson>[];
     botResponses?: Partial<BotResponseJson>[];
     ingredients?: Partial<IngredientJson>[];
-    captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+    // DEPRECATED - TO BE REMOVED IN THE FUTURE
+    // captionDefinitionList?: Partial<CaptionDefinitionListJson>;
     cardBits?: Partial<CardBit>[];
     footer?: Partial<Footer>;
 
@@ -309,7 +326,13 @@ class Builder extends BaseBuilder {
   }): Bit | undefined {
     const bitConfig = Config.getBitConfig(data.bitType);
     const bitType = data.bitType;
-    const textFormat = TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
+
+    // Text Format (accepts deprecated values, and converts them to the new format)
+    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(data.textFormat);
+    let textFormat = TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
+    if (deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus) {
+      textFormat = TextFormat.bitmarkText;
+    }
 
     const context: BuildContext = {
       bitConfig,
@@ -351,6 +374,8 @@ class Builder extends BaseBuilder {
       jupyterId: this.toAstProperty(PropertyConfigKey.jupyterId, data.jupyterId),
       jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, data.jupyterExecutionCount),
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, data.isPublic),
+      isTemplate: this.toAstProperty(PropertyConfigKey.isTemplate, data.isTemplate),
+      isTemplateStripTheme: this.toAstProperty(PropertyConfigKey.isTemplateStripTheme, data.isTemplateStripTheme),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, data.aiGenerated),
       machineTranslated: this.toAstProperty(PropertyConfigKey.machineTranslated, data.machineTranslated),
       searchIndex: this.toAstProperty(PropertyConfigKey.searchIndex, data.searchIndex),
@@ -361,10 +386,12 @@ class Builder extends BaseBuilder {
       feedbackEngine: this.toAstProperty(PropertyConfigKey.feedbackEngine, data.feedbackEngine),
       feedbackType: this.toAstProperty(PropertyConfigKey.feedbackType, data.feedbackType),
       disableFeedback: this.toAstProperty(PropertyConfigKey.disableFeedback, data.disableFeedback),
+      diffTo: this.toAstProperty(PropertyConfigKey.diffTo, data.diffTo),
       diffOp: this.toAstProperty(PropertyConfigKey.diffOp, data.diffOp),
       diffRef: this.toAstProperty(PropertyConfigKey.diffRef, data.diffRef),
       diffContext: this.toAstProperty(PropertyConfigKey.diffContext, data.diffContext),
       diffTime: this.toAstProperty(PropertyConfigKey.diffTime, data.diffTime),
+      path: this.toAstProperty(PropertyConfigKey.path, data.path),
       releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, data.releaseVersion),
       releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, data.releaseKind),
       releaseDate: this.toAstProperty(PropertyConfigKey.releaseDate, data.releaseDate),
@@ -403,6 +430,7 @@ class Builder extends BaseBuilder {
       kind: this.toAstProperty(PropertyConfigKey.kind, data.kind),
       hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, data.hasMarkAsDone),
       processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, data.processHandIn),
+      processHandInLocation: this.toAstProperty(PropertyConfigKey.processHandInLocation, data.processHandInLocation),
       chatWithBook: this.toAstProperty(PropertyConfigKey.chatWithBook, data.chatWithBook),
       chatWithBookBrainKey: this.toAstProperty(PropertyConfigKey.chatWithBookBrainKey, data.chatWithBookBrainKey),
       action: this.toAstProperty(PropertyConfigKey.action, data.action),
@@ -426,6 +454,10 @@ class Builder extends BaseBuilder {
       ),
       allowedBit: this.toAstProperty(PropertyConfigKey.allowedBit, data.allowedBit),
       tableFixedHeader: this.toAstProperty(PropertyConfigKey.tableFixedHeader, data.tableFixedHeader),
+      tableHeaderWhitespaceNoWrap: this.toAstProperty(
+        PropertyConfigKey.tableHeaderWhitespaceNoWrap,
+        data.tableHeaderWhitespaceNoWrap,
+      ),
       tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, data.tableSearch),
       tableSort: this.toAstProperty(PropertyConfigKey.tableSort, data.tableSort),
       tablePagination: this.toAstProperty(PropertyConfigKey.tablePagination, data.tablePagination),
@@ -452,17 +484,20 @@ class Builder extends BaseBuilder {
       pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, data.pointerLeft),
       pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, data.pointerTop),
       listItemIndent: this.toAstProperty(PropertyConfigKey.listItemIndent, data.listItemIndent),
-      backgroundWallpaper: this.toAstProperty(PropertyConfigKey.backgroundWallpaper, data.backgroundWallpaper),
+      backgroundWallpaper: this.toImageResource(context, data.backgroundWallpaper),
       hasBookNavigation: this.toAstProperty(PropertyConfigKey.hasBookNavigation, data.hasBookNavigation),
       duration: this.toAstProperty(PropertyConfigKey.duration, data.duration),
       deeplink: this.toAstProperty(PropertyConfigKey.deeplink, data.deeplink),
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, data.externalLink),
       externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, data.externalLinkText),
       videoCallLink: this.toAstProperty(PropertyConfigKey.videoCallLink, data.videoCallLink),
+      vendorDashboardId: this.toAstProperty(PropertyConfigKey.vendorDashboardId, data.vendorDashboardId),
       vendorSurveyId: this.toAstProperty(PropertyConfigKey.vendorSurveyId, data.vendorSurveyId),
       vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, data.vendorUrl),
       search: this.toAstProperty(PropertyConfigKey.search, data.search),
       list: this.toAstProperty(PropertyConfigKey.list, data.list),
+      layer: this.toAstProperty(PropertyConfigKey.layer, data.layer),
+      layerRole: this.toAstProperty(PropertyConfigKey.layerRole, data.layerRole),
       textReference: this.toAstProperty(PropertyConfigKey.textReference, data.textReference),
       isTracked: this.toAstProperty(PropertyConfigKey.isTracked, data.isTracked),
       isInfoOnly: this.toAstProperty(PropertyConfigKey.isInfoOnly, data.isInfoOnly),
@@ -474,7 +509,7 @@ class Builder extends BaseBuilder {
       mailingList: this.toAstProperty(PropertyConfigKey.mailingList, data.mailingList),
       buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, data.buttonCaption),
       callToActionUrl: this.toAstProperty(PropertyConfigKey.callToActionUrl, data.callToActionUrl),
-      caption: this.handleJsonText(context, true, data.caption),
+      caption: this.handleJsonText(context, TextLocation.tag, data.caption),
       quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, data.quotedPerson),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
       resolved: this.toAstProperty(PropertyConfigKey.resolved, data.resolved),
@@ -486,6 +521,8 @@ class Builder extends BaseBuilder {
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, data.maxCreatedBits),
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, data.maxDisplayLevel),
       maxTocChapterLevel: this.toAstProperty(PropertyConfigKey.maxTocChapterLevel, data.maxTocChapterLevel),
+      tocResource: this.toAstProperty(PropertyConfigKey.tocResource, data.tocResource),
+      tocContent: this.toAstProperty(PropertyConfigKey.tocContent, data.tocContent),
       page: this.toAstProperty(PropertyConfigKey.page, data.page),
       productId: this.toAstProperty(PropertyConfigKey.productId, data.productId),
       product: this.toAstProperty(PropertyConfigKey.product, data.product),
@@ -505,8 +542,8 @@ class Builder extends BaseBuilder {
       referenceProperty: this.toAstProperty(PropertyConfigKey.property_reference, data.referenceProperty),
 
       // Book data
-      title: this.handleJsonText(context, true, data.title),
-      subtitle: this.handleJsonText(context, true, data.subtitle),
+      title: this.handleJsonText(context, TextLocation.tag, data.title),
+      subtitle: this.handleJsonText(context, TextLocation.tag, data.subtitle),
       level: NumberUtils.asNumber(data.level),
       toc: this.toAstProperty(PropertyConfigKey.toc, data.toc),
       progress: this.toAstProperty(PropertyConfigKey.progress, data.progress),
@@ -516,12 +553,12 @@ class Builder extends BaseBuilder {
       revealSolutions: this.toAstProperty(PropertyConfigKey.revealSolutions, data.revealSolutions),
 
       // Item, Lead, Hint, Instruction
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      pageNumber: this.handleJsonText(context, true, data.pageNumber),
-      marginNumber: this.handleJsonText(context, true, data.marginNumber),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      pageNumber: this.handleJsonText(context, TextLocation.tag, data.pageNumber),
+      marginNumber: this.handleJsonText(context, TextLocation.tag, data.marginNumber),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
 
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, data.partialAnswer),
       sampleSolution: this.toAstProperty(PropertyConfigKey.property_sampleSolution, data.sampleSolution),
@@ -532,9 +569,7 @@ class Builder extends BaseBuilder {
 
       // Person
 
-      imagePlaceholder: ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data.imagePlaceholder?.image),
-      ) as ImageResourceWrapperJson,
+      imagePlaceholder: this.toImageResource(context, data.imagePlaceholder),
       resources: ArrayUtils.asArray(this.resourceBuilder.resourceFromResourceJson(context, data.resources)),
 
       // Body, Card, Footer, must be after all other properties except the extraProperties and markup / parser
@@ -552,7 +587,7 @@ class Builder extends BaseBuilder {
       __isDefaultExample: data.__isDefaultExample ?? false,
     };
 
-    // Push reasonableNumOfChars down the tree for the interview bit
+    // Push reasonableNumOfChars down the tree for the interview bits
     if (Config.isOfBitType(node.bitType, BitType.interview)) {
       this.pushDownTree(
         context,
@@ -565,10 +600,23 @@ class Builder extends BaseBuilder {
       );
     }
 
+    // Push reasonableNumOfChars down the tree for the feedback bits
+    if (Config.isOfBitType(node.bitType, BitType.feedback)) {
+      this.pushDownTree(
+        context,
+        undefined,
+        undefined,
+        cardNode,
+        ['feedbacks', 'reason'],
+        PropertyConfigKey.reasonableNumOfChars,
+        data.reasonableNumOfChars,
+      );
+    }
+
     // Push isCaseSensitive down the tree for the cloze, match and match-matrix bits
     this.pushDownTree(
       context,
-      [node.body, ...(cardNode?.cardBits?.map((cardBit) => cardBit.body) ?? [])],
+      [node.body, ...(cardNode?.cardBits?.map((cardBit) => cardBit.body) || [])],
       [BodyBitType.gap],
       undefined,
       undefined, //'isCaseSensitive',
@@ -660,6 +708,92 @@ class Builder extends BaseBuilder {
   }
 
   /**
+   * Build feedbackChoices[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedbackChoices(
+    context: BuildContext,
+    data: Partial<FeedbackChoiceJson>[] | undefined,
+  ): FeedbackChoiceJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.buildFeedbackChoice(context, d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
+   * Build feedbackChoice node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedbackChoice(
+    context: BuildContext,
+    data: Partial<FeedbackChoiceJson> | undefined,
+  ): FeedbackChoiceJson | undefined {
+    if (!data) return undefined;
+
+    // NOTE: Node order is important and is defined here
+    const node: FeedbackChoiceJson = {
+      choice: data.choice ?? '',
+      requireReason: !!data.requireReason,
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
+      ...this.toExample(data.__isDefaultExample, data.example, true),
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      ignoreUndefined: ['example'],
+    });
+
+    return node;
+  }
+
+  /**
+   * Build feedbackReason node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedbackReason(
+    context: BuildContext,
+    data: Partial<FeedbackReasonJson> | undefined,
+  ): FeedbackReasonJson | undefined {
+    if (!data) return undefined;
+
+    // Set default example
+    // Not __testAst - there is no default example
+    const defaultExample = this.handleJsonText(context, TextLocation.tag, 'true');
+
+    // NOTE: Node order is important and is defined here
+    const node: FeedbackReasonJson = {
+      text: data.text ?? '',
+      reasonableNumOfChars: (data.reasonableNumOfChars ?? undefined) as number,
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
+      ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
+      __textAst: data.__textAst,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      ignoreUndefined: ['example', 'reasonableNumOfChars'],
+    });
+
+    return node;
+  }
+
+  /**
    * Build choice[] node
    *
    * @param data - data for the node
@@ -684,10 +818,10 @@ class Builder extends BaseBuilder {
     const node: ChoiceJson = {
       choice: data.choice ?? '',
       isCorrect: !!data.isCorrect,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -729,10 +863,10 @@ class Builder extends BaseBuilder {
     const node: ResponseJson = {
       response: data.response ?? '',
       isCorrect: !!data.isCorrect,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -778,9 +912,9 @@ class Builder extends BaseBuilder {
       response: data.response ?? '',
       reaction: data.reaction ?? '',
       feedback: data.feedback ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
     };
 
     // Remove Unset Optionals
@@ -795,7 +929,68 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Build quiz[] node
+   * Build feedbacks[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedbacks(
+    context: BuildContext,
+    data: Partial<FeedbackJson>[] | undefined,
+  ): FeedbackJson[] | undefined {
+    if (!Array.isArray(data)) return undefined;
+    const nodes = data.map((d) => this.buildFeedback(context, d)).filter((d) => d != null);
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
+   * Build feedback node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildFeedback(context: BuildContext, data: Partial<FeedbackJson> | undefined): FeedbackJson | undefined {
+    if (!data) return undefined;
+
+    let choices: FeedbackChoiceJson[] | undefined;
+    let reason: FeedbackReasonJson | undefined;
+
+    if (data.choices) {
+      choices = this.buildFeedbackChoices(context, data.choices);
+
+      // Push __isDefaultExample down the tree
+      // this.pushExampleDownTreeBoolean(context, data.__isDefaultExample, convertedExample.example, true, choices);
+    } else {
+      // No choices, not a valid feedback
+      return undefined;
+    }
+
+    if (data.reason) {
+      reason = this.buildFeedbackReason(context, data.reason);
+    }
+
+    // NOTE: Node order is important and is defined here
+    const node: FeedbackJson = {
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
+      // isExample: !!data.__defaultExample,
+      choices: choices as FeedbackChoiceJson[],
+      reason: reason as FeedbackReasonJson, // Might be undefined
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreAllFalse: true,
+      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+    });
+
+    return node;
+  }
+
+  /**
+   * Build quizzes[] node
    *
    * @param data - data for the node
    * @returns
@@ -839,10 +1034,10 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: QuizJson = {
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isExample: !!data.__defaultExample,
       choices: choices as ChoiceJson[],
       responses: responses as ResponseJson[],
@@ -908,30 +1103,21 @@ class Builder extends BaseBuilder {
     const defaultExample = Array.isArray(data.__valuesAst) && data.__valuesAst.length > 0 ? data.__valuesAst[0] : null;
 
     // Process the keyAudio and keyImage resources
-    const keyAudio = (
-      ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.audio, data.keyAudio),
-      ) as AudioResourceWrapperJson
-    )?.audio;
-
-    const keyImage = (
-      ArrayUtils.asSingle(
-        this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data.keyImage),
-      ) as ImageResourceWrapperJson
-    )?.image;
+    const keyAudio = this.resourceBuilder.resourceFromResourceJson(context, data.keyAudio) as AudioResourceWrapperJson;
+    const keyImage = this.resourceBuilder.resourceFromResourceJson(context, data.keyImage) as ImageResourceWrapperJson;
 
     // NOTE: Node order is important and is defined here
     const node: PairJson = {
       key: data.key ?? '',
       keyAudio,
       keyImage,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
-      values: data.values ?? [],
+      values: data.values || [],
       __valuesAst: data.__valuesAst,
     };
 
@@ -990,7 +1176,7 @@ class Builder extends BaseBuilder {
     let isExample = false;
 
     // Set isExample for matrix based on isExample for cells
-    for (const c of data.cells ?? []) {
+    for (const c of data.cells || []) {
       if (data.__isDefaultExample && !c.isExample) {
         c.isExample = true;
       }
@@ -1000,12 +1186,12 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: MatrixJson = {
       key: data.key ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isExample,
-      cells: (data.cells ?? []).map((c) => this.buildMatrixCell(context, c)).filter((c) => c != null),
+      cells: (data.cells || []).map((c) => this.buildMatrixCell(context, c)).filter((c) => c != null),
     };
 
     // Remove Unset Optionals
@@ -1035,11 +1221,11 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCellJson = {
-      values: data.values ?? [],
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      values: data.values || [],
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __valuesAst: data.__valuesAst,
@@ -1069,18 +1255,14 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: PronunciationTableJson = {
-      data: (dataIn.data ?? []).map((row) =>
-        (row ?? []).map((cell) => {
+      data: (dataIn.data || []).map((row) =>
+        (row || []).map((cell) => {
           // Process the audio resource
-          const audio = (
-            ArrayUtils.asSingle(
-              this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.audio, cell.audio),
-            ) as AudioResourceWrapperJson
-          )?.audio;
+          const audio = this.resourceBuilder.resourceFromResourceJson(context, cell.audio) as AudioResourceWrapperJson;
 
           return {
-            title: this.handleJsonText(context, true, cell.title),
-            body: this.handleJsonText(context, true, cell.body),
+            title: this.handleJsonText(context, TextLocation.tag, cell.title),
+            body: this.handleJsonText(context, TextLocation.tag, cell.body),
             audio,
           };
         }),
@@ -1106,8 +1288,10 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: TableJson = {
-      columns: (dataIn.columns ?? []).map((col) => this.handleJsonText(context, true, col)),
-      data: (dataIn.data ?? []).map((row) => (row ?? []).map((cell) => this.handleJsonText(context, true, cell))),
+      columns: (dataIn.columns || []).map((col) => this.handleJsonText(context, TextLocation.tag, col)),
+      data: (dataIn.data || []).map((row) =>
+        (row || []).map((cell) => this.handleJsonText(context, TextLocation.tag, cell)),
+      ),
     };
 
     // Remove Unset Optionals
@@ -1152,10 +1336,10 @@ class Builder extends BaseBuilder {
       sampleSolution: data.sampleSolution ?? '',
       additionalSolutions: (data.additionalSolutions ?? undefined) as string[],
       reasonableNumOfChars: (data.reasonableNumOfChars ?? undefined) as number,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __sampleSolutionAst: data.__sampleSolutionAst,
     };
@@ -1193,21 +1377,24 @@ class Builder extends BaseBuilder {
    * @returns
    */
   protected buildIngredient(
-    _context: BuildContext,
+    context: BuildContext,
     data: Partial<IngredientJson> | undefined,
   ): IngredientJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: IngredientJson = {
-      title: data.title ?? '',
+      title: this.handleJsonText(context, TextLocation.tag, data.title),
       checked: data.checked ?? false,
-      item: data.item ?? '',
+      ingredient: this.handleJsonText(context, TextLocation.tag, data.ingredient),
       quantity: data.quantity ?? 0,
       unit: data.unit ?? '',
       unitAbbr: data.unitAbbr ?? '',
       decimalPlaces: data.decimalPlaces ?? 1,
       disableCalculation: data.disableCalculation ?? false,
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
     };
 
     // Remove Unset Optionals
@@ -1265,7 +1452,7 @@ class Builder extends BaseBuilder {
       // TODO - process body bits through the correct builders.
 
       if (StringUtils.isString(data.body)) {
-        // Body is a string (legacy bitmark v2, or not bitmark--/++)
+        // Body is a string (legacy bitmark v2, or not bitmarkText)
         bodyStr = ((data.body as BreakscapedString) ?? '').trim() as BreakscapedString;
         rawBody = [];
       } else if (Array.isArray(data.body)) {
@@ -1285,12 +1472,13 @@ class Builder extends BaseBuilder {
       }
 
       if (bodyStr) {
-        // Bug #7141: Use textFormat for textParser, not always bitmark-- if it is a v2 string body
+        // Bug #7141: Use textFormat for textParser, not always bitmarkText if it is a v2 string body
         // However, only use plain text breakscaping the text from the v2 JSON body
 
         // Special v2 Breakscaping
         bodyStr = Breakscape.breakscape(bodyStr, {
-          textFormat,
+          format: textFormat,
+          location: TextLocation.body,
           v2: true,
         });
 
@@ -1308,8 +1496,8 @@ class Builder extends BaseBuilder {
 
         // Convert the body string to AST
         rawBody = this.textParser.toAst(bodyStr, {
-          textFormat,
-          isProperty: false,
+          format: textFormat,
+          location: TextLocation.body,
         });
 
         const replaceBitsRecursive = (bodyText: TextAst) => {
@@ -1371,7 +1559,7 @@ class Builder extends BaseBuilder {
       body = data.body as string;
     };
 
-    const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+    const isBitmarkText = textFormat === TextFormat.bitmarkText;
     if (textFormat === TextFormat.json) {
       // JSON
       handleJsonBody();
@@ -1402,7 +1590,7 @@ class Builder extends BaseBuilder {
   protected buildFooter(context: BuildContext, data: Partial<Footer> | undefined): Footer | undefined {
     if (!data) return undefined;
     const node: Footer = {
-      footer: this.handleJsonText(context, false, data.footer),
+      footer: this.handleJsonText(context, TextLocation.body, data.footer),
     };
 
     return node;
@@ -1427,11 +1615,11 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: GapJson = {
       type: BodyBitType.gap,
-      solutions: data.solutions ?? [], // Must be before other properties except type
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      solutions: data.solutions || [], // Must be before other properties except type
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isCaseSensitive: data.isCaseSensitive as boolean,
       ...this.toExample(data.__isDefaultExample, data.example, defaultExample),
       __solutionsAst: data.__solutionsAst,
@@ -1508,10 +1696,10 @@ class Builder extends BaseBuilder {
       type: BodyBitType.mark,
       solution: data.solution ?? '', // Must be before other properties except type
       mark: data.mark ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
 
       attrs: {},
@@ -1543,13 +1731,13 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: SelectJson = {
       type: BodyBitType.select,
-      options: this.buildSelectOptions(context, data.options) ?? [], // Must be before other properties except type
+      options: this.buildSelectOptions(context, data.options) || [], // Must be before other properties except type
       prefix: data.prefix ?? '',
       postfix: data.postfix ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
       __hintString: data.__hintString,
       __instructionString: data.__instructionString,
@@ -1598,10 +1786,10 @@ class Builder extends BaseBuilder {
     const node: SelectOptionJson = {
       text: data.text ?? '', // Must be before other properties except type
       isCorrect: !!data.isCorrect,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -1630,13 +1818,13 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: HighlightJson = {
       type: BodyBitType.highlight,
-      texts: this.buildHighlightTexts(context, data.texts) ?? [], // Must be before other properties except type
+      texts: this.buildHighlightTexts(context, data.texts) || [], // Must be before other properties except type
       prefix: data.prefix ?? '',
       postfix: data.postfix ?? '',
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(false, undefined, undefined), // Will be set in later
 
       attrs: {},
@@ -1684,10 +1872,10 @@ class Builder extends BaseBuilder {
       text: data.text ?? '', // Must be before other properties except type
       isCorrect: !!data.isCorrect,
       isHighlighted: !!data.isHighlighted,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -1727,13 +1915,15 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: FlashcardJson = {
-      question: this.handleJsonText(context, true, data.question),
-      answer: this.handleJsonText(context, true, data.answer),
-      alternativeAnswers: this.handleJsonText(context, true, data.alternativeAnswers),
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      question: this.buildTextAndIcon(context, data.question) as TextAndIconJson,
+      answer: this.buildTextAndIcon(context, data.answer) as TextAndIconJson,
+      alternativeAnswers: (data.alternativeAnswers || [])
+        .map((d) => this.buildTextAndIcon(context, d))
+        .filter((d) => d != null),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
     };
 
@@ -1774,15 +1964,21 @@ class Builder extends BaseBuilder {
   ): DefinitionListItemJson | undefined {
     if (!data) return undefined;
 
+    const { bitType } = context;
+
+    const textAsStrings = Config.isOfBitType(bitType, [BitType.metaSearchDefaultTerms]);
+
     // NOTE: Node order is important and is defined here
     const node: DefinitionListItemJson = {
-      term: this.handleJsonText(context, true, data.term),
-      definition: this.handleJsonText(context, true, data.definition),
-      alternativeDefinitions: this.handleJsonText(context, true, data.alternativeDefinitions),
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      term: this.buildTextAndIcon(context, data.term, textAsStrings) as TextAndIconJson,
+      definition: this.buildTextAndIcon(context, data.definition, textAsStrings) as TextAndIconJson,
+      alternativeDefinitions: (data.alternativeDefinitions || [])
+        .map((d) => this.buildTextAndIcon(context, d, textAsStrings))
+        .filter((d) => d != null),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, true),
     };
 
@@ -1791,6 +1987,40 @@ class Builder extends BaseBuilder {
       ignoreAllFalse: true,
       ignoreEmptyArrays: ['question', 'answer', 'alternativeDefinitions', 'item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
+    });
+
+    return node;
+  }
+
+  protected buildTextAndIcon(
+    context: BuildContext,
+    data: Partial<TextAndIconJson> | undefined,
+    textAsStrings: boolean = false,
+  ): TextAndIconJson | undefined {
+    const icon = this.resourceBuilder.resourceFromResourceJson(context, data?.icon) as ImageResourceWrapperJson;
+
+    // Ensure text is bitmark text
+    let text: JsonText = this.handleJsonText(context, TextLocation.tag, data?.text || (data as string));
+
+    if (textAsStrings) {
+      // Convert the bitmark text to plain text (without breakscaping, as that will happen in the Bitmark Generator)
+      text = this.textGenerator
+        .generateSync(text as TextAst, TextFormat.plainText, TextLocation.body, {
+          noBreakscaping: true,
+        })
+        .trim();
+    }
+
+    // NOTE: Node order is important and is defined here
+    const node: TextAndIconJson = {
+      text,
+      icon,
+    };
+
+    // Remove Unset Optionals
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyArrays: ['text'],
+      ignoreUndefined: ['icon'],
     });
 
     return node;
@@ -1824,10 +2054,10 @@ class Builder extends BaseBuilder {
     const node: StatementJson = {
       statement: data.statement ?? '',
       isCorrect: !!data.isCorrect,
-      item: this.handleJsonText(context, true, data.item),
-      lead: this.handleJsonText(context, true, data.lead),
-      hint: this.handleJsonText(context, true, data.hint),
-      instruction: this.handleJsonText(context, true, data.instruction),
+      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      lead: this.handleJsonText(context, TextLocation.tag, data.lead),
+      hint: this.handleJsonText(context, TextLocation.tag, data.hint),
+      instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       ...this.toExample(data.__isDefaultExample, data.example, !!data.isCorrect),
     };
 
@@ -1888,11 +2118,7 @@ class Builder extends BaseBuilder {
     const node: PersonJson = {
       name: name ?? '',
       title: (title ?? undefined) as string,
-      avatarImage: (
-        ArrayUtils.asSingle(
-          this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, avatarImage),
-        ) as ImageResourceWrapperJson
-      )?.image,
+      avatarImage: this.resourceBuilder.resourceFromResourceJson(context, avatarImage) as ImageResourceWrapperJson,
     };
 
     // Remove Unset Optionals
@@ -1977,7 +2203,7 @@ class Builder extends BaseBuilder {
     // NOTE: Node order is important and is defined here
     const node: RatingLevelStartEndJson = {
       level: level ?? 0,
-      label: this.handleJsonText(context, true, label),
+      label: this.handleJsonText(context, TextLocation.tag, label),
     };
 
     // Remove Unset Optionals
@@ -1989,67 +2215,68 @@ class Builder extends BaseBuilder {
     return node;
   }
 
-  /**
-   * Build captionDefinition node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  protected buildCaptionDefinition(
-    _context: BuildContext,
-    data: Partial<CaptionDefinitionJson> | undefined,
-  ): CaptionDefinitionJson | undefined {
-    if (!data) return undefined;
+  // DEPRECATED - TO BE REMOVED IN FUTURE
+  // /**
+  //  * Build captionDefinition node
+  //  *
+  //  * @param data - data for the node
+  //  * @returns
+  //  */
+  // protected buildCaptionDefinition(
+  //   _context: BuildContext,
+  //   data: Partial<CaptionDefinitionJson> | undefined,
+  // ): CaptionDefinitionJson | undefined {
+  //   if (!data) return undefined;
 
-    // NOTE: Node order is important and is defined here
-    const node: CaptionDefinitionJson = {
-      // term: this.convertJsonTextToAstText(data.term),
-      // description: this.convertJsonTextToAstText(data.description),
-      term: data.term ?? '',
-      definition: data.definition ?? '',
-    };
+  //   // NOTE: Node order is important and is defined here
+  //   const node: CaptionDefinitionJson = {
+  //     // term: this.convertJsonTextToAstText(data.term),
+  //     // description: this.convertJsonTextToAstText(data.description),
+  //     term: data.term ?? '',
+  //     definition: data.definition ?? '',
+  //   };
 
-    // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
-      ignoreEmptyString: ['term', 'description'],
-      // ignoreAllUndefined: true,
-    });
+  //   // Remove Unset Optionals
+  //   ObjectUtils.removeUnwantedProperties(node, {
+  //     ignoreEmptyString: ['term', 'description'],
+  //     // ignoreAllUndefined: true,
+  //   });
 
-    return node;
-  }
+  //   return node;
+  // }
 
-  /**
-   * Build captionDefinitionList node
-   *
-   * @param data - data for the node
-   * @returns
-   */
-  protected buildCaptionDefinitionList(
-    context: BuildContext,
-    data: Partial<CaptionDefinitionListJson> | undefined,
-  ): CaptionDefinitionListJson | undefined {
-    if (!data) return undefined;
+  // /**
+  //  * Build captionDefinitionList node
+  //  *
+  //  * @param data - data for the node
+  //  * @returns
+  //  */
+  // protected buildCaptionDefinitionList(
+  //   context: BuildContext,
+  //   data: Partial<CaptionDefinitionListJson> | undefined,
+  // ): CaptionDefinitionListJson | undefined {
+  //   if (!data) return undefined;
 
-    // NOTE: Node order is important and is defined here
-    const node: CaptionDefinitionListJson = {
-      columns: data.columns ?? [],
-      definitions: (data.definitions ?? [])
-        .map((d) => {
-          return this.buildCaptionDefinition(context, {
-            term: d.term,
-            definition: d.definition,
-          });
-        })
-        .filter((d) => d != null),
-    };
+  //   // NOTE: Node order is important and is defined here
+  //   const node: CaptionDefinitionListJson = {
+  //     columns: data.columns || [],
+  //     definitions: (data.definitions || [])
+  //       .map((d) => {
+  //         return this.buildCaptionDefinition(context, {
+  //           term: d.term,
+  //           definition: d.definition,
+  //         });
+  //       })
+  //       .filter((d) => d != null),
+  //   };
 
-    // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node, {
-      ignoreAllEmptyArrays: true,
-    });
+  //   // Remove Unset Optionals
+  //   ObjectUtils.removeUnwantedProperties(node, {
+  //     ignoreAllEmptyArrays: true,
+  //   });
 
-    return node;
-  }
+  //   return node;
+  // }
 
   /**
    * Build card bit[] node
@@ -2101,6 +2328,15 @@ class Builder extends BaseBuilder {
     return NodeValidator.validateCardBit(node);
   }
 
+  protected toImageResource(
+    context: BuildContext,
+    data: Partial<ImageResourceWrapperJson> | undefined,
+  ): ImageResourceWrapperJson {
+    return ArrayUtils.asSingle(
+      this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data?.image),
+    ) as ImageResourceWrapperJson;
+  }
+
   //
   // Private
   //
@@ -2110,12 +2346,14 @@ class Builder extends BaseBuilder {
     data: {
       flashcards?: Partial<FlashcardJson>[];
       definitions?: Partial<DefinitionListItemJson>[];
+      legend?: Partial<DefinitionListItemJson>[];
       questions?: Partial<QuestionJson>[];
       elements?: string[];
       statement?: Partial<StatementJson>;
       statements?: Partial<StatementJson>[];
       choices?: Partial<ChoiceJson>[];
       responses?: Partial<ResponseJson>[];
+      feedbacks?: Partial<FeedbackJson>[];
       quizzes?: Partial<QuizJson>[];
       heading?: Partial<HeadingJson>;
       pairs?: Partial<PairJson>[];
@@ -2124,28 +2362,31 @@ class Builder extends BaseBuilder {
       table?: Partial<TableJson>;
       botResponses?: Partial<BotResponseJson>[];
       ingredients?: Partial<IngredientJson>[];
-      captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+      // DEPRECATED - TO BE REMOVED IN FUTURE
+      // captionDefinitionList?: Partial<CaptionDefinitionListJson>;
       cardBits?: Partial<CardBit>[];
     },
   ): CardNode | undefined {
     const node: CardNode = {
+      heading: this.buildHeading(context, data.heading),
       questions: this.buildQuestions(context, data.questions),
       elements: data.elements,
       flashcards: this.buildFlashcards(context, data.flashcards),
-      definitions: this.buildDefinitionList(context, data.definitions),
+      definitions: this.buildDefinitionList(context, data.definitions ?? data.legend),
       statement: this.buildStatement(context, data.statement),
       statements: this.buildStatements(context, data.statements),
       choices: this.buildChoices(context, data.choices),
       responses: this.buildResponses(context, data.responses),
+      feedbacks: this.buildFeedbacks(context, data.feedbacks),
       quizzes: this.buildQuizzes(context, data.quizzes),
-      heading: this.buildHeading(context, data.heading),
       pairs: this.buildPairs(context, data.pairs),
       matrix: this.buildMatricies(context, data.matrix),
       pronunciationTable: this.buildPronunciationTable(context, data.pronunciationTable),
       table: this.buildTable(context, data.table),
       botResponses: this.buildBotResponses(context, data.botResponses),
       ingredients: this.buildIngredients(context, data.ingredients),
-      captionDefinitionList: this.buildCaptionDefinitionList(context, data.captionDefinitionList),
+      // DEPRECATED - TO BE REMOVED IN FUTURE
+      // captionDefinitionList: this.buildCaptionDefinitionList(context, data.captionDefinitionList),
       cardBits: this.buildCardBits(context, data.cardBits),
     };
 
@@ -2368,7 +2609,7 @@ class Builder extends BaseBuilder {
   ): void {
     if (value === undefined) return;
 
-    // Add value to card nodes if required (TODO - nested paths)
+    // Add value to card nodes if required
     if (cardNode && cardNodePath) {
       if (!Array.isArray(cardNodePath)) cardNodePath = [cardNodePath];
 
@@ -2488,60 +2729,60 @@ class Builder extends BaseBuilder {
 
     if (cardNode) {
       // flashcards
-      for (const v of cardNode.flashcards ?? []) {
+      for (const v of cardNode.flashcards || []) {
         checkIsExample(v as WithExampleJson);
       }
 
       // definitions
-      for (const v of cardNode.definitions ?? []) {
+      for (const v of cardNode.definitions || []) {
         checkIsExample(v as WithExampleJson);
       }
 
       // pairs
-      for (const v of cardNode.pairs ?? []) {
+      for (const v of cardNode.pairs || []) {
         checkIsExample(v as WithExampleJson);
       }
       // matrix
-      for (const mx of cardNode.matrix ?? []) {
+      for (const mx of cardNode.matrix || []) {
         let hasExample = false;
 
         // matrix cell
-        for (const v of mx.cells ?? []) {
+        for (const v of mx.cells || []) {
           hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
         mx.isExample = hasExample;
       }
       // quizzes
-      for (const quiz of cardNode.quizzes ?? []) {
+      for (const quiz of cardNode.quizzes || []) {
         let hasExample = false;
 
         // responses
-        for (const v of quiz.responses ?? []) {
+        for (const v of quiz.responses || []) {
           hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
         // choices
-        for (const v of quiz.choices ?? []) {
+        for (const v of quiz.choices || []) {
           hasExample = checkIsExample(v as WithExampleJson) ? true : hasExample;
         }
         quiz.isExample = hasExample;
       }
       // responses
-      for (const v of cardNode.responses ?? []) {
+      for (const v of cardNode.responses || []) {
         checkIsExample(v as WithExampleJson);
       }
       // choices
-      for (const v of cardNode.choices ?? []) {
+      for (const v of cardNode.choices || []) {
         checkIsExample(v as WithExampleJson);
       }
       // statements
-      for (const v of cardNode.statements ?? []) {
+      for (const v of cardNode.statements || []) {
         checkIsExample(v as WithExampleJson);
       }
       // statement
       checkIsExample(cardNode.statement as WithExampleJson);
       // NO: elements
       // questions
-      for (const v of cardNode.questions ?? []) {
+      for (const v of cardNode.questions || []) {
         checkIsExample(v as WithExampleJson);
       }
     }
@@ -2551,11 +2792,11 @@ class Builder extends BaseBuilder {
     // statement
     checkIsExample(bit.statement as WithExampleJson);
     // responses
-    for (const v of bit.responses ?? []) {
+    for (const v of bit.responses || []) {
       checkIsExample(v as WithExampleJson);
     }
     // choices
-    for (const v of bit.choices ?? []) {
+    for (const v of bit.choices || []) {
       checkIsExample(v as WithExampleJson);
     }
 

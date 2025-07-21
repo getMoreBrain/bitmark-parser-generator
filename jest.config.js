@@ -8,7 +8,9 @@ module.exports = {
   testEnvironment: 'node',
   verbose: true,
   testTimeout: 50000,
-  testMatch: ['<rootDir>/test/standard/**/*.test.ts'],
+  testMatch: ['<rootDir>/test/standard/**/*.test.ts', '<rootDir>/test/breakscape/**/*.test.ts'],
+  // testMatch: ['<rootDir>/test/standard/**/*.test.ts'],
+  // testMatch: ['<rootDir>/test/breakscape/**/*.test.ts'],
   transform: {
     '^.+\\.[jt]sx?$': [
       'ts-jest',
@@ -19,6 +21,9 @@ module.exports = {
       },
     ],
   },
+  transformIgnorePatterns: [
+    '/node_modules/(?!@gmb/bitmark-breakscape)', // allow transpiling this package
+  ],
   reporters: [
     'default',
     [require.resolve('jest-junit'), { outputDirectory: '<rootDir>/test/standard/results' }],

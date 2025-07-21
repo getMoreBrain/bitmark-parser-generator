@@ -5,14 +5,12 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["152331"],
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -33,7 +31,7 @@
             "alt": null,
             "title": null,
             "class": "center",
-            "zoomDisabled": false
+            "zoomDisabled": true
           }
         },
         {
@@ -124,14 +122,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["151.640"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["151.640"]
+                "example": null
               }
             },
             {
@@ -147,14 +145,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["-77.206"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["-77.206"]
+                "example": null
               }
             },
             {
@@ -170,25 +168,27 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["74.434"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["74.434"]
+                "example": null
               }
             }
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark++]\n[@id:152331]\nUmsatzsteuern\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png|\n\nVOST-Berechnungen\n\nSchulungs AG\nDirekt:\t 27,5 % auf CHF 20.000\tCHF\t5.500\nIndirekt:\t\tCHF\t0\n\nVerlag AG\nDirekt:\t85,7 % auf CHF 80.000\tCHF\t68.560\nIndirekt:\t14,3 % auf 27,5 % auf CHF 80.000\tCHF\t3.146\n\nTotal Vorsteuern Gruppe\tCHF\t77.206\n\nMWST-Abrechnung\n\nUmsatzsteuer\t\tCHF\t[_151.640]\n\n./. Vorsteuern\t\tCHF\t[_-77.206]\n\nNettosteuer\t\tCHF\t[_74.434]"
   },
@@ -199,7 +199,6 @@
       "bitLevel": 1,
       "id": ["193275"],
       "anchor": "Ref_Roche",
-      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -217,7 +216,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -232,25 +230,27 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Roche"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Roche"]
+                "example": null
               }
             }
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark++]\n[@id:193275]\n[▼Ref_Roche]\n[%][%Leitbild 6]\nOur people make our business. Our people discover, develop and manufacture our products and ensure that they reach the patients who need them. Therefore, we’ve created a supportive work environment where people can be truly invested in their work. We encourage big thinking and give our people the support and flexibility they need to make their mark. This is more than just a job. It’s an international family dedicated to making a real impact on the world around us. We believe that employees who are engaged are key to delivering the highest standards and the greatest levels of innovation. That’s why we care about what makes working here a rewarding experience for our employees.\n[_Roche]"
   },
@@ -261,7 +261,6 @@
       "bitLevel": 1,
       "id": ["193276"],
       "anchor": "Ref_Emmi",
-      "revealSolutions": false,
       "item": [],
       "lead": [
         {
@@ -279,7 +278,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -294,35 +292,36 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Emmi"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Emmi"]
+                "example": null
               }
             }
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark++]\n[@id:193276]\n[▼Ref_Emmi]\n[%][%Leitbild 7]\nDie Mitarbeitenden sind unser wichtigstes Kapital. Respekt, Menschlichkeit und Vertrauen prägen unsere Zusammenarbeit. Die Personalpolitik stellt die Attraktivität von uns als Arbeitgeberin sicher und erschliesst für die Umsetzung der Unternehmenspolitik die notwendigen personellen Ressourcen. Träger der Personalpolitik sind die Vorgesetzten. Grundsätze: Mit geeigneten Personalgewinnungs- und Auswahlverfahren werden die richtigen Mitarbeitenden am richtigen Arbeitsplatz eingesetzt. Bei der Personalauswahl wird neben der fachlichen Qualifikationen auf soziale Kompetenzen geachtet. Aus- und Weiterbildungsmassnahmen werden gezielt auf die Bedürfnisse der Mitarbeitenden und Firma abgestimmt. Die Personalentwicklungsmassnahmen sichern die Qualifikation der Mitarbeitenden für die momentanen und zukünftigen Anforderungen Die Mitarbeitenden werden offen und transparent informiert. Auf der Basis gegenseitiger Offenheit und gegenseitigen Vertrauens pflegen wir eine intensive Zusammenarbeit mit den Personalkommissionen Führung wahrnehmen und vorleben heisst: regelmässig Ziele verständlich und offen zu kommunizieren und die Aufgaben darauf auszurichten, Mitarbeitende und Teams befähigen, lösungs- und eigenverantwortlich zu handeln, Kompetenzen und Verantwortungen so weit wie möglich delegieren\n[_Emmi]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-cloze",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": ["136524"],
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -351,108 +350,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "body": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Wo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "gap",
-              "attrs": {
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isCaseSensitive": true,
-                "isExample": false,
-                "example": null,
-                "solutions": ["c"]
-              }
-            },
-            {
-              "text": " ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "gap",
-              "attrs": {
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isCaseSensitive": true,
-                "isExample": false,
-                "example": null,
-                "solutions": ["x"]
-              }
-            },
-            {
-              "text": " Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "gap",
-              "attrs": {
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isCaseSensitive": true,
-                "isExample": false,
-                "example": null,
-                "solutions": ["a"]
-              }
-            },
-            {
-              "text": " RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "type": "gap",
-              "attrs": {
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isCaseSensitive": true,
-                "isExample": false,
-                "example": null,
-                "solutions": ["b"]
-              }
-            },
-            {
-              "text": " JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner.",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
       "resource": {
         "type": "image",
         "image": {
@@ -468,22 +365,142 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["c"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["x"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["a"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "gap",
+              "attrs": {
+                "solutions": ["b"],
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isCaseSensitive": true,
+                "isExample": false,
+                "example": null
+              }
+            },
+            {
+              "text": " JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-cloze:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 41,
+              "column": 1,
+              "offset": 2706
+            },
+            "end": {
+              "line": 41,
+              "column": 47,
+              "offset": 2752
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--&image]\n[@id:136524]\n[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]\n[%2a]\n[!Forum „Fußball-WM 2018“. Welcher Beitrag passt zu welchem Foto? Lesen Sie und ordnen Sie zu. (Zu einem Text gibt es kein Foto. Schreiben Sie dann X.)]\n\nWo und mit wem seht ihr die Spiele der Fußball-WM? Schreibt uns!\n[_c] ThomasK: Ich will auf jeden Fall alle Spiele mit der deutschen Nationalmannschaft sehen. Ich sehe die Spiele am liebsten in meinem Lieblingslokal. Das mache ich schon lange so. Dort treffe ich dann immer einige Nachbarn und Bekannte – und wir haben immer Spaß zusammen. Ich sehe ein Fußballspiel nie allein zu Hause. Das finde ich super langweilig. Man muss doch mit jemandem über alles reden können!\n\n[_x] Nina85: Ich schaue Fußballspiele am liebsten mit meiner Familie. Mein Mann und die Kinder sind große Fußballfans. Wenn das Wetter gut ist, stellen wir den Fernseher in den Garten und grillen. Wenn Deutschland spielt, tragen wir natürlich alle Schals in Schwarz, Rot und Gold . In der Pause spielen die Kinder Fußball – dann sehen wir die besten Momente aus dem Spiel noch einmal.☺Mir ist Fußball nicht so wichtig. Aber die WM- Spiele sind wirklich toll, weil mein Mann und die Kinder so viel Spaß haben.\n\n[_a] RafaelS: Ich habe Tickets für zwei WM-Spiele gekauft! Ich sehe große Länder-spiele super gern im Stadion – zusammen mit Fußballfans aus der ganzen Welt. Wir singen und feiern zusammen! Mir ist auch egal, welches Team dann spielt. Ich bin gern live dabei. Und im Stadion ist es einfach toll! Okay, die Tickets sind nicht billig und die Reise kostet auch Geld. Aber das muss einfach sein! Die WM ist ja nur alle vier Jahre.\n\n[_b] JasMini: Ich schaue nur Fußball, wenn die deutsche Nationalmannschaft spielt. Die anderen Mannschaften interessieren mich nicht. Wenn Deutschland spielt, dann lade ich meine Freundin zu mir nach Hause ein. Das ist immer cool. Unsere Männer gehen zum Public Viewing auf den Marktplatz. Aber da sind mir zu viele Menschen und es ist sehr laut. Das mag ich nicht. Ich finde es in unserem Wohnzimmer einfach schöner."
   },
   {
     "bit": {
       "type": "coach-self-reflection-cloze",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": ["245337"],
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -523,7 +540,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -531,35 +547,54 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Insekten"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Insekten"]
+                "example": null
               }
             }
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-cloze:bitmark--]",
+          "location": {
+            "start": {
+              "line": 57,
+              "column": 1,
+              "offset": 4854
+            },
+            "end": {
+              "line": 57,
+              "column": 41,
+              "offset": 4894
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--]\n[@id:245337]\n[%4][%HK E.1 Infektionslehre]\n[!Wie heißt der Oberbegriff für die Tiere, die die vektorielle Übertragung verursachen?]\n[_Insekten]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-cloze",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": ["273397"],
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -588,7 +623,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -600,14 +634,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["qualitativen"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["qualitativen"]
+                "example": null
               }
             },
             {
@@ -617,14 +651,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["offenen"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["offenen"]
+                "example": null
               }
             },
             {
@@ -634,14 +668,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Sekundärmarktforschung"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Sekundärmarktforschung"]
+                "example": null
               }
             },
             {
@@ -651,14 +685,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["aktuell"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["aktuell"]
+                "example": null
               }
             },
             {
@@ -675,14 +709,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Primärmarktforschung"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Primärmarktforschung"]
+                "example": null
               }
             },
             {
@@ -692,14 +726,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["eigene Daten"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["eigene Daten"]
+                "example": null
               }
             },
             {
@@ -709,14 +743,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Befragung"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Befragung"]
+                "example": null
               }
             },
             {
@@ -726,14 +760,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Fokusgruppen"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Fokusgruppen"]
+                "example": null
               }
             },
             {
@@ -743,14 +777,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Kosten"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Kosten"]
+                "example": null
               }
             },
             {
@@ -760,22 +794,41 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-cloze:bitmark--]",
+          "location": {
+            "start": {
+              "line": 63,
+              "column": 1,
+              "offset": 5040
+            },
+            "end": {
+              "line": 63,
+              "column": 41,
+              "offset": 5080
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--]\n[@id:273397]\n[%10]\n[!Ergänzen Sie den folgenden Lückentext.]\nMit der [_qualitativen] Marktforschung versucht man, mehr Klarheit zu einer [_offenen] Fragestellung zu erhalten. Bei der quantitativen Marktforschung hingegen geht es um geschlossene Fragestellungen. Bei der [_Sekundärmarktforschung] arbeitet man mit bereits vorhandenen Daten. Diese liegen aus internen oder externen Quellen vor. Ein Vorteil ist, dass die Daten schnell zu beschaffen sind. Ein Nachteil ist, dass die Daten nicht mehr [_aktuell] sein können.\nIn der Regel sichtet man bei Marktforschungsprojekten zuerst Sekundärdaten, bevor eine [_Primärmarktforschung] durchgeführt wird. Hierbei erhebt man [_eigene Daten] zur Erforschung einer bestimmten Fragestellung, meistens mit einem professionellen Marktforschungsinstitut zusammen. Die folgenden Methoden gibt es: [_Befragung], Beobachtung / Test, Mystery Shopping, Panel oder [_Fokusgruppen]. Die Nachteile sind der zeitliche Aufwand und die [_Kosten]. Dafür passen die gewonnenen Daten genau auf die Fragestellung des Unternehmens."
   },
   {
     "bit": {
       "type": "coach-self-reflection-cloze",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": ["273304"],
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -804,7 +857,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -874,14 +926,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["A", "C"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["A", "C"]
+                "example": null
               }
             },
             {
@@ -894,14 +946,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["F", "G"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["F", "G"]
+                "example": null
               }
             },
             {
@@ -914,14 +966,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["F", "B"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["F", "B"]
+                "example": null
               }
             },
             {
@@ -934,14 +986,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["A", "D"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["A", "D"]
+                "example": null
               }
             },
             {
@@ -954,14 +1006,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["A", "E"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["A", "E"]
+                "example": null
               }
             },
             {
@@ -974,14 +1026,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["F", "G"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["F", "G"]
+                "example": null
               }
             },
             {
@@ -994,14 +1046,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["A", "C"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["A", "C"]
+                "example": null
               }
             },
             {
@@ -1014,14 +1066,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["A", "D"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["A", "D"]
+                "example": null
               }
             },
             {
@@ -1031,22 +1083,41 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-cloze:bitmark--]",
+          "location": {
+            "start": {
+              "line": 70,
+              "column": 1,
+              "offset": 6137
+            },
+            "end": {
+              "line": 70,
+              "column": 41,
+              "offset": 6177
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--]\n[@id:273304]\n[%3]\n[!Um welche Güter handelt es sich bei den in der Tabelle aufgeführten Beispielen?]\nTragen Sie den richtigen Buchstaben in die Tabelle ein. Zuordnungen sind mehrfach möglich. Je Beispiel können mehrere Buchstaben zutreffen.\n\nA - Materielle Güter\nB - Rechte\nC - Investitionsgüter\nD - Verbrauchsgüter\nE - Gebrauchsgüter\nF - immaterielle Güter\nG - Dienstleistungen\n\n[_A][_C] Neue Kaffeerostanlage in einer Rosterei\n[_F][_G] Beratungen durch Steuerberater\n[_F][_B] Patente für die Herstellung von Energie aus Kompost\n[_A][_D] Putzmittel im Haushalt\n[_A][_E] Autos von Privatpersonen\n[_F][_G] Haarschnitte beim Coiffeur\n[_A][_C] Zwei moderne Autowaschanlagen\n[_A][_D] Medikamente gegen Migräne"
   },
   {
     "bit": {
       "type": "coach-self-reflection-cloze",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": ["272904"],
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -1075,7 +1146,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -1087,6 +1157,7 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["direkten Vertrieb", "direkten Vertrieb2"],
                 "item": [],
                 "lead": [],
                 "hint": [
@@ -1104,8 +1175,7 @@
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["direkten Vertrieb", "direkten Vertrieb2"]
+                "example": null
               }
             },
             {
@@ -1115,14 +1185,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Verkaufsstellen"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Verkaufsstellen"]
+                "example": null
               }
             },
             {
@@ -1132,14 +1202,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Verkaufsmitarbeitende"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Verkaufsmitarbeitende"]
+                "example": null
               }
             },
             {
@@ -1149,6 +1219,7 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["indirekten Vertrieb", "indirekten Vertrieb2"],
                 "item": [],
                 "lead": [],
                 "hint": [
@@ -1166,8 +1237,7 @@
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["indirekten Vertrieb", "indirekten Vertrieb2"]
+                "example": null
               }
             },
             {
@@ -1177,14 +1247,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Grosshandel"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Grosshandel"]
+                "example": null
               }
             },
             {
@@ -1194,14 +1264,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["NOT Grosshandel2"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["NOT Grosshandel2"]
+                "example": null
               }
             },
             {
@@ -1211,14 +1281,14 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["Einzelhandel"],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Einzelhandel"]
+                "example": null
               }
             },
             {
@@ -1228,28 +1298,46 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.coach-self-reflection-cloze:bitmark--]",
+          "location": {
+            "start": {
+              "line": 93,
+              "column": 1,
+              "offset": 6885
+            },
+            "end": {
+              "line": 93,
+              "column": 41,
+              "offset": 6925
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.coach-self-reflection-cloze:bitmark--]\n[@id:272904]\n[%34]\n[!Füllen Sie den Lückentext zum Vertriebssystem mit den passenden Begriffen aus.]\nBeim [_direkten Vertrieb][_direkten Vertrieb2][?Hint] verkauft eigene [_Verkaufsstellen] einrichten, [_Verkaufsmitarbeitende] einstellen. Beim [_indirekten Vertrieb][_indirekten Vertrieb2][?HINT?] läuft den [_Grosshandel] [_NOT Grosshandel2] und / oder den [_Einzelhandel]."
   },
   {
     "bit": {
       "type": "coach-self-reflection-cloze",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -1261,6 +1349,7 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["solution", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1278,35 +1367,34 @@
                     ],
                     "attrs": {}
                   }
-                ],
-                "solutions": ["solution", "problem"]
+                ]
               }
             }
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-cloze]\nThis is a multiple gap [_solution][@example][_problem]"
   },
   {
     "bit": {
       "type": "coach-self-reflection-cloze",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -1318,6 +1406,7 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["solution", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1335,19 +1424,20 @@
                     ],
                     "attrs": {}
                   }
-                ],
-                "solutions": ["solution", "problem"]
+                ]
               }
             }
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.coach-self-reflection-cloze]\nThis is a multiple gap [_solution][_problem][@example:wrong answer]"
   }

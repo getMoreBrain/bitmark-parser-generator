@@ -1,0 +1,129 @@
+[
+  {
+    "bit": {
+      "type": "cook-note-on-quantity",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["92375"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.cook-note-on-quantity]\n[@id:92375]"
+  },
+  {
+    "bit": {
+      "type": "cook-note-on-quantity",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Summary of this Book",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the cook-note-on-quantity of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.cook-note-on-quantity]\n[#Summary of this Book]\nThis is the cook-note-on-quantity of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link."
+  },
+  {
+    "bit": {
+      "type": "cook-note-on-quantity",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Summary of Chapter One",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a cook-note-on-quantity of chapter 1.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.cook-note-on-quantity]\n[#Summary of Chapter One]\nThis is a cook-note-on-quantity of chapter 1."
+  },
+  {
+    "bit": {
+      "type": "cook-note-on-quantity",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.cook-note-on-quantity]"
+  }
+]

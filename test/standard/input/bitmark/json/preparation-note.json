@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "preparation-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "190596"
@@ -27,16 +27,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.preparation-note]\n[@id:190596]\n[!Welche Bedeutung hat Arbeit für Sie?]"
   },
   {
     "bit": {
       "type": "preparation-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "190597"
@@ -61,16 +61,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.preparation-note]\n[@id:190597]\n[!Wo sehen Sie die Chancen und Gefahren „moderner“ Arbeit?]"
   },
   {
     "bit": {
       "type": "preparation-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "190598"
@@ -95,16 +95,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.preparation-note]\n[@id:190598]\n[!Ist Feelgood Management ein „Luxusproblem“?]"
   },
   {
     "bit": {
       "type": "preparation-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191144"
@@ -140,16 +140,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.preparation-note]\n[@id:191144]\n[%1][%Verstehen „Design Challenge“]"
   },
   {
     "bit": {
       "type": "preparation-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191145"
@@ -185,16 +185,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.preparation-note]\n[@id:191145]\n[%2][%Beobachten / befragen]"
   },
   {
     "bit": {
       "type": "preparation-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191146"
@@ -230,16 +230,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.preparation-note]\n[@id:191146]\n[%3][%Sichtweisen definieren / zusammen tragen „How might we“]"
   },
   {
     "bit": {
       "type": "preparation-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191147"
@@ -275,16 +275,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.preparation-note]\n[@id:191147]\n[%4][%Ideen finden]"
   },
   {
     "bit": {
       "type": "preparation-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191148"
@@ -320,16 +320,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.preparation-note]\n[@id:191148]\n[%5][%Prototypen entwickeln]"
   },
   {
     "bit": {
       "type": "preparation-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191149"
@@ -365,9 +365,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.preparation-note]\n[@id:191149]\n[%6][%Testen]"
   }

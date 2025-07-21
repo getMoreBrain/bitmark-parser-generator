@@ -2,33 +2,36 @@
   {
     "bit": {
       "type": "page-person",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "slug": "testing-1234",
       "buttonCaption": "Follow",
+      "person": {
+        "name": "Morgan Sweeny",
+        "title": "Ant Collector",
+        "avatarImage": {
+          "type": "image",
+          "image": {
+            "format": "jpg",
+            "provider": "cdn.bitbook.education",
+            "src": "https://cdn.bitbook.education/avatars/ds.jpg",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      },
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "person": {
-        "name": "Morgan Sweeny",
-        "title": "Ant Collector",
-        "avatarImage": {
-          "format": "jpg",
-          "provider": "cdn.bitbook.education",
-          "src": "https://cdn.bitbook.education/avatars/ds.jpg",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      },
       "body": [
         {
           "type": "paragraph",
@@ -43,9 +46,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-person]\n[@slug:testing-1234]\n[@person:Morgan Sweeny][@title:Ant Collector][&image:https://cdn.bitbook.education/avatars/ds.jpg]\n[@buttonCaption:Follow]\nMorgan has collected ants since they were six years old and now has many dozen ants but none in their pants."
   }

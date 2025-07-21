@@ -1,0 +1,215 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "this is a symbol",
+              "width": 928,
+              "height": 10,
+              "comment": "comment"
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " on the previous text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "bulletList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "Test link in a list 2",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "text": "Entgelt ",
+                        "type": "text"
+                      },
+                      {
+                        "marks": [
+                          {
+                            "type": "symbol",
+                            "attrs": {
+                              "src": "this is **a** symbol"
+                            }
+                          }
+                        ],
+                        "text": "Some\ntext",
+                        "type": "text"
+                      },
+                      {
+                        "text": " on the previous text",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": ""
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " with empty symbol",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "this is a symbol",
+              "height": 10
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " on the previous text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "bulletList",
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "Test link in a list 2",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "text": "Entgelt ",
+                        "type": "text"
+                      },
+                      {
+                        "marks": [
+                          {
+                            "type": "symbol",
+                            "attrs": {
+                              "src": "this is **a** symbol",
+                              "comment": "comment"
+                            }
+                          }
+                        ],
+                        "text": "Some\ntext",
+                        "type": "text"
+                      },
+                      {
+                        "text": " on the previous text",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": ""
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " with empty symbol",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

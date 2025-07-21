@@ -1,0 +1,109 @@
+[
+  {
+    "bit": {
+      "type": "vendor-datadog-dashboard-embed",
+      "format": "text",
+      "bitLevel": 1,
+      "id": [
+        "342341"
+      ],
+      "vendorDashboardId": "here is  the survey id",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": "<div style=\"position: relative; height:100vh; max-height:100vh; overflow:auto;\">\n  <iframe\n    src=\"https://app.formbricks.com/s/<your-surveyId>\"\n    frameborder=\"0\"\n    style=\"position: absolute; left:0; top:0; width:100%; height:100%; border:0;\"\n  >\n  </iframe>\n</div>"
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.vendor-datadog-dashboard-embed]\n[@id:342341]\n[@vendorDashboardId:here is ^ the survey id]\n<div style=\"position: relative; height:100vh; max-height:100vh; overflow:auto;\">\n  <iframe\n    src=\"https://app.formbricks.com/s/<your-surveyId>\"\n    frameborder=\"0\"\n    style=\"position: absolute; left:0; top:0; width:100%; height:100%; border:0;\"\n  >\n  </iframe>\n</div>"
+  },
+  {
+    "bit": {
+      "type": "vendor-datadog-dashboard-embed",
+      "format": "text",
+      "bitLevel": 1,
+      "id": [
+        "342341"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": "<div style=\"position: relative; height:100vh; max-height:100vh; overflow:auto;\">\n</div>"
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.vendor-datadog-dashboard-embed]\n[@id:342341]\n<div style=\"position: relative; height:100vh; max-height:100vh; overflow:auto;\">\n</div>"
+  },
+  {
+    "bit": {
+      "type": "_error",
+      "bitLevel": 1
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2",
+      "errors": [
+        {
+          "message": "Invalid bit type: 'vendor-datadog-dashboard-embed-anonymous'",
+          "text": "[.vendor-datadog-dashboard-embed-anonymous]",
+          "location": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 500
+            },
+            "end": {
+              "line": 18,
+              "column": 44,
+              "offset": 543
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.vendor-datadog-dashboard-embed-anonymous]\n[@id:342341]\n[@vendorDashboardId:here is ^ the survey id]\n<div style=\"position: relative; height:100vh; max-height:100vh; overflow:auto;\">\n  <iframe\n    src=\"https://app.formbricks.com/s/<your-surveyId>\"\n    frameborder=\"0\"\n    style=\"position: absolute; left:0; top:0; width:100%; height:100%; border:0;\"\n  >\n  </iframe>\n</div>"
+  },
+  {
+    "bit": {
+      "type": "_error",
+      "bitLevel": 1
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2",
+      "errors": [
+        {
+          "message": "Invalid bit type: 'vendor-datadog-dashboard-embed-anonymous'",
+          "text": "[.vendor-datadog-dashboard-embed-anonymous]",
+          "location": {
+            "start": {
+              "line": 30,
+              "column": 1,
+              "offset": 874
+            },
+            "end": {
+              "line": 30,
+              "column": 44,
+              "offset": 917
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.vendor-datadog-dashboard-embed-anonymous]\n[@id:342341]\n<div style=\"position: relative; height:100vh; max-height:100vh; overflow:auto;\">\n</div>"
+  }
+]

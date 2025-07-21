@@ -1,0 +1,427 @@
+[
+  {
+    "bit": {
+      "type": "meta-search-default-topics",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": "Term 1?\n•1 Ordered list item 1\nCard 1, ==Side 1==|bold|",
+            "icon": {
+              "type": "image",
+              "image": {
+                "format": "svg",
+                "provider": "image.io",
+                "src": "https://image.io/term1.svg",
+                "width": 100,
+                "height": 200,
+                "alt": "",
+                "zoomDisabled": false,
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            }
+          },
+          "definition": {
+            "text": "Definition 1\nCard 1, Side 2",
+            "icon": {
+              "type": "image",
+              "image": {
+                "format": "svg",
+                "provider": "image.io",
+                "src": "https://image.io/def1.svg",
+                "width": null,
+                "height": null,
+                "alt": "",
+                "zoomDisabled": false,
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            }
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "term": {
+            "text": "Term 2?\nCard 2, Side 1"
+          },
+          "definition": {
+            "text": "Definition 2\nCard 2, Side 2"
+          },
+          "alternativeDefinitions": [
+            {
+              "text": "Alternative Definition 2\nCard 2, Side 2",
+              "icon": {
+                "type": "image",
+                "image": {
+                  "format": "svg",
+                  "provider": "image.io",
+                  "src": "https://image.io/altdef2.svg",
+                  "width": null,
+                  "height": null,
+                  "alt": "",
+                  "zoomDisabled": false,
+                  "license": "",
+                  "copyright": "",
+                  "showInIndex": false,
+                  "caption": []
+                }
+              }
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Footer anyone?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.meta-search-default-topics]\n\nSomebody\n====\nTerm 1?\n•1 Ordered list item 1\nCard 1, **Side 1**\n[&icon:https://image.io/term1.svg][@width:100][@height:200]\n--\nDefinition 1\nCard 1, Side 2\n[&icon:https://image.io/def1.svg]\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2\n++\nAlternative Definition 2\nCard 2, Side 2\n[&icon:https://image.io/altdef2.svg]\n~~~~\n\nFooter anyone?"
+  },
+  {
+    "bit": {
+      "type": "meta-search-default-topics",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": "Term 1?\nCard 1, Side 1"
+          },
+          "definition": {
+            "text": "Definition 1\nCard 1, Side 2"
+          },
+          "alternativeDefinitions": [
+            {
+              "text": "Alternative Definition 2\nCard 1, Side 2"
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "term": {
+            "text": "Term 2?\nCard 2, Side 1"
+          },
+          "definition": {
+            "text": "Definition 2\nCard 2, Side 2, No footer"
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.meta-search-default-topics]\n\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer"
+  },
+  {
+    "bit": {
+      "type": "meta-search-default-topics",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": "Term 1?\nCard 1, Side 1"
+          },
+          "definition": {
+            "text": "Definition 1\nCard 1, Side 2"
+          },
+          "alternativeDefinitions": [
+            {
+              "text": "Alternative Definition 1\nCard 1, Side 2"
+            },
+            {
+              "text": "Alternative Definition 2\nCard 1, Side 2"
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": true,
+          "example": true
+        },
+        {
+          "term": {
+            "text": "Term 2?\nCard 2, Side 1"
+          },
+          "definition": {
+            "text": "Definition 2\nCard 2, Side 2, No footer"
+          },
+          "alternativeDefinitions": [],
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "lead",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isExample": true,
+          "example": true
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.meta-search-default-topics]\n[@example]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]"
+  },
+  {
+    "bit": {
+      "type": "meta-search-default-topics",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": "Term 1?\nCard 1, Side 1"
+          },
+          "definition": {
+            "text": "Definition 1\nCard 1, Side 2"
+          },
+          "alternativeDefinitions": [
+            {
+              "text": "Alternative Definition 2\nCard 1, Side 2"
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "term": {
+            "text": "Term 2?\nCard 2, Side 1"
+          },
+          "definition": {
+            "text": "Definition 2\nCard 2, Side 2, No footer"
+          },
+          "alternativeDefinitions": [],
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "lead",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isExample": true,
+          "example": true
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Footer anyone?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.meta-search-default-topics]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
+  }
+]

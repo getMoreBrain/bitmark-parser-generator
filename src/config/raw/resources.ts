@@ -87,6 +87,16 @@ const RESOURCES: _ResourcesConfig = {
     tag: ResourceTag.websiteLink,
     jsonKey: ResourceJsonKey.websiteLink,
   },
+  //
+  [ResourceConfigKey.icon]: {
+    tag: ResourceTag.icon,
+  },
+  [ResourceConfigKey.backgroundWallpaper]: {
+    tag: ResourceTag.backgroundWallpaper,
+  },
+  [ResourceConfigKey.imagePlaceholder]: {
+    tag: ResourceTag.imagePlaceholder,
+  },
 };
 
 export { RESOURCES };

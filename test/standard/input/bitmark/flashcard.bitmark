@@ -1,0 +1,126 @@
+[.flashcard]
+
+Somebody
+====
+Question 1?
+Card 1, Side 1
+[&icon:https://image.io/question1.svg]
+--
+Answer 1
+Card 1, Side 2
+====
+Question 2?
+Card 2, Side 1
+[&icon:https://image.io/question2.svg]
+--
+Answer 2
+Card 2, Side 2
+[&icon:https://image.io/answer2.svg]
+++
+Alternative Answer 2
+Card 2, Side 2
+~~~~
+
+Footer anyone?
+
+
+[.flashcard]
+
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2
+++
+Alternative Answer 2
+Card 1, Side 2
+====
+Question 2?
+Card 2, Side 1
+--
+Answer 2
+Card 2, Side 2, No footer
+
+
+[.flashcard]
+[@example]
+[%item][%lead]
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2
+++
+Alternative Answer 1
+Card 1, Side 2
+++
+Alternative Answer 2
+Card 1, Side 2
+====
+Question 2?
+Card 2, Side 1
+--
+Answer 2
+Card 2, Side 2, No footer
+[%item][%lead]
+
+
+[.flashcard]
+[%item][%lead]
+Somebody
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2
+++
+Alternative Answer 2
+Card 1, Side 2
+====
+Question 2?
+Card 2, Side 1
+--
+Answer 2
+Card 2, Side 2, No footer
+[%item][%lead]
+[@example]
+====
+
+
+~~~~
+
+Footer anyone?
+
+
+[.flashcard-1:bitmark++]
+[@id:1785935]
+[@revealSolutions:false]
+
+====
+K, der den Verspätungszuschlag noch „abbiegen“ will, fragt sich, ob denn Entschuldigungsgründe für die verspätete Abgabe bestehen. Dann, so hat er gehört, ist ein Verspätungszuschlag nicht festzusetzen. Im Einzelnen nennt er folgende Vorfälle: Erkrankung, Abwesenheit, Vertreterverschulden
+--
+
+**Erkrankung:**
+
+• **entschuldigt** bei plötzlicher schwerer Erkrankung;
+
+• **nicht entschuldigt**, wenn bei dauerhafter Erkrankung die zumutbare Bestellung eines Vertreters unterblieben ist.
+
+**Abwesenheit:**
+
+• generell sind bei Abwesenheit aus privaten oder geschäftlichen Gründen Vorkehrungen für die Entgegennahme von Verwaltungsakten zu treffen, so dass eine deshalb eingetretene Verspätung **nicht entschuldigt** ist;
+• als **entschuldigt** gilt jedoch eine kurzfristige, urlaubsbedingte Abwesenheit ohne konkrete Anhaltspunkte für einen zu erwartenden Verwaltungsakt.
+**Vertreterverschulden:**
+• Der Steuerpflichtige muss sich das Verschulden seines gesetzlichen Vertreters (§ 110 Abs. 1 Satz 2, z.B. Eltern eines Minderjährigen) zurechnen lassen, ist also **nicht entschuldigt**.
+
+Ebenso verhält es sich bei Verschulden eines Erfüllungsgehilfen (§ 152 Abs. 1 Satz 3), z.B. **Steuerberater**, insbesondere ist dessen **Arbeitsüberlastung** kein Entschuldigungsgrund.
+• Wenn jedoch der sonst zuverlässige und gut überwachte **Mitarbeiter** des Steuerberaters die Verspätung verursacht hat, liegt seitens des Steuerberaters schon kein Überwachungs- und Organisationsverschulden vor und K ist damit auch **entschuldigt**.
+
+==Zum Buch==|xref:e-abgabenordnung-leicht-gemacht._8vqk25f6kcvb|►qaa-1733060|
+
+====

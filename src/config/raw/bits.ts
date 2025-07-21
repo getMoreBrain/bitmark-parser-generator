@@ -2,6 +2,7 @@ import { _BitsConfig } from '../../model/config/_Config';
 import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey';
 import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
 import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
+import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey';
 import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
 import { BitTagType } from '../../model/enum/BitTagType';
 import { BitType } from '../../model/enum/BitType';
@@ -164,7 +165,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.maxCreatedBits,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.appBitmarkFromEditor]: { since: '1.4.5', baseBitType: BitType.appBitmarkFromJavascript },
   [BitType.articleEmbed]: {
@@ -261,6 +262,16 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.diff]: {
+    since: '3.13.0',
+    baseBitType: BitType._standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffTo,
+      },
+    ],
+  },
   [BitType.book]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -271,6 +282,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.bookEnd]: { since: '3.27.0', baseBitType: BitType.article },
   [BitType.bookAcknowledgements]: { since: '1.17.0', baseBitType: BitType.article },
   [BitType.bookAddendum]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookAfterword]: { since: '1.3.0', baseBitType: BitType.article },
@@ -307,6 +319,21 @@ const BITS: _BitsConfig = {
   [BitType.bookSummary]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookTeaser]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookTitle]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.bookCover]: {
+    since: '3.27.0',
+    baseBitType: BitType.image,
+    tags: [
+      {
+        type: BitTagType.tag,
+        configKey: TagConfigKey.title,
+        maxCount: 2, // title & subtitle
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.coverColor,
+      },
+    ],
+  },
   [BitType.bookAlias]: {
     since: '1.4.3',
     baseBitType: BitType.book,
@@ -527,7 +554,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.codeMinimap,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.formula]: {
     since: '1.35.0',
@@ -584,6 +611,24 @@ const BITS: _BitsConfig = {
   [BitType.conversationRight1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Scream]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Thought]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.clozeAndMultipleChoiceTextConversationLeft1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.clozeAndMultipleChoiceTextConversationLeft1Scream]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
+  [BitType.clozeAndMultipleChoiceTextConversationLeft1Thought]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
+  [BitType.clozeAndMultipleChoiceTextConversationRight1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.clozeAndMultipleChoiceTextConversationRight1Scream]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
+  [BitType.clozeAndMultipleChoiceTextConversationRight1Thought]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
   [BitType.cookPreparation]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookStep]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookIngredients]: {
@@ -627,6 +672,7 @@ const BITS: _BitsConfig = {
   [BitType.cookRemark]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookVariation]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookInsert]: { since: '1.3.0', baseBitType: BitType.article },
+  [BitType.cookNoteOnQuantity]: { since: '3.27.0', baseBitType: BitType.article },
   [BitType.cookArrangement]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookPracticeAdvise]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.cookPlate]: { since: '1.3.0', baseBitType: BitType.article },
@@ -667,6 +713,7 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: false,
   },
+  [BitType.leDocumentDownload]: { since: '3.18.0', baseBitType: BitType.documentDownload },
   [BitType.documentEmbed]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -868,6 +915,16 @@ const BITS: _BitsConfig = {
   [BitType.exampleCollapsible]: { since: '1.21.0', baseBitType: BitType.article },
   [BitType.hintCollapsible]: { since: '1.21.0', baseBitType: BitType.article },
   [BitType.bugCollapsible]: { since: '1.21.0', baseBitType: BitType.article },
+  [BitType.platformPath]: {
+    since: '3.14.1',
+    baseBitType: BitType._standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.path,
+      },
+    ],
+  },
   [BitType.container]: {
     since: '1.9.0',
     baseBitType: BitType.article,
@@ -950,7 +1007,7 @@ const BITS: _BitsConfig = {
     since: '1.7.1',
     baseBitType: BitType._standard,
     tags: [],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.extractorInformation]: {
     since: '3.8.0',
@@ -958,6 +1015,7 @@ const BITS: _BitsConfig = {
     tags: [],
     textFormatDefault: TextFormat.json,
   },
+  [BitType.extractorAiChat]: { since: '3.19.0', baseBitType: BitType._standard },
   [BitType.extractorBlock]: {
     since: '1.5.16',
     baseBitType: BitType._standard,
@@ -1096,12 +1154,31 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey._exampleBitList,
   },
+  [BitType.legend]: {
+    since: '3.12.0',
+    baseBitType: BitType._standard,
+    tags: [],
+    cardSet: CardSetConfigKey._definitionList,
+  },
+  [BitType.smartStandardLegend]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardLegendNonNormative]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardLegendNormative]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardRemarkLegend]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardRemarkLegendNonNormative]: { since: '3.12.0', baseBitType: BitType.legend },
+  [BitType.smartStandardRemarkLegendNormative]: { since: '3.12.0', baseBitType: BitType.legend },
   [BitType.definitionList]: {
     since: '1.34.0',
     baseBitType: BitType._standard,
     tags: [],
-    cardSet: CardSetConfigKey._flashcardLike,
+    cardSet: CardSetConfigKey._definitionList,
   },
+  [BitType.metaSearchDefaultTerms]: {
+    since: '3.12.0',
+    baseBitType: BitType._standard,
+    tags: [],
+    cardSet: CardSetConfigKey._definitionList,
+  },
+  [BitType.metaSearchDefaultTopics]: { since: '3.12.0', baseBitType: BitType.metaSearchDefaultTerms },
   [BitType.flashcard]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -1112,9 +1189,10 @@ const BITS: _BitsConfig = {
         configKey: GroupConfigKey.group_quizCommon,
       },
     ],
-    cardSet: CardSetConfigKey._flashcardLike,
+    cardSet: CardSetConfigKey._flashcard,
   },
   [BitType.flashcard1]: { since: '1.3.0', baseBitType: BitType.flashcard },
+  [BitType.qAndACard]: { since: '3.25.0', baseBitType: BitType.flashcard1 },
   [BitType.focusImage]: {
     since: '1.3.0',
     baseBitType: BitType.image,
@@ -1149,8 +1227,14 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.backgroundWallpaper,
+        type: BitTagType.resource,
+        configKey: ResourceConfigKey.backgroundWallpaper,
+        chain: [
+          {
+            type: BitTagType.group,
+            configKey: GroupConfigKey.group_resourceImageCommon,
+          },
+        ],
       },
       {
         type: BitTagType.group,
@@ -1170,13 +1254,13 @@ const BITS: _BitsConfig = {
   [BitType.figure]: {
     since: '1.3.0',
     baseBitType: BitType.image,
-    cardSet: CardSetConfigKey._captionDefinitionsList,
+    cardSet: CardSetConfigKey._definitionList,
   },
   [BitType.imageBanner]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.imageFigure]: {
     since: '1.3.0',
     baseBitType: BitType.image,
-    cardSet: CardSetConfigKey._captionDefinitionsList,
+    cardSet: CardSetConfigKey._definitionList,
   },
   [BitType.imageFigureAlt]: { since: '1.16.0', baseBitType: BitType.imageFigure },
   [BitType.standardImageFigureNormative]: { since: '1.16.0', baseBitType: BitType.imageFigure },
@@ -1448,6 +1532,7 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.leMultiDayEvent]: { since: '3.32.0', baseBitType: BitType.leClassroomEvent },
   [BitType.leCompletion]: {
     since: '1.25.0',
     baseBitType: BitType.learningPathClosing,
@@ -1603,18 +1688,30 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.match,
     cardSet: CardSetConfigKey._matchMatrix,
   },
-
   [BitType.matchAudio]: {
     since: '1.3.0',
     baseBitType: BitType.match,
     cardSet: CardSetConfigKey._matchAudioPairs,
   },
-
   [BitType.matchPicture]: {
     since: '1.3.0',
     baseBitType: BitType.match,
     cardSet: CardSetConfigKey._matchImagePairs,
   },
+  [BitType.feedback]: {
+    since: '3.13.0',
+    baseBitType: BitType._standard,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.reasonableNumOfChars,
+      },
+    ],
+    cardSet: CardSetConfigKey._feedback,
+  },
+  [BitType.learningDocumentationFeedback]: { since: '3.13.0', baseBitType: BitType.feedback },
+  [BitType.handInFeedbackExpert]: { since: '3.30.0', baseBitType: BitType.feedback },
+  [BitType.handInFeedbackSelf]: { since: '3.30.0', baseBitType: BitType.feedback },
   [BitType.multipleChoice1]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -1909,7 +2006,6 @@ const BITS: _BitsConfig = {
     //
     since: '3.5.0',
     baseBitType: BitType.reviewNote,
-    textFormatDefault: TextFormat.bitmarkPlusPlus,
   },
   [BitType.reviewReviewerNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
   [BitType.reviewRequestForReviewNote]: { since: '1.3.0', baseBitType: BitType.reviewNote },
@@ -2102,6 +2198,10 @@ const BITS: _BitsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.tableHeaderWhitespaceNoWrap,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.tableSearch,
       },
       {
@@ -2180,6 +2280,46 @@ const BITS: _BitsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.maxDisplayLevel,
+      },
+    ],
+  },
+  [BitType.tocInline]: {
+    since: '3.24.0',
+    baseBitType: BitType.toc,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.maxTocChapterLevel,
+      },
+    ],
+  },
+  [BitType.tocResource]: {
+    since: '3.31.0',
+    baseBitType: BitType.toc,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tocResource,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
+      },
+    ],
+  },
+  [BitType.tocContent]: {
+    since: '3.31.0',
+    baseBitType: BitType.toc,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.tocContent,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.buttonCaption,
       },
     ],
   },
@@ -2298,6 +2438,17 @@ const BITS: _BitsConfig = {
     tags: [],
     textFormatDefault: TextFormat.json,
   },
+  [BitType.vendorDatadogDashboardEmbed]: {
+    since: '3.12.0',
+    baseBitType: BitType.code,
+    tags: [
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.vendorDashboardId,
+      },
+    ],
+    textFormatDefault: TextFormat.plainText,
+  },
   [BitType.vendorFormbricksEmbed]: {
     since: '3.8.0',
     baseBitType: BitType.code,
@@ -2307,7 +2458,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.vendorSurveyId,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorFormbricksEmbedAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksEmbed },
   [BitType.vendorFormbricksLink]: {
@@ -2319,7 +2470,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.vendorSurveyId,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorFormbricksLinkAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksLink },
   [BitType.vendorHighchartsChart]: {
@@ -2343,7 +2494,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.vendorUrl,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorIframelyCard]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
   [BitType.vendorIframelyPreview]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
@@ -2361,7 +2512,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.jupyterExecutionCount,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorJupyterCellCode]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
   [BitType.vendorJupyterCellMarkdown]: { since: '1.4.3', baseBitType: BitType.vendorJupyterOutput },
@@ -2376,7 +2527,7 @@ const BITS: _BitsConfig = {
         configKey: PropertyConfigKey.padletId,
       },
     ],
-    textFormatDefault: TextFormat.text,
+    textFormatDefault: TextFormat.plainText,
   },
   [BitType.vendorStripePricingTable]: {
     since: '1.20.0',
@@ -2394,6 +2545,8 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.vendorStripePricingTableExternal]: { since: '3.13.0', baseBitType: BitType.vendorStripePricingTable },
+
   [BitType.video]: {
     since: '1.3.0',
     baseBitType: BitType._standard,

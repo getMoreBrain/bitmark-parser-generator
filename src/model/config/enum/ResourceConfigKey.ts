@@ -28,6 +28,10 @@ const resourceConfigKeys = {
   documentDownload: 'documentDownload',
   appLink: 'appLink',
   websiteLink: 'websiteLink',
+
+  icon: 'icon',
+  backgroundWallpaper: 'backgroundWallpaper',
+  imagePlaceholder: 'imagePlaceholder',
 } as const;
 
 const ResourceConfigKey = superenum(resourceConfigKeys);

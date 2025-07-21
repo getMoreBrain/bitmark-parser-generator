@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "browser-image",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "focusX": 100,
       "focusY": 300,
@@ -12,6 +12,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -115,7 +131,26 @@
           ],
           "attrs": {}
         }
-      ],
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.browser-image]\n**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.\n[@focusX:100]\n[@focusY:300]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
+  },
+  {
+    "bit": {
+      "type": "browser-image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "resource": {
         "type": "image",
         "image": {
@@ -131,26 +166,7 @@
           "showInIndex": false,
           "caption": []
         }
-      }
-    },
-    "parser": {
-      "version": "1.31.0",
-      "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
-    },
-    "bitmark": "[.browser-image]\n**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.\n[@focusX:100]\n[@focusY:300]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
-  },
-  {
-    "bit": {
-      "type": "browser-image",
-      "format": "bitmark--",
-      "bitLevel": 1,
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      },
       "body": [
         {
           "type": "paragraph",
@@ -201,7 +217,28 @@
           ],
           "attrs": {}
         }
-      ],
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.browser-image]\n**◼︎ Temporale Präpositionen**\n__Zeitpunkt__\nWann hast du mit ihm darüber gesprochen/sprichst du mit ihm darüber?\n\n__Zeitdauer__\n\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
+  },
+  {
+    "bit": {
+      "type": "browser-image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "focusX": 100,
+      "focusY": 300,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
       "resource": {
         "type": "image",
         "image": {
@@ -217,28 +254,7 @@
           "showInIndex": false,
           "caption": []
         }
-      }
-    },
-    "parser": {
-      "version": "1.31.0",
-      "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
-    },
-    "bitmark": "[.browser-image]\n**◼︎ Temporale Präpositionen**\n__Zeitpunkt__\nWann hast du mit ihm darüber gesprochen/sprichst du mit ihm darüber?\n\n__Zeitdauer__\n\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
-  },
-  {
-    "bit": {
-      "type": "browser-image",
-      "format": "bitmark--",
-      "bitLevel": 1,
-      "focusX": 100,
-      "focusY": 300,
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
+      },
       "body": [
         {
           "type": "paragraph",
@@ -342,28 +358,12 @@
           ],
           "attrs": {}
         }
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "png",
-          "provider": "docs.bitbook.education",
-          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.browser-image]\n**◼︎ Sätze: Temporale Satzverbindungen**\n**Nachdem** Paul in einem italienischen Restaurant gegessen hatte, ging er ins Kino.\n**Bevor/Ehe** Paul ins Kino ging, aß er in einem italienischen Restaurant.\n**Beachten Sie:** **Nachdem** Paul in einem italienischen Restaurant gegessen hatte __(Plusquamperfekt)__, ging er ins Kino __(Präteritum)__.\n[@focusX:100]\n[@focusY:300]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   }

@@ -2,9 +2,8 @@
   {
     "bit": {
       "type": "cloze-list",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -61,6 +60,9 @@
                 },
                 {
                   "type": "gap",
+                  "solutions": [
+                    "gap"
+                  ],
                   "item": [],
                   "lead": [],
                   "hint": [],
@@ -78,8 +80,7 @@
                   ],
                   "isCaseSensitive": true,
                   "isExample": false,
-                  "example": null,
-                  "solutions": ["gap"]
+                  "example": null
                 },
                 {
                   "text": " text with ^ another ",
@@ -87,6 +88,9 @@
                 },
                 {
                   "type": "gap",
+                  "solutions": [
+                    "cloze"
+                  ],
                   "item": [],
                   "lead": [],
                   "hint": [
@@ -104,8 +108,7 @@
                   "instruction": [],
                   "isCaseSensitive": true,
                   "isExample": false,
-                  "example": null,
-                  "solutions": ["cloze"]
+                  "example": null
                 },
                 {
                   "text": ".",
@@ -142,14 +145,16 @@
                 },
                 {
                   "type": "gap",
+                  "solutions": [
+                    "gap"
+                  ],
                   "item": [],
                   "lead": [],
                   "hint": [],
                   "instruction": [],
                   "isCaseSensitive": true,
                   "isExample": false,
-                  "example": null,
-                  "solutions": ["gap"]
+                  "example": null
                 },
                 {
                   "text": " text.",
@@ -164,14 +169,16 @@
                 },
                 {
                   "type": "gap",
+                  "solutions": [
+                    "two"
+                  ],
                   "item": [],
                   "lead": [],
                   "hint": [],
                   "instruction": [],
                   "isCaseSensitive": true,
                   "isExample": false,
-                  "example": null,
-                  "solutions": ["two"]
+                  "example": null
                 },
                 {
                   "text": " lines.",
@@ -194,13 +201,32 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.cloze-list:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 24,
+              "offset": 23
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.cloze-list:bitmark--]\n[!Instruction]\n\nSome body\n\n====\n[%1.] This is a [_gap][!instruction] text with another [_cloze][?hint].\n====\n[%2.] This is another [_gap] text.\nWith [_two] lines.\n\n~~~~\nOptional Footer"
+    "bitmark": "[.cloze-list:bitmark--]\n[!Instruction]\n\nSome body\n\n====\n[%1.] This is a [_gap][!instruction] text with ^^ another [_cloze][?hint].\n====\n[%2.] This is ^another [_gap] text.\nWith [_two] lines.\n\n~~~~\nOptional Footer"
   }
 ]

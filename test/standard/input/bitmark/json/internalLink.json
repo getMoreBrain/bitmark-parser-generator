@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "internal-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "192356"
@@ -28,16 +28,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.internal-link]\n[@id:192356]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Starbucks]"
   },
   {
     "bit": {
       "type": "internal-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "192374"
@@ -63,16 +63,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.internal-link]\n[@id:192374]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Emmi]"
   },
   {
     "bit": {
       "type": "internal-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "192383"
@@ -98,9 +98,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.internal-link]\n[@id:192383]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Globus]"
   }

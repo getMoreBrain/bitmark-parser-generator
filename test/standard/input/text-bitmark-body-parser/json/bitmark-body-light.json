@@ -1,0 +1,95 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "light"
+          }
+        ],
+        "text": "This is some LIGHT text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "There are ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "light"
+          }
+        ],
+        "text": "multiple lines",
+        "type": "text"
+      },
+      {
+        "text": ", and some stars but nothing else ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "light"
+          }
+        ],
+        "text": "`particularly exciting`",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "light"
+          }
+        ],
+        "text": "Or perhaps nothing very exciting? It really depends",
+        "type": "text"
+      },
+      {
+        "text": " on your point of view ;)",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "light"
+          }
+        ],
+        "text": "__ LIGHT __",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "light"
+          }
+        ],
+        "text": " LIGHT ",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

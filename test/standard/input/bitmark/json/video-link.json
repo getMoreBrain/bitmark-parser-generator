@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "video-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -37,9 +37,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[&video] is included more than 0 time(s).",
@@ -96,26 +96,23 @@
   {
     "bit": {
       "type": "video-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
           "format": "mp4",
           "provider": "docs.bitmark.cloud",
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
-          "width": "740",
-          "height": "540",
+          "width": 740,
+          "height": 540,
           "duration": "PT12M31S",
           "thumbnails": [
             {
@@ -150,19 +147,20 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.video-link]\n[@id:119760]\n[&video-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@src1x:https://www.youtube.com/tumb_201809210816.png][@src2x:https://www.youtube.com/tumb_201809210816.png][@width:740][@height:540][@duration:PT12M31S]"
   },
   {
     "bit": {
       "type": "video-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -170,6 +168,20 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "video-link",
+        "videoLink": {
+          "format": "wmv",
+          "provider": "docs.bitbook.education",
+          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
+          "width": null,
+          "height": null,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -194,44 +206,27 @@
           ],
           "attrs": {}
         }
-      ],
-      "resource": {
-        "type": "video-link",
-        "videoLink": {
-          "format": "wmv",
-          "provider": "docs.bitbook.education",
-          "url": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv",
-          "width": null,
-          "height": null,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.video-link]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&video-link:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "186837"
-      ],
+      "id": ["186837"],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -255,30 +250,46 @@
             }
           ]
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--&video-link]",
+          "location": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 932
+            },
+            "end": {
+              "line": 14,
+              "column": 32,
+              "offset": 963
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--&video-link]\n[@id:186837]\n[&video-link:https://www.youtube.com/watch?v=E41oFn8EdqY][@caption:Erklärvideo zum Bildungsbericht (1/2): Zielsetzung]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "187546"
-      ],
+      "id": ["187546"],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -302,30 +313,46 @@
             }
           ]
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--&video-link]",
+          "location": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 1097
+            },
+            "end": {
+              "line": 18,
+              "column": 32,
+              "offset": 1128
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.article:bitmark--&video-link]\n[@id:187546]\n[&video-link:https://www.youtube.com/watch?v=FW47I-KbmF4&t=6s][@caption:Erklärvideo die Lerndokumentation]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "185332"
-      ],
+      "id": ["185332"],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -338,30 +365,28 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article&video-link]\n[@id:185332]\n\n[&video-link:https://vimeo.com/585451927]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "185329"
-      ],
+      "id": ["185329"],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -374,30 +399,28 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article&video-link]\n[@id:185329]\n[&video-link:https://vimeo.com/585450701]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "185330"
-      ],
+      "id": ["185330"],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "video-link",
         "videoLink": {
@@ -410,12 +433,13 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article&video-link]\n[@id:185330]\n\n[&video-link:https://vimeo.com/585457783]"
   }

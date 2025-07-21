@@ -1,0 +1,51 @@
+|| Testing breakscaping ||
+// TODO ADD THESE BACK ONCE TEXT IS MERGED CANONICALLY IN BITMARK
+*F_^_^_^_^_^_
+F_^__^__^_
+F_^^____^^_^
+
+[.cloze:bitmark++&image]
+[@id:1234]
+[@id:[1234^]]
+[@id:[1234^]4321]
+[@id:id-with-a-^]-in-it-and-at-the-end-^]]
+[@id:id-with-a-^^]-in-it-and-at-the-end-^^]]
+[@id:id-with-a-^^^]-in-it-and-at-the-end-^^^]]
+
+Here
+
+[%[%item^]][%[%lead^]:)]
+[!Instruc[tion^]]
+[@externalId:[externalId with square bracked at end^]]
+is
+[@lang:[lang^] with square bracked in middle]
+the body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets
+
+[&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]
+
+[.article]
+__^_particularly exciting_^__
+__^^_particularly exciting_^^__
+
+
+[.article]
+[!^**A**]
+
+[.article:bitmark++]
+[!Start **[text^]** ==[n^]==|latex| end^]]
+
+[.article:bitmark++]
+==bold[^==|bold|
+**bold[^**
+__italic[^__
+!!highlight[^!!
+[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]
+
+[.article:bitmark--]
+==bold[^==|bold|
+**bold[^**
+__italic[^__
+!!highlight[^!!
+[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]
+
+

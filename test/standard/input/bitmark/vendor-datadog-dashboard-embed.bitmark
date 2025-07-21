@@ -1,0 +1,33 @@
+[.vendor-datadog-dashboard-embed]
+[@id:342341]
+[@vendorDashboardId:here is ^ the survey id]
+<div style="position: relative; height:100vh; max-height:100vh; overflow:auto;">
+  <iframe
+    src="https://app.formbricks.com/s/<your-surveyId>"
+    frameborder="0"
+    style="position: absolute; left:0; top:0; width:100%; height:100%; border:0;"
+  >
+  </iframe>
+</div>
+
+[.vendor-datadog-dashboard-embed]
+[@id:342341]
+<div style="position: relative; height:100vh; max-height:100vh; overflow:auto;">
+</div>
+
+[.vendor-datadog-dashboard-embed-anonymous]
+[@id:342341]
+[@vendorDashboardId:here is ^ the survey id]
+<div style="position: relative; height:100vh; max-height:100vh; overflow:auto;">
+  <iframe
+    src="https://app.formbricks.com/s/<your-surveyId>"
+    frameborder="0"
+    style="position: absolute; left:0; top:0; width:100%; height:100%; border:0;"
+  >
+  </iframe>
+</div>
+
+[.vendor-datadog-dashboard-embed-anonymous]
+[@id:342341]
+<div style="position: relative; height:100vh; max-height:100vh; overflow:auto;">
+</div>

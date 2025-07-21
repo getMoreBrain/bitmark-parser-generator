@@ -5,13 +5,13 @@
       "bitLevel": 1
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "errors": [
         {
           "message": "Invalid bit",
-          "text": "|| Testing breakscaping ||\n",
+          "text": "|| Testing breakscaping ||\n// TODO ADD THESE BACK ONCE TEXT IS MERGED CANONICALLY IN BITMARK\n*F_^_^_^_^_^_\nF_^__^__^_\nF_^^____^^_^\n",
           "location": {
             "start": {
               "line": 1,
@@ -19,15 +19,15 @@
               "offset": 0
             },
             "end": {
-              "line": 2,
+              "line": 6,
               "column": 1,
-              "offset": 27
+              "offset": 131
             }
           }
         }
       ]
     },
-    "bitmark": "|| Testing breakscaping ||"
+    "bitmark": "|| Testing breakscaping ||\n// TODO ADD THESE BACK ONCE TEXT IS MERGED CANONICALLY IN BITMARK\n*F_^_^_^_^_^_\nF_^__^__^_\nF_^^____^^_^"
   },
   {
     "bit": {
@@ -44,7 +44,6 @@
       ],
       "externalId": ["[externalId with square bracked at end]"],
       "lang": "[lang] with square bracked in middle",
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -84,7 +83,22 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
+      "resource": {
+        "type": "image",
+        "image": {
+          "provider": "bad.url",
+          "src": "https://bad.url/]with-square-bracket",
+          "src1x": "https://bad.url/]with-square-bracket",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -125,6 +139,7 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": ["[gap]"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -142,8 +157,7 @@
                     ],
                     "attrs": {}
                   }
-                ],
-                "solutions": ["[gap]"]
+                ]
               }
             },
             {
@@ -154,34 +168,20 @@
           "attrs": {}
         }
       ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "provider": "bad.url",
-          "src": "https://bad.url/]with-square-bracket",
-          "src1x": "https://bad.url/]with-square-bracket",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.cloze:bitmark++&image]\n[@id:1234]\n[@id:[1234^]]\n[@id:[1234^]4321]\n[@id:id-with-a-^]-in-it-and-at-the-end-^]]\n[@id:id-with-a-^^]-in-it-and-at-the-end-^^]]\n[@id:id-with-a-^^^]-in-it-and-at-the-end-^^^]]\n\nHere\n\n[%[%item^]][%[%lead^]:)]\n[!Instruc[tion^]]\n[@externalId:[externalId with square bracked at end^]]\nis\n[@lang:[lang^] with square bracked in middle]\nthe body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets\n\n[&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -213,19 +213,134 @@
               ],
               "text": "^_particularly exciting_^",
               "type": "text"
-            },
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.article]\n__^_particularly exciting_^__\n__^^_particularly exciting_^^__"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
             {
-              "type": "hardBreak"
-            },
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "A",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "3.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.article]\n[!^**A**]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
             {
-              "text": "*F______",
+              "text": "Start ",
               "type": "text"
             },
             {
-              "type": "hardBreak"
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "[text]",
+              "type": "text"
             },
             {
-              "text": "F_",
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "attrs": {
+                "formula": "[n]"
+              },
+              "type": "latex"
+            },
+            {
+              "text": " end]",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": []
+    },
+    "parser": {
+      "version": "3.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.article:bitmark++]\n[!Start **[text^]** ==[n^]==|latex| end^]]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "highlight"
+                }
+              ],
+              "text": "]highlight[",
+              "type": "text"
+            },
+            {
+              "text": " ",
               "type": "text"
             },
             {
@@ -234,19 +349,66 @@
                   "type": "italic"
                 }
               ],
-              "text": "",
+              "text": "]italic[",
               "type": "text"
             },
             {
-              "text": "_",
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "]bold[",
+              "type": "text"
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "]bold[",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold[",
               "type": "text"
             },
             {
               "type": "hardBreak"
             },
             {
-              "text": "F_^",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold[",
               "type": "text"
+            },
+            {
+              "type": "hardBreak"
             },
             {
               "marks": [
@@ -254,11 +416,19 @@
                   "type": "italic"
                 }
               ],
-              "text": "",
+              "text": "italic[",
               "type": "text"
             },
             {
-              "text": "^_",
+              "type": "hardBreak"
+            },
+            {
+              "marks": [
+                {
+                  "type": "highlight"
+                }
+              ],
+              "text": "highlight[",
               "type": "text"
             }
           ],
@@ -267,10 +437,155 @@
       ]
     },
     "parser": {
-      "version": "2.0.0",
+      "version": "3.26.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.1"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.article]\n__^_particularly exciting_^__\n__^^_particularly exciting_^^__\n*F_^_^_^_^_^_\nF_^__^__^_\nF_^^____^^_^"
+    "bitmark": "[.article:bitmark++]\n==bold[^==|bold|\n**bold[^**\n__italic[^__\n!!highlight[^!!\n[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "highlight"
+                }
+              ],
+              "text": "]highlight[",
+              "type": "text"
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "]italic[",
+              "type": "text"
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "]bold[",
+              "type": "text"
+            },
+            {
+              "text": " ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "]bold[",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold[",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold[",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "italic[",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "marks": [
+                {
+                  "type": "highlight"
+                }
+              ],
+              "text": "highlight[",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 44,
+              "column": 1,
+              "offset": 992
+            },
+            "end": {
+              "line": 44,
+              "column": 21,
+              "offset": 1012
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.article:bitmark--]\n==bold[^==|bold|\n**bold[^**\n__italic[^__\n!!highlight[^!!\n[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]"
   }
 ]

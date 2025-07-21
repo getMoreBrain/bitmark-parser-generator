@@ -7,8 +7,8 @@ import { ConfigKey } from '../../../../model/config/enum/ConfigKey';
 import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
 import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
-import { ResourceTag } from '../../../../model/enum/ResourceTag';
 import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { BooleanUtils } from '../../../../utils/BooleanUtils';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { StringUtils } from '../../../../utils/StringUtils';
@@ -21,7 +21,6 @@ import { commentTagContentProcessor as internalCommentTagContentProcessor } from
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
 import { personChainContentProcessor } from './PersonChainContentProcessor';
 import { ratingLevelChainContentProcessor } from './RatingLevelChainContentProcessor';
-import { propertyStyleResourceContentProcessor } from './ResourceContentProcessor';
 import { servingsChainContentProcessor } from './ServingsChainContentProcessor';
 import { technicalTermChainContentProcessor } from './TechnicalTermChainContentProcessor';
 
@@ -88,9 +87,6 @@ function propertyContentProcessor(
     } else if (configKey === PropertyConfigKey.property_title && isChain) {
       // Hack the intermediate tag so as not to clash with [#title] tags which are not chained (yet)
       tag = 'propertyTitle';
-    } else if (configKey === PropertyConfigKey.imagePlaceholder) {
-      propertyStyleResourceContentProcessor(context, contentDepth, tagsConfig, content, target, ResourceTag.image);
-      return;
     }
   }
 
@@ -108,34 +104,53 @@ function propertyContentProcessor(
           // case PropertyFormat.string:
           //   return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
 
-          case PropertyFormat.trimmedString:
+          case PropertyFormat.plainText:
             return Breakscape.unbreakscape(
               StringUtils.isString(v) ? (StringUtils.trimmedString(v) as BreakscapedString) : undefined,
+              {
+                format: TextFormat.plainText,
+                location: TextLocation.tag,
+              },
             );
 
           case PropertyFormat.number:
-            return NumberUtils.asNumber(Breakscape.unbreakscape(v as BreakscapedString));
+            return NumberUtils.asNumber(
+              Breakscape.unbreakscape(v as BreakscapedString, {
+                format: TextFormat.plainText,
+                location: TextLocation.tag,
+              }),
+            );
 
           case PropertyFormat.boolean:
-            return BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
+            return BooleanUtils.toBoolean(
+              Breakscape.unbreakscape(v as BreakscapedString, {
+                format: TextFormat.plainText,
+                location: TextLocation.tag,
+              }),
+              true,
+            );
 
           case PropertyFormat.invertedBoolean:
-            return !BooleanUtils.toBoolean(Breakscape.unbreakscape(v as BreakscapedString), true);
+            return !BooleanUtils.toBoolean(
+              Breakscape.unbreakscape(v as BreakscapedString, {
+                format: TextFormat.plainText,
+                location: TextLocation.tag,
+              }),
+              true,
+            );
 
-          case PropertyFormat.bitmarkMinusMinus:
+          case PropertyFormat.bitmarkText:
+            v = StringUtils.isString(v) ? v : '';
             return textParser.toAst(v as BreakscapedString, {
-              textFormat: TextFormat.bitmarkMinusMinus,
-              isProperty: true,
-            });
-
-          case PropertyFormat.bitmarkPlusPlus:
-            return textParser.toAst(v as BreakscapedString, {
-              textFormat: TextFormat.bitmarkPlusPlus,
-              isProperty: true,
+              format: TextFormat.bitmarkText,
+              location: TextLocation.tag,
             });
         }
       }
-      return Breakscape.unbreakscape(v as BreakscapedString);
+      return Breakscape.unbreakscape(v as BreakscapedString, {
+        format: TextFormat.plainText,
+        location: TextLocation.tag,
+      });
     };
 
     // Convert property and key as needed
@@ -179,7 +194,7 @@ function propertyContentProcessor(
         undefined,
         undefined,
         true,
-        PropertyFormat.bitmarkMinusMinus,
+        PropertyFormat.bitmarkText,
         undefined,
         undefined,
       ),

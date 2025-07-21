@@ -8,7 +8,7 @@ import { BitTagType } from '../../model/enum/BitTagType';
 import { Count } from '../../model/enum/Count';
 
 const CARDSETS: _CardSetsConfig = {
-  [CardSetConfigKey._flashcardLike]: {
+  [CardSetConfigKey._definitionList]: {
     variants: [
       [
         {
@@ -20,6 +20,41 @@ const CARDSETS: _CardSetsConfig = {
             {
               type: BitTagType.group,
               configKey: GroupConfigKey.group_standardExample,
+            },
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_resourceIcon,
+            },
+          ],
+          repeatCount: Count.infinity,
+        },
+      ],
+    ],
+  },
+  [CardSetConfigKey._flashcard]: {
+    variants: [
+      [
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+            },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardExample,
+            },
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_resourceIcon,
             },
           ],
           repeatCount: Count.infinity,
@@ -94,6 +129,56 @@ const CARDSETS: _CardSetsConfig = {
             },
           ],
           bodyAllowed: false,
+        },
+      ],
+    ],
+  },
+  [CardSetConfigKey._feedback]: {
+    variants: [
+      // Side 1
+      [
+        // Variant 1..N
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+            },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_trueFalse,
+            },
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
+          ],
+          bodyAllowed: false,
+        },
+      ],
+      // Side 2
+      [
+        // Variant 1..N
+        {
+          tags: [
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardItemLeadInstructionHint,
+            },
+            {
+              type: BitTagType.property,
+              configKey: PropertyConfigKey.reasonableNumOfChars,
+            },
+            {
+              type: BitTagType.group,
+              configKey: GroupConfigKey.group_standardExample,
+            },
+            {
+              type: BitTagType.tag,
+              configKey: TagConfigKey.title,
+            },
+          ],
+          bodyAllowed: true,
         },
       ],
     ],
@@ -402,23 +487,24 @@ const CARDSETS: _CardSetsConfig = {
       ],
     ],
   },
-  [CardSetConfigKey._captionDefinitionsList]: {
-    variants: [
-      // Side 1
-      [
-        // Variant 1..N
-        {
-          tags: [
-            {
-              type: BitTagType.tag,
-              configKey: TagConfigKey.title,
-            },
-          ],
-          repeatCount: Count.infinity,
-        },
-      ],
-    ],
-  },
+  // DEPRECATED - TO BE REMOVED IN THE FUTURE
+  // [CardSetConfigKey._captionDefinitionsList]: {
+  //   variants: [
+  //     // Side 1
+  //     [
+  //       // Variant 1..N
+  //       {
+  //         tags: [
+  //           {
+  //             type: BitTagType.tag,
+  //             configKey: TagConfigKey.title,
+  //           },
+  //         ],
+  //         repeatCount: Count.infinity,
+  //       },
+  //     ],
+  //   ],
+  // },
   [CardSetConfigKey._bookReferenceList]: {
     variants: [
       // Side 1

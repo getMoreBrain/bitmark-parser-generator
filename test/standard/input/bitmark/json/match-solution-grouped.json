@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "match-solution-grouped",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213827"],
-      "revealSolutions": false,
+      "id": [
+        "213827"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -34,7 +35,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "heading": {
         "forKeys": "Ethischer Begriff",
@@ -43,83 +43,111 @@
       "pairs": [
         {
           "key": "Beschreibt ein auf Dauerhaftigkeit ausgerichtetes Handeln.",
-          "values": ["Nachhaltigkeit"],
           "item": [],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "Nachhaltigkeit"
+          ]
         },
         {
           "key": "Leitvorstellungen über erwünschenswertes Verhalten.",
-          "values": ["Werte"],
           "item": [],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "Werte"
+          ]
         },
         {
           "key": "Gesamtheit von Verhaltensregeln innerhalb einer Gesellschaft.",
-          "values": ["Moral"],
           "item": [],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "Moral"
+          ]
         },
         {
           "key": "Konkrete Verhaltensanweisungen zur Umsetzung ethischen Verhaltens.",
-          "values": ["Normen"],
           "item": [],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "Normen"
+          ]
         },
         {
           "key": "Untersucht und argumentiert für oder gegen Verhaltensregeln.",
-          "values": ["Ethik"],
           "item": [],
           "hint": [],
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "Ethik"
+          ]
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.match-solution-grouped:bitmark--]",
+          "location": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 2,
+              "column": 36,
+              "offset": 36
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.match-solution-grouped:bitmark--]\n[@id:213827]\n[%46]\n[!Ordnen Sie die Begriffe den korrekten Beschreibungen zu.]\n===\n[#Ethischer Begriff]\n==\n[#Beschreibung]\n===\nBeschreibt ein auf Dauerhaftigkeit ausgerichtetes Handeln.\n==\nNachhaltigkeit\n===\nLeitvorstellungen über erwünschenswertes Verhalten.\n==\nWerte\n===\nGesamtheit von Verhaltensregeln innerhalb einer Gesellschaft.\n==\nMoral\n===\nKonkrete Verhaltensanweisungen zur Umsetzung ethischen Verhaltens.\n==\nNormen\n===\nUntersucht und argumentiert für oder gegen Verhaltensregeln.\n==\nEthik\n==="
   },
   {
     "bit": {
       "type": "match-solution-grouped",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["265794"],
-      "revealSolutions": false,
+      "id": [
+        "265794"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
-      "heading": {},
       "pairs": [
         {
           "key": "die Koffer",
-          "values": ["packen"],
           "item": [
             {
               "type": "paragraph",
@@ -147,11 +175,13 @@
               ],
               "attrs": {}
             }
+          ],
+          "values": [
+            "packen"
           ]
         },
         {
           "key": "in den Urlaub",
-          "values": ["fahren"],
           "item": [
             {
               "type": "paragraph",
@@ -168,11 +198,13 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "fahren"
+          ]
         },
         {
           "key": "Geld",
-          "values": ["ausgeben"],
           "item": [
             {
               "type": "paragraph",
@@ -189,11 +221,13 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "ausgeben"
+          ]
         },
         {
           "key": "über dem europäischen Durchschnitt",
-          "values": ["liegen"],
           "item": [
             {
               "type": "paragraph",
@@ -210,11 +244,13 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "liegen"
+          ]
         },
         {
           "key": "mehr Inlandsreisen",
-          "values": ["planen"],
           "item": [
             {
               "type": "paragraph",
@@ -231,11 +267,13 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "planen"
+          ]
         },
         {
           "key": "das angenehme Wetter",
-          "values": ["genießen", "nutzen"],
           "item": [
             {
               "type": "paragraph",
@@ -252,11 +290,14 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "genießen",
+            "nutzen"
+          ]
         },
         {
           "key": "den Strandurlaub",
-          "values": ["bevorzugen"],
           "item": [
             {
               "type": "paragraph",
@@ -273,11 +314,13 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "bevorzugen"
+          ]
         },
         {
           "key": "böse Überraschungen",
-          "values": ["erleben"],
           "item": [
             {
               "type": "paragraph",
@@ -294,11 +337,13 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "erleben"
+          ]
         },
         {
           "key": "mobile Angebote",
-          "values": ["nutzen"],
           "item": [
             {
               "type": "paragraph",
@@ -315,11 +360,13 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "nutzen"
+          ]
         },
         {
           "key": "sich über verschiede Angebote",
-          "values": ["informieren"],
           "item": [
             {
               "type": "paragraph",
@@ -336,11 +383,13 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "informieren"
+          ]
         },
         {
           "key": "auf Serviceleistungen",
-          "values": ["achten"],
           "item": [
             {
               "type": "paragraph",
@@ -357,11 +406,13 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "achten"
+          ]
         },
         {
           "key": "auf die Hotelbar Wert",
-          "values": ["legen"],
           "item": [
             {
               "type": "paragraph",
@@ -378,14 +429,20 @@
           "instruction": [],
           "isCaseSensitive": true,
           "isExample": false,
-          "example": null
+          "example": null,
+          "values": [
+            "legen"
+          ]
         }
-      ]
+      ],
+      "isExample": true,
+      "heading": {},
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.match-solution-grouped]\n[@id:265794]\n===\n[%1]die Koffer\n==\npacken[@example]\n===\n[%2]in den Urlaub\n==\nfahren\n===\n[%3]Geld\n==\nausgeben\n===\n[%4]über dem europäischen Durchschnitt\n==\nliegen\n===\n[%5]mehr Inlandsreisen\n==\nplanen\n===\n[%6]das angenehme Wetter\n==\ngenießen\n--\nnutzen\n===\n[%7]den Strandurlaub\n==\nbevorzugen\n===\n[%8]böse Überraschungen\n==\nerleben\n===\n[%9]mobile Angebote\n==\nnutzen\n===\n[%10]sich über verschiede Angebote\n==\ninformieren\n===\n[%11]auf Serviceleistungen\n==\nachten\n===\n[%12]auf die Hotelbar Wert\n==\nlegen\n==="
   }

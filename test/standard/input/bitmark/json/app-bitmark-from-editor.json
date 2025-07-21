@@ -17,10 +17,10 @@
       "body": "bitmark.print(\"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")\nbitmark.console.log(\"This is a [_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")"
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.app-bitmark-from-editor]\n[@id:342341]\n[@maxCreatedBits:100]\n\nbitmark.print(\"[^.cloze]\\nThis is a [^_gap text].\\n[.cloze]\\nThis is another [^_gap text].\")\nbitmark.console.log(\"This is a [^_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[^.cloze]\\nThis is a [^_gap text].\\n[^.cloze]\\nThis is another [^_gap text].\")"
+    "bitmark": "[.app-bitmark-from-editor]\n[@id:342341]\n[@maxCreatedBits:100]\n\nbitmark.print(\"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")\nbitmark.console.log(\"This is a [_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")"
   }
 ]

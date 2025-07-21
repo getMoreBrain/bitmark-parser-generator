@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "image-portrait",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "342343"
@@ -13,7 +13,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -29,12 +28,13 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.image-portrait]\n[@id:342343]\n[&image:https://www.apple.com/v/mac/home/bs/images/overview/hero/mac_mini__d3310qb7lt6q_large_2x.jpg]"
   }

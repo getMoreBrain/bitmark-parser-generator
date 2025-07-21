@@ -1,0 +1,672 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Here we are testing the inline tag",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'c' code ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "code",
+            "attrs": {
+              "language": "c"
+            }
+          }
+        ],
+        "text": "int test=0;",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'plain text' code ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "code",
+            "attrs": {
+              "language": "plain text"
+            }
+          }
+        ],
+        "text": "int test=0;",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'colour' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "color",
+            "attrs": {
+              "color": "pink"
+            }
+          }
+        ],
+        "text": "**Bold is ignored**",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "strike"
+          }
+        ],
+        "text": "^Breakscape^!",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "strike"
+          },
+          {
+            "type": "comment",
+            "comment": "With a comment as well"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "subscript"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "superscript"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "ins"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "del"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "underline"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "doubleUnderline"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "circle"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmRed"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmOrange"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmYellow"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmGreen"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmBlue"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmPurple"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmPink"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmBrown"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmBlack"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmWhite"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEmGray"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "languageEm"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userUnderline"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userDoubleUnderline"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userStrike"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userCircle"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userHighlight"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "notranslate"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          },
+          {
+            "type": "italic"
+          },
+          {
+            "type": "subscript"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

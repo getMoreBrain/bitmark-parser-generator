@@ -18,6 +18,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "image.com",
+          "src": "https://image.com/large_cover_image.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -51,28 +67,12 @@
           ],
           "attrs": {}
         }
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "png",
-          "provider": "image.com",
-          "src": "https://image.com/large_cover_image.png",
-          "width": null,
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.module-product&image:bitmark++]\n[@ageRange:18][@ageRange:120]\n[&image:https://image.com/large_cover_image.png]\n\n[@hasBookNavigation:false]\n[@duration:PT2H]\n[@productId:e-ef-b11_u1_l1]\n\n[@icon:https://docs.getmorebrain.com/bit-books/ef/b1_1/student_book/unit_1/web-resources/images/icon_speaking_b1_v2.svg]\n\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   },
@@ -81,7 +81,6 @@
       "type": "module-product",
       "format": "bitmark++",
       "bitLevel": 1,
-      "hasBookNavigation": true,
       "productId": "e-ef-b11_u1_l13",
       "item": [],
       "lead": [],
@@ -89,12 +88,13 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "hasBookNavigation": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[@productId] is included more than 1 time(s). The earlier ones will be ignored",
@@ -136,19 +136,19 @@
       "type": "module-product",
       "format": "bitmark++",
       "bitLevel": 1,
-      "hasBookNavigation": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "hasBookNavigation": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[@productId] is required at least 1 time(s)",

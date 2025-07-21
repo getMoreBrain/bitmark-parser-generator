@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "pronunciation-table",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -60,13 +60,16 @@
                 }
               ],
               "audio": {
-                "format": "mp3",
-                "provider": "https",
-                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
-                "license": "",
-                "copyright": "",
-                "showInIndex": false,
-                "caption": []
+                "type": "audio",
+                "audio": {
+                  "format": "mp3",
+                  "provider": "https",
+                  "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                  "license": "",
+                  "copyright": "",
+                  "showInIndex": false,
+                  "caption": []
+                }
               }
             },
             {
@@ -108,13 +111,16 @@
                 }
               ],
               "audio": {
-                "format": "mp3",
-                "provider": "https",
-                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
-                "license": "",
-                "copyright": "",
-                "showInIndex": false,
-                "caption": []
+                "type": "audio",
+                "audio": {
+                  "format": "mp3",
+                  "provider": "https",
+                  "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                  "license": "",
+                  "copyright": "",
+                  "showInIndex": false,
+                  "caption": []
+                }
               }
             }
           ],
@@ -154,13 +160,16 @@
                 }
               ],
               "audio": {
-                "format": "mp3",
-                "provider": "https",
-                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
-                "license": "",
-                "copyright": "",
-                "showInIndex": false,
-                "caption": []
+                "type": "audio",
+                "audio": {
+                  "format": "mp3",
+                  "provider": "https",
+                  "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                  "license": "",
+                  "copyright": "",
+                  "showInIndex": false,
+                  "caption": []
+                }
               }
             },
             {
@@ -202,13 +211,16 @@
                 }
               ],
               "audio": {
-                "format": "mp3",
-                "provider": "https",
-                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
-                "license": "",
-                "copyright": "",
-                "showInIndex": false,
-                "caption": []
+                "type": "audio",
+                "audio": {
+                  "format": "mp3",
+                  "provider": "https",
+                  "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                  "license": "",
+                  "copyright": "",
+                  "showInIndex": false,
+                  "caption": []
+                }
               }
             },
             {
@@ -250,13 +262,16 @@
                 }
               ],
               "audio": {
-                "format": "mp3",
-                "provider": "https",
-                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
-                "license": "",
-                "copyright": "",
-                "showInIndex": false,
-                "caption": []
+                "type": "audio",
+                "audio": {
+                  "format": "mp3",
+                  "provider": "https",
+                  "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                  "license": "",
+                  "copyright": "",
+                  "showInIndex": false,
+                  "caption": []
+                }
               }
             }
           ],
@@ -300,13 +315,16 @@
                 }
               ],
               "audio": {
-                "format": "mp3",
-                "provider": "https",
-                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
-                "license": "",
-                "copyright": "",
-                "showInIndex": false,
-                "caption": []
+                "type": "audio",
+                "audio": {
+                  "format": "mp3",
+                  "provider": "https",
+                  "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                  "license": "",
+                  "copyright": "",
+                  "showInIndex": false,
+                  "caption": []
+                }
               }
             },
             {
@@ -344,13 +362,16 @@
                 }
               ],
               "audio": {
-                "format": "mp3",
-                "provider": "https",
-                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
-                "license": "",
-                "copyright": "",
-                "showInIndex": false,
-                "caption": []
+                "type": "audio",
+                "audio": {
+                  "format": "mp3",
+                  "provider": "https",
+                  "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                  "license": "",
+                  "copyright": "",
+                  "showInIndex": false,
+                  "caption": []
+                }
               }
             },
             {
@@ -388,13 +409,16 @@
                 }
               ],
               "audio": {
-                "format": "mp3",
-                "provider": "https",
-                "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
-                "license": "",
-                "copyright": "",
-                "showInIndex": false,
-                "caption": []
+                "type": "audio",
+                "audio": {
+                  "format": "mp3",
+                  "provider": "https",
+                  "src": "https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3",
+                  "license": "",
+                  "copyright": "",
+                  "showInIndex": false,
+                  "caption": []
+                }
               }
             }
           ]
@@ -402,16 +426,16 @@
       }
     },
     "parser": {
-      "version": "3.1.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.18.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.pronunciation-table]\n[!Diphthongs]\n====\n[#ɪə]\n**ea**r\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#eɪ]\nc**a**ke\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n====\n[#ʊə]\n**eu**ro\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#ɔɪ]\nc**oi**n\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#əʊ]\nb**oa**t\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n====\n[#eə]\nch**ai**r\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#aɪ]\n**i**ce\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#aʊ]\nc**ow**\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n===="
   },
   {
     "bit": {
       "type": "pronunciation-table",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -425,9 +449,9 @@
       }
     },
     "parser": {
-      "version": "3.1.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.18.2"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.pronunciation-table]"
   }

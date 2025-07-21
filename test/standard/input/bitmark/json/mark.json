@@ -2,27 +2,8 @@
   {
     "bit": {
       "type": "mark",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
-      "isExample": true,
       "marks": [
         {
           "mark": "adjective",
@@ -38,6 +19,23 @@
           "mark": "noun",
           "color": "blue",
           "emphasis": "underline"
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Please mark all ==adjectives==|mark:underline|color:blue| and ==verbs==|mark:circle|color:red|.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
         }
       ],
       "body": [
@@ -342,12 +340,14 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "Only default [@example] is allowed, using default",

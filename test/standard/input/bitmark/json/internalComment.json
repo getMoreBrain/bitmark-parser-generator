@@ -2,17 +2,17 @@
   {
     "bit": {
       "type": "multiple-choice",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186986"],
-      "revealSolutions": false,
+      "id": [
+        "186986"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -302,15 +302,17 @@
           ]
         }
       ],
-      "footer": []
+      "isExample": false,
+      "footer": [],
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "internalComments": [
         "This is a simple comment",
-        "This is a comment with a breakscaped ] in it",
+        "This is a comment with a breakscaped ^] in it",
         "This comment is in a card - it will be moved to the top of the bit"
       ]
     },

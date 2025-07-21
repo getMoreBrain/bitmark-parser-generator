@@ -2,16 +2,14 @@
   {
     "bit": {
       "type": "flashcard-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -22,6 +20,80 @@
             }
           ],
           "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 1",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Answer 2",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
         }
       ],
       "footer": [
@@ -36,95 +108,27 @@
           "attrs": {}
         }
       ],
-      "cards": [
-        {
-          "question": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Question 1?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "answer": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Answer 1",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 2",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "alternativeAnswers": [
-            [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "Alternative Answer 2",
-                    "type": "text"
-                  },
-                  {
-                    "type": "hardBreak"
-                  },
-                  {
-                    "text": "Card 1, Side 2",
-                    "type": "text"
-                  }
-                ],
-                "attrs": {}
-              }
-            ]
-          ],
-          "item": [],
-          "hint": [],
-          "instruction": [],
-          "isExample": false,
-          "example": null
-        }
-      ]
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n~~~~\n\nFooter anyone?"
   },
   {
     "bit": {
       "type": "flashcard-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -139,70 +143,34 @@
       ],
       "cards": [
         {
-          "question": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Question 1?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "answer": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Answer 1",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 2",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "alternativeAnswers": [
-            [
+          "question": {
+            "text": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Answer 1",
+                    "text": "Question 1?",
                     "type": "text"
                   },
                   {
                     "type": "hardBreak"
                   },
                   {
-                    "text": "Card 1, Side 2",
+                    "text": "Card 1, Side 1",
                     "type": "text"
                   }
                 ],
                 "attrs": {}
               }
-            ],
-            [
+            ]
+          },
+          "answer": {
+            "text": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Alternative Answer 2",
+                    "text": "Answer 1",
                     "type": "text"
                   },
                   {
@@ -216,6 +184,50 @@
                 "attrs": {}
               }
             ]
+          },
+          "alternativeAnswers": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Answer 1",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            },
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Answer 2",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            }
           ],
           "item": [],
           "hint": [],
@@ -223,21 +235,22 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2"
   },
   {
     "bit": {
       "type": "flashcard-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -266,7 +279,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -281,44 +293,48 @@
       ],
       "cards": [
         {
-          "question": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Question 2?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "answer": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Answer 2",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 2, Side 2, No footer",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 2?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 2",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
           "alternativeAnswers": [],
           "item": [
             {
@@ -349,21 +365,22 @@
           "isExample": true,
           "example": true
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.flashcard-1]\n[@example]\n[%item][%lead]\nSomebody\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]"
   },
   {
     "bit": {
       "type": "flashcard-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -392,7 +409,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -407,44 +423,48 @@
       ],
       "cards": [
         {
-          "question": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Question 1?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "answer": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Answer 1",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 2, No footer",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 1",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
           "alternativeAnswers": [],
           "item": [
             {
@@ -475,21 +495,22 @@
           "isExample": true,
           "example": true
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.flashcard-1]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2, No footer\n[%item][%lead]\n[@example]"
   },
   {
     "bit": {
       "type": "flashcard-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",
@@ -518,7 +539,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -529,6 +549,58 @@
             }
           ],
           "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 1",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
         }
       ],
       "footer": [
@@ -543,59 +615,13 @@
           "attrs": {}
         }
       ],
-      "cards": [
-        {
-          "question": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Question 1?",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 1",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "answer": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Answer 1",
-                  "type": "text"
-                },
-                {
-                  "type": "hardBreak"
-                },
-                {
-                  "text": "Card 1, Side 2, No footer",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ],
-          "alternativeAnswers": [],
-          "item": [],
-          "hint": [],
-          "instruction": [],
-          "isExample": false,
-          "example": null
-        }
-      ]
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "Bit 'flashcard-1' should only contain one card. Ignore subsequent card: 'Question Too Many?\nCard 2, Side 1'",

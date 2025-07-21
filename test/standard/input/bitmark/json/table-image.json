@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "table-image",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "78954"
@@ -13,7 +13,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -29,19 +28,20 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.table-image]\n[@id:78954]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
   {
     "bit": {
       "type": "table-image-alt",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "78954"
@@ -52,7 +52,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -68,19 +67,20 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.table-image-alt]\n[@id:78954]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
   {
     "bit": {
       "type": "standard-table-image-normative",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
@@ -91,7 +91,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -107,19 +106,38 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.standard-table-image-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 220
+            },
+            "end": {
+              "line": 11,
+              "column": 44,
+              "offset": 263
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.standard-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
   {
     "bit": {
       "type": "standard-table-image-non-normative",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151972"
@@ -130,7 +148,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -146,19 +163,38 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.standard-table-image-non-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 358
+            },
+            "end": {
+              "line": 16,
+              "column": 48,
+              "offset": 405
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.standard-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
   {
     "bit": {
       "type": "standard-remark-table-image-normative",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
@@ -169,7 +205,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -185,19 +220,38 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.standard-remark-table-image-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 21,
+              "column": 1,
+              "offset": 500
+            },
+            "end": {
+              "line": 21,
+              "column": 51,
+              "offset": 550
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.standard-remark-table-image-normative:bitmark--]\n[@id:151971]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   },
   {
     "bit": {
       "type": "standard-remark-table-image-non-normative",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151972"
@@ -208,7 +262,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "image",
         "image": {
@@ -224,12 +277,31 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.standard-remark-table-image-non-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 645
+            },
+            "end": {
+              "line": 26,
+              "column": 55,
+              "offset": 699
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.standard-remark-table-image-non-normative:bitmark--]\n[@id:151972]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
   }

@@ -1,6 +1,8 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
+import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
 
@@ -32,9 +34,14 @@ function clozeTagContentProcessor(
   if (StringUtils.isString(value)) {
     const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
-    solutions.push(Breakscape.unbreakscape(trimmedStringValue));
+    solutions.push(
+      Breakscape.unbreakscape(trimmedStringValue, {
+        format: TextFormat.bitmarkText,
+        location: TextLocation.tag,
+      }),
+    );
 
-    const solutionAst = textParser.toAst(trimmedStringValue, { textFormat, isProperty: true });
+    const solutionAst = textParser.toAst(trimmedStringValue, { format: textFormat, location: TextLocation.tag });
     solutionsAst.push(solutionAst);
   }
 }

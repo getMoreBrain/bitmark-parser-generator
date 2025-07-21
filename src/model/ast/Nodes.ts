@@ -12,10 +12,10 @@ import { JsonText, TextAst } from './TextNodes';
 import {
   BookJson,
   BotResponseJson,
-  CaptionDefinitionListJson,
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
+  FeedbackJson,
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
@@ -65,6 +65,8 @@ export interface Bit {
   jupyterId?: Property;
   jupyterExecutionCount?: Property;
   isPublic?: Property;
+  isTemplate?: Property;
+  isTemplateStripTheme?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
   searchIndex?: Property;
@@ -75,10 +77,12 @@ export interface Bit {
   feedbackEngine?: Property;
   feedbackType?: Property;
   disableFeedback?: Property;
+  diffTo?: Property;
   diffOp?: Property;
   diffRef?: Property;
   diffContext?: Property;
   diffTime?: Property;
+  path?: Property;
   releaseVersion?: Property;
   releaseKind?: Property;
   releaseDate?: Property;
@@ -116,6 +120,7 @@ export interface Bit {
   kind?: Property;
   hasMarkAsDone?: Property;
   processHandIn?: Property;
+  processHandInLocation?: Property;
   chatWithBook?: Property;
   chatWithBookBrainKey?: Property;
   action?: Property;
@@ -136,6 +141,7 @@ export interface Bit {
   availableClassifications?: Property;
   allowedBit?: Property;
   tableFixedHeader?: Property;
+  tableHeaderWhitespaceNoWrap?: Property;
   tableSearch?: Property;
   tableSort?: Property;
   tablePagination?: Property;
@@ -159,19 +165,22 @@ export interface Bit {
   pointerLeft?: Property;
   pointerTop?: Property;
   listItemIndent?: Property;
-  backgroundWallpaper?: Property;
+  backgroundWallpaper?: ImageResourceWrapperJson;
   hasBookNavigation?: Property;
   duration?: Property;
   deeplink?: Property;
   externalLink?: Property;
   externalLinkText?: Property;
   videoCallLink?: Property;
+  vendorDashboardId?: Property;
   vendorSurveyId?: Property;
   vendorUrl?: Property;
   search?: Property;
   bot?: Property;
   referenceProperty?: Property;
   list?: Property;
+  layer?: Property;
+  layerRole?: Property;
   textReference?: Property;
   isTracked?: Property;
   isInfoOnly?: Property;
@@ -196,6 +205,8 @@ export interface Bit {
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
   maxTocChapterLevel?: Property;
+  tocResource?: Property;
+  tocContent?: Property;
   page?: Property;
   productId?: Property;
   product?: Property;
@@ -305,6 +316,7 @@ export interface CardNode {
   statements?: StatementJson[];
   choices?: ChoiceJson[];
   responses?: ResponseJson[];
+  feedbacks?: FeedbackJson[];
   quizzes?: QuizJson[];
   heading?: HeadingJson;
   pairs?: PairJson[];
@@ -314,7 +326,8 @@ export interface CardNode {
   botResponses?: BotResponseJson[];
   cardBits?: Bit[];
   ingredients?: IngredientJson[];
-  captionDefinitionList?: CaptionDefinitionListJson;
+  // DEPRECATED - TO BE REMOVED IN THE FUTURE
+  // captionDefinitionList?: CaptionDefinitionListJson;
 }
 
 // Footer

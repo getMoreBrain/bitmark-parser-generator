@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186300"],
-      "revealSolutions": false,
+      "id": [
+        "186300"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -23,7 +24,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -53,22 +53,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.multiple-response-1]\n[@id:186300]\n[!Bitte wählen Sie alle zutreffenden Antworten]\n[-Die Qualicard ist ein branchenspezifisches Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildun.]\n[-Die Qualicard ist eine gesetzliche Vorschrift für die Ausbildungsbewilligung.]\n[+Die Qualicard ist ein berufsunabhängiges Instrument zur Beurteilung der Qualität in der betrieblichen Ausbildung.]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186301"],
-      "revealSolutions": false,
+      "id": [
+        "186301"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -86,7 +89,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -125,22 +127,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.multiple-response-1]\n[@id:186301]\n[!Kreuze zwei Bereiche an, die in der Qualicard geregelt werden]\n[+Anstellung]\n[+Einführung in die Arbeitswelt]\n[-Verhalten der Lernenden]\n[-Schulische Leistungen]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186302"],
-      "revealSolutions": false,
+      "id": [
+        "186302"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -158,7 +163,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -197,22 +201,25 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.multiple-response-1]\n[@id:186302]\n[!Welche Punkte gehören in den Einführungszprozess?]\n[-Die Leistungen der Lernenden in der Berufsfachschule und in den überbetrieblichen Kursen werden kontrolliert und besprochen.]\n[-Die Lernenden werden bei Lehrbeginn über Sinn und Zweck der Bildungsverordnung und des Bildungsplans (betrieblicher Bildungsplan, Modelllehrgang, etc.) informiert.]\n[+Die Lernenden werden über die Tätigkeiten und das Arbeitsumfeld des Lehrbetriebs informiert.]\n[+Die für die Ausbildung zuständigen Personen sind bestimmt.]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187540"],
-      "revealSolutions": false,
+      "id": [
+        "187540"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -230,7 +237,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -269,22 +275,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 1146
+            },
+            "end": {
+              "line": 25,
+              "column": 33,
+              "offset": 1178
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187540]\n[!Was ist das Ziel eines Beurteilungsgesprächs? Bitte wählen Sie alle zutreffenden Antworten]\n[-Die Lerndokumentation überprüfen]\n[-Die Lernenden besser kennenzulernen]\n[+Rückmeldung zum Verhalten und Leistung]\n[+Überprüfen der betrieblichen Ausbildung und deren Zielen]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187541"],
-      "revealSolutions": false,
+      "id": [
+        "187541"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -309,7 +336,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -348,22 +374,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 1464
+            },
+            "end": {
+              "line": 33,
+              "column": 33,
+              "offset": 1496
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187541]\n[!Welche Informationsquellen für die Vorbereitung eines Gesprächs kennst du?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Rückmeldungen Praxisbildner/Berufsbildner]\n[+Beobachtungen am Arbeitsplatz]\n[-Gehörtes von Arbeitskollegen]\n[+Lerndokumentation]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187542"],
-      "revealSolutions": false,
+      "id": [
+        "187542"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -381,7 +428,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -420,22 +466,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 42,
+              "column": 1,
+              "offset": 1765
+            },
+            "end": {
+              "line": 42,
+              "column": 33,
+              "offset": 1797
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187542]\n[!Wie schaffst du eine angenehme Gesprächsumgebung? Bitte wählen Sie alle zutreffenden Antworten]\n[+Die Dauer des Gesprächs definieren]\n[-Mit den Zielen für das nächste Semester beginnen]\n[+Mit einem 'Eisbrecher' starten]\n[+Der Sinn des Gesprächs erklären]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187543"],
-      "revealSolutions": false,
+      "id": [
+        "187543"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -460,7 +527,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -499,22 +565,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 50,
+              "column": 1,
+              "offset": 2069
+            },
+            "end": {
+              "line": 50,
+              "column": 33,
+              "offset": 2101
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187543]\n[!Wenn du das Beurteilungsgespräch alleine führst, was ist dabei zu beachten?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Genügend Zeit einberechnen]\n[+Rückmeldungen bei anderen Berufsbildner/Praxisbildner K° einholen]\n[-Dass der Raum gross genug ist]\n[+Mich absichern was ich von den anderen BB/PB rückmelden darf]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187544"],
-      "revealSolutions": false,
+      "id": [
+        "187544"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -532,7 +619,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -571,22 +657,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 2436
+            },
+            "end": {
+              "line": 59,
+              "column": 33,
+              "offset": 2468
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187544]\n[!Nach welchen Beurteilungsmerkmalen beurteilst du die Teamfähigkeit? Bitte wählen Sie alle zutreffenden Antworten]\n[+Umgang mit Kritik]\n[+Beteiligt sich der Lernende in Gesprächen aktiv]\n[+Bringt sich der Lernende ins Team ein]\n[-Pünktlichkeit]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187233"],
-      "revealSolutions": false,
+      "id": [
+        "187233"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -611,7 +718,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -650,22 +756,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 67,
+              "column": 1,
+              "offset": 2729
+            },
+            "end": {
+              "line": 67,
+              "column": 33,
+              "offset": 2761
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187233]\n[!Was sind die Vorteile einer Lerndokumentation für den Lernenden?\nBitte wählen Sie alle zutreffenden Antworten]\n[+Reflexion des Gelernten]\n[-Neue Lernstrategien sammeln]\n[+Zusammenfassung der neugelernten Arbeitstechniken]\n[+Die Lerndoku dient als Nachschlagewerk]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187234"],
-      "revealSolutions": false,
+      "id": [
+        "187234"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -690,7 +817,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [],
       "responses": [
         {
@@ -720,22 +846,43 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 76,
+              "column": 1,
+              "offset": 3042
+            },
+            "end": {
+              "line": 76,
+              "column": 33,
+              "offset": 3074
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@id:187234]\n[!Was sind die Vorteile für den Berufsbildner/Praxisbildner\nBitte wählen Sie alle zutreffenden Antworten]\n[-Lernender lernt eine Arbeit zu schreiben]\n[+Führungsinstrument]\n[+Übersicht über den effektiv erfolgten Bildungsverlauf]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["208470"],
-      "revealSolutions": false,
+      "id": [
+        "208470"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -764,7 +911,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -841,28 +987,28 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.multiple-response-1]\n[@id:208470]\n[%4]\nDie für die Produktion von Gütern eingesetzten Mittel nennt man Produktionsfaktoren. Davon gibt es 4.\n[!Markieren Sie die Produktionsfaktoren.]\n[+Know-how]\n[+Arbeit]\n[-Arbeitslosigkeit]\n[+Werkstoffe]\n[+Betriebsmittel]\n[-Ressourcen]\n[-Konsumgüter]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "responses": [
         {
@@ -892,28 +1038,46 @@
           "isExample": true,
           "example": false
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 99,
+              "column": 1,
+              "offset": 3609
+            },
+            "end": {
+              "line": 99,
+              "column": 33,
+              "offset": 3641
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[@example]\n[+CorrectAnswer1]\n[+CorrectAnswer2]\n[-FalseAnswer3]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "responses": [
         {
@@ -943,28 +1107,46 @@
           "isExample": true,
           "example": false
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 106,
+              "column": 1,
+              "offset": 3707
+            },
+            "end": {
+              "line": 106,
+              "column": 33,
+              "offset": 3739
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[+CorrectAnswer1][@example]\n[+CorrectAnswer2][@example]\n[-FalseAnswer3][@example]"
   },
   {
     "bit": {
       "type": "multiple-response-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "revealSolutions": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [],
       "responses": [
         {
@@ -994,12 +1176,32 @@
           "isExample": true,
           "example": true
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.multiple-response-1:bitmark--]",
+          "location": {
+            "start": {
+              "line": 112,
+              "column": 1,
+              "offset": 3824
+            },
+            "end": {
+              "line": 112,
+              "column": 33,
+              "offset": 3856
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.multiple-response-1:bitmark--]\n[+CorrectAnswer1][@example:false]\n[+CorrectAnswer2]\n[-FalseAnswer3][@example:true]"
   }

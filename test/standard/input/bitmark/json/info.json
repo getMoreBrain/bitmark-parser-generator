@@ -53,16 +53,16 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.info:bitmark++]\n[@id:287895]\n**Assignment** is very close to an ==article==|link:https://docs.bitmark.cloud/quizzes/#article|. The difference is, that this is a \"quiz\" and therefore has an instruction property. The distinction is important for display, sharing, ..."
   },
   {
     "bit": {
       "type": "info",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "287886"
@@ -92,16 +92,34 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.info:bitmark--]",
+          "location": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 269
+            },
+            "end": {
+              "line": 5,
+              "column": 18,
+              "offset": 286
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.info:bitmark--]\n[@id:287886]\n__Simple true/false image quiz__"
   },
   {
     "bit": {
       "type": "info-alt",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
@@ -137,9 +155,27 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.info-alt:bitmark--]",
+          "location": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 334
+            },
+            "end": {
+              "line": 9,
+              "column": 22,
+              "offset": 355
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.info-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   }

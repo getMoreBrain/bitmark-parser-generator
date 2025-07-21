@@ -2,12 +2,11 @@
   {
     "bit": {
       "type": "page-subpage",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
-      "slug": "",
       "page": "https://123.com",
       "item": [],
       "lead": [],
@@ -15,19 +14,20 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "slug": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.page-subpage]\n[@id:151970]\n[@page:https://123.com]"
   },
   {
     "bit": {
       "type": "page-subpage",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "304379"
@@ -43,9 +43,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[@page] is included more than 1 time(s). The earlier ones will be ignored",

@@ -1,12 +1,15 @@
 import { EnumType, superenum } from '@ncoderz/superenum';
 
 const TextFormat = superenum({
-  text: 'text', // plain text [only start of new bits will be breakscaped]
-  latex: 'latex', // LaTeX code [breakscaping same as plain text]
-  json: 'json', // json as text [breakscaping same as plain text]
-  xml: 'xml', // xml as text [breakscaping same as plain text]
-  bitmarkMinusMinus: 'bitmark--', // bitmark-- text, all bitmark and bitmark-- text will be breakscaped
-  bitmarkPlusPlus: 'bitmark++', // bitmark-- text, all bitmark, bitmark-- and bitmark++ text will be breakscaped
+  // plain text
+  plainText: 'text',
+  latex: 'latex', // LaTeX code, alias for text
+  json: 'json', // json, alias for text
+  xml: 'xml', // xml, alias for text
+
+  // bitmarkText
+  // bitmarkText in the body is bitmark++ and bitmarkText in a tag is bitmark+
+  bitmarkText: 'bitmark++',
 });
 
 export type TextFormatType = EnumType<typeof TextFormat>;

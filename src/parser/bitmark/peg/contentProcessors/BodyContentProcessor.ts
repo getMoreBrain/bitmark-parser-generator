@@ -6,6 +6,7 @@ import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { BitTypeType } from '../../../../model/enum/BitType';
 import { BodyBitType } from '../../../../model/enum/BodyBitType';
 import { TextFormat, TextFormatType } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { BodyBitJson, GapJson, HighlightJson, MarkJson, SelectJson } from '../../../../model/json/BodyBitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 import { TextParser } from '../../../text/TextParser';
@@ -110,20 +111,22 @@ class BodyContentProcessor {
       }
 
       // Create the body text AST
-      const isBitmarkText = textFormat === TextFormat.bitmarkMinusMinus || textFormat === TextFormat.bitmarkPlusPlus;
+      const isBitmarkText = textFormat === TextFormat.bitmarkText;
 
       const parsedBodyText: JsonText = isBitmarkText
         ? textParser.toAst(bodyTextStr, {
             //
-            textFormat,
-            isProperty: false,
+            format: textFormat,
+            location: TextLocation.body,
           })
         : Breakscape.unbreakscape(bodyTextStr, {
-            textFormat: TextFormat.text,
+            format: TextFormat.plainText,
+            location: TextLocation.body,
           });
 
       const parserPlainText: JsonText = Breakscape.unbreakscape(plainBodyTextStr, {
-        textFormat: TextFormat.text,
+        format: TextFormat.plainText,
+        location: TextLocation.body,
       });
 
       // Newlines will have been lost from the end of bodyTextStr, and start of plainBodyTextStr
@@ -134,7 +137,8 @@ class BodyContentProcessor {
 
       finalBody = ContentProcessorUtils.concatenatePlainTextWithAstTexts(parsedBodyText, newlines, parserPlainText);
       finalBodyString = Breakscape.unbreakscape(bodyStr, {
-        textFormat,
+        format: textFormat,
+        location: TextLocation.body,
       }).trim() as BreakscapedString;
       const finalBodyIsAst = Array.isArray(finalBody);
       const bodyAst = finalBodyIsAst ? (finalBody as TextAst) : undefined;

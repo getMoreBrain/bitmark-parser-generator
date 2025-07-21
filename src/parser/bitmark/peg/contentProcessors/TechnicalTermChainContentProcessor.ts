@@ -1,6 +1,8 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
+import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { TechnicalTermJson } from '../../../../model/json/BitJson';
 import { StringUtils } from '../../../../utils/StringUtils';
 
@@ -30,7 +32,10 @@ function technicalTermChainContentProcessor(
   const { lang } = tags;
 
   // Extract the technicalTerm from the content tag
-  const technicalTerm = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString);
+  const technicalTerm = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString, {
+    format: TextFormat.bitmarkText,
+    location: TextLocation.tag,
+  });
 
   const node: Partial<TechnicalTermJson> = {
     technicalTerm,

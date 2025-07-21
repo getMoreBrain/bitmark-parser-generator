@@ -2,12 +2,11 @@
   {
     "bit": {
       "type": "gap-text-instruction-grouped",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287822"],
-      "quizCountItems": true,
-      "quizStrikethroughSolutions": false,
-      "revealSolutions": false,
+      "id": [
+        "287822"
+      ],
       "item": [],
       "lead": [
         {
@@ -25,7 +24,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -37,6 +35,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "erfreut"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -65,8 +66,7 @@
                     ],
                     "attrs": {}
                   }
-                ],
-                "solutions": ["erfreut"]
+                ]
               }
             },
             {
@@ -76,6 +76,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "steht"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -93,8 +96,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["steht"]
+                "example": null
               }
             },
             {
@@ -104,24 +106,27 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.gap-text-instruction-grouped]\n[@id:287822]\n[%][%gap-text-instruction-grouped]\nDer Fußball [_erfreut][!erfreuen][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht][!stehen] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ..."
   },
   {
     "bit": {
       "type": "gap-text-instruction-grouped",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["107938"],
-      "quizCountItems": true,
-      "quizStrikethroughSolutions": false,
-      "revealSolutions": false,
+      "id": [
+        "107938"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -164,7 +169,6 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -172,6 +176,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  ""
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -189,8 +196,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": [""]
+                "example": null
               }
             },
             {
@@ -203,6 +209,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  ""
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -220,8 +229,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": [""]
+                "example": null
               }
             },
             {
@@ -234,6 +242,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "Was"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -251,8 +262,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Was"]
+                "example": null
               }
             },
             {
@@ -265,6 +275,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "Welche"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -282,8 +295,7 @@
                 ],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["Welche"]
+                "example": null
               }
             },
             {
@@ -293,12 +305,16 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "quizCountItems": true,
+      "quizStrikethroughSolutions": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.gap-text-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[_][!woher] kommen Sie?\n[_][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?"
   }

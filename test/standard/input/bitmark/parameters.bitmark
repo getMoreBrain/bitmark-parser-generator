@@ -1,0 +1,87 @@
+[.parameters]
+[@tableFixedHeader:true]
+[@tableHeaderWhitespaceNoWrap:false]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+[.parameters]
+[@tableSearch:false]
+[@tableSort:false]
+[@caption:This is the table caption]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+[.parameters]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+[@tablePaginationLimit:42]
+[@tableHeight:99]
+[@tableWhitespaceNoWrap:false]
+[@tableAutoWidth:false]
+[@tableResizableColumns:true]
+[@caption: This is the caption ]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+[.parameters]
+
+

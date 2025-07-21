@@ -1,0 +1,95 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "This is some BOLD text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "There are ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "multiple lines",
+        "type": "text"
+      },
+      {
+        "text": ", and some stars but nothing else ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "*particularly exciting*",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "Or perhaps nothing very exciting? It really depends",
+        "type": "text"
+      },
+      {
+        "text": " on your point of view ;)",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "__ BOLD __",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": " BOLD ",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "scorm",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "scormSource": "http://scorm.com/scorm",
       "posterImage": "http://scorm.com/scorm/poster.png",
@@ -26,9 +26,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.scorm]\n\n[@scormSource:http://scorm.com/scorm]\n\n[@posterImage:http://scorm.com/scorm/poster.png]\n\nThis is SCORM"
   }

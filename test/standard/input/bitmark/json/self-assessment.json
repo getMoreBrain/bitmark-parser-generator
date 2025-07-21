@@ -5,9 +5,9 @@
       "bitLevel": 1
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "errors": [
         {
           "message": "Invalid bit",
@@ -32,7 +32,7 @@
   {
     "bit": {
       "type": "self-assessment",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -43,9 +43,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "'CardSet' tag is not valid here (incorrectly chained?). It will be ignored",
@@ -70,7 +70,7 @@
   {
     "bit": {
       "type": "self-assessment",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "92484"
@@ -106,9 +106,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "'CardSet' tag is not valid here (incorrectly chained?). It will be ignored",
@@ -133,7 +133,7 @@
   {
     "bit": {
       "type": "self-assessment",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "191222"
@@ -147,9 +147,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "'CardSet' tag is not valid here (incorrectly chained?). It will be ignored",

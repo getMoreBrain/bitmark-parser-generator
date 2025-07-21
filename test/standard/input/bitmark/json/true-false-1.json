@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "true-false-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285736"],
-      "revealSolutions": false,
+      "id": [
+        "285736"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -34,26 +35,28 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
-      "example": true,
       "body": [],
       "statement": "Ein Elefant ist grösser als eine Maus.",
-      "isCorrect": true
+      "isCorrect": true,
+      "isExample": true,
+      "example": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[@example]\n[+Ein Elefant ist grösser als eine Maus.]"
   },
   {
     "bit": {
       "type": "true-false-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285736"],
-      "revealSolutions": false,
+      "id": [
+        "285736"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -82,26 +85,28 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
-      "example": true,
       "body": [],
       "statement": "Ein Elefant ist grösser als eine Maus.",
-      "isCorrect": true
+      "isCorrect": true,
+      "isExample": true,
+      "example": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[+Ein Elefant ist grösser als eine Maus.][@example]"
   },
   {
     "bit": {
       "type": "true-false-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285736"],
-      "revealSolutions": false,
+      "id": [
+        "285736"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -130,26 +135,28 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
-      "example": false,
       "body": [],
       "statement": "Ein Elefant ist grösser als eine Maus.",
-      "isCorrect": true
+      "isCorrect": true,
+      "isExample": true,
+      "example": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[+Ein Elefant ist grösser als eine Maus.][@example:false]"
   },
   {
     "bit": {
       "type": "true-false-1",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285736"],
-      "revealSolutions": false,
+      "id": [
+        "285736"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -178,16 +185,17 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
-      "example": false,
       "body": [],
       "statement": "Ein Elefant ist grösser als eine Maus.",
-      "isCorrect": true
+      "isCorrect": true,
+      "isExample": true,
+      "example": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[@example:false]\n[+Ein Elefant ist grösser als eine Maus.]"
   }

@@ -4,7 +4,10 @@
       "type": "deleted",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -50,9 +53,9 @@
       ]
     },
     "parser": {
-      "version": "3.9.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[&image] is included more than 0 time(s).",
@@ -95,7 +98,7 @@
   {
     "bit": {
       "type": "deleted",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -106,9 +109,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.9.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.19.1"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.deleted]"
   }

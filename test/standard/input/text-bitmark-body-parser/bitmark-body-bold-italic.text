@@ -1,0 +1,10 @@
+==This is some BOLD/ITALIC text==|bold|italic|
+
+There are ==multiple lines==|bold|italic|, and some stars but nothing else ==^=particularly exciting=^==|bold|italic|
+
+==Or perhaps nothing very exciting? It really depends==|bold|italic| on your point of view ;)
+
+==_^_BOLD/ITALIC_^_==|bold|italic|
+== BOLD/ITALIC ==|bold|italic|
+
+== BOLD/ITALIC/Comment ==|bold|#This is a comment|italic|

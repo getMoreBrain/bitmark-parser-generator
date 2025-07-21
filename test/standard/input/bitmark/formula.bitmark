@@ -1,0 +1,85 @@
+[.formula]
+[@id:1]
+
+\left. C = \left( \left( X , \mathrm { X } \right) , \left( G , \mathrm { G } \right) , P , D , A , N \right) \right) ,
+[^.formula:bitmark--] part of formula above
+
+[.formula:latex]
+[@id:2]
+
+C = \left( X , G , P , D , A , N \right)
+
+[.formula]
+[@id:3]
+
+C _ { i } = \left( X _ { i } , G _ { i } , P _ { i } , D _ { i } , A _ { i } , N _ { i } \right) , i = 1 , 2 , 3 .
+[!part of formula above]
+[^.formula:bitmark--] part of formula above
+
+[.formula]
+[@id:4]
+
+$$$$
+P _ { 1 } = P _ { 1 2 } \otimes P _ { 1 3 } : \left( G _ { 2 } \times G _ { 3 } \right) \times \mathrm { X } _ { 1 } \rightarrow \left[ 0 , 1 \right] ,
+
+[.formula]
+[@id:5]
+
+$$$$
+[!part of formula below]
+\mathrm { X } _ { 1 } = \sigma \left( \mathrm { X } _ { 1 2 } \times \mathrm { X } _ { 1 3 } \right) ,
+
+[.formula]
+[@id:5]
+
+All part of formula, as this text starts it
+$$$$
+[!part of formula below]
+\mathrm { X } _ { 1 } = \sigma \left( \mathrm { X } _ { 1 2 } \times \mathrm { X } _ { 1 3 } \right) ,
+
+
+[.article:latex]
+[@id:5]
+
+All part of formula, as this text starts it
+$$$$
+[!part of formula below]
+\mathrm { X } _ { 1 } = \sigma \left( \mathrm { X } _ { 1 2 } \times \mathrm { X } _ { 1 3 } \right) ,
+
+
+[.smart-standard-formula]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-formula-non-normative]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-formula-normative]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-remark-formula]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-remark-formula-non-normative]
+C = \left( X , G , P , D , A , N \right)
+
+[.smart-standard-remark-formula-normative]
+C = \left( X , G , P , D , A , N \right)
+
+
+[.article:bitmark++]
+[!Start **[text^]**
+==p = 100 \times \left(1 - \sqrt[n^]{\frac{RW}{AK}}\right)==|latex|
+end^]]
+
+Start **[text^]**
+==p = 100 \times \left(1 - \sqrt[n^]{\frac{RW}{AK}}\right)==|latex|
+end^]
+
+[.article:bitmark--]
+[!Start **[text^]**
+==p = 100 \times \left(1 - \sqrt[n^]{\frac{RW}{AK}}\right)==|latex|
+end^]]
+
+Start **[text^]**
+==p = 100 \times \left(1 - \sqrt[n^]{\frac{RW}{AK}}\right)==|latex|
+end^]

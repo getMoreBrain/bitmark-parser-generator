@@ -53,9 +53,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "[&image] is included more than 0 time(s).",
@@ -98,7 +98,7 @@
   {
     "bit": {
       "type": "warning-alt",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
@@ -134,9 +134,27 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.warning-alt:bitmark--]",
+          "location": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 197
+            },
+            "end": {
+              "line": 11,
+              "column": 25,
+              "offset": 221
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.warning-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   }

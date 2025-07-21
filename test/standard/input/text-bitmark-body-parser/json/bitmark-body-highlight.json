@@ -1,0 +1,95 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": "This is some HIGHLIGHT text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "There are ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": "multiple lines",
+        "type": "text"
+      },
+      {
+        "text": ", and some stars but nothing else ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": "!particularly exciting!",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": "Or perhaps nothing very exciting? It really depends",
+        "type": "text"
+      },
+      {
+        "text": " on your point of view ;)",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": "__ HIGHLIGHT __",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": " HIGHLIGHT ",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

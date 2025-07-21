@@ -7,39 +7,39 @@ import { PropertyTag } from '../../model/enum/PropertyTag';
 const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.id]: {
     tag: PropertyTag.id,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.internalComment]: {
     tag: PropertyTag.internalComment,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.customerId]: {
     tag: PropertyTag.customerId,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.customerExternalId]: {
     tag: PropertyTag.customerExternalId,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.externalId]: {
     tag: PropertyTag.externalId,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.spaceId]: {
     tag: PropertyTag.spaceId,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.padletId]: {
     tag: PropertyTag.padletId,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.jupyterId]: {
     tag: PropertyTag.jupyterId,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.jupyterExecutionCount]: {
     tag: PropertyTag.jupyterExecutionCount,
@@ -54,73 +54,83 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.machineTranslated]: {
     tag: PropertyTag.machineTranslated,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.searchIndex]: {
     tag: PropertyTag.searchIndex,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.analyticsTag]: {
     tag: PropertyTag.analyticsTag,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.categoryTag]: {
     tag: PropertyTag.categoryTag,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.topicTag]: {
     tag: PropertyTag.topicTag,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.altLangTag]: {
     tag: PropertyTag.altLangTag,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.feedbackEngine]: {
     tag: PropertyTag.feedbackEngine,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.disableFeedback]: {
     tag: PropertyTag.disableFeedback,
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.diffTo]: {
+    tag: PropertyTag.diffTo,
+    single: true,
+    format: PropertyFormat.plainText,
+  },
   [PropertyConfigKey.diffOp]: {
     tag: PropertyTag.diffOp,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.diffRef]: {
     tag: PropertyTag.diffRef,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.diffContext]: {
     tag: PropertyTag.diffContext,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.diffTime]: {
     tag: PropertyTag.diffTime,
     single: true,
     format: PropertyFormat.number,
   },
+  [PropertyConfigKey.path]: {
+    tag: PropertyTag.path,
+    single: true,
+    format: PropertyFormat.plainText,
+  },
   [PropertyConfigKey.releaseVersion]: {
     tag: PropertyTag.releaseVersion,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.releaseKind]: {
     tag: PropertyTag.releaseKind,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.releaseDate]: {
     tag: PropertyTag.releaseDate,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.resolved]: {
     tag: PropertyTag.resolved,
@@ -130,198 +140,193 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.resolvedDate]: {
     tag: PropertyTag.resolvedDate,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.resolvedBy]: {
     tag: PropertyTag.resolvedBy,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.handInAcceptFileType]: {
     tag: PropertyTag.handInAcceptFileType,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.handInRequirement]: {
     tag: PropertyTag.handInRequirement,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.handInInstruction]: {
     tag: PropertyTag.handInInstruction,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.ageRange]: {
     tag: PropertyTag.ageRange,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.lang]: {
     tag: PropertyTag.lang,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.language]: {
     tag: PropertyTag.language,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.computerLanguage]: {
     tag: PropertyTag.computerLanguage,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.target]: {
     tag: PropertyTag.target,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.slug]: {
     tag: PropertyTag.slug,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.tag]: {
     tag: PropertyTag.tag,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.reductionTag]: {
     tag: PropertyTag.reductionTag,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.bubbleTag]: {
     tag: PropertyTag.bubbleTag,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.levelCEFRp]: {
     tag: PropertyTag.levelCEFRp,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.levelCEFR]: {
     tag: PropertyTag.levelCEFR,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.levelILR]: {
     tag: PropertyTag.levelILR,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.levelACTFL]: {
     tag: PropertyTag.levelACTFL,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.icon]: {
     tag: PropertyTag.icon,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.iconTag]: {
     tag: PropertyTag.iconTag,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.colorTag]: {
     tag: PropertyTag.colorTag,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.flashcardSet]: {
     tag: PropertyTag.flashcardSet,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.subtype]: {
     tag: PropertyTag.subtype,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.bookAlias]: {
     tag: PropertyTag.bookAlias,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.bookDiff]: {
     tag: PropertyTag.bookDiff,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.refAuthor]: {
     tag: PropertyTag.refAuthor,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.refBookTitle]: {
     tag: PropertyTag.refBookTitle,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.refPublisher]: {
     tag: PropertyTag.refPublisher,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.refPublicationYear]: {
     tag: PropertyTag.refPublicationYear,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.citationStyle]: {
     tag: PropertyTag.citationStyle,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.coverImage]: {
     tag: PropertyTag.coverImage,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.coverColor]: {
     tag: PropertyTag.coverColor,
     single: true,
-    format: PropertyFormat.trimmedString,
-  },
-  [PropertyConfigKey.imagePlaceholder]: {
-    tag: PropertyTag.imagePlaceholder,
-    single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.publisher]: {
     tag: PropertyTag.publisher,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.publisherName]: {
     tag: PropertyTag.publisherName,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.publications]: {
     tag: PropertyTag.publications,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.author]: {
     tag: PropertyTag.author,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.subject]: {
     tag: PropertyTag.subject,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.date]: {
     tag: PropertyTag.date,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.dateEnd]: {
     tag: PropertyTag.dateEnd,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.location]: {
     tag: PropertyTag.location,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.theme]: {
     tag: PropertyTag.theme,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.kind]: {
     tag: PropertyTag.kind,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.hasMarkAsDone]: {
     tag: PropertyTag.hasMarkAsDone,
@@ -335,8 +340,25 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.boolean,
   },
+  [PropertyConfigKey.processHandInLocation]: {
+    tag: PropertyTag.processHandInLocation,
+    single: true,
+    format: PropertyFormat.plainText,
+  },
   [PropertyConfigKey.isPublic]: {
     tag: PropertyTag.isPublic,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.isTemplate]: {
+    tag: PropertyTag.isTemplate,
+    defaultValue: 'false',
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.isTemplateStripTheme]: {
+    tag: PropertyTag.isTemplateStripTheme,
     defaultValue: 'false',
     single: true,
     format: PropertyFormat.boolean,
@@ -350,27 +372,27 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.chatWithBookBrainKey]: {
     tag: PropertyTag.chatWithBookBrainKey,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.action]: {
     tag: PropertyTag.action,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.thumbImage]: {
     tag: PropertyTag.thumbImage,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.scormSource]: {
     tag: PropertyTag.scormSource,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.posterImage]: {
     tag: PropertyTag.posterImage,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.focusX]: {
     tag: PropertyTag.focusX,
@@ -384,60 +406,73 @@ const PROPERTIES: _PropertiesConfig = {
   },
   [PropertyConfigKey.deeplink]: {
     tag: PropertyTag.deeplink,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.externalLink]: {
     tag: PropertyTag.externalLink,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.externalLinkText]: {
     tag: PropertyTag.externalLinkText,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.videoCallLink]: {
     tag: PropertyTag.videoCallLink,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
+  },
+  [PropertyConfigKey.vendorDashboardId]: {
+    tag: PropertyTag.vendorDashboardId,
+    single: true,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.vendorSurveyId]: {
     tag: PropertyTag.vendorSurveyId,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.vendorUrl]: {
     tag: PropertyTag.vendorUrl,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.search]: {
     tag: PropertyTag.search,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.bot]: {
     tag: PropertyTag.bot,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.duration]: {
     tag: PropertyTag.duration,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.property_reference]: {
     tag: PropertyTag.tag_reference,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
     astKey: PropertyAstKey.ast_referenceProperty,
   },
   [PropertyConfigKey.list]: {
     tag: PropertyTag.list,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
+  },
+  [PropertyConfigKey.layer]: {
+    tag: PropertyTag.layer,
+    format: PropertyFormat.plainText,
+  },
+  [PropertyConfigKey.layerRole]: {
+    tag: PropertyTag.layerRole,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.textReference]: {
     tag: PropertyTag.textReference,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.isTracked]: {
     tag: PropertyTag.isTracked,
@@ -452,27 +487,27 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.labelTrue]: {
     tag: PropertyTag.labelTrue,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.labelFalse]: {
     tag: PropertyTag.labelFalse,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.content2Buy]: {
     tag: PropertyTag.content2Buy,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.quotedPerson]: {
     tag: PropertyTag.quotedPerson,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.partialAnswer]: {
     tag: PropertyTag.partialAnswer,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.reasonableNumOfChars]: {
     tag: PropertyTag.reasonableNumOfChars,
@@ -494,10 +529,18 @@ const PROPERTIES: _PropertiesConfig = {
     single: true,
     format: PropertyFormat.number,
   },
+  [PropertyConfigKey.tocResource]: {
+    tag: PropertyTag.tocResource,
+    format: PropertyFormat.plainText,
+  },
+  [PropertyConfigKey.tocContent]: {
+    tag: PropertyTag.tocContent,
+    format: PropertyFormat.plainText,
+  },
   [PropertyConfigKey.technicalTerm]: {
     tag: PropertyTag.technicalTerm,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.servings]: {
     tag: PropertyTag.servings,
@@ -507,12 +550,12 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.unit]: {
     tag: PropertyTag.unit,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.unitAbbr]: {
     tag: PropertyTag.unitAbbr,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.decimalPlaces]: {
     tag: PropertyTag.decimalPlaces,
@@ -529,7 +572,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.example]: {
     tag: PropertyTag.example,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.toc]: {
     tag: PropertyTag.toc,
@@ -540,39 +583,39 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.page]: {
     tag: PropertyTag.page,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.product]: {
     tag: PropertyTag.product,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.productId]: {
     tag: PropertyTag.productId,
     single: false, // and true
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.productList]: {
     tag: PropertyTag.product,
     single: false,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
     astKey: PropertyAstKey.ast_productList,
   },
   [PropertyConfigKey.productVideo]: {
     tag: PropertyTag.productVideo,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.productVideoList]: {
     tag: PropertyTag.productVideo,
     single: false,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
     astKey: PropertyAstKey.ast_productVideoList,
   },
   [PropertyConfigKey.productFolder]: {
     tag: PropertyTag.productFolder,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.progress]: {
     tag: PropertyTag.progress,
@@ -583,46 +626,46 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.book]: {
     tag: PropertyTag.book,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.person]: {
     tag: PropertyTag.person,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   // Deprecated (replaced by person)
   [PropertyConfigKey.partner]: {
     tag: PropertyTag.partner,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.property_sampleSolution]: {
     tag: PropertyTag.tag_sampleSolution,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.additionalSolutions]: {
     tag: PropertyTag.additionalSolutions,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.markConfig]: {
     tag: PropertyTag.tag_mark,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
     astKey: PropertyAstKey.ast_markConfig,
   },
   [PropertyConfigKey.property_mark]: {
     tag: PropertyTag.tag_mark,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.color]: {
     tag: PropertyTag.color,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.emphasis]: {
     tag: PropertyTag.emphasis,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.isCaseSensitive]: {
     tag: PropertyTag.isCaseSensitive,
@@ -632,17 +675,17 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.reaction]: {
     tag: PropertyTag.reaction,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.imageSource]: {
     tag: PropertyTag.imageSource,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.mockupId]: {
     tag: PropertyTag.mockupId,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.size]: {
     tag: PropertyTag.size,
@@ -652,12 +695,12 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.format]: {
     tag: PropertyTag.format,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.property_title]: {
     tag: PropertyTag.tag_title,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.trim]: {
     tag: PropertyTag.trim,
@@ -667,47 +710,47 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.width]: {
     tag: PropertyTag.width,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.number,
   },
   [PropertyConfigKey.height]: {
     tag: PropertyTag.height,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.number,
   },
   [PropertyConfigKey.license]: {
     tag: PropertyTag.license,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.copyright]: {
     tag: PropertyTag.copyright,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.mailingList]: {
     tag: PropertyTag.mailingList,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.buttonCaption]: {
     tag: PropertyTag.buttonCaption,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.callToActionUrl]: {
     tag: PropertyTag.callToActionUrl,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.feedbackType]: {
     tag: PropertyTag.feedbackType,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.caption]: {
     tag: PropertyTag.caption,
     single: true,
-    format: PropertyFormat.bitmarkMinusMinus,
+    format: PropertyFormat.bitmarkText,
   },
   [PropertyConfigKey.showInIndex]: {
     tag: PropertyTag.showInIndex,
@@ -718,7 +761,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.alt]: {
     tag: PropertyTag.alt,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.zoomDisabled]: {
     tag: PropertyTag.zoomDisabled,
@@ -728,22 +771,22 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.src1x]: {
     tag: PropertyTag.src1x,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.src2x]: {
     tag: PropertyTag.src2x,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.src3x]: {
     tag: PropertyTag.src3x,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.src4x]: {
     tag: PropertyTag.src4x,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.mute]: {
     tag: PropertyTag.mute,
@@ -768,28 +811,23 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.siteName]: {
     tag: PropertyTag.siteName,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.pointerLeft]: {
     tag: PropertyTag.pointerLeft,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.pointerTop]: {
     tag: PropertyTag.pointerTop,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.listItemIndent]: {
     tag: PropertyTag.listItemIndent,
     single: true,
     defaultValue: '0',
     format: PropertyFormat.number,
-  },
-  [PropertyConfigKey.backgroundWallpaper]: {
-    tag: PropertyTag.backgroundWallpaper,
-    single: true,
-    format: PropertyFormat.trimmedString,
   },
   [PropertyConfigKey.hasBookNavigation]: {
     tag: PropertyTag.hasBookNavigation,
@@ -800,7 +838,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.blockId]: {
     tag: PropertyTag.blockId,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.pageNo]: {
     tag: PropertyTag.pageNo,
@@ -825,20 +863,25 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.classification]: {
     tag: PropertyTag.classification,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.availableClassifications]: {
     tag: PropertyTag.availableClassifications,
     single: false,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.allowedBit]: {
     tag: PropertyTag.allowedBit,
     single: false,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.tableFixedHeader]: {
     tag: PropertyTag.tableFixedHeader,
+    single: true,
+    format: PropertyFormat.boolean,
+  },
+  [PropertyConfigKey.tableHeaderWhitespaceNoWrap]: {
+    tag: PropertyTag.tableHeaderWhitespaceNoWrap,
     single: true,
     format: PropertyFormat.boolean,
   },
@@ -914,12 +957,12 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.stripePricingTableId]: {
     tag: PropertyTag.stripePricingTableId,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.stripePublishableKey]: {
     tag: PropertyTag.stripePublishableKey,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.ratingLevelStart]: {
     tag: PropertyTag.ratingLevelStart,
@@ -939,7 +982,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.label]: {
     tag: PropertyTag.label,
     single: true,
-    format: PropertyFormat.bitmarkMinusMinus,
+    format: PropertyFormat.bitmarkText,
   },
   [PropertyConfigKey.imageFirst]: {
     tag: PropertyTag.imageFirst,
@@ -950,7 +993,7 @@ const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.activityType]: {
     tag: PropertyTag.activityType,
     single: true,
-    format: PropertyFormat.trimmedString,
+    format: PropertyFormat.plainText,
   },
   [PropertyConfigKey.revealSolutions]: {
     tag: PropertyTag.revealSolutions,

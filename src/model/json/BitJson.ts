@@ -1,7 +1,7 @@
 import { JsonText, TextAst } from '../ast/TextNodes';
 
 import { BodyBitsJson } from './BodyBitJson';
-import { AudioResourceJson, ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
+import { AudioResourceWrapperJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
 
 export interface BitJson {
   type: string; // bit type
@@ -20,6 +20,8 @@ export interface BitJson {
   jupyterId: string;
   jupyterExecutionCount: number;
   isPublic: boolean;
+  isTemplate: boolean;
+  isTemplateStripTheme: boolean;
   aiGenerated: boolean;
   machineTranslated: string;
   searchIndex: string | string[];
@@ -34,6 +36,7 @@ export interface BitJson {
   diffRef: string;
   diffContext: string;
   diffTime: number;
+  path: string;
   releaseVersion: string;
   releaseKind: string;
   releaseDate: string;
@@ -71,6 +74,7 @@ export interface BitJson {
   kind: string;
   hasMarkAsDone: boolean;
   processHandIn: boolean;
+  processHandInLocation: string;
   chatWithBook: boolean;
   chatWithBookBrainKey: string;
   action: string;
@@ -91,6 +95,7 @@ export interface BitJson {
   availableClassifications: string | string[];
   allowedBit: string | string[];
   tableFixedHeader: boolean;
+  tableHeaderWhitespaceNoWrap: boolean;
   tableSearch: boolean;
   tableSort: boolean;
   tablePagination: boolean;
@@ -114,18 +119,21 @@ export interface BitJson {
   pointerLeft: string;
   pointerTop: string;
   listItemIndent: number;
-  backgroundWallpaper: string;
+  backgroundWallpaper: ImageResourceWrapperJson;
   hasBookNavigation: boolean;
   duration: string;
   deeplink: string | string[];
   externalLink: string;
   externalLinkText: string;
   videoCallLink: string;
+  vendorDashboardId: string;
   vendorSurveyId: string;
   vendorUrl: string;
   search: string;
   bot: string | string[];
   list: string | string[];
+  layer: string | string[];
+  layerRole: string | string[];
   textReference: string;
   isTracked: boolean; // only .learningPathExternalLink?
   isInfoOnly: boolean; // only .learningPathExternalLink?
@@ -149,6 +157,8 @@ export interface BitJson {
   maxCreatedBits: number;
   maxDisplayLevel: number;
   maxTocChapterLevel: number;
+  tocResource: string | string[];
+  tocContent: string | string[];
   page: string;
   productId: string | string[];
   product: string;
@@ -212,12 +222,14 @@ export interface BitJson {
   descriptions: DefinitionListItemJson[];
   statements: StatementJson[];
   responses: ResponseJson[] | BotResponseJson[];
+  feedbacks: FeedbackJson[];
   quizzes: QuizJson[];
   heading: HeadingJson;
   pairs: PairJson[];
   matrix: MatrixJson[];
   table: TableJson;
-  captionDefinitionList: CaptionDefinitionListJson;
+  // DEPRECATED - REMOVE IN THE FUTURE
+  // captionDefinitionList: CaptionDefinitionListJson;
   choices: ChoiceJson[];
   questions: QuestionJson[];
   ingredients: IngredientJson[];
@@ -247,7 +259,7 @@ export interface ImageSourceJson {
 export interface PersonJson {
   name: string;
   title: string;
-  avatarImage: ImageResourceJson;
+  avatarImage: ImageResourceWrapperJson;
 }
 
 export interface MarkConfigJson {
@@ -257,9 +269,9 @@ export interface MarkConfigJson {
 }
 
 export interface FlashcardJson {
-  question: JsonText;
-  answer: JsonText;
-  alternativeAnswers: JsonText[];
+  question: TextAndIconJson;
+  answer: TextAndIconJson;
+  alternativeAnswers: TextAndIconJson[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -271,9 +283,9 @@ export interface FlashcardJson {
 }
 
 export interface DefinitionListItemJson {
-  term: JsonText;
-  definition: JsonText;
-  alternativeDefinitions: JsonText[];
+  term: TextAndIconJson;
+  definition: TextAndIconJson;
+  alternativeDefinitions: TextAndIconJson[];
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -282,6 +294,11 @@ export interface DefinitionListItemJson {
   example: ExampleJson;
   __isDefaultExample?: boolean;
   __defaultExample?: ExampleJson;
+}
+
+export interface TextAndIconJson {
+  text: JsonText;
+  icon: ImageResourceWrapperJson;
 }
 
 export interface StatementJson {
@@ -293,6 +310,33 @@ export interface StatementJson {
   instruction: JsonText;
   isExample: boolean;
   example: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
+}
+
+export interface FeedbackChoiceJson {
+  choice: string;
+  requireReason: boolean;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
+  isExample: boolean;
+  example: ExampleJson;
+  __isDefaultExample?: boolean;
+  __defaultExample?: ExampleJson;
+}
+
+export interface FeedbackReasonJson {
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
+  text: string;
+  reasonableNumOfChars: number;
+  isExample: boolean;
+  example: ExampleJson;
+  __textAst?: TextAst;
   __isDefaultExample?: boolean;
   __defaultExample?: ExampleJson;
 }
@@ -323,6 +367,18 @@ export interface ResponseJson {
   __defaultExample?: ExampleJson;
 }
 
+export interface FeedbackJson {
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
+  instruction: JsonText;
+  // isExample: boolean;
+  choices: FeedbackChoiceJson[];
+  reason: FeedbackReasonJson;
+  // __isDefaultExample?: boolean;
+  // __defaultExample?: ExampleJson;
+}
+
 export interface QuizJson {
   item: JsonText;
   lead: JsonText;
@@ -343,8 +399,8 @@ export interface HeadingJson {
 
 export interface PairJson {
   key: string;
-  keyAudio: AudioResourceJson;
-  keyImage: ImageResourceJson;
+  keyAudio: AudioResourceWrapperJson;
+  keyImage: ImageResourceWrapperJson;
   item: JsonText;
   lead: JsonText;
   hint: JsonText;
@@ -387,7 +443,7 @@ export interface MatrixCellJson {
 export interface PronunciationTableCellJson {
   title: JsonText;
   body: JsonText;
-  audio: AudioResourceJson;
+  audio: AudioResourceWrapperJson;
 }
 
 export interface PronunciationTableJson {
@@ -442,12 +498,15 @@ export interface ServingsJson {
 export interface IngredientJson {
   title: string;
   checked: boolean;
-  item: string;
+  ingredient: string;
   quantity: number;
   unit: string;
   unitAbbr: string;
   decimalPlaces: number;
   disableCalculation: boolean;
+  item: JsonText;
+  lead: JsonText;
+  hint: JsonText;
 }
 
 export interface RatingLevelStartEndJson {
@@ -455,19 +514,20 @@ export interface RatingLevelStartEndJson {
   label?: JsonText;
 }
 
-// CaptionDefinition
+// DEPRECATED - REMOVE IN THE FUTURE
+// // CaptionDefinition
 
-export interface CaptionDefinitionJson {
-  term: string;
-  definition: string;
-}
+// export interface CaptionDefinitionJson {
+//   term: string;
+//   definition: string;
+// }
 
-// CaptionDefinitionList
+// // CaptionDefinitionList (a.k.a Legend)
 
-export interface CaptionDefinitionListJson {
-  columns: string[];
-  definitions: CaptionDefinitionJson[];
-}
+// export interface CaptionDefinitionListJson {
+//   heading: string[];
+//   definitions: CaptionDefinitionJson[];
+// }
 
 export interface ListItemJson {
   item: JsonText;

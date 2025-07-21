@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "sample-solution",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "anchor": "I am an anchor",
       "reference": "Ref4.2.34",
@@ -26,9 +26,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.sample-solution][!More examples and quizzes...][►Ref4.2.34]\n\n[▼I am an anchor]"
   }

@@ -1,6 +1,8 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape';
 import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
 import { TagsConfig } from '../../../../model/config/TagsConfig';
+import { TextFormat } from '../../../../model/enum/TextFormat';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { StringUtils } from '../../../../utils/StringUtils';
 
 import {
@@ -24,9 +26,15 @@ function referenceTagContentProcessor(
   const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
   if (isReferenceEnd) {
-    target.referenceEnd = Breakscape.unbreakscape(trimmedStringValue);
+    target.referenceEnd = Breakscape.unbreakscape(trimmedStringValue, {
+      format: TextFormat.bitmarkText,
+      location: TextLocation.tag,
+    });
   } else {
-    target.reference = Breakscape.unbreakscape(trimmedStringValue);
+    target.reference = Breakscape.unbreakscape(trimmedStringValue, {
+      format: TextFormat.bitmarkText,
+      location: TextLocation.tag,
+    });
   }
 }
 export { referenceTagContentProcessor };

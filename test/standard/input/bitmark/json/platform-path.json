@@ -1,0 +1,184 @@
+[
+  {
+    "bit": {
+      "type": "platform-path",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "path": "/this/is/a/path",
+      "ageRange": [
+        "18",
+        "120"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "[&image] is included more than 0 time(s).",
+          "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
+          "location": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 161
+            },
+            "end": {
+              "line": 7,
+              "column": 47,
+              "offset": 207
+            }
+          }
+        }
+      ],
+      "excessResources": [
+        {
+          "type": "image",
+          "image": {
+            "format": "jpg",
+            "provider": "cdn.bitbook.education",
+            "src": "https://cdn.bitbook.education/cat.jpg",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ]
+    },
+    "bitmark": "[.platform-path:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@path:/this/is/a/path]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]\n\nSome more text."
+  },
+  {
+    "bit": {
+      "type": "platform-path",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "151971"
+      ],
+      "path": "/this/is/a/path",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "marginNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The bit content",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.platform-path:bitmark--]",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 227
+            },
+            "end": {
+              "line": 12,
+              "column": 27,
+              "offset": 253
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.platform-path:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n[@path:/this/is/a/path]\n\nThe bit content"
+  },
+  {
+    "bit": {
+      "type": "platform-path",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "path": ""
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.platform-path]"
+  }
+]

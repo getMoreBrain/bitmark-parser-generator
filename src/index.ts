@@ -29,7 +29,7 @@ export { Writer } from './ast/writer/Writer';
 export { StringWriter } from './ast/writer/StringWriter';
 
 export { BitType } from './model/enum/BitType';
-export { TextFormat } from './model/enum/TextFormat';
+export { BodyTextFormat } from './model/enum/BodyTextFormat';
 export { ResourceTag } from './model/enum/ResourceTag';
 export { NodeType } from './model/ast/NodeType';
 export { BitmarkParserType } from './model/enum/BitmarkParserType';
@@ -83,7 +83,7 @@ export type { FileOptions } from './ast/writer/FileWriter';
 export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
 export type { JsonOptions } from './generator/json/JsonGenerator';
 export type { BitTypeType } from './model/enum/BitType';
-export type { TextFormatType } from './model/enum/TextFormat';
+export type { BodyTextFormatType } from './model/enum/BodyTextFormat';
 export type { ResourceTagType } from './model/enum/ResourceTag';
 export type { NodeTypeType } from './model/ast/NodeType';
 export type { BitmarkParserTypeType } from './model/enum/BitmarkParserType';
@@ -117,8 +117,9 @@ export type {
   ServingsJson,
   IngredientJson,
   RatingLevelStartEndJson,
-  CaptionDefinitionJson,
-  CaptionDefinitionListJson,
+  // DEPRECATED - TO BE REMOVED IN THE FUTURE
+  // CaptionDefinitionJson,
+  // CaptionDefinitionListJson,
   ListItemJson,
   ExampleJson,
 } from './model/json/BitJson';

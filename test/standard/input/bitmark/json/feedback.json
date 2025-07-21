@@ -1,0 +1,686 @@
+[
+  {
+    "bit": {
+      "type": "feedback",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["67915"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "heading": {
+        "forKeys": "AAA",
+        "forValues": "BBB"
+      },
+      "feedbacks": [
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "ICH BEVORZUGE …",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "choices": [
+            {
+              "choice": "Bier",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": true,
+              "example": true
+            },
+            {
+              "choice": "Wein",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ],
+          "reason": {
+            "text": "Please answer in keywords",
+            "reasonableNumOfChars": 100,
+            "item": [],
+            "hint": [],
+            "instruction": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Why?",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "isExample": true,
+            "example": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Example text",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          }
+        },
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1I.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "ICH HASSE …",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "choices": [
+            {
+              "choice": "Bier",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Wein",
+              "requireReason": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ],
+          "reason": {
+            "text": "Please answer in keywords",
+            "reasonableNumOfChars": 300,
+            "item": [],
+            "hint": [],
+            "instruction": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Why?",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "isExample": true,
+            "example": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "true",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.29.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.feedback]\n[@id:67915]\n[@reasonableNumOfChars:100]\n====\n[#AAA]\n--\n[#BBB]\n====\n[!ICH BEVORZUGE …]\n[%1.]\n[+ Bier][@example]\n[+ Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@example:Example text]\n====\n[!ICH HASSE …]\n[%1I.]\n[+ Bier]\n[- Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@reasonableNumOfChars:300]\n[@example]\n===="
+  },
+  {
+    "bit": {
+      "type": "feedback",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["64574"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "feedbacks": [
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "other",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "ICH BEVORZUGE …",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "choices": [
+            {
+              "choice": "Bier",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Wein",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": true,
+              "example": true
+            }
+          ],
+          "reason": {
+            "text": "Please answer in keywords",
+            "reasonableNumOfChars": 50,
+            "item": [],
+            "hint": [],
+            "instruction": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Why?",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "isExample": false,
+            "example": null
+          }
+        },
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1I.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "ICH HASSE …",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "choices": [
+            {
+              "choice": "Bier",
+              "requireReason": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Wein",
+              "requireReason": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ]
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.29.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@reasonableNumOfChars:300]",
+          "location": {
+            "start": {
+              "line": 39,
+              "column": 1,
+              "offset": 439
+            },
+            "end": {
+              "line": 39,
+              "column": 28,
+              "offset": 466
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.feedback]\n[@id:64574]\n[@reasonableNumOfChars:50]\n====\n[!ICH BEVORZUGE …]\n[%1.][%other]\n[+ Bier]\n[+ Wein][@example]\n[@reasonableNumOfChars:300]\n--\n[!Why?]\nPlease answer in keywords\n====\n[!ICH HASSE …]\n[%1I.]\n[- Bier]\n[- Wein]\n===="
+  },
+  {
+    "bit": {
+      "type": "hand-in-feedback-expert",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["64574"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "feedbacks": [
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "other",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "ICH BEVORZUGE …",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "choices": [
+            {
+              "choice": "Bier",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Wein",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": true,
+              "example": true
+            }
+          ],
+          "reason": {
+            "text": "Please answer in keywords",
+            "reasonableNumOfChars": 50,
+            "item": [],
+            "hint": [],
+            "instruction": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Why?",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "isExample": false,
+            "example": null
+          }
+        },
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1I.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "ICH HASSE …",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "choices": [
+            {
+              "choice": "Bier",
+              "requireReason": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Wein",
+              "requireReason": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ]
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.29.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@reasonableNumOfChars:300]",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 688
+            },
+            "end": {
+              "line": 59,
+              "column": 28,
+              "offset": 715
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.hand-in-feedback-expert]\n[@id:64574]\n[@reasonableNumOfChars:50]\n====\n[!ICH BEVORZUGE …]\n[%1.][%other]\n[+ Bier]\n[+ Wein][@example]\n[@reasonableNumOfChars:300]\n--\n[!Why?]\nPlease answer in keywords\n====\n[!ICH HASSE …]\n[%1I.]\n[- Bier]\n[- Wein]\n===="
+  },
+  {
+    "bit": {
+      "type": "hand-in-feedback-self",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["64574"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "feedbacks": [
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "other",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "ICH BEVORZUGE …",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "choices": [
+            {
+              "choice": "Bier",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Wein",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": true,
+              "example": true
+            }
+          ],
+          "reason": {
+            "text": "Please answer in keywords",
+            "reasonableNumOfChars": 50,
+            "item": [],
+            "hint": [],
+            "instruction": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Why?",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "isExample": false,
+            "example": null
+          }
+        },
+        {
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "1I.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "ICH HASSE …",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "choices": [
+            {
+              "choice": "Bier",
+              "requireReason": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Wein",
+              "requireReason": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ]
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.29.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@reasonableNumOfChars:300]",
+          "location": {
+            "start": {
+              "line": 79,
+              "column": 1,
+              "offset": 935
+            },
+            "end": {
+              "line": 79,
+              "column": 28,
+              "offset": 962
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.hand-in-feedback-self]\n[@id:64574]\n[@reasonableNumOfChars:50]\n====\n[!ICH BEVORZUGE …]\n[%1.][%other]\n[+ Bier]\n[+ Wein][@example]\n[@reasonableNumOfChars:300]\n--\n[!Why?]\nPlease answer in keywords\n====\n[!ICH HASSE …]\n[%1I.]\n[- Bier]\n[- Wein]\n===="
+  }
+]

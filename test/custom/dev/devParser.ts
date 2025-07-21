@@ -22,7 +22,7 @@ const bitmarkParser = new BitmarkParser();
 
 class DevParser {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bit');
+    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.bitmark');
 
     if (debug) {
       // Read in the test file
@@ -58,6 +58,8 @@ class DevParser {
       console.log(jsonStr);
     } else {
       const res = await bitmarkParserGenerator.convert(filename, {
+        // bitmarkVersion: BitmarkVersion.v2,
+        bitmarkVersion: BitmarkVersion.v3,
         jsonOptions: {
           enableWarnings: true,
           textAsPlainText: false,

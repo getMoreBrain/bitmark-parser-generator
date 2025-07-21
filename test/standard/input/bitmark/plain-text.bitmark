@@ -1,0 +1,291 @@
+[.article:text]
+Article 1
+[?NOT a hint]
+[^.article]
+Article 1.1
+
+[.article]
+Article 2
+[?hint][^!NOT an instruction]
+
+[^.article]
+Article 2.1
+
+[.article]
+Article 3
+
+[.cloze]
+This is a multiple^^ [^_gap] [_solution][_problem][@isCaseSensitive:false] with a separate gap
+with [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default
+case [_sensitivity]
+
+[.code]
+[?hint]
+This is some code and here no ^ hats should be
+removed or anything [^.bit] [^.silly^] like that^
+[^notabit]
+The only thing that should be removed is
+[^.notabit]
+[^^.notabit]
+[^^^.notabit]
+the start of a new bit
+
+====
+Question 1?
+Card 1, Side 1
+--
+Answer 1
+Card 1, Side 2
+====
+Question 2?
+Card 2, Side 1
+--
+Answer 2
+Card 2, Side 2
+++
+Alternative Answer 2
+Card 2, Side 2
+~~~~
+
+Footer anyone?
+
+[.cloze]
+This is a multiple^^ [^_gap] [_solu^^tion][_pro^blem][@isCaseSensitive:false] with a separate gap
+
+[.article:json]
+[?hint]
+{
+  "hello": "world"
+}
+
+[.article:json]
+[?hint]
+{
+  "hello": "world"
+}
+[!NOT instruction, will break JSON]
+
+[.article]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+$$$$
+[%${1}][%][%${originalPageNo}][%]
+[#${2}]
+
+
+
+[.cloze]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+** Excellent **
+This is a [_gap] :)
+
+$$$$
+
+^Testing123^^
+
+$$$$
+**Excellent**
+
+[.extractor-configuration]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+$$$$
+[%${1}][%][%${originalPageNo}][%]
+[#${2}]
+
+[.article]
+[@id:12345]
+[%1]
+
+ $$$$
+[!My first config in TOML]
+
+This is NOT pre!
+$$$$
+[!My first config in TOML]
+This IS pre!
+
+[.article]
+[@id:12345]
+[%1]
+
+ $$$$
+[!My first config in TOML]
+
+This is NOT pre!
+$^$$$
+[!My first config in TOML]
+This IS NOT pre!!
+
+$$$$
+[!My first config in TOML]
+This IS pre!!!
+
+
+[.article]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+$$$$
+[%${1}][%][%${originalPageNo}][%]
+[#${2}]
+
+
+
+[.cloze]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+** Excellent **
+This is a [_gap] :)
+
+==== text ====
+
+^Testing123^^
+
+==== text ====
+**Excellent**
+
+[.extractor-configuration]
+[@id:12345]
+[%1]
+[!My first config in TOML]
+
+==== text    ====
+[%${1}][%][%${originalPageNo}][%]
+[#${2}]
+
+[.article]
+[@id:12345]
+[%1]
+
+ ==== text ====
+[!My first config in TOML]
+
+This is NOT pre!
+==== text ====
+[!My first config in TOML]
+This IS pre!
+
+[.article]
+[@id:12345]
+[%1]
+
+ ==== text ====
+====text ====
+==== text====
+====text====
+[!My first config in TOML]
+
+This is NOT pre!
+=^=== text ====
+[!My first config in TOML]
+This IS NOT pre!!
+
+====   text ====
+[!My first config in TOML]
+This IS pre!!!
+
+[.article]
+[@id:12345]
+[%1]
+========
+[!My first config in TOML]
+This is NOT pre!!!
+
+
+[.article:bitmark--]
+**bold**
+[!instruction]
+==== text ====
+Absolutely **NOT** bold, just **stars**
+
+[?not hint]
+
+More text
+
+
+[.article:bitmark--]
+**bold**
+
+==== footer ====
+__italic__
+[!instruction]
+==== text ====
+Absolutely __NOT__ italic, just __underlines__
+
+[?not hint]
+
+More text
+
+
+[.article]
+test
+
+[.flashcard]
+
+*^*bold*^*
+
+====
+Card
+--
+Answer
+==== footer ====
+
+A footer with
+==== text ====
+Absolutely __NOT__ italic, just __underlines__
+
+[?not hint]
+
+More text
+
+[.flashcard]
+
+*^*bold*^*
+
+====
+Card
+--
+Answer
+
+
+[.article:bitmark--]
+**bold**
+[!instruction]
+==== text ====
+This is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.
+
+[^.article]
+
+[.article]
+
+new article
+
+
+
+[.article:bitmark--]
+[!instruction]
+
+**bold**
+
+==== text ====
+This is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.
+
+[^.article]
+
+
+
+
+[.article]
+
+new article

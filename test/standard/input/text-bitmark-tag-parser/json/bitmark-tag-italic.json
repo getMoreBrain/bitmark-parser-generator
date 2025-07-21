@@ -1,0 +1,95 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ],
+        "text": "This is some ITALIC text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "There are ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ],
+        "text": "multiple lines",
+        "type": "text"
+      },
+      {
+        "text": ", and some stars but nothing else ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ],
+        "text": "_particularly exciting_",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ],
+        "text": "Or perhaps nothing very exciting? It really depends",
+        "type": "text"
+      },
+      {
+        "text": " on your point of view ;)",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ],
+        "text": "** ITALIC **",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ],
+        "text": " ITALIC ",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

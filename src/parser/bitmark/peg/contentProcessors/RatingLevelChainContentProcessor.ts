@@ -1,5 +1,6 @@
 import { TagsConfig } from '../../../../model/config/TagsConfig';
 import { PropertyTag } from '../../../../model/enum/PropertyTag';
+import { TextLocation } from '../../../../model/enum/TextLocation';
 import { RatingLevelStartEndJson } from '../../../../model/json/BitJson';
 import { NumberUtils } from '../../../../utils/NumberUtils';
 import { TextParser } from '../../../text/TextParser';
@@ -38,7 +39,7 @@ function ratingLevelChainContentProcessor(
 
   const node: Partial<RatingLevelStartEndJson> = {
     level,
-    label: label ? textParser.toAst(label, { textFormat, isProperty: true }) : undefined,
+    label: label ? textParser.toAst(label, { format: textFormat, location: TextLocation.tag }) : undefined,
   };
 
   switch (key) {

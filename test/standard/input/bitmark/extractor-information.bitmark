@@ -1,0 +1,17 @@
+[.extractor-information]
+[@id:5673456]
+==== text ====
+{
+  "version": "1.2.3",
+  "input": {
+    "pdf": "pdf-filename.pdf",
+    "config": "config-filename.toml",
+    "feedback": "feedback-filename.pdf"
+  },
+  "output": {
+    "bitmark": "bitmark-filename.bitmark",
+    "info": "info-filename.txt",
+    "visualization": "visualization-filename.pdf"
+  }
+}
+

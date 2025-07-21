@@ -17,7 +17,7 @@ const dependencies = {
 
 const inputPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'bit-grammar.pegjs');
 const outputPath = path.resolve(__dirname, '../../..', 'src/generated/parser/bitmark/', 'bitmark-peggy-parser.js');
-const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.bit');
+const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.bitmark');
 
 // Process command line options
 const commandLineOptions = process.argv.slice(2);

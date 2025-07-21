@@ -2,9 +2,11 @@
   {
     "bit": {
       "type": "featured",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342339"],
+      "id": [
+        "342339"
+      ],
       "customerId": "themightyboosh",
       "item": [],
       "lead": [],
@@ -33,10 +35,10 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.featured]\n[@id:342339]\nFeatured\nIt's exactly the same as an .article."
+    "bitmark": "[.featured]\n[@id:342339]\n[@customerId:themightyboosh]\nFeatured\nIt's exactly the same as an .article."
   }
 ]

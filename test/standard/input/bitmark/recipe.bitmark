@@ -1,0 +1,36 @@
+[.recipe]
+[%][%ZUTATEN]
+
+[!Kraftbrühe Murillo]
+[@technicalTerm: Consommé Murillo ][@lang:fr]
+[@servings:4.5][@unit:Litre][@unitAbbr:l][?hint]
+
+====
+[#Title for the **ingredient**]
+[+][!2][@unitAbbr:Lt][@unit:Liter] Geflügelkraftbrühe
+[%item]
+====
+[-][!30][@unitAbbr:Stk][@unit:Stück] Scheiben vom Eierstich mit Kürbis ...
+[%item]
+====
+[!5][@unitAbbr:Stk][@unit:Stück] __Erbsen__ ...
+[%item]
+====
+[#Another title for an ingredient]
+[!1][@unit:Prise] Salz
+[%item]
+====
+[!2.5][@unit:kg] Mehl
+[%item]
+====
+[!10][@unit:minutes][@unitAbbr:min][@disableCalculation] Cooking time
+[%item]
+====
+[+]
+[!20]
+[@unit:minutes]
+[@unitAbbr:min]
+[@disableCalculation]
+Cooking time
+[%item]
+====

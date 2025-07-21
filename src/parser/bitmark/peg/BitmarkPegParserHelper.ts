@@ -10,7 +10,7 @@
  * -------------------------
  *
  * - To build the parser, run 'yarn build-grammar-bit'
- * - Modify the bitmark in '_simple.bit' to test the parser (this will be parsed after building the parser)
+ * - Modify the bitmark in '_simple.bitmark' to test the parser (this will be parsed after building the parser)
  * - To undersand the operation and to help debug and develop, use the DEBUG_XXX flags in the code below
  *   and in BitmarkPegParserProcessor.ts
  *
@@ -21,6 +21,7 @@ import { BreakscapedString } from '../../../model/ast/BreakscapedString';
 import { Bit } from '../../../model/ast/Nodes';
 import { CardSetVersion } from '../../../model/enum/CardSetVersion';
 import { TextFormat } from '../../../model/enum/TextFormat';
+import { TextLocation } from '../../../model/enum/TextLocation';
 import { ParserError } from '../../../model/parser/ParserError';
 import { ParserLocation } from '../../../model/parser/ParserLocation';
 import { StringUtils } from '../../../utils/StringUtils';
@@ -189,7 +190,8 @@ class BitmarkPegParserHelper {
     return {
       type: TypeKey.Property,
       key: Breakscape.unbreakscape(key, {
-        textFormat: TextFormat.text,
+        format: TextFormat.plainText,
+        location: TextLocation.tag,
       }),
       value,
       parser: {
@@ -205,7 +207,8 @@ class BitmarkPegParserHelper {
     return {
       type: TypeKey.Resource,
       key: Breakscape.unbreakscape(key, {
-        textFormat: TextFormat.text,
+        format: TextFormat.plainText,
+        location: TextLocation.tag,
       }),
       value,
       parser: {

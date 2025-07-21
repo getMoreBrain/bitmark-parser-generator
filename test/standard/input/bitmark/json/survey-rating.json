@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "survey-rating",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "93061"
@@ -58,16 +58,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.survey-rating]\n[@id:93061]\n[%D2]\n[@ratingLevelStart:0][@label:NOT AT ALL LIKELY]\n[@ratingLevelEnd:10][@label:EXTREMLY LIKELY]\n[@ratingLevelSelected:3]"
   },
   {
     "bit": {
       "type": "survey-rating",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "93062"
@@ -98,45 +98,45 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.survey-rating]\n[@id:93062]\n[%D2]\n[@ratingLevelStart:0]\n[@ratingLevelEnd:wrong]\n[@ratingLevelSelected:wrong]"
   },
   {
     "bit": {
       "type": "survey-rating",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "93063"
       ],
-      "ratingLevelStart": {
-        "level": 0
-      },
-      "ratingLevelEnd": {
-        "level": 0
-      },
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "ratingLevelStart": {
+        "level": 0
+      },
+      "ratingLevelEnd": {
+        "level": 0
+      }
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.survey-rating]\n[@id:93063]"
   },
   {
     "bit": {
       "type": "survey-rating",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "93061"
@@ -214,9 +214,9 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.survey-rating]\n[@id:93061]\n[%D2]\n[@ratingLevelStart:-10][@label:NOT **AT** ALL LIKELY]\n[@ratingLevelEnd:10][@label:EXTREMLY !!LIKELY!!]\n[@ratingLevelSelected:0]"
   }

@@ -1,0 +1,291 @@
+[.table]
+[@tableFixedHeader:true]
+[@tableHeaderWhitespaceNoWrap:false]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+[.table]
+[@tableSearch:false]
+[@tableSort:false]
+[@caption:This is the table caption]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+[.table]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+[@tablePaginationLimit:42]
+[@tableHeight:99]
+[@tableWhitespaceNoWrap:false]
+[@tableAutoWidth:false]
+[@tableResizableColumns:true]
+[@caption: This is the caption ]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+[.table]
+
+
+[.table-alt]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+[@tableColumnMinWidth:200]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+
+[.standard-table-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+
+[.standard-table-non-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+[.standard-remark-table-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+
+[.standard-remark-table-non-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+[.table:bitmark++]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+**John**
+--
+john@example.com
+--
+(353) __01__ 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+
+• Leitbild
+• transparente Kommunikation
+• marktübliche Vergütung
+• etc.
+
+====
+
+[.table:xml]
+
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+
+[.table:bitmark++]
+[@tableFixedHeader:false]
+[@tableSearch:false]
+[@tableSort:false]
+[@tablePagination:false]
+[@tablePaginationLimit:0]
+[@tableHeight:0]
+[@tableWhitespaceNoWrap:true]
+[@tableAutoWidth:true]
+[@tableResizableColumns:false]
+[@tableColumnMinWidth:0]
+
+
+
+====
+[#Fleischstück]
+--
+[#Schnittarten]
+--
+[#Klassische Gartechniken]
+====
+**Stotzen**
+==cuisseaud==|notranslate|
+==hindquarter==|notranslate|
+
+--
+ganz
+
+--
+Braten, Glasieren

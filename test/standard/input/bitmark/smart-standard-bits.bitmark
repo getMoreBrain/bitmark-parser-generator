@@ -1,0 +1,223 @@
+[.smart-standard-article-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
+
+
+[.smart-standard-article-non-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
+
+[.smart-standard-example-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
+
+
+[.smart-standard-example-non-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
+
+
+[.smart-standard-image-figure-normative]
+Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.
+[&backgroundWallpaper:https://miro.medium.com/background.png][@width:100]
+[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]
+
+
+
+[.smart-standard-image-figure-non-normative]
+Die Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.
+[&backgroundWallpaper:https://miro.medium.com/background.png][@height:100]
+[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]
+
+====
+[#Legende]
+--
+[#]
+====
+A
+--
+Körper
+====
+B
+--
+Stromquelle
+====
+
+~~~~
+Optional Footer
+
+[.smart-standard-list:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+The bit content
+
+[.smart-standard-list-item:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+The bit content
+
+[.smart-standard-list-item:bitmark++]
+[@listItemIndent:5]
+
+[.smart-standard-note-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
+
+
+[.smart-standard-note-non-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
+
+[.smart-standard-remark-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
+
+
+[.smart-standard-remark-non-normative:bitmark--]
+[@id:151971]
+[%][%][%][%marginNumber]
+
+Bit content
+
+
+[.smart-standard-table-image-normative:bitmark--]
+[@id:151971]
+[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]
+
+
+[.smart-standard-table-image-non-normative:bitmark--]
+[@id:151972]
+[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]
+
+
+[.smart-standard-remark-table-image-normative:bitmark--]
+[@id:151971]
+[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]
+
+
+[.smart-standard-remark-table-image-non-normative:bitmark--]
+[@id:151972]
+[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]
+
+
+
+[.smart-standard-table-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+
+[.smart-standard-table-non-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+[.smart-standard-remark-table-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
+
+
+[.smart-standard-remark-table-non-normative]
+[@tableFixedHeader:true]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====

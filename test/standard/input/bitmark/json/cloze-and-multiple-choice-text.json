@@ -2,10 +2,11 @@
   {
     "bit": {
       "type": "cloze-and-multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287842"],
-      "revealSolutions": false,
+      "id": [
+        "287842"
+      ],
       "item": [],
       "lead": [
         {
@@ -23,7 +24,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": false,
       "body": [
         {
           "type": "paragraph",
@@ -35,14 +35,16 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "cloze"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
                 "instruction": [],
                 "isCaseSensitive": true,
                 "isExample": false,
-                "example": null,
-                "solutions": ["cloze"]
+                "example": null
               }
             },
             {
@@ -52,13 +54,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "forms",
@@ -80,7 +75,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -92,13 +94,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "other",
@@ -120,7 +115,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -140,13 +142,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "other",
@@ -168,7 +163,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -188,13 +190,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "other",
@@ -206,7 +201,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -216,13 +218,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "options",
@@ -234,7 +229,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -244,22 +246,25 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.cloze-and-multiple-choice-text]\n[@id:287842]\n[%][%cloze-and-multiple-choice-text]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
   },
   {
     "bit": {
       "type": "cloze-and-multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287843"],
-      "revealSolutions": false,
+      "id": [
+        "287843"
+      ],
       "item": [],
       "lead": [
         {
@@ -277,7 +282,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -289,6 +293,9 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "cloze"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -306,8 +313,7 @@
                     ],
                     "attrs": {}
                   }
-                ],
-                "solutions": ["cloze"]
+                ]
               }
             },
             {
@@ -317,13 +323,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": true,
                 "options": [
                   {
                     "text": "forms",
@@ -345,7 +344,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true
               }
             },
             {
@@ -357,13 +363,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": true,
                 "options": [
                   {
                     "text": "other",
@@ -385,7 +384,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true
               }
             },
             {
@@ -405,13 +411,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": true,
                 "options": [
                   {
                     "text": "other",
@@ -433,7 +432,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true
               }
             },
             {
@@ -453,13 +459,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": true,
                 "options": [
                   {
                     "text": "other",
@@ -471,7 +470,14 @@
                     "isExample": true,
                     "example": true
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true
               }
             },
             {
@@ -481,13 +487,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "options",
@@ -499,7 +498,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -509,22 +515,25 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.cloze-and-multiple-choice-text]\n[@id:287843]\n[%][%cloze-and-multiple-choice-text]\n[@example]\nThe students completed the [_cloze] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
   },
   {
     "bit": {
       "type": "cloze-and-multiple-choice-text",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287844"],
-      "revealSolutions": false,
+      "id": [
+        "287844"
+      ],
       "item": [],
       "lead": [
         {
@@ -542,7 +551,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "isExample": true,
       "body": [
         {
           "type": "paragraph",
@@ -554,6 +562,10 @@
             {
               "type": "gap",
               "attrs": {
+                "solutions": [
+                  "cloze",
+                  "gap"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -571,8 +583,7 @@
                     ],
                     "attrs": {}
                   }
-                ],
-                "solutions": ["cloze", "gap"]
+                ]
               }
             },
             {
@@ -582,13 +593,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "forms",
@@ -610,7 +614,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -622,13 +633,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "other",
@@ -650,7 +654,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -670,13 +681,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": true,
                 "options": [
                   {
                     "text": "other",
@@ -698,7 +702,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": true
               }
             },
             {
@@ -718,13 +729,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "other",
@@ -736,7 +740,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -746,13 +757,6 @@
             {
               "type": "select",
               "attrs": {
-                "prefix": "",
-                "postfix": "",
-                "item": [],
-                "lead": [],
-                "hint": [],
-                "instruction": [],
-                "isExample": false,
                 "options": [
                   {
                     "text": "options",
@@ -764,7 +768,14 @@
                     "isExample": false,
                     "example": null
                   }
-                ]
+                ],
+                "prefix": "",
+                "postfix": "",
+                "item": [],
+                "lead": [],
+                "hint": [],
+                "instruction": [],
+                "isExample": false
               }
             },
             {
@@ -774,12 +785,14 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": true,
+      "revealSolutions": false
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.cloze-and-multiple-choice-text]\n[@id:287844]\n[%][%cloze-and-multiple-choice-text]\nThe students completed the [_cloze][_gap][@example] with the correct verb [+forms][-formats]\n\n[+other][-options] is on another line and may cause issues with bit chaining.\n\nHere we chain [+other][@example][-options] correctly\n\nHere we chain [+other] [-options] incorrectly"
   }

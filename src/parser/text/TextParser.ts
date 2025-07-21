@@ -1,5 +1,6 @@
 import { JsonText, TextAst } from '../../model/ast/TextNodes';
-import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
+import { TextFormatType } from '../../model/enum/TextFormat';
+import { TextLocation, TextLocationType } from '../../model/enum/TextLocation';
 import { TextNodeType } from '../../model/enum/TextNodeType';
 import { BodyBitJson } from '../../model/json/BodyBitJson';
 import { StringUtils } from '../../utils/StringUtils';
@@ -7,13 +8,9 @@ import { StringUtils } from '../../utils/StringUtils';
 import { parse as bitmarkTextParse } from './peg/TextPegParser';
 
 export interface BitmarkTextParserOptions {
-  textFormat: TextFormatType;
-  isProperty: boolean;
+  format: TextFormatType;
+  location: TextLocationType;
 }
-
-const START_HAT_REGEX = new RegExp('^\\^\\n', 'gm');
-const MIDDLE_HAT_REGEX = new RegExp('\\n\\^\\n', 'gm');
-const END_HAT_REGEX = new RegExp('\\n\\^$', 'gm');
 
 class TextParser {
   /**
@@ -88,25 +85,12 @@ class TextParser {
     const opts = Object.assign({}, options);
 
     // Set the start rule.
-    // If the bit text format is bitmark++, and the text is a property, the start rule is bitmarkPlus
+    // The start rule is bitmark++ for the body, and bitmark+ for the tags
     // Otherwise, the start rule is bitmarkMinusMinus
-    let startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
-    if (opts.isProperty && opts.textFormat === TextFormat.bitmarkPlusPlus) {
+    let startRule = 'bitmarkPlusPlus';
+    if (opts.location === TextLocation.tag) {
       startRule = 'bitmarkPlus';
     }
-
-    // There is a special case for pre-processing the string passed to the text parser
-    // If the string starts with ^/n, contains /n^/n or ends with /n^, the parser will generated
-    // an empty text block:
-    // {
-    //   "text": "",
-    //   "type": "text"
-    // },
-    //
-    // This happens because the single ^ is removed by the breakscaping algorithm.
-    // This in itself is not wrong, but it is undesired because it will be lost when converting back to text.
-    // Therefore the string is pre-processed to remove these empty text blocks.
-    str = str.replace(START_HAT_REGEX, '\n').replace(END_HAT_REGEX, '\n').replace(MIDDLE_HAT_REGEX, '\n\n');
 
     // Always trim the string before parsing (parser handles leading/trailing whitespace inconsistently)
     str = str.trim();

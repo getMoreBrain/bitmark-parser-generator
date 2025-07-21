@@ -1,0 +1,879 @@
+[
+  {
+    "bit": {
+      "type": "q-and-a-card",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "icon": {
+              "type": "image",
+              "image": {
+                "format": "svg",
+                "provider": "image.io",
+                "src": "https://image.io/question1.svg",
+                "width": null,
+                "height": null,
+                "alt": "",
+                "zoomDisabled": false,
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            }
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 1",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question Too Many?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer Too Many",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 2,",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            "icon": {
+              "type": "image",
+              "image": {
+                "format": "svg",
+                "provider": "image.io",
+                "src": "https://image.io/answer2.svg",
+                "width": null,
+                "height": null,
+                "alt": "",
+                "zoomDisabled": false,
+                "license": "",
+                "copyright": "",
+                "showInIndex": false,
+                "caption": []
+              }
+            }
+          },
+          "alternativeAnswers": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Footer anyone?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.q-and-a-card]\n\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n[&icon:https://image.io/question1.svg]\n--\nAnswer 1\nCard 1, Side 2, No footer\n====\nQuestion Too Many?\nCard 2, Side 1\n--\nAnswer Too Many\nCard 2, Side 2,\n[&icon:https://image.io/answer2.svg]\n~~~~\n\nFooter anyone?"
+  },
+  {
+    "bit": {
+      "type": "q-and-a-card",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 1",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Answer 2",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Footer anyone?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.q-and-a-card]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n~~~~\n\nFooter anyone?"
+  },
+  {
+    "bit": {
+      "type": "q-and-a-card",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 1",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 2",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Answer 1",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            },
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Alternative Answer 2",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "text": "Card 1, Side 2",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ]
+            }
+          ],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.q-and-a-card]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2"
+  },
+  {
+    "bit": {
+      "type": "q-and-a-card",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 2?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 2",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [],
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "lead",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isExample": true,
+          "example": true
+        }
+      ],
+      "isExample": true,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.q-and-a-card]\n[@example]\n[%item][%lead]\nSomebody\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]"
+  },
+  {
+    "bit": {
+      "type": "q-and-a-card",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 1",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [],
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "item",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "lead": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "lead",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isExample": true,
+          "example": true
+        }
+      ],
+      "isExample": true,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.q-and-a-card]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2, No footer\n[%item][%lead]\n[@example]"
+  },
+  {
+    "bit": {
+      "type": "q-and-a-card",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "lead",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Somebody",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "cards": [
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question 1?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer 1",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 1, Side 2, No footer",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Question Too Many?",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 1",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "answer": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Answer Too Many",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hardBreak"
+                  },
+                  {
+                    "text": "Card 2, Side 2,",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeAnswers": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Footer anyone?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "isExample": false,
+      "revealSolutions": false
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.q-and-a-card]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2, No footer\n====\nQuestion Too Many?\nCard 2, Side 1\n--\nAnswer Too Many\nCard 2, Side 2,\n~~~~\n\nFooter anyone?"
+  }
+]

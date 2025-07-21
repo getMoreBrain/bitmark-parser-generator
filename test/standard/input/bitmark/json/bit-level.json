@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "item": [],
       "lead": [],
@@ -13,16 +13,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 2,
       "id": [
         "151971"
@@ -36,9 +36,27 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[..article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 12
+            },
+            "end": {
+              "line": 3,
+              "column": 22,
+              "offset": 33
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[..article:bitmark--]\n[@id:151971]"
   },
@@ -59,16 +77,16 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.article:bitmark++]\n[@id:151972]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 3,
       "id": [
         "151973"
@@ -82,16 +100,34 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[...article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 83
+            },
+            "end": {
+              "line": 9,
+              "column": 23,
+              "offset": 105
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[...article:bitmark--]\n[@id:151973]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 2,
       "id": [
         "239893"
@@ -105,10 +141,26 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[..article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 120
+            },
+            "end": {
+              "line": 12,
+              "column": 28,
+              "offset": 147
+            }
+          }
+        },
         {
           "message": "[&image] is required at least 1 time(s)",
           "text": "[..article:bitmark--&image]\n[@id:239893]\n\n",
@@ -148,7 +200,7 @@
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 2,
       "id": [
         "191143"
@@ -162,10 +214,26 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[..article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 163
+            },
+            "end": {
+              "line": 16,
+              "column": 28,
+              "offset": 190
+            }
+          }
+        },
         {
           "message": "[&image] is required at least 1 time(s)",
           "text": "[..article:bitmark--&image]\n[@id:191143]\n",
@@ -205,7 +273,7 @@
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "245285"
@@ -219,10 +287,26 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 205
+            },
+            "end": {
+              "line": 19,
+              "column": 27,
+              "offset": 231
+            }
+          }
+        },
         {
           "message": "[&image] is required at least 1 time(s)",
           "text": "[.article:bitmark--&image]\n[@id:245285]\n",
@@ -270,10 +354,26 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[..|article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 246
+            },
+            "end": {
+              "line": 22,
+              "column": 29,
+              "offset": 274
+            }
+          }
+        },
         {
           "message": "[&image] is required at least 1 time(s)",
           "text": "[..|article:bitmark--&image]\n[@id:239893]\n\n",
@@ -313,7 +413,7 @@
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 7,
       "id": [
         "5743563"
@@ -327,16 +427,34 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.......article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 290
+            },
+            "end": {
+              "line": 26,
+              "column": 27,
+              "offset": 316
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.......article:bitmark--]\n[@id:5743563]"
   },
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 7,
       "id": [
         "162205"
@@ -350,12 +468,28 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "Bit level of 8 too high, setting to max value of 7",
+          "text": "[........article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 332
+            },
+            "end": {
+              "line": 29,
+              "column": 34,
+              "offset": 365
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
           "text": "[........article:bitmark--&image]",
           "location": {
             "start": {
@@ -409,7 +543,7 @@
   {
     "bit": {
       "type": "article",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 7,
       "id": [
         "162205"
@@ -423,12 +557,28 @@
       "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0",
+      "textParserVersion": "8.32.2",
       "warnings": [
         {
           "message": "Bit level of 11 too high, setting to max value of 7",
+          "text": "[...........article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 381
+            },
+            "end": {
+              "line": 33,
+              "column": 37,
+              "offset": 417
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
           "text": "[...........article:bitmark--&image]",
           "location": {
             "start": {

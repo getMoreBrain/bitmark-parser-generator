@@ -18,6 +18,7 @@ import { BitTagType, BitTagTypeType } from '../../../model/enum/BitTagType';
 import { BitTypeType } from '../../../model/enum/BitType';
 import { Count, CountType } from '../../../model/enum/Count';
 import { PropertyTag, PropertyTagType } from '../../../model/enum/PropertyTag';
+import { ResourceTag } from '../../../model/enum/ResourceTag';
 import { Tag, TagType } from '../../../model/enum/Tag';
 import { TextFormatType } from '../../../model/enum/TextFormat';
 import { ParserData } from '../../../model/parser/ParserData';
@@ -242,7 +243,7 @@ class BitmarkPegParserValidator {
 
     const { bodyAllowed } = variantConfig;
 
-    const hasBody = (cardBody.body as JsonText).length > 0;
+    const hasBody = (cardBody.bodyString as JsonText).length > 0;
 
     // this.checkBodyForCommonPotentialMistakes(context, contentDepth, bitType, cardBody);
 
@@ -339,7 +340,7 @@ class BitmarkPegParserValidator {
       if (!content) continue;
 
       const { type, key } = content as TypeKeyValue;
-      const typeKey = TypeKey.fromValue(type);
+      let typeKey = TypeKey.fromValue(type);
       if (!typeKey) continue; // Should not happen
 
       // Build the final type key with the property / resource key added
@@ -348,7 +349,28 @@ class BitmarkPegParserValidator {
         typeKeyPlusKey = `${typeKey}:${key}`;
       }
 
-      const tagData = validTypeKeys.get(typeKeyPlusKey);
+      // Get the tag data for this tag type and key. If not found, the tag is not valid
+      let tagData = validTypeKeys.get(typeKeyPlusKey);
+
+      // Support [@ fallback to [&:
+      // See: https://github.com/getMoreBrain/cosmic/issues/7859
+      // In the case of a property tag that is not found, convert it to a resource tag and retry
+      // Only for specific tags. This is to support legacy tags for a short period and will be removed in the future
+      // (support @ instead of & for resources)
+      if (
+        !tagData &&
+        typeKey === TypeKey.Property &&
+        (key === ResourceTag.backgroundWallpaper || key === ResourceTag.imagePlaceholder)
+      ) {
+        tagData = validTypeKeys.get(`${TypeKey.Resource}:${key}`);
+        if (tagData) {
+          typeKey = TypeKey.Resource;
+          content.type = TypeKey.Resource;
+
+          const warningMsg = `Falling back to '[&${key}]' from '[@${key}]'. Replace '[@${key}]' with '[&${key}]' to avoid this warning.`;
+          context.addWarning(warningMsg);
+        }
+      }
 
       // Validate the single tag
       const { validated: validatedTagContent, warning } = this.validateSingleTag(

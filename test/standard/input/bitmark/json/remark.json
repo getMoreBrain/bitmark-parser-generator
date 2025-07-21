@@ -2,17 +2,10 @@
   {
     "bit": {
       "type": "remark",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "239803"
-      ],
-      "bubbleTag": [
-        "Tag 1",
-        "",
-        "Tag 2",
-        "**Tag 3**"
-      ],
+      "id": ["239803"],
+      "bubbleTag": ["Tag 1", "", "Tag 2", "**Tag 3**"],
       "item": [],
       "lead": [
         {
@@ -44,26 +37,40 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.remark]\n[@id:239803]\n[@bubbleTag:Tag 1]\n[@bubbleTag:]\n[@bubbleTag:Tag 2]\n[@bubbleTag:**Tag 3**]\n[%][%Reflexion]\nHalte deine Gedanken in einem Notizbuch oder auf Klebezetteln fest, du kannst diese auch auf diese Seite im Buch heften und später zurückkommen, um für dich zu sehen, was sich über die Zeit an deiner Perspektive verändert."
   },
   {
     "bit": {
       "type": "remark",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "239896"
-      ],
+      "id": ["239896"],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitmark.cloud",
+          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png",
+          "width": 150,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -84,39 +91,39 @@
           ],
           "attrs": {}
         }
-      ],
-      "resource": {
-        "type": "image",
-        "image": {
-          "format": "png",
-          "provider": "docs.bitmark.cloud",
-          "src": "https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png",
-          "width": "150",
-          "height": null,
-          "alt": "",
-          "zoomDisabled": false,
-          "license": "",
-          "copyright": "",
-          "showInIndex": false,
-          "caption": []
-        }
-      }
+      ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.remark:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 10,
+              "column": 1,
+              "offset": 338
+            },
+            "end": {
+              "line": 10,
+              "column": 26,
+              "offset": 363
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.remark:bitmark--&image]\n[@id:239896]\n[&image:https://docs.bitmark.cloud/bit-books/beWirken/das_methodenbuch_fur_digitale_unterricht/web-resources/images/bewirken_k7_2.png][@width:150]\n**Avatar – Ein Avatar ist ein*e grafische*r Stellvertreter*in für eine echte Person**, dies können auch echte Bilder der Schüler*innen sein oder eigene gewählte Symbole, Zeichnungen oder künstlich erstelle Personen."
   },
   {
     "bit": {
       "type": "remark",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "234993"
-      ],
+      "id": ["234993"],
       "item": [],
       "lead": [
         {
@@ -166,253 +173,331 @@
             {
               "text": " – Gemeinsamer Start",
               "type": "text"
-            },
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
             {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Check-In/Warm-Up – z.B. mit ",
-              "type": "text"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "italic"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Check-In/Warm-Up – z.B. mit ",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ],
+                      "text": "Drei Hashtags",
+                      "type": "text"
+                    },
+                    {
+                      "text": ": Welche nationalen/internationalen Gedenktage kennst du?",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "10:05 Uhr",
+                      "type": "text"
+                    },
+                    {
+                      "text": " – Einstieg ins Thema",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "Drei Hashtags",
-              "type": "text"
+              ]
             },
             {
-              "text": ": Welche nationalen/internationalen Gedenktage kennst du?",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Austausch in ",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ],
+                      "text": "Breakout-Räumen",
+                      "type": "text"
+                    },
+                    {
+                      "text": " (3er bis 4er Gruppen). Leitenden Fragen z.B.:",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "10:05 Uhr",
-              "type": "text"
+              ]
             },
             {
-              "text": " – Einstieg ins Thema",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Austausch in ",
-              "type": "text"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "italic"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Welche Formen gibt es, um an historische Ereignisse zu erinnern?",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "Breakout-Räumen",
-              "type": "text"
+              ]
             },
             {
-              "text": " (3er bis 4er Gruppen). Leitenden Fragen z.B.:",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Welche Formen gibt es, um an historische Ereignisse zu erinnern?",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "10:30 Uhr",
-              "type": "text"
+              ]
             },
             {
-              "text": " – Thema vertiefen & Inhalte erarbeiten",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• ",
-              "type": "text"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "italic"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "Breakout-Räume",
-              "type": "text"
+              ]
             },
             {
-              "text": ": Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "11:00 Uhr",
-              "type": "text"
+              ]
             },
             {
-              "text": " – Kurze Pause oder Energizer",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "10:30 Uhr",
+                      "type": "text"
+                    },
+                    {
+                      "text": " – Thema vertiefen & Inhalte erarbeiten",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "11:05 Uhr",
-              "type": "text"
+              ]
             },
             {
-              "text": " – Kritische Auseinandersetzung",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• Mit einer ",
-              "type": "text"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "italic"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ],
+                      "text": "Breakout-Räume",
+                      "type": "text"
+                    },
+                    {
+                      "text": ": Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "11:00 Uhr",
+                      "type": "text"
+                    },
+                    {
+                      "text": " – Kurze Pause oder Energizer",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "11:05 Uhr",
+                      "type": "text"
+                    },
+                    {
+                      "text": " – Kritische Auseinandersetzung",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "stillen Diskussion",
-              "type": "text"
+              ]
             },
             {
-              "text": " erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Mit einer ",
+                      "type": "text"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ],
+                      "text": "stillen Diskussion",
+                      "type": "text"
+                    },
+                    {
+                      "text": " erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "11:20 Uhr",
+                      "type": "text"
+                    },
+                    {
+                      "text": " – Zusammenfassung (durch dich oder Schüler*innen)",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "11:25 Uhr",
+                      "type": "text"
+                    },
+                    {
+                      "text": " – Reflexion & Check-Out",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "11:20 Uhr",
-              "type": "text"
+              ]
             },
             {
-              "text": " – Zusammenfassung (durch dich oder Schüler*innen)",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "bold"
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ],
+                      "text": "Klebezettel-Methode",
+                      "type": "text"
+                    },
+                    {
+                      "text": ": Was möchte ich für mich mitnehmen?",
+                      "type": "text"
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "marks": [
+                        {
+                          "type": "bold"
+                        }
+                      ],
+                      "text": "11:30 Uhr",
+                      "type": "text"
+                    },
+                    {
+                      "text": " – ENDE",
+                      "type": "text"
+                    }
+                  ]
                 }
-              ],
-              "text": "11:25 Uhr",
-              "type": "text"
-            },
-            {
-              "text": " – Reflexion & Check-Out",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "text": "• ",
-              "type": "text"
-            },
-            {
-              "marks": [
-                {
-                  "type": "italic"
-                }
-              ],
-              "text": "Klebezettel-Methode",
-              "type": "text"
-            },
-            {
-              "text": ": Was möchte ich für mich mitnehmen?",
-              "type": "text"
-            },
-            {
-              "type": "hardBreak"
-            },
-            {
-              "marks": [
-                {
-                  "type": "bold"
-                }
-              ],
-              "text": "11:30 Uhr",
-              "type": "text"
-            },
-            {
-              "text": " – ENDE",
-              "type": "text"
+              ]
             }
           ],
           "attrs": {}
@@ -420,20 +505,18 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.remark]\n[@id:234993]\n[%][%Agendabeispiel 1: Inhaltlicher Einstieg – Beispielthema: Einnerungskultur & Deutsche Geschichte]\n**09:50 Uhr** – Ankommen (bei Onlinesession Videokonferenzraum öffnen)\n**10:00 Uhr** – Gemeinsamer Start\n• Check-In/Warm-Up – z.B. mit __Drei Hashtags__: Welche nationalen/internationalen Gedenktage kennst du?\n**10:05 Uhr** – Einstieg ins Thema\n• Austausch in __Breakout-Räumen__ (3er bis 4er Gruppen). Leitenden Fragen z.B.:\n• Welche Formen gibt es, um an historische Ereignisse zu erinnern?\n• Wie habt ihr selbst verschiedene Formen der Erinnerung erlebt?\n• An welche historischen Ereignisse wird in Deutschland besonders viel erinnert und auf welche Art?\n• Wichtige Stichpunkte werden von den Schüler*innen auf einem Board-Tool oder in einem Dokument gesammelt.\n• Im Anschluss gemeinsam auf die Ergebnisse blicken. Du kannst Punkte herausgreifen, nachfragen oder ergänzen.\n**10:30 Uhr** – Thema vertiefen & Inhalte erarbeiten\n• __Breakout-Räume__: Schüler*innen erhalten Material (z.B. Videoschnipsel, Texte) und erarbeiten in ihren Gruppen eine Definition von Erinnerungskultur und halten diese auf einem Board-Tool fest.\n**11:00 Uhr** – Kurze Pause oder Energizer\n**11:05 Uhr** – Kritische Auseinandersetzung\n• Mit einer __stillen Diskussion__ erörtern die Schüler*innen die Vor- und Nachteile der jeweiligen Definitionen.\n**11:20 Uhr** – Zusammenfassung (durch dich oder Schüler*innen)\n**11:25 Uhr** – Reflexion & Check-Out\n• __Klebezettel-Methode__: Was möchte ich für mich mitnehmen?\n**11:30 Uhr** – ENDE"
   },
   {
     "bit": {
       "type": "remark-alt",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -465,20 +548,36 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.remark-alt:bitmark--]",
+          "location": {
+            "start": {
+              "line": 40,
+              "column": 1,
+              "offset": 2282
+            },
+            "end": {
+              "line": 40,
+              "column": 24,
+              "offset": 2305
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.remark-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
   },
   {
     "bit": {
       "type": "standard-remark-normative",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -510,20 +609,36 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.standard-remark-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 47,
+              "column": 1,
+              "offset": 2363
+            },
+            "end": {
+              "line": 47,
+              "column": 39,
+              "offset": 2401
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.standard-remark-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
       "type": "standard-remark-non-normative",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -555,9 +670,27 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2",
+      "warnings": [
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "text": "[.standard-remark-non-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 54,
+              "column": 1,
+              "offset": 2455
+            },
+            "end": {
+              "line": 54,
+              "column": 43,
+              "offset": 2497
+            }
+          }
+        }
+      ]
     },
     "bitmark": "[.standard-remark-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
   }

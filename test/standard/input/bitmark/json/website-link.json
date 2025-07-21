@@ -2,32 +2,135 @@
   {
     "bit": {
       "type": "website-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["119761"],
+      "id": [
+        "119761"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "website-link",
         "websiteLink": {
           "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
           "license": "",
           "copyright": "",
+          "showInIndex": true,
+          "caption": []
+        }
+      },
+      "body": []
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.website-link]\n[@id:119761]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@showInIndex]"
+  },
+  {
+    "bit": {
+      "type": "website-link",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "website-link",
+        "websiteLink": {
+          "url": "/logout",
+          "license": "",
+          "copyright": "",
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
-    "bitmark": "[.website-link]\n[@id:119761]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]"
+    "bitmark": "[.website-link]\n[&website-link:/logout][@caption]"
+  },
+  {
+    "bit": {
+      "type": "website-link",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "website-link",
+        "websiteLink": {
+          "url": "/logout",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
+      "body": []
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.website-link]\n[&website-link:/logout][@caption:]"
+  },
+  {
+    "bit": {
+      "type": "website-link",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "website-link",
+        "websiteLink": {
+          "url": "/logout",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "true",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        }
+      },
+      "body": []
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.website-link]\n[&website-link:/logout][@caption:true]"
   }
 ]

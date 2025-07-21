@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135649"
@@ -20,8 +20,6 @@
         }
       ],
       "level": 2,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-1",
       "item": [],
       "lead": [],
@@ -29,19 +27,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-1]\n[@id:135649]\n[##It’s complicated]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135651"
@@ -59,8 +59,6 @@
         }
       ],
       "level": 2,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-2",
       "item": [],
       "lead": [],
@@ -68,19 +66,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-2]\n[@id:135651]\n[##So Hedge Therefore, Who Join Forever]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135653"
@@ -98,8 +98,6 @@
         }
       ],
       "level": 2,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-3",
       "item": [],
       "lead": [],
@@ -107,19 +105,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-3]\n[@id:135653]\n[##The plug problem]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135655"
@@ -137,8 +137,6 @@
         }
       ],
       "level": 2,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-4",
       "item": [],
       "lead": [],
@@ -146,19 +144,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-4]\n[@id:135655]\n[##In principle, the solution would be simple, but…]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135657"
@@ -176,8 +176,6 @@
         }
       ],
       "level": 2,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-5",
       "item": [],
       "lead": [],
@@ -185,19 +183,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-5]\n[@id:135657]\n[##Existing e-learning standards (AICC, SCORM etc.) do not meet today’s requirements]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135659"
@@ -215,8 +215,6 @@
         }
       ],
       "level": 2,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-6",
       "item": [],
       "lead": [],
@@ -224,19 +222,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-6]\n[@id:135659]\n[##bitmark — the freely accessible content-first standard for interactive learning content]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135661"
@@ -254,8 +254,6 @@
         }
       ],
       "level": 3,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-7",
       "item": [],
       "lead": [],
@@ -263,19 +261,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-7]\n[@id:135661]\n[###Suitable for all learning content]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135663"
@@ -293,8 +293,6 @@
         }
       ],
       "level": 3,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-8",
       "item": [],
       "lead": [],
@@ -302,19 +300,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-8]\n[@id:135663]\n[###Uncompromisingly “content-first”]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135665"
@@ -332,8 +332,6 @@
         }
       ],
       "level": 3,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-9",
       "item": [],
       "lead": [],
@@ -341,19 +339,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-9]\n[@id:135665]\n[###Openness of the standard prevents “lock-in” effects]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135667"
@@ -371,8 +371,6 @@
         }
       ],
       "level": 3,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-10",
       "item": [],
       "lead": [],
@@ -380,19 +378,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-10]\n[@id:135667]\n[###Digital transformation of learning]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135669"
@@ -410,8 +410,6 @@
         }
       ],
       "level": 2,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-11",
       "item": [],
       "lead": [],
@@ -419,19 +417,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-11]\n[@id:135669]\n[##Democratization of learning]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135671"
@@ -449,8 +449,6 @@
         }
       ],
       "level": 2,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-12",
       "item": [],
       "lead": [],
@@ -458,19 +456,21 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-12]\n[@id:135671]\n[##The “bitmark Association”]"
   },
   {
     "bit": {
       "type": "chapter",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "135673"
@@ -488,8 +488,6 @@
         }
       ],
       "level": 2,
-      "toc": true,
-      "progress": true,
       "anchor": "ch-13",
       "item": [],
       "lead": [],
@@ -497,13 +495,130 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": []
+      "body": [],
+      "toc": true,
+      "progress": true
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.chapter]\n[▼ch-13]\n[@id:135673]\n[##Useful links:]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true,
+      "level": 1
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.chapter]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "level": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.chapter]\n[#]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "level": 2,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.chapter]\n[##]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "level": 3,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.chapter]\n[###]"
+  },
+  {
+    "bit": {
+      "type": "chapter",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "level": 4,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "toc": true,
+      "progress": true
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.chapter]\n[####]"
   }
 ]

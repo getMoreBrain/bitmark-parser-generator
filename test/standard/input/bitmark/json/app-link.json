@@ -2,7 +2,7 @@
   {
     "bit": {
       "type": "app-link",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "119760"
@@ -13,7 +13,6 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
       "resource": {
         "type": "app-link",
         "appLink": {
@@ -23,12 +22,13 @@
           "showInIndex": false,
           "caption": []
         }
-      }
+      },
+      "body": []
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.app-link]\n[@id:119760]\n[&app-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]"
   }

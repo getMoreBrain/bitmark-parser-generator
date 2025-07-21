@@ -2,14 +2,11 @@
   {
     "bit": {
       "type": "review-note",
-      "format": "bitmark--",
+      "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "210022"
       ],
-      "resolved": false,
-      "resolvedDate": "",
-      "resolvedBy": "",
       "item": [],
       "lead": [
         {
@@ -43,12 +40,15 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "resolved": false,
+      "resolvedDate": "",
+      "resolvedBy": ""
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.review-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   },
@@ -99,9 +99,9 @@
       ]
     },
     "parser": {
-      "version": "1.31.0",
+      "version": "3.25.2",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.17.0"
+      "textParserVersion": "8.32.2"
     },
     "bitmark": "[.review-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n[@resolved:true]\n[@resolvedDate:1992]\n[@resolvedBy:Kayo]\n\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   }

@@ -28,6 +28,14 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.isTemplate,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.isTemplateStripTheme,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.aiGenerated,
       },
       {
@@ -69,6 +77,10 @@ const GROUPS: _GroupsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.disableFeedback,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.diffTo,
       },
       {
         type: BitTagType.property,
@@ -170,6 +182,16 @@ const GROUPS: _GroupsConfig = {
       {
         type: BitTagType.property,
         configKey: PropertyConfigKey.showInIndex,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.layer,
+        maxCount: Count.infinity,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.layerRole,
+        maxCount: Count.infinity,
       },
     ],
   },
@@ -455,7 +477,19 @@ const GROUPS: _GroupsConfig = {
       },
       {
         type: BitTagType.property,
+        configKey: PropertyConfigKey.processHandInLocation,
+      },
+      {
+        type: BitTagType.property,
         configKey: PropertyConfigKey.isPublic,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.isTemplate,
+      },
+      {
+        type: BitTagType.property,
+        configKey: PropertyConfigKey.isTemplateStripTheme,
       },
       {
         type: BitTagType.property,
@@ -586,8 +620,8 @@ const GROUPS: _GroupsConfig = {
     type: GroupConfigType.standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.imagePlaceholder,
+        type: BitTagType.resource,
+        configKey: ResourceConfigKey.imagePlaceholder,
         chain: [
           {
             type: BitTagType.group,
@@ -758,6 +792,21 @@ const GROUPS: _GroupsConfig = {
   //
   // Single resources
   //
+  [GroupConfigKey.group_resourceIcon]: {
+    type: GroupConfigType.standard,
+    tags: [
+      {
+        type: BitTagType.resource,
+        configKey: ResourceConfigKey.icon,
+        chain: [
+          {
+            type: BitTagType.group,
+            configKey: GroupConfigKey.group_resourceImageCommon,
+          },
+        ],
+      },
+    ],
+  },
   [GroupConfigKey.group_resourceImage]: {
     type: GroupConfigType.resource,
     tags: [

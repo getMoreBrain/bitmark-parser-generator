@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.21.2"
+const VERSION = "8.34.3"
 
 //Parser peggy.js
 
@@ -64,6 +64,8 @@ Alex
 
 |image:https://apple.com|width:300|height: 400|
 
+text ==alt text of the inline image==|image:https://img.io/img.svg|width:400|height:200|#comment| more text
+
 |code: javascript
 
 let a = 3
@@ -92,19 +94,25 @@ function s(_string) {
   return _string ?? ""
 }
 
-function unbreakscape(_str) {
+function legacyContextAwarewUnbreakscape(_str) {
 	let u_ = _str || ""
 
-	// function replacer(match, p1, offset, string, groups) {
-  // 		return match.replace("^", "");
-	// }
+	function replacer(match, p1, offset, string, groups) {
+  		return match.replace("^", "");
+	}
 
-  // let re_ = new RegExp( /=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
+  let re_ = new RegExp( /=\^(\^*)(?==)|\*\^(\^*)(?=\*)|_\^(\^*)(?=_)|`\^(\^*)(?=`)|!\^(\^*)(?=!)|\[\^(\^*)|•\^(\^*)|#\^(\^*)|\|\^(\^*)|\|\^(\^*)/, "g") // RegExp( /([\[*_`!])\^(?!\^)/, "g")
 
-  // u_ = u_.replace(re_, replacer)
-  u_ = Breakscape.unbreakscape(u_);
+  u_ = u_.replace(re_, replacer)
 
   return u_
+}
+
+function unbreakscape(str) {
+  if (typeof str !== 'string') return null;
+  // return str.replace(/\^+/g, run => run.slice(1));
+
+  return Breakscape.unbreakscape(str);
 }
 
 function removeTempParsingParent(obj) {
@@ -117,6 +125,72 @@ function removeTempParsingParent(obj) {
             removeTempParsingParent(obj[key]);
         });
     }
+}
+
+// function cleanEmptyTextNodes(node) {
+//   debugger;
+//   if (Array.isArray(node)) {
+//     return node.map(cleanEmptyTextNodes);
+//   }
+//   if (node !== null && typeof node === 'object') {
+//     const hasType    = Object.prototype.hasOwnProperty.call(node, 'type');
+//     const hasContent = Object.prototype.hasOwnProperty.call(node, 'content');
+//     const result = {};
+
+//     for (const [key, value] of Object.entries(node)) {
+//       if (key === 'content' && hasType && hasContent && Array.isArray(value)) {
+//         // filter out items where item.text === ""
+//         const filtered = value.filter(item =>
+//           !(item && typeof item === 'object' && 'text' in item && item.text === '')
+//         );
+//         result[key] = filtered.map(cleanEmptyTextNodes);
+
+//       } else if (Array.isArray(value)) {
+//         result[key] = value.map(cleanEmptyTextNodes);
+
+//       } else {
+//         result[key] = cleanEmptyTextNodes(value);
+//       }
+//     }
+
+//     return result;
+//   }
+//   return node;
+// }
+
+/**
+ * RAS 2025-05-22
+ * Fixes / features
+ * - Handles arrays or objects as input (including root array) - main reason for change
+ * - Modifies in-place rather than copying array.
+ * - Removed some unnecessary checks - will work fine without them
+ */
+function cleanEmptyTextNodes(root) {
+  const isEmptyTextNode = (n) => n && n.type === "text" && !n.text;
+
+  // Recursively walk 'content' arrays
+  function cleanContentArray(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+      const item = arr[i];
+
+      if (isEmptyTextNode(item)) {
+        // drop the empty text node
+        arr.splice(i, 1);
+      } else if (item && Array.isArray(item.content)) {
+        // recurse into `content` array
+        cleanContentArray(item.content);
+      }
+      // Any other shape is ignored.
+    }
+  }
+
+  if (Array.isArray(root)) {
+    cleanContentArray(root);
+  } else if (root && Array.isArray(root.content)) {
+    cleanContentArray(root.content);
+  }
+
+  return root;
 }
 
 function bitmarkPlusPlus(_str) {
@@ -195,12 +269,13 @@ bitmarkPlusPlus "StyledText"
   / NoContent
 
 Block
-  = b: TitleBlock { return { ...b }}
-  / b: ListBlock { let lb_ = { ...b }; removeTempParsingParent(lb_); return lb_ }
+  = b: TitleBlock { const cleaned_ = cleanEmptyTextNodes({ ...b }); return cleaned_ }
+  / b: ListBlock { let lb_ = { ...b }; removeTempParsingParent(lb_); const cleaned_ = cleanEmptyTextNodes(lb_); return cleaned_ }
   / b: ImageBlock { return { ...b }}
   / b: CodeBlock { return { ...b }}
-  / b: Paragraph { return { ...b }}
+  / b: Paragraph { const cleaned_ = cleanEmptyTextNodes({ ...b }); return cleaned_ }
 
+//const cleaned = cleanEmptyTextNodes(exampleData);
 
 BlockStartTags
   = TitleTags
@@ -222,10 +297,6 @@ BlockTag = '|'
 NoContent
     = '' { return [] }
 
-Heading
-  = ':' h: $(char*) { return bitmarkMinusMinusString(h.trim()) }
-  / '' { return [] }
-
 
 
 // Title Block
@@ -236,7 +307,7 @@ TitleTags
   / '# '
 
 TitleBlock
-  = h: TitleTags t: $char* EOL  NL? { return { type: "heading", content: bitmarkMinusMinusString(t), attrs: { level: h.length - 1 } } }
+  = h: TitleTags t: $char* EOL  NL? { return { type: "heading", content: bitmarkPlusString(t), attrs: { level: h.length - 1 } } }
 
 
 
@@ -458,7 +529,7 @@ ImageTag
   = BlockTag t: ImageType { return t }
 
 ImageBlock
-  = t: ImageTag ':' ' '? u: UrlHttp BlockTag ch: MediaChain? $([ \t]* EOL) NL?
+  = t: ImageTag ':' ' '? u: UrlHttp ' '* BlockTag ch: MediaChain? $([ \t]* EOL) NL?
   {
 
     const chain = Object.assign({}, ...ch)
@@ -468,18 +539,20 @@ ImageBlock
     let alt_ = chain.alt || null; delete chain.alt
     let title_ = chain.caption || null; delete chain.caption
     let class_ = chain.align || "center"; delete chain.align
-	let zoomDisabled_ = chain.zoomDisabled || Boolean(chain.zoomDisabled); delete chain.zoomDisabled
+    let zoomDisabled_ = chain.zoomDisabled === undefined ? true
+    	: typeof chain.zoomDisabled === 'boolean' ? chain.zoomDisabled
+    	: String(chain.zoomDisabled).toLowerCase() === 'true'; delete chain.zoomDisabled
 
     let image = {
       type: t,
       attrs: {
-		alignment: imageAlignment_,
+        alignment: imageAlignment_,
         textAlign: textAlign_,
         src: u,
-        alt: alt_,
-        title: title_,
+        alt: unbreakscape(alt_),
+        title: unbreakscape(title_),
         class: class_,
-		zoomDisabled: zoomDisabled_,
+        zoomDisabled: zoomDisabled_,
         ...chain
       }
     }
@@ -492,22 +565,32 @@ MediaChain
   = ch: MediaChainItem* { return ch }
 
 MediaChainItem
-  = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
-  / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
-  / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be an positive integer.', found: v }}
-  / '@'? p: AlignmentTags ':' ' '* v: Alignment BlockTag  { return { [p]: v } }
-  / '@'? p: $((!(BlockTag / ':' / AlignmentTags ':') char)*) ':' ' '? v: $((!BlockTag char)*) BlockTag { return { [p]: v } }
-  / '@'? p: $((!(BlockTag / AlignmentTags ':') char)*) BlockTag {return { [p]: true } }
+  = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str.trim() }}
+  / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) ' '* BlockTag { return { [p]: parseInt(v) } }
+  / '@'? p: MediaTextTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { [p]: v.trim() } }
+  / '@'? p: MediaAlignmentTags ':' ' '* v: MediaAlignment ' '* BlockTag  { return { [p]: v } }
+  / '@'? p: MediaBooleanTags ':' ' '* v: Boolean ' '* BlockTag  { return { [p]: v } }
+  / '@'? p: MediaBooleanTags ' '* BlockTag  { return { [p]: true } }
+  / '@'? BlockTag  { return } // ignore empty chain elements ||
+  / '@'? p: $((!BlockTag char)*) BlockTag { return { error: 'Found unknown property or invalid value: '+ p }} // don't break on unknown properties, but don't accept them neither
 
 MediaSizeTags
   = 'width' / 'height'
 
-AlignmentTags
+MediaAlignmentTags
   = 'alignment' / 'captionAlign'
 
-Alignment
+MediaAlignment
   = 'left' / 'center' / 'right'
 
+MediaTextTags
+  = 'alt' / 'caption'
+
+MediaBooleanTags
+  = 'zoomDisabled'
+
+Boolean
+  = 'true' / 'false'
 
 
 
@@ -521,7 +604,9 @@ bitmarkPlusString "StyledString"
   = InlineTags
 
 InlineTags
-  = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
+  // RAS 2025-05-22 - for bitmarkPlus / bitmarkPlusString
+  // = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
+  = first: InlinePlainText? more: (InlineStyledText / InlinePlainText)*  { const cleaned_ = cleanEmptyTextNodes(first ? [first, ...more.flat()] : more.flat()); return cleaned_ }
 
 InlinePlainText
   = NL { return { "type": "hardBreak" } }
@@ -534,12 +619,13 @@ InlineTag = InlineHalfTag InlineHalfTag
 
 InlineStyledText
   = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
-  / InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: t}, type: "latex" } }
-  / InlineTag ' '? t: $((!(' '? InlineTag) .)* ) ' '? InlineTag marks: AttrChain { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
-  / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
-  / ItalicTag ' '? t: $((!(' '? ItalicTag) .)* ) ' '? ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
-  / LightTag ' '? t: $((!(' '? LightTag) .)* ) ' '? LightTag { return { marks: [{type: "light"}], text: unbreakscape(t), type: "text" } }
-  / HighlightTag ' '? t: $((!(' '? HighlightTag) .)* ) ' '? HighlightTag { return { marks: [{type: "highlight"}], text: unbreakscape(t), type: "text" } }
+  / InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: unbreakscape(t)}, type: "latex" } }
+  / InlineTag alt: $((!InlineTag .)* ) InlineTag '|imageInline:' u: Url '|' ch: InlineMediaChain? { return { attrs: { alt, src: (u.pr + u.t).trim(), ...Object.assign({}, ...ch), zoomDisabled: true }, type: "imageInline" } }
+  / InlineTag t: $((!InlineTag .)* ) InlineTag marks: AttrChain { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
+  / BoldTag t: $((!BoldTag .)* ) BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
+  / ItalicTag t: $((!ItalicTag .)* ) ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
+  / LightTag t: $((!LightTag .)* ) LightTag { return { marks: [{type: "light"}], text: unbreakscape(t), type: "text" } }
+  / HighlightTag t: $((!HighlightTag .)* ) HighlightTag { return { marks: [{type: "highlight"}], text: unbreakscape(t), type: "text" } }
   / u: Url { return { marks: [{ type: "link", attrs: { href: (u.pr + u.t).trim(), target: '_blank' } }], text: u.t, type: "text" } }
 
 InlineTagTags
@@ -549,6 +635,23 @@ InlineTagTags
 
 AttrChain
   = '|' ch: AttrChainItem+ { return ch }
+
+InlineMediaChain
+  = ch: InlineMediaChainItem* { return ch }
+
+InlineMediaChainItem
+  = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
+  / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
+  / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be a positive integer.', found: v }}
+  / '@'? p: 'alignmentVertical' ':' ' '* v: InlineMediaAlignment BlockTag  { return { [p]: v } }
+  / '@'? p: 'size' ':' ' '* v: InlineMediaSize BlockTag  { return { [p]: v } }
+
+InlineMediaAlignment
+  = 'top' / 'middle' / 'bottom' / 'baseline' / 'sub' / 'super' / 'text-bottom' / 'text-top'
+
+InlineMediaSize
+  = 'line-height' / 'font-height' / 'super' / 'sub' / 'explicit'
+
 
 // ==This is a link==|link:https://www.apple.com/|
 // ==503==|var:AHV Mindestbeitrag|
@@ -577,7 +680,7 @@ AttrChainItem
  // / p: $((!BlockTag word)*) BlockTag {return { [p]: true } }
 
 // glosary/index: ==term==|definition:term's definition|
-// symbol (inline image): ==power symbol==|symbol:https://img.com/ps.svg| >> alt:power symbol, zoomDisable:true, width and heigh?
+// symbol (inline image): ==power symbol==|symbol:https://img.com/ps.svg| >> alt:power symbol, zoomDisable:true
 // explanation:
 // description:
 // translation: ==Haus==|translation:house|lang:en|
@@ -602,6 +705,17 @@ AlternativeStyleTags
   / 'underline'
   / 'doubleUnderline'
   / 'circle'
+  / 'languageEmRed'
+  / 'languageEmOrange'
+  / 'languageEmYellow'
+  / 'languageEmGreen'
+  / 'languageEmBlue'
+  / 'languageEmPurple'
+  / 'languageEmPink'
+  / 'languageEmBrown'
+  / 'languageEmBlack'
+  / 'languageEmWhite'
+  / 'languageEmGray'
   / 'languageEm'
    / 'userUnderline'
   / 'userDoubleUnderline'
@@ -614,7 +728,7 @@ Color
   = 'aqua'
   / 'black'
   / 'blue'
-  / 'pink'
+  / 'brown'
   / 'fuchsia'
   / 'lightgrey'
   / 'gray'
@@ -626,6 +740,7 @@ Color
   / 'navy'
   / 'olive'
   / 'orange'
+  / 'pink'
   / 'purple'
   / 'red'
   / 'silver'
@@ -646,7 +761,9 @@ bitmarkMinusMinus "MinimalStyledText"
   = bs: bitmarkMinusMinusString { return [ { type: 'paragraph', content: bs, attrs: { } } ] }
 
 bitmarkMinusMinusString "MinimalStyledString"
-  = first: PlainText? more: (StyledText / PlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
+  // RAS 2025-05-22 - for bitmarkMinusMinus / bitmarkMinusMinusString
+  // = first: PlainText? more: (StyledText / PlainText)*  { return first ? [first, ...more.flat()] : more.flat() }
+  = first: PlainText? more: (StyledText / PlainText)*  { const cleaned_ = cleanEmptyTextNodes(first ? [first, ...more.flat()] : more.flat()); return cleaned_ }
 
 PlainText
   = NL { return { "type": "hardBreak" } }
@@ -669,10 +786,10 @@ BodyBitCloseTag = ']'
 
 StyledText
   = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
-  / BoldTag ' '? t: $((!(' '? BoldTag) .)* ) ' '? BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
-  / ItalicTag ' '? t: $((!(' '? ItalicTag) .)* ) ' '? ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
-  / LightTag ' '? t: $((!(' '? LightTag) .)* ) ' '? LightTag { return { marks: [{type: "light"}], text: unbreakscape(t), type: "text" } }
-  / HighlightTag ' '? t: $((!(' '? HighlightTag) .)* ) ' '? HighlightTag { return { marks: [{type: "highlight"}], text: unbreakscape(t), type: "text" } }
+  / BoldTag t: $((!BoldTag .)* ) BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
+  / ItalicTag t: $((!ItalicTag .)* ) ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
+  / LightTag t: $((!LightTag .)* ) LightTag { return { marks: [{type: "light"}], text: unbreakscape(t), type: "text" } }
+  / HighlightTag t: $((!HighlightTag .)* ) HighlightTag { return { marks: [{type: "highlight"}], text: unbreakscape(t), type: "text" } }
 
 TagTags
   = $(LightTag LightHalfTag+)

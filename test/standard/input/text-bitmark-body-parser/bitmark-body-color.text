@@ -1,0 +1,29 @@
+Intro text
+
+==Color text==|color:aqua| there you go
+==Color text==|color:black| there you go
+==Color text==|color:blue| there you go
+==Color text==|color:brown| there you go
+==Color text==|color:fuchsia| there you go
+==Color text==|color:lightgrey| there you go
+==Color text==|color:gray| there you go
+==Color text==|color:darkgray| there you go
+==Color text==|color:green| there you go
+==Color text==|color:lime| there you go
+==Color text==|color:magenta| there you go
+==Color text==|color:maroon| there you go
+==Color text==|color:navy| there you go
+==Color text==|color:olive| there you go
+==Color text==|color:orange| there you go
+==Color text==|color:pink| there you go
+==Color text==|color:purple| there you go
+==Color text==|color:red| there you go
+==Color text==|color:silver| there you go
+==Color text==|color:teal| there you go
+==Color text==|color:violet| there you go
+==Color text==|color:white| there you go
+==Color text==|color:yellow| there you go
+
+==Color text==|color:bad| there you don't go
+
+==Color text==|bad:1234| there you don't go
