@@ -1,4 +1,4 @@
-import { EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType, superenum } from '@ncoderz/superenum';
 
 const PropertyFormat = superenum({
   none: 'none', // The property does not have a value

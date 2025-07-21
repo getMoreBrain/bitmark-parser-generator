@@ -62,54 +62,58 @@
  *   and in BitmarkPegParserHelper.ts
  */
 
-import { Builder } from '../../../ast/Builder';
-import { Breakscape } from '../../../breakscaping/Breakscape';
-import { Config } from '../../../config/Config';
-import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { Bit, BitmarkAst, BodyPart } from '../../../model/ast/Nodes';
-import { TagsConfig } from '../../../model/config/TagsConfig';
-import { BitType } from '../../../model/enum/BitType';
-import { BodyTextFormat } from '../../../model/enum/BodyTextFormat';
-import { DeprecatedTextFormat } from '../../../model/enum/DeprecatedTextFormat';
-import { ResourceTag } from '../../../model/enum/ResourceTag';
-import { TextFormat } from '../../../model/enum/TextFormat';
-import { TextLocation } from '../../../model/enum/TextLocation';
-import { ParserData } from '../../../model/parser/ParserData';
-import { ParserError } from '../../../model/parser/ParserError';
-import { ParserInfo } from '../../../model/parser/ParserInfo';
-import { StringUtils } from '../../../utils/StringUtils';
-
-import { BitmarkPegParserValidator } from './BitmarkPegParserValidator';
-import { BodyContentProcessor } from './contentProcessors/BodyContentProcessor';
-import { buildCards } from './contentProcessors/CardContentProcessor';
-import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor';
-import { FooterContentProcessor } from './contentProcessors/FooterContentProcessor';
-import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor';
-import { itemLeadChainContentProcessor } from './contentProcessors/ItemLeadChainContentProcessor';
-import { markChainContentProcessor } from './contentProcessors/MarkChainContentProcessor';
-import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor';
-import { referenceTagContentProcessor } from './contentProcessors/ReferenceTagContentProcessor';
-import { buildResources, resourceContentProcessor } from './contentProcessors/ResourceContentProcessor';
-import { buildTitles, titleTagContentProcessor } from './contentProcessors/TitleTagContentProcessor';
-import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseChainContentProcessor';
-
+import { Builder } from '../../../ast/Builder.ts';
+import { Breakscape } from '../../../breakscaping/Breakscape.ts';
+import { Config } from '../../../config/Config.ts';
+import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
+import { type Bit, type BitmarkAst, type BodyPart } from '../../../model/ast/Nodes.ts';
+import { type TagsConfig } from '../../../model/config/TagsConfig.ts';
+import { BitType } from '../../../model/enum/BitType.ts';
+import { BodyTextFormat } from '../../../model/enum/BodyTextFormat.ts';
+import { DeprecatedTextFormat } from '../../../model/enum/DeprecatedTextFormat.ts';
+import { ResourceTag } from '../../../model/enum/ResourceTag.ts';
+import { TextFormat } from '../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../model/enum/TextLocation.ts';
+import { type ParserData } from '../../../model/parser/ParserData.ts';
+import { type ParserError } from '../../../model/parser/ParserError.ts';
+import { type ParserInfo } from '../../../model/parser/ParserInfo.ts';
+import { StringUtils } from '../../../utils/StringUtils.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitHeader,
-  ParseFunction,
-  ParserHelperOptions,
-  SubParserResult,
+  type BitContentProcessorResult,
+  type BitHeader,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type ParsedCardSet,
+  type ParseFunction,
+  type ParserHelperOptions,
+  type RawTextAndResourceType,
+  type SubParserResult,
   TypeKey,
-  BitContentProcessorResult,
-  TypeKeyType,
-  TypeKeyValue,
-  TypeValue,
-  BitmarkPegParserContext,
-  ParsedCardSet,
-  RawTextAndResourceType,
-} from './BitmarkPegParserTypes';
+  type TypeKeyType,
+  type TypeKeyValue,
+  type TypeValue,
+} from './BitmarkPegParserTypes.ts';
+import { BitmarkPegParserValidator } from './BitmarkPegParserValidator.ts';
+import { BodyContentProcessor } from './contentProcessors/BodyContentProcessor.ts';
+import { buildCards } from './contentProcessors/CardContentProcessor.ts';
+import { defaultTagContentProcessor } from './contentProcessors/DefaultTagContentProcessor.ts';
+import { FooterContentProcessor } from './contentProcessors/FooterContentProcessor.ts';
+import { gapChainContentProcessor } from './contentProcessors/GapChainContentProcessor.ts';
+import { itemLeadChainContentProcessor } from './contentProcessors/ItemLeadChainContentProcessor.ts';
+import { markChainContentProcessor } from './contentProcessors/MarkChainContentProcessor.ts';
+import { propertyContentProcessor } from './contentProcessors/PropertyContentProcessor.ts';
+import { referenceTagContentProcessor } from './contentProcessors/ReferenceTagContentProcessor.ts';
+import {
+  buildResources,
+  resourceContentProcessor,
+} from './contentProcessors/ResourceContentProcessor.ts';
+import {
+  buildTitles,
+  titleTagContentProcessor,
+} from './contentProcessors/TitleTagContentProcessor.ts';
+import { trueFalseChainContentProcessor } from './contentProcessors/TrueFalseChainContentProcessor.ts';
 
 // Debugging flags for helping develop and debug the parser
 const ENABLE_DEBUG = true;
@@ -131,9 +135,6 @@ const DEBUG_CARD_TAGS = true; // Print the tags extracted from the card content
 const DEBUG = ENABLE_DEBUG && process.env.BPG_ENV === 'development';
 
 const builder = new Builder();
-
-// Dummy for stripping unwanted code
-const STRIP = 0;
 
 class BitmarkPegParserProcessor {
   private context: BitmarkPegParserContext;
@@ -285,7 +286,10 @@ class BitmarkPegParserProcessor {
     const filteredResources = buildResources(this.context, resourceType, resources);
 
     // Build the final internal comments
-    const internalComment = [...(internalComments ?? []), ...(bitSpecificCards.internalComments ?? [])];
+    const internalComment = [
+      ...(internalComments ?? []),
+      ...(bitSpecificCards.internalComments ?? []),
+    ];
 
     // Build the warnings and errors for the parser object
     const warnings = this.buildBitLevelWarnings();
@@ -360,10 +364,14 @@ class BitmarkPegParserProcessor {
 
     // Bit level
     if (bitLevel > Config.bitLevelMax) {
-      this.addWarning(`Bit level of ${bitLevel} too high, setting to max value of ${Config.bitLevelMax}`);
+      this.addWarning(
+        `Bit level of ${bitLevel} too high, setting to max value of ${Config.bitLevelMax}`,
+      );
       bitLevel = Config.bitLevelMax;
     } else if (bitLevel < Config.bitLevelMin) {
-      this.addWarning(`Bit level of ${bitLevel} too low, setting to min value of ${Config.bitLevelMin}`);
+      this.addWarning(
+        `Bit level of ${bitLevel} too low, setting to min value of ${Config.bitLevelMin}`,
+      );
       bitLevel = Config.bitLevelMin;
     }
 
@@ -377,7 +385,9 @@ class BitmarkPegParserProcessor {
     }
 
     // Deprecated warning for bitmark--
-    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(textFormatAndResourceType.textFormat);
+    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(
+      textFormatAndResourceType.textFormat,
+    );
     if (deprecatedTextFormat) {
       textFormat = TextFormat.bitmarkText;
       this.addWarning(
@@ -390,7 +400,9 @@ class BitmarkPegParserProcessor {
     // Resource type
     const resourceType = ResourceTag.fromValue(textFormatAndResourceType.resourceType);
     if (textFormatAndResourceType.resourceType && !resourceType) {
-      this.addWarning(`Invalid resource type '${textFormatAndResourceType.resourceType}', it will be ignored`);
+      this.addWarning(
+        `Invalid resource type '${textFormatAndResourceType.resourceType}', it will be ignored`,
+      );
     }
 
     return {
@@ -403,7 +415,10 @@ class BitmarkPegParserProcessor {
   }
 
   // Build text and resource type
-  buildTextAndResourceType(value1: TypeValue | undefined, value2: TypeValue | undefined): RawTextAndResourceType {
+  buildTextAndResourceType(
+    value1: TypeValue | undefined,
+    value2: TypeValue | undefined,
+  ): RawTextAndResourceType {
     const res: RawTextAndResourceType = {};
 
     const processValue = (value: TypeValue | undefined) => {
@@ -552,7 +567,11 @@ class BitmarkPegParserProcessor {
     const addBodyText = () => {
       if (bodyTextPart) {
         // Validate the body part
-        bodyTextPart = BitmarkPegParserValidator.checkBodyPart(this.context, contentDepth, bodyTextPart);
+        bodyTextPart = BitmarkPegParserValidator.checkBodyPart(
+          this.context,
+          contentDepth,
+          bodyTextPart,
+        );
 
         const bodyText = BodyContentProcessor.buildBodyText(bodyTextPart, false);
         bodyParts.push(bodyText);
@@ -601,20 +620,41 @@ class BitmarkPegParserProcessor {
 
         case TypeKey.Gap: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          gapChainContentProcessor(this.context, contentDepth, tagsConfig, content, result, bodyParts);
+          gapChainContentProcessor(
+            this.context,
+            contentDepth,
+            tagsConfig,
+            content,
+            result,
+            bodyParts,
+          );
           break;
         }
 
         case TypeKey.Mark: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          markChainContentProcessor(this.context, contentDepth, tagsConfig, content, result, bodyParts);
+          markChainContentProcessor(
+            this.context,
+            contentDepth,
+            tagsConfig,
+            content,
+            result,
+            bodyParts,
+          );
           break;
         }
 
         case TypeKey.True:
         case TypeKey.False: {
           if (!inChain) addBodyText(); // Body bit, so add the body text
-          trueFalseChainContentProcessor(this.context, contentDepth, tagsConfig, content, result, bodyParts);
+          trueFalseChainContentProcessor(
+            this.context,
+            contentDepth,
+            tagsConfig,
+            content,
+            result,
+            bodyParts,
+          );
           break;
         }
 
@@ -667,7 +707,9 @@ class BitmarkPegParserProcessor {
     addBodyText();
 
     // Add the plain texts if they exist
-    const bodyPlainTextNode = bodyPlainText ? BodyContentProcessor.buildBodyText(bodyPlainText, true) : undefined;
+    const bodyPlainTextNode = bodyPlainText
+      ? BodyContentProcessor.buildBodyText(bodyPlainText, true)
+      : undefined;
     if (bodyPlainTextNode) bodyParts.push(bodyPlainTextNode);
 
     // Spread the chained item / lead / etc
@@ -752,7 +794,8 @@ class BitmarkPegParserProcessor {
     if (result.responses.length === 0) delete result.responses;
     if (result.trueFalse.length === 0) delete result.trueFalse;
     if (result.markConfig.length === 0) delete result.markConfig;
-    if (Object.keys(result.propertyStyleResources).length === 0) delete result.propertyStyleResources;
+    if (Object.keys(result.propertyStyleResources).length === 0)
+      delete result.propertyStyleResources;
     if (result.resources.length === 0) delete result.resources;
     if (result.internalComments.length === 0) delete result.internalComments;
 
@@ -848,8 +891,6 @@ class BitmarkPegParserProcessor {
    */
   private debugPrint(header: string, data: unknown): void {
     /* STRIP:START */
-    STRIP;
-
     if (DEBUG) {
       if (DEBUG_DATA) {
         // Strip 'parser' out of the data, otherwise it is too verbose
@@ -866,9 +907,7 @@ class BitmarkPegParserProcessor {
         console.log(`- DEBUG: ${header}`);
       }
     }
-
     /* STRIP:END */
-    STRIP;
   }
 }
 

@@ -2,27 +2,31 @@
  * @jest-environment jsdom
  */
 
-import { describe, test } from '@jest/globals';
 // import deepEqual from 'deep-equal';
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import fs from 'fs-extra';
 import { performance } from 'perf_hooks';
+import { describe, expect, test } from 'vitest';
 
-import * as bpgLib from '../../dist/browser/bitmark-parser-generator.min';
-import { FileUtils } from '../../src/utils/FileUtils';
-import { JsonCleanupUtils } from '../utils/JsonCleanupUtils';
-import { deepDiffMapper } from '../utils/deepDiffMapper';
+import { FileUtils } from '../../src/utils/FileUtils.ts';
+import { deepDiffMapper } from '../utils/deepDiffMapper.ts';
+import { JsonCleanupUtils } from '../utils/JsonCleanupUtils.ts';
+import { getTestFiles, getTestFilesDir } from './config/config-bitmark-files.ts';
+import { isDebugPerformance } from './config/config-test.ts';
+import * as bpgLibMinified from './web-bpg-minified-wrapper.js';
 
-import { getTestFiles, getTestFilesDir } from './config/config-bitmark-files';
-import { isDebugPerformance } from './config/config-test';
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const DEBUG_PERFORMANCE = isDebugPerformance();
 
 const TEST_FILES = getTestFiles();
 const TEST_INPUT_DIR = getTestFilesDir();
 const JSON_INPUT_DIR = path.resolve(TEST_INPUT_DIR, './json');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/web-bitmark-parser/output');
+const TEST_OUTPUT_DIR = path.resolve(dirname, './results/web-bitmark-parser/output');
 
+const bpgLib = bpgLibMinified as typeof import('../../src/index.ts') & typeof bpgLibMinified;
 // const jsonParser = new JsonParser();
 const bitmarkParser = new bpgLib.BitmarkParser();
 
@@ -149,7 +153,10 @@ describe('web-bitmark-parser', () => {
         });
 
         // Remove uninteresting JSON items
-        JsonCleanupUtils.cleanupBitJson(originalJson, { removeMarkup: true, removeTemporaryProperties: true });
+        JsonCleanupUtils.cleanupBitJson(originalJson, {
+          removeMarkup: true,
+          removeTemporaryProperties: true,
+        });
         JsonCleanupUtils.cleanupBitJson(newJson, {
           removeMarkup: true,
           removeParser: true,
@@ -169,7 +176,8 @@ describe('web-bitmark-parser', () => {
 
         // Print performance information
         if (DEBUG_PERFORMANCE) {
-          const pegTimeSecs = Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
+          const pegTimeSecs =
+            Math.round(performance.measure('PEG', 'PEG:Start', 'PEG:End').duration) / 1000;
           console.log(`'${fileId}' timing; PEG: ${pegTimeSecs} s`);
         }
 

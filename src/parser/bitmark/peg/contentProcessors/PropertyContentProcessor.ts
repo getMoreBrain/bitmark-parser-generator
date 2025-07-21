@@ -1,37 +1,35 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { Config } from '../../../../config/Config';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { ConfigKey } from '../../../../model/config/enum/ConfigKey';
-import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey';
-import { PropertyFormat } from '../../../../model/enum/PropertyFormat';
-import { PropertyTag } from '../../../../model/enum/PropertyTag';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { BooleanUtils } from '../../../../utils/BooleanUtils';
-import { NumberUtils } from '../../../../utils/NumberUtils';
-import { StringUtils } from '../../../../utils/StringUtils';
-import { TextParser } from '../../../text/TextParser';
-
-import { bookChainContentProcessor } from './BookChainContentProcessor';
-import { exampleTagContentProcessor } from './ExampleTagContentProcessor';
-import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor';
-import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor';
-import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor';
-import { personChainContentProcessor } from './PersonChainContentProcessor';
-import { ratingLevelChainContentProcessor } from './RatingLevelChainContentProcessor';
-import { servingsChainContentProcessor } from './ServingsChainContentProcessor';
-import { technicalTermChainContentProcessor } from './TechnicalTermChainContentProcessor';
-
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { Config } from '../../../../config/Config.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { ConfigKey } from '../../../../model/config/enum/ConfigKey.ts';
+import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey.ts';
+import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { PropertyFormat } from '../../../../model/enum/PropertyFormat.ts';
+import { PropertyTag } from '../../../../model/enum/PropertyTag.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { BooleanUtils } from '../../../../utils/BooleanUtils.ts';
+import { NumberUtils } from '../../../../utils/NumberUtils.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
+import { TextParser } from '../../../text/TextParser.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  TypeKeyValue,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type TypeKeyValue,
+} from '../BitmarkPegParserTypes.ts';
+import { bookChainContentProcessor } from './BookChainContentProcessor.ts';
+import { exampleTagContentProcessor } from './ExampleTagContentProcessor.ts';
+import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor.ts';
+import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor.ts';
+import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor.ts';
+import { personChainContentProcessor } from './PersonChainContentProcessor.ts';
+import { ratingLevelChainContentProcessor } from './RatingLevelChainContentProcessor.ts';
+import { servingsChainContentProcessor } from './ServingsChainContentProcessor.ts';
+import { technicalTermChainContentProcessor } from './TechnicalTermChainContentProcessor.ts';
 
 const textParser = new TextParser();
 
@@ -63,11 +61,26 @@ function propertyContentProcessor(
     if (configKey === PropertyConfigKey.example) {
       exampleTagContentProcessor(context, contentDepth, content, target);
       return;
-    } else if (configKey === PropertyConfigKey.ratingLevelStart || configKey === PropertyConfigKey.ratingLevelEnd) {
-      ratingLevelChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
+    } else if (
+      configKey === PropertyConfigKey.ratingLevelStart ||
+      configKey === PropertyConfigKey.ratingLevelEnd
+    ) {
+      ratingLevelChainContentProcessor(
+        context,
+        contentDepth,
+        propertyConfig.chain,
+        content,
+        target,
+      );
       return;
     } else if (configKey === PropertyConfigKey.technicalTerm) {
-      technicalTermChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
+      technicalTermChainContentProcessor(
+        context,
+        contentDepth,
+        propertyConfig.chain,
+        content,
+        target,
+      );
       return;
     } else if (configKey === PropertyConfigKey.servings) {
       servingsChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
@@ -106,7 +119,9 @@ function propertyContentProcessor(
 
           case PropertyFormat.plainText:
             return Breakscape.unbreakscape(
-              StringUtils.isString(v) ? (StringUtils.trimmedString(v) as BreakscapedString) : undefined,
+              StringUtils.isString(v)
+                ? (StringUtils.trimmedString(v) as BreakscapedString)
+                : undefined,
               {
                 format: TextFormat.plainText,
                 location: TextLocation.tag,

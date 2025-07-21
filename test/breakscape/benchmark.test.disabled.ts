@@ -4,13 +4,12 @@
  * - breakscape-regex.ts (regex-based implementation)
  */
 
-// import { describe, it, expect } from 'vitest';
-import { describe, it, expect } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
-import { Breakscape as BreakscapeChar } from '../../src/breakscaping/BreakscapeLoop';
-import { Breakscape as BreakscapeRegex } from '../../src/breakscaping/BreakscapeRegex';
-import { BodyTextFormat } from '../../src/model/enum/BodyTextFormat';
-import { TextLocation } from '../../src/model/enum/TextLocation';
+import { Breakscape as BreakscapeChar } from '../../src/breakscaping/BreakscapeLoop.ts';
+import { Breakscape as BreakscapeRegex } from '../../src/breakscaping/BreakscapeRegex.ts';
+import { BodyTextFormat } from '../../src/model/enum/BodyTextFormat.ts';
+import { TextLocation } from '../../src/model/enum/TextLocation.ts';
 
 // Test data sets for benchmarking
 const TEST_DATA = {
@@ -27,7 +26,9 @@ const TEST_DATA = {
     'The text continues with more content to test performance on longer strings.'
   ).repeat(10),
   arraySmall: ['^', '**bold**', '_italic_', '[.article]'],
-  arrayLarge: Array(1000).fill('This is about an [.article] with **bold** text and some _italic_ content.'),
+  arrayLarge: Array(1000).fill(
+    'This is about an [.article] with **bold** text and some _italic_ content.',
+  ),
   specialChars: '^^^^***```___!!!===```^^^',
 };
 
@@ -123,7 +124,9 @@ describe('Breakscape Performance Benchmark', () => {
             it(`should benchmark ${testName} breakscape`, () => {
               const iterations = ITERATIONS[testName as keyof typeof ITERATIONS];
 
-              globalThis.console?.log(`\\n--- Benchmarking ${testName} breakscape (${iterations} iterations) ---`);
+              globalThis.console?.log(
+                `\\n--- Benchmarking ${testName} breakscape (${iterations} iterations) ---`,
+              );
 
               const charResult = measurePerformance(
                 'Character Implementation',
@@ -174,7 +177,9 @@ describe('Breakscape Performance Benchmark', () => {
                 breakscapedData = charImpl.breakscape(testData, options);
               }
 
-              globalThis.console?.log(`\\n--- Benchmarking ${testName} unbreakscape (${iterations} iterations) ---`);
+              globalThis.console?.log(
+                `\\n--- Benchmarking ${testName} unbreakscape (${iterations} iterations) ---`,
+              );
 
               const charResult = measurePerformance(
                 'Character Implementation',

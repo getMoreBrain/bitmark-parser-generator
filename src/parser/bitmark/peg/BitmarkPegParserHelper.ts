@@ -16,42 +16,40 @@
  *
  */
 
-import { Breakscape } from '../../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { Bit } from '../../../model/ast/Nodes';
-import { CardSetVersion } from '../../../model/enum/CardSetVersion';
-import { TextFormat } from '../../../model/enum/TextFormat';
-import { TextLocation } from '../../../model/enum/TextLocation';
-import { ParserError } from '../../../model/parser/ParserError';
-import { ParserLocation } from '../../../model/parser/ParserLocation';
-import { StringUtils } from '../../../utils/StringUtils';
+import '../../../config/Config.ts';
 
-import { PeggyGrammarLocation } from './PeggyGrammarLocation';
-
+import { Breakscape } from '../../../breakscaping/Breakscape.ts';
+import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
+import { type Bit } from '../../../model/ast/Nodes.ts';
+import { CardSetVersion } from '../../../model/enum/CardSetVersion.ts';
+import { TextFormat } from '../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../model/enum/TextLocation.ts';
+import { type ParserError } from '../../../model/parser/ParserError.ts';
+import { type ParserLocation } from '../../../model/parser/ParserLocation.ts';
+import { StringUtils } from '../../../utils/StringUtils.ts';
 import {
-  ParseFunction,
-  ParsedCard,
-  ParsedCardSet,
-  ParsedCardSide,
-  SubParserResult,
-  UnparsedCardSet,
-} from './BitmarkPegParserTypes';
+  type ParsedCard,
+  type ParsedCardSet,
+  type ParsedCardSide,
+  type ParseFunction,
+  type SubParserResult,
+  type UnparsedCardSet,
+} from './BitmarkPegParserTypes.ts';
 import {
-  BitContent,
+  type BitContent,
+  CARD_DIVIDER_V1,
   CARD_DIVIDER_V2,
   CARD_SIDE_DIVIDER_V1,
-  CARD_VARIANT_DIVIDER_V1,
-  CARD_DIVIDER_V1,
-  CARD_VARIANT_DIVIDER_V2,
   CARD_SIDE_DIVIDER_V2,
-  CardData,
-  ParserHelperOptions,
+  CARD_VARIANT_DIVIDER_V1,
+  CARD_VARIANT_DIVIDER_V2,
+  type CardData,
+  type ParserHelperOptions,
   TypeKey,
-  TypeKeyType,
-  TypeValue,
-} from './BitmarkPegParserTypes';
-
-import '../../../config/Config';
+  type TypeKeyType,
+  type TypeValue,
+} from './BitmarkPegParserTypes.ts';
+import { PeggyGrammarLocation } from './PeggyGrammarLocation.ts';
 
 const ENABLE_DEBUG = true;
 const DEBUG_DATA = true;
@@ -73,9 +71,6 @@ const DEBUG_TRACE_CARD_CONTENT = false;
 const DEBUG_TRACE_CARD_TAGS = false;
 const DEBUG_TRACE_CARD_PARSED = true; // Print the parsed card (will create a lot of output if card value is large)
 const DEBUG = ENABLE_DEBUG && process.env.BPG_ENV === 'development';
-
-// Dummy for stripping unwanted code
-const STRIP = 0;
 
 class BitmarkPegParserHelper {
   private cardIndex = 0;
@@ -291,7 +286,12 @@ class BitmarkPegParserHelper {
         if (!content) continue;
         const { type, value: cardData, parser } = content as TypeValue;
         if (!type || type !== TypeKey.Card) continue;
-        const { cardIndex, cardSideIndex, cardVariantIndex: cardContentIndex, value } = cardData as CardData;
+        const {
+          cardIndex,
+          cardSideIndex,
+          cardVariantIndex: cardContentIndex,
+          value,
+        } = cardData as CardData;
 
         // Get or create card
         let card = unparsedCardSet.cards[cardIndex];
@@ -606,7 +606,11 @@ class BitmarkPegParserHelper {
    * @param recurseIntoTypes set to true to reduce types which have array values
    * @returns an array of BitContent objects reduced from the input data
    */
-  private reduceToArrayOfTypes(data: unknown, validTypes?: TypeKeyType[], recurseIntoTypes?: boolean): BitContent[] {
+  private reduceToArrayOfTypes(
+    data: unknown,
+    validTypes?: TypeKeyType[],
+    recurseIntoTypes?: boolean,
+  ): BitContent[] {
     if (!Array.isArray(data)) return [];
 
     const res = data.reduce((acc, content, _index) => {
@@ -671,8 +675,6 @@ class BitmarkPegParserHelper {
    */
   private debugPrint(header: string, data?: unknown): void {
     /* STRIP:START */
-    STRIP;
-
     if (DEBUG) {
       if (DEBUG_DATA) {
         // Strip 'parser' out of the data, otherwise it is too verbose
@@ -689,9 +691,7 @@ class BitmarkPegParserHelper {
         console.log(`- TRACE: ${header}`);
       }
     }
-
     /* STRIP:END */
-    STRIP;
   }
 }
 

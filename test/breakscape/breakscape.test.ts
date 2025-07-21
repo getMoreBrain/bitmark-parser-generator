@@ -1,9 +1,8 @@
-// import { describe, it, expect } from 'vitest';
-import { describe, it, expect } from '@jest/globals';
+import { describe, expect, it } from 'vitest';
 
-import { Breakscape } from '../../src/breakscaping/BreakscapeRegex';
-import { BodyTextFormat, BodyTextFormatType } from '../../src/model/enum/BodyTextFormat';
-import { TextLocation, TextLocationType } from '../../src/model/enum/TextLocation';
+import { Breakscape } from '../../src/breakscaping/BreakscapeRegex.ts';
+import { BodyTextFormat, type BodyTextFormatType } from '../../src/model/enum/BodyTextFormat.ts';
+import { TextLocation, type TextLocationType } from '../../src/model/enum/TextLocation.ts';
 
 type Case = {
   from: string;
@@ -807,9 +806,10 @@ const CASES: Case[] = [
 describe(`Breakscape`, () => {
   const bs = new Breakscape();
 
-  const types: string[] = ['bitmarkPlusPlus_body', 'bitmarkPlusPlus_tag', 'text_body', 'text_tag'];
+  const types = ['bitmarkPlusPlus_body', 'bitmarkPlusPlus_tag', 'text_body', 'text_tag'] as const;
+  type TypeKey = (typeof types)[number];
 
-  types.forEach((type: string) => {
+  types.forEach((type: TypeKey) => {
     const textFormat = BodyTextFormat.fromKey(type.split('_')[0]) as BodyTextFormatType;
     const textLocation = TextLocation.fromKey(type.split('_')[1]) as TextLocationType;
 

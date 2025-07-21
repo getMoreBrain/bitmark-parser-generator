@@ -1,20 +1,19 @@
-import { Config } from '../../../../config/Config';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { TextAst } from '../../../../model/ast/TextNodes';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { StringUtils } from '../../../../utils/StringUtils';
-import { TextParser } from '../../../text/TextParser';
-
+import { Config } from '../../../../config/Config.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { type TextAst } from '../../../../model/ast/TextNodes.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { BitType, type BitTypeType } from '../../../../model/enum/BitType.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
+import { TextParser } from '../../../text/TextParser.ts';
 import {
-  BitContent,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitSpecificTitles,
-  BitmarkPegParserContext,
-  TypeValue,
-} from '../BitmarkPegParserTypes';
+  type BitContent,
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type BitSpecificTitles,
+  type ContentDepthType,
+  type TypeValue,
+} from '../BitmarkPegParserTypes.ts';
 
 const textParser = new TextParser();
 
@@ -73,4 +72,4 @@ function buildTitles(
   }
 }
 
-export { titleTagContentProcessor, buildTitles };
+export { buildTitles, titleTagContentProcessor };

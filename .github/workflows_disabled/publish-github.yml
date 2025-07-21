@@ -11,21 +11,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 22.x
+
+      - name: Use Node.js 24.x
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '24.x'
           registry-url: 'https://npm.pkg.github.com'
-          cache: 'yarn'
-      - name: Setup Yarn
+          cache: 'npm'
+
+      - name: Configure npm for GitHub Packages
         run: |
-          yarn config set npmScopes.getmorebrain.npmRegistryServer "https://npm.pkg.github.com"
-          yarn config set npmScopes.getmorebrain.npmPublishRegistry "https://npm.pkg.github.com"
-          yarn config set npmScopes.getmorebrain.npmAlwaysAuth true
-          yarn config set npmScopes.getmorebrain.npmAuthToken $GITHUB_AUTH_TOKEN
+          echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > ~/.npmrc
+          echo "@ncoderz:registry=https://npm.pkg.github.com/" >> ~/.npmrc
         env:
-          GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Install dependencies
-        run: yarn install --immutable
+        run: npm ci
+
       - name: Publish
-        run: yarn npm publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

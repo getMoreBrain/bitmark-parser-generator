@@ -1,51 +1,53 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { Config } from '../../../../config/Config';
-import { CardBit } from '../../../../model/ast/Nodes';
-import { JsonText, TextAst } from '../../../../model/ast/TextNodes';
-import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey';
-import { BitType, BitTypeType } from '../../../../model/enum/BitType';
-import { BodyBitType } from '../../../../model/enum/BodyBitType';
-import { ResourceTag } from '../../../../model/enum/ResourceTag';
-import { TextFormatType } from '../../../../model/enum/TextFormat';
-import { SelectJson } from '../../../../model/json/BodyBitJson';
-import { AudioResourceWrapperJson, ImageResourceWrapperJson } from '../../../../model/json/ResourceJson';
-import { NumberUtils } from '../../../../utils/NumberUtils';
-import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
-
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { Config } from '../../../../config/Config.ts';
+import { type CardBit } from '../../../../model/ast/Nodes.ts';
+import { type JsonText, type TextAst } from '../../../../model/ast/TextNodes.ts';
+import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey.ts';
+import { BitType, type BitTypeType } from '../../../../model/enum/BitType.ts';
+import { BodyBitType } from '../../../../model/enum/BodyBitType.ts';
+import { ResourceTag } from '../../../../model/enum/ResourceTag.ts';
+import { type TextFormatType } from '../../../../model/enum/TextFormat.ts';
 import {
-  BotResponseJson,
-  ChoiceJson,
-  DefinitionListItemJson,
-  ExampleJson,
-  FeedbackChoiceJson,
-  FeedbackJson,
-  FeedbackReasonJson,
-  FlashcardJson,
-  HeadingJson,
-  IngredientJson,
-  MatrixCellJson,
-  MatrixJson,
-  PairJson,
-  PronunciationTableCellJson,
-  PronunciationTableJson,
-  QuestionJson,
-  QuizJson,
-  ResponseJson,
-  StatementJson,
-  TableJson,
-  TextAndIconJson,
-} from '../../../../model/json/BitJson';
+  type BotResponseJson,
+  type ChoiceJson,
+  type DefinitionListItemJson,
+  type ExampleJson,
+  type FeedbackChoiceJson,
+  type FeedbackJson,
+  type FeedbackReasonJson,
+  type FlashcardJson,
+  type HeadingJson,
+  type IngredientJson,
+  type MatrixCellJson,
+  type MatrixJson,
+  type PairJson,
+  type PronunciationTableCellJson,
+  type PronunciationTableJson,
+  type QuestionJson,
+  type QuizJson,
+  type ResponseJson,
+  type StatementJson,
+  type TableJson,
+  type TextAndIconJson,
+} from '../../../../model/json/BitJson.ts';
+import { type SelectJson } from '../../../../model/json/BodyBitJson.ts';
+import {
+  type AudioResourceWrapperJson,
+  type ImageResourceWrapperJson,
+} from '../../../../model/json/ResourceJson.ts';
+import { NumberUtils } from '../../../../utils/NumberUtils.ts';
 import {
   BitContentLevel,
-  BitContentProcessorResult,
-  BitSpecificCards,
-  BitmarkPegParserContext,
-  ParsedCardSet,
-  ProcessedCard,
-  ProcessedCardSet,
-  ProcessedCardSide,
-  ProcessedCardVariant,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type BitSpecificCards,
+  type ParsedCardSet,
+  type ProcessedCard,
+  type ProcessedCardSet,
+  type ProcessedCardSide,
+  type ProcessedCardVariant,
+} from '../BitmarkPegParserTypes.ts';
+import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator.ts';
 
 interface HeadingData {
   heading: HeadingJson;
@@ -153,7 +155,10 @@ function buildCards(
   return result;
 }
 
-function processCardSet(context: BitmarkPegParserContext, parsedCardSet: ParsedCardSet | undefined): ProcessedCardSet {
+function processCardSet(
+  context: BitmarkPegParserContext,
+  parsedCardSet: ParsedCardSet | undefined,
+): ProcessedCardSet {
   const processedCardSet: ProcessedCardSet = {
     cards: [],
     internalComments: [],
@@ -259,7 +264,10 @@ function parseFlashcardOrDefinitionList(
           ...extraTags,
           ...tags,
         };
-        const icon = resources && resources.length > 0 ? (resources[0] as ImageResourceWrapperJson) : undefined;
+        const icon =
+          resources && resources.length > 0
+            ? (resources[0] as ImageResourceWrapperJson)
+            : undefined;
         const text = cardBody?.body as TextAst;
         const str = cardBody?.bodyString ?? '';
 
@@ -366,8 +374,6 @@ function parseStatements(
     for (const side of card.sides) {
       for (const content of side.variants) {
         const { statements: chainedStatements, statement: _ignore, ...tags } = content.data;
-        // Remove statement from rest, tags
-        _ignore;
 
         // Re-build the statement, adding any tags that were not in the True/False chain
         // These tags are actually not in the correct place, but we can still interpret them and fix the data.
@@ -642,7 +648,8 @@ function parseMatchPairs(
 
       for (const content of side.variants) {
         // variant = content;
-        const { cardBody, cardBodyStr, resources, __isDefaultExample, example, ...tags } = content.data;
+        const { cardBody, cardBodyStr, resources, __isDefaultExample, example, ...tags } =
+          content.data;
 
         // Example
         isDefaultExampleCard = __isDefaultExample === true ? true : isDefaultExampleCard;
@@ -669,7 +676,8 @@ function parseMatchPairs(
           const valueAst = cardBody?.body as TextAst;
           pairValues.push(value);
           _pairValuesAst.push(valueAst);
-          if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard) exampleCard = valueAst;
+          if ((isDefaultExampleCardSet || isDefaultExampleCard) && !exampleCard)
+            exampleCard = valueAst;
 
           // Fix: https://github.com/getMoreBrain/cosmic/issues/5454
           delete tags.item;
@@ -772,7 +780,8 @@ function parseMatchMatrix(
         // variant = content;
         const tags = content.data;
 
-        const { cardBody, cardBodyStr, __isDefaultExample, example, isCaseSensitive, ...restTags } = tags;
+        const { cardBody, cardBodyStr, __isDefaultExample, example, isCaseSensitive, ...restTags } =
+          tags;
 
         // Example
         isDefaultExampleSide = __isDefaultExample === true ? true : isDefaultExampleSide;
@@ -794,7 +803,8 @@ function parseMatchMatrix(
           const valueAst = cardBody?.body as TextAst;
           matrixCellValues.push(value);
           _matrixCellValuesAst.push(valueAst);
-          if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide) exampleSide = valueAst;
+          if ((isDefaultExampleCardSet || isDefaultExampleSide) && !exampleSide)
+            exampleSide = valueAst;
           isCaseSensitiveCell = isCaseSensitive != null ? isCaseSensitive : isCaseSensitiveMatrix;
         }
       }
@@ -804,7 +814,8 @@ function parseMatchMatrix(
         // Calculate final example and __isDefaultExample
         if (isDefaultExampleSide) exampleCard = exampleCardSet = undefined;
         if (isDefaultExampleCard) exampleCardSet = undefined;
-        const __isDefaultExample = isDefaultExampleSide || isDefaultExampleCard || isDefaultExampleCardSet;
+        const __isDefaultExample =
+          isDefaultExampleSide || isDefaultExampleCard || isDefaultExampleCardSet;
         const example = exampleSide || exampleCard || exampleCardSet;
 
         const matrixCell: Partial<MatrixCellJson> = {
@@ -860,7 +871,9 @@ function parsePronunciationTable(
 
         const heading = title && title[1].titleAst;
         const audio: AudioResourceWrapperJson = (
-          resources && resources.length > 0 ? resources.find((r) => r.type === ResourceTag.audio) : undefined
+          resources && resources.length > 0
+            ? resources.find((r) => r.type === ResourceTag.audio)
+            : undefined
         ) as AudioResourceWrapperJson;
 
         const value: PronunciationTableCellJson = {
@@ -994,11 +1007,13 @@ function parseIngredients(
         let checked = false;
         let quantity: number | undefined = NumberUtils.asNumber(__instructionString);
         if (cardBody && cardBody.bodyBits) {
-          const select: SelectJson | undefined = cardBody.bodyBits.find((c) => c.type === BodyBitType.select) as
-            | SelectJson
-            | undefined;
+          const select: SelectJson | undefined = cardBody.bodyBits.find(
+            (c) => c.type === BodyBitType.select,
+          ) as SelectJson | undefined;
           if (select) {
-            quantity = select.__instructionString ? NumberUtils.asNumber(select.__instructionString) : quantity;
+            quantity = select.__instructionString
+              ? NumberUtils.asNumber(select.__instructionString)
+              : quantity;
             if (select.options && select.options.length > 0) {
               checked = select.options[0].isCorrect;
             }
@@ -1118,7 +1133,10 @@ function parseCardBits(
   };
 }
 
-function extractHeadingCard(cardSet: ProcessedCardSet, valuesIsArray = false): HeadingData | undefined {
+function extractHeadingCard(
+  cardSet: ProcessedCardSet,
+  valuesIsArray = false,
+): HeadingData | undefined {
   let isHeading = false;
   let heading: Partial<HeadingJson> | undefined;
   let forKeys: string | undefined = undefined;

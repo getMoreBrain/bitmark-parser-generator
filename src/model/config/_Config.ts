@@ -2,22 +2,21 @@
  * Type definitions for the raw configuration data.
  *
  */
-import { BitTagTypeType } from '../enum/BitTagType';
-import { BitTypeType } from '../enum/BitType';
-import { CountType } from '../enum/Count';
-import { ExampleTypeType } from '../enum/ExampleType';
-import { PropertyAstKeyType } from '../enum/PropertyAstKey';
-import { PropertyFormatType } from '../enum/PropertyFormat';
-import { PropertyJsonKeyType } from '../enum/PropertyJsonKey';
-import { PropertyTagType } from '../enum/PropertyTag';
-import { ResourceJsonKeyType } from '../enum/ResourceJsonKey';
-import { ResourceTagType } from '../enum/ResourceTag';
-import { TagType } from '../enum/Tag';
-import { TextFormatType } from '../enum/TextFormat';
-
-import { CardSetConfigKeyType } from './enum/CardSetConfigKey';
-import { ConfigKeyType } from './enum/ConfigKey';
-import { GroupConfigTypeType } from './enum/GroupConfigType';
+import { type BitTagTypeType } from '../enum/BitTagType.ts';
+import { type BitTypeType } from '../enum/BitType.ts';
+import { type CountType } from '../enum/Count.ts';
+import { type ExampleTypeType } from '../enum/ExampleType.ts';
+import { type PropertyAstKeyType } from '../enum/PropertyAstKey.ts';
+import { type PropertyFormatType } from '../enum/PropertyFormat.ts';
+import { type PropertyJsonKeyType } from '../enum/PropertyJsonKey.ts';
+import { type PropertyTagType } from '../enum/PropertyTag.ts';
+import { type ResourceJsonKeyType } from '../enum/ResourceJsonKey.ts';
+import { type ResourceTagType } from '../enum/ResourceTag.ts';
+import { type TagType } from '../enum/Tag.ts';
+import { type TextFormatType } from '../enum/TextFormat.ts';
+import { type CardSetConfigKeyType } from './enum/CardSetConfigKey.ts';
+import { type ConfigKeyType } from './enum/ConfigKey.ts';
+import { type GroupConfigTypeType } from './enum/GroupConfigType.ts';
 
 export interface _Config {
   bits: _BitsConfig;

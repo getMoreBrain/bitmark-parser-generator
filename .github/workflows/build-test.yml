@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [24.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
       - uses: actions/checkout@v4
@@ -23,18 +23,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://registry.npmjs.org'
-          cache: 'yarn'
-      # - name: Setup Yarn
-      #   run: |
-      #     yarn config set npmScopes.getmorebrain.npmRegistryServer "https://npm.pkg.github.com"
-      #     yarn config set npmScopes.getmorebrain.npmPublishRegistry "https://npm.pkg.github.com"
-      #     yarn config set npmScopes.getmorebrain.npmAlwaysAuth true
-      #     yarn config set npmScopes.getmorebrain.npmAuthToken $GITHUB_AUTH_TOKEN
-      #   env:
-      #     GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          cache: 'npm'
+
       - name: Install dependencies
-        run: yarn install --immutable
+        run: npm ci
       - name: Build
-        run: yarn build
+        run: npm run build
       - name: Test
-        run: yarn test
+        run: npm run test-ci

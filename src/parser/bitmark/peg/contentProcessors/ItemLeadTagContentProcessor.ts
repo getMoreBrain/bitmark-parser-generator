@@ -1,16 +1,15 @@
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { StringUtils } from '../../../../utils/StringUtils';
-import { TextParser } from '../../../text/TextParser';
-
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
+import { TextParser } from '../../../text/TextParser.ts';
 import {
-  BitContent,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  TypeValue,
-} from '../BitmarkPegParserTypes';
+  type BitContent,
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type TypeValue,
+} from '../BitmarkPegParserTypes.ts';
 
 function itemLeadTagContentProcessor(
   context: BitmarkPegParserContext,

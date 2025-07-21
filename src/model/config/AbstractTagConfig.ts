@@ -1,14 +1,13 @@
-import { BitTagTypeType } from '../enum/BitTagType';
-import { CountType } from '../enum/Count';
-import { PropertyAstKeyType } from '../enum/PropertyAstKey';
-import { PropertyJsonKeyType } from '../enum/PropertyJsonKey';
-import { PropertyTagType } from '../enum/PropertyTag';
-import { ResourceJsonKeyType } from '../enum/ResourceJsonKey';
-import { ResourceTagType } from '../enum/ResourceTag';
-import { TagType } from '../enum/Tag';
-
-import { TagsConfig } from './TagsConfig';
-import { ConfigKeyType } from './enum/ConfigKey';
+import { type BitTagTypeType } from '../enum/BitTagType.ts';
+import { type CountType } from '../enum/Count.ts';
+import { type PropertyAstKeyType } from '../enum/PropertyAstKey.ts';
+import { type PropertyJsonKeyType } from '../enum/PropertyJsonKey.ts';
+import { type PropertyTagType } from '../enum/PropertyTag.ts';
+import { type ResourceJsonKeyType } from '../enum/ResourceJsonKey.ts';
+import { type ResourceTagType } from '../enum/ResourceTag.ts';
+import { type TagType } from '../enum/Tag.ts';
+import { type ConfigKeyType } from './enum/ConfigKey.ts';
+import { type TagsConfig } from './TagsConfig.ts';
 
 abstract class AbstractTagConfig {
   readonly type: BitTagTypeType;

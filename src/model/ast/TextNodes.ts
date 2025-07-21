@@ -1,5 +1,5 @@
-import { TextMarkTypeType } from '../enum/TextMarkType';
-import { TextNodeTypeType } from '../enum/TextNodeType';
+import { type TextMarkTypeType } from '../enum/TextMarkType.ts';
+import { type TextNodeTypeType } from '../enum/TextNodeType.ts';
 
 export type JsonText = string | TextAst;
 

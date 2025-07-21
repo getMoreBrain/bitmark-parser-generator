@@ -1,5 +1,5 @@
-import { Environment, EnvironmentType } from './Environment';
-import { Os, OsType } from './Os';
+import { Environment, type EnvironmentType } from './Environment.ts';
+import { Os, type OsType } from './Os.ts';
 
 export interface UserAgentInfo {
   browser: EnvironmentType;
@@ -16,7 +16,8 @@ interface TokenizedUserAgent {
 }
 
 function parseUserAgent(): UserAgentInfo | undefined {
-  if (typeof window === 'undefined' || !window.navigator || !window.navigator.userAgent) return undefined;
+  if (typeof window === 'undefined' || !window.navigator || !window.navigator.userAgent)
+    return undefined;
 
   const uai: UserAgentInfo = {
     browser: Environment.unknown,

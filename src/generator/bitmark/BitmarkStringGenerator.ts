@@ -1,8 +1,7 @@
-import { StringWriter } from '../../ast/writer/StringWriter';
-import { BitmarkAst } from '../../model/ast/Nodes';
-import { Generator } from '../Generator';
-
-import { BitmarkGenerator, BitmarkGeneratorOptions } from './BitmarkGenerator';
+import { StringWriter } from '../../ast/writer/StringWriter.ts';
+import { type BitmarkAst } from '../../model/ast/Nodes.ts';
+import { type Generator } from '../Generator.ts';
+import { BitmarkGenerator, type BitmarkGeneratorOptions } from './BitmarkGenerator.ts';
 
 /**
  * Generate bitmark markup from a bitmark AST as a string

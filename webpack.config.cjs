@@ -1,15 +1,18 @@
-import path from 'path';
-import TerserPlugin from 'terser-webpack-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import { Configuration, DefinePlugin } from 'webpack';
+const path = require('node:path');
 
-const root = __dirname;
-const entry = path.resolve(root, './dist/cjs/index.js');
+const TerserPlugin = require('terser-webpack-plugin');
+const { DefinePlugin } = require('webpack');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+const dirname = __dirname;
+
+const root = dirname;
+const entry = path.resolve(root, './build/browser/index.cjs');
 const outputFilename = path.resolve(root, './dist/browser/');
 
 const MAX_ASSET_SIZE = 1024 * 1204 * 50; // 50 MB!!
 
-const config: Configuration = {
+const config = {
   target: 'browserslist:modern',
   mode: 'production',
   // mode: 'development',
@@ -32,26 +35,31 @@ const config: Configuration = {
   },
   resolve: {
     fallback: {
-      fs: require.resolve('./dist/cjs/utils/polyfill/fs.js'),
+      fs: require.resolve('./src/web-polyfills/fs.js'),
+      // os: require.resolve('os-browserify/browser'),
+      os: false,
+      path: false,
+      stream: false,
+      constants: false,
     },
   },
   module: {
-    rules: [
-      {
-        test: /\.[jt]sx?$/,
-        enforce: 'pre',
-        exclude: /(node_modules)/,
-        use: [
-          {
-            loader: 'webpack-strip-block',
-            options: {
-              start: 'STRIP:START',
-              end: 'STRIP:END',
-            },
-          },
-        ],
-      },
-    ],
+    // rules: [
+    //   {
+    //     test: /\.[jt]sx?$/,
+    //     enforce: 'pre',
+    //     exclude: /(node_modules)/,
+    //     use: [
+    //       {
+    //         loader: 'webpack-strip-block',
+    //         options: {
+    //           start: 'STRIP:START',
+    //           end: 'STRIP:END',
+    //         },
+    //       },
+    //     ],
+    //   },
+    // ],
   },
   optimization: {
     minimize: true,
@@ -76,5 +84,4 @@ const config: Configuration = {
   ],
 };
 
-// eslint-disable-next-line arca/no-default-export
-export default config;
+module.exports = config;

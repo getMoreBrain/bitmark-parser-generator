@@ -1,18 +1,17 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { StringUtils } from '../../../../utils/StringUtils';
-import { TextParser } from '../../../text/TextParser';
-
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
+import { TextParser } from '../../../text/TextParser.ts';
 import {
-  BitContent,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  TypeValue,
-} from '../BitmarkPegParserTypes';
+  type BitContent,
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type TypeValue,
+} from '../BitmarkPegParserTypes.ts';
 
 const textParser = new TextParser();
 
@@ -41,7 +40,10 @@ function clozeTagContentProcessor(
       }),
     );
 
-    const solutionAst = textParser.toAst(trimmedStringValue, { format: textFormat, location: TextLocation.tag });
+    const solutionAst = textParser.toAst(trimmedStringValue, {
+      format: textFormat,
+      location: TextLocation.tag,
+    });
     solutionsAst.push(solutionAst);
   }
 }

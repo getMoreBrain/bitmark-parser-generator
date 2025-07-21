@@ -1,20 +1,18 @@
-import { Config } from '../../../../config/Config';
-import { BodyPart } from '../../../../model/ast/Nodes';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BodyBitType } from '../../../../model/enum/BodyBitType';
-import { Tag } from '../../../../model/enum/Tag';
-import { MarkJson } from '../../../../model/json/BodyBitJson';
-import { ArrayUtils } from '../../../../utils/ArrayUtils';
-
-import { markTagContentProcessor } from './MarkTagContentProcessor';
-
+import { Config } from '../../../../config/Config.ts';
+import { type BodyPart } from '../../../../model/ast/Nodes.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { BodyBitType } from '../../../../model/enum/BodyBitType.ts';
+import { Tag } from '../../../../model/enum/Tag.ts';
+import { type MarkJson } from '../../../../model/json/BodyBitJson.ts';
+import { ArrayUtils } from '../../../../utils/ArrayUtils.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+} from '../BitmarkPegParserTypes.ts';
+import { markTagContentProcessor } from './MarkTagContentProcessor.ts';
 
 function markChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -27,7 +25,12 @@ function markChainContentProcessor(
   if (contentDepth === BitContentLevel.Chain) {
     markTagContentProcessor(context, BitContentLevel.Chain, content, target);
   } else {
-    const mark: Partial<MarkJson> | undefined = buildMark(context, contentDepth, tagsConfig, content);
+    const mark: Partial<MarkJson> | undefined = buildMark(
+      context,
+      contentDepth,
+      tagsConfig,
+      content,
+    );
     if (mark) bodyParts.push(mark as BodyPart);
   }
 }
@@ -43,7 +46,11 @@ function buildMark(
   const markConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
 
   const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, [content]);
-  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, markConfig?.chain, content.chain);
+  const chainTags = context.bitContentProcessor(
+    BitContentLevel.Chain,
+    markConfig?.chain,
+    content.chain,
+  );
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('mark TAGS', chainTags);
 

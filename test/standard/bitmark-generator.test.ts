@@ -1,25 +1,28 @@
-import { describe, test } from '@jest/globals';
 // import deepEqual from 'deep-equal';
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { BitmarkFileGenerator } from '../../src/generator/bitmark/BitmarkFileGenerator';
-import { JsonFileGenerator } from '../../src/generator/json/JsonFileGenerator';
-import { BitmarkParser } from '../../src/parser/bitmark/BitmarkParser';
-import { JsonParser } from '../../src/parser/json/JsonParser';
-import { FileUtils } from '../../src/utils/FileUtils';
-import { JsonCleanupUtils } from '../utils/JsonCleanupUtils';
-import { deepDiffMapper } from '../utils/deepDiffMapper';
+import fs from 'fs-extra';
+import { describe, expect, test } from 'vitest';
 
-import { getTestFiles, getTestFilesDir } from './config/config-bitmark-files';
-import { isDebugPerformance } from './config/config-test';
+import { BitmarkFileGenerator } from '../../src/generator/bitmark/BitmarkFileGenerator.ts';
+import { JsonFileGenerator } from '../../src/generator/json/JsonFileGenerator.ts';
+import { BitmarkParser } from '../../src/parser/bitmark/BitmarkParser.ts';
+import { JsonParser } from '../../src/parser/json/JsonParser.ts';
+import { FileUtils } from '../../src/utils/FileUtils.ts';
+import { deepDiffMapper } from '../utils/deepDiffMapper.ts';
+import { JsonCleanupUtils } from '../utils/JsonCleanupUtils.ts';
+import { getTestFiles, getTestFilesDir } from './config/config-bitmark-files.ts';
+import { isDebugPerformance } from './config/config-test.ts';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const DEBUG_PERFORMANCE = isDebugPerformance();
 
 const TEST_FILES = getTestFiles();
 const TEST_INPUT_DIR = getTestFilesDir();
 // const JSON_INPUT_DIR = path.resolve(TEST_INPUT_DIR, './json');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/bitmark-generator/output');
+const TEST_OUTPUT_DIR = path.resolve(dirname, './results/bitmark-generator/output');
 
 const jsonParser = new JsonParser();
 const bitmarkParser = new BitmarkParser();
@@ -170,7 +173,10 @@ describe('bitmark-generator', () => {
         const newJson = fs.readJsonSync(generatedJsonFile, 'utf8');
 
         // Remove uninteresting JSON items
-        JsonCleanupUtils.cleanupBitJson(originalJson, { removeMarkup: true, removeTemporaryProperties: true });
+        JsonCleanupUtils.cleanupBitJson(originalJson, {
+          removeMarkup: true,
+          removeTemporaryProperties: true,
+        });
         JsonCleanupUtils.cleanupBitJson(newJson, {
           removeMarkup: true,
           removeParser: true,
@@ -190,7 +196,8 @@ describe('bitmark-generator', () => {
 
         // Print performance information
         if (DEBUG_PERFORMANCE) {
-          const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
+          const genTimeSecs =
+            Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
           console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
         }
 

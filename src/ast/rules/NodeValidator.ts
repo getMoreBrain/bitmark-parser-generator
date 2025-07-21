@@ -1,28 +1,27 @@
-import { Bit, CardBit } from '../../model/ast/Nodes';
-import { ResourceTag } from '../../model/enum/ResourceTag';
-import { StringUtils } from '../../utils/StringUtils';
-
+import { type Bit, type CardBit } from '../../model/ast/Nodes.ts';
+import { ResourceTag } from '../../model/enum/ResourceTag.ts';
 import {
-  AppLinkResourceWrapperJson,
-  ArticleResourceWrapperJson,
-  AudioEmbedResourceWrapperJson,
-  AudioLinkResourceWrapperJson,
-  AudioResourceWrapperJson,
-  DocumentDownloadResourceWrapperJson,
-  DocumentEmbedResourceWrapperJson,
-  DocumentLinkResourceWrapperJson,
-  DocumentResourceWrapperJson,
-  ImageLinkResourceWrapperJson,
-  ImageResourceWrapperJson,
-  ResourceJson,
-  StillImageFilmEmbedResourceWrapperJson,
-  StillImageFilmLinkResourceWrapperJson,
-  StillImageFilmResourceWrapperJson,
-  VideoEmbedResourceWrapperJson,
-  VideoLinkResourceWrapperJson,
-  VideoResourceWrapperJson,
-  WebsiteLinkResourceWrapperJson,
-} from '../../model/json/ResourceJson';
+  type AppLinkResourceWrapperJson,
+  type ArticleResourceWrapperJson,
+  type AudioEmbedResourceWrapperJson,
+  type AudioLinkResourceWrapperJson,
+  type AudioResourceWrapperJson,
+  type DocumentDownloadResourceWrapperJson,
+  type DocumentEmbedResourceWrapperJson,
+  type DocumentLinkResourceWrapperJson,
+  type DocumentResourceWrapperJson,
+  type ImageLinkResourceWrapperJson,
+  type ImageResourceWrapperJson,
+  type ResourceJson,
+  type StillImageFilmEmbedResourceWrapperJson,
+  type StillImageFilmLinkResourceWrapperJson,
+  type StillImageFilmResourceWrapperJson,
+  type VideoEmbedResourceWrapperJson,
+  type VideoLinkResourceWrapperJson,
+  type VideoResourceWrapperJson,
+  type WebsiteLinkResourceWrapperJson,
+} from '../../model/json/ResourceJson.ts';
+import { StringUtils } from '../../utils/StringUtils.ts';
 
 /**
  * Validates a node as the builder level (i.e. when creating AST).
@@ -201,7 +200,9 @@ class NodeValidator {
     if (Number.isFinite(val)) return;
     if (val === true || val === false) return;
     if (val == null) return;
-    throw new Error(`${name} is required to be a string or a number or a boolean or null or undefined`);
+    throw new Error(
+      `${name} is required to be a string or a number or a boolean or null or undefined`,
+    );
   }
 
   //
