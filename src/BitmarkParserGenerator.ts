@@ -6,7 +6,7 @@ import { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
 import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator';
 import { JsonOptions } from './generator/json/JsonGenerator';
 import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator';
-import { BitmarkAst, Property } from './model/ast/Nodes';
+import { BitmarkAst } from './model/ast/Nodes';
 import { BitmarkParserType, BitmarkParserTypeType } from './model/enum/BitmarkParserType';
 import { BitmarkParser } from './parser/bitmark/BitmarkParser';
 import { JsonParser } from './parser/json/JsonParser';
@@ -43,9 +43,7 @@ import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
 import { Breakscape } from './breakscaping/Breakscape';
 import { BreakscapedString } from './model/ast/BreakscapedString';
-
 import { BitType, BitTypeType } from './model/enum/BitType';
-import { BitConfig } from './model/config/BitConfig';
 import { BitTagType } from './model/enum/BitTagType';
 import { PropertyFormat } from './model/enum/PropertyFormat';
 import { PropertyTagConfig } from './model/config/PropertyTagConfig';
@@ -54,7 +52,6 @@ import { _BitConfig, _GroupsConfig } from './model/config/_Config';
 import { TAGS } from './config/raw/tags';
 import { PROPERTIES } from './config/raw/properties';
 import { GROUPS } from './config/raw/groups';
-
 import { TextLocation, TextLocationType } from './model/enum/TextLocation';
 import { BodyTextFormatType } from './model/enum/BodyTextFormat';
 import { TextFormat, TextFormatType } from './model/enum/TextFormat';
@@ -411,9 +408,6 @@ class BitmarkParserGenerator {
     const includeNonDeprecated = all || !deprecated;
     const includeDeprecated = all || deprecated;
 
-    // HACK
-    await this.doHack();
-
     if (opts.type === InfoType.bit) {
       const bitConfigs = builder.getSupportedBitConfigs().filter((b) => {
         if (!opts.bit) return true;
@@ -459,8 +453,20 @@ class BitmarkParserGenerator {
     return res;
   }
 
-  async doHack(): Promise<void> {
-    // HACK
+  /**
+   * Generate the new configuration for the bitmark parser.
+   */
+  public async generateConfig(_options?: InfoOptions): Promise<unknown> {
+    // const opts: InfoOptions = Object.assign({}, options);
+    // const builder = new InfoBuilder();
+    // let res: unknown;
+    // const outputString = !opts.outputFormat || opts.outputFormat === InfoFormat.text;
+    // const outputJson = opts.outputFormat === InfoFormat.json;
+    // const all = opts.type === InfoType.all;
+    // const deprecated = opts.type === InfoType.deprecated;
+    // const includeNonDeprecated = all || !deprecated;
+    // const includeDeprecated = all || deprecated;
+
     const bitConfigs: (_BitConfig & { bitType: BitTypeType })[] = [];
     const groupConfigs: (_GroupsConfig & { key: string })[] = [];
 
@@ -654,7 +660,7 @@ class BitmarkParserGenerator {
         const inherits = [];
         const tags = [];
 
-        if (g.key == '_resourceImage') debugger;
+        // if (g.key == '_resourceImage') debugger;
 
         const tagEntriesTypeOrder = [BitTagType.tag, BitTagType.property, BitTagType.resource, BitTagType.group];
         const tagEntries = Object.entries(g.tags ?? []).sort((a, b) => {
@@ -664,7 +670,8 @@ class BitmarkParserGenerator {
           return typeOrder;
         });
 
-        for (const [tagKey, tag] of tagEntries) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        for (const [_tagKey, tag] of tagEntries) {
           let tagName = tag.configKey as string;
           let tagKeyPrefix = '';
           let format = '';
@@ -824,6 +831,8 @@ class BitmarkParserGenerator {
     writeGroupConfigs(groupConfigs);
 
     await Promise.all(fileWrites);
+
+    return void 0;
   }
 
   /**

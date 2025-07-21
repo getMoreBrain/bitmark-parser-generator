@@ -27,6 +27,17 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Dev Generate Config",
+      "program": "${workspaceFolder}/test/custom/dev/devGenerateConfig.ts",
+      "runtimeArgs": ["--import", "tsx"],
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Dev Bitmark Parser",
       "program": "${workspaceFolder}/test/custom/dev/devParser.ts",
       "runtimeArgs": ["--import", "tsx"],

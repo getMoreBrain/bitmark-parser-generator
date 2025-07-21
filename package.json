@@ -14,6 +14,7 @@
   "scripts": {
     "start": "run start-parser",
     "start-info": "node --import tsx ./test/custom/dev/devInfo.ts",
+    "start-generate-config": "node --import tsx ./test/custom/dev/devGenerateConfig.ts",
     "start-parser": "node --import tsx ./test/custom/dev/devParser.ts",
     "start-generator": "node --import tsx ./test/custom/dev/devGenerator.ts",
     "start-prettify": "node --import tsx ./test/custom/dev/devPrettify.ts",
