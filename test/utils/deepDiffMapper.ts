@@ -26,7 +26,7 @@ const deepDiffMapper = (function () {
         };
       }
 
-      const _map = (key: string, val1: undefined, val2: any) => {
+      const _map = (key: string, val1: any, val2: any) => {
         const thisDiff = this.map(val1, val2, options, depth + 1);
 
         const ignore = _options.ignoreUnchanged && thisDiff.type === this.VALUE_UNCHANGED;
