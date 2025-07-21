@@ -397,7 +397,7 @@ class BitmarkParserGenerator {
   /**
    * Get information about the bitmark-parser-generator library
    */
-  public async info(options?: InfoOptions): Promise<unknown> {
+  public info(options?: InfoOptions): unknown {
     const opts: InfoOptions = Object.assign({}, options);
     const builder = new InfoBuilder();
     let res: unknown;

@@ -117,8 +117,8 @@
     "fs-extra": "^11.3.0"
   },
   "devDependencies": {
-    "@eslint/json": "^0.12.0",
-    "@eslint/markdown": "^6.6.0",
+    "@eslint/json": "^0.13.0",
+    "@eslint/markdown": "^7.0.0",
     "@swc/core": "^1.12.9",
     "@types/ungap__structured-clone": "^1.2.0",
     "@types/webpack-bundle-analyzer": "^4.7.0",

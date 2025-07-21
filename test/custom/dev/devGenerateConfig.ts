@@ -6,7 +6,7 @@ Copyright ©2023 Get More Brain
 
 */
 
-import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator.ts';
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
