@@ -38,7 +38,7 @@
     "start-text-plain-body-unbreakscape": "node ./test/custom/dev/devTextPlainBodyUnbreakscape.ts",
     "start-text-plain-tag-breakscape": "node ./test/custom/dev/devTextPlainTagBreakscape.ts",
     "start-text-plain-tag-unbreakscape": "node ./test/custom/dev/devTextPlainTagUnbreakscape.ts",
-    "build": "npm run clean && npm run build-grammar-bit && npm run build-grammar-text && npm run check && tsup && npm run build-browser && npm run build-supported-info",
+    "build": "npm run clean && npm run init && npm run build-grammar-bit && npm run build-grammar-text && npm run check && tsup && npm run build-browser && npm run build-supported-info",
     "build-browser": "node ./scripts/build-for-webpack.ts && webpack -c ./webpack.config.cjs",
     "build-doc": "typedoc",
     "build-grammar-bit": "node ./scripts/grammar/bitmark/generate-bitmark-parser.ts --bit",
