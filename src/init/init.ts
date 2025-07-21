@@ -1,6 +1,7 @@
-import { buildInfo } from '../generated/build-info';
-import { initEnv } from '../utils/env/Env';
-import '../config/Config';
+import '../config/Config.ts';
+
+import { PACKAGE_INFO } from '../generated/package_info.ts';
+import { initEnv } from '../utils/env/Env.ts';
 
 let initialised = false;
 
@@ -8,7 +9,7 @@ let initialised = false;
 function init(): void {
   if (initialised) return;
 
-  initEnv(buildInfo.name, buildInfo.version);
+  initEnv(PACKAGE_INFO.name, PACKAGE_INFO.version);
 
   initialised = true;
 }

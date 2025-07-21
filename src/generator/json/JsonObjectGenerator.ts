@@ -1,9 +1,8 @@
-import { StringWriter } from '../../ast/writer/StringWriter';
-import { BitmarkAst } from '../../model/ast/Nodes';
-import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { Generator } from '../Generator';
-
-import { JsonGenerator, JsonGeneratorOptions } from './JsonGenerator';
+import { StringWriter } from '../../ast/writer/StringWriter.ts';
+import { type BitmarkAst } from '../../model/ast/Nodes.ts';
+import { type BitWrapperJson } from '../../model/json/BitWrapperJson.ts';
+import { type Generator } from '../Generator.ts';
+import { JsonGenerator, type JsonGeneratorOptions } from './JsonGenerator.ts';
 
 /**
  * Generate bitmark JSON from a bitmark AST as a plain JS object

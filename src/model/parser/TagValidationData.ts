@@ -1,12 +1,11 @@
-import { TagsConfig } from '../config/TagsConfig';
-import { ConfigKeyType } from '../config/enum/ConfigKey';
-import { BitTagTypeType } from '../enum/BitTagType';
-import { CountType } from '../enum/Count';
-import { PropertyTagType } from '../enum/PropertyTag';
-import { ResourceTagType } from '../enum/ResourceTag';
-import { TagType } from '../enum/Tag';
-
-import { ParserData } from './ParserData';
+import { type ConfigKeyType } from '../config/enum/ConfigKey.ts';
+import { type TagsConfig } from '../config/TagsConfig.ts';
+import { type BitTagTypeType } from '../enum/BitTagType.ts';
+import { type CountType } from '../enum/Count.ts';
+import { type PropertyTagType } from '../enum/PropertyTag.ts';
+import { type ResourceTagType } from '../enum/ResourceTag.ts';
+import { type TagType } from '../enum/Tag.ts';
+import { type ParserData } from './ParserData.ts';
 
 type InternalTagTypes = '||' | 'CardSet' | 'TextFormat' | 'BodyText' | 'CardText';
 

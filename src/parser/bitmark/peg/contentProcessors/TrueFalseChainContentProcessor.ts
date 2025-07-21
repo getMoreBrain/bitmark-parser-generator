@@ -1,23 +1,30 @@
-import { Config } from '../../../../config/Config';
-import { BodyPart } from '../../../../model/ast/Nodes';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitType } from '../../../../model/enum/BitType';
-import { BodyBitType } from '../../../../model/enum/BodyBitType';
-import { ChoiceJson, ResponseJson, StatementJson } from '../../../../model/json/BitJson';
-import { HighlightJson, HighlightTextJson, SelectJson, SelectOptionJson } from '../../../../model/json/BodyBitJson';
-
-import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor';
-
+import { Config } from '../../../../config/Config.ts';
+import { type BodyPart } from '../../../../model/ast/Nodes.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { BitType } from '../../../../model/enum/BitType.ts';
+import { BodyBitType } from '../../../../model/enum/BodyBitType.ts';
 import {
-  BitContent,
+  type ChoiceJson,
+  type ResponseJson,
+  type StatementJson,
+} from '../../../../model/json/BitJson.ts';
+import {
+  type HighlightJson,
+  type HighlightTextJson,
+  type SelectJson,
+  type SelectOptionJson,
+} from '../../../../model/json/BodyBitJson.ts';
+import {
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  StatementsOrChoicesOrResponses,
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type StatementsOrChoicesOrResponses,
+  type TrueFalseValue,
   TypeKey,
-  TrueFalseValue,
-} from '../BitmarkPegParserTypes';
+} from '../BitmarkPegParserTypes.ts';
+import { trueFalseTagContentProcessor } from './TrueFalseTagContentProcessor.ts';
 
 function trueFalseChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -97,9 +104,14 @@ function buildStatement(
   const { bitType } = context;
   if (!Config.isOfBitType(bitType, BitType.trueFalse1)) return undefined;
 
-  if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
+  if (context.DEBUG_CHAIN_CONTENT)
+    context.debugPrint('trueFalse V1 content (statement)', trueFalseContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, trueFalseContent);
+  const { trueFalse, ...tags } = context.bitContentProcessor(
+    BitContentLevel.Chain,
+    tagsConfig,
+    trueFalseContent,
+  );
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (statement)', tags);
 
@@ -113,7 +125,6 @@ function buildStatement(
   if (firstTrueFalse) {
     // Have to remove the statement JSON tag to keep typescript happy
     const { statement: _ignore, ...tagsRest } = tags;
-    _ignore;
     statement = { ...firstTrueFalse, statement: firstTrueFalse.text, ...tagsRest };
   }
 
@@ -141,21 +152,31 @@ function buildStatementsChoicesResponses(
     BitType.multipleChoice1,
     BitType.feedback,
   ]);
-  const insertResponses = Config.isOfBitType(bitType, [BitType.multipleResponse, BitType.multipleResponse1]);
+  const insertResponses = Config.isOfBitType(bitType, [
+    BitType.multipleResponse,
+    BitType.multipleResponse1,
+  ]);
   if (!insertStatements && !insertChoices && !insertResponses) return {};
 
   const statements: Partial<StatementJson>[] = [];
   const choices: Partial<ChoiceJson>[] = [];
   const responses: Partial<ResponseJson>[] = [];
 
-  const trueFalseContents = context.splitBitContent(trueFalseContent, [TypeKey.True, TypeKey.False]);
+  const trueFalseContents = context.splitBitContent(trueFalseContent, [
+    TypeKey.True,
+    TypeKey.False,
+  ]);
 
   if (context.DEBUG_CHAIN_CONTENT) {
     context.debugPrint('trueFalse V1 content (choices/responses)', trueFalseContents);
   }
 
   for (const contents of trueFalseContents) {
-    const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, contents);
+    const { trueFalse, ...tags } = context.bitContentProcessor(
+      BitContentLevel.Chain,
+      tagsConfig,
+      contents,
+    );
 
     if (context.DEBUG_CHAIN_TAGS) context.debugPrint('trueFalse V1 tags (choices/responses)', tags);
 
@@ -168,7 +189,6 @@ function buildStatementsChoicesResponses(
       if (insertStatements) {
         // Have to remove the statement JSON tag to keep typescript happy
         const { statement: _ignore, ...tagsRest } = tags;
-        _ignore;
 
         const statement: Partial<StatementJson> = {
           ...firstTrueFalse,
@@ -205,7 +225,11 @@ function buildHighlight(
 ): Partial<HighlightJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('highlight content', highlightContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, highlightContent);
+  const { trueFalse, ...tags } = context.bitContentProcessor(
+    BitContentLevel.Chain,
+    tagsConfig,
+    highlightContent,
+  );
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('highlight TAGS', { trueFalse, ...tags });
 
@@ -233,7 +257,11 @@ function buildSelect(
 ): Partial<SelectJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('select content', selectContent);
 
-  const { trueFalse, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, selectContent);
+  const { trueFalse, ...tags } = context.bitContentProcessor(
+    BitContentLevel.Chain,
+    tagsConfig,
+    selectContent,
+  );
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('select TAGS', { trueFalse, ...tags });
 

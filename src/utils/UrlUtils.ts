@@ -9,7 +9,7 @@ class UrlUtils {
         if (pathParts.length > 1) {
           format = pathParts[pathParts.length - 1];
         }
-      } catch (e) {
+      } catch (_e) {
         // will return undefined
       }
     }
@@ -24,7 +24,7 @@ class UrlUtils {
       try {
         const parsedUrl = new URL(url);
         domain = parsedUrl.hostname;
-      } catch (e) {
+      } catch (_e) {
         // will return undefined
       }
     }

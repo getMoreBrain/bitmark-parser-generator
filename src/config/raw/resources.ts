@@ -1,7 +1,7 @@
-import { _ResourcesConfig } from '../../model/config/_Config';
-import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey';
-import { ResourceJsonKey } from '../../model/enum/ResourceJsonKey';
-import { ResourceTag } from '../../model/enum/ResourceTag';
+import { type _ResourcesConfig } from '../../model/config/_Config.ts';
+import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey.ts';
+import { ResourceJsonKey } from '../../model/enum/ResourceJsonKey.ts';
+import { ResourceTag } from '../../model/enum/ResourceTag.ts';
 
 const RESOURCES: _ResourcesConfig = {
   [ResourceConfigKey.image]: {

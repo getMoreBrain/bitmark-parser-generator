@@ -8,172 +8,184 @@
  * Therefore we have to use some dummy code to prevent it from removing the STRIP stripping comments.
  */
 
-import { init } from './init/init';
+import { init } from './init/init.ts';
 
-export { BitmarkParserGenerator, Input, Output } from './BitmarkParserGenerator';
-
-export { Builder } from './ast/Builder';
-export { ResourceBuilder } from './ast/ResourceBuilder';
-
-export { Ast } from './ast/Ast';
-
-export { JsonParser } from './parser/json/JsonParser';
-export { JsonGenerator } from './generator/json/JsonGenerator';
-export { JsonStringGenerator } from './generator/json/JsonStringGenerator';
-
-export { BitmarkParser } from './parser/bitmark/BitmarkParser';
-export { BitmarkGenerator } from './generator/bitmark/BitmarkGenerator';
-export { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator';
-
-export { Writer } from './ast/writer/Writer';
-export { StringWriter } from './ast/writer/StringWriter';
-
-export { BitType } from './model/enum/BitType';
-export { BodyTextFormat } from './model/enum/BodyTextFormat';
-export { ResourceTag } from './model/enum/ResourceTag';
-export { NodeType } from './model/ast/NodeType';
-export { BitmarkParserType } from './model/enum/BitmarkParserType';
-export { BitmarkVersion } from './model/enum/BitmarkVersion';
-export { CardSetVersion } from './model/enum/CardSetVersion';
-export { InfoType } from './model/info/enum/InfoType';
-export { InfoFormat } from './model/info/enum/InfoFormat';
-export { BreakscapedString } from './model/ast/BreakscapedString';
+export { Ast } from './ast/Ast.ts';
+export { Builder } from './ast/Builder.ts';
+export { ResourceBuilder } from './ast/ResourceBuilder.ts';
+export { StringWriter } from './ast/writer/StringWriter.ts';
+export { BitmarkParserGenerator, Input, Output } from './BitmarkParserGenerator.ts';
+export { BitmarkGenerator } from './generator/bitmark/BitmarkGenerator.ts';
+export { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator.ts';
+export { JsonGenerator } from './generator/json/JsonGenerator.ts';
+export { JsonStringGenerator } from './generator/json/JsonStringGenerator.ts';
+export { NodeType } from './model/ast/NodeType.ts';
+export { BitmarkParserType } from './model/enum/BitmarkParserType.ts';
+export { BitmarkVersion } from './model/enum/BitmarkVersion.ts';
+export { BitType } from './model/enum/BitType.ts';
+export { BodyTextFormat } from './model/enum/BodyTextFormat.ts';
+export { CardSetVersion } from './model/enum/CardSetVersion.ts';
+export { ResourceTag } from './model/enum/ResourceTag.ts';
+export { InfoFormat } from './model/info/enum/InfoFormat.ts';
+export { InfoType } from './model/info/enum/InfoType.ts';
+export { BitmarkParser } from './parser/bitmark/BitmarkParser.ts';
+export { JsonParser } from './parser/json/JsonParser.ts';
 
 //
 // Direct text parser export
 //
-export { parse as bitmarkTextParse } from './parser/text/peg/TextPegParser';
+export { parse as bitmarkTextParse } from './parser/text/peg/TextPegParser.ts';
 
 //
 // Exports that are stripped out for the browser
 //
 
+/*
+ * NOTE:
+ *
+ * We want to be able to strip out the NodeJS specific functions from the final bundle.
+ * Any code between the comments STRIP:START and STRIP:END will be removed.
+ *
+ * However, the prettifier will move comments that it does not believe are associated with code.
+ *
+ * Therefore we have to use some dummy code to prevent it from removing the STRIP stripping comments.
+ */
 const STRIP = 0;
 /* STRIP:START */
-STRIP;
+STRIP; // eslint-disable-line @typescript-eslint/no-unused-expressions
 
-export { JsonFileGenerator } from './generator/json/JsonFileGenerator';
-export { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
-export { FileWriter } from './ast/writer/FileWriter';
-export { StreamWriter } from './ast/writer/StreamWriter';
+export { FileWriter } from './ast/writer/FileWriter.ts';
+export { StreamWriter } from './ast/writer/StreamWriter.ts';
+export { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator.ts';
+export { JsonFileGenerator } from './generator/json/JsonFileGenerator.ts';
 
 /* STRIP:END */
-STRIP;
+STRIP; // eslint-disable-line @typescript-eslint/no-unused-expressions
 
 //
 // Type only exports
 //
 
+export type { AstWalkCallbacks, NodeInfo } from './ast/Ast.ts';
+export type { FileOptions } from './ast/writer/FileWriter.ts';
+export { type Writer } from './ast/writer/Writer.ts';
 export type {
-  InfoOptions,
+  BreakscapeOptions,
   ConvertOptions,
-  UpgradeOptions,
-  UpgradeOptions as PrettifyOptions,
   ConvertTextOptions,
   CreateAstOptions,
-  BreakscapeOptions,
-  UnbreakscapeOptions,
+  InfoOptions,
   InputType,
   OutputType,
+  UpgradeOptions as PrettifyOptions,
   TextJsonOptions,
-} from './BitmarkParserGenerator';
-export type { InfoTypeType } from './model/info/enum/InfoType';
-export type { InfoFormatType } from './model/info/enum/InfoFormat';
-export type { FileOptions } from './ast/writer/FileWriter';
-export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
-export type { JsonOptions } from './generator/json/JsonGenerator';
-export type { BitTypeType } from './model/enum/BitType';
-export type { BodyTextFormatType } from './model/enum/BodyTextFormat';
-export type { ResourceTagType } from './model/enum/ResourceTag';
-export type { NodeTypeType } from './model/ast/NodeType';
-export type { BitmarkParserTypeType } from './model/enum/BitmarkParserType';
-export type { BitmarkVersionType } from './model/enum/BitmarkVersion';
-export type { CardSetVersionType } from './model/enum/CardSetVersion';
-export type { Generator } from './generator/Generator';
-
-export type { NodeInfo, AstWalkCallbacks } from './ast/Ast';
-export type { Node, BitmarkAst, Bit, Example, ExtraProperties, Property, Body, BodyPart } from './model/ast/Nodes';
-export type { JsonText as Text, TextAst } from './model/ast/TextNodes';
-export type { BitWrapperJson } from './model/json/BitWrapperJson';
+  UnbreakscapeOptions,
+  UpgradeOptions,
+} from './BitmarkParserGenerator.ts';
+export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator.ts';
+export type { Generator } from './generator/Generator.ts';
+export type { JsonOptions } from './generator/json/JsonGenerator.ts';
+export { type BreakscapedString } from './model/ast/BreakscapedString.ts';
+export type {
+  Bit,
+  BitmarkAst,
+  Body,
+  BodyPart,
+  Example,
+  ExtraProperties,
+  Node,
+  Property,
+} from './model/ast/Nodes.ts';
+export type { NodeTypeType } from './model/ast/NodeType.ts';
+export type { JsonText as Text, TextAst } from './model/ast/TextNodes.ts';
+export type { BitmarkParserTypeType } from './model/enum/BitmarkParserType.ts';
+export type { BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
+export type { BitTypeType } from './model/enum/BitType.ts';
+export type { BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
+export type { CardSetVersionType } from './model/enum/CardSetVersion.ts';
+export type { ResourceTagType } from './model/enum/ResourceTag.ts';
+export type { InfoFormatType } from './model/info/enum/InfoFormat.ts';
+export type { InfoTypeType } from './model/info/enum/InfoType.ts';
 export type {
   BitJson,
-  ImageSourceJson,
-  PersonJson,
-  MarkConfigJson,
-  FlashcardJson,
-  DefinitionListItemJson,
-  StatementJson,
-  ChoiceJson,
-  ResponseJson,
-  QuizJson,
-  HeadingJson,
-  PairJson,
-  MatrixJson,
-  MatrixCellJson,
-  TableJson,
-  QuestionJson,
   BotResponseJson,
-  TechnicalTermJson,
-  ServingsJson,
+  ChoiceJson,
+  DefinitionListItemJson,
+  ExampleJson,
+  FlashcardJson,
+  HeadingJson,
+  ImageSourceJson,
   IngredientJson,
-  RatingLevelStartEndJson,
   // DEPRECATED - TO BE REMOVED IN THE FUTURE
   // CaptionDefinitionJson,
   // CaptionDefinitionListJson,
   ListItemJson,
-  ExampleJson,
-} from './model/json/BitJson';
+  MarkConfigJson,
+  MatrixCellJson,
+  MatrixJson,
+  PairJson,
+  PersonJson,
+  QuestionJson,
+  QuizJson,
+  RatingLevelStartEndJson,
+  ResponseJson,
+  ServingsJson,
+  StatementJson,
+  TableJson,
+  TechnicalTermJson,
+} from './model/json/BitJson.ts';
+export type { BitWrapperJson } from './model/json/BitWrapperJson.ts';
 export type {
-  BodyBitsJson,
   BodyBitJson,
+  BodyBitsJson,
   GapJson,
-  SelectJson,
-  SelectOptionJson,
   HighlightJson,
   HighlightTextJson,
-} from './model/json/BodyBitJson';
+  SelectJson,
+  SelectOptionJson,
+} from './model/json/BodyBitJson.ts';
+export type { ParserJson } from './model/json/ParserJson.ts';
 export type {
+  AppLinkResourceJson,
+  AppLinkResourceWrapperJson,
+  ArticleResourceJson,
+  ArticleResourceWrapperJson,
+  AudioEmbedResourceJson,
+  AudioEmbedResourceWrapperJson,
+  AudioLinkResourceJson,
+  AudioLinkResourceWrapperJson,
+  AudioResourceJson,
+  AudioResourceWrapperJson,
+  DocumentDownloadResourceJson,
+  DocumentDownloadResourceWrapperJson,
+  DocumentEmbedResourceJson,
+  DocumentEmbedResourceWrapperJson,
+  DocumentLinkResourceJson,
+  DocumentLinkResourceWrapperJson,
+  DocumentResourceJson,
+  DocumentResourceWrapperJson,
+  ImageLinkResourceJson,
+  ImageLinkResourceWrapperJson,
+  ImageResourceJson,
+  ImageResourceWrapperJson,
   ResourceDataJson,
   ResourceJson,
   ResourceWrapperJson,
-  ImageResourceWrapperJson,
-  ImageLinkResourceWrapperJson,
-  AudioResourceWrapperJson,
-  AudioEmbedResourceWrapperJson,
-  AudioLinkResourceWrapperJson,
-  VideoResourceWrapperJson,
-  VideoEmbedResourceWrapperJson,
-  VideoLinkResourceWrapperJson,
-  StillImageFilmResourceWrapperJson,
-  StillImageFilmEmbedResourceWrapperJson,
-  StillImageFilmLinkResourceWrapperJson,
-  ArticleResourceWrapperJson,
-  DocumentResourceWrapperJson,
-  DocumentEmbedResourceWrapperJson,
-  DocumentLinkResourceWrapperJson,
-  DocumentDownloadResourceWrapperJson,
-  AppLinkResourceWrapperJson,
-  WebsiteLinkResourceWrapperJson,
-  ImageResourceJson,
-  ImageLinkResourceJson,
-  AudioResourceJson,
-  AudioEmbedResourceJson,
-  AudioLinkResourceJson,
-  VideoResourceJson,
-  VideoEmbedResourceJson,
-  VideoLinkResourceJson,
-  StillImageFilmResourceJson,
   StillImageFilmEmbedResourceJson,
+  StillImageFilmEmbedResourceWrapperJson,
   StillImageFilmLinkResourceJson,
-  ArticleResourceJson,
-  DocumentResourceJson,
-  DocumentEmbedResourceJson,
-  DocumentLinkResourceJson,
-  DocumentDownloadResourceJson,
-  AppLinkResourceJson,
+  StillImageFilmLinkResourceWrapperJson,
+  StillImageFilmResourceJson,
+  StillImageFilmResourceWrapperJson,
+  VideoEmbedResourceJson,
+  VideoEmbedResourceWrapperJson,
+  VideoLinkResourceJson,
+  VideoLinkResourceWrapperJson,
+  VideoResourceJson,
+  VideoResourceWrapperJson,
   WebsiteLinkResourceJson,
-} from './model/json/ResourceJson';
-export type { ParserJson } from './model/json/ParserJson';
+  WebsiteLinkResourceWrapperJson,
+} from './model/json/ResourceJson.ts';
 
 // Initialise the application
 init();

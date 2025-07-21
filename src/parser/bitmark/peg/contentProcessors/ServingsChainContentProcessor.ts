@@ -1,14 +1,13 @@
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { ServingsJson } from '../../../../model/json/BitJson';
-import { NumberUtils } from '../../../../utils/NumberUtils';
-
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { type ServingsJson } from '../../../../model/json/BitJson.ts';
+import { NumberUtils } from '../../../../utils/NumberUtils.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+} from '../BitmarkPegParserTypes.ts';
 
 function servingsChainContentProcessor(
   context: BitmarkPegParserContext,

@@ -1,9 +1,8 @@
-import { BreakscapedString } from '../model/ast/BreakscapedString';
-import { TextFormat } from '../model/enum/TextFormat';
-import { TextLocation } from '../model/enum/TextLocation';
-
-import { BreakscapeOptions } from './BreakscapeOptions';
-import { Breakscape as BreakscapeImpl } from './BreakscapeRegex';
+import { type BreakscapedString } from '../model/ast/BreakscapedString.ts';
+import { TextFormat } from '../model/enum/TextFormat.ts';
+import { TextLocation } from '../model/enum/TextLocation.ts';
+import { type BreakscapeOptions } from './BreakscapeOptions.ts';
+import { Breakscape as BreakscapeImpl } from './BreakscapeRegex.ts';
 
 /**
  * Utility class for breakscaping strings.
@@ -38,7 +37,11 @@ class Breakscape {
     val: T,
     options: BreakscapeOptions,
   ): T extends string ? BreakscapedString : T extends string[] ? BreakscapedString[] : undefined {
-    type R = T extends string ? BreakscapedString : T extends string[] ? BreakscapedString[] : undefined;
+    type R = T extends string
+      ? BreakscapedString
+      : T extends string[]
+        ? BreakscapedString[]
+        : undefined;
 
     const opts = Object.assign({}, DEFAULT_BREAKSCAPE_OPTIONS, options);
 
@@ -62,7 +65,11 @@ class Breakscape {
     val: T,
     options: BreakscapeOptions,
   ): T extends BreakscapedString ? string : T extends BreakscapedString[] ? string[] : undefined {
-    type R = T extends BreakscapedString ? string : T extends BreakscapedString[] ? string[] : undefined;
+    type R = T extends BreakscapedString
+      ? string
+      : T extends BreakscapedString[]
+        ? string[]
+        : undefined;
 
     const opts = Object.assign({}, DEFAULT_BREAKSCAPE_OPTIONS, options);
 
@@ -81,7 +88,11 @@ class Breakscape {
     val: T,
     options?: BreakscapeOptions,
   ): T extends string ? BreakscapedString : T extends string[] ? BreakscapedString[] : undefined {
-    type R = T extends string ? BreakscapedString : T extends string[] ? BreakscapedString[] : undefined;
+    type R = T extends string
+      ? BreakscapedString
+      : T extends string[]
+        ? BreakscapedString[]
+        : undefined;
 
     const opts = Object.assign({}, DEFAULT_BREAKSCAPE_OPTIONS, options);
 

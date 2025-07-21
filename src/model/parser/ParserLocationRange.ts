@@ -1,4 +1,4 @@
-import { ParserLocation } from './ParserLocation';
+import { type ParserLocation } from './ParserLocation.ts';
 
 export interface ParserLocationRange {
   /** Any object that was supplied to the `parse()` call as the `grammarSource` option. */

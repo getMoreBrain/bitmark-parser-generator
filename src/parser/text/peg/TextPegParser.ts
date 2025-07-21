@@ -1,5 +1,5 @@
 import { parse as _parse } from '../../../generated/parser/text/text-peggy-parser.js';
-import { TextAst } from '../../../model/ast/TextNodes.js';
+import { type TextAst } from '../../../model/ast/TextNodes.ts';
 
 interface ParseOptions {
   startRule?: string;

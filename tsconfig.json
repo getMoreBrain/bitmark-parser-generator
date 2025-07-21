@@ -1,35 +1,27 @@
 {
   "compilerOptions": {
-    // "extendedDiagnostics": true,
+    "noEmit": true,
+    "target": "ESNext",
+    "module": "NodeNext",
+    // "lib": ["ESNext"],
     "strict": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    //
-    "module": "CommonJS",
-    "target": "ES6",
-    "esModuleInterop": true,
-    "lib": ["ES6", "DOM", "DOM.Iterable"],
-    "outDir": "dist/cjs",
-    "sourceMap": true,
-    "declaration": true,
-    "declarationDir": "dist/types",
-    "declarationMap": true,
-    // "skipLibCheck": true
-    "moduleResolution": "node",
-    "isolatedModules": false,
-    // "allowSyntheticDefaultImports": true,
-    // "experimentalDecorators": true,
-    // "downlevelIteration": true,
-    // "importHelpers": true,
-    "allowJs": true, // Required for PEG parser
-    "removeComments": false
-    // "incremental": true,
-    // "strictPropertyInitialization": false
-    // "resolveJsonModule": true,
-    // "typeRoots": ["./@types", "./node_modules/@types"]
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "preserve",
+    "rewriteRelativeImportExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["**/*.ts"],
+  "exclude": [
+    "dist",
+    "assets",
+    "coverage",
+    "docs",
+    // Catch-22: Have to exclude as it includes imports from the build
+    // output so checks will fail if not built,
+    "test/standard/web-bpg-minified-wrapper.js"
+  ]
 }

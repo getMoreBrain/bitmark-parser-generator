@@ -5,12 +5,11 @@
  *  (c) 2025 — MIT / public domain
  */
 
-import { buildInfo } from '../generated/build-info';
-import { BodyTextFormat, BodyTextFormatType } from '../model/enum/BodyTextFormat';
-import { TextLocation, TextLocationType } from '../model/enum/TextLocation';
-
-import type { BreakscapeOptions } from './BreakscapeOptions';
-import * as RC from './RegexConfigs';
+import { PACKAGE_INFO } from '../generated/package_info.ts';
+import { BodyTextFormat, type BodyTextFormatType } from '../model/enum/BodyTextFormat.ts';
+import { TextLocation, type TextLocationType } from '../model/enum/TextLocation.ts';
+import type { BreakscapeOptions } from './BreakscapeOptions.ts';
+import * as RC from './RegexConfigs.ts';
 
 // default options
 const DEF = {
@@ -135,7 +134,10 @@ class Breakscape {
   breakscape(val: string, opts?: BreakscapeOptions): string;
   breakscape(val: string[], opts?: BreakscapeOptions): string[];
   breakscape(val: undefined | null, opts?: BreakscapeOptions): undefined;
-  breakscape(val: string | string[] | undefined | null, opts: BreakscapeOptions = {}): string | string[] | undefined {
+  breakscape(
+    val: string | string[] | undefined | null,
+    opts: BreakscapeOptions = {},
+  ): string | string[] | undefined {
     if (val == null) return undefined;
     const options = Object.assign({}, DEF, opts);
     if (Array.isArray(val)) {
@@ -145,7 +147,11 @@ class Breakscape {
     // If an unrecognized type is passed, return it as is (e.g. true, false, 0, 1, etc.)
     if (!isString(val)) return val as string | undefined;
 
-    const { regex, replacer } = selectBreakscapeRegexAndReplacer(options.format, options.location, options.v2);
+    const { regex, replacer } = selectBreakscapeRegexAndReplacer(
+      options.format,
+      options.location,
+      options.v2,
+    );
     let str = val;
     str = str.replace(regex, replacer);
     return str;
@@ -162,7 +168,10 @@ class Breakscape {
   unbreakscape(val: string, opts?: BreakscapeOptions): string;
   unbreakscape(val: string[], opts?: BreakscapeOptions): string[];
   unbreakscape(val: undefined | null, opts?: BreakscapeOptions): undefined;
-  unbreakscape(val: string | string[] | undefined | null, opts: BreakscapeOptions = {}): string | string[] | undefined {
+  unbreakscape(
+    val: string | string[] | undefined | null,
+    opts: BreakscapeOptions = {},
+  ): string | string[] | undefined {
     if (val == null) return undefined;
     const options = Object.assign({}, DEF, opts);
     if (Array.isArray(val)) {
@@ -172,7 +181,10 @@ class Breakscape {
     // If an unrecognized type is passed, return it as is (e.g. true, false, 0, 1, etc.)
     if (!isString(val)) return val as string | undefined;
 
-    const { regex, replacer } = selectUnbreakscapeRegexAndReplacer(options.format, options.location);
+    const { regex, replacer } = selectUnbreakscapeRegexAndReplacer(
+      options.format,
+      options.location,
+    );
     let str = val;
     str = str.replace(regex, replacer);
     return str;
@@ -229,7 +241,7 @@ class Breakscape {
    * ```
    */
   version(): string {
-    return buildInfo.version;
+    return PACKAGE_INFO.version;
   }
 
   /**
@@ -244,7 +256,7 @@ class Breakscape {
    * ```
    */
   license(): string {
-    return buildInfo.license;
+    return PACKAGE_INFO.license;
   }
 }
 

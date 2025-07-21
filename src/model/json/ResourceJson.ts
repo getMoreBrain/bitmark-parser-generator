@@ -1,5 +1,5 @@
-import { JsonText } from '../ast/TextNodes';
-import { ResourceTagType } from '../enum/ResourceTag';
+import { type JsonText } from '../ast/TextNodes.ts';
+import { type ResourceTagType } from '../enum/ResourceTag.ts';
 
 export type ResourceDataJson = ImageResourceJson &
   ImageResponsiveResourceJson &

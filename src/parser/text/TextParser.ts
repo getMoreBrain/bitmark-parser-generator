@@ -1,11 +1,10 @@
-import { JsonText, TextAst } from '../../model/ast/TextNodes';
-import { TextFormatType } from '../../model/enum/TextFormat';
-import { TextLocation, TextLocationType } from '../../model/enum/TextLocation';
-import { TextNodeType } from '../../model/enum/TextNodeType';
-import { BodyBitJson } from '../../model/json/BodyBitJson';
-import { StringUtils } from '../../utils/StringUtils';
-
-import { parse as bitmarkTextParse } from './peg/TextPegParser';
+import { type JsonText, type TextAst } from '../../model/ast/TextNodes.ts';
+import { type TextFormatType } from '../../model/enum/TextFormat.ts';
+import { TextLocation, type TextLocationType } from '../../model/enum/TextLocation.ts';
+import { TextNodeType } from '../../model/enum/TextNodeType.ts';
+import { type BodyBitJson } from '../../model/json/BodyBitJson.ts';
+import { StringUtils } from '../../utils/StringUtils.ts';
+import { parse as bitmarkTextParse } from './peg/TextPegParser.ts';
 
 export interface BitmarkTextParserOptions {
   format: TextFormatType;
@@ -34,7 +33,7 @@ class TextParser {
       const str = ast as string;
       try {
         ast = JSON.parse(str);
-      } catch (e) {
+      } catch (_e) {
         // Failed to parse JSON, return empty array
         return undefined;
       }
@@ -138,7 +137,10 @@ class TextParser {
    * @param text
    * @returns
    */
-  public walkBodyBits(text: JsonText, callback: (parent: TextAst, index: number, bodyBit: BodyBitJson) => void): void {
+  public walkBodyBits(
+    text: JsonText,
+    callback: (parent: TextAst, index: number, bodyBit: BodyBitJson) => void,
+  ): void {
     if (!Array.isArray(text)) return;
 
     const textAst = text as TextAst;

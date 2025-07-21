@@ -1,24 +1,23 @@
-/* eslint-disable arca/import-ordering */
-import { EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType, superenum } from '@ncoderz/superenum';
 
-import { Ast } from './ast/Ast';
-import { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
-import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator';
-import { JsonOptions } from './generator/json/JsonGenerator';
-import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator';
-import { BitmarkAst } from './model/ast/Nodes';
-import { BitmarkParserType, BitmarkParserTypeType } from './model/enum/BitmarkParserType';
-import { BitmarkParser } from './parser/bitmark/BitmarkParser';
-import { JsonParser } from './parser/json/JsonParser';
-import { env } from './utils/env/Env';
-import { BitmarkVersionType } from './model/enum/BitmarkVersion';
-import { InfoBuilder, SupportedBit } from './info/InfoBuilder';
-import { InfoType, InfoTypeType } from './model/info/enum/InfoType';
-import { InfoFormat, InfoFormatType } from './model/info/enum/InfoFormat';
-import { Config } from './config/Config';
-// import { TextFormat, TextFormatType } from './model/enum/TextFormat';
-import { TextGenerator } from './generator/text/TextGenerator';
-import { TextParser } from './parser/text/TextParser';
+import { Ast } from './ast/Ast.ts';
+import { Config } from './config/Config.ts';
+import { type BitmarkOptions } from './generator/bitmark/BitmarkGenerator.ts';
+import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator.ts';
+import { type JsonOptions } from './generator/json/JsonGenerator.ts';
+import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator.ts';
+// import { TextFormat, TextFormatType } from './model/enum/TextFormat.ts';
+import { TextGenerator } from './generator/text/TextGenerator.ts';
+import { InfoBuilder, type SupportedBit } from './info/InfoBuilder.ts';
+import { type BitmarkAst } from './model/ast/Nodes.ts';
+import { BitmarkParserType, type BitmarkParserTypeType } from './model/enum/BitmarkParserType.ts';
+import { type BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
+import { InfoFormat, type InfoFormatType } from './model/info/enum/InfoFormat.ts';
+import { InfoType, type InfoTypeType } from './model/info/enum/InfoType.ts';
+import { BitmarkParser } from './parser/bitmark/BitmarkParser.ts';
+import { JsonParser } from './parser/json/JsonParser.ts';
+import { TextParser } from './parser/text/TextParser.ts';
+import { env } from './utils/env/Env.ts';
 
 /*
  * NOTE:
@@ -26,29 +25,30 @@ import { TextParser } from './parser/text/TextParser';
  * We want to be able to strip out the NodeJS specific functions from the final bundle.
  * Any code between the comments STRIP:START and STRIP:END will be removed.
  *
- * However, the Typescript compiler will remove comments that it does not believe are associated with code.
+ * However, the prettifier will move comments that it does not believe are associated with code.
+ *
  * Therefore we have to use some dummy code to prevent it from removing the STRIP stripping comments.
  */
 const STRIP = 0;
 
 /* STRIP:START */
-STRIP;
+STRIP; // eslint-disable-line @typescript-eslint/no-unused-expressions
 
-/* eslint-disable arca/import-ordering */
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
 
-import { FileOptions } from './ast/writer/FileWriter';
-import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
-import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
-import { Breakscape } from './breakscaping/Breakscape';
-import { BreakscapedString } from './model/ast/BreakscapedString';
-import { TextLocation, TextLocationType } from './model/enum/TextLocation';
-import { BodyTextFormatType } from './model/enum/BodyTextFormat';
-import { TextFormat, TextFormatType } from './model/enum/TextFormat';
+import fs from 'fs-extra';
+
+import { type FileOptions } from './ast/writer/FileWriter.ts';
+import { Breakscape } from './breakscaping/Breakscape.ts';
+import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator.ts';
+import { JsonFileGenerator } from './generator/json/JsonFileGenerator.ts';
+import { type BreakscapedString } from './model/ast/BreakscapedString.ts';
+import { type BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
+import { TextFormat, type TextFormatType } from './model/enum/TextFormat.ts';
+import { TextLocation, type TextLocationType } from './model/enum/TextLocation.ts';
 
 /* STRIP:END */
-STRIP;
+STRIP; // eslint-disable-line @typescript-eslint/no-unused-expressions
 
 /**
  * Info options for the parser
@@ -849,7 +849,8 @@ class BitmarkParserGenerator {
     const opts: ConvertTextOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
-    const textFormat: TextFormatType = TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+    const textFormat: TextFormatType =
+      TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
@@ -930,7 +931,8 @@ class BitmarkParserGenerator {
 
     const opts: BreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
-    const textFormat: TextFormatType = TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+    const textFormat: TextFormatType =
+      TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
@@ -994,7 +996,8 @@ class BitmarkParserGenerator {
 
     const opts: UnbreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
-    const textFormat: TextFormatType = TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+    const textFormat: TextFormatType =
+      TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: BreakscapedString = input as BreakscapedString;
@@ -1045,7 +1048,11 @@ class BitmarkParserGenerator {
    * @param forceStringify
    * @returns
    */
-  private jsonStringifyPrettify = (json: unknown, options: JsonOptions, forceStringify?: boolean): unknown => {
+  private jsonStringifyPrettify = (
+    json: unknown,
+    options: JsonOptions,
+    forceStringify?: boolean,
+  ): unknown => {
     const prettifySpace = options.prettify === true ? 2 : options.prettify || undefined;
     const stringify = forceStringify || options.stringify === true || prettifySpace !== undefined;
 

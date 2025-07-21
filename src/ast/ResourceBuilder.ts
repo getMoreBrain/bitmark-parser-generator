@@ -1,40 +1,38 @@
-import { Breakscape } from '../breakscaping/Breakscape';
-import { Config } from '../config/Config';
-import { TextAst } from '../model/ast/TextNodes';
-import { BitType } from '../model/enum/BitType';
-import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
-import { TextLocation } from '../model/enum/TextLocation';
-import { ObjectUtils } from '../utils/ObjectUtils';
-import { StringUtils } from '../utils/StringUtils';
-import { UrlUtils } from '../utils/UrlUtils';
-
-import { BaseBuilder, BuildContext } from './BaseBuilder';
-import { NodeValidator } from './rules/NodeValidator';
-
+import { Breakscape } from '../breakscaping/Breakscape.ts';
+import { Config } from '../config/Config.ts';
+import { type TextAst } from '../model/ast/TextNodes.ts';
+import { BitType } from '../model/enum/BitType.ts';
+import { ResourceTag, type ResourceTagType } from '../model/enum/ResourceTag.ts';
+import { TextLocation } from '../model/enum/TextLocation.ts';
 import {
-  AppLinkResourceWrapperJson,
-  ArticleResourceWrapperJson,
-  AudioEmbedResourceWrapperJson,
-  AudioLinkResourceWrapperJson,
-  AudioResourceWrapperJson,
-  DocumentDownloadResourceWrapperJson,
-  DocumentEmbedResourceWrapperJson,
-  DocumentLinkResourceWrapperJson,
-  DocumentResourceWrapperJson,
-  ImageLinkResourceWrapperJson,
-  ImageResourceJson,
-  ImageResourceWrapperJson,
-  ImageResponsiveResourceJson,
-  ResourceDataJson,
-  ResourceJson,
-  StillImageFilmEmbedResourceWrapperJson,
-  StillImageFilmLinkResourceWrapperJson,
-  StillImageFilmResourceJson,
-  VideoEmbedResourceWrapperJson,
-  VideoLinkResourceWrapperJson,
-  VideoResourceWrapperJson,
-  WebsiteLinkResourceWrapperJson,
-} from '../model/json/ResourceJson';
+  type AppLinkResourceWrapperJson,
+  type ArticleResourceWrapperJson,
+  type AudioEmbedResourceWrapperJson,
+  type AudioLinkResourceWrapperJson,
+  type AudioResourceWrapperJson,
+  type DocumentDownloadResourceWrapperJson,
+  type DocumentEmbedResourceWrapperJson,
+  type DocumentLinkResourceWrapperJson,
+  type DocumentResourceWrapperJson,
+  type ImageLinkResourceWrapperJson,
+  type ImageResourceJson,
+  type ImageResourceWrapperJson,
+  type ImageResponsiveResourceJson,
+  type ResourceDataJson,
+  type ResourceJson,
+  type StillImageFilmEmbedResourceWrapperJson,
+  type StillImageFilmLinkResourceWrapperJson,
+  type StillImageFilmResourceJson,
+  type VideoEmbedResourceWrapperJson,
+  type VideoLinkResourceWrapperJson,
+  type VideoResourceWrapperJson,
+  type WebsiteLinkResourceWrapperJson,
+} from '../model/json/ResourceJson.ts';
+import { ObjectUtils } from '../utils/ObjectUtils.ts';
+import { StringUtils } from '../utils/StringUtils.ts';
+import { UrlUtils } from '../utils/UrlUtils.ts';
+import { BaseBuilder, type BuildContext } from './BaseBuilder.ts';
+import { NodeValidator } from './rules/NodeValidator.ts';
 
 /**
  * Builder to build bitmark Resource AST nodes programmatically
@@ -126,19 +124,32 @@ class ResourceBuilder extends BaseBuilder {
     type = ResourceTag.fromValue(type) as ResourceTagType;
     if (!type) return undefined;
 
-    const dataAsString: string | undefined = StringUtils.isString(data) ? (data as unknown as string) : undefined;
+    const dataAsString: string | undefined = StringUtils.isString(data)
+      ? (data as unknown as string)
+      : undefined;
 
     // url / src / href / app
     const url = data.url || data.src || data.body || dataAsString;
 
     // Sub resources
     const posterImage = data.posterImage
-      ? (this.resourceFromResourceDataJson(context, ResourceTag.image, data.posterImage) as ImageResourceWrapperJson)
-          ?.image
+      ? (
+          this.resourceFromResourceDataJson(
+            context,
+            ResourceTag.image,
+            data.posterImage,
+          ) as ImageResourceWrapperJson
+        )?.image
       : undefined;
     const thumbnails = data.thumbnails
       ? data.thumbnails.map((t) => {
-          return (this.resourceFromResourceDataJson(context, ResourceTag.image, t) as ImageResourceWrapperJson)?.image;
+          return (
+            this.resourceFromResourceDataJson(
+              context,
+              ResourceTag.image,
+              t,
+            ) as ImageResourceWrapperJson
+          )?.image;
         })
       : undefined;
 
@@ -583,7 +594,8 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): AudioResourceWrapperJson | undefined {
-    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResourceWrapperJson = {
@@ -636,7 +648,8 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): AudioEmbedResourceWrapperJson | undefined {
-    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResourceWrapperJson = {
@@ -689,7 +702,8 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): AudioLinkResourceWrapperJson | undefined {
-    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } = data;
+    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } =
+      data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResourceWrapperJson = {

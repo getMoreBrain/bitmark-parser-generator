@@ -1,18 +1,17 @@
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { PropertyTag } from '../../../../model/enum/PropertyTag';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { RatingLevelStartEndJson } from '../../../../model/json/BitJson';
-import { NumberUtils } from '../../../../utils/NumberUtils';
-import { TextParser } from '../../../text/TextParser';
-
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { PropertyTag } from '../../../../model/enum/PropertyTag.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { type RatingLevelStartEndJson } from '../../../../model/json/BitJson.ts';
+import { NumberUtils } from '../../../../utils/NumberUtils.ts';
+import { TextParser } from '../../../text/TextParser.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  TypeKeyValue,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type TypeKeyValue,
+} from '../BitmarkPegParserTypes.ts';
 
 const textParser = new TextParser();
 
@@ -39,7 +38,9 @@ function ratingLevelChainContentProcessor(
 
   const node: Partial<RatingLevelStartEndJson> = {
     level,
-    label: label ? textParser.toAst(label, { format: textFormat, location: TextLocation.tag }) : undefined,
+    label: label
+      ? textParser.toAst(label, { format: textFormat, location: TextLocation.tag })
+      : undefined,
   };
 
   switch (key) {

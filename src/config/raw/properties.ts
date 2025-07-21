@@ -1,8 +1,8 @@
-import { _PropertiesConfig } from '../../model/config/_Config';
-import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
-import { PropertyAstKey } from '../../model/enum/PropertyAstKey';
-import { PropertyFormat } from '../../model/enum/PropertyFormat';
-import { PropertyTag } from '../../model/enum/PropertyTag';
+import { type _PropertiesConfig } from '../../model/config/_Config.ts';
+import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey.ts';
+import { PropertyAstKey } from '../../model/enum/PropertyAstKey.ts';
+import { PropertyFormat } from '../../model/enum/PropertyFormat.ts';
+import { PropertyTag } from '../../model/enum/PropertyTag.ts';
 
 const PROPERTIES: _PropertiesConfig = {
   [PropertyConfigKey.id]: {

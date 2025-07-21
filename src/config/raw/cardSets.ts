@@ -1,11 +1,11 @@
-import { _CardSetsConfig } from '../../model/config/_Config';
-import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey';
-import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
-import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
-import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey';
-import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
-import { BitTagType } from '../../model/enum/BitTagType';
-import { Count } from '../../model/enum/Count';
+import { type _CardSetsConfig } from '../../model/config/_Config.ts';
+import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey.ts';
+import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey.ts';
+import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey.ts';
+import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey.ts';
+import { TagConfigKey } from '../../model/config/enum/TagConfigKey.ts';
+import { BitTagType } from '../../model/enum/BitTagType.ts';
+import { Count } from '../../model/enum/Count.ts';
 
 const CARDSETS: _CardSetsConfig = {
   [CardSetConfigKey._definitionList]: {

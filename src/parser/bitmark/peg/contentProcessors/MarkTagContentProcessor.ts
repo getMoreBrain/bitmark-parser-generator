@@ -1,13 +1,12 @@
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { StringUtils } from '../../../../utils/StringUtils';
-
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
 import {
-  BitContent,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  TypeValue,
-} from '../BitmarkPegParserTypes';
+  type BitContent,
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type TypeValue,
+} from '../BitmarkPegParserTypes.ts';
 
 function markTagContentProcessor(
   _context: BitmarkPegParserContext,

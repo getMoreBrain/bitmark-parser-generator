@@ -1,19 +1,28 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { Body, BodyPart } from '../../../../model/ast/Nodes';
-import { JsonText, TextAst } from '../../../../model/ast/TextNodes';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { BitTypeType } from '../../../../model/enum/BitType';
-import { BodyBitType } from '../../../../model/enum/BodyBitType';
-import { TextFormat, TextFormatType } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { BodyBitJson, GapJson, HighlightJson, MarkJson, SelectJson } from '../../../../model/json/BodyBitJson';
-import { StringUtils } from '../../../../utils/StringUtils';
-import { TextParser } from '../../../text/TextParser';
-import { BitContentProcessorResult, BitmarkPegParserContext, ContentDepthType } from '../BitmarkPegParserTypes';
-import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
-
-import { ContentProcessorUtils } from './ContentProcessorUtils';
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { type Body, type BodyPart } from '../../../../model/ast/Nodes.ts';
+import { type JsonText, type TextAst } from '../../../../model/ast/TextNodes.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { type BitTypeType } from '../../../../model/enum/BitType.ts';
+import { BodyBitType } from '../../../../model/enum/BodyBitType.ts';
+import { TextFormat, type TextFormatType } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import {
+  type BodyBitJson,
+  type GapJson,
+  type HighlightJson,
+  type MarkJson,
+  type SelectJson,
+} from '../../../../model/json/BodyBitJson.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
+import { TextParser } from '../../../text/TextParser.ts';
+import {
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+} from '../BitmarkPegParserTypes.ts';
+import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator.ts';
+import { ContentProcessorUtils } from './ContentProcessorUtils.ts';
 
 export interface BodyText extends BodyPart {
   type: 'text';
@@ -43,7 +52,13 @@ class BodyContentProcessor {
     const trimmedBodyParts = bodyParts.length > 0 ? this.trimBodyParts(bodyParts) : undefined;
     const validatedBodyParts = isCardBody
       ? trimmedBodyParts
-      : BitmarkPegParserValidator.checkBody(context, contentDepth, bitType, textFormat, trimmedBodyParts);
+      : BitmarkPegParserValidator.checkBody(
+          context,
+          contentDepth,
+          bitType,
+          textFormat,
+          trimmedBodyParts,
+        );
 
     // If the text format is JSON, check the body is valid JSON
     // In this case, the body will already have been 'squashed' so will not contain any parsed inline body tags
@@ -57,7 +72,7 @@ class BodyContentProcessor {
       }, '');
       try {
         finalBody = JSON.parse(finalBody as string);
-      } catch (e) {
+      } catch (_e) {
         finalBody = null;
         context.addError(`Body JSON is invalid.`);
       }
@@ -135,7 +150,11 @@ class BodyContentProcessor {
         StringUtils.countOccurrencesAtEnd(bodyTextStr, '\n') +
         StringUtils.countOccurrencesAtStart(plainBodyTextStr, '\n');
 
-      finalBody = ContentProcessorUtils.concatenatePlainTextWithAstTexts(parsedBodyText, newlines, parserPlainText);
+      finalBody = ContentProcessorUtils.concatenatePlainTextWithAstTexts(
+        parsedBodyText,
+        newlines,
+        parserPlainText,
+      );
       finalBodyString = Breakscape.unbreakscape(bodyStr, {
         format: textFormat,
         location: TextLocation.body,
@@ -224,7 +243,11 @@ class BodyContentProcessor {
    * @param bodyBitJson the body bit json to insert at the placeholder position
    * @param index the index of the placeholder to replace
    */
-  protected replacePlaceholderWithBodyBit(bodyAst: TextAst, bodyBitJson: BodyBitJson, index: number) {
+  protected replacePlaceholderWithBodyBit(
+    bodyAst: TextAst,
+    bodyBitJson: BodyBitJson,
+    index: number,
+  ) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const walkRecursive = (node: any, parent: any, parentKey: any): boolean => {
       if (Array.isArray(node)) {

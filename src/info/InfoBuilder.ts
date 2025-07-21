@@ -1,6 +1,6 @@
-import { Config } from '../config/Config';
-import { BitConfig } from '../model/config/BitConfig';
-import { BitType, BitTypeType } from '../model/enum/BitType';
+import { Config } from '../config/Config.ts';
+import { BitConfig } from '../model/config/BitConfig.ts';
+import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
 
 export interface SupportedBitsOptions {
   includeNonDeprecated?: boolean; // Default: true
@@ -26,9 +26,12 @@ class InfoBuilder {
       const bitType = Config.getBitType(bt);
       const bitConfig = Config.getBitConfig(bitType);
 
-      const inheritedBitTypes = bitConfig.inheritedBitTypes.length > 0 ? bitConfig.inheritedBitTypes : undefined;
+      const inheritedBitTypes =
+        bitConfig.inheritedBitTypes.length > 0 ? bitConfig.inheritedBitTypes : undefined;
 
-      const include = (includeNonDeprecated && !bitConfig.deprecated) || (includeDeprecated && bitConfig.deprecated);
+      const include =
+        (includeNonDeprecated && !bitConfig.deprecated) ||
+        (includeDeprecated && bitConfig.deprecated);
       if (include) {
         supportedBits.push({
           name: bt,

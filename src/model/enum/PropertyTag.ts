@@ -1,6 +1,6 @@
-import { EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType, superenum } from '@ncoderz/superenum';
 
-import { propertyConfigKeys } from '../config/enum/PropertyConfigKey';
+import { propertyConfigKeys } from '../config/enum/PropertyConfigKey.ts';
 
 const PropertyTag = superenum({
   ...propertyConfigKeys,

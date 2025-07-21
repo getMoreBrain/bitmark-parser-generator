@@ -1,23 +1,22 @@
-import { BitConfig } from '../model/config/BitConfig';
-import { ResourceTagConfig } from '../model/config/ResourceTagConfig';
-import { ResourcesConfig } from '../model/config/ResourcesConfig';
-import { TagConfig } from '../model/config/TagConfig';
-import { TagsConfig } from '../model/config/TagsConfig';
-import { _BitConfig, _PropertiesConfig } from '../model/config/_Config';
-import { GroupConfigType } from '../model/config/enum/GroupConfigType';
-import { BitTagType } from '../model/enum/BitTagType';
-import { BitType, BitTypeType } from '../model/enum/BitType';
-import { PropertyTagType } from '../model/enum/PropertyTag';
-import { ResourceJsonKeyType } from '../model/enum/ResourceJsonKey';
-import { ResourceTagType } from '../model/enum/ResourceTag';
-import { TagType } from '../model/enum/Tag';
-import { TextFormat } from '../model/enum/TextFormat';
-import { ObjectUtils } from '../utils/ObjectUtils';
-
-import { ConfigHydrator } from './ConfigHydrator';
-import { BITS } from './raw/bits';
-import { GROUPS } from './raw/groups';
-import { PROPERTIES } from './raw/properties';
+import { type _BitConfig, type _PropertiesConfig } from '../model/config/_Config.ts';
+import { BitConfig } from '../model/config/BitConfig.ts';
+import { GroupConfigType } from '../model/config/enum/GroupConfigType.ts';
+import { ResourcesConfig } from '../model/config/ResourcesConfig.ts';
+import { ResourceTagConfig } from '../model/config/ResourceTagConfig.ts';
+import { type TagConfig } from '../model/config/TagConfig.ts';
+import { type TagsConfig } from '../model/config/TagsConfig.ts';
+import { BitTagType } from '../model/enum/BitTagType.ts';
+import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
+import { type PropertyTagType } from '../model/enum/PropertyTag.ts';
+import { type ResourceJsonKeyType } from '../model/enum/ResourceJsonKey.ts';
+import { type ResourceTagType } from '../model/enum/ResourceTag.ts';
+import { type TagType } from '../model/enum/Tag.ts';
+import { TextFormat } from '../model/enum/TextFormat.ts';
+import { ObjectUtils } from '../utils/ObjectUtils.ts';
+import { ConfigHydrator } from './ConfigHydrator.ts';
+import { BITS } from './raw/bits.ts';
+import { GROUPS } from './raw/groups.ts';
+import { PROPERTIES } from './raw/properties.ts';
 
 export interface ComboResources {
   [configKey: string]: TagsConfig;
@@ -53,7 +52,10 @@ class Config {
    * @param bitType the bit type
    * @param baseBitType the root bit type or types to check
    */
-  public isOfBitType(bitType: BitTypeType | undefined, baseBitType: BitTypeType | BitTypeType[]): boolean {
+  public isOfBitType(
+    bitType: BitTypeType | undefined,
+    baseBitType: BitTypeType | BitTypeType[],
+  ): boolean {
     if (!bitType) return false;
     if (bitType === baseBitType) return true;
     const bitConfig = this.getBitConfig(bitType);
@@ -207,7 +209,11 @@ class Config {
    * @param parentTagConfig
    * @returns
    */
-  public getTagsConfigForCardSet(bitType: BitTypeType, sideNo: number, variantNo: number): TagsConfig | undefined {
+  public getTagsConfigForCardSet(
+    bitType: BitTypeType,
+    sideNo: number,
+    variantNo: number,
+  ): TagsConfig | undefined {
     const bitConfig = this.getBitConfig(bitType);
     if (!bitConfig) return undefined;
 
@@ -254,7 +260,8 @@ class Config {
 
     // Work out the potential combo resource type, which is either fixed by the bit type, or comes from the bit header
     const comboResourceType =
-      bitConfig.comboResourceType ?? (bitConfig.resourceAttachmentAllowed && resourceTypeAttachment);
+      bitConfig.comboResourceType ??
+      (bitConfig.resourceAttachmentAllowed && resourceTypeAttachment);
 
     if (comboResourceType) {
       // The comboResourceType might be a combo resource. Build the comborResourceTagTypesMap
@@ -289,7 +296,9 @@ class Config {
         for (const [k, tag] of Object.entries(resourceTags)) {
           // Check if the tag matches the resource type attachment or the comboResource
           const singleTagMatch = comboResourceType === tag.tag;
-          const comboTagMatch = comboResourcesMap ? comboResourcesMap.has(tag.tag as ResourceTagType) : false;
+          const comboTagMatch = comboResourcesMap
+            ? comboResourcesMap.has(tag.tag as ResourceTagType)
+            : false;
 
           if (singleTagMatch) {
             // Single tag match for a resource specified in the bit header
@@ -338,7 +347,9 @@ class Config {
    * @param resourceTypeAttachment
    * @returns resourceTypes for the combo resource (or undefined if not a combo resource)
    */
-  private getComboResourceTagTypes(resourceTypeAttachment: ResourceTagType | undefined): ResourceTagType[] | undefined {
+  private getComboResourceTagTypes(
+    resourceTypeAttachment: ResourceTagType | undefined,
+  ): ResourceTagType[] | undefined {
     const comboResource = this.getComboResource(resourceTypeAttachment);
     if (comboResource) {
       const comboResourceTypes = Object.values(comboResource)
@@ -368,7 +379,9 @@ class Config {
       // Filter for all the resource groups and hydrate the tags
       comboResourcesTags = {};
       Object.values(GROUPS)
-        .filter((g) => g.type === GroupConfigType.comboResource && g.comboResourceType === resourceType)
+        .filter(
+          (g) => g.type === GroupConfigType.comboResource && g.comboResourceType === resourceType,
+        )
         .forEach((g) => {
           comboResourcesTags = {
             ...comboResourcesTags,

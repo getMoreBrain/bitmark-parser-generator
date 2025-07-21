@@ -1,4 +1,4 @@
-import { EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType, superenum } from '@ncoderz/superenum';
 
 const BitTagType = superenum({
   tag: 'tag', // A standard tag

@@ -1,14 +1,14 @@
-import { _BitsConfig } from '../../model/config/_Config';
-import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey';
-import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
-import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
-import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey';
-import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
-import { BitTagType } from '../../model/enum/BitTagType';
-import { BitType } from '../../model/enum/BitType';
-import { Count } from '../../model/enum/Count';
-import { ExampleType } from '../../model/enum/ExampleType';
-import { TextFormat } from '../../model/enum/TextFormat';
+import { type _BitsConfig } from '../../model/config/_Config.ts';
+import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey.ts';
+import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey.ts';
+import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey.ts';
+import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey.ts';
+import { TagConfigKey } from '../../model/config/enum/TagConfigKey.ts';
+import { BitTagType } from '../../model/enum/BitTagType.ts';
+import { BitType } from '../../model/enum/BitType.ts';
+import { Count } from '../../model/enum/Count.ts';
+import { ExampleType } from '../../model/enum/ExampleType.ts';
+import { TextFormat } from '../../model/enum/TextFormat.ts';
 
 const BITS: _BitsConfig = {
   [BitType._error]: {
@@ -94,8 +94,14 @@ const BITS: _BitsConfig = {
   [BitType.articleResponsiveAlt]: { since: '2.0.0', baseBitType: BitType.articleResponsive },
   [BitType.standardArticleNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.standardArticleNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
-  [BitType.smartStandardArticleNormative]: { since: '1.28.0', baseBitType: BitType.standardArticleNormative },
-  [BitType.smartStandardArticleNonNormative]: { since: '1.28.0', baseBitType: BitType.standardArticleNonNormative },
+  [BitType.smartStandardArticleNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardArticleNormative,
+  },
+  [BitType.smartStandardArticleNonNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardArticleNonNormative,
+  },
   [BitType.smartStandardArticleNormativeCollapsible]: {
     since: '1.28.0',
     baseBitType: BitType.smartStandardArticleNormative,
@@ -522,7 +528,10 @@ const BITS: _BitsConfig = {
   [BitType.clozeSolutionGrouped]: { since: '1.3.0', baseBitType: BitType.cloze },
   [BitType.clozeSeveral]: { since: '3.5.0', baseBitType: BitType.cloze },
   [BitType.gapText]: { since: '1.5.15', baseBitType: BitType.cloze },
-  [BitType.gapTextInstructionGrouped]: { since: '1.5.15', baseBitType: BitType.clozeInstructionGrouped },
+  [BitType.gapTextInstructionGrouped]: {
+    since: '1.5.15',
+    baseBitType: BitType.clozeInstructionGrouped,
+  },
   [BitType.coachSelfReflectionCloze]: { since: '1.3.0', baseBitType: BitType.cloze },
   [BitType.coachCallToActionCloze]: { since: '1.3.0', baseBitType: BitType.cloze },
   [BitType.clozeList]: {
@@ -566,7 +575,10 @@ const BITS: _BitsConfig = {
   [BitType.smartStandardFormulaNonNormative]: { since: '3.11.0', baseBitType: BitType.formula },
   [BitType.smartStandardFormulaNormative]: { since: '3.11.0', baseBitType: BitType.formula },
   [BitType.smartStandardRemarkFormula]: { since: '3.11.0', baseBitType: BitType.formula },
-  [BitType.smartStandardRemarkFormulaNonNormative]: { since: '3.11.0', baseBitType: BitType.formula },
+  [BitType.smartStandardRemarkFormulaNonNormative]: {
+    since: '3.11.0',
+    baseBitType: BitType.formula,
+  },
   [BitType.smartStandardRemarkFormulaNormative]: { since: '3.11.0', baseBitType: BitType.formula },
   [BitType.appCodeCell]: { since: '1.4.3', baseBitType: BitType.code },
   [BitType.appCodeEditor]: { since: '1.4.3', baseBitType: BitType.code },
@@ -611,7 +623,10 @@ const BITS: _BitsConfig = {
   [BitType.conversationRight1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Scream]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
   [BitType.conversationRight1Thought]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
-  [BitType.clozeAndMultipleChoiceTextConversationLeft1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.clozeAndMultipleChoiceTextConversationLeft1]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
   [BitType.clozeAndMultipleChoiceTextConversationLeft1Scream]: {
     since: '1.3.0',
     baseBitType: BitType.conversationLeft1,
@@ -620,7 +635,10 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.conversationLeft1,
   },
-  [BitType.clozeAndMultipleChoiceTextConversationRight1]: { since: '1.3.0', baseBitType: BitType.conversationLeft1 },
+  [BitType.clozeAndMultipleChoiceTextConversationRight1]: {
+    since: '1.3.0',
+    baseBitType: BitType.conversationLeft1,
+  },
   [BitType.clozeAndMultipleChoiceTextConversationRight1Scream]: {
     since: '1.3.0',
     baseBitType: BitType.conversationLeft1,
@@ -796,8 +814,14 @@ const BITS: _BitsConfig = {
   [BitType.exampleAlt]: { since: '1.16.0', baseBitType: BitType.example },
   [BitType.standardExampleNormative]: { since: '1.16.0', baseBitType: BitType.example },
   [BitType.standardExampleNonNormative]: { since: '1.16.0', baseBitType: BitType.example },
-  [BitType.smartStandardExampleNormative]: { since: '1.28.0', baseBitType: BitType.standardExampleNormative },
-  [BitType.smartStandardExampleNonNormative]: { since: '1.28.0', baseBitType: BitType.standardExampleNonNormative },
+  [BitType.smartStandardExampleNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardExampleNormative,
+  },
+  [BitType.smartStandardExampleNonNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardExampleNonNormative,
+  },
   [BitType.smartStandardExampleNormativeCollapsible]: {
     since: '1.28.0',
     baseBitType: BitType.smartStandardExampleNormative,
@@ -862,16 +886,28 @@ const BITS: _BitsConfig = {
   [BitType.list]: { since: '1.22.0', baseBitType: BitType.article },
   [BitType.standardList]: { since: '1.22.0', baseBitType: BitType.article },
   [BitType.smartStandardList]: { since: '1.28.0', baseBitType: BitType.standardList },
-  [BitType.smartStandardListCollapsible]: { since: '1.28.0', baseBitType: BitType.smartStandardList },
+  [BitType.smartStandardListCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardList,
+  },
   [BitType.message]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.newspaperArticle]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.note]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.noteAlt]: { since: '1.16.0', baseBitType: BitType.note },
   [BitType.standardNoteNormative]: { since: '1.16.0', baseBitType: BitType.note },
   [BitType.standardNoteNonNormative]: { since: '1.16.0', baseBitType: BitType.note },
-  [BitType.smartStandardNoteNormative]: { since: '1.28.0', baseBitType: BitType.standardNoteNormative },
-  [BitType.smartStandardNoteNonNormative]: { since: '1.28.0', baseBitType: BitType.standardNoteNonNormative },
-  [BitType.smartStandardNoteNormativeCollapsible]: { since: '1.28.0', baseBitType: BitType.smartStandardNoteNormative },
+  [BitType.smartStandardNoteNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardNoteNormative,
+  },
+  [BitType.smartStandardNoteNonNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardNoteNonNormative,
+  },
+  [BitType.smartStandardNoteNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardNoteNormative,
+  },
   [BitType.smartStandardNoteNonNormativeCollapsible]: {
     since: '1.28.0',
     baseBitType: BitType.smartStandardNoteNonNormative,
@@ -884,8 +920,14 @@ const BITS: _BitsConfig = {
   [BitType.remarkAlt]: { since: '1.16.0', baseBitType: BitType.remark },
   [BitType.standardRemarkNormative]: { since: '1.16.0', baseBitType: BitType.article },
   [BitType.standardRemarkNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
-  [BitType.smartStandardRemarkNormative]: { since: '1.28.0', baseBitType: BitType.standardRemarkNormative },
-  [BitType.smartStandardRemarkNonNormative]: { since: '1.28.0', baseBitType: BitType.standardRemarkNonNormative },
+  [BitType.smartStandardRemarkNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardRemarkNormative,
+  },
+  [BitType.smartStandardRemarkNonNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardRemarkNonNormative,
+  },
   [BitType.smartStandardRemarkNormativeCollapsible]: {
     since: '1.28.0',
     baseBitType: BitType.smartStandardRemarkNormative,
@@ -1002,7 +1044,10 @@ const BITS: _BitsConfig = {
   [BitType.extractorPage]: { since: '1.5.17', baseBitType: BitType.image },
   [BitType.extractorPageCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPage },
   [BitType.extractorPageWithBlocks]: { since: '1.5.21', baseBitType: BitType.image },
-  [BitType.extractorPageWithBlocksCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPageWithBlocks },
+  [BitType.extractorPageWithBlocksCollapsible]: {
+    since: '1.30.0',
+    baseBitType: BitType.extractorPageWithBlocks,
+  },
   [BitType.extractorConfiguration]: {
     since: '1.7.1',
     baseBitType: BitType._standard,
@@ -1067,11 +1112,20 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorRepeatedText]: { since: '1.5.21', baseBitType: BitType.article },
   [BitType.extractorPageNumber]: { since: '1.5.21', baseBitType: BitType.article },
-  [BitType.extractorPageNumberCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPageNumber },
+  [BitType.extractorPageNumberCollapsible]: {
+    since: '1.30.0',
+    baseBitType: BitType.extractorPageNumber,
+  },
   [BitType.extractorPageHeader]: { since: '1.5.21', baseBitType: BitType.article },
-  [BitType.extractorPageHeaderCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPageHeader },
+  [BitType.extractorPageHeaderCollapsible]: {
+    since: '1.30.0',
+    baseBitType: BitType.extractorPageHeader,
+  },
   [BitType.extractorPageFooter]: { since: '1.5.21', baseBitType: BitType.article },
-  [BitType.extractorPageFooterCollapsible]: { since: '1.30.0', baseBitType: BitType.extractorPageFooter },
+  [BitType.extractorPageFooterCollapsible]: {
+    since: '1.30.0',
+    baseBitType: BitType.extractorPageFooter,
+  },
   [BitType.pageOpenBook]: {
     since: '1.5.10',
     baseBitType: BitType.article,
@@ -1178,7 +1232,10 @@ const BITS: _BitsConfig = {
     tags: [],
     cardSet: CardSetConfigKey._definitionList,
   },
-  [BitType.metaSearchDefaultTopics]: { since: '3.12.0', baseBitType: BitType.metaSearchDefaultTerms },
+  [BitType.metaSearchDefaultTopics]: {
+    since: '3.12.0',
+    baseBitType: BitType.metaSearchDefaultTerms,
+  },
   [BitType.flashcard]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -1265,7 +1322,10 @@ const BITS: _BitsConfig = {
   [BitType.imageFigureAlt]: { since: '1.16.0', baseBitType: BitType.imageFigure },
   [BitType.standardImageFigureNormative]: { since: '1.16.0', baseBitType: BitType.imageFigure },
   [BitType.standardImageFigureNonNormative]: { since: '1.16.0', baseBitType: BitType.imageFigure },
-  [BitType.smartStandardImageFigureNormative]: { since: '1.28.0', baseBitType: BitType.standardImageFigureNormative },
+  [BitType.smartStandardImageFigureNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardImageFigureNormative,
+  },
   [BitType.smartStandardImageFigureNonNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardImageFigureNonNormative,
@@ -1316,8 +1376,14 @@ const BITS: _BitsConfig = {
   [BitType.standardTableImageNormative]: { since: '1.16.0', baseBitType: BitType.tableImage },
   [BitType.standardTableImageNonNormative]: { since: '1.16.0', baseBitType: BitType.tableImage },
   [BitType.standardRemarkTableImageNormative]: { since: '1.17.0', baseBitType: BitType.tableImage },
-  [BitType.standardRemarkTableImageNonNormative]: { since: '1.17.0', baseBitType: BitType.tableImage },
-  [BitType.smartStandardTableImageNormative]: { since: '1.28.0', baseBitType: BitType.standardTableImageNormative },
+  [BitType.standardRemarkTableImageNonNormative]: {
+    since: '1.17.0',
+    baseBitType: BitType.tableImage,
+  },
+  [BitType.smartStandardTableImageNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardTableImageNormative,
+  },
   [BitType.smartStandardTableImageNonNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardTableImageNonNormative,
@@ -1461,7 +1527,10 @@ const BITS: _BitsConfig = {
   [BitType.bookLinkNext]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
   [BitType.bookLinkPrev]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
   [BitType.learningPathClassroomEvent]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
-  [BitType.learningPathClassroomTraining]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
+  [BitType.learningPathClassroomTraining]: {
+    since: '1.3.0',
+    baseBitType: BitType.learningPathBook,
+  },
   [BitType.learningPathClosing]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
   [BitType.learningPathFeedback]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
   [BitType.learningPathLearningGoal]: { since: '1.3.0', baseBitType: BitType.learningPathBook },
@@ -1643,7 +1712,10 @@ const BITS: _BitsConfig = {
   },
   [BitType.standardListItem]: { since: '1.22.0', baseBitType: BitType.listItem },
   [BitType.smartStandardListItem]: { since: '1.28.0', baseBitType: BitType.standardListItem },
-  [BitType.smartStandardListItemCollapsible]: { since: '1.28.0', baseBitType: BitType.smartStandardListItem },
+  [BitType.smartStandardListItemCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardListItem,
+  },
   [BitType.mark]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -1727,7 +1799,10 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-  [BitType.coachSelfReflectionMultipleChoice1]: { since: '1.3.0', baseBitType: BitType.multipleChoice1 },
+  [BitType.coachSelfReflectionMultipleChoice1]: {
+    since: '1.3.0',
+    baseBitType: BitType.multipleChoice1,
+  },
   [BitType.multipleChoice]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -1744,7 +1819,10 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey._quiz,
   },
-  [BitType.coachSelfReflectionMultipleChoice]: { since: '1.3.0', baseBitType: BitType.multipleChoice },
+  [BitType.coachSelfReflectionMultipleChoice]: {
+    since: '1.3.0',
+    baseBitType: BitType.multipleChoice,
+  },
   [BitType.multipleChoiceText]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -1760,8 +1838,14 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-  [BitType.coachCallToActionMultipleChoiceText]: { since: '1.3.0', baseBitType: BitType.multipleChoiceText },
-  [BitType.coachSelfReflectionMultipleChoiceText]: { since: '1.3.0', baseBitType: BitType.multipleChoiceText },
+  [BitType.coachCallToActionMultipleChoiceText]: {
+    since: '1.3.0',
+    baseBitType: BitType.multipleChoiceText,
+  },
+  [BitType.coachSelfReflectionMultipleChoiceText]: {
+    since: '1.3.0',
+    baseBitType: BitType.multipleChoiceText,
+  },
   [BitType.multipleResponse1]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -1777,7 +1861,10 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-  [BitType.coachSelfReflectionMultipleResponse1]: { since: '1.3.0', baseBitType: BitType.multipleResponse1 },
+  [BitType.coachSelfReflectionMultipleResponse1]: {
+    since: '1.3.0',
+    baseBitType: BitType.multipleResponse1,
+  },
   [BitType.multipleResponse]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -1794,7 +1881,10 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey._quiz,
   },
-  [BitType.coachSelfReflectionMultipleResponse]: { since: '1.3.0', baseBitType: BitType.multipleResponse },
+  [BitType.coachSelfReflectionMultipleResponse]: {
+    since: '1.3.0',
+    baseBitType: BitType.multipleResponse,
+  },
   [BitType.page]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -2244,9 +2334,18 @@ const BITS: _BitsConfig = {
   [BitType.standardTableNonNormative]: { since: '1.16.0', baseBitType: BitType.table },
   [BitType.standardRemarkTableNormative]: { since: '1.17.0', baseBitType: BitType.table },
   [BitType.standardRemarkTableNonNormative]: { since: '1.17.0', baseBitType: BitType.table },
-  [BitType.smartStandardTableNormative]: { since: '1.28.0', baseBitType: BitType.standardTableNormative },
-  [BitType.smartStandardTableNonNormative]: { since: '1.28.0', baseBitType: BitType.standardTableNonNormative },
-  [BitType.smartStandardRemarkTableNormative]: { since: '1.28.0', baseBitType: BitType.standardRemarkTableNormative },
+  [BitType.smartStandardTableNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardTableNormative,
+  },
+  [BitType.smartStandardTableNonNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardTableNonNormative,
+  },
+  [BitType.smartStandardRemarkTableNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardRemarkTableNormative,
+  },
   [BitType.smartStandardRemarkTableNonNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardRemarkTableNonNormative,
@@ -2460,7 +2559,10 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.vendorFormbricksEmbedAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksEmbed },
+  [BitType.vendorFormbricksEmbedAnonymous]: {
+    since: '3.9.0',
+    baseBitType: BitType.vendorFormbricksEmbed,
+  },
   [BitType.vendorFormbricksLink]: {
     since: '3.8.0',
     baseBitType: BitType.code,
@@ -2472,7 +2574,10 @@ const BITS: _BitsConfig = {
     ],
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.vendorFormbricksLinkAnonymous]: { since: '3.9.0', baseBitType: BitType.vendorFormbricksLink },
+  [BitType.vendorFormbricksLinkAnonymous]: {
+    since: '3.9.0',
+    baseBitType: BitType.vendorFormbricksLink,
+  },
   [BitType.vendorHighchartsChart]: {
     since: '1.5.28',
     baseBitType: BitType.vendorAmcharts5Chart,
@@ -2498,7 +2603,10 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorIframelyCard]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
   [BitType.vendorIframelyPreview]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
-  [BitType.vendorIframelyPreviewMini]: { since: '1.5.10', baseBitType: BitType.vendorIframelyEmbed },
+  [BitType.vendorIframelyPreviewMini]: {
+    since: '1.5.10',
+    baseBitType: BitType.vendorIframelyEmbed,
+  },
   [BitType.vendorJupyterOutput]: {
     since: '1.4.3',
     baseBitType: BitType.code,
@@ -2545,7 +2653,10 @@ const BITS: _BitsConfig = {
       },
     ],
   },
-  [BitType.vendorStripePricingTableExternal]: { since: '3.13.0', baseBitType: BitType.vendorStripePricingTable },
+  [BitType.vendorStripePricingTableExternal]: {
+    since: '3.13.0',
+    baseBitType: BitType.vendorStripePricingTable,
+  },
 
   [BitType.video]: {
     since: '1.3.0',

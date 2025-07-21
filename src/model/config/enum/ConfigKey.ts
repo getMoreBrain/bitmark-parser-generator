@@ -1,9 +1,9 @@
-import { EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType, superenum } from '@ncoderz/superenum';
 
-import { groupConfigKeys } from './GroupConfigKey';
-import { propertyConfigKeys } from './PropertyConfigKey';
-import { resourceConfigKeys } from './ResourceConfigKey';
-import { tagConfigKeys } from './TagConfigKey';
+import { groupConfigKeys } from './GroupConfigKey.ts';
+import { propertyConfigKeys } from './PropertyConfigKey.ts';
+import { resourceConfigKeys } from './ResourceConfigKey.ts';
+import { tagConfigKeys } from './TagConfigKey.ts';
 
 /**
  * Combined bit config keys

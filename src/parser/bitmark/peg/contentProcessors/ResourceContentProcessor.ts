@@ -1,22 +1,25 @@
-import { ResourceBuilder } from '../../../../ast/ResourceBuilder';
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { Config } from '../../../../config/Config';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { Count } from '../../../../model/enum/Count';
-import { ResourceTag } from '../../../../model/enum/ResourceTag';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { ImageResourceJson, ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
-
+import { ResourceBuilder } from '../../../../ast/ResourceBuilder.ts';
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { Config } from '../../../../config/Config.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { Count } from '../../../../model/enum/Count.ts';
+import { ResourceTag } from '../../../../model/enum/ResourceTag.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
 import {
-  BitContent,
+  type ImageResourceJson,
+  type ImageResourceWrapperJson,
+  type ResourceJson,
+} from '../../../../model/json/ResourceJson.ts';
+import {
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  TypeKeyValue,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type TypeKeyValue,
+} from '../BitmarkPegParserTypes.ts';
 
 // const builder = new Builder();
 const resourceBuilder = new ResourceBuilder();
@@ -95,7 +98,6 @@ function resourceContentProcessor(
   content: BitContent,
   target: BitContentProcessorResult,
 ): void {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { type: _ignoreType, key, value, chain } = content as TypeKeyValue<BreakscapedString>;
 
   const resources = target.resources;
@@ -140,7 +142,11 @@ function resourceContentProcessor(
     // );
 
     // Process the chain
-    const { posterImage, ...tags } = context.bitContentProcessor(BitContentLevel.Chain, resourceConfig?.chain, chain);
+    const { posterImage, ...tags } = context.bitContentProcessor(
+      BitContentLevel.Chain,
+      resourceConfig?.chain,
+      chain,
+    );
 
     // Handle the poster image
     let posterImageResource: ImageResourceJson | undefined;
@@ -152,12 +158,11 @@ function resourceContentProcessor(
         'posterImage',
       );
 
-      const { posterImage: unused, ...posterImageTags } = context.bitContentProcessor(
+      const { posterImage: _unused, ...posterImageTags } = context.bitContentProcessor(
         BitContentLevel.Chain,
         posterImageChainConfig,
         posterImageChain,
       );
-      unused;
 
       // Build the poster image resource
       posterImageResource = (

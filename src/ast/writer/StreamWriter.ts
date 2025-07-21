@@ -1,6 +1,6 @@
 import os from 'os';
 
-import { Writer } from './Writer';
+import { type Writer } from './Writer.ts';
 
 /**
  * Writer to write to a stream.

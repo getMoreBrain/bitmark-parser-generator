@@ -1,132 +1,124 @@
-import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import tsParser from '@typescript-eslint/parser';
-import arca from 'eslint-plugin-arca';
-import json from 'eslint-plugin-json';
+// import json from '@eslint/json';
+import markdown from '@eslint/markdown';
 import prettier from 'eslint-plugin-prettier';
-import globals from 'globals';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+// import fs from 'fs-extra';
+// import globals from 'globals';
+// import stringify from 'safe-stable-stringify';
+import tseslint from 'typescript-eslint';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
-// eslint-disable-next-line arca/no-default-export
-export default [
+/** @type {import("eslint").Linter.Config[]} */
+const config = [
+  //
+  // General ESLint configuration
+  //
   {
-    ignores: ['**/.yarn', '**/node_modules', '**/dist', '**/docs', '**/coverage', 'src/generated'],
+    ignores: [
+      '**/package-lock.json',
+      '**/node_modules',
+      '**/dist',
+      '**/docs',
+      '**/coverage',
+      '**/build',
+      'assets',
+      'src/generated',
+      '**/*.d.ts',
+    ],
   },
-  ...compat.extends('eslint:recommended', 'plugin:prettier/recommended', 'prettier'),
-  {
-    plugins: {
-      prettier,
-      json,
-      arca,
-    },
 
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-
-      ecmaVersion: 2021,
-      sourceType: 'module',
-
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: false,
-        },
-      },
-    },
-
-    settings: {
-      react: {
-        version: '16',
-      },
-    },
-
-    rules: {
-      'no-unused-vars': [
-        1,
-        {
-          vars: 'all',
-          args: 'none',
-          caughtErrors: 'none',
-        },
-      ],
-
-      'arca/import-ordering': [
-        2,
-        {
-          hoistOneliners: true,
-        },
-      ],
-
-      'arca/newline-after-import-section': [
-        2,
-        {
-          enableOnelinerSections: true,
-        },
-      ],
-
-      'arca/no-default-export': [2],
-    },
-  },
-  ...compat.extends('plugin:@typescript-eslint/recommended').map((config) => ({
+  //
+  // TypeScript files
+  //
+  ...tseslint.configs.recommended.map((config) => ({
     ...config,
     files: ['**/*.ts', '**/*.tsx'],
   })),
   {
     files: ['**/*.ts', '**/*.tsx'],
-
+    plugins: {
+      prettier,
+      'simple-import-sort': simpleImportSort,
+    },
     languageOptions: {
-      parser: tsParser,
-      ecmaVersion: 5,
-      sourceType: 'script',
-
       parserOptions: {
-        project: ['tsconfig.eslint.json'],
+        project: ['./tsconfig.json'],
       },
     },
-
     rules: {
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+      'prettier/prettier': 'error',
+      '@typescript-eslint/no-floating-promises': 'error',
       '@typescript-eslint/no-unused-vars': [
-        1,
+        'warn',
         {
           vars: 'all',
-          args: 'none',
-          caughtErrors: 'none',
+          args: 'after-used',
+          caughtErrors: 'all',
+          ignoreRestSiblings: true,
+          varsIgnorePattern: '^_', // Ignore variables that start with "_"
+          argsIgnorePattern: '^_', // Ignore function arguments that start with "_"
+          caughtErrorsIgnorePattern: '^_', // Ignore caught errors that start with "_"
         },
       ],
-
-      '@typescript-eslint/no-unused-expressions': 0,
-
       '@typescript-eslint/no-empty-object-type': [
         2,
         {
           allowInterfaces: 'always',
-          // allowObjectTypes?: 'always' | 'never';
-          // allowWithName?: string;
         },
       ],
+    },
+  },
 
-      '@typescript-eslint/no-inferrable-types': [
-        1,
-        {
-          ignoreParameters: true,
-          ignoreProperties: true,
-        },
-      ],
+  //
+  // JavaScript files
+  //
+  {
+    files: ['**/*.js', '**/*.mjs'],
+    ...js.configs.recommended,
+  },
+  {
+    files: ['**/*.js', '**/*.mjs'],
+    plugins: {
+      prettier,
+      'simple-import-sort': simpleImportSort,
+    },
+    rules: {
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+      'prettier/prettier': 'error',
+      //
+    },
+  },
 
-      '@typescript-eslint/no-namespace': 0,
+  //
+  // JSON files - NOT WORKING?
+  //
+  // {
+  //   files: ['**/*.json'],
+  //   ...json.configs.recommended,
+  // },
+  // {
+  //   files: ['**/*.json'],
+  // },
 
-      '@typescript-eslint/no-floating-promises': ['error'],
+  //
+  // Markdown files
+  //
+  ...markdown.configs.recommended.map((config) => ({
+    ...config,
+    files: ['**/*.md'],
+  })),
+  {
+    files: ['**/*.md'],
+    rules: {
+      // 'markdown/no-html': 'error',
     },
   },
 ];
+
+// For debugging config
+// fs.writeFileSync('eslint-config-final.json', stringify(config, null, 2));
+
+export default config;

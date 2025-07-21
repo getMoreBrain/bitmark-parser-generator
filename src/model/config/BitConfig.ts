@@ -1,11 +1,10 @@
-import { BitTypeType } from '../enum/BitType';
-import { Count } from '../enum/Count';
-import { ExampleTypeType } from '../enum/ExampleType';
-import { ResourceTagType } from '../enum/ResourceTag';
-import { TextFormatType } from '../enum/TextFormat';
-
-import { CardSetConfig } from './CardSetConfig';
-import { TagsConfig } from './TagsConfig';
+import { type BitTypeType } from '../enum/BitType.ts';
+import { Count } from '../enum/Count.ts';
+import { type ExampleTypeType } from '../enum/ExampleType.ts';
+import { type ResourceTagType } from '../enum/ResourceTag.ts';
+import { type TextFormatType } from '../enum/TextFormat.ts';
+import { CardSetConfig } from './CardSetConfig.ts';
+import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
   includeChains?: boolean;
@@ -77,7 +76,8 @@ class BitConfig {
     this.bodyRequired = bodyRequired;
     this.footerAllowed = footerAllowed == null ? true : footerAllowed;
     this.footerRequired = footerRequired;
-    this.resourceAttachmentAllowed = resourceAttachmentAllowed == null ? true : resourceAttachmentAllowed;
+    this.resourceAttachmentAllowed =
+      resourceAttachmentAllowed == null ? true : resourceAttachmentAllowed;
     this.rootExampleType = rootExampleType;
     this.comboResourceType = comboResourceType;
   }

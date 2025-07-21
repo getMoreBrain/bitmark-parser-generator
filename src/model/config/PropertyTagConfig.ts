@@ -1,13 +1,12 @@
-import { BitTagType, BitTagTypeType } from '../enum/BitTagType';
-import { CountType } from '../enum/Count';
-import { PropertyAstKeyType } from '../enum/PropertyAstKey';
-import { PropertyFormatType } from '../enum/PropertyFormat';
-import { PropertyJsonKeyType } from '../enum/PropertyJsonKey';
-import { PropertyTagType } from '../enum/PropertyTag';
-
-import { AbstractTagConfig } from './AbstractTagConfig';
-import { TagsConfig } from './TagsConfig';
-import { ConfigKeyType } from './enum/ConfigKey';
+import { BitTagType, type BitTagTypeType } from '../enum/BitTagType.ts';
+import { type CountType } from '../enum/Count.ts';
+import { type PropertyAstKeyType } from '../enum/PropertyAstKey.ts';
+import { type PropertyFormatType } from '../enum/PropertyFormat.ts';
+import { type PropertyJsonKeyType } from '../enum/PropertyJsonKey.ts';
+import { type PropertyTagType } from '../enum/PropertyTag.ts';
+import { AbstractTagConfig } from './AbstractTagConfig.ts';
+import { type ConfigKeyType } from './enum/ConfigKey.ts';
+import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
   includeChains?: boolean;
@@ -34,7 +33,17 @@ class PropertyTagConfig extends AbstractTagConfig {
     defaultValue: string | undefined,
     deprecated: string | undefined,
   ) {
-    super(BitTagType.property, configKey, tag, maxCount, minCount, chain, jsonKey, astKey, deprecated);
+    super(
+      BitTagType.property,
+      configKey,
+      tag,
+      maxCount,
+      minCount,
+      chain,
+      jsonKey,
+      astKey,
+      deprecated,
+    );
 
     this.single = single;
     this.format = format;

@@ -1,7 +1,10 @@
-import { JsonText, TextAst } from '../ast/TextNodes';
-
-import { BodyBitsJson } from './BodyBitJson';
-import { AudioResourceWrapperJson, ImageResourceWrapperJson, ResourceJson } from './ResourceJson';
+import { type JsonText, type TextAst } from '../ast/TextNodes.ts';
+import { type BodyBitsJson } from './BodyBitJson.ts';
+import {
+  type AudioResourceWrapperJson,
+  type ImageResourceWrapperJson,
+  type ResourceJson,
+} from './ResourceJson.ts';
 
 export interface BitJson {
   type: string; // bit type

@@ -1,7 +1,7 @@
-import { Environment, EnvironmentType } from './Environment';
-import { Os, OsType } from './Os';
-import { EMPTY_VERSION, Version } from './Version';
-import { parseUserAgent, UserAgentInfo } from './userAgent';
+import { Environment, type EnvironmentType } from './Environment.ts';
+import { Os, type OsType } from './Os.ts';
+import { parseUserAgent, type UserAgentInfo } from './userAgent.ts';
+import { EMPTY_VERSION, type Version } from './Version.ts';
 
 declare const process: {
   env: { [key: string]: string };

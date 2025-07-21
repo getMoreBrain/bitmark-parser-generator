@@ -5,11 +5,10 @@
  *  (c) 2025 — MIT / public domain
  */
 
-import { buildInfo } from '../generated/build-info';
-import { BodyTextFormat, BodyTextFormatType } from '../model/enum/BodyTextFormat';
-import { TextLocation, TextLocationType } from '../model/enum/TextLocation';
-
-import { BreakscapeOptions } from './BreakscapeOptions';
+import { PACKAGE_INFO } from '../generated/package_info.ts';
+import { BodyTextFormat, type BodyTextFormatType } from '../model/enum/BodyTextFormat.ts';
+import { TextLocation, type TextLocationType } from '../model/enum/TextLocation.ts';
+import { type BreakscapeOptions } from './BreakscapeOptions.ts';
 
 const DEF = {
   format: BodyTextFormat.bitmarkPlusPlus,
@@ -31,7 +30,11 @@ const HALF_TAGS = new Set(['*', '`', '_', '!', '=']);
  */
 function isBitmarkText(fmt: BodyTextFormatType): boolean {
   // Only bitmarkPlusPlus is defined in TextFormat, so only check for that
-  return fmt === BodyTextFormat.bitmarkPlusPlus || (fmt as string) === 'bitmark+' || (fmt as string) === 'bitmark--';
+  return (
+    fmt === BodyTextFormat.bitmarkPlusPlus ||
+    (fmt as string) === 'bitmark+' ||
+    (fmt as string) === 'bitmark--'
+  );
 }
 
 // -----------------------------------------------------------------------------
@@ -109,7 +112,12 @@ function breakscapeBuf(src: string, fmt: BodyTextFormatType, loc: TextLocationTy
     // 5) body-only rules --------------------------------------------------
     if (body) {
       // (a) ### | •  at BOL
-      if (atLineStart && physicalBOC && bitmarkText && (ch === 0x23 || ch === 0x7c || ch === 0x2022)) {
+      if (
+        atLineStart &&
+        physicalBOC &&
+        bitmarkText &&
+        (ch === 0x23 || ch === 0x7c || ch === 0x2022)
+      ) {
         let j = i;
         while (j < len && src.charCodeAt(j) === ch) j++;
         out.push(src.slice(i, j));
@@ -291,7 +299,10 @@ class Breakscape {
   breakscape(val: string, opts?: BreakscapeOptions): string;
   breakscape(val: string[], opts?: BreakscapeOptions): string[];
   breakscape(val: undefined | null, opts?: BreakscapeOptions): undefined;
-  breakscape(val: string | string[] | undefined | null, opts: BreakscapeOptions = {}): string | string[] | undefined {
+  breakscape(
+    val: string | string[] | undefined | null,
+    opts: BreakscapeOptions = {},
+  ): string | string[] | undefined {
     const { format: fmt, location: loc } = { ...DEF, ...opts };
     if (val == null) return undefined;
     const proc = (s: string) => breakscapeBuf(s, fmt, loc);
@@ -338,7 +349,10 @@ class Breakscape {
   unbreakscape(val: string, opts?: BreakscapeOptions): string;
   unbreakscape(val: string[], opts?: BreakscapeOptions): string[];
   unbreakscape(val: undefined | null, opts?: BreakscapeOptions): undefined;
-  unbreakscape(val: string | string[] | undefined | null, opts: BreakscapeOptions = {}): string | string[] | undefined {
+  unbreakscape(
+    val: string | string[] | undefined | null,
+    opts: BreakscapeOptions = {},
+  ): string | string[] | undefined {
     const { format: fmt, location: loc } = { ...DEF, ...opts };
     if (val == null) return undefined;
     const proc = (s: string) => unbreakscapeBuf(s, fmt, loc);
@@ -362,9 +376,6 @@ class Breakscape {
     _val: T,
     _options?: BreakscapeOptions,
   ): T extends string ? string : T extends string[] ? string[] : undefined {
-    _val; // to avoid unused variable warning
-
-    _options; // to avoid unused variable warning
     throw new Error('breakscapeCode is not implemented.');
   }
 
@@ -380,7 +391,7 @@ class Breakscape {
    * ```
    */
   version(): string {
-    return buildInfo.version;
+    return PACKAGE_INFO.version;
   }
 
   /**
@@ -395,7 +406,7 @@ class Breakscape {
    * ```
    */
   license(): string {
-    return buildInfo.license;
+    return PACKAGE_INFO.license;
   }
 }
 

@@ -1,7 +1,8 @@
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
 
-import { StreamWriter } from './StreamWriter';
+import fs from 'fs-extra';
+
+import { StreamWriter } from './StreamWriter.ts';
 
 /**
  * Options for file writing

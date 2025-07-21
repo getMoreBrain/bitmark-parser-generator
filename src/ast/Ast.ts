@@ -1,7 +1,7 @@
-import { init } from '../init/init';
-import { NodeTypeType, NodeType } from '../model/ast/NodeType';
-import { BitmarkAst, Node } from '../model/ast/Nodes';
-import { StringUtils } from '../utils/StringUtils';
+import { init } from '../init/init.ts';
+import { type BitmarkAst, type Node } from '../model/ast/Nodes.ts';
+import { NodeType, type NodeTypeType } from '../model/ast/NodeType.ts';
+import { StringUtils } from '../utils/StringUtils.ts';
 
 /**
  * AST tree node information
@@ -43,7 +43,13 @@ export interface AstWalkCallbacks<C = undefined> {
    * @param route
    * @returns
    */
-  between?: (node: NodeInfo, leftNode: NodeInfo, rightNode: NodeInfo, route: NodeInfo[], context: C) => void | boolean;
+  between?: (
+    node: NodeInfo,
+    leftNode: NodeInfo,
+    rightNode: NodeInfo,
+    route: NodeInfo[],
+    context: C,
+  ) => void | boolean;
 
   /**
    * Called when a branch node is exited
@@ -176,7 +182,7 @@ class Ast {
       const str = ast as string;
       try {
         ast = JSON.parse(str);
-      } catch (e) {
+      } catch (_e) {
         // Failed to parse JSON, return empty array
         return undefined;
       }
@@ -202,7 +208,12 @@ class Ast {
     return false;
   }
 
-  private walkRecursive<C>(node: Node, route: NodeInfo[], callbacks: AstWalkCallbacks<C>, context: C): void {
+  private walkRecursive<C>(
+    node: Node,
+    route: NodeInfo[],
+    callbacks: AstWalkCallbacks<C>,
+    context: C,
+  ): void {
     const { enter, between, exit, leaf } = callbacks;
 
     const parentKey = route[route.length - 1].key;

@@ -1,42 +1,52 @@
-import structuredClone from '@ungap/structured-clone';
-
-import { Ast, NodeInfo } from '../../ast/Ast';
-import { Writer } from '../../ast/writer/Writer';
-import { Breakscape } from '../../breakscaping/Breakscape';
-import { Config } from '../../config/Config';
-import { BreakscapedString } from '../../model/ast/BreakscapedString';
-import { NodeType, NodeTypeType } from '../../model/ast/NodeType';
-import { BitmarkAst, Bit } from '../../model/ast/Nodes';
-import { Example, ExtraProperties } from '../../model/ast/Nodes';
-import { Body, CardBit } from '../../model/ast/Nodes';
-import { JsonText, TextAst, TextNode, TextNodeAttibutes } from '../../model/ast/TextNodes';
-import { BitType, BitTypeType } from '../../model/enum/BitType';
-import { BitmarkVersion, BitmarkVersionType, DEFAULT_BITMARK_VERSION } from '../../model/enum/BitmarkVersion';
-import { BodyBitType, BodyBitTypeType } from '../../model/enum/BodyBitType';
-import { ExampleType } from '../../model/enum/ExampleType';
-import { ResourceTag, ResourceTagType } from '../../model/enum/ResourceTag';
-import { TextFormat, TextFormatType } from '../../model/enum/TextFormat';
-import { TextLocation, TextLocationType } from '../../model/enum/TextLocation';
-import { TextNodeType } from '../../model/enum/TextNodeType';
-import { BitWrapperJson } from '../../model/json/BitWrapperJson';
-import { BodyBitJson } from '../../model/json/BodyBitJson';
-import { ImageResourceWrapperJson, ResourceJson, ResourceWrapperJson } from '../../model/json/ResourceJson';
-import { ParserInfo } from '../../model/parser/ParserInfo';
-import { TextParser } from '../../parser/text/TextParser';
-import { BooleanUtils } from '../../utils/BooleanUtils';
-import { NumberUtils } from '../../utils/NumberUtils';
-import { AstWalkerGenerator } from '../AstWalkerGenerator';
-import { TextGenerator } from '../text/TextGenerator';
-
+import { Ast, type NodeInfo } from '../../ast/Ast.ts';
+import { type Writer } from '../../ast/writer/Writer.ts';
+import { Breakscape } from '../../breakscaping/Breakscape.ts';
+import { Config } from '../../config/Config.ts';
+import { type BreakscapedString } from '../../model/ast/BreakscapedString.ts';
+import { type Bit, type BitmarkAst } from '../../model/ast/Nodes.ts';
+import { type Example, type ExtraProperties } from '../../model/ast/Nodes.ts';
+import { type Body, type CardBit } from '../../model/ast/Nodes.ts';
+import { NodeType, type NodeTypeType } from '../../model/ast/NodeType.ts';
 import {
-  BitJson,
-  BookReferenceJson,
-  ExampleJson,
-  HeadingJson,
-  ListItemJson,
-  MarkConfigJson,
-  StatementJson,
-} from '../../model/json/BitJson';
+  type JsonText,
+  type TextAst,
+  type TextNode,
+  type TextNodeAttibutes,
+} from '../../model/ast/TextNodes.ts';
+import {
+  BitmarkVersion,
+  type BitmarkVersionType,
+  DEFAULT_BITMARK_VERSION,
+} from '../../model/enum/BitmarkVersion.ts';
+import { BitType, type BitTypeType } from '../../model/enum/BitType.ts';
+import { BodyBitType, type BodyBitTypeType } from '../../model/enum/BodyBitType.ts';
+import { ExampleType } from '../../model/enum/ExampleType.ts';
+import { ResourceTag, type ResourceTagType } from '../../model/enum/ResourceTag.ts';
+import { TextFormat, type TextFormatType } from '../../model/enum/TextFormat.ts';
+import { TextLocation, type TextLocationType } from '../../model/enum/TextLocation.ts';
+import { TextNodeType } from '../../model/enum/TextNodeType.ts';
+import {
+  type BitJson,
+  type BookReferenceJson,
+  type ExampleJson,
+  type HeadingJson,
+  type ListItemJson,
+  type MarkConfigJson,
+  type StatementJson,
+} from '../../model/json/BitJson.ts';
+import { type BitWrapperJson } from '../../model/json/BitWrapperJson.ts';
+import { type BodyBitJson } from '../../model/json/BodyBitJson.ts';
+import {
+  type ImageResourceWrapperJson,
+  type ResourceJson,
+  type ResourceWrapperJson,
+} from '../../model/json/ResourceJson.ts';
+import { type ParserInfo } from '../../model/parser/ParserInfo.ts';
+import { TextParser } from '../../parser/text/TextParser.ts';
+import { BooleanUtils } from '../../utils/BooleanUtils.ts';
+import { NumberUtils } from '../../utils/NumberUtils.ts';
+import { AstWalkerGenerator } from '../AstWalkerGenerator.ts';
+import { TextGenerator } from '../text/TextGenerator.ts';
 
 const MOVE_BODY_RECURSION_LIMIT = 5000;
 
@@ -178,7 +188,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.leaf = this.leaf.bind(this);
     this.bodyBitCallback = this.bodyBitCallback.bind(this);
 
-    this.bitmarkVersion = BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
+    this.bitmarkVersion =
+      BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.textParserVersion = this.textParser.version();
     this.options = {
       ...DEFAULT_OPTIONS,
@@ -186,7 +197,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     };
 
     this.debugGenerationInline = this.options.debugGenerationInline ?? false;
-    this.jsonPrettifySpace = this.options.prettify === true ? 2 : this.options.prettify || undefined;
+    this.jsonPrettifySpace =
+      this.options.prettify === true ? 2 : this.options.prettify || undefined;
 
     // Set defaults according to bitmark version
     if (this.bitmarkVersion === BitmarkVersion.v2) {
@@ -416,7 +428,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (bitType === BitType.module) {
       this.addProperty(this.bitJson, 'productId', productIds, { array: true });
     } else if (productIds.length > 0) {
-      this.addProperty(this.bitJson, 'productId', productIds[productIds.length - 1], { array: false });
+      this.addProperty(this.bitJson, 'productId', productIds[productIds.length - 1], {
+        array: false,
+      });
     }
 
     // Stop traversal of this branch
@@ -491,7 +505,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // if (parent?.key !== NodeType.bitsValue && parent?.key !== NodeType.cardNode) return;
 
     // this.bitJson.title = node.value;
-    return this.standardHandler(node, route, [NodeType.bitsValue, NodeType.cardNode], { array: true });
+    return this.standardHandler(node, route, [NodeType.bitsValue, NodeType.cardNode], {
+      array: true,
+    });
   }
 
   //  bitmarkAst -> bits -> bitsValue -> subtitle
@@ -572,8 +588,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.addProperty(bookReference, 'refAuthor', cardBit.refAuthor ?? [], { array: true });
       this.addProperty(bookReference, 'refBookTitle', cardBit.refBookTitle ?? [], { array: false });
       this.addProperty(bookReference, 'refPublisher', cardBit.refPublisher ?? [], { array: true });
-      this.addProperty(bookReference, 'refPublicationYear', cardBit.refPublicationYear ?? [], { array: false });
-      this.addProperty(bookReference, 'citationStyle', cardBit.citationStyle ?? [], { array: false });
+      this.addProperty(bookReference, 'refPublicationYear', cardBit.refPublicationYear ?? [], {
+        array: false,
+      });
+      this.addProperty(bookReference, 'citationStyle', cardBit.citationStyle ?? [], {
+        array: false,
+      });
 
       this.bitJson.bookReferences.push(bookReference as BookReferenceJson);
     } else {
@@ -630,9 +650,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
       // Convert the body to plain text if required
       if (this.options.textAsPlainText && bodyIsBitmarkText) {
-        const textBody = this.textGenerator.generateSync(this.bodyJson as TextAst, textFormat, TextLocation.body, {
-          noBreakscaping: true,
-        });
+        const textBody = this.textGenerator.generateSync(
+          this.bodyJson as TextAst,
+          textFormat,
+          TextLocation.body,
+          {
+            noBreakscaping: true,
+          },
+        );
         this.bitJson.body = (textBody ?? '').trim();
       } else if (bodyIsBitmarkText) {
         // If the body is bitmark text, convert the body bits to move their attributes to the attrs property
@@ -679,7 +704,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       throw new Error('Recursion limit exceeded');
     }
     for (const node of nodes) {
-      if (node.type !== BodyBitType.text && BodyBitType.values().includes(node.type as BodyBitTypeType)) {
+      if (
+        node.type !== BodyBitType.text &&
+        BodyBitType.values().includes(node.type as BodyBitTypeType)
+      ) {
         const bodyBit = node as unknown as BodyBitJson;
         bodyBit.attrs = {} as Record<string, unknown>;
 
@@ -702,7 +730,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> footer
 
   protected enter_footer(node: NodeInfo, route: NodeInfo[]): boolean {
-    return this.standardHandler(node, route, undefined, { array: true, valueOverride: node.value.footer });
+    return this.standardHandler(node, route, undefined, {
+      array: true,
+      valueOverride: node.value.footer,
+    });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> elements
@@ -714,7 +745,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards
 
   protected enter_flashcards(node: NodeInfo, route: NodeInfo[]): boolean {
-    return this.standardHandler(node, route, NodeType.cardNode, { array: true, keyOverride: 'cards' });
+    return this.standardHandler(node, route, NodeType.cardNode, {
+      array: true,
+      keyOverride: 'cards',
+    });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> definitions
@@ -812,7 +846,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses
 
   protected enter_botResponses(node: NodeInfo, route: NodeInfo[]): boolean {
-    return this.standardHandler(node, route, NodeType.cardNode, { array: true, keyOverride: 'responses' });
+    return this.standardHandler(node, route, NodeType.cardNode, {
+      array: true,
+      keyOverride: 'responses',
+    });
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> ingredients -> ingredientsValue
@@ -973,7 +1010,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
 
     if (parser && bitType) {
-      const { version, excessResources: parserExcessResources, warnings, errors, ...parserRest } = parser;
+      const {
+        version,
+        excessResources: parserExcessResources,
+        warnings,
+        errors,
+        ...parserRest
+      } = parser;
       const bitmarkVersion = `${this.bitmarkVersion}`;
       const textParserVersion = this.textParserVersion;
 
@@ -1111,7 +1154,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     // Add the property
-    this.addProperty(this.bitJson, options.keyOverride ?? node.key, options.valueOverride ?? node.value, options);
+    this.addProperty(
+      this.bitJson,
+      options.keyOverride ?? node.key,
+      options.valueOverride ?? node.value,
+      options,
+    );
 
     // Stop traversal of this branch
     return false;
@@ -1176,7 +1224,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       exampleValue = isBoolean
         ? BooleanUtils.toBoolean(example)
-        : this.convertBreakscapedStringToJsonText(example as BreakscapedString, options.textFormat, TextLocation.tag);
+        : this.convertBreakscapedStringToJsonText(
+            example as BreakscapedString,
+            options.textFormat,
+            TextLocation.tag,
+          );
     }
 
     return {
@@ -1282,7 +1334,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     format: TextFormatType,
     textLocation: TextLocationType,
   ): JsonText {
-    if (!text) undefined;
+    if (!text) return '';
 
     const isBitmarkText = format === TextFormat.bitmarkText;
 
@@ -1312,7 +1364,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * @param text the text to concatenate
    * @param textPlain the plain text to concatenate
    */
-  protected concatenatePlainTextWithJsonTexts(text: JsonText, extraBreaks: number, textPlain: string): JsonText {
+  protected concatenatePlainTextWithJsonTexts(
+    text: JsonText,
+    extraBreaks: number,
+    textPlain: string,
+  ): JsonText {
     if (Array.isArray(text)) {
       textPlain = textPlain.trim();
       if (textPlain) {
@@ -1381,7 +1437,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // WRITE FUNCTIONS
   //
 
-  protected writeInlineDebug(key: string, state: { open?: boolean; close?: boolean; single?: boolean }) {
+  protected writeInlineDebug(
+    key: string,
+    state: { open?: boolean; close?: boolean; single?: boolean },
+  ) {
     let tag = key;
     if (state.open) {
       tag = `<${key}>`;
@@ -1464,10 +1523,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         // Bits without item, lead, etc
         if (bitJson.item == null || bitJson.item?.length === 0) delete bitJson.item;
         if (bitJson.lead == null || bitJson.lead?.length === 0) delete bitJson.lead;
-        if (bitJson.pageNumber == null || bitJson.pageNumber?.length === 0) delete bitJson.pageNumber;
-        if (bitJson.marginNumber == null || bitJson.marginNumber?.length === 0) delete bitJson.marginNumber;
+        if (bitJson.pageNumber == null || bitJson.pageNumber?.length === 0)
+          delete bitJson.pageNumber;
+        if (bitJson.marginNumber == null || bitJson.marginNumber?.length === 0)
+          delete bitJson.marginNumber;
         if (bitJson.hint == null || bitJson.hint?.length === 0) delete bitJson.hint;
-        if (bitJson.instruction == null || bitJson.instruction?.length === 0) delete bitJson.instruction;
+        if (bitJson.instruction == null || bitJson.instruction?.length === 0)
+          delete bitJson.instruction;
       } else {
         // Majority of bits
         if (bitJson.item == null) bitJson.item = this.textDefault;
@@ -1527,7 +1589,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         } else if (Config.isOfBitType(bitType, BitType.clozeInstructionGrouped)) {
           // Instruction grouped
           if (bitJson.quizCountItems == null) bitJson.quizCountItems = true;
-          if (bitJson.quizStrikethroughSolutions == null) bitJson.quizStrikethroughSolutions = false;
+          if (bitJson.quizStrikethroughSolutions == null)
+            bitJson.quizStrikethroughSolutions = false;
         }
       }
 
@@ -1673,7 +1736,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
 
       // Special case for 'ai' bits
-      if (bitType === BitType.articleAi || bitType === BitType.noteAi || bitType === BitType.summaryAi) {
+      if (
+        bitType === BitType.articleAi ||
+        bitType === BitType.noteAi ||
+        bitType === BitType.summaryAi
+      ) {
         if (bitJson.aiGenerated == null) bitJson.aiGenerated = true;
       }
 
@@ -1701,7 +1768,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
 
       // Special case for 'stepImageScreenshotWithPointer' / surveyMatrix / etc bits
-      if (Config.isOfBitType(bitType, [BitType.stepImageScreenshotWithPointer, BitType.surveyMatrix])) {
+      if (
+        Config.isOfBitType(bitType, [BitType.stepImageScreenshotWithPointer, BitType.surveyMatrix])
+      ) {
         if (bitJson.pointerTop == null) bitJson.pointerTop = '';
         if (bitJson.pointerLeft == null) bitJson.pointerLeft = '';
         if (Config.isOfBitType(bitType, [BitType.surveyMatrix])) {
@@ -1794,16 +1863,23 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   /**
    * Convert any bitmark texts to strings.
    */
-  protected convertAllBitmarkTextsToStringsForPlainText(json: Record<string, unknown> | unknown[]): void {
+  protected convertAllBitmarkTextsToStringsForPlainText(
+    json: Record<string, unknown> | unknown[],
+  ): void {
     if (!this.options.textAsPlainText) return;
 
     const obj = json as Record<string, unknown>;
     for (const key in obj) {
       const val = obj[key];
       if (this.isBitmarkText(val)) {
-        const s = this.textGenerator.generateSync(val as TextAst, TextFormat.bitmarkText, TextLocation.tag, {
-          noBreakscaping: true,
-        });
+        const s = this.textGenerator.generateSync(
+          val as TextAst,
+          TextFormat.bitmarkText,
+          TextLocation.tag,
+          {
+            noBreakscaping: true,
+          },
+        );
         obj[key] = (s ?? '').trim();
       } else if (typeof obj[key] === 'object') {
         this.convertAllBitmarkTextsToStringsForPlainText(obj[key] as Record<string, unknown>);

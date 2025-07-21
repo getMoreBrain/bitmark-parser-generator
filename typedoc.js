@@ -2,7 +2,7 @@
 /**
  * @type {import('typedoc').TypeDocOptions}
  */
-module.exports = {
+export default {
   entryPoints: ['./src/index.ts'],
   out: 'docs',
   plugin: ['typedoc-plugin-markdown'],

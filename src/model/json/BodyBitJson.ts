@@ -1,6 +1,5 @@
-import { JsonText, TextAst, TextNode } from '../ast/TextNodes';
-
-import { ExampleJson } from './BitJson';
+import { type JsonText, type TextAst, type TextNode } from '../ast/TextNodes.ts';
+import { type ExampleJson } from './BitJson.ts';
 
 export interface BodyBitsJson {
   [key: string]: BodyBitJson;

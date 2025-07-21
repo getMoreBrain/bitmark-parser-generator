@@ -1,23 +1,32 @@
-import fs from 'fs';
-import path from 'path';
-import peggy, { SourceBuildOptions } from 'peggy';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { init } from '../../../src/init/init';
+import peggy, { type SourceBuildOptions } from 'peggy';
+
+import { init } from '../../../src/init/init.ts';
 
 type SourceOptions = SourceBuildOptions<'source'> & {
   //
 };
 
+const dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const dependencies = {
-  '{ TypeKey }': '../../../parser/bitmark/peg/BitmarkPegParserTypes',
-  '{ BitmarkPegParserHelper }': '../../../parser/bitmark/peg/BitmarkPegParserHelper',
-  '{ BitmarkPegParserProcessor }': '../../../parser/bitmark/peg/BitmarkPegParserProcessor',
-  '{ Breakscape }': '../../../breakscaping/Breakscape',
+  '{ TypeKey }': '../../../parser/bitmark/peg/BitmarkPegParserTypes.ts',
+  '{ BitmarkPegParserHelper }': '../../../parser/bitmark/peg/BitmarkPegParserHelper.ts',
+  '{ BitmarkPegParserProcessor }': '../../../parser/bitmark/peg/BitmarkPegParserProcessor.ts',
+  '{ Breakscape }': '../../../breakscaping/Breakscape.ts',
 };
 
-const inputPath = path.resolve(__dirname, '../../..', 'assets/grammar/bitmark/', 'bit-grammar.pegjs');
-const outputPath = path.resolve(__dirname, '../../..', 'src/generated/parser/bitmark/', 'bitmark-peggy-parser.js');
-const testFilePath = path.resolve(__dirname, '../../..', 'assets/', 'test.bitmark');
+const inputPath = path.resolve(dirname, '../../..', 'assets/grammar/bitmark/', 'bit-grammar.pegjs');
+const outputPath = path.resolve(
+  dirname,
+  '../../..',
+  'src/generated/parser/bitmark/',
+  'bitmark-peggy-parser.js',
+);
+const testFilePath = path.resolve(dirname, '../../..', 'assets/', 'test.bitmark');
 
 // Process command line options
 const commandLineOptions = process.argv.slice(2);

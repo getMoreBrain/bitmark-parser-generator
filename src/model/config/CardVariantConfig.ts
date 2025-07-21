@@ -1,6 +1,5 @@
-import { CountType } from '../enum/Count';
-
-import { TagsConfig } from './TagsConfig';
+import { type CountType } from '../enum/Count.ts';
+import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
   includeChains?: boolean;
@@ -13,7 +12,12 @@ class CardVariantConfig {
   bodyRequired?: boolean; // Default: false
   repeatCount?: CountType; // Default: 1
 
-  public constructor(tags: TagsConfig, bodyAllowed?: boolean, bodyRequired?: boolean, repeatCount?: CountType) {
+  public constructor(
+    tags: TagsConfig,
+    bodyAllowed?: boolean,
+    bodyRequired?: boolean,
+    repeatCount?: CountType,
+  ) {
     this.tags = tags;
     this.bodyAllowed = bodyAllowed == null ? true : bodyAllowed;
     this.bodyRequired = bodyRequired;

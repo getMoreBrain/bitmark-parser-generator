@@ -1,33 +1,14 @@
 # BUILD
-/artifacts
 /dist
-package.tgz
-/packages/*/bundles
-/packages/*/dist/*
-/vscode-case-study
-.history
+/build
 /coverage
-tsconfig.tsbuildinfo
 
 # TEST
 /test/**/results
 /test/**/coverage
-test.txt
-test-report.html
-junit.xml
 
-# YARN
-**/.yarn/*
-!**/.yarn/releases
-!**/.yarn/plugins
-!**/.yarn/sdks
-**/yarn-error.log
+# NPM
 node_modules
-
-# Swap the comments on the following lines if you don't wish to use zero-installs
-# Documentation here: https://yarnpkg.com/features/zero-installs
-# !/.yarn/cache
-**/.pnp.*
 
 # VSCODE / MISE
 .vscode/mise-tools

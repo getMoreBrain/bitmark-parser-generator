@@ -1,17 +1,16 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { StringUtils } from '../../../../utils/StringUtils';
-
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
 import {
-  BitContent,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
+  type BitContent,
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
   TypeKey,
-  TypeValue,
-} from '../BitmarkPegParserTypes';
+  type TypeValue,
+} from '../BitmarkPegParserTypes.ts';
 
 function trueFalseTagContentProcessor(
   _context: BitmarkPegParserContext,
@@ -25,10 +24,13 @@ function trueFalseTagContentProcessor(
 
   if (!trueFalse) return;
 
-  const trimmedStringValue = Breakscape.unbreakscape(StringUtils.trimmedString(value) as BreakscapedString, {
-    format: TextFormat.bitmarkText,
-    location: TextLocation.tag,
-  });
+  const trimmedStringValue = Breakscape.unbreakscape(
+    StringUtils.trimmedString(value) as BreakscapedString,
+    {
+      format: TextFormat.bitmarkText,
+      location: TextLocation.tag,
+    },
+  );
 
   trueFalse.push({
     text: trimmedStringValue,

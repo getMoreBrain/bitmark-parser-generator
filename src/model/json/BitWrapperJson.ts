@@ -1,5 +1,5 @@
-import { BitJson } from './BitJson';
-import { ParserJson } from './ParserJson';
+import { type BitJson } from './BitJson.ts';
+import { type ParserJson } from './ParserJson.ts';
 
 export interface BitWrapperJson {
   bitmark?: string;

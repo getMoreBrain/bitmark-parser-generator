@@ -1,20 +1,20 @@
-import { Breakscape } from '../breakscaping/Breakscape';
-import { Config } from '../config/Config';
-import { TextGenerator } from '../generator/text/TextGenerator';
-import { Property } from '../model/ast/Nodes';
-import { JsonText, TextAst } from '../model/ast/TextNodes';
-import { BitConfig } from '../model/config/BitConfig';
-import { ConfigKeyType } from '../model/config/enum/ConfigKey';
-import { BitTypeType } from '../model/enum/BitType';
-import { PropertyFormat } from '../model/enum/PropertyFormat';
-import { TextFormatType } from '../model/enum/TextFormat';
-import { TextLocation, TextLocationType } from '../model/enum/TextLocation';
-import { ExampleJson } from '../model/json/BitJson';
-import { TextParser } from '../parser/text/TextParser';
-import { ArrayUtils } from '../utils/ArrayUtils';
-import { BooleanUtils } from '../utils/BooleanUtils';
-import { NumberUtils } from '../utils/NumberUtils';
-import { StringUtils } from '../utils/StringUtils';
+import { Breakscape } from '../breakscaping/Breakscape.ts';
+import { Config } from '../config/Config.ts';
+import { TextGenerator } from '../generator/text/TextGenerator.ts';
+import { type Property } from '../model/ast/Nodes.ts';
+import { type JsonText, type TextAst } from '../model/ast/TextNodes.ts';
+import { BitConfig } from '../model/config/BitConfig.ts';
+import { type ConfigKeyType } from '../model/config/enum/ConfigKey.ts';
+import { type BitTypeType } from '../model/enum/BitType.ts';
+import { PropertyFormat } from '../model/enum/PropertyFormat.ts';
+import { type TextFormatType } from '../model/enum/TextFormat.ts';
+import { TextLocation, type TextLocationType } from '../model/enum/TextLocation.ts';
+import { type ExampleJson } from '../model/json/BitJson.ts';
+import { TextParser } from '../parser/text/TextParser.ts';
+import { ArrayUtils } from '../utils/ArrayUtils.ts';
+import { BooleanUtils } from '../utils/BooleanUtils.ts';
+import { NumberUtils } from '../utils/NumberUtils.ts';
+import { StringUtils } from '../utils/StringUtils.ts';
 
 export interface WithExampleJson {
   isExample: boolean;
@@ -94,7 +94,10 @@ class BaseBuilder {
    * @param value
    * @returns
    */
-  protected toAstProperty(key: ConfigKeyType, value: unknown | unknown[] | undefined): Property | undefined {
+  protected toAstProperty(
+    key: ConfigKeyType,
+    value: unknown | unknown[] | undefined,
+  ): Property | undefined {
     if (value == null) return undefined;
 
     const propertiesConfig = Config.getRawPropertiesConfig();
@@ -161,11 +164,10 @@ class BaseBuilder {
    * @param text JsonText or JsonText[] to convert
    * @returns Breakscaped string or breakscaped string[]
    */
-  protected handleJsonText<T extends JsonText | JsonText[] | undefined, R = T extends JsonText[] ? TextAst[] : TextAst>(
-    context: BuildContext,
-    textLocation: TextLocationType,
-    text: T,
-  ): R {
+  protected handleJsonText<
+    T extends JsonText | JsonText[] | undefined,
+    R = T extends JsonText[] ? TextAst[] : TextAst,
+  >(context: BuildContext, textLocation: TextLocationType, text: T): R {
     let res: R;
 
     const { textFormat } = context;

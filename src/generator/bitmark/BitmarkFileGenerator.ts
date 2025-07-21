@@ -1,10 +1,9 @@
-import * as fs from 'fs-extra';
+import fs from 'fs-extra';
 
-import { FileOptions, FileWriter } from '../../ast/writer/FileWriter';
-import { BitmarkAst } from '../../model/ast/Nodes';
-import { Generator } from '../Generator';
-
-import { BitmarkGenerator, BitmarkGeneratorOptions } from './BitmarkGenerator';
+import { type FileOptions, FileWriter } from '../../ast/writer/FileWriter.ts';
+import { type BitmarkAst } from '../../model/ast/Nodes.ts';
+import { type Generator } from '../Generator.ts';
+import { BitmarkGenerator, type BitmarkGeneratorOptions } from './BitmarkGenerator.ts';
 
 /**
  * Bitmark file generator options

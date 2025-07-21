@@ -1,11 +1,10 @@
-import { WithExampleJson } from '../ast/BaseBuilder';
-import { TextAst } from '../model/ast/TextNodes';
-import { TextFormatType } from '../model/enum/TextFormat';
-import { TextLocation } from '../model/enum/TextLocation';
-import { ExampleJson } from '../model/json/BitJson';
-import { TextParser } from '../parser/text/TextParser';
-
-import { BooleanUtils } from './BooleanUtils';
+import { type WithExampleJson } from '../ast/BaseBuilder.ts';
+import { type TextAst } from '../model/ast/TextNodes.ts';
+import { type TextFormatType } from '../model/enum/TextFormat.ts';
+import { TextLocation } from '../model/enum/TextLocation.ts';
+import { type ExampleJson } from '../model/json/BitJson.ts';
+import { TextParser } from '../parser/text/TextParser.ts';
+import { BooleanUtils } from './BooleanUtils.ts';
 
 const textParser = new TextParser();
 
@@ -39,7 +38,10 @@ class BitUtils {
           // node.__isDefaultExample = false;
           node.example = (
             example
-              ? textParser.toAst(example as TextAst, { format: textFormat, location: TextLocation.tag })
+              ? textParser.toAst(example as TextAst, {
+                  format: textFormat,
+                  location: TextLocation.tag,
+                })
               : undefined
           ) as ExampleJson;
         }

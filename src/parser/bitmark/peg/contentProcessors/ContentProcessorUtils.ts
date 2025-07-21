@@ -1,5 +1,9 @@
-import { JsonText, TextNode, TextNodeAttibutes } from '../../../../model/ast/TextNodes';
-import { TextNodeType } from '../../../../model/enum/TextNodeType';
+import {
+  type JsonText,
+  type TextNode,
+  type TextNodeAttibutes,
+} from '../../../../model/ast/TextNodes.ts';
+import { TextNodeType } from '../../../../model/enum/TextNodeType.ts';
 
 class ContentProcessorUtils {
   /**
@@ -10,7 +14,11 @@ class ContentProcessorUtils {
    * @param extraBreaks extra breaks to add between concatenated texts
    * @param textPlain the plain text to concatenate
    */
-  public concatenatePlainTextWithAstTexts(text: JsonText, extraBreaks: number, textPlain: string): JsonText {
+  public concatenatePlainTextWithAstTexts(
+    text: JsonText,
+    extraBreaks: number,
+    textPlain: string,
+  ): JsonText {
     if (Array.isArray(text)) {
       textPlain = textPlain && textPlain.trim();
       if (textPlain) {
