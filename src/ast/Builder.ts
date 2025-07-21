@@ -1,70 +1,78 @@
-import structuredClone from '@ungap/structured-clone';
-
-import { Breakscape } from '../breakscaping/Breakscape';
-import { Config } from '../config/Config';
-import { BreakscapedString } from '../model/ast/BreakscapedString';
-import { Bit, BitmarkAst, Body, ExtraProperties, CardNode, CardBit, Footer } from '../model/ast/Nodes';
-import { JsonText, TextAst, TextNode } from '../model/ast/TextNodes';
-import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey';
-import { BitType, BitTypeType } from '../model/enum/BitType';
-import { BodyBitType, BodyBitTypeType } from '../model/enum/BodyBitType';
-import { DeprecatedTextFormat } from '../model/enum/DeprecatedTextFormat';
-import { ResourceTag, ResourceTagType } from '../model/enum/ResourceTag';
-import { TextFormat, TextFormatType } from '../model/enum/TextFormat';
-import { TextLocation } from '../model/enum/TextLocation';
-import { AudioResourceWrapperJson, ImageResourceWrapperJson, ResourceJson } from '../model/json/ResourceJson';
-import { ParserError } from '../model/parser/ParserError';
-import { ParserInfo } from '../model/parser/ParserInfo';
-import { ArrayUtils } from '../utils/ArrayUtils';
-import { BitUtils } from '../utils/BitUtils';
-import { BooleanUtils } from '../utils/BooleanUtils';
-import { NumberUtils } from '../utils/NumberUtils';
-import { ObjectUtils } from '../utils/ObjectUtils';
-import { StringUtils } from '../utils/StringUtils';
-import { env } from '../utils/env/Env';
-
-import { BaseBuilder, BuildContext, WithExampleJson } from './BaseBuilder';
-import { ResourceBuilder } from './ResourceBuilder';
-import { NodeValidator } from './rules/NodeValidator';
-
+import { Breakscape } from '../breakscaping/Breakscape.ts';
+import { Config } from '../config/Config.ts';
+import { type BreakscapedString } from '../model/ast/BreakscapedString.ts';
 import {
-  BookJson,
-  BotResponseJson,
-  ChoiceJson,
-  DefinitionListItemJson,
-  ExampleJson,
-  FeedbackChoiceJson,
-  FeedbackJson,
-  FeedbackReasonJson,
-  FlashcardJson,
-  HeadingJson,
-  ImageSourceJson,
-  IngredientJson,
-  MarkConfigJson,
-  MatrixCellJson,
-  MatrixJson,
-  PairJson,
-  PersonJson,
-  PronunciationTableJson,
-  QuestionJson,
-  QuizJson,
-  RatingLevelStartEndJson,
-  ResponseJson,
-  ServingsJson,
-  StatementJson,
-  TableJson,
-  TechnicalTermJson,
-  TextAndIconJson,
-} from '../model/json/BitJson';
+  type Bit,
+  type BitmarkAst,
+  type Body,
+  type CardBit,
+  type CardNode,
+  type ExtraProperties,
+  type Footer,
+} from '../model/ast/Nodes.ts';
+import { type JsonText, type TextAst, type TextNode } from '../model/ast/TextNodes.ts';
+import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey.ts';
+import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
+import { BodyBitType, type BodyBitTypeType } from '../model/enum/BodyBitType.ts';
+import { DeprecatedTextFormat } from '../model/enum/DeprecatedTextFormat.ts';
+import { ResourceTag, type ResourceTagType } from '../model/enum/ResourceTag.ts';
+import { TextFormat, type TextFormatType } from '../model/enum/TextFormat.ts';
+import { TextLocation } from '../model/enum/TextLocation.ts';
 import {
-  BodyBitJson,
-  GapJson,
-  HighlightJson,
-  HighlightTextJson,
-  MarkJson,
-  SelectJson,
-  SelectOptionJson,
-} from '../model/json/BodyBitJson';
+  type BookJson,
+  type BotResponseJson,
+  type ChoiceJson,
+  type DefinitionListItemJson,
+  type ExampleJson,
+  type FeedbackChoiceJson,
+  type FeedbackJson,
+  type FeedbackReasonJson,
+  type FlashcardJson,
+  type HeadingJson,
+  type ImageSourceJson,
+  type IngredientJson,
+  type MarkConfigJson,
+  type MatrixCellJson,
+  type MatrixJson,
+  type PairJson,
+  type PersonJson,
+  type PronunciationTableJson,
+  type QuestionJson,
+  type QuizJson,
+  type RatingLevelStartEndJson,
+  type ResponseJson,
+  type ServingsJson,
+  type StatementJson,
+  type TableJson,
+  type TechnicalTermJson,
+  type TextAndIconJson,
+} from '../model/json/BitJson.ts';
+import {
+  type BodyBitJson,
+  type GapJson,
+  type HighlightJson,
+  type HighlightTextJson,
+  type MarkJson,
+  type SelectJson,
+  type SelectOptionJson,
+} from '../model/json/BodyBitJson.ts';
+import {
+  type AudioResourceWrapperJson,
+  type ImageResourceWrapperJson,
+  type ResourceJson,
+} from '../model/json/ResourceJson.ts';
+import { type ParserError } from '../model/parser/ParserError.ts';
+import { type ParserInfo } from '../model/parser/ParserInfo.ts';
+import { ArrayUtils } from '../utils/ArrayUtils.ts';
+import { BitUtils } from '../utils/BitUtils.ts';
+import { BooleanUtils } from '../utils/BooleanUtils.ts';
+import { env } from '../utils/env/Env.ts';
+import { NumberUtils } from '../utils/NumberUtils.ts';
+import { ObjectUtils } from '../utils/ObjectUtils.ts';
+import { StringUtils } from '../utils/StringUtils.ts';
+import { BaseBuilder, type BuildContext, type WithExampleJson } from './BaseBuilder.ts';
+import { ResourceBuilder } from './ResourceBuilder.ts';
+import { NodeValidator } from './rules/NodeValidator.ts';
 
 /**
  * Builder to build bitmark AST node programmatically
@@ -367,17 +375,29 @@ class Builder extends BaseBuilder {
       id: this.toAstProperty(PropertyConfigKey.id, data.id),
       internalComment: this.toAstProperty(PropertyConfigKey.internalComment, data.internalComment),
       customerId: this.toAstProperty(PropertyConfigKey.customerId, data.customerId),
-      customerExternalId: this.toAstProperty(PropertyConfigKey.customerExternalId, data.customerExternalId),
+      customerExternalId: this.toAstProperty(
+        PropertyConfigKey.customerExternalId,
+        data.customerExternalId,
+      ),
       externalId: this.toAstProperty(PropertyConfigKey.externalId, data.externalId),
       spaceId: this.toAstProperty(PropertyConfigKey.spaceId, data.spaceId),
       padletId: this.toAstProperty(PropertyConfigKey.padletId, data.padletId),
       jupyterId: this.toAstProperty(PropertyConfigKey.jupyterId, data.jupyterId),
-      jupyterExecutionCount: this.toAstProperty(PropertyConfigKey.jupyterExecutionCount, data.jupyterExecutionCount),
+      jupyterExecutionCount: this.toAstProperty(
+        PropertyConfigKey.jupyterExecutionCount,
+        data.jupyterExecutionCount,
+      ),
       isPublic: this.toAstProperty(PropertyConfigKey.isPublic, data.isPublic),
       isTemplate: this.toAstProperty(PropertyConfigKey.isTemplate, data.isTemplate),
-      isTemplateStripTheme: this.toAstProperty(PropertyConfigKey.isTemplateStripTheme, data.isTemplateStripTheme),
+      isTemplateStripTheme: this.toAstProperty(
+        PropertyConfigKey.isTemplateStripTheme,
+        data.isTemplateStripTheme,
+      ),
       aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, data.aiGenerated),
-      machineTranslated: this.toAstProperty(PropertyConfigKey.machineTranslated, data.machineTranslated),
+      machineTranslated: this.toAstProperty(
+        PropertyConfigKey.machineTranslated,
+        data.machineTranslated,
+      ),
       searchIndex: this.toAstProperty(PropertyConfigKey.searchIndex, data.searchIndex),
       analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, data.analyticsTag),
       categoryTag: this.toAstProperty(PropertyConfigKey.categoryTag, data.categoryTag),
@@ -402,7 +422,10 @@ class Builder extends BaseBuilder {
       publisher: this.toAstProperty(PropertyConfigKey.publisher, data.publisher),
       publisherName: this.toAstProperty(PropertyConfigKey.publisherName, data.publisherName),
       theme: this.toAstProperty(PropertyConfigKey.theme, data.theme),
-      computerLanguage: this.toAstProperty(PropertyConfigKey.computerLanguage, data.computerLanguage),
+      computerLanguage: this.toAstProperty(
+        PropertyConfigKey.computerLanguage,
+        data.computerLanguage,
+      ),
       target: this.toAstProperty(PropertyConfigKey.target, data.target),
       slug: this.toAstProperty(PropertyConfigKey.slug, data.slug),
       tag: this.toAstProperty(PropertyConfigKey.tag, data.tag),
@@ -430,15 +453,24 @@ class Builder extends BaseBuilder {
       kind: this.toAstProperty(PropertyConfigKey.kind, data.kind),
       hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, data.hasMarkAsDone),
       processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, data.processHandIn),
-      processHandInLocation: this.toAstProperty(PropertyConfigKey.processHandInLocation, data.processHandInLocation),
+      processHandInLocation: this.toAstProperty(
+        PropertyConfigKey.processHandInLocation,
+        data.processHandInLocation,
+      ),
       chatWithBook: this.toAstProperty(PropertyConfigKey.chatWithBook, data.chatWithBook),
-      chatWithBookBrainKey: this.toAstProperty(PropertyConfigKey.chatWithBookBrainKey, data.chatWithBookBrainKey),
+      chatWithBookBrainKey: this.toAstProperty(
+        PropertyConfigKey.chatWithBookBrainKey,
+        data.chatWithBookBrainKey,
+      ),
       action: this.toAstProperty(PropertyConfigKey.action, data.action),
       showInIndex: this.toAstProperty(PropertyConfigKey.showInIndex, data.showInIndex),
       refAuthor: this.toAstProperty(PropertyConfigKey.refAuthor, data.refAuthor),
       refBookTitle: this.toAstProperty(PropertyConfigKey.refBookTitle, data.refBookTitle),
       refPublisher: this.toAstProperty(PropertyConfigKey.refPublisher, data.refPublisher),
-      refPublicationYear: this.toAstProperty(PropertyConfigKey.refPublicationYear, data.refPublicationYear),
+      refPublicationYear: this.toAstProperty(
+        PropertyConfigKey.refPublicationYear,
+        data.refPublicationYear,
+      ),
       citationStyle: this.toAstProperty(PropertyConfigKey.citationStyle, data.citationStyle),
       blockId: this.toAstProperty(PropertyConfigKey.blockId, data.blockId),
       pageNo: this.toAstProperty(PropertyConfigKey.pageNo, data.pageNo),
@@ -453,7 +485,10 @@ class Builder extends BaseBuilder {
         data.availableClassifications,
       ),
       allowedBit: this.toAstProperty(PropertyConfigKey.allowedBit, data.allowedBit),
-      tableFixedHeader: this.toAstProperty(PropertyConfigKey.tableFixedHeader, data.tableFixedHeader),
+      tableFixedHeader: this.toAstProperty(
+        PropertyConfigKey.tableFixedHeader,
+        data.tableFixedHeader,
+      ),
       tableHeaderWhitespaceNoWrap: this.toAstProperty(
         PropertyConfigKey.tableHeaderWhitespaceNoWrap,
         data.tableHeaderWhitespaceNoWrap,
@@ -461,12 +496,24 @@ class Builder extends BaseBuilder {
       tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, data.tableSearch),
       tableSort: this.toAstProperty(PropertyConfigKey.tableSort, data.tableSort),
       tablePagination: this.toAstProperty(PropertyConfigKey.tablePagination, data.tablePagination),
-      tablePaginationLimit: this.toAstProperty(PropertyConfigKey.tablePaginationLimit, data.tablePaginationLimit),
+      tablePaginationLimit: this.toAstProperty(
+        PropertyConfigKey.tablePaginationLimit,
+        data.tablePaginationLimit,
+      ),
       tableHeight: this.toAstProperty(PropertyConfigKey.tableHeight, data.tableHeight),
-      tableWhitespaceNoWrap: this.toAstProperty(PropertyConfigKey.tableWhitespaceNoWrap, data.tableWhitespaceNoWrap),
+      tableWhitespaceNoWrap: this.toAstProperty(
+        PropertyConfigKey.tableWhitespaceNoWrap,
+        data.tableWhitespaceNoWrap,
+      ),
       tableAutoWidth: this.toAstProperty(PropertyConfigKey.tableAutoWidth, data.tableAutoWidth),
-      tableResizableColumns: this.toAstProperty(PropertyConfigKey.tableResizableColumns, data.tableResizableColumns),
-      tableColumnMinWidth: this.toAstProperty(PropertyConfigKey.tableColumnMinWidth, data.tableColumnMinWidth),
+      tableResizableColumns: this.toAstProperty(
+        PropertyConfigKey.tableResizableColumns,
+        data.tableResizableColumns,
+      ),
+      tableColumnMinWidth: this.toAstProperty(
+        PropertyConfigKey.tableColumnMinWidth,
+        data.tableColumnMinWidth,
+      ),
       quizCountItems: this.toAstProperty(PropertyConfigKey.quizCountItems, data.quizCountItems),
       quizStrikethroughSolutions: this.toAstProperty(
         PropertyConfigKey.quizStrikethroughSolutions,
@@ -474,8 +521,14 @@ class Builder extends BaseBuilder {
       ),
       codeLineNumbers: this.toAstProperty(PropertyConfigKey.codeLineNumbers, data.codeLineNumbers),
       codeMinimap: this.toAstProperty(PropertyConfigKey.codeMinimap, data.codeMinimap),
-      stripePricingTableId: this.toAstProperty(PropertyConfigKey.stripePricingTableId, data.stripePricingTableId),
-      stripePublishableKey: this.toAstProperty(PropertyConfigKey.stripePublishableKey, data.stripePublishableKey),
+      stripePricingTableId: this.toAstProperty(
+        PropertyConfigKey.stripePricingTableId,
+        data.stripePricingTableId,
+      ),
+      stripePublishableKey: this.toAstProperty(
+        PropertyConfigKey.stripePublishableKey,
+        data.stripePublishableKey,
+      ),
       thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, data.thumbImage),
       scormSource: this.toAstProperty(PropertyConfigKey.scormSource, data.scormSource),
       posterImage: this.toAstProperty(PropertyConfigKey.posterImage, data.posterImage),
@@ -485,13 +538,22 @@ class Builder extends BaseBuilder {
       pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, data.pointerTop),
       listItemIndent: this.toAstProperty(PropertyConfigKey.listItemIndent, data.listItemIndent),
       backgroundWallpaper: this.toImageResource(context, data.backgroundWallpaper),
-      hasBookNavigation: this.toAstProperty(PropertyConfigKey.hasBookNavigation, data.hasBookNavigation),
+      hasBookNavigation: this.toAstProperty(
+        PropertyConfigKey.hasBookNavigation,
+        data.hasBookNavigation,
+      ),
       duration: this.toAstProperty(PropertyConfigKey.duration, data.duration),
       deeplink: this.toAstProperty(PropertyConfigKey.deeplink, data.deeplink),
       externalLink: this.toAstProperty(PropertyConfigKey.externalLink, data.externalLink),
-      externalLinkText: this.toAstProperty(PropertyConfigKey.externalLinkText, data.externalLinkText),
+      externalLinkText: this.toAstProperty(
+        PropertyConfigKey.externalLinkText,
+        data.externalLinkText,
+      ),
       videoCallLink: this.toAstProperty(PropertyConfigKey.videoCallLink, data.videoCallLink),
-      vendorDashboardId: this.toAstProperty(PropertyConfigKey.vendorDashboardId, data.vendorDashboardId),
+      vendorDashboardId: this.toAstProperty(
+        PropertyConfigKey.vendorDashboardId,
+        data.vendorDashboardId,
+      ),
       vendorSurveyId: this.toAstProperty(PropertyConfigKey.vendorSurveyId, data.vendorSurveyId),
       vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, data.vendorUrl),
       search: this.toAstProperty(PropertyConfigKey.search, data.search),
@@ -515,12 +577,24 @@ class Builder extends BaseBuilder {
       resolved: this.toAstProperty(PropertyConfigKey.resolved, data.resolved),
       resolvedDate: this.toAstProperty(PropertyConfigKey.resolvedDate, data.resolvedDate),
       resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, data.resolvedBy),
-      handInAcceptFileType: this.toAstProperty(PropertyConfigKey.handInAcceptFileType, data.handInAcceptFileType),
-      handInRequirement: this.toAstProperty(PropertyConfigKey.handInRequirement, data.handInRequirement),
-      handInInstruction: this.toAstProperty(PropertyConfigKey.handInInstruction, data.handInInstruction),
+      handInAcceptFileType: this.toAstProperty(
+        PropertyConfigKey.handInAcceptFileType,
+        data.handInAcceptFileType,
+      ),
+      handInRequirement: this.toAstProperty(
+        PropertyConfigKey.handInRequirement,
+        data.handInRequirement,
+      ),
+      handInInstruction: this.toAstProperty(
+        PropertyConfigKey.handInInstruction,
+        data.handInInstruction,
+      ),
       maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, data.maxCreatedBits),
       maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, data.maxDisplayLevel),
-      maxTocChapterLevel: this.toAstProperty(PropertyConfigKey.maxTocChapterLevel, data.maxTocChapterLevel),
+      maxTocChapterLevel: this.toAstProperty(
+        PropertyConfigKey.maxTocChapterLevel,
+        data.maxTocChapterLevel,
+      ),
       tocResource: this.toAstProperty(PropertyConfigKey.tocResource, data.tocResource),
       tocContent: this.toAstProperty(PropertyConfigKey.tocContent, data.tocContent),
       page: this.toAstProperty(PropertyConfigKey.page, data.page),
@@ -528,18 +602,27 @@ class Builder extends BaseBuilder {
       product: this.toAstProperty(PropertyConfigKey.product, data.product),
       productList: this.toAstProperty(PropertyConfigKey.productList, data.productList),
       productVideo: this.toAstProperty(PropertyConfigKey.productVideo, data.productVideo),
-      productVideoList: this.toAstProperty(PropertyConfigKey.productVideoList, data.productVideoList),
+      productVideoList: this.toAstProperty(
+        PropertyConfigKey.productVideoList,
+        data.productVideoList,
+      ),
       productFolder: this.toAstProperty(PropertyConfigKey.productFolder, data.productFolder),
       technicalTerm: this.buildTechnicalTerm(context, data.technicalTerm),
       servings: this.buildServings(context, data.servings),
       ratingLevelStart: this.buildRatingLevelStartEnd(context, data.ratingLevelStart),
       ratingLevelEnd: this.buildRatingLevelStartEnd(context, data.ratingLevelEnd),
-      ratingLevelSelected: this.toAstProperty(PropertyConfigKey.ratingLevelSelected, data.ratingLevelSelected),
+      ratingLevelSelected: this.toAstProperty(
+        PropertyConfigKey.ratingLevelSelected,
+        data.ratingLevelSelected,
+      ),
       markConfig: this.buildMarkConfigs(context, data.markConfig),
       imageSource: this.buildImageSource(context, data.imageSource),
       person: this.buildPerson(context, data.person),
       bot: this.toAstProperty(PropertyConfigKey.bot, data.bot),
-      referenceProperty: this.toAstProperty(PropertyConfigKey.property_reference, data.referenceProperty),
+      referenceProperty: this.toAstProperty(
+        PropertyConfigKey.property_reference,
+        data.referenceProperty,
+      ),
 
       // Book data
       title: this.handleJsonText(context, TextLocation.tag, data.title),
@@ -561,8 +644,14 @@ class Builder extends BaseBuilder {
       instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
 
       partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, data.partialAnswer),
-      sampleSolution: this.toAstProperty(PropertyConfigKey.property_sampleSolution, data.sampleSolution),
-      additionalSolutions: this.toAstProperty(PropertyConfigKey.additionalSolutions, data.additionalSolutions),
+      sampleSolution: this.toAstProperty(
+        PropertyConfigKey.property_sampleSolution,
+        data.sampleSolution,
+      ),
+      additionalSolutions: this.toAstProperty(
+        PropertyConfigKey.additionalSolutions,
+        data.additionalSolutions,
+      ),
 
       // Example
       ...this.toExample(data.__isDefaultExample, data.example as TextAst),
@@ -570,7 +659,9 @@ class Builder extends BaseBuilder {
       // Person
 
       imagePlaceholder: this.toImageResource(context, data.imagePlaceholder),
-      resources: ArrayUtils.asArray(this.resourceBuilder.resourceFromResourceJson(context, data.resources)),
+      resources: ArrayUtils.asArray(
+        this.resourceBuilder.resourceFromResourceJson(context, data.resources),
+      ),
 
       // Body, Card, Footer, must be after all other properties except the extraProperties and markup / parser
       body: this.buildBody(context, data.body),
@@ -644,7 +735,13 @@ class Builder extends BaseBuilder {
     );
 
     // If __isDefaultExample is set at the bit level, push the default example down the tree to the relevant nodes
-    this.pushExampleDownTree(context, node.body, cardNode, node.__isDefaultExample, convertedExample.example);
+    this.pushExampleDownTree(
+      context,
+      node.body,
+      cardNode,
+      node.__isDefaultExample,
+      convertedExample.example,
+    );
 
     // Set default values
     this.setDefaultBitValues(node);
@@ -688,7 +785,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildBook(_context: BuildContext, data: Partial<BookJson> | undefined): BookJson | undefined {
+  protected buildBook(
+    _context: BuildContext,
+    data: Partial<BookJson> | undefined,
+  ): BookJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -799,7 +899,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildChoices(context: BuildContext, data: Partial<ChoiceJson>[] | undefined): ChoiceJson[] | undefined {
+  protected buildChoices(
+    context: BuildContext,
+    data: Partial<ChoiceJson>[] | undefined,
+  ): ChoiceJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
     const nodes = data.map((d) => this.buildChoice(context, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
@@ -811,7 +914,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildChoice(context: BuildContext, data: Partial<ChoiceJson> | undefined): ChoiceJson | undefined {
+  protected buildChoice(
+    context: BuildContext,
+    data: Partial<ChoiceJson> | undefined,
+  ): ChoiceJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -856,7 +962,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildResponse(context: BuildContext, data: Partial<ResponseJson> | undefined): ResponseJson | undefined {
+  protected buildResponse(
+    context: BuildContext,
+    data: Partial<ResponseJson> | undefined,
+  ): ResponseJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -949,7 +1058,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildFeedback(context: BuildContext, data: Partial<FeedbackJson> | undefined): FeedbackJson | undefined {
+  protected buildFeedback(
+    context: BuildContext,
+    data: Partial<FeedbackJson> | undefined,
+  ): FeedbackJson | undefined {
     if (!data) return undefined;
 
     let choices: FeedbackChoiceJson[] | undefined;
@@ -995,7 +1107,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildQuizzes(context: BuildContext, data: Partial<QuizJson>[] | undefined): QuizJson[] | undefined {
+  protected buildQuizzes(
+    context: BuildContext,
+    data: Partial<QuizJson>[] | undefined,
+  ): QuizJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
     const nodes = data.map((d) => this.buildQuiz(context, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
@@ -1007,7 +1122,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildQuiz(context: BuildContext, data: Partial<QuizJson> | undefined): QuizJson | undefined {
+  protected buildQuiz(
+    context: BuildContext,
+    data: Partial<QuizJson> | undefined,
+  ): QuizJson | undefined {
     if (!data) return undefined;
 
     const convertedExample = {
@@ -1021,12 +1139,24 @@ class Builder extends BaseBuilder {
       choices = this.buildChoices(context, data.choices);
 
       // Push __isDefaultExample down the tree
-      this.pushExampleDownTreeBoolean(context, data.__isDefaultExample, convertedExample.example, true, choices);
+      this.pushExampleDownTreeBoolean(
+        context,
+        data.__isDefaultExample,
+        convertedExample.example,
+        true,
+        choices,
+      );
     } else if (data.responses) {
       responses = this.buildResponses(context, data.responses);
 
       // Push __isDefaultExample down the tree
-      this.pushExampleDownTreeBoolean(context, data.__isDefaultExample, convertedExample.example, false, responses);
+      this.pushExampleDownTreeBoolean(
+        context,
+        data.__isDefaultExample,
+        convertedExample.example,
+        false,
+        responses,
+      );
     } else {
       // No choices or responses, not a valid quiz
       return undefined;
@@ -1058,7 +1188,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildHeading(_context: BuildContext, data: Partial<HeadingJson> | undefined): HeadingJson | undefined {
+  protected buildHeading(
+    _context: BuildContext,
+    data: Partial<HeadingJson> | undefined,
+  ): HeadingJson | undefined {
     if (!data) return undefined;
     if (data.forKeys == null) return undefined;
 
@@ -1084,7 +1217,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildPairs(context: BuildContext, data: Partial<PairJson>[] | undefined): PairJson[] | undefined {
+  protected buildPairs(
+    context: BuildContext,
+    data: Partial<PairJson>[] | undefined,
+  ): PairJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
     const nodes = data.map((d) => this.buildPair(context, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
@@ -1096,15 +1232,25 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildPair(context: BuildContext, data: Partial<PairJson> | undefined): PairJson | undefined {
+  protected buildPair(
+    context: BuildContext,
+    data: Partial<PairJson> | undefined,
+  ): PairJson | undefined {
     if (!data) return undefined;
 
     // Set default example
-    const defaultExample = Array.isArray(data.__valuesAst) && data.__valuesAst.length > 0 ? data.__valuesAst[0] : null;
+    const defaultExample =
+      Array.isArray(data.__valuesAst) && data.__valuesAst.length > 0 ? data.__valuesAst[0] : null;
 
     // Process the keyAudio and keyImage resources
-    const keyAudio = this.resourceBuilder.resourceFromResourceJson(context, data.keyAudio) as AudioResourceWrapperJson;
-    const keyImage = this.resourceBuilder.resourceFromResourceJson(context, data.keyImage) as ImageResourceWrapperJson;
+    const keyAudio = this.resourceBuilder.resourceFromResourceJson(
+      context,
+      data.keyAudio,
+    ) as AudioResourceWrapperJson;
+    const keyImage = this.resourceBuilder.resourceFromResourceJson(
+      context,
+      data.keyImage,
+    ) as ImageResourceWrapperJson;
 
     // NOTE: Node order is important and is defined here
     const node: PairJson = {
@@ -1150,7 +1296,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildMatricies(context: BuildContext, data: Partial<MatrixJson>[] | undefined): MatrixJson[] | undefined {
+  protected buildMatricies(
+    context: BuildContext,
+    data: Partial<MatrixJson>[] | undefined,
+  ): MatrixJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
     const nodes = data.map((d) => this.buildMatrix(context, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
@@ -1162,7 +1311,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildMatrix(context: BuildContext, data: Partial<MatrixJson> | undefined): MatrixJson | undefined {
+  protected buildMatrix(
+    context: BuildContext,
+    data: Partial<MatrixJson> | undefined,
+  ): MatrixJson | undefined {
     if (!data) return undefined;
 
     // const convertedExample = {
@@ -1191,7 +1343,9 @@ class Builder extends BaseBuilder {
       hint: this.handleJsonText(context, TextLocation.tag, data.hint),
       instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
       isExample,
-      cells: (data.cells || []).map((c) => this.buildMatrixCell(context, c)).filter((c) => c != null),
+      cells: (data.cells || [])
+        .map((c) => this.buildMatrixCell(context, c))
+        .filter((c) => c != null),
     };
 
     // Remove Unset Optionals
@@ -1217,7 +1371,8 @@ class Builder extends BaseBuilder {
     if (!data) return undefined;
 
     // Set default example
-    const defaultExample = Array.isArray(data.__valuesAst) && data.__valuesAst.length > 0 ? data.__valuesAst[0] : null;
+    const defaultExample =
+      Array.isArray(data.__valuesAst) && data.__valuesAst.length > 0 ? data.__valuesAst[0] : null;
 
     // NOTE: Node order is important and is defined here
     const node: MatrixCellJson = {
@@ -1258,7 +1413,10 @@ class Builder extends BaseBuilder {
       data: (dataIn.data || []).map((row) =>
         (row || []).map((cell) => {
           // Process the audio resource
-          const audio = this.resourceBuilder.resourceFromResourceJson(context, cell.audio) as AudioResourceWrapperJson;
+          const audio = this.resourceBuilder.resourceFromResourceJson(
+            context,
+            cell.audio,
+          ) as AudioResourceWrapperJson;
 
           return {
             title: this.handleJsonText(context, TextLocation.tag, cell.title),
@@ -1283,12 +1441,17 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildTable(context: BuildContext, dataIn: Partial<TableJson> | undefined): TableJson | undefined {
+  protected buildTable(
+    context: BuildContext,
+    dataIn: Partial<TableJson> | undefined,
+  ): TableJson | undefined {
     if (!dataIn) return undefined;
 
     // NOTE: Node order is important and is defined here
     const node: TableJson = {
-      columns: (dataIn.columns || []).map((col) => this.handleJsonText(context, TextLocation.tag, col)),
+      columns: (dataIn.columns || []).map((col) =>
+        this.handleJsonText(context, TextLocation.tag, col),
+      ),
       data: (dataIn.data || []).map((row) =>
         (row || []).map((cell) => this.handleJsonText(context, TextLocation.tag, cell)),
       ),
@@ -1323,7 +1486,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildQuestion(context: BuildContext, data: Partial<QuestionJson> | undefined): QuestionJson | undefined {
+  protected buildQuestion(
+    context: BuildContext,
+    data: Partial<QuestionJson> | undefined,
+  ): QuestionJson | undefined {
     if (!data) return undefined;
 
     // Set default example
@@ -1433,7 +1599,7 @@ class Builder extends BaseBuilder {
       if (typeof data.body === 'string') {
         try {
           body = JSON.parse(data.body);
-        } catch (e) {
+        } catch (_e) {
           // Could not parse JSON - set body to null
           body = null;
         }
@@ -1587,7 +1753,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildFooter(context: BuildContext, data: Partial<Footer> | undefined): Footer | undefined {
+  protected buildFooter(
+    context: BuildContext,
+    data: Partial<Footer> | undefined,
+  ): Footer | undefined {
     if (!data) return undefined;
     const node: Footer = {
       footer: this.handleJsonText(context, TextLocation.body, data.footer),
@@ -1602,12 +1771,17 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildGap(context: BuildContext, data: Partial<GapJson> | undefined): GapJson | undefined {
+  protected buildGap(
+    context: BuildContext,
+    data: Partial<GapJson> | undefined,
+  ): GapJson | undefined {
     if (!data) return undefined;
 
     // Set default example
     const defaultExample =
-      Array.isArray(data.__solutionsAst) && data.__solutionsAst.length > 0 ? data.__solutionsAst[0] : null;
+      Array.isArray(data.__solutionsAst) && data.__solutionsAst.length > 0
+        ? data.__solutionsAst[0]
+        : null;
 
     // Copy any attributes from 'attrs' to the body bit (data is in 'attrs' when coming from JSON)
     data = this.bodyBitCopyFromAttrs(data);
@@ -1685,7 +1859,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildMark(context: BuildContext, data: Partial<MarkJson> | undefined): MarkJson | undefined {
+  protected buildMark(
+    context: BuildContext,
+    data: Partial<MarkJson> | undefined,
+  ): MarkJson | undefined {
     if (!data) return undefined;
 
     // Copy any attributes from 'attrs' to the body bit (data is in 'attrs' when coming from JSON)
@@ -1722,7 +1899,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildSelect(context: BuildContext, data: Partial<SelectJson> | undefined): SelectJson | undefined {
+  protected buildSelect(
+    context: BuildContext,
+    data: Partial<SelectJson> | undefined,
+  ): SelectJson | undefined {
     if (!data) return undefined;
 
     // Copy any attributes from 'attrs' to the body bit (data is in 'attrs' when coming from JSON)
@@ -1809,7 +1989,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildHighlight(context: BuildContext, data: Partial<HighlightJson> | undefined): HighlightJson | undefined {
+  buildHighlight(
+    context: BuildContext,
+    data: Partial<HighlightJson> | undefined,
+  ): HighlightJson | undefined {
     if (!data) return undefined;
 
     // Copy any attributes from 'attrs' to the body bit (data is in 'attrs' when coming from JSON)
@@ -1910,7 +2093,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildFlashcard(context: BuildContext, data: Partial<FlashcardJson> | undefined): FlashcardJson | undefined {
+  protected buildFlashcard(
+    context: BuildContext,
+    data: Partial<FlashcardJson> | undefined,
+  ): FlashcardJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -1930,7 +2116,14 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreEmptyArrays: ['question', 'answer', 'alternativeAnswers', 'item', 'hint', 'instruction'],
+      ignoreEmptyArrays: [
+        'question',
+        'answer',
+        'alternativeAnswers',
+        'item',
+        'hint',
+        'instruction',
+      ],
       ignoreUndefined: ['example'],
     });
 
@@ -1948,7 +2141,9 @@ class Builder extends BaseBuilder {
     data: Partial<DefinitionListItemJson>[] | undefined,
   ): DefinitionListItemJson[] | undefined {
     if (!Array.isArray(data)) return undefined;
-    const nodes = data.map((d) => this.buildDefinitionListItem(context, d)).filter((d) => d != null);
+    const nodes = data
+      .map((d) => this.buildDefinitionListItem(context, d))
+      .filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
   }
 
@@ -1985,7 +2180,14 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreEmptyArrays: ['question', 'answer', 'alternativeDefinitions', 'item', 'hint', 'instruction'],
+      ignoreEmptyArrays: [
+        'question',
+        'answer',
+        'alternativeDefinitions',
+        'item',
+        'hint',
+        'instruction',
+      ],
       ignoreUndefined: ['example'],
     });
 
@@ -1997,10 +2199,17 @@ class Builder extends BaseBuilder {
     data: Partial<TextAndIconJson> | undefined,
     textAsStrings: boolean = false,
   ): TextAndIconJson | undefined {
-    const icon = this.resourceBuilder.resourceFromResourceJson(context, data?.icon) as ImageResourceWrapperJson;
+    const icon = this.resourceBuilder.resourceFromResourceJson(
+      context,
+      data?.icon,
+    ) as ImageResourceWrapperJson;
 
     // Ensure text is bitmark text
-    let text: JsonText = this.handleJsonText(context, TextLocation.tag, data?.text || (data as string));
+    let text: JsonText = this.handleJsonText(
+      context,
+      TextLocation.tag,
+      data?.text || (data as string),
+    );
 
     if (textAsStrings) {
       // Convert the bitmark text to plain text (without breakscaping, as that will happen in the Bitmark Generator)
@@ -2047,7 +2256,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildStatement(context: BuildContext, data: Partial<StatementJson> | undefined): StatementJson | undefined {
+  protected buildStatement(
+    context: BuildContext,
+    data: Partial<StatementJson> | undefined,
+  ): StatementJson | undefined {
     if (!data) return undefined;
 
     // NOTE: Node order is important and is defined here
@@ -2109,7 +2321,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildPerson(context: BuildContext, data: Partial<PersonJson> | undefined): PersonJson | undefined {
+  protected buildPerson(
+    context: BuildContext,
+    data: Partial<PersonJson> | undefined,
+  ): PersonJson | undefined {
     if (!data) return undefined;
     const { name, title, avatarImage } = data;
     // { name: string; title?: string; avatarImage?: ImageResourceJson }
@@ -2118,7 +2333,10 @@ class Builder extends BaseBuilder {
     const node: PersonJson = {
       name: name ?? '',
       title: (title ?? undefined) as string,
-      avatarImage: this.resourceBuilder.resourceFromResourceJson(context, avatarImage) as ImageResourceWrapperJson,
+      avatarImage: this.resourceBuilder.resourceFromResourceJson(
+        context,
+        avatarImage,
+      ) as ImageResourceWrapperJson,
     };
 
     // Remove Unset Optionals
@@ -2164,7 +2382,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildServings(_context: BuildContext, data: Partial<ServingsJson> | undefined): ServingsJson | undefined {
+  protected buildServings(
+    _context: BuildContext,
+    data: Partial<ServingsJson> | undefined,
+  ): ServingsJson | undefined {
     if (!data) return undefined;
     const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = data;
 
@@ -2284,7 +2505,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildCardBits(context: BuildContext, data: Partial<CardBit>[] | undefined): Bit[] | undefined {
+  protected buildCardBits(
+    context: BuildContext,
+    data: Partial<CardBit>[] | undefined,
+  ): Bit[] | undefined {
     if (!Array.isArray(data)) return undefined;
     const nodes = data.map((d) => this.buildCardBit(context, d)).filter((d) => d != null);
     return nodes.length > 0 ? nodes : undefined;
@@ -2296,7 +2520,10 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  protected buildCardBit(context: BuildContext, data: Partial<CardBit> | undefined): CardBit | undefined {
+  protected buildCardBit(
+    context: BuildContext,
+    data: Partial<CardBit> | undefined,
+  ): CardBit | undefined {
     if (!data) return undefined;
     const { bitType, textFormat } = context;
 
@@ -2435,7 +2662,12 @@ class Builder extends BaseBuilder {
   ): void {
     if (__isDefaultExample || example != null) {
       if (cardNode) {
-        this.pushExampleDownTreeString(context, __isDefaultExample, example, cardNode.pairs as WithExampleJson[]);
+        this.pushExampleDownTreeString(
+          context,
+          __isDefaultExample,
+          example,
+          cardNode.pairs as WithExampleJson[],
+        );
         this.pushExampleDownTreeBoolean(
           context,
           __isDefaultExample,
@@ -2544,7 +2776,13 @@ class Builder extends BaseBuilder {
       for (const ds of nodes) {
         if (ds) {
           const exampleNodes = Array.isArray(ds) ? ds : [ds];
-          BitUtils.fillStringExample(context.textFormat, exampleNodes, __isDefaultExample, example, false);
+          BitUtils.fillStringExample(
+            context.textFormat,
+            exampleNodes,
+            __isDefaultExample,
+            example,
+            false,
+          );
         }
       }
     }
@@ -2564,7 +2802,13 @@ class Builder extends BaseBuilder {
         switch (part.type) {
           case BodyBitType.gap: {
             const gap = part as GapJson;
-            BitUtils.fillStringExample(context.textFormat, [gap], __isDefaultExample, example, false);
+            BitUtils.fillStringExample(
+              context.textFormat,
+              [gap],
+              __isDefaultExample,
+              example,
+              false,
+            );
             break;
           }
           case BodyBitType.mark: {
@@ -2648,7 +2892,9 @@ class Builder extends BaseBuilder {
     }
   }
 
-  private parseExtraProperties(extraProperties: { [key: string]: unknown } | undefined): ExtraProperties | undefined {
+  private parseExtraProperties(
+    extraProperties: { [key: string]: unknown } | undefined,
+  ): ExtraProperties | undefined {
     if (!extraProperties) return undefined;
 
     const entries = Object.entries(extraProperties);

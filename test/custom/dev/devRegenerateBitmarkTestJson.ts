@@ -6,17 +6,20 @@ Copyright ©2023 Get More Brain
 
 */
 
-// import * as fs from 'fs-extra';
-import path from 'path';
+// import fs from 'fs-extra';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
-import { FileUtils } from '../../../src/utils/FileUtils';
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator.ts';
+import { FileUtils } from '../../../src/utils/FileUtils.ts';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
 class DevRegenerateBitmarkTestJson {
   async test(_debug?: boolean): Promise<void> {
-    const bitmarkFilesDir = path.resolve(__dirname, '../../..', 'test/standard/input/bitmark');
+    const bitmarkFilesDir = path.resolve(dirname, '../../..', 'test/standard/input/bitmark');
     const jsonFilesDir = path.resolve(bitmarkFilesDir, 'json');
 
     const bitmarkFiles = FileUtils.getFilenamesSync(bitmarkFilesDir, {

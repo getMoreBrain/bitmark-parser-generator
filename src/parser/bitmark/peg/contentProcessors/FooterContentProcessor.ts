@@ -1,16 +1,19 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { Footer } from '../../../../model/ast/Nodes';
-import { JsonText } from '../../../../model/ast/TextNodes';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { StringUtils } from '../../../../utils/StringUtils';
-import { TextParser } from '../../../text/TextParser';
-import { BitContentProcessorResult, BitmarkPegParserContext, ContentDepthType } from '../BitmarkPegParserTypes';
-import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator';
-
-import { ContentProcessorUtils } from './ContentProcessorUtils';
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { type Footer } from '../../../../model/ast/Nodes.ts';
+import { type JsonText } from '../../../../model/ast/TextNodes.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
+import { TextParser } from '../../../text/TextParser.ts';
+import {
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+} from '../BitmarkPegParserTypes.ts';
+import { BitmarkPegParserValidator } from '../BitmarkPegParserValidator.ts';
+import { ContentProcessorUtils } from './ContentProcessorUtils.ts';
 
 export interface FooterText {
   footerText: BreakscapedString;
@@ -43,7 +46,8 @@ class FooterContentProcessor {
     let newLines = 0;
     if (haveFooter && haveFooterPlainText) {
       newLines =
-        StringUtils.countOccurrencesAtEnd(footer, '\n') + StringUtils.countOccurrencesAtStart(footerPlainText, '\n');
+        StringUtils.countOccurrencesAtEnd(footer, '\n') +
+        StringUtils.countOccurrencesAtStart(footerPlainText, '\n');
     }
 
     if (footer || footerPlainText) {

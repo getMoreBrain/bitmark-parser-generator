@@ -7,33 +7,32 @@
  *
  */
 
-import { Config } from '../../../config/Config';
-import { BreakscapedString } from '../../../model/ast/BreakscapedString';
-import { Body, BodyPart } from '../../../model/ast/Nodes';
-import { JsonText } from '../../../model/ast/TextNodes';
-import { CardSetConfig } from '../../../model/config/CardSetConfig';
-import { CardVariantConfig } from '../../../model/config/CardVariantConfig';
-import { TagsConfig } from '../../../model/config/TagsConfig';
-import { BitTagType, BitTagTypeType } from '../../../model/enum/BitTagType';
-import { BitTypeType } from '../../../model/enum/BitType';
-import { Count, CountType } from '../../../model/enum/Count';
-import { PropertyTag, PropertyTagType } from '../../../model/enum/PropertyTag';
-import { ResourceTag } from '../../../model/enum/ResourceTag';
-import { Tag, TagType } from '../../../model/enum/Tag';
-import { TextFormatType } from '../../../model/enum/TextFormat';
-import { ParserData } from '../../../model/parser/ParserData';
-import { TagValidationData } from '../../../model/parser/TagValidationData';
-
+import { Config } from '../../../config/Config.ts';
+import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
+import { type Body, type BodyPart } from '../../../model/ast/Nodes.ts';
+import { type JsonText } from '../../../model/ast/TextNodes.ts';
+import { CardSetConfig } from '../../../model/config/CardSetConfig.ts';
+import { CardVariantConfig } from '../../../model/config/CardVariantConfig.ts';
+import { type TagsConfig } from '../../../model/config/TagsConfig.ts';
+import { BitTagType, type BitTagTypeType } from '../../../model/enum/BitTagType.ts';
+import { type BitTypeType } from '../../../model/enum/BitType.ts';
+import { Count, type CountType } from '../../../model/enum/Count.ts';
+import { PropertyTag, type PropertyTagType } from '../../../model/enum/PropertyTag.ts';
+import { ResourceTag } from '../../../model/enum/ResourceTag.ts';
+import { Tag, type TagType } from '../../../model/enum/Tag.ts';
+import { type TextFormatType } from '../../../model/enum/TextFormat.ts';
+import { type ParserData } from '../../../model/parser/ParserData.ts';
+import { type TagValidationData } from '../../../model/parser/TagValidationData.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitmarkPegParserContext,
-  ParsedCardSet,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type ParsedCardSet,
   TypeKey,
-  TypeKeyType,
-  TypeKeyValue,
-} from './BitmarkPegParserTypes';
+  type TypeKeyType,
+  type TypeKeyValue,
+} from './BitmarkPegParserTypes.ts';
 
 const COMMON_MISTAKE_STRINGS = [
   // Card divider errors
@@ -306,7 +305,11 @@ class BitmarkPegParserValidator {
     };
 
     // Helper function for add extra valid property keys
-    const addExtraValidPropertyKeys = (key: PropertyTagType, maxCount: CountType, minCount: number) => {
+    const addExtraValidPropertyKeys = (
+      key: PropertyTagType,
+      maxCount: CountType,
+      minCount: number,
+    ) => {
       validTypeKeys.set(`${TypeKey.Property}:${key}`, {
         maxCount,
         minCount,
@@ -438,7 +441,11 @@ class BitmarkPegParserValidator {
       // The chain is split off from the single tag for further processing.
       // This allows non-chained tags to be compressed into a chain without breaking the behaviour, and makes the
       // parser more forgiving.
-      if (validatedTagContent && Array.isArray(validatedTagContent.chain) && validatedTagContent.chain.length > 0) {
+      if (
+        validatedTagContent &&
+        Array.isArray(validatedTagContent.chain) &&
+        validatedTagContent.chain.length > 0
+      ) {
         if (tagData && tagData.chain) {
           const { validated: validatedTagChainContent, remaining: remainingTagChainContent } =
             this.validateTagChainsRecursive(
@@ -522,7 +529,9 @@ class BitmarkPegParserValidator {
 
     const { type, key } = content as TypeKeyValue;
 
-    const keyStr = tagValidationData ? this.getTagSignature(tagValidationData) : this.getUnknownTagSignature(type, key);
+    const keyStr = tagValidationData
+      ? this.getTagSignature(tagValidationData)
+      : this.getUnknownTagSignature(type, key);
     const ignoredStr = ' It will be ignored';
     let warningStr = '';
     let validatedContent: BitContent | undefined;
@@ -817,7 +826,11 @@ class BitmarkPegParserValidator {
         for (const variant of side.variants) {
           const variantContent = variant.content;
           let validatedContent: BitContent[] | undefined;
-          const variantConfig = this.getVariantConfig(cardSetConfig.variants, sideIndex, variantIndex);
+          const variantConfig = this.getVariantConfig(
+            cardSetConfig.variants,
+            sideIndex,
+            variantIndex,
+          );
 
           if (variantConfig) {
             // Validate the variant against the config

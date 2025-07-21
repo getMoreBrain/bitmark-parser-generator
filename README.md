@@ -21,12 +21,12 @@ Features:
 ### Package manager
 
 Using yarn:
-```
+```sh
 $ yarn add @gmb/bitmark-parser-generator
 ```
 
 Using npm:
-```
+```sh
 $ npm install @gmb/bitmark-parser-generator
 ```
 

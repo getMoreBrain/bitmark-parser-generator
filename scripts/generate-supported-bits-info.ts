@@ -6,10 +6,10 @@ Copyright ©2023 Get More Brain
 
 */
 
-import * as fs from 'fs-extra';
+import fs from 'fs-extra';
 
-import { BitmarkParserGenerator } from '../src/BitmarkParserGenerator';
-import { InfoType } from '../src/model/info/enum/InfoType';
+import { BitmarkParserGenerator } from '../src/BitmarkParserGenerator.ts';
+import { InfoType } from '../src/model/info/enum/InfoType.ts';
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 

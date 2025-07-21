@@ -1,8 +1,7 @@
-import { BitmarkAst } from '../../model/ast/Nodes';
-import { BitmarkParserTypeType } from '../../model/enum/BitmarkParserType';
-import { JsonParser } from '../json/JsonParser';
-
-import { parse as bitmarkParse } from './peg/BitmarkPegParser';
+import { type BitmarkAst } from '../../model/ast/Nodes.ts';
+import { type BitmarkParserTypeType } from '../../model/enum/BitmarkParserType.ts';
+import { JsonParser } from '../json/JsonParser.ts';
+import { parse as bitmarkParse } from './peg/BitmarkPegParser.ts';
 
 export interface BitmarkParserOptions {
   parserType?: BitmarkParserTypeType;

@@ -49,7 +49,7 @@ class JsonCleanupUtils {
   }
 
   cleanupBitmarkPlusPlusJson(obj: any, options?: { removeErrors?: boolean }): void {
-    options = Object.assign({}, options);
+    const _options = Object.assign({}, options);
 
     if (obj) {
       let blocks: any[] = [];

@@ -1,5 +1,5 @@
-import { BodyTextFormatType } from '../model/enum/BodyTextFormat';
-import { TextLocationType } from '../model/enum/TextLocation';
+import { type BodyTextFormatType } from '../model/enum/BodyTextFormat.ts';
+import { type TextLocationType } from '../model/enum/TextLocation.ts';
 
 /**
  * Configuration options for breakscape and unbreakscape operations.

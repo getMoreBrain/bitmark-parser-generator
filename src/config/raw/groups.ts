@@ -1,12 +1,12 @@
-import { _GroupsConfig } from '../../model/config/_Config';
-import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey';
-import { GroupConfigType } from '../../model/config/enum/GroupConfigType';
-import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey';
-import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey';
-import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
-import { BitTagType } from '../../model/enum/BitTagType';
-import { Count } from '../../model/enum/Count';
-import { ResourceTag } from '../../model/enum/ResourceTag';
+import { type _GroupsConfig } from '../../model/config/_Config.ts';
+import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey.ts';
+import { GroupConfigType } from '../../model/config/enum/GroupConfigType.ts';
+import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey.ts';
+import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey.ts';
+import { TagConfigKey } from '../../model/config/enum/TagConfigKey.ts';
+import { BitTagType } from '../../model/enum/BitTagType.ts';
+import { Count } from '../../model/enum/Count.ts';
+import { ResourceTag } from '../../model/enum/ResourceTag.ts';
 
 const GROUPS: _GroupsConfig = {
   [GroupConfigKey.group_standardAllBits]: {

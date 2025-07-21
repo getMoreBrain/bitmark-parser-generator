@@ -1,11 +1,10 @@
-import { BitTagType, BitTagTypeType } from '../enum/BitTagType';
-import { CountType } from '../enum/Count';
-import { ResourceJsonKeyType } from '../enum/ResourceJsonKey';
-import { ResourceTagType } from '../enum/ResourceTag';
-
-import { AbstractTagConfig } from './AbstractTagConfig';
-import { TagsConfig } from './TagsConfig';
-import { ConfigKeyType } from './enum/ConfigKey';
+import { BitTagType, type BitTagTypeType } from '../enum/BitTagType.ts';
+import { type CountType } from '../enum/Count.ts';
+import { type ResourceJsonKeyType } from '../enum/ResourceJsonKey.ts';
+import { type ResourceTagType } from '../enum/ResourceTag.ts';
+import { AbstractTagConfig } from './AbstractTagConfig.ts';
+import { type ConfigKeyType } from './enum/ConfigKey.ts';
+import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
   includeChains?: boolean;
@@ -25,7 +24,17 @@ class ResourceTagConfig extends AbstractTagConfig {
     // astKey: PropertyAstKeyType|undefined,
     deprecated: string | undefined,
   ) {
-    super(BitTagType.resource, configKey, tag, maxCount, minCount, chain, jsonKey, undefined, deprecated);
+    super(
+      BitTagType.resource,
+      configKey,
+      tag,
+      maxCount,
+      minCount,
+      chain,
+      jsonKey,
+      undefined,
+      deprecated,
+    );
 
     // TODO
   }

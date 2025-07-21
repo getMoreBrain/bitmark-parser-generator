@@ -1,16 +1,14 @@
-import { Config } from '../../../../config/Config';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { Tag } from '../../../../model/enum/Tag';
-
-import { itemLeadTagContentProcessor } from './ItemLeadTagContentProcessor';
-
+import { Config } from '../../../../config/Config.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { Tag } from '../../../../model/enum/Tag.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+} from '../BitmarkPegParserTypes.ts';
+import { itemLeadTagContentProcessor } from './ItemLeadTagContentProcessor.ts';
 
 function itemLeadChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -39,7 +37,11 @@ function buildItemLead(
   const itemLeadConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
   const chainContent = [content, ...(content.chain ?? [])];
 
-  const chainTags = context.bitContentProcessor(BitContentLevel.Chain, itemLeadConfig?.chain, chainContent);
+  const chainTags = context.bitContentProcessor(
+    BitContentLevel.Chain,
+    itemLeadConfig?.chain,
+    chainContent,
+  );
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('item lead TAGS', chainTags);
 

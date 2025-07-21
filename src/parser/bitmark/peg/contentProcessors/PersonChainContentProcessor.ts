@@ -1,20 +1,22 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { ResourceTag } from '../../../../model/enum/ResourceTag';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { PersonJson } from '../../../../model/json/BitJson';
-import { ImageResourceWrapperJson, ResourceJson } from '../../../../model/json/ResourceJson';
-import { StringUtils } from '../../../../utils/StringUtils';
-
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { ResourceTag } from '../../../../model/enum/ResourceTag.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { type PersonJson } from '../../../../model/json/BitJson.ts';
 import {
-  BitContent,
+  type ImageResourceWrapperJson,
+  type ResourceJson,
+} from '../../../../model/json/ResourceJson.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
+import {
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+} from '../BitmarkPegParserTypes.ts';
 
 function personChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -34,10 +36,13 @@ function personChainContentProcessor(
   const { propertyTitle, resources } = tags;
 
   // Extract the name from the content tag
-  const name = Breakscape.unbreakscape(StringUtils.trimmedString(content.value) as BreakscapedString, {
-    format: TextFormat.bitmarkText,
-    location: TextLocation.tag,
-  });
+  const name = Breakscape.unbreakscape(
+    StringUtils.trimmedString(content.value) as BreakscapedString,
+    {
+      format: TextFormat.bitmarkText,
+      location: TextLocation.tag,
+    },
+  );
 
   // Extract the title from the propertyTitle tag
   const title = StringUtils.trimmedString(propertyTitle);
@@ -78,7 +83,9 @@ function extractAvatarImage(
     context.parser.excessResources = excessResources;
 
     // Add an warning to warn about the excess resources
-    context.addWarning(`${excessResources.length} excess resource(s) present in the [@person] chain.`);
+    context.addWarning(
+      `${excessResources.length} excess resource(s) present in the [@person] chain.`,
+    );
   }
 
   return avatarImage;

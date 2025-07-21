@@ -1,4 +1,4 @@
-import { ParserLocation } from './ParserLocation';
+import { type ParserLocation } from './ParserLocation.ts';
 
 export interface ParserError {
   message: string;

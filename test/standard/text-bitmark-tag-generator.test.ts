@@ -1,24 +1,27 @@
-import { describe, test } from '@jest/globals';
 // import deepEqual from 'deep-equal';
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { TextGenerator } from '../../src/generator/text/TextGenerator';
-import { TextFormat } from '../../src/model/enum/TextFormat';
-import { TextLocation } from '../../src/model/enum/TextLocation';
-import { TextParser } from '../../src/parser/text/TextParser';
-import { FileUtils } from '../../src/utils/FileUtils';
-import { deepDiffMapper } from '../utils/deepDiffMapper';
+import fs from 'fs-extra';
+import { describe, expect, test } from 'vitest';
 
-import { isDebugPerformance } from './config/config-test';
-import { getTestFiles, getTestFilesDir } from './config/config-text-bitmark-tag-parser-files';
+import { TextGenerator } from '../../src/generator/text/TextGenerator.ts';
+import { TextFormat } from '../../src/model/enum/TextFormat.ts';
+import { TextLocation } from '../../src/model/enum/TextLocation.ts';
+import { TextParser } from '../../src/parser/text/TextParser.ts';
+import { FileUtils } from '../../src/utils/FileUtils.ts';
+import { deepDiffMapper } from '../utils/deepDiffMapper.ts';
+import { isDebugPerformance } from './config/config-test.ts';
+import { getTestFiles, getTestFilesDir } from './config/config-text-bitmark-tag-parser-files.ts';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const DEBUG_PERFORMANCE = isDebugPerformance();
 
 const TEST_FILES = getTestFiles();
 const TEST_INPUT_DIR = getTestFilesDir();
 // const JSON_INPUT_DIR = path.resolve(TEST_INPUT_DIR, './json');
-const TEST_OUTPUT_DIR = path.resolve(__dirname, './results/text-bitmark-tag-generator/output');
+const TEST_OUTPUT_DIR = path.resolve(dirname, './results/text-bitmark-tag-generator/output');
 
 const textGenerator = new TextGenerator();
 const textParser = new TextParser();
@@ -115,7 +118,11 @@ describe('text-bitmark-tag-generator', () => {
 
         // Convert the JSON to text
         performance.mark('GEN:Start');
-        const text = textGenerator.generateSync(originalJson, TextFormat.bitmarkText, TextLocation.tag);
+        const text = textGenerator.generateSync(
+          originalJson,
+          TextFormat.bitmarkText,
+          TextLocation.tag,
+        );
 
         // Write the new text to file
         fs.writeFileSync(generatedMarkupFile, text, {
@@ -157,7 +164,8 @@ describe('text-bitmark-tag-generator', () => {
 
         // Print performance information
         if (DEBUG_PERFORMANCE) {
-          const genTimeSecs = Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
+          const genTimeSecs =
+            Math.round(performance.measure('GEN', 'GEN:Start', 'GEN:End').duration) / 1000;
           console.log(`'${fileId}' timing; GEN: ${genTimeSecs} s`);
         }
 

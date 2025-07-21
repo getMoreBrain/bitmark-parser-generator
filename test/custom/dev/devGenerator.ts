@@ -6,13 +6,17 @@ Copyright ©2023 Get More Brain
 
 */
 
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator';
-import { Ast } from '../../../src/ast/Ast';
-import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator';
-import { JsonParser } from '../../../src/parser/json/JsonParser';
+import fs from 'fs-extra';
+
+import { Ast } from '../../../src/ast/Ast.ts';
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator.ts';
+import { BitmarkStringGenerator } from '../../../src/generator/bitmark/BitmarkStringGenerator.ts';
+import { JsonParser } from '../../../src/parser/json/JsonParser.ts';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const jsonParser = new JsonParser();
 const ast = new Ast();
@@ -20,7 +24,7 @@ const bitmarkParserGenerator = new BitmarkParserGenerator();
 
 class DevGenerator {
   async test(debug?: boolean): Promise<void> {
-    const filename = path.resolve(__dirname, '../../..', 'assets', 'test.json');
+    const filename = path.resolve(dirname, '../../..', 'assets', 'test.json');
 
     if (debug) {
       // Read in the test file

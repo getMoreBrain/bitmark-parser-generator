@@ -1,5 +1,5 @@
-import { ParserLocationRange } from '../../../model/parser/ParserLocationRange';
-import { ParserLocation } from '../../../model/parser/ParserLocation';
+import { type ParserLocation } from '../../../model/parser/ParserLocation.ts';
+import { type ParserLocationRange } from '../../../model/parser/ParserLocationRange.ts';
 
 /**
  * Sourced from: https://github.com/peggyjs/peggy/blob/cdf878e4ee59ab9d3e5199abb87ef34a8d7ce642/lib/grammar-location.js

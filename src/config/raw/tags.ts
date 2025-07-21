@@ -1,6 +1,6 @@
-import { _TagsConfig } from '../../model/config/_Config';
-import { TagConfigKey } from '../../model/config/enum/TagConfigKey';
-import { Tag } from '../../model/enum/Tag';
+import { type _TagsConfig } from '../../model/config/_Config.ts';
+import { TagConfigKey } from '../../model/config/enum/TagConfigKey.ts';
+import { Tag } from '../../model/enum/Tag.ts';
 
 const TAGS: _TagsConfig = {
   [TagConfigKey.title]: {

@@ -1,4 +1,4 @@
-import { EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType, superenum } from '@ncoderz/superenum';
 
 const BitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
@@ -120,7 +120,8 @@ const BitType = superenum({
   coachAudioTranscript: 'coach-audio-transcript',
   coachCallToActionChecklist: 'coach-call-to-action-checklist',
   coachCallToActionCloze: 'coach-call-to-action-cloze',
-  coachCallToActionClozeAndMultipleChoiceText: 'coach-call-to-action-cloze-and-multiple-choice-text',
+  coachCallToActionClozeAndMultipleChoiceText:
+    'coach-call-to-action-cloze-and-multiple-choice-text',
   coachCallToActionEssay: 'coach-call-to-action-essay',
   coachCallToActionMultipleChoiceText: 'coach-call-to-action-multiple-choice-text',
   coachHomeRules: 'coach-home-rules',
@@ -166,11 +167,16 @@ const BitType = superenum({
   conversationRight1Scream: 'conversation-right-1-scream',
   conversationRight1Thought: 'conversation-right-1-thought',
   clozeAndMultipleChoiceTextConversationLeft1: 'cloze-and-multiple-choice-text-conversation-left-1',
-  clozeAndMultipleChoiceTextConversationLeft1Scream: 'cloze-and-multiple-choice-text-conversation-left-1-scream',
-  clozeAndMultipleChoiceTextConversationLeft1Thought: 'cloze-and-multiple-choice-text-conversation-left-1-thought',
-  clozeAndMultipleChoiceTextConversationRight1: 'cloze-and-multiple-choice-text-conversation-right-1',
-  clozeAndMultipleChoiceTextConversationRight1Scream: 'cloze-and-multiple-choice-text-conversation-right-1-scream',
-  clozeAndMultipleChoiceTextConversationRight1Thought: 'cloze-and-multiple-choice-text-conversation-right-1-thought',
+  clozeAndMultipleChoiceTextConversationLeft1Scream:
+    'cloze-and-multiple-choice-text-conversation-left-1-scream',
+  clozeAndMultipleChoiceTextConversationLeft1Thought:
+    'cloze-and-multiple-choice-text-conversation-left-1-thought',
+  clozeAndMultipleChoiceTextConversationRight1:
+    'cloze-and-multiple-choice-text-conversation-right-1',
+  clozeAndMultipleChoiceTextConversationRight1Scream:
+    'cloze-and-multiple-choice-text-conversation-right-1-scream',
+  clozeAndMultipleChoiceTextConversationRight1Thought:
+    'cloze-and-multiple-choice-text-conversation-right-1-thought',
   cookArrangement: 'cook-arrangement',
   cookIngredients: 'cook-ingredients',
   cookInsert: 'cook-insert',
@@ -442,7 +448,8 @@ const BitType = superenum({
   smartStandardFormulaNonNormative: 'smart-standard-formula-non-normative',
   smartStandardFormulaNormative: 'smart-standard-formula-normative',
   smartStandardImageFigureNonNormative: 'smart-standard-image-figure-non-normative',
-  smartStandardImageFigureNonNormativeCollapsible: 'smart-standard-image-figure-non-normative-collapsible',
+  smartStandardImageFigureNonNormativeCollapsible:
+    'smart-standard-image-figure-non-normative-collapsible',
   smartStandardImageFigureNormative: 'smart-standard-image-figure-normative',
   smartStandardImageFigureNormativeCollapsible: 'smart-standard-image-figure-normative-collapsible',
   smartStandardLegend: 'smart-standard-legend',
@@ -467,15 +474,19 @@ const BitType = superenum({
   smartStandardRemarkNormative: 'smart-standard-remark-normative',
   smartStandardRemarkNormativeCollapsible: 'smart-standard-remark-normative-collapsible',
   smartStandardRemarkTableImageNonNormative: 'smart-standard-remark-table-image-non-normative',
-  smartStandardRemarkTableImageNonNormativeCollapsible: 'smart-standard-remark-table-image-non-normative-collapsible',
+  smartStandardRemarkTableImageNonNormativeCollapsible:
+    'smart-standard-remark-table-image-non-normative-collapsible',
   smartStandardRemarkTableImageNormative: 'smart-standard-remark-table-image-normative',
-  smartStandardRemarkTableImageNormativeCollapsible: 'smart-standard-remark-table-image-normative-collapsible',
+  smartStandardRemarkTableImageNormativeCollapsible:
+    'smart-standard-remark-table-image-normative-collapsible',
   smartStandardRemarkTableNonNormative: 'smart-standard-remark-table-non-normative',
-  smartStandardRemarkTableNonNormativeCollapsible: 'smart-standard-remark-table-non-normative-collapsible',
+  smartStandardRemarkTableNonNormativeCollapsible:
+    'smart-standard-remark-table-non-normative-collapsible',
   smartStandardRemarkTableNormative: 'smart-standard-remark-table-normative',
   smartStandardRemarkTableNormativeCollapsible: 'smart-standard-remark-table-normative-collapsible',
   smartStandardTableImageNonNormative: 'smart-standard-table-image-non-normative',
-  smartStandardTableImageNonNormativeCollapsible: 'smart-standard-table-image-non-normative-collapsible',
+  smartStandardTableImageNonNormativeCollapsible:
+    'smart-standard-table-image-non-normative-collapsible',
   smartStandardTableImageNormative: 'smart-standard-table-image-normative',
   smartStandardTableImageNormativeCollapsible: 'smart-standard-table-image-normative-collapsible',
   smartStandardTableNonNormative: 'smart-standard-table-non-normative',

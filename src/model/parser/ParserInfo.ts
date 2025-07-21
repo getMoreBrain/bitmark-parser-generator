@@ -1,4 +1,4 @@
-import { ParserError } from './ParserError';
+import { type ParserError } from './ParserError.ts';
 
 export interface ParserInfo {
   version?: string;

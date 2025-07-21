@@ -1,24 +1,23 @@
-/* eslint-disable arca/import-ordering */
-import { EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType, superenum } from '@ncoderz/superenum';
 
-import { Ast } from './ast/Ast';
-import { BitmarkOptions } from './generator/bitmark/BitmarkGenerator';
-import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator';
-import { JsonOptions } from './generator/json/JsonGenerator';
-import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator';
-import { BitmarkAst } from './model/ast/Nodes';
-import { BitmarkParserType, BitmarkParserTypeType } from './model/enum/BitmarkParserType';
-import { BitmarkParser } from './parser/bitmark/BitmarkParser';
-import { JsonParser } from './parser/json/JsonParser';
-import { env } from './utils/env/Env';
-import { BitmarkVersionType } from './model/enum/BitmarkVersion';
-import { InfoBuilder, SupportedBit } from './info/InfoBuilder';
-import { InfoType, InfoTypeType } from './model/info/enum/InfoType';
-import { InfoFormat, InfoFormatType } from './model/info/enum/InfoFormat';
-import { Config } from './config/Config';
-// import { TextFormat, TextFormatType } from './model/enum/TextFormat';
-import { TextGenerator } from './generator/text/TextGenerator';
-import { TextParser } from './parser/text/TextParser';
+import { Ast } from './ast/Ast.ts';
+import { Config } from './config/Config.ts';
+import { type BitmarkOptions } from './generator/bitmark/BitmarkGenerator.ts';
+import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator.ts';
+import { type JsonOptions } from './generator/json/JsonGenerator.ts';
+import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator.ts';
+// import { TextFormat, TextFormatType } from './model/enum/TextFormat.ts';
+import { TextGenerator } from './generator/text/TextGenerator.ts';
+import { InfoBuilder, type SupportedBit } from './info/InfoBuilder.ts';
+import { type BitmarkAst } from './model/ast/Nodes.ts';
+import { BitmarkParserType, type BitmarkParserTypeType } from './model/enum/BitmarkParserType.ts';
+import { type BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
+import { InfoFormat, type InfoFormatType } from './model/info/enum/InfoFormat.ts';
+import { InfoType, type InfoTypeType } from './model/info/enum/InfoType.ts';
+import { BitmarkParser } from './parser/bitmark/BitmarkParser.ts';
+import { JsonParser } from './parser/json/JsonParser.ts';
+import { TextParser } from './parser/text/TextParser.ts';
+import { env } from './utils/env/Env.ts';
 
 /*
  * NOTE:
@@ -26,38 +25,32 @@ import { TextParser } from './parser/text/TextParser';
  * We want to be able to strip out the NodeJS specific functions from the final bundle.
  * Any code between the comments STRIP:START and STRIP:END will be removed.
  *
- * However, the Typescript compiler will remove comments that it does not believe are associated with code.
+ * However, the prettifier will move comments that it does not believe are associated with code.
+ *
  * Therefore we have to use some dummy code to prevent it from removing the STRIP stripping comments.
  */
 const STRIP = 0;
 
 /* STRIP:START */
-STRIP;
+STRIP; // eslint-disable-line @typescript-eslint/no-unused-expressions
 
-/* eslint-disable arca/import-ordering */
-import * as fs from 'fs-extra';
-import path from 'path';
+import path from 'node:path';
 
-import { FileOptions } from './ast/writer/FileWriter';
-import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator';
-import { JsonFileGenerator } from './generator/json/JsonFileGenerator';
-import { Breakscape } from './breakscaping/Breakscape';
-import { BreakscapedString } from './model/ast/BreakscapedString';
-import { BitType, BitTypeType } from './model/enum/BitType';
-import { BitTagType } from './model/enum/BitTagType';
-import { PropertyFormat } from './model/enum/PropertyFormat';
-import { PropertyTagConfig } from './model/config/PropertyTagConfig';
-import { BITS } from './config/raw/bits';
-import { _BitConfig, _GroupsConfig } from './model/config/_Config';
-import { TAGS } from './config/raw/tags';
-import { PROPERTIES } from './config/raw/properties';
-import { GROUPS } from './config/raw/groups';
-import { TextLocation, TextLocationType } from './model/enum/TextLocation';
-import { BodyTextFormatType } from './model/enum/BodyTextFormat';
-import { TextFormat, TextFormatType } from './model/enum/TextFormat';
+import fs from 'fs-extra';
+
+import { type FileOptions } from './ast/writer/FileWriter.ts';
+import { Breakscape } from './breakscaping/Breakscape.ts';
+import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator.ts';
+import { JsonFileGenerator } from './generator/json/JsonFileGenerator.ts';
+import { ConfigBuilder } from './info/ConfigBuilder.ts';
+import { type BreakscapedString } from './model/ast/BreakscapedString.ts';
+import type { _BitConfig, _GroupsConfig } from './model/config/_Config.ts';
+import { type BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
+import { TextFormat, type TextFormatType } from './model/enum/TextFormat.ts';
+import { TextLocation, type TextLocationType } from './model/enum/TextLocation.ts';
 
 /* STRIP:END */
-STRIP;
+STRIP; // eslint-disable-line @typescript-eslint/no-unused-expressions
 
 /**
  * Info options for the parser
@@ -92,6 +85,13 @@ export interface InfoOptions {
    * If prettify is set, a string will be returned if possible.
    */
   prettify?: boolean | number;
+}
+
+/**
+ * Config generation options for the parser
+ */
+export interface GenerateConfigOptions {
+  //
 }
 
 /**
@@ -456,9 +456,9 @@ class BitmarkParserGenerator {
   /**
    * Generate the new configuration for the bitmark parser.
    */
-  public async generateConfig(_options?: InfoOptions): Promise<unknown> {
-    // const opts: InfoOptions = Object.assign({}, options);
-    // const builder = new InfoBuilder();
+  public async generateConfig(options?: GenerateConfigOptions): Promise<unknown> {
+    const opts: GenerateConfigOptions = Object.assign({}, options);
+    const builder = new ConfigBuilder();
     // let res: unknown;
     // const outputString = !opts.outputFormat || opts.outputFormat === InfoFormat.text;
     // const outputJson = opts.outputFormat === InfoFormat.json;
@@ -467,370 +467,7 @@ class BitmarkParserGenerator {
     // const includeNonDeprecated = all || !deprecated;
     // const includeDeprecated = all || deprecated;
 
-    const bitConfigs: (_BitConfig & { bitType: BitTypeType })[] = [];
-    const groupConfigs: (_GroupsConfig & { key: string })[] = [];
-
-    for (const bt of BitType.values()) {
-      const bitType = Config.getBitType(bt);
-
-      const _bitConfig: _BitConfig & { bitType: BitTypeType } = BITS[bitType] as _BitConfig & { bitType: BitTypeType };
-      if (_bitConfig) {
-        _bitConfig.bitType = bitType;
-        bitConfigs.push(_bitConfig);
-      }
-
-      // const config: BitConfig = Config.getBitConfig(bitType);
-      // bitConfigs.push(config);
-    }
-
-    for (const [k, g] of Object.entries(GROUPS)) {
-      const g2 = g as unknown as _GroupsConfig & { key: string };
-      let k2 = k as string;
-      if (k.startsWith('group_')) k2 = k2.substring(6);
-      k2 = '_' + k2;
-      g2.key = k2;
-      groupConfigs.push(g2);
-    }
-
-    const outputFolder = 'tmp';
-    const outputFolderBits = path.join(outputFolder, 'bits');
-    const outputFolderGroups = path.join(outputFolder, 'groups');
-    fs.ensureDirSync(outputFolderBits);
-    fs.ensureDirSync(outputFolderGroups);
-
-    const fileWrites: Promise<void>[] = [];
-
-    // BitConfigs
-    for (const b of bitConfigs) {
-      const inherits = [];
-      const tags = [];
-
-      const tagEntriesTypeOrder = [BitTagType.tag, BitTagType.property, BitTagType.resource, BitTagType.group];
-      const tagEntries = Object.entries(b.tags ?? []).sort((a, b) => {
-        const tagA = a[1];
-        const tagB = b[1];
-        const typeOrder = tagEntriesTypeOrder.indexOf(tagA.type) - tagEntriesTypeOrder.indexOf(tagB.type);
-        return typeOrder;
-      });
-
-      if (b.baseBitType) inherits.push(b.baseBitType);
-
-      for (const [tagKey, tag] of tagEntries) {
-        let tagName = tagKey;
-        let tagKeyPrefix = '';
-        let format = '';
-        let description = '';
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        let chain: any = undefined;
-
-        if (tag.type === BitTagType.tag) {
-          const resolvedTag = TAGS[tag.configKey];
-          tagName = resolvedTag.tag;
-
-          if (tagName === '%') {
-            description = 'Item';
-            chain = {
-              key: '%',
-              format,
-              min: tag.minCount,
-              max: tag.maxCount,
-              description: 'Lead',
-              chain: {
-                key: '%',
-                format,
-                min: tag.minCount,
-                max: tag.maxCount,
-                description: 'Page number',
-                chain: {
-                  key: '%',
-                  format,
-                  min: tag.minCount,
-                  max: tag.maxCount,
-                  description: 'Margin number',
-                },
-              },
-            };
-          } else if (tagName === '!') {
-            description = 'Instruction';
-          } else if (tagName === '?') {
-            description = 'Hint';
-          } else if (tagName === '#') {
-            description = 'Title';
-          } else if (tagName === '##') {
-            description = 'Sub-title';
-          } else if (tagName === '▼') {
-            description = 'Anchor';
-          } else if (tagName === '►') {
-            description = 'Reference';
-          } else if (tagName === '$') {
-            description = 'Sample solution';
-          } else if (tagName === '&') {
-            description = 'Resource';
-          } else if (tagName === '+') {
-            description = 'True statement';
-          } else if (tagName === '-') {
-            description = 'False statement';
-          } else if (tagName === '_') {
-            description = 'Gap';
-          } else if (tagName === '=') {
-            description = 'Mark';
-          }
-
-          format = 'bitmark--';
-        } else if (tag.type === BitTagType.property) {
-          const resolvedProperty = PROPERTIES[tag.configKey];
-          tagName = resolvedProperty.tag;
-
-          tagKeyPrefix = '@';
-
-          const property = resolvedProperty as PropertyTagConfig;
-
-          // format
-          if (property.format === PropertyFormat.plainText) {
-            format = 'string';
-          } else if (property.format === PropertyFormat.boolean) {
-            format = 'bool';
-          } else if (property.format === PropertyFormat.bitmarkText) {
-            format = 'bitmark';
-          } else if (property.format === PropertyFormat.number) {
-            format = 'number';
-          }
-        } else if (tag.type === BitTagType.resource) {
-          tagKeyPrefix = '&';
-        } else if (tag.type === BitTagType.group) {
-          tagKeyPrefix = '@';
-          let k = tag.configKey as string;
-          if (k.startsWith('group_')) k = k.substring(6);
-          k = '_' + k;
-          inherits.push(k);
-          continue;
-        }
-
-        const t = {
-          key: tagKeyPrefix + tagName,
-          format,
-          default: null,
-          alwaysInclude: false,
-          min: tag.minCount == null ? 0 : tag.minCount,
-          max: tag.maxCount == null ? 1 : tag.maxCount,
-          description,
-          chain,
-          // raw: {
-          //   ...tag,
-          // },
-        };
-        tags.push(t);
-      }
-
-      const bitJson = {
-        name: b.bitType,
-        description: '',
-        since: b.since,
-        deprecated: b.deprecated,
-        history: [
-          {
-            version: b.since,
-            changes: ['Initial version'],
-          },
-        ],
-        format: b.textFormatDefault ?? 'bitmark--',
-        bodyAllowed: b.bodyAllowed ?? true,
-        bodyRequired: b.bodyRequired ?? false,
-        footerAllowed: b.footerAllowed ?? true,
-        footerRequired: b.footerRequired ?? false,
-        resourceAttachmentAllowed: b.resourceAttachmentAllowed ?? true,
-        inherits,
-        tags,
-      };
-
-      const output = path.join(outputFolderBits, `${b.bitType}.jsonc`);
-      const str = JSON.stringify(bitJson, null, 2);
-      fileWrites.push(fs.writeFile(output, str));
-
-      // const bitType = b.bitType;
-      // const bitType2 = Config.getBitType(bitType);
-      // if (bitType !== bitType2) {
-      //   console.log(`BitType: ${bitType} => ${bitType2}`);
-      // }
-    }
-
-    // GroupConfigs
-    const writeGroupConfigs = (groupConfigs: (_GroupsConfig & { key: string })[]) => {
-      for (const g of groupConfigs) {
-        const inherits = [];
-        const tags = [];
-
-        // if (g.key == '_resourceImage') debugger;
-
-        const tagEntriesTypeOrder = [BitTagType.tag, BitTagType.property, BitTagType.resource, BitTagType.group];
-        const tagEntries = Object.entries(g.tags ?? []).sort((a, b) => {
-          const tagA = a[1];
-          const tagB = b[1];
-          const typeOrder = tagEntriesTypeOrder.indexOf(tagA.type) - tagEntriesTypeOrder.indexOf(tagB.type);
-          return typeOrder;
-        });
-
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        for (const [_tagKey, tag] of tagEntries) {
-          let tagName = tag.configKey as string;
-          let tagKeyPrefix = '';
-          let format = '';
-          let description = '';
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          let chain: any = undefined;
-
-          if (tag.type === BitTagType.tag) {
-            const resolvedTag = TAGS[tag.configKey];
-            tagName = resolvedTag.tag;
-
-            if (tagName === '%') {
-              description = 'Item';
-              chain = {
-                key: '%',
-                format,
-                min: tag.minCount,
-                max: tag.maxCount,
-                description: 'Lead',
-                chain: {
-                  key: '%',
-                  format,
-                  min: tag.minCount,
-                  max: tag.maxCount,
-                  description: 'Page number',
-                  chain: {
-                    key: '%',
-                    format,
-                    min: tag.minCount,
-                    max: tag.maxCount,
-                    description: 'Margin number',
-                  },
-                },
-              };
-            } else if (tagName === '!') {
-              description = 'Instruction';
-            } else if (tagName === '?') {
-              description = 'Hint';
-            } else if (tagName === '#') {
-              description = 'Title';
-            } else if (tagName === '##') {
-              description = 'Sub-title';
-            } else if (tagName === '▼') {
-              description = 'Anchor';
-            } else if (tagName === '►') {
-              description = 'Reference';
-            } else if (tagName === '$') {
-              description = 'Sample solution';
-            } else if (tagName === '&') {
-              description = 'Resource';
-            } else if (tagName === '+') {
-              description = 'True statement';
-            } else if (tagName === '-') {
-              description = 'False statement';
-            } else if (tagName === '_') {
-              description = 'Gap';
-            } else if (tagName === '=') {
-              description = 'Mark';
-            }
-
-            format = 'bitmark--';
-          } else if (tag.type === BitTagType.property) {
-            const resolvedProperty = PROPERTIES[tag.configKey];
-            tagName = resolvedProperty.tag;
-
-            tagKeyPrefix = '@';
-
-            const property = resolvedProperty as PropertyTagConfig;
-
-            // format
-            if (property.format === PropertyFormat.plainText) {
-              format = 'string';
-            } else if (property.format === PropertyFormat.boolean) {
-              format = 'bool';
-            } else if (property.format === PropertyFormat.bitmarkText) {
-              format = 'bitmark';
-            } else if (property.format === PropertyFormat.number) {
-              format = 'number';
-            }
-          } else if (tag.type === BitTagType.resource) {
-            tagKeyPrefix = '&';
-            format = 'string';
-          } else if (tag.type === BitTagType.group) {
-            tagKeyPrefix = '@';
-            let k = tag.configKey as string;
-            if (k.startsWith('group_')) k = k.substring(6);
-            k = '_' + k;
-            inherits.push(k);
-            continue;
-          }
-
-          const t = {
-            key: tagKeyPrefix + tagName,
-            format,
-            default: null,
-            alwaysInclude: false,
-            min: tag.minCount == null ? 0 : tag.minCount,
-            max: tag.maxCount == null ? 1 : tag.maxCount,
-            description,
-            chain,
-            // raw: {
-            //   ...tag,
-            // },
-          };
-          tags.push(t);
-        }
-
-        const bitJson = {
-          name: g.key,
-          description: '',
-          since: 'UNKNOWN',
-          deprecated: g.deprecated,
-          history: [
-            {
-              version: 'UNKNOWN',
-              changes: ['Initial version'],
-            },
-          ],
-          inherits,
-          tags,
-          // cards: [
-          //   {
-          //     card: null,
-          //     side: 1,
-          //     variant: null,
-          //     description: '',
-          //     tags: [],
-          //   },
-          //   {
-          //     card: null,
-          //     side: 2,
-          //     variant: 1,
-          //     description: '',
-          //     tags: [],
-          //   },
-          //   {
-          //     card: null,
-          //     side: 2,
-          //     variant: null,
-          //     description: '',
-          //     tags: [],
-          //   },
-          // ],
-        };
-
-        const output = path.join(outputFolderGroups, `${g.key}.jsonc`);
-        const str = JSON.stringify(bitJson, null, 2);
-        fileWrites.push(fs.writeFile(output, str));
-
-        // const bitType = b.bitType;
-        // const bitType2 = Config.getBitType(bitType);
-        // if (bitType !== bitType2) {
-        //   console.log(`BitType: ${bitType} => ${bitType2}`);
-        // }
-      }
-    };
-    writeGroupConfigs(groupConfigs);
-
-    await Promise.all(fileWrites);
+    await builder.build(opts);
 
     return void 0;
   }
@@ -1240,7 +877,8 @@ class BitmarkParserGenerator {
     const opts: ConvertTextOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
-    const textFormat: TextFormatType = TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+    const textFormat: TextFormatType =
+      TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
@@ -1321,7 +959,8 @@ class BitmarkParserGenerator {
 
     const opts: BreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
-    const textFormat: TextFormatType = TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+    const textFormat: TextFormatType =
+      TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
@@ -1385,7 +1024,8 @@ class BitmarkParserGenerator {
 
     const opts: UnbreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
-    const textFormat: TextFormatType = TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+    const textFormat: TextFormatType =
+      TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: BreakscapedString = input as BreakscapedString;
@@ -1436,7 +1076,11 @@ class BitmarkParserGenerator {
    * @param forceStringify
    * @returns
    */
-  private jsonStringifyPrettify = (json: unknown, options: JsonOptions, forceStringify?: boolean): unknown => {
+  private jsonStringifyPrettify = (
+    json: unknown,
+    options: JsonOptions,
+    forceStringify?: boolean,
+  ): unknown => {
     const prettifySpace = options.prettify === true ? 2 : options.prettify || undefined;
     const stringify = forceStringify || options.stringify === true || prettifySpace !== undefined;
 

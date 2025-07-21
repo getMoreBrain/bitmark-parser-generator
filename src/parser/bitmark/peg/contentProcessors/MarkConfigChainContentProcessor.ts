@@ -1,21 +1,20 @@
-import { Breakscape } from '../../../../breakscaping/Breakscape';
-import { Config } from '../../../../config/Config';
-import { BreakscapedString } from '../../../../model/ast/BreakscapedString';
-import { TagsConfig } from '../../../../model/config/TagsConfig';
-import { PropertyTag } from '../../../../model/enum/PropertyTag';
-import { TextFormat } from '../../../../model/enum/TextFormat';
-import { TextLocation } from '../../../../model/enum/TextLocation';
-import { MarkConfigJson } from '../../../../model/json/BitJson';
-import { StringUtils } from '../../../../utils/StringUtils';
-
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
+import { Config } from '../../../../config/Config.ts';
+import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { PropertyTag } from '../../../../model/enum/PropertyTag.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
+import { TextLocation } from '../../../../model/enum/TextLocation.ts';
+import { type MarkConfigJson } from '../../../../model/json/BitJson.ts';
+import { StringUtils } from '../../../../utils/StringUtils.ts';
 import {
-  BitContent,
+  type BitContent,
   BitContentLevel,
-  ContentDepthType,
-  BitContentProcessorResult,
-  BitmarkPegParserContext,
-  TypeKeyValue,
-} from '../BitmarkPegParserTypes';
+  type BitContentProcessorResult,
+  type BitmarkPegParserContext,
+  type ContentDepthType,
+  type TypeKeyValue,
+} from '../BitmarkPegParserTypes.ts';
 
 function markConfigChainContentProcessor(
   context: BitmarkPegParserContext,
@@ -34,7 +33,6 @@ function markConfigChainContentProcessor(
 
   const markTagConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { mark: _ignoreMark, ...tags } = context.bitContentProcessor(
     BitContentLevel.Chain,
     markTagConfig?.chain,

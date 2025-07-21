@@ -1,8 +1,11 @@
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import { FileUtils } from '../../../src/utils/FileUtils';
+import { FileUtils } from '../../../src/utils/FileUtils.ts';
 
-const TEST_FILES_DIR = path.resolve(__dirname, '../input/text-plain-tag-breakscape');
+const dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const TEST_FILES_DIR = path.resolve(dirname, '../input/text-plain-tag-breakscape');
 
 // List all test files in the directory
 const TEST_FILES = (() => {
@@ -20,4 +23,4 @@ function getTestFiles(): string[] {
   return TEST_FILES;
 }
 
-export { getTestFilesDir, getTestFiles };
+export { getTestFiles, getTestFilesDir };
