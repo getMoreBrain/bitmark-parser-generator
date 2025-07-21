@@ -131,7 +131,7 @@
     "jsdom": "^26.1.0",
     "node-polyfill-webpack-plugin": "^4.1.0",
     "os-browserify": "^0.3.0",
-    "peggy": "^4.2.0",
+    "peggy": "^5.0.5",
     "prettier": "^3.6.2",
     "terser-webpack-plugin": "^5.3.14",
     "tsup": "^8.5.0",
