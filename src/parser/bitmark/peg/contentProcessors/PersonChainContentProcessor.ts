@@ -1,7 +1,7 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
-import { ResourceTag } from '../../../../model/enum/ResourceTag.ts';
+import { ResourceType } from '../../../../model/enum/ResourceType.ts';
 import { TextFormat } from '../../../../model/enum/TextFormat.ts';
 import { TextLocation } from '../../../../model/enum/TextLocation.ts';
 import { type PersonJson } from '../../../../model/json/BitJson.ts';
@@ -70,7 +70,7 @@ function extractAvatarImage(
 
   if (resources) {
     for (const r of resources.reverse()) {
-      if (!avatarImage && ResourceTag.image === r.type) {
+      if (!avatarImage && ResourceType.image === r.type) {
         avatarImage = r;
       } else {
         excessResources.push(r);

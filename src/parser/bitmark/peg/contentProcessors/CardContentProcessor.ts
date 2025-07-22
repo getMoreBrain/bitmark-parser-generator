@@ -5,7 +5,7 @@ import { type JsonText, type TextAst } from '../../../../model/ast/TextNodes.ts'
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey.ts';
 import { BitType, type BitTypeType } from '../../../../model/enum/BitType.ts';
 import { BodyBitType } from '../../../../model/enum/BodyBitType.ts';
-import { ResourceTag } from '../../../../model/enum/ResourceTag.ts';
+import { ResourceType } from '../../../../model/enum/ResourceType.ts';
 import { type TextFormatType } from '../../../../model/enum/TextFormat.ts';
 import {
   type BotResponseJson,
@@ -80,61 +80,61 @@ function buildCards(
   const cardSetType = bitConfig.cardSet?.configKey;
 
   switch (cardSetType) {
-    case CardSetConfigKey._flashcard:
-    case CardSetConfigKey._definitionList:
+    case CardSetConfigKey.flashcard:
+    case CardSetConfigKey.definitionList:
       result = parseFlashcardOrDefinitionList(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._elements:
+    case CardSetConfigKey.elements:
       result = parseElements(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._statements:
+    case CardSetConfigKey.statements:
       result = parseStatements(context, bitType, processedCardSet, statementV1, statementsV1);
       break;
 
-    case CardSetConfigKey._feedback:
+    case CardSetConfigKey.feedback:
       result = parseFeedback(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._quiz:
+    case CardSetConfigKey.quiz:
       result = parseQuiz(context, bitType, processedCardSet, choicesV1, responsesV1);
       break;
 
-    case CardSetConfigKey._questions:
+    case CardSetConfigKey.questions:
       result = parseQuestions(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._matchPairs:
+    case CardSetConfigKey.matchPairs:
       // ==> heading / pairs
       result = parseMatchPairs(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._matchMatrix:
+    case CardSetConfigKey.matchMatrix:
       // ==> heading / matrix
       result = parseMatchMatrix(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._pronunciationTable:
+    case CardSetConfigKey.pronunciationTable:
       result = parsePronunciationTable(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._table:
+    case CardSetConfigKey.table:
       // ==> heading / table
       result = parseTable(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._botActionResponses:
+    case CardSetConfigKey.botActionResponses:
       result = parseBotActionResponses(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._ingredients:
+    case CardSetConfigKey.ingredients:
       result = parseIngredients(context, bitType, processedCardSet);
       break;
 
-    case CardSetConfigKey._clozeList:
-    case CardSetConfigKey._exampleBitList:
-    case CardSetConfigKey._bookReferenceList:
+    case CardSetConfigKey.clozeList:
+    case CardSetConfigKey.exampleBitList:
+    case CardSetConfigKey.bookReferenceList:
       result = parseCardBits(context, bitType, textFormat, processedCardSet);
       break;
 
@@ -661,9 +661,9 @@ function parseMatchPairs(
             // TODO - should search the correct resource type based on the bit type
             const resource = resources[0];
             // console.log('WARNING: Match card has resource on first side', tags.resource);
-            if (resource.type === ResourceTag.audio) {
+            if (resource.type === ResourceType.audio) {
               keyAudio = resource as AudioResourceWrapperJson;
-            } else if (resource.type === ResourceTag.image) {
+            } else if (resource.type === ResourceType.image) {
               keyImage = resource as ImageResourceWrapperJson;
             }
           } else {
@@ -872,7 +872,7 @@ function parsePronunciationTable(
         const heading = title && title[1].titleAst;
         const audio: AudioResourceWrapperJson = (
           resources && resources.length > 0
-            ? resources.find((r) => r.type === ResourceTag.audio)
+            ? resources.find((r) => r.type === ResourceType.audio)
             : undefined
         ) as AudioResourceWrapperJson;
 

@@ -1,6 +1,9 @@
 import { type EnumType, superenum } from '@ncoderz/superenum';
 
-const ResourceTag = superenum({
+import { StringUtils } from '../../utils/StringUtils.ts';
+import type { ConfigKeyType } from '../config/enum/ConfigKey.ts';
+
+const ResourceType = superenum({
   unknown: 'unknown',
 
   image: 'image',
@@ -34,6 +37,10 @@ const ResourceTag = superenum({
   imagePlaceholder: 'imagePlaceholder',
 });
 
-export type ResourceTagType = EnumType<typeof ResourceTag>;
+export type ResourceTypeType = EnumType<typeof ResourceType>;
 
-export { ResourceTag };
+function resourceTypeToConfigKey(type: ResourceTypeType): ConfigKeyType {
+  return `&${StringUtils.kebabToCamel(type)}` as ConfigKeyType;
+}
+
+export { ResourceType, resourceTypeToConfigKey };

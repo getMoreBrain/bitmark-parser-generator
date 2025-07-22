@@ -71,7 +71,7 @@ import { type TagsConfig } from '../../../model/config/TagsConfig.ts';
 import { BitType } from '../../../model/enum/BitType.ts';
 import { BodyTextFormat } from '../../../model/enum/BodyTextFormat.ts';
 import { DeprecatedTextFormat } from '../../../model/enum/DeprecatedTextFormat.ts';
-import { ResourceTag } from '../../../model/enum/ResourceTag.ts';
+import { ResourceType } from '../../../model/enum/ResourceType.ts';
 import { TextFormat } from '../../../model/enum/TextFormat.ts';
 import { TextLocation } from '../../../model/enum/TextLocation.ts';
 import { type ParserData } from '../../../model/parser/ParserData.ts';
@@ -398,7 +398,7 @@ class BitmarkPegParserProcessor {
     textFormat = textFormat ?? bitConfig.textFormatDefault;
 
     // Resource type
-    const resourceType = ResourceTag.fromValue(textFormatAndResourceType.resourceType);
+    const resourceType = ResourceType.fromValue(textFormatAndResourceType.resourceType);
     if (textFormatAndResourceType.resourceType && !resourceType) {
       this.addWarning(
         `Invalid resource type '${textFormatAndResourceType.resourceType}', it will be ignored`,
@@ -601,7 +601,6 @@ class BitmarkPegParserProcessor {
           referenceTagContentProcessor(
             this.context,
             contentDepth,
-
             tagsConfig,
             content,
             result,

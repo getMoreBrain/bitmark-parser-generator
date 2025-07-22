@@ -7,18 +7,13 @@ Copyright ©2023 Get More Brain
 */
 
 import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator.ts';
-import { InfoType } from '../../../src/model/info/enum/InfoType.ts';
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
 class DevConfig {
   async run(): Promise<void> {
-    const info = await bitmarkParserGenerator.info({
-      type: InfoType.all,
-      // type: InfoType.bit,
-      // bit: BitType.cloze,
-      // outputFormat: InfoFormat.json,
-      // prettify: true,
+    const info = await bitmarkParserGenerator.generateConfig({
+      //
     });
     console.log(info);
   }

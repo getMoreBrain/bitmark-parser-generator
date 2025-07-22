@@ -1,6 +1,8 @@
 import { type EnumType, superenum } from '@ncoderz/superenum';
 
-const BitTagType = superenum({
+const BitTagConfigKeyType = superenum({
+  unknown: 'unknown', // Unknown tag type, used for error handling
+
   tag: 'tag', // A standard tag
   property: 'property', // A property tag
   resource: 'resource', // A resource tag
@@ -9,6 +11,6 @@ const BitTagType = superenum({
   group: 'group', // A reusable group of tags
 });
 
-export type BitTagTypeType = EnumType<typeof BitTagType>;
+export type BitTagConfigKeyTypeType = EnumType<typeof BitTagConfigKeyType>;
 
-export { BitTagType };
+export { BitTagConfigKeyType };

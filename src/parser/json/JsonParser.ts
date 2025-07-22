@@ -10,7 +10,7 @@ import {
 import { type JsonText } from '../../model/ast/TextNodes.ts';
 import { BitType, type BitTypeType } from '../../model/enum/BitType.ts';
 import { DeprecatedTextFormat } from '../../model/enum/DeprecatedTextFormat.ts';
-import { ResourceTag, type ResourceTagType } from '../../model/enum/ResourceTag.ts';
+import { ResourceType, type ResourceTypeType } from '../../model/enum/ResourceType.ts';
 import { TextFormat, type TextFormatType } from '../../model/enum/TextFormat.ts';
 import {
   type BitJson,
@@ -154,7 +154,7 @@ class JsonParser {
   }
 
   private bitToAst(bit: BitJson, internalComments: string[] | undefined): Bit | undefined {
-    const { statement, product, productVideo, reference: referenceBit, ...bitRest } = bit;
+    const { statement, reference: referenceBit, ...bitRest } = bit;
 
     const isCommented = bit.type === BitType._comment && bit.originalType !== undefined;
 
@@ -180,8 +180,6 @@ class JsonParser {
       resourceType: this.getResourceType(bit.resource),
       isCommented,
       internalComment: internalComments,
-      productList: product,
-      productVideoList: productVideo,
       ...this.processReference(referenceBit), // reference and referenceProperty
       ...this.parseExample(bit.example),
       person: bit.partner ?? bit.person,
@@ -276,9 +274,9 @@ class JsonParser {
     return nodes;
   }
 
-  private getResourceType(resource?: ResourceJson): ResourceTagType | undefined {
+  private getResourceType(resource?: ResourceJson): ResourceTypeType | undefined {
     if (resource) {
-      const resourceKey = ResourceTag.fromValue(resource.type);
+      const resourceKey = ResourceType.fromValue(resource.type);
       return resourceKey;
     }
 

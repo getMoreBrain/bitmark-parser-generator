@@ -14,6 +14,7 @@ node_modules
 .vscode/mise-tools
 
 # PACKAGE SPECIFIC
+/assets/config
 /assets/test
 /assets/test.*
 /assets/classtime

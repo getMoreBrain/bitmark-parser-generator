@@ -1,11 +1,8 @@
-import { BitTagType, type BitTagTypeType } from '../enum/BitTagType.ts';
-import { type CountType } from '../enum/Count.ts';
-import { type PropertyAstKeyType } from '../enum/PropertyAstKey.ts';
-import { type PropertyFormatType } from '../enum/PropertyFormat.ts';
-import { type PropertyJsonKeyType } from '../enum/PropertyJsonKey.ts';
-import { type PropertyTagType } from '../enum/PropertyTag.ts';
+import { BitTagConfigKeyType, type BitTagConfigKeyTypeType } from '../enum/BitTagConfigKeyType.ts';
+import { Count, type CountType } from '../enum/Count.ts';
+import { type TagFormatType } from '../enum/TagFormat.ts';
 import { AbstractTagConfig } from './AbstractTagConfig.ts';
-import { type ConfigKeyType } from './enum/ConfigKey.ts';
+import type { ConfigKeyType } from './enum/ConfigKey.ts';
 import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
@@ -14,38 +11,35 @@ interface ToStringOptions {
 }
 
 class PropertyTagConfig extends AbstractTagConfig {
-  readonly type: BitTagTypeType = BitTagType.property;
+  readonly type: BitTagConfigKeyTypeType = BitTagConfigKeyType.property;
 
-  readonly single?: boolean; // If the property is treated as single rather than an array
-  readonly format?: PropertyFormatType; // How the property is formatted
+  readonly array?: boolean; // If the property is treated as an array rather than a single value
+  readonly format?: TagFormatType; // How the property is formatted
   readonly defaultValue?: string; // The default value of the property - this value can be omitted from the markup
 
   public constructor(
     configKey: ConfigKeyType,
-    tag: PropertyTagType,
+    tag: string,
     maxCount: CountType,
     minCount: number,
     chain: TagsConfig | undefined,
-    jsonKey: PropertyJsonKeyType | undefined,
-    astKey: PropertyAstKeyType | undefined,
-    single: boolean | undefined,
-    format: PropertyFormatType | undefined,
+    jsonKey: string | undefined,
+    format: TagFormatType | undefined,
     defaultValue: string | undefined,
     deprecated: string | undefined,
   ) {
     super(
-      BitTagType.property,
+      BitTagConfigKeyType.property,
       configKey,
       tag,
       maxCount,
       minCount,
       chain,
       jsonKey,
-      astKey,
       deprecated,
     );
 
-    this.single = single;
+    this.array = maxCount === Count.infinity || maxCount > 1;
     this.format = format;
     this.defaultValue = defaultValue;
   }
@@ -58,11 +52,10 @@ class PropertyTagConfig extends AbstractTagConfig {
       if (this.deprecated != null) s += `, deprecated=${this.deprecated}`;
       if (this.maxCount != null) s += `, max=${this.maxCount}`;
       if (this.minCount != null) s += `, min=${this.minCount}`;
-      if (this.single != null) s += `, sgl=${this.single}`;
+      if (this.array != null) s += `, arr=${this.array}`;
       if (this.format != null) s += `, fmt=${this.format}`;
       if (this.defaultValue != null) s += `, def=${this.defaultValue}`;
       if (this.jsonKey != null) s += `, json=${this.jsonKey}`;
-      if (this.astKey != null) s += `, ast=${this.astKey}`;
     }
     s += ']';
 

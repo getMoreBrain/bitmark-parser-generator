@@ -9,13 +9,14 @@ import {
   type CardNode,
   type ExtraProperties,
   type Footer,
+  type Property,
 } from '../model/ast/Nodes.ts';
 import { type JsonText, type TextAst, type TextNode } from '../model/ast/TextNodes.ts';
-import { PropertyConfigKey } from '../model/config/enum/PropertyConfigKey.ts';
+import { ConfigKey } from '../model/config/enum/ConfigKey.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
 import { BodyBitType, type BodyBitTypeType } from '../model/enum/BodyBitType.ts';
 import { DeprecatedTextFormat } from '../model/enum/DeprecatedTextFormat.ts';
-import { ResourceTag, type ResourceTagType } from '../model/enum/ResourceTag.ts';
+import { ResourceType, type ResourceTypeType } from '../model/enum/ResourceType.ts';
 import { TextFormat, type TextFormatType } from '../model/enum/TextFormat.ts';
 import { TextLocation } from '../model/enum/TextLocation.ts';
 import {
@@ -74,6 +75,13 @@ import { BaseBuilder, type BuildContext, type WithExampleJson } from './BaseBuil
 import { ResourceBuilder } from './ResourceBuilder.ts';
 import { NodeValidator } from './rules/NodeValidator.ts';
 
+export interface BuildBitOptions {
+  cardSet?: {
+    sideNo: number; // Side number of the card set
+    variantNo: number; // Variant number of the card set
+  };
+}
+
 /**
  * Builder to build bitmark AST node programmatically
  */
@@ -106,234 +114,237 @@ class Builder extends BaseBuilder {
    * @param data - data for the node
    * @returns
    */
-  buildBit(data: {
-    bitType: BitTypeType;
-    bitLevel: number;
-    textFormat?: TextFormatType;
-    resourceType?: ResourceTagType; // This is optional, it will be inferred from the resource
-    isCommented?: boolean;
-    id?: string | string[];
-    internalComment?: string | string[];
-    customerId?: string;
-    customerExternalId?: string | string[];
-    externalId?: string | string[];
-    spaceId?: string | string[];
-    padletId?: string;
-    jupyterId?: string;
-    jupyterExecutionCount?: number;
-    isPublic?: boolean;
-    isTemplate?: boolean;
-    isTemplateStripTheme?: boolean;
-    aiGenerated?: boolean;
-    machineTranslated?: string;
-    searchIndex?: string | string[];
-    analyticsTag?: string | string[];
-    categoryTag?: string | string[];
-    topicTag?: string | string[];
-    altLangTag?: string;
-    feedbackEngine?: string;
-    feedbackType?: string;
-    disableFeedback?: boolean;
-    diffTo?: string;
-    diffOp?: string;
-    diffRef?: string;
-    diffContext?: string;
-    diffTime?: number;
-    path?: string;
-    releaseVersion?: string;
-    releaseKind?: string;
-    releaseDate?: string;
-    ageRange?: number | number[];
-    lang?: string;
-    language?: string | string[];
-    publisher?: string | string[];
-    publisherName?: string;
-    theme?: string | string[];
-    computerLanguage?: string;
-    target?: string | string[];
-    slug?: string;
-    tag?: string | string[];
-    reductionTag?: string | string[];
-    bubbleTag?: string | string[];
-    levelCEFRp?: string | string[];
-    levelCEFR?: string | string[];
-    levelILR?: string | string[];
-    levelACTFL?: string | string[];
-    icon?: string;
-    iconTag?: string;
-    colorTag?: string | string[];
-    flashcardSet?: string | string[];
-    subtype?: string;
-    bookAlias?: string | string[];
-    bookDiff?: string;
-    coverImage?: string | string[];
-    coverColor?: string;
-    publications?: string | string[];
-    author?: string | string[];
-    subject?: string | string[];
-    date?: string;
-    dateEnd?: string;
-    location?: string;
-    kind?: string;
-    hasMarkAsDone?: boolean;
-    processHandIn?: boolean;
-    processHandInLocation?: string;
-    chatWithBook?: boolean;
-    chatWithBookBrainKey?: string;
-    action?: string;
-    showInIndex?: boolean;
-    refAuthor?: string | string[];
-    refBookTitle?: string;
-    refPublisher?: string | string[];
-    refPublicationYear?: string;
-    citationStyle?: string;
-    blockId?: string;
-    pageNo?: number;
-    x?: number;
-    y?: number;
-    width?: string;
-    height?: string;
-    index?: number;
-    classification?: string;
-    availableClassifications?: string | string[];
-    allowedBit?: string | string[];
-    tableFixedHeader?: boolean;
-    tableHeaderWhitespaceNoWrap?: boolean;
-    tableSearch?: boolean;
-    tableSort?: boolean;
-    tablePagination?: boolean;
-    tablePaginationLimit?: number;
-    tableHeight?: number;
-    tableWhitespaceNoWrap?: boolean;
-    tableAutoWidth?: boolean;
-    tableResizableColumns?: boolean;
-    tableColumnMinWidth?: number;
-    quizCountItems?: boolean;
-    quizStrikethroughSolutions?: boolean;
-    codeLineNumbers?: boolean;
-    codeMinimap?: boolean;
-    stripePricingTableId?: string;
-    stripePublishableKey?: string;
-    thumbImage?: string;
-    scormSource?: string;
-    posterImage?: string;
-    focusX?: number;
-    focusY?: number;
-    pointerLeft?: string;
-    pointerTop?: string;
-    listItemIndent?: number;
-    backgroundWallpaper?: Partial<ImageResourceWrapperJson>;
-    hasBookNavigation?: boolean;
-    duration?: string;
-    referenceProperty?: string | string[];
-    deeplink?: string | string[];
-    externalLink?: string;
-    externalLinkText?: string;
-    videoCallLink?: string;
-    vendorDashboardId?: string;
-    vendorSurveyId?: string;
-    vendorUrl?: string;
-    search?: string;
-    bot?: string | string[];
-    list?: string | string[];
-    layer?: string | string[];
-    layerRole?: string | string[];
-    textReference?: string;
-    isTracked?: boolean;
-    isInfoOnly?: boolean;
-    imageFirst?: boolean;
-    activityType?: string;
-    labelTrue?: string;
-    labelFalse?: string;
-    content2Buy?: string;
-    mailingList?: string;
-    buttonCaption?: string;
-    callToActionUrl?: string;
-    caption?: JsonText;
-    quotedPerson?: string;
-    reasonableNumOfChars?: number;
-    resolved?: boolean;
-    resolvedDate?: string;
-    resolvedBy?: string;
-    handInAcceptFileType?: string | string[];
-    handInRequirement?: string | string[];
-    handInInstruction?: string;
-    maxCreatedBits?: number;
-    maxDisplayLevel?: number;
-    maxTocChapterLevel?: number;
-    tocResource?: string | string[];
-    tocContent?: string | string[];
-    page?: string | string[];
-    productId?: string | string[];
-    product?: string | string[];
-    productList?: string | string[];
-    productVideo?: string | string[];
-    productVideoList?: string | string[];
-    productFolder?: string;
-    technicalTerm?: Partial<TechnicalTermJson>;
-    servings?: Partial<ServingsJson>;
-    ratingLevelStart?: Partial<RatingLevelStartEndJson>;
-    ratingLevelEnd?: Partial<RatingLevelStartEndJson>;
-    ratingLevelSelected?: number;
-    partialAnswer?: string;
-    book?: string | BookJson[];
-    title?: JsonText;
-    subtitle?: JsonText;
-    level?: number | string;
-    toc?: boolean;
-    progress?: boolean;
-    anchor?: string;
-    reference?: string;
-    referenceEnd?: string;
-    revealSolutions?: boolean;
-    isCaseSensitive?: boolean;
-    item?: JsonText;
-    lead?: JsonText;
-    pageNumber?: JsonText;
-    marginNumber?: JsonText;
-    hint?: JsonText;
-    instruction?: JsonText;
-    example?: Partial<ExampleJson>;
-    imageSource?: Partial<ImageSourceJson>;
-    person?: Partial<PersonJson>;
-    extraProperties?: {
-      [key: string]: unknown | unknown[];
-    };
+  buildBit(
+    data: {
+      bitType: BitTypeType;
+      bitLevel: number;
+      textFormat?: TextFormatType;
+      resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
+      isCommented?: boolean;
+      id?: string | string[];
+      internalComment?: string | string[];
+      customerId?: string;
+      customerExternalId?: string | string[];
+      externalId?: string | string[];
+      spaceId?: string | string[];
+      padletId?: string;
+      jupyterId?: string;
+      jupyterExecutionCount?: number;
+      isPublic?: boolean;
+      isTemplate?: boolean;
+      isTemplateStripTheme?: boolean;
+      aiGenerated?: boolean;
+      machineTranslated?: string;
+      searchIndex?: string | string[];
+      analyticsTag?: string | string[];
+      categoryTag?: string | string[];
+      topicTag?: string | string[];
+      altLangTag?: string;
+      feedbackEngine?: string;
+      feedbackType?: string;
+      disableFeedback?: boolean;
+      diffTo?: string;
+      diffOp?: string;
+      diffRef?: string;
+      diffContext?: string;
+      diffTime?: number;
+      path?: string;
+      releaseVersion?: string;
+      releaseKind?: string;
+      releaseDate?: string;
+      ageRange?: number | number[];
+      lang?: string;
+      language?: string | string[];
+      publisher?: string | string[];
+      publisherName?: string;
+      theme?: string | string[];
+      computerLanguage?: string;
+      target?: string | string[];
+      slug?: string;
+      tag?: string | string[];
+      reductionTag?: string | string[];
+      bubbleTag?: string | string[];
+      levelCEFRp?: string | string[];
+      levelCEFR?: string | string[];
+      levelILR?: string | string[];
+      levelACTFL?: string | string[];
+      icon?: string;
+      iconTag?: string;
+      colorTag?: string | string[];
+      flashcardSet?: string | string[];
+      subtype?: string;
+      bookAlias?: string | string[];
+      bookDiff?: string;
+      coverImage?: string | string[];
+      coverColor?: string;
+      publications?: string | string[];
+      author?: string | string[];
+      subject?: string | string[];
+      date?: string;
+      dateEnd?: string;
+      location?: string;
+      kind?: string;
+      hasMarkAsDone?: boolean;
+      processHandIn?: boolean;
+      processHandInLocation?: string;
+      chatWithBook?: boolean;
+      chatWithBookBrainKey?: string;
+      action?: string;
+      showInIndex?: boolean;
+      refAuthor?: string | string[];
+      refBookTitle?: string;
+      refPublisher?: string | string[];
+      refPublicationYear?: string;
+      citationStyle?: string;
+      blockId?: string;
+      pageNo?: number;
+      x?: number;
+      y?: number;
+      width?: string;
+      height?: string;
+      index?: number;
+      classification?: string;
+      availableClassifications?: string | string[];
+      allowedBit?: string | string[];
+      tableFixedHeader?: boolean;
+      tableHeaderWhitespaceNoWrap?: boolean;
+      tableSearch?: boolean;
+      tableSort?: boolean;
+      tablePagination?: boolean;
+      tablePaginationLimit?: number;
+      tableHeight?: number;
+      tableWhitespaceNoWrap?: boolean;
+      tableAutoWidth?: boolean;
+      tableResizableColumns?: boolean;
+      tableColumnMinWidth?: number;
+      quizCountItems?: boolean;
+      quizStrikethroughSolutions?: boolean;
+      codeLineNumbers?: boolean;
+      codeMinimap?: boolean;
+      stripePricingTableId?: string;
+      stripePublishableKey?: string;
+      thumbImage?: string;
+      scormSource?: string;
+      posterImage?: string;
+      focusX?: number;
+      focusY?: number;
+      pointerLeft?: string;
+      pointerTop?: string;
+      listItemIndent?: number;
+      backgroundWallpaper?: Partial<ImageResourceWrapperJson>;
+      hasBookNavigation?: boolean;
+      duration?: string;
+      referenceProperty?: string | string[];
+      deeplink?: string | string[];
+      externalLink?: string;
+      externalLinkText?: string;
+      videoCallLink?: string;
+      vendorDashboardId?: string;
+      vendorSurveyId?: string;
+      vendorUrl?: string;
+      search?: string;
+      bot?: string | string[];
+      list?: string | string[];
+      layer?: string | string[];
+      layerRole?: string | string[];
+      textReference?: string;
+      isTracked?: boolean;
+      isInfoOnly?: boolean;
+      imageFirst?: boolean;
+      activityType?: string;
+      labelTrue?: string;
+      labelFalse?: string;
+      content2Buy?: string;
+      mailingList?: string;
+      buttonCaption?: string;
+      callToActionUrl?: string;
+      caption?: JsonText;
+      quotedPerson?: string;
+      reasonableNumOfChars?: number;
+      resolved?: boolean;
+      resolvedDate?: string;
+      resolvedBy?: string;
+      handInAcceptFileType?: string | string[];
+      handInRequirement?: string | string[];
+      handInInstruction?: string;
+      maxCreatedBits?: number;
+      maxDisplayLevel?: number;
+      maxTocChapterLevel?: number;
+      tocResource?: string | string[];
+      tocContent?: string | string[];
+      page?: string | string[];
+      productId?: string | string[];
+      product?: string | string[];
+      // productList?: string | string[];
+      productVideo?: string | string[];
+      // productVideoList?: string | string[];
+      productFolder?: string;
+      technicalTerm?: Partial<TechnicalTermJson>;
+      servings?: Partial<ServingsJson>;
+      ratingLevelStart?: Partial<RatingLevelStartEndJson>;
+      ratingLevelEnd?: Partial<RatingLevelStartEndJson>;
+      ratingLevelSelected?: number;
+      partialAnswer?: string;
+      book?: string | BookJson[];
+      title?: JsonText;
+      subtitle?: JsonText;
+      level?: number | string;
+      toc?: boolean;
+      progress?: boolean;
+      anchor?: string;
+      reference?: string;
+      referenceEnd?: string;
+      revealSolutions?: boolean;
+      isCaseSensitive?: boolean;
+      item?: JsonText;
+      lead?: JsonText;
+      pageNumber?: JsonText;
+      marginNumber?: JsonText;
+      hint?: JsonText;
+      instruction?: JsonText;
+      example?: Partial<ExampleJson>;
+      imageSource?: Partial<ImageSourceJson>;
+      person?: Partial<PersonJson>;
+      extraProperties?: {
+        [key: string]: unknown | unknown[];
+      };
 
-    markConfig?: Partial<MarkConfigJson>[];
-    imagePlaceholder?: Partial<ImageResourceWrapperJson>;
-    resources?: Partial<ResourceJson> | Partial<ResourceJson>[];
-    body?: Partial<Body>;
-    sampleSolution?: string;
-    additionalSolutions?: string | string[];
-    heading?: Partial<HeadingJson>;
-    elements?: string[];
-    flashcards?: Partial<FlashcardJson>[];
-    definitions?: Partial<DefinitionListItemJson>[];
-    legend?: Partial<DefinitionListItemJson>[];
-    statement?: Partial<StatementJson>;
-    statements?: Partial<StatementJson>[];
-    responses?: Partial<ResponseJson>[];
-    quizzes?: Partial<QuizJson>[];
-    pairs?: Partial<PairJson>[];
-    matrix?: Partial<MatrixJson>[];
-    pronunciationTable?: Partial<PronunciationTableJson>;
-    table?: Partial<TableJson>;
-    choices?: Partial<ChoiceJson>[];
-    questions?: Partial<QuestionJson>[];
-    botResponses?: Partial<BotResponseJson>[];
-    ingredients?: Partial<IngredientJson>[];
-    // DEPRECATED - TO BE REMOVED IN THE FUTURE
-    // captionDefinitionList?: Partial<CaptionDefinitionListJson>;
-    cardBits?: Partial<CardBit>[];
-    footer?: Partial<Footer>;
+      markConfig?: Partial<MarkConfigJson>[];
+      imagePlaceholder?: Partial<ImageResourceWrapperJson>;
+      resources?: Partial<ResourceJson> | Partial<ResourceJson>[];
+      body?: Partial<Body>;
+      sampleSolution?: string;
+      additionalSolutions?: string | string[];
+      heading?: Partial<HeadingJson>;
+      elements?: string[];
+      flashcards?: Partial<FlashcardJson>[];
+      definitions?: Partial<DefinitionListItemJson>[];
+      legend?: Partial<DefinitionListItemJson>[];
+      statement?: Partial<StatementJson>;
+      statements?: Partial<StatementJson>[];
+      responses?: Partial<ResponseJson>[];
+      quizzes?: Partial<QuizJson>[];
+      pairs?: Partial<PairJson>[];
+      matrix?: Partial<MatrixJson>[];
+      pronunciationTable?: Partial<PronunciationTableJson>;
+      table?: Partial<TableJson>;
+      choices?: Partial<ChoiceJson>[];
+      questions?: Partial<QuestionJson>[];
+      botResponses?: Partial<BotResponseJson>[];
+      ingredients?: Partial<IngredientJson>[];
+      // DEPRECATED - TO BE REMOVED IN THE FUTURE
+      // captionDefinitionList?: Partial<CaptionDefinitionListJson>;
+      cardBits?: Partial<CardBit>[];
+      footer?: Partial<Footer>;
 
-    markup?: string;
-    parser?: ParserInfo;
-    __isDefaultExample?: boolean;
-  }): Bit | undefined {
-    const bitConfig = Config.getBitConfig(data.bitType);
+      markup?: string;
+      parser?: ParserInfo;
+      __isDefaultExample?: boolean;
+    },
+    options?: BuildBitOptions,
+  ): Bit | undefined {
     const bitType = data.bitType;
+    const bitConfig = Config.getBitConfig(bitType);
 
     // Text Format (accepts deprecated values, and converts them to the new format)
     const deprecatedTextFormat = DeprecatedTextFormat.fromValue(data.textFormat);
@@ -356,7 +367,12 @@ class Builder extends BaseBuilder {
 
     // Add reasonableNumOfChars to the bit only for essay bits (in other cases it will be pushed down the tree)
     const reasonableNumOfCharsProperty = Config.isOfBitType(data.bitType, BitType.essay)
-      ? this.toAstProperty(PropertyConfigKey.reasonableNumOfChars, data.reasonableNumOfChars)
+      ? this.toAstProperty(
+          bitType,
+          ConfigKey.property_reasonableNumOfChars,
+          data.reasonableNumOfChars,
+          options,
+        )
       : undefined;
 
     const convertedExample = {
@@ -368,272 +384,673 @@ class Builder extends BaseBuilder {
       bitType,
       bitLevel: data.bitLevel,
       textFormat,
-      resourceType: ResourceTag.fromValue(data.resourceType),
+      resourceType: ResourceType.fromValue(data.resourceType),
       isCommented: data.isCommented,
 
       // Properties
-      id: this.toAstProperty(PropertyConfigKey.id, data.id),
-      internalComment: this.toAstProperty(PropertyConfigKey.internalComment, data.internalComment),
-      customerId: this.toAstProperty(PropertyConfigKey.customerId, data.customerId),
+      id: this.toAstProperty(bitType, ConfigKey.property_id, data.id, options),
+      internalComment: this.toAstProperty(
+        bitType,
+        ConfigKey.property_internalComment,
+        data.internalComment,
+        options,
+      ),
+      customerId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_customerId,
+        data.customerId,
+        options,
+      ),
       customerExternalId: this.toAstProperty(
-        PropertyConfigKey.customerExternalId,
+        bitType,
+        ConfigKey.property_customerExternalId,
         data.customerExternalId,
+        options,
       ),
-      externalId: this.toAstProperty(PropertyConfigKey.externalId, data.externalId),
-      spaceId: this.toAstProperty(PropertyConfigKey.spaceId, data.spaceId),
-      padletId: this.toAstProperty(PropertyConfigKey.padletId, data.padletId),
-      jupyterId: this.toAstProperty(PropertyConfigKey.jupyterId, data.jupyterId),
+      externalId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_externalId,
+        data.externalId,
+        options,
+      ),
+      spaceId: this.toAstProperty(bitType, ConfigKey.property_spaceId, data.spaceId, options),
+      padletId: this.toAstProperty(bitType, ConfigKey.property_padletId, data.padletId, options),
+      jupyterId: this.toAstProperty(bitType, ConfigKey.property_jupyterId, data.jupyterId, options),
       jupyterExecutionCount: this.toAstProperty(
-        PropertyConfigKey.jupyterExecutionCount,
+        bitType,
+        ConfigKey.property_jupyterExecutionCount,
         data.jupyterExecutionCount,
+        options,
       ),
-      isPublic: this.toAstProperty(PropertyConfigKey.isPublic, data.isPublic),
-      isTemplate: this.toAstProperty(PropertyConfigKey.isTemplate, data.isTemplate),
+      isPublic: this.toAstProperty(bitType, ConfigKey.property_isPublic, data.isPublic, options),
+      isTemplate: this.toAstProperty(
+        bitType,
+        ConfigKey.property_isTemplate,
+        data.isTemplate,
+        options,
+      ),
       isTemplateStripTheme: this.toAstProperty(
-        PropertyConfigKey.isTemplateStripTheme,
+        bitType,
+        ConfigKey.property_isTemplateStripTheme,
         data.isTemplateStripTheme,
+        options,
       ),
-      aiGenerated: this.toAstProperty(PropertyConfigKey.aiGenerated, data.aiGenerated),
+      aiGenerated: this.toAstProperty(
+        bitType,
+        ConfigKey.property_aiGenerated,
+        data.aiGenerated,
+        options,
+      ),
       machineTranslated: this.toAstProperty(
-        PropertyConfigKey.machineTranslated,
+        bitType,
+        ConfigKey.property_machineTranslated,
         data.machineTranslated,
+        options,
       ),
-      searchIndex: this.toAstProperty(PropertyConfigKey.searchIndex, data.searchIndex),
-      analyticsTag: this.toAstProperty(PropertyConfigKey.analyticsTag, data.analyticsTag),
-      categoryTag: this.toAstProperty(PropertyConfigKey.categoryTag, data.categoryTag),
-      topicTag: this.toAstProperty(PropertyConfigKey.topicTag, data.topicTag),
-      altLangTag: this.toAstProperty(PropertyConfigKey.altLangTag, data.altLangTag),
-      feedbackEngine: this.toAstProperty(PropertyConfigKey.feedbackEngine, data.feedbackEngine),
-      feedbackType: this.toAstProperty(PropertyConfigKey.feedbackType, data.feedbackType),
-      disableFeedback: this.toAstProperty(PropertyConfigKey.disableFeedback, data.disableFeedback),
-      diffTo: this.toAstProperty(PropertyConfigKey.diffTo, data.diffTo),
-      diffOp: this.toAstProperty(PropertyConfigKey.diffOp, data.diffOp),
-      diffRef: this.toAstProperty(PropertyConfigKey.diffRef, data.diffRef),
-      diffContext: this.toAstProperty(PropertyConfigKey.diffContext, data.diffContext),
-      diffTime: this.toAstProperty(PropertyConfigKey.diffTime, data.diffTime),
-      path: this.toAstProperty(PropertyConfigKey.path, data.path),
-      releaseVersion: this.toAstProperty(PropertyConfigKey.releaseVersion, data.releaseVersion),
-      releaseKind: this.toAstProperty(PropertyConfigKey.releaseKind, data.releaseKind),
-      releaseDate: this.toAstProperty(PropertyConfigKey.releaseDate, data.releaseDate),
+      searchIndex: this.toAstProperty(
+        bitType,
+        ConfigKey.property_searchIndex,
+        data.searchIndex,
+        options,
+      ),
+      analyticsTag: this.toAstProperty(
+        bitType,
+        ConfigKey.property_analyticsTag,
+        data.analyticsTag,
+        options,
+      ),
+      categoryTag: this.toAstProperty(
+        bitType,
+        ConfigKey.property_categoryTag,
+        data.categoryTag,
+        options,
+      ),
+      topicTag: this.toAstProperty(bitType, ConfigKey.property_topicTag, data.topicTag, options),
+      altLangTag: this.toAstProperty(
+        bitType,
+        ConfigKey.property_altLangTag,
+        data.altLangTag,
+        options,
+      ),
+      feedbackEngine: this.toAstProperty(
+        bitType,
+        ConfigKey.property_feedbackEngine,
+        data.feedbackEngine,
+        options,
+      ),
+      feedbackType: this.toAstProperty(
+        bitType,
+        ConfigKey.property_feedbackType,
+        data.feedbackType,
+        options,
+      ),
+      disableFeedback: this.toAstProperty(
+        bitType,
+        ConfigKey.property_disableFeedback,
+        data.disableFeedback,
+        options,
+      ),
+      diffTo: this.toAstProperty(bitType, ConfigKey.property_diffTo, data.diffTo, options),
+      diffOp: this.toAstProperty(bitType, ConfigKey.property_diffOp, data.diffOp, options),
+      diffRef: this.toAstProperty(bitType, ConfigKey.property_diffRef, data.diffRef, options),
+      diffContext: this.toAstProperty(
+        bitType,
+        ConfigKey.property_diffContext,
+        data.diffContext,
+        options,
+      ),
+      diffTime: this.toAstProperty(bitType, ConfigKey.property_diffTime, data.diffTime, options),
+      path: this.toAstProperty(bitType, ConfigKey.property_path, data.path, options),
+      releaseVersion: this.toAstProperty(
+        bitType,
+        ConfigKey.property_releaseVersion,
+        data.releaseVersion,
+        options,
+      ),
+      releaseKind: this.toAstProperty(
+        bitType,
+        ConfigKey.property_releaseKind,
+        data.releaseKind,
+        options,
+      ),
+      releaseDate: this.toAstProperty(
+        bitType,
+        ConfigKey.property_releaseDate,
+        data.releaseDate,
+        options,
+      ),
       book: this.buildBooks(context, data.book),
-      ageRange: this.toAstProperty(PropertyConfigKey.ageRange, data.ageRange),
-      lang: this.toAstProperty(PropertyConfigKey.lang, data.lang),
-      language: this.toAstProperty(PropertyConfigKey.language, data.language),
-      publisher: this.toAstProperty(PropertyConfigKey.publisher, data.publisher),
-      publisherName: this.toAstProperty(PropertyConfigKey.publisherName, data.publisherName),
-      theme: this.toAstProperty(PropertyConfigKey.theme, data.theme),
+      ageRange: this.toAstProperty(bitType, ConfigKey.property_ageRange, data.ageRange, options),
+      lang: this.toAstProperty(bitType, ConfigKey.property_lang, data.lang, options),
+      language: this.toAstProperty(bitType, ConfigKey.property_language, data.language, options),
+      publisher: this.toAstProperty(bitType, ConfigKey.property_publisher, data.publisher, options),
+      publisherName: this.toAstProperty(
+        bitType,
+        ConfigKey.property_publisherName,
+        data.publisherName,
+        options,
+      ),
+      theme: this.toAstProperty(bitType, ConfigKey.property_theme, data.theme, options),
       computerLanguage: this.toAstProperty(
-        PropertyConfigKey.computerLanguage,
+        bitType,
+        ConfigKey.property_computerLanguage,
         data.computerLanguage,
+        options,
       ),
-      target: this.toAstProperty(PropertyConfigKey.target, data.target),
-      slug: this.toAstProperty(PropertyConfigKey.slug, data.slug),
-      tag: this.toAstProperty(PropertyConfigKey.tag, data.tag),
-      reductionTag: this.toAstProperty(PropertyConfigKey.reductionTag, data.reductionTag),
-      bubbleTag: this.toAstProperty(PropertyConfigKey.bubbleTag, data.bubbleTag),
-      levelCEFRp: this.toAstProperty(PropertyConfigKey.levelCEFRp, data.levelCEFRp),
-      levelCEFR: this.toAstProperty(PropertyConfigKey.levelCEFR, data.levelCEFR),
-      levelILR: this.toAstProperty(PropertyConfigKey.levelILR, data.levelILR),
-      levelACTFL: this.toAstProperty(PropertyConfigKey.levelACTFL, data.levelACTFL),
-      icon: this.toAstProperty(PropertyConfigKey.icon, data.icon),
-      iconTag: this.toAstProperty(PropertyConfigKey.iconTag, data.iconTag),
-      colorTag: this.toAstProperty(PropertyConfigKey.colorTag, data.colorTag),
-      flashcardSet: this.toAstProperty(PropertyConfigKey.flashcardSet, data.flashcardSet),
-      subtype: this.toAstProperty(PropertyConfigKey.subtype, data.subtype),
-      bookAlias: this.toAstProperty(PropertyConfigKey.bookAlias, data.bookAlias),
-      bookDiff: this.toAstProperty(PropertyConfigKey.bookDiff, data.bookDiff),
-      coverImage: this.toAstProperty(PropertyConfigKey.coverImage, data.coverImage),
-      coverColor: this.toAstProperty(PropertyConfigKey.coverColor, data.coverColor),
-      publications: this.toAstProperty(PropertyConfigKey.publications, data.publications),
-      author: this.toAstProperty(PropertyConfigKey.author, data.author),
-      subject: this.toAstProperty(PropertyConfigKey.subject, data.subject),
-      date: this.toAstProperty(PropertyConfigKey.date, data.date),
-      dateEnd: this.toAstProperty(PropertyConfigKey.dateEnd, data.dateEnd),
-      location: this.toAstProperty(PropertyConfigKey.location, data.location),
-      kind: this.toAstProperty(PropertyConfigKey.kind, data.kind),
-      hasMarkAsDone: this.toAstProperty(PropertyConfigKey.hasMarkAsDone, data.hasMarkAsDone),
-      processHandIn: this.toAstProperty(PropertyConfigKey.processHandIn, data.processHandIn),
+      target: this.toAstProperty(bitType, ConfigKey.property_target, data.target, options),
+      slug: this.toAstProperty(bitType, ConfigKey.property_slug, data.slug, options),
+      tag: this.toAstProperty(bitType, ConfigKey.property_tag, data.tag, options),
+      reductionTag: this.toAstProperty(
+        bitType,
+        ConfigKey.property_reductionTag,
+        data.reductionTag,
+        options,
+      ),
+      bubbleTag: this.toAstProperty(bitType, ConfigKey.property_bubbleTag, data.bubbleTag, options),
+      levelCEFRp: this.toAstProperty(
+        bitType,
+        ConfigKey.property_levelCEFRp,
+        data.levelCEFRp,
+        options,
+      ),
+      levelCEFR: this.toAstProperty(bitType, ConfigKey.property_levelCEFR, data.levelCEFR, options),
+      levelILR: this.toAstProperty(bitType, ConfigKey.property_levelILR, data.levelILR, options),
+      levelACTFL: this.toAstProperty(
+        bitType,
+        ConfigKey.property_levelACTFL,
+        data.levelACTFL,
+        options,
+      ),
+      icon: this.toAstProperty(bitType, ConfigKey.property_icon, data.icon, options),
+      iconTag: this.toAstProperty(bitType, ConfigKey.property_iconTag, data.iconTag, options),
+      colorTag: this.toAstProperty(bitType, ConfigKey.property_colorTag, data.colorTag, options),
+      flashcardSet: this.toAstProperty(
+        bitType,
+        ConfigKey.property_flashcardSet,
+        data.flashcardSet,
+        options,
+      ),
+      subtype: this.toAstProperty(bitType, ConfigKey.property_subtype, data.subtype, options),
+      bookAlias: this.toAstProperty(bitType, ConfigKey.property_bookAlias, data.bookAlias, options),
+      bookDiff: this.toAstProperty(bitType, ConfigKey.property_bookDiff, data.bookDiff, options),
+      coverImage: this.toAstProperty(
+        bitType,
+        ConfigKey.property_coverImage,
+        data.coverImage,
+        options,
+      ),
+      coverColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_coverColor,
+        data.coverColor,
+        options,
+      ),
+      publications: this.toAstProperty(
+        bitType,
+        ConfigKey.property_publications,
+        data.publications,
+        options,
+      ),
+      author: this.toAstProperty(bitType, ConfigKey.property_author, data.author, options),
+      subject: this.toAstProperty(bitType, ConfigKey.property_subject, data.subject, options),
+      date: this.toAstProperty(bitType, ConfigKey.property_date, data.date, options),
+      dateEnd: this.toAstProperty(bitType, ConfigKey.property_dateEnd, data.dateEnd, options),
+      location: this.toAstProperty(bitType, ConfigKey.property_location, data.location, options),
+      kind: this.toAstProperty(bitType, ConfigKey.property_kind, data.kind, options),
+      hasMarkAsDone: this.toAstProperty(
+        bitType,
+        ConfigKey.property_hasMarkAsDone,
+        data.hasMarkAsDone,
+        options,
+      ),
+      processHandIn: this.toAstProperty(
+        bitType,
+        ConfigKey.property_processHandIn,
+        data.processHandIn,
+        options,
+      ),
       processHandInLocation: this.toAstProperty(
-        PropertyConfigKey.processHandInLocation,
+        bitType,
+        ConfigKey.property_processHandInLocation,
         data.processHandInLocation,
+        options,
       ),
-      chatWithBook: this.toAstProperty(PropertyConfigKey.chatWithBook, data.chatWithBook),
+      chatWithBook: this.toAstProperty(
+        bitType,
+        ConfigKey.property_chatWithBook,
+        data.chatWithBook,
+        options,
+      ),
       chatWithBookBrainKey: this.toAstProperty(
-        PropertyConfigKey.chatWithBookBrainKey,
+        bitType,
+        ConfigKey.property_chatWithBookBrainKey,
         data.chatWithBookBrainKey,
+        options,
       ),
-      action: this.toAstProperty(PropertyConfigKey.action, data.action),
-      showInIndex: this.toAstProperty(PropertyConfigKey.showInIndex, data.showInIndex),
-      refAuthor: this.toAstProperty(PropertyConfigKey.refAuthor, data.refAuthor),
-      refBookTitle: this.toAstProperty(PropertyConfigKey.refBookTitle, data.refBookTitle),
-      refPublisher: this.toAstProperty(PropertyConfigKey.refPublisher, data.refPublisher),
+      action: this.toAstProperty(bitType, ConfigKey.property_action, data.action, options),
+      showInIndex: this.toAstProperty(
+        bitType,
+        ConfigKey.property_showInIndex,
+        data.showInIndex,
+        options,
+      ),
+      refAuthor: this.toAstProperty(bitType, ConfigKey.property_refAuthor, data.refAuthor, options),
+      refBookTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_refBookTitle,
+        data.refBookTitle,
+        options,
+      ),
+      refPublisher: this.toAstProperty(
+        bitType,
+        ConfigKey.property_refPublisher,
+        data.refPublisher,
+        options,
+      ),
       refPublicationYear: this.toAstProperty(
-        PropertyConfigKey.refPublicationYear,
+        bitType,
+        ConfigKey.property_refPublicationYear,
         data.refPublicationYear,
+        options,
       ),
-      citationStyle: this.toAstProperty(PropertyConfigKey.citationStyle, data.citationStyle),
-      blockId: this.toAstProperty(PropertyConfigKey.blockId, data.blockId),
-      pageNo: this.toAstProperty(PropertyConfigKey.pageNo, data.pageNo),
-      x: this.toAstProperty(PropertyConfigKey.x, data.x),
-      y: this.toAstProperty(PropertyConfigKey.y, data.y),
-      width: this.toAstProperty(PropertyConfigKey.width, data.width),
-      height: this.toAstProperty(PropertyConfigKey.height, data.height),
-      index: this.toAstProperty(PropertyConfigKey.index, data.index),
-      classification: this.toAstProperty(PropertyConfigKey.classification, data.classification),
+      citationStyle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_citationStyle,
+        data.citationStyle,
+        options,
+      ),
+      blockId: this.toAstProperty(bitType, ConfigKey.property_blockId, data.blockId, options),
+      pageNo: this.toAstProperty(bitType, ConfigKey.property_pageNo, data.pageNo, options),
+      x: this.toAstProperty(bitType, ConfigKey.property_x, data.x, options),
+      y: this.toAstProperty(bitType, ConfigKey.property_y, data.y, options),
+      width: this.toAstProperty(bitType, ConfigKey.property_width, data.width, options),
+      height: this.toAstProperty(bitType, ConfigKey.property_height, data.height, options),
+      index: this.toAstProperty(bitType, ConfigKey.property_index, data.index, options),
+      classification: this.toAstProperty(
+        bitType,
+        ConfigKey.property_classification,
+        data.classification,
+        options,
+      ),
       availableClassifications: this.toAstProperty(
-        PropertyConfigKey.availableClassifications,
+        bitType,
+        ConfigKey.property_availableClassifications,
         data.availableClassifications,
+        options,
       ),
-      allowedBit: this.toAstProperty(PropertyConfigKey.allowedBit, data.allowedBit),
+      allowedBit: this.toAstProperty(
+        bitType,
+        ConfigKey.property_allowedBit,
+        data.allowedBit,
+        options,
+      ),
       tableFixedHeader: this.toAstProperty(
-        PropertyConfigKey.tableFixedHeader,
+        bitType,
+        ConfigKey.property_tableFixedHeader,
         data.tableFixedHeader,
+        options,
       ),
       tableHeaderWhitespaceNoWrap: this.toAstProperty(
-        PropertyConfigKey.tableHeaderWhitespaceNoWrap,
+        bitType,
+        ConfigKey.property_tableHeaderWhitespaceNoWrap,
         data.tableHeaderWhitespaceNoWrap,
+        options,
       ),
-      tableSearch: this.toAstProperty(PropertyConfigKey.tableSearch, data.tableSearch),
-      tableSort: this.toAstProperty(PropertyConfigKey.tableSort, data.tableSort),
-      tablePagination: this.toAstProperty(PropertyConfigKey.tablePagination, data.tablePagination),
+      tableSearch: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableSearch,
+        data.tableSearch,
+        options,
+      ),
+      tableSort: this.toAstProperty(bitType, ConfigKey.property_tableSort, data.tableSort, options),
+      tablePagination: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tablePagination,
+        data.tablePagination,
+        options,
+      ),
       tablePaginationLimit: this.toAstProperty(
-        PropertyConfigKey.tablePaginationLimit,
+        bitType,
+        ConfigKey.property_tablePaginationLimit,
         data.tablePaginationLimit,
+        options,
       ),
-      tableHeight: this.toAstProperty(PropertyConfigKey.tableHeight, data.tableHeight),
+      tableHeight: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableHeight,
+        data.tableHeight,
+        options,
+      ),
       tableWhitespaceNoWrap: this.toAstProperty(
-        PropertyConfigKey.tableWhitespaceNoWrap,
+        bitType,
+        ConfigKey.property_tableWhitespaceNoWrap,
         data.tableWhitespaceNoWrap,
+        options,
       ),
-      tableAutoWidth: this.toAstProperty(PropertyConfigKey.tableAutoWidth, data.tableAutoWidth),
+      tableAutoWidth: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableAutoWidth,
+        data.tableAutoWidth,
+        options,
+      ),
       tableResizableColumns: this.toAstProperty(
-        PropertyConfigKey.tableResizableColumns,
+        bitType,
+        ConfigKey.property_tableResizableColumns,
         data.tableResizableColumns,
+        options,
       ),
       tableColumnMinWidth: this.toAstProperty(
-        PropertyConfigKey.tableColumnMinWidth,
+        bitType,
+        ConfigKey.property_tableColumnMinWidth,
         data.tableColumnMinWidth,
+        options,
       ),
-      quizCountItems: this.toAstProperty(PropertyConfigKey.quizCountItems, data.quizCountItems),
+      quizCountItems: this.toAstProperty(
+        bitType,
+        ConfigKey.property_quizCountItems,
+        data.quizCountItems,
+        options,
+      ),
       quizStrikethroughSolutions: this.toAstProperty(
-        PropertyConfigKey.quizStrikethroughSolutions,
+        bitType,
+        ConfigKey.property_quizStrikethroughSolutions,
         data.quizStrikethroughSolutions,
+        options,
       ),
-      codeLineNumbers: this.toAstProperty(PropertyConfigKey.codeLineNumbers, data.codeLineNumbers),
-      codeMinimap: this.toAstProperty(PropertyConfigKey.codeMinimap, data.codeMinimap),
+      codeLineNumbers: this.toAstProperty(
+        bitType,
+        ConfigKey.property_codeLineNumbers,
+        data.codeLineNumbers,
+        options,
+      ),
+      codeMinimap: this.toAstProperty(
+        bitType,
+        ConfigKey.property_codeMinimap,
+        data.codeMinimap,
+        options,
+      ),
       stripePricingTableId: this.toAstProperty(
-        PropertyConfigKey.stripePricingTableId,
+        bitType,
+        ConfigKey.property_stripePricingTableId,
         data.stripePricingTableId,
+        options,
       ),
       stripePublishableKey: this.toAstProperty(
-        PropertyConfigKey.stripePublishableKey,
+        bitType,
+        ConfigKey.property_stripePublishableKey,
         data.stripePublishableKey,
+        options,
       ),
-      thumbImage: this.toAstProperty(PropertyConfigKey.thumbImage, data.thumbImage),
-      scormSource: this.toAstProperty(PropertyConfigKey.scormSource, data.scormSource),
-      posterImage: this.toAstProperty(PropertyConfigKey.posterImage, data.posterImage),
-      focusX: this.toAstProperty(PropertyConfigKey.focusX, data.focusX),
-      focusY: this.toAstProperty(PropertyConfigKey.focusY, data.focusY),
-      pointerLeft: this.toAstProperty(PropertyConfigKey.pointerLeft, data.pointerLeft),
-      pointerTop: this.toAstProperty(PropertyConfigKey.pointerTop, data.pointerTop),
-      listItemIndent: this.toAstProperty(PropertyConfigKey.listItemIndent, data.listItemIndent),
+      thumbImage: this.toAstProperty(
+        bitType,
+        ConfigKey.property_thumbImage,
+        data.thumbImage,
+        options,
+      ),
+      scormSource: this.toAstProperty(
+        bitType,
+        ConfigKey.property_scormSource,
+        data.scormSource,
+        options,
+      ),
+      posterImage: this.toAstProperty(
+        bitType,
+        ConfigKey.property_posterImage,
+        data.posterImage,
+        options,
+      ),
+      focusX: this.toAstProperty(bitType, ConfigKey.property_focusX, data.focusX, options),
+      focusY: this.toAstProperty(bitType, ConfigKey.property_focusY, data.focusY, options),
+      pointerLeft: this.toAstProperty(
+        bitType,
+        ConfigKey.property_pointerLeft,
+        data.pointerLeft,
+        options,
+      ),
+      pointerTop: this.toAstProperty(
+        bitType,
+        ConfigKey.property_pointerTop,
+        data.pointerTop,
+        options,
+      ),
+      listItemIndent: this.toAstProperty(
+        bitType,
+        ConfigKey.property_listItemIndent,
+        data.listItemIndent,
+        options,
+      ),
       backgroundWallpaper: this.toImageResource(context, data.backgroundWallpaper),
       hasBookNavigation: this.toAstProperty(
-        PropertyConfigKey.hasBookNavigation,
+        bitType,
+        ConfigKey.property_hasBookNavigation,
         data.hasBookNavigation,
+        options,
       ),
-      duration: this.toAstProperty(PropertyConfigKey.duration, data.duration),
-      deeplink: this.toAstProperty(PropertyConfigKey.deeplink, data.deeplink),
-      externalLink: this.toAstProperty(PropertyConfigKey.externalLink, data.externalLink),
+      duration: this.toAstProperty(bitType, ConfigKey.property_duration, data.duration, options),
+      deeplink: this.toAstProperty(bitType, ConfigKey.property_deeplink, data.deeplink, options),
+      externalLink: this.toAstProperty(
+        bitType,
+        ConfigKey.property_externalLink,
+        data.externalLink,
+        options,
+      ),
       externalLinkText: this.toAstProperty(
-        PropertyConfigKey.externalLinkText,
+        bitType,
+        ConfigKey.property_externalLinkText,
         data.externalLinkText,
+        options,
       ),
-      videoCallLink: this.toAstProperty(PropertyConfigKey.videoCallLink, data.videoCallLink),
+      videoCallLink: this.toAstProperty(
+        bitType,
+        ConfigKey.property_videoCallLink,
+        data.videoCallLink,
+        options,
+      ),
       vendorDashboardId: this.toAstProperty(
-        PropertyConfigKey.vendorDashboardId,
+        bitType,
+        ConfigKey.property_vendorDashboardId,
         data.vendorDashboardId,
+        options,
       ),
-      vendorSurveyId: this.toAstProperty(PropertyConfigKey.vendorSurveyId, data.vendorSurveyId),
-      vendorUrl: this.toAstProperty(PropertyConfigKey.vendorUrl, data.vendorUrl),
-      search: this.toAstProperty(PropertyConfigKey.search, data.search),
-      list: this.toAstProperty(PropertyConfigKey.list, data.list),
-      layer: this.toAstProperty(PropertyConfigKey.layer, data.layer),
-      layerRole: this.toAstProperty(PropertyConfigKey.layerRole, data.layerRole),
-      textReference: this.toAstProperty(PropertyConfigKey.textReference, data.textReference),
-      isTracked: this.toAstProperty(PropertyConfigKey.isTracked, data.isTracked),
-      isInfoOnly: this.toAstProperty(PropertyConfigKey.isInfoOnly, data.isInfoOnly),
-      imageFirst: this.toAstProperty(PropertyConfigKey.imageFirst, data.imageFirst),
-      activityType: this.toAstProperty(PropertyConfigKey.activityType, data.activityType),
-      labelTrue: this.toAstProperty(PropertyConfigKey.labelTrue, data.labelTrue),
-      labelFalse: this.toAstProperty(PropertyConfigKey.labelFalse, data.labelFalse),
-      content2Buy: this.toAstProperty(PropertyConfigKey.content2Buy, data.content2Buy),
-      mailingList: this.toAstProperty(PropertyConfigKey.mailingList, data.mailingList),
-      buttonCaption: this.toAstProperty(PropertyConfigKey.buttonCaption, data.buttonCaption),
-      callToActionUrl: this.toAstProperty(PropertyConfigKey.callToActionUrl, data.callToActionUrl),
+      vendorSurveyId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_vendorSurveyId,
+        data.vendorSurveyId,
+        options,
+      ),
+      vendorUrl: this.toAstProperty(bitType, ConfigKey.property_vendorUrl, data.vendorUrl, options),
+      search: this.toAstProperty(bitType, ConfigKey.property_search, data.search, options),
+      list: this.toAstProperty(bitType, ConfigKey.property_list, data.list, options),
+      layer: this.toAstProperty(bitType, ConfigKey.property_layer, data.layer, options),
+      layerRole: this.toAstProperty(bitType, ConfigKey.property_layerRole, data.layerRole, options),
+      textReference: this.toAstProperty(
+        bitType,
+        ConfigKey.property_textReference,
+        data.textReference,
+        options,
+      ),
+      isTracked: this.toAstProperty(bitType, ConfigKey.property_isTracked, data.isTracked, options),
+      isInfoOnly: this.toAstProperty(
+        bitType,
+        ConfigKey.property_isInfoOnly,
+        data.isInfoOnly,
+        options,
+      ),
+      imageFirst: this.toAstProperty(
+        bitType,
+        ConfigKey.property_imageFirst,
+        data.imageFirst,
+        options,
+      ),
+      activityType: this.toAstProperty(
+        bitType,
+        ConfigKey.property_activityType,
+        data.activityType,
+        options,
+      ),
+      labelTrue: this.toAstProperty(bitType, ConfigKey.property_labelTrue, data.labelTrue, options),
+      labelFalse: this.toAstProperty(
+        bitType,
+        ConfigKey.property_labelFalse,
+        data.labelFalse,
+        options,
+      ),
+      content2Buy: this.toAstProperty(
+        bitType,
+        ConfigKey.property_content2Buy,
+        data.content2Buy,
+        options,
+      ),
+      mailingList: this.toAstProperty(
+        bitType,
+        ConfigKey.property_mailingList,
+        data.mailingList,
+        options,
+      ),
+      buttonCaption: this.toAstProperty(
+        bitType,
+        ConfigKey.property_buttonCaption,
+        data.buttonCaption,
+        options,
+      ),
+      callToActionUrl: this.toAstProperty(
+        bitType,
+        ConfigKey.property_callToActionUrl,
+        data.callToActionUrl,
+        options,
+      ),
       caption: this.handleJsonText(context, TextLocation.tag, data.caption),
-      quotedPerson: this.toAstProperty(PropertyConfigKey.quotedPerson, data.quotedPerson),
+      quotedPerson: this.toAstProperty(
+        bitType,
+        ConfigKey.property_quotedPerson,
+        data.quotedPerson,
+        options,
+      ),
       reasonableNumOfChars: reasonableNumOfCharsProperty,
-      resolved: this.toAstProperty(PropertyConfigKey.resolved, data.resolved),
-      resolvedDate: this.toAstProperty(PropertyConfigKey.resolvedDate, data.resolvedDate),
-      resolvedBy: this.toAstProperty(PropertyConfigKey.resolvedBy, data.resolvedBy),
+      resolved: this.toAstProperty(bitType, ConfigKey.property_resolved, data.resolved, options),
+      resolvedDate: this.toAstProperty(
+        bitType,
+        ConfigKey.property_resolvedDate,
+        data.resolvedDate,
+        options,
+      ),
+      resolvedBy: this.toAstProperty(
+        bitType,
+        ConfigKey.property_resolvedBy,
+        data.resolvedBy,
+        options,
+      ),
       handInAcceptFileType: this.toAstProperty(
-        PropertyConfigKey.handInAcceptFileType,
+        bitType,
+        ConfigKey.property_handInAcceptFileType,
         data.handInAcceptFileType,
+        options,
       ),
       handInRequirement: this.toAstProperty(
-        PropertyConfigKey.handInRequirement,
+        bitType,
+        ConfigKey.property_handInRequirement,
         data.handInRequirement,
+        options,
       ),
       handInInstruction: this.toAstProperty(
-        PropertyConfigKey.handInInstruction,
+        bitType,
+        ConfigKey.property_handInInstruction,
         data.handInInstruction,
+        options,
       ),
-      maxCreatedBits: this.toAstProperty(PropertyConfigKey.maxCreatedBits, data.maxCreatedBits),
-      maxDisplayLevel: this.toAstProperty(PropertyConfigKey.maxDisplayLevel, data.maxDisplayLevel),
+      maxCreatedBits: this.toAstProperty(
+        bitType,
+        ConfigKey.property_maxCreatedBits,
+        data.maxCreatedBits,
+        options,
+      ),
+      maxDisplayLevel: this.toAstProperty(
+        bitType,
+        ConfigKey.property_maxDisplayLevel,
+        data.maxDisplayLevel,
+        options,
+      ),
       maxTocChapterLevel: this.toAstProperty(
-        PropertyConfigKey.maxTocChapterLevel,
+        bitType,
+        ConfigKey.property_maxTocChapterLevel,
         data.maxTocChapterLevel,
+        options,
       ),
-      tocResource: this.toAstProperty(PropertyConfigKey.tocResource, data.tocResource),
-      tocContent: this.toAstProperty(PropertyConfigKey.tocContent, data.tocContent),
-      page: this.toAstProperty(PropertyConfigKey.page, data.page),
-      productId: this.toAstProperty(PropertyConfigKey.productId, data.productId),
-      product: this.toAstProperty(PropertyConfigKey.product, data.product),
-      productList: this.toAstProperty(PropertyConfigKey.productList, data.productList),
-      productVideo: this.toAstProperty(PropertyConfigKey.productVideo, data.productVideo),
-      productVideoList: this.toAstProperty(
-        PropertyConfigKey.productVideoList,
-        data.productVideoList,
+      tocResource: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tocResource,
+        data.tocResource,
+        options,
       ),
-      productFolder: this.toAstProperty(PropertyConfigKey.productFolder, data.productFolder),
+      tocContent: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tocContent,
+        data.tocContent,
+        options,
+      ),
+      page: this.toAstProperty(bitType, ConfigKey.property_page, data.page, options),
+      productId: this.toAstProperty(bitType, ConfigKey.property_productId, data.productId, options),
+      product: this.toAstProperty(bitType, ConfigKey.property_product, data.product, options),
+      // productList: this.toAstProperty(
+      //   bitType,
+      //   ConfigKey.property_productList,
+      //   data.productList,
+      //   options,
+      // ),
+      productVideo: this.toAstProperty(
+        bitType,
+        ConfigKey.property_productVideo,
+        data.productVideo,
+        options,
+      ),
+      // productVideoList: this.toAstProperty(
+      //   bitType,
+      //   ConfigKey.property_productVideoList,
+      //   data.productVideoList,
+      //   options,
+      // ),
+      productFolder: this.toAstProperty(
+        bitType,
+        ConfigKey.property_productFolder,
+        data.productFolder,
+        options,
+      ),
       technicalTerm: this.buildTechnicalTerm(context, data.technicalTerm),
       servings: this.buildServings(context, data.servings),
       ratingLevelStart: this.buildRatingLevelStartEnd(context, data.ratingLevelStart),
       ratingLevelEnd: this.buildRatingLevelStartEnd(context, data.ratingLevelEnd),
       ratingLevelSelected: this.toAstProperty(
-        PropertyConfigKey.ratingLevelSelected,
+        bitType,
+        ConfigKey.property_ratingLevelSelected,
         data.ratingLevelSelected,
+        options,
       ),
       markConfig: this.buildMarkConfigs(context, data.markConfig),
       imageSource: this.buildImageSource(context, data.imageSource),
       person: this.buildPerson(context, data.person),
-      bot: this.toAstProperty(PropertyConfigKey.bot, data.bot),
+      bot: this.toAstProperty(bitType, ConfigKey.property_bot, data.bot, options),
       referenceProperty: this.toAstProperty(
-        PropertyConfigKey.property_reference,
+        bitType,
+        ConfigKey.property_reference,
         data.referenceProperty,
+        options,
       ),
 
       // Book data
       title: this.handleJsonText(context, TextLocation.tag, data.title),
       subtitle: this.handleJsonText(context, TextLocation.tag, data.subtitle),
       level: NumberUtils.asNumber(data.level),
-      toc: this.toAstProperty(PropertyConfigKey.toc, data.toc),
-      progress: this.toAstProperty(PropertyConfigKey.progress, data.progress),
+      toc: this.toAstProperty(bitType, ConfigKey.property_toc, data.toc, options),
+      progress: this.toAstProperty(bitType, ConfigKey.property_progress, data.progress, options),
       anchor: data.anchor,
       reference: data.reference,
       referenceEnd: data.referenceEnd,
-      revealSolutions: this.toAstProperty(PropertyConfigKey.revealSolutions, data.revealSolutions),
+      revealSolutions: this.toAstProperty(
+        bitType,
+        ConfigKey.property_revealSolutions,
+        data.revealSolutions,
+        options,
+      ),
 
       // Item, Lead, Hint, Instruction
       item: this.handleJsonText(context, TextLocation.tag, data.item),
@@ -643,14 +1060,23 @@ class Builder extends BaseBuilder {
       hint: this.handleJsonText(context, TextLocation.tag, data.hint),
       instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
 
-      partialAnswer: this.toAstProperty(PropertyConfigKey.partialAnswer, data.partialAnswer),
+      partialAnswer: this.toAstProperty(
+        bitType,
+        ConfigKey.property_partialAnswer,
+        data.partialAnswer,
+        options,
+      ),
       sampleSolution: this.toAstProperty(
-        PropertyConfigKey.property_sampleSolution,
+        bitType,
+        ConfigKey.property_sampleSolution,
         data.sampleSolution,
+        options,
       ),
       additionalSolutions: this.toAstProperty(
-        PropertyConfigKey.additionalSolutions,
+        bitType,
+        ConfigKey.property_additionalSolutions,
         data.additionalSolutions,
+        options,
       ),
 
       // Example
@@ -686,7 +1112,7 @@ class Builder extends BaseBuilder {
         undefined,
         cardNode,
         'questions',
-        PropertyConfigKey.reasonableNumOfChars,
+        'reasonableNumOfChars',
         data.reasonableNumOfChars,
       );
     }
@@ -699,7 +1125,7 @@ class Builder extends BaseBuilder {
         undefined,
         cardNode,
         ['feedbacks', 'reason'],
-        PropertyConfigKey.reasonableNumOfChars,
+        'reasonableNumOfChars',
         data.reasonableNumOfChars,
       );
     }
@@ -711,7 +1137,7 @@ class Builder extends BaseBuilder {
       [BodyBitType.gap],
       undefined,
       undefined, //'isCaseSensitive',
-      PropertyConfigKey.isCaseSensitive,
+      'isCaseSensitive',
       data.isCaseSensitive ?? true,
     );
 
@@ -721,7 +1147,7 @@ class Builder extends BaseBuilder {
       undefined,
       cardNode,
       'pairs',
-      PropertyConfigKey.isCaseSensitive,
+      'isCaseSensitive',
       data.isCaseSensitive ?? true,
     );
     this.pushDownTree(
@@ -730,7 +1156,7 @@ class Builder extends BaseBuilder {
       undefined,
       cardNode,
       ['matrix', 'cells'],
-      PropertyConfigKey.isCaseSensitive,
+      'isCaseSensitive',
       data.isCaseSensitive ?? true,
     );
 
@@ -2528,7 +2954,12 @@ class Builder extends BaseBuilder {
     const { bitType, textFormat } = context;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const node = this.buildBit({ ...data, bitType, textFormat } as any) as CardBit;
+    const node = this.buildBit({ ...data, bitType, textFormat } as any, {
+      cardSet: {
+        sideNo: 0,
+        variantNo: 0,
+      },
+    }) as CardBit;
 
     // // NOTE: Node order is important and is defined here
     // const node: CardBit = {
@@ -2560,7 +2991,7 @@ class Builder extends BaseBuilder {
     data: Partial<ImageResourceWrapperJson> | undefined,
   ): ImageResourceWrapperJson {
     return ArrayUtils.asSingle(
-      this.resourceBuilder.resourceFromResourceDataJson(context, ResourceTag.image, data?.image),
+      this.resourceBuilder.resourceFromResourceDataJson(context, ResourceType.image, data?.image),
     ) as ImageResourceWrapperJson;
   }
 
@@ -2903,7 +3334,7 @@ class Builder extends BaseBuilder {
     const res: ExtraProperties = {};
 
     for (const [key, value] of entries) {
-      res[key] = ArrayUtils.asArray(value) || [value];
+      res[key] = (ArrayUtils.asArray(value) || [value]) as Property;
     }
 
     return res;
@@ -3051,12 +3482,18 @@ class Builder extends BaseBuilder {
   }
 
   private setDefaultBitValues(bit: Bit) {
+    const { bitType } = bit;
     // Set aiGenerated == true for all AI generated bits
-    switch (bit.bitType) {
+    switch (bitType) {
       case BitType.articleAi:
       case BitType.noteAi:
       case BitType.summaryAi:
-        bit.aiGenerated = this.toAstProperty(PropertyConfigKey.aiGenerated, true);
+        bit.aiGenerated = this.toAstProperty(
+          bitType,
+          ConfigKey.property_aiGenerated,
+          true,
+          undefined,
+        );
         break;
     }
   }
