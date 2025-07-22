@@ -1,8 +1,8 @@
-import { BitTagType, type BitTagTypeType } from '../enum/BitTagType.ts';
+import { BitTagConfigKeyType, type BitTagConfigKeyTypeType } from '../enum/BitTagConfigKeyType.ts';
 import { type CountType } from '../enum/Count.ts';
 import { type TagType } from '../enum/Tag.ts';
 import { AbstractTagConfig } from './AbstractTagConfig.ts';
-import { type ConfigKeyType } from './enum/ConfigKey.ts';
+import type { ConfigKeyType } from './enum/ConfigKey.ts';
 import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
@@ -11,7 +11,7 @@ interface ToStringOptions {
 }
 
 class MarkupTagConfig extends AbstractTagConfig {
-  readonly type: BitTagTypeType = BitTagType.tag;
+  readonly type: BitTagConfigKeyTypeType = BitTagConfigKeyType.tag;
 
   public constructor(
     configKey: ConfigKeyType,
@@ -24,13 +24,12 @@ class MarkupTagConfig extends AbstractTagConfig {
     deprecated: string | undefined,
   ) {
     super(
-      BitTagType.tag,
+      BitTagConfigKeyType.tag,
       configKey,
       tag,
       maxCount,
       minCount,
       chain,
-      undefined,
       undefined,
       deprecated,
     );

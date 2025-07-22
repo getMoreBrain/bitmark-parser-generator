@@ -14,6 +14,10 @@ import {
   type TextNodeAttibutes,
 } from '../../model/ast/TextNodes.ts';
 import {
+  configKeyToPropertyType,
+  configKeyToResourceType,
+} from '../../model/config/enum/ConfigKey.ts';
+import {
   BitmarkVersion,
   type BitmarkVersionType,
   DEFAULT_BITMARK_VERSION,
@@ -21,7 +25,8 @@ import {
 import { BitType, type BitTypeType } from '../../model/enum/BitType.ts';
 import { BodyBitType, type BodyBitTypeType } from '../../model/enum/BodyBitType.ts';
 import { ExampleType } from '../../model/enum/ExampleType.ts';
-import { ResourceTag, type ResourceTagType } from '../../model/enum/ResourceTag.ts';
+import { PropertyKey } from '../../model/enum/PropertyKey.ts';
+import { ResourceType, type ResourceTypeType } from '../../model/enum/ResourceType.ts';
 import { TextFormat, type TextFormatType } from '../../model/enum/TextFormat.ts';
 import { TextLocation, type TextLocationType } from '../../model/enum/TextLocation.ts';
 import { TextNodeType } from '../../model/enum/TextNodeType.ts';
@@ -888,34 +893,40 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const bitConfig = Config.getBitConfig(bitType);
     const bitResourcesConfig = Config.getBitResourcesConfig(bitType, resourceType);
-    const comboMap = bitResourcesConfig.comboResourceTagTypesMap;
+    const comboMap = bitResourcesConfig.comboResourceConfigKeysMap;
 
-    if (bitResourcesConfig.comboResourceTagTypesMap.size > 0) {
+    if (comboMap.size > 0) {
       // The resource is a combo resource
       // Extract the resource types from the combo resource
       // NOTE: There should only ever be one combo resource per bit, but the code can handle multiple
       // except for overwriting resourceJson
-      for (const [comboTagType, resourceTags] of comboMap.entries()) {
+      for (const [comboConfigKey, resourceConfigKeys] of comboMap.entries()) {
+        // Convert the config key to a ResourceType
+        const comboTagType = configKeyToResourceType(comboConfigKey);
+
         // Create the combo resource wrapper
         const wrapper: ResourceWrapperJson = {
           type: comboTagType,
           __typeAlias: comboTagType,
+          __configKey: comboConfigKey,
         };
 
         // For each of the resources in this combo resource, find the actual resource and add it to the JSON
-        for (const rt of resourceTags) {
-          const r = resources.find((r) => r.__typeAlias === rt);
+        for (const ck of resourceConfigKeys) {
+          const r = resources.find((r) => r.__configKey === ck);
           // Extract everything except the type from the resource
           if (r) {
-            const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.__typeAlias);
-            const key = tagConfig?.jsonKey ?? r.__typeAlias;
-            const tag = tagConfig?.tag ?? r.__typeAlias;
-            const json = r.__typeAlias === tag ? r : undefined;
-            if (json) {
-              for (const [k, v] of Object.entries(json)) {
-                if (k !== 'type') {
-                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                  (wrapper as any)[key] = v;
+            const tagConfig = Config.getTagConfigForTag(bitConfig.tags, r.__configKey);
+            if (tagConfig) {
+              const key = tagConfig.jsonKey ?? tagConfig.tag;
+              const configKey = tagConfig.configKey ?? r.__configKey;
+              const json = r.__configKey === configKey ? r : undefined;
+              if (json) {
+                for (const [k, v] of Object.entries(json)) {
+                  if (k !== 'type') {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    (wrapper as any)[key] = v;
+                  }
                 }
               }
             }
@@ -927,7 +938,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // The resource is a logo-grave  / prototpye-images resource
       const images: ImageResourceWrapperJson[] = [];
       for (const r of resources) {
-        if (r.type === ResourceTag.image) {
+        if (r.type === ResourceType.image) {
           images.push(r);
         }
       }
@@ -1081,43 +1092,70 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * Generate the handlers for properties, as they are mostly the same, but not quite
    */
   protected generatePropertyHandlers() {
-    const propertiesConfig = Config.getRawPropertiesConfig();
+    // TODO
+    // const propertiesConfig = Config.getRawPropertiesConfig();
+    // for (const propertyConfig of Object.values(propertiesConfig)) {
+    //   const astKey = propertyConfig.astKey ?? propertyConfig.tag;
+    //   const funcName = `enter_${astKey}`;
+    //   // Skip if the function already exists, allows for custom handlers
+    //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    //   if (typeof (this as any)[funcName] === 'function') {
+    //     continue;
+    //   }
+    //   // Skip 'example' property as it is non-standard and handled elsewhere
+    //   if (astKey === 'example') continue;
+    //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    //   (this as any)[funcName] = (node: NodeInfo, route: NodeInfo[]) => {
+    //     const value = node.value as unknown[] | undefined;
+    //     if (value == null) return;
+    //     // if (key === 'progress') debugger;
+    //     // Ignore any property that is not at the bit level as that will be handled by a different handler
+    //     const parent = this.getParentNode(route);
+    //     if (parent?.key !== NodeType.bitsValue) return;
+    //     // Convert key as needed
+    //     const jsonKey = propertyConfig.jsonKey ?? propertyConfig.tag;
+    //     // Add the property
+    //     this.addProperty(this.bitJson, jsonKey, value, { array: !propertyConfig.single });
+    //   };
+    //   // Bind this
+    //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    //   (this as any)[funcName] = (this as any)[funcName].bind(this);
+    // }
 
-    for (const propertyConfig of Object.values(propertiesConfig)) {
-      const astKey = propertyConfig.astKey ?? propertyConfig.tag;
+    for (const propertyConfigKey of PropertyKey.values()) {
+      const propertyTag = configKeyToPropertyType(propertyConfigKey);
 
-      const funcName = `enter_${astKey}`;
+      const funcNames = [`enter_${propertyTag}`, `leaf_${propertyTag}`];
+      for (const funcName of funcNames) {
+        // Skip if the function already exists, allows for custom handlers
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (typeof (this as any)[funcName] === 'function') {
+          continue;
+        }
+        // Skip 'example' property as it is non-standard and handled elsewhere
+        if (propertyTag === 'example') continue;
 
-      // Skip if the function already exists, allows for custom handlers
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      if (typeof (this as any)[funcName] === 'function') {
-        continue;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (this as any)[funcName] = (node: NodeInfo, route: NodeInfo[]) => {
+          const value = node.value as unknown[] | undefined;
+          if (value == null) return;
+          // if (key === 'progress') debugger;
+          // Ignore any property that is not at the bit level as that will be handled by a different handler
+          const parent = this.getParentNode(route);
+          if (parent?.key !== NodeType.bitsValue) return;
+          // // Convert key as needed
+          // const jsonKey = propertyConfig.jsonKey ?? propertyConfig.tag;
+          // // Add the property
+          // this.addProperty(this.bitJson, jsonKey, value, { array: !propertyConfig.single });
+
+          // Add the property
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (this.bitJson as any)[propertyTag] = value;
+        };
+        // Bind this
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (this as any)[funcName] = (this as any)[funcName].bind(this);
       }
-
-      // Skip 'example' property as it is non-standard and handled elsewhere
-      if (astKey === 'example') continue;
-
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[funcName] = (node: NodeInfo, route: NodeInfo[]) => {
-        const value = node.value as unknown[] | undefined;
-        if (value == null) return;
-
-        // if (key === 'progress') debugger;
-
-        // Ignore any property that is not at the bit level as that will be handled by a different handler
-        const parent = this.getParentNode(route);
-        if (parent?.key !== NodeType.bitsValue) return;
-
-        // Convert key as needed
-        const jsonKey = propertyConfig.jsonKey ?? propertyConfig.tag;
-
-        // Add the property
-        this.addProperty(this.bitJson, jsonKey, value, { array: !propertyConfig.single });
-      };
-
-      // Bind this
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[funcName] = (this as any)[funcName].bind(this);
     }
   }
 
@@ -1282,7 +1320,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    * @param route the route to the current node
    * @returns the bit type
    */
-  protected getResourceType(route: NodeInfo[]): ResourceTagType | undefined {
+  protected getResourceType(route: NodeInfo[]): ResourceTypeType | undefined {
     for (const node of route) {
       if (node.key === NodeType.bitsValue) {
         const n = node.value as Bit;

@@ -25,7 +25,6 @@ export { BitmarkVersion } from './model/enum/BitmarkVersion.ts';
 export { BitType } from './model/enum/BitType.ts';
 export { BodyTextFormat } from './model/enum/BodyTextFormat.ts';
 export { CardSetVersion } from './model/enum/CardSetVersion.ts';
-export { ResourceTag } from './model/enum/ResourceTag.ts';
 export { InfoFormat } from './model/info/enum/InfoFormat.ts';
 export { InfoType } from './model/info/enum/InfoType.ts';
 export { BitmarkParser } from './parser/bitmark/BitmarkParser.ts';
@@ -103,7 +102,6 @@ export type { BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
 export type { BitTypeType } from './model/enum/BitType.ts';
 export type { BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
 export type { CardSetVersionType } from './model/enum/CardSetVersion.ts';
-export type { ResourceTagType } from './model/enum/ResourceTag.ts';
 export type { InfoFormatType } from './model/info/enum/InfoFormat.ts';
 export type { InfoTypeType } from './model/info/enum/InfoType.ts';
 export type {

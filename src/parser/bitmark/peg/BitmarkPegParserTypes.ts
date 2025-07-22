@@ -20,7 +20,7 @@ import { type JsonText, type TextAst } from '../../../model/ast/TextNodes.ts';
 import { BitConfig } from '../../../model/config/BitConfig.ts';
 import { type TagsConfig } from '../../../model/config/TagsConfig.ts';
 import { type BitTypeType } from '../../../model/enum/BitType.ts';
-import { type ResourceTagType } from '../../../model/enum/ResourceTag.ts';
+import type { ResourceTypeType } from '../../../model/enum/ResourceType.ts';
 import { Tag } from '../../../model/enum/Tag.ts';
 import { type TextFormatType } from '../../../model/enum/TextFormat.ts';
 import {
@@ -93,7 +93,7 @@ export interface RawTextAndResourceType {
 export interface BitHeader {
   bitType: BitTypeType;
   textFormat: TextFormatType;
-  resourceType?: ResourceTagType;
+  resourceType?: ResourceTypeType;
   bitLevel: number;
   isCommented?: boolean;
 }
@@ -260,7 +260,7 @@ const TypeKey = superenum({
   Title: Tag.tag_title,
   Anchor: Tag.tag_anchor,
   Reference: Tag.tag_reference,
-  ItemLead: Tag.tag_itemLead,
+  ItemLead: Tag.tag_item,
   Instruction: Tag.tag_instruction,
   Hint: Tag.tag_hint,
   True: Tag.tag_true,
@@ -364,7 +364,7 @@ export interface BitmarkPegParserContext {
   bitConfig: BitConfig;
   bitType: BitTypeType;
   textFormat: TextFormatType;
-  resourceType?: ResourceTagType;
+  resourceType?: ResourceTypeType;
 
   DEBUG_BIT_RAW: boolean;
   DEBUG_BIT_CONTENT_RAW: boolean;

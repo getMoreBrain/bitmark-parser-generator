@@ -1,8 +1,8 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../../config/Config.ts';
 import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { ConfigKey } from '../../../../model/config/enum/ConfigKey.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
-import { PropertyTag } from '../../../../model/enum/PropertyTag.ts';
 import { TextFormat } from '../../../../model/enum/TextFormat.ts';
 import { TextLocation } from '../../../../model/enum/TextLocation.ts';
 import { type ImageSourceJson } from '../../../../model/json/BitJson.ts';
@@ -59,7 +59,7 @@ function buildImageSource(
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('imageSource content', content);
 
   const { key: tag } = content as TypeKeyValue;
-  const imageSourceConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
+  const imageSourceConfig = Config.getTagConfigForTag(tagsConfig, ConfigKey.fromValue(tag));
 
   const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, [content]);
   const chainTags = context.bitContentProcessor(

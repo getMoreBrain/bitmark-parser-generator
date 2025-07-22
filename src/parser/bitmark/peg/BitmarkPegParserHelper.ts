@@ -22,6 +22,7 @@ import { Breakscape } from '../../../breakscaping/Breakscape.ts';
 import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
 import { type Bit } from '../../../model/ast/Nodes.ts';
 import { CardSetVersion } from '../../../model/enum/CardSetVersion.ts';
+import { Tag } from '../../../model/enum/Tag.ts';
 import { TextFormat } from '../../../model/enum/TextFormat.ts';
 import { TextLocation } from '../../../model/enum/TextLocation.ts';
 import { type ParserError } from '../../../model/parser/ParserError.ts';
@@ -171,6 +172,7 @@ class BitmarkPegParserHelper {
 
     return {
       type,
+      key: Tag.fromValue(type),
       value,
       parser: {
         text: this.parserText(),
@@ -184,10 +186,10 @@ class BitmarkPegParserHelper {
 
     return {
       type: TypeKey.Property,
-      key: Breakscape.unbreakscape(key, {
+      key: `@${Breakscape.unbreakscape(key, {
         format: TextFormat.plainText,
         location: TextLocation.tag,
-      }),
+      })}`,
       value,
       parser: {
         text: this.parserText(),
@@ -199,12 +201,15 @@ class BitmarkPegParserHelper {
   handleResourceTag(key: BreakscapedString, value: unknown): BitContent {
     if (DEBUG_TRACE_RESOURCE_TAGS) this.debugPrint(TypeKey.Resource, { key, value });
 
+    const uKey = Breakscape.unbreakscape(key, {
+      format: TextFormat.plainText,
+      location: TextLocation.tag,
+    });
+    const camelKey = StringUtils.kebabToCamel(uKey);
+
     return {
       type: TypeKey.Resource,
-      key: Breakscape.unbreakscape(key, {
-        format: TextFormat.plainText,
-        location: TextLocation.tag,
-      }),
+      key: `&${camelKey}`,
       value,
       parser: {
         text: this.parserText(),

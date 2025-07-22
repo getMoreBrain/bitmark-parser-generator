@@ -1,13 +1,10 @@
 import { type _BitsConfig } from '../../model/config/_Config.ts';
 import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey.ts';
-import { GroupConfigKey } from '../../model/config/enum/GroupConfigKey.ts';
-import { PropertyConfigKey } from '../../model/config/enum/PropertyConfigKey.ts';
-import { ResourceConfigKey } from '../../model/config/enum/ResourceConfigKey.ts';
-import { TagConfigKey } from '../../model/config/enum/TagConfigKey.ts';
-import { BitTagType } from '../../model/enum/BitTagType.ts';
+import { ConfigKey } from '../../model/config/enum/ConfigKey.ts';
 import { BitType } from '../../model/enum/BitType.ts';
 import { Count } from '../../model/enum/Count.ts';
 import { ExampleType } from '../../model/enum/ExampleType.ts';
+import { TagFormat } from '../../model/enum/TagFormat.ts';
 import { TextFormat } from '../../model/enum/TextFormat.ts';
 
 const BITS: _BitsConfig = {
@@ -25,8 +22,7 @@ const BITS: _BitsConfig = {
     since: '3.2.0',
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_standardTags,
+        key: ConfigKey.group_standardTags,
       },
     ],
   },
@@ -37,16 +33,14 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.title,
+        key: ConfigKey.tag_title,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.flashcardSet,
+        key: ConfigKey.property_flashcardSet,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
     ],
@@ -59,12 +53,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceAppLink,
+        key: ConfigKey.group_resourceAppLink,
         minCount: 1,
       },
     ],
@@ -75,8 +67,7 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.title,
+        key: ConfigKey.tag_title,
       },
     ],
   },
@@ -86,8 +77,9 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.imageFirst,
+        key: ConfigKey.property_imageFirst,
+        format: TagFormat.boolean,
+        defaultValue: 'true',
       },
     ],
   },
@@ -118,8 +110,9 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.imageFirst,
+        key: ConfigKey.property_imageFirst,
+        format: TagFormat.boolean,
+        defaultValue: 'true',
       },
     ],
   },
@@ -128,8 +121,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -138,12 +131,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.callToActionUrl,
+        key: ConfigKey.property_callToActionUrl,
+        format: TagFormat.plainText,
         minCount: 1,
       },
     ],
@@ -167,8 +160,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.maxCreatedBits,
+        key: ConfigKey.property_maxCreatedBits,
+        format: TagFormat.number,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -179,12 +172,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceArticleEmbed,
+        key: ConfigKey.group_resourceArticleEmbed,
         minCount: 1,
       },
     ],
@@ -195,12 +186,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceArticleLink,
+        key: ConfigKey.group_resourceArticleLink,
         minCount: 1,
       },
     ],
@@ -211,12 +200,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceAudio,
+        key: ConfigKey.group_resourceAudio,
         minCount: 1,
       },
     ],
@@ -227,12 +214,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceAudioEmbed,
+        key: ConfigKey.group_resourceAudioEmbed,
         minCount: 1,
       },
     ],
@@ -243,12 +228,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceAudioLink,
+        key: ConfigKey.group_resourceAudioLink,
         minCount: 1,
       },
     ],
@@ -259,12 +242,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.tag_reference,
+        key: ConfigKey.tag_reference,
       },
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.anchor,
+        key: ConfigKey.tag_anchor,
       },
     ],
   },
@@ -273,8 +254,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.diffTo,
+        key: ConfigKey.property_diffTo,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -283,8 +264,7 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_bookCommon,
+        key: ConfigKey.group_bookCommon,
       },
     ],
   },
@@ -319,7 +299,7 @@ const BITS: _BitsConfig = {
     //
     since: '3.2.0',
     baseBitType: BitType._standard,
-    cardSet: CardSetConfigKey._bookReferenceList,
+    cardSet: CardSetConfigKey.bookReferenceList,
   },
   [BitType.bookRequestForABookReview]: { since: '1.3.0', baseBitType: BitType.article },
   [BitType.bookSummary]: { since: '1.3.0', baseBitType: BitType.article },
@@ -330,13 +310,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.image,
     tags: [
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.title,
+        key: ConfigKey.tag_title,
         maxCount: 2, // title & subtitle
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.coverColor,
+        key: ConfigKey.property_coverColor,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -345,8 +324,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.book,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.bookAlias,
+        key: ConfigKey.property_bookAlias,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
     ],
@@ -356,8 +335,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.book,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.bookDiff,
+        key: ConfigKey.property_bookDiff,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -366,8 +345,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -376,26 +355,26 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.refAuthor,
+        key: ConfigKey.property_refAuthor,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.refBookTitle,
+        key: ConfigKey.property_refBookTitle,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.refPublisher,
+        key: ConfigKey.property_refPublisher,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.refPublicationYear,
+        key: ConfigKey.property_refPublicationYear,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.citationStyle,
+        key: ConfigKey.property_citationStyle,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -403,15 +382,15 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType._standard,
     tags: [],
-    cardSet: CardSetConfigKey._botActionResponses,
+    cardSet: CardSetConfigKey.botActionResponses,
   },
   [BitType.botActionSend]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.date,
+        key: ConfigKey.property_date,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -420,12 +399,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.image,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.focusX,
+        key: ConfigKey.property_focusX,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.focusY,
+        key: ConfigKey.property_focusY,
+        format: TagFormat.number,
       },
     ],
   },
@@ -435,8 +414,7 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
     ],
   },
@@ -448,20 +426,20 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.anchor,
+        key: ConfigKey.tag_anchor,
       },
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.title,
+        key: ConfigKey.tag_title,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.toc,
+        key: ConfigKey.property_toc,
+        format: TagFormat.boolean,
+        defaultValue: 'true',
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.progress,
+        key: ConfigKey.property_progress,
+        format: TagFormat.boolean,
+        defaultValue: 'true',
       },
     ],
   },
@@ -471,16 +449,13 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_gap,
+        key: ConfigKey.group_gap,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalse,
       },
     ],
   },
@@ -494,33 +469,27 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.isCaseSensitive,
+        key: ConfigKey.property_isCaseSensitive,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.quizCountItems,
+        key: ConfigKey.property_quizCountItems,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.quizStrikethroughSolutions,
+        key: ConfigKey.property_quizStrikethroughSolutions,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.quizStrikethroughSolutions,
-      },
-      {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.additionalSolutions,
+        key: ConfigKey.property_additionalSolutions,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_gap,
+        key: ConfigKey.group_gap,
       },
     ],
   },
@@ -540,27 +509,26 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
     ],
-    cardSet: CardSetConfigKey._clozeList,
+    cardSet: CardSetConfigKey.clozeList,
   },
   [BitType.code]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.computerLanguage,
+        key: ConfigKey.property_computerLanguage,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.codeLineNumbers,
+        key: ConfigKey.property_codeLineNumbers,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.codeMinimap,
+        key: ConfigKey.property_codeMinimap,
+        format: TagFormat.boolean,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -594,14 +562,14 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.image,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.pointerTop,
+        key: ConfigKey.property_pointerTop,
+        format: TagFormat.plainText,
         minCount: 1,
         maxCount: 1,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.pointerLeft,
+        key: ConfigKey.property_pointerLeft,
+        format: TagFormat.plainText,
         minCount: 1,
         maxCount: 1,
       },
@@ -613,8 +581,7 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_person,
+        key: ConfigKey.group_person,
       },
     ],
   },
@@ -654,37 +621,36 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_technicalTerm,
+        key: ConfigKey.group_technicalTerm,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.servings,
+        key: ConfigKey.property_servings,
+        format: TagFormat.number,
         chain: [
           {
-            type: BitTagType.property,
-            configKey: PropertyConfigKey.unit,
+            key: ConfigKey.property_unit,
+            format: TagFormat.plainText,
           },
           {
-            type: BitTagType.property,
-            configKey: PropertyConfigKey.unitAbbr,
+            key: ConfigKey.property_unitAbbr,
+            format: TagFormat.plainText,
           },
           {
-            type: BitTagType.property,
-            configKey: PropertyConfigKey.decimalPlaces,
+            key: ConfigKey.property_decimalPlaces,
+            format: TagFormat.number,
+            defaultValue: '1',
           },
           {
-            type: BitTagType.property,
-            configKey: PropertyConfigKey.disableCalculation,
+            key: ConfigKey.property_disableCalculation,
+            format: TagFormat.boolean,
           },
           {
-            type: BitTagType.tag,
-            configKey: TagConfigKey.hint,
+            key: ConfigKey.tag_hint,
           },
         ],
       },
     ],
-    cardSet: CardSetConfigKey._ingredients,
+    cardSet: CardSetConfigKey.ingredients,
   },
   [BitType.recipe]: { since: '1.5.24', baseBitType: BitType.cookIngredients },
   [BitType.cookRemark]: { since: '1.3.0', baseBitType: BitType.article },
@@ -704,12 +670,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceDocument,
+        key: ConfigKey.group_resourceDocument,
         minCount: 1,
       },
     ],
@@ -720,12 +684,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceDocumentDownload,
+        key: ConfigKey.group_resourceDocumentDownload,
         minCount: 1,
       },
     ],
@@ -737,12 +699,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceDocumentEmbed,
+        key: ConfigKey.group_resourceDocumentEmbed,
         minCount: 1,
       },
     ],
@@ -753,12 +713,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceDocumentLink,
+        key: ConfigKey.group_resourceDocumentLink,
         minCount: 1,
       },
     ],
@@ -770,29 +728,28 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.reasonableNumOfChars,
+        key: ConfigKey.property_reasonableNumOfChars,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.property_sampleSolution,
+        key: ConfigKey.property_sampleSolution,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.additionalSolutions,
+        key: ConfigKey.property_additionalSolutions,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.partialAnswer,
+        key: ConfigKey.property_partialAnswer,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.property_reference,
+        key: ConfigKey.property_reference,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
     ],
@@ -805,8 +762,7 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.title,
+        key: ConfigKey.tag_title,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -962,8 +918,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.path,
+        key: ConfigKey.property_path,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -972,8 +928,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.allowedBit,
+        key: ConfigKey.property_allowedBit,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
     ],
@@ -1009,18 +965,19 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.hasBookNavigation,
+        key: ConfigKey.property_hasBookNavigation,
+        format: TagFormat.boolean,
+        defaultValue: 'true',
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.productId,
+        key: ConfigKey.property_productId,
+        format: TagFormat.plainText,
         minCount: 1,
         maxCount: Count.infinity,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.duration,
+        key: ConfigKey.property_duration,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1029,16 +986,17 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.module,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.productId,
+        key: ConfigKey.property_productId,
+        format: TagFormat.plainText,
         minCount: 1,
+        maxCount: Count.infinity,
       },
     ],
   },
   [BitType.exampleList]: {
     since: '1.4.13',
     baseBitType: BitType.example,
-    cardSet: CardSetConfigKey._exampleBitList,
+    cardSet: CardSetConfigKey.exampleBitList,
     rootExampleType: ExampleType.string,
   },
   [BitType.extractorPage]: { since: '1.5.17', baseBitType: BitType.image },
@@ -1066,45 +1024,44 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.blockId,
+        key: ConfigKey.property_blockId,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.pageNo,
+        key: ConfigKey.property_pageNo,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.x,
+        key: ConfigKey.property_x,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.y,
+        key: ConfigKey.property_y,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.width,
+        key: ConfigKey.property_width,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.height,
+        key: ConfigKey.property_height,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.index,
+        key: ConfigKey.property_index,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.classification,
+        key: ConfigKey.property_classification,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.availableClassifications,
+        key: ConfigKey.property_availableClassifications,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceImage,
+        key: ConfigKey.group_resourceImage,
         minCount: 1,
       },
     ],
@@ -1131,28 +1088,25 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.book,
+        key: ConfigKey.property_book,
+        format: TagFormat.plainText,
         chain: [
           {
-            type: BitTagType.tag,
-            configKey: TagConfigKey.tag_reference,
+            key: ConfigKey.tag_reference,
             maxCount: 2,
           },
         ],
       },
       {
         /* Allow incorrectly chained reference tag */
-        type: BitTagType.tag,
-        configKey: TagConfigKey.tag_reference,
+        key: ConfigKey.tag_reference,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
       },
     ],
   },
@@ -1161,20 +1115,18 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.book,
+        key: ConfigKey.property_book,
         maxCount: Count.infinity,
         chain: [
           {
-            type: BitTagType.tag,
-            configKey: TagConfigKey.tag_reference,
+            key: ConfigKey.tag_reference,
             maxCount: 2,
           },
         ],
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1183,16 +1135,16 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.mailingList,
+        key: ConfigKey.property_mailingList,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1202,17 +1154,17 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
     ],
-    cardSet: CardSetConfigKey._exampleBitList,
+    cardSet: CardSetConfigKey.exampleBitList,
   },
   [BitType.legend]: {
     since: '3.12.0',
     baseBitType: BitType._standard,
     tags: [],
-    cardSet: CardSetConfigKey._definitionList,
+    cardSet: CardSetConfigKey.definitionList,
   },
   [BitType.smartStandardLegend]: { since: '3.12.0', baseBitType: BitType.legend },
   [BitType.smartStandardLegendNonNormative]: { since: '3.12.0', baseBitType: BitType.legend },
@@ -1224,13 +1176,13 @@ const BITS: _BitsConfig = {
     since: '1.34.0',
     baseBitType: BitType._standard,
     tags: [],
-    cardSet: CardSetConfigKey._definitionList,
+    cardSet: CardSetConfigKey.definitionList,
   },
   [BitType.metaSearchDefaultTerms]: {
     since: '3.12.0',
     baseBitType: BitType._standard,
     tags: [],
-    cardSet: CardSetConfigKey._definitionList,
+    cardSet: CardSetConfigKey.definitionList,
   },
   [BitType.metaSearchDefaultTopics]: {
     since: '3.12.0',
@@ -1242,11 +1194,10 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
     ],
-    cardSet: CardSetConfigKey._flashcard,
+    cardSet: CardSetConfigKey.flashcard,
   },
   [BitType.flashcard1]: { since: '1.3.0', baseBitType: BitType.flashcard },
   [BitType.qAndACard]: { since: '3.25.0', baseBitType: BitType.flashcard1 },
@@ -1255,12 +1206,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.image,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.focusX,
+        key: ConfigKey.property_focusX,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.focusY,
+        key: ConfigKey.property_focusY,
+        format: TagFormat.number,
       },
     ],
   },
@@ -1270,12 +1221,10 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalse,
       },
     ],
   },
@@ -1284,22 +1233,18 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.resource,
-        configKey: ResourceConfigKey.backgroundWallpaper,
+        key: ConfigKey.resource_backgroundWallpaper,
         chain: [
           {
-            type: BitTagType.group,
-            configKey: GroupConfigKey.group_resourceImageCommon,
+            key: ConfigKey.group_resourceImageCommon,
           },
         ],
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceImage,
+        key: ConfigKey.group_resourceImage,
         minCount: 1,
       },
     ],
@@ -1311,13 +1256,13 @@ const BITS: _BitsConfig = {
   [BitType.figure]: {
     since: '1.3.0',
     baseBitType: BitType.image,
-    cardSet: CardSetConfigKey._definitionList,
+    cardSet: CardSetConfigKey.definitionList,
   },
   [BitType.imageBanner]: { since: '1.3.0', baseBitType: BitType.image },
   [BitType.imageFigure]: {
     since: '1.3.0',
     baseBitType: BitType.image,
-    cardSet: CardSetConfigKey._definitionList,
+    cardSet: CardSetConfigKey.definitionList,
   },
   [BitType.imageFigureAlt]: { since: '1.16.0', baseBitType: BitType.imageFigure },
   [BitType.standardImageFigureNormative]: { since: '1.16.0', baseBitType: BitType.imageFigure },
@@ -1355,8 +1300,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.image,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1367,8 +1312,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.image,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.caption,
+        key: ConfigKey.property_caption,
+        format: TagFormat.bitmarkText,
       },
     ],
   },
@@ -1417,12 +1362,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceImageLink,
+        key: ConfigKey.group_resourceImageLink,
         minCount: 1,
       },
     ],
@@ -1433,16 +1376,13 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceImage,
+        key: ConfigKey.group_resourceImage,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_imageSource,
+        key: ConfigKey.group_imageSource,
       },
     ],
     resourceAttachmentAllowed: false,
@@ -1452,13 +1392,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
         // Combo resource
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceImageResponsive,
+
+        key: ConfigKey.group_resourceImageResponsive,
       },
     ],
     resourceAttachmentAllowed: false,
@@ -1468,13 +1407,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
         // Image resource
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceImage,
+
+        key: ConfigKey.group_resourceImage,
         minCount: 1,
         maxCount: Count.infinity,
       },
@@ -1490,8 +1428,7 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.tag_reference,
+        key: ConfigKey.tag_reference,
       },
     ],
   },
@@ -1501,15 +1438,14 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.reasonableNumOfChars,
+        key: ConfigKey.property_reasonableNumOfChars,
+        format: TagFormat.number,
       },
     ],
-    cardSet: CardSetConfigKey._questions,
+    cardSet: CardSetConfigKey.questions,
   },
   [BitType.interviewInstructionGrouped]: { since: '1.3.0', baseBitType: BitType.interview },
   [BitType.botInterview]: { since: '1.3.0', baseBitType: BitType.interview },
@@ -1518,8 +1454,7 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_learningPathCommon,
+        key: ConfigKey.group_learningPathCommon,
       },
     ],
   },
@@ -1542,8 +1477,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathBook,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.bot,
+        key: ConfigKey.property_bot,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1552,12 +1487,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathBook,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.externalLink,
+        key: ConfigKey.property_externalLink,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.externalLinkText,
+        key: ConfigKey.property_externalLinkText,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1566,8 +1501,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathBook,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.videoCallLink,
+        key: ConfigKey.property_videoCallLink,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1576,8 +1511,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathLearningGoal,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1586,8 +1521,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathVideoCall,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1596,8 +1531,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathClassroomEvent,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1607,8 +1542,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathClosing,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1617,8 +1552,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathExternalLink,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1627,8 +1562,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathBook,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1637,8 +1572,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathStep,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1647,12 +1582,11 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathBook,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
     ],
   },
-
   [BitType.leRead]: { since: '1.27.0', baseBitType: BitType.lePreparationTask },
   [BitType.leTask]: { since: '1.27.0', baseBitType: BitType.lePreparationTask },
   [BitType.leTodo]: { since: '1.27.0', baseBitType: BitType.lePreparationTask },
@@ -1664,16 +1598,14 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathBook,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceVideoEmbed,
+        key: ConfigKey.group_resourceVideoEmbed,
         minCount: 1,
       },
     ],
@@ -1684,16 +1616,14 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.learningPathBook,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.activityType,
+        key: ConfigKey.property_activityType,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceAudioEmbed,
+        key: ConfigKey.group_resourceAudioEmbed,
         minCount: 1,
       },
     ],
@@ -1705,8 +1635,9 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.listItemIndent,
+        key: ConfigKey.property_listItemIndent,
+        format: TagFormat.number,
+        defaultValue: '0',
       },
     ],
   },
@@ -1722,16 +1653,13 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_markConfig,
+        key: ConfigKey.group_markConfig,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_mark,
+        key: ConfigKey.group_mark,
       },
     ],
   },
@@ -1741,15 +1669,14 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.isCaseSensitive,
+        key: ConfigKey.property_isCaseSensitive,
+        format: TagFormat.boolean,
       },
     ],
-    cardSet: CardSetConfigKey._matchPairs,
+    cardSet: CardSetConfigKey.matchPairs,
   },
   [BitType.matchAll]: { since: '1.3.0', baseBitType: BitType.match },
   [BitType.matchReverse]: { since: '1.3.0', baseBitType: BitType.match },
@@ -1758,28 +1685,28 @@ const BITS: _BitsConfig = {
   [BitType.matchMatrix]: {
     since: '1.3.0',
     baseBitType: BitType.match,
-    cardSet: CardSetConfigKey._matchMatrix,
+    cardSet: CardSetConfigKey.matchMatrix,
   },
   [BitType.matchAudio]: {
     since: '1.3.0',
     baseBitType: BitType.match,
-    cardSet: CardSetConfigKey._matchAudioPairs,
+    cardSet: CardSetConfigKey.matchAudioPairs,
   },
   [BitType.matchPicture]: {
     since: '1.3.0',
     baseBitType: BitType.match,
-    cardSet: CardSetConfigKey._matchImagePairs,
+    cardSet: CardSetConfigKey.matchImagePairs,
   },
   [BitType.feedback]: {
     since: '3.13.0',
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.reasonableNumOfChars,
+        key: ConfigKey.property_reasonableNumOfChars,
+        format: TagFormat.number,
       },
     ],
-    cardSet: CardSetConfigKey._feedback,
+    cardSet: CardSetConfigKey.feedback,
   },
   [BitType.learningDocumentationFeedback]: { since: '3.13.0', baseBitType: BitType.feedback },
   [BitType.handInFeedbackExpert]: { since: '3.30.0', baseBitType: BitType.feedback },
@@ -1790,12 +1717,10 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalse,
       },
     ],
   },
@@ -1809,15 +1734,13 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalse,
       }, // This is actually for multiple-choice-1, but we support it here as well (as many bits are wrong)
     ],
-    cardSet: CardSetConfigKey._quiz,
+    cardSet: CardSetConfigKey.quiz,
   },
   [BitType.coachSelfReflectionMultipleChoice]: {
     since: '1.3.0',
@@ -1829,12 +1752,10 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalse,
       },
     ],
   },
@@ -1852,12 +1773,10 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalse,
       },
     ],
   },
@@ -1871,15 +1790,13 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalse,
       }, // This is actually for multiple-response-1, but we support it here as well (as many bits are wrong)
     ],
-    cardSet: CardSetConfigKey._quiz,
+    cardSet: CardSetConfigKey.quiz,
   },
   [BitType.coachSelfReflectionMultipleResponse]: {
     since: '1.3.0',
@@ -1890,12 +1807,11 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.title,
+        key: ConfigKey.tag_title,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.thumbImage,
+        key: ConfigKey.property_thumbImage,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1906,16 +1822,16 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.content2Buy,
+        key: ConfigKey.property_content2Buy,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1926,12 +1842,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.page,
+        key: ConfigKey.property_page,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1945,16 +1861,15 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_person,
+        key: ConfigKey.group_person,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1963,12 +1878,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.product,
+        key: ConfigKey.property_product,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -1977,14 +1892,19 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
       },
+      // NOTE: Only one of productVideo or productVideoList should be used, not both - TODO: fix when know which one!
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.productList,
+        key: ConfigKey.property_product,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
+      // {
+      //   key: ConfigKey.property_productList,
+      //   format: TagFormat.plainText,
+      //   maxCount: Count.infinity,
+      // },
     ],
   },
   [BitType.pageProductVideo]: {
@@ -1992,12 +1912,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.productVideo,
+        key: ConfigKey.property_productVideo,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -2006,14 +1926,20 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
+      // NOTE: Only one of productVideo or productVideoList should be used, not both - TODO: fix when know which one!
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.productVideoList,
+        key: ConfigKey.property_productVideo,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
+      // {
+      //   key: ConfigKey.property_productVideoList,
+      //   format: TagFormat.plainText,
+      //   maxCount: Count.infinity,
+      // },
     ],
   },
   [BitType.pageSectionFolder]: {
@@ -2021,12 +1947,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.slug,
+        key: ConfigKey.property_slug,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.productFolder,
+        key: ConfigKey.property_productFolder,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -2039,8 +1965,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.quotedPerson,
+        key: ConfigKey.property_quotedPerson,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -2055,16 +1981,16 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.releaseVersion,
+        key: ConfigKey.property_releaseVersion,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.releaseKind,
+        key: ConfigKey.property_releaseKind,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.releaseDate,
+        key: ConfigKey.property_releaseDate,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -2073,20 +1999,19 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.title,
+        key: ConfigKey.tag_title,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.resolved,
+        key: ConfigKey.property_resolved,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.resolvedDate,
+        key: ConfigKey.property_resolvedDate,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.resolvedBy,
+        key: ConfigKey.property_resolvedBy,
+        format: TagFormat.plainText,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -2106,12 +2031,10 @@ const BITS: _BitsConfig = {
     tags: [
       // Not sure if these are actually valid here, but include them as they are in the test bit.
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.anchor,
+        key: ConfigKey.tag_anchor,
       },
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.tag_reference,
+        key: ConfigKey.tag_reference,
       },
     ],
   },
@@ -2122,11 +2045,10 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
     ],
-    cardSet: CardSetConfigKey._elements,
+    cardSet: CardSetConfigKey.elements,
     rootExampleType: ExampleType.boolean,
   },
   [BitType.stillImageFilm]: {
@@ -2134,13 +2056,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
         // Combo resource
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceStillImageFilm,
+
+        key: ConfigKey.group_resourceStillImageFilm,
       },
     ],
     resourceAttachmentAllowed: false,
@@ -2150,12 +2071,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceStillImageFilmEmbed,
+        key: ConfigKey.group_resourceStillImageFilmEmbed,
         minCount: 1,
       },
     ],
@@ -2166,12 +2085,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceStillImageFilmLink,
+        key: ConfigKey.group_resourceStillImageFilmLink,
         minCount: 1,
       },
     ],
@@ -2192,20 +2109,20 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.image,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.pointerTop,
+        key: ConfigKey.property_pointerTop,
+        format: TagFormat.plainText,
         minCount: 1,
         maxCount: 1,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.pointerLeft,
+        key: ConfigKey.property_pointerLeft,
+        format: TagFormat.plainText,
         minCount: 1,
         maxCount: 1,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
         minCount: 1,
         maxCount: 1,
       },
@@ -2217,32 +2134,32 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.ratingLevelStart,
+        key: ConfigKey.property_ratingLevelStart,
+        format: TagFormat.number,
         chain: [
           {
-            type: BitTagType.property,
-            configKey: PropertyConfigKey.label,
+            key: ConfigKey.property_label,
+            format: TagFormat.bitmarkText,
           },
         ],
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.ratingLevelEnd,
+        key: ConfigKey.property_ratingLevelEnd,
+        format: TagFormat.number,
         chain: [
           {
-            type: BitTagType.property,
-            configKey: PropertyConfigKey.label,
+            key: ConfigKey.property_label,
+            format: TagFormat.bitmarkText,
           },
         ],
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.ratingLevelSelected,
+        key: ConfigKey.property_ratingLevelSelected,
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -2259,12 +2176,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.scormSource,
+        key: ConfigKey.property_scormSource,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.posterImage,
+        key: ConfigKey.property_posterImage,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -2272,62 +2189,66 @@ const BITS: _BitsConfig = {
     since: '3.1.0',
     baseBitType: BitType._standard,
     tags: [],
-    cardSet: CardSetConfigKey._pronunciationTable,
+    cardSet: CardSetConfigKey.pronunciationTable,
   },
   [BitType.table]: {
     since: '1.5.19',
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.caption,
+        key: ConfigKey.property_caption,
+        format: TagFormat.bitmarkText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tableFixedHeader,
+        key: ConfigKey.property_tableFixedHeader,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tableHeaderWhitespaceNoWrap,
+        key: ConfigKey.property_tableHeaderWhitespaceNoWrap,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tableSearch,
+        key: ConfigKey.property_tableSearch,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tableSort,
+        key: ConfigKey.property_tableSort,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tablePagination,
+        key: ConfigKey.property_tablePagination,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tablePaginationLimit,
+        key: ConfigKey.property_tablePaginationLimit,
+        format: TagFormat.number,
+        defaultValue: '0',
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tableHeight,
+        key: ConfigKey.property_tableHeight,
+        format: TagFormat.number,
+        defaultValue: '0',
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tableWhitespaceNoWrap,
+        key: ConfigKey.property_tableWhitespaceNoWrap,
+        format: TagFormat.boolean,
+        // defaultValue: 'true',
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tableAutoWidth,
+        key: ConfigKey.property_tableAutoWidth,
+        format: TagFormat.boolean,
+        // defaultValue: 'true',
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tableResizableColumns,
+        key: ConfigKey.property_tableResizableColumns,
+        format: TagFormat.boolean,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tableColumnMinWidth,
+        key: ConfigKey.property_tableColumnMinWidth,
+        format: TagFormat.number,
       },
     ],
-    cardSet: CardSetConfigKey._table,
+    cardSet: CardSetConfigKey.table,
   },
   [BitType.tableAlt]: { since: '1.16.0', baseBitType: BitType.table },
   [BitType.standardTableNormative]: { since: '1.16.0', baseBitType: BitType.table },
@@ -2377,8 +2298,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.toc,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.maxDisplayLevel,
+        key: ConfigKey.property_maxDisplayLevel,
+        format: TagFormat.number,
       },
     ],
   },
@@ -2387,8 +2308,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.toc,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.maxTocChapterLevel,
+        key: ConfigKey.property_maxTocChapterLevel,
+        format: TagFormat.number,
       },
     ],
   },
@@ -2397,13 +2318,13 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.toc,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tocResource,
+        key: ConfigKey.property_tocResource,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -2412,13 +2333,13 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.toc,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.tocContent,
+        key: ConfigKey.property_tocContent,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -2451,8 +2372,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.handInAcceptFileType,
+        key: ConfigKey.property_handInAcceptFileType,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
     ],
@@ -2466,17 +2387,17 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.handInRequirement,
+        key: ConfigKey.property_handInRequirement,
+        format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.handInInstruction,
+        key: ConfigKey.property_handInInstruction,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.buttonCaption,
+        key: ConfigKey.property_buttonCaption,
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -2488,24 +2409,21 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.labelTrue,
+        key: ConfigKey.property_labelTrue,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.labelFalse,
+        key: ConfigKey.property_labelFalse,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.true,
+        key: ConfigKey.tag_true,
       },
       {
-        type: BitTagType.tag,
-        configKey: TagConfigKey.false,
+        key: ConfigKey.tag_false,
       },
     ],
     rootExampleType: ExampleType.boolean,
@@ -2517,19 +2435,18 @@ const BITS: _BitsConfig = {
     quizBit: true,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_quizCommon,
+        key: ConfigKey.group_quizCommon,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.labelTrue,
+        key: ConfigKey.property_labelTrue,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.labelFalse,
+        key: ConfigKey.property_labelFalse,
+        format: TagFormat.plainText,
       },
     ],
-    cardSet: CardSetConfigKey._statements,
+    cardSet: CardSetConfigKey.statements,
   },
   [BitType.vendorAmcharts5Chart]: {
     since: '1.5.8',
@@ -2542,8 +2459,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.vendorDashboardId,
+        key: ConfigKey.property_vendorDashboardId,
+        format: TagFormat.plainText,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -2553,8 +2470,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.vendorSurveyId,
+        key: ConfigKey.property_vendorSurveyId,
+        format: TagFormat.plainText,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -2568,8 +2485,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.vendorSurveyId,
+        key: ConfigKey.property_vendorSurveyId,
+        format: TagFormat.plainText,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -2587,16 +2504,16 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.width, // Same as image
+        key: ConfigKey.property_width, // Same as image
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.height, // Same as image
+        key: ConfigKey.property_height, // Same as image
+        format: TagFormat.number,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.vendorUrl,
+        key: ConfigKey.property_vendorUrl,
+        format: TagFormat.plainText,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -2612,12 +2529,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.jupyterId,
+        key: ConfigKey.property_jupyterId,
+        format: TagFormat.plainText,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.jupyterExecutionCount,
+        key: ConfigKey.property_jupyterExecutionCount,
+        format: TagFormat.number,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -2631,8 +2548,8 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.padletId,
+        key: ConfigKey.property_padletId,
+        format: TagFormat.plainText,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -2642,13 +2559,13 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     tags: [
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.stripePricingTableId,
+        key: ConfigKey.property_stripePricingTableId,
+        format: TagFormat.plainText,
         minCount: 1,
       },
       {
-        type: BitTagType.property,
-        configKey: PropertyConfigKey.stripePublishableKey,
+        key: ConfigKey.property_stripePublishableKey,
+        format: TagFormat.plainText,
         minCount: 1,
       },
     ],
@@ -2663,12 +2580,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceVideo,
+        key: ConfigKey.group_resourceVideo,
         minCount: 1,
       },
     ],
@@ -2681,12 +2596,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceVideoEmbed,
+        key: ConfigKey.group_resourceVideoEmbed,
         minCount: 1,
       },
     ],
@@ -2699,12 +2612,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceVideoLink,
+        key: ConfigKey.group_resourceVideoLink,
         minCount: 1,
       },
     ],
@@ -2717,12 +2628,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     tags: [
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceBitTags,
+        key: ConfigKey.group_resourceBitTags,
       },
       {
-        type: BitTagType.group,
-        configKey: GroupConfigKey.group_resourceWebsiteLink,
+        key: ConfigKey.group_resourceWebsiteLink,
         minCount: 1,
       },
     ],

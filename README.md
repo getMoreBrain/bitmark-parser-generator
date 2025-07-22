@@ -53,10 +53,10 @@ Replace `latest` with a specific version in either of the URLs above to use a sp
 
 ```ts
 // Modules
-import { BitmarkParserGenerator } from 'bitmark-parser-generator';
+import { BitmarkParserGenerator } from '@gmb/bitmark-parser-generator';
 
 // CommonJS
-const { BitmarkParserGenerator } = require('bitmark-parser-generator');
+const { BitmarkParserGenerator } = require('@gmb/bitmark-parser-generator');
 
 // Browser UMD
 const { BitmarkParserGenerator } = window.bitmarkParserGenerator;

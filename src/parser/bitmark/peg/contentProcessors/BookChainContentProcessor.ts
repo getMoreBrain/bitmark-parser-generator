@@ -1,6 +1,6 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
-import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey.ts';
+import { ConfigKey } from '../../../../model/config/enum/ConfigKey.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
 import { Count } from '../../../../model/enum/Count.ts';
 import { TextFormat } from '../../../../model/enum/TextFormat.ts';
@@ -55,7 +55,7 @@ function buildBook(
   );
 
   // Get the config for the bit
-  const bookConfig = bitConfig.tags[PropertyConfigKey.book];
+  const bookConfig = bitConfig.tags[ConfigKey.property_book];
   if (bookConfig && (bookConfig.maxCount === Count.infinity || bookConfig.maxCount > 1)) {
     // Add the book to the list of books
     if (!Array.isArray(target.book)) target.book = [];

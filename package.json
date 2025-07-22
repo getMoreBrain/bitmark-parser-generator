@@ -68,7 +68,7 @@
     "test-web-generator": "vitest run test/standard/web-generator.test.ts",
     "check": "npm run init && npm run typecheck && npm run lint",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings 0",
     "lint-fix": "eslint . --fix",
     "regenerate-bitmark-test-json": "node ./test/custom/dev/devRegenerateBitmarkTestJson.ts",
     "prepublishOnly": "npm run clean && npm run build && npm run test",
