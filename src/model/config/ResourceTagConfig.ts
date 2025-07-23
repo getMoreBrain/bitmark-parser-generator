@@ -1,9 +1,7 @@
-import { BitTagType, type BitTagTypeType } from '../enum/BitTagType.ts';
+import { BitTagConfigKeyType, type BitTagConfigKeyTypeType } from '../enum/BitTagConfigKeyType.ts';
 import { type CountType } from '../enum/Count.ts';
-import { type ResourceJsonKeyType } from '../enum/ResourceJsonKey.ts';
-import { type ResourceTagType } from '../enum/ResourceTag.ts';
 import { AbstractTagConfig } from './AbstractTagConfig.ts';
-import { type ConfigKeyType } from './enum/ConfigKey.ts';
+import type { ConfigKeyType } from './enum/ConfigKey.ts';
 import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
@@ -12,27 +10,25 @@ interface ToStringOptions {
 }
 
 class ResourceTagConfig extends AbstractTagConfig {
-  readonly type: BitTagTypeType = BitTagType.resource;
+  readonly type: BitTagConfigKeyTypeType = BitTagConfigKeyType.resource;
 
   public constructor(
     configKey: ConfigKeyType,
-    tag: ResourceTagType,
+    tag: string,
     maxCount: CountType,
     minCount: number,
     chain: TagsConfig | undefined,
-    jsonKey: ResourceJsonKeyType | undefined,
-    // astKey: PropertyAstKeyType|undefined,
+    jsonKey: string | undefined,
     deprecated: string | undefined,
   ) {
     super(
-      BitTagType.resource,
+      BitTagConfigKeyType.resource,
       configKey,
       tag,
       maxCount,
       minCount,
       chain,
       jsonKey,
-      undefined,
       deprecated,
     );
 

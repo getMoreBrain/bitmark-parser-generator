@@ -12,14 +12,15 @@ import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts'
 import { type Body, type BodyPart } from '../../../model/ast/Nodes.ts';
 import { type JsonText } from '../../../model/ast/TextNodes.ts';
 import { CardSetConfig } from '../../../model/config/CardSetConfig.ts';
-import { CardVariantConfig } from '../../../model/config/CardVariantConfig.ts';
+import { ConfigKey, type ConfigKeyType } from '../../../model/config/enum/ConfigKey.ts';
 import { type TagsConfig } from '../../../model/config/TagsConfig.ts';
-import { BitTagType, type BitTagTypeType } from '../../../model/enum/BitTagType.ts';
+import {
+  BitTagConfigKeyType,
+  type BitTagConfigKeyTypeType,
+} from '../../../model/enum/BitTagConfigKeyType.ts';
 import { type BitTypeType } from '../../../model/enum/BitType.ts';
 import { Count, type CountType } from '../../../model/enum/Count.ts';
-import { PropertyTag, type PropertyTagType } from '../../../model/enum/PropertyTag.ts';
-import { ResourceTag } from '../../../model/enum/ResourceTag.ts';
-import { Tag, type TagType } from '../../../model/enum/Tag.ts';
+import { type TagType } from '../../../model/enum/Tag.ts';
 import { type TextFormatType } from '../../../model/enum/TextFormat.ts';
 import { type ParserData } from '../../../model/parser/ParserData.ts';
 import { type TagValidationData } from '../../../model/parser/TagValidationData.ts';
@@ -237,7 +238,7 @@ class BitmarkPegParserValidator {
     // Get the bit config to check how to parse the bit
     if (!bitConfig.cardSet) return cardBody; // Won't happen. Just to make TS happy
 
-    const variantConfig = this.getVariantConfig(bitConfig.cardSet.variants, sideNo, variantNo);
+    const variantConfig = Config.getCardSetVariantConfig(bitType, sideNo, variantNo);
     if (!variantConfig) return cardBody; // Won't happen. Just to make TS happy
 
     const { bodyAllowed } = variantConfig;
@@ -298,29 +299,11 @@ class BitmarkPegParserValidator {
       validTypeKeys.set(key, {
         maxCount,
         minCount,
-        _type: key as BitTagTypeType,
+        _type: key as BitTagConfigKeyTypeType,
         _tag: key as TagType,
         _seenCount: 0,
       });
     };
-
-    // Helper function for add extra valid property keys
-    const addExtraValidPropertyKeys = (
-      key: PropertyTagType,
-      maxCount: CountType,
-      minCount: number,
-    ) => {
-      validTypeKeys.set(`${TypeKey.Property}:${key}`, {
-        maxCount,
-        minCount,
-        _type: BitTagType.property,
-        _tag: Tag.tag_property,
-        _seenCount: 0,
-      });
-    };
-
-    // Comment property tags are allowed anywhere
-    addExtraValidPropertyKeys(PropertyTag.internalComment, Count.infinity, 0);
 
     if (contentDepth === BitContentLevel.Bit) {
       // Add the extra valid tags dependent on bit configuration
@@ -346,32 +329,34 @@ class BitmarkPegParserValidator {
       let typeKey = TypeKey.fromValue(type);
       if (!typeKey) continue; // Should not happen
 
-      // Build the final type key with the property / resource key added
-      let typeKeyPlusKey: TypeKeyType | string | undefined = typeKey;
+      // Build the final valid type key which is the key for property / resources
+      let validTypeKey: TypeKeyType | string | undefined = typeKey;
       if (typeKey === TypeKey.Property || typeKey === TypeKey.Resource) {
-        typeKeyPlusKey = `${typeKey}:${key}`;
+        validTypeKey = key;
       }
 
       // Get the tag data for this tag type and key. If not found, the tag is not valid
-      let tagData = validTypeKeys.get(typeKeyPlusKey);
+      let tagData = validTypeKeys.get(validTypeKey);
 
       // Support [@ fallback to [&:
       // See: https://github.com/getMoreBrain/cosmic/issues/7859
       // In the case of a property tag that is not found, convert it to a resource tag and retry
       // Only for specific tags. This is to support legacy tags for a short period and will be removed in the future
       // (support @ instead of & for resources)
-      if (
-        !tagData &&
-        typeKey === TypeKey.Property &&
-        (key === ResourceTag.backgroundWallpaper || key === ResourceTag.imagePlaceholder)
-      ) {
-        tagData = validTypeKeys.get(`${TypeKey.Resource}:${key}`);
-        if (tagData) {
-          typeKey = TypeKey.Resource;
-          content.type = TypeKey.Resource;
+      if (!tagData && typeKey === TypeKey.Property) {
+        const resourceKey = key.replace(/^@/, '&') as ConfigKeyType;
+        if (
+          resourceKey === ConfigKey.resource_backgroundWallpaper ||
+          resourceKey === ConfigKey.resource_imagePlaceholder
+        ) {
+          tagData = validTypeKeys.get(resourceKey);
+          if (tagData) {
+            typeKey = TypeKey.Resource;
+            content.type = TypeKey.Resource;
 
-          const warningMsg = `Falling back to '[&${key}]' from '[@${key}]'. Replace '[@${key}]' with '[&${key}]' to avoid this warning.`;
-          context.addWarning(warningMsg);
+            const warningMsg = `Falling back to '[${resourceKey}]' from '[${key}]'. Replace '[${key}]' with '[&${key}]' to avoid this warning.`;
+            context.addWarning(warningMsg);
+          }
         }
       }
 
@@ -826,11 +811,7 @@ class BitmarkPegParserValidator {
         for (const variant of side.variants) {
           const variantContent = variant.content;
           let validatedContent: BitContent[] | undefined;
-          const variantConfig = this.getVariantConfig(
-            cardSetConfig.variants,
-            sideIndex,
-            variantIndex,
-          );
+          const variantConfig = Config.getCardSetVariantConfig(bitType, sideIndex, variantIndex);
 
           if (variantConfig) {
             // Validate the variant against the config
@@ -937,9 +918,9 @@ class BitmarkPegParserValidator {
       const tagValidationData: TagValidationData = {
         minCount: v.minCount,
         maxCount: v.maxCount,
-        isTag: v.type === BitTagType.tag,
-        isProperty: v.type === BitTagType.property,
-        isResource: v.type === BitTagType.resource,
+        isTag: v.type === BitTagConfigKeyType.tag,
+        isProperty: v.type === BitTagConfigKeyType.property,
+        isResource: v.type === BitTagConfigKeyType.resource,
         chain: v.chain,
 
         // Private
@@ -951,9 +932,9 @@ class BitmarkPegParserValidator {
       };
 
       if (tagValidationData.isProperty) {
-        res.set(`${TypeKey.Property}:${v.tag}`, tagValidationData);
+        res.set(v.configKey, tagValidationData);
       } else if (tagValidationData.isResource) {
-        res.set(`${TypeKey.Resource}:${v.tag}`, tagValidationData);
+        res.set(v.configKey, tagValidationData);
       } else {
         // Take advantage of the same naming convention (dangerous - should be improved)
         const typeKey = TypeKey.fromValue(v.tag);
@@ -966,49 +947,12 @@ class BitmarkPegParserValidator {
     return res;
   }
 
-  /**
-   * Get the configuration for a particular card side and variant
-   * (checking for infinitely repeating variants)
-   *
-   * @param config all variant configurations
-   * @param side side index
-   * @param variant variant index
-   *
-   * @returns the config if found, otherwise undefined
-   */
-  private getVariantConfig(
-    config: CardVariantConfig[][],
-    side: number,
-    variant: number,
-  ): CardVariantConfig | undefined {
-    let ret: CardVariantConfig | undefined;
-
-    if (config.length === 0) return undefined;
-
-    const sideIdx = Math.min(side, config.length - 1);
-
-    const variantConfigs = config[sideIdx];
-
-    // Check for variant
-    const maxVariantIndex = variantConfigs.length - 1;
-    if (variant > maxVariantIndex) {
-      ret = variantConfigs[maxVariantIndex];
-      if (ret.repeatCount !== Count.infinity) return undefined;
-    } else {
-      ret = variantConfigs[variant];
-    }
-
-    return ret;
-  }
-
   private getTagSignature(tagValidationData: TagValidationData): string {
     switch (tagValidationData._type) {
-      case BitTagType.tag:
-        return `[${tagValidationData._tag}]`;
-      case BitTagType.property:
-        return `[@${tagValidationData._tag}]`;
-      case BitTagType.resource:
-        return `[&${tagValidationData._tag}]`;
+      case BitTagConfigKeyType.tag:
+      case BitTagConfigKeyType.property:
+      case BitTagConfigKeyType.resource:
+        return `[${tagValidationData._configKey}]`;
       default:
         return `'${tagValidationData._type}' tag '${tagValidationData._tag}'`;
     }
@@ -1017,9 +961,8 @@ class BitmarkPegParserValidator {
   private getUnknownTagSignature(type: string, tag: string): string {
     switch (type) {
       case TypeKey.Property:
-        return `[@${tag}]`;
       case TypeKey.Resource:
-        return `[&${tag}]`;
+        return `[${tag}]`;
       default:
         return tag ? `'${type}' tag '${tag}'` : `'${type}' tag`;
     }

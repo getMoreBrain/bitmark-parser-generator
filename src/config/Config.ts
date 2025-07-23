@@ -1,22 +1,23 @@
 import { type _BitConfig, type _PropertiesConfig } from '../model/config/_Config.ts';
 import { BitConfig } from '../model/config/BitConfig.ts';
+import type { CardVariantConfig } from '../model/config/CardVariantConfig.ts';
+import { ConfigKey, type ConfigKeyType } from '../model/config/enum/ConfigKey.ts';
 import { GroupConfigType } from '../model/config/enum/GroupConfigType.ts';
 import { ResourcesConfig } from '../model/config/ResourcesConfig.ts';
 import { ResourceTagConfig } from '../model/config/ResourceTagConfig.ts';
 import { type TagConfig } from '../model/config/TagConfig.ts';
 import { type TagsConfig } from '../model/config/TagsConfig.ts';
-import { BitTagType } from '../model/enum/BitTagType.ts';
+import { BitTagConfigKeyType } from '../model/enum/BitTagConfigKeyType.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
-import { type PropertyTagType } from '../model/enum/PropertyTag.ts';
-import { type ResourceJsonKeyType } from '../model/enum/ResourceJsonKey.ts';
-import { type ResourceTagType } from '../model/enum/ResourceTag.ts';
-import { type TagType } from '../model/enum/Tag.ts';
+import { Count } from '../model/enum/Count.ts';
+import type { ResourceKeyType } from '../model/enum/ResourceKey.ts';
+import { resourceTypeToConfigKey, type ResourceTypeType } from '../model/enum/ResourceType.ts';
+import { TagFormat } from '../model/enum/TagFormat.ts';
 import { TextFormat } from '../model/enum/TextFormat.ts';
 import { ObjectUtils } from '../utils/ObjectUtils.ts';
 import { ConfigHydrator } from './ConfigHydrator.ts';
 import { BITS } from './raw/bits.ts';
 import { GROUPS } from './raw/groups.ts';
-import { PROPERTIES } from './raw/properties.ts';
 
 export interface ComboResources {
   [configKey: string]: TagsConfig;
@@ -27,7 +28,7 @@ class Config {
   public bitLevelMax = 7;
   private bitCache: Map<BitTypeType, BitConfig> = new Map();
   private allResourcesCache: TagsConfig | undefined;
-  private comboResourcesCache: Map<ResourceTagType, TagsConfig | undefined> = new Map();
+  private comboResourcesCache: Map<ConfigKeyType, TagsConfig | undefined> = new Map();
 
   constructor() {
     //
@@ -132,13 +133,21 @@ class Config {
         rootExampleType,
       } = _mergedBitConfig;
 
-      // Hydratre the configuration
+      // All bits have the internal comment property, so add it to the tags
+      _tags?.push({
+        key: ConfigKey.property_internalComment,
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+        minCount: 0,
+      });
+
+      // Hydrate the configuration
       const zeroCountAllResourcesTags = this.getAllResourcesTagsWithZeroCounts();
       const bitTags = ConfigHydrator.hydrateTagsConfig(_tags ?? []);
       const cardSet = ConfigHydrator.hydrateCardSetConfig(_cardSet);
 
       // Merge the allResourcesTags with the bitTags *in the correct order*
-      const comboResourceTagType = bitTags.info?.comboResourceType;
+      const comboResourceConfigKey = bitTags.info?.comboResourceConfigKey;
       const tags = {
         ...bitTags.tags,
       };
@@ -162,7 +171,7 @@ class Config {
         footerRequired,
         resourceAttachmentAllowed,
         rootExampleType,
-        comboResourceType: comboResourceTagType,
+        comboResourceConfigKey,
       });
 
       // Add to cache
@@ -172,35 +181,34 @@ class Config {
     return bitConfig;
   }
 
-  public getRawPropertiesConfig(): _PropertiesConfig {
-    return PROPERTIES;
-  }
-
   /**
    * Look up the tag configuration by tag (rather than by config key).
    *
    * @param bitType
-   * @param tag the tag to look up - if undefined, will return undefined
+   * @param key the configKey to look up - if undefined, will return undefined
    * @returns
    */
   public getTagConfigForTag(
     tagsConfig: TagsConfig | undefined,
-    tag: TagType | PropertyTagType | ResourceTagType | undefined,
+    key: ConfigKeyType | undefined,
   ): TagConfig | undefined {
     if (!tagsConfig) return undefined;
 
-    // Search the properties in the bit config for the matching tag.
-    for (const [, t] of Object.entries(tagsConfig)) {
-      if (t.tag === tag) {
-        return t;
-      }
-    }
+    // // Search the properties in the bit config for the matching tag.
+    // for (const [, t] of Object.entries(tagsConfig)) {
+    //   if (t.tag === tag) {
+    //     return t;
+    //   }
+    // }
 
-    return undefined;
+    // return undefined;
+
+    // Now a map lookup since the tag now has the & / @ prefix
+    return tagsConfig[key as string];
   }
 
   /**
-   * Look up the tag configuration for a cardSet.
+   * Look up the tag configuration for a cardSet variant.
    *
    * @param bitType
    * @param sideNo
@@ -214,18 +222,48 @@ class Config {
     sideNo: number,
     variantNo: number,
   ): TagsConfig | undefined {
+    const variantConfig = this.getCardSetVariantConfig(bitType, sideNo, variantNo);
+    if (!variantConfig) return undefined;
+
+    return variantConfig.tags;
+  }
+
+  /**
+   * Get the configuration for a particular card side and variant
+   * (checking for infinitely repeating variants)
+   *
+   * @param config all variant configurations
+   * @param sideNo side index
+   * @param variantNo variant index
+   *
+   * @returns the config if found, otherwise undefined
+   */
+  public getCardSetVariantConfig(
+    bitType: BitTypeType,
+    sideNo: number,
+    variantNo: number,
+  ): CardVariantConfig | undefined {
+    let ret: CardVariantConfig | undefined;
+
     const bitConfig = this.getBitConfig(bitType);
     if (!bitConfig) return undefined;
+    const variants = bitConfig.cardSet?.variants;
+    if (!variants) return undefined;
 
-    const cardSet = bitConfig.cardSet;
-    if (!cardSet) return undefined;
+    const sideIdx = Math.min(sideNo, variants.length - 1);
+    const variant = variants[sideIdx];
 
-    sideNo = Math.min(sideNo, cardSet.variants.length - 1);
-    const variants = cardSet.variants[sideNo];
-    variantNo = Math.min(variantNo, variants.length - 1);
-    const variant = variants[variantNo];
+    // Check for variant
+    const maxVariantIndex = variant.length - 1;
+    if (variantNo > maxVariantIndex) {
+      ret = variant[maxVariantIndex];
+      // Fix: Always assume infinite repeat count
+      // if (ret.repeatCount !== Count.infinity) return undefined;
+    } else {
+      ret = variant[variantNo];
+    }
 
-    return variant.tags;
+    return ret;
   }
 
   /**
@@ -241,51 +279,55 @@ class Config {
    * @param resourceTypeAttachment the resource type specified in the bit header
    * @returns the definitive resource configuration for the bit
    */
+  // TODO - this will need fixing.
   public getBitResourcesConfig(
     bitType: BitTypeType,
-    resourceTypeAttachment: ResourceTagType | undefined,
+    resourceTypeAttachment: ResourceTypeType | undefined,
   ): ResourcesConfig {
     let finalResourceTags: TagsConfig = {};
-    const comboResourceTagTypesMap: Map<ResourceTagType, ResourceTagType[]> = new Map();
+    const comboResourceConfigKeysMap: Map<ConfigKeyType, ConfigKeyType[]> = new Map();
+    const configKeyResourceAttachment = resourceTypeAttachment
+      ? resourceTypeToConfigKey(resourceTypeAttachment)
+      : undefined;
 
     const bitConfig = this.getBitConfig(bitType);
 
     // Filter out the resource tags
     const resourceTags: TagsConfig = {};
     for (const [k, v] of Object.entries(bitConfig.tags)) {
-      if (v.type === BitTagType.resource) {
+      if (v.type === BitTagConfigKeyType.resource) {
         resourceTags[k] = v;
       }
     }
 
     // Work out the potential combo resource type, which is either fixed by the bit type, or comes from the bit header
-    const comboResourceType =
-      bitConfig.comboResourceType ??
-      (bitConfig.resourceAttachmentAllowed && resourceTypeAttachment);
+    const comboResourceConfigKey =
+      bitConfig.comboResourceConfigKey ??
+      (bitConfig.resourceAttachmentAllowed ? configKeyResourceAttachment : undefined);
 
-    if (comboResourceType) {
-      // The comboResourceType might be a combo resource. Build the comborResourceTagTypesMap
-      const comboResourcesMap: Map<ResourceTagType, TagConfig> = new Map();
+    if (comboResourceConfigKey) {
+      // The comboResourceConfigKey might be a combo resource. Build the comborResourceTagTypesMap
+      const comboResourcesMap: Map<ConfigKeyType, TagConfig> = new Map();
 
       // The resource type attachment might be a combo resource - handle it
-      const comboResource = this.getComboResource(comboResourceType);
+      const comboResource = this.getComboResource(comboResourceConfigKey);
       if (comboResource) {
         // Extract the resource types from the combo resource
         const comboResourceTagConfigs = Object.values(comboResource).filter((t) => {
-          return t.type === BitTagType.resource;
+          return t.type === BitTagConfigKeyType.resource;
         });
-        const comboResourceTypes = comboResourceTagConfigs.map((t) => t.tag as ResourceTagType);
+        const comboResourceTypes = comboResourceTagConfigs.map((t) => t.configKey);
 
         // Combine into a map for easy lookup
         comboResourceTypes.forEach((type) => {
-          const tags = comboResourceTagConfigs.find((t) => t.tag === type);
+          const tags = comboResourceTagConfigs.find((t) => t.configKey === type);
           if (tags) comboResourcesMap.set(type, tags);
         });
 
-        // If the resource tag is a combo resource tag, then add it to the comboResourceTagTypesMap
-        const resourceTagTypes = this.getComboResourceTagTypes(comboResourceType);
-        if (resourceTagTypes && resourceTagTypes.length > 0) {
-          comboResourceTagTypesMap.set(comboResourceType, resourceTagTypes);
+        // If the resource tag is a combo resource tag, then add it to the comboResourceConfigKeysMap
+        const comboResourceConfigKeys = this.getComboResourceConfigKeys(comboResourceConfigKey);
+        if (comboResourceConfigKeys && comboResourceConfigKeys.length > 0) {
+          comboResourceConfigKeysMap.set(comboResourceConfigKey, comboResourceConfigKeys);
         }
       }
 
@@ -295,27 +337,27 @@ class Config {
       if (resourceTypeAttachment) {
         for (const [k, tag] of Object.entries(resourceTags)) {
           // Check if the tag matches the resource type attachment or the comboResource
-          const singleTagMatch = comboResourceType === tag.tag;
+          const singleTagMatch = comboResourceConfigKey === tag.configKey;
           const comboTagMatch = comboResourcesMap
-            ? comboResourcesMap.has(tag.tag as ResourceTagType)
+            ? comboResourcesMap.has(tag.configKey as ResourceKeyType)
             : false;
 
           if (singleTagMatch) {
             // Single tag match for a resource specified in the bit header
             const newTag = new ResourceTagConfig(
               tag.configKey,
-              tag.tag as ResourceTagType,
+              tag.tag,
               1,
               1,
               tag.chain,
-              tag.jsonKey as ResourceJsonKeyType,
+              tag.jsonKey,
               tag.deprecated,
             );
             finalResourceTags[k] = newTag;
           } else if (comboTagMatch) {
             // Combo resource tag match for a resource specified in the bit header
             if (comboResourcesMap) {
-              const newTag = comboResourcesMap.get(tag.tag as ResourceTagType);
+              const newTag = comboResourcesMap.get(tag.configKey as ResourceKeyType);
               if (newTag) finalResourceTags[k] = newTag;
             }
           } else {
@@ -334,8 +376,8 @@ class Config {
     const resourcesConfig = new ResourcesConfig(
       finalResourceTags,
       bitConfig.resourceAttachmentAllowed,
-      resourceTypeAttachment,
-      comboResourceTagTypesMap,
+      configKeyResourceAttachment,
+      comboResourceConfigKeysMap,
     );
 
     return resourcesConfig;
@@ -344,19 +386,19 @@ class Config {
   /**
    * Get the resourceType tags for a combo resource.
    *
-   * @param resourceTypeAttachment
+   * @param configKeyResourceAttachment
    * @returns resourceTypes for the combo resource (or undefined if not a combo resource)
    */
-  private getComboResourceTagTypes(
-    resourceTypeAttachment: ResourceTagType | undefined,
-  ): ResourceTagType[] | undefined {
-    const comboResource = this.getComboResource(resourceTypeAttachment);
+  private getComboResourceConfigKeys(
+    configKeyResourceAttachment: ConfigKeyType | undefined,
+  ): ConfigKeyType[] | undefined {
+    const comboResource = this.getComboResource(configKeyResourceAttachment);
     if (comboResource) {
       const comboResourceTypes = Object.values(comboResource)
         .filter((t) => {
-          return t.type === BitTagType.resource;
+          return t.type === BitTagConfigKeyType.resource;
         })
-        .map((t) => t.tag as ResourceTagType);
+        .map((t) => t.configKey);
 
       return comboResourceTypes;
     }
@@ -371,16 +413,18 @@ class Config {
    *
    * @returns TagsConfig for the combo resource or undefined if not found
    */
-  private getComboResource(resourceType: ResourceTagType | undefined): TagsConfig | undefined {
-    if (!resourceType) return undefined;
+  private getComboResource(resourceConfigKey: ConfigKeyType | undefined): TagsConfig | undefined {
+    if (!resourceConfigKey) return undefined;
 
-    let comboResourcesTags = this.comboResourcesCache.get(resourceType);
+    let comboResourcesTags = this.comboResourcesCache.get(resourceConfigKey);
     if (!comboResourcesTags) {
       // Filter for all the resource groups and hydrate the tags
       comboResourcesTags = {};
       Object.values(GROUPS)
         .filter(
-          (g) => g.type === GroupConfigType.comboResource && g.comboResourceType === resourceType,
+          (g) =>
+            g.type === GroupConfigType.comboResource &&
+            g.comboResourceConfigKey === resourceConfigKey,
         )
         .forEach((g) => {
           comboResourcesTags = {
@@ -391,7 +435,7 @@ class Config {
 
       // Add to cache
       if (Object.keys(comboResourcesTags).length === 0) comboResourcesTags = undefined;
-      this.comboResourcesCache.set(resourceType, comboResourcesTags);
+      this.comboResourcesCache.set(resourceConfigKey, comboResourcesTags);
     }
 
     return comboResourcesTags;

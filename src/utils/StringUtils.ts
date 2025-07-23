@@ -189,6 +189,16 @@ class StringUtils {
 
     return result;
   }
+
+  /**
+   * Convert a kebab-case string to camelCase.
+   *
+   * @param str the string to convert
+   * @returns the camelCase version of the string
+   */
+  kebabToCamel(str: string): string {
+    return str.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+  }
 }
 
 const stringUtils = new StringUtils();

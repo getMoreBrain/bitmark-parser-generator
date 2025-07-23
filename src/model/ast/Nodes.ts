@@ -1,6 +1,6 @@
 import { type BitTypeType } from '../enum/BitType.ts';
 import { type BodyBitTypeType } from '../enum/BodyBitType.ts';
-import { type ResourceTagType } from '../enum/ResourceTag.ts';
+import type { ResourceTypeType } from '../enum/ResourceType.ts';
 import { type TextFormatType } from '../enum/TextFormat.ts';
 import {
   type BookJson,
@@ -51,7 +51,7 @@ export interface Bit {
   bitType: BitTypeType;
   bitLevel: number;
   textFormat: TextFormatType;
-  resourceType?: ResourceTagType;
+  resourceType?: ResourceTypeType;
   isCommented?: boolean;
   id?: Property;
   internalComment?: Property;
@@ -260,19 +260,13 @@ export interface Bit {
 
 export type Example = JsonText | string | boolean; // BitmarkTextNode | string | boolean;
 
-export interface WithExample {
-  __isDefaultExample: boolean;
-  isExample: boolean;
-  example?: Example;
-}
-
 // Extra Properties
 
 export interface ExtraProperties {
   [key: string]: Property;
 }
 
-export type Property = string[] | number[] | boolean[] | unknown[];
+export type Property = string[] | number[] | boolean[] | string | number | boolean;
 
 // Body
 

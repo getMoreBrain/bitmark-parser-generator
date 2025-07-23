@@ -2,20 +2,14 @@
  * Type definitions for the raw configuration data.
  *
  */
-import { type BitTagTypeType } from '../enum/BitTagType.ts';
 import { type BitTypeType } from '../enum/BitType.ts';
 import { type CountType } from '../enum/Count.ts';
 import { type ExampleTypeType } from '../enum/ExampleType.ts';
-import { type PropertyAstKeyType } from '../enum/PropertyAstKey.ts';
-import { type PropertyFormatType } from '../enum/PropertyFormat.ts';
-import { type PropertyJsonKeyType } from '../enum/PropertyJsonKey.ts';
-import { type PropertyTagType } from '../enum/PropertyTag.ts';
-import { type ResourceJsonKeyType } from '../enum/ResourceJsonKey.ts';
-import { type ResourceTagType } from '../enum/ResourceTag.ts';
 import { type TagType } from '../enum/Tag.ts';
+import { type TagFormatType } from '../enum/TagFormat.ts';
 import { type TextFormatType } from '../enum/TextFormat.ts';
 import { type CardSetConfigKeyType } from './enum/CardSetConfigKey.ts';
-import { type ConfigKeyType } from './enum/ConfigKey.ts';
+import type { ConfigKeyType } from './enum/ConfigKey.ts';
 import { type GroupConfigTypeType } from './enum/GroupConfigType.ts';
 
 export interface _Config {
@@ -63,7 +57,7 @@ export interface _GroupConfig {
   minCount?: number; // Default: 0
 
   // Only relevant if type = GroupConfigType.comboResource
-  comboResourceType?: ResourceTagType;
+  comboResourceConfigKey?: ConfigKeyType;
 }
 
 export interface _ComboResourcesConfig {
@@ -88,13 +82,11 @@ export interface _PropertiesConfig {
 }
 
 export interface _PropertyConfig {
-  tag: PropertyTagType;
+  tag: string;
   deprecated?: string; // Deprecated version
-  single?: boolean; // If the property is treated as single rather than an array
-  format?: PropertyFormatType; // How the property is formatted
+  format?: TagFormatType; // How the property is formatted
   defaultValue?: string; // The default value of the property - this value can be omitted from the markup
-  jsonKey?: PropertyJsonKeyType; // If the json key is different from the tag
-  astKey?: PropertyAstKeyType; // If the AST key is different from the tag
+  jsonKey?: string; // If the json key is different from the tag
 }
 
 export interface _ResourcesConfig {
@@ -102,16 +94,19 @@ export interface _ResourcesConfig {
 }
 
 export interface _ResourceConfig {
-  tag: ResourceTagType;
+  tag: string;
   deprecated?: string; // Deprecated version
-  jsonKey?: ResourceJsonKeyType; // If the json key is different from the tag
+  jsonKey?: string; // If the json key is different from the tag
 }
 
 export interface _TagInfoConfig {
-  type: BitTagTypeType;
-  configKey: ConfigKeyType;
+  key: ConfigKeyType;
+  deprecated?: string; // Deprecated version
   maxCount?: CountType; // Default: 1
   minCount?: number; // Default: 0
+  format?: TagFormatType; // How the tag is formatted
+  defaultValue?: string; // The default value of the tag if omitted from the markup
+  jsonKey?: string; // If the json key is different from the tag
   chain?: _TagInfoConfig[];
 }
 

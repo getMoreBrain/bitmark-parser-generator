@@ -1,6 +1,6 @@
 import { type EnumType, superenum } from '@ncoderz/superenum';
 
-const PropertyFormat = superenum({
+const TagFormat = superenum({
   none: 'none', // The property does not have a value
   plainText: 'plainText', // If the value of the property is treated as a trimmed plain text string
   bitmarkText: 'bitmarkText', // If the value of the property is treated as a bitmark+
@@ -9,6 +9,6 @@ const PropertyFormat = superenum({
   invertedBoolean: 'invertedBoolean', // If the value is treated as a boolean with the value inverted (e.g. isLongAnswer ==> isShortAnswer = false)
 });
 
-export type PropertyFormatType = EnumType<typeof PropertyFormat>;
+export type TagFormatType = EnumType<typeof TagFormat>;
 
-export { PropertyFormat };
+export { TagFormat as TagFormat };

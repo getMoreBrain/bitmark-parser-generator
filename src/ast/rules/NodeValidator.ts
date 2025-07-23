@@ -1,5 +1,5 @@
 import { type Bit, type CardBit } from '../../model/ast/Nodes.ts';
-import { ResourceTag } from '../../model/enum/ResourceTag.ts';
+import { ResourceType } from '../../model/enum/ResourceType.ts';
 import {
   type AppLinkResourceWrapperJson,
   type ArticleResourceWrapperJson,
@@ -61,62 +61,62 @@ class NodeValidator {
     let valid = false;
 
     switch (resource.type) {
-      case ResourceTag.image:
+      case ResourceType.image:
         // case ResourceTag.imagePortrait:
         // case ResourceTag.imageLandscape:
         valid = !!(resource as ImageResourceWrapperJson).image.src;
         break;
-      case ResourceTag.imageLink:
+      case ResourceType.imageLink:
         valid = !!(resource as ImageLinkResourceWrapperJson).imageLink.url;
         break;
-      case ResourceTag.audio:
+      case ResourceType.audio:
         valid = !!(resource as AudioResourceWrapperJson).audio.src;
         break;
-      case ResourceTag.audioEmbed:
+      case ResourceType.audioEmbed:
         valid = !!(resource as AudioEmbedResourceWrapperJson).audioEmbed.src;
         break;
-      case ResourceTag.audioLink:
+      case ResourceType.audioLink:
         valid = !!(resource as AudioLinkResourceWrapperJson).audioLink.url;
         break;
-      case ResourceTag.video:
+      case ResourceType.video:
         valid = !!(resource as VideoResourceWrapperJson).video.src;
         break;
-      case ResourceTag.videoEmbed:
+      case ResourceType.videoEmbed:
         valid = !!(resource as VideoEmbedResourceWrapperJson).videoEmbed.url;
         break;
-      case ResourceTag.videoLink:
+      case ResourceType.videoLink:
         valid = !!(resource as VideoLinkResourceWrapperJson).videoLink.url;
         break;
-      case ResourceTag.stillImageFilm:
+      case ResourceType.stillImageFilm:
         valid =
           !!(resource as StillImageFilmResourceWrapperJson).image.src &&
           !!(resource as StillImageFilmResourceWrapperJson).audio.src;
         break;
-      case ResourceTag.stillImageFilmEmbed:
+      case ResourceType.stillImageFilmEmbed:
         valid = !!(resource as StillImageFilmEmbedResourceWrapperJson).stillImageFilmEmbed.url;
         break;
-      case ResourceTag.stillImageFilmLink:
+      case ResourceType.stillImageFilmLink:
         valid = !!(resource as StillImageFilmLinkResourceWrapperJson).stillImageFilmLink.url;
         break;
-      case ResourceTag.article:
+      case ResourceType.article:
         valid = !!(resource as ArticleResourceWrapperJson).article.body;
         break;
-      case ResourceTag.document:
+      case ResourceType.document:
         valid = !!(resource as DocumentResourceWrapperJson).document.url;
         break;
-      case ResourceTag.documentEmbed:
+      case ResourceType.documentEmbed:
         valid = !!(resource as DocumentEmbedResourceWrapperJson).documentEmbed.url;
         break;
-      case ResourceTag.documentLink:
+      case ResourceType.documentLink:
         valid = !!(resource as DocumentLinkResourceWrapperJson).documentLink.url;
         break;
-      case ResourceTag.documentDownload:
+      case ResourceType.documentDownload:
         valid = !!(resource as DocumentDownloadResourceWrapperJson).documentDownload.url;
         break;
-      case ResourceTag.appLink:
+      case ResourceType.appLink:
         valid = !!(resource as AppLinkResourceWrapperJson).appLink.url;
         break;
-      case ResourceTag.websiteLink:
+      case ResourceType.websiteLink:
         valid = !!(resource as WebsiteLinkResourceWrapperJson).websiteLink.url;
         break;
 

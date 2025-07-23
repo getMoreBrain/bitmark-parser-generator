@@ -35,13 +35,15 @@ export default defineConfig([
     splitting: false,
     treeshake: false,
     clean: true,
-    banner: ({ format }) => {
-      if (format === 'esm')
-        return {
-          js: `import { createRequire as _banner_createRequire } from 'module'; const require = _banner_createRequire(import.meta.url);`,
-        };
-      return {};
-    },
+    // The banner code below is useful when createRequire is needed in ESM.
+    // However, using createRequire will break bundle builds (e.g. using esbuild).
+    // banner: ({ format }) => {
+    //   if (format === 'esm')
+    //     return {
+    //       js: `import { createRequire as _banner_createRequire } from 'module'; const require = _banner_createRequire(import.meta.url);`,
+    //     };
+    //   return {};
+    // },
     // onSuccess: async () => {
     //   // Copy file(s) to dist
     //   fs.cpSync('prompts', 'dist/prompts', {

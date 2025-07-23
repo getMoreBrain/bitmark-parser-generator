@@ -1,46 +1,60 @@
 import { type EnumType, superenum } from '@ncoderz/superenum';
 
-import { groupConfigKeys } from './GroupConfigKey.ts';
-import { propertyConfigKeys } from './PropertyConfigKey.ts';
-import { resourceConfigKeys } from './ResourceConfigKey.ts';
-import { tagConfigKeys } from './TagConfigKey.ts';
+import {
+  BitTagConfigKeyType,
+  type BitTagConfigKeyTypeType,
+} from '../../enum/BitTagConfigKeyType.ts';
+import { groupKeys } from '../../enum/GroupKey.ts';
+import { propertyKeys } from '../../enum/PropertyKey.ts';
+import { resourceKeys } from '../../enum/ResourceKey.ts';
+import { ResourceType, type ResourceTypeType } from '../../enum/ResourceType.ts';
+import { tags } from '../../enum/Tag.ts';
 
 /**
- * Combined bit config keys
+ * Config keys for tags, resources, properties, and groups.
+ *
+ * Each type has a different prefix so there are no conflicts:
+ * - Resources: `&`
+ * - Properties: `@`
+ * - Groups: `group_`
+ * - Tags: <none>
+ *
  */
 const ConfigKey = superenum({
+  // Internal
   _unknown: '_unknown',
 
   // Tags
-  ...tagConfigKeys,
-
-  // Properties
-  ...propertyConfigKeys,
+  ...tags,
 
   // Resources
-  ...resourceConfigKeys,
+  ...resourceKeys,
+
+  // Properties
+  ...propertyKeys,
 
   // Groups
-  ...groupConfigKeys,
+  ...groupKeys,
 });
-
-function keyClashCheck() {
-  const keys = new Set<string>();
-  const keySets = [tagConfigKeys, propertyConfigKeys, resourceConfigKeys, groupConfigKeys];
-  for (const keySet of keySets) {
-    for (const key in keySet) {
-      // Clashes are not a problem, and necessary if for example a Property and Resource tag have the same name
-      // if (keys.has(key)) {
-      // throw new Error(`Duplicate ConfigKey: ${key}`);
-      // }
-      keys.add(key);
-    }
-  }
-}
-
-// Run key clash check on initialisation
-keyClashCheck();
 
 export type ConfigKeyType = EnumType<typeof ConfigKey>;
 
-export { ConfigKey };
+function typeFromConfigKey(tagKey: ConfigKeyType): BitTagConfigKeyTypeType {
+  if (!tagKey) return BitTagConfigKeyType.unknown;
+
+  if (tagKey.startsWith('@')) return BitTagConfigKeyType.property;
+  if (tagKey.startsWith('&')) return BitTagConfigKeyType.resource;
+  if (tagKey.startsWith('group_')) return BitTagConfigKeyType.group;
+
+  return BitTagConfigKeyType.tag;
+}
+
+function configKeyToPropertyType(configKey: string): string {
+  return configKey.replace(/^@/, '');
+}
+
+function configKeyToResourceType(configKey: string): ResourceTypeType {
+  return ResourceType.fromKey(configKey.replace(/^&/, '')) as ResourceTypeType;
+}
+
+export { ConfigKey, configKeyToPropertyType, configKeyToResourceType, typeFromConfigKey };

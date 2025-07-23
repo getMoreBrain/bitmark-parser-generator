@@ -1,9 +1,6 @@
 import { type EnumType, superenum } from '@ncoderz/superenum';
 
-/**
- * Config keys for groups
- */
-const groupConfigKeys = {
+const groupKeys = {
   group_standardAllBits: 'group_standardAllBits',
   group_standardItemLeadInstructionHint: 'group_standardItemLeadInstructionHint',
   group_standardExample: 'group_standardExample',
@@ -50,8 +47,8 @@ const groupConfigKeys = {
   group_resourceWebsiteLink: 'group_resourceWebsiteLink',
 } as const;
 
-const GroupConfigKey = superenum(groupConfigKeys);
+const GroupKey = superenum(groupKeys);
 
-export type GroupConfigKeyType = EnumType<typeof GroupConfigKey>;
+export type GroupKeyType = EnumType<typeof GroupKey>;
 
-export { GroupConfigKey, groupConfigKeys };
+export { GroupKey, groupKeys };

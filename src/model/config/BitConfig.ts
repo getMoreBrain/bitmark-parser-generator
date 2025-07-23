@@ -1,9 +1,9 @@
 import { type BitTypeType } from '../enum/BitType.ts';
 import { Count } from '../enum/Count.ts';
 import { type ExampleTypeType } from '../enum/ExampleType.ts';
-import { type ResourceTagType } from '../enum/ResourceTag.ts';
 import { type TextFormatType } from '../enum/TextFormat.ts';
 import { CardSetConfig } from './CardSetConfig.ts';
+import type { ConfigKeyType } from './enum/ConfigKey.ts';
 import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
@@ -27,7 +27,7 @@ class BitConfig {
   readonly footerRequired?: boolean; // Default: false
   readonly resourceAttachmentAllowed?: boolean; // Default: true
   readonly rootExampleType?: ExampleTypeType;
-  readonly comboResourceType?: ResourceTagType;
+  readonly comboResourceConfigKey?: ConfigKeyType;
 
   public constructor(config: {
     since: string;
@@ -44,7 +44,7 @@ class BitConfig {
     footerRequired: boolean | undefined;
     resourceAttachmentAllowed: boolean | undefined;
     rootExampleType: ExampleTypeType | undefined;
-    comboResourceType: ResourceTagType | undefined;
+    comboResourceConfigKey: ConfigKeyType | undefined;
   }) {
     const {
       since,
@@ -61,7 +61,7 @@ class BitConfig {
       footerRequired,
       resourceAttachmentAllowed,
       rootExampleType,
-      comboResourceType,
+      comboResourceConfigKey,
     } = config;
     this.since = since;
     this.bitType = bitType;
@@ -79,7 +79,7 @@ class BitConfig {
     this.resourceAttachmentAllowed =
       resourceAttachmentAllowed == null ? true : resourceAttachmentAllowed;
     this.rootExampleType = rootExampleType;
-    this.comboResourceType = comboResourceType;
+    this.comboResourceConfigKey = comboResourceConfigKey;
   }
 
   public toString(options?: ToStringOptions): string {
@@ -107,7 +107,8 @@ class BitConfig {
     if (this.footerRequired) flags.push('footerRequired');
     if (this.resourceAttachmentAllowed) flags.push('resourceAttachmentAllowed');
     if (this.rootExampleType != null) flags.push(`rootExampleType=${this.rootExampleType}`);
-    if (this.comboResourceType != null) flags.push(`comboResourceType=${this.comboResourceType}`);
+    if (this.comboResourceConfigKey != null)
+      flags.push(`comboResourceConfigKey=${this.comboResourceConfigKey}`);
     s += `\n\n[Flags]\n${flags.join(', ')}`;
 
     // Tags

@@ -1,5 +1,5 @@
+import { ConfigKey } from '../../../../model/config/enum/ConfigKey.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
-import { PropertyTag } from '../../../../model/enum/PropertyTag.ts';
 import { TextLocation } from '../../../../model/enum/TextLocation.ts';
 import { type RatingLevelStartEndJson } from '../../../../model/json/BitJson.ts';
 import { NumberUtils } from '../../../../utils/NumberUtils.ts';
@@ -44,11 +44,11 @@ function ratingLevelChainContentProcessor(
   };
 
   switch (key) {
-    case PropertyTag.ratingLevelStart:
+    case ConfigKey.property_ratingLevelStart:
       target.ratingLevelStart = node;
 
       break;
-    case PropertyTag.ratingLevelEnd:
+    case ConfigKey.property_ratingLevelEnd:
       target.ratingLevelEnd = node;
 
       break;

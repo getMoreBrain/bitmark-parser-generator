@@ -1,8 +1,8 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../../config/Config.ts';
 import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
+import { ConfigKey } from '../../../../model/config/enum/ConfigKey.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
-import { PropertyTag } from '../../../../model/enum/PropertyTag.ts';
 import { TextFormat } from '../../../../model/enum/TextFormat.ts';
 import { TextLocation } from '../../../../model/enum/TextLocation.ts';
 import { type MarkConfigJson } from '../../../../model/json/BitJson.ts';
@@ -31,7 +31,7 @@ function markConfigChainContentProcessor(
 
   if (!markConfig) return;
 
-  const markTagConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
+  const markTagConfig = Config.getTagConfigForTag(tagsConfig, ConfigKey.fromValue(tag));
 
   const { mark: _ignoreMark, ...tags } = context.bitContentProcessor(
     BitContentLevel.Chain,

@@ -2,7 +2,11 @@ import { Breakscape } from '../breakscaping/Breakscape.ts';
 import { Config } from '../config/Config.ts';
 import { type TextAst } from '../model/ast/TextNodes.ts';
 import { BitType } from '../model/enum/BitType.ts';
-import { ResourceTag, type ResourceTagType } from '../model/enum/ResourceTag.ts';
+import {
+  ResourceType,
+  resourceTypeToConfigKey,
+  type ResourceTypeType,
+} from '../model/enum/ResourceType.ts';
 import { TextLocation } from '../model/enum/TextLocation.ts';
 import {
   type AppLinkResourceWrapperJson,
@@ -61,15 +65,15 @@ class ResourceBuilder extends BaseBuilder {
 
     for (const thisResource of resource) {
       // Validate we have a valid resource type
-      let type = ResourceTag.fromValue(thisResource.type);
+      let type = ResourceType.fromValue(thisResource.type);
       if (!type) return undefined;
 
       // Get the resource key
-      const resourceKey = ResourceTag.keyFromValue(type);
+      const resourceKey = ResourceType.keyFromValue(type);
       if (!resourceKey) return undefined;
 
       // Override original type with type alias if present
-      const __typeAlias = ResourceTag.fromValue(thisResource.__typeAlias);
+      const __typeAlias = ResourceType.fromValue(thisResource.__typeAlias);
       type = __typeAlias ?? type;
 
       let data: ResourceDataJson | undefined;
@@ -77,24 +81,24 @@ class ResourceBuilder extends BaseBuilder {
       // TODO: This code should use the config to handle the combo resources. For now the logic is hardcoded
 
       // Handle special cases for multiple resource bits (imageResponsive, stillImageFilm)
-      if (type === ResourceTag.imageResponsive) {
+      if (type === ResourceType.imageResponsive) {
         const r = thisResource as unknown as ImageResponsiveResourceJson;
         const imagePortraitNode = this.resourceFromResourceDataJson(
           context,
-          ResourceTag.imagePortrait,
+          ResourceType.imagePortrait,
           r.imagePortrait,
         );
         const imageLandscapeNode = this.resourceFromResourceDataJson(
           context,
-          ResourceTag.imageLandscape,
+          ResourceType.imageLandscape,
           r.imageLandscape,
         );
         if (imagePortraitNode) nodes.push(imagePortraitNode);
         if (imageLandscapeNode) nodes.push(imageLandscapeNode);
-      } else if (type === ResourceTag.stillImageFilm) {
+      } else if (type === ResourceType.stillImageFilm) {
         const r = thisResource as unknown as StillImageFilmResourceJson;
-        const imageNode = this.resourceFromResourceDataJson(context, ResourceTag.image, r.image);
-        const audioNode = this.resourceFromResourceDataJson(context, ResourceTag.audio, r.audio);
+        const imageNode = this.resourceFromResourceDataJson(context, ResourceType.image, r.image);
+        const audioNode = this.resourceFromResourceDataJson(context, ResourceType.audio, r.audio);
         if (imageNode) nodes.push(imageNode);
         if (audioNode) nodes.push(audioNode);
       } else {
@@ -117,11 +121,11 @@ class ResourceBuilder extends BaseBuilder {
 
   public resourceFromResourceDataJson(
     context: BuildContext,
-    type: ResourceTagType,
+    type: ResourceTypeType,
     data: Partial<ResourceDataJson> | undefined,
   ): ResourceJson | undefined {
     if (!data) return undefined;
-    type = ResourceTag.fromValue(type) as ResourceTagType;
+    type = ResourceType.fromValue(type) as ResourceTypeType;
     if (!type) return undefined;
 
     const dataAsString: string | undefined = StringUtils.isString(data)
@@ -136,7 +140,7 @@ class ResourceBuilder extends BaseBuilder {
       ? (
           this.resourceFromResourceDataJson(
             context,
-            ResourceTag.image,
+            ResourceType.image,
             data.posterImage,
           ) as ImageResourceWrapperJson
         )?.image
@@ -146,7 +150,7 @@ class ResourceBuilder extends BaseBuilder {
           return (
             this.resourceFromResourceDataJson(
               context,
-              ResourceTag.image,
+              ResourceType.image,
               t,
             ) as ImageResourceWrapperJson
           )?.image;
@@ -207,7 +211,7 @@ class ResourceBuilder extends BaseBuilder {
   /* private */ resource(
     context: BuildContext,
     data: {
-      type: ResourceTagType;
+      type: ResourceTypeType;
 
       // Generic part (value of bit tag)
       value?: string; // url / src / href / app / body
@@ -260,11 +264,11 @@ class ResourceBuilder extends BaseBuilder {
 
     // Special case for video like tags - build thumbnails from the srcXx properties
     switch (type) {
-      case ResourceTag.video:
-      case ResourceTag.videoEmbed:
-      case ResourceTag.videoLink:
-      case ResourceTag.stillImageFilmEmbed:
-      case ResourceTag.stillImageFilmLink: {
+      case ResourceType.video:
+      case ResourceType.videoEmbed:
+      case ResourceType.videoLink:
+      case ResourceType.stillImageFilmEmbed:
+      case ResourceType.stillImageFilmLink: {
         const thumbnailKeys = ['src1x', 'src2x', 'src3x', 'src4x'];
         const thumbnails: ImageResourceJson[] = [];
         for (const k of thumbnailKeys) {
@@ -273,7 +277,7 @@ class ResourceBuilder extends BaseBuilder {
           const value = dataAsAny[k];
           if (value) {
             const image: ImageResourceWrapperJson = this.resource(context, {
-              type: ResourceTag.image,
+              type: ResourceType.image,
               value,
             }) as ImageResourceWrapperJson;
             if (image) thumbnails.push(image.image as ImageResourceJson);
@@ -285,16 +289,16 @@ class ResourceBuilder extends BaseBuilder {
     }
 
     switch (type) {
-      case ResourceTag.image:
-      case ResourceTag.imagePortrait:
-      case ResourceTag.imageLandscape:
-      case ResourceTag.backgroundWallpaper:
-      case ResourceTag.imagePlaceholder:
-      case ResourceTag.icon:
+      case ResourceType.image:
+      case ResourceType.imagePortrait:
+      case ResourceType.imageLandscape:
+      case ResourceType.backgroundWallpaper:
+      case ResourceType.imagePlaceholder:
+      case ResourceType.icon:
         node = this.imageResource(context, finalData, type);
         break;
 
-      // case ResourceTag.imageResponsive: {
+      // case ResourceType.imageResponsive: {
       //   node = this.imageResponsiveResource({
       //     imagePortrait: this.imageResource(
       //       finalData.imagePortrait ?? {
@@ -312,35 +316,35 @@ class ResourceBuilder extends BaseBuilder {
       //   break;
       // }
 
-      case ResourceTag.imageLink:
+      case ResourceType.imageLink:
         node = this.imageLinkResource(context, finalData);
         break;
 
-      case ResourceTag.audio:
+      case ResourceType.audio:
         node = this.audioResource(context, finalData);
         break;
 
-      case ResourceTag.audioEmbed:
+      case ResourceType.audioEmbed:
         node = this.audioEmbedResource(context, finalData);
         break;
 
-      case ResourceTag.audioLink:
+      case ResourceType.audioLink:
         node = this.audioLinkResource(context, finalData);
         break;
 
-      case ResourceTag.video:
+      case ResourceType.video:
         node = this.videoResource(context, finalData);
         break;
 
-      case ResourceTag.videoEmbed:
+      case ResourceType.videoEmbed:
         node = this.videoEmbedResource(context, finalData);
         break;
 
-      case ResourceTag.videoLink:
+      case ResourceType.videoLink:
         node = this.videoLinkResource(context, finalData);
         break;
 
-      // case ResourceTag.stillImageFilm: {
+      // case ResourceType.stillImageFilm: {
       //   node = this.stillImageFilmResource({
       //     image: this.imageResource(context,
       //       finalData.image ?? {
@@ -358,39 +362,39 @@ class ResourceBuilder extends BaseBuilder {
       //   break;
       // }
 
-      case ResourceTag.stillImageFilmEmbed:
+      case ResourceType.stillImageFilmEmbed:
         node = this.stillImageFilmEmbedResource(context, finalData);
         break;
 
-      case ResourceTag.stillImageFilmLink:
+      case ResourceType.stillImageFilmLink:
         node = this.stillImageFilmLinkResource(context, finalData);
         break;
 
-      case ResourceTag.article:
+      case ResourceType.article:
         node = this.articleResource(context, finalData);
         break;
 
-      case ResourceTag.document:
+      case ResourceType.document:
         node = this.documentResource(context, finalData);
         break;
 
-      case ResourceTag.documentEmbed:
+      case ResourceType.documentEmbed:
         node = this.documentEmbedResource(context, finalData);
         break;
 
-      case ResourceTag.documentLink:
+      case ResourceType.documentLink:
         node = this.documentLinkResource(context, finalData);
         break;
 
-      case ResourceTag.documentDownload:
+      case ResourceType.documentDownload:
         node = this.documentDownloadResource(context, finalData);
         break;
 
-      case ResourceTag.appLink:
+      case ResourceType.appLink:
         node = this.appLinkResource(context, finalData);
         break;
 
-      case ResourceTag.websiteLink:
+      case ResourceType.websiteLink:
         node = this.websiteLinkResource(context, finalData);
         break;
 
@@ -425,7 +429,7 @@ class ResourceBuilder extends BaseBuilder {
       caption?: TextAst;
       search?: string;
     },
-    __typeAlias?: ResourceTagType,
+    __typeAlias?: ResourceTypeType,
   ): ImageResourceWrapperJson | undefined {
     const {
       value,
@@ -459,8 +463,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: ImageResourceWrapperJson = {
-      type: ResourceTag.image,
-      __typeAlias: __typeAlias ?? ResourceTag.image,
+      type: ResourceType.image,
+      __typeAlias: __typeAlias ?? ResourceType.image,
+      __configKey: resourceTypeToConfigKey(__typeAlias ?? ResourceType.image),
       image: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -538,8 +543,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: ImageLinkResourceWrapperJson = {
-      type: ResourceTag.imageLink,
-      __typeAlias: ResourceTag.imageLink,
+      type: ResourceType.imageLink,
+      __typeAlias: ResourceType.imageLink,
+      __configKey: resourceTypeToConfigKey(ResourceType.imageLink),
       imageLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -599,8 +605,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: AudioResourceWrapperJson = {
-      type: ResourceTag.audio,
-      __typeAlias: ResourceTag.audio,
+      type: ResourceType.audio,
+      __typeAlias: ResourceType.audio,
+      __configKey: resourceTypeToConfigKey(ResourceType.audio),
       audio: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -653,8 +660,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResourceWrapperJson = {
-      type: ResourceTag.audioEmbed,
-      __typeAlias: ResourceTag.audioEmbed,
+      type: ResourceType.audioEmbed,
+      __typeAlias: ResourceType.audioEmbed,
+      __configKey: resourceTypeToConfigKey(ResourceType.audioEmbed),
       audioEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -707,8 +715,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResourceWrapperJson = {
-      type: ResourceTag.audioLink,
-      __typeAlias: ResourceTag.audioLink,
+      type: ResourceType.audioLink,
+      __typeAlias: ResourceType.audioLink,
+      __configKey: resourceTypeToConfigKey(ResourceType.audioLink),
       audioLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -784,8 +793,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: VideoResourceWrapperJson = {
-      type: ResourceTag.video,
-      __typeAlias: ResourceTag.video,
+      type: ResourceType.video,
+      __typeAlias: ResourceType.video,
+      __configKey: resourceTypeToConfigKey(ResourceType.video),
       video: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -870,8 +880,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: VideoEmbedResourceWrapperJson = {
-      type: ResourceTag.videoEmbed,
-      __typeAlias: ResourceTag.videoEmbed,
+      type: ResourceType.videoEmbed,
+      __typeAlias: ResourceType.videoEmbed,
+      __configKey: resourceTypeToConfigKey(ResourceType.videoEmbed),
       videoEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -956,8 +967,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: VideoLinkResourceWrapperJson = {
-      type: ResourceTag.videoLink,
-      __typeAlias: ResourceTag.videoLink,
+      type: ResourceType.videoLink,
+      __typeAlias: ResourceType.videoLink,
+      __configKey: resourceTypeToConfigKey(ResourceType.videoLink),
       videoLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1004,8 +1016,8 @@ class ResourceBuilder extends BaseBuilder {
 
   //   // NOTE: Node order is important and is defined here
   //   const node: StillImageFilmResource = {
-  //     type: ResourceTag.stillImageFilm,
-  //     __typeAlias: ResourceTag.stillImageFilm,
+  //     type: ResourceType.stillImageFilm,
+  //     __typeAlias: ResourceType.stillImageFilm,
   //     image: image ?? this.imageResource({ format: '', value: '' }),
   //     audio: audio ?? this.audioResource({ format: '', value: '' }),
   //   };
@@ -1066,8 +1078,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmEmbedResourceWrapperJson = {
-      type: ResourceTag.stillImageFilmEmbed,
-      __typeAlias: ResourceTag.stillImageFilmEmbed,
+      type: ResourceType.stillImageFilmEmbed,
+      __typeAlias: ResourceType.stillImageFilmEmbed,
+      __configKey: resourceTypeToConfigKey(ResourceType.stillImageFilmEmbed),
       stillImageFilmEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1152,8 +1165,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: StillImageFilmLinkResourceWrapperJson = {
-      type: ResourceTag.stillImageFilmLink,
-      __typeAlias: ResourceTag.stillImageFilmLink,
+      type: ResourceType.stillImageFilmLink,
+      __typeAlias: ResourceType.stillImageFilmLink,
+      __configKey: resourceTypeToConfigKey(ResourceType.stillImageFilmLink),
       stillImageFilmLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1211,8 +1225,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: ArticleResourceWrapperJson = {
-      type: ResourceTag.article,
-      __typeAlias: ResourceTag.article,
+      type: ResourceType.article,
+      __typeAlias: ResourceType.article,
+      __configKey: resourceTypeToConfigKey(ResourceType.article),
       article: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1257,8 +1272,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DocumentResourceWrapperJson = {
-      type: ResourceTag.document,
-      __typeAlias: ResourceTag.document,
+      type: ResourceType.document,
+      __typeAlias: ResourceType.document,
+      __configKey: resourceTypeToConfigKey(ResourceType.document),
       document: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1304,8 +1320,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DocumentEmbedResourceWrapperJson = {
-      type: ResourceTag.documentEmbed,
-      __typeAlias: ResourceTag.documentEmbed,
+      type: ResourceType.documentEmbed,
+      __typeAlias: ResourceType.documentEmbed,
+      __configKey: resourceTypeToConfigKey(ResourceType.documentEmbed),
       documentEmbed: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1351,8 +1368,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DocumentLinkResourceWrapperJson = {
-      type: ResourceTag.documentLink,
-      __typeAlias: ResourceTag.documentLink,
+      type: ResourceType.documentLink,
+      __typeAlias: ResourceType.documentLink,
+      __configKey: resourceTypeToConfigKey(ResourceType.documentLink),
       documentLink: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1398,8 +1416,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: DocumentDownloadResourceWrapperJson = {
-      type: ResourceTag.documentDownload,
-      __typeAlias: ResourceTag.documentDownload,
+      type: ResourceType.documentDownload,
+      __typeAlias: ResourceType.documentDownload,
+      __configKey: resourceTypeToConfigKey(ResourceType.documentDownload),
       documentDownload: {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1444,8 +1463,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: AppLinkResourceWrapperJson = {
-      type: ResourceTag.appLink,
-      __typeAlias: ResourceTag.appLink,
+      type: ResourceType.appLink,
+      __typeAlias: ResourceType.appLink,
+      __configKey: resourceTypeToConfigKey(ResourceType.appLink),
       appLink: {
         // format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         // provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
@@ -1492,8 +1512,9 @@ class ResourceBuilder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResourceWrapperJson = {
-      type: ResourceTag.websiteLink,
-      __typeAlias: ResourceTag.websiteLink,
+      type: ResourceType.websiteLink,
+      __typeAlias: ResourceType.websiteLink,
+      __configKey: resourceTypeToConfigKey(ResourceType.websiteLink),
       websiteLink: {
         // provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         provider: undefined as unknown as string,

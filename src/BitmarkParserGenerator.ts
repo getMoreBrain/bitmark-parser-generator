@@ -42,7 +42,9 @@ import { type FileOptions } from './ast/writer/FileWriter.ts';
 import { Breakscape } from './breakscaping/Breakscape.ts';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator.ts';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator.ts';
+import { ConfigBuilder } from './info/ConfigBuilder.ts';
 import { type BreakscapedString } from './model/ast/BreakscapedString.ts';
+import type { _BitConfig, _GroupsConfig } from './model/config/_Config.ts';
 import { type BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
 import { TextFormat, type TextFormatType } from './model/enum/TextFormat.ts';
 import { TextLocation, type TextLocationType } from './model/enum/TextLocation.ts';
@@ -83,6 +85,13 @@ export interface InfoOptions {
    * If prettify is set, a string will be returned if possible.
    */
   prettify?: boolean | number;
+}
+
+/**
+ * Config generation options for the parser
+ */
+export interface GenerateConfigOptions {
+  //
 }
 
 /**
@@ -442,6 +451,25 @@ class BitmarkParserGenerator {
     }
 
     return res;
+  }
+
+  /**
+   * Generate the new configuration for the bitmark parser.
+   */
+  public async generateConfig(options?: GenerateConfigOptions): Promise<unknown> {
+    const opts: GenerateConfigOptions = Object.assign({}, options);
+    const builder = new ConfigBuilder();
+    // let res: unknown;
+    // const outputString = !opts.outputFormat || opts.outputFormat === InfoFormat.text;
+    // const outputJson = opts.outputFormat === InfoFormat.json;
+    // const all = opts.type === InfoType.all;
+    // const deprecated = opts.type === InfoType.deprecated;
+    // const includeNonDeprecated = all || !deprecated;
+    // const includeDeprecated = all || deprecated;
+
+    await builder.build(opts);
+
+    return void 0;
   }
 
   /**

@@ -1,12 +1,11 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../../config/Config.ts';
 import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
-import { ConfigKey } from '../../../../model/config/enum/ConfigKey.ts';
-import { PropertyConfigKey } from '../../../../model/config/enum/PropertyConfigKey.ts';
+import { ConfigKey, configKeyToPropertyType } from '../../../../model/config/enum/ConfigKey.ts';
 import { PropertyTagConfig } from '../../../../model/config/PropertyTagConfig.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
-import { PropertyFormat } from '../../../../model/enum/PropertyFormat.ts';
-import { PropertyTag } from '../../../../model/enum/PropertyTag.ts';
+import { PropertyKey } from '../../../../model/enum/PropertyKey.ts';
+import { TagFormat } from '../../../../model/enum/TagFormat.ts';
 import { TextFormat } from '../../../../model/enum/TextFormat.ts';
 import { TextLocation } from '../../../../model/enum/TextLocation.ts';
 import { BooleanUtils } from '../../../../utils/BooleanUtils.ts';
@@ -41,15 +40,16 @@ function propertyContentProcessor(
   target: BitContentProcessorResult,
 ): void {
   const { value } = content as TypeKeyValue;
-  let { key: tag } = content as TypeKeyValue;
+  const { key: keyIn } = content as TypeKeyValue;
   const isChain = contentDepth === BitContentLevel.Chain;
 
   // Get the property config for the tag (if it exists)
-  const propertyConfig = Config.getTagConfigForTag(tagsConfig, PropertyTag.fromValue(tag));
+  const propertyConfig = Config.getTagConfigForTag(tagsConfig, PropertyKey.fromValue(keyIn));
   const configKey = propertyConfig ? propertyConfig.configKey : undefined;
+  let property = configKeyToPropertyType(keyIn);
 
   // Handle internal comments
-  if (tag === PropertyTag.internalComment) {
+  if (configKey === ConfigKey.property_internalComment) {
     internalCommentTagContentProcessor(context, contentDepth, content, target);
     return;
   }
@@ -58,12 +58,12 @@ function propertyContentProcessor(
   // Generally, the chain will only be present in the correct bit as the data was already validated. The bit type
   // should also be checked here if the property may occur in another bit with a different meaning.
   if (propertyConfig) {
-    if (configKey === PropertyConfigKey.example) {
+    if (configKey === ConfigKey.property_example) {
       exampleTagContentProcessor(context, contentDepth, content, target);
       return;
     } else if (
-      configKey === PropertyConfigKey.ratingLevelStart ||
-      configKey === PropertyConfigKey.ratingLevelEnd
+      configKey === ConfigKey.property_ratingLevelStart ||
+      configKey === ConfigKey.property_ratingLevelEnd
     ) {
       ratingLevelChainContentProcessor(
         context,
@@ -73,7 +73,7 @@ function propertyContentProcessor(
         target,
       );
       return;
-    } else if (configKey === PropertyConfigKey.technicalTerm) {
+    } else if (configKey === ConfigKey.property_technicalTerm) {
       technicalTermChainContentProcessor(
         context,
         contentDepth,
@@ -82,24 +82,27 @@ function propertyContentProcessor(
         target,
       );
       return;
-    } else if (configKey === PropertyConfigKey.servings) {
+    } else if (configKey === ConfigKey.property_servings) {
       servingsChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
-    } else if (configKey === PropertyConfigKey.person || configKey === PropertyConfigKey.partner) {
+    } else if (
+      configKey === ConfigKey.property_person ||
+      configKey === ConfigKey.property_partner
+    ) {
       personChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
-    } else if (configKey === PropertyConfigKey.imageSource) {
+    } else if (configKey === ConfigKey.property_imageSource) {
       imageSourceChainContentProcessor(context, contentDepth, tagsConfig, content, target);
       return;
-    } else if (configKey === PropertyConfigKey.book) {
+    } else if (configKey === ConfigKey.property_book) {
       bookChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
-    } else if (configKey === PropertyConfigKey.markConfig && !isChain) {
+    } else if (configKey === ConfigKey.property_mark && !isChain) {
       markConfigChainContentProcessor(context, contentDepth, tagsConfig, content, target);
       return;
-    } else if (configKey === PropertyConfigKey.property_title && isChain) {
+    } else if (configKey === ConfigKey.property_title && isChain) {
       // Hack the intermediate tag so as not to clash with [#title] tags which are not chained (yet)
-      tag = 'propertyTitle';
+      property = 'propertyTitle';
     }
   }
 
@@ -117,7 +120,7 @@ function propertyContentProcessor(
           // case PropertyFormat.string:
           //   return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
 
-          case PropertyFormat.plainText:
+          case TagFormat.plainText:
             return Breakscape.unbreakscape(
               StringUtils.isString(v)
                 ? (StringUtils.trimmedString(v) as BreakscapedString)
@@ -128,7 +131,7 @@ function propertyContentProcessor(
               },
             );
 
-          case PropertyFormat.number:
+          case TagFormat.number:
             return NumberUtils.asNumber(
               Breakscape.unbreakscape(v as BreakscapedString, {
                 format: TextFormat.plainText,
@@ -136,7 +139,7 @@ function propertyContentProcessor(
               }),
             );
 
-          case PropertyFormat.boolean:
+          case TagFormat.boolean:
             return BooleanUtils.toBoolean(
               Breakscape.unbreakscape(v as BreakscapedString, {
                 format: TextFormat.plainText,
@@ -145,7 +148,7 @@ function propertyContentProcessor(
               true,
             );
 
-          case PropertyFormat.invertedBoolean:
+          case TagFormat.invertedBoolean:
             return !BooleanUtils.toBoolean(
               Breakscape.unbreakscape(v as BreakscapedString, {
                 format: TextFormat.plainText,
@@ -154,7 +157,7 @@ function propertyContentProcessor(
               true,
             );
 
-          case PropertyFormat.bitmarkText:
+          case TagFormat.bitmarkText:
             v = StringUtils.isString(v) ? v : '';
             return textParser.toAst(v as BreakscapedString, {
               format: TextFormat.bitmarkText,
@@ -170,46 +173,43 @@ function propertyContentProcessor(
 
     // Convert property and key as needed
     v = processValue(v);
-    if (c?.astKey) tag = c.astKey;
 
-    if (c?.single) {
-      obj[tag] = v;
-    } else {
+    if (c == null || c.array) {
       if (Object.prototype.hasOwnProperty.call(obj, tag)) {
         const originalValue = obj[tag];
         obj[tag] = [...originalValue, v];
       } else {
         obj[tag] = [v];
       }
+    } else {
+      obj[tag] = v;
     }
   };
 
   if (propertyConfig) {
     // Known property in correct position
-    addProperty(target, tag, value, propertyConfig);
+    addProperty(target, property, value, propertyConfig);
   } else {
     // Unknown (extra) property
-    addProperty(target.extraProperties, tag, value, propertyConfig);
+    addProperty(target.extraProperties, property, value, propertyConfig);
   }
 
   // HACKS: Need to allow properties for different bits and in chains to have different/multiple formats!
   // This is not currently supported by the config system; it would need to be extended to support this.
-  // That is a bit job, so instead there are just some hacks here for the few cases where it is currently needed :(
-  if (tag === PropertyTag.tag_sampleSolution) {
+  // That is a big job, so instead there are just some hacks here for the few cases where it is currently needed :(
+  if (configKey === ConfigKey.property_sampleSolution) {
     addProperty(
       target,
       '__sampleSolutionAst',
       value,
       new PropertyTagConfig(
-        ConfigKey.sampleSolution,
-        PropertyTag.tag_sampleSolution,
+        ConfigKey.property_sampleSolution,
+        'sampleSolution',
         1,
         1,
         undefined,
         undefined,
-        undefined,
-        true,
-        PropertyFormat.bitmarkText,
+        TagFormat.bitmarkText,
         undefined,
         undefined,
       ),

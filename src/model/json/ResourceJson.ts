@@ -1,5 +1,6 @@
 import { type JsonText } from '../ast/TextNodes.ts';
-import { type ResourceTagType } from '../enum/ResourceTag.ts';
+import type { ConfigKeyType } from '../config/enum/ConfigKey.ts';
+import type { ResourceTypeType } from '../enum/ResourceType.ts';
 
 export type ResourceDataJson = ImageResourceJson &
   ImageResponsiveResourceJson &
@@ -43,8 +44,9 @@ export type ResourceJson =
   | WebsiteLinkResourceWrapperJson;
 
 export interface ResourceWrapperJson {
-  type: string; // resource bit type
-  __typeAlias: ResourceTagType;
+  type: ResourceTypeType; // resource bit type
+  __typeAlias: ResourceTypeType;
+  __configKey: ConfigKeyType;
 }
 
 export interface ImageResourceWrapperJson extends ResourceWrapperJson {

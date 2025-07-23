@@ -4,14 +4,14 @@ import { TextGenerator } from '../generator/text/TextGenerator.ts';
 import { type Property } from '../model/ast/Nodes.ts';
 import { type JsonText, type TextAst } from '../model/ast/TextNodes.ts';
 import { BitConfig } from '../model/config/BitConfig.ts';
-import { type ConfigKeyType } from '../model/config/enum/ConfigKey.ts';
+import type { ConfigKeyType } from '../model/config/enum/ConfigKey.ts';
+import type { PropertyTagConfig } from '../model/config/PropertyTagConfig.ts';
 import { type BitTypeType } from '../model/enum/BitType.ts';
-import { PropertyFormat } from '../model/enum/PropertyFormat.ts';
+import { TagFormat } from '../model/enum/TagFormat.ts';
 import { type TextFormatType } from '../model/enum/TextFormat.ts';
 import { TextLocation, type TextLocationType } from '../model/enum/TextLocation.ts';
 import { type ExampleJson } from '../model/json/BitJson.ts';
 import { TextParser } from '../parser/text/TextParser.ts';
-import { ArrayUtils } from '../utils/ArrayUtils.ts';
 import { BooleanUtils } from '../utils/BooleanUtils.ts';
 import { NumberUtils } from '../utils/NumberUtils.ts';
 import { StringUtils } from '../utils/StringUtils.ts';
@@ -26,6 +26,13 @@ export interface BuildContext {
   bitConfig: BitConfig;
   bitType: BitTypeType;
   textFormat: TextFormatType;
+}
+
+export interface ToAstPropertyOptions {
+  cardSet?: {
+    sideNo: number; // Side number of the card set
+    variantNo: number; // Variant number of the card set
+  };
 }
 
 class BaseBuilder {
@@ -92,45 +99,57 @@ class BaseBuilder {
    *
    * @param key
    * @param value
+   * @param options
    * @returns
    */
   protected toAstProperty(
+    bitType: BitTypeType,
     key: ConfigKeyType,
     value: unknown | unknown[] | undefined,
+    options: ToAstPropertyOptions | undefined,
   ): Property | undefined {
     if (value == null) return undefined;
 
-    const propertiesConfig = Config.getRawPropertiesConfig();
-    const propertyConfig = propertiesConfig[key];
+    const bitConfig = Config.getBitConfig(bitType);
+    let tagsConfig = bitConfig.tags;
+    if (options?.cardSet) {
+      const { sideNo, variantNo } = options.cardSet;
+      const cardTagsConfig = Config.getTagsConfigForCardSet(bitType, sideNo, variantNo);
+      tagsConfig = cardTagsConfig ?? tagsConfig;
+    }
 
-    // if (key === 'progress') debugger;
+    const propertyConfig = Config.getTagConfigForTag(tagsConfig, key) as
+      | PropertyTagConfig
+      | undefined;
+
+    // Convert to array or single value if needed
+    if (propertyConfig?.array && !Array.isArray(value)) {
+      value = [value];
+    } else if (!propertyConfig?.array && Array.isArray(value)) {
+      value = value[value.length - 1];
+    }
 
     // Convert property as needed
-    const processValue = (v: unknown) => {
+    const processValue = (v: unknown): Property | undefined => {
       if (v == null) return undefined;
-      switch (propertyConfig.format) {
-        // case PropertyFormat.string: {
-        //   // Convert number to string
-        //   if (NumberUtils.asNumber(v) != null) v = `${v}`;
-
-        //   return StringUtils.isString(v) ? StringUtils.string(v) : undefined;
-        // }
-        case PropertyFormat.plainText:
+      const format = propertyConfig?.format ?? TagFormat.plainText;
+      switch (format) {
+        case TagFormat.plainText:
           // Convert number to string
           if (NumberUtils.asNumber(v) != null) v = `${v}`;
 
           return StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
 
-        case PropertyFormat.number:
+        case TagFormat.number:
           return NumberUtils.asNumber(v);
 
-        case PropertyFormat.boolean:
+        case TagFormat.boolean:
           return BooleanUtils.toBoolean(v, true);
 
-        case PropertyFormat.invertedBoolean:
+        case TagFormat.invertedBoolean:
           return !BooleanUtils.toBoolean(v, true);
       }
-      return v;
+      return v as Property;
     };
     if (Array.isArray(value)) {
       const valueArray = value as unknown[];
@@ -141,7 +160,7 @@ class BaseBuilder {
       value = processValue(value);
     }
 
-    return ArrayUtils.asArray(value);
+    return value as Property;
   }
 
   protected getEmptyTextAst(context: BuildContext): TextAst {
