@@ -1,13 +1,3 @@
-/*
- * NOTE:
- *
- * We want to be able to strip out the NodeJS specific functions from the final bundle.
- * Any code between the comments STRIP:START and STRIP:END will be removed.
- *
- * However, the Typescript compiler will remove comments that it does not believe are associated with code.
- * Therefore we have to use some dummy code to prevent it from removing the STRIP stripping comments.
- */
-
 import { init } from './init/init.ts';
 
 export { Ast } from './ast/Ast.ts';
@@ -105,24 +95,24 @@ export type { CardSetVersionType } from './model/enum/CardSetVersion.ts';
 export type { InfoFormatType } from './model/info/enum/InfoFormat.ts';
 export type { InfoTypeType } from './model/info/enum/InfoType.ts';
 export type {
-  BitJson,
+  BookJson,
   BotResponseJson,
   ChoiceJson,
   DefinitionListItemJson,
   ExampleJson,
+  FeedbackChoiceJson,
+  FeedbackJson,
+  FeedbackReasonJson,
   FlashcardJson,
   HeadingJson,
   ImageSourceJson,
   IngredientJson,
-  // DEPRECATED - TO BE REMOVED IN THE FUTURE
-  // CaptionDefinitionJson,
-  // CaptionDefinitionListJson,
-  ListItemJson,
   MarkConfigJson,
   MatrixCellJson,
   MatrixJson,
   PairJson,
   PersonJson,
+  PronunciationTableJson,
   QuestionJson,
   QuizJson,
   RatingLevelStartEndJson,
@@ -131,6 +121,7 @@ export type {
   StatementJson,
   TableJson,
   TechnicalTermJson,
+  TextAndIconJson,
 } from './model/json/BitJson.ts';
 export type { BitWrapperJson } from './model/json/BitWrapperJson.ts';
 export type {

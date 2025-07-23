@@ -1,17 +1,19 @@
 {
   "name": "@gmb/bitmark-parser-generator",
-  "version": "3.35.0",
+  "version": "3.36.0",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Get More Brain Ltd",
   "license": "ISC",
   "homepage": "https://github.com/getMoreBrain/bitmark-parser-generator#readme",
   "type": "module",
+  "browser": "./dist/browser/bitmark-parser-generator.min.js",
   "module": "./dist/index.js",
   "main": "./dist/index.cjs",
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "browser": "./dist/browser/bitmark-parser-generator.min.js"
     }
   },
   "files": [
