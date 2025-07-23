@@ -260,12 +260,6 @@ export interface Bit {
 
 export type Example = JsonText | string | boolean; // BitmarkTextNode | string | boolean;
 
-export interface WithExample {
-  __isDefaultExample: boolean;
-  isExample: boolean;
-  example?: Example;
-}
-
 // Extra Properties
 
 export interface ExtraProperties {
