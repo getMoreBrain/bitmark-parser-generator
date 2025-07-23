@@ -80,8 +80,11 @@ export type {
   BitmarkAst,
   Body,
   BodyPart,
+  CardBit,
+  CardNode,
   Example,
   ExtraProperties,
+  Footer,
   Node,
   Property,
 } from './model/ast/Nodes.ts';
@@ -95,7 +98,9 @@ export type { CardSetVersionType } from './model/enum/CardSetVersion.ts';
 export type { InfoFormatType } from './model/info/enum/InfoFormat.ts';
 export type { InfoTypeType } from './model/info/enum/InfoType.ts';
 export type {
+  BitJson,
   BookJson,
+  BookReferenceJson,
   BotResponseJson,
   ChoiceJson,
   DefinitionListItemJson,
@@ -107,11 +112,13 @@ export type {
   HeadingJson,
   ImageSourceJson,
   IngredientJson,
+  ListItemJson,
   MarkConfigJson,
   MatrixCellJson,
   MatrixJson,
   PairJson,
   PersonJson,
+  PronunciationTableCellJson,
   PronunciationTableJson,
   QuestionJson,
   QuizJson,
@@ -130,6 +137,7 @@ export type {
   GapJson,
   HighlightJson,
   HighlightTextJson,
+  MarkJson,
   SelectJson,
   SelectOptionJson,
 } from './model/json/BodyBitJson.ts';
