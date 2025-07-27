@@ -14,7 +14,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
             {
               key: ConfigKey.tag_title,
@@ -37,7 +38,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
             {
               key: ConfigKey.tag_title,
@@ -60,7 +62,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
           ],
           repeatCount: Count.infinity,
@@ -85,7 +88,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
           ],
           bodyAllowed: false,
@@ -105,7 +109,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
           ],
           bodyAllowed: false,
@@ -146,7 +151,8 @@ const CARDSETS: _CardSetsConfig = {
               format: TagFormat.number,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
             {
               key: ConfigKey.tag_title,
@@ -186,7 +192,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
           ],
           repeatCount: Count.infinity,
@@ -209,7 +216,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
             {
               key: ConfigKey.tag_title,
@@ -235,7 +243,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
             {
               key: ConfigKey.tag_title,
@@ -260,7 +269,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
             {
               key: ConfigKey.tag_title,
@@ -285,7 +295,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
             {
               key: ConfigKey.tag_title,
@@ -354,7 +365,8 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.group_standardItemLeadInstructionHint,
             },
             {
-              key: ConfigKey.group_standardExample,
+              key: ConfigKey.property_example,
+              format: TagFormat.plainText,
             },
           ],
         },

@@ -12,25 +12,19 @@ interface ToStringOptions {
 class ResourceTagConfig extends AbstractTagConfig {
   readonly type: BitTagConfigKeyTypeType = BitTagConfigKeyType.resource;
 
-  public constructor(
-    configKey: ConfigKeyType,
-    tag: string,
-    maxCount: CountType,
-    minCount: number,
-    chain: TagsConfig | undefined,
-    jsonKey: string | undefined,
-    deprecated: string | undefined,
-  ) {
-    super(
-      BitTagConfigKeyType.resource,
-      configKey,
-      tag,
-      maxCount,
-      minCount,
-      chain,
-      jsonKey,
-      deprecated,
-    );
+  public constructor(params: {
+    configKey: ConfigKeyType;
+    tag: string;
+    maxCount: CountType;
+    minCount: number;
+    chain: TagsConfig | undefined;
+    jsonKey: string | undefined;
+    deprecated: string | undefined;
+  }) {
+    super({
+      type: BitTagConfigKeyType.resource,
+      ...params,
+    });
 
     // TODO
   }

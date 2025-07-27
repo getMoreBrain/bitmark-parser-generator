@@ -202,17 +202,17 @@ function propertyContentProcessor(
       target,
       '__sampleSolutionAst',
       value,
-      new PropertyTagConfig(
-        ConfigKey.property_sampleSolution,
-        'sampleSolution',
-        1,
-        1,
-        undefined,
-        undefined,
-        TagFormat.bitmarkText,
-        undefined,
-        undefined,
-      ),
+      new PropertyTagConfig({
+        configKey: ConfigKey.property_sampleSolution,
+        tag: 'sampleSolution',
+        maxCount: 1,
+        minCount: 1,
+        chain: undefined,
+        jsonKey: undefined,
+        format: TagFormat.bitmarkText,
+        defaultValue: undefined,
+        deprecated: undefined,
+      }),
     );
   }
 }

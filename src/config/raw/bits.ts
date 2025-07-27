@@ -10,19 +10,25 @@ import { TextFormat } from '../../model/enum/TextFormat.ts';
 const BITS: _BitsConfig = {
   [BitType._error]: {
     since: '1.3.0',
+    description: 'An error bit, rendered when the bit cannot be interpreted',
     tags: [],
   },
 
   [BitType._comment]: {
     since: '1.4.12',
+    description:
+      'A comment bit, used when a bit is commented out by adding | between the . and the bit name, e.g [.|article]',
     tags: [],
   },
 
   [BitType._standard]: {
     since: '3.2.0',
+    description:
+      'The standard bit type, used as a base for other bits, should not be used directly',
     tags: [
       {
         key: ConfigKey.group_standardTags,
+        description: 'Standard tags for (almost) all bits',
       },
     ],
   },
@@ -30,33 +36,48 @@ const BITS: _BitsConfig = {
   [BitType.appFlashcards]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
+    description: 'App flashcards bit, used for flashcard quizzes in the app',
     quizBit: true,
     tags: [
       {
         key: ConfigKey.group_quizCommon,
+        description: 'Common tags for quiz bits',
       },
       {
         key: ConfigKey.tag_title,
+        description: 'The title of the flashcard quiz',
       },
       {
         key: ConfigKey.property_flashcardSet,
+        description: 'The flashcard set to use for the app flashcards',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
     ],
     rootExampleType: ExampleType.string,
   },
-  [BitType.appFlashcardsQuiz]: { since: '1.3.0', baseBitType: BitType.appFlashcards },
-  [BitType.appFlashcardsLearn]: { since: '1.3.0', baseBitType: BitType.appFlashcards },
+  [BitType.appFlashcardsQuiz]: {
+    since: '1.3.0',
+    baseBitType: BitType.appFlashcards,
+    description: 'App flashcards quiz bit',
+  },
+  [BitType.appFlashcardsLearn]: {
+    since: '1.3.0',
+    baseBitType: BitType.appFlashcards,
+    description: 'App flashcards learn bit',
+  },
   [BitType.appLink]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
+    description: 'App link bit, used to link to other bits in the app',
     tags: [
       {
         key: ConfigKey.group_resourceBitTags,
+        description: 'Tags for the resource bit',
       },
       {
         key: ConfigKey.group_resourceAppLink,
+        description: 'Tags for the app link resource',
         minCount: 1,
       },
     ],
@@ -65,52 +86,90 @@ const BITS: _BitsConfig = {
   [BitType.article]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
+    description: 'Article bit, used for articles / paragraphs',
     tags: [
       {
         key: ConfigKey.tag_title,
+        description: 'The title of the article',
       },
     ],
   },
-  [BitType.articleAlt]: { since: '1.15.0', baseBitType: BitType.article },
+  [BitType.articleAlt]: {
+    since: '1.15.0',
+    baseBitType: BitType.article,
+    description: 'Alternative article bit',
+  },
   [BitType.articleResponsive]: {
     since: '1.21.0',
     baseBitType: BitType.article,
+    description: 'Responsive article bit, used for articles that adapt to the screen size',
     tags: [
       {
         key: ConfigKey.property_imageFirst,
+        description: 'If the image should be displayed first in the responsive article',
         format: TagFormat.boolean,
         defaultValue: 'true',
       },
     ],
   },
-  [BitType.articleResponsiveAlt]: { since: '2.0.0', baseBitType: BitType.articleResponsive },
-  [BitType.standardArticleNormative]: { since: '1.16.0', baseBitType: BitType.article },
-  [BitType.standardArticleNonNormative]: { since: '1.16.0', baseBitType: BitType.article },
+  [BitType.articleResponsiveAlt]: {
+    since: '2.0.0',
+    baseBitType: BitType.articleResponsive,
+    description: 'Alternative responsive article bit',
+  },
+  [BitType.standardArticleNormative]: {
+    since: '1.16.0',
+    baseBitType: BitType.article,
+    description: 'Standard normative article bit',
+  },
+  [BitType.standardArticleNonNormative]: {
+    since: '1.16.0',
+    baseBitType: BitType.article,
+    description: 'Standard non-normative article bit',
+  },
   [BitType.smartStandardArticleNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardArticleNormative,
+    description: 'Smart standard normative article bit',
   },
   [BitType.smartStandardArticleNonNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardArticleNonNormative,
+    description: 'Smart standard non-normative article bit',
   },
   [BitType.smartStandardArticleNormativeCollapsible]: {
     since: '1.28.0',
     baseBitType: BitType.smartStandardArticleNormative,
+    description: 'Smart standard normative article bit that is collapsible',
   },
   [BitType.smartStandardArticleNonNormativeCollapsible]: {
     since: '1.28.0',
     baseBitType: BitType.smartStandardArticleNonNormative,
+    description: 'Smart standard non-normative article bit that is collapsible',
   },
-  [BitType.statement]: { since: '1.3.0', baseBitType: BitType.article },
-  [BitType.pageArticle]: { since: '1.15.0', baseBitType: BitType.article },
-  [BitType.pageArticleAlt]: { since: '1.15.0', baseBitType: BitType.article },
+  [BitType.statement]: {
+    since: '1.3.0',
+    baseBitType: BitType.article,
+    description: 'Statement bit, used for statements in documents',
+  },
+  [BitType.pageArticle]: {
+    since: '1.15.0',
+    baseBitType: BitType.article,
+    description: 'Page article bit',
+  },
+  [BitType.pageArticleAlt]: {
+    since: '1.15.0',
+    baseBitType: BitType.article,
+    description: 'Alternative page article bit',
+  },
   [BitType.pageArticleResponsive]: {
     since: '1.21.0',
     baseBitType: BitType.article,
+    description: 'Responsive page article bit, used for articles that adapt to the screen size',
     tags: [
       {
         key: ConfigKey.property_imageFirst,
+        description: 'If the image should be displayed first in the responsive article',
         format: TagFormat.boolean,
         defaultValue: 'true',
       },
@@ -119,9 +178,11 @@ const BITS: _BitsConfig = {
   [BitType.buttonCopyText]: {
     since: '1.4.3',
     baseBitType: BitType.article,
+    description: 'Button copy text bit, used to create a button that copies text to the clipboard',
     tags: [
       {
         key: ConfigKey.property_buttonCaption,
+        description: 'The caption of the button',
         format: TagFormat.plainText,
       },
     ],
@@ -129,53 +190,121 @@ const BITS: _BitsConfig = {
   [BitType.callToAction]: {
     since: '1.15.0',
     baseBitType: BitType._standard,
+    description: 'Call to action bit, used to create a call to action button',
     tags: [
       {
         key: ConfigKey.property_buttonCaption,
+        description: 'The caption of the call to action button',
         format: TagFormat.plainText,
       },
       {
         key: ConfigKey.property_callToActionUrl,
+        description: 'The URL to navigate to when the call to action button is clicked',
         format: TagFormat.plainText,
         minCount: 1,
       },
     ],
   },
-  [BitType.callToActionSubscribe]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionContact]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionJoin]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionMail]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionLearnMore]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionSeeMore]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionWatch]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionStartNow]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionGetOffer]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionBookNow]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionShopNow]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionGetNow]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionDownload]: { since: '1.15.0', baseBitType: BitType.callToAction },
-  [BitType.callToActionCreateAccount]: { since: '1.15.0', baseBitType: BitType.callToAction },
+  [BitType.callToActionSubscribe]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action subscribe bit',
+  },
+  [BitType.callToActionContact]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action contact bit',
+  },
+  [BitType.callToActionJoin]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action join bit',
+  },
+  [BitType.callToActionMail]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action mail bit',
+  },
+  [BitType.callToActionLearnMore]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action learn more bit',
+  },
+  [BitType.callToActionSeeMore]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action see more bit',
+  },
+  [BitType.callToActionWatch]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action watch bit',
+  },
+  [BitType.callToActionStartNow]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action start now bit',
+  },
+  [BitType.callToActionGetOffer]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action get offer bit',
+  },
+  [BitType.callToActionBookNow]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action book now bit',
+  },
+  [BitType.callToActionShopNow]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action shop now bit',
+  },
+  [BitType.callToActionGetNow]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action get now bit',
+  },
+  [BitType.callToActionDownload]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action download bit',
+  },
+  [BitType.callToActionCreateAccount]: {
+    since: '1.15.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call to action create account bit',
+  },
   [BitType.appBitmarkFromJavascript]: {
     since: '1.4.5',
     baseBitType: BitType._standard,
+    description: 'App bitmark from JavaScript, used to create bits from JavaScript in the app',
     tags: [
       {
         key: ConfigKey.property_maxCreatedBits,
+        description: 'The maximum number of bits that can be created from this bit',
         format: TagFormat.number,
       },
     ],
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.appBitmarkFromEditor]: { since: '1.4.5', baseBitType: BitType.appBitmarkFromJavascript },
+  [BitType.appBitmarkFromEditor]: {
+    since: '1.4.5',
+    baseBitType: BitType.appBitmarkFromJavascript,
+    description: 'App bitmark from editor, used to create bits from the editor in the app',
+  },
   [BitType.articleEmbed]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
+    description: 'Article embed bit, used to embed articles from other sources',
     tags: [
       {
         key: ConfigKey.group_resourceBitTags,
+        description: 'Tags for the resource bit',
       },
       {
         key: ConfigKey.group_resourceArticleEmbed,
+        description: 'Tags for the article embed resource',
         minCount: 1,
       },
     ],
@@ -184,6 +313,7 @@ const BITS: _BitsConfig = {
   [BitType.articleLink]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
+    description: 'Article link bit, used to link to articles from other sources',
     tags: [
       {
         key: ConfigKey.group_resourceBitTags,
