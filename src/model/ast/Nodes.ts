@@ -10,6 +10,7 @@ import {
   type ExampleJson,
   type FeedbackJson,
   type FlashcardJson,
+  type GroupTagJson,
   type HeadingJson,
   type ImageSourceJson,
   type IngredientJson,
@@ -71,6 +72,7 @@ export interface Bit {
   analyticsTag?: Property;
   categoryTag?: Property;
   topicTag?: Property;
+  reportTag?: Property;
   altLangTag?: Property;
   feedbackEngine?: Property;
   feedbackType?: Property;
@@ -94,6 +96,7 @@ export interface Bit {
   target?: Property;
   slug?: Property;
   tag?: Property;
+  groupTag?: GroupTagJson[];
   reductionTag?: Property;
   bubbleTag?: Property;
   levelCEFRp?: Property;

@@ -22,6 +22,7 @@ import {
 } from '../BitmarkPegParserTypes.ts';
 import { bookChainContentProcessor } from './BookChainContentProcessor.ts';
 import { exampleTagContentProcessor } from './ExampleTagContentProcessor.ts';
+import { groupTagChainContentProcessor } from './GroupTagChainContentProcessor.ts';
 import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor.ts';
 import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor.ts';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor.ts';
@@ -60,6 +61,9 @@ function propertyContentProcessor(
   if (propertyConfig) {
     if (configKey === ConfigKey.property_example) {
       exampleTagContentProcessor(context, contentDepth, content, target);
+      return;
+    } else if (configKey === ConfigKey.property_groupTag) {
+      groupTagChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
       return;
     } else if (
       configKey === ConfigKey.property_ratingLevelStart ||
@@ -202,17 +206,17 @@ function propertyContentProcessor(
       target,
       '__sampleSolutionAst',
       value,
-      new PropertyTagConfig(
-        ConfigKey.property_sampleSolution,
-        'sampleSolution',
-        1,
-        1,
-        undefined,
-        undefined,
-        TagFormat.bitmarkText,
-        undefined,
-        undefined,
-      ),
+      new PropertyTagConfig({
+        configKey: ConfigKey.property_sampleSolution,
+        tag: 'sampleSolution',
+        maxCount: 1,
+        minCount: 1,
+        chain: undefined,
+        jsonKey: undefined,
+        format: TagFormat.bitmarkText,
+        defaultValue: undefined,
+        deprecated: undefined,
+      }),
     );
   }
 }

@@ -31,6 +31,7 @@ export interface BitJson {
   analyticsTag: string | string[];
   categoryTag: string | string[];
   topicTag: string | string[];
+  reportTag: string | string[];
   altLangTag: string;
   feedbackEngine: string;
   feedbackType: string;
@@ -50,6 +51,7 @@ export interface BitJson {
   target: string | string[];
   slug: string;
   tag: string | string[];
+  groupTag: GroupTagJson[];
   reductionTag: string | string[];
   bubbleTag: string | string[];
   levelCEFRp: string;
@@ -249,6 +251,11 @@ export interface BookJson {
   book: string;
   reference: string;
   referenceEnd: string;
+}
+
+export interface GroupTagJson {
+  name: string;
+  tags: string[];
 }
 
 export interface ImageSourceJson {
