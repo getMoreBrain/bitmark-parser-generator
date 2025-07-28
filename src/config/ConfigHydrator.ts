@@ -1,4 +1,4 @@
-import { type _CardVariantConfig, type _TagInfoConfig } from '../model/config/_Config.ts';
+import { type _AbstractTagConfig, type _CardVariantConfig } from '../model/config/_Config.ts';
 import { CardSetConfig } from '../model/config/CardSetConfig.ts';
 import { CardVariantConfig } from '../model/config/CardVariantConfig.ts';
 import { type CardSetConfigKeyType } from '../model/config/enum/CardSetConfigKey.ts';
@@ -17,7 +17,7 @@ const MAX_COUNT_DEFAULT = 1;
 const MIN_COUNT_DEFAULT = 0;
 
 class ConfigHydrator {
-  public hydrateTagsConfig(_tags: _TagInfoConfig[]): TagsConfigWithInfo {
+  public hydrateTagsConfig(_tags: _AbstractTagConfig[]): TagsConfigWithInfo {
     const tagsWithInfo: TagsConfigWithInfo = {
       tags: {},
     };
@@ -83,7 +83,7 @@ class ConfigHydrator {
     return cardSetConfig;
   }
 
-  private hydrateTagConfig(_tag: _TagInfoConfig): TagsConfigWithInfo {
+  private hydrateTagConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
     const { key: _configKey, maxCount, minCount, chain: _chain, deprecated } = _tag;
     const configKey = ConfigKey.fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No tag key found for config key '${configKey}'`);
@@ -96,14 +96,14 @@ class ConfigHydrator {
       chain = this.hydrateTagsConfig(_chain).tags;
     }
 
-    const hydratedTag = new MarkupTagConfig(
+    const hydratedTag = new MarkupTagConfig({
       configKey,
       tag,
-      maxCount ?? MAX_COUNT_DEFAULT,
-      minCount ?? MIN_COUNT_DEFAULT,
+      maxCount: maxCount ?? MAX_COUNT_DEFAULT,
+      minCount: minCount ?? MIN_COUNT_DEFAULT,
       chain,
       deprecated,
-    );
+    });
 
     return {
       tags: {
@@ -112,7 +112,7 @@ class ConfigHydrator {
     };
   }
 
-  private hydratePropertyTagConfig(_tag: _TagInfoConfig): TagsConfigWithInfo {
+  private hydratePropertyTagConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
     const {
       key: _configKey,
       maxCount,
@@ -133,17 +133,17 @@ class ConfigHydrator {
       chain = this.hydrateTagsConfig(_chain).tags;
     }
 
-    const hydratedTag = new PropertyTagConfig(
+    const hydratedTag = new PropertyTagConfig({
       configKey,
       tag,
-      maxCount ?? MAX_COUNT_DEFAULT,
-      minCount ?? MIN_COUNT_DEFAULT,
+      maxCount: maxCount ?? MAX_COUNT_DEFAULT,
+      minCount: minCount ?? MIN_COUNT_DEFAULT,
       chain,
       jsonKey,
       format,
       defaultValue,
       deprecated,
-    );
+    });
 
     return {
       tags: {
@@ -152,7 +152,7 @@ class ConfigHydrator {
     };
   }
 
-  private hydrateResourceTagConfig(_tag: _TagInfoConfig): TagsConfigWithInfo {
+  private hydrateResourceTagConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
     const { key: _configKey, maxCount, minCount, chain: _chain, deprecated, jsonKey } = _tag;
     const configKey = ConfigKey.fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No resource key found for config key '${configKey}'`);
@@ -164,15 +164,15 @@ class ConfigHydrator {
       chain = this.hydrateTagsConfig(_chain).tags;
     }
 
-    const hydratedTag = new ResourceTagConfig(
+    const hydratedTag = new ResourceTagConfig({
       configKey,
       tag,
-      maxCount ?? MAX_COUNT_DEFAULT,
-      minCount ?? MIN_COUNT_DEFAULT,
+      maxCount: maxCount ?? MAX_COUNT_DEFAULT,
+      minCount: minCount ?? MIN_COUNT_DEFAULT,
       chain,
       jsonKey,
       deprecated,
-    );
+    });
 
     return {
       tags: {
@@ -181,7 +181,7 @@ class ConfigHydrator {
     };
   }
 
-  private hydrateTagGroupConfig(_tag: _TagInfoConfig): TagsConfigWithInfo {
+  private hydrateTagGroupConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
     const { key: _configKey } = _tag;
     const configKey = ConfigKey.fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No group key found for config key '${configKey}'`);

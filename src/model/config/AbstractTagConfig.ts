@@ -15,24 +15,24 @@ abstract class AbstractTagConfig {
 
   readonly deprecated?: string; // Deprecated version
 
-  public constructor(
-    type: BitTagConfigKeyTypeType,
-    configKey: ConfigKeyType,
-    tag: string,
-    maxCount: CountType,
-    minCount: number,
-    chain: TagsConfig | undefined,
-    jsonKey: string | undefined,
-    deprecated: string | undefined,
-  ) {
-    this.type = type;
-    this.configKey = configKey;
-    this.tag = tag;
-    this.maxCount = maxCount;
-    this.minCount = minCount;
-    this.chain = chain;
-    this.jsonKey = jsonKey;
-    this.deprecated = deprecated;
+  public constructor(params: {
+    type: BitTagConfigKeyTypeType;
+    configKey: ConfigKeyType;
+    tag: string;
+    maxCount: CountType;
+    minCount: number;
+    chain: TagsConfig | undefined;
+    jsonKey: string | undefined;
+    deprecated: string | undefined;
+  }) {
+    this.type = params.type;
+    this.configKey = params.configKey;
+    this.tag = params.tag;
+    this.maxCount = params.maxCount;
+    this.minCount = params.minCount;
+    this.chain = params.chain;
+    this.jsonKey = params.jsonKey;
+    this.deprecated = params.deprecated;
   }
 }
 

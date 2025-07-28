@@ -36,7 +36,7 @@ export default defineConfig([
     treeshake: false,
     clean: true,
     // The banner code below is useful when createRequire is needed in ESM.
-    // However, using createRequire will break bundle builds (e.g. using esbuild).
+    // However, using 'import.meta.url' will break bundle builds (e.g. using esbuild) because it will not be defined.
     // banner: ({ format }) => {
     //   if (format === 'esm')
     //     return {

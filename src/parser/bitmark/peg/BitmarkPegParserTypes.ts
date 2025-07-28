@@ -32,6 +32,7 @@ import {
   type FeedbackChoiceJson,
   type FeedbackJson,
   type FlashcardJson,
+  type GroupTagJson,
   type HeadingJson,
   type ImageSourceJson,
   type IngredientJson,
@@ -118,6 +119,8 @@ export interface BitContentProcessorResult {
   cardBodyStr?: string;
   body?: Body;
   footer?: Footer;
+  groupTag?: Partial<GroupTagJson>[];
+  tag?: string[];
   imageSource?: Partial<ImageSourceJson>;
   technicalTerm?: Partial<TechnicalTermJson>;
   servings?: Partial<ServingsJson>;

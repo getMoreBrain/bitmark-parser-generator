@@ -31,6 +31,28 @@ class ArrayUtils {
     }
     return val;
   }
+
+  /**
+   * Removes all duplicate items, keeping the first duplicate only.
+   * The input array is modified in place.
+   *
+   * @param arr array in which to make items unique
+   * @param keyFunc function(item) to return the key to check for equality. - optional
+   * @returns the input array with all duplicate items removed
+   */
+  public removeDuplicates<T>(arr: T[], keyFunc?: (item: T) => unknown): T[] {
+    const seen: Set<unknown> = new Set();
+    for (const item of arr) {
+      const k = keyFunc ? keyFunc(item) : item;
+      if (seen.has(k)) {
+        const index = arr.lastIndexOf(item);
+        if (index !== -1) arr.splice(index, 1);
+      }
+      seen.add(k);
+    }
+
+    return arr;
+  }
 }
 
 const instance = new ArrayUtils();

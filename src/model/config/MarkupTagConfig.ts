@@ -13,26 +13,19 @@ interface ToStringOptions {
 class MarkupTagConfig extends AbstractTagConfig {
   readonly type: BitTagConfigKeyTypeType = BitTagConfigKeyType.tag;
 
-  public constructor(
-    configKey: ConfigKeyType,
-    tag: TagType,
-    maxCount: CountType,
-    minCount: number,
-    chain: TagsConfig | undefined,
-    // jsonKey?: PropertyJsonKeyType | ResourceJsonKeyType|undefined,
-    // astKey?: PropertyAstKeyType|undefined,
-    deprecated: string | undefined,
-  ) {
-    super(
-      BitTagConfigKeyType.tag,
-      configKey,
-      tag,
-      maxCount,
-      minCount,
-      chain,
-      undefined,
-      deprecated,
-    );
+  public constructor(params: {
+    configKey: ConfigKeyType;
+    tag: TagType;
+    maxCount: CountType;
+    minCount: number;
+    chain: TagsConfig | undefined;
+    deprecated: string | undefined;
+  }) {
+    super({
+      type: BitTagConfigKeyType.tag,
+      jsonKey: undefined,
+      ...params,
+    });
 
     // TODO
   }

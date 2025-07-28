@@ -27,10 +27,12 @@ export interface _BitsConfig {
 
 export interface _BitConfig {
   since: string; // Supported since version
+  name?: string; // Will default to the configKey minus prefix if not provided
+  description: string;
   baseBitType?: BitTypeType; // The base bit type
   textFormatDefault?: TextFormatType; // Default text format
   quizBit?: true; // True if the bit is a quiz bit
-  tags?: _TagInfoConfig[];
+  tags?: _AbstractTagConfig[];
   cardSet?: CardSetConfigKeyType;
   deprecated?: string; // Deprecated version
   bodyAllowed?: boolean; // Default: true
@@ -52,7 +54,9 @@ export interface _GroupsConfig {
 
 export interface _GroupConfig {
   type: GroupConfigTypeType;
-  tags: _TagInfoConfig[];
+  name?: string; // Will default to the configKey minus prefix if not provided
+  description: string;
+  tags: _AbstractTagConfig[];
   maxCount?: CountType; // Default: 1
   minCount?: number; // Default: 0
 
@@ -65,7 +69,7 @@ export interface _ComboResourcesConfig {
 }
 
 export interface _ComboResourceConfig {
-  tags: _TagInfoConfig[];
+  tags: _AbstractTagConfig[];
 }
 
 export interface _TagsConfig {
@@ -73,7 +77,9 @@ export interface _TagsConfig {
 }
 
 export interface _TagConfig {
-  tag: TagType;
+  key: TagType;
+  name?: string; // Will default to the configKey minus prefix if not provided
+  description: string;
   deprecated?: string; // Deprecated version
 }
 
@@ -82,7 +88,9 @@ export interface _PropertiesConfig {
 }
 
 export interface _PropertyConfig {
-  tag: string;
+  key: ConfigKeyType;
+  name?: string; // Will default to the configKey minus prefix if not provided
+  description: string;
   deprecated?: string; // Deprecated version
   format?: TagFormatType; // How the property is formatted
   defaultValue?: string; // The default value of the property - this value can be omitted from the markup
@@ -94,20 +102,27 @@ export interface _ResourcesConfig {
 }
 
 export interface _ResourceConfig {
-  tag: string;
+  key: ConfigKeyType;
+  name?: string; // Will default to the configKey minus prefix if not provided
+  description: string;
   deprecated?: string; // Deprecated version
   jsonKey?: string; // If the json key is different from the tag
 }
 
-export interface _TagInfoConfig {
+/**
+ * Combines the _TagConfig, _PropertyConfig, and _ResourceConfig interfaces
+ */
+export interface _AbstractTagConfig {
   key: ConfigKeyType;
+  name?: string; // Will default to the configKey minus prefix if not provided
+  description: string;
   deprecated?: string; // Deprecated version
   maxCount?: CountType; // Default: 1
   minCount?: number; // Default: 0
   format?: TagFormatType; // How the tag is formatted
   defaultValue?: string; // The default value of the tag if omitted from the markup
   jsonKey?: string; // If the json key is different from the tag
-  chain?: _TagInfoConfig[];
+  chain?: _AbstractTagConfig[];
 }
 
 export interface _CardSetsConfig {
@@ -128,7 +143,7 @@ export interface _CardSetConfig {
 }
 
 export interface _CardVariantConfig {
-  tags: _TagInfoConfig[];
+  tags: _AbstractTagConfig[];
   deprecated?: string; // Deprecated version
   bodyAllowed?: boolean; // Default: false
   bodyRequired?: boolean; // Default: false
