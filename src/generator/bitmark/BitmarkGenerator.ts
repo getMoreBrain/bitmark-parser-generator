@@ -35,6 +35,7 @@ import {
   type BookJson,
   type ChoiceJson,
   type FeedbackChoiceJson,
+  type GroupTagJson,
   type ImageSourceJson,
   type IngredientJson,
   type MarkConfigJson,
@@ -402,6 +403,37 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         format: TagFormat.plainText,
         array: true,
       });
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> groupTag
+
+  protected enter_groupTag(node: NodeInfo, route: NodeInfo[]): boolean {
+    const groupTag = node.value as GroupTagJson[];
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
+    for (const gt of groupTag) {
+      const { name, tags } = gt;
+
+      this.writeNL();
+      this.writeProperty('groupTag', name, route, {
+        format: TagFormat.plainText,
+        writeEmpty: true,
+      });
+      if (tags && tags.length > 0) {
+        for (const t of tags) {
+          this.writeProperty('tag', t, route, {
+            format: TagFormat.plainText,
+            writeEmpty: true,
+          });
+        }
+      }
     }
 
     // Stop traversal of this branch

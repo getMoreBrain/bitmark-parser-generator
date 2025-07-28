@@ -4,9 +4,20 @@
       "type": "bug",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
+      "ageRange": ["18", "120"],
+      "groupTag": [
+        {
+          "name": "group A",
+          "tags": ["item 1", "", "item 2", "item 3"]
+        },
+        {
+          "name": "",
+          "tags": [""]
+        },
+        {
+          "name": "group B",
+          "tags": ["item B1"]
+        }
       ],
       "item": [],
       "lead": [],
@@ -100,13 +111,8 @@
       "type": "bug-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
-      "searchIndex": [
-        "Value1",
-        "Value2"
-      ],
+      "id": ["151971"],
+      "searchIndex": ["Value1", "Value2"],
       "item": [],
       "lead": [],
       "pageNumber": [],
