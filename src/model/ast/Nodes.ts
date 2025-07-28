@@ -71,6 +71,7 @@ export interface Bit {
   analyticsTag?: Property;
   categoryTag?: Property;
   topicTag?: Property;
+  reportTag?: Property;
   altLangTag?: Property;
   feedbackEngine?: Property;
   feedbackType?: Property;

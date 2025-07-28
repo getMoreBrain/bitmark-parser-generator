@@ -31,6 +31,7 @@ export interface BitJson {
   analyticsTag: string | string[];
   categoryTag: string | string[];
   topicTag: string | string[];
+  reportTag: string | string[];
   altLangTag: string;
   feedbackEngine: string;
   feedbackType: string;

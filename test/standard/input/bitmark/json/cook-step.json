@@ -4,9 +4,7 @@
       "type": "cook-step",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "92375"
-      ],
+      "id": ["92375"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -27,6 +25,7 @@
       "type": "cook-step",
       "format": "bitmark++",
       "bitLevel": 1,
+      "reportTag": ["This report", "That report"],
       "title": [
         {
           "type": "paragraph",
