@@ -1,5 +1,10 @@
 [.bug:bitmark++]
 [@ageRange:18][@ageRange:120]
+[@groupTag: group A ][@tag: item 1 ][@tag: ][@tag: item 2 ]
+[@groupTag: group A ][@tag: item 3 ][@tag: item 1 ]
+[@groupTag: ][@tag: ]
+[@groupTag: group B ][@tag: item B1 ]
+
 
 **Some bold text,**
 followed by some plain text. cloze open close cloze1 book.

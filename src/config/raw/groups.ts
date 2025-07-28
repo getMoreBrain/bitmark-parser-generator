@@ -165,6 +165,20 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_groupTag,
+        description: 'The group tag(s) for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+        chain: [
+          {
+            key: ConfigKey.property_tag,
+            description: 'The tag(s) for the group',
+            format: TagFormat.plainText,
+            maxCount: Count.infinity,
+          },
+        ],
+      },
+      {
         key: ConfigKey.property_reductionTag,
         description: 'The reduction tag(s) for the bit',
         format: TagFormat.plainText,

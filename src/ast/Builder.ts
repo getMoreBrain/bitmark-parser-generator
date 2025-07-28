@@ -29,6 +29,7 @@ import {
   type FeedbackJson,
   type FeedbackReasonJson,
   type FlashcardJson,
+  type GroupTagJson,
   type HeadingJson,
   type ImageSourceJson,
   type IngredientJson,
@@ -163,6 +164,7 @@ class Builder extends BaseBuilder {
       target?: string | string[];
       slug?: string;
       tag?: string | string[];
+      groupTag?: Partial<GroupTagJson> | Partial<GroupTagJson>[];
       reductionTag?: string | string[];
       bubbleTag?: string | string[];
       levelCEFRp?: string | string[];
@@ -542,6 +544,7 @@ class Builder extends BaseBuilder {
       target: this.toAstProperty(bitType, ConfigKey.property_target, data.target, options),
       slug: this.toAstProperty(bitType, ConfigKey.property_slug, data.slug, options),
       tag: this.toAstProperty(bitType, ConfigKey.property_tag, data.tag, options),
+      groupTag: this.buildGroupTags(context, data.groupTag),
       reductionTag: this.toAstProperty(
         bitType,
         ConfigKey.property_reductionTag,
@@ -1231,6 +1234,68 @@ class Builder extends BaseBuilder {
       ignoreAllFalse: true,
       ignoreEmptyString: ['book', 'reference'],
     });
+
+    return node;
+  }
+
+  /**
+   * Build groupTag[] node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildGroupTags(
+    context: BuildContext,
+    data: Partial<GroupTagJson> | Partial<GroupTagJson>[] | undefined,
+  ): GroupTagJson[] | undefined {
+    if (!data) return undefined;
+    if (!Array.isArray(data)) data = [data];
+    let nodes = data.map((d) => this.buildGroupTag(context, d)).filter((d) => d != null);
+
+    // Combine tags with the same name, filtering out duplicate tags
+    const combinedNodes: Record<string, GroupTagJson> = {};
+    for (const node of nodes) {
+      if (!node) continue;
+      if (!combinedNodes[node.name]) {
+        combinedNodes[node.name] = node;
+      } else {
+        combinedNodes[node.name].tags = ArrayUtils.removeDuplicates([
+          ...combinedNodes[node.name].tags,
+          ...node.tags,
+        ]);
+      }
+    }
+
+    nodes = Object.values(combinedNodes);
+
+    return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
+   * Build groupTag node
+   *
+   * @param data - data for the node
+   * @returns
+   */
+  protected buildGroupTag(
+    _context: BuildContext,
+    data: Partial<GroupTagJson> | undefined,
+  ): GroupTagJson | undefined {
+    if (!data) return undefined;
+
+    const tags: string[] = Array.isArray(data.tags) ? data.tags : [];
+
+    // NOTE: Node order is important and is defined here
+    const node: GroupTagJson = {
+      name: data.name ?? '',
+      tags: tags.map((tag) => tag?.trim() ?? '') ?? [],
+    };
+
+    // Remove Unset Optionals
+    // ObjectUtils.removeUnwantedProperties(node, {
+    //   ignoreAllFalse: true,
+    //   ignoreEmptyString: ['book', 'reference'],
+    // });
 
     return node;
   }
