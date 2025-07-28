@@ -520,6 +520,8 @@ const NodeType = superenum({
   tocValue: 'tocValue',
   topicTag: 'topicTag',
   topicTagValue: 'topicTagValue',
+  reportTag: 'reportTag',
+  reportTagValue: 'reportTagValue',
   trim: 'trim',
   type: 'type',
   __typeAlias: '__typeAlias',

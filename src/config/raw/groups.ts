@@ -74,6 +74,12 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_reportTag,
+        description: 'The report tag(s) for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_altLangTag,
         description: 'The alternative language tag for the bit',
         format: TagFormat.plainText,

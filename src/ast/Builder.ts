@@ -139,6 +139,7 @@ class Builder extends BaseBuilder {
       analyticsTag?: string | string[];
       categoryTag?: string | string[];
       topicTag?: string | string[];
+      reportTag?: string | string[];
       altLangTag?: string;
       feedbackEngine?: string;
       feedbackType?: string;
@@ -466,6 +467,7 @@ class Builder extends BaseBuilder {
         options,
       ),
       topicTag: this.toAstProperty(bitType, ConfigKey.property_topicTag, data.topicTag, options),
+      reportTag: this.toAstProperty(bitType, ConfigKey.property_reportTag, data.reportTag, options),
       altLangTag: this.toAstProperty(
         bitType,
         ConfigKey.property_altLangTag,

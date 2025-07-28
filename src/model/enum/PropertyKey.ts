@@ -149,6 +149,7 @@ const propertyKeys = {
   property_releaseDate: '@releaseDate',
   property_releaseKind: '@releaseKind',
   property_releaseVersion: '@releaseVersion',
+  property_reportTag: '@reportTag',
   property_resolved: '@resolved',
   property_resolvedBy: '@resolvedBy',
   property_resolvedDate: '@resolvedDate',
