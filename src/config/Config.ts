@@ -136,6 +136,7 @@ class Config {
       // All bits have the internal comment property, so add it to the tags
       _tags?.push({
         key: ConfigKey.property_internalComment,
+        description: 'Internal comment for the bit.',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
         minCount: 0,
