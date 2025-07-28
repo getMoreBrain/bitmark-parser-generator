@@ -136,6 +136,7 @@ class Config {
       // All bits have the internal comment property, so add it to the tags
       _tags?.push({
         key: ConfigKey.property_internalComment,
+        description: 'Internal comment for the bit.',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
         minCount: 0,
@@ -344,15 +345,15 @@ class Config {
 
           if (singleTagMatch) {
             // Single tag match for a resource specified in the bit header
-            const newTag = new ResourceTagConfig(
-              tag.configKey,
-              tag.tag,
-              1,
-              1,
-              tag.chain,
-              tag.jsonKey,
-              tag.deprecated,
-            );
+            const newTag = new ResourceTagConfig({
+              configKey: tag.configKey,
+              tag: tag.tag,
+              minCount: 1,
+              maxCount: 1,
+              chain: tag.chain,
+              jsonKey: tag.jsonKey,
+              deprecated: tag.deprecated,
+            });
             finalResourceTags[k] = newTag;
           } else if (comboTagMatch) {
             // Combo resource tag match for a resource specified in the bit header

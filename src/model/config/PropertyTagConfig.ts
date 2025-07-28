@@ -17,31 +17,25 @@ class PropertyTagConfig extends AbstractTagConfig {
   readonly format?: TagFormatType; // How the property is formatted
   readonly defaultValue?: string; // The default value of the property - this value can be omitted from the markup
 
-  public constructor(
-    configKey: ConfigKeyType,
-    tag: string,
-    maxCount: CountType,
-    minCount: number,
-    chain: TagsConfig | undefined,
-    jsonKey: string | undefined,
-    format: TagFormatType | undefined,
-    defaultValue: string | undefined,
-    deprecated: string | undefined,
-  ) {
-    super(
-      BitTagConfigKeyType.property,
-      configKey,
-      tag,
-      maxCount,
-      minCount,
-      chain,
-      jsonKey,
-      deprecated,
-    );
+  public constructor(params: {
+    configKey: ConfigKeyType;
+    tag: string;
+    maxCount: CountType;
+    minCount: number;
+    chain: TagsConfig | undefined;
+    jsonKey: string | undefined;
+    format: TagFormatType | undefined;
+    defaultValue: string | undefined;
+    deprecated: string | undefined;
+  }) {
+    super({
+      type: BitTagConfigKeyType.property,
+      ...params,
+    });
 
-    this.array = maxCount === Count.infinity || maxCount > 1;
-    this.format = format;
-    this.defaultValue = defaultValue;
+    this.array = params.maxCount === Count.infinity || params.maxCount > 1;
+    this.format = params.format;
+    this.defaultValue = params.defaultValue;
   }
 
   public toString(options?: ToStringOptions): string {
