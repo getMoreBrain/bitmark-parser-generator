@@ -7,7 +7,7 @@ import { defineConfig } from 'tsup';
  *
  * It is used to remove node specific code from the browser builds.
  *
- * @returns
+ * @returns {Plugin} An esbuild plugin that strips code blocks marked with block comments STRIP:START and STRIP:END.
  */
 const stripBlock = (): Plugin => ({
   name: 'strip-block',
