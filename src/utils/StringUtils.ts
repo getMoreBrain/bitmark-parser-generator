@@ -177,13 +177,13 @@ class StringUtils {
         subLength = width;
         rangeStartNext = rangeStart + width;
       }
-      subString = str.substr(rangeStart, subLength);
+      subString = str.slice(rangeStart, rangeStart + subLength);
       rangeStart = rangeStartNext;
       result.push(subString.trim());
     }
     // Add the remainder
     if (rangeStart < len) {
-      subString = str.substr(rangeStart);
+      subString = str.slice(rangeStart);
       result.push(subString);
     }
 
@@ -197,6 +197,7 @@ class StringUtils {
    * @returns the camelCase version of the string
    */
   kebabToCamel(str: string): string {
+    if (!str) return str;
     return str.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
   }
 }
