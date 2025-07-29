@@ -70,7 +70,7 @@
       "textParserVersion": "8.17.0",
       "warnings": [
         {
-          "message": "Resource type [&article-link] is specified in the bit header, but no such a resource is present",
+          "message": "Resource type [&article-link] is specified in the bit header, but no such resource is present",
           "text": "[.message&article-link]\n[&article-link:https://www.youtube.com/watch?v=RecY5iZn6B0]\n\nWhat the Hell!\n\n",
           "location": {
             "start": {

@@ -83,7 +83,7 @@ function buildResources(
     context.addWarning(warningMsg);
   } else if (filteredResources.length === 0 && resourceTypeAttachment) {
     context.addWarning(
-      `Resource type [&${resourceTypeAttachment}] is specified in the bit header, but no such a resource is present`,
+      `Resource type [&${resourceTypeAttachment}] is specified in the bit header, but no such resource is present`,
     );
   }
 
