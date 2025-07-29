@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-parser-generator",
-  "version": "3.37.0",
+  "version": "3.38.0",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Get More Brain Ltd",
   "license": "ISC",
@@ -10,10 +10,33 @@
   "module": "./dist/index.js",
   "main": "./dist/index.cjs",
   "exports": {
-    ".": {
-      "browser": "./dist/browser/bitmark-parser-generator.min.js",
-      "import": "./dist/index.js",
+    "./browser/cjs": {
+      "browser": "./dist/browser/cjs/index.cjs",
+      "import": "./dist/browser/cjs/index.cjs",
+      "require": "./dist/browser/cjs/index.cjs"
+    },
+    "./browser/esm": {
+      "browser": "./dist/browser/esm/index.js",
+      "import": "./dist/browser/esm/index.js",
+      "require": "./dist/browser/esm/index.js"
+    },
+    "./browser": {
+      "browser": "./dist/browser/esm/index.js",
+      "import": "./dist/browser/esm/index.js",
+      "require": "./dist/browser/cjs/index.cjs"
+    },
+    "./cjs": {
+      "import": "./dist/index.cjs",
       "require": "./dist/index.cjs"
+    },
+    "./esm": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
     }
   },
   "files": [
@@ -144,7 +167,6 @@
     "vitest": "^3.2.4",
     "webpack": "^5.98.0",
     "webpack-bundle-analyzer": "^4.10.2",
-    "webpack-cli": "^6.0.1",
-    "webpack-strip-block": "^0.3.0"
+    "webpack-cli": "^6.0.1"
   }
 }
