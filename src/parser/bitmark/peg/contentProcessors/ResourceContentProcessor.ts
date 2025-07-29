@@ -5,7 +5,7 @@ import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.
 import { ConfigKey, type ConfigKeyType } from '../../../../model/config/enum/ConfigKey.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
 import { Count } from '../../../../model/enum/Count.ts';
-import { ResourceType, resourceTypeToConfigKey } from '../../../../model/enum/ResourceType.ts';
+import { ResourceType } from '../../../../model/enum/ResourceType.ts';
 import { TextFormat } from '../../../../model/enum/TextFormat.ts';
 import { TextLocation } from '../../../../model/enum/TextLocation.ts';
 import {
@@ -52,7 +52,9 @@ function buildResources(
   // Find the excess resources and ensure we have the minimum resources
   if (resources) {
     for (const r of resources.reverse()) {
-      const configKey = resourceTypeToConfigKey(r.__typeAlias);
+      if (r.__invalid) continue; // Skip invalid resources
+
+      const configKey = r.__configKey;
       let countMin = countsMin.get(configKey) ?? 0;
       let countMax = countsMax.get(configKey) ?? 0;
 
