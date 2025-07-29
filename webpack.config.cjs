@@ -7,7 +7,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const dirname = __dirname;
 
 const root = dirname;
-const entry = path.resolve(root, './build/browser/index.cjs');
+const entry = path.resolve(root, './dist/browser/cjs/index.cjs');
 const outputFilename = path.resolve(root, './dist/browser/');
 
 const MAX_ASSET_SIZE = 1024 * 1204 * 50; // 50 MB!!
@@ -32,34 +32,6 @@ const config = {
     },
     // prevent error: `Uncaught ReferenceError: self is not define`
     globalObject: 'this',
-  },
-  resolve: {
-    fallback: {
-      fs: require.resolve('./src/web-polyfills/fs.js'),
-      // os: require.resolve('os-browserify/browser'),
-      os: false,
-      path: false,
-      stream: false,
-      constants: false,
-    },
-  },
-  module: {
-    // rules: [
-    //   {
-    //     test: /\.[jt]sx?$/,
-    //     enforce: 'pre',
-    //     exclude: /(node_modules)/,
-    //     use: [
-    //       {
-    //         loader: 'webpack-strip-block',
-    //         options: {
-    //           start: 'STRIP:START',
-    //           end: 'STRIP:END',
-    //         },
-    //       },
-    //     ],
-    //   },
-    // ],
   },
   optimization: {
     minimize: true,
