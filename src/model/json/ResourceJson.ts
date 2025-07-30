@@ -47,6 +47,7 @@ export interface ResourceWrapperJson {
   type: ResourceTypeType; // resource bit type
   __typeAlias: ResourceTypeType;
   __configKey: ConfigKeyType;
+  __invalid?: boolean; // true if the resource is invalid
 }
 
 export interface ImageResourceWrapperJson extends ResourceWrapperJson {

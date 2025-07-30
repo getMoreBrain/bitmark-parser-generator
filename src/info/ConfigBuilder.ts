@@ -19,9 +19,9 @@ export interface GenerateConfigOptions {
 }
 
 class ConfigBuilder {
-  public async build(options?: GenerateConfigOptions): Promise<void> {
+  public build(options?: GenerateConfigOptions): void {
     const opts: GenerateConfigOptions = Object.assign({}, options);
-    await this.buildFlat(opts);
+    this.buildFlat(opts);
     // const bitConfigs: (_BitConfig & { bitType: BitTypeType })[] = [];
     // const groupConfigs: (_GroupsConfig & { key: string })[] = [];
     // for (const bt of BitType.values()) {
@@ -366,7 +366,7 @@ class ConfigBuilder {
     // await Promise.all(fileWrites);
   }
 
-  public async buildFlat(options?: GenerateConfigOptions): Promise<void> {
+  public buildFlat(options?: GenerateConfigOptions): void {
     const opts: GenerateConfigOptions = Object.assign({}, options);
     const bitConfigs: BitConfig[] = [];
 
@@ -379,8 +379,6 @@ class ConfigBuilder {
     const outputFolder = opts.outputDir ?? 'assets/config';
     const outputFolderBits = path.join(outputFolder, 'bits_flat');
     fs.ensureDirSync(outputFolderBits);
-
-    const fileWrites: Promise<void>[] = [];
 
     // BitConfigs
     for (const b of bitConfigs) {
@@ -521,14 +519,13 @@ class ConfigBuilder {
       };
       const output = path.join(outputFolderBits, `${b.bitType}.jsonc`);
       const str = JSON.stringify(bitJson, null, 2);
-      fileWrites.push(fs.writeFile(output, str));
+      fs.writeFileSync(output, str);
       // const bitType = b.bitType;
       // const bitType2 = Config.getBitType(bitType);
       // if (bitType !== bitType2) {
       //   console.log(`BitType: ${bitType} => ${bitType2}`);
       // }
     }
-    await Promise.all(fileWrites);
   }
 }
 
