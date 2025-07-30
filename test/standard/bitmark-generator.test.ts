@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import fs from 'fs-extra';
 import { describe, expect, test } from 'vitest';
 
+import { BitmarkParserGenerator } from '../../src/BitmarkParserGenerator.ts';
 import { BitmarkFileGenerator } from '../../src/generator/bitmark/BitmarkFileGenerator.ts';
 import { JsonFileGenerator } from '../../src/generator/json/JsonFileGenerator.ts';
 import { BitmarkParser } from '../../src/parser/bitmark/BitmarkParser.ts';
@@ -44,6 +45,17 @@ function getTestFilenames(): string[] {
 }
 
 describe('bitmark-generator', () => {
+  test('JSON => Bitmark (convert API)', () => {
+    //
+    const bpg = new BitmarkParserGenerator();
+
+    const bitmark = bpg.convert(
+      '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++", "bitLevel": 1, "body": "Hello World" }}]',
+    ) as string;
+
+    expect(bitmark.replace(new RegExp('[\\n]', 'g'), '')).to.equal('[.article]Hello World');
+  });
+
   describe('JSON => Bitmark => JSON', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);

@@ -70,7 +70,7 @@ class DevGenerator {
       const res = await generator.generate(bitmarkAst);
       console.log(res);
     } else {
-      const res = await bitmarkParserGenerator.convert(filename, {
+      const res = bitmarkParserGenerator.convert(filename, {
         bitmarkOptions: {
           explicitTextFormat: false,
         },

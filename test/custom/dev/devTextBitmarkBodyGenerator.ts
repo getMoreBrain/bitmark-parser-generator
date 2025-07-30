@@ -41,7 +41,7 @@ class DevTextGenerator {
       ast.printTree(textAst, NodeType.textAst);
       console.log(text);
     } else {
-      const res = await bitmarkParserGenerator.convertText(filename, {
+      const res = bitmarkParserGenerator.convertText(filename, {
         textFormat: TextFormat.bitmarkText,
         textLocation: TextLocation.body,
       });

@@ -56,7 +56,7 @@ class DevPrettify {
       const res = await generator.generate(bitmarkAst);
       console.log(res);
     } else {
-      const res = await bitmarkParserGenerator.upgrade(filename, {
+      const res = bitmarkParserGenerator.upgrade(filename, {
         bitmarkOptions: {
           explicitTextFormat: false,
         },

@@ -265,6 +265,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // Walk the bitmark AST
     this.walkAndWrite(ast);
 
+    // Write the JSON object to file
+    this.write(JSON.stringify(this.json, null, this.jsonPrettifySpace));
+
     // Close the writer
     this.writer.closeSync();
   }

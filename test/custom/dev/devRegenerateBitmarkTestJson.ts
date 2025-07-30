@@ -32,7 +32,7 @@ class DevRegenerateBitmarkTestJson {
       const jsonFile = path.join(jsonFilesDir, `${path.basename(bitmarkFile, '.bitmark')}.json`);
 
       console.log(`Processing: ${basename}`);
-      await bitmarkParserGenerator.convert(bitmarkFile, {
+      bitmarkParserGenerator.convert(bitmarkFile, {
         outputFile: jsonFile,
         jsonOptions: {
           enableWarnings: true,
