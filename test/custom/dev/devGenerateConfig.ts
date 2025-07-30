@@ -12,7 +12,7 @@ const bitmarkParserGenerator = new BitmarkParserGenerator();
 
 class DevConfig {
   async run(): Promise<void> {
-    await bitmarkParserGenerator.generateConfig({
+    bitmarkParserGenerator.generateConfig({
       //
     });
   }

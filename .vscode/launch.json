@@ -238,9 +238,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Current file",
+      "name": "Test: Current file",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": ["${fileBasenameNoExtension}"],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -252,9 +252,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: ALL Standard Tests",
+      "name": "Test: ALL Standard Tests",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": ["-i"],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -266,9 +266,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Bitmark Parser - Standard Tests",
+      "name": "Test: Bitmark Parser - Standard Tests",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -285,9 +285,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Bitmark Generator - Standard Tests",
+      "name": "Test: Bitmark Generator - Standard Tests",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -304,9 +304,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Parser (bitmark body)",
+      "name": "Test: Text Parser (bitmark body)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -323,9 +323,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Generator (bitmark body)",
+      "name": "Test: Text Generator (bitmark body)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -342,9 +342,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Parser (bitmark tag)",
+      "name": "Test: Text Parser (bitmark tag)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -361,9 +361,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Generator (bitmark tag)",
+      "name": "Test: Text Generator (bitmark tag)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -380,9 +380,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Breakscape (bitmark body)",
+      "name": "Test: Text Breakscape (bitmark body)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -399,9 +399,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Unbreakscape (bitmark body)",
+      "name": "Test: Text Unbreakscape (bitmark body)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -418,9 +418,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Breakscape (bitmark tag)",
+      "name": "Test: Text Breakscape (bitmark tag)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -437,9 +437,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Unbreakscape (bitmark tag)",
+      "name": "Test: Text Unbreakscape (bitmark tag)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -456,9 +456,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Breakscape (plain body)",
+      "name": "Test: Text Breakscape (plain body)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -475,9 +475,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Unbreakscape (plain body)",
+      "name": "Test: Text Unbreakscape (plain body)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -494,9 +494,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Breakscape (plain tag)",
+      "name": "Test: Text Breakscape (plain tag)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -513,9 +513,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Text Unbreakscape (plain tag)",
+      "name": "Test: Text Unbreakscape (plain tag)",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -532,9 +532,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Web Parser - Standard Tests",
+      "name": "Test: Web Parser - Standard Tests",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",
@@ -551,9 +551,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest: Web Generator - Standard Tests",
+      "name": "Test: Web Generator - Standard Tests",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
         "--config=jest.config.js",
         "--testMatch",

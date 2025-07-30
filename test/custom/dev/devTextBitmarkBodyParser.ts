@@ -50,7 +50,7 @@ class DevTextParser {
 
       console.log(jsonStr);
     } else {
-      const res = await bitmarkParserGenerator.convertText(filename, {
+      const res = bitmarkParserGenerator.convertText(filename, {
         textFormat: TextFormat.bitmarkText,
         textLocation: TextLocation.body,
         jsonOptions: {

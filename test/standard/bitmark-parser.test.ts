@@ -6,7 +6,9 @@ import fs from 'fs-extra';
 import { performance } from 'perf_hooks';
 import { describe, expect, test } from 'vitest';
 
+import { BitmarkParserGenerator } from '../../src/BitmarkParserGenerator.ts';
 import { JsonFileGenerator } from '../../src/generator/json/JsonFileGenerator.ts';
+import { BitmarkVersion, type BitWrapperJson } from '../../src/index.ts';
 import { BitmarkParser } from '../../src/parser/bitmark/BitmarkParser.ts';
 // import { JsonParser } from '../../src/parser/json/JsonParser.ts';
 import { FileUtils } from '../../src/utils/FileUtils.ts';
@@ -40,6 +42,28 @@ function getTestFilenames(): string[] {
 }
 
 describe('bitmark-parser', () => {
+  test('Bitmark => JSON (convert API)', () => {
+    //
+    const bpg = new BitmarkParserGenerator();
+
+    const json = bpg.convert('[.article]\nHello World', {
+      bitmarkVersion: BitmarkVersion.v2,
+    }) as BitWrapperJson[];
+
+    expect(json[0].bit).to.deep.equal({
+      type: 'article',
+      format: 'bitmark++',
+      bitLevel: 1,
+      item: '',
+      lead: '',
+      pageNumber: '',
+      marginNumber: '',
+      hint: '',
+      instruction: '',
+      body: 'Hello World',
+    });
+  });
+
   describe('Bitmark => JSON', () => {
     // Ensure required folders
     fs.ensureDirSync(TEST_OUTPUT_DIR);
