@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-parser-generator",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Get More Brain Ltd",
   "license": "ISC",
@@ -65,7 +65,7 @@
     "start-text-plain-tag-breakscape": "node ./test/custom/dev/devTextPlainTagBreakscape.ts",
     "start-text-plain-tag-unbreakscape": "node ./test/custom/dev/devTextPlainTagUnbreakscape.ts",
     "build": "npm run clean && npm run init && npm run build-grammar-bit && npm run build-grammar-text && npm run check && tsup && npm run build-browser && npm run build-supported-info",
-    "build-browser": "node ./scripts/build-for-webpack.ts && webpack -c ./webpack.config.cjs",
+    "build-browser": "webpack -c ./webpack.config.cjs",
     "build-doc": "typedoc",
     "build-grammar-bit": "node ./scripts/grammar/bitmark/generate-bitmark-parser.ts --bit",
     "build-grammar-bit-test": "BPG_ENV=development node ./scripts/grammar/bitmark/generate-bitmark-parser.ts --bit --test",
