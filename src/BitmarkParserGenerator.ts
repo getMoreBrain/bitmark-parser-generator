@@ -456,7 +456,7 @@ class BitmarkParserGenerator {
   /**
    * Generate the new configuration for the bitmark parser.
    */
-  public async generateConfig(options?: GenerateConfigOptions): Promise<unknown> {
+  public generateConfig(options?: GenerateConfigOptions): void {
     const opts: GenerateConfigOptions = Object.assign({}, options);
     const builder = new ConfigBuilder();
     // let res: unknown;
@@ -467,9 +467,7 @@ class BitmarkParserGenerator {
     // const includeNonDeprecated = all || !deprecated;
     // const includeDeprecated = all || deprecated;
 
-    await builder.build(opts);
-
-    return void 0;
+    builder.build(opts);
   }
 
   /**
@@ -494,14 +492,14 @@ class BitmarkParserGenerator {
    * @param input - bitmark or JSON or AST as a string, JSON or AST as plain JS object, or path to a file containing
    * bitmark, JSON, or AST.
    * @param options - the conversion options
-   * @returns Promise that resolves to string if converting to bitmark, a plain JS object if converting to JSON, or
+   * @returns A string if converting to bitmark, a plain JS object if converting to JSON, or
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  public async convert(
+  public convert(
     input: string | fs.PathLike | unknown,
     options?: ConvertOptions,
-  ): Promise<string | unknown | void> {
+  ): string | unknown | void {
     let res: string | unknown | void;
     const opts: ConvertOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -544,19 +542,19 @@ class BitmarkParserGenerator {
     const isBitmark = !isJson && !isAst; // Assume bitmark since not AST or JSON
 
     // Helper conversion functions
-    const bitmarkToBitmark = async (bitmarkStr: string) => {
+    const bitmarkToBitmark = (bitmarkStr: string) => {
       // Validate and prettify
-      await bitmarkToAst(bitmarkStr);
-      await astToBitmark(res as BitmarkAst);
+      bitmarkToAst(bitmarkStr);
+      astToBitmark(res as BitmarkAst);
     };
 
-    const bitmarkToAst = async (bitmarkStr: string) => {
+    const bitmarkToAst = (bitmarkStr: string) => {
       res = this.bitmarkParser.toAst(bitmarkStr, {
         parserType: bitmarkParserType,
       });
     };
 
-    const bitmarkToJson = async (bitmarkStr: string) => {
+    const bitmarkToJson = (bitmarkStr: string) => {
       if (bitmarkParserType === BitmarkParserType.peggy) {
         // Convert the bitmark to JSON using the peggy parser (aways true, only peggy parser supported)
 
@@ -569,11 +567,11 @@ class BitmarkParserGenerator {
         if (opts.outputFile) {
           // Write JSON file
           const generator = new JsonFileGenerator(opts.outputFile, opts);
-          await generator.generate(ast);
+          generator.generateSync(ast);
         } else {
           // Generate JSON object
           const generator = new JsonObjectGenerator(opts);
-          const json = await generator.generate(ast);
+          const json = generator.generateSync(ast);
 
           // Return JSON as object or string depending on prettify/stringify option
           res = this.jsonStringifyPrettify(json, jsonOptions);
@@ -581,65 +579,65 @@ class BitmarkParserGenerator {
       }
     };
 
-    const astToBitmark = async (astJson: BitmarkAst) => {
+    const astToBitmark = (astJson: BitmarkAst) => {
       // Convert the AST to bitmark
       if (opts.outputFile) {
         // Write markup file
         const generator = new BitmarkFileGenerator(opts.outputFile, opts);
-        await generator.generate(astJson);
+        generator.generateSync(astJson);
       } else {
         // Generate markup string
         const generator = new BitmarkStringGenerator(opts);
-        res = await generator.generate(astJson);
+        res = generator.generateSync(astJson);
       }
     };
 
-    const astToAst = async (astJson: BitmarkAst) => {
+    const astToAst = (astJson: BitmarkAst) => {
       // Return JSON as object or string depending on prettify/stringify option
       res = this.jsonStringifyPrettify(astJson, jsonOptions);
     };
 
-    const astToJson = async (astJson: BitmarkAst) => {
+    const astToJson = (astJson: BitmarkAst) => {
       // Convert the AST to JSON
       if (opts.outputFile) {
         // Write JSON file
         const generator = new JsonFileGenerator(opts.outputFile, opts);
-        await generator.generate(astJson);
+        generator.generateSync(astJson);
       } else {
         // Generate JSON object
         const generator = new JsonObjectGenerator(opts);
-        const json = await generator.generate(astJson);
+        const json = generator.generateSync(astJson);
 
         // Return JSON as object or string depending on prettify/stringify option
         res = this.jsonStringifyPrettify(json, jsonOptions);
       }
     };
 
-    const jsonToBitmark = async (astJson: BitmarkAst) => {
+    const jsonToBitmark = (astJson: BitmarkAst) => {
       // We already have the ast from detecting the input type, so use the AST we already have
 
       // Convert the JSON to bitmark
       if (opts.outputFile) {
         // Write markup file
         const generator = new BitmarkFileGenerator(opts.outputFile, opts);
-        await generator.generate(astJson);
+        generator.generateSync(astJson);
       } else {
         // Generate markup string
         const generator = new BitmarkStringGenerator(opts);
-        res = await generator.generate(astJson);
+        res = generator.generateSync(astJson);
       }
     };
 
-    const jsonToAst = async (astJson: BitmarkAst) => {
+    const jsonToAst = (astJson: BitmarkAst) => {
       // We already have the ast from detecting the input type, so just return the AST we already have
 
       // Return JSON as object or string depending on prettify/stringify option
       res = this.jsonStringifyPrettify(astJson, jsonOptions);
     };
 
-    const jsonToJson = async (astJson: BitmarkAst) => {
+    const jsonToJson = (astJson: BitmarkAst) => {
       // Validate and prettify
-      await astToJson(astJson);
+      astToJson(astJson);
     };
 
     // Convert
@@ -647,39 +645,39 @@ class BitmarkParserGenerator {
       // Input was Bitmark
       if (outputBitmark) {
         // Bitmark ==> Bitmark
-        await bitmarkToBitmark(inStr);
+        bitmarkToBitmark(inStr);
       } else if (outputAst) {
         // Bitmark ==> AST
-        await bitmarkToAst(inStr);
+        bitmarkToAst(inStr);
       } else {
         // Bitmark ==> JSON
-        await bitmarkToJson(inStr);
+        bitmarkToJson(inStr);
       }
     } else if (isAst) {
       // Input was AST
       ast = ast as BitmarkAst;
       if (outputAst) {
         // AST ==> AST
-        await astToAst(ast);
+        astToAst(ast);
       } else if (outputJson) {
         // AST ==> JSON
-        await astToJson(ast);
+        astToJson(ast);
       } else {
         // AST ==> Bitmark
-        await astToBitmark(ast);
+        astToBitmark(ast);
       }
     } else {
       // Input was JSON
       ast = ast as BitmarkAst;
       if (outputJson) {
         // JSON ==> JSON
-        await jsonToJson(ast);
+        jsonToJson(ast);
       } else if (outputAst) {
         // JSON ==> AST
-        await jsonToAst(ast);
+        jsonToAst(ast);
       } else {
         // JSON ==> Bitmark
-        await jsonToBitmark(ast);
+        jsonToBitmark(ast);
       }
     }
 
@@ -711,10 +709,10 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  public async upgrade(
+  public upgrade(
     input: string | fs.PathLike | unknown,
     options?: UpgradeOptions,
-  ): Promise<string | unknown | void> {
+  ): string | unknown | void {
     let res: string | unknown | void;
     const opts: UpgradeOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -748,7 +746,7 @@ class BitmarkParserGenerator {
     const isBitmark = !isJson; // Assume bitmark since not JSON
 
     // Helper conversion functions
-    const bitmarkToBitmark = async (bitmarkStr: string) => {
+    const bitmarkToBitmark = (bitmarkStr: string) => {
       // Validate and upgrade
       const astJson = this.bitmarkParser.toAst(bitmarkStr, {
         parserType: bitmarkParserType,
@@ -758,26 +756,26 @@ class BitmarkParserGenerator {
       if (opts.outputFile) {
         // Write markup file
         const generator = new BitmarkFileGenerator(opts.outputFile, opts);
-        await generator.generate(astJson);
+        generator.generateSync(astJson);
       } else {
         // Generate markup string
         const generator = new BitmarkStringGenerator(opts);
-        res = await generator.generate(astJson);
+        res = generator.generateSync(astJson);
       }
     };
 
-    const jsonToJson = async (astJson: BitmarkAst) => {
+    const jsonToJson = (astJson: BitmarkAst) => {
       // Validate and upgrade
 
       // Convert the AST to JSON
       if (opts.outputFile) {
         // Write JSON file
         const generator = new JsonFileGenerator(opts.outputFile, opts);
-        await generator.generate(astJson);
+        generator.generateSync(astJson);
       } else {
         // Generate JSON object
         const generator = new JsonObjectGenerator(opts);
-        const json = await generator.generate(astJson);
+        const json = generator.generateSync(astJson);
 
         // Return JSON as object or string depending on prettify/stringify option
         res = this.jsonStringifyPrettify(json, jsonOptions);
@@ -787,11 +785,11 @@ class BitmarkParserGenerator {
     // Validate and Upgrade
     if (isBitmark) {
       // Bitmark ==> Bitmark
-      await bitmarkToBitmark(inStr);
+      bitmarkToBitmark(inStr);
     } else {
       // JSON ==> JSON
       ast = ast as BitmarkAst;
-      await jsonToJson(ast);
+      jsonToJson(ast);
     }
 
     return res;
@@ -868,10 +866,10 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  public async convertText(
+  public convertText(
     input: string | fs.PathLike | unknown,
     options?: ConvertTextOptions,
-  ): Promise<string | unknown | void> {
+  ): string | unknown | void {
     let res: string | unknown | void;
     let preRes: string | unknown | void;
     const opts: ConvertTextOptions = Object.assign({}, options);
@@ -909,7 +907,7 @@ class BitmarkParserGenerator {
         location: TextLocation.body,
       });
     } else {
-      preRes = await this.textGenerator.generate(ast, textFormat, textLocation);
+      preRes = this.textGenerator.generateSync(ast, textFormat, textLocation);
     }
 
     if (opts.outputFile) {

@@ -54,13 +54,16 @@ class StringWriter implements Writer {
   public writeLine(value?: string): this {
     if (!this._buffer) return this;
 
+    let line: string;
+
     if (value != null) {
-      this._buffer.push(value + this.endOfLineString);
-      this.lastWrite = value + this.endOfLineString;
+      line = value + this.endOfLineString;
     } else {
-      this._buffer.push(this.endOfLineString);
-      this.lastWrite = this.endOfLineString;
+      line = this.endOfLineString;
     }
+
+    this._buffer.push(line);
+    this.lastWrite = line;
 
     return this;
   }
