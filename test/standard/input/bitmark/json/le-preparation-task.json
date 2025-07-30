@@ -87,7 +87,7 @@
           }
         },
         {
-          "message": "Resource type [&website-link] is specified in the bit header, but no such a resource is present",
+          "message": "Resource type [&website-link] is specified in the bit header, but no such resource is present",
           "text": "[.le-preparation-task&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-preparation-task]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n\n",
           "location": {
             "start": {
@@ -111,20 +111,13 @@
       "type": "le-preparation-task",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "list": ["One", "Two", "Three", "Four"],
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
       "item": [],

@@ -16,7 +16,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Info",
+      "name": "Info",
       "program": "${workspaceFolder}/test/custom/dev/devInfo.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -27,7 +27,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Generate Config",
+      "name": "Config",
       "program": "${workspaceFolder}/test/custom/dev/devGenerateConfig.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -38,7 +38,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Bitmark Parser",
+      "name": "Parser",
       "program": "${workspaceFolder}/test/custom/dev/devParser.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -49,7 +49,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Bitmark Generator",
+      "name": "Generator",
       "program": "${workspaceFolder}/test/custom/dev/devGenerator.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -60,7 +60,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Prettify",
+      "name": "Prettify",
       "program": "${workspaceFolder}/test/custom/dev/devPrettify.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -71,7 +71,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Parser (bitmark body)",
+      "name": "Text Parser (bitmark body)",
       "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkBodyParser.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -82,7 +82,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Generator (bitmark body)",
+      "name": "Text Generator (bitmark body)",
       "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkBodyGenerator.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -93,7 +93,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Parser (bitmark tag)",
+      "name": "Text Parser (bitmark tag)",
       "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkTagParser.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -104,7 +104,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Generator (bitmark tag)",
+      "name": "Text Generator (bitmark tag)",
       "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkTagGenerator.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -115,7 +115,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Breakscape (bitmark body)",
+      "name": "Breakscape (bitmark body)",
       "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkBodyBreakscape.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -126,7 +126,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Unbreakscape (bitmark body)",
+      "name": "Unbreakscape (bitmark body)",
       "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkBodyUnbreakscape.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -137,7 +137,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Breakscape (bitmark tag)",
+      "name": "Breakscape (bitmark tag)",
       "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkTagBreakscape.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -148,7 +148,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Unbreakscape (bitmark tag)",
+      "name": "Unbreakscape (bitmark tag)",
       "program": "${workspaceFolder}/test/custom/dev/devTextBitmarkTagUnbreakscape.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -159,7 +159,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Breakscape (plain body)",
+      "name": "Breakscape (plain body)",
       "program": "${workspaceFolder}/test/custom/dev/devTextPlainBodyBreakscape.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -170,7 +170,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Unbreakscape (plain body)",
+      "name": "Unbreakscape (plain body)",
       "program": "${workspaceFolder}/test/custom/dev/devTextPlainBodyUnbreakscape.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -181,7 +181,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Breakscape (plain tag)",
+      "name": "Breakscape (plain tag)",
       "program": "${workspaceFolder}/test/custom/dev/devTextPlainTagBreakscape.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -192,7 +192,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Text Unbreakscape (plain tag)",
+      "name": "Unbreakscape (plain tag)",
       "program": "${workspaceFolder}/test/custom/dev/devTextPlainTagUnbreakscape.ts",
       "runtimeArgs": [],
       "console": "internalConsole",
@@ -203,7 +203,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Dev Regenerate Bitmark Tests",
+      "name": "Regenerate Bitmark Tests",
       "program": "${workspaceFolder}/test/custom/dev/devRegenerateBitmarkTests.ts",
       "runtimeArgs": [],
       "console": "internalConsole",

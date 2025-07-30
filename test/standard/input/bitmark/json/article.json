@@ -777,7 +777,7 @@
           }
         },
         {
-          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "message": "Resource type [&image] is specified in the bit header, but no such resource is present",
           "text": "[.article:bitmark--&image]\n[@id:162205]\n**Abb. 3: UV-Index und empfohlene Schutzmassnahmen**\n|image:https://docs.bitmark.cloud/bit-books/careum/gesundheitsfoerderung/web-resources/images/careum_gesundheitsfoerderung_8_v2.png|\n\n",
           "location": {
             "start": {

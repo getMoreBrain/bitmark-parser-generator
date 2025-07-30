@@ -130,7 +130,9 @@ class NodeValidator {
       if (resource.type) {
         ret = {
           type: resource.type,
-          // __typeAlias: resource.type,
+          __typeAlias: resource.type,
+          __configKey: resource.__configKey,
+          __invalid: true,
         } as T;
       }
     }

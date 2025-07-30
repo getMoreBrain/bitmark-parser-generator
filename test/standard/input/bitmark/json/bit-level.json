@@ -24,9 +24,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 2,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -65,9 +63,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -88,9 +84,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 3,
-      "id": [
-        "151973"
-      ],
+      "id": ["151973"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -129,9 +123,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 2,
-      "id": [
-        "239893"
-      ],
+      "id": ["239893"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -178,7 +170,7 @@
           }
         },
         {
-          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "message": "Resource type [&image] is specified in the bit header, but no such resource is present",
           "text": "[..article:bitmark--&image]\n[@id:239893]\n\n",
           "location": {
             "start": {
@@ -202,9 +194,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 2,
-      "id": [
-        "191143"
-      ],
+      "id": ["191143"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -251,7 +241,7 @@
           }
         },
         {
-          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "message": "Resource type [&image] is specified in the bit header, but no such resource is present",
           "text": "[..article:bitmark--&image]\n[@id:191143]\n",
           "location": {
             "start": {
@@ -275,9 +265,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "245285"
-      ],
+      "id": ["245285"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -324,7 +312,7 @@
           }
         },
         {
-          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "message": "Resource type [&image] is specified in the bit header, but no such resource is present",
           "text": "[.article:bitmark--&image]\n[@id:245285]\n",
           "location": {
             "start": {
@@ -348,9 +336,7 @@
       "type": "_comment",
       "originalType": "article",
       "bitLevel": 2,
-      "id": [
-        "239893"
-      ],
+      "id": ["239893"],
       "body": []
     },
     "parser": {
@@ -391,7 +377,7 @@
           }
         },
         {
-          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "message": "Resource type [&image] is specified in the bit header, but no such resource is present",
           "text": "[..|article:bitmark--&image]\n[@id:239893]\n\n",
           "location": {
             "start": {
@@ -415,9 +401,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 7,
-      "id": [
-        "5743563"
-      ],
+      "id": ["5743563"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -456,9 +440,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 7,
-      "id": [
-        "162205"
-      ],
+      "id": ["162205"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -521,7 +503,7 @@
           }
         },
         {
-          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "message": "Resource type [&image] is specified in the bit header, but no such resource is present",
           "text": "[........article:bitmark--&image]\n[@id:162205]\n\n",
           "location": {
             "start": {
@@ -545,9 +527,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 7,
-      "id": [
-        "162205"
-      ],
+      "id": ["162205"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -610,7 +590,7 @@
           }
         },
         {
-          "message": "Resource type [&image] is specified in the bit header, but no such a resource is present",
+          "message": "Resource type [&image] is specified in the bit header, but no such resource is present",
           "text": "[...........article:bitmark--&image]\n[@id:162205]\n",
           "location": {
             "start": {
