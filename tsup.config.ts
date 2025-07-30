@@ -28,6 +28,10 @@ const stripBlock = (): Plugin => ({
   },
 });
 
+const browserDefines = {
+  'process.env.BPG_ENV': JSON.stringify('production'),
+};
+
 export default defineConfig([
   // Node builds (ESM / CJS)
   {
@@ -64,7 +68,7 @@ export default defineConfig([
     format: ['cjs'],
     target: 'es2020',
     outDir: 'dist/browser/cjs',
-    // external: ['os', 'path', 'stream', 'constants'],
+    define: browserDefines,
     shims: true,
     dts: true,
     sourcemap: true,
@@ -86,6 +90,7 @@ export default defineConfig([
     format: ['esm'],
     target: 'es2020',
     outDir: 'dist/browser/esm',
+    define: browserDefines,
     shims: true,
     dts: true,
     sourcemap: true,
