@@ -5,13 +5,15 @@ import fs from 'fs-extra';
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(dirname, '..');
-// const nodeModulesDir = path.join(rootDir, 'node_modules');
-const distDir = path.join(rootDir, 'dist');
-const buildDir = path.join(rootDir, 'build');
 
-const dirsToRemove = [distDir, buildDir];
+const dirsToRemove = [
+  //
+  'dist',
+  'build', // legacy
+];
 
-for (const dir of dirsToRemove) {
+for (const d of dirsToRemove) {
+  const dir = path.join(rootDir, d);
   try {
     await fs.rm(dir, { recursive: true, force: true });
     console.log(`✅ Cleaned: ${path.basename(dir)}`);
