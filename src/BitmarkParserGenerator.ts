@@ -513,6 +513,7 @@ class BitmarkParserGenerator {
     const bitmarkParserType = BitmarkParserType.peggy; // Option is no longer used as only Peggy parser supported
 
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -522,7 +523,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -722,6 +723,7 @@ class BitmarkParserGenerator {
     const bitmarkParserType = opts.bitmarkParserType;
 
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -731,7 +733,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -808,12 +810,13 @@ class BitmarkParserGenerator {
   public createAst(input: unknown, options?: CreateAstOptions): BitmarkAst {
     let res: BitmarkAst;
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
     const opts: CreateAstOptions = Object.assign({}, options);
 
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -880,6 +883,7 @@ class BitmarkParserGenerator {
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -889,7 +893,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -962,6 +966,7 @@ class BitmarkParserGenerator {
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -971,7 +976,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -1027,6 +1032,7 @@ class BitmarkParserGenerator {
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: BreakscapedString = input as BreakscapedString;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -1036,7 +1042,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           }) as BreakscapedString;
