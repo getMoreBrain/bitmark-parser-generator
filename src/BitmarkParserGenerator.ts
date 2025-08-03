@@ -540,7 +540,7 @@ class BitmarkParserGenerator {
       ast = this.jsonParser.toAst(inStr);
     }
     const isJson = !!ast?.bits;
-    const isBitmark = !isJson && !isAst; // Assume bitmark since not AST or JSON
+    const isBitmark = inputIsString && !isJson && !isAst; // Assume bitmark since not AST or JSON
 
     // Helper conversion functions
     const bitmarkToBitmark = (bitmarkStr: string) => {
@@ -667,7 +667,7 @@ class BitmarkParserGenerator {
         // AST ==> Bitmark
         astToBitmark(ast);
       }
-    } else {
+    } else if (isJson) {
       // Input was JSON
       ast = ast as BitmarkAst;
       if (outputJson) {
@@ -680,6 +680,9 @@ class BitmarkParserGenerator {
         // JSON ==> Bitmark
         jsonToBitmark(ast);
       }
+    } else {
+      // Input was not recognised, return an empty string
+      res = '';
     }
 
     return res;
@@ -745,7 +748,7 @@ class BitmarkParserGenerator {
     let ast = this.jsonParser.toAst(inStr);
 
     const isJson = !!ast?.bits;
-    const isBitmark = !isJson; // Assume bitmark since not JSON
+    const isBitmark = inputIsString && !isJson; // Assume bitmark since not JSON
 
     // Helper conversion functions
     const bitmarkToBitmark = (bitmarkStr: string) => {
@@ -788,10 +791,13 @@ class BitmarkParserGenerator {
     if (isBitmark) {
       // Bitmark ==> Bitmark
       bitmarkToBitmark(inStr);
-    } else {
+    } else if (isJson) {
       // JSON ==> JSON
       ast = ast as BitmarkAst;
       jsonToJson(ast);
+    } else {
+      // Input was not recognised
+      return;
     }
 
     return res;
@@ -833,14 +839,17 @@ class BitmarkParserGenerator {
       ast = this.jsonParser.toAst(inStr);
     }
     const isJson = !!ast?.bits;
-    const isBitmark = !isJson && !isAst; // Assume bitmark since not AST or JSON
+    const isBitmark = inputIsString && !isJson && !isAst; // Assume bitmark since not AST or JSON
 
     if (isBitmark) {
       // Bitmark ==> AST
       res = this.bitmarkParser.toAst(inStr);
-    } else {
+    } else if (isJson) {
       // JSON / AST ==> AST
       res = ast as BitmarkAst;
+    } else {
+      // Input was not recognised, return an empty AST
+      res = {};
     }
 
     return res;
