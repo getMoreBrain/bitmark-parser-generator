@@ -95,6 +95,7 @@ export type { BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
 export type { BitTypeType } from './model/enum/BitType.ts';
 export type { BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
 export type { CardSetVersionType } from './model/enum/CardSetVersion.ts';
+export type { ResourceTypeType } from './model/enum/ResourceType.ts';
 export type { InfoFormatType } from './model/info/enum/InfoFormat.ts';
 export type { InfoTypeType } from './model/info/enum/InfoType.ts';
 export type {
