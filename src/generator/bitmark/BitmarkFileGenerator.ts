@@ -1,4 +1,4 @@
-import fs from 'fs-extra';
+import { type PathLike } from 'node:fs';
 
 import { type FileOptions, FileWriter } from '../../ast/writer/FileWriter.ts';
 import { SyncFileWriter } from '../../ast/writer/SyncFileWriter.ts';
@@ -37,7 +37,7 @@ class BitmarkFileGenerator implements Generator<BitmarkAst> {
    * @param path - path of file to generate
    * @param options - bitmark generation options
    */
-  constructor(path: fs.PathLike, options?: BitmarkFileGeneratorOptions) {
+  constructor(path: PathLike, options?: BitmarkFileGeneratorOptions) {
     this.async = options?.async ?? false;
     const writer = this.async
       ? new FileWriter(path, options?.fileOptions)

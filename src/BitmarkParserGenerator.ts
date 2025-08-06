@@ -130,7 +130,7 @@ export interface ConvertOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
   /**
    * Options for the output file
    */
@@ -178,7 +178,7 @@ export interface UpgradeOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
 
   /**
    * Options for the output file
@@ -219,7 +219,7 @@ export interface ConvertTextOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
 
   /**
    * Options for the output file
@@ -256,7 +256,7 @@ export interface BreakscapeOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
 
   /**
    * Options for the output file
@@ -287,7 +287,7 @@ export interface UnbreakscapeOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
 
   /**
    * Options for the output file
@@ -496,10 +496,7 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  public convert(
-    input: string | fs.PathLike | unknown,
-    options?: ConvertOptions,
-  ): string | unknown | void {
+  public convert(input: string | unknown, options?: ConvertOptions): string | unknown | void {
     let res: string | unknown | void;
     const opts: ConvertOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -713,10 +710,7 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  public upgrade(
-    input: string | fs.PathLike | unknown,
-    options?: UpgradeOptions,
-  ): string | unknown | void {
+  public upgrade(input: string | unknown, options?: UpgradeOptions): string | unknown | void {
     let res: string | unknown | void;
     const opts: UpgradeOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -879,7 +873,7 @@ class BitmarkParserGenerator {
    * @throws Error if any error occurs
    */
   public convertText(
-    input: string | fs.PathLike | unknown,
+    input: string | unknown,
     options?: ConvertTextOptions,
   ): string | unknown | void {
     let res: string | unknown | void;
