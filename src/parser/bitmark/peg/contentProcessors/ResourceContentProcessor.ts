@@ -52,8 +52,6 @@ function buildResources(
   // Find the excess resources and ensure we have the minimum resources
   if (resources) {
     for (const r of resources.reverse()) {
-      if (r.__invalid) continue; // Skip invalid resources
-
       const configKey = r.__configKey;
       let countMin = countsMin.get(configKey) ?? 0;
       let countMax = countsMax.get(configKey) ?? 0;
@@ -74,6 +72,10 @@ function buildResources(
       // Set the new counts
       countsMin.set(configKey, countMin);
       countsMax.set(configKey, countMax);
+
+      if (r.__invalid) {
+        context.addWarning(`Resource type [&${r.type}] is not valid`);
+      }
     }
   }
 
