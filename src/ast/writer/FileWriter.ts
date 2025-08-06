@@ -1,3 +1,4 @@
+import { type PathLike } from 'node:fs';
 import path from 'node:path';
 
 import fs from 'fs-extra';
@@ -22,7 +23,7 @@ export interface FileOptions {
  * Writer to write to a file.
  */
 class FileWriter extends StreamWriter {
-  private _path: fs.PathLike;
+  private _path: PathLike;
   private _append: boolean;
   private _encoding: BufferEncoding;
 
@@ -32,7 +33,7 @@ class FileWriter extends StreamWriter {
    * @param path - path of file to write
    * @param options - options for file writing
    */
-  constructor(path: fs.PathLike, options?: FileOptions) {
+  constructor(path: PathLike, options?: FileOptions) {
     super();
     const opts = Object.assign({}, options);
 
@@ -41,7 +42,7 @@ class FileWriter extends StreamWriter {
     this._encoding = opts.encoding ?? 'utf8';
   }
 
-  public get path(): fs.PathLike {
+  public get path(): PathLike {
     return this._path;
   }
 

@@ -1,3 +1,4 @@
+import { type PathLike } from 'node:fs';
 import path from 'node:path';
 
 import fs from 'fs-extra';
@@ -21,7 +22,7 @@ export interface FileOptions {
  * Writer to write to a file synchronously.
  */
 class SyncFileWriter {
-  private _path: fs.PathLike;
+  private _path: PathLike;
   private _append: boolean;
   private _encoding: BufferEncoding;
   private _open: boolean;
@@ -35,7 +36,7 @@ class SyncFileWriter {
    * @param path - path of file to write
    * @param options - options for file writing
    */
-  constructor(path: fs.PathLike, options?: FileOptions) {
+  constructor(path: PathLike, options?: FileOptions) {
     const opts = Object.assign({}, options);
 
     this._path = path;
@@ -48,7 +49,7 @@ class SyncFileWriter {
     return true;
   }
 
-  public get path(): fs.PathLike {
+  public get path(): PathLike {
     return this._path;
   }
 

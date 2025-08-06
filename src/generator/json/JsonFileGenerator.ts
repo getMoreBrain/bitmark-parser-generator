@@ -1,4 +1,4 @@
-import fs from 'fs-extra';
+import { type PathLike } from 'node:fs';
 
 import { type FileOptions, FileWriter } from '../../ast/writer/FileWriter.ts';
 import { SyncFileWriter } from '../../ast/writer/SyncFileWriter.ts';
@@ -40,7 +40,7 @@ class JsonFileGenerator implements Generator<BitmarkAst> {
    * @param fileOptions - file options
    * @param bitmarkOptions - bitmark generation options
    */
-  constructor(path: fs.PathLike, options?: JsonFileGeneratorOptions) {
+  constructor(path: PathLike, options?: JsonFileGeneratorOptions) {
     this.async = options?.async ?? false;
     const writer = this.async
       ? new FileWriter(path, options?.fileOptions)

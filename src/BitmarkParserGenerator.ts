@@ -130,7 +130,7 @@ export interface ConvertOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
   /**
    * Options for the output file
    */
@@ -178,7 +178,7 @@ export interface UpgradeOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
 
   /**
    * Options for the output file
@@ -219,7 +219,7 @@ export interface ConvertTextOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
 
   /**
    * Options for the output file
@@ -256,7 +256,7 @@ export interface BreakscapeOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
 
   /**
    * Options for the output file
@@ -287,7 +287,7 @@ export interface UnbreakscapeOptions {
   /**
    * Specify a file to write the output to
    */
-  outputFile?: fs.PathLike;
+  outputFile?: string;
 
   /**
    * Options for the output file
@@ -496,10 +496,7 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  public convert(
-    input: string | fs.PathLike | unknown,
-    options?: ConvertOptions,
-  ): string | unknown | void {
+  public convert(input: string | unknown, options?: ConvertOptions): string | unknown | void {
     let res: string | unknown | void;
     const opts: ConvertOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -513,6 +510,7 @@ class BitmarkParserGenerator {
     const bitmarkParserType = BitmarkParserType.peggy; // Option is no longer used as only Peggy parser supported
 
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -522,7 +520,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -539,7 +537,7 @@ class BitmarkParserGenerator {
       ast = this.jsonParser.toAst(inStr);
     }
     const isJson = !!ast?.bits;
-    const isBitmark = !isJson && !isAst; // Assume bitmark since not AST or JSON
+    const isBitmark = inputIsString && !isJson && !isAst; // Assume bitmark since not AST or JSON
 
     // Helper conversion functions
     const bitmarkToBitmark = (bitmarkStr: string) => {
@@ -666,7 +664,7 @@ class BitmarkParserGenerator {
         // AST ==> Bitmark
         astToBitmark(ast);
       }
-    } else {
+    } else if (isJson) {
       // Input was JSON
       ast = ast as BitmarkAst;
       if (outputJson) {
@@ -679,6 +677,9 @@ class BitmarkParserGenerator {
         // JSON ==> Bitmark
         jsonToBitmark(ast);
       }
+    } else {
+      // Input was not recognised, return an empty string
+      res = '';
     }
 
     return res;
@@ -709,10 +710,7 @@ class BitmarkParserGenerator {
    * void if writing to a file
    * @throws Error if any error occurs
    */
-  public upgrade(
-    input: string | fs.PathLike | unknown,
-    options?: UpgradeOptions,
-  ): string | unknown | void {
+  public upgrade(input: string | unknown, options?: UpgradeOptions): string | unknown | void {
     let res: string | unknown | void;
     const opts: UpgradeOptions = Object.assign({}, options);
     // const fileOptions = Object.assign({}, opts.fileOptions);
@@ -722,6 +720,7 @@ class BitmarkParserGenerator {
     const bitmarkParserType = opts.bitmarkParserType;
 
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -731,7 +730,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -743,7 +742,7 @@ class BitmarkParserGenerator {
     let ast = this.jsonParser.toAst(inStr);
 
     const isJson = !!ast?.bits;
-    const isBitmark = !isJson; // Assume bitmark since not JSON
+    const isBitmark = inputIsString && !isJson; // Assume bitmark since not JSON
 
     // Helper conversion functions
     const bitmarkToBitmark = (bitmarkStr: string) => {
@@ -786,10 +785,13 @@ class BitmarkParserGenerator {
     if (isBitmark) {
       // Bitmark ==> Bitmark
       bitmarkToBitmark(inStr);
-    } else {
+    } else if (isJson) {
       // JSON ==> JSON
       ast = ast as BitmarkAst;
       jsonToJson(ast);
+    } else {
+      // Input was not recognised
+      return;
     }
 
     return res;
@@ -808,12 +810,13 @@ class BitmarkParserGenerator {
   public createAst(input: unknown, options?: CreateAstOptions): BitmarkAst {
     let res: BitmarkAst;
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
     const opts: CreateAstOptions = Object.assign({}, options);
 
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -830,14 +833,17 @@ class BitmarkParserGenerator {
       ast = this.jsonParser.toAst(inStr);
     }
     const isJson = !!ast?.bits;
-    const isBitmark = !isJson && !isAst; // Assume bitmark since not AST or JSON
+    const isBitmark = inputIsString && !isJson && !isAst; // Assume bitmark since not AST or JSON
 
     if (isBitmark) {
       // Bitmark ==> AST
       res = this.bitmarkParser.toAst(inStr);
-    } else {
+    } else if (isJson) {
       // JSON / AST ==> AST
       res = ast as BitmarkAst;
+    } else {
+      // Input was not recognised, return an empty AST
+      res = {};
     }
 
     return res;
@@ -867,7 +873,7 @@ class BitmarkParserGenerator {
    * @throws Error if any error occurs
    */
   public convertText(
-    input: string | fs.PathLike | unknown,
+    input: string | unknown,
     options?: ConvertTextOptions,
   ): string | unknown | void {
     let res: string | unknown | void;
@@ -880,6 +886,7 @@ class BitmarkParserGenerator {
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -889,7 +896,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -962,6 +969,7 @@ class BitmarkParserGenerator {
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -971,7 +979,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           });
@@ -1027,6 +1035,7 @@ class BitmarkParserGenerator {
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: BreakscapedString = input as BreakscapedString;
+    const inputIsString = typeof input === 'string';
 
     // Check if we are trying to write to a file in the browser
     if (env.isBrowser && opts.outputFile) {
@@ -1036,7 +1045,7 @@ class BitmarkParserGenerator {
     // If a file, read the file in
     if (!opts.inputFormat || opts.inputFormat === Input.file) {
       if (env.isNode) {
-        if (fs.existsSync(inStr)) {
+        if (inputIsString && fs.existsSync(inStr)) {
           inStr = fs.readFileSync(inStr, {
             encoding: 'utf8',
           }) as BreakscapedString;

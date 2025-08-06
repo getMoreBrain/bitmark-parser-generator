@@ -57,7 +57,7 @@ class NodeValidator {
   validateResource<T extends ResourceJson>(resource: T | undefined): T | undefined {
     if (!resource) return undefined;
 
-    let ret: T | undefined = resource;
+    const ret: T | undefined = resource;
     let valid = false;
 
     switch (resource.type) {
@@ -128,12 +128,7 @@ class NodeValidator {
     // in the bit declaration, and if it is removed completely this cannot be done.
     if (!valid) {
       if (resource.type) {
-        ret = {
-          type: resource.type,
-          __typeAlias: resource.type,
-          __configKey: resource.__configKey,
-          __invalid: true,
-        } as T;
+        resource.__invalid = true;
       }
     }
 

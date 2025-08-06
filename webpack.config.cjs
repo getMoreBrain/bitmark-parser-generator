@@ -1,7 +1,6 @@
 const path = require('node:path');
 
 const TerserPlugin = require('terser-webpack-plugin');
-const { DefinePlugin } = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const dirname = __dirname;
@@ -49,9 +48,6 @@ const config = {
       analyzerMode: 'static',
       reportFilename: 'bundle-report.html',
       defaultSizes: 'stat',
-    }),
-    new DefinePlugin({
-      'process.env.BPG_ENV': JSON.stringify('production'),
     }),
   ],
 };
