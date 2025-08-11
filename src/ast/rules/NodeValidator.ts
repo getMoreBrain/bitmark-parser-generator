@@ -58,67 +58,104 @@ class NodeValidator {
     if (!resource) return undefined;
 
     const ret: T | undefined = resource;
-    let valid = false;
+    let valid = true;
 
     switch (resource.type) {
-      case ResourceType.image:
+      case ResourceType.image: {
         // case ResourceTag.imagePortrait:
         // case ResourceTag.imageLandscape:
-        valid = !!(resource as ImageResourceWrapperJson).image.src;
+        const imageResource = (resource as ImageResourceWrapperJson).image;
+        if (!StringUtils.isString(imageResource.src)) imageResource.src = '';
         break;
-      case ResourceType.imageLink:
-        valid = !!(resource as ImageLinkResourceWrapperJson).imageLink.url;
+      }
+      case ResourceType.imageLink: {
+        const imageLink = (resource as ImageLinkResourceWrapperJson).imageLink;
+        if (!StringUtils.isString(imageLink.url)) imageLink.url = '';
         break;
-      case ResourceType.audio:
-        valid = !!(resource as AudioResourceWrapperJson).audio.src;
+      }
+      case ResourceType.audio: {
+        const audio = (resource as AudioResourceWrapperJson).audio;
+        if (!StringUtils.isString(audio.src)) audio.src = '';
         break;
-      case ResourceType.audioEmbed:
-        valid = !!(resource as AudioEmbedResourceWrapperJson).audioEmbed.src;
+      }
+      case ResourceType.audioEmbed: {
+        const audioEmbed = (resource as AudioEmbedResourceWrapperJson).audioEmbed;
+        if (!StringUtils.isString(audioEmbed.src)) audioEmbed.src = '';
         break;
-      case ResourceType.audioLink:
-        valid = !!(resource as AudioLinkResourceWrapperJson).audioLink.url;
+      }
+      case ResourceType.audioLink: {
+        const audioLink = (resource as AudioLinkResourceWrapperJson).audioLink;
+        if (!StringUtils.isString(audioLink.url)) audioLink.url = '';
         break;
-      case ResourceType.video:
-        valid = !!(resource as VideoResourceWrapperJson).video.src;
+      }
+      case ResourceType.video: {
+        const video = (resource as VideoResourceWrapperJson).video;
+        if (!StringUtils.isString(video.src)) video.src = '';
         break;
-      case ResourceType.videoEmbed:
-        valid = !!(resource as VideoEmbedResourceWrapperJson).videoEmbed.url;
+      }
+      case ResourceType.videoEmbed: {
+        const videoEmbed = (resource as VideoEmbedResourceWrapperJson).videoEmbed;
+        if (!StringUtils.isString(videoEmbed.url)) videoEmbed.url = '';
         break;
-      case ResourceType.videoLink:
-        valid = !!(resource as VideoLinkResourceWrapperJson).videoLink.url;
+      }
+      case ResourceType.videoLink: {
+        const videoLink = (resource as VideoLinkResourceWrapperJson).videoLink;
+        if (!StringUtils.isString(videoLink.url)) videoLink.url = '';
         break;
-      case ResourceType.stillImageFilm:
-        valid =
-          !!(resource as StillImageFilmResourceWrapperJson).image.src &&
-          !!(resource as StillImageFilmResourceWrapperJson).audio.src;
+      }
+      case ResourceType.stillImageFilm: {
+        const stillImageFilm = resource as StillImageFilmResourceWrapperJson;
+        if (!StringUtils.isString(stillImageFilm.image.src)) stillImageFilm.image.src = '';
+        if (!StringUtils.isString(stillImageFilm.audio.src)) stillImageFilm.audio.src = '';
         break;
-      case ResourceType.stillImageFilmEmbed:
-        valid = !!(resource as StillImageFilmEmbedResourceWrapperJson).stillImageFilmEmbed.url;
+      }
+      case ResourceType.stillImageFilmEmbed: {
+        const stillImageFilmEmbed = (resource as StillImageFilmEmbedResourceWrapperJson)
+          .stillImageFilmEmbed;
+        if (!StringUtils.isString(stillImageFilmEmbed.url)) stillImageFilmEmbed.url = '';
         break;
-      case ResourceType.stillImageFilmLink:
-        valid = !!(resource as StillImageFilmLinkResourceWrapperJson).stillImageFilmLink.url;
+      }
+      case ResourceType.stillImageFilmLink: {
+        const stillImageFilmLink = (resource as StillImageFilmLinkResourceWrapperJson)
+          .stillImageFilmLink;
+        if (!StringUtils.isString(stillImageFilmLink.url)) stillImageFilmLink.url = '';
         break;
-      case ResourceType.article:
-        valid = !!(resource as ArticleResourceWrapperJson).article.body;
+      }
+      case ResourceType.article: {
+        const article = (resource as ArticleResourceWrapperJson).article;
+        if (!StringUtils.isString(article.body)) article.body = '';
         break;
-      case ResourceType.document:
-        valid = !!(resource as DocumentResourceWrapperJson).document.url;
+      }
+      case ResourceType.document: {
+        const document = (resource as DocumentResourceWrapperJson).document;
+        if (!StringUtils.isString(document.url)) document.url = '';
         break;
-      case ResourceType.documentEmbed:
-        valid = !!(resource as DocumentEmbedResourceWrapperJson).documentEmbed.url;
+      }
+      case ResourceType.documentEmbed: {
+        const documentEmbed = (resource as DocumentEmbedResourceWrapperJson).documentEmbed;
+        if (!StringUtils.isString(documentEmbed.url)) documentEmbed.url = '';
         break;
-      case ResourceType.documentLink:
-        valid = !!(resource as DocumentLinkResourceWrapperJson).documentLink.url;
+      }
+      case ResourceType.documentLink: {
+        const documentLink = (resource as DocumentLinkResourceWrapperJson).documentLink;
+        if (!StringUtils.isString(documentLink.url)) documentLink.url = '';
         break;
-      case ResourceType.documentDownload:
-        valid = !!(resource as DocumentDownloadResourceWrapperJson).documentDownload.url;
+      }
+      case ResourceType.documentDownload: {
+        const documentDownload = (resource as DocumentDownloadResourceWrapperJson).documentDownload;
+        if (!StringUtils.isString(documentDownload.url)) documentDownload.url = '';
         break;
-      case ResourceType.appLink:
-        valid = !!(resource as AppLinkResourceWrapperJson).appLink.url;
+      }
+      case ResourceType.appLink: {
+        const appLink = (resource as AppLinkResourceWrapperJson).appLink;
+        if (!StringUtils.isString(appLink.url)) appLink.url = '';
         break;
-      case ResourceType.websiteLink:
-        valid = !!(resource as WebsiteLinkResourceWrapperJson).websiteLink.url;
+      }
+      case ResourceType.websiteLink: {
+        const websiteLink = (resource as WebsiteLinkResourceWrapperJson).websiteLink;
+        if (!StringUtils.isString(websiteLink.url)) websiteLink.url = '';
         break;
+      }
 
       default:
         valid = false;

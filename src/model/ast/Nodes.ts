@@ -66,6 +66,7 @@ export interface Bit {
   isPublic?: Property;
   isTemplate?: Property;
   isTemplateStripTheme?: Property;
+  isEditable?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
   searchIndex?: Property;
@@ -179,6 +180,10 @@ export interface Bit {
   search?: Property;
   bot?: Property;
   referenceProperty?: Property;
+  fullName?: Property;
+  pseudonym?: Property;
+  titleString?: Property;
+  jobTitle?: Property;
   list?: Property;
   layer?: Property;
   layerRole?: Property;

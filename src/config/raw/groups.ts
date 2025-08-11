@@ -592,6 +592,12 @@ const GROUPS: _GroupsConfig = {
         defaultValue: 'false',
       },
       {
+        key: ConfigKey.property_isEditable,
+        description: 'If true, the book is editable',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
         key: ConfigKey.property_chatWithBook,
         description: 'If true, the user can chat about the book with an AI assistant',
         format: TagFormat.boolean,

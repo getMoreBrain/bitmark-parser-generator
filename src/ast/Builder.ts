@@ -134,6 +134,7 @@ class Builder extends BaseBuilder {
       isPublic?: boolean;
       isTemplate?: boolean;
       isTemplateStripTheme?: boolean;
+      isEditable?: boolean;
       aiGenerated?: boolean;
       machineTranslated?: string;
       searchIndex?: string | string[];
@@ -247,6 +248,10 @@ class Builder extends BaseBuilder {
       vendorUrl?: string;
       search?: string;
       bot?: string | string[];
+      fullName?: string;
+      pseudonym?: string;
+      titleString?: string;
+      jobTitle?: string;
       list?: string | string[];
       layer?: string | string[];
       layerRole?: string | string[];
@@ -436,6 +441,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_isTemplateStripTheme,
         data.isTemplateStripTheme,
+        options,
+      ),
+      isEditable: this.toAstProperty(
+        bitType,
+        ConfigKey.property_isEditable,
+        data.isEditable,
         options,
       ),
       aiGenerated: this.toAstProperty(
@@ -1040,6 +1051,12 @@ class Builder extends BaseBuilder {
         data.referenceProperty,
         options,
       ),
+
+      // Author data
+      fullName: this.toAstProperty(bitType, ConfigKey.property_fullName, data.fullName, options),
+      pseudonym: this.toAstProperty(bitType, ConfigKey.property_pseudonym, data.pseudonym, options),
+      titleString: this.toAstProperty(bitType, ConfigKey.property_title, data.titleString, options),
+      jobTitle: this.toAstProperty(bitType, ConfigKey.property_jobTitle, data.jobTitle, options),
 
       // Book data
       title: this.handleJsonText(context, TextLocation.tag, data.title),

@@ -25,6 +25,7 @@ export interface BitJson {
   isPublic: boolean;
   isTemplate: boolean;
   isTemplateStripTheme: boolean;
+  isEditable: boolean;
   aiGenerated: boolean;
   machineTranslated: string;
   searchIndex: string | string[];

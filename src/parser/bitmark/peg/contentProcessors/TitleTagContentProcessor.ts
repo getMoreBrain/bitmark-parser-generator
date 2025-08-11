@@ -63,12 +63,22 @@ function buildTitles(
       level: title.length > 0 ? title.length - 1 : undefined,
     };
   } else {
-    return {
-      title: title[1]?.titleAst ?? undefined,
-      titleString: title[1]?.titleString ?? undefined,
-      subtitle: title[2]?.titleAst ?? undefined,
-      subtitleString: title[2]?.titleString ?? undefined,
-    };
+    if (Array.isArray(title)) {
+      return {
+        title: title[1]?.titleAst ?? undefined,
+        titleString: title[1]?.titleString ?? undefined,
+        subtitle: title[2]?.titleAst ?? undefined,
+        subtitleString: title[2]?.titleString ?? undefined,
+      };
+    } else {
+      // Special case for title property (string, not bitmark text)
+      return {
+        title: undefined,
+        titleString: title ?? undefined,
+        subtitle: undefined,
+        subtitleString: undefined,
+      };
+    }
   }
 }
 

@@ -1992,6 +1992,25 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
+  // bitmarkAst -> bits -> bitsValue -> titleString
+
+  protected leaf_titleString(node: NodeInfo, route: NodeInfo[]): boolean {
+    // Ignore title that are not at the bit level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
+    if (node.value) {
+      this.writeNL();
+      // this.bitJson.title = node.value;
+      this.writeProperty('title', node.value, route, {
+        format: TagFormat.plainText,
+      });
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
   //  bitmarkAst -> bits -> title
 
   protected enter_title(node: NodeInfo, route: NodeInfo[]): boolean {

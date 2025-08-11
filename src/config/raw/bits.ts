@@ -81,6 +81,40 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: false,
   },
+  [BitType.author]: {
+    since: '4.2.0',
+    baseBitType: BitType._standard,
+    description: 'Represents an author of something',
+    tags: [
+      {
+        key: ConfigKey.property_fullName,
+        description: 'Full name of the author',
+      },
+      {
+        key: ConfigKey.property_pseudonym,
+        description: 'A pseudonym of the author, if any',
+      },
+      {
+        key: ConfigKey.property_title,
+        description: 'The title of the author, e.g. "Dr.", "Prof.", etc.',
+        jsonKey: 'title',
+      },
+      {
+        key: ConfigKey.property_jobTitle,
+        description: 'The job title of the author, e.g. "Software Engineer", "Professor", etc.',
+      },
+    ],
+  },
+  [BitType.bookAuthor]: {
+    since: '4.2.0',
+    baseBitType: BitType.author,
+    description: 'Represents an author of a book',
+  },
+  [BitType.articleAuthor]: {
+    since: '4.2.0',
+    baseBitType: BitType.author,
+    description: 'Represents an author of a book',
+  },
   [BitType.article]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -1078,6 +1112,76 @@ const BITS: _BitsConfig = {
     description:
       'Cloze and multiple choice text conversation right thought bit, used for conversations with cloze and multiple choice text and a thought on the right side of the screen',
   },
+
+  [BitType.advertising]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'General advertising content bit',
+  },
+  [BitType.advertisingAdvertorial]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'Advertorial content bit (sponsored article)',
+  },
+
+  [BitType.advertisingCallToAction]: {
+    since: '4.2.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call-to-action for advertising',
+  },
+  [BitType.advertisingCallToActionMeeting]: {
+    since: '4.2.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call-to-action for meeting or appointment',
+  },
+
+  [BitType.advertisingBanner]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Banner advertisement bit',
+  },
+  [BitType.advertisingSkyscraper]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Skyscraper (vertical) advertisement bit',
+  },
+  [BitType.advertisingRectangle]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Rectangle advertisement bit',
+  },
+
+  [BitType.advertisingFullPage]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Full-page advertisement bit',
+  },
+  [BitType.advertisingHalfPage]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Half-page advertisement bit',
+  },
+  [BitType.advertisingQuarterPage]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Quarter-page advertisement bit',
+  },
+  [BitType.advertisingClassifiedPage]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Classifieds advertisement page bit',
+  },
+  [BitType.advertisingLandscape]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Landscape format advertisement bit',
+  },
+  [BitType.advertisingPortrait]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Portrait format advertisement bit',
+  },
+
   [BitType.cookPreparation]: {
     since: '1.3.0',
     baseBitType: BitType.article,
@@ -1380,6 +1484,19 @@ const BITS: _BitsConfig = {
     description:
       'Smart standard non-normative example collapsible bit, used to provide non-normative examples in smart standards that can be collapsed',
   },
+  [BitType.authorContentBitGenerator]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'Body contains the content of one or more bits to be created by the bit generator',
+    tags: [
+      {
+        key: ConfigKey.property_classification,
+        description: 'Classification for the created bits',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+    ],
+  },
   [BitType.appAiPrompt]: {
     since: '1.3.0',
     baseBitType: BitType.article,
@@ -1389,6 +1506,26 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.article,
     description: 'AI prompt bit, used to create AI prompts in articles or books',
+  },
+  [BitType.aiChat]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'AI chat bit, used to create an AI chat',
+  },
+  [BitType.aiEditor]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'AI editor bit, used to create an AI editor',
+  },
+  [BitType.aiTutor]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'AI tutor bit, used to create an AI tutor',
+  },
+  [BitType.aiWbt]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'AI WBT bit, used to create an AI WBT (Web-Based Training)',
   },
   [BitType.articleAi]: {
     since: '1.3.0',
