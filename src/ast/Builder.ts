@@ -134,6 +134,7 @@ class Builder extends BaseBuilder {
       isPublic?: boolean;
       isTemplate?: boolean;
       isTemplateStripTheme?: boolean;
+      isEditable?: boolean;
       aiGenerated?: boolean;
       machineTranslated?: string;
       searchIndex?: string | string[];
@@ -436,6 +437,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_isTemplateStripTheme,
         data.isTemplateStripTheme,
+        options,
+      ),
+      isEditable: this.toAstProperty(
+        bitType,
+        ConfigKey.property_isEditable,
+        data.isEditable,
         options,
       ),
       aiGenerated: this.toAstProperty(

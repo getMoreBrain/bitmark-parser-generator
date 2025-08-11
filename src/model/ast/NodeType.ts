@@ -242,6 +242,8 @@ const NodeType = superenum({
   isCaseSensitive: 'isCaseSensitive',
   isCommented: 'isCommented',
   isCorrect: 'isCorrect',
+  isEditable: 'isEditable',
+  isEditableValue: 'isEditableValue',
   isExample: 'isExample',
   isInfoOnly: 'isInfoOnly',
   isInfoOnlyValue: 'isInfoOnlyValue',

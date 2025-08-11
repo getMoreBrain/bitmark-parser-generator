@@ -66,6 +66,7 @@ export interface Bit {
   isPublic?: Property;
   isTemplate?: Property;
   isTemplateStripTheme?: Property;
+  isEditable?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
   searchIndex?: Property;

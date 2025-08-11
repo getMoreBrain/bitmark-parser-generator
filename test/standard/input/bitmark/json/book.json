@@ -14,6 +14,7 @@
       "publisher": ["kpmg"],
       "publisherName": "KPMG",
       "theme": ["grundzuege"],
+      "isEditable": true,
       "levelCEFRp": "levelCEFRp",
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
