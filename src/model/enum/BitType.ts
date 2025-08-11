@@ -4,6 +4,19 @@ const BitType = superenum({
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
   _comment: '_comment', // Used to indicate a bit is commented out
   _standard: '_standard', // Not to be used as a bit, but as a base for other bit types
+  advertising: 'advertising',
+  advertisingAdvertorial: 'advertising-advertorial',
+  advertisingCallToAction: 'advertising-call-to-action',
+  advertisingCallToActionMeeting: 'advertising-call-to-action-meeting',
+  advertisingBanner: 'advertising-banner',
+  advertisingSkyscraper: 'advertising-skyscraper',
+  advertisingRectangle: 'advertising-rectangle',
+  advertisingFullPage: 'advertising-full-page',
+  advertisingHalfPage: 'advertising-half-page',
+  advertisingQuarterPage: 'advertising-quarter-page',
+  advertisingClassifiedPage: 'advertising-classified-page',
+  advertisingLandscape: 'advertising-landscape',
+  advertisingPortrait: 'advertising-portrait',
   aiPrompt: 'ai-prompt',
   anchor: 'anchor',
   appAiPrompt: 'app-ai-prompt',
