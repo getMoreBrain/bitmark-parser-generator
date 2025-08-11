@@ -1,0 +1,199 @@
+[
+  {
+    "bit": {
+      "type": "author",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "ageRange": ["18", "120"],
+      "fullName": "John Smith",
+      "pseudonym": "Smithy",
+      "title": "Geeza",
+      "jobTitle": "Janitor",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.34.3"
+    },
+    "bitmark": "[.author]\n[@ageRange:18][@ageRange:120]\n[@id:151971]\n[@fullName:John Smith]\n[@pseudonym: Smithy]\n[@title: Geeza]\n[@jobTitle: Janitor]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+  },
+  {
+    "bit": {
+      "type": "book-author",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "ageRange": ["120"],
+      "fullName": "John Smith",
+      "pseudonym": "Smithy",
+      "title": "Geeza",
+      "jobTitle": "Janitor",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.34.3"
+    },
+    "bitmark": "[.book-author]\n[@ageRange:120]\n[@id:151971]\n[@fullName:John Smith]\n[@pseudonym: Smithy]\n[@title: Geeza]\n[@jobTitle: Janitor]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+  },
+  {
+    "bit": {
+      "type": "article-author",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["151971"],
+      "ageRange": ["18"],
+      "fullName": "John Smith",
+      "pseudonym": "Smithy",
+      "title": "Geeza",
+      "jobTitle": "Janitor",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.34.3"
+    },
+    "bitmark": "[.article-author]\n[@ageRange:18]\n[@id:151971]\n[@fullName:John Smith]\n[@pseudonym: Smithy]\n[@title: Geeza]\n[@jobTitle: Janitor]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+  },
+  {
+    "bit": {
+      "type": "author",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.34.3"
+    },
+    "bitmark": "[.author]"
+  }
+]

@@ -81,6 +81,40 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: false,
   },
+  [BitType.author]: {
+    since: '4.2.0',
+    baseBitType: BitType._standard,
+    description: 'Represents an author of something',
+    tags: [
+      {
+        key: ConfigKey.property_fullName,
+        description: 'Full name of the author',
+      },
+      {
+        key: ConfigKey.property_pseudonym,
+        description: 'A pseudonym of the author, if any',
+      },
+      {
+        key: ConfigKey.property_title,
+        description: 'The title of the author, e.g. "Dr.", "Prof.", etc.',
+        jsonKey: 'title',
+      },
+      {
+        key: ConfigKey.property_jobTitle,
+        description: 'The job title of the author, e.g. "Software Engineer", "Professor", etc.',
+      },
+    ],
+  },
+  [BitType.bookAuthor]: {
+    since: '4.2.0',
+    baseBitType: BitType.author,
+    description: 'Represents an author of a book',
+  },
+  [BitType.articleAuthor]: {
+    since: '4.2.0',
+    baseBitType: BitType.author,
+    description: 'Represents an author of a book',
+  },
   [BitType.article]: {
     since: '1.3.0',
     baseBitType: BitType._standard,

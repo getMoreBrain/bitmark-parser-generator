@@ -44,8 +44,8 @@ class DevParser {
 
       // AST ==> JSON
       const generator = new JsonObjectGenerator({
-        // bitmarkVersion: BitmarkVersion.v2,
-        bitmarkVersion: BitmarkVersion.v3,
+        bitmarkVersion: BitmarkVersion.v2,
+        // bitmarkVersion: BitmarkVersion.v3,
         jsonOptions: {
           enableWarnings: true,
           // textAsPlainText: false,
@@ -77,6 +77,6 @@ class DevParser {
 
 const parser = new DevParser();
 
-void parser.test(false).then(() => {
+void parser.test(true).then(() => {
   // Done
 });
