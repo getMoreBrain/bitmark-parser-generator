@@ -1,0 +1,28 @@
+[.ai-tutor:bitmark++]
+[@ageRange:18][@ageRange:120]
+
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+
+
+
+[.ai-tutor:bitmark++]
+[@aiGenerated:true]
+[@ageRange:18][@ageRange:120]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+
+
+[.ai-tutor:bitmark++]
+[@aiGenerated:false]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+

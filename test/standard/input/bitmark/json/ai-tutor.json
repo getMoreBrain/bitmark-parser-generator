@@ -1,0 +1,155 @@
+[
+  {
+    "bit": {
+      "type": "ai-tutor",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "ageRange": ["18", "120"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.ai-tutor:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+  },
+  {
+    "bit": {
+      "type": "ai-tutor",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "aiGenerated": true,
+      "ageRange": ["18", "120"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Some more text.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.ai-tutor:bitmark++]\n[@aiGenerated:true]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
+  },
+  {
+    "bit": {
+      "type": "ai-tutor",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "aiGenerated": false,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Some bold text,",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "followed by some plain text. cloze open close cloze1 book.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "3.25.2",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.32.2"
+    },
+    "bitmark": "[.ai-tutor:bitmark++]\n[@aiGenerated:false]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book."
+  }
+]
