@@ -55,28 +55,6 @@
   },
   {
     "bit": {
-      "type": "bug-alt",
-      "format": "bitmark++",
-      "bitLevel": 1,
-      "id": ["151971"],
-      "searchIndex": ["Value1"],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
-      "hint": [],
-      "instruction": [],
-      "body": []
-    },
-    "parser": {
-      "version": "4.2.0",
-      "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
-    },
-    "bitmark": "[.bug-alt:bitmark++]\n[@id:151971]\n[@searchIndex:Value1]"
-  },
-  {
-    "bit": {
       "type": "advertising-advertorial",
       "format": "bitmark++",
       "bitLevel": 1,
