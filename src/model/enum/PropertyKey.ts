@@ -51,6 +51,7 @@ const propertyKeys = {
   property_disableCalculation: '@disableCalculation',
   property_disableFeedback: '@disableFeedback',
   property_duration: '@duration',
+  property_isEditable: '@isEditable',
   property_emphasis: '@emphasis',
   property_example: '@example',
   property_externalId: '@externalId',
