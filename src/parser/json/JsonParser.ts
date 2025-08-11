@@ -25,6 +25,11 @@ import { type BodyBitsJson } from '../../model/json/BodyBitJson.ts';
 import { type ImageResourceWrapperJson, type ResourceJson } from '../../model/json/ResourceJson.ts';
 import { StringUtils } from '../../utils/StringUtils.ts';
 
+interface TitleAndTitleString {
+  titleString?: string;
+  title?: JsonText;
+}
+
 interface ReferenceAndReferenceProperty {
   reference?: string;
   referenceProperty?: string | string[];
@@ -180,6 +185,7 @@ class JsonParser {
       resourceType: this.getResourceType(bit.resource),
       isCommented,
       internalComment: internalComments,
+      ...this.processTitle(bitType, bit.title),
       ...this.processReference(referenceBit), // reference and referenceProperty
       ...this.parseExample(bit.example),
       person: bit.partner ?? bit.person,
@@ -325,6 +331,19 @@ class JsonParser {
     if (!footerText) return undefined;
     return {
       footer: footerText,
+    };
+  }
+
+  private processTitle(bitType: BitTypeType, title: JsonText): TitleAndTitleString {
+    if (Config.isOfBitType(bitType, BitType.author))
+      return {
+        titleString: title as string,
+        title: undefined,
+      };
+
+    return {
+      titleString: undefined,
+      title,
     };
   }
 

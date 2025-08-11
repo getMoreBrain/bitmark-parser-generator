@@ -1,0 +1,43 @@
+[.author]
+[@ageRange:18][@ageRange:120]
+[@id:151971]
+[@fullName:John Smith]
+[@pseudonym: Smithy]
+[@title: Geeza]
+[@jobTitle: Janitor]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+
+
+[.book-author]
+[@ageRange:120]
+[@id:151971]
+[@fullName:John Smith]
+[@pseudonym: Smithy]
+[@title: Geeza]
+[@jobTitle: Janitor]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+
+
+[.article-author]
+[@ageRange:18]
+[@id:151971]
+[@fullName:John Smith]
+[@pseudonym: Smithy]
+[@title: Geeza]
+[@jobTitle: Janitor]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+
+
+[.author]

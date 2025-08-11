@@ -505,6 +505,20 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
   }
 
+  // bitmarkAst -> bits -> bitsValue -> titleString
+
+  protected leaf_titleString(node: NodeInfo, route: NodeInfo[]): boolean {
+    // Ignore title that are not at the bit level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
+    // this.bitJson.title = node.value;
+    return this.standardHandler(node, route, [NodeType.bitsValue], {
+      array: false,
+      keyOverride: 'title',
+    });
+  }
+
   // bitmarkAst -> bits -> bitsValue -> title
 
   protected enter_title(node: NodeInfo, route: NodeInfo[]): boolean {

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { createRequire } from 'node:module';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -11,6 +12,7 @@ type SourceOptions = SourceBuildOptions<'source'> & {
 };
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
+const require = createRequire(import.meta.url);
 
 const dependencies = {
   '{ TypeKey }': '../../../parser/bitmark/peg/BitmarkPegParserTypes.ts',
@@ -67,7 +69,7 @@ fs.writeFileSync(outputPath, parserSource);
 // Test parser
 if (optTest) {
   const testText = fs.readFileSync(testFilePath, 'utf8');
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
+
   const parser = require(outputPath);
   // const result = parser.parse('            \n\r\n\r\r\n       \t', {
   const result = parser.parse(testText, {

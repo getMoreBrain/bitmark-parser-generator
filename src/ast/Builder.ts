@@ -248,6 +248,10 @@ class Builder extends BaseBuilder {
       vendorUrl?: string;
       search?: string;
       bot?: string | string[];
+      fullName?: string;
+      pseudonym?: string;
+      titleString?: string;
+      jobTitle?: string;
       list?: string | string[];
       layer?: string | string[];
       layerRole?: string | string[];
@@ -1047,6 +1051,12 @@ class Builder extends BaseBuilder {
         data.referenceProperty,
         options,
       ),
+
+      // Author data
+      fullName: this.toAstProperty(bitType, ConfigKey.property_fullName, data.fullName, options),
+      pseudonym: this.toAstProperty(bitType, ConfigKey.property_pseudonym, data.pseudonym, options),
+      titleString: this.toAstProperty(bitType, ConfigKey.property_title, data.titleString, options),
+      jobTitle: this.toAstProperty(bitType, ConfigKey.property_jobTitle, data.jobTitle, options),
 
       // Book data
       title: this.handleJsonText(context, TextLocation.tag, data.title),
