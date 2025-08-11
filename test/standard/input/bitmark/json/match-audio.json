@@ -4,9 +4,7 @@
       "type": "match-audio",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285729"
-      ],
+      "id": ["285729"],
       "item": [
         {
           "type": "paragraph",
@@ -48,8 +46,7 @@
         }
       ],
       "isExample": false,
-      "heading": {},
-      "revealSolutions": false
+      "heading": {}
     },
     "parser": {
       "version": "3.25.2",

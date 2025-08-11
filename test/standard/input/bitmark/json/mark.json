@@ -341,8 +341,7 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",

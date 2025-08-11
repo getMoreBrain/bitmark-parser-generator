@@ -1543,7 +1543,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
   protected cleanBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
     const bitType = Config.getBitType(bitJson.type);
-    const bitConfig = Config.getBitConfig(bitType);
+    // const bitConfig = Config.getBitConfig(bitType);
     // const textFormat = bitJson.format;
     // const plainText = this.options.textAsPlainText;
 
@@ -1884,11 +1884,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Special case for 'container' bits
       if (Config.isOfBitType(bitType, BitType.container)) {
         if (bitJson.allowedBit == null) bitJson.allowedBit = [];
-      }
-
-      // Special case for 'quiz' bits
-      if (bitConfig.quizBit) {
-        if (bitJson.revealSolutions == null) bitJson.revealSolutions = false;
       }
 
       // Special case for 'platform-path' bits

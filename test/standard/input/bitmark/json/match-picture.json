@@ -4,9 +4,7 @@
       "type": "match-picture",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285726"
-      ],
+      "id": ["285726"],
       "item": [
         {
           "type": "paragraph",
@@ -59,8 +57,7 @@
         }
       ],
       "isExample": false,
-      "heading": {},
-      "revealSolutions": false
+      "heading": {}
     },
     "parser": {
       "version": "3.25.2",
@@ -74,9 +71,7 @@
       "type": "match-picture",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "136185"
-      ],
+      "id": ["136185"],
       "item": [
         {
           "type": "paragraph",
@@ -107,8 +102,7 @@
       ],
       "body": [],
       "isExample": false,
-      "heading": {},
-      "revealSolutions": false
+      "heading": {}
     },
     "parser": {
       "version": "3.25.2",

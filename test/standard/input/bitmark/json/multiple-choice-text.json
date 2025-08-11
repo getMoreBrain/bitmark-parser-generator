@@ -4,9 +4,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287839"
-      ],
+      "id": ["287839"],
       "item": [],
       "lead": [
         {
@@ -132,8 +130,7 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -165,9 +162,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213773"
-      ],
+      "id": ["213773"],
       "item": [
         {
           "type": "paragraph",
@@ -454,8 +449,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -487,9 +481,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213840"
-      ],
+      "id": ["213840"],
       "item": [
         {
           "type": "paragraph",
@@ -727,8 +719,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -760,9 +751,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "208481"
-      ],
+      "id": ["208481"],
       "item": [
         {
           "type": "paragraph",
@@ -1001,8 +990,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1034,9 +1022,7 @@
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "107949"
-      ],
+      "id": ["107949"],
       "item": [
         {
           "type": "paragraph",
@@ -1235,8 +1221,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1316,8 +1301,7 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -1397,8 +1381,7 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -1478,8 +1461,7 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",

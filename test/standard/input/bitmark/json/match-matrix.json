@@ -4,9 +4,7 @@
       "type": "match-matrix",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287966"
-      ],
+      "id": ["287966"],
       "item": [],
       "lead": [
         {
@@ -38,10 +36,7 @@
       "body": [],
       "heading": {
         "forKeys": "Verb",
-        "forValues": [
-          "Future, 1st Person, Singular",
-          "Past, 3rd Person, Plural"
-        ]
+        "forValues": ["Future, 1st Person, Singular", "Past, 3rd Person, Plural"]
       },
       "matrix": [
         {
@@ -51,9 +46,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "ich werde gehen"
-              ],
+              "values": ["ich werde gehen"],
               "item": [],
               "instruction": [
                 {
@@ -83,9 +76,7 @@
               ]
             },
             {
-              "values": [
-                "sie gingen"
-              ],
+              "values": ["sie gingen"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -112,9 +103,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "ich werde sprechen"
-              ],
+              "values": ["ich werde sprechen"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -122,9 +111,7 @@
               "example": null
             },
             {
-              "values": [
-                "sie sprachen"
-              ],
+              "values": ["sie sprachen"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -134,8 +121,7 @@
           ]
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -158,10 +144,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -171,9 +154,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -181,10 +162,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -211,9 +189,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -221,10 +197,7 @@
               "example": null
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -245,8 +218,7 @@
           ]
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -287,10 +259,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -300,9 +269,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -310,10 +277,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -340,9 +304,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -361,10 +323,7 @@
               ]
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -385,8 +344,7 @@
           ]
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -427,10 +385,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -440,9 +395,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -461,10 +414,7 @@
               ]
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -491,9 +441,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -512,10 +460,7 @@
               ]
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -536,8 +481,7 @@
           ]
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -578,10 +522,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -591,9 +532,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -612,10 +551,7 @@
               ]
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -642,9 +578,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -663,10 +597,7 @@
               ]
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -687,8 +618,7 @@
           ]
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -729,10 +659,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -742,9 +669,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -763,10 +688,7 @@
               ]
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -793,9 +715,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -814,10 +734,7 @@
               ]
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -838,8 +755,7 @@
           ]
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -880,10 +796,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -893,9 +806,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -914,10 +825,7 @@
               ]
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -944,9 +852,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -965,10 +871,7 @@
               ]
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -989,8 +892,7 @@
           ]
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -1031,10 +933,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -1044,9 +943,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1065,10 +962,7 @@
               ]
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1095,9 +989,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1116,10 +1008,7 @@
               ]
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1140,8 +1029,7 @@
           ]
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -1182,10 +1070,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -1195,9 +1080,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1216,10 +1099,7 @@
               ]
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1246,9 +1126,7 @@
           "isExample": true,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1267,10 +1145,7 @@
               ]
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1291,8 +1166,7 @@
           ]
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -1333,10 +1207,7 @@
       "body": [],
       "heading": {
         "forKeys": "",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -1346,9 +1217,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1356,10 +1225,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1369,8 +1235,7 @@
           ]
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1411,10 +1276,7 @@
       "body": [],
       "heading": {
         "forKeys": "",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -1424,9 +1286,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1434,10 +1294,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1447,8 +1304,7 @@
           ]
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1489,10 +1345,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "",
-          "Heading3"
-        ]
+        "forValues": ["", "Heading3"]
       },
       "matrix": [
         {
@@ -1502,9 +1355,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1512,10 +1363,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1525,8 +1373,7 @@
           ]
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1567,10 +1414,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "",
-          "Heading3"
-        ]
+        "forValues": ["", "Heading3"]
       },
       "matrix": [
         {
@@ -1580,9 +1424,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1590,10 +1432,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1603,8 +1442,7 @@
           ]
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1645,10 +1483,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          ""
-        ]
+        "forValues": ["Heading2", ""]
       },
       "matrix": [
         {
@@ -1658,9 +1493,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1668,10 +1501,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1681,8 +1511,7 @@
           ]
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1729,9 +1558,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1739,10 +1566,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1753,8 +1577,7 @@
         }
       ],
       "isExample": false,
-      "heading": {},
-      "revealSolutions": false
+      "heading": {}
     },
     "parser": {
       "version": "3.25.2",
@@ -1795,10 +1618,7 @@
       "body": [],
       "heading": {
         "forKeys": "",
-        "forValues": [
-          "",
-          ""
-        ]
+        "forValues": ["", ""]
       },
       "matrix": [
         {
@@ -1808,9 +1628,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1818,10 +1636,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1831,8 +1646,7 @@
           ]
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1873,10 +1687,7 @@
       "body": [],
       "heading": {
         "forKeys": "Title1",
-        "forValues": [
-          "Title2",
-          "Title3"
-        ]
+        "forValues": ["Title2", "Title3"]
       },
       "matrix": [
         {
@@ -1920,9 +1731,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "Unterbringung"
-              ],
+              "values": ["Unterbringung"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1930,9 +1739,7 @@
               "example": null
             },
             {
-              "values": [
-                "Übernachtung"
-              ],
+              "values": ["Übernachtung"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1959,9 +1766,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "Hotel"
-              ],
+              "values": ["Hotel"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1969,9 +1774,7 @@
               "example": null
             },
             {
-              "values": [
-                "Unterbringungsmöglichkeit"
-              ],
+              "values": ["Unterbringungsmöglichkeit"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -1981,8 +1784,7 @@
           ]
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -2005,10 +1807,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -2018,9 +1817,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -2028,10 +1825,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -2047,9 +1841,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -2057,10 +1849,7 @@
               "example": null
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -2070,8 +1859,7 @@
           ]
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -2112,10 +1900,7 @@
       "body": [],
       "heading": {
         "forKeys": "Heading1",
-        "forValues": [
-          "Heading2",
-          "Heading3"
-        ]
+        "forValues": ["Heading2", "Heading3"]
       },
       "matrix": [
         {
@@ -2125,9 +1910,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "A"
-              ],
+              "values": ["A"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -2135,10 +1918,7 @@
               "example": null
             },
             {
-              "values": [
-                "B",
-                "C"
-              ],
+              "values": ["B", "C"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": true,
@@ -2154,9 +1934,7 @@
           "isExample": false,
           "cells": [
             {
-              "values": [
-                "D"
-              ],
+              "values": ["D"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -2164,10 +1942,7 @@
               "example": null
             },
             {
-              "values": [
-                "E",
-                "F"
-              ],
+              "values": ["E", "F"],
               "item": [],
               "instruction": [],
               "isCaseSensitive": false,
@@ -2177,8 +1952,7 @@
           ]
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",

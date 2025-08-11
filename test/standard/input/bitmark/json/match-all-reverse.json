@@ -4,9 +4,7 @@
       "type": "match-all-reverse",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "324342"
-      ],
+      "id": ["324342"],
       "item": [
         {
           "type": "paragraph",
@@ -63,8 +61,7 @@
         }
       ],
       "isExample": false,
-      "heading": {},
-      "revealSolutions": false
+      "heading": {}
     },
     "parser": {
       "version": "3.25.2",

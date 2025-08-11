@@ -4,9 +4,7 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "249781"
-      ],
+      "id": ["249781"],
       "quizCountItems": false,
       "quizStrikethroughSolutions": false,
       "item": [
@@ -55,9 +53,7 @@
           "attrs": {}
         }
       ],
-      "additionalSolutions": [
-        "canvas"
-      ],
+      "additionalSolutions": ["canvas"],
       "body": [
         {
           "type": "paragraph",
@@ -69,9 +65,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Infektionsquelle"
-                ],
+                "solutions": ["Infektionsquelle"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -91,9 +85,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Austrittspforte"
-                ],
+                "solutions": ["Austrittspforte"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -113,9 +105,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Übertragungswege direkt oder indirekt"
-                ],
+                "solutions": ["Übertragungswege direkt oder indirekt"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -135,9 +125,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Eintrittspforte"
-                ],
+                "solutions": ["Eintrittspforte"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -157,9 +145,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "neue Infektionsquelle"
-                ],
+                "solutions": ["neue Infektionsquelle"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -173,8 +159,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -206,9 +191,7 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287825"
-      ],
+      "id": ["287825"],
       "item": [],
       "lead": [
         {
@@ -226,13 +209,7 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "additionalSolutions": [
-        "canvas",
-        "texture",
-        "figurative",
-        "abstract",
-        "contrast"
-      ],
+      "additionalSolutions": ["canvas", "texture", "figurative", "abstract", "contrast"],
       "body": [
         {
           "type": "paragraph",
@@ -244,9 +221,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "erfreut"
-                ],
+                "solutions": ["erfreut"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -274,9 +249,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "steht"
-                ],
+                "solutions": ["steht"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -296,8 +269,7 @@
       ],
       "isExample": true,
       "quizCountItems": true,
-      "quizStrikethroughSolutions": true,
-      "revealSolutions": false
+      "quizStrikethroughSolutions": true
     },
     "parser": {
       "version": "3.25.2",
@@ -311,9 +283,7 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "131518"
-      ],
+      "id": ["131518"],
       "item": [
         {
           "type": "paragraph",
@@ -356,9 +326,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Erinnerung"
-                ],
+                "solutions": ["Erinnerung"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -386,9 +354,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "gab"
-                ],
+                "solutions": ["gab"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -416,9 +382,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Jahreszeit"
-                ],
+                "solutions": ["Jahreszeit"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -446,9 +410,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "musste"
-                ],
+                "solutions": ["musste"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -476,9 +438,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Balkon"
-                ],
+                "solutions": ["Balkon"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -506,9 +466,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Regen"
-                ],
+                "solutions": ["Regen"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -543,9 +501,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "trotzdem"
-                ],
+                "solutions": ["trotzdem"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -573,9 +529,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "fällt"
-                ],
+                "solutions": ["fällt"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -603,9 +557,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "konnte"
-                ],
+                "solutions": ["konnte"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -636,8 +588,7 @@
       ],
       "isExample": false,
       "quizCountItems": true,
-      "quizStrikethroughSolutions": true,
-      "revealSolutions": false
+      "quizStrikethroughSolutions": true
     },
     "parser": {
       "version": "3.25.2",
@@ -651,9 +602,7 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "131518"
-      ],
+      "id": ["131518"],
       "item": [
         {
           "type": "paragraph",
@@ -696,9 +645,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Erinnerung"
-                ],
+                "solutions": ["Erinnerung"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -737,9 +684,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "gab"
-                ],
+                "solutions": ["gab"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -778,9 +723,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Jahreszeit"
-                ],
+                "solutions": ["Jahreszeit"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -819,9 +762,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "musste"
-                ],
+                "solutions": ["musste"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -860,9 +801,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Balkon"
-                ],
+                "solutions": ["Balkon"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -901,9 +840,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Regen"
-                ],
+                "solutions": ["Regen"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -949,9 +886,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "trotzdem"
-                ],
+                "solutions": ["trotzdem"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -990,9 +925,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "fällt"
-                ],
+                "solutions": ["fällt"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -1031,9 +964,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "konnte"
-                ],
+                "solutions": ["konnte"],
                 "item": [
                   {
                     "type": "paragraph",
@@ -1075,8 +1006,7 @@
       ],
       "isExample": true,
       "quizCountItems": true,
-      "quizStrikethroughSolutions": true,
-      "revealSolutions": false
+      "quizStrikethroughSolutions": true
     },
     "parser": {
       "version": "3.25.2",

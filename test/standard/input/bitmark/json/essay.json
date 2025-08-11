@@ -34,12 +34,15 @@
         }
       ],
       "sampleSolution": "The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.",
-      "additionalSolutions": ["Additional solution 1", "Additional solution 2", "Additional solution 3"],
+      "additionalSolutions": [
+        "Additional solution 1",
+        "Additional solution 2",
+        "Additional solution 3"
+      ],
       "body": [],
       "isExample": false,
       "example": null,
-      "partialAnswer": "",
-      "revealSolutions": false
+      "partialAnswer": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -116,7 +119,11 @@
         }
       ],
       "partialAnswer": "This is a **partialAnswer** 2",
-      "additionalSolutions": ["Additional solution 1", "Additional solution 2", "Additional solution 3"],
+      "additionalSolutions": [
+        "Additional solution 1",
+        "Additional solution 2",
+        "Additional solution 3"
+      ],
       "body": [
         {
           "type": "paragraph",
@@ -130,8 +137,7 @@
         }
       ],
       "isExample": false,
-      "example": null,
-      "revealSolutions": false
+      "example": null
     },
     "parser": {
       "version": "3.25.2",
@@ -321,8 +327,7 @@
           "attrs": {}
         }
       ],
-      "partialAnswer": "",
-      "revealSolutions": false
+      "partialAnswer": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -786,8 +791,7 @@
       ],
       "isExample": false,
       "example": null,
-      "partialAnswer": "",
-      "revealSolutions": false
+      "partialAnswer": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -840,8 +844,7 @@
       "body": [],
       "isExample": false,
       "example": null,
-      "partialAnswer": "",
-      "revealSolutions": false
+      "partialAnswer": ""
     },
     "parser": {
       "version": "3.25.2",

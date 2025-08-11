@@ -4,9 +4,7 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285747"
-      ],
+      "id": ["285747"],
       "item": [
         {
           "type": "paragraph",
@@ -36,15 +34,9 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "elements": [
-        "Ein Elefant",
-        "ist",
-        "grösser als",
-        "eine Maus."
-      ],
+      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."],
       "isExample": true,
-      "example": true,
-      "revealSolutions": false
+      "example": true
     },
     "parser": {
       "version": "3.25.2",
@@ -58,9 +50,7 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285748"
-      ],
+      "id": ["285748"],
       "item": [
         {
           "type": "paragraph",
@@ -90,15 +80,9 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "elements": [
-        "Ein Elefant",
-        "ist",
-        "grösser als",
-        "eine Maus."
-      ],
+      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."],
       "isExample": true,
-      "example": true,
-      "revealSolutions": false
+      "example": true
     },
     "parser": {
       "version": "3.25.2",
@@ -112,9 +96,7 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285749"
-      ],
+      "id": ["285749"],
       "item": [
         {
           "type": "paragraph",
@@ -153,8 +135,7 @@
         "**zu unterst**\nKeller"
       ],
       "isExample": false,
-      "example": null,
-      "revealSolutions": false
+      "example": null
     },
     "parser": {
       "version": "3.25.2",

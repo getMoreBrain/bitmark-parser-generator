@@ -4,9 +4,7 @@
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "187003"
-      ],
+      "id": ["187003"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1117,8 +1115,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -1132,9 +1129,7 @@
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "186986"
-      ],
+      "id": ["186986"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1431,8 +1426,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -1446,9 +1440,7 @@
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "136408"
-      ],
+      "id": ["136408"],
       "item": [
         {
           "type": "paragraph",
@@ -2390,8 +2382,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -2423,9 +2414,7 @@
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "107942"
-      ],
+      "id": ["107942"],
       "item": [
         {
           "type": "paragraph",
@@ -2514,8 +2503,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -2529,9 +2517,7 @@
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "107955"
-      ],
+      "id": ["107955"],
       "item": [
         {
           "type": "paragraph",
@@ -2622,8 +2608,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -2637,9 +2622,7 @@
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "107956"
-      ],
+      "id": ["107956"],
       "item": [
         {
           "type": "paragraph",
@@ -2707,8 +2690,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -2722,9 +2704,7 @@
       "type": "coach-self-reflection-multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291806"
-      ],
+      "id": ["291806"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3062,8 +3042,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -3151,8 +3130,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -3240,8 +3218,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -3329,8 +3306,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -3418,8 +3394,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -3523,8 +3498,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -3628,8 +3602,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -3733,8 +3706,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -3859,8 +3831,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -3937,8 +3908,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -4015,8 +3985,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -4093,8 +4062,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",

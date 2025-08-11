@@ -4,9 +4,7 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "198779"
-      ],
+      "id": ["198779"],
       "item": [
         {
           "type": "paragraph",
@@ -88,8 +86,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -183,15 +180,8 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "136528"
-      ],
-      "bubbleTag": [
-        "Tag 1",
-        "",
-        "Tag 2",
-        "**Tag 3**"
-      ],
+      "id": ["136528"],
+      "bubbleTag": ["Tag 1", "", "Tag 2", "**Tag 3**"],
       "item": [
         {
           "type": "paragraph",
@@ -261,8 +251,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -294,9 +283,7 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "198779"
-      ],
+      "id": ["198779"],
       "item": [
         {
           "type": "paragraph",
@@ -339,8 +326,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -388,9 +374,7 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "198781"
-      ],
+      "id": ["198781"],
       "item": [
         {
           "type": "paragraph",
@@ -582,8 +566,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -615,9 +598,7 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "198782"
-      ],
+      "id": ["198782"],
       "item": [
         {
           "type": "paragraph",
@@ -660,8 +641,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -709,9 +689,7 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "187612"
-      ],
+      "id": ["187612"],
       "item": [
         {
           "type": "paragraph",
@@ -794,8 +772,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -809,9 +786,7 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "136484"
-      ],
+      "id": ["136484"],
       "item": [
         {
           "type": "paragraph",
@@ -944,8 +919,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -959,9 +933,7 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "136405"
-      ],
+      "id": ["136405"],
       "item": [
         {
           "type": "paragraph",
@@ -1023,8 +995,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -1056,9 +1027,7 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "198264"
-      ],
+      "id": ["198264"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1100,8 +1069,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -1149,9 +1117,7 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "198267"
-      ],
+      "id": ["198267"],
       "item": [
         {
           "type": "paragraph",
@@ -1398,8 +1364,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
