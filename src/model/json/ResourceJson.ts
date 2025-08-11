@@ -48,6 +48,7 @@ export interface ResourceWrapperJson {
   __typeAlias: ResourceTypeType;
   __configKey: ConfigKeyType;
   __invalid?: boolean; // true if the resource is invalid
+  __excessResource?: boolean; // true if the resource is an excess resource
 }
 
 export interface ImageResourceWrapperJson extends ResourceWrapperJson {
