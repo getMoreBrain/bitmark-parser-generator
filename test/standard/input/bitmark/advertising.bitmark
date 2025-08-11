@@ -1,0 +1,80 @@
+[.advertising]
+[@ageRange:18][@ageRange:120]
+
+**Some bold text,**
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+
+[.bug-alt:bitmark++]
+[@id:151971]
+[@searchIndex:Value1]
+
+
+[.advertising-advertorial]
+[@searchIndex:Value2 ]
+[%][%][%][%marginNumber]
+[!
+
+Instruction with ==notranslate==|notranslate|
+
+• List 1
+• List 2
+
+]
+
+Bit content with ==notranslate==|notranslate|
+
+• List 1
+• List 2
+
+
+[.advertising-call-to-action]
+[@id:342341]
+[@buttonCaption:Click Me!]
+[@callToActionUrl:https://test.com/test]
+Button Text?
+
+
+
+[.advertising-call-to-action-meeting]
+[@id:342341]
+[@buttonCaption:Click Me!]
+[@callToActionUrl:https://test.com/test]
+Button Text?
+
+
+[.advertising-banner]
+[&image:https://cdn.bitbook.education/cat1.jpg]
+
+[.advertising-skyscraper]
+[&image:https://cdn.bitbook.education/cat2.jpg]
+
+[.advertising-rectangle]
+[&image:https://cdn.bitbook.education/cat3.jpg]
+
+[.advertising-full-page]
+[&image:https://cdn.bitbook.education/cat4.jpg]
+
+[.advertising-half-page]
+[&image:https://cdn.bitbook.education/cat5.jpg]
+
+[.advertising-quarter-page]
+[&image:https://cdn.bitbook.education/cat6.jpg]
+
+[.advertising-classified-page]
+[&image:https://cdn.bitbook.education/cat7.jpg]
+
+[.advertising-landscape]
+[&image:https://cdn.bitbook.education/cat8.jpg]
+
+[.advertising-portrait]
+[&image:https://cdn.bitbook.education/cat9.jpg]
+
+
+[.advertising-portrait]
+[&image]
+
+
+[.advertising-portrait]
+[&image:]

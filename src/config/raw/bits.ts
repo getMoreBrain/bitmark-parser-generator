@@ -1078,6 +1078,76 @@ const BITS: _BitsConfig = {
     description:
       'Cloze and multiple choice text conversation right thought bit, used for conversations with cloze and multiple choice text and a thought on the right side of the screen',
   },
+
+  [BitType.advertising]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'General advertising content bit',
+  },
+  [BitType.advertisingAdvertorial]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'Advertorial content bit (sponsored article)',
+  },
+
+  [BitType.advertisingCallToAction]: {
+    since: '4.2.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call-to-action for advertising',
+  },
+  [BitType.advertisingCallToActionMeeting]: {
+    since: '4.2.0',
+    baseBitType: BitType.callToAction,
+    description: 'Call-to-action for meeting or appointment',
+  },
+
+  [BitType.advertisingBanner]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Banner advertisement bit',
+  },
+  [BitType.advertisingSkyscraper]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Skyscraper (vertical) advertisement bit',
+  },
+  [BitType.advertisingRectangle]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Rectangle advertisement bit',
+  },
+
+  [BitType.advertisingFullPage]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Full-page advertisement bit',
+  },
+  [BitType.advertisingHalfPage]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Half-page advertisement bit',
+  },
+  [BitType.advertisingQuarterPage]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Quarter-page advertisement bit',
+  },
+  [BitType.advertisingClassifiedPage]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Classifieds advertisement page bit',
+  },
+  [BitType.advertisingLandscape]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Landscape format advertisement bit',
+  },
+  [BitType.advertisingPortrait]: {
+    since: '4.2.0',
+    baseBitType: BitType.image,
+    description: 'Portrait format advertisement bit',
+  },
+
   [BitType.cookPreparation]: {
     since: '1.3.0',
     baseBitType: BitType.article,
