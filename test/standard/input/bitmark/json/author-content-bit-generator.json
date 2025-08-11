@@ -1,0 +1,34 @@
+[
+  {
+    "bit": {
+      "type": "author-content-bit-generator",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "classification": ["Classification 1", "Classification 2", "Classification 3"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Human language quiz or content description",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.34.3"
+    },
+    "bitmark": "[.author-content-bit-generator]\n[@classification:Classification 1]\n[@classification:Classification 2]\n[@classification:Classification 3]\nHuman language quiz or content description"
+  }
+]

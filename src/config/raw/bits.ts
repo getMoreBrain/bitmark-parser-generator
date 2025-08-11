@@ -1484,6 +1484,19 @@ const BITS: _BitsConfig = {
     description:
       'Smart standard non-normative example collapsible bit, used to provide non-normative examples in smart standards that can be collapsed',
   },
+  [BitType.authorContentBitGenerator]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'Body contains the content of one or more bits to be created by the bit generator',
+    tags: [
+      {
+        key: ConfigKey.property_classification,
+        description: 'Classification for the created bits',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+    ],
+  },
   [BitType.appAiPrompt]: {
     since: '1.3.0',
     baseBitType: BitType.article,
@@ -1493,6 +1506,26 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.article,
     description: 'AI prompt bit, used to create AI prompts in articles or books',
+  },
+  [BitType.aiChat]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'AI chat bit, used to create an AI chat',
+  },
+  [BitType.aiEditor]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'AI editor bit, used to create an AI editor',
+  },
+  [BitType.aiTutor]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'AI prompt bit, used to create an AI tutor',
+  },
+  [BitType.aiWbt]: {
+    since: '4.2.0',
+    baseBitType: BitType.article,
+    description: 'AI prompt bit, used to create an AI WBT (Web-Based Training)',
   },
   [BitType.articleAi]: {
     since: '1.3.0',
