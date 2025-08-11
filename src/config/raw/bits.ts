@@ -1525,7 +1525,7 @@ const BITS: _BitsConfig = {
   [BitType.aiWbt]: {
     since: '4.2.0',
     baseBitType: BitType.article,
-    description: 'AI prompt bit, used to create an AI WBT (Web-Based Training)',
+    description: 'AI WBT bit, used to create an AI WBT (Web-Based Training)',
   },
   [BitType.articleAi]: {
     since: '1.3.0',
