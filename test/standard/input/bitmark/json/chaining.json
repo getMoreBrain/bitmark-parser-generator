@@ -640,8 +640,7 @@
         }
       ],
       "isExample": true,
-      "heading": {},
-      "revealSolutions": false
+      "heading": {}
     },
     "parser": {
       "version": "3.25.2",

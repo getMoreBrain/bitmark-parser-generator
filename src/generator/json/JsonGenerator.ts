@@ -1543,7 +1543,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
   protected cleanBitJson(bitJson: Partial<BitJson>): Partial<BitJson> {
     const bitType = Config.getBitType(bitJson.type);
-    const bitConfig = Config.getBitConfig(bitType);
+    // const bitConfig = Config.getBitConfig(bitType);
     // const textFormat = bitJson.format;
     // const plainText = this.options.textAsPlainText;
 

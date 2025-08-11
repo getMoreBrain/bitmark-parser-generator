@@ -138,10 +138,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "solution",
-                  "problem"
-                ],
+                "solutions": ["solution", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -165,9 +162,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "different"
-                ],
+                "solutions": ["different"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -191,9 +186,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "sensitivity"
-                ],
+                "solutions": ["sensitivity"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -207,8 +200,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -270,10 +262,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "solu^tion",
-                  "problem"
-                ],
+                "solutions": ["solu^tion", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -291,8 +280,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -388,9 +376,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -451,9 +437,7 @@
       "type": "cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -505,9 +489,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "gap"
-                ],
+                "solutions": ["gap"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -555,8 +537,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -570,9 +551,7 @@
       "type": "extractor-configuration",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -615,9 +594,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -698,9 +675,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -834,9 +809,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -897,9 +870,7 @@
       "type": "cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -951,9 +922,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "gap"
-                ],
+                "solutions": ["gap"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1001,8 +970,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1016,9 +984,7 @@
       "type": "extractor-configuration",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -1061,9 +1027,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -1144,9 +1108,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -1301,9 +1263,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -1700,8 +1660,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -1771,8 +1730,7 @@
           "example": null
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",

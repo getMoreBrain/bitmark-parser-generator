@@ -4,9 +4,7 @@
       "type": "match-reverse",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287869"
-      ],
+      "id": ["287869"],
       "item": [],
       "lead": [
         {
@@ -56,9 +54,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "das"
-          ]
+          "values": ["das"]
         },
         {
           "key": "Kuh",
@@ -68,9 +64,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "die"
-          ]
+          "values": ["die"]
         },
         {
           "key": "Löwe",
@@ -80,9 +74,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "die"
-          ]
+          "values": ["die"]
         },
         {
           "key": "Schmetterling",
@@ -92,14 +84,11 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "der"
-          ]
+          "values": ["der"]
         }
       ],
       "isExample": true,
-      "heading": {},
-      "revealSolutions": false
+      "heading": {}
     },
     "parser": {
       "version": "3.25.2",

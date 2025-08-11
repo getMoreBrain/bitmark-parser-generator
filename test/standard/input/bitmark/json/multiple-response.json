@@ -4,9 +4,7 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -81,8 +79,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -114,9 +111,7 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -191,8 +186,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -256,9 +250,7 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -333,8 +325,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -366,9 +357,7 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -443,8 +432,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -554,8 +542,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -649,8 +636,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",
@@ -744,8 +730,7 @@
         }
       ],
       "isExample": true,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",

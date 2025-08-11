@@ -4,9 +4,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -47,8 +45,7 @@
           "example": null
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -62,9 +59,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -105,8 +100,7 @@
           "example": null
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -120,9 +114,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rathe",
       "item": [],
@@ -143,8 +135,7 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -158,9 +149,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -189,8 +178,7 @@
           "example": null
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -254,8 +242,7 @@
       ],
       "isExample": false,
       "labelFalse": "",
-      "labelTrue": "",
-      "revealSolutions": false
+      "labelTrue": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -269,9 +256,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [
         {
@@ -292,8 +277,7 @@
       "body": [],
       "isExample": false,
       "labelFalse": "",
-      "labelTrue": "",
-      "revealSolutions": false
+      "labelTrue": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -307,9 +291,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -319,8 +301,7 @@
       "body": [],
       "isExample": false,
       "labelFalse": "",
-      "labelTrue": "",
-      "revealSolutions": false
+      "labelTrue": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -334,9 +315,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "ra",
       "item": [],
       "lead": [
@@ -357,8 +336,7 @@
       "instruction": [],
       "body": [],
       "isExample": false,
-      "labelFalse": "",
-      "revealSolutions": false
+      "labelFalse": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -372,9 +350,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -395,8 +371,7 @@
       "body": [],
       "isExample": false,
       "labelFalse": "",
-      "labelTrue": "",
-      "revealSolutions": false
+      "labelTrue": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -410,9 +385,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -433,8 +406,7 @@
       "body": [],
       "isExample": false,
       "labelFalse": "",
-      "labelTrue": "",
-      "revealSolutions": false
+      "labelTrue": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -448,9 +420,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -460,8 +430,7 @@
       "body": [],
       "isExample": false,
       "labelFalse": "",
-      "labelTrue": "",
-      "revealSolutions": false
+      "labelTrue": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -493,9 +462,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -505,8 +472,7 @@
       "body": [],
       "isExample": false,
       "labelFalse": "",
-      "labelTrue": "",
-      "revealSolutions": false
+      "labelTrue": ""
     },
     "parser": {
       "version": "3.25.2",
@@ -555,9 +521,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "gap tag"
-                ],
+                "solutions": ["gap tag"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -571,8 +535,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -586,9 +549,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -613,8 +574,7 @@
       "body": [],
       "isExample": false,
       "labelFalse": "",
-      "labelTrue": "",
-      "revealSolutions": false
+      "labelTrue": ""
     },
     "parser": {
       "version": "3.25.2",

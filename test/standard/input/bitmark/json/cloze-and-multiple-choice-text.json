@@ -4,9 +4,7 @@
       "type": "cloze-and-multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287842"
-      ],
+      "id": ["287842"],
       "item": [],
       "lead": [
         {
@@ -35,9 +33,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "cloze"
-                ],
+                "solutions": ["cloze"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -247,8 +243,7 @@
           "attrs": {}
         }
       ],
-      "isExample": false,
-      "revealSolutions": false
+      "isExample": false
     },
     "parser": {
       "version": "3.25.2",
@@ -262,9 +257,7 @@
       "type": "cloze-and-multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287843"
-      ],
+      "id": ["287843"],
       "item": [],
       "lead": [
         {
@@ -293,9 +286,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "cloze"
-                ],
+                "solutions": ["cloze"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -516,8 +507,7 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",
@@ -531,9 +521,7 @@
       "type": "cloze-and-multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287844"
-      ],
+      "id": ["287844"],
       "item": [],
       "lead": [
         {
@@ -562,10 +550,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "cloze",
-                  "gap"
-                ],
+                "solutions": ["cloze", "gap"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -786,8 +771,7 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.25.2",

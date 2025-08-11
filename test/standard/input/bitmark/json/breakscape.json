@@ -168,8 +168,7 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.26.0",

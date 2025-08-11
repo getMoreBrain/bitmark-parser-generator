@@ -4,9 +4,7 @@
       "type": "multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "186986"
-      ],
+      "id": ["186986"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -303,8 +301,7 @@
         }
       ],
       "isExample": false,
-      "footer": [],
-      "revealSolutions": false
+      "footer": []
     },
     "parser": {
       "version": "3.25.2",

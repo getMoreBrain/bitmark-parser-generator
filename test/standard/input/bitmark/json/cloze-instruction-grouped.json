@@ -104,8 +104,7 @@
           "attrs": {}
         }
       ],
-      "isExample": true,
-      "revealSolutions": false
+      "isExample": true
     },
     "parser": {
       "version": "3.32.0",
@@ -294,8 +293,7 @@
       ],
       "isExample": false,
       "quizCountItems": true,
-      "quizStrikethroughSolutions": false,
-      "revealSolutions": false
+      "quizStrikethroughSolutions": false
     },
     "parser": {
       "version": "3.32.0",
@@ -310,11 +308,11 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["1779156"],
+      "revealSolutions": false,
       "feedbackType": "2-step",
       "icon": "https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/icons/a2_icon.svg",
       "quizCountItems": true,
       "quizStrikethroughSolutions": false,
-      "revealSolutions": false,
       "item": [
         {
           "type": "paragraph",

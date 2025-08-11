@@ -162,8 +162,7 @@
           ],
           "attrs": {}
         }
-      ],
-      "revealSolutions": false
+      ]
     },
     "parser": {
       "version": "3.25.2",
