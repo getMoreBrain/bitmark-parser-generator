@@ -1520,7 +1520,7 @@ const BITS: _BitsConfig = {
   [BitType.aiTutor]: {
     since: '4.2.0',
     baseBitType: BitType.article,
-    description: 'AI prompt bit, used to create an AI tutor',
+    description: 'AI tutor bit, used to create an AI tutor',
   },
   [BitType.aiWbt]: {
     since: '4.2.0',
