@@ -1,0 +1,97 @@
+[
+  {
+    "bit": {
+      "type": "extractor-embedded-image",
+      "format": "text",
+      "bitLevel": 1,
+      "id": ["304379"],
+      "backgroundWallpaper": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/background.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "search": "testing **123**"
+        }
+      },
+      "body": ""
+    },
+    "parser": {
+      "version": "4.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.34.3"
+    },
+    "bitmark": "[.extractor-embedded-image]\n[@id:304379]\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@search:testing **123**]"
+  },
+  {
+    "bit": {
+      "type": "extractor-embedded-image-collapsible",
+      "format": "text",
+      "bitLevel": 1,
+      "id": ["304379"],
+      "levelCEFRp": "levelCEFRp",
+      "levelCEFR": "levelCEFR",
+      "levelILR": "levelILR",
+      "levelACTFL": "levelACTFL",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": true,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
+      "body": ""
+    },
+    "parser": {
+      "version": "4.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.34.3"
+    },
+    "bitmark": "[.extractor-embedded-image-collapsible]\n[@id:304379]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif][@zoomDisabled]"
+  }
+]
