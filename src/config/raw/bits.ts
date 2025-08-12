@@ -2311,16 +2311,16 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorEmbeddedImage]: {
+  [BitType.extractorImage]: {
     since: '4.3.0',
     baseBitType: BitType.image,
     description: 'Extractor embedded image bit, used for embedded images extracted from PDFs',
 
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorEmbeddedImageCollapsible]: {
+  [BitType.extractorImageCollapsible]: {
     since: '4.3.0',
-    baseBitType: BitType.extractorEmbeddedImage,
+    baseBitType: BitType.extractorImage,
     description:
       'Collapsible extractor embedded image bit, used for embedded images extracted from PDFs',
 

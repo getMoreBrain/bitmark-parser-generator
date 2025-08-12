@@ -1,7 +1,7 @@
 [
   {
     "bit": {
-      "type": "extractor-embedded-image",
+      "type": "extractor-image",
       "format": "text",
       "bitLevel": 1,
       "id": ["304379"],
@@ -51,11 +51,11 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.34.3"
     },
-    "bitmark": "[.extractor-embedded-image]\n[@id:304379]\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@search:testing **123**]"
+    "bitmark": "[.extractor-image]\n[@id:304379]\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@search:testing **123**]"
   },
   {
     "bit": {
-      "type": "extractor-embedded-image-collapsible",
+      "type": "extractor-image-collapsible",
       "format": "text",
       "bitLevel": 1,
       "id": ["304379"],
@@ -92,6 +92,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.34.3"
     },
-    "bitmark": "[.extractor-embedded-image-collapsible]\n[@id:304379]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif][@zoomDisabled]"
+    "bitmark": "[.extractor-image-collapsible]\n[@id:304379]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif][@zoomDisabled]"
   }
 ]

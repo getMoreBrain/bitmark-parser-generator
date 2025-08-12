@@ -1,9 +1,9 @@
-[.extractor-embedded-image]
+[.extractor-image]
 [@id:304379]
 [&backgroundWallpaper:https://miro.medium.com/background.png]
 [&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@search:testing **123**]
 
-[.extractor-embedded-image-collapsible]
+[.extractor-image-collapsible]
 [@id:304379]
 [@levelCEFRp:levelCEFRp]
 [@levelCEFR:levelCEFR]
