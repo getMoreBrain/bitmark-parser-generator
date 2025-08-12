@@ -239,6 +239,8 @@ const BitType = superenum({
   extractorAiChat: 'extractor-ai-chat',
   extractorBlock: 'extractor-block',
   extractorConfiguration: 'extractor-configuration',
+  extractorEmbeddedImage: 'extractor-embedded-image',
+  extractorEmbeddedImageCollapsible: 'extractor-embedded-image-collapsible',
   extractorInformation: 'extractor-information',
   extractorPage: 'extractor-page',
   extractorPageCollapsible: 'extractor-page-collapsible',
