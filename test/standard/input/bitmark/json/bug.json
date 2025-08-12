@@ -25,6 +25,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "jpg",
+          "provider": "cdn.bitbook.education",
+          "src": "https://cdn.bitbook.education/cat.jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -82,24 +98,6 @@
               "column": 47,
               "offset": 173
             }
-          }
-        }
-      ],
-      "excessResources": [
-        {
-          "type": "image",
-          "image": {
-            "format": "jpg",
-            "provider": "cdn.bitbook.education",
-            "src": "https://cdn.bitbook.education/cat.jpg",
-            "width": null,
-            "height": null,
-            "alt": "",
-            "zoomDisabled": false,
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": []
           }
         }
       ]

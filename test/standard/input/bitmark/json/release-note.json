@@ -13,6 +13,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -58,24 +74,6 @@
               "column": 140,
               "offset": 401
             }
-          }
-        }
-      ],
-      "excessResources": [
-        {
-          "type": "image",
-          "image": {
-            "format": "png",
-            "provider": "docs.bitbook.education",
-            "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
-            "width": null,
-            "height": null,
-            "alt": "",
-            "zoomDisabled": false,
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": []
           }
         }
       ]

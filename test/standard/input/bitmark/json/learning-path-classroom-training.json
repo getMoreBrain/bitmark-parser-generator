@@ -4,20 +4,13 @@
       "type": "learning-path-classroom-training",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "list": ["One", "Two", "Three", "Four"],
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
       "item": [],
@@ -37,6 +30,16 @@
           "attrs": {}
         }
       ],
+      "resource": {
+        "type": "website-link",
+        "websiteLink": {
+          "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -92,18 +95,6 @@
               "column": 91,
               "offset": 612
             }
-          }
-        }
-      ],
-      "excessResources": [
-        {
-          "type": "website-link",
-          "websiteLink": {
-            "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": []
           }
         }
       ]

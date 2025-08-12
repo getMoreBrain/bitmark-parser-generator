@@ -10,6 +10,18 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -73,20 +85,6 @@
             }
           }
         }
-      ],
-      "excessResources": [
-        {
-          "type": "audio",
-          "audio": {
-            "format": "mp3",
-            "provider": "docs.bitbook.education",
-            "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3",
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": []
-          }
-        }
       ]
     },
     "bitmark": "[.audio-embed]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&audio:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3]"
@@ -102,6 +100,18 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "audio",
+        "audio": {
+          "format": "mp3",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3",
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -163,20 +173,6 @@
               "column": 1,
               "offset": 658
             }
-          }
-        }
-      ],
-      "excessResources": [
-        {
-          "type": "audio",
-          "audio": {
-            "format": "mp3",
-            "provider": "docs.bitbook.education",
-            "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.mp3",
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": []
           }
         }
       ]
