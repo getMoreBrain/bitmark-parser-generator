@@ -3637,6 +3637,11 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.page,
     description: 'Page cover image bit, used to create cover images for pages',
   },
+  [BitType.advertisingAdvertorialPage]: {
+    since: '4.5.0',
+    baseBitType: BitType.page,
+    description: 'Advertorial Page bit, used to create advertorial pages',
+  },
   [BitType.pageBuyButton]: {
     since: '1.4.3',
     baseBitType: BitType._standard,

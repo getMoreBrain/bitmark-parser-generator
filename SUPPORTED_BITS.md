@@ -1,11 +1,12 @@
 # bitmark-parser-generator
 
-Version: 4.3.0
+Version: 4.5.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
 advertising (since: 4.2.0)
 advertising-advertorial (since: 4.2.0)
+advertising-advertorial-page (since: 4.5.0)
 advertising-call-to-action (since: 4.2.0)
 advertising-call-to-action-meeting (since: 4.2.0)
 advertising-banner (since: 4.2.0)
