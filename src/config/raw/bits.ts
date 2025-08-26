@@ -836,12 +836,6 @@ const BITS: _BitsConfig = {
         format: TagFormat.boolean,
       },
       {
-        key: ConfigKey.property_additionalSolutions,
-        description: 'Additional solutions for the cloze quiz',
-        format: TagFormat.plainText,
-        maxCount: Count.infinity,
-      },
-      {
         key: ConfigKey.group_gap,
         description: 'Tags for gaps in cloze bits',
       },
@@ -1399,12 +1393,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_sampleSolution,
         description: 'Sample solution for the essay, used as a reference answer',
         format: TagFormat.plainText,
-      },
-      {
-        key: ConfigKey.property_additionalSolutions,
-        description: 'Additional solutions for the essay, used for alternative answers',
-        format: TagFormat.plainText,
-        maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_partialAnswer,

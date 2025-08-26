@@ -745,6 +745,12 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.boolean,
         // defaultValue: 'false',
       },
+      {
+        key: ConfigKey.property_additionalSolutions,
+        description: 'Additional solutions',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
     ],
   },
   //
