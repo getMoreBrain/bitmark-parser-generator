@@ -1038,24 +1038,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
 
     if (parser && bitType) {
-      const {
-        version,
-        excessResources: parserExcessResources,
-        warnings,
-        errors,
-        ...parserRest
-      } = parser;
+      const { version, warnings, errors, ...parserRest } = parser;
       const bitmarkVersion = `${this.bitmarkVersion}`;
       const textParserVersion = this.textParserVersion;
-
-      // Parse resources to JSON from AST
-      let excessResources: ResourceJson[] | undefined;
-      if (Array.isArray(parserExcessResources) && parserExcessResources.length > 0) {
-        excessResources = [];
-        for (const r of parserExcessResources) {
-          excessResources.push(r as ResourceJson);
-        }
-      }
 
       // Extract internal comments from the AST and add to the parser
       const internalComments = this.getInternalComments(route);
@@ -1070,7 +1055,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           ...parserRest,
           warnings,
           errors,
-          excessResources,
         };
 
         if (!this.options.enableWarnings) {

@@ -623,7 +623,10 @@ class BitmarkPegParserValidator {
       if (warning.invalid || warning.excessResource) {
         warningStr = `${keyStr} is not valid here (incorrectly chained?).${ignoredStr}`;
       } else if (warning.tooMany != null) {
-        warningStr = `${keyStr} is included more than ${warning.tooMany} time(s).`;
+        warningStr = `${keyStr} is included more than the required ${warning.tooMany} time(s).`;
+        if (warning.tooMany === 0 && typeKey === TypeKey.Resource) {
+          warningStr += ` Did you forget the '${key}' in the bit header?`;
+        }
         if (warning.tooMany > 0) warningStr += ' The earlier ones will be ignored';
         // } else if (warning.tooFew != null) {
         //   warningStr = `'${type}'${keyStr} is not included enough times(s). It should be included ${warning.tooFew} time(s)`;

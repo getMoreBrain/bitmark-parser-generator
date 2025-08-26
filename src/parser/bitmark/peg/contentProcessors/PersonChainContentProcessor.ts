@@ -79,9 +79,6 @@ function extractAvatarImage(
   }
 
   if (excessResources.length > 0) {
-    // Set the excess resources in the parser info
-    context.parser.excessResources = excessResources;
-
     // Add an warning to warn about the excess resources
     context.addWarning(
       `${excessResources.length} excess resource(s) present in the [@person] chain.`,

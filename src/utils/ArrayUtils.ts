@@ -41,16 +41,21 @@ class ArrayUtils {
    * @returns the input array with all duplicate items removed
    */
   public removeDuplicates<T>(arr: T[], keyFunc?: (item: T) => unknown): T[] {
-    const seen: Set<unknown> = new Set();
-    for (const item of arr) {
-      const k = keyFunc ? keyFunc(item) : item;
-      if (seen.has(k)) {
-        const index = arr.lastIndexOf(item);
-        if (index !== -1) arr.splice(index, 1);
+    const seen = new Set<unknown>();
+    let write = 0;
+
+    for (let read = 0; read < arr.length; read++) {
+      const item = arr[read];
+      const k = keyFunc ? keyFunc(item) : (item as unknown);
+
+      if (!seen.has(k)) {
+        seen.add(k);
+        if (write !== read) arr[write] = item;
+        write++;
       }
-      seen.add(k);
     }
 
+    if (write < arr.length) arr.length = write;
     return arr;
   }
 }

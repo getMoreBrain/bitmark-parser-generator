@@ -89,10 +89,10 @@ function buildResources(
     );
   }
 
-  if (excessResources.length > 0) {
-    // Set the excess resources in the parser info
-    context.parser.excessResources = excessResources;
-  }
+  excessResources.forEach((r) => {
+    r.__excessResource = true;
+    filteredResources.push(r);
+  });
 
   return filteredResources;
 }

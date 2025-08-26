@@ -836,12 +836,6 @@ const BITS: _BitsConfig = {
         format: TagFormat.boolean,
       },
       {
-        key: ConfigKey.property_additionalSolutions,
-        description: 'Additional solutions for the cloze quiz',
-        format: TagFormat.plainText,
-        maxCount: Count.infinity,
-      },
-      {
         key: ConfigKey.group_gap,
         description: 'Tags for gaps in cloze bits',
       },
@@ -1399,12 +1393,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_sampleSolution,
         description: 'Sample solution for the essay, used as a reference answer',
         format: TagFormat.plainText,
-      },
-      {
-        key: ConfigKey.property_additionalSolutions,
-        description: 'Additional solutions for the essay, used for alternative answers',
-        format: TagFormat.plainText,
-        maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_partialAnswer,
@@ -2311,16 +2299,16 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorEmbeddedImage]: {
+  [BitType.extractorImage]: {
     since: '4.3.0',
     baseBitType: BitType.image,
     description: 'Extractor embedded image bit, used for embedded images extracted from PDFs',
 
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorEmbeddedImageCollapsible]: {
+  [BitType.extractorImageCollapsible]: {
     since: '4.3.0',
-    baseBitType: BitType.extractorEmbeddedImage,
+    baseBitType: BitType.extractorImage,
     description:
       'Collapsible extractor embedded image bit, used for embedded images extracted from PDFs',
 
@@ -3636,6 +3624,11 @@ const BITS: _BitsConfig = {
     since: '1.22.0',
     baseBitType: BitType.page,
     description: 'Page cover image bit, used to create cover images for pages',
+  },
+  [BitType.advertisingAdvertorialPage]: {
+    since: '4.5.0',
+    baseBitType: BitType.page,
+    description: 'Advertorial Page bit, used to create advertorial pages',
   },
   [BitType.pageBuyButton]: {
     since: '1.4.3',

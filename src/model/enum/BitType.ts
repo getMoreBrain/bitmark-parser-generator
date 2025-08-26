@@ -6,6 +6,7 @@ const BitType = superenum({
   _standard: '_standard', // Not to be used as a bit, but as a base for other bit types
   advertising: 'advertising',
   advertisingAdvertorial: 'advertising-advertorial',
+  advertisingAdvertorialPage: 'advertising-advertorial-page',
   advertisingCallToAction: 'advertising-call-to-action',
   advertisingCallToActionMeeting: 'advertising-call-to-action-meeting',
   advertisingBanner: 'advertising-banner',
@@ -239,8 +240,8 @@ const BitType = superenum({
   extractorAiChat: 'extractor-ai-chat',
   extractorBlock: 'extractor-block',
   extractorConfiguration: 'extractor-configuration',
-  extractorEmbeddedImage: 'extractor-embedded-image',
-  extractorEmbeddedImageCollapsible: 'extractor-embedded-image-collapsible',
+  extractorImage: 'extractor-image',
+  extractorImageCollapsible: 'extractor-image-collapsible',
   extractorInformation: 'extractor-information',
   extractorPage: 'extractor-page',
   extractorPageCollapsible: 'extractor-page-collapsible',

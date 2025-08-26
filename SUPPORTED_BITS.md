@@ -1,11 +1,12 @@
 # bitmark-parser-generator
 
-Version: 4.3.0
+Version: 4.5.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
 advertising (since: 4.2.0)
 advertising-advertorial (since: 4.2.0)
+advertising-advertorial-page (since: 4.5.0)
 advertising-call-to-action (since: 4.2.0)
 advertising-call-to-action-meeting (since: 4.2.0)
 advertising-banner (since: 4.2.0)
@@ -233,8 +234,8 @@ example-list (since: 1.4.13)
 extractor-ai-chat (since: 3.19.0)
 extractor-block (since: 1.5.16)
 extractor-configuration (since: 1.7.1)
-extractor-embedded-image (since: 4.3.0)
-extractor-embedded-image-collapsible (since: 4.3.0)
+extractor-image (since: 4.3.0)
+extractor-image-collapsible (since: 4.3.0)
 extractor-information (since: 3.8.0)
 extractor-page (since: 1.5.17)
 extractor-page-collapsible (since: 1.30.0)
