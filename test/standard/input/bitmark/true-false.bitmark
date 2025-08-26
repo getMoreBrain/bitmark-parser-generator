@@ -1,6 +1,9 @@
 
 [.true-false]
 [@id:287883]
+[@additionalSolutions: word1 ]
+[@additionalSolutions: word2 ]
+[@additionalSolutions: word3 ]
 [%][%true-false]
 [@labelTrue:rather yes][@labelFalse:rather no]
 ===
