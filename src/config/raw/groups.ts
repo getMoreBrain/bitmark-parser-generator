@@ -812,6 +812,12 @@ const GROUPS: _GroupsConfig = {
         description: 'The search text for the resource',
         format: TagFormat.plainText,
       },
+      {
+        key: ConfigKey.property_srcAlt,
+        description: 'An alternative source for the resource',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
     ],
   },
   [ConfigKey.group_resourceImageCommon]: {

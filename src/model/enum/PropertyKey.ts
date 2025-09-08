@@ -170,6 +170,7 @@ const propertyKeys = {
   property_src2x: '@src2x',
   property_src3x: '@src3x',
   property_src4x: '@src4x',
+  property_srcAlt: '@srcAlt',
   property_stripePricingTableId: '@stripePricingTableId',
   property_stripePublishableKey: '@stripePublishableKey',
   property_subject: '@subject',

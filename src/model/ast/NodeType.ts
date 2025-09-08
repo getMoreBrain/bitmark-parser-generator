@@ -460,6 +460,8 @@ const NodeType = superenum({
   spaceId: 'spaceId',
   spaceIdValue: 'spaceIdValue',
   src: 'src',
+  srcAlt: 'srcAlt',
+  srcAltValue: 'srcAltValue',
   src1x: 'src1x',
   src2x: 'src2x',
   src3x: 'src3x',
