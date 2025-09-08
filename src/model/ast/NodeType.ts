@@ -80,6 +80,8 @@ const NodeType = superenum({
   botValue: 'botValue',
   bubbleTag: 'bubbleTag',
   bubbleTagValue: 'bubbleTagValue',
+  extractorTag: 'extractorTag',
+  extractorTagValue: 'extractorTagValue',
   buttonCaption: 'buttonCaption',
   buttonCaptionValue: 'buttonCaptionValue',
   callToActionUrl: 'callToActionUrl',
