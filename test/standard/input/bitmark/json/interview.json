@@ -284,6 +284,7 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "id": ["198779"],
+      "extractorTag": ["Tag 1", "Tag 2"],
       "item": [
         {
           "type": "paragraph",

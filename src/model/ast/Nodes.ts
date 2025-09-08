@@ -100,6 +100,7 @@ export interface Bit {
   groupTag?: GroupTagJson[];
   reductionTag?: Property;
   bubbleTag?: Property;
+  extractorTag?: Property;
   levelCEFRp?: Property;
   levelCEFR?: Property;
   levelILR?: Property;

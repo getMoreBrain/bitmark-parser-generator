@@ -20,6 +20,7 @@ const propertyKeys = {
   property_bookDiff: '@bookDiff',
   property_bot: '@bot',
   property_bubbleTag: '@bubbleTag',
+  property_extractorTag: '@extractorTag',
   property_buttonCaption: '@buttonCaption',
   property_callToActionUrl: '@callToActionUrl',
   property_caption: '@caption',

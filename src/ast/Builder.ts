@@ -168,6 +168,7 @@ class Builder extends BaseBuilder {
       groupTag?: Partial<GroupTagJson> | Partial<GroupTagJson>[];
       reductionTag?: string | string[];
       bubbleTag?: string | string[];
+      extractorTag?: string | string[];
       levelCEFRp?: string | string[];
       levelCEFR?: string | string[];
       levelILR?: string | string[];
@@ -563,6 +564,12 @@ class Builder extends BaseBuilder {
         options,
       ),
       bubbleTag: this.toAstProperty(bitType, ConfigKey.property_bubbleTag, data.bubbleTag, options),
+      extractorTag: this.toAstProperty(
+        bitType,
+        ConfigKey.property_extractorTag,
+        data.extractorTag,
+        options,
+      ),
       levelCEFRp: this.toAstProperty(
         bitType,
         ConfigKey.property_levelCEFRp,
