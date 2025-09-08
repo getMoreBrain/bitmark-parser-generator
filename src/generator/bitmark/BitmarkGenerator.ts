@@ -2413,7 +2413,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> resource -> ...
   // bitmarkAst -> bits -> bitsValue -> resource -> posterImage -> ...
   // bitmarkAst -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...
-  // [src1x,src2x,src3x,src4x,width,height,alt,zoomDisabled,caption]
+  // [srcAlt,src1x,src2x,src3x,src4x,width,height,alt,zoomDisabled,caption]
+
+  protected leaf_srcAltValue(node: NodeInfo, route: NodeInfo[]): void {
+    this.writeProperty('srcAlt', node.value, route, {
+      format: TagFormat.plainText,
+    });
+  }
 
   protected leaf_src1x(node: NodeInfo, route: NodeInfo[]): void {
     this.writeProperty('src1x', node.value, route, {

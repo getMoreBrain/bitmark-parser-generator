@@ -55,6 +55,7 @@ export interface BitJson {
   groupTag: GroupTagJson[];
   reductionTag: string | string[];
   bubbleTag: string | string[];
+  extractorTag: string | string[];
   levelCEFRp: string;
   levelCEFR: string;
   levelILR: string;

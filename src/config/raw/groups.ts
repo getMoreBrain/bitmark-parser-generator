@@ -191,6 +191,12 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_extractorTag,
+        description: 'The extractor tag(s) for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_levelCEFRp,
         description: 'The CEFRp level for the bit',
         format: TagFormat.plainText,
@@ -805,6 +811,12 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_search,
         description: 'The search text for the resource',
         format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_srcAlt,
+        description: 'An alternative source for the resource',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
       },
     ],
   },

@@ -164,6 +164,9 @@ class ResourceBuilder extends BaseBuilder {
       // Generic (except Article / Document)
       value: url,
 
+      // Alternative source
+      srcAlt: data.srcAlt,
+
       // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
       format: data.format,
 
@@ -215,6 +218,9 @@ class ResourceBuilder extends BaseBuilder {
 
       // Generic part (value of bit tag)
       value?: string; // url / src / href / app / body
+
+      // Alternative source
+      srcAlt?: string[];
 
       // ImageLikeResource / AudioLikeResource / VideoLikeResource / Article / Document
       format?: string;
@@ -415,6 +421,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string; //src
+      srcAlt?: string[];
       src1x?: string;
       src2x?: string;
       src3x?: string;
@@ -433,6 +440,7 @@ class ResourceBuilder extends BaseBuilder {
   ): ImageResourceWrapperJson | undefined {
     const {
       value,
+      srcAlt,
       src1x,
       src2x,
       src3x,
@@ -470,6 +478,7 @@ class ResourceBuilder extends BaseBuilder {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         src: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         src1x: (src1x ?? undefined) as string,
         src2x: (src2x ?? undefined) as string,
         src3x: (src3x ?? undefined) as string,
@@ -509,6 +518,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string;
+      srcAlt?: string[];
       src1x?: string;
       src2x?: string;
       src3x?: string;
@@ -526,6 +536,7 @@ class ResourceBuilder extends BaseBuilder {
   ): ImageLinkResourceWrapperJson | undefined {
     const {
       value,
+      srcAlt,
       src1x,
       src2x,
       src3x,
@@ -551,6 +562,7 @@ class ResourceBuilder extends BaseBuilder {
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         // src: value ?? '',
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         src1x: (src1x ?? undefined) as string,
         src2x: (src2x ?? undefined) as string,
         src3x: (src3x ?? undefined) as string,
@@ -590,6 +602,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string; // src
+      srcAlt?: string[];
       duration?: number; // string?
       mute?: boolean;
       autoplay?: boolean;
@@ -600,8 +613,18 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): AudioResourceWrapperJson | undefined {
-    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } =
-      data;
+    const {
+      value,
+      srcAlt,
+      duration,
+      mute,
+      autoplay,
+      license,
+      copyright,
+      showInIndex,
+      caption,
+      search,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioResourceWrapperJson = {
@@ -612,6 +635,7 @@ class ResourceBuilder extends BaseBuilder {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         src: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         duration: (duration ?? undefined) as number,
         mute: (mute ?? undefined) as boolean,
         autoplay: (autoplay ?? undefined) as boolean,
@@ -645,6 +669,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string; // src
+      srcAlt?: string[];
       duration?: number; // string?
       mute?: boolean;
       autoplay?: boolean;
@@ -655,8 +680,18 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): AudioEmbedResourceWrapperJson | undefined {
-    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } =
-      data;
+    const {
+      value,
+      srcAlt,
+      duration,
+      mute,
+      autoplay,
+      license,
+      copyright,
+      showInIndex,
+      caption,
+      search,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioEmbedResourceWrapperJson = {
@@ -667,6 +702,7 @@ class ResourceBuilder extends BaseBuilder {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         src: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         duration: (duration ?? undefined) as number,
         mute: (mute ?? undefined) as boolean,
         autoplay: (autoplay ?? undefined) as boolean,
@@ -700,6 +736,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string;
+      srcAlt?: string[];
       duration?: number; // string?
       mute?: boolean;
       autoplay?: boolean;
@@ -710,8 +747,18 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): AudioLinkResourceWrapperJson | undefined {
-    const { value, duration, mute, autoplay, license, copyright, showInIndex, caption, search } =
-      data;
+    const {
+      value,
+      srcAlt,
+      duration,
+      mute,
+      autoplay,
+      license,
+      copyright,
+      showInIndex,
+      caption,
+      search,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AudioLinkResourceWrapperJson = {
@@ -723,6 +770,7 @@ class ResourceBuilder extends BaseBuilder {
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         // src: value ?? '',
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         duration: (duration ?? undefined) as number,
         mute: (mute ?? undefined) as boolean,
         autoplay: (autoplay ?? undefined) as boolean,
@@ -755,6 +803,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string; // src
+      srcAlt?: string[];
       width?: string;
       height?: string;
       duration?: number; // string?
@@ -774,6 +823,7 @@ class ResourceBuilder extends BaseBuilder {
   ): VideoResourceWrapperJson | undefined {
     const {
       value,
+      srcAlt,
       width,
       height,
       duration,
@@ -800,6 +850,7 @@ class ResourceBuilder extends BaseBuilder {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         src: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         duration: (duration ?? undefined) as number,
@@ -842,6 +893,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string; // src
+      srcAlt?: string[];
       width?: string;
       height?: string;
       duration?: number; // string?
@@ -861,6 +913,7 @@ class ResourceBuilder extends BaseBuilder {
   ): VideoEmbedResourceWrapperJson | undefined {
     const {
       value,
+      srcAlt,
       width,
       height,
       duration,
@@ -888,6 +941,7 @@ class ResourceBuilder extends BaseBuilder {
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         // src: value ?? '',
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         duration: (duration ?? undefined) as number,
@@ -929,6 +983,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string;
+      srcAlt?: string[];
       width?: string;
       height?: string;
       duration?: number; // string?
@@ -948,6 +1003,7 @@ class ResourceBuilder extends BaseBuilder {
   ): VideoLinkResourceWrapperJson | undefined {
     const {
       value,
+      srcAlt,
       width,
       height,
       duration,
@@ -975,6 +1031,7 @@ class ResourceBuilder extends BaseBuilder {
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         // src: value ?? '',
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         duration: (duration ?? undefined) as number,
@@ -1040,6 +1097,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string; // src
+      srcAlt?: string[];
       width?: string;
       height?: string;
       duration?: number; // string?
@@ -1059,6 +1117,7 @@ class ResourceBuilder extends BaseBuilder {
   ): StillImageFilmEmbedResourceWrapperJson | undefined {
     const {
       value,
+      srcAlt,
       width,
       height,
       duration,
@@ -1086,6 +1145,7 @@ class ResourceBuilder extends BaseBuilder {
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         // src: value ?? '',
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         duration: (duration ?? undefined) as number,
@@ -1127,6 +1187,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string;
+      srcAlt?: string[];
       width?: string;
       height?: string;
       duration?: number; // string?
@@ -1146,6 +1207,7 @@ class ResourceBuilder extends BaseBuilder {
   ): StillImageFilmLinkResourceWrapperJson | undefined {
     const {
       value,
+      srcAlt,
       width,
       height,
       duration,
@@ -1173,6 +1235,7 @@ class ResourceBuilder extends BaseBuilder {
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         // src: value ?? '',
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         width: (width ?? null) as string,
         height: (height ?? null) as string,
         duration: (duration ?? undefined) as number,
@@ -1213,6 +1276,7 @@ class ResourceBuilder extends BaseBuilder {
     context: BuildContext,
     data: {
       format: string;
+      srcAlt?: string[];
       value: string;
       license?: string;
       copyright?: string;
@@ -1221,7 +1285,7 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): ArticleResourceWrapperJson | undefined {
-    const { value, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ArticleResourceWrapperJson = {
@@ -1232,6 +1296,7 @@ class ResourceBuilder extends BaseBuilder {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         body: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
@@ -1261,6 +1326,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string;
+      srcAlt?: string[];
       license?: string;
       copyright?: string;
       showInIndex?: boolean;
@@ -1268,7 +1334,7 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): DocumentResourceWrapperJson | undefined {
-    const { value, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentResourceWrapperJson = {
@@ -1279,6 +1345,7 @@ class ResourceBuilder extends BaseBuilder {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
@@ -1309,6 +1376,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string;
+      srcAlt?: string[];
       license?: string;
       copyright?: string;
       showInIndex?: boolean;
@@ -1316,7 +1384,7 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): DocumentEmbedResourceWrapperJson | undefined {
-    const { value, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentEmbedResourceWrapperJson = {
@@ -1327,6 +1395,7 @@ class ResourceBuilder extends BaseBuilder {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
@@ -1357,6 +1426,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string;
+      srcAlt?: string[];
       license?: string;
       copyright?: string;
       showInIndex?: boolean;
@@ -1364,7 +1434,7 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): DocumentLinkResourceWrapperJson | undefined {
-    const { value, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentLinkResourceWrapperJson = {
@@ -1375,6 +1445,7 @@ class ResourceBuilder extends BaseBuilder {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
@@ -1405,6 +1476,7 @@ class ResourceBuilder extends BaseBuilder {
     data: {
       format: string;
       value: string;
+      srcAlt?: string[];
       license?: string;
       copyright?: string;
       showInIndex?: boolean;
@@ -1412,7 +1484,7 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): DocumentDownloadResourceWrapperJson | undefined {
-    const { value, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentDownloadResourceWrapperJson = {
@@ -1423,6 +1495,7 @@ class ResourceBuilder extends BaseBuilder {
         format: (UrlUtils.fileExtensionFromUrl(value) ?? undefined) as string,
         provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
@@ -1452,6 +1525,7 @@ class ResourceBuilder extends BaseBuilder {
     context: BuildContext,
     data: {
       value: string;
+      srcAlt?: string[];
       license?: string;
       copyright?: string;
       showInIndex?: boolean;
@@ -1459,7 +1533,7 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): AppLinkResourceWrapperJson | undefined {
-    const { value, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AppLinkResourceWrapperJson = {
@@ -1471,6 +1545,7 @@ class ResourceBuilder extends BaseBuilder {
         // provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         provider: undefined as unknown as string,
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         license: license ?? '',
         copyright: copyright ?? '',
         showInIndex: showInIndex ?? false,
@@ -1500,6 +1575,7 @@ class ResourceBuilder extends BaseBuilder {
     context: BuildContext,
     data: {
       value: string;
+      srcAlt?: string[];
       siteName?: string;
       license?: string;
       copyright?: string;
@@ -1508,7 +1584,7 @@ class ResourceBuilder extends BaseBuilder {
       search?: string;
     },
   ): WebsiteLinkResourceWrapperJson | undefined {
-    const { value, /*siteName,*/ license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, /*siteName,*/ license, copyright, showInIndex, caption, search } = data;
 
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResourceWrapperJson = {
@@ -1519,6 +1595,7 @@ class ResourceBuilder extends BaseBuilder {
         // provider: (UrlUtils.domainFromUrl(value) ?? undefined) as string,
         provider: undefined as unknown as string,
         url: value ?? '',
+        srcAlt: (srcAlt ?? undefined) as string[],
         // siteName,
         license: license ?? '',
         copyright: copyright ?? '',
