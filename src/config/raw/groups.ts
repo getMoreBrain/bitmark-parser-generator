@@ -655,6 +655,12 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_relatedBook,
+        description: 'Books related to this book',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_duration,
         description: 'The duration of the book',
         format: TagFormat.plainText,

@@ -115,6 +115,7 @@ export interface Bit {
   coverImage?: Property;
   coverColor?: Property;
   publications?: Property;
+  relatedBook?: Property;
   author?: Property;
   subject?: Property;
   date?: Property;
