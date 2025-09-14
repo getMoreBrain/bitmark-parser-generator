@@ -415,6 +415,8 @@ const NodeType = superenum({
   referencePropertyValue: 'referencePropertyValue',
   refPublicationYear: 'refPublicationYear',
   refPublisher: 'refPublisher',
+  relatedBook: 'relatedBook',
+  relatedBookValue: 'relatedBookValue',
   releaseDate: 'releaseDate',
   releaseDateValue: 'releaseDateValue',
   releaseKind: 'releaseKind',
