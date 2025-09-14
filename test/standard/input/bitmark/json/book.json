@@ -24,6 +24,7 @@
         "https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png"
       ],
       "coverColor": "#F2F2F2",
+      "relatedBook": ["n_9374th83h20", "g_F2F2F2"],
       "author": ["Philippe Pointet"],
       "kind": "learning-path",
       "hasMarkAsDone": true,

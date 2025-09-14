@@ -75,17 +75,14 @@ class ConfigBuilder {
         return typeOrder;
       });
       if (b.baseBitType) inherits.push(b.baseBitType);
-      for (const [tagKey, tag] of tagEntries) {
+      for (const [_tagKey, tag] of tagEntries) {
         const tagName = tag.key as string;
-        let tagKeyPrefix = '';
         let format = '';
-        let description = '';
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let chain: any = undefined;
         const tagType = typeFromConfigKey(tag.key);
         if (tagType === BitTagConfigKeyType.tag) {
           if (tagName === '%') {
-            description = 'Item';
             chain = {
               key: '%',
               format,
@@ -107,34 +104,9 @@ class ConfigBuilder {
                 },
               },
             };
-          } else if (tagName === '!') {
-            description = 'Instruction';
-          } else if (tagName === '?') {
-            description = 'Hint';
-          } else if (tagName === '#') {
-            description = 'Title';
-          } else if (tagName === '##') {
-            description = 'Sub-title';
-          } else if (tagName === '▼') {
-            description = 'Anchor';
-          } else if (tagName === '►') {
-            description = 'Reference';
-          } else if (tagName === '$') {
-            description = 'Sample solution';
-          } else if (tagName === '&') {
-            description = 'Resource';
-          } else if (tagName === '+') {
-            description = 'True statement';
-          } else if (tagName === '-') {
-            description = 'False statement';
-          } else if (tagName === '_') {
-            description = 'Gap';
-          } else if (tagName === '=') {
-            description = 'Mark';
           }
           format = 'bitmark--';
         } else if (tagType === BitTagConfigKeyType.property) {
-          tagKeyPrefix = '@';
           // const resolvedProperty = Config.getTagConfigForTag(b.tags, tagKey);
           // const property = resolvedProperty as PropertyTagConfig;
           // format
@@ -148,9 +120,7 @@ class ConfigBuilder {
             format = 'number';
           }
         } else if (tagType === BitTagConfigKeyType.resource) {
-          tagKeyPrefix = '&';
         } else if (tagType === BitTagConfigKeyType.group) {
-          tagKeyPrefix = '@';
           let k = tag.key as string;
           if (k.startsWith('group_')) k = k.substring(6);
           k = '_' + k;
@@ -224,9 +194,7 @@ class ConfigBuilder {
         for (const [_tagKey, tag] of tagEntries) {
           let tagName = tag.key as string;
           const tagType = typeFromConfigKey(tag.key);
-          let tagKeyPrefix = '';
           let format = '';
-          let description = '';
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           let chain: any = undefined;
           if (tagType === BitTagConfigKeyType.tag) {
@@ -234,7 +202,6 @@ class ConfigBuilder {
             // tagName = resolvedTag.tag;
             tagName = tag.name;
             if (tagName === '%') {
-              description = 'Item';
               chain = {
                 key: '%',
                 format,
@@ -256,37 +223,12 @@ class ConfigBuilder {
                   },
                 },
               };
-            } else if (tagName === '!') {
-              description = 'Instruction';
-            } else if (tagName === '?') {
-              description = 'Hint';
-            } else if (tagName === '#') {
-              description = 'Title';
-            } else if (tagName === '##') {
-              description = 'Sub-title';
-            } else if (tagName === '▼') {
-              description = 'Anchor';
-            } else if (tagName === '►') {
-              description = 'Reference';
-            } else if (tagName === '$') {
-              description = 'Sample solution';
-            } else if (tagName === '&') {
-              description = 'Resource';
-            } else if (tagName === '+') {
-              description = 'True statement';
-            } else if (tagName === '-') {
-              description = 'False statement';
-            } else if (tagName === '_') {
-              description = 'Gap';
-            } else if (tagName === '=') {
-              description = 'Mark';
             }
             format = 'bitmark--';
           } else if (tagType === BitTagConfigKeyType.property) {
             // const resolvedProperty = PROPERTIES[tag.configKey];
             // tagName = resolvedProperty.tag;
             tagName = tag.key;
-            tagKeyPrefix = '@';
             // const property = resolvedProperty as PropertyTagConfig;
             // format
             if (tag.format === TagFormat.plainText) {
@@ -299,10 +241,8 @@ class ConfigBuilder {
               format = 'number';
             }
           } else if (tagType === BitTagConfigKeyType.resource) {
-            tagKeyPrefix = '&';
             format = 'string';
           } else if (tagType === BitTagConfigKeyType.group) {
-            tagKeyPrefix = '@';
             let k = tag.key as string;
             if (k.startsWith('group_')) k = k.substring(6);
             k = /*'_' +*/ StringUtils.camelToKebab(k);
