@@ -200,6 +200,20 @@ class StringUtils {
     if (!str) return str;
     return str.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
   }
+
+  /**
+   * Convert a camelCase string to kebab-case.
+   *
+   * @param str the string to convert
+   * @returns the kebab-case version of the string
+   */
+  camelToKebab(str: string): string {
+    if (!str) return str;
+    return str
+      .replace(/([a-z])([A-Z])/g, '$1-$2')
+      .replace(/[\s_]+/g, '-')
+      .toLowerCase();
+  }
 }
 
 const stringUtils = new StringUtils();
