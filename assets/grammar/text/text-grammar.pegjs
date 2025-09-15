@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.34.3"
+const VERSION = "8.35.0"
 
 //Parser peggy.js
 
@@ -641,6 +641,7 @@ InlineMediaChain
 
 InlineMediaChainItem
   = '#' str: $((!BlockTag char)*) BlockTag {return { comment: str }}
+  / '@'? p: 'srcAlt' ':' ' '* v: $((!BlockTag char)*) BlockTag {return { [p]: v }}
   / '@'? p: MediaSizeTags ':' ' '* v: $( (!BlockTag [0-9])+) BlockTag { return { [p]: parseInt(v) } }
   / '@'? p: MediaSizeTags ':' ' '* v: $((!BlockTag char)*) BlockTag { return { type: "error", msg: p + ' must be a positive integer.', found: v }}
   / '@'? p: 'alignmentVertical' ':' ' '* v: InlineMediaAlignment BlockTag  { return { [p]: v } }
