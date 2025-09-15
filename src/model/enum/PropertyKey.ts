@@ -147,6 +147,7 @@ const propertyKeys = {
   property_reference: '@reference',
   property_refPublicationYear: '@refPublicationYear',
   property_refPublisher: '@refPublisher',
+  property_relatedBook: '@relatedBook',
   property_releaseDate: '@releaseDate',
   property_releaseKind: '@releaseKind',
   property_releaseVersion: '@releaseVersion',
