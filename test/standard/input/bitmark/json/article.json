@@ -216,6 +216,29 @@
               "type": "hardBreak"
             },
             {
+              "text": "Some ",
+              "type": "text"
+            },
+            {
+              "attrs": {
+                "alt": "Gray circular control knob",
+                "src": "https://embedded/page-0001_image-0008.png",
+                "srcAlt": "https://embedded/page-0001_image-0008.png",
+                "zoomDisabled": true
+              },
+              "type": "imageInline"
+            },
+            {
+              "text": "  text",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
               "text": "Bereits in der Strategieentwicklung war die Rede vom Kopieren verlockender Ideen und spannender Konzepte aus dem eigenen Netzwerk. Wenn diese ohne Abstimmung mit den strategischen Zielen erfolgt, kann dieses Vorgehen im Unternehmen bestenfalls keinen Nutzen generieren, schlimmstenfalls grossen Schaden anrichten. So verhält es sich auch mit Personalmarketingmassnahmen.",
               "type": "text"
             }
@@ -225,29 +248,45 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.8.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 15,
+              "line": 1,
               "column": 1,
-              "offset": 292
+              "offset": 0
             },
             "end": {
-              "line": 15,
+              "line": 1,
               "column": 21,
-              "offset": 312
+              "offset": 20
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 21,
+              "offset": 20
             }
           }
         }
       ]
     },
-    "bitmark": "[.article:bitmark--]\n[@id::5__5:32^]**fg^e!!--``test^ ]\n[%][%][%][%marginNumber]\n\nMan könnte davon ausgehen, dass es reicht, aus zahlreichen Möglichkeiten und Instrumenten diejenigen zu wählen, die am besten zur Unternehmung passen. Damit würde ein Unternehmen einen zu einfachen Weg wählen.\n\nBereits in der Strategieentwicklung war die Rede vom Kopieren verlockender Ideen und spannender Konzepte aus dem eigenen Netzwerk. Wenn diese ohne Abstimmung mit den strategischen Zielen erfolgt, kann dieses Vorgehen im Unternehmen bestenfalls keinen Nutzen generieren, schlimmstenfalls grossen Schaden anrichten. So verhält es sich auch mit Personalmarketingmassnahmen."
+    "bitmark": "[.article:bitmark--]\n[@id::5__5:32^]**fg^e!!--``test^ ]\n[%][%][%][%marginNumber]\n\nMan könnte davon ausgehen, dass es reicht, aus zahlreichen Möglichkeiten und Instrumenten diejenigen zu wählen, die am besten zur Unternehmung passen. Damit würde ein Unternehmen einen zu einfachen Weg wählen.\n\nSome ==Gray circular control knob==|imageInline:https://embedded/page-0001_image-0008.png|srcAlt:https://embedded/page-0001_image-0008.png|  text\n\nBereits in der Strategieentwicklung war die Rede vom Kopieren verlockender Ideen und spannender Konzepte aus dem eigenen Netzwerk. Wenn diese ohne Abstimmung mit den strategischen Zielen erfolgt, kann dieses Vorgehen im Unternehmen bestenfalls keinen Nutzen generieren, schlimmstenfalls grossen Schaden anrichten. So verhält es sich auch mit Personalmarketingmassnahmen."
   },
   {
     "bit": {
