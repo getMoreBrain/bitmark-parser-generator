@@ -991,6 +991,26 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     description: 'Standard output bit, used to display standard output from code snippets',
   },
+  [BitType.sandbox]: {
+    since: '4.10.0',
+    baseBitType: BitType.code,
+    description: 'A sandbox bit, used to create a sandboxed environment for code execution',
+  },
+  [BitType.sandboxOutputJson]: {
+    since: '4.10.0',
+    baseBitType: BitType.code,
+    description: 'A sandbox output JSON bit, used to display JSON output from sandboxed code',
+  },
+  [BitType.sandboxOutputMarkup]: {
+    since: '4.10.0',
+    baseBitType: BitType.code,
+    description: 'A sandbox output markup bit, used to display markup output from sandboxed code',
+  },
+  [BitType.sandboxOutputRender]: {
+    since: '4.10.0',
+    baseBitType: BitType.code,
+    description: 'A sandbox output render bit, used to display rendered output from sandboxed code',
+  },
   [BitType.step]: {
     since: '1.5.1',
     baseBitType: BitType.article,
