@@ -27,6 +27,7 @@ const BitType = superenum({
   appAiPrompt: 'app-ai-prompt',
   appBitmarkFromEditor: 'app-bitmark-from-editor',
   appBitmarkFromJavascript: 'app-bitmark-from-javascript',
+  appCalculatorLatex: 'app-calculator-latex',
   appCodeCell: 'app-code-cell',
   appCodeEditor: 'app-code-editor',
   appCodeIde: 'app-code-ide',

@@ -294,6 +294,7 @@ class Builder extends BaseBuilder {
       ratingLevelStart?: Partial<RatingLevelStartEndJson>;
       ratingLevelEnd?: Partial<RatingLevelStartEndJson>;
       ratingLevelSelected?: number;
+      formula?: string;
       partialAnswer?: string;
       book?: string | BookJson[];
       title?: JsonText;
@@ -1055,6 +1056,7 @@ class Builder extends BaseBuilder {
         data.ratingLevelSelected,
         options,
       ),
+      formula: this.toAstProperty(bitType, ConfigKey.property_formula, data.formula, options),
       markConfig: this.buildMarkConfigs(context, data.markConfig),
       imageSource: this.buildImageSource(context, data.imageSource),
       person: this.buildPerson(context, data.person),

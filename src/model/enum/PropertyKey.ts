@@ -64,6 +64,7 @@ const propertyKeys = {
   property_focusX: '@focusX',
   property_focusY: '@focusY',
   property_format: '@format',
+  property_formula: '@formula',
   property_fullName: '@fullName',
   property_groupTag: '@groupTag',
   property_handInAcceptFileType: '@handInAcceptFileType',

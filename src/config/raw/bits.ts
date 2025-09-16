@@ -2071,6 +2071,19 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.appCalculatorLatex]: {
+    since: '4.10.0',
+    baseBitType: BitType.article,
+    description:
+      'A LaTeX calculator bit, used to create a calculator that can interpret LaTeX expressions',
+    tags: [
+      {
+        key: ConfigKey.property_formula,
+        description: 'The LaTeX formula for the calculator, used to define the calculation logic',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
   [BitType.container]: {
     since: '1.9.0',
     baseBitType: BitType.article,
