@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 4.9.0
+Version: 4.10.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -27,6 +27,7 @@ anchor (since: 1.3.0)
 app-ai-prompt (since: 1.3.0)
 app-bitmark-from-editor (since: 1.4.5)
 app-bitmark-from-javascript (since: 1.4.5)
+app-calculator-latex (since: 4.10.0)
 app-code-cell (since: 1.4.3)
 app-code-editor (since: 1.4.3)
 app-code-ide (since: 1.4.3)
@@ -446,6 +447,10 @@ review-note (since: 1.3.0)
 review-request-for-review-note (since: 1.3.0)
 review-reviewer-note (since: 1.3.0)
 sample-solution (since: 1.3.0)
+sandbox (since: 4.10.0)
+sandbox-output-json (since: 4.10.0)
+sandbox-output-markup (since: 4.10.0)
+sandbox-output-render (since: 4.10.0)
 scorm (since: 1.5.11)
 screenshot (since: 1.3.0, deprecated: 1.4.0)
 self-assessment (since: 1.3.0)

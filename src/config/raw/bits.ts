@@ -991,6 +991,26 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.code,
     description: 'Standard output bit, used to display standard output from code snippets',
   },
+  [BitType.sandbox]: {
+    since: '4.10.0',
+    baseBitType: BitType.code,
+    description: 'A sandbox bit, used to create a sandboxed environment for code execution',
+  },
+  [BitType.sandboxOutputJson]: {
+    since: '4.10.0',
+    baseBitType: BitType.code,
+    description: 'A sandbox output JSON bit, used to display JSON output from sandboxed code',
+  },
+  [BitType.sandboxOutputMarkup]: {
+    since: '4.10.0',
+    baseBitType: BitType.code,
+    description: 'A sandbox output markup bit, used to display markup output from sandboxed code',
+  },
+  [BitType.sandboxOutputRender]: {
+    since: '4.10.0',
+    baseBitType: BitType.code,
+    description: 'A sandbox output render bit, used to display rendered output from sandboxed code',
+  },
   [BitType.step]: {
     since: '1.5.1',
     baseBitType: BitType.article,
@@ -2067,6 +2087,19 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.property_path,
         description: 'The path for the platform, used to define navigation paths',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [BitType.appCalculatorLatex]: {
+    since: '4.10.0',
+    baseBitType: BitType.article,
+    description:
+      'A LaTeX calculator bit, used to create a calculator that can interpret LaTeX expressions',
+    tags: [
+      {
+        key: ConfigKey.property_formula,
+        description: 'The LaTeX formula for the calculator, used to define the calculation logic',
         format: TagFormat.plainText,
       },
     ],
