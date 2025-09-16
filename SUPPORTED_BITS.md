@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 4.9.0
+Version: 4.10.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -27,6 +27,7 @@ anchor (since: 1.3.0)
 app-ai-prompt (since: 1.3.0)
 app-bitmark-from-editor (since: 1.4.5)
 app-bitmark-from-javascript (since: 1.4.5)
+app-calculator-latex (since: 4.10.0)
 app-code-cell (since: 1.4.3)
 app-code-editor (since: 1.4.3)
 app-code-ide (since: 1.4.3)

@@ -198,6 +198,8 @@ const NodeType = superenum({
   footerText: 'footerText',
   forKeys: 'forKeys',
   format: 'format',
+  formula: 'formula',
+  formulaValue: 'formulaValue',
   forValues: 'forValues',
   forValuesValue: 'forValuesValue',
   fullName: 'fullName',

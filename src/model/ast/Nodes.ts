@@ -227,6 +227,7 @@ export interface Bit {
   ratingLevelStart?: RatingLevelStartEndJson;
   ratingLevelEnd?: RatingLevelStartEndJson;
   ratingLevelSelected?: Property;
+  formula?: Property;
   markConfig?: MarkConfigJson[];
   extraProperties?: ExtraProperties;
   book?: string | BookJson[];

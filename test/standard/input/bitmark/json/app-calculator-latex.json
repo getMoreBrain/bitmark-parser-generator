@@ -1,0 +1,24 @@
+[
+  {
+    "bit": {
+      "type": "app-calculator-latex",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["51861"],
+      "formula": "\\\\left( x | y \\\\right)",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.9.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.app-calculator-latex]\n[@id:51861]\n[@formula: \\\\left( x | y \\\\right)]"
+  }
+]
