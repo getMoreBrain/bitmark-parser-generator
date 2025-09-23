@@ -153,6 +153,7 @@ export interface BitContentProcessorResult {
   itemString?: string;
   lead?: TextAst;
   pageNumber?: TextAst;
+  sourcePageNumber?: TextAst;
   marginNumber?: TextAst;
   instruction?: TextAst;
   __instructionString?: string;

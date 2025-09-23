@@ -243,6 +243,7 @@ export interface Bit {
   item?: TextAst;
   lead?: TextAst;
   pageNumber?: TextAst;
+  sourcePageNumber?: TextAst;
   marginNumber?: TextAst;
   hint?: TextAst;
   instruction?: TextAst;
