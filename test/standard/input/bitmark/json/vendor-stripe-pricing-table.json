@@ -12,15 +12,16 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.vendor-stripe-pricing-table]\n[@id:342346]\n[@stripePricingTableId: prctb1_1NNeGVGt8{VgVjROuB0TVMu ]\n[@stripePublishableKey: pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ ]"
   },
@@ -37,15 +38,16 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.vendor-stripe-pricing-table-external]\n[@id:342346]\n[@stripePricingTableId: prctb1_1NNeGVGt8{VgVjROuB0TVMu ]\n[@stripePublishableKey: pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ ]"
   }

@@ -4,15 +4,28 @@
       "type": "book-alias",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135647"],
-      "externalId": ["e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"],
-      "spaceId": ["sl"],
-      "lang": "en-US",
-      "language": ["de"],
+      "id": [
+        "135647"
+      ],
+      "externalId": [
+        "e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"
+      ],
+      "spaceId": [
+        "sl"
+      ],
       "isEditable": true,
+      "lang": "en-US",
+      "language": [
+        "de"
+      ],
       "subtype": "draft-book",
-      "bookAlias": ["e-garantie-du-revenu_lj4qvpq8gk5m", "test-id"],
-      "author": ["Philippe Pointet"],
+      "bookAlias": [
+        "e-garantie-du-revenu_lj4qvpq8gk5m",
+        "test-id"
+      ],
+      "author": [
+        "Philippe Pointet"
+      ],
       "kind": "learning-path",
       "maxTocChapterLevel": 45,
       "title": [
@@ -42,6 +55,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -53,11 +67,11 @@
       "chatWithBookBrainKey": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.book-alias]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@bookAlias: e-garantie-du-revenu_lj4qvpq8gk5m]\n[@bookAlias: test-id]\n[@maxTocChapterLevel:45]"
+    "bitmark": "[.book-alias]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@isEditable]\n[@author:Philippe Pointet]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@bookAlias: e-garantie-du-revenu_lj4qvpq8gk5m]\n[@bookAlias: test-id]\n[@maxTocChapterLevel:45]"
   },
   {
     "bit": {
@@ -67,6 +81,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -79,9 +94,9 @@
       "chatWithBookBrainKey": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.book-alias]"
   }

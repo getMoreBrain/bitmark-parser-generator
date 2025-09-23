@@ -4,10 +4,15 @@
       "type": "author-content-bit-generator",
       "format": "bitmark++",
       "bitLevel": 1,
-      "classification": ["Classification 1", "Classification 2", "Classification 3"],
+      "classification": [
+        "Classification 1",
+        "Classification 2",
+        "Classification 3"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -25,9 +30,9 @@
       ]
     },
     "parser": {
-      "version": "4.2.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.author-content-bit-generator]\n[@classification:Classification 1]\n[@classification:Classification 2]\n[@classification:Classification 3]\nHuman language quiz or content description"
   }

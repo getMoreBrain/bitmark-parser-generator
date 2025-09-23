@@ -4,7 +4,10 @@
       "type": "page",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -60,9 +63,9 @@
       ]
     },
     "parser": {
-      "version": "4.3.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.page&image:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]\n\nSome more text."
   },
@@ -132,9 +135,9 @@
       ]
     },
     "parser": {
-      "version": "4.3.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.page&image:bitmark++]\n**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)=="
   },
@@ -143,7 +146,10 @@
       "type": "page-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -199,9 +205,9 @@
       ]
     },
     "parser": {
-      "version": "4.3.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.page-collapsible&image:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]\n\nSome more text."
   },
@@ -271,9 +277,9 @@
       ]
     },
     "parser": {
-      "version": "4.3.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.advertising-advertorial-page&image:bitmark++]\n**Erfolg um jeden Preis**\n\nImmer, wenn ein Dopingfall durch die Medien geht, melden sich auch die Moralisten zu Wort.\n\n[&image:http://cdn.bitbook.education/publishers/3/books/26363/erfolg.jpg]\n\nWas sind dagegen ein paar anabole Steroide ==anabole Steroide==(*synthetisch hergestellte Mittel zur Leistungssteigerung)=="
   },
@@ -285,9 +291,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.3.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.page]"
   }

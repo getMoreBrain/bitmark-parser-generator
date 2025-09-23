@@ -4,7 +4,9 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198779"],
+      "id": [
+        "198779"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -19,6 +21,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -89,12 +92,12 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.interview:bitmark--]",
           "location": {
             "start": {
@@ -110,7 +113,23 @@
           }
         },
         {
-          "message": "[@sampleSolution] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 23,
+              "offset": 22
+            }
+          }
+        },
+        {
+          "message": "[@sampleSolution] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@sampleSolution:Some other text **2**.]",
           "location": {
             "start": {
@@ -141,7 +160,7 @@
           }
         },
         {
-          "message": "[@partialAnswer] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@partialAnswer] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@partialAnswer:This is a **partialAnswer** 2]",
           "location": {
             "start": {
@@ -180,8 +199,15 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136528"],
-      "bubbleTag": ["Tag 1", "", "Tag 2", "**Tag 3**"],
+      "id": [
+        "136528"
+      ],
+      "bubbleTag": [
+        "Tag 1",
+        "",
+        "Tag 2",
+        "**Tag 3**"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -196,6 +222,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -254,12 +281,28 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.interview:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 700
+            },
+            "end": {
+              "line": 25,
+              "column": 29,
+              "offset": 728
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.interview:bitmark--&image]",
           "location": {
             "start": {
@@ -283,8 +326,13 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198779"],
-      "extractorTag": ["Tag 1", "Tag 2"],
+      "id": [
+        "198779"
+      ],
+      "extractorTag": [
+        "Tag 1",
+        "Tag 2"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -299,6 +347,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -330,12 +379,28 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 42,
+              "column": 1,
+              "offset": 1141
+            },
+            "end": {
+              "line": 42,
+              "column": 23,
+              "offset": 1163
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.interview:bitmark--]",
           "location": {
             "start": {
@@ -355,27 +420,29 @@
           "text": "[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]",
           "location": {
             "start": {
-              "line": 47,
+              "line": 49,
               "column": 1,
-              "offset": 1235
+              "offset": 1279
             },
             "end": {
-              "line": 47,
+              "line": 49,
               "column": 105,
-              "offset": 1339
+              "offset": 1383
             }
           }
         }
       ]
     },
-    "bitmark": "[.interview:bitmark--]\n[@id:198779]\n[%1]\n[!Erklären Sie den Begriff „Steuerüberwälzung“.]\n===\n[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]\n==="
+    "bitmark": "[.interview:bitmark--]\n[@id:198779]\n[@extractorTag:Tag 1]\n[@extractorTag:Tag 2]\n[%1]\n[!Erklären Sie den Begriff „Steuerüberwälzung“.]\n===\n[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]\n==="
   },
   {
     "bit": {
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198781"],
+      "id": [
+        "198781"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -390,6 +457,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -570,23 +638,23 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
           "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
           "text": "[$Erbvorbezug, Schenkung Eltern\nIn vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.]",
           "location": {
             "start": {
-              "line": 63,
+              "line": 65,
               "column": 1,
-              "offset": 3373
+              "offset": 3417
             },
             "end": {
-              "line": 64,
+              "line": 66,
               "column": 101,
-              "offset": 3505
+              "offset": 3549
             }
           }
         }
@@ -599,7 +667,9 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198782"],
+      "id": [
+        "198782"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -614,6 +684,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -645,23 +716,39 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.interview:bitmark--]",
           "location": {
             "start": {
-              "line": 108,
+              "line": 110,
               "column": 1,
-              "offset": 5115
+              "offset": 5159
             },
             "end": {
-              "line": 108,
+              "line": 110,
               "column": 23,
-              "offset": 5137
+              "offset": 5181
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 110,
+              "column": 1,
+              "offset": 5159
+            },
+            "end": {
+              "line": 110,
+              "column": 23,
+              "offset": 5181
             }
           }
         },
@@ -670,14 +757,14 @@
           "text": "[$Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.]",
           "location": {
             "start": {
-              "line": 113,
+              "line": 115,
               "column": 1,
-              "offset": 5230
+              "offset": 5274
             },
             "end": {
-              "line": 113,
+              "line": 115,
               "column": 168,
-              "offset": 5397
+              "offset": 5441
             }
           }
         }
@@ -690,7 +777,9 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187612"],
+      "id": [
+        "187612"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -705,6 +794,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -776,9 +866,9 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.interview]\n[@id:187612]\n[%12]\n[!Datum / Unterschriften]\n===\nDieser Bildungsbericht wurde am\n===\nbesprochen.\n**Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:**\n===\n**Unterschrift der lernenden Person:**\n===\n**Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:**\nDatum:\n===\nUnterschrift:\n==="
   },
@@ -787,7 +877,9 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136484"],
+      "id": [
+        "136484"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -802,6 +894,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -923,9 +1016,9 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.interview&image]\n[@id:136484]\n[%9]\n[&image:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung3.png]\n[!Die beiden U-förmigen Teile A und B, die aus je 7 Würfeln bestehen, werden zu einer Gesamtfigur zusammengesetzt, wie es angegeben ist.]\n\n===\n[%a] Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?\n===\n[%b] Wie viele Quadrate der Figur A werden beim Zusammenfügen mit der Figur B verdeckt?\n===\n[%c] Wie viele Quadrate der Gesamtfigur sind von aussen sichtbar?\n===\n[%d] Auf der Gesamtfigur wandert man entlang von Würfelkanten vom Punkt P auf A zum Punkt Q auf B. Wie lange ist eine solcher Weg mindestens?\n==="
   },
@@ -934,7 +1027,9 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136405"],
+      "id": [
+        "136405"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -949,6 +1044,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -999,23 +1095,39 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.interview:bitmark--]",
           "location": {
             "start": {
-              "line": 151,
+              "line": 153,
               "column": 1,
-              "offset": 6475
+              "offset": 6519
             },
             "end": {
-              "line": 151,
+              "line": 153,
               "column": 23,
-              "offset": 6497
+              "offset": 6541
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 153,
+              "column": 1,
+              "offset": 6519
+            },
+            "end": {
+              "line": 153,
+              "column": 23,
+              "offset": 6541
             }
           }
         }
@@ -1028,10 +1140,13 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198264"],
+      "id": [
+        "198264"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1073,23 +1188,39 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.interview:bitmark--]",
           "location": {
             "start": {
-              "line": 166,
+              "line": 168,
               "column": 1,
-              "offset": 6603
+              "offset": 6647
             },
             "end": {
-              "line": 166,
+              "line": 168,
               "column": 23,
-              "offset": 6625
+              "offset": 6669
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 168,
+              "column": 1,
+              "offset": 6647
+            },
+            "end": {
+              "line": 168,
+              "column": 23,
+              "offset": 6669
             }
           }
         },
@@ -1098,14 +1229,14 @@
           "text": "[$Ja, die Eintragung ist zwingend, da die Geschwister eine unternehmerische Tätigkeit im Sinne von Art. 10 MWSTG ausüben und der Umsatz von CHF 100'000 mit dem Verkauf der Wohnung 1 (Verkauf vor Baubeginn stellt eine steuerbare Tätigkeit dar) überschritten wird.]",
           "location": {
             "start": {
-              "line": 172,
+              "line": 174,
               "column": 1,
-              "offset": 6801
+              "offset": 6845
             },
             "end": {
-              "line": 172,
+              "line": 174,
               "column": 264,
-              "offset": 7064
+              "offset": 7108
             }
           }
         }
@@ -1118,7 +1249,9 @@
       "type": "interview",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["198267"],
+      "id": [
+        "198267"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1144,6 +1277,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1368,23 +1502,39 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.interview:bitmark--]",
           "location": {
             "start": {
-              "line": 178,
+              "line": 180,
               "column": 1,
-              "offset": 7331
+              "offset": 7375
             },
             "end": {
-              "line": 178,
+              "line": 180,
               "column": 23,
-              "offset": 7353
+              "offset": 7397
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.interview:bitmark--]",
+          "location": {
+            "start": {
+              "line": 180,
+              "column": 1,
+              "offset": 7375
+            },
+            "end": {
+              "line": 180,
+              "column": 23,
+              "offset": 7397
             }
           }
         }

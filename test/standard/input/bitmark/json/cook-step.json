@@ -4,19 +4,22 @@
       "type": "cook-step",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92375"],
+      "id": [
+        "92375"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cook-step]\n[@id:92375]"
   },
@@ -25,7 +28,10 @@
       "type": "cook-step",
       "format": "bitmark++",
       "bitLevel": 1,
-      "reportTag": ["This report", "That report"],
+      "reportTag": [
+        "This report",
+        "That report"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -41,6 +47,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -58,11 +65,11 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.cook-step]\n[#Summary of this Book]\nThis is the cook-step of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link."
+    "bitmark": "[.cook-step]\n[@reportTag:This report]\n[@reportTag:That report]\n[#Summary of this Book]\nThis is the cook-step of this book. It is often  used outside the book like in an online book store, or as a short description for a rich link."
   },
   {
     "bit": {
@@ -84,6 +91,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -101,9 +109,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cook-step]\n[#Summary of Chapter One]\nThis is a cook-step of chapter 1."
   },
@@ -115,15 +123,16 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cook-step]"
   }

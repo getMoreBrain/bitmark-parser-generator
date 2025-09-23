@@ -4,10 +4,13 @@
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -82,12 +85,28 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.coach-self-reflection-multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 53,
+              "offset": 52
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.coach-self-reflection-multiple-response:bitmark--]",
           "location": {
             "start": {
@@ -111,10 +130,13 @@
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -189,12 +211,28 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.coach-self-reflection-multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 252
+            },
+            "end": {
+              "line": 13,
+              "column": 53,
+              "offset": 304
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.coach-self-reflection-multiple-response:bitmark--]",
           "location": {
             "start": {
@@ -250,10 +288,13 @@
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -328,12 +369,28 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.coach-self-reflection-multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 547
+            },
+            "end": {
+              "line": 26,
+              "column": 53,
+              "offset": 599
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.coach-self-reflection-multiple-response:bitmark--]",
           "location": {
             "start": {
@@ -357,10 +414,13 @@
       "type": "coach-self-reflection-multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -435,12 +495,28 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.coach-self-reflection-multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 38,
+              "column": 1,
+              "offset": 809
+            },
+            "end": {
+              "line": 38,
+              "column": 53,
+              "offset": 861
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.coach-self-reflection-multiple-response:bitmark--]",
           "location": {
             "start": {
@@ -483,6 +559,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -545,12 +622,28 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.coach-self-reflection-multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 50,
+              "column": 1,
+              "offset": 1109
+            },
+            "end": {
+              "line": 50,
+              "column": 53,
+              "offset": 1161
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.coach-self-reflection-multiple-response:bitmark--]",
           "location": {
             "start": {
@@ -577,6 +670,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -639,12 +733,28 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.coach-self-reflection-multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 60,
+              "column": 1,
+              "offset": 1254
+            },
+            "end": {
+              "line": 60,
+              "column": 53,
+              "offset": 1306
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.coach-self-reflection-multiple-response:bitmark--]",
           "location": {
             "start": {
@@ -671,6 +781,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -733,12 +844,28 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.coach-self-reflection-multiple-response:bitmark--]",
+          "location": {
+            "start": {
+              "line": 69,
+              "column": 1,
+              "offset": 1418
+            },
+            "end": {
+              "line": 69,
+              "column": 53,
+              "offset": 1470
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.coach-self-reflection-multiple-response:bitmark--]",
           "location": {
             "start": {

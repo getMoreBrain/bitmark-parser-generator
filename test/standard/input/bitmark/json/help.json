@@ -26,6 +26,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -43,9 +44,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.help]\n[@id:210023]\n[%][%**Schlüsselbegriffe**]\nBedürfnis, Kundenorientierung, Marketing"
   },
@@ -76,6 +77,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -93,9 +95,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.help]\n[@id:210041]\n[%][%**Schlüsselbegriffe**]\nAnalyse, Budget, Instrumente, Kontrolle, Marketingkonzept, Strategien, Ziele"
   },
@@ -126,6 +128,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -143,9 +146,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.help]\n[@id:210064]\n[%][%**Schlüsselbegriffe**]\nBefragung, Beobachtung, externe Quellen, Fokusgruppen, interne Quellen, Markttest, Methoden, Mystery Shopping, Online-Befragung, Panel, persönliche Befragung, Primärmarktforschung, Produkttest, qualitative Marktforschung, quantitative Marktforschung, Secundärmarktforschung, Stichprobe, telefonische Befragung, Test, Werbetest"
   },
@@ -176,6 +179,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -193,12 +197,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.help:bitmark--]",
+          "location": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 597
+            },
+            "end": {
+              "line": 18,
+              "column": 18,
+              "offset": 614
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.help:bitmark--]",
           "location": {
             "start": {
@@ -228,6 +248,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -256,12 +277,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.help-alt:bitmark--]",
+          "location": {
+            "start": {
+              "line": 23,
+              "column": 1,
+              "offset": 838
+            },
+            "end": {
+              "line": 23,
+              "column": 22,
+              "offset": 859
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.help-alt:bitmark--]",
           "location": {
             "start": {
@@ -278,6 +315,6 @@
         }
       ]
     },
-    "bitmark": "[.help-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+    "bitmark": "[.help-alt:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nThe bit content"
   }
 ]

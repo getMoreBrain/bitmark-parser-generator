@@ -4,13 +4,16 @@
       "type": "book-close",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342341"],
+      "id": [
+        "342341"
+      ],
       "isTemplate": true,
       "isTemplateStripTheme": true,
       "buttonCaption": "Button **Caption**",
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -48,10 +51,10 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.book-close]\n[@id:342341]\n[!.book-close]\n[@buttonCaption:Button **Caption**]\nButton **Text**"
+    "bitmark": "[.book-close]\n[@id:342341]\n[@isTemplate]\n[@isTemplateStripTheme]\n[!.book-close]\n[@buttonCaption:Button **Caption**]\nButton **Text**"
   }
 ]

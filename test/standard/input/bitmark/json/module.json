@@ -19,6 +19,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -74,9 +75,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.module&image:bitmark++]\n[@ageRange:18][@ageRange:120]\n[&image:https://image.com/large_cover_image.png]\n\n[@hasBookNavigation:false]\n[@duration:PT2H]\n[@productId:e-ef-b11_u1_l1]\n[@productId:e-ef-b11_u1_l12]\n[@productId:e-ef-b11_u1_l12]\n\n[@icon:https://docs.getmorebrain.com/bit-books/ef/b1_1/student_book/unit_1/web-resources/images/icon_speaking_b1_v2.svg]\n\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   },
@@ -88,6 +89,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -95,9 +97,9 @@
       "hasBookNavigation": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
           "message": "[@productId] is required at least 1 time(s)",

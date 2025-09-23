@@ -7,6 +7,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -51,12 +52,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&video] is included more than 0 time(s).",
+          "message": "[&video] is included more than the required 0 time(s). Did you forget the '&video' in the bit header?",
           "text": "[&video:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]",
           "location": {
             "start": {
@@ -72,7 +73,7 @@
           }
         },
         {
-          "message": "[&video-link] is required at least 1 time(s)",
+          "message": "[&videoLink] is required at least 1 time(s)",
           "text": "[.video-link]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&video:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]\n",
           "location": {
             "start": {
@@ -96,10 +97,13 @@
       "type": "video-link",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["119760"],
+      "id": [
+        "119760"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -149,9 +153,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.video-link]\n[@id:119760]\n[&video-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4][@src1x:https://www.youtube.com/tumb_201809210816.png][@src2x:https://www.youtube.com/tumb_201809210816.png][@width:740][@height:540][@duration:PT12M31S]"
   },
@@ -163,6 +167,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -207,9 +212,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.video-link]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&video-link:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.wmv]"
   },
@@ -218,10 +223,13 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186837"],
+      "id": [
+        "186837"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -252,12 +260,28 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.article:bitmark--&video-link]",
+          "location": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 932
+            },
+            "end": {
+              "line": 14,
+              "column": 32,
+              "offset": 963
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.article:bitmark--&video-link]",
           "location": {
             "start": {
@@ -281,10 +305,13 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["187546"],
+      "id": [
+        "187546"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -315,12 +342,28 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.article:bitmark--&video-link]",
+          "location": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 1097
+            },
+            "end": {
+              "line": 18,
+              "column": 32,
+              "offset": 1128
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.article:bitmark--&video-link]",
           "location": {
             "start": {
@@ -344,10 +387,13 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["185332"],
+      "id": [
+        "185332"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -367,9 +413,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article&video-link]\n[@id:185332]\n\n[&video-link:https://vimeo.com/585451927]"
   },
@@ -378,10 +424,13 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["185329"],
+      "id": [
+        "185329"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -401,9 +450,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article&video-link]\n[@id:185329]\n[&video-link:https://vimeo.com/585450701]"
   },
@@ -412,10 +461,13 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["185330"],
+      "id": [
+        "185330"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -435,9 +487,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article&video-link]\n[@id:185330]\n\n[&video-link:https://vimeo.com/585457783]"
   }

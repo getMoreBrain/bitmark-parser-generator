@@ -4,10 +4,13 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["193275"],
+      "id": [
+        "193275"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -22,7 +25,11 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["", "", ""],
+                "solutions": [
+                  "",
+                  "",
+                  ""
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -39,7 +46,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["test"],
+                "solutions": [
+                  "test"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -56,7 +65,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [""],
+                "solutions": [
+                  ""
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -77,9 +88,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.gap-text:bitmark++]\n[@id:193275]\nThis is a [_][_][_] [_test] [_] in a sentence"
   },
@@ -88,10 +99,13 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["152331"],
+      "id": [
+        "152331"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -206,7 +220,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [""],
+                "solutions": [
+                  ""
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -229,7 +245,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [""],
+                "solutions": [
+                  ""
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -252,7 +270,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [""],
+                "solutions": [
+                  ""
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -269,9 +289,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.gap-text:bitmark++]\n[@id:152331]\nUmsatzsteuern\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png|\n\nVOST-Berechnungen\n\nSchulungs AG\nDirekt:\t 27,5 % auf CHF 20.000\tCHF\t5.500\nIndirekt:\t\tCHF\t0\n\nVerlag AG\nDirekt:\t85,7 % auf CHF 80.000\tCHF\t68.560\nIndirekt:\t14,3 % auf 27,5 % auf CHF 80.000\tCHF\t3.146\n\nTotal Vorsteuern Gruppe\tCHF\t77.206\n\nMWST-Abrechnung\n\nUmsatzsteuer\t\tCHF\t[_]\n\n./. Vorsteuern\t\tCHF\t[_]\n\nNettosteuer\t\tCHF\t[_]"
   },
@@ -280,7 +300,9 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["193275"],
+      "id": [
+        "193275"
+      ],
       "anchor": "Ref_Roche",
       "item": [],
       "lead": [
@@ -296,6 +318,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -313,7 +336,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Roche"],
+                "solutions": [
+                  "Roche"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -330,9 +355,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.gap-text:bitmark++]\n[@id:193275]\n[▼Ref_Roche]\n[%][%Leitbild 6]\nOur people make our business. Our people discover, develop and manufacture our products and ensure that they reach the patients who need them. Therefore, we’ve created a supportive work environment where people can be truly invested in their work. We encourage big thinking and give our people the support and flexibility they need to make their mark. This is more than just a job. It’s an international family dedicated to making a real impact on the world around us. We believe that employees who are engaged are key to delivering the highest standards and the greatest levels of innovation. That’s why we care about what makes working here a rewarding experience for our employees.\n[_Roche][@isCaseSensitive:false]"
   },
@@ -341,7 +366,9 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["193276"],
+      "id": [
+        "193276"
+      ],
       "anchor": "Ref_Emmi",
       "item": [],
       "lead": [
@@ -357,6 +384,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -374,7 +402,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Emmi"],
+                "solutions": [
+                  "Emmi"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -391,9 +421,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.gap-text:bitmark++]\n[@id:193276]\n[▼Ref_Emmi]\n[%][%Leitbild 7]\nDie Mitarbeitenden sind unser wichtigstes Kapital. Respekt, Menschlichkeit und Vertrauen prägen unsere Zusammenarbeit. Die Personalpolitik stellt die Attraktivität von uns als Arbeitgeberin sicher und erschliesst für die Umsetzung der Unternehmenspolitik die notwendigen personellen Ressourcen. Träger der Personalpolitik sind die Vorgesetzten. Grundsätze: Mit geeigneten Personalgewinnungs- und Auswahlverfahren werden die richtigen Mitarbeitenden am richtigen Arbeitsplatz eingesetzt. Bei der Personalauswahl wird neben der fachlichen Qualifikationen auf soziale Kompetenzen geachtet. Aus- und Weiterbildungsmassnahmen werden gezielt auf die Bedürfnisse der Mitarbeitenden und Firma abgestimmt. Die Personalentwicklungsmassnahmen sichern die Qualifikation der Mitarbeitenden für die momentanen und zukünftigen Anforderungen Die Mitarbeitenden werden offen und transparent informiert. Auf der Basis gegenseitiger Offenheit und gegenseitigen Vertrauens pflegen wir eine intensive Zusammenarbeit mit den Personalkommissionen Führung wahrnehmen und vorleben heisst: regelmässig Ziele verständlich und offen zu kommunizieren und die Aufgaben darauf auszurichten, Mitarbeitende und Teams befähigen, lösungs- und eigenverantwortlich zu handeln, Kompetenzen und Verantwortungen so weit wie möglich delegieren\n[_Emmi]"
   },
@@ -402,7 +432,9 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136524"],
+      "id": [
+        "136524"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -417,6 +449,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -461,7 +494,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["c"],
+                "solutions": [
+                  "c"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -484,7 +519,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["x"],
+                "solutions": [
+                  "x"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -507,7 +544,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["a"],
+                "solutions": [
+                  "a"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -530,7 +569,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["b"],
+                "solutions": [
+                  "b"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -551,12 +592,28 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.gap-text:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 46,
+              "column": 1,
+              "offset": 2736
+            },
+            "end": {
+              "line": 46,
+              "column": 28,
+              "offset": 2763
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.gap-text:bitmark--&image]",
           "location": {
             "start": {
@@ -580,7 +637,9 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["245337"],
+      "id": [
+        "245337"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -606,6 +665,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -627,7 +687,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Insekten"],
+                "solutions": [
+                  "Insekten"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -644,12 +706,28 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.gap-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 62,
+              "column": 1,
+              "offset": 4865
+            },
+            "end": {
+              "line": 62,
+              "column": 22,
+              "offset": 4886
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.gap-text:bitmark--]",
           "location": {
             "start": {
@@ -673,7 +751,9 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["273397"],
+      "id": [
+        "273397"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -688,6 +768,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -713,7 +794,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["qualitativen"],
+                "solutions": [
+                  "qualitativen"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -730,7 +813,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["offenen"],
+                "solutions": [
+                  "offenen"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -747,7 +832,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Sekundärmarktforschung"],
+                "solutions": [
+                  "Sekundärmarktforschung"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -764,7 +851,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["aktuell"],
+                "solutions": [
+                  "aktuell"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -788,7 +877,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Primärmarktforschung"],
+                "solutions": [
+                  "Primärmarktforschung"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -805,7 +896,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["eigene Daten"],
+                "solutions": [
+                  "eigene Daten"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -822,7 +915,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Befragung"],
+                "solutions": [
+                  "Befragung"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -839,7 +934,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Fokusgruppen"],
+                "solutions": [
+                  "Fokusgruppen"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -856,7 +953,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Kosten"],
+                "solutions": [
+                  "Kosten"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -877,12 +976,28 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.gap-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 68,
+              "column": 1,
+              "offset": 5032
+            },
+            "end": {
+              "line": 68,
+              "column": 22,
+              "offset": 5053
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.gap-text:bitmark--]",
           "location": {
             "start": {
@@ -906,7 +1021,9 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["273304"],
+      "id": [
+        "273304"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -921,6 +1038,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1004,7 +1122,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["A", "C"],
+                "solutions": [
+                  "A",
+                  "C"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1024,7 +1145,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["F", "G"],
+                "solutions": [
+                  "F",
+                  "G"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1044,7 +1168,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["F", "B"],
+                "solutions": [
+                  "F",
+                  "B"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1064,7 +1191,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["A", "D"],
+                "solutions": [
+                  "A",
+                  "D"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1084,7 +1214,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["A", "E"],
+                "solutions": [
+                  "A",
+                  "E"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1104,7 +1237,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["F", "G"],
+                "solutions": [
+                  "F",
+                  "G"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1124,7 +1260,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["A", "C"],
+                "solutions": [
+                  "A",
+                  "C"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1144,7 +1283,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["A", "D"],
+                "solutions": [
+                  "A",
+                  "D"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1165,12 +1307,28 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.gap-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 75,
+              "column": 1,
+              "offset": 6110
+            },
+            "end": {
+              "line": 75,
+              "column": 22,
+              "offset": 6131
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.gap-text:bitmark--]",
           "location": {
             "start": {
@@ -1194,7 +1352,9 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["272904"],
+      "id": [
+        "272904"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1209,6 +1369,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1234,7 +1395,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["direkten Vertrieb", "direkten Vertrieb2"],
+                "solutions": [
+                  "direkten Vertrieb",
+                  "direkten Vertrieb2"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [
@@ -1262,7 +1426,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Verkaufsstellen"],
+                "solutions": [
+                  "Verkaufsstellen"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1279,7 +1445,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Verkaufsmitarbeitende"],
+                "solutions": [
+                  "Verkaufsmitarbeitende"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1296,7 +1464,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["indirekten Vertrieb", "indirekten Vertrieb2"],
+                "solutions": [
+                  "indirekten Vertrieb",
+                  "indirekten Vertrieb2"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [
@@ -1324,7 +1495,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Grosshandel"],
+                "solutions": [
+                  "Grosshandel"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1341,7 +1514,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["NOT Grosshandel2"],
+                "solutions": [
+                  "NOT Grosshandel2"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1358,7 +1533,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Einzelhandel"],
+                "solutions": [
+                  "Einzelhandel"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1379,12 +1556,28 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.gap-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 98,
+              "column": 1,
+              "offset": 6839
+            },
+            "end": {
+              "line": 98,
+              "column": 22,
+              "offset": 6860
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.gap-text:bitmark--]",
           "location": {
             "start": {
@@ -1411,6 +1604,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1425,7 +1619,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["solution", "problem"],
+                "solutions": [
+                  "solution",
+                  "problem"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1453,9 +1650,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.gap-text]\nThis is a multiple gap [_solution][@example][_problem]"
   },
@@ -1467,6 +1664,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1481,7 +1679,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["solution", "problem"],
+                "solutions": [
+                  "solution",
+                  "problem"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1509,9 +1710,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.gap-text]\nThis is a multiple gap [_solution][_problem][@example:wrong answer]"
   }

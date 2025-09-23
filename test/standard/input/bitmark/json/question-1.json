@@ -18,6 +18,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -165,9 +166,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.question-1]\n\n**Hier finden Sie wichtigen Wortschatz des Kapitels:**\n[%D1]\n\n**Angaben zur eigenen Person**\n* Ich heiße ...\n* Mein Name ist ...\n* Ich komme aus ...\n* Ich wohne in ...\n* Ich bin von Beruf ...\n* Ich arbeite bei ... als ...\n* Ich bin ledig/Single, verheiratet, geschieden.\n* Ich habe die __(deutsche)__ Staatsbürgerschaft.\n* Ich bin __(Deutsche(r)). __\n* In meiner Freizeit ...\n\n**Schule und Ausbildung**"
   }

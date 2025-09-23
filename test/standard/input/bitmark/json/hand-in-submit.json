@@ -4,13 +4,19 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["189522"],
+      "id": [
+        "189522"
+      ],
       "buttonCaption": "Click Me!",
-      "handInRequirement": ["This is a requirement", "You'd better do this as well!"],
+      "handInRequirement": [
+        "This is a requirement",
+        "You'd better do this as well!"
+      ],
       "handInInstruction": "Fill out ✍️ and hand in",
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -49,9 +55,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.hand-in-submit]\n[@id:189522]\n[!Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können.]\n[@handInRequirement:This is a requirement]\n[@handInRequirement:You'd better do this as well!]\n[@handInInstruction:Fill out ✍️ and hand in]\n[@buttonCaption: Click Me!  ]\n\n\nWichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.\n\nZeit: 60 Minuten"
   },
@@ -60,7 +66,9 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213729"],
+      "id": [
+        "213729"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -75,6 +83,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -116,9 +125,9 @@
       "buttonCaption": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.hand-in-submit:bitmark++]\n[@id:213729]\n[%7]\n[!Ergänzen Sie die unten stehende Tabelle mit den richtigen Begriffen. Nehmen Sie dazu die folgenden Begriffe. Aufgepasst, ein Begriff lässt sich nicht sinnvoll unterbringen.\nBegriffe: Nutzungsverhalten, Werbeerfolg, Marktleistung, Kundenorientierung, Marktkennzahlen, Kundenzufriedenheit]\n|image:https://docs.bitmark.cloud/bit-books/compendio/marketing_quiz/web-resources/images/compendio_marketing_7_v2.png|@width:650|"
   },
@@ -127,7 +136,9 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213734"],
+      "id": [
+        "213734"
+      ],
       "buttonCaption": "Click Me!!!",
       "handInInstruction": "Fill out ✍️ and hand in!!",
       "item": [
@@ -144,6 +155,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -169,12 +181,12 @@
       "handInRequirement": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.hand-in-submit:bitmark--]",
           "location": {
             "start": {
@@ -190,7 +202,23 @@
           }
         },
         {
-          "message": "[@handInInstruction] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.hand-in-submit:bitmark--]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 994
+            },
+            "end": {
+              "line": 22,
+              "column": 28,
+              "offset": 1021
+            }
+          }
+        },
+        {
+          "message": "[@handInInstruction] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@handInInstruction:Fill out ✍️ and hand in!!]",
           "location": {
             "start": {
@@ -221,7 +249,7 @@
           }
         },
         {
-          "message": "[@buttonCaption] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@buttonCaption] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@buttonCaption: Click Me!!!  ]",
           "location": {
             "start": {
@@ -260,7 +288,9 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213737"],
+      "id": [
+        "213737"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -286,6 +316,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -317,12 +348,28 @@
       "buttonCaption": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.hand-in-submit:bitmark--]",
+          "location": {
+            "start": {
+              "line": 34,
+              "column": 1,
+              "offset": 1496
+            },
+            "end": {
+              "line": 34,
+              "column": 28,
+              "offset": 1523
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.hand-in-submit:bitmark--]",
           "location": {
             "start": {
@@ -346,10 +393,13 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["197943"],
+      "id": [
+        "197943"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -359,9 +409,9 @@
       "buttonCaption": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.hand-in-submit]\n[@id:197943]"
   }

@@ -4,8 +4,9 @@
       "type": "match-reverse",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287869"],
-      "additionalSolutions": ["word1", "word2", "word3"],
+      "id": [
+        "287869"
+      ],
       "item": [],
       "lead": [
         {
@@ -20,6 +21,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -33,6 +35,11 @@
           ],
           "attrs": {}
         }
+      ],
+      "additionalSolutions": [
+        "word1",
+        "word2",
+        "word3"
       ],
       "body": [],
       "pairs": [
@@ -55,7 +62,9 @@
               "attrs": {}
             }
           ],
-          "values": ["das"]
+          "values": [
+            "das"
+          ]
         },
         {
           "key": "Kuh",
@@ -65,7 +74,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["die"]
+          "values": [
+            "die"
+          ]
         },
         {
           "key": "Löwe",
@@ -75,7 +86,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["die"]
+          "values": [
+            "die"
+          ]
         },
         {
           "key": "Schmetterling",
@@ -85,17 +98,19 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["der"]
+          "values": [
+            "der"
+          ]
         }
       ],
       "isExample": true,
       "heading": {}
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.match-reverse]\n[@id:287869]\n[%][%match-reverse]\n[!Wie heißen die passenden Nomen?]\n===\nTier\n==\ndas[@example]\n===\nKuh\n==\ndie\n===\nLöwe\n==\ndie\n===\nSchmetterling\n==\nder\n==="
+    "bitmark": "[.match-reverse]\n[@id:287869]\n[@additionalSolutions: word1 ]\n[@additionalSolutions: word2 ]\n[@additionalSolutions: word3 ]\n[%][%match-reverse]\n[!Wie heißen die passenden Nomen?]\n===\nTier\n==\ndas[@example]\n===\nKuh\n==\ndie\n===\nLöwe\n==\ndie\n===\nSchmetterling\n==\nder\n==="
   }
 ]

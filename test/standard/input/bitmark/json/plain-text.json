@@ -7,15 +7,16 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": "Article 1\n[?NOT a hint]\n[.article]\nArticle 1.1"
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article:text]\nArticle 1\n[?NOT a hint]\n[^.article]\nArticle 1.1"
   },
@@ -27,6 +28,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -79,9 +81,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nArticle 2\n[?hint][^!NOT an instruction]\n\n[^.article]\nArticle 2.1"
   },
@@ -93,6 +95,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -110,9 +113,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nArticle 3"
   },
@@ -124,6 +127,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -138,7 +142,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["solution", "problem"],
+                "solutions": [
+                  "solution",
+                  "problem"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -162,7 +169,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["different"],
+                "solutions": [
+                  "different"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -186,7 +195,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["sensitivity"],
+                "solutions": [
+                  "sensitivity"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -203,9 +214,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cloze]\nThis is a multiple^^ [^_gap] [_solution][_problem][@isCaseSensitive:false] with a separate gap\nwith [_different][@isCaseSensitive:true] case sensitivity. There is even a gap which inherits the default\ncase [_sensitivity]"
   },
@@ -217,6 +228,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -234,9 +246,9 @@
       "body": "This is some code and here no ^ hats should be\nremoved or anything [^.bit] [^.silly^] like that^\n[^notabit]\nThe only thing that should be removed is\n[.notabit]\n[^.notabit]\n[^^.notabit]\nthe start of a new bit\n\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.code]\n[?hint]\nThis is some code and here no ^ hats should be\nremoved or anything [^.bit] [^.silly^] like that^\n[^notabit]\nThe only thing that should be removed is\n[^.notabit]\n[^^.notabit]\n[^^^.notabit]\nthe start of a new bit\n\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
   },
@@ -248,6 +260,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -262,7 +275,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["solu^tion", "problem"],
+                "solutions": [
+                  "solu^tion",
+                  "problem"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -283,9 +299,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cloze]\nThis is a multiple^^ [^_gap] [_solu^^tion][_pro^blem][@isCaseSensitive:false] with a separate gap"
   },
@@ -297,6 +313,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -316,9 +333,9 @@
       }
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article:json]\n[?hint]\n{\n  \"hello\": \"world\"\n}"
   },
@@ -330,6 +347,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -347,9 +365,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "errors": [
         {
           "message": "Body JSON is invalid.",
@@ -376,7 +394,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -391,6 +411,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -426,9 +447,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n$$$$\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -437,7 +458,9 @@
       "type": "cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -452,6 +475,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -489,7 +513,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["gap"],
+                "solutions": [
+                  "gap"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -540,9 +566,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cloze]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n** Excellent **\nThis is a [_gap] :)\n\n$$$$\n\n^Testing123^^\n\n$$$$\n**Excellent**"
   },
@@ -551,7 +577,9 @@
       "type": "extractor-configuration",
       "format": "text",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -566,6 +594,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -583,9 +612,9 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.extractor-configuration]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n$$$$\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -594,7 +623,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -609,6 +640,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -664,9 +696,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n $$$$\n[!My first config in TOML]\n\nThis is NOT pre!\n$$$$\n[!My first config in TOML]\nThis IS pre!"
   },
@@ -675,7 +707,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -690,6 +724,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -765,12 +800,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[!] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[!] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[!My first config in TOML]",
           "location": {
             "start": {
@@ -809,7 +844,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -824,6 +861,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -859,9 +897,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n$$$$\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -870,7 +908,9 @@
       "type": "cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -885,6 +925,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -922,7 +963,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["gap"],
+                "solutions": [
+                  "gap"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -973,9 +1016,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cloze]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n** Excellent **\nThis is a [_gap] :)\n\n==== text ====\n\n^Testing123^^\n\n==== text ====\n**Excellent**"
   },
@@ -984,7 +1027,9 @@
       "type": "extractor-configuration",
       "format": "text",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -999,6 +1044,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1016,9 +1062,9 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.extractor-configuration]\n[@id:12345]\n[%1]\n[!My first config in TOML]\n\n==== text    ====\n[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
   },
@@ -1027,7 +1073,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1042,6 +1090,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1097,9 +1146,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n\n ==== text ====\n[!My first config in TOML]\n\nThis is NOT pre!\n==== text ====\n[!My first config in TOML]\nThis IS pre!"
   },
@@ -1108,7 +1157,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1123,6 +1174,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1219,12 +1271,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[!] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[!] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[!My first config in TOML]",
           "location": {
             "start": {
@@ -1263,7 +1315,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1278,6 +1332,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1316,9 +1371,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\n[@id:12345]\n[%1]\n========\n[!My first config in TOML]\nThis is NOT pre!!!"
   },
@@ -1330,6 +1385,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1393,12 +1449,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 206,
+              "column": 1,
+              "offset": 2582
+            },
+            "end": {
+              "line": 206,
+              "column": 21,
+              "offset": 2602
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
@@ -1425,6 +1497,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1505,12 +1578,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 217,
+              "column": 1,
+              "offset": 2708
+            },
+            "end": {
+              "line": 217,
+              "column": 21,
+              "offset": 2728
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
@@ -1537,6 +1626,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1554,9 +1644,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\ntest"
   },
@@ -1568,6 +1658,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1663,9 +1754,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.flashcard]\n\n*^*bold*^*\n\n====\nCard\n--\nAnswer\n==== footer ====\n\nA footer with\n==== text ====\nAbsolutely __NOT__ italic, just __underlines__\n\n[?not hint]\n\nMore text"
   },
@@ -1677,6 +1768,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1733,9 +1825,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.flashcard]\n\n*^*bold*^*\n\n====\nCard\n--\nAnswer"
   },
@@ -1747,6 +1839,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1800,12 +1893,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 262,
+              "column": 1,
+              "offset": 3100
+            },
+            "end": {
+              "line": 262,
+              "column": 21,
+              "offset": 3120
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
@@ -1832,6 +1941,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1849,9 +1959,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\n\nnew article"
   },
@@ -1863,6 +1973,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1916,12 +2027,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 276,
+              "column": 1,
+              "offset": 3288
+            },
+            "end": {
+              "line": 276,
+              "column": 21,
+              "offset": 3308
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
@@ -1948,6 +2075,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1965,9 +2093,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\n\nnew article"
   }

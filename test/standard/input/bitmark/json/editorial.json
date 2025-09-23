@@ -30,6 +30,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -54,12 +55,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[@altLangTag] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@altLangTag] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@altLangTag:en]",
           "location": {
             "start": {
@@ -90,7 +91,7 @@
           }
         },
         {
-          "message": "[@disableFeedback] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@disableFeedback] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@disableFeedback:true]",
           "location": {
             "start": {
@@ -121,7 +122,7 @@
           }
         },
         {
-          "message": "[@diffOp] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@diffOp] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@diffOp:add]",
           "location": {
             "start": {
@@ -152,7 +153,7 @@
           }
         },
         {
-          "message": "[@diffRef] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@diffRef] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@diffRef:funjw34i7th9]",
           "location": {
             "start": {
@@ -183,7 +184,7 @@
           }
         },
         {
-          "message": "[@diffContext] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@diffContext] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@diffContext:global]",
           "location": {
             "start": {
@@ -214,7 +215,7 @@
           }
         },
         {
-          "message": "[@diffTime] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@diffTime] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@diffTime:32958078658]",
           "location": {
             "start": {

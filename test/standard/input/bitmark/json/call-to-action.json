@@ -12,6 +12,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -29,9 +30,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -48,6 +49,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -65,9 +67,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-subscribe]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -84,6 +86,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -101,9 +104,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-contact]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -120,6 +123,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -137,9 +141,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-join]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -156,6 +160,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -173,9 +178,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-mail]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -192,6 +197,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -209,9 +215,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-learn-more]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -228,6 +234,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -245,9 +252,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-see-more]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -264,6 +271,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -281,9 +289,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-watch]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -300,6 +308,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -317,9 +326,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-start-now]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -336,6 +345,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -353,9 +363,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-get-offer]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -372,6 +382,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -389,9 +400,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-book-now]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -408,6 +419,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -425,9 +437,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-shop-now]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -444,6 +456,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -461,9 +474,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-get-now]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -480,6 +493,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -497,9 +511,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-download]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   },
@@ -516,6 +530,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -533,9 +548,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.call-to-action-create-account]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
   }

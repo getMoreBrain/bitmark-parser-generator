@@ -10,6 +10,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -53,9 +54,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.info:bitmark++]\n[@id:287895]\n**Assignment** is very close to an ==article==|link:https://docs.bitmark.cloud/quizzes/#article|. The difference is, that this is a \"quiz\" and therefore has an instruction property. The distinction is important for display, sharing, ..."
   },
@@ -70,6 +71,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -92,12 +94,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.info:bitmark--]",
+          "location": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 269
+            },
+            "end": {
+              "line": 5,
+              "column": 18,
+              "offset": 286
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.info:bitmark--]",
           "location": {
             "start": {
@@ -127,6 +145,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -155,12 +174,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.info-alt:bitmark--]",
+          "location": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 334
+            },
+            "end": {
+              "line": 9,
+              "column": 22,
+              "offset": 355
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.info-alt:bitmark--]",
           "location": {
             "start": {
@@ -177,6 +212,6 @@
         }
       ]
     },
-    "bitmark": "[.info-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+    "bitmark": "[.info-alt:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nThe bit content"
   }
 ]

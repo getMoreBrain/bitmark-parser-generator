@@ -4,7 +4,9 @@
       "type": "match-picture",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285726"],
+      "id": [
+        "285726"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -30,6 +32,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -60,9 +63,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.match-picture:bitmark++]\n[@id:285726] ||this bit type does not work||\n[%25][%match-picture]\n[!Name the animals on the pictures.]\n\n===\n|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|\n==\ncat\n===\n|image:https://docs.bitmark.cloud/bit-books/gmb/quiz_book/web-resources/images/gmb_quiz_book_cat.png|@width:928|\n==\ntiger\n==="
   },
@@ -71,7 +74,9 @@
       "type": "match-picture",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136185"],
+      "id": [
+        "136185"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -86,6 +91,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -105,9 +111,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.match-picture]\n[@id:136185]\n[%Activity 12]\n[!You can buy food and drink in many different places. Match photos 1–6 to the descriptions beneath.]\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f023.jpg]\n==\nHier kann man japanisch essen.\n===\n\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]\n==\nHier kann man Kaffee trinken.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f059.jpg]\n==\nHier kann man Bratwurst kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f022.jpg]\n==\nHier kann man ein Schinkenbrötchen kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f025.jpg]\n==\nHier kann man Obst und Gemüse kaufen.\n===\n[&image:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f021.jpg]\n==\nHier kann man Brot kaufen.\n==="
   }

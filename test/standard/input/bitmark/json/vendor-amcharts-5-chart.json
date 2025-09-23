@@ -21,6 +21,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -41,9 +42,9 @@
       }
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.vendor-amcharts-5-chart:json]\n[@id:298225]\n[%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"Json\"}"
   },
@@ -69,15 +70,16 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "errors": [
         {
           "message": "Body JSON is invalid.",
@@ -118,6 +120,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -156,9 +159,9 @@
       }
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.vendor-amcharts-5-chart:json]\n[!this is a json bit]\n[%item 2]\n{\n  \"name\": \"@bitmark-standard/bitmark-grammar\",\n  \"version\": \"1.0.23\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/bitmark-standard/bitmark-grammar.git\"\n  },\n  \"publishConfig\": {\n    \"registry\": \"https://npm.pkg.github.com\"\n  },\n  \"keywords\": [ \"bitmark\", \"grammar\", \"parser\" ],\n  \"keywords\": [ {\"bitmark\":0},{\"grammar\":1},{\"parser\":2}]\n}"
   },
@@ -184,6 +187,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -204,9 +208,9 @@
       }
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.vendor-amcharts-5-chart]\n[@id:298225]\n  [%item 1]\n[!This is my first chart bit with a JSON body]\n{\"Test\": 100, \"Test2\": \"[%item 1][%lead]\"}"
   },
@@ -232,6 +236,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -249,9 +254,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "errors": [
         {
           "message": "Body JSON is invalid.",

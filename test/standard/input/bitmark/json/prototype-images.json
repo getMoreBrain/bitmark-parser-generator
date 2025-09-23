@@ -10,6 +10,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -157,9 +158,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.prototype-images]\n[@id:890929]\n[!Trusted by leading brands]\n\n[&image:https://www.additiv.com/wp-content/uploads/2023/10/logo_zurich-1.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_postfinance.png][@zoomDisabled]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_atram.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/07/CommonWealth.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_nspartners.png][@zoomDisabled:false]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_swissfex.png]\n[&image:https://www.additiv.com/wp-content/uploads/2023/03/logo_bevestor.png][@zoomDisabled:true]\n[&image:https://www.additiv.com/wp-content/uploads/2021/09/logo_coop.png]"
   }

@@ -21,15 +21,16 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.page-open-book-list]\n[@id:342341]\n[@book:the_book_id][►ch-5]\n[@book:the_other_book_id][►ch-6]\n\n[@buttonCaption: Open ]"
   }

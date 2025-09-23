@@ -4,8 +4,13 @@
       "type": "author",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
-      "ageRange": ["18", "120"],
+      "id": [
+        "151971"
+      ],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "fullName": "John Smith",
       "pseudonym": "Smithy",
       "title": "Geeza",
@@ -13,6 +18,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -52,9 +58,9 @@
       ]
     },
     "parser": {
-      "version": "4.2.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.author]\n[@ageRange:18][@ageRange:120]\n[@id:151971]\n[@fullName:John Smith]\n[@pseudonym: Smithy]\n[@title: Geeza]\n[@jobTitle: Janitor]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   },
@@ -63,8 +69,12 @@
       "type": "book-author",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
-      "ageRange": ["120"],
+      "id": [
+        "151971"
+      ],
+      "ageRange": [
+        "120"
+      ],
       "fullName": "John Smith",
       "pseudonym": "Smithy",
       "title": "Geeza",
@@ -72,6 +82,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -111,9 +122,9 @@
       ]
     },
     "parser": {
-      "version": "4.2.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.book-author]\n[@ageRange:120]\n[@id:151971]\n[@fullName:John Smith]\n[@pseudonym: Smithy]\n[@title: Geeza]\n[@jobTitle: Janitor]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   },
@@ -122,8 +133,12 @@
       "type": "article-author",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
-      "ageRange": ["18"],
+      "id": [
+        "151971"
+      ],
+      "ageRange": [
+        "18"
+      ],
       "fullName": "John Smith",
       "pseudonym": "Smithy",
       "title": "Geeza",
@@ -131,6 +146,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -170,9 +186,9 @@
       ]
     },
     "parser": {
-      "version": "4.2.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article-author]\n[@ageRange:18]\n[@id:151971]\n[@fullName:John Smith]\n[@pseudonym: Smithy]\n[@title: Geeza]\n[@jobTitle: Janitor]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   },
@@ -184,15 +200,16 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "4.2.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.34.3"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.author]"
   }

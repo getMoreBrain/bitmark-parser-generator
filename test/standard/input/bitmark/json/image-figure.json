@@ -5,24 +5,25 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "backgroundWallpaper": {
+        "type": "image",
         "image": {
-          "alt": "",
-          "caption": [],
-          "copyright": "",
           "format": "png",
-          "height": null,
-          "license": "",
           "provider": "miro.medium.com",
-          "showInIndex": false,
           "src": "https://miro.medium.com/background.png",
           "width": null,
-          "zoomDisabled": false
-        },
-        "type": "image"
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
       },
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -159,9 +160,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.image-figure]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n====\n[#Legende]\n--\n[#]\n====\nA\n--\nKörper\n====\nB\n--\nStromquelle\n====\n\n~~~~\nOptional Footer"
   },
@@ -171,24 +172,25 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "backgroundWallpaper": {
+        "type": "image",
         "image": {
-          "alt": "",
-          "caption": [],
-          "copyright": "",
           "format": "png",
-          "height": null,
-          "license": "",
           "provider": "miro.medium.com",
-          "showInIndex": false,
           "src": "https://miro.medium.com/background.png",
           "width": null,
-          "zoomDisabled": false
-        },
-        "type": "image"
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
       },
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -235,9 +237,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.image-figure-alt]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
@@ -247,24 +249,25 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "backgroundWallpaper": {
+        "type": "image",
         "image": {
-          "alt": "",
-          "caption": [],
-          "copyright": "",
           "format": "png",
-          "height": null,
-          "license": "",
           "provider": "miro.medium.com",
-          "showInIndex": false,
           "src": "https://miro.medium.com/background.png",
           "width": null,
-          "zoomDisabled": false
-        },
-        "type": "image"
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
       },
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -311,9 +314,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.standard-image-figure-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
@@ -323,24 +326,25 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "backgroundWallpaper": {
+        "type": "image",
         "image": {
-          "alt": "",
-          "caption": [],
-          "copyright": "",
           "format": "png",
-          "height": null,
-          "license": "",
           "provider": "miro.medium.com",
-          "showInIndex": false,
           "src": "https://miro.medium.com/background.png",
           "width": null,
-          "zoomDisabled": false
-        },
-        "type": "image"
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
       },
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -477,9 +481,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.standard-image-figure-non-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n====\n[#Legende]\n--\n[#]\n====\nA\n--\nKörper\n====\nB\n--\nStromquelle\n====\n\n~~~~\nOptional Footer"
   }

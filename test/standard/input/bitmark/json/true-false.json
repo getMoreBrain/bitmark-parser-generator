@@ -4,8 +4,9 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287883"],
-      "additionalSolutions": ["word1", "word2", "word3"],
+      "id": [
+        "287883"
+      ],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -22,9 +23,15 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "additionalSolutions": [
+        "word1",
+        "word2",
+        "word3"
+      ],
       "body": [],
       "statements": [
         {
@@ -49,18 +56,20 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.true-false]\n[@id:287883]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n===\n[+A house is bigger than a car.]\n===\n[+A tiger is bigger than a cat.]\n===\n[-A cow is bigger than a dog.]\n==="
+    "bitmark": "[.true-false]\n[@id:287883]\n[@additionalSolutions: word1 ]\n[@additionalSolutions: word2 ]\n[@additionalSolutions: word3 ]\n[%][%true-false]\n[@labelTrue:rather yes][@labelFalse:rather no]\n===\n[+A house is bigger than a car.]\n===\n[+A tiger is bigger than a cat.]\n===\n[-A cow is bigger than a dog.]\n==="
   },
   {
     "bit": {
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287885"],
+      "id": [
+        "287885"
+      ],
       "item": [],
       "lead": [
         {
@@ -75,6 +84,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -121,9 +131,9 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.true-false]\n[@id:287885]\n[%][%true-false]\n[!What colors can cows have in Switzerland?]\n===\n[+brown]\n===\n[+purple, but only in chocolate ads]\n===\n[-blue]\n===\n[-green]\n==="
   },
@@ -132,7 +142,9 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287887"],
+      "id": [
+        "287887"
+      ],
       "item": [],
       "lead": [
         {
@@ -147,6 +159,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -186,23 +199,39 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.true-false:bitmark--&image]",
           "location": {
             "start": {
-              "line": 28,
+              "line": 31,
               "column": 1,
-              "offset": 379
+              "offset": 472
             },
             "end": {
-              "line": 28,
+              "line": 31,
               "column": 30,
-              "offset": 408
+              "offset": 501
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.true-false:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 31,
+              "column": 1,
+              "offset": 472
+            },
+            "end": {
+              "line": 31,
+              "column": 30,
+              "offset": 501
             }
           }
         }
@@ -215,7 +244,9 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["249542"],
+      "id": [
+        "249542"
+      ],
       "labelTrue": "Richtig",
       "labelFalse": "Falsch",
       "item": [],
@@ -232,6 +263,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -379,9 +411,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.true-false:bitmark++]\n[@id:249542]\n[%][%Selbsttest Grundlagen E]\n[@labelTrue:Richtig][@labelFalse:Falsch]\n===\n[-Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.]\n===\n[-Die Leukozyten haben die Fächigkeit, sich aktiv fortzubewegen. Sie können fremde Zellen erkennen und diese imitieren, indem sie spezielle Substanzen freisetzen.]\n===\n[+Zu den Schutzbarrieren des Körpers gehören u.a. der Säureschutzmantel (pH-Wert), die Melanozyten (pigmentbildend gegen UV-Strahlen) und die Hornschicht der Haut.]\n===\n[-Lzmphozyten werden auch als spezifisches Immunsystem bezeichnet, da sie nur an spezifischen Geweben des Körpers ihre Immunabwehr verrichten.]\n===\n[+Makrophagen werden angelockt, indem die Antikörper aus den B-Lymphozyten die Antigene auf dem eingedrungenen Erreger besetzen.]\n===\n[-T- und B-Lymphozyten, Granulozyten und Makrophagen sind von Geburt an zur Abwehr von Krankeitserregern im Einsatz.]\n===\n[+Fieber zeigt an, dass das Immunsystem der Körpers aktiv ist, denn ab einer Körpertemperatur von 37°C können sich die Lymphoyzten besser vermehren und sind aktiver.]\n===\n[+Bei einer aktiven Impfung werden abgeschwächte Krankheitserreger in den Körper gespritzt, woraufhin die T- und B-Lzmphozyten gegen die Antigene bilden.]\n===\n[+Zu den Mikroorganismen zählen z. B. Pilze, Bakterien und Viren.]\n===\n[-Um sich zu vermehren und den Stoffwechsel aufrechtzuerhalten, benötigen Bakterien Wärme, Feuchtigkeit, Nährszoffe und einen Wirt (z. B. den Menschen).]\n===\n[-Eine Mzkosen werden Kugelbakterien (Kokken) verursacht.]\n===\n[+Medikamente, die gegen Pilze wirken, heissen Antimykotika. Medikamente gegen Viren sint Virostatika und solche gegen Bakkterien Antibiotika.]\n===\n[+Stresshormone dienen dem Körper dazu, um in lebensbedrohlichen Situationen sofort reagieren zu können.]\n===\n[-Bei der therapeutischen Nutzung von Kortison muss grundsätzlich bei alle Anwendungen, ob lokal oder systemisch, mit erheblichen Nebenwirkungen gerechnet werden.]\n===\n[-Bei den sogenannten Superinfektionen handelt es sich um die jeweiligen Varianten der Influenza, die gerade in Umlauf sind und viele Menschenleben kosten können.]\n===\n[-Sobald die klassischen Entzündungszeichen erkennbar sind, liegt immer eine Infektion mit Krankheitserregern vor.]\n===\n[+Bei der indirekten Übertragung werden Keime beispielsweise über die Türklinke weitergegeben, bei der direkten Übertragung zum Beispiel über Tröpfchen.]\n===\n[+Bei der vektoriellen Übertragung werden Krankheitserreger von z. B. Mücken oder Zecken auf den Menschen übertragen.]\n===\n[+Eine nosokomiale Infektion wurde in einer Einrichtung der Gesundheitswesens (z- B- Spital, Pflegeheim, Arztpraxis) erworben.]\n===\n[+MRSA ist die Abkürzung für Methicillin resistenter Staphylococcus aureus.]\n===\n[-Eine Händedesinfektion hat nach WHO immer zu erfolgen:\n\n• bei Arbeitsbeginn und -Ende\n• vor Mahlzeitzubereitung\n• vor und nach dem Engpässen\n• vor und nach Pausen\n• bei sichtbarer Verschmutzung der Hände\n• nach der Toilettenbenutzung]\n===\n[+Zur persönlicher Hygiene (Individualhyhiene) gehören die Haut-, die Haar-, die Nagel- und die Mundpflege.]\n===\n[+Hygiene bezieht such nicht nur auf die persönliche Hygiene (Individualhygiene). Hygiene umfasst auch Themen wie:\n\n• Lebensmittel gyhiene\n• Wasserhygiene (Trinkwasser und Abwasser)\n• Umwelthygiene (Luft, Boden)\n• Abfallentsorgung\n• Arbeitsschutz, die\n• Sozialhygiene und Psychohygiene]\n==="
   },
@@ -390,12 +422,15 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["165223"],
+      "id": [
+        "165223"
+      ],
       "labelTrue": "richtig",
       "labelFalse": "falsch",
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -465,23 +500,39 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.true-false:bitmark--]",
           "location": {
             "start": {
-              "line": 106,
+              "line": 109,
               "column": 1,
-              "offset": 4077
+              "offset": 4170
             },
             "end": {
-              "line": 106,
+              "line": 109,
               "column": 24,
-              "offset": 4100
+              "offset": 4193
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.true-false:bitmark--]",
+          "location": {
+            "start": {
+              "line": 109,
+              "column": 1,
+              "offset": 4170
+            },
+            "end": {
+              "line": 109,
+              "column": 24,
+              "offset": 4193
             }
           }
         }
@@ -494,7 +545,9 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213731"],
+      "id": [
+        "213731"
+      ],
       "labelTrue": "p",
       "labelFalse": "s",
       "item": [
@@ -511,6 +564,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -567,23 +621,39 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.true-false:bitmark--]",
           "location": {
             "start": {
-              "line": 132,
+              "line": 135,
               "column": 1,
-              "offset": 5134
+              "offset": 5227
             },
             "end": {
-              "line": 132,
+              "line": 135,
               "column": 24,
-              "offset": 5157
+              "offset": 5250
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.true-false:bitmark--]",
+          "location": {
+            "start": {
+              "line": 135,
+              "column": 1,
+              "offset": 5227
+            },
+            "end": {
+              "line": 135,
+              "column": 24,
+              "offset": 5250
             }
           }
         }
@@ -600,6 +670,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -623,9 +694,9 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.true-false]\n[@example]\n[@revealSolutions:false]\n===\n[+TrueAnswer]\n===\n[-FalseAnswer]\n==="
   },
@@ -638,6 +709,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -661,9 +733,9 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.true-false]\n[@revealSolutions:true]\n===\n[+TrueAnswer][@example]\n===\n[-FalseAnswer][@example]\n==="
   },
@@ -676,6 +748,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -699,9 +772,9 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.true-false]\n[@revealSolutions]\n===\n[+TrueAnswer][@example:false]\n===\n[-FalseAnswer][@example:true]\n==="
   }
