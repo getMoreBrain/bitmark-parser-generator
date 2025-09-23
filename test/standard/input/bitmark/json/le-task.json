@@ -16,6 +16,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -67,12 +68,12 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&website-link] is required at least 1 time(s)",
+          "message": "[&websiteLink] is required at least 1 time(s)",
           "text": "[.le-task&website-link]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-task]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@dateEnd:2016-05-25T00:12:34Z]\n[@location:Zug]\n\n",
           "location": {
             "start": {
@@ -112,19 +113,27 @@
       "type": "le-task",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["119760"],
+      "id": [
+        "119760"
+      ],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "showInIndex": true,
       "duration": "3600s",
-      "list": ["One", "Two", "Three", "Four"],
+      "list": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -186,9 +195,9 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.le-task&website-link]\n[@showInIndex]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[@list:One]\n[@list:Two]\n[@list:Three]\n[@list:Four]\n[@id:119760]\n[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]"
   }

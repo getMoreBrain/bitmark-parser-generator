@@ -4,10 +4,14 @@
       "type": "danger",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -66,12 +70,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&image] is included more than 0 time(s).",
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
           "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
           "location": {
             "start": {
@@ -95,10 +99,13 @@
       "type": "danger-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -127,12 +134,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.danger-alt:bitmark--]",
+          "location": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 196
+            },
+            "end": {
+              "line": 11,
+              "column": 24,
+              "offset": 219
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.danger-alt:bitmark--]",
           "location": {
             "start": {
@@ -149,6 +172,6 @@
         }
       ]
     },
-    "bitmark": "[.danger-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+    "bitmark": "[.danger-alt:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nThe bit content"
   }
 ]

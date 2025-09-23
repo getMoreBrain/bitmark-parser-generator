@@ -195,6 +195,7 @@ export interface BitJson {
   item: JsonText;
   lead: JsonText;
   pageNumber: JsonText;
+  sourcePageNumber: JsonText;
   marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;

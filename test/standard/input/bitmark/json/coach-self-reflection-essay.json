@@ -18,6 +18,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -39,9 +40,9 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.coach-self-reflection-essay]\n[%1]\n[!Listen to the train announcement. Write down every word you hear.]\n[@sampleSolution:The train now approaching Platform 2 is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]"
   },
@@ -50,7 +51,9 @@
       "type": "coach-self-reflection-essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["245552"],
+      "id": [
+        "245552"
+      ],
       "item": [],
       "lead": [
         {
@@ -65,6 +68,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -96,12 +100,28 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.coach-self-reflection-essay:bitmark--]",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 261
+            },
+            "end": {
+              "line": 6,
+              "column": 41,
+              "offset": 301
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.coach-self-reflection-essay:bitmark--]",
           "location": {
             "start": {
@@ -125,7 +145,9 @@
       "type": "coach-self-reflection-essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["272740"],
+      "id": [
+        "272740"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -151,6 +173,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -218,9 +241,9 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.coach-self-reflection-essay::bitmark++]\n[@id:272740]\n[%2][%Situationen und Aufgaben gemäss Lehrplan]\nEin Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.\n\n[!Machen Sie sich Gedanken zu folgenden Fragen:]\n\nHaben Sie selbst dieses Problem auch schon erlebt, dass es Sie juckt? Was haben Sie dagegen unternommen?\nWarum hat die Haut gejuckt? Welche Ursachen könnten eine Rolle spielen?"
   },
@@ -229,10 +252,13 @@
       "type": "coach-self-reflection-essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["152151"],
+      "id": [
+        "152151"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -635,9 +661,9 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.coach-self-reflection-essay:bitmark++]\n[@id:152151]\n[!Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:]\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png|\n\nErstellen Sie die Mehrwertsteuerabrechnung 20.1 aufgrund der nachfolgenden Angaben:\n\n**01.01. bis 31.12.20.1 - Beträge In CHF (exkl. MWST)**\nAutohandels AG\n3.200.000 - Verkäufe an inländische Kunden\n80.000 - Verkäufe an Fahrschule\n100.000 - Dividendenerträge von Gruppengesellschaften\nInvestitionen 7,7% = 50% des Umsatzes\nÜbriger Aufwand 7,7% = 10% des Umsatzes\n\nImmobilien AG\n120.000 - Mieterträge von Autohandels AG\n80.000 - Mieterträge von Reparatur und Carrossierie AG\n100.000 - Mietersträge von Fahrschule AG\n-65.000 - Aufwendungen (7,7%)\n\nReparatur und Carrosserie AG\n820.000 - Umsätze mit Dritten\n150.000 - Umsätze mit Fahrschule AG\n-360.000 - Aufwendungen (7,7%)\n\nFahrschule AG\n270.000 - Kurse und Schulungen im Inland\n80.000 - Kurse und Schulungen im Ausland\n40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte\n140.000 - Aufwendungen (7,7%)\n\n\n[?|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|\n1)VOST: 3.200.000 * 60% * 7,70%\t\t\t\tVOST\t**147.840**\n2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|\n3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360\t    **23.423**\n\n4)direkte VOST auf Ausland-Umsätzen, da für diese\noptiert werden könnte (Art. 29 Ibis MWSTG).\nBerechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%\t       **2.211**\n\n**Abrechnung:**\n\nUmsatz (3.200.000+820.000+390.000)\t4.410.000\n./. ausg. Umsätze\t-390.000\nsteuerbare Umsätze\t4.020.000\n\n**Steuer 7,70%\t309.540**\n**VOST\t-176.557**\n**Nettozahllast\t132.983**\n]"
   },
@@ -646,7 +672,9 @@
       "type": "coach-self-reflection-essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136476"],
+      "id": [
+        "136476"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -661,6 +689,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -688,9 +717,9 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.coach-self-reflection-essay]\n[@id:136476]\n[%1]\n[!Gib das Ergebnis an:\n(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]"
   }

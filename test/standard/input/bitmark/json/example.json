@@ -21,6 +21,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -40,9 +41,9 @@
       "example": null
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.example]\n[@id:210051]\n[%][%Beispiel]\nDie Pizza-Kette «Gut & Reichlich» erweitert ihr Angebot um einen Take-away-Service. Für die Einführung dieses neuen Angebots wird ein Werbekonzept erstellt, das auf dem Marketingkonzept des Unternehmens aufbaut. Das Werbekonzept dient der externen Werbeagentur als Vorgabe für die Ausarbeitung der Werbemittel wie Plakate oder Adwords-Kampagne im Internet."
   },
@@ -68,6 +69,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -87,12 +89,28 @@
       "example": null
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.example:bitmark--]",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 397
+            },
+            "end": {
+              "line": 6,
+              "column": 21,
+              "offset": 417
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.example:bitmark--]",
           "location": {
             "start": {
@@ -133,6 +151,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -159,9 +178,9 @@
       "example": null
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.example:bitmark++]\n[@id:208422]\n[%][%Beispiel]\nTrotz Hungersnot haben Menschen auch das Bedürfnis nach Liebe.\nÄlteren Leuten sind soziale Kontakt oftmals wichtiger als langfristige Sicherheit."
   },
@@ -176,6 +195,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -206,12 +226,28 @@
       "example": null
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.example-alt:bitmark--]",
+          "location": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 1071
+            },
+            "end": {
+              "line": 19,
+              "column": 25,
+              "offset": 1095
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.example-alt:bitmark--]",
           "location": {
             "start": {
@@ -228,7 +264,7 @@
         }
       ]
     },
-    "bitmark": "[.example-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+    "bitmark": "[.example-alt:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nThe bit content"
   },
   {
     "bit": {
@@ -241,6 +277,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -271,29 +308,45 @@
       "example": null
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.standard-example-normative:bitmark--]",
           "location": {
             "start": {
               "line": 26,
               "column": 1,
-              "offset": 1153
+              "offset": 1156
             },
             "end": {
               "line": 26,
               "column": 40,
-              "offset": 1192
+              "offset": 1195
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.standard-example-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 1156
+            },
+            "end": {
+              "line": 26,
+              "column": 40,
+              "offset": 1195
             }
           }
         }
       ]
     },
-    "bitmark": "[.standard-example-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+    "bitmark": "[.standard-example-normative:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
@@ -306,6 +359,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -336,28 +390,44 @@
       "example": null
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.standard-example-non-normative:bitmark--]",
           "location": {
             "start": {
               "line": 33,
               "column": 1,
-              "offset": 1246
+              "offset": 1252
             },
             "end": {
               "line": 33,
               "column": 44,
-              "offset": 1289
+              "offset": 1295
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.standard-example-non-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 1252
+            },
+            "end": {
+              "line": 33,
+              "column": 44,
+              "offset": 1295
             }
           }
         }
       ]
     },
-    "bitmark": "[.standard-example-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+    "bitmark": "[.standard-example-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nBit content"
   }
 ]

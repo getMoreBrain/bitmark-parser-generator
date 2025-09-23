@@ -4,8 +4,9 @@
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287839"],
-      "additionalSolutions": ["word1", "word2", "word3"],
+      "id": [
+        "287839"
+      ],
       "item": [],
       "lead": [
         {
@@ -20,9 +21,15 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "additionalSolutions": [
+        "word1",
+        "word2",
+        "word3"
+      ],
       "body": [
         {
           "type": "paragraph",
@@ -134,12 +141,28 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.multiple-choice-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 34,
+              "offset": 33
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.multiple-choice-text:bitmark--]",
           "location": {
             "start": {
@@ -156,14 +179,16 @@
         }
       ]
     },
-    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:287839]\n[%][%multiple-choice-text]\nThe students complete[+d][-t][-s][@example] the [+cloze][-cloth][-close] with the correct verb forms."
+    "bitmark": "[.multiple-choice-text:bitmark--]\n[@id:287839]\n[@additionalSolutions: word1 ]\n[@additionalSolutions: word2 ]\n[@additionalSolutions: word3 ]\n[%][%multiple-choice-text]\nThe students complete[+d][-t][-s][@example] the [+cloze][-cloth][-close] with the correct verb forms."
   },
   {
     "bit": {
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213773"],
+      "id": [
+        "213773"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -178,6 +203,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -453,23 +479,39 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.multiple-choice-text:bitmark--]",
           "location": {
             "start": {
-              "line": 6,
+              "line": 9,
               "column": 1,
-              "offset": 177
+              "offset": 270
             },
             "end": {
-              "line": 6,
+              "line": 9,
               "column": 34,
-              "offset": 210
+              "offset": 303
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.multiple-choice-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 270
+            },
+            "end": {
+              "line": 9,
+              "column": 34,
+              "offset": 303
             }
           }
         }
@@ -482,7 +524,9 @@
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213840"],
+      "id": [
+        "213840"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -497,6 +541,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -723,23 +768,39 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.multiple-choice-text:bitmark--]",
           "location": {
             "start": {
-              "line": 19,
+              "line": 22,
               "column": 1,
-              "offset": 1450
+              "offset": 1543
             },
             "end": {
-              "line": 19,
+              "line": 22,
               "column": 34,
-              "offset": 1483
+              "offset": 1576
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.multiple-choice-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 1543
+            },
+            "end": {
+              "line": 22,
+              "column": 34,
+              "offset": 1576
             }
           }
         }
@@ -752,7 +813,9 @@
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["208481"],
+      "id": [
+        "208481"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -767,6 +830,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -994,23 +1058,39 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.multiple-choice-text:bitmark--]",
           "location": {
             "start": {
-              "line": 29,
+              "line": 32,
               "column": 1,
-              "offset": 2376
+              "offset": 2469
             },
             "end": {
-              "line": 29,
+              "line": 32,
               "column": 34,
-              "offset": 2409
+              "offset": 2502
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.multiple-choice-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 32,
+              "column": 1,
+              "offset": 2469
+            },
+            "end": {
+              "line": 32,
+              "column": 34,
+              "offset": 2502
             }
           }
         }
@@ -1023,7 +1103,9 @@
       "type": "multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["107949"],
+      "id": [
+        "107949"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1038,6 +1120,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1225,9 +1308,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.multiple-choice-text&image]\n[@id:107949]\n[%16]\n[&image:https://docs.bitbook.education/bit-books/dw/einstufungstest-a1/web-resources/images/et-a1-16.png]\n[!Ein Bekannter von dir ist noch nicht lange in Deutschland. Du erklärst ihm wichtige Verkehrsschilder. Wähl das\nrichtige Modalverb zur Erklärung.]\n\nWähl das richtige Wort.\nA) Hier [+dürfen][-müssen] Sie nicht parken.\nB) Hier [+können][-müssen] Sie über die Straße gehen.\nC) Hier [-dürfen][+müssen] Sie warten."
   },
@@ -1239,6 +1322,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1305,9 +1389,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.multiple-choice-text]\nThe students completed the [+cloze][@example][-cloth][-close] with the correct verb forms."
   },
@@ -1319,6 +1403,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1385,9 +1470,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.multiple-choice-text]\n[@example]\nThe students completed the [+cloze][-cloth][-close] with the correct verb forms."
   },
@@ -1399,6 +1484,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1465,9 +1551,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.multiple-choice-text]\nThe students completed the [+cloze][-cloth][@example][-close] with the correct verb forms."
   }

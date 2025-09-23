@@ -4,11 +4,15 @@
       "type": "list-item",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "listItemIndent": 3,
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -67,12 +71,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&image] is included more than 0 time(s).",
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
           "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
           "location": {
             "start": {
@@ -99,6 +103,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -106,9 +111,9 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.list-item:bitmark++]"
   },
@@ -117,10 +122,13 @@
       "type": "standard-list-item",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -150,12 +158,28 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.standard-list-item:bitmark--]",
+          "location": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 243
+            },
+            "end": {
+              "line": 14,
+              "column": 32,
+              "offset": 274
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.standard-list-item:bitmark--]",
           "location": {
             "start": {
@@ -172,7 +196,7 @@
         }
       ]
     },
-    "bitmark": "[.standard-list-item:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+    "bitmark": "[.standard-list-item:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nThe bit content"
   },
   {
     "bit": {
@@ -183,15 +207,16 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.standard-list-item:bitmark++]\n[@listItemIndent:5]"
   }

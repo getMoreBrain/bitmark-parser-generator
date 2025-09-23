@@ -26,6 +26,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -43,9 +44,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   },
@@ -76,6 +77,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -93,9 +95,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   },
@@ -110,6 +112,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -138,12 +141,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.note-alt:bitmark--]",
+          "location": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 202
+            },
+            "end": {
+              "line": 15,
+              "column": 22,
+              "offset": 223
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.note-alt:bitmark--]",
           "location": {
             "start": {
@@ -160,7 +179,7 @@
         }
       ]
     },
-    "bitmark": "[.note-alt:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nThe bit content"
+    "bitmark": "[.note-alt:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nThe bit content"
   },
   {
     "bit": {
@@ -173,6 +192,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -201,29 +221,45 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.standard-note-normative:bitmark--]",
           "location": {
             "start": {
               "line": 22,
               "column": 1,
-              "offset": 281
+              "offset": 284
             },
             "end": {
               "line": 22,
               "column": 37,
-              "offset": 317
+              "offset": 320
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.standard-note-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 284
+            },
+            "end": {
+              "line": 22,
+              "column": 37,
+              "offset": 320
             }
           }
         }
       ]
     },
-    "bitmark": "[.standard-note-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+    "bitmark": "[.standard-note-normative:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
@@ -236,6 +272,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -264,28 +301,44 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.standard-note-non-normative:bitmark--]",
           "location": {
             "start": {
               "line": 29,
               "column": 1,
-              "offset": 371
+              "offset": 377
             },
             "end": {
               "line": 29,
               "column": 41,
-              "offset": 411
+              "offset": 417
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.standard-note-non-normative:bitmark--]",
+          "location": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 377
+            },
+            "end": {
+              "line": 29,
+              "column": 41,
+              "offset": 417
             }
           }
         }
       ]
     },
-    "bitmark": "[.standard-note-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%marginNumber]\n\nBit content"
+    "bitmark": "[.standard-note-non-normative:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nBit content"
   }
 ]

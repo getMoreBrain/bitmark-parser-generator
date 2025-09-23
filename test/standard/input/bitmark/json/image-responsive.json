@@ -7,6 +7,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -42,9 +43,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.image-responsive]\n[&image-portrait:https://docs.bitbook.education/bit-books/open_university/beginners_german_food_and_drink/web-resources/images/l193_ol_f026.jpg]\n[&image-landscape:https://docs.bitmark.cloud/bit-books/ef/unit_1/web-resources/audio/b1_1_1_6_j.jpg]"
   },
@@ -56,6 +57,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -86,12 +88,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&image-responsive] is not valid here (incorrectly chained?). It will be ignored",
+          "message": "[&imageResponsive] is not valid here (incorrectly chained?). It will be ignored",
           "text": "[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]",
           "location": {
             "start": {
@@ -107,7 +109,7 @@
           }
         },
         {
-          "message": "[&image-portrait] is required at least 1 time(s)",
+          "message": "[&imagePortrait] is required at least 1 time(s)",
           "text": "[.image-responsive]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n",
           "location": {
             "start": {
@@ -123,7 +125,7 @@
           }
         },
         {
-          "message": "[&image-landscape] is required at least 1 time(s)",
+          "message": "[&imageLandscape] is required at least 1 time(s)",
           "text": "[.image-responsive]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image-responsive:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n",
           "location": {
             "start": {
@@ -150,6 +152,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -185,12 +188,28 @@
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.article:bitmark--&image-responsive]",
+          "location": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 614
+            },
+            "end": {
+              "line": 11,
+              "column": 38,
+              "offset": 651
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.article:bitmark--&image-responsive]",
           "location": {
             "start": {

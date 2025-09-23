@@ -22,15 +22,16 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": "int mess_up(int **doublePointer) {\n  return \"take that!!\"\n}\n\nvoid veryNastyCode() {\n  int xor = 1 ^ 0x1234; // This is fine, not breakscaped away\n  int or  = 1 // Inline comment followed by no indentation\n| 0x1234; // This is going to break things\n}\n\n\n/**\n  * Convert Bitmark text to text AST.\n  *\n  * The Bitmark text should be a string.\n  * If parsed bitmark text AST is passed to this function, it will be returned as is.\n  *\n  * @param text - bitmark text\n  * @returns bitmark text AST as plain JS object\n  */\ntoAst(text: string | TextAst | undefined, options?: BitmarkTextParserOptions): TextAst {\n  // If input is not a string, return it as is\n  if (Array.isArray(text)) return text;\n  const str = text as string;\n\n  const testXor = 2 ^ 0x12345678;\n\n  // Ensure options is an object\n  const opts = Object.assign({}, options);\n\n  // Default text format to bitmark-- if not specified\n  if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;\n\n  const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';\n\n  return bitmarkTextParse(str ?? '', {\n    startRule,\n  });\n}"
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.app-code-cell]\n[@id:51861]\n[@computerLanguage:javascript]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n\nint mess_up(int **doublePointer) {\n  return \"take that!!\"\n}\n\nvoid veryNastyCode() {\n  int xor = 1 ^ 0x1234; // This is fine, not breakscaped away\n  int or  = 1 // Inline comment followed by no indentation\n| 0x1234; // This is going to break things\n}\n\n\n/**\n  * Convert Bitmark text to text AST.\n  *\n  * The Bitmark text should be a string.\n  * If parsed bitmark text AST is passed to this function, it will be returned as is.\n  *\n  * @param text - bitmark text\n  * @returns bitmark text AST as plain JS object\n  */\ntoAst(text: string | TextAst | undefined, options?: BitmarkTextParserOptions): TextAst {\n  // If input is not a string, return it as is\n  if (Array.isArray(text)) return text;\n  const str = text as string;\n\n  const testXor = 2 ^ 0x12345678;\n\n  // Ensure options is an object\n  const opts = Object.assign({}, options);\n\n  // Default text format to bitmark-- if not specified\n  if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;\n\n  const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';\n\n  return bitmarkTextParse(str ?? '', {\n    startRule,\n  });\n}"
   }

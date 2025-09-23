@@ -4,7 +4,9 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["249781"],
+      "id": [
+        "249781"
+      ],
       "quizCountItems": false,
       "quizStrikethroughSolutions": false,
       "item": [
@@ -32,6 +34,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -53,7 +56,9 @@
           "attrs": {}
         }
       ],
-      "additionalSolutions": ["canvas"],
+      "additionalSolutions": [
+        "canvas"
+      ],
       "body": [
         {
           "type": "paragraph",
@@ -65,7 +70,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Infektionsquelle"],
+                "solutions": [
+                  "Infektionsquelle"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -85,7 +92,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Austrittspforte"],
+                "solutions": [
+                  "Austrittspforte"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -105,7 +114,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Übertragungswege direkt oder indirekt"],
+                "solutions": [
+                  "Übertragungswege direkt oder indirekt"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -125,7 +136,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Eintrittspforte"],
+                "solutions": [
+                  "Eintrittspforte"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -145,7 +158,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["neue Infektionsquelle"],
+                "solutions": [
+                  "neue Infektionsquelle"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -162,12 +177,28 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.cloze-solution-grouped:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 36,
+              "offset": 35
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.cloze-solution-grouped:bitmark--]",
           "location": {
             "start": {
@@ -191,7 +222,9 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287825"],
+      "id": [
+        "287825"
+      ],
       "item": [],
       "lead": [
         {
@@ -206,10 +239,17 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "additionalSolutions": ["canvas", "texture", "figurative", "abstract", "contrast"],
+      "additionalSolutions": [
+        "canvas",
+        "texture",
+        "figurative",
+        "abstract",
+        "contrast"
+      ],
       "body": [
         {
           "type": "paragraph",
@@ -221,7 +261,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["erfreut"],
+                "solutions": [
+                  "erfreut"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -249,7 +291,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["steht"],
+                "solutions": [
+                  "steht"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -272,9 +316,9 @@
       "quizStrikethroughSolutions": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cloze-solution-grouped]\n[@id:287825]\n[%][%cloze-solution-grouped]\n[@additionalSolutions: canvas]\n[@additionalSolutions: texture]\n[@additionalSolutions: figurative]\n[@additionalSolutions: abstract]\n[@additionalSolutions: contrast]\nDer Fußball [_erfreut][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ..."
   },
@@ -283,7 +327,9 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["131518"],
+      "id": [
+        "131518"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -298,6 +344,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -326,7 +373,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Erinnerung"],
+                "solutions": [
+                  "Erinnerung"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -354,7 +403,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["gab"],
+                "solutions": [
+                  "gab"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -382,7 +433,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Jahreszeit"],
+                "solutions": [
+                  "Jahreszeit"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -410,7 +463,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["musste"],
+                "solutions": [
+                  "musste"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -438,7 +493,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Balkon"],
+                "solutions": [
+                  "Balkon"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -466,7 +523,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Regen"],
+                "solutions": [
+                  "Regen"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -501,7 +560,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["trotzdem"],
+                "solutions": [
+                  "trotzdem"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -529,7 +590,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["fällt"],
+                "solutions": [
+                  "fällt"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -557,7 +620,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["konnte"],
+                "solutions": [
+                  "konnte"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -591,9 +656,9 @@
       "quizStrikethroughSolutions": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cloze-solution-grouped]\n[@id:131518][%82-90]\n[!Schreiben Sie die Wörter am Ende des Textes an die richtige Stelle.]\nIch wohnte auch noch als Studentin bei meinen Eltern, bis ich 24 war. In meiner\n[_Erinnerung][%82] war Leipzig, meine Heimatstadt, ein düsterer, grauer Ort. Es [_gab][%83] dort sehr viel Industrie. Die Luft und der Fluss waren zu jeder [_Jahreszeit][%84] schmutzig. Meine Mutter [_musste][%85] fast täglich den [_Balkon][%86] und die Fenster putzen. Auch der [_Regen][%87] war schmutzig, also waren die Häuser grau, und viele waren noch kaputt vom Krieg.\nDie Wohnung meiner Eltern hatte keinen Stil. [_trotzdem][%88] fühlte ich mich dort wohl, auch noch, wenn ich sie später besuchte. Heute [_fällt][%89] es mir schwer, mir vorzustellen, wie man in einer solchen Enge überhaupt Kinder grossziehen [_konnte][%90]."
   },
@@ -602,7 +667,9 @@
       "type": "cloze-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["131518"],
+      "id": [
+        "131518"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -617,6 +684,7 @@
       ],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -645,7 +713,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Erinnerung"],
+                "solutions": [
+                  "Erinnerung"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -684,7 +754,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["gab"],
+                "solutions": [
+                  "gab"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -723,7 +795,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Jahreszeit"],
+                "solutions": [
+                  "Jahreszeit"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -762,7 +836,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["musste"],
+                "solutions": [
+                  "musste"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -801,7 +877,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Balkon"],
+                "solutions": [
+                  "Balkon"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -840,7 +918,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Regen"],
+                "solutions": [
+                  "Regen"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -886,7 +966,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["trotzdem"],
+                "solutions": [
+                  "trotzdem"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -925,7 +1007,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["fällt"],
+                "solutions": [
+                  "fällt"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -964,7 +1048,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["konnte"],
+                "solutions": [
+                  "konnte"
+                ],
                 "item": [
                   {
                     "type": "paragraph",
@@ -1009,9 +1095,9 @@
       "quizStrikethroughSolutions": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cloze-solution-grouped]\n[@id:131518][%82-90]\n[@example]\n[!Schreiben Sie die Wörter am Ende des Textes an die richtige Stelle.]\nIch wohnte auch noch als Studentin bei meinen Eltern, bis ich 24 war. In meiner\n[_Erinnerung][%82] war Leipzig, meine Heimatstadt, ein düsterer, grauer Ort. Es [_gab][%83] dort sehr viel Industrie. Die Luft und der Fluss waren zu jeder [_Jahreszeit][%84] schmutzig. Meine Mutter [_musste][%85] fast täglich den [_Balkon][%86] und die Fenster putzen. Auch der [_Regen][%87] war schmutzig, also waren die Häuser grau, und viele waren noch kaputt vom Krieg.\nDie Wohnung meiner Eltern hatte keinen Stil. [_trotzdem][%88] fühlte ich mich dort wohl, auch noch, wenn ich sie später besuchte. Heute [_fällt][%89] es mir schwer, mir vorzustellen, wie man in einer solchen Enge überhaupt Kinder grossziehen [_konnte][%90]."
   }

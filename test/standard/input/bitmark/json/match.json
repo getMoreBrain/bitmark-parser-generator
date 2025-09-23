@@ -4,11 +4,13 @@
       "type": "match",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["197919"],
-      "additionalSolutions": ["word1", "word2", "word3"],
+      "id": [
+        "197919"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -22,6 +24,11 @@
           ],
           "attrs": {}
         }
+      ],
+      "additionalSolutions": [
+        "word1",
+        "word2",
+        "word3"
       ],
       "body": [],
       "heading": {
@@ -48,7 +55,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["- 150'000.00"]
+          "values": [
+            "- 150'000.00"
+          ]
         },
         {
           "key": "2009",
@@ -69,7 +78,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["- 70'000.00"]
+          "values": [
+            "- 70'000.00"
+          ]
         },
         {
           "key": "2010",
@@ -79,7 +90,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["0"]
+          "values": [
+            "0"
+          ]
         },
         {
           "key": "2011",
@@ -89,7 +102,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["0"]
+          "values": [
+            "0"
+          ]
         },
         {
           "key": "2012",
@@ -99,7 +114,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["0"]
+          "values": [
+            "0"
+          ]
         },
         {
           "key": "2013",
@@ -109,7 +126,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["0"]
+          "values": [
+            "0"
+          ]
         },
         {
           "key": "2014",
@@ -119,7 +138,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["0"]
+          "values": [
+            "0"
+          ]
         },
         {
           "key": "2015",
@@ -129,7 +150,9 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": ["0"]
+          "values": [
+            "0"
+          ]
         },
         {
           "key": "2016",
@@ -139,7 +162,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["0"]
+          "values": [
+            "0"
+          ]
         },
         {
           "key": "2017",
@@ -149,7 +174,9 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": ["0"]
+          "values": [
+            "0"
+          ]
         },
         {
           "key": "Total",
@@ -159,18 +186,36 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["- 220'000.00"]
+          "values": [
+            "- 220'000.00"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 19,
+              "offset": 18
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
@@ -187,14 +232,16 @@
         }
       ]
     },
-    "bitmark": "[.match:bitmark--]\n[@id:197919]\n[!Verfallene Verluste per 01.01.2018]\n===\n[#Jahr]\n==\n[#CHF]\n===\n[%1.]\n2008\n==\n- 150'000.00\n===\n[%2.]\n2009\n==\n- 70'000.00\n===\n2010\n==\n0\n===\n2011\n==\n0\n===\n2012\n==\n0\n===\n2013\n==\n0\n===\n2014\n==\n0\n===\n2015\n==\n0[@isCaseSensitive:false]\n===\n2016\n==\n0\n===\n2017[@isCaseSensitive:false]\n==\n0\n===\nTotal\n==\n- 220'000.00\n==="
+    "bitmark": "[.match:bitmark--]\n[@id:197919]\n[@additionalSolutions: word1 ]\n[@additionalSolutions: word2 ]\n[@additionalSolutions: word3 ]\n[!Verfallene Verluste per 01.01.2018]\n===\n[#Jahr]\n==\n[#CHF]\n===\n[%1.]\n2008\n==\n- 150'000.00\n===\n[%2.]\n2009\n==\n- 70'000.00\n===\n2010\n==\n0\n===\n2011\n==\n0\n===\n2012\n==\n0\n===\n2013\n==\n0\n===\n2014\n==\n0\n===\n2015\n==\n0[@isCaseSensitive:false]\n===\n2016\n==\n0\n===\n2017[@isCaseSensitive:false]\n==\n0\n===\nTotal\n==\n- 220'000.00\n==="
   },
   {
     "bit": {
       "type": "match",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213782"],
+      "id": [
+        "213782"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -220,6 +267,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -287,7 +335,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A"]
+          "values": [
+            "A"
+          ]
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
@@ -297,7 +347,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["E"]
+          "values": [
+            "E"
+          ]
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
@@ -307,7 +359,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C"]
+          "values": [
+            "C"
+          ]
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
@@ -317,7 +371,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["E"]
+          "values": [
+            "E"
+          ]
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
@@ -327,7 +383,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C"]
+          "values": [
+            "C"
+          ]
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
@@ -337,7 +395,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["D"]
+          "values": [
+            "D"
+          ]
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
@@ -347,7 +407,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C"]
+          "values": [
+            "C"
+          ]
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
@@ -357,29 +419,47 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["B"]
+          "values": [
+            "B"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 58,
+              "line": 61,
               "column": 1,
-              "offset": 346
+              "offset": 439
             },
             "end": {
-              "line": 58,
+              "line": 61,
               "column": 19,
-              "offset": 364
+              "offset": 457
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 61,
+              "column": 1,
+              "offset": 439
+            },
+            "end": {
+              "line": 61,
+              "column": 19,
+              "offset": 457
             }
           }
         }
@@ -392,7 +472,9 @@
       "type": "match",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["208467"],
+      "id": [
+        "208467"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -418,6 +500,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -485,7 +568,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A"]
+          "values": [
+            "A"
+          ]
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
@@ -495,7 +580,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["E"]
+          "values": [
+            "E"
+          ]
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
@@ -505,7 +592,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C"]
+          "values": [
+            "C"
+          ]
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
@@ -515,7 +604,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["E"]
+          "values": [
+            "E"
+          ]
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
@@ -525,7 +616,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C"]
+          "values": [
+            "C"
+          ]
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
@@ -535,7 +628,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["D"]
+          "values": [
+            "D"
+          ]
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
@@ -545,7 +640,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C"]
+          "values": [
+            "C"
+          ]
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
@@ -555,29 +652,47 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["B"]
+          "values": [
+            "B"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 107,
+              "line": 110,
               "column": 1,
-              "offset": 1259
+              "offset": 1352
             },
             "end": {
-              "line": 107,
+              "line": 110,
               "column": 19,
-              "offset": 1277
+              "offset": 1370
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 110,
+              "column": 1,
+              "offset": 1352
+            },
+            "end": {
+              "line": 110,
+              "column": 19,
+              "offset": 1370
             }
           }
         }
@@ -593,6 +708,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -610,7 +726,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -631,29 +750,48 @@
               "attrs": {}
             }
           ],
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         }
       ],
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 156,
+              "line": 159,
               "column": 1,
-              "offset": 2172
+              "offset": 2265
             },
             "end": {
-              "line": 156,
+              "line": 159,
               "column": 19,
-              "offset": 2190
+              "offset": 2283
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 159,
+              "column": 1,
+              "offset": 2265
+            },
+            "end": {
+              "line": 159,
+              "column": 19,
+              "offset": 2283
             }
           }
         }
@@ -669,6 +807,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -686,7 +825,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -707,29 +849,48 @@
               "attrs": {}
             }
           ],
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         }
       ],
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 178,
+              "line": 181,
               "column": 1,
-              "offset": 2363
+              "offset": 2456
             },
             "end": {
-              "line": 178,
+              "line": 181,
               "column": 19,
-              "offset": 2381
+              "offset": 2474
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 181,
+              "column": 1,
+              "offset": 2456
+            },
+            "end": {
+              "line": 181,
+              "column": 19,
+              "offset": 2474
             }
           }
         }
@@ -745,6 +906,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -773,7 +935,10 @@
               "attrs": {}
             }
           ],
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -783,29 +948,48 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         }
       ],
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 200,
+              "line": 203,
               "column": 1,
-              "offset": 2556
+              "offset": 2649
             },
             "end": {
-              "line": 200,
+              "line": 203,
               "column": 19,
-              "offset": 2574
+              "offset": 2667
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 203,
+              "column": 1,
+              "offset": 2649
+            },
+            "end": {
+              "line": 203,
+              "column": 19,
+              "offset": 2667
             }
           }
         }
@@ -821,6 +1005,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -849,7 +1034,10 @@
               "attrs": {}
             }
           ],
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -859,29 +1047,48 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         }
       ],
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 222,
+              "line": 225,
               "column": 1,
-              "offset": 2749
+              "offset": 2842
             },
             "end": {
-              "line": 222,
+              "line": 225,
               "column": 19,
-              "offset": 2767
+              "offset": 2860
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 225,
+              "column": 1,
+              "offset": 2842
+            },
+            "end": {
+              "line": 225,
+              "column": 19,
+              "offset": 2860
             }
           }
         }
@@ -897,6 +1104,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -925,7 +1133,10 @@
               "attrs": {}
             }
           ],
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -946,29 +1157,48 @@
               "attrs": {}
             }
           ],
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         }
       ],
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 243,
+              "line": 246,
               "column": 1,
-              "offset": 2941
+              "offset": 3034
             },
             "end": {
-              "line": 243,
+              "line": 246,
               "column": 19,
-              "offset": 2959
+              "offset": 3052
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 246,
+              "column": 1,
+              "offset": 3034
+            },
+            "end": {
+              "line": 246,
+              "column": 19,
+              "offset": 3052
             }
           }
         }
@@ -984,6 +1214,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1012,7 +1243,10 @@
               "attrs": {}
             }
           ],
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -1033,29 +1267,48 @@
               "attrs": {}
             }
           ],
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         }
       ],
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 265,
+              "line": 268,
               "column": 1,
-              "offset": 3134
+              "offset": 3227
             },
             "end": {
-              "line": 265,
+              "line": 268,
               "column": 19,
-              "offset": 3152
+              "offset": 3245
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 268,
+              "column": 1,
+              "offset": 3227
+            },
+            "end": {
+              "line": 268,
+              "column": 19,
+              "offset": 3245
             }
           }
         }
@@ -1071,6 +1324,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1099,7 +1353,10 @@
               "attrs": {}
             }
           ],
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -1120,29 +1377,48 @@
               "attrs": {}
             }
           ],
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         }
       ],
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 287,
+              "line": 290,
               "column": 1,
-              "offset": 3325
+              "offset": 3418
             },
             "end": {
-              "line": 287,
+              "line": 290,
               "column": 19,
-              "offset": 3343
+              "offset": 3436
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 290,
+              "column": 1,
+              "offset": 3418
+            },
+            "end": {
+              "line": 290,
+              "column": 19,
+              "offset": 3436
             }
           }
         }
@@ -1158,6 +1434,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1186,7 +1463,10 @@
               "attrs": {}
             }
           ],
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -1207,29 +1487,48 @@
               "attrs": {}
             }
           ],
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         }
       ],
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 309,
+              "line": 312,
               "column": 1,
-              "offset": 3516
+              "offset": 3609
             },
             "end": {
-              "line": 309,
+              "line": 312,
               "column": 19,
-              "offset": 3534
+              "offset": 3627
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 312,
+              "column": 1,
+              "offset": 3609
+            },
+            "end": {
+              "line": 312,
+              "column": 19,
+              "offset": 3627
             }
           }
         }
@@ -1245,6 +1544,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1273,7 +1573,10 @@
               "attrs": {}
             }
           ],
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -1294,29 +1597,48 @@
               "attrs": {}
             }
           ],
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         }
       ],
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 331,
+              "line": 334,
               "column": 1,
-              "offset": 3709
+              "offset": 3802
             },
             "end": {
-              "line": 331,
+              "line": 334,
               "column": 19,
-              "offset": 3727
+              "offset": 3820
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 334,
+              "column": 1,
+              "offset": 3802
+            },
+            "end": {
+              "line": 334,
+              "column": 19,
+              "offset": 3820
             }
           }
         }
@@ -1332,6 +1654,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1367,7 +1690,10 @@
               "attrs": {}
             }
           ],
-          "values": ["gehen", "denken"]
+          "values": [
+            "gehen",
+            "denken"
+          ]
         },
         {
           "key": "an einer Hochschule",
@@ -1388,16 +1714,18 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["studieren"]
+          "values": [
+            "studieren"
+          ]
         }
       ],
       "isExample": true,
       "heading": {}
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.match-solution-grouped]\n===\n[%1]auf eine Schule\n==\n[%b]gehen[@example]\n==\n[%c]denken[@example]\n===\n[%2]an einer Hochschule\n==\n[%f]studieren\n==="
   },
@@ -1409,6 +1737,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1426,29 +1755,48 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 368,
+              "line": 371,
               "column": 1,
-              "offset": 4071
+              "offset": 4164
             },
             "end": {
-              "line": 368,
+              "line": 371,
               "column": 19,
-              "offset": 4089
+              "offset": 4182
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 371,
+              "column": 1,
+              "offset": 4164
+            },
+            "end": {
+              "line": 371,
+              "column": 19,
+              "offset": 4182
             }
           }
         }
@@ -1464,6 +1812,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1481,29 +1830,48 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 381,
+              "line": 384,
               "column": 1,
-              "offset": 4134
+              "offset": 4227
             },
             "end": {
-              "line": 381,
+              "line": 384,
               "column": 19,
-              "offset": 4152
+              "offset": 4245
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 384,
+              "column": 1,
+              "offset": 4227
+            },
+            "end": {
+              "line": 384,
+              "column": 19,
+              "offset": 4245
             }
           }
         }
@@ -1519,6 +1887,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1536,29 +1905,48 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 393,
+              "line": 396,
               "column": 1,
-              "offset": 4193
+              "offset": 4286
             },
             "end": {
-              "line": 393,
+              "line": 396,
               "column": 19,
-              "offset": 4211
+              "offset": 4304
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 396,
+              "column": 1,
+              "offset": 4286
+            },
+            "end": {
+              "line": 396,
+              "column": 19,
+              "offset": 4304
             }
           }
         }
@@ -1574,6 +1962,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1591,29 +1980,48 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 406,
+              "line": 409,
               "column": 1,
-              "offset": 4256
+              "offset": 4349
             },
             "end": {
-              "line": 406,
+              "line": 409,
               "column": 19,
-              "offset": 4274
+              "offset": 4367
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 409,
+              "column": 1,
+              "offset": 4349
+            },
+            "end": {
+              "line": 409,
+              "column": 19,
+              "offset": 4367
             }
           }
         }
@@ -1629,6 +2037,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1646,29 +2055,48 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 419,
+              "line": 422,
               "column": 1,
-              "offset": 4316
+              "offset": 4409
             },
             "end": {
-              "line": 419,
+              "line": 422,
               "column": 19,
-              "offset": 4334
+              "offset": 4427
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 422,
+              "column": 1,
+              "offset": 4409
+            },
+            "end": {
+              "line": 422,
+              "column": 19,
+              "offset": 4427
             }
           }
         }
@@ -1684,6 +2112,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1697,30 +2126,49 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         }
       ],
       "isExample": false,
       "heading": {}
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 432,
+              "line": 435,
               "column": 1,
-              "offset": 4371
+              "offset": 4464
             },
             "end": {
-              "line": 432,
+              "line": 435,
               "column": 19,
-              "offset": 4389
+              "offset": 4482
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 435,
+              "column": 1,
+              "offset": 4464
+            },
+            "end": {
+              "line": 435,
+              "column": 19,
+              "offset": 4482
             }
           }
         }
@@ -1736,6 +2184,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1753,7 +2202,10 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -1763,7 +2215,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         },
         {
           "key": "A third pair is defined here",
@@ -1773,7 +2228,10 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": ["E", "F"]
+          "values": [
+            "E",
+            "F"
+          ]
         },
         {
           "key": "And a fourth pair is defined here",
@@ -1783,29 +2241,48 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": ["G", "H"]
+          "values": [
+            "G",
+            "H"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 445,
+              "line": 448,
               "column": 1,
-              "offset": 4422
+              "offset": 4515
             },
             "end": {
-              "line": 445,
+              "line": 448,
               "column": 19,
-              "offset": 4440
+              "offset": 4533
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 448,
+              "column": 1,
+              "offset": 4515
+            },
+            "end": {
+              "line": 448,
+              "column": 19,
+              "offset": 4533
             }
           }
         }
@@ -1821,6 +2298,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1838,7 +2316,10 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": ["A", "B"]
+          "values": [
+            "A",
+            "B"
+          ]
         },
         {
           "key": "should be the text not the value",
@@ -1848,7 +2329,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["C", "D"]
+          "values": [
+            "C",
+            "D"
+          ]
         },
         {
           "key": "A third pair is defined here",
@@ -1858,7 +2342,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["E", "F"]
+          "values": [
+            "E",
+            "F"
+          ]
         },
         {
           "key": "And a fourth pair is defined here",
@@ -1868,29 +2355,48 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["G", "H"]
+          "values": [
+            "G",
+            "H"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
           "text": "[.match:bitmark--]",
           "location": {
             "start": {
-              "line": 480,
+              "line": 483,
               "column": 1,
-              "offset": 4766
+              "offset": 4859
             },
             "end": {
-              "line": 480,
+              "line": 483,
               "column": 19,
-              "offset": 4784
+              "offset": 4877
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.match:bitmark--]",
+          "location": {
+            "start": {
+              "line": 483,
+              "column": 1,
+              "offset": 4859
+            },
+            "end": {
+              "line": 483,
+              "column": 19,
+              "offset": 4877
             }
           }
         }

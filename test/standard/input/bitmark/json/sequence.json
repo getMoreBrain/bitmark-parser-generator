@@ -4,7 +4,9 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285747"],
+      "id": [
+        "285747"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -30,18 +32,24 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [],
-      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."],
+      "elements": [
+        "Ein Elefant",
+        "ist",
+        "grösser als",
+        "eine Maus."
+      ],
       "isExample": true,
       "example": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.sequence]\n[%32][%sequence]\n[@id:285747]\n[@example]\n===\nEin Elefant\n--\nist\n--\ngrösser als\n--\neine Maus.\n==="
   },
@@ -50,7 +58,9 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285748"],
+      "id": [
+        "285748"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -76,18 +86,24 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [],
-      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."],
+      "elements": [
+        "Ein Elefant",
+        "ist",
+        "grösser als",
+        "eine Maus."
+      ],
       "isExample": true,
       "example": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.sequence]\n[@id:285748]\n[%32][%sequence]\n[@example:true]\n\n====\nEin Elefant\n++\nist\n++\ngrösser als\n++\neine Maus."
   },
@@ -96,7 +112,9 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285749"],
+      "id": [
+        "285749"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -122,6 +140,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -138,12 +157,28 @@
       "example": null
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.sequence:bitmark--]",
+          "location": {
+            "start": {
+              "line": 31,
+              "column": 1,
+              "offset": 225
+            },
+            "end": {
+              "line": 31,
+              "column": 22,
+              "offset": 246
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.sequence:bitmark--]",
           "location": {
             "start": {

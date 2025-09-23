@@ -8,6 +8,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -422,9 +423,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.page-footer:bitmark++]\n[@slug:testing-1234]\n====\n|image:https://www.additiv.com/logo.png|alt:additov logo|\n==in==|link:https://www.linkedin.com/company/additiv/|icon:https://www.additiv.com/linkedin_icon.svg| ==yt==|link:https://www.youtube.com/channel/UC1B4S1TtFeBe43RAnSAVhhQ|icon:https://www.additiv.com/youtube_icon.svg| ==X==|link:https://twitter.com/additivAG|icon:https://www.additiv.com/twitter_icon.svg|\n====\n[! Platform]\n==Orchestration by additiv==|link:https://www.additiv.com/orchestration-platform/|\n==Types of orchestration==|link:[https://www.server2.com/|](https://www.additiv.com/types-of-orchestration/|\n====\n|image:https://www.additiv.com/logo.png|alt:additov logo|\n==in==|link:https://www.linkedin.com/company/additiv/|icon:https://www.additiv.com/linkedin_icon.svg| ==yt==|link:https://www.youtube.com/channel/UC1B4S1TtFeBe43RAnSAVhhQ|icon:https://www.additiv.com/youtube_icon.svg| ==X==|link:https://twitter.com/additivAG|icon:https://www.additiv.com/twitter_icon.svg|\n====\n[! Platform]\n==Orchestration by additiv==|link:https://www.additiv.com/orchestration-platform/|\n==Types of orchestration==|link:[https://www.server2.com/|](https://www.additiv.com/types-of-orchestration/|"
   }

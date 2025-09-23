@@ -4,10 +4,13 @@
       "type": "multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["186986"],
+      "id": [
+        "186986"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -304,13 +307,46 @@
       "footer": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "internalComments": [
         "This is a simple comment",
-        "This is a comment with a breakscaped ^] in it",
-        "This comment is in a card - it will be moved to the top of the bit"
+        "This is a comment with a breakscaped ^] in it"
+      ],
+      "warnings": [
+        {
+          "message": "[@internalComment] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@internalComment: This comment is in a card - it will be moved to the top of the bit]",
+          "location": {
+            "start": {
+              "line": 21,
+              "column": 1,
+              "offset": 1002
+            },
+            "end": {
+              "line": 21,
+              "column": 87,
+              "offset": 1088
+            }
+          }
+        },
+        {
+          "message": "[@internalComment] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@internalComment: This comment is chained and will be ignored]",
+          "location": {
+            "start": {
+              "line": 27,
+              "column": 31,
+              "offset": 1311
+            },
+            "end": {
+              "line": 27,
+              "column": 94,
+              "offset": 1374
+            }
+          }
+        }
       ]
     },
     "bitmark": "[.multiple-choice]\n[@internalComment: This is a simple comment   ]\n[@id:186986]\n[@internalComment: This is a comment with a breakscaped ^] in it]\nQualitätsanforderungen - Beurteilung\n===\n[!24 - Hat die lernende Person Schwierigkeiten oder droht die Auflösung des Lehrverhältnisses, kontaktiert der/die Berufsbildner/in je nach Situation frühzeitig die gesetzlichen Vertreter, das zuständige Berufsbildungsamt und/oder die Berufsfachschule.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!25 - Alle für das Qualifikationsverfahren notwendigen organisatorischen und formalen Massnahmen werden rechtzeitig getroffen.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!26 - Die Austrittsmodalitäten betreffend der Lernenden sind rechtzeitig geregelt.]\n[-Anforderungen nicht erfüllt]\n[@internalComment: This comment is in a card - it will be moved to the top of the bit]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!27 - Der/die Berufsbildner/in bildet sich regelmässig weiter.]\n[-Anforderungen nicht erfüllt][@internalComment: This comment is chained and will be ignored]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n===\n[!28 - Der Lehrbetrieb stellt dem/der Berufsbildner/in die notwendigen zeitlichen, finanziellen und materiellen Ressourcen zur Verfügung.]\n[-Anforderungen nicht erfüllt]\n[-Anforderungen teilweise erfüllt]\n[-Anforderungen erfüllt (Optimierungspotenzial vorhanden)]\n[+Anforderungen gut erfüllt]\n==="

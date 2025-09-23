@@ -7,6 +7,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -111,9 +112,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2\n~~~~\n\nFooter anyone?"
   },
@@ -125,6 +126,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -238,9 +240,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n++\nAlternative Answer 1\nCard 1, Side 2\n++\nAlternative Answer 2\nCard 1, Side 2"
   },
@@ -274,6 +276,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -367,9 +370,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.flashcard-1]\n[@example]\n[%item][%lead]\nSomebody\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2, No footer\n[%item][%lead]"
   },
@@ -403,6 +406,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -496,9 +500,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.flashcard-1]\n[%item][%lead]\nSomebody\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2, No footer\n[%item][%lead]\n[@example]"
   },
@@ -532,6 +536,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -614,9 +619,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
           "message": "Bit 'flashcard-1' should only contain one card. Ignore subsequent card: 'Question Too Many?\nCard 2, Side 1'",

@@ -7,6 +7,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -71,9 +72,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis is an article with a footer\n[?hint]\n\n~~~~\n[!instruction]\nThis **is** the footer"
   },
@@ -85,6 +86,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -160,9 +162,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n\n~^~~~\n[!instruction]\nThis is !!not!! a footer"
   },
@@ -174,6 +176,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -236,9 +239,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis article does not have a footer\n[?hint]\n\n~~~~~\n[!instruction]\nThis is not a footer"
   },
@@ -250,6 +253,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -331,9 +335,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nNeither does this article have a footer\n[?hint]\n[!instruction]\n~~~~This is **not** a footer\n!!Nor!! is this"
   },
@@ -345,6 +349,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -446,9 +451,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis article has 2 footers which is not really valid.\nAll text after the first footer should be in the footer, and a warning should be given\n[?hint]\n\n~~~~\nThis **is** a footer\n~~~~\n[!instruction]\nThis is **also** part of the footer and not a second footer!"
   },
@@ -460,6 +465,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -537,9 +543,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nCard 1, Side 1\n~~~~\n\nFooter anyone?\n\n~~~~\n\nStill in the footer"
   },
@@ -551,6 +557,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -635,9 +642,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n~~~~\n**\n[!instruction]\nThis is !!not!! a footer"
   },
@@ -649,6 +656,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -726,9 +734,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n~^~~~\n**\n[!instruction]\nThis is !!not!! a footer"
   },
@@ -740,6 +748,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -804,9 +813,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis is an article with a footer\n[?hint]\n\n====    footer ====\n[!instruction]\nThis **is** the footer"
   },
@@ -818,6 +827,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -893,9 +903,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n\n====   ^ footer ====\n[!instruction]\nThis is !!not!! a footer"
   },
@@ -907,6 +917,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -969,9 +980,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis article does not have a footer\n[?hint]\n\n===== footer ====\n[!instruction]\nThis is not a footer"
   },
@@ -983,6 +994,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -1064,9 +1076,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nNeither does this article have a footer\n[?hint]\n[!instruction]\n==== footer ====This is **not** a footer\n!!Nor!! is this"
   },
@@ -1078,6 +1090,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -1179,9 +1192,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis article has 2 footers which is not really valid.\nAll text after the first footer should be in the footer, and a warning should be given\n[?hint]\n\n==== footer  ====\nThis **is** a footer\n==== footer ====\n[!instruction]\nThis is **also** part of the footer and not a second footer!"
   },
@@ -1193,6 +1206,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1270,9 +1284,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.flashcard-1]\n\nSomebody\n====\nCard 1, Side 1\n====            footer               ====\n\nFooter anyone?\n\n==== footer ====\n\nStill in the footer"
   },
@@ -1284,6 +1298,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -1368,9 +1383,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n==== footer ====\n**\n[!instruction]\nThis is !!not!! a footer"
   },
@@ -1382,6 +1397,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -1459,9 +1475,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\nThis is an article with an escaped footer, so no footer actually\n[?hint]\n**\n=^=== footer ====\n**\n[!instruction]\nThis is !!not!! a footer"
   }

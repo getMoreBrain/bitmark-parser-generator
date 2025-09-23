@@ -10,6 +10,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -59,12 +60,28 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.q-and-a:bitmark--]",
+          "location": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 21,
+              "offset": 20
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.q-and-a:bitmark--]",
           "location": {
             "start": {
@@ -116,7 +133,7 @@
           "attrs": {}
         }
       ],
-      "marginNumber": [
+      "sourcePageNumber": [
         {
           "type": "paragraph",
           "content": [
@@ -128,6 +145,7 @@
           "attrs": {}
         }
       ],
+      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",
@@ -279,9 +297,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.q-and-a:bitmark++&image]\n[@id:1920727]\n[%Übung 1][%][%19][%Nasty ^ ^^ =^=]\n[!**Rechnungswesen als modellhafte Abbildung der betrieblichen Realität**\nDie:\n|image:https://ex__am==ple.com/im**age.png|@width:650|\n\nWelcher Verein wurde deutscher Meister?]\n[&image:https://ex__am==ple.com/im**age.png]\n\nSie haben keinen Schimmer?\n==This is a link==|link:https://ex__am==ple.com/im**age.png|\n\n\nhttps://ex__am==ple.com/im**age.png\n\n[?customerId:https://ex__am==ple.com/im**age.png]"
   }

@@ -10,6 +10,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -152,9 +153,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.learning-documentation-feedback]\n[@id:67915]\n[@reasonableNumOfChars:100]\n====\n[!ICH BEVORZUGE …]\n[%1.]\n[+ Bier]\n[+ Wein]\n--\n[!Why?]\nPlease answer in keywords\n====\n[!ICH HASSE …]\n[%1I.]\n[+ Bier]\n[- Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@reasonableNumOfChars:300]\n===="
   },
@@ -169,6 +170,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -303,9 +305,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
           "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",

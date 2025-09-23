@@ -4,10 +4,13 @@
       "type": "side-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210103"],
+      "id": [
+        "210103"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -154,9 +157,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.side-note:bitmark++]\n[@id:210103]\nMithilfe der **Marktforschung** finden Sie im besten Fall heraus, was Ihre Kunden wollen, wie Ihr Unternehmen wahrgenommen wird, wie Ihre Produkte im Vergleich zur Konkurrenz abschneiden, und ähnliche Fragen. Die Marktforschung hat vier **Einsatzgebiete**:\n\n\nDer Marktforschung sind **Grenzen** gesetzt. Beispielsweise kann es zu Ungenauigkeiten oder Verzerrungen kommen. Zudem sind Kosten und Aufwand zu berücksichtigen.\n\nDie **Methoden** der Marktforschung sind in der folgenden Tabelle dargestellt.\n\n|image:https://docs.bitmark.cloud/bit-books/compendio/tk_marketing/web-resources/images/compendio_tk_marketing_22.png|\n**Sekundärmarktforschung** hat den Vorteil, dass die Daten schnell zu beschaffen sind und in vielen Fällen kostenlos zur Verfügung stehen. Demgegenüber stehen die Nachteile, dass Daten zu wenig genau für die eigene Fragestellung sind oder die Aktualität der Daten nicht gegeben ist.\n\nBei der **Primärmarktforschung** ist der Vorteil, dass die gewonnenen Informationen genau auf die aktuelle Situation zugeschnitten sind. Dafür ist Primärmarktforschung oft aufwendig und damit teuer."
   },
@@ -165,10 +168,14 @@
       "type": "side-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -227,12 +234,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&image] is included more than 0 time(s).",
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
           "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
           "location": {
             "start": {

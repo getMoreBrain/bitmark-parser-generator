@@ -11,6 +11,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -18,9 +19,9 @@
       "slug": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.page-product-video]\n[@id:151970]\n[@productVideo:https://123.com]"
   },
@@ -37,18 +38,19 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[@productVideo] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@productVideo] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@productVideo:https://1234.com]",
           "location": {
             "start": {

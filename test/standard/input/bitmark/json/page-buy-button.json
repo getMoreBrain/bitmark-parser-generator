@@ -12,6 +12,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -40,9 +41,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.page-buy-button]\n[@id:342341]\n[@slug:testing-1234]\n[!.page-buy-button]\n[@content2Buy:testing 123 ]\nButton Text"
   },
@@ -59,6 +60,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -87,9 +89,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.page-buy-button-alt]\n[@id:342341]\n[@slug:testing-1234]\n[!.page-buy-button]\n[@content2Buy:testing 123 ]\nButton Text Alt"
   }

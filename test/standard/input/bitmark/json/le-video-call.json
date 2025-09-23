@@ -9,6 +9,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -17,9 +18,9 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.le-video-call]\n[@videoCallLink:https://yasminboland.com/video/call.php]\n[@activityType:Nullserie]"
   }

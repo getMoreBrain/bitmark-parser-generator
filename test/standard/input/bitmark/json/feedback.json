@@ -4,10 +4,13 @@
       "type": "feedback",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["67915"],
+      "id": [
+        "67915"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -176,9 +179,9 @@
       ]
     },
     "parser": {
-      "version": "3.29.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.feedback]\n[@id:67915]\n[@reasonableNumOfChars:100]\n====\n[#AAA]\n--\n[#BBB]\n====\n[!ICH BEVORZUGE …]\n[%1.]\n[+ Bier][@example]\n[+ Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@example:Example text]\n====\n[!ICH HASSE …]\n[%1I.]\n[+ Bier]\n[- Wein]\n--\n[!Why?]\nPlease answer in keywords\n[@reasonableNumOfChars:300]\n[@example]\n===="
   },
@@ -187,10 +190,13 @@
       "type": "feedback",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["64574"],
+      "id": [
+        "64574"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -325,9 +331,9 @@
       ]
     },
     "parser": {
-      "version": "3.29.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
           "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
@@ -354,10 +360,13 @@
       "type": "hand-in-feedback-expert",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["64574"],
+      "id": [
+        "64574"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -492,9 +501,9 @@
       ]
     },
     "parser": {
-      "version": "3.29.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
           "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
@@ -521,10 +530,13 @@
       "type": "hand-in-feedback-self",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["64574"],
+      "id": [
+        "64574"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -659,9 +671,9 @@
       ]
     },
     "parser": {
-      "version": "3.29.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
           "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",

@@ -4,22 +4,26 @@
       "type": "toc-content",
       "format": "bitmark++",
       "bitLevel": 1,
-      "tocContent": ["99", "This is a resource"],
       "buttonCaption": "Click Me!",
+      "tocContent": [
+        "99",
+        "This is a resource"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.30.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.toc-content]\n[@tocContent:99]\n[@tocContent:This is a resource]"
+    "bitmark": "[.toc-content]\n[@tocContent:99]\n[@tocContent:This is a resource]\n[@buttonCaption: Click Me!  ]"
   },
   {
     "bit": {
@@ -29,6 +33,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -36,9 +41,9 @@
       "tocContent": []
     },
     "parser": {
-      "version": "3.30.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.toc-content]"
   }

@@ -7,15 +7,16 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]"
   },
@@ -24,22 +25,41 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 2,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[..article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 12
+            },
+            "end": {
+              "line": 3,
+              "column": 22,
+              "offset": 33
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[..article:bitmark--]",
           "location": {
             "start": {
@@ -63,19 +83,22 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article:bitmark++]\n[@id:151972]"
   },
@@ -84,22 +107,41 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 3,
-      "id": ["151973"],
+      "id": [
+        "151973"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[...article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 83
+            },
+            "end": {
+              "line": 9,
+              "column": 23,
+              "offset": 105
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[...article:bitmark--]",
           "location": {
             "start": {
@@ -123,22 +165,41 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 2,
-      "id": ["239893"],
+      "id": [
+        "239893"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[..article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 120
+            },
+            "end": {
+              "line": 12,
+              "column": 28,
+              "offset": 147
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[..article:bitmark--&image]",
           "location": {
             "start": {
@@ -194,22 +255,41 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 2,
-      "id": ["191143"],
+      "id": [
+        "191143"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[..article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 163
+            },
+            "end": {
+              "line": 16,
+              "column": 28,
+              "offset": 190
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[..article:bitmark--&image]",
           "location": {
             "start": {
@@ -265,22 +345,41 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["245285"],
+      "id": [
+        "245285"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 205
+            },
+            "end": {
+              "line": 19,
+              "column": 27,
+              "offset": 231
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.article:bitmark--&image]",
           "location": {
             "start": {
@@ -336,16 +435,34 @@
       "type": "_comment",
       "originalType": "article",
       "bitLevel": 2,
-      "id": ["239893"],
+      "id": [
+        "239893"
+      ],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[..|article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 246
+            },
+            "end": {
+              "line": 22,
+              "column": 29,
+              "offset": 274
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[..|article:bitmark--&image]",
           "location": {
             "start": {
@@ -401,22 +518,41 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 7,
-      "id": ["5743563"],
+      "id": [
+        "5743563"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.......article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 290
+            },
+            "end": {
+              "line": 26,
+              "column": 27,
+              "offset": 316
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.......article:bitmark--]",
           "location": {
             "start": {
@@ -440,19 +576,22 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 7,
-      "id": ["162205"],
+      "id": [
+        "162205"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
           "message": "Bit level of 8 too high, setting to max value of 7",
@@ -471,7 +610,23 @@
           }
         },
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[........article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 332
+            },
+            "end": {
+              "line": 29,
+              "column": 34,
+              "offset": 365
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[........article:bitmark--&image]",
           "location": {
             "start": {
@@ -527,19 +682,22 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 7,
-      "id": ["162205"],
+      "id": [
+        "162205"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
           "message": "Bit level of 11 too high, setting to max value of 7",
@@ -558,7 +716,23 @@
           }
         },
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[...........article:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 381
+            },
+            "end": {
+              "line": 33,
+              "column": 37,
+              "offset": 417
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[...........article:bitmark--&image]",
           "location": {
             "start": {

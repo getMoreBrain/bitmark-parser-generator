@@ -26,6 +26,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -46,9 +47,9 @@
       "resolvedBy": ""
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.review-note]\n[@id:210022]\n[%][%**Lernziele**]\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   },
@@ -82,6 +83,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -99,9 +101,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.review-note:bitmark++]\n[@id:210040]\n[%][%**Lernziele**]\n[@resolved:true]\n[@resolvedDate:1992]\n[@resolvedBy:Kayo]\n\n\nNach der Bearbeitung dieses Kapitels können Sie ..."
   }

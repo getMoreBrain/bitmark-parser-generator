@@ -12,6 +12,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -142,11 +143,11 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.parameters]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+    "bitmark": "[.parameters]\n[@tableFixedHeader:true]\n[@tableHeaderWhitespaceNoWrap:false]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
   {
     "bit": {
@@ -170,6 +171,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -303,9 +305,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.parameters]\n[@tableSearch:false]\n[@tableSort:false]\n[@caption:This is the table caption]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -315,7 +317,6 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
-      "tableHeaderWhitespaceNoWrap": true,
       "tableSearch": true,
       "tableSort": true,
       "tablePagination": true,
@@ -339,6 +340,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -461,12 +463,13 @@
           ]
         ]
       },
+      "tableHeaderWhitespaceNoWrap": true,
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.parameters]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n[@tablePaginationLimit:42]\n[@tableHeight:99]\n[@tableWhitespaceNoWrap:false]\n[@tableAutoWidth:false]\n[@tableResizableColumns:true]\n[@caption: This is the caption ]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -478,6 +481,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -499,9 +503,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.parameters]"
   }

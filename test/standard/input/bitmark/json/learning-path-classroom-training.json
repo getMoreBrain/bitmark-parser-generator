@@ -4,18 +4,26 @@
       "type": "learning-path-classroom-training",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["119760"],
+      "id": [
+        "119760"
+      ],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": ["One", "Two", "Three", "Four"],
+      "list": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -77,12 +85,12 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&website-link] is included more than 0 time(s).",
+          "message": "[&websiteLink] is included more than the required 0 time(s). Did you forget the '&websiteLink' in the bit header?",
           "text": "[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]",
           "location": {
             "start": {

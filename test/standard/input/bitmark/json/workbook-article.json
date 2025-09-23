@@ -4,10 +4,14 @@
       "type": "workbook-article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -53,12 +57,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&image] is included more than 0 time(s).",
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
           "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
           "location": {
             "start": {

@@ -4,24 +4,37 @@
       "type": "bug",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "groupTag": [
         {
           "name": "group A",
-          "tags": ["item 1", "", "item 2", "item 3"]
+          "tags": [
+            "item 1",
+            "",
+            "item 2",
+            "item 3"
+          ]
         },
         {
           "name": "",
-          "tags": [""]
+          "tags": [
+            ""
+          ]
         },
         {
           "name": "group B",
-          "tags": ["item B1"]
+          "tags": [
+            "item B1"
+          ]
         }
       ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -80,40 +93,46 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&image] is included more than 0 time(s).",
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
           "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
           "location": {
             "start": {
-              "line": 6,
+              "line": 11,
               "column": 1,
-              "offset": 127
+              "offset": 300
             },
             "end": {
-              "line": 6,
+              "line": 11,
               "column": 47,
-              "offset": 173
+              "offset": 346
             }
           }
         }
       ]
     },
-    "bitmark": "[.bug:bitmark++]\n[@ageRange:18][@ageRange:120]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]\n\nSome more text."
+    "bitmark": "[.bug:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@groupTag: group A ][@tag: item 1 ][@tag: ][@tag: item 2 ]\n[@groupTag: group A ][@tag: item 3 ][@tag: item 1 ]\n[@groupTag: ][@tag: ]\n[@groupTag: group B ][@tag: item B1 ]\n\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n[&image:https://cdn.bitbook.education/cat.jpg]\n\nSome more text."
   },
   {
     "bit": {
       "type": "bug-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
-      "searchIndex": ["Value1", "Value2"],
+      "id": [
+        "151971"
+      ],
+      "searchIndex": [
+        "Value1",
+        "Value2"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -224,10 +243,10 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.bug-alt:bitmark++]\n[@id:151971]\n[@searchIndex:Value1]\n[@searchIndex:Value2 ]\n[%][%][%][%marginNumber]\n[!\n\nInstruction with ==notranslate==|notranslate|\n\n• List 1\n• List 2\n\n]\n\nBit content with ==notranslate==|notranslate|\n\n• List 1\n• List 2"
+    "bitmark": "[.bug-alt:bitmark++]\n[@id:151971]\n[@searchIndex:Value1]\n[@searchIndex:Value2 ]\n[%][%][%][%][%marginNumber]\n[!\n\nInstruction with ==notranslate==|notranslate|\n\n• List 1\n• List 2\n\n]\n\nBit content with ==notranslate==|notranslate|\n\n• List 1\n• List 2"
   }
 ]

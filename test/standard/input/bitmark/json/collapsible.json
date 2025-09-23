@@ -51,6 +51,18 @@
           "attrs": {}
         }
       ],
+      "sourcePageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "sourcePageNumber",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -145,23 +157,23 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[%] is included more than 3 time(s). The earlier ones will be ignored",
+          "message": "[%] is included more than the required 4 time(s). The earlier ones will be ignored",
           "text": "[%oneTooMany]",
           "location": {
             "start": {
               "line": 7,
-              "column": 43,
-              "offset": 168
+              "column": 62,
+              "offset": 187
             },
             "end": {
               "line": 7,
-              "column": 56,
-              "offset": 181
+              "column": 75,
+              "offset": 200
             }
           },
           "original": {
@@ -169,20 +181,20 @@
             "location": {
               "start": {
                 "line": 7,
-                "column": 28,
-                "offset": 153
+                "column": 47,
+                "offset": 172
               },
               "end": {
                 "line": 7,
-                "column": 43,
-                "offset": 168
+                "column": 62,
+                "offset": 187
               }
             }
           }
         }
       ]
     },
-    "bitmark": "[.collapsible:bitmark++]\n[@id:151970]\n[@machineTranslated: © Google 2024]\n[@lang:en-UK]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
+    "bitmark": "[.collapsible:bitmark++]\n[@id:151970]\n[@machineTranslated: © Google 2024]\n[@lang:en-UK]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%sourcePageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
   },
   {
     "bit": {
@@ -195,6 +207,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -234,9 +247,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.side-note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -251,6 +264,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -290,9 +304,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.info-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -307,6 +321,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -346,9 +361,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.remark-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -363,6 +378,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -402,9 +418,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.warning-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -419,6 +435,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -458,9 +475,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.danger-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -475,6 +492,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -514,9 +532,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -531,6 +549,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -570,9 +589,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.example-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -587,6 +606,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -626,9 +646,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.hint-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -643,6 +663,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -682,9 +703,9 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.bug-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   }

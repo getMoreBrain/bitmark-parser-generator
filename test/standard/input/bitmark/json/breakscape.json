@@ -5,9 +5,9 @@
       "bitLevel": 1
     },
     "parser": {
-      "version": "3.26.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "errors": [
         {
           "message": "Invalid bit",
@@ -42,7 +42,9 @@
         "id-with-a-^]-in-it-and-at-the-end-^]",
         "id-with-a-^^]-in-it-and-at-the-end-^^]"
       ],
-      "externalId": ["[externalId with square bracked at end]"],
+      "externalId": [
+        "[externalId with square bracked at end]"
+      ],
       "lang": "[lang] with square bracked in middle",
       "item": [
         {
@@ -69,6 +71,7 @@
         }
       ],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -139,7 +142,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["[gap]"],
+                "solutions": [
+                  "[gap]"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -171,9 +176,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "3.26.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.cloze:bitmark++&image]\n[@id:1234]\n[@id:[1234^]]\n[@id:[1234^]4321]\n[@id:id-with-a-^]-in-it-and-at-the-end-^]]\n[@id:id-with-a-^^]-in-it-and-at-the-end-^^]]\n[@id:id-with-a-^^^]-in-it-and-at-the-end-^^^]]\n\nHere\n\n[%[%item^]][%[%lead^]:)]\n[!Instruc[tion^]]\n[@externalId:[externalId with square bracked at end^]]\nis\n[@lang:[lang^] with square bracked in middle]\nthe body and here is a [_[gap^]][@example:^] with square bracked at beginning [] with square brackets\n\n[&image:https://bad.url/^]with-square-bracket][@src1x:https://bad.url/^]with-square-bracket]"
   },
@@ -185,6 +190,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -219,9 +225,9 @@
       ]
     },
     "parser": {
-      "version": "3.26.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\n__^_particularly exciting_^__\n__^^_particularly exciting_^^__"
   },
@@ -233,6 +239,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -255,9 +262,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.26.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article]\n[!^**A**]"
   },
@@ -269,6 +276,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -309,9 +317,9 @@
       "body": []
     },
     "parser": {
-      "version": "3.26.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article:bitmark++]\n[!Start **[text^]** ==[n^]==|latex| end^]]"
   },
@@ -323,6 +331,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -436,9 +445,9 @@
       ]
     },
     "parser": {
-      "version": "3.26.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article:bitmark++]\n==bold[^==|bold|\n**bold[^**\n__italic[^__\n!!highlight[^!!\n[!^!!^]highlight[!! __^]italic[__ **^]bold[** ==^]bold[==|bold|]"
   },
@@ -450,6 +459,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -563,12 +573,28 @@
       ]
     },
     "parser": {
-      "version": "3.26.0",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.article:bitmark--]",
+          "location": {
+            "start": {
+              "line": 44,
+              "column": 1,
+              "offset": 992
+            },
+            "end": {
+              "line": 44,
+              "column": 21,
+              "offset": 1012
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.article:bitmark--]",
           "location": {
             "start": {

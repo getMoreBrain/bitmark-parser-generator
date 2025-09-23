@@ -8,6 +8,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -47,12 +48,12 @@
       ]
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[@diffTo] is included more than 1 time(s). The earlier ones will be ignored",
+          "message": "[@diffTo] is included more than the required 1 time(s). The earlier ones will be ignored",
           "text": "[@diffTo:59872359]",
           "location": {
             "start": {
@@ -94,18 +95,35 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": []
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "bitmark-- text format is deprecated. Bit will be parsed as bitmark++",
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.diff:bitmark--]",
+          "location": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 149
+            },
+            "end": {
+              "line": 11,
+              "column": 18,
+              "offset": 166
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
           "text": "[.diff:bitmark--]",
           "location": {
             "start": {

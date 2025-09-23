@@ -15,6 +15,7 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -93,9 +94,9 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2"
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.le-watch-video-embed]\n[!Skript «Grundausbildung Altersvorsorge»]\n[@action:Selbststudium]\n[@duration:3600s]\n[@book:e-876z78z87og87g8zg][►Ref4.2.34][►Ref4.3.1]\n[@activityType:le-watch-video-embed]\n\nFirst one is the normal reference.\nSecond is the optional property called “referenceEnd”\nAll these bits support all resources (like &website-link, …\nAll of these bits (starting with .learning-path support the following optional properties:\n[@date:2015-03-25T12:00:00Z]\n[@location:Zug]\n[&video-embed:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/videos/IMG_0292.mp4][@posterImage:https://docs.bitbook.education/bit-books/david_geisser/kochbuch/web-resources/images/dg_still_pesto.png]"
   },
@@ -104,18 +105,26 @@
       "type": "le-watch-video-embed",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["119760"],
+      "id": [
+        "119760"
+      ],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": ["One", "Two", "Three", "Four"],
+      "list": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
       "item": [],
       "lead": [],
       "pageNumber": [],
+      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -210,12 +219,12 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "3.25.2",
+      "version": "4.10.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.32.2",
+      "textParserVersion": "8.35.0",
       "warnings": [
         {
-          "message": "[&website-link] is included more than 0 time(s).",
+          "message": "[&websiteLink] is included more than the required 0 time(s). Did you forget the '&websiteLink' in the bit header?",
           "text": "[&website-link:https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4]",
           "location": {
             "start": {
@@ -244,18 +253,6 @@
               "column": 1,
               "offset": 1641
             }
-          }
-        }
-      ],
-      "excessResources": [
-        {
-          "type": "website-link",
-          "websiteLink": {
-            "url": "https://docs.bitmark.cloud/bit-books/rav/web-resources/video/rav_video.mp4",
-            "license": "",
-            "copyright": "",
-            "showInIndex": false,
-            "caption": []
           }
         }
       ]
