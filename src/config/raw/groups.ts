@@ -265,7 +265,7 @@ const GROUPS: _GroupsConfig = {
   [ConfigKey.group_standardItemLeadInstructionHint]: {
     type: GroupConfigType.standard,
     description:
-      'Standard group for item, lead, page number, margin number, instruction and hint tags',
+      'Standard group for item, lead, page number, source page number, margin number, instruction and hint tags',
     tags: [
       {
         key: ConfigKey.tag_item,
@@ -273,8 +273,8 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.tag_item,
-            description: 'The lead, page number, and margin number for the bit',
-            maxCount: 3,
+            description: 'The lead, page number, source page number, and margin number for the bit',
+            maxCount: 4,
           },
         ],
       },
@@ -669,6 +669,11 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_maxTocChapterLevel,
         description: 'The maximum table of contents chapter level',
         format: TagFormat.number,
+      },
+      {
+        key: ConfigKey.property_sourceDocument,
+        description: 'Url of the source document for the book (for example, a PDF file)',
+        format: TagFormat.plainText,
       },
     ],
   },

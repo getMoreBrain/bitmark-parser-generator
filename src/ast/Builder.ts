@@ -280,6 +280,7 @@ class Builder extends BaseBuilder {
       maxCreatedBits?: number;
       maxDisplayLevel?: number;
       maxTocChapterLevel?: number;
+      sourceDocument?: string;
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
@@ -310,6 +311,7 @@ class Builder extends BaseBuilder {
       item?: JsonText;
       lead?: JsonText;
       pageNumber?: JsonText;
+      sourcePageNumber?: JsonText;
       marginNumber?: JsonText;
       hint?: JsonText;
       instruction?: JsonText;
@@ -1007,6 +1009,12 @@ class Builder extends BaseBuilder {
         data.maxTocChapterLevel,
         options,
       ),
+      sourceDocument: this.toAstProperty(
+        bitType,
+        ConfigKey.property_sourceDocument,
+        data.sourceDocument,
+        options,
+      ),
       tocResource: this.toAstProperty(
         bitType,
         ConfigKey.property_tocResource,
@@ -1094,6 +1102,7 @@ class Builder extends BaseBuilder {
       item: this.handleJsonText(context, TextLocation.tag, data.item),
       lead: this.handleJsonText(context, TextLocation.tag, data.lead),
       pageNumber: this.handleJsonText(context, TextLocation.tag, data.pageNumber),
+      sourcePageNumber: this.handleJsonText(context, TextLocation.tag, data.sourcePageNumber),
       marginNumber: this.handleJsonText(context, TextLocation.tag, data.marginNumber),
       hint: this.handleJsonText(context, TextLocation.tag, data.hint),
       instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
@@ -1220,7 +1229,15 @@ class Builder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
       ignoreUndefined: ['example'],
-      ignoreEmptyArrays: ['item', 'lead', 'pageNumber', 'marginNumber', 'hint', 'instruction'],
+      ignoreEmptyArrays: [
+        'item',
+        'lead',
+        'pageNumber',
+        'sourcePageNumber',
+        'marginNumber',
+        'hint',
+        'instruction',
+      ],
     });
 
     // Validate and correct invalid bits as much as possible

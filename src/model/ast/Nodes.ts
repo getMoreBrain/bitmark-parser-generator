@@ -213,6 +213,7 @@ export interface Bit {
   maxCreatedBits?: Property;
   maxDisplayLevel?: Property;
   maxTocChapterLevel?: Property;
+  sourceDocument?: Property;
   tocResource?: Property;
   tocContent?: Property;
   page?: Property;
@@ -243,6 +244,7 @@ export interface Bit {
   item?: TextAst;
   lead?: TextAst;
   pageNumber?: TextAst;
+  sourcePageNumber?: TextAst;
   marginNumber?: TextAst;
   hint?: TextAst;
   instruction?: TextAst;
