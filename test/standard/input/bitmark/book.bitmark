@@ -29,6 +29,7 @@
 [@levelILR:levelILR]
 [@levelACTFL:levelACTFL]
 [@maxTocChapterLevel:5]
+[@sourceDocument:http://example.com/source.pdf]
 [@processHandIn]
 [@chatWithBook]
 [@isEditable]

@@ -670,6 +670,11 @@ const GROUPS: _GroupsConfig = {
         description: 'The maximum table of contents chapter level',
         format: TagFormat.number,
       },
+      {
+        key: ConfigKey.property_sourceDocument,
+        description: 'Url of the source document for the book (for example, a PDF file)',
+        format: TagFormat.plainText,
+      },
     ],
   },
   [ConfigKey.group_learningPathCommon]: {

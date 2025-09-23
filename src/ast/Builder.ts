@@ -280,6 +280,7 @@ class Builder extends BaseBuilder {
       maxCreatedBits?: number;
       maxDisplayLevel?: number;
       maxTocChapterLevel?: number;
+      sourceDocument?: string;
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
@@ -1006,6 +1007,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_maxTocChapterLevel,
         data.maxTocChapterLevel,
+        options,
+      ),
+      sourceDocument: this.toAstProperty(
+        bitType,
+        ConfigKey.property_sourceDocument,
+        data.sourceDocument,
         options,
       ),
       tocResource: this.toAstProperty(
