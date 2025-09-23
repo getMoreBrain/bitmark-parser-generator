@@ -13,6 +13,7 @@
 [@bookDiff: test-id]
 [@maxTocChapterLevel:45]
 [@processHandInLocation:Auckland]
+[@sourceDocument:http://example.com/source.pdf]
 
 
 [.book-diff]

@@ -461,6 +461,8 @@ const NodeType = superenum({
   solution: 'solution',
   solutions: 'solutions',
   solutionsValue: 'solutionsValue',
+  sourceDocument: 'sourceDocument',
+  sourceDocumentValue: 'sourceDocumentValue',
   sourcePageNumber: 'sourcePageNumber',
   spaceId: 'spaceId',
   spaceIdValue: 'spaceIdValue',
