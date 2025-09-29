@@ -153,6 +153,7 @@ export interface BitJson {
   mailingList: string;
   buttonCaption: string;
   callToActionUrl: string;
+  advertisingClickUrl: string;
   caption: JsonText;
   quotedPerson: string;
   reasonableNumOfChars: number;

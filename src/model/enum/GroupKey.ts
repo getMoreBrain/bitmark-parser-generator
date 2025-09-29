@@ -13,6 +13,7 @@ const groupKeys = {
   group_mark: 'group_mark',
   group_bookCommon: 'group_bookCommon',
   group_learningPathCommon: 'group_learningPathCommon',
+  group_advertisingCommon: 'group_advertisingCommon',
   group_quizCommon: 'group_quizCommon',
   group_resourceBitTags: 'group_resourceBitTags',
   group_resourceCommon: 'group_resourceCommon',

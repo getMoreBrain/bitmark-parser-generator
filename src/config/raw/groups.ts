@@ -752,6 +752,17 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_advertisingCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common advertising tags',
+    tags: [
+      {
+        key: ConfigKey.property_advertisingClickUrl,
+        description: 'The URL to which the advertisement should link',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
   [ConfigKey.group_quizCommon]: {
     type: GroupConfigType.standard,
     description: 'Common quiz tags',

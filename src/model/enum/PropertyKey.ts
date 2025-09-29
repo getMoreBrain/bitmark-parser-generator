@@ -4,6 +4,7 @@ const propertyKeys = {
   property_action: '@action',
   property_activityType: '@activityType',
   property_additionalSolutions: '@additionalSolutions',
+  property_advertisingClickUrl: '@advertisingClickUrl',
   property_ageRange: '@ageRange',
   property_aiGenerated: '@aiGenerated',
   property_allowedBit: '@allowedBit',

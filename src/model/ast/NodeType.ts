@@ -20,6 +20,8 @@ const NodeType = superenum({
   activityTypeValue: 'activityTypeValue',
   additionalSolutions: 'additionalSolutions',
   additionalSolutionsValue: 'additionalSolutionsValue',
+  advertisingClickUrl: 'advertisingClickUrl',
+  advertisingClickUrlValue: 'advertisingClickUrlValue',
   ageRange: 'ageRange',
   ageRangeValue: 'ageRangeValue',
   aiGenerated: 'aiGenerated',

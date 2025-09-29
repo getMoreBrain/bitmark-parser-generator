@@ -1131,69 +1131,147 @@ const BITS: _BitsConfig = {
     since: '4.2.0',
     baseBitType: BitType.article,
     description: 'General advertising content bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
   [BitType.advertisingAdvertorial]: {
     since: '4.2.0',
     baseBitType: BitType.article,
     description: 'Advertorial content bit (sponsored article)',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
 
   [BitType.advertisingCallToAction]: {
     since: '4.2.0',
     baseBitType: BitType.callToAction,
     description: 'Call-to-action for advertising',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
   [BitType.advertisingCallToActionMeeting]: {
     since: '4.2.0',
     baseBitType: BitType.callToAction,
     description: 'Call-to-action for meeting or appointment',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
 
   [BitType.advertisingBanner]: {
     since: '4.2.0',
     baseBitType: BitType.image,
     description: 'Banner advertisement bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
   [BitType.advertisingSkyscraper]: {
     since: '4.2.0',
     baseBitType: BitType.image,
     description: 'Skyscraper (vertical) advertisement bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
   [BitType.advertisingRectangle]: {
     since: '4.2.0',
     baseBitType: BitType.image,
     description: 'Rectangle advertisement bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
 
   [BitType.advertisingFullPage]: {
     since: '4.2.0',
     baseBitType: BitType.image,
     description: 'Full-page advertisement bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
   [BitType.advertisingHalfPage]: {
     since: '4.2.0',
     baseBitType: BitType.image,
     description: 'Half-page advertisement bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
   [BitType.advertisingQuarterPage]: {
     since: '4.2.0',
     baseBitType: BitType.image,
     description: 'Quarter-page advertisement bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
   [BitType.advertisingClassifiedPage]: {
     since: '4.2.0',
     baseBitType: BitType.image,
     description: 'Classifieds advertisement page bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
   [BitType.advertisingLandscape]: {
     since: '4.2.0',
     baseBitType: BitType.image,
     description: 'Landscape format advertisement bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
   [BitType.advertisingPortrait]: {
     since: '4.2.0',
     baseBitType: BitType.image,
     description: 'Portrait format advertisement bit',
+    tags: [
+      {
+        key: ConfigKey.group_advertisingCommon,
+        description: 'Common advertising tags',
+      },
+    ],
   },
 
   [BitType.cookPreparation]: {
