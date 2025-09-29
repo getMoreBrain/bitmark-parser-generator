@@ -268,6 +268,7 @@ class Builder extends BaseBuilder {
       mailingList?: string;
       buttonCaption?: string;
       callToActionUrl?: string;
+      advertisingClickUrl?: string;
       caption?: JsonText;
       quotedPerson?: string;
       reasonableNumOfChars?: number;
@@ -950,6 +951,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_callToActionUrl,
         data.callToActionUrl,
+        options,
+      ),
+      advertisingClickUrl: this.toAstProperty(
+        bitType,
+        ConfigKey.property_advertisingClickUrl,
+        data.advertisingClickUrl,
         options,
       ),
       caption: this.handleJsonText(context, TextLocation.tag, data.caption),
