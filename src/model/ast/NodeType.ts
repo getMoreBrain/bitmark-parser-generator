@@ -21,7 +21,7 @@ const NodeType = superenum({
   additionalSolutions: 'additionalSolutions',
   additionalSolutionsValue: 'additionalSolutionsValue',
   advertisingClickUrl: 'advertisingClickUrl',
-  advertisngClickUrlValue: 'advertisngClickUrlValue',
+  advertisingClickUrlValue: 'advertisingClickUrlValue',
   ageRange: 'ageRange',
   ageRangeValue: 'ageRangeValue',
   aiGenerated: 'aiGenerated',
