@@ -4,10 +4,7 @@
       "type": "advertising",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -51,7 +48,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -62,9 +59,7 @@
       "type": "advertising-advertorial",
       "format": "bitmark++",
       "bitLevel": 1,
-      "searchIndex": [
-        "Value2"
-      ],
+      "searchIndex": ["Value2"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -179,7 +174,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -190,11 +185,10 @@
       "type": "advertising-call-to-action",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -216,22 +210,21 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-call-to-action]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
+    "bitmark": "[.advertising-call-to-action]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\n[@advertisingClickUrl:https://test.com/ad/link]\nButton Text?"
   },
   {
     "bit": {
       "type": "advertising-call-to-action-meeting",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "buttonCaption": "Click Me!",
       "callToActionUrl": "https://test.com/test",
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -253,17 +246,18 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-call-to-action-meeting]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\nButton Text?"
+    "bitmark": "[.advertising-call-to-action-meeting]\n[@id:342341]\n[@buttonCaption:Click Me!]\n[@callToActionUrl:https://test.com/test]\n[@advertisingClickUrl:https://test.com/ad/link]\nButton Text?"
   },
   {
     "bit": {
       "type": "advertising-banner",
       "format": "bitmark++",
       "bitLevel": 1,
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -290,17 +284,18 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-banner]\n[&image:https://cdn.bitbook.education/cat1.jpg]"
+    "bitmark": "[.advertising-banner]\n[&image:https://cdn.bitbook.education/cat1.jpg]\n[@advertisingClickUrl:https://test.com/ad/link]"
   },
   {
     "bit": {
       "type": "advertising-skyscraper",
       "format": "bitmark++",
       "bitLevel": 1,
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -327,17 +322,18 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-skyscraper]\n[&image:https://cdn.bitbook.education/cat2.jpg]"
+    "bitmark": "[.advertising-skyscraper]\n[&image:https://cdn.bitbook.education/cat2.jpg]\n[@advertisingClickUrl:https://test.com/ad/link]"
   },
   {
     "bit": {
       "type": "advertising-rectangle",
       "format": "bitmark++",
       "bitLevel": 1,
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -364,17 +360,18 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-rectangle]\n[&image:https://cdn.bitbook.education/cat3.jpg]"
+    "bitmark": "[.advertising-rectangle]\n[&image:https://cdn.bitbook.education/cat3.jpg]\n[@advertisingClickUrl:https://test.com/ad/link]"
   },
   {
     "bit": {
       "type": "advertising-full-page",
       "format": "bitmark++",
       "bitLevel": 1,
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -401,17 +398,18 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-full-page]\n[&image:https://cdn.bitbook.education/cat4.jpg]"
+    "bitmark": "[.advertising-full-page]\n[&image:https://cdn.bitbook.education/cat4.jpg]\n[@advertisingClickUrl:https://test.com/ad/link]"
   },
   {
     "bit": {
       "type": "advertising-half-page",
       "format": "bitmark++",
       "bitLevel": 1,
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -438,17 +436,18 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-half-page]\n[&image:https://cdn.bitbook.education/cat5.jpg]"
+    "bitmark": "[.advertising-half-page]\n[&image:https://cdn.bitbook.education/cat5.jpg]\n[@advertisingClickUrl:https://test.com/ad/link]"
   },
   {
     "bit": {
       "type": "advertising-quarter-page",
       "format": "bitmark++",
       "bitLevel": 1,
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -475,17 +474,18 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-quarter-page]\n[&image:https://cdn.bitbook.education/cat6.jpg]"
+    "bitmark": "[.advertising-quarter-page]\n[&image:https://cdn.bitbook.education/cat6.jpg]\n[@advertisingClickUrl:https://test.com/ad/link]"
   },
   {
     "bit": {
       "type": "advertising-classified-page",
       "format": "bitmark++",
       "bitLevel": 1,
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -512,17 +512,18 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-classified-page]\n[&image:https://cdn.bitbook.education/cat7.jpg]"
+    "bitmark": "[.advertising-classified-page]\n[&image:https://cdn.bitbook.education/cat7.jpg]\n[@advertisingClickUrl:https://test.com/ad/link]"
   },
   {
     "bit": {
       "type": "advertising-landscape",
       "format": "bitmark++",
       "bitLevel": 1,
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -549,17 +550,18 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-landscape]\n[&image:https://cdn.bitbook.education/cat8.jpg]"
+    "bitmark": "[.advertising-landscape]\n[&image:https://cdn.bitbook.education/cat8.jpg]\n[@advertisingClickUrl:https://test.com/ad/link]"
   },
   {
     "bit": {
       "type": "advertising-portrait",
       "format": "bitmark++",
       "bitLevel": 1,
+      "advertisingClickUrl": "https://test.com/ad/link",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -586,11 +588,11 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.advertising-portrait]\n[&image:https://cdn.bitbook.education/cat9.jpg]"
+    "bitmark": "[.advertising-portrait]\n[&image:https://cdn.bitbook.education/cat9.jpg]\n[@advertisingClickUrl:https://test.com/ad/link]"
   },
   {
     "bit": {
@@ -621,7 +623,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -656,7 +658,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

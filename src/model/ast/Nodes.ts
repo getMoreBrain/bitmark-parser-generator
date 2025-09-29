@@ -200,6 +200,7 @@ export interface Bit {
   mailingList?: Property;
   buttonCaption?: Property;
   callToActionUrl?: Property;
+  advertisingClickUrl?: Property;
   caption?: TextAst;
   quotedPerson?: Property;
   partialAnswer?: Property;

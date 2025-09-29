@@ -29,6 +29,7 @@ Bit content with ==notranslate==|notranslate|
 [@id:342341]
 [@buttonCaption:Click Me!]
 [@callToActionUrl:https://test.com/test]
+[@advertisingClickUrl:https://test.com/ad/link]
 Button Text?
 
 
@@ -37,35 +38,45 @@ Button Text?
 [@id:342341]
 [@buttonCaption:Click Me!]
 [@callToActionUrl:https://test.com/test]
+[@advertisingClickUrl:https://test.com/ad/link]
 Button Text?
 
 
 [.advertising-banner]
 [&image:https://cdn.bitbook.education/cat1.jpg]
+[@advertisingClickUrl:https://test.com/ad/link]
 
 [.advertising-skyscraper]
 [&image:https://cdn.bitbook.education/cat2.jpg]
+[@advertisingClickUrl:https://test.com/ad/link]
 
 [.advertising-rectangle]
 [&image:https://cdn.bitbook.education/cat3.jpg]
+[@advertisingClickUrl:https://test.com/ad/link]
 
 [.advertising-full-page]
 [&image:https://cdn.bitbook.education/cat4.jpg]
+[@advertisingClickUrl:https://test.com/ad/link]
 
 [.advertising-half-page]
 [&image:https://cdn.bitbook.education/cat5.jpg]
+[@advertisingClickUrl:https://test.com/ad/link]
 
 [.advertising-quarter-page]
 [&image:https://cdn.bitbook.education/cat6.jpg]
+[@advertisingClickUrl:https://test.com/ad/link]
 
 [.advertising-classified-page]
 [&image:https://cdn.bitbook.education/cat7.jpg]
+[@advertisingClickUrl:https://test.com/ad/link]
 
 [.advertising-landscape]
 [&image:https://cdn.bitbook.education/cat8.jpg]
+[@advertisingClickUrl:https://test.com/ad/link]
 
 [.advertising-portrait]
 [&image:https://cdn.bitbook.education/cat9.jpg]
+[@advertisingClickUrl:https://test.com/ad/link]
 
 
 [.advertising-portrait]
