@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 4.11.0
+Version: 4.12.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -109,6 +109,7 @@ bot-action-save (since: 1.3.0)
 bot-action-send (since: 1.3.0)
 bot-action-true-false (since: 1.3.0)
 bot-interview (since: 1.3.0)
+brand-color (since: 4.12.0)
 browser-image (since: 1.3.0)
 bug (since: 1.3.0)
 bug-alt (since: 1.16.0)
@@ -423,7 +424,18 @@ page-subpage (since: 1.6.6)
 page-subscribe (since: 1.5.10)
 parameters (since: 1.18.0)
 photo (since: 1.3.0)
+platform (since: 4.12.0)
+platform-header (since: 4.12.0)
+platform-main (since: 4.12.0)
+platform-main-button (since: 4.12.0)
+platform-main-input (since: 4.12.0)
 platform-path (since: 3.14.1)
+platform-section (since: 4.12.0)
+platform-section-button (since: 4.12.0)
+platform-section-chat (since: 4.12.0)
+platform-section-header (since: 4.12.0)
+platform-section-input (since: 4.12.0)
+platform-system-icon (since: 4.12.0)
 preparation-note (since: 1.3.0)
 pronunciation-table (since: 3.1.0)
 prototype-images (since: 1.6.1)

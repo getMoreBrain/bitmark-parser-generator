@@ -27,6 +27,9 @@ const resourceKeys = {
   resource_websiteLink: '&websiteLink',
 
   resource_icon: '&icon',
+  resource_platformBackgroundImage: '&platformBackgroundImage',
+  resource_platformIcon: '&platformIcon',
+  resource_platformLogo: '&platformLogo',
   resource_backgroundWallpaper: '&backgroundWallpaper',
   resource_imagePlaceholder: '&imagePlaceholder',
 } as const;

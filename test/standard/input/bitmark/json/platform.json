@@ -1,0 +1,317 @@
+[
+  {
+    "bit": {
+      "type": "brand-color",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "brandColor": "#e95a0c",
+      "brandColorName": "Vibrant Orange",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.brand-color]\n[@brandColor: #e95a0c]\n[@brandColorName: Vibrant Orange]"
+  },
+  {
+    "bit": {
+      "type": "platform",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformName": "Sobrado",
+      "platformIcon": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "sobrado.getmorebrain.com",
+          "src": "https://sobrado.getmorebrain.com/sobrado_icon.png"
+        }
+      },
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform]\n[@platformName: Sobrado]\n[&platformIcon: https://sobrado.getmorebrain.com/sobrado_icon.png]"
+  },
+  {
+    "bit": {
+      "type": "platform-header",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformLogo": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "sobrado.getmorebrain.com",
+          "src": "https://sobrado.getmorebrain.com/sobrado_logo.png"
+        }
+      },
+      "platformPrimaryColor": "white",
+      "platformBackgroundColor": "#19333B",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-header]\n[&platformLogo: https://sobrado.getmorebrain.com/sobrado_logo.png]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: #19333B]"
+  },
+  {
+    "bit": {
+      "type": "platform-system-icon",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformPrimaryColor": "white",
+      "platformBackgroundColor": "green",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-system-icon]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: green]"
+  },
+  {
+    "bit": {
+      "type": "platform-main",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformPrimaryColor": "white",
+      "platformSecondaryColor": "white",
+      "platformBackgroundColor": "white",
+      "platformScrollbarColor": "white",
+      "platformSelectionColor": "orange",
+      "platformSeparatorColor": "orange",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-main]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformSelectionColor: orange]\n[@platformSeparatorColor: orange]\n[@platformBackgroundColor: white]"
+  },
+  {
+    "bit": {
+      "type": "platform-main-button",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformPrimaryColor": "white",
+      "platformBackgroundColor": "white",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-main-button]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: white]"
+  },
+  {
+    "bit": {
+      "type": "platform-main-input",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformPrimaryColor": "white",
+      "platformBackgroundColor": "green",
+      "platformPlaceholderColor": "gray",
+      "platformTextSelectionColor": "orange",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-main-input]\n[@platformPlaceholderColor: gray]\n[@platformTextSelectionColor: orange]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: green]"
+  },
+  {
+    "bit": {
+      "type": "platform-section-header",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformPrimaryColor": "white",
+      "platformBackgroundColor": "#19333B",
+      "platformButtonPrimaryColor": "white",
+      "platformButtonBackgroundColor": "white",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-section-header]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: #19333B]\n[@platformButtonPrimaryColor: white]\n[@platformButtonBackgroundColor: white]"
+  },
+  {
+    "bit": {
+      "type": "platform-section",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformPrimaryColor": "white",
+      "platformSecondaryColor": "white",
+      "platformBackgroundColor": "white",
+      "platformScrollbarColor": "white",
+      "platformSelectionColor": "orange",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-section]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformSelectionColor: orange]\n[@platformBackgroundColor: white]"
+  },
+  {
+    "bit": {
+      "type": "platform-section-button",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformPrimaryColor": "white",
+      "platformBackgroundColor": "white",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-section-button]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: white]"
+  },
+  {
+    "bit": {
+      "type": "platform-section-input",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformPrimaryColor": "white",
+      "platformBackgroundColor": "green",
+      "platformPlaceholderColor": "gray",
+      "platformTextSelectionColor": "orange",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-section-input]\n[@platformPlaceholderColor: gray]\n[@platformTextSelectionColor: orange]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: green]"
+  },
+  {
+    "bit": {
+      "type": "platform-section-chat",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformPrimaryColor": "white",
+      "platformSecondaryColor": "white",
+      "platformBackgroundColor": "white",
+      "platformScrollbarColor": "white",
+      "platformMessageBackgroundColor": "white",
+      "platformBackgroundImage": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "sobrado.getmorebrain.com",
+          "src": "https://sobrado.getmorebrain.com/sobrado_bg.png"
+        }
+      },
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "sourcePageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.12.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.platform-section-chat]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformMessageBackgroundColor: white]\n[@platformBackgroundColor: white]\n[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]"
+  }
+]

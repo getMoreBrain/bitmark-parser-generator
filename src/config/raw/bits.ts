@@ -3159,6 +3159,17 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.interview,
     description: 'Bot interview bit, used to create bot interviews in articles or books',
   },
+  [BitType.brandColor]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Brand color bit, used to define brand colors',
+    tags: [
+      {
+        key: ConfigKey.group_brandColorCommon,
+        description: 'Common brand color tags',
+      },
+    ],
+  },
   [BitType.learningPathBook]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -3944,6 +3955,157 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.image,
     description: 'Photo bit, used to create photo bits in articles or books',
+  },
+  [BitType.platform]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform bit, used to define platform properties',
+    tags: [
+      {
+        key: ConfigKey.resource_platformIcon,
+        description: 'The platform icon',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the platform icon resource',
+          },
+        ],
+      },
+      {
+        key: ConfigKey.group_platformCommon,
+        description: 'Common platform tags',
+      },
+    ],
+  },
+  [BitType.platformHeader]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform header bit, used to define platform header properties',
+    tags: [
+      {
+        key: ConfigKey.resource_platformLogo,
+        description: 'The platform logo',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the platform logo resource',
+          },
+        ],
+      },
+      {
+        key: ConfigKey.group_platformHeaderCommon,
+        description: 'Common platform header tags',
+      },
+    ],
+  },
+  [BitType.platformMain]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform main bit, used to define platform main properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformMainCommon,
+        description: 'Common platform main tags',
+      },
+    ],
+  },
+  [BitType.platformMainButton]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform main button bit, used to define platform main button properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformMainButtonCommon,
+        description: 'Common platform main button tags',
+      },
+    ],
+  },
+  [BitType.platformMainInput]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform main input bit, used to define platform main input properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformMainInputCommon,
+        description: 'Common platform main input tags',
+      },
+    ],
+  },
+  [BitType.platformSection]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section bit, used to define platform section properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformSectionCommon,
+        description: 'Common platform section tags',
+      },
+    ],
+  },
+  [BitType.platformSectionButton]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section button bit, used to define platform section button properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformSectionButtonCommon,
+        description: 'Common platform section button tags',
+      },
+    ],
+  },
+  [BitType.platformSectionChat]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section chat bit, used to define platform section chat properties',
+    tags: [
+      {
+        key: ConfigKey.resource_platformBackgroundImage,
+        description: 'The platform section chat background image',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the platform background image resource',
+          },
+        ],
+      },
+      {
+        key: ConfigKey.group_platformSectionChatCommon,
+        description: 'Common platform section chat tags',
+      },
+    ],
+  },
+  [BitType.platformSectionHeader]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section header bit, used to define platform section header properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformSectionHeaderCommon,
+        description: 'Common platform section header tags',
+      },
+    ],
+  },
+  [BitType.platformSectionInput]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section input bit, used to define platform section input properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformSectionInputCommon,
+        description: 'Common platform section input tags',
+      },
+    ],
+  },
+  [BitType.platformSystemIcon]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform system icon bit, used to define platform system icon properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformSystemIconCommon,
+        description: 'Common platform system icon tags',
+      },
+    ],
   },
   [BitType.quote]: {
     since: '1.3.0',

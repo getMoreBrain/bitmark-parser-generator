@@ -763,6 +763,306 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_brandColorCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common brand color tags',
+    tags: [
+      {
+        key: ConfigKey.property_brandColor,
+        description: 'The brand color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_brandColorName,
+        description: 'The brand color name',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformName,
+        description: 'The platform name',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.resource_platformIcon,
+        description: 'The platform icon',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the platform icon resource',
+          },
+        ],
+        maxCount: 1,
+      },
+    ],
+  },
+  [ConfigKey.group_platformHeaderCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform header tags',
+    tags: [
+      {
+        key: ConfigKey.resource_platformLogo,
+        description: 'The platform logo',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the platform logo resource',
+          },
+        ],
+        maxCount: 1,
+      },
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform header primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform header background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformSystemIconCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform system icon tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform system icon primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform system icon background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformMainCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform main tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform main primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSecondaryColor,
+        description: 'The platform main secondary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformScrollbarColor,
+        description: 'The platform main scrollbar color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSelectionColor,
+        description: 'The platform main selection color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSeparatorColor,
+        description: 'The platform main separator color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform main background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformMainButtonCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform main button tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform main button primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform main button background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformMainInputCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform main input tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformPlaceholderColor,
+        description: 'The platform main input placeholder color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformTextSelectionColor,
+        description: 'The platform main input text selection color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform main input primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform main input background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformSectionHeaderCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform section header tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform section header primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform section header background color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformButtonPrimaryColor,
+        description: 'The platform section header button primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformButtonBackgroundColor,
+        description: 'The platform section header button background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformSectionCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform section tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform section primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSecondaryColor,
+        description: 'The platform section secondary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformScrollbarColor,
+        description: 'The platform section scrollbar color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSelectionColor,
+        description: 'The platform section selection color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform section background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformSectionButtonCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform section button tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform section button primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform section button background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformSectionInputCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform section input tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformPlaceholderColor,
+        description: 'The platform section input placeholder color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformTextSelectionColor,
+        description: 'The platform section input text selection color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform section input primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform section input background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformSectionChatCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform section chat tags',
+    tags: [
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform section chat primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSecondaryColor,
+        description: 'The platform section chat secondary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformScrollbarColor,
+        description: 'The platform section chat scrollbar color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformMessageBackgroundColor,
+        description: 'The platform section chat message background color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform section chat background color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.resource_platformBackgroundImage,
+        description: 'The platform section chat background image',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the platform background image resource',
+          },
+        ],
+        maxCount: 1,
+      },
+    ],
+  },
   [ConfigKey.group_quizCommon]: {
     type: GroupConfigType.standard,
     description: 'Common quiz tags',
