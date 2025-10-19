@@ -216,6 +216,7 @@ export interface Bit {
   maxDisplayLevel?: Property;
   maxTocChapterLevel?: Property;
   sourceDocument?: Property;
+  internalPrintPdf?: Property;
   tocResource?: Property;
   tocContent?: Property;
   page?: Property;

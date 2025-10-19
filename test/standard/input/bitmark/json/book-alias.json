@@ -16,6 +16,7 @@
       "kind": "learning-path",
       "maxTocChapterLevel": 45,
       "sourceDocument": "http://example.com/source.pdf",
+      "internalPrintPdf": "http://example.com/print.pdf",
       "title": [
         {
           "type": "paragraph",

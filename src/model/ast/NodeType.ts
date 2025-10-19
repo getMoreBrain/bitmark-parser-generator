@@ -247,6 +247,8 @@ const NodeType = superenum({
   instruction: 'instruction',
   internalComment: 'internalComment',
   internalCommentValue: 'internalCommentValue',
+  internalPrintPdf: 'internalPrintPdf',
+  internalPrintPdfValue: 'internalPrintPdfValue',
   isCaseSensitive: 'isCaseSensitive',
   isCommented: 'isCommented',
   isCorrect: 'isCorrect',

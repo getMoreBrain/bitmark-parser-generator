@@ -35,6 +35,7 @@
       "duration": "PT2H",
       "maxTocChapterLevel": 5,
       "sourceDocument": "http://example.com/source.pdf",
+      "internalPrintPdf": "http://example.com/print.pdf",
       "title": [
         {
           "type": "paragraph",

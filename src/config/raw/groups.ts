@@ -680,6 +680,11 @@ const GROUPS: _GroupsConfig = {
         description: 'Url of the source document for the book (for example, a PDF file)',
         format: TagFormat.plainText,
       },
+      {
+        key: ConfigKey.property_internalPrintPdf,
+        description: 'Url of the internal print PDF for the book',
+        format: TagFormat.plainText,
+      },
     ],
   },
   [ConfigKey.group_learningPathCommon]: {
