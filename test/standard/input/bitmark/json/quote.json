@@ -4,14 +4,11 @@
       "type": "quote",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191164"
-      ],
+      "id": ["191164"],
       "quotedPerson": "Henry Ford",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

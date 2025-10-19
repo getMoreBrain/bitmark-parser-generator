@@ -4,16 +4,11 @@
       "type": "page-product-video-list",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
-      "productVideo": [
-        "https://123.com"
-      ],
+      "id": ["151970"],
+      "productVideo": ["https://123.com"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -32,18 +27,12 @@
       "type": "page-product-video-list",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "slug": "testing-1234",
-      "productVideo": [
-        "https://123.com",
-        "https://1234.com"
-      ],
+      "productVideo": ["https://123.com", "https://1234.com"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

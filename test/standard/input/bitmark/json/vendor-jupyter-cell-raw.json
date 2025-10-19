@@ -4,9 +4,7 @@
       "type": "vendor-jupyter-cell-raw",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "51861"
-      ],
+      "id": ["51861"],
       "jupyterId": "f265c4ba-ae94-451d-aa19-e7528d33cf23",
       "jupyterExecutionCount": 10,
       "computerLanguage": "python",
@@ -24,7 +22,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

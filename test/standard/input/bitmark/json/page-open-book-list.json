@@ -4,9 +4,7 @@
       "type": "page-open-book-list",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "book": [
         {
           "book": "the_book_id",
@@ -21,7 +19,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

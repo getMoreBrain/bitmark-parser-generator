@@ -19,7 +19,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -90,9 +89,7 @@
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "245552"
-      ],
+      "id": ["245552"],
       "item": [],
       "lead": [
         {
@@ -107,7 +104,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -220,9 +216,7 @@
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "272740"
-      ],
+      "id": ["272740"],
       "item": [
         {
           "type": "paragraph",
@@ -248,7 +242,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -364,13 +357,10 @@
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "152151"
-      ],
+      "id": ["152151"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -831,9 +821,7 @@
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "136476"
-      ],
+      "id": ["136476"],
       "item": [
         {
           "type": "paragraph",
@@ -848,7 +836,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

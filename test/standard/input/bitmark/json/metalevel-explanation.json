@@ -4,9 +4,7 @@
       "type": "metalevel-explanation",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
+      "id": ["197915"],
       "item": [
         {
           "type": "paragraph",
@@ -21,7 +19,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

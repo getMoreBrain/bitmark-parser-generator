@@ -4,9 +4,7 @@
       "type": "book-cover",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "339637"
-      ],
+      "id": ["339637"],
       "coverColor": "#2FF22F",
       "title": [
         {
@@ -35,7 +33,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

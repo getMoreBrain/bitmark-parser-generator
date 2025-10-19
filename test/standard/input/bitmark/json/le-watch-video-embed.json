@@ -15,7 +15,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -105,26 +104,18 @@
       "type": "le-watch-video-embed",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "book": "e-876z78z87og87g8zg",
       "date": "2015-03-25T12:00:00Z",
       "location": "Zug",
       "action": "Selbststudium",
       "duration": "3600s",
-      "list": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
-      ],
+      "list": ["One", "Two", "Three", "Four"],
       "reference": "Ref4.2.34",
       "referenceEnd": "Ref4.3.1",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

@@ -22,6 +22,7 @@ export interface BitJson {
   padletId: string;
   jupyterId: string;
   jupyterExecutionCount: number;
+  sourceRL: string;
   isPublic: boolean;
   isTemplate: boolean;
   isTemplateStripTheme: boolean;
@@ -198,7 +199,6 @@ export interface BitJson {
   item: JsonText;
   lead: JsonText;
   pageNumber: JsonText;
-  sourcePageNumber: JsonText;
   marginNumber: JsonText;
   hint: JsonText;
   instruction: JsonText;

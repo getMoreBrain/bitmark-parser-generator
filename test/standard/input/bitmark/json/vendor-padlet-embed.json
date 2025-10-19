@@ -4,20 +4,12 @@
       "type": "vendor-padlet-embed",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "342346"
-      ],
+      "id": ["342346"],
       "padletId": "2c7rc1zj8jdo25ed",
-      "bubbleTag": [
-        "Tag 1",
-        "",
-        "Tag 2",
-        "**Tag 3**"
-      ],
+      "bubbleTag": ["Tag 1", "", "Tag 2", "**Tag 3**"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

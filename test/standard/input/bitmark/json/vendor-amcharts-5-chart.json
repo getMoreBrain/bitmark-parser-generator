@@ -4,9 +4,7 @@
       "type": "vendor-amcharts-5-chart",
       "format": "json",
       "bitLevel": 1,
-      "id": [
-        "298225"
-      ],
+      "id": ["298225"],
       "item": [
         {
           "type": "paragraph",
@@ -21,7 +19,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -53,9 +50,7 @@
       "type": "vendor-amcharts-5-chart",
       "format": "json",
       "bitLevel": 1,
-      "id": [
-        "298225"
-      ],
+      "id": ["298225"],
       "item": [
         {
           "type": "paragraph",
@@ -70,7 +65,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -120,7 +114,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -170,9 +163,7 @@
       "type": "vendor-amcharts-5-chart",
       "format": "json",
       "bitLevel": 1,
-      "id": [
-        "298225"
-      ],
+      "id": ["298225"],
       "item": [
         {
           "type": "paragraph",
@@ -187,7 +178,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -219,9 +209,7 @@
       "type": "vendor-amcharts-5-chart",
       "format": "json",
       "bitLevel": 1,
-      "id": [
-        "298225"
-      ],
+      "id": ["298225"],
       "item": [
         {
           "type": "paragraph",
@@ -236,7 +224,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

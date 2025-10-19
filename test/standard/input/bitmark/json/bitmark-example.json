@@ -4,9 +4,7 @@
       "type": "bitmark-example",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210051"
-      ],
+      "id": ["210051"],
       "item": [],
       "lead": [
         {
@@ -21,7 +19,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -52,9 +49,7 @@
       "type": "bitmark-example",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "208411"
-      ],
+      "id": ["208411"],
       "item": [],
       "lead": [
         {
@@ -69,7 +64,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -134,9 +128,7 @@
       "type": "bitmark-example",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "208422"
-      ],
+      "id": ["208422"],
       "item": [],
       "lead": [
         {
@@ -151,7 +143,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

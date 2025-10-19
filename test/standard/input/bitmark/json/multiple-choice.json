@@ -4,21 +4,14 @@
       "type": "multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "187003"
-      ],
+      "id": ["187003"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "additionalSolutions": [
-        "word1",
-        "word2",
-        "word3"
-      ],
+      "additionalSolutions": ["word1", "word2", "word3"],
       "body": [],
       "quizzes": [
         {
@@ -1137,13 +1130,10 @@
       "type": "multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "186986"
-      ],
+      "id": ["186986"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1451,9 +1441,7 @@
       "type": "multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "136408"
-      ],
+      "id": ["136408"],
       "item": [
         {
           "type": "paragraph",
@@ -1468,7 +1456,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -2444,9 +2431,7 @@
       "type": "multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "107942"
-      ],
+      "id": ["107942"],
       "item": [
         {
           "type": "paragraph",
@@ -2461,7 +2446,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -2550,9 +2534,7 @@
       "type": "multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "107955"
-      ],
+      "id": ["107955"],
       "item": [
         {
           "type": "paragraph",
@@ -2567,7 +2549,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -2658,9 +2639,7 @@
       "type": "multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "107956"
-      ],
+      "id": ["107956"],
       "item": [
         {
           "type": "paragraph",
@@ -2675,7 +2654,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -2743,13 +2721,10 @@
       "type": "multiple-choice",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291806"
-      ],
+      "id": ["291806"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -3135,7 +3110,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -3240,7 +3214,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -3345,7 +3318,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -3450,7 +3422,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -3571,7 +3542,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -3692,7 +3662,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -3813,7 +3782,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -3966,7 +3934,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -4060,7 +4027,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -4154,7 +4120,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -4248,7 +4213,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

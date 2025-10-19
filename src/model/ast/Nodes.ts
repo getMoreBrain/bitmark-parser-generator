@@ -63,6 +63,7 @@ export interface Bit {
   padletId?: Property;
   jupyterId?: Property;
   jupyterExecutionCount?: Property;
+  sourceRL?: Property;
   isPublic?: Property;
   isTemplate?: Property;
   isTemplateStripTheme?: Property;
@@ -246,7 +247,6 @@ export interface Bit {
   item?: TextAst;
   lead?: TextAst;
   pageNumber?: TextAst;
-  sourcePageNumber?: TextAst;
   marginNumber?: TextAst;
   hint?: TextAst;
   instruction?: TextAst;

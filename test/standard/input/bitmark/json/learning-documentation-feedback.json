@@ -4,13 +4,10 @@
       "type": "learning-documentation-feedback",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "67915"
-      ],
+      "id": ["67915"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -164,13 +161,10 @@
       "type": "learning-documentation-feedback",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "64574"
-      ],
+      "id": ["64574"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
