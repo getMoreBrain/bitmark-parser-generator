@@ -282,6 +282,7 @@ class Builder extends BaseBuilder {
       maxDisplayLevel?: number;
       maxTocChapterLevel?: number;
       sourceDocument?: string;
+      internalPrintPdf?: string;
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
@@ -1020,6 +1021,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_sourceDocument,
         data.sourceDocument,
+        options,
+      ),
+      internalPrintPdf: this.toAstProperty(
+        bitType,
+        ConfigKey.property_internalPrintPdf,
+        data.internalPrintPdf,
         options,
       ),
       tocResource: this.toAstProperty(

@@ -81,6 +81,7 @@ const propertyKeys = {
   property_imageSource: '@imageSource',
   property_index: '@index',
   property_internalComment: '@internalComment',
+  property_internalPrintPdf: '@internalPrintPdf',
   property_isCaseSensitive: '@isCaseSensitive',
   property_isInfoOnly: '@isInfoOnly',
   property_isPublic: '@isPublic',

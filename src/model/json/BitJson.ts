@@ -167,6 +167,7 @@ export interface BitJson {
   maxDisplayLevel: number;
   maxTocChapterLevel: number;
   sourceDocument: string;
+  internalPrintPdf: string;
   tocResource: string | string[];
   tocContent: string | string[];
   page: string;
