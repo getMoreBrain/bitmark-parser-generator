@@ -3165,8 +3165,14 @@ const BITS: _BitsConfig = {
     description: 'Brand color bit, used to define brand colors',
     tags: [
       {
-        key: ConfigKey.group_brandColorCommon,
-        description: 'Common brand color tags',
+        key: ConfigKey.property_brandColor,
+        description: 'The brand color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_brandColorName,
+        description: 'The brand color name',
+        format: TagFormat.plainText,
       },
     ],
   },
@@ -3962,6 +3968,11 @@ const BITS: _BitsConfig = {
     description: 'Platform bit, used to define platform properties',
     tags: [
       {
+        key: ConfigKey.property_platformName,
+        description: 'The platform name',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.resource_platformIcon,
         description: 'The platform icon',
         chain: [
@@ -3970,10 +3981,7 @@ const BITS: _BitsConfig = {
             description: 'Common image properties for the platform icon resource',
           },
         ],
-      },
-      {
-        key: ConfigKey.group_platformCommon,
-        description: 'Common platform tags',
+        maxCount: 1,
       },
     ],
   },
@@ -3991,10 +3999,11 @@ const BITS: _BitsConfig = {
             description: 'Common image properties for the platform logo resource',
           },
         ],
+        maxCount: 1,
       },
       {
-        key: ConfigKey.group_platformHeaderCommon,
-        description: 'Common platform header tags',
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
       },
     ],
   },
@@ -4004,8 +4013,8 @@ const BITS: _BitsConfig = {
     description: 'Platform main bit, used to define platform main properties',
     tags: [
       {
-        key: ConfigKey.group_platformMainCommon,
-        description: 'Common platform main tags',
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
       },
     ],
   },
@@ -4015,8 +4024,8 @@ const BITS: _BitsConfig = {
     description: 'Platform main button bit, used to define platform main button properties',
     tags: [
       {
-        key: ConfigKey.group_platformMainButtonCommon,
-        description: 'Common platform main button tags',
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
       },
     ],
   },
@@ -4026,8 +4035,8 @@ const BITS: _BitsConfig = {
     description: 'Platform main input bit, used to define platform main input properties',
     tags: [
       {
-        key: ConfigKey.group_platformMainInputCommon,
-        description: 'Common platform main input tags',
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
       },
     ],
   },
@@ -4037,8 +4046,8 @@ const BITS: _BitsConfig = {
     description: 'Platform section bit, used to define platform section properties',
     tags: [
       {
-        key: ConfigKey.group_platformSectionCommon,
-        description: 'Common platform section tags',
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
       },
     ],
   },
@@ -4048,8 +4057,8 @@ const BITS: _BitsConfig = {
     description: 'Platform section button bit, used to define platform section button properties',
     tags: [
       {
-        key: ConfigKey.group_platformSectionButtonCommon,
-        description: 'Common platform section button tags',
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
       },
     ],
   },
@@ -4058,6 +4067,10 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     description: 'Platform section chat bit, used to define platform section chat properties',
     tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
       {
         key: ConfigKey.resource_platformBackgroundImage,
         description: 'The platform section chat background image',
@@ -4068,10 +4081,6 @@ const BITS: _BitsConfig = {
           },
         ],
       },
-      {
-        key: ConfigKey.group_platformSectionChatCommon,
-        description: 'Common platform section chat tags',
-      },
     ],
   },
   [BitType.platformSectionHeader]: {
@@ -4080,8 +4089,8 @@ const BITS: _BitsConfig = {
     description: 'Platform section header bit, used to define platform section header properties',
     tags: [
       {
-        key: ConfigKey.group_platformSectionHeaderCommon,
-        description: 'Common platform section header tags',
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
       },
     ],
   },
@@ -4091,8 +4100,8 @@ const BITS: _BitsConfig = {
     description: 'Platform section input bit, used to define platform section input properties',
     tags: [
       {
-        key: ConfigKey.group_platformSectionInputCommon,
-        description: 'Common platform section input tags',
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
       },
     ],
   },
@@ -4102,8 +4111,8 @@ const BITS: _BitsConfig = {
     description: 'Platform system icon bit, used to define platform system icon properties',
     tags: [
       {
-        key: ConfigKey.group_platformSystemIconCommon,
-        description: 'Common platform system icon tags',
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
       },
     ],
   },
