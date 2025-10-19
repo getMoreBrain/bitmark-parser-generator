@@ -4,9 +4,7 @@
       "type": "page-container",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
+      "id": ["197915"],
       "item": [
         {
           "type": "paragraph",
@@ -21,7 +19,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -62,9 +59,7 @@
       "type": "page-container-wrap",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
+      "id": ["197915"],
       "item": [
         {
           "type": "paragraph",
@@ -79,7 +74,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -120,9 +114,7 @@
       "type": "page-container-nowrap",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
+      "id": ["197915"],
       "item": [
         {
           "type": "paragraph",
@@ -137,7 +129,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -178,9 +169,7 @@
       "type": "page-container-nowrap-stretch",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
+      "id": ["197915"],
       "item": [
         {
           "type": "paragraph",
@@ -195,7 +184,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -236,9 +224,7 @@
       "type": "page-container-group",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
+      "id": ["197915"],
       "item": [
         {
           "type": "paragraph",
@@ -253,7 +239,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -294,13 +279,8 @@
       "type": "page-container-folder",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
-      "allowedBit": [
-        "test",
-        ".test2"
-      ],
+      "id": ["197915"],
+      "allowedBit": ["test", ".test2"],
       "item": [
         {
           "type": "paragraph",
@@ -315,7 +295,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

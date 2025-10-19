@@ -169,6 +169,7 @@ const propertyKeys = {
   property_size: '@size',
   property_slug: '@slug',
   property_sourceDocument: '@sourceDocument',
+  property_sourceRL: '@sourceRL',
   property_spaceId: '@spaceId',
   property_src1x: '@src1x',
   property_src2x: '@src2x',

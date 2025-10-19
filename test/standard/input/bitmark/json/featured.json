@@ -4,17 +4,12 @@
       "type": "featured",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342339"
-      ],
+      "id": ["342339"],
       "customerId": "themightyboosh",
-      "reportTag": [
-        "This is a report at https://www.reports.com/report-1"
-      ],
+      "reportTag": ["This is a report at https://www.reports.com/report-1"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

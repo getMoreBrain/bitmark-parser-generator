@@ -4,15 +4,12 @@
       "type": "page-buy-button",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "slug": "testing-1234",
       "content2Buy": "testing 123",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -52,15 +49,12 @@
       "type": "page-buy-button-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "slug": "testing-1234",
       "content2Buy": "testing 123",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

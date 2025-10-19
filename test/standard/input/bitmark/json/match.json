@@ -4,13 +4,10 @@
       "type": "match",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197919"
-      ],
+      "id": ["197919"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -25,11 +22,7 @@
           "attrs": {}
         }
       ],
-      "additionalSolutions": [
-        "word1",
-        "word2",
-        "word3"
-      ],
+      "additionalSolutions": ["word1", "word2", "word3"],
       "body": [],
       "heading": {
         "forKeys": "Jahr",
@@ -55,9 +48,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "- 150'000.00"
-          ]
+          "values": ["- 150'000.00"]
         },
         {
           "key": "2009",
@@ -78,9 +69,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "- 70'000.00"
-          ]
+          "values": ["- 70'000.00"]
         },
         {
           "key": "2010",
@@ -90,9 +79,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "0"
-          ]
+          "values": ["0"]
         },
         {
           "key": "2011",
@@ -102,9 +89,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "0"
-          ]
+          "values": ["0"]
         },
         {
           "key": "2012",
@@ -114,9 +99,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "0"
-          ]
+          "values": ["0"]
         },
         {
           "key": "2013",
@@ -126,9 +109,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "0"
-          ]
+          "values": ["0"]
         },
         {
           "key": "2014",
@@ -138,9 +119,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "0"
-          ]
+          "values": ["0"]
         },
         {
           "key": "2015",
@@ -150,9 +129,7 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": [
-            "0"
-          ]
+          "values": ["0"]
         },
         {
           "key": "2016",
@@ -162,9 +139,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "0"
-          ]
+          "values": ["0"]
         },
         {
           "key": "2017",
@@ -174,9 +149,7 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": [
-            "0"
-          ]
+          "values": ["0"]
         },
         {
           "key": "Total",
@@ -186,9 +159,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "- 220'000.00"
-          ]
+          "values": ["- 220'000.00"]
         }
       ],
       "isExample": false
@@ -239,9 +210,7 @@
       "type": "match",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213782"
-      ],
+      "id": ["213782"],
       "item": [
         {
           "type": "paragraph",
@@ -267,7 +236,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -335,9 +303,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A"
-          ]
+          "values": ["A"]
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
@@ -347,9 +313,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "E"
-          ]
+          "values": ["E"]
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
@@ -359,9 +323,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C"
-          ]
+          "values": ["C"]
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
@@ -371,9 +333,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "E"
-          ]
+          "values": ["E"]
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
@@ -383,9 +343,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C"
-          ]
+          "values": ["C"]
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
@@ -395,9 +353,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "D"
-          ]
+          "values": ["D"]
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
@@ -407,9 +363,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C"
-          ]
+          "values": ["C"]
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
@@ -419,9 +373,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "B"
-          ]
+          "values": ["B"]
         }
       ],
       "isExample": false
@@ -472,9 +424,7 @@
       "type": "match",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "208467"
-      ],
+      "id": ["208467"],
       "item": [
         {
           "type": "paragraph",
@@ -500,7 +450,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -568,9 +517,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A"
-          ]
+          "values": ["A"]
         },
         {
           "key": "Als Ausgleich zum Berufsleben malen Sie in der Freizeit Bilder.",
@@ -580,9 +527,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "E"
-          ]
+          "values": ["E"]
         },
         {
           "key": "Marcel Rossi geht samstags in sein Stammlokal, um Freunde zu treffen.",
@@ -592,9 +537,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C"
-          ]
+          "values": ["C"]
         },
         {
           "key": "Corinne bildet sich mit Abendkursen weiter.",
@@ -604,9 +547,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "E"
-          ]
+          "values": ["E"]
         },
         {
           "key": "Zwei Freundinnen verkaufen auf dem Markt billig Secondhandkleider.",
@@ -616,9 +557,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C"
-          ]
+          "values": ["C"]
         },
         {
           "key": "Stefan freut sich über ein Lob seiner Vorgesetzten.",
@@ -628,9 +567,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "D"
-          ]
+          "values": ["D"]
         },
         {
           "key": "Daniel Gerber verbringt den Abend vor dem Computer, um zu chatten.",
@@ -640,9 +577,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C"
-          ]
+          "values": ["C"]
         },
         {
           "key": "Ein Ehepaar installiert eine Alarmanlage im Haus.",
@@ -652,9 +587,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "B"
-          ]
+          "values": ["B"]
         }
       ],
       "isExample": false
@@ -708,7 +641,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -726,10 +658,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -750,10 +679,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         }
       ],
       "isExample": true
@@ -807,7 +733,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -825,10 +750,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -849,10 +771,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         }
       ],
       "isExample": true
@@ -906,7 +825,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -935,10 +853,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -948,10 +863,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         }
       ],
       "isExample": true
@@ -1005,7 +917,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1034,10 +945,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -1047,10 +955,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         }
       ],
       "isExample": true
@@ -1104,7 +1009,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1133,10 +1037,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -1157,10 +1058,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         }
       ],
       "isExample": true
@@ -1214,7 +1112,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1243,10 +1140,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -1267,10 +1161,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         }
       ],
       "isExample": true
@@ -1324,7 +1215,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1353,10 +1243,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -1377,10 +1264,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         }
       ],
       "isExample": true
@@ -1434,7 +1318,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1463,10 +1346,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -1487,10 +1367,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         }
       ],
       "isExample": true
@@ -1544,7 +1421,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1573,10 +1449,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -1597,10 +1470,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         }
       ],
       "isExample": true
@@ -1654,7 +1524,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1690,10 +1559,7 @@
               "attrs": {}
             }
           ],
-          "values": [
-            "gehen",
-            "denken"
-          ]
+          "values": ["gehen", "denken"]
         },
         {
           "key": "an einer Hochschule",
@@ -1714,9 +1580,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "studieren"
-          ]
+          "values": ["studieren"]
         }
       ],
       "isExample": true,
@@ -1737,7 +1601,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1755,10 +1618,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         }
       ],
       "isExample": false
@@ -1812,7 +1672,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1830,10 +1689,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         }
       ],
       "isExample": false
@@ -1887,7 +1743,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1905,10 +1760,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         }
       ],
       "isExample": false
@@ -1962,7 +1814,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1980,10 +1831,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         }
       ],
       "isExample": false
@@ -2037,7 +1885,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -2055,10 +1902,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         }
       ],
       "isExample": false
@@ -2112,7 +1956,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -2126,10 +1969,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         }
       ],
       "isExample": false,
@@ -2184,7 +2024,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -2202,10 +2041,7 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -2215,10 +2051,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         },
         {
           "key": "A third pair is defined here",
@@ -2228,10 +2061,7 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": [
-            "E",
-            "F"
-          ]
+          "values": ["E", "F"]
         },
         {
           "key": "And a fourth pair is defined here",
@@ -2241,10 +2071,7 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": [
-            "G",
-            "H"
-          ]
+          "values": ["G", "H"]
         }
       ],
       "isExample": false
@@ -2298,7 +2125,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -2316,10 +2142,7 @@
           "isCaseSensitive": false,
           "isExample": false,
           "example": null,
-          "values": [
-            "A",
-            "B"
-          ]
+          "values": ["A", "B"]
         },
         {
           "key": "should be the text not the value",
@@ -2329,10 +2152,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "C",
-            "D"
-          ]
+          "values": ["C", "D"]
         },
         {
           "key": "A third pair is defined here",
@@ -2342,10 +2162,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "E",
-            "F"
-          ]
+          "values": ["E", "F"]
         },
         {
           "key": "And a fourth pair is defined here",
@@ -2355,10 +2172,7 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": [
-            "G",
-            "H"
-          ]
+          "values": ["G", "H"]
         }
       ],
       "isExample": false

@@ -4,9 +4,7 @@
       "type": "extractor-configuration",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -21,7 +19,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

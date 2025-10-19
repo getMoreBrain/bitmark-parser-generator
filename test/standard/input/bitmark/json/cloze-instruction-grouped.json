@@ -4,9 +4,7 @@
       "type": "cloze-instruction-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287822"
-      ],
+      "id": ["287822"],
       "quizCountItems": true,
       "quizStrikethroughSolutions": true,
       "item": [],
@@ -23,13 +21,10 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "additionalSolutions": [
-        "canvas"
-      ],
+      "additionalSolutions": ["canvas"],
       "body": [
         {
           "type": "paragraph",
@@ -41,9 +36,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "erfreut"
-                ],
+                "solutions": ["erfreut"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -82,9 +75,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "steht"
-                ],
+                "solutions": ["steht"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -127,9 +118,7 @@
       "type": "cloze-instruction-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "107938"
-      ],
+      "id": ["107938"],
       "item": [
         {
           "type": "paragraph",
@@ -144,7 +133,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -173,13 +161,7 @@
           "attrs": {}
         }
       ],
-      "additionalSolutions": [
-        "canvas",
-        "texture",
-        "figurative",
-        "abstract",
-        "contrast"
-      ],
+      "additionalSolutions": ["canvas", "texture", "figurative", "abstract", "contrast"],
       "body": [
         {
           "type": "paragraph",
@@ -187,9 +169,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Woher"
-                ],
+                "solutions": ["Woher"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -220,9 +200,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Wo"
-                ],
+                "solutions": ["Wo"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -253,9 +231,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Was"
-                ],
+                "solutions": ["Was"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -286,9 +262,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Welche"
-                ],
+                "solutions": ["Welche"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -333,9 +307,7 @@
       "type": "cloze-instruction-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "1779156"
-      ],
+      "id": ["1779156"],
       "feedbackType": "2-step",
       "icon": "https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/icons/a2_icon.svg",
       "quizCountItems": true,
@@ -355,7 +327,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -401,9 +372,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "möchte"
-                ],
+                "solutions": ["möchte"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -449,9 +418,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "kann"
-                ],
+                "solutions": ["kann"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -479,9 +446,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Können"
-                ],
+                "solutions": ["Können"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -530,9 +495,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "kann"
-                ],
+                "solutions": ["kann"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -560,9 +523,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "wollen"
-                ],
+                "solutions": ["wollen"],
                 "item": [],
                 "lead": [],
                 "hint": [],

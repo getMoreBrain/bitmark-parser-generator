@@ -4,9 +4,7 @@
       "type": "extractor-image",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "backgroundWallpaper": {
         "type": "image",
         "image": {
@@ -26,7 +24,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -61,9 +58,7 @@
       "type": "extractor-image-collapsible",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "levelCEFRp": "levelCEFRp",
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
@@ -71,7 +66,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

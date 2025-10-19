@@ -4,9 +4,7 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285747"
-      ],
+      "id": ["285747"],
       "item": [
         {
           "type": "paragraph",
@@ -32,17 +30,11 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [],
-      "elements": [
-        "Ein Elefant",
-        "ist",
-        "grösser als",
-        "eine Maus."
-      ],
+      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."],
       "isExample": true,
       "example": true
     },
@@ -58,9 +50,7 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285748"
-      ],
+      "id": ["285748"],
       "item": [
         {
           "type": "paragraph",
@@ -86,17 +76,11 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [],
-      "elements": [
-        "Ein Elefant",
-        "ist",
-        "grösser als",
-        "eine Maus."
-      ],
+      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."],
       "isExample": true,
       "example": true
     },
@@ -112,9 +96,7 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285749"
-      ],
+      "id": ["285749"],
       "item": [
         {
           "type": "paragraph",
@@ -140,7 +122,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

@@ -4,13 +4,10 @@
       "type": "book-end",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135647"
-      ],
+      "id": ["135647"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

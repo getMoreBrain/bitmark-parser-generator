@@ -4,13 +4,10 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -25,11 +22,7 @@
           "attrs": {}
         }
       ],
-      "additionalSolutions": [
-        "word1",
-        "word2",
-        "word3"
-      ],
+      "additionalSolutions": ["word1", "word2", "word3"],
       "body": [],
       "quizzes": [
         {
@@ -135,13 +128,10 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -293,13 +283,10 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -419,13 +406,10 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "291969"
-      ],
+      "id": ["291969"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -564,7 +548,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -675,7 +658,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -786,7 +768,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

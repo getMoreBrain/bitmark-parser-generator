@@ -4,15 +4,10 @@
       "type": "author-content-bit-generator",
       "format": "bitmark++",
       "bitLevel": 1,
-      "classification": [
-        "Classification 1",
-        "Classification 2",
-        "Classification 3"
-      ],
+      "classification": ["Classification 1", "Classification 2", "Classification 3"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

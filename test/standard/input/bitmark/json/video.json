@@ -4,13 +4,10 @@
       "type": "video",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "301454"
-      ],
+      "id": ["301454"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -55,13 +52,10 @@
       "type": "video",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "300497"
-      ],
+      "id": ["300497"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -106,14 +100,11 @@
       "type": "video",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "301460"
-      ],
+      "id": ["301460"],
       "search": "Errungenschaftsbeteiligung, Scheidung, Güterrechtliche Auseinandersetzung, Vorschlag",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -161,7 +152,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

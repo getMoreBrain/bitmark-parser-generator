@@ -4,14 +4,11 @@
       "type": "app-calculator-latex",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "51861"
-      ],
+      "id": ["51861"],
       "formula": "\\\\left( x | y \\\\right)",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

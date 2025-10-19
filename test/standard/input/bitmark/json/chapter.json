@@ -4,9 +4,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135649"
-      ],
+      "id": ["135649"],
       "title": [
         {
           "type": "paragraph",
@@ -24,7 +22,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -44,9 +41,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135651"
-      ],
+      "id": ["135651"],
       "title": [
         {
           "type": "paragraph",
@@ -64,7 +59,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -84,9 +78,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135653"
-      ],
+      "id": ["135653"],
       "title": [
         {
           "type": "paragraph",
@@ -104,7 +96,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -124,9 +115,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135655"
-      ],
+      "id": ["135655"],
       "title": [
         {
           "type": "paragraph",
@@ -144,7 +133,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -164,9 +152,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135657"
-      ],
+      "id": ["135657"],
       "title": [
         {
           "type": "paragraph",
@@ -184,7 +170,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -204,9 +189,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135659"
-      ],
+      "id": ["135659"],
       "title": [
         {
           "type": "paragraph",
@@ -224,7 +207,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -244,9 +226,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135661"
-      ],
+      "id": ["135661"],
       "title": [
         {
           "type": "paragraph",
@@ -264,7 +244,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -284,9 +263,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135663"
-      ],
+      "id": ["135663"],
       "title": [
         {
           "type": "paragraph",
@@ -304,7 +281,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -324,9 +300,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135665"
-      ],
+      "id": ["135665"],
       "title": [
         {
           "type": "paragraph",
@@ -344,7 +318,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -364,9 +337,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135667"
-      ],
+      "id": ["135667"],
       "title": [
         {
           "type": "paragraph",
@@ -384,7 +355,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -404,9 +374,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135669"
-      ],
+      "id": ["135669"],
       "title": [
         {
           "type": "paragraph",
@@ -424,7 +392,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -444,9 +411,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135671"
-      ],
+      "id": ["135671"],
       "title": [
         {
           "type": "paragraph",
@@ -464,7 +429,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -484,9 +448,7 @@
       "type": "chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135673"
-      ],
+      "id": ["135673"],
       "title": [
         {
           "type": "paragraph",
@@ -504,7 +466,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -527,7 +488,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -552,7 +512,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -576,7 +535,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -600,7 +558,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -624,7 +581,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

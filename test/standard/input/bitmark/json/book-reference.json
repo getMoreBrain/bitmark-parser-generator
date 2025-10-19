@@ -4,22 +4,15 @@
       "type": "book-reference",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135647"
-      ],
+      "id": ["135647"],
       "lang": "en-US",
-      "refAuthor": [
-        "Philippe Pointet"
-      ],
+      "refAuthor": ["Philippe Pointet"],
       "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
-      "refPublisher": [
-        "kpmg"
-      ],
+      "refPublisher": ["kpmg"],
       "citationStyle": "Stylish",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -38,22 +31,14 @@
       "type": "book-reference",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135647"
-      ],
+      "id": ["135647"],
       "lang": "en-US",
-      "refAuthor": [
-        "Philippe Pointet"
-      ],
+      "refAuthor": ["Philippe Pointet"],
       "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
-      "refPublisher": [
-        "kpmg",
-        "gmpk"
-      ],
+      "refPublisher": ["kpmg", "gmpk"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -72,24 +57,16 @@
       "type": "book-reference",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135647"
-      ],
+      "id": ["135647"],
       "lang": "en-US",
-      "refAuthor": [
-        "Philippe Pointet",
-        "Someone Else"
-      ],
+      "refAuthor": ["Philippe Pointet", "Someone Else"],
       "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
-      "refPublisher": [
-        "kpmg"
-      ],
+      "refPublisher": ["kpmg"],
       "refPublicationYear": "2025",
       "citationStyle": "Not so stylish",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -171,14 +148,11 @@
       "type": "book-reference",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135647"
-      ],
+      "id": ["135647"],
       "lang": "en-US",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

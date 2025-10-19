@@ -4,9 +4,7 @@
       "type": "survey-rating-display",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "93061"
-      ],
+      "id": ["93061"],
       "ratingLevelStart": {
         "level": 0,
         "label": [
@@ -52,7 +50,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

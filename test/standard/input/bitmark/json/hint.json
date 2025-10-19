@@ -4,9 +4,7 @@
       "type": "hint",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210048"
-      ],
+      "id": ["210048"],
       "item": [],
       "lead": [
         {
@@ -21,7 +19,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -50,13 +47,10 @@
       "type": "hint-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",

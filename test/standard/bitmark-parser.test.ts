@@ -57,7 +57,6 @@ describe('bitmark-parser', () => {
       item: '',
       lead: '',
       pageNumber: '',
-      sourcePageNumber: '',
       marginNumber: '',
       hint: '',
       instruction: '',

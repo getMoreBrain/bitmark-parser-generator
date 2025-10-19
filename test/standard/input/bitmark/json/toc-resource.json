@@ -5,14 +5,10 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "buttonCaption": "Click Me!",
-      "tocResource": [
-        "99",
-        "This is a resource"
-      ],
+      "tocResource": ["99", "This is a resource"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -33,7 +29,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

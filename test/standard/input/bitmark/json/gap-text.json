@@ -4,13 +4,10 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "193275"
-      ],
+      "id": ["193275"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -25,11 +22,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "",
-                  "",
-                  ""
-                ],
+                "solutions": ["", "", ""],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -46,9 +39,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "test"
-                ],
+                "solutions": ["test"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -65,9 +56,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  ""
-                ],
+                "solutions": [""],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -99,13 +88,10 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "152331"
-      ],
+      "id": ["152331"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -220,9 +206,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  ""
-                ],
+                "solutions": [""],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -245,9 +229,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  ""
-                ],
+                "solutions": [""],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -270,9 +252,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  ""
-                ],
+                "solutions": [""],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -300,9 +280,7 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "193275"
-      ],
+      "id": ["193275"],
       "anchor": "Ref_Roche",
       "item": [],
       "lead": [
@@ -318,7 +296,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -336,9 +313,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Roche"
-                ],
+                "solutions": ["Roche"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -366,9 +341,7 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "193276"
-      ],
+      "id": ["193276"],
       "anchor": "Ref_Emmi",
       "item": [],
       "lead": [
@@ -384,7 +357,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -402,9 +374,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Emmi"
-                ],
+                "solutions": ["Emmi"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -432,9 +402,7 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "136524"
-      ],
+      "id": ["136524"],
       "item": [
         {
           "type": "paragraph",
@@ -449,7 +417,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -494,9 +461,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "c"
-                ],
+                "solutions": ["c"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -519,9 +484,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "x"
-                ],
+                "solutions": ["x"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -544,9 +507,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "a"
-                ],
+                "solutions": ["a"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -569,9 +530,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "b"
-                ],
+                "solutions": ["b"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -637,9 +596,7 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "245337"
-      ],
+      "id": ["245337"],
       "item": [
         {
           "type": "paragraph",
@@ -665,7 +622,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -687,9 +643,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Insekten"
-                ],
+                "solutions": ["Insekten"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -751,9 +705,7 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "273397"
-      ],
+      "id": ["273397"],
       "item": [
         {
           "type": "paragraph",
@@ -768,7 +720,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -794,9 +745,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "qualitativen"
-                ],
+                "solutions": ["qualitativen"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -813,9 +762,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "offenen"
-                ],
+                "solutions": ["offenen"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -832,9 +779,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Sekundärmarktforschung"
-                ],
+                "solutions": ["Sekundärmarktforschung"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -851,9 +796,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "aktuell"
-                ],
+                "solutions": ["aktuell"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -877,9 +820,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Primärmarktforschung"
-                ],
+                "solutions": ["Primärmarktforschung"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -896,9 +837,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "eigene Daten"
-                ],
+                "solutions": ["eigene Daten"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -915,9 +854,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Befragung"
-                ],
+                "solutions": ["Befragung"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -934,9 +871,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Fokusgruppen"
-                ],
+                "solutions": ["Fokusgruppen"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -953,9 +888,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Kosten"
-                ],
+                "solutions": ["Kosten"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1021,9 +954,7 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "273304"
-      ],
+      "id": ["273304"],
       "item": [
         {
           "type": "paragraph",
@@ -1038,7 +969,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1122,10 +1052,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "A",
-                  "C"
-                ],
+                "solutions": ["A", "C"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1145,10 +1072,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "F",
-                  "G"
-                ],
+                "solutions": ["F", "G"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1168,10 +1092,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "F",
-                  "B"
-                ],
+                "solutions": ["F", "B"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1191,10 +1112,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "A",
-                  "D"
-                ],
+                "solutions": ["A", "D"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1214,10 +1132,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "A",
-                  "E"
-                ],
+                "solutions": ["A", "E"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1237,10 +1152,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "F",
-                  "G"
-                ],
+                "solutions": ["F", "G"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1260,10 +1172,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "A",
-                  "C"
-                ],
+                "solutions": ["A", "C"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1283,10 +1192,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "A",
-                  "D"
-                ],
+                "solutions": ["A", "D"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1352,9 +1258,7 @@
       "type": "gap-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "272904"
-      ],
+      "id": ["272904"],
       "item": [
         {
           "type": "paragraph",
@@ -1369,7 +1273,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1395,10 +1298,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "direkten Vertrieb",
-                  "direkten Vertrieb2"
-                ],
+                "solutions": ["direkten Vertrieb", "direkten Vertrieb2"],
                 "item": [],
                 "lead": [],
                 "hint": [
@@ -1426,9 +1326,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Verkaufsstellen"
-                ],
+                "solutions": ["Verkaufsstellen"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1445,9 +1343,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Verkaufsmitarbeitende"
-                ],
+                "solutions": ["Verkaufsmitarbeitende"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1464,10 +1360,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "indirekten Vertrieb",
-                  "indirekten Vertrieb2"
-                ],
+                "solutions": ["indirekten Vertrieb", "indirekten Vertrieb2"],
                 "item": [],
                 "lead": [],
                 "hint": [
@@ -1495,9 +1388,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Grosshandel"
-                ],
+                "solutions": ["Grosshandel"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1514,9 +1405,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "NOT Grosshandel2"
-                ],
+                "solutions": ["NOT Grosshandel2"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1533,9 +1422,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "Einzelhandel"
-                ],
+                "solutions": ["Einzelhandel"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1604,7 +1491,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1619,10 +1505,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "solution",
-                  "problem"
-                ],
+                "solutions": ["solution", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1664,7 +1547,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1679,10 +1561,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "solution",
-                  "problem"
-                ],
+                "solutions": ["solution", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],

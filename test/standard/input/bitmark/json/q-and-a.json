@@ -4,13 +4,10 @@
       "type": "q-and-a",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "245346"
-      ],
+      "id": ["245346"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -105,9 +102,7 @@
       "type": "q-and-a",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "1920727"
-      ],
+      "id": ["1920727"],
       "item": [
         {
           "type": "paragraph",
@@ -133,7 +128,7 @@
           "attrs": {}
         }
       ],
-      "sourcePageNumber": [
+      "marginNumber": [
         {
           "type": "paragraph",
           "content": [
@@ -145,7 +140,6 @@
           "attrs": {}
         }
       ],
-      "marginNumber": [],
       "hint": [
         {
           "type": "paragraph",

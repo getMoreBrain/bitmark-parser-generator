@@ -4,23 +4,15 @@
       "type": "checklist",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
+      "id": ["197915"],
       "groupTag": [
         {
           "name": "group A",
-          "tags": [
-            "item 1",
-            "item 2",
-            "item 3"
-          ]
+          "tags": ["item 1", "item 2", "item 3"]
         },
         {
           "name": "group B",
-          "tags": [
-            "item B1"
-          ]
+          "tags": ["item B1"]
         }
       ],
       "item": [
@@ -37,7 +29,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -173,9 +164,7 @@
       "type": "checklist",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210109"
-      ],
+      "id": ["210109"],
       "item": [
         {
           "type": "paragraph",
@@ -190,7 +179,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -230,13 +218,10 @@
       "type": "checklist",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210110"
-      ],
+      "id": ["210110"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
