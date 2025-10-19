@@ -4,13 +4,10 @@
       "type": "video-embed",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "301454"
-      ],
+      "id": ["301454"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -55,13 +52,10 @@
       "type": "video-embed",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "300497"
-      ],
+      "id": ["300497"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -140,13 +134,10 @@
       "type": "video-embed",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "301460"
-      ],
+      "id": ["301460"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

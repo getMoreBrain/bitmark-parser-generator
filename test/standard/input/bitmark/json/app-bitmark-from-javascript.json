@@ -4,14 +4,11 @@
       "type": "app-bitmark-from-javascript",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "maxCreatedBits": 100,
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

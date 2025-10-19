@@ -4,16 +4,10 @@
       "type": "page-article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "lang": "en-UK",
-      "publisher": [
-        "kpmg"
-      ],
-      "theme": [
-        "grundzuege"
-      ],
+      "publisher": ["kpmg"],
+      "theme": ["grundzuege"],
       "item": [
         {
           "type": "paragraph",
@@ -44,18 +38,6 @@
           "content": [
             {
               "text": "pageNumber",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
-      "sourcePageNumber": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "sourcePageNumber",
               "type": "text"
             }
           ],
@@ -193,20 +175,17 @@
         }
       ]
     },
-    "bitmark": "[.page-article-alt:bitmark++]\n[@id:151970]\n[@lang:en-UK]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%sourcePageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
+    "bitmark": "[.page-article-alt:bitmark++]\n[@id:151970]\n[@lang:en-UK]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
   },
   {
     "bit": {
       "type": "page-article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",
@@ -290,9 +269,7 @@
       "type": "page-article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [
@@ -307,7 +284,6 @@
           "attrs": {}
         }
       ],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -343,9 +319,7 @@
       "type": "page-article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151973"
-      ],
+      "id": ["151973"],
       "item": [
         {
           "type": "paragraph",
@@ -376,18 +350,6 @@
           "content": [
             {
               "text": "pageNumber",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
-      "sourcePageNumber": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "sourcePageNumber",
               "type": "text"
             }
           ],
@@ -510,16 +472,14 @@
         }
       ]
     },
-    "bitmark": "[.page-article-alt:bitmark--]\n[@id:151973]\n[%item][%lead][%pageNumber][%sourcePageNumber][%marginNumber]\n\nWerfen wir einen Blick ins Marketing. Gängig ist die folgende Kurzdefinition Ein systematischer Ansatz, um unternehmerische Entscheidungen nach den Bedürfnissen des Marktes und der Kunden auszurichten. Diese Definition kann wie folgt erweitert werden … um Wettbewerbsvorteile zu schaffen, zu erhalten und weiter zu entwickeln.\n\nMarketingprofis mögen mit dieser rudimentären Definition Nachsicht üben.\n\nWenn wir diese Denkhaltung ins Personalmarketing übersetzen, könnte die Definition wie folgt lauten\n\nEin systematischer Ansatz, um unternehmerische Entscheidungen nach den Bedürfnissen des Arbeitsmarktes und der bestehenden und potentiellen Mitarbeitenden auszurichten, um Wettbewerbsvorteile zu schaffen, zu erhalten und weiter zu entwickeln.\n\nWichtig ist primär die Aussage systematisch. Sie zeigt, dass Einzelmassnahmen nicht der ideale Weg sind, die Attraktivität als Arbeitgeber zu stärken.\n\nIn den folgenden Unterkapiteln wählen wir einzelne Methoden des Marketings und transferieren einige Ansätze in die Überlegungen zu einem systematischen Personalmarketing."
+    "bitmark": "[.page-article-alt:bitmark--]\n[@id:151973]\n[%item][%lead][%pageNumber][%marginNumber]\n\nWerfen wir einen Blick ins Marketing. Gängig ist die folgende Kurzdefinition Ein systematischer Ansatz, um unternehmerische Entscheidungen nach den Bedürfnissen des Marktes und der Kunden auszurichten. Diese Definition kann wie folgt erweitert werden … um Wettbewerbsvorteile zu schaffen, zu erhalten und weiter zu entwickeln.\n\nMarketingprofis mögen mit dieser rudimentären Definition Nachsicht üben.\n\nWenn wir diese Denkhaltung ins Personalmarketing übersetzen, könnte die Definition wie folgt lauten\n\nEin systematischer Ansatz, um unternehmerische Entscheidungen nach den Bedürfnissen des Arbeitsmarktes und der bestehenden und potentiellen Mitarbeitenden auszurichten, um Wettbewerbsvorteile zu schaffen, zu erhalten und weiter zu entwickeln.\n\nWichtig ist primär die Aussage systematisch. Sie zeigt, dass Einzelmassnahmen nicht der ideale Weg sind, die Attraktivität als Arbeitgeber zu stärken.\n\nIn den folgenden Unterkapiteln wählen wir einzelne Methoden des Marketings und transferieren einige Ansätze in die Überlegungen zu einem systematischen Personalmarketing."
   },
   {
     "bit": {
       "type": "page-article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "239893"
-      ],
+      "id": ["239893"],
       "item": [],
       "lead": [
         {
@@ -534,7 +494,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -669,13 +628,10 @@
       "type": "page-article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191143"
-      ],
+      "id": ["191143"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -743,13 +699,10 @@
       "type": "page-article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "245285"
-      ],
+      "id": ["245285"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -828,13 +781,10 @@
       "type": "page-article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "162205"
-      ],
+      "id": ["162205"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -946,35 +896,16 @@
       "type": "page-article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "5743563"
-      ],
-      "target": [
-        "target1",
-        "target2",
-        "target3"
-      ],
-      "tag": [
-        "green",
-        "yellow",
-        "red"
-      ],
-      "reductionTag": [
-        "green",
-        "yellow"
-      ],
+      "id": ["5743563"],
+      "target": ["target1", "target2", "target3"],
+      "tag": ["green", "yellow", "red"],
+      "reductionTag": ["green", "yellow"],
       "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII=",
       "iconTag": "this is the icon tag",
-      "colorTag": [
-        "green",
-        "white",
-        "purple",
-        "orange"
-      ],
+      "colorTag": ["green", "white", "purple", "orange"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

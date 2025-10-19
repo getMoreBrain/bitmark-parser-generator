@@ -4,9 +4,7 @@
       "type": "foot-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210051"
-      ],
+      "id": ["210051"],
       "item": [],
       "lead": [
         {
@@ -21,7 +19,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

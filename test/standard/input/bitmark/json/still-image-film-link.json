@@ -4,13 +4,10 @@
       "type": "still-image-film-link",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "119760"
-      ],
+      "id": ["119760"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

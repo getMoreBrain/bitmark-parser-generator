@@ -4,13 +4,10 @@
       "type": "preparation-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "190596"
-      ],
+      "id": ["190596"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -39,13 +36,10 @@
       "type": "preparation-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "190597"
-      ],
+      "id": ["190597"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -74,13 +68,10 @@
       "type": "preparation-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "190598"
-      ],
+      "id": ["190598"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -109,9 +100,7 @@
       "type": "preparation-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191144"
-      ],
+      "id": ["191144"],
       "item": [
         {
           "type": "paragraph",
@@ -137,7 +126,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -155,9 +143,7 @@
       "type": "preparation-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191145"
-      ],
+      "id": ["191145"],
       "item": [
         {
           "type": "paragraph",
@@ -183,7 +169,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -201,9 +186,7 @@
       "type": "preparation-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191146"
-      ],
+      "id": ["191146"],
       "item": [
         {
           "type": "paragraph",
@@ -229,7 +212,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -247,9 +229,7 @@
       "type": "preparation-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191147"
-      ],
+      "id": ["191147"],
       "item": [
         {
           "type": "paragraph",
@@ -275,7 +255,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -293,9 +272,7 @@
       "type": "preparation-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191148"
-      ],
+      "id": ["191148"],
       "item": [
         {
           "type": "paragraph",
@@ -321,7 +298,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -339,9 +315,7 @@
       "type": "preparation-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191149"
-      ],
+      "id": ["191149"],
       "item": [
         {
           "type": "paragraph",
@@ -367,7 +341,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

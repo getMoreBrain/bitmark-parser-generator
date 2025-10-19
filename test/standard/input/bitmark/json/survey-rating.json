@@ -4,9 +4,7 @@
       "type": "survey-rating",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "93061"
-      ],
+      "id": ["93061"],
       "ratingLevelStart": {
         "level": 0,
         "label": [
@@ -52,7 +50,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -70,9 +67,7 @@
       "type": "survey-rating",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "93062"
-      ],
+      "id": ["93062"],
       "ratingLevelStart": {
         "level": 0
       },
@@ -93,7 +88,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -111,13 +105,10 @@
       "type": "survey-rating",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "93063"
-      ],
+      "id": ["93063"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -141,9 +132,7 @@
       "type": "survey-rating",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "93061"
-      ],
+      "id": ["93061"],
       "ratingLevelStart": {
         "level": -10,
         "label": [
@@ -211,7 +200,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

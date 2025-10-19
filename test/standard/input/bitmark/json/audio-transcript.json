@@ -4,9 +4,7 @@
       "type": "audio-transcript",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197915"
-      ],
+      "id": ["197915"],
       "item": [
         {
           "type": "paragraph",
@@ -21,7 +19,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -157,9 +154,7 @@
       "type": "audio-transcript",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210109"
-      ],
+      "id": ["210109"],
       "item": [
         {
           "type": "paragraph",
@@ -174,7 +169,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -214,13 +208,10 @@
       "type": "audio-transcript",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210110"
-      ],
+      "id": ["210110"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

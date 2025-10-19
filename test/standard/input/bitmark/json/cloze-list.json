@@ -7,7 +7,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -61,9 +60,7 @@
                 },
                 {
                   "type": "gap",
-                  "solutions": [
-                    "gap"
-                  ],
+                  "solutions": ["gap"],
                   "item": [],
                   "lead": [],
                   "hint": [],
@@ -89,9 +86,7 @@
                 },
                 {
                   "type": "gap",
-                  "solutions": [
-                    "cloze"
-                  ],
+                  "solutions": ["cloze"],
                   "item": [],
                   "lead": [],
                   "hint": [
@@ -146,9 +141,7 @@
                 },
                 {
                   "type": "gap",
-                  "solutions": [
-                    "gap"
-                  ],
+                  "solutions": ["gap"],
                   "item": [],
                   "lead": [],
                   "hint": [],
@@ -170,9 +163,7 @@
                 },
                 {
                   "type": "gap",
-                  "solutions": [
-                    "two"
-                  ],
+                  "solutions": ["two"],
                   "item": [],
                   "lead": [],
                   "hint": [],

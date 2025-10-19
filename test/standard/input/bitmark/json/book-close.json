@@ -4,16 +4,13 @@
       "type": "book-close",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "isTemplate": true,
       "isTemplateStripTheme": true,
       "buttonCaption": "Button **Caption**",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

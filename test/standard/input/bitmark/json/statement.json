@@ -4,13 +4,10 @@
       "type": "statement",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191210"
-      ],
+      "id": ["191210"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -39,13 +36,10 @@
       "type": "statement",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191207"
-      ],
+      "id": ["191207"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

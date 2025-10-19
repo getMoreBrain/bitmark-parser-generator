@@ -875,7 +875,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (this.isEmptyText(item)) return false; // Ignore empty
     if (!this.isEmptyText(parent?.value?.lead)) return true; // Will be handled by lead
     if (!this.isEmptyText(parent?.value?.pageNumber)) return true; // Will be handled by pageNumber
-    if (!this.isEmptyText(parent?.value?.sourcePageNumber)) return true; // Will be handled by sourcePageNumber
     if (!this.isEmptyText(parent?.value?.marginNumber)) return true; // Will be handled by marginNumber
 
     this.writeNL_IfNotChain(route);
@@ -893,7 +892,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (this.isEmptyText(lead)) return false; // Ignore empty
     if (!this.isEmptyText(parent?.value?.pageNumber)) return true; // Will be handled by pageNumber
-    if (!this.isEmptyText(parent?.value?.sourcePageNumber)) return true; // Will be handled by sourcePageNumber
     if (!this.isEmptyText(parent?.value?.marginNumber)) return true; // Will be handled by marginNumber
 
     this.writeNL_IfNotChain(route);
@@ -913,7 +911,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const pageNumber = node.value as TextAst;
     const parent = this.getParentNode(route);
     if (this.isEmptyText(pageNumber)) return false; // Ignore empty
-    if (!this.isEmptyText(parent?.value?.sourcePageNumber)) return true; // Will be handled by sourcePageNumber
     if (!this.isEmptyText(parent?.value?.marginNumber)) return true; // Will be handled by marginNumber
 
     this.writeNL_IfNotChain(route);
@@ -925,35 +922,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeCL();
     this.writeOPC();
     this.writeTextOrValue(pageNumber ?? '', TextFormat.bitmarkText, TextLocation.tag);
-    this.writeCL();
-
-    return true;
-  }
-
-  // bitmarkAst -> bits -> bitsValue -> sourcePageNumber
-
-  protected enter_sourcePageNumber(node: NodeInfo, route: NodeInfo[]): boolean {
-    const sourcePageNumber = node.value as TextAst;
-    const parent = this.getParentNode(route);
-    if (this.isEmptyText(sourcePageNumber)) return false; // Ignore empty
-    if (!this.isEmptyText(parent?.value?.marginNumber)) return true; // Will be handled by marginNumber
-
-    this.writeNL_IfNotChain(route);
-    this.writeOPC();
-    this.writeTextOrValue(parent?.value?.item ?? '', TextFormat.bitmarkText, TextLocation.tag);
-    this.writeCL();
-    this.writeOPC();
-    this.writeTextOrValue(parent?.value?.lead ?? '', TextFormat.bitmarkText, TextLocation.tag);
-    this.writeCL();
-    this.writeOPC();
-    this.writeTextOrValue(
-      parent?.value?.pageNumber ?? '',
-      TextFormat.bitmarkText,
-      TextLocation.tag,
-    );
-    this.writeCL();
-    this.writeOPC();
-    this.writeTextOrValue(sourcePageNumber ?? '', TextFormat.bitmarkText, TextLocation.tag);
     this.writeCL();
 
     return true;
@@ -976,13 +944,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeOPC();
     this.writeTextOrValue(
       parent?.value?.pageNumber ?? '',
-      TextFormat.bitmarkText,
-      TextLocation.tag,
-    );
-    this.writeCL();
-    this.writeOPC();
-    this.writeTextOrValue(
-      parent?.value?.sourcePageNumber ?? '',
       TextFormat.bitmarkText,
       TextLocation.tag,
     );

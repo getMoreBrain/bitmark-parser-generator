@@ -4,13 +4,10 @@
       "type": "info",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287895"
-      ],
+      "id": ["287895"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -65,13 +62,10 @@
       "type": "info",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287886"
-      ],
+      "id": ["287886"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -139,13 +133,10 @@
       "type": "info-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [
         {
           "type": "paragraph",

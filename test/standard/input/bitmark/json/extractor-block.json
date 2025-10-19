@@ -12,14 +12,10 @@
       "height": 100,
       "index": 99,
       "classification": "paragraph",
-      "availableClassifications": [
-        "test1",
-        "test2"
-      ],
+      "availableClassifications": ["test1", "test2"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

@@ -4,13 +4,10 @@
       "type": "index-term",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342339"
-      ],
+      "id": ["342339"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

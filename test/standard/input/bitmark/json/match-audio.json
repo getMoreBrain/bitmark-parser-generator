@@ -4,9 +4,7 @@
       "type": "match-audio",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285729"
-      ],
+      "id": ["285729"],
       "item": [
         {
           "type": "paragraph",
@@ -32,7 +30,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

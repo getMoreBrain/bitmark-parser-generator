@@ -28,6 +28,11 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_sourceRL,
+        description: 'The original location of the information in the original source material',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.property_isTemplate,
         description: 'If true, the bit is a template',
         format: TagFormat.boolean,

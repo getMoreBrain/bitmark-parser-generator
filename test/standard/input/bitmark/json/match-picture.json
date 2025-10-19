@@ -4,9 +4,7 @@
       "type": "match-picture",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "285726"
-      ],
+      "id": ["285726"],
       "item": [
         {
           "type": "paragraph",
@@ -32,7 +30,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -74,9 +71,7 @@
       "type": "match-picture",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "136185"
-      ],
+      "id": ["136185"],
       "item": [
         {
           "type": "paragraph",
@@ -91,7 +86,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

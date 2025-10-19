@@ -7,7 +7,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -28,7 +27,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -95,7 +93,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -127,7 +124,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -142,10 +138,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "solution",
-                  "problem"
-                ],
+                "solutions": ["solution", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -169,9 +162,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "different"
-                ],
+                "solutions": ["different"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -195,9 +186,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "sensitivity"
-                ],
+                "solutions": ["sensitivity"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -228,7 +217,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -260,7 +248,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -275,10 +262,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "solu^tion",
-                  "problem"
-                ],
+                "solutions": ["solu^tion", "problem"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -313,7 +297,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -347,7 +330,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -394,9 +376,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -411,7 +391,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -458,9 +437,7 @@
       "type": "cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -475,7 +452,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -513,9 +489,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "gap"
-                ],
+                "solutions": ["gap"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -577,9 +551,7 @@
       "type": "extractor-configuration",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -594,7 +566,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -623,9 +594,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -640,7 +609,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -707,9 +675,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -724,7 +690,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -844,9 +809,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -861,7 +824,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -908,9 +870,7 @@
       "type": "cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -925,7 +885,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -963,9 +922,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "gap"
-                ],
+                "solutions": ["gap"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -1027,9 +984,7 @@
       "type": "extractor-configuration",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -1044,7 +999,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1073,9 +1027,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -1090,7 +1042,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1157,9 +1108,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -1174,7 +1123,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1315,9 +1263,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "12345"
-      ],
+      "id": ["12345"],
       "item": [
         {
           "type": "paragraph",
@@ -1332,7 +1278,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1385,7 +1330,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1497,7 +1441,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1626,7 +1569,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1658,7 +1600,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1768,7 +1709,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1839,7 +1779,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -1941,7 +1880,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -1973,7 +1911,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -2075,7 +2012,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

@@ -4,13 +4,10 @@
       "type": "extractor-information",
       "format": "json",
       "bitLevel": 1,
-      "id": [
-        "5673456"
-      ],
+      "id": ["5673456"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

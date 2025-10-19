@@ -4,9 +4,7 @@
       "type": "page-open-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "book": "the_book",
       "slug": "testing-1234",
       "reference": "ch-5",
@@ -24,7 +22,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {

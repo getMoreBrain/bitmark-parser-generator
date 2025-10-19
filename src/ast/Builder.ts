@@ -131,6 +131,7 @@ class Builder extends BaseBuilder {
       padletId?: string;
       jupyterId?: string;
       jupyterExecutionCount?: number;
+      sourceRL?: string;
       isPublic?: boolean;
       isTemplate?: boolean;
       isTemplateStripTheme?: boolean;
@@ -312,7 +313,6 @@ class Builder extends BaseBuilder {
       item?: JsonText;
       lead?: JsonText;
       pageNumber?: JsonText;
-      sourcePageNumber?: JsonText;
       marginNumber?: JsonText;
       hint?: JsonText;
       instruction?: JsonText;
@@ -436,6 +436,7 @@ class Builder extends BaseBuilder {
         data.jupyterExecutionCount,
         options,
       ),
+      sourceRL: this.toAstProperty(bitType, ConfigKey.property_sourceRL, data.sourceRL, options),
       isPublic: this.toAstProperty(bitType, ConfigKey.property_isPublic, data.isPublic, options),
       isTemplate: this.toAstProperty(
         bitType,
@@ -1109,7 +1110,6 @@ class Builder extends BaseBuilder {
       item: this.handleJsonText(context, TextLocation.tag, data.item),
       lead: this.handleJsonText(context, TextLocation.tag, data.lead),
       pageNumber: this.handleJsonText(context, TextLocation.tag, data.pageNumber),
-      sourcePageNumber: this.handleJsonText(context, TextLocation.tag, data.sourcePageNumber),
       marginNumber: this.handleJsonText(context, TextLocation.tag, data.marginNumber),
       hint: this.handleJsonText(context, TextLocation.tag, data.hint),
       instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
@@ -1236,15 +1236,7 @@ class Builder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
       ignoreUndefined: ['example'],
-      ignoreEmptyArrays: [
-        'item',
-        'lead',
-        'pageNumber',
-        'sourcePageNumber',
-        'marginNumber',
-        'hint',
-        'instruction',
-      ],
+      ignoreEmptyArrays: ['item', 'lead', 'pageNumber', 'marginNumber', 'hint', 'instruction'],
     });
 
     // Validate and correct invalid bits as much as possible

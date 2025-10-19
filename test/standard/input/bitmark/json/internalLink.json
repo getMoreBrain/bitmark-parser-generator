@@ -4,14 +4,11 @@
       "type": "internal-link",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "192356"
-      ],
+      "id": ["192356"],
       "reference": "Ref_Starbucks",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -40,14 +37,11 @@
       "type": "internal-link",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "192374"
-      ],
+      "id": ["192374"],
       "reference": "Ref_Emmi",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -76,14 +70,11 @@
       "type": "internal-link",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "192383"
-      ],
+      "id": ["192383"],
       "reference": "Ref_Globus",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

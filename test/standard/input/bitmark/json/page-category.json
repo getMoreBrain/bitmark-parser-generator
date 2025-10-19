@@ -4,14 +4,11 @@
       "type": "page-category",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "page": "https://123.com",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -30,15 +27,12 @@
       "type": "page-category",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "slug": "testing-1234",
       "page": "https://1234.com",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

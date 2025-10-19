@@ -4,13 +4,10 @@
       "type": "prototype-images",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "890929"
-      ],
+      "id": ["890929"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

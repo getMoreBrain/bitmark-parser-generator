@@ -4,9 +4,7 @@
       "type": "output",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "51861"
-      ],
+      "id": ["51861"],
       "computerLanguage": "javascript",
       "item": [],
       "lead": [
@@ -22,7 +20,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
